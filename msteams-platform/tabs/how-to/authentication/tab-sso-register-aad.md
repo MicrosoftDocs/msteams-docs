@@ -1,12 +1,9 @@
 ---
-title: Register Tab with Microsoft Entra ID
-description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients.
-ms.topic: how-to
-ms.localizationpriority: high
-keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
-ms.date: 02/01/2023
-ms.owner: ryanbliss
+
+title: Register Tab with Microsoft Entra ID description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients. ms.topic: how-to ms.localizationpriority: high keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope ms.date: 02/01/2023 ms.owner: ryanbliss
+
 ---
+
 # Configure your tab app in Microsoft Entra ID
 
 Microsoft Entra ID provides access to your tab app based on the app user's Teams identity. Register your tab app with Microsoft Entra ID so that the app user who has signed into Teams can access your tab app.
@@ -15,7 +12,7 @@ Microsoft Entra ID provides access to your tab app based on the app user's Teams
 
 ## Enable SSO in Microsoft Entra ID
 
-Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as, generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
+Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Microsoft Entra ID to send access token to Teams Client app":::
 
@@ -53,11 +50,9 @@ You can configure your tab app in Microsoft Entra ID to configure the scope and 
 
 Register your app in Microsoft Entra ID and configure the tenancy and app's platform, before you can enable it for SSO. Microsoft Entra ID generates a new app ID that you must note. You need to update it later in the app manifest (previously called Teams app manifest) file.
 
-> [!NOTE]
-> Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) registers the Microsoft Entra application in an SSO project. You can skip this section if you've used Agents Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
+> [!NOTE] > Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) registers the Microsoft Entra application in an SSO project. You can skip this section if you've used Agents Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
 
-<details>
-<summary><b>Learn how to register your app in Microsoft Entra ID</b></summary>
+<details> <summary><b>Learn how to register your app in Microsoft Entra ID</b></summary>
 
 <a name='to-register-a-new-app-in-azure-ad'></a>
 
@@ -83,23 +78,15 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
 
 5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories, or restrict the access to personal Microsoft accounts only.
 
-    <details>
-    <summary><b>Options for supported account types</b></summary>
+    <details> <summary><b>Options for supported account types</b></summary>
 
-    | Option | Select this to... |
-    | --- | --- |
-    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
-    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
+    | Option | Select this to... | | --- | --- | | Accounts in this organizational directory only (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. | | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.| | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. | | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
     </details>
 
-    > [!NOTE]
-    > You don't need to enter **Redirect URI** for enabling SSO for a tab app.
+    > [!NOTE] > You don't need to enter **Redirect URI** for enabling SSO for a tab app.
 
-7. Select **Register**.
-    A message pops up on the browser stating that the app was created.
+7. Select **Register**. A message pops up on the browser stating that the app was created.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Microsoft Entra admin center.":::
 
@@ -127,8 +114,7 @@ You must define the access token version for your app. You can find this configu
 
 1. Set the `requestedAccessTokenVersion` property to **2**.
 
-    > [!NOTE]
-    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as **2**.
+    > [!NOTE] > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as **2**.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for access token version" lightbox="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png":::
 
@@ -145,7 +131,6 @@ After you've verified and configured the version of access token, you must confi
 After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you need:
-
 
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
 - [To configure API scope](#to-configure-api-scope): Define scope for the API and specify users who can consent to a scope. Allow only admins to consent to higher-privileged permissions.
@@ -176,25 +161,26 @@ To configure scope and authorize trusted client applications, you need:
     where,
     - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same.
 
-      If you're using a tunneling service, such as ngrok, update this value whenever your ngrok subdomain changes.
-    - `AppID` is the app ID (GUID) generated when you registered your app. You can view it in the **Overview** section.
+If you're using a tunneling service like ngrok, update this value whenever your ngrok subdomain changes.
 
-    > [!IMPORTANT]
-    >
-    > - **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
-    >
-    > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
-    >
-    > - **Format for domain name**: Use lowercase letters for the domain name. Don't use uppercase.
-    >
-    >   For example, to create an app service or web app with resource name, `demoapplication`:
-    >
-    >   | If base resource name used is | URL will be... | Format is supported on... |
-    >   | --- | --- | --- |
-    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
-    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
-    >
-    >    Use the lowercase option *demoapplication* as the base resource name.
+- `AppID` is the app ID (GUID) generated when you registered your app. You can view it in the **Overview** section.
+
+> [!IMPORTANT]
+>
+> - **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
+>
+> - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
+>
+> - **Format for domain name**: Use lowercase letters for the domain name. Don't use uppercase.
+>
+>   For example, to create an app service or web app with resource name, `demoapplication`:
+>
+>   | If base resource name used is | URL will be... | Format is supported on... |
+>   | --- | --- | --- |
+>   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+>   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+>
+>    Use the lowercase option *demoapplication* as the base resource name.
 
 1. Select **Save**.
 
