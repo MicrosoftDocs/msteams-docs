@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/25/2026
+ms.date: 03/30/2026
 ---
 # Get Teams specific context for your bot
 
@@ -12,7 +12,7 @@ A bot can access additional context data about a team or chat where it's install
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used.
 
 > [!NOTE]
 >
@@ -22,8 +22,6 @@ Your bot can query for the list of members and their basic user profiles, includ
 The following sample code uses the paged endpoint for fetching the roster:
 
 # [C#](#tab/dotnet)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ```csharp
 app.OnMessage(async context =>
@@ -37,8 +35,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getpagedmembers)
-
 ```typescript
 app.on('message', async ({ activity, api }) => {
     const conversationId = activity.conversation.id;
@@ -49,8 +45,6 @@ app.on('message', async ({ activity, api }) => {
 ```
 
 # [Python](#tab/python)
-
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-members)
 
 ```python
 @app.on_message
@@ -114,8 +108,6 @@ The following sample code is used to get single member details:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -129,8 +121,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmember)
-
 ```typescript
 app.on('message', async ({ activity, api }) => {
     const conversationId = activity.conversation.id;
@@ -142,8 +132,6 @@ app.on('message', async ({ activity, api }) => {
 ```
 
 # [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-member)
 
 ```python
 @app.on_message
@@ -203,8 +191,6 @@ The following sample code is used to get team's details:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -225,8 +211,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamdetails)
-
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
     const teamId = activity.channelData?.team?.id;
@@ -242,8 +226,6 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/python)
-
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-details)
 
 ```python
 @app.on_message
@@ -290,8 +272,6 @@ The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -308,8 +288,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
-[SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamchannels)
-
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
     const teamId = activity.channelData?.team?.id;
@@ -323,8 +301,6 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/python)
-
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-channels)
 
 ```python
 @app.on_message
