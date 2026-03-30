@@ -98,7 +98,7 @@ Response body
 
 * * *
 
-After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `context.Api.Conversations.Members.GetAsync(conversationId)` for C# or `api.conversations.members(conversationId).get()` for TypeScript APIs.
+After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more specific members of a chat or team, use the Microsoft Teams bot APIs `context.Api.Conversations.Members.GetByIdAsync(conversationId, memberId)` for C# or `api.conversations.members(conversationId).getById(memberId)` for TypeScript APIs.
 
 ## Get single member details
 
@@ -181,7 +181,7 @@ Response body
 
 * * *
 
-After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `context.Api.Conversations.Members.GetByIdAsync(conversationId, memberId)` for C# or `api.conversations.members(conversationId).getById(memberId)` for TypeScript.
+After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `context.Api.Teams.GetByIdAsync(teamId)` for C# or `api.teams.getById(teamId)` for TypeScript.
 
 ## Get team's details
 
