@@ -47,7 +47,7 @@ The following table details the apps and its capabilities supported for Teams op
 
 ### Service and availability
 
- The features that are available in Teams depends on the Office 365 plan purchased. For more information, see [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
+The features that are available in Teams depend on the Office 365 plan purchased. For more information, see [feature availability](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) in Teams operated by 21Vianet.
 
 ## See also
 
