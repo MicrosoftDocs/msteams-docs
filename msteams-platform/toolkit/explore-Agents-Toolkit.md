@@ -17,7 +17,7 @@ This section gives you a tour of Agents Toolkit and its capabilities.
 
 Agents Toolkit appears within Visual Studio Code as an extension. After you install Agents Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentalserv/first-page.png" alt-text="Screenshot shows the Overview of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png" alt-text="Screenshot shows the Overview of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
