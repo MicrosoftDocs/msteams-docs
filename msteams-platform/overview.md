@@ -1,11 +1,3 @@
----
-title: Microsoft Teams Developer Platform
-author: heath-hamilton
-description: Learn about Microsoft Teams and associated organizational goals, why should you build agents and apps on Teams platform, and how do they help meet business needs.
-ms.topic: overview
-ms.localizationpriority: high
-ms.date: 04/18/2025
----
 # Microsoft Teams developer platform overview
 
 Microsoft Teams platform empowers you as developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables seamless integration across Microsoft 365 platforms.
@@ -17,7 +9,7 @@ You can continue to create Teams apps, and extend Teams capabilities for task-sp
 
 Take a look at these example developer personas and agent or app scenarios:
 
-:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
+![Screenshot shows you the developer persona and user stories.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/overview/dev-persona.png)
 
 You can meet these scenarios to enhance collaboration using Teams agents or apps.
 
@@ -50,24 +42,18 @@ Teams acts as a social platform where custom apps help extend company culture. P
 ## What to build on Teams platform?
 
 Teams platform offers two powerful paths to choose from:
-
-:::row:::
-    :::column:::
-        :::image type="content" source="assets/images/agents-in-teams/path.png" alt-text="Image to choose a path" border="false":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        :::image type="content" source="assets/images/agents-in-teams/choose-agent.png" alt-text="Image to choose agent" border="false" lightbox="assets/images/agents-in-teams/choose-agent.png" link="agents-in-teams/overview.md":::
-    :::column-end:::
-    :::column:::
-        :::image type="content" source="assets/images/agents-in-teams/choose-app.png" alt-text="Image to choose app" border="false" link="get-started/get-started-overview.md" lightbox="assets/images/agents-in-teams/choose-app.png":::
-    :::column-end:::
-:::row-end:::
-
+![Image to choose a path](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/agents-in-teams/path.png)
+![Image to choose agent](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/agents-in-teams/choose-agent.png)
+![Image to choose app](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/agents-in-teams/choose-app.png)
 ## Next steps
 
-> [!div class="nextstepaction"]
+> 
 > [Agents in Teams](agents-in-teams/overview.md)
-> [!div class="nextstepaction"]
+> 
 > [Build your first agent](agents-in-teams/build-first-agent.md)
+
+---
+
+**Scenario:**
+
+Imagine you are a developer at a mid-sized company looking to enhance internal communication and streamline workflows. Your team is considering building a custom agent on the Microsoft Teams platform to automate routine tasks such as scheduling meetings, managing project timelines, and handling employee inquiries. You aim to leverage the platform's integration capabilities with Microsoft 365 to ensure seamless data flow and improve productivity across departments.
