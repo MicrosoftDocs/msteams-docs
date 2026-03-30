@@ -1,6 +1,6 @@
 ---
 title: OAuth 2.0 Bot Authentication with Azure
-author: surbhigupta
+author: vikasalmal
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
@@ -19,7 +19,7 @@ See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understan
 In this article you'll learn:
 
 - **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication.
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
@@ -296,9 +296,17 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-     [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
+     ```JSON
+    "Teams": { 
+    "ClientId": "", 
+    "ClientSecret": "", 
+    "TenantId": "", 
+    "ConnectionName": ""
 
-1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots#botid).
+  }
+    ```
+
+1. In the Solution Explorer, go to the `appPackage` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots#botid).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+C%23%2F.NET&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dnode-js%252Cdotnet-sample%23test-the-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -307,7 +315,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 1. Clone [node-auth-sample][teams-auth-bot-js].
 1. In a console, go to the project: </br></br>
-`cd samples/bot-teams-authentication/nodejs`
+`cd samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart`
 1. Install modules</br></br>
 `npm install`
 1. Update the **.env** configuration as follows:
@@ -317,9 +325,14 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set the `CONNECTION_NAME` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-     [!code-javascript[settings](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/.env)]
+     ```Javascript
+    TENANT_ID=
+    CLIENT_ID=
+    CLIENT_SECRET=
+    CONNECTION_NAME=
+    ```
 
-1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot registration.
+1. In the `appPackage` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+JavaScript&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dnode-js%252Cdotnet-sample%23prepare-the-bot-sample-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -334,7 +347,12 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
       Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-      [!code-python[config](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/config.py?range=14-16)]
+     ```Python
+    TENANT_ID=
+    CLIENT_ID=
+    CLIENT_SECRET=
+    CONNECTION_NAME=
+    ```
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+Python&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dpython%252Cdotnet-sample%23prepare-the-bot-sample-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -373,46 +391,6 @@ Alternatively, while in Visual Studio, you can follow these steps:
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+the+bot+to+Azure&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23deploy-the-bot-to-azure&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Test the bot locally
-
-After you configure the authentication mechanism, you can perform the actual bot testing.
-
-1. Run the bot sample locally on your machine, via Visual Studio for example.
-1. Start the Emulator.
-1. Select the **Open bot** button.
-1. In the **Bot URL**, enter the bot's local URL. Usually, `http://localhost:3978/api/messages`.
-1. In the **Microsoft App ID**, enter the bot's app ID from `appsettings.json`.
-1. In the **Microsoft App password**, enter the bot's app password from the `appsettings.json`.
-1. Select **Connect**.
-1. After the bot is up and running, enter any text to display the sign-in card.
-1. Select the **Sign in** button.
-1. A pop-up dialog appears to **Confirm Open URL** to authenticate the bot's user (you).  
-1. Select **Confirm**.
-1. If asked, select the applicable user's account.
-1. Depending which configuration you used for the Emulator, you get one of the following options:
-    1. **Using sign-in verification code**  
-      &#x2713; A window opens displaying the validation code.  
-      &#x2713; Copy and enter the validation code into the chat box to complete the sign-in.
-    1. **Using authentication tokens**.  
-      &#x2713; You're signed in based on your credentials.
-
-    The following image is an example of the bot UI after you sign in:
-
-    :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator.PNG" alt-text="Screenshot shows an example of the bot UI after you sign in.":::
-
-1. If you select **Yes** when the bot asks *Would you like to view your token?*, you get the following response:
-
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-login-emulator-token.png" alt-text="Screenshot shows how to select the consent.":::
-
-1. Enter **logout** in the input chat box to sign out.
-It releases the user token, and the bot won't be able to act on your behalf until you sign in again.
-
-> [!NOTE]
-> Bot authentication requires use of the **Azure Bot Service**. The service accesses the bot registration information for your bot.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+the+bot+locally&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cdotnet-sample%23test-the-bot-locally&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## Test the deployed bot
 
 <!--There are several testing scenarios here. Ideally, we'd have a separate article on the what, why, 
@@ -448,15 +426,15 @@ and when for these, and just reference that from here, along with the set of ste
 
 ## Install and test the bot in Teams
 
-1. In your bot project, ensure that the `TeamsAppManifest` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
-1. In Solution Explorer, go to the `TeamsAppManifest` folder. Edit `manifest.json` by assigning the following values:
+1. In your bot project, ensure that the `appPackage` folder contains the `manifest.json` along with an `outline.png` and `color.png` files.
+1. In Solution Explorer, go to the `appPackage` folder. Edit `manifest.json` by assigning the following values:
     1. Ensure that the **bot App ID** you received at the time of the bot registration is assigned to `id` and `botId`.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
 1. Select and **zip** the `manifest.json`, `outline.png`, and `color.png` files.
 1. Open **Microsoft Teams**.
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
-1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
+1. Go to the `appPackage` folder and upload the zipped manifest.
 1. Select **Add** to install the app to Teams.
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with the Add option highlighted.":::
@@ -508,7 +486,7 @@ It launches ngrok to listen on the port you specify. In return, it gives you an 
 
 ## Additional information
 
-### TeamsAppManifest/manifest.json
+### appPackage/manifest.json
 
 This manifest contains information needed by Teams to connect with the bot:  
 
@@ -624,7 +602,6 @@ This sample demonstrates how to implement Single Sign-On (SSO) authentication fo
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|---------------|
 | Bot Auth Quickstart | This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) |
-| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA |
 
 ## See also
 
