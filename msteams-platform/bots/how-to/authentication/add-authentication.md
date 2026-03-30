@@ -297,11 +297,13 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      ```JSON
-    "Teams": {
-    "ClientId": "",
-    "ClientSecret": "",
-    "TenantId": "",
-    "ConnectionName": ""
+    {
+      "Teams": {
+        "ClientId": "",
+        "ClientSecret": "",
+        "TenantId": "",
+        "ConnectionName": ""
+      }
     }
     ```
 
