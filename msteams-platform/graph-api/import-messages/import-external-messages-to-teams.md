@@ -283,13 +283,11 @@ Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is se
 * [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-You can also verify that target chat or channel is in migration mode in Teams through a banner which says **Migration for this conversation is in progress. Messages may be out of order during this time.**
+You can also verify that target chat or channel is in `migrationMode` state in Teams through a banner which says **Migration for this conversation is in progress. Messages may be out of order during this time**. <br>
 This banner will remain visible in the Teams UI until the migration is completed for the target chat or channel.
 
 > [!NOTE]
 > The `migrationMode` flag is currently available only in the beta version.
-
-
 
 ## Step 3: Import messages
 
