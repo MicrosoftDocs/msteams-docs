@@ -4,7 +4,8 @@ description: Learn how to use the Meeting AI Insights API to fetch Teams meeting
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
-ms.date: 12/12/2025
+ms.author: vikasalmal
+ms.date: 03/30/2026
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
@@ -13,7 +14,7 @@ ms.date: 12/12/2025
 
 > [!IMPORTANT]
 >
-> * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. You can only fetch insights on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
+> * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. You can only fetch insights on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](#license-requirements-for-teams-meeting-ai-insights-apis).
 
 The Meeting AI Insights API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings. These insights include:
 
@@ -40,6 +41,10 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 ## Prerequisites
 
 * You must [turn on the transcription or recording](https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b) for the meeting to generate insights. Alternatively, you can set a meeting to autotranscribe or autorecord programmatically using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
+
+## License requirements for Teams meeting AI insights APIs
+
+This section describes the license requirements for Teams meeting AI insights APIs. To access these APIs, users must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models or evaluation mode aren't applicable for these APIs; they can be used by any application for users who have the required license.
 
 ## Fetch meeting insights
 

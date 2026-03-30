@@ -1,7 +1,7 @@
 ---
 title: Create Actions in Microsoft 365
 description: Learn how to build Actions, configure app manifest, retrieve Actions information through context object, access content through Graph API, preinstall Actions.
-ms.date: 12/8/2023
+ms.date: 03/16/2026
 author: v-preethah
 ms.topic: conceptual
 ms.subservice: m365apps
@@ -138,7 +138,7 @@ Follow instructions to preinstall your app for entire organization or user group
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
+| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/m365-actions-preview/nodejs)|
 
 ## Next step
 

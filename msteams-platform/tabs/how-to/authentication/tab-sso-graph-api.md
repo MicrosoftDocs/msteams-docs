@@ -4,7 +4,7 @@ description: Learn how to configure API permissions and authentication for diffe
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
-ms.date: 03/13/2025
+ms.date: 03/16/2026
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -250,7 +250,7 @@ When the user has provided their consent and you try to make an OBO call immedia
 
 If your application is unaware of this behavior, it might ask the user for consent multiple times. Best practice is to build a meaningful wait-and-retry mechanism to avoid this suboptimal user experience.
 
-The wait-and-retry mechanism must keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Microsoft Entra ID sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one-second wait.
+The wait-and-retry mechanism must keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Microsoft Entra ID sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/TeamsJS/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one-second wait.
 
 If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you might have to prompt them to consent again.
 

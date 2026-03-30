@@ -1,10 +1,11 @@
 ---
-title: Build apps for anonymous user
+title: Build app for anonymous user
 description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
 ms.topic: conceptual
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.owner: vichug
-ms.date: 02/07/2023
+ms.date: 03/16/2026
 ---
 
 # Build apps for anonymous users
@@ -240,7 +241,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 |Sample name | Description | .NET |Node.js|
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Teams SDK, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
+| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Teams SDK, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-anonymous-users/nodejs)|
 
 ## Next step
 
