@@ -297,13 +297,12 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      ```JSON
-    "Teams": { 
-    "ClientId": "", 
-    "ClientSecret": "", 
-    "TenantId": "", 
+    "Teams": {
+    "ClientId": "",
+    "ClientSecret": "",
+    "TenantId": "",
     "ConnectionName": ""
-
-  }
+    }
     ```
 
 1. In the Solution Explorer, go to the `appPackage` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots#botid).
@@ -325,7 +324,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set the `CONNECTION_NAME` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-     ```Javascript
+     ```JavaScript
     TENANT_ID=
     CLIENT_ID=
     CLIENT_SECRET=
