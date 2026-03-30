@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 03/16/2026
+ms.date: 03/27/2026
 ---
 
 # Meeting apps APIs
@@ -1502,30 +1502,283 @@ The following examples show how to capture the meeting start and end events:
 
 **Meeting Start Event**
 
+# [C#](#tab/dotnet1)
+
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
-// Invoked when a Teams Meeting Start event activity is received from the connector.
-protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting start handler
+teamsApp.OnMeetingStart(async context =>
 {
-    // Sends a message activity to the sender of the incoming activity. 
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
+    var activity = context.Activity.Value;
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock("The meeting has started.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new TextBlock($"**Title:** {activity.Title}")
+            {
+                Wrap = true
+            },
+            new TextBlock($"**Start Time:** {activity.StartTime}")
+            {
+                Wrap = true
+            }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new OpenUrlAction(activity.JoinUrl)
+            {
+                Title = "Join Meeting"
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
+```
+
+# [TypeScript](#tab/typescript1)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```typescript
+app.on('meetingStart', async (context) => {
+  const value = context.activity.value;
+
+  const card = new AdaptiveCard(
+    new TextBlock('The meeting has started.', { weight: 'Bolder', size: 'Large', wrap: true }),
+    new TextBlock(`**Title:** ${value.Title || 'N/A'}`, { wrap: true }),
+    new TextBlock(`**Start Time:** ${value.StartTime || 'N/A'}`, { wrap: true })
+  ).withActions(
+    new OpenUrlAction(value.JoinUrl, { title: 'Join Meeting' })
+  );
+  
+  await context.send(card);
+});
+
+```
+
+# [Python](#tab/python1)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```python
+@app.on_meeting_start
+async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) -> None:
+    value = ctx.activity.value
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="The meeting has started.", weight="Bolder", size="Large", wrap=True),
+            TextBlock(text=f"**Title:** {value.title}", wrap=True),
+            TextBlock(text=f"**Start Time:** {value.start_time}", wrap=True)
+        ],
+        actions=[OpenUrlAction(url=value.join_url, title="Join Meeting")],
+    )
+    await ctx.send(card)
+
 ```
 
 **Meeting End Event**
+
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
-// Invoked when a Teams Meeting End event activity is received from the connector.
-protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting end handler with transcript support
+teamsApp.OnMeetingEnd(async context =>
 {
-    // Sends a message activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
+    var activity = context.Activity.Value;
+    var meetingId = activity.Id;
+    
+    // Get meeting info from API
+    var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+
+    // Retrieve the user ID of the organizer for the transcript API
+    var userId = "";
+    if (meetingInfo?.Organizer != null)
+    {
+        userId = meetingInfo.Organizer.AadObjectId ?? "";
+    }
+
+    // Get MS Graph Resource ID from meeting details
+    var msGraphResourceId = meetingInfo?.Details?.MSGraphResourceId;
+
+    // Wait 30 seconds for the transcript to become available
+    await Task.Delay(30000);
+    
+    // Retrieve transcript
+    var transcript = "";
+    if (!string.IsNullOrEmpty(msGraphResourceId) && !string.IsNullOrEmpty(userId))
+    {
+        var vttTranscript = await GetMeetingTranscriptAsync(msGraphResourceId, userId);
+        if (!string.IsNullOrEmpty(vttTranscript))
+        {
+            transcript = ParseVtt(vttTranscript);
+        }
+    }
+
+    // Build card body with transcript
+    var cardBody = new List<CardElement>
+    {
+        new TextBlock("The meeting has ended.")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
+        },
+        new TextBlock($"**End Time:** {activity.EndTime}")
+        {
+            Wrap = true
+        },
+        new TextBlock("**Transcript:**")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder
+        }
+    };
+
+    // Add transcript lines or fallback message
+    if (!string.IsNullOrEmpty(transcript))
+    {
+        var transcriptLines = transcript.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+        foreach (var line in transcriptLines)
+        {
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                cardBody.Add(new TextBlock(line) { Wrap = true });
+            }
+        }
+    }
+    else
+    {
+        cardBody.Add(new TextBlock("Transcript not available for this meeting.") { Wrap = true });
+    }
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = cardBody
+    };
+
+    await context.Send(card);
+});
+
+```
+
+# [TypeScript](#tab/typescript2)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
+
+```typescript
+app.on('meetingEnd', async (context) => {
+  const value = context.activity.value;
+  const meetingId = context.activity.channelData?.meeting?.id ?? '';
+  if (!meetingId) {
+    console.error('meetingEnd event received without a valid meeting id');
+    return;
+  }
+  let msGraphResourceId = context.activity.channelData?.meeting?.details?.msGraphResourceId;
+  const meetingInfo = await context.api.meetings.getById(meetingId);
+
+  let userId = '';
+  if (meetingInfo && meetingInfo.organizer) {
+    userId = meetingInfo.organizer.aadObjectId || '';
+  }
+
+  if (!msGraphResourceId && meetingInfo && meetingInfo.details) {
+    msGraphResourceId = meetingInfo.details.msGraphResourceId;
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 30000));
+
+  let transcript = '';
+  if (msGraphResourceId) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const vttTranscript = await getMeetingTranscript(msGraphResourceId, userId);
+      if (vttTranscript) {
+        transcript = parseVtt(vttTranscript);
+        break;
+      }
+      if (attempt < 3) {
+        console.log(`Transcript not ready, retrying in 10s (attempt ${attempt}/3)...`);
+        await new Promise(resolve => setTimeout(resolve, 10000));
+      }
+    }
+  }
+
+  const transcriptBlocks = transcript
+    ? transcript.split('\n').filter(line => line).map(line => new TextBlock(line, { wrap: true }))
+    : [new TextBlock('Transcript not available for this meeting.', { wrap: true })];
+
+  const card = new AdaptiveCard(
+    new TextBlock('The meeting has ended.', { weight: 'Bolder', size: 'Large', wrap: true }),
+    new TextBlock(`**End Time:** ${value.EndTime}`, { wrap: true }),
+    new TextBlock('**Transcript:**', { weight: 'Bolder', wrap: true }),
+    ...transcriptBlocks
+  );
+
+  await context.send(card);
+});
+
+```
+
+# [Python](#tab/python2)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
+
+```python
+@app.on_meeting_end
+async def handle_meeting_end(ctx: ActivityContext[MeetingEndEventActivity]) -> None:
+    value = ctx.activity.value
+    meeting_id = ctx.activity.channel_data.meeting.id
+    ms_graph_resource_id = getattr(ctx.activity.channel_data.meeting.details, 'ms_graph_resource_id', None)
+    meeting_info = await ctx.api.meetings.get_by_id(meeting_id)
+
+    # Retrieve the user ID of the organizer for the transcript API
+    user_id = ""
+    if meeting_info and meeting_info.organizer:
+        user_id = getattr(meeting_info.organizer, 'aadObjectId', None) or ""
+
+    if not ms_graph_resource_id and meeting_info and meeting_info.details:
+        ms_graph_resource_id = meeting_info.details.ms_graph_resource_id
+
+    transcript = ''
+    if ms_graph_resource_id:
+        vtt_transcript = await get_meeting_transcript(ms_graph_resource_id, user_id)
+        if vtt_transcript:
+            transcript = parse_vtt(vtt_transcript)
+
+    transcript_blocks = (
+        [TextBlock(text=line, wrap=True) for line in transcript.splitlines() if line]
+        if transcript
+        else [TextBlock(text="Transcript not available for this meeting.", wrap=True)]
+    )
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="The meeting has ended.", weight="Bolder", size="Large", wrap=True),
+            TextBlock(text=f"**End Time:** {value.end_time}", wrap=True),
+            TextBlock(text="**Transcript:**", weight="Bolder", wrap=True),
+            *transcript_blocks,
+        ],
+    )
+    await ctx.send(card)
+
 ```
 
 ### Example of meeting start event payload
@@ -1657,34 +1910,177 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-# [Participant join event](#tab/participant-join-event)
+**Participant join event**
+
+# [C#](#tab/dotnet3)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
-//Invoked on participant join a meeting
-protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting participant join handler
+teamsApp.OnMeetingJoin(async context =>
 {
-  await turnContext.SendActivityAsync("Member has joined the meeting.");
-  return;
-}
+    var activity = context.Activity.Value;
+    if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
+
+    var member = activity.Members[0].User.Name;
+    var role = activity.Members[0].Meeting?.Role ?? "a participant";
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has joined the meeting as {role}.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
 ```
 
-# [Participant leave event](#tab/participant-leave-event)
+# [TypeScript](#tab/typescript3)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```typescript
+app.on('meetingParticipantJoin', async (context) => {
+  const meetingData = context.activity.value;
+  const participant = meetingData.members[0];
+
+  if (!participant.user?.aadObjectId) return;
+
+  const member = participant.user.name || 'A participant';
+  const role = participant.meeting?.role || 'a participant';
+
+  const card = new AdaptiveCard(
+    new TextBlock(`${member} has joined the meeting as ${role}.`, {
+      wrap: true,
+      weight: 'Bolder'
+    })
+  );
+
+  await context.send(card);
+});
+
+```
+
+# [Python](#tab/python3)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```python
+@app.on_meeting_participant_join
+async def handle_meeting_participant_join(ctx: ActivityContext[MeetingParticipantJoinEventActivity]):
+    meeting_data = ctx.activity.value
+    member = meeting_data.members[0].user.name
+    role = meeting_data.members[0].meeting.role if hasattr(meeting_data.members[0].meeting, "role") else "a participant"
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(
+                text=f"{member} has joined the meeting as {role}.",
+                wrap=True,
+                weight="Bolder",
+            )
+        ]
+    )
+
+    await ctx.send(card)
+
+```
+
+**Participant leave event**
+
+# [C#](#tab/dotnet4)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
-//Invoked on participant leave a meeting
-protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting participant leave handler
+teamsApp.OnMeetingLeave(async context =>
 {
-  await turnContext.SendActivityAsync("Member left the meeting.");
-  return;
-}
+    var activity = context.Activity.Value;
+    var member = activity.Members[0].User.Name;
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has left the meeting.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
+```
+
+# [TypeScript](#tab/typescript4)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```typescript
+app.on('meetingParticipantLeave', async (context) => {
+  const meetingData = context.activity.value;
+  const participant = meetingData.members[0];
+
+  // Skip bot's own leave event (no aadObjectId)
+  if (!participant.user?.aadObjectId) return;
+
+  const member = participant.user.name || 'A participant';
+
+  const card = new AdaptiveCard(
+    new TextBlock(`${member} has left the meeting.`, {
+      wrap: true,
+      weight: 'Bolder'
+    })
+  );
+
+  await context.send(card);
+});
+
+```
+
+# [Python](#tab/python4)
+
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+
+```python
+@app.on_meeting_participant_leave
+async def handle_meeting_participant_leave(ctx: ActivityContext[MeetingParticipantLeaveEventActivity]):
+    meeting_data = ctx.activity.value
+    member = meeting_data.members[0].user.name
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(
+                text=f"{member} has left the meeting.",
+                wrap=True,
+                weight="Bolder",
+            )
+        ]
+    )
+
+    await ctx.send(card)
+
 ```
 
 ---
