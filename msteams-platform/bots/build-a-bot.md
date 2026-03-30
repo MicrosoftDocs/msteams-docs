@@ -2,9 +2,9 @@
 title: Bots in Teams
 description: Learn to build a basic chatbot. Additionally, learn to migrate  build an agent.
 ms.localizationpriority: high
-ms.date: 09/25/2024
+ms.date: 03/16/2026
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ---
 
 # Bots in Teams
@@ -37,7 +37,7 @@ Let's start by building a bot. You can use Agents Toolkit, Bot Framework SDK, or
 
 | # | I want to build ... | Here's a sample |
 | --- | --- | --- |
-| 1. | Conversational bot using Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
+| 1. | Conversational bot using Teams SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python) |
 | 2. | Conversational bot using Agents Toolkit | [Create Teams conversation bot](how-to/conversations/channel-and-group-conversations.md) |
 
 ### Build an AI-powered Teams bot app

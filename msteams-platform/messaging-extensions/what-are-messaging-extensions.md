@@ -1,12 +1,12 @@
 ---
 title: Message extensions
-author: surbhigupta
+author: vikasalmal
 description: Learn how to build message extensions and the scenarios where they are used. Explore samples on action and search based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ms.owner: slamba
-ms.date: 01/23/2025
+ms.date: 03/16/2026
 ---
 # Build message extensions
 
@@ -143,8 +143,5 @@ The following table helps you select a message extension type to get started:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |------------|-------------|----------------|------------|------------|------------|
+| Message extension with search-based commands | This sample demonstrates how to create a Message Extension in Microsoft Teams that allows users to perform searches and retrieve results. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/csharp/demo-manifest/msgext-search.zip)
 | Message extension with action-based commands | This sample demonstrates how to create Action-Based Message Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-| Message extension with search-based commands | This sample demonstrates how to create a Message Extension in Microsoft Teams that allows users to perform searches and retrieve results. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams Message Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Message extension action for task scheduling|This sample demonstrates a Message Extension that allows users to schedule tasks and receive reminder cards in Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp/demo-manifest/msgext-message-reminder.zip)|
-| Northwind inventory message extension| This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts) |NA |NA
