@@ -15,7 +15,7 @@ To start with Teams capabilities, you can create the following types of Teams ap
 
 | App Types | Definition |
 | --- | --- |
-| **Basic Teams apps** | Basic Teams apps are just Hello World Teams tab, bot, or message extension that you can create and customize based on your requirement. |
+| **Basic Teams apps** | Basic Teams apps include Teams tab, bot, or message extension apps that you can create and customize based on your requirement. |
 | **Office Add-ins** | This group of add-ins can be installed and run on Outlook and Office.com. |
 
 ## Create a new Teams app using Visual Studio Code
