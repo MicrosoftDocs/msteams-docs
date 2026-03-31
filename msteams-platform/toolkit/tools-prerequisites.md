@@ -134,7 +134,9 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts.png" alt-text="Screenshot shows the accounts details.":::
+
+:::image type="content" source="../assets/images/toolkit-v2/accounts1_1.png" alt-text="test image":::
 
 1. Verify if you can see the option **Custom App Upload Enabled** as shown in the following image:
 
