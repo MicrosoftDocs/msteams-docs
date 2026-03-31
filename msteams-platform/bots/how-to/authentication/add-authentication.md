@@ -24,14 +24,14 @@ In this article you'll learn:
 
 ## Prerequisites
 
-- Knowledge of [bot basics](/microsoftteams/platform/bots/bot-concepts) and the [Teams SDK](/microsoftteams/platform/bots/bot-concepts).
+- Knowledge of [bot basics](/microsoftteams/platform/bots/bot-concepts) and the [Teams SDK](/microsoftteams/platform/teams-sdk/welcome).
 - Knowledge of Azure and OAuth 2.0 development.
 - The latest versions of Microsoft Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - The following sample:
 
     | Sample |
-    |:---|:---:|:---|
+    |:---|
     | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] |
     | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] |
     | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] |
@@ -90,7 +90,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
     >[!IMPORTANT]
-    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **TENANT_ID** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
+    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continue to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **TENANT_ID** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
@@ -290,9 +290,9 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. From the toolbar, select **File > Open > Project/Solution** and open the bot project.
 1. In C#, Update **appsettings.json** as follows:
 
-    - Set `CONNECTION_NAME` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
-    - Set `CLIENT_ID` to the **bot App ID** you saved at the time of the bot registration.
-    - Set `CLIENT_SECRET` to the **customer secret** you saved at the time of the bot registration.
+    - Set `ConnectionName` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
+    - Set `ClientId` to the **bot App ID** you saved at the time of the bot registration.
+    - Set `ClientSecret` to the **client secret** you saved at the time of the bot registration.
 
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
@@ -322,7 +322,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. Update the **.env** configuration as follows:
 
     - Set `CLIENT_ID` to the **bot App ID** you saved at the time of the bot registration.
-    - Set `CLIENT_SECRET` to the **customer secret** you saved at the time of the bot registration.
+    - Set `CLIENT_SECRET` to the **client secret** you saved at the time of the bot registration.
     - Set the `CONNECTION_NAME` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
@@ -594,14 +594,14 @@ This manifest contains information needed by Teams to connect with the bot:
 With authentication, Teams behaves differently than other channels.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+TeamsAppManifest%2Fmanifest.json&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23teamsappmanifestmanifestjson&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+appPackage%2Fmanifest.json&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23apppackagemanifestjson&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Code sample
 
 This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|---------------|
+|---------------|------------|------------|-------------|---------------|
 | Bot Auth Quickstart | This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) |
 
 ## See also
