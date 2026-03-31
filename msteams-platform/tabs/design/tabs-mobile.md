@@ -28,19 +28,19 @@ Apps [published through the Microsoft Teams Store](~/concepts/deploy-and-publish
 
 ## Authentication
 
-For authentication to work on mobile clients, you must upgrade you Teams JavaScript library to at least version 1.4.1.
+For authentication to work on mobile clients, you must upgrade your Teams JavaScript library to at least version 1.4.1. This ensures compatibility and functionality across different mobile platforms.
 
 ## Low bandwidth and intermittent connections
 
-Mobile clients function with low bandwidth and intermittent connections. Your app must handle any timeouts appropriately by providing a contextual message to the user. You must also use progress indicators to provide feedback to your users for any long-running processes.
+Mobile clients function with low bandwidth and intermittent connections. Your app must handle any timeouts appropriately by providing a contextual message to the user. You must also use progress indicators to provide feedback to your users for any long-running processes. This approach helps maintain a smooth user experience even under challenging network conditions.
 
 ## Testing on mobile clients
 
-You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet.
+You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet. This comprehensive testing ensures that your app delivers a consistent experience across different devices.
 
 ## Publish to Teams Store
 
-Apps listed on the Teams Store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depends on whether your app is approved.
+Apps listed on the Teams Store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depend on whether your app is approved.
 
 ### Apps on Teams Store approved for mobile
 
@@ -67,7 +67,7 @@ The following table describes tab availability and behavior when the app is list
 
 ### Apps not on Teams Store
 
-If you're uploading your custom app or publishing to an organization's app catalog, tab behavior is the same as Teams Store apps approved by Microsoft for mobile.
+If you're uploading your custom app or publishing to an organization's app catalog, tab behavior is the same as Teams Store apps approved by Microsoft for mobile. This ensures that your app functions consistently regardless of its distribution method.
 
 ## Next step
 
