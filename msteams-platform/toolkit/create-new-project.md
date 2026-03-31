@@ -20,7 +20,7 @@ To start with Teams capabilities, you can create the following types of Teams ap
 
 ## Create a new Teams app using Visual Studio Code
 
-The process to create a new Teams app is similar for all types of agents and apps. To create a basic Teams app:
+The process to create a new Teams app is similar for all types of apps. To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
@@ -28,7 +28,7 @@ The process to create a new Teams app is similar for all types of agents and app
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/toolkit-activity-bar.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
 
-1. Select **Other Teams Capabilities**
+1. Select **Other Teams Capabilities**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/other-teams-capabilities.png" alt-text="Screenshot shows the Other Teams Capabilities to select.":::
 
@@ -46,13 +46,13 @@ The process to create a new Teams app is similar for all types of agents and app
 
     1. Select the location for project workspace.
 
-    The folder you select is the location for your project workspace.
+       The folder you select is the location for your project workspace.
 
-1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
-   The Teams tab app is created in a few seconds.
+   The Teams tab app workspace is created in a few seconds.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/toolkit-v2/first-tab/tab-app-created.png":::
 
@@ -61,7 +61,7 @@ The process to create a new Teams app is similar for all types of agents and app
 
 ### Directory structure for different app types
 
-Agents Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **EXPLORER** section.
+Agents Toolkit provides all components for building an app. After creating the project workspace, you can view the project folders and files under **EXPLORER** section.
 
 <br>
 <details>
