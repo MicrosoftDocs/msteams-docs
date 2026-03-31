@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/30/2026
+ms.date: 03/31/2026
 ---
 # Get Teams specific context for your bot
 
@@ -12,14 +12,9 @@ A bot can access additional context data about a team or chat where it's install
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used.
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team.
 
-> [!NOTE]
->
-> * Pagination is available in a team and a channel.
-> * Pagination isn't supported in chats. For chats, the entire roster is always returned.
-
-The following sample code uses the paged endpoint for fetching the roster:
+The following sample code is used for fetching the roster:
 
 # [C#](#tab/dotnet)
 
@@ -257,7 +252,7 @@ Response body
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `context.Api.Teams.GetByIdAsync(teamId)` for C# or `api.teams.getById(teamId)` for TypeScript APIs.
+After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `context.Api.Teams.GetConversationsAsync(teamId)` for C# or `api.teams.getConversations(teamId)` for TypeScript APIs.
 
 ## Get the list of channels in a team
 
