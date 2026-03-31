@@ -9,13 +9,12 @@ ms.date: 03/14/2022
 
 # Create a new Teams app
 
-Learn how to create Microsoft Teams apps and agents using Visual Studio Code and the Microsoft 365 Agents Toolkit. This guide walks you through the process of building basic Teams apps and agents, exploring their directory structures, and leveraging available templates. Whether you're starting with a simple "Hello World" app, building agents to automate tasks, or extending Teams capabilities across Microsoft 365, this article provides instructions to help you get started.
+Learn how to create Microsoft Teams apps using Visual Studio Code and the Microsoft 365 Agents Toolkit. This guide walks you through the process of building a basic Teams app, exploring their directory structures, and leveraging available templates. Whether you're starting with a simple "Hello World" app, building apps to automate tasks, or extending Teams capabilities across Microsoft 365, this article provides instructions to help you get started.
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
 | App Types | Definition |
 | --- | --- |
-| **Scenario-based Teams agents** | This group of templates is designed for particular abstracted business scenarios that your teams agent can serve for. |
 | **Basic Teams apps** | Basic Teams apps are just Hello World Teams tab, bot, or message extension that you can create and customize based on your requirement. |
 | **Office Add-ins** | This group of add-ins can be installed and run on Outlook and Office.com. |
 
