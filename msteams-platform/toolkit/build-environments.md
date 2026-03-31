@@ -1,10 +1,10 @@
 ---
 title: Build Apps with Agents Toolkit - Prepare
-author: surbhigupta
-description: Learn about build environments of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
+author: vikasalmal
+description: Learn about build environments of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building agents and apps.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 03/01/2026
 ---
 
 # Prepare to build apps using Microsoft 365 Agents Toolkit
@@ -26,10 +26,10 @@ Agents Toolkit in Microsoft Visual Studio Code offers a set of environments to b
 
 The agents or apps built with JavaScript or TypeScript have the following advantages:
 
-* Comes with its own UI and UX capabilities that are rich and user friendly.
+* Comes with its own UI and UX capabilities that are rich and user-friendly.
 * Provides quick upgrades to the existing agents or apps.
 * Distributes agents or apps on multiple platforms, such as Android and iOS.
-* Compatible for creating an app with the existing APIs.
+* Compatible for creating an agent or app with the existing APIs.
 
 Agents toolkit also supports building agents or app using Python in the developer preview version.
 
@@ -62,7 +62,7 @@ Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. T
 
 You can use Agents Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest. Azure Functions provides "compute on-demand" in two significant ways:
 
-1. Allows implementing your system's logic into your readily available blocks of code. These blocks are called functions.
+1. Allows implementing your app's logic into readily available blocks of code. These blocks are called functions.
 1. Scales to meet demand with as many resources and function instances as necessary as the requests increase.
 
 Azure Functions integrates with an array of [cloud services](add-resource.md) to provide feature-rich implementations. The following are some of the [common scenarios](/azure/azure-functions/functions-scenarios) for Azure Functions:
