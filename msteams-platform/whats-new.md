@@ -485,8 +485,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md)
-
+**March 27, 2026**: [Enable targeted messages for agents](agents-in-teams/targeted-messages.md)
 <!--
 **2025 May**
 
@@ -495,6 +494,17 @@ Developer preview is a public program that provides early access to unreleased T
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams](/microsoftteams/platform/teams-ai-library/welcome/overview).
 -->
 <br/>
+
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md |
+
+</details>
+</br>
 
 <details>
 
