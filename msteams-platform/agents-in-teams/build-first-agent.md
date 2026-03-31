@@ -75,13 +75,13 @@ For more information about setting up Azure OpenAI services, see:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png" alt-text="Screenshot shows the field to add the agent name." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png":::
 
-    The toolkit displays a message that the agent has been successfully created. You can also provision the agent at this time or later. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
+    The toolkit displays a message that the agent workspace has been successfully created. You can also provision the agent at this time or later. If the toolkit displays a message to confirm that you trust the author, select **Yes, I trust the authors**.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshot shows the message for confirming if you trust the authors of the agent.":::
 
 ### Take a tour of the agent source code
 
-Microsoft 365 Agents Toolkit creates your agent project and scaffolds the project workspace. Here's a look at the folder structure:
+Microsoft 365 Agents Toolkit creates and scaffolds the agent project workspace. Here's a look at the folder structure:
 
 | Folder | Contents |
 | --- | --- |
