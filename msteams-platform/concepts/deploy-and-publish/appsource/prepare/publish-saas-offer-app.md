@@ -44,8 +44,6 @@ Update the `subscriptionOffer` property in your app manifest.
 > [!NOTE]
 > The `subscriptionOffer` property is supported in manifest schema version 1.10 or later.
 
-For more information to map the paid functionality to your offer and publish, see [map your Teams app](https://aka.ms/TMTG).
-
 ## Publish your app
 
 After linking the offer to your app, you can submit your monetized app through Partner Center to validate and publish. Perform the prevalidation checks before submission. For more information, see [prepare to publish](/partner-center/marketplace-offers/checklist) and [store step-by-step submission guide](/partner-center/marketplace/add-in-submission-guide?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json).
@@ -61,7 +59,7 @@ After the SaaS app is published, users can view the **Buy a subscription** optio
 
 ### Post purchase
 
-* Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. To check the existing experience for user purchase, see [monetized apps in Teams](https://aka.ms/TMTG).
+* Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation.
 
 * After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) that the user selects on the publisher landing page.
 
