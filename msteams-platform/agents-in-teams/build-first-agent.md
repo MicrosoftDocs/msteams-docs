@@ -76,7 +76,7 @@ To build an agent in Microsoft Teams, ensure you have the following:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png" alt-text="Screenshot shows the field to add the agent name." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png":::
 
-    The toolkit displays a message that the agent workspace has been successfully created. You can also provision the agent at this time or later. If the toolkit displays a message to confirm that you trust the author, select **Yes, I trust the authors**.
+    The toolkit displays a message that the agent workspace has been successfully created. You can provision the agent at this time or later. If the toolkit displays a message to confirm that you trust the author, select **Yes, I trust the authors**.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshot shows the message for confirming if you trust the authors of the agent.":::
 
