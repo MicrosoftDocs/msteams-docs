@@ -1,6 +1,5 @@
 ---
 title: Build an interacive bot
-author: surbhigupta
 description: Learn about creating interactive bot
 ms.topic: overview
 ms.localizationpriority: high

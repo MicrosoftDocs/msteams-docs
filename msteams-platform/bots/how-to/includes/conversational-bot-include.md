@@ -1,6 +1,5 @@
 ---
 title: Build an conversational bot
-author: surbhigupta
 description: Learn about creating a conversational bot
 ms.topic: overview
 ms.localizationpriority: high
