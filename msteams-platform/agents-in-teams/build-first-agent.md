@@ -16,22 +16,23 @@ To build an agent in Microsoft Teams, ensure you have the following:
 
 | Install | For using... |
 | --- | --- |
-| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python (in public preview) build environments. Use the latest version. |
 | [Teams SDK](/microsoftteams/platform/teams-ai-library/teams/overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
-| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your agent. Use the latest version.|
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your agent. Use the latest version. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through agents and apps for chat, meetings, and calls all in one place.|
-| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your agent or access resources in Azure, you must create an Azure OpenAI service.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through agents and apps for chat, meetings, and calls all in one place. |
+| [Azure OpenAI](https://oai.azure.com/portal) | OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your agent or access resources in Azure, you must create an Azure OpenAI service. |
 
 ## Set up your environment
 
 1. Install the latest versions of Visual Studio Code, Node.js, and Microsoft 365 Agents Toolkit.
 1. If you want to use Azure OpenAI service to access Large Language Model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and obtain your API key.
 
-For more information about setting up Azure OpenAI services, see:
-
-- [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
-- [Create an Azure OpenAI Resource and Deploy a Model](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource).
+> [!NOTE]
+> For more information about setting up Azure OpenAI services, see:
+>
+> - [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
+> - [Create an Azure OpenAI Resource and Deploy a Model](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource).
 
 ## Create an agent using Microsoft 365 Agents Toolkit
 
@@ -39,19 +40,19 @@ For more information about setting up Azure OpenAI services, see:
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m-365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 1. Select **Create a New Agent/App**.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the location of the option to create a new agent using Microsoft 365 Agents Toolkit sidebar." lightbox="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the option to create a new agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png":::
 
 1. From the **New Project** menu, select **Teams Agents and Apps**.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png" alt-text="Screenshot shows the location of the option to create a new agent or app in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png" alt-text="Screenshot shows the option to create a new agent or app project in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png":::
 
 1. Select **General Teams Agent** to create an agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
 
 1. Select a service to access Large Language Model (LLM) for your agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
 
     Choose one of the following options:
 
@@ -69,7 +70,7 @@ For more information about setting up Azure OpenAI services, see:
 
 1. Select the **Default folder** as the **Workspace Folder** for your agent project.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the workspace folder for your agent project." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the project workspace folder for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
 
 1. Enter the agent name and then select **Enter**.
 
