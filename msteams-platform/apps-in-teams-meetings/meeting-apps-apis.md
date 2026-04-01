@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 03/27/2026
+ms.date: 04/01/2026
 ---
 
 # Meeting apps APIs
@@ -1504,7 +1504,7 @@ The following examples show how to capture the meeting start and end events:
 
 # [C#](#tab/dotnet1)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
@@ -1548,7 +1548,7 @@ teamsApp.OnMeetingStart(async context =>
 
 # [TypeScript](#tab/typescript1)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingstarteventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
@@ -1594,7 +1594,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 # [C#](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingendactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
@@ -1681,7 +1681,7 @@ teamsApp.OnMeetingEnd(async context =>
 
 # [TypeScript](#tab/typescript2)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingendeventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```typescript
@@ -1914,7 +1914,7 @@ The following examples show how to capture the participant join and leave events
 
 # [C#](#tab/dotnet3)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantjoinactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
@@ -1947,7 +1947,7 @@ teamsApp.OnMeetingJoin(async context =>
 
 # [TypeScript](#tab/typescript3)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
@@ -2002,8 +2002,7 @@ async def handle_meeting_participant_join(ctx: ActivityContext[MeetingParticipan
 
 # [C#](#tab/dotnet4)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantleaveactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
@@ -2033,7 +2032,7 @@ teamsApp.OnMeetingLeave(async context =>
 
 # [TypeScript](#tab/typescript4)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantleaveeventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
