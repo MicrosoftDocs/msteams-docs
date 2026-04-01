@@ -146,7 +146,7 @@ adaptive_card_response = {
 ## See also
 
 * [Cards and dialogs](../../cards-and-task-modules.md)
-* [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+* [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#card-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Form completion feedback](../cards-actions.md#form-completion-feedback)
+* [Server handlers](../cards-actions.md#server-handlers)
