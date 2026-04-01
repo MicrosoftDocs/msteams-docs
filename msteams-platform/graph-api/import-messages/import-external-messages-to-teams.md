@@ -27,8 +27,8 @@ Teams supports migrating external message to existing channels or chats. Use any
 To enable migration mode in an existing channel or chat, see [Existing channel migration](#existing-channel-migration).
 
 > [!NOTE]
->
-> Federated content can't be imported. All imported content must come from the authenticated tenant.> The application that calls `startMigration` on a thread owns that migration session end-to-end. The same app must invoke `importMessage` and `completeMigration`. No other app can call these APIs on the thread until the owning app completes migration.
+> Federated content can't be imported. All imported content must come from the authenticated tenant.<br>
+> The application that calls `startMigration` on a thread owns that migration session end-to-end. The same app must invoke `importMessage` and `completeMigration`. No other app can call these APIs on the thread until the owning app completes migration.
 
 `migrationMode` is a special state that ensures data integrity by preventing certain operations during data migration.
 
