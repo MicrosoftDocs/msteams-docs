@@ -4,7 +4,6 @@ description: Learn what are the customizing options in Microsoft Teams while des
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: surbhigupta
 ms.date: 02/06/2025
 --- 
 # Understand the Microsoft Teams app structure
