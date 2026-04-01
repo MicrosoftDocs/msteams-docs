@@ -1,7 +1,7 @@
 ---
 title: Prerequisites to Create Teams Agent or App
 author: zyxiaoyuer
-description: Learn about the tools required to build a Teams agent or app in Visual Studio Code, how to prepare accounts, verify and enable custom upload.
+description: Learn about the tools required to build a Teams app in Visual Studio Code, how to prepare accounts, verify and enable custom app upload.
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/21/2024

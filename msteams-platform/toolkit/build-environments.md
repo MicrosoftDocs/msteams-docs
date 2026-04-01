@@ -1,7 +1,6 @@
 ---
 title: Build Apps with Agents Toolkit - Prepare
-author: vikasalmal
-description: Learn about build environments of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building agents and apps.
+description: Learn about build environments such as SPFx of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 03/01/2026

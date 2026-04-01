@@ -4,7 +4,6 @@ description: Learn how tab functions on Android and iOS Microsoft Teams clients 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 11/02/2022
-ms.owner: ryanbliss
 ---
 
 # Tabs on mobile

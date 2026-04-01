@@ -2,7 +2,6 @@
 title: Design App with Advanced UI Components
 author: heath-hamilton
 description: Learn about the Teams UI components, such as breadcrumbs, left nav, notification bar, Stageview, and Toolbar along with relevant use cases. 
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 05/17/2023

@@ -1,6 +1,5 @@
 ---
 title: Add Media Capabilities to Teams App 
-author: surbhigupta
 description: Learn how to use Teams JavaScript client library to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium

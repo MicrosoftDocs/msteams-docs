@@ -1,9 +1,7 @@
 ---
 title: Deep Links for Workflows in Teams App
-author: surbhigupta
 description: Learn how to create deep links to a specific task in Microsoft Teams and navigate using them in your Teams. Code sample (.NET, Node.js).
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 10/29/2023
 ---

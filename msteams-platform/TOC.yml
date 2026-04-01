@@ -889,8 +889,6 @@
       - name: Low-code custom apps
         href: samples/teams-low-code-solutions.md
         displayName: Power BI, Power Platform apps, Project Oakdale
-      - name: Add Power Virtual Agents chatbot
-        href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: App templates for Microsoft Teams
       href: samples/app-templates.md
       displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
