@@ -1,7 +1,6 @@
 ---
 title: App Notification Types
 description: Learn how to design effective app notifications and choose the right framework for your app such as activity feed notification and interactive notification.
-ms.author: surbhigupta
 ms.topic: reference
 ms.date: 02/23/2024
 ---

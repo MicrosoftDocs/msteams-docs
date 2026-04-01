@@ -6,7 +6,6 @@ description: Learn how to integrate Fluid-powered real-time collaboration featur
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 12/13/2022
-ms.owner: ryanbliss
 ---
 
 # Use Fluid with Teams

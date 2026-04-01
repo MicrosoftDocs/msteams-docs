@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Learn what you can do during the final stage of your app to grow your app, wider TAM coverage, convert PQLs from app, app metrics and data-backed insights.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 02/21/2023
 ---
 # Succeed with your collaborative app
