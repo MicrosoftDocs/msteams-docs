@@ -142,7 +142,7 @@ To learn more about the directory structure of different types of scenario-based
 <br>
 -->
 
-For trying out more step-by-step guiges on building apps, see [Tutorials](../get-started/tutorials.md).
+For trying out more step-by-step guides on building apps, see [Tutorials](../get-started/tutorials.md).
 
 ## See also
 
