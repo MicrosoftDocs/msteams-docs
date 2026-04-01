@@ -1,10 +1,8 @@
 ---
 title: Adaptive Card Previewer - Visual Studio
-author: surbhigupta
 description: In this article, learn more about the Microsoft Adaptive Card previewer using Microsoft 365 Agents Toolkit for Visual Studio, features, advantages, limitations.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 02/13/2024
 ---
 

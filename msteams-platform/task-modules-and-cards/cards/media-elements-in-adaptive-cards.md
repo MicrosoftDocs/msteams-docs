@@ -1,6 +1,5 @@
 ---
 title: Add Audio/Video Clips in Adaptive Cards
-author: surbhigupta12
 description: Learn how the media files are added and supported in the Adaptive Card, and support consumption directly within Teams Adaptive Card.
 ms.localizationpriority: high
 ms.topic: reference
