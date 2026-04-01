@@ -14,7 +14,7 @@ Learn how to create Microsoft Teams apps using Visual Studio Code and the Micros
 > [!div class="nextstepaction"]
 > [Learn to build agents](../agents-in-teams/build-first-agent.md)
 
-To start with Teams capabilities, you can create the following types of Teams app:
+You can create the following types of Teams app:
 
 | App Types | Definition |
 | --- | --- |
@@ -29,19 +29,19 @@ The process to create a new Teams app is similar for all types of apps. To creat
 
 1. Select the **Microsoft 365 Agents Toolkit** > **Create a New Agent/App** > select **Teams Agents and Apps**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/toolkit-activity-bar.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/toolkit-activity-bar.png" alt-text="Screenshot shows the option to create a new agent or app in the Agents Toolkit sidebar.":::
 
 1. Select **Other Teams Capabilities**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/other-teams-capabilities.png" alt-text="Screenshot shows the Other Teams Capabilities to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/other-teams-capabilities.png" alt-text="Screenshot shows the option to select the other Teams Capabilities.":::
 
 1. In this example, select **Tab** as app capability.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the option to select the App Capability that you want to build.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the option to select the default location for the project workspace.":::
 
     To change the default location, follow these steps:
 
@@ -53,11 +53,11 @@ The process to create a new Teams app is similar for all types of apps. To creat
 
 1. Enter a suitable name, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows the field to enter the app name.":::
 
    The Teams tab app workspace is created in a few seconds.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/toolkit-v2/first-tab/tab-app-created.png":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows that the project workspace is created." lightbox="../assets/images/toolkit-v2/first-tab/tab-app-created.png":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20new%20Teams%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fcreate-new-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fcreate-new-project.md&documentVersionIndependentId=13410ab8-6255-e478-9a1d-4b3b348f1d16&author=surbhigupta&platformId=b1ad62b3-b835-8765-636a-213eee2696b6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
