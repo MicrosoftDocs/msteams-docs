@@ -16,14 +16,14 @@ This article explains how environment files work, how local and remote environme
 
 ## Using environment files with Agents Toolkit
 
-Agents Toolkit uses a naming convention for the environment files such as: `.env.{environment-name}`. Using the toolkit's lifecycle commands (Provision, Deploy, or Publish) you're required to provide an environment name. The name of the environment should be the same as the value chosen for `{environment-name}` when creating the environment file.
+Agents Toolkit follows a standard naming pattern for environment files, such as `.env.{environment-name}`. When you run lifecycle commands like Provision, Deploy, or Publish, you must specify an environment name. This name must match the `{environment-name}` used in the corresponding environment file.
 
 > [!NOTE]
 > You can define environment variables for Agents Toolkit in your current shell environment which override any values in the `.env` file during a naming conflict.
 
 ### Environment file location
 
-By default, Agents Toolkit doesn't load any env variables, and just proceed with executing actions and write outputs to `./env/.env.dev`. If `environmentFolderPath` isn't defined, Agents Toolkit doesn't load any environment variables from the `.env` file, and executes actions assuming the env is dev. The outputs are written to `./env/.env.dev`.
+By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to ./env/.env.dev. If you don't specify an environmentFolderPath, it will not read variables from a .env file and will assume the environment is set to dev, with outputs directed to ./env/.env.dev.
 
 ## Local environments
 
