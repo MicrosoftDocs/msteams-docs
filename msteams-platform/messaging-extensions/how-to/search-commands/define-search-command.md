@@ -46,12 +46,11 @@ To create a search-based message extension using Agents Toolkit, follow these st
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New Agents/App** > **Teams App**.
+1. Select **Create a New Agents/App** > **Teams Agents and Apps** > **Other Teams Capabilities**.
 1. Select **Message Extension**.
-1. Select **Custom Search Results**.
 1. Select a **programming language**.
 1. Select **Default folder**.
-1. Enter the name of your app and select **Enter**.
+1. Enter the name of your app/agent and select **Enter**.
 
    Agents Toolkit scaffolds your project and creates a search message extension.
 
@@ -107,7 +106,7 @@ To run the message extension in Teams, follow these steps:
    * Parameter description
    * Select the type of input
 
-1. Select **Save**. A search message extension using bot framework created.
+1. Select **Save**. A search message extension is created.
 1. At the upper-right corner, select **Preview in Teams**. The app opens in Teams desktop or web client.
 
 ---
@@ -125,7 +124,7 @@ The following code provides an example of search-based for message extensions:
 
 # [.NET](#tab/dotnet)
 
-* [SDK reference](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/message-extensions/search-commands/)
+* [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=csharp)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -177,11 +176,11 @@ teams.OnQuery(async (ctx) =>
 
 # [Node.js](#tab/nodejs)
 
-* [SDK reference](https://microsoft.github.io/teams-sdk/typescript/in-depth-guides/message-extensions/search-commands/)
+* [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=typescript)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-```javascript
+```TypeScript
 app.on('message.ext.query', async ({ activity }) => { 
   const commandId = activity.value?.commandId 
   const params = activity.value?.parameters || [] 
@@ -221,7 +220,7 @@ app.on('message.ext.query', async ({ activity }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](https://microsoft.github.io/teams-sdk/python/in-depth-guides/message-extensions/search-commands/)
+* [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=python)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
@@ -268,7 +267,7 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
 
 | Sample name           | Description | .NET    | Node.js   | Python|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/TeamsSDK/samples/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/TeamsSDK/samples/bot-message-extensions/python/bot-message-extensions)
+|Bot Message Extensions   | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)
 
 ## Next step
 
