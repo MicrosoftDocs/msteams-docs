@@ -8,7 +8,8 @@ ms.date: 03/01/2026
 
 # Prepare to build apps using Microsoft 365 Agents Toolkit
 
-Microsoft 365 Agents Toolkit empowers developers to build feature-rich agents and apps for Microsoft Teams by integrating Azure Functions and leveraging various build environments. Whether you're creating agents or apps using JavaScript, TypeScript, or Python, the toolkit simplifies the development process and supports a wide range of solutions, including tab apps, bot apps, and message extension apps.
+The Microsoft 365 Agents Toolkit empowers developers to build rich agents and apps for Microsoft Teams. It plugs into Azure Functions and works with different development setups.
+You can use JavaScript, TypeScript, or Python (Python support is currently available in preview). The toolkit streamlines development and supports tabs, bots, and message extension apps.
 
 :::image type="content" source="../assets/images/toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Agents Toolkit." lightbox="../assets/images/toolkit-v2/build-apps-ttk-vsc.png":::
 
@@ -59,7 +60,7 @@ Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. T
 
 ## Support for Azure Functions
 
-You can use Agents Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest. Azure Functions provides "compute on-demand" in two significant ways:
+Agents Toolkit lets you integrate [Azure Functions](/azure/azure-functions/functions-overview) directly into your apps. You focus on the code that matters, while Azure Functions takes care of the infrastructure. It delivers "compute-on-demand" in two key ways:
 
 1. Allows implementing your app's logic into readily available blocks of code. These blocks are called functions.
 1. Scales to meet demand with as many resources and function instances as necessary as the requests increase.
