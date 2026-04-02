@@ -25,6 +25,9 @@
   - name: Enable targeted messages for agents
     href: agents-in-teams/targeted-messages.md
     displayName: targeted messages, proactive messages, adaptive cards, message actions, message extension, notifications
+  - name: Enable slash commands for agents
+    href: agents-in-teams/agent-slash-commands.md
+    displayName: slash commands, agents, bots, AI bot, custom engine agent, Teams SDK, targeted messages, message extension
 - name: Tools and SDKs
   items:
   - name: Overview
