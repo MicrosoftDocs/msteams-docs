@@ -106,7 +106,9 @@ An Azure account lets you host a Teams agent or app, or its back-end resources, 
 * You plan to host back-end resources on another cloud provider or your own publicly accessible servers.
 
 > [!NOTE]
-> You can use Azure account to provision Azure resource to host your Teams agent or app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
+> You can use Azure account to provision Azure resource to host your Teams agent or app. [Create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) if you don’t already have one.
+>
+> An Azure account isn’t required if you’re not using the Agents Toolkit for provisioning and deployment.
 
 <!--
 ### SharePoint collection site administrator account
@@ -116,13 +118,13 @@ While creating Teams app using SPFx environment, you must have a SharePoint coll
 
 ## Verify custom app upload permission
 
-After creating the agent or app, you must load it in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option. You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
+After creating your agent or app, you must load it into Teams without distributing it. This is called a custom app upload. Sign in to your Microsoft 365 account to access this option. You can check whether custom app upload is enabled using either Visual Studio Code or Teams client.
 
 <br>
 <details>
 <summary><b>Verify custom app upload permission using Visual Studio Code</b></summary>
 
-You can use this method to verify custom app upload permission only after you have created a project using Microsoft 365 Agents Toolkit. If you haven't created a project, you can verify custom app upload permission using Teams client.
+You can verify custom app upload permissions this way only after you've created a project with the Microsoft 365 Agents Toolkit. If you haven’t created a project yet, use the Teams client to check the permission instead.
 
 1. Open **Visual Studio Code**.
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
