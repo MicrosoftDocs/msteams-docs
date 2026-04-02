@@ -4,7 +4,7 @@ description: Create an Incoming Webhook to Teams app and post external requests 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: hantony
-ms.date: 03/02/2026
+ms.date: 04/01/2026
 ---
 
 # Create Incoming Webhooks
@@ -43,99 +43,9 @@ The following table provides the features and description of an Incoming Webhook
 > * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 > * For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
-## Create an Incoming Webhook
-
-To add an Incoming Webhook to a Teams channel, follow these steps:
-
-# [New Teams](#tab/newteams)
-
-1. In the New Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
-
-1. Select **More options** &#8226;&#8226;&#8226; on the right side of the channel name.
-
-1. Select **Manage channel**.
-
-    :::image type="content" source="../../assets/images/manage-channel-new-teams.png" alt-text="Screenshot shows the Manage channel option under More options for Teams 2.1.":::
-
-    For members who aren't admins of the channel, the **Manage channel** option is available under the **Open channel details** option in the upper-right corner of a channel.
-
-    :::image type="content" source="../../assets/images/Connectors/manage-channel-non-admin-user.png" alt-text="Screenshot of the Manage channel option for non-admin users." lightbox="../../assets/images/Connectors/manage-channel.png":::
-
-1. Select **Edit**.
-
-    :::image type="content" source="../../assets/images/edit-connector-new-teams.png" alt-text="Screenshot shows the edit option under Connectors option to add an Incoming Webhook.":::
-
-1. Search for **Incoming Webhook** and select **Add**.
-
-   :::image type="content" source="../../assets/images/search-add-webhook.png" alt-text="Screenshot shows the Add option to add an Incoming Webhook.":::
-
-    The Incoming Webhook dialog appears.
-
-1. Select **Add**.
-
-    :::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
-
-    > [!NOTE]
-    > If you’ve already added an Incoming Webhook, the **Configure** option appears. Select **Configure** to create an Incoming Webhook.
-
-1. Provide a name for the webhook and upload an image if necessary.
-
-1. Select **Create**.
-
-   :::image type="content" source="../../assets/images/create-incoming-webhook-new-teams.png" alt-text="Screenshot shows the name and image fields to be filled to create the webhook.":::
-
-1. Copy and save the unique webhook URL present in the dialog. The URL maps to the channel and you can use it to send information to Teams.
-
-1. Select **Done**. The webhook is now available in the Teams channel.
-
-   :::image type="content" source="../../assets/images/url_1-new-teams.png" alt-text="Screenshot shows the unique webhook URL.":::
-
-The following graphical representation provides the steps to create an Incoming Webhook:
-
-:::image type="content" source="../../assets/images/create-incoming-webhook.gif" alt-text="The graphical representation shows the steps to create an Incoming Webhook.":::
-
-# [Classic Teams](#tab/classicteams)
-
-1. In the Classic Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
-
-1. Select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
-
-1. Select **Connectors** from the dropdown menu.
-
-   :::image type="content" source="../../assets/images/connectors_1.png" alt-text="Screenshot shows how to select connector.":::
-
-1. Search for **Incoming Webhook** and select **Add**.
-
-   :::image type="content" source="../../assets/images/search-add-webhook.png" alt-text="Screenshot shows the Add option to add an Incoming Webhook.":::
-
-    The Incoming Webhook dialog appears.
-
-1. Select **Add**.
-
-    :::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
-
-    > [!NOTE]
-    > If you’ve already added an Incoming Webhook, the **Configure** option appears. Select **Configure** to create an Incoming Webhook.
-
-1. Provide a name for the webhook and upload an image if necessary.
-
-1. Select **Create**.
-
-   :::image type="content" source="../../assets/images/create-incoming-webhook.png" alt-text="Screenshot shows the name and image fields to be filled to create the webhook.":::
-
-1. Copy and save the unique webhook URL present in the dialog. The URL maps to the channel and you can use it to send information to Teams.
-
-1. Select **Done**.
-
-   :::image type="content" source="../../assets/images/url_1.png" alt-text="Screenshot shows the unique webhook URL.":::
-
-The webhook is now available in the Teams channel.
-
----
-
 ## Create Webhooks using Workflows
 
-The **Workflows** app in Microsoft Teams allows you to create automated workflows that can receive HTTP requests through a webhook URL. When the webhook is triggered, the workflow can post a message or an Adaptive Card to a Teams channel or chat.
+The **Workflows** app in Microsoft Teams enables you to create automated workflows that can receive HTTP requests through a webhook URL. When the webhook triggers, the workflow can post a message or an Adaptive Card to a Teams channel or chat.
 
 Workflows are powered by Microsoft Power Automate and provide a flexible way to process webhook payloads before posting them to Teams.
 
@@ -150,8 +60,9 @@ You can create a webhook workflow directly from a channel using a template.
 1. Search for and select a template such as **Send webhook alerts to a channel**.
    :::image type="content" source="../../assets/images/connectors/workflows-template-selection.png" alt-text="Select the Send webhook alerts to a channel template.":::
 1. Configure the workflow parameters.
-1. Select **Create**.
-1. After the workflow is created, copy the generated **Webhook URL**.
+   :::image type="content" source="../../assets/images/connectors/workflows-parameters.png" alt-text="Add the parameters.":::
+1. Select **Save**.
+1. After the workflow is created, copy the webhook link.
    :::image type="content" source="../../assets/images/connectors/workflows-url-copy.png" alt-text="Copy the webhook URL generated by the workflow.":::
 Use the webhook URL in your external application or service to send HTTP POST requests.
 
@@ -167,15 +78,10 @@ You can also create a webhook workflow manually using the Workflows app.
    :::image type="content" source="../../assets/images/connectors/search-workflows.png" alt-text="Search for workflows.":::
 1. Select **Build from scratch**.
    :::image type="content" source="../../assets/images/connectors/workflows-build-from-scratch.png" alt-text="Build from scratch.":::
-1. Search for and select the trigger **When a Teams webhook request is received**.
+1. Select the trigger **When a Teams webhook request is received**.
    :::image type="content" source="../../assets/images/connectors/webhook-trigger.png" alt-text="Select the trigger.":::
-1. Configure the trigger settings if required.
-1. Add an action such as **Post card in a chat or channel**.
-1. Configure the message or Adaptive Card content.
+1. Configure the trigger settings.
 1. Save the workflow.
-1. Copy the generated **Webhook URL**.
-
-External services can now send HTTP POST requests to this webhook URL.
 
 ### Send a request to the webhook
 
@@ -285,74 +191,34 @@ axios.post(webhookUrl , formatted_Card_Payload )
 
 ---
 
-## Remove Incoming Webhooks
+## Manage your workflows
 
-To remove an Incoming Webhook from a Teams channel, follow these steps:
+You can manage your workflows by turning them on or off, or by deleting them when no longer needed.
 
-# [New Teams](#tab/newteams)
+### Turn on or turn off your workflow
 
-1. In the New Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an Incoming Webhook.
+Turn on or turn off a workflow at any time from the Workflows app.
 
-1. Select **More options** &#8226;&#8226;&#8226; on the right side of the channel name.
+1. Open the **Workflows** app.
+1. Scroll down the **Home** page to find the **Your workflows** section.
+1. Next to the workflow you want to turn on or turn off, select **More actions (…)**.
+1. From the menu, select **Turn on** or **Turn off**.
 
-1. Select **Manage channel**.
+:::image type="content" source="media/add-incoming-webhook/workflows-turnon-off-1775110382584.png" alt-text="Workflows-turnon-off.":::
 
-    :::image type="content" source="../../assets/images/manage-channel-new-teams.png" alt-text="Screenshot shows the Manage channel option under More options.":::
+### Delete your workflow
 
-1. Select **Edit**.
+Remove a workflow from your list at any time.
 
-    :::image type="content" source="../../assets/images/edit-connector-new-teams.png" alt-text="Screenshot shows the edit option under Connectors option.":::
+1. Open the **Workflows** app.
+1. Scroll down the **Home** page to find the **Your workflows** section.
+1. Next to the workflow you want to delete, select **More actions (…)**.
+1. Select **Delete**.
+:::image type="content" source="media/add-incoming-webhook/workflow-delete-1775111178626.png" alt-text="Workflow-delete.":::
 
-1. In the left pane, select **Configured**.
+1. In the confirmation window, select **Delete** to permanently remove the workflow.
 
-1. Under Incoming Webhook, select **1 Configured**.
-
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your connectors.":::
-
-1. Select **Manage**.
-
-   :::image type="content" source="../../assets/images/manage_1.png" alt-text="Screenshot shows how to manage for connector that you want to remove.":::
-
-1. Select **Remove**.
-
-   :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
-
-   The Remove Configuration dialog appears.
-
-1. Select the required checkboxes.
-
-1. Select **Remove**.
-
-   :::image type="content" source="../../assets/images/finalremove_1.png" alt-text="Screenshot shows how to remove an Incoming Webhook from Teams channel.":::
-
-The webhook is now removed from the Teams channel.
-
-# [Classic Teams](#tab/classicteams)
-
-1. In the Classic Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an Incoming Webhook.
-1. Select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
-1. Select **Connectors** from the dropdown menu.
-1. In the left pane, select **Configured**.
-1. Under Incoming Webhook, select **1 Configured**.
-
-   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your connectors.":::
-
-1. Select **Manage**.
-
-   :::image type="content" source="../../assets/images/manage_1.png" alt-text="Screenshot shows how to manage for connector that you want to remove.":::
-
-1. Select **Remove**.
-
-   :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
-
-   The Remove Configuration dialog appears.
-
-1. Select the required checkboxes.
-1. Select **Remove**.
-
-   :::image type="content" source="../../assets/images/finalremove_1.png" alt-text="Screenshot shows how to remove an Incoming Webhook from Teams channel.":::
-
-The webhook is now removed from the Teams channel.
+:::image type="content" source="media/add-incoming-webhook/workflow-delete-popup1-1775111268730.png" alt-text="Workflow-delete-popup.":::
 
 ---
 
