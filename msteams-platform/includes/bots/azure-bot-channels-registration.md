@@ -3,7 +3,6 @@ title: Azure bot channel registration
 description: With this learning module, learn about Azure bot channels for registration and how to enable Teams channel after registration.
 localization_priority: Normal
 ms.topic: overview
-ms.author: surbhigupta12
 ms.date: 06/02/2022
 ---
 

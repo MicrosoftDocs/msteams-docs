@@ -1,6 +1,5 @@
 ---
 title: Explore Responses to Action Commands
-author: surbhigupta
 description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
 ms.topic: article
