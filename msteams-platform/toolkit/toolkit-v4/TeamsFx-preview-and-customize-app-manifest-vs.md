@@ -1,8 +1,6 @@
 ---
 title: Customize App Manifest in Agents Toolkit
-author: surbhigupta
 description: Learn how to customize and preview the app manifest for different environments in Agents Toolkit for Visual Studio, and sync local changes in Developer Portal.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022

@@ -1,9 +1,7 @@
 ---
 title: Execution and handling of deep links
-author: surbhigupta
 description: Learn how to execute deep links in your Microsoft Teams personal tab, shared tab, chat message, and bot, handle deep links, and consume a deep link from a tab.
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 02/26/2025
 ---

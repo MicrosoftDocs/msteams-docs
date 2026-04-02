@@ -3,7 +3,6 @@ title: Stream bot messages
 description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams SDK and configure streaming bot messages. 
 ms.date: 02/19/2025
 ms.topic: conceptual
-author: surbhigupta12
 ms.author: vikasalmal
 ms.localizationpriority: high
 ---
