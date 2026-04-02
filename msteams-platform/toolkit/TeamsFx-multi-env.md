@@ -23,11 +23,12 @@ Agents Toolkit follows a standard naming pattern for environment files, such as 
 
 ### Environment file location
 
-By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to ./env/.env.dev. If you don't specify an environmentFolderPath, it will not read variables from a .env file and will assume the environment is set to dev, with outputs directed to ./env/.env.dev.
+By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to `./env/.env.dev`. If you don't specify an `environmentFolderPath`, it doesn't read variables from a .env file and assumes the environment is set to `dev`, with outputs directed to `./env/.env.dev`.
 
 ## Local environments
 
-To build a Microsoft Teams app, certain resources, such as app registrations and the Teams client are hosted in the cloud. However, the other resources, such as including the application logic can be hosted locally to simplify the testing changes during app development. All Agents Toolkit project templates and samples are configured with a `local` environment. The local environment has `./env/.env.local` and `./env/.env.local.user` files and helps you to run your app with a locally hosted web server. When using Visual Studio Code (VS Code) and Visual Studio (VS), the project templates and samples are set up to support debugging with breakpoints.
+Building a Microsoft Teams app involves both cloud and local resources.
+Cloud resources include app registrations and the Teams client, while application logic can run locally to speed up development and testing. All Agents Toolkit templates include a preconfigured `local` environment with `./env/.env.local` and `./env/.env.local.user` files. This setup lets you run your agent or app on a local web server and debug it with breakpoints in Visual Studio Code or Visual Studio.
 
 To differentiate between a local environment and all other environments, you can create a separate project file called `m365agents.local.yml` in the same directory as `m365agents.yml`.
 
