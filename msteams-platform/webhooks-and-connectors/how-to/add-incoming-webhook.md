@@ -204,7 +204,7 @@ Turn on or turn off a workflow at any time from the Workflows app.
 1. Next to the workflow you want to turn on or turn off, select **More actions (…)**.
 1. From the menu, select **Turn on** or **Turn off**.
 
-:::image type="content" source="media/add-incoming-webhook/workflows-turnon-off-1775110382584.png" alt-text="Workflows-turnon-off.":::
+:::image type="content" source="media/add-incoming-webhook/workflows-turn-on-off.png" alt-text="Workflows-turnon-off.":::
 
 ### Delete your workflow
 
@@ -214,11 +214,11 @@ Remove a workflow from your list at any time.
 1. Scroll down the **Home** page to find the **Your workflows** section.
 1. Next to the workflow you want to delete, select **More actions (…)**.
 1. Select **Delete**.
-:::image type="content" source="media/add-incoming-webhook/workflow-delete-1775111178626.png" alt-text="Workflow-delete.":::
+:::image type="content" source="media/add-incoming-webhook/workflow-delete.png" alt-text="Workflow-delete.":::
 
 1. In the confirmation window, select **Delete** to permanently remove the workflow.
 
-:::image type="content" source="media/add-incoming-webhook/workflow-delete-popup1-1775111268730.png" alt-text="Workflow-delete-popup.":::
+:::image type="content" source="media/add-incoming-webhook/workflow-delete-pop-up.png" alt-text="Workflow-delete-popup.":::
 
 ---
 
