@@ -1,8 +1,6 @@
 ---
 title: TeamsFx Environments in Agents Toolkit
-author: vikasalmal0201
 description: Learn about TeamsFX multiple environment, use env files with Microsoft 365 Agents Toolkit, create a new environment manually in Visual Studio Code, and select target environment.
-ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 02/06/2025

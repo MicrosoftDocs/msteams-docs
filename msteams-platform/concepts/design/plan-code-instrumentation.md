@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Learn about planning code instrumentation using an analytics service such as TrackEvent, retention workbook, use flows, and telemetry as an investment.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 11/28/2022
 ---
 

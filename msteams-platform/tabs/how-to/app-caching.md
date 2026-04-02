@@ -1,11 +1,10 @@
 ---
 title: Enable App Suspension for Tab App
-author: surbhigupta
 description: Learn how to enable app suspension for tab app in Teams, improve app's subsequent launch time and about limitations, troubleshooting, and code sample.
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
-ms.date: 09/04/2025
+ms.date: 03/02/2026
 ---
 
 # App suspension for your tab app
@@ -222,7 +221,7 @@ The following are the limitations for app suspension within the Teams app:
 
 |Sample name | Description | Node.js |
 |----------------|--------------------------------------------------------|
-| App caching | This sample shows how to enhance app loading times during meetings with side panel caching, improving user experience in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
+| App caching | This sample shows how to enhance app loading times during meetings with side panel caching, improving user experience in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-cache-meetings/nodejs) |
 
 ## See also
 

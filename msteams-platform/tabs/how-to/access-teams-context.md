@@ -3,8 +3,7 @@ title: Get Contextual Information for Tabs
 description: Learn to get context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.date: 03/19/2025
-ms.owner: ryanbliss
+ms.date: 03/02/2026
 ---
 
 # Get context for your tab
@@ -375,7 +374,7 @@ The following image shows the dark theme option in the Teams:
 
 | Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
-|Tab channel context| This sample illustrates the capabilities of a tab application that shows the tab context object specifically for private and shared channels in Microsoft Teams. Users can expand and copy JSON slices from the context object, providing valuable insights based on the channel type. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
+|Tab channel context| This sample illustrates the capabilities of a tab application that shows the tab context object specifically for private and shared channels in Microsoft Teams. Users can expand and copy JSON slices from the context object, providing valuable insights based on the channel type. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-channel-context/nodejs)
 
 ## See also
 

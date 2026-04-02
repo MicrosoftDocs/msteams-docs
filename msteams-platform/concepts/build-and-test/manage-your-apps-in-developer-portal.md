@@ -3,7 +3,6 @@ title: Manage Apps with Developer Portal
 description: Learn how to configure, develop, publish, manage, validate against Microsoft's test cases, and publish your apps using the Developer Portal for Teams.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 01/23/2025
 ---
 
@@ -287,7 +286,7 @@ Create and manage Agent Identity Blueprints in Developer Portal, while manage ag
 
 #### View and use existing Agent Identity Blueprints
 
-The Agent Identity Blueprint tool in Developer Portal displays a list of existing blueprints available in your tenant.
+The Agent Identity Blueprint tool in Developer Portal displays a list of existing blueprints available in your tenant. While Blueprints are visible to all users in a tenant, only the owners of a blueprint can make changes to it.
 
 :::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints" lightbox="../../assets/images/tdp/list-agent-blueprint.png":::
 

@@ -1,6 +1,5 @@
 ---
 title: Message Extension as Agent for Copilot
-author: surbhigupta
 description: Learn how to build a bot-based message extension agent for Microsoft 365 Copilot using Developer Portal for Teams and Microsoft 365 Agents Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
