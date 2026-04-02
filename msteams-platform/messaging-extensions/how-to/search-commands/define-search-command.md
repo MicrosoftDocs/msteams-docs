@@ -125,7 +125,7 @@ The following code provides an example of search-based for message extensions:
 # [.NET](#tab/dotnet)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=csharp)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
@@ -177,8 +177,7 @@ teams.OnQuery(async (ctx) =>
 # [Node.js](#tab/nodejs)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
 ```TypeScript
 app.on('message.ext.query', async ({ activity }) => { 
@@ -221,7 +220,7 @@ app.on('message.ext.query', async ({ activity }) => {
 # [Python](#tab/python)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=python)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/python/bot-message-extensions/main.py)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
 @app.on_message_ext_query 
