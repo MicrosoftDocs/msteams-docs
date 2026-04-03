@@ -24,6 +24,7 @@ If your Teams app has declared in the [application manifest](native-device-permi
 
 After the **App permissions** option is selected, a pop-up appears where the user can enable the permissions button.
 
+:::image type="content" source="assets/images/tabs/browser-device-permissions/app-permission.png" alt-text="Screenshot of the pop=up message with app permissions":::
 A user needs to enable these permissions in the browser for these permissions to take effect. After user changes the app’s device permissions in the browser, they're prompted to reload the application in Teams.
 
 > [!IMPORTANT]
@@ -33,7 +34,8 @@ A user needs to enable these permissions in the browser for these permissions to
 
 Teams app that requires device permissions in the browser must show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you need to ensure that your instructions are pointing the user to correct location to access these permissions. The permissions differ for personal apps, dialogs, tabs in chats, and channels or meetings.
 
-:::image type="content" source="~/assets/images/tabs/enable-access.png" alt-text="Screenshot shows the Enable camera access screen.":::
+:::image type="content" source="../../assets/images/tabs/browser-device-permissions/enable-access.png" alt-text="Screenshot showing app permissions":::
+
 
 ## Code sample
 
