@@ -228,7 +228,7 @@ Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and te
 
 ## Publish webhook and connector
 
-1. [Create Incoming Webhooks](add-incoming-webhook.md#create-incoming-webhooks) directly for your team.
+1. [Create Incoming Webhooks](add-incoming-webhook.md#create-webhooks-using-workflows) directly for your team.
 
 1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?#integrate-the-configuration-experience) and publish your Incoming Webhook in a connector for Microsoft 365 Groups.
 
