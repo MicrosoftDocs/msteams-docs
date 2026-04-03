@@ -4,7 +4,6 @@ description: Learn about third-party OAuth IdP authentication, navigation and au
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 03/16/2026
-ms.owner: ryanbliss
 ---
 # Configure third party OAuth IdP authentication
 

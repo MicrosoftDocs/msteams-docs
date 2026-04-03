@@ -1,7 +1,6 @@
 ---
 title: The New Microsoft Teams Client
 description: Learn about the new Microsoft Teams, advantages, timelines, rollout, limitations, versions, deprecated features, and latest updates.
-author: surbhigupta
 ms.author: lajanuar
 ms.localizationpriority: medium
 ms.topic: reference

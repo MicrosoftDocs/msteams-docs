@@ -1,11 +1,8 @@
 ---
 title: Collaborate with Live Share Canvas
-author: surbhigupta
 description: In this module, learn more about Live Share canvas, an extension enabling inking, laser pointers, and cursors for meeting apps.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
-ms.owner: ryanbliss
 ms.date: 10/04/2022
 ---
 
