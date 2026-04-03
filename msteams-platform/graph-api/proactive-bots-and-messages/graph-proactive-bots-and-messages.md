@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
 ms.owner: vishachadha
-ms.date: 12/15/2022
+ms.date: 03/26/2026
 ---
 
 # Send proactive installation messages
@@ -149,7 +149,7 @@ If the user has Microsoft Teams running, app installation occurs immediately. A 
 
 ### Retrieve the conversation `chatId`
 
-When your app is installed for the user, the bot receives a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that contains the necessary information to send the proactive message.
+When your app is installed for the user, the bot receives an **install** activity. Use the `OnInstall` handler (C#) or `install.add` event (Node.js/Python) in the [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) to capture the `conversationId` needed to send the proactive message.
 
 **Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -183,7 +183,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 ### Send proactive messages
 
-Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team, and has received all the user information.
+Your bot can [send proactive messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) after the bot has been added for a user or a team, and has received all the user information.
 
 ## Code snippets
 
@@ -191,51 +191,86 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
-
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
-public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-   int msgSentCount = 0;
+using Microsoft.Teams.Api; 
+using Microsoft.Teams.Apps; 
+// ...
 
-   // Send notification to all the members.
-   foreach (var conversationReference in _conversationReferences.Values)
-   {
-       await turnContext.Adapter.ContinueConversationAsync(_configuration["MicrosoftAppId"], conversationReference, BotCallback, cancellationToken);
-       msgSentCount++;
-   }
+// Store conversation IDs (e.g., during install event) 
+var conversationStorage = new Dictionary<string, string>(); 
+app.OnInstall(async context => 
+{ 
+    var userId = context.Activity.From.AadObjectId; 
+    var conversationId = context.Activity.Conversation.Id; 
+    conversationStorage[userId] = conversationId; 
+    await context.Send("Hi! I will send you proactive notifications."); 
+}); 
 
-   return msgSentCount;
-}
-
-private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
-{
-    // Sends an activity to the sender of the incoming activity.
-   await turnContext.SendActivityAsync("Proactive hello.");
-}
+// Send proactive message from anywhere 
+public static async Task SendProactiveNotification(string userId) 
+{ 
+    var conversationId = conversationStorage.GetValueOrDefault(userId); 
+    if (conversationId is null) return; 
+    await app.Send(conversationId, "Proactive hello."); 
+} 
 ```
 
-# [Node.js](#tab/nodejs)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/cloudadapter?view=botbuilder-ts-latest&preserve-view=true#botbuilder-cloudadapter-continueconversationasync)
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
-```javascript
-server.get('/api/notify', async (req, res) => {
-    for (const conversationReference of Object.values(conversationReferences)) {
+```typescript
+import { MessageActivity } from '@microsoft/teams.api'; 
+import { App } from '@microsoft/teams.apps';
+// ...
 
-        // Sends a proactive message to a conversation.
-        await adapter.continueConversationAsync(process.env.MicrosoftAppId, conversationReference, async context => {
-            await context.sendActivity('proactive hello');
-        });
-    }
-    res.setHeader('Content-Type', 'text/html');
-    res.writeHead(200);
-    res.write('<html><body><h1>Proactive messages have been sent.</h1></body></html>');
-    res.end();
-});
+// Store conversation IDs 
+const conversationStorage = new Map<string, string>(); 
+
+// Capture conversation ID when app is installed 
+app.on('install.add', async ({ activity, send }) => { 
+  conversationStorage.set(activity.from.aadObjectId!, activity.conversation.id); 
+  await send('Hi! I will send you proactive notifications.'); 
+}); 
+
+// Send proactive message from anywhere 
+const sendProactiveNotification = async (userId: string) => { 
+  const conversationId = conversationStorage.get(userId); 
+  if (!conversationId) return; 
+  const activity = new MessageActivity('Proactive hello.'); 
+  await app.send(conversationId, activity); 
+};
+```
+
+# [Python](#tab/python)
+
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=python)
+
+```python
+from microsoft_teams.api import MessageActivityInput 
+from microsoft_teams.apps import App 
+# ...
+
+# Store conversation IDs 
+conversation_storage: dict[str, str] = {} 
+
+@app.on_install_add 
+async def handle_install(ctx): 
+    user_id = ctx.activity.from_property.aad_object_id 
+    conversation_storage[user_id] = ctx.activity.conversation.id 
+    await ctx.send("Hi! I will send you proactive notifications.") 
+
+# Send proactive message from anywhere 
+async def send_proactive_notification(user_id: str): 
+    conversation_id = conversation_storage.get(user_id, "") 
+    if not conversation_id: 
+        return 
+    activity = MessageActivityInput(text="Proactive hello.") 
+    await app.send(conversation_id, activity) 
 ```
 
 ---
@@ -254,7 +289,7 @@ server.get('/api/notify', async (req, res) => {
 ## See also
 
 * [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Proactive messaging with Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging)
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
