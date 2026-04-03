@@ -1,10 +1,12 @@
 ---
 title: Add Link Unfurling to App Manifest
+author: vikasalmal
 description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.author: vikasalmal
 ms.owner: slamba
-ms.date: 11/06/2024
+ms.date: 04/01/2026
 ---
 # Link unfurling
 
@@ -121,7 +123,7 @@ The following card types are supported:
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Connector card for Microsoft 365 Groups](../../task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 
-For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+For more information, see [Action.Execute](~/task-modules-and-cards/cards/cards-actions.md#actionexecute).
 
 The following code is an example of the `invoke` request:
 

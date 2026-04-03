@@ -1,546 +1,426 @@
----
-title: Add card actions in a bot
-description: Learn about card actions such as openUrl, messageBack, imBack, invoke, and signin, and Adaptive Card actions such as Action.Submit.
+﻿---
+title: Adaptive Card actions in Teams SDK
+description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 11/07/2024
+ms.date: 03/31/2026
 ---
 
 # Card actions
 
 [!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
-Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
+Adaptive Cards support interactive elements through actions—buttons, links, and input submission triggers that respond to user interaction. You can use these to collect form input, trigger workflows, open URLs, and more.
+
+The Teams SDK provides builder helpers and server-side handlers that simplify working with card actions. The following action types are supported:
+
+| Action type | Use case | Description |
+| --- | --- | --- |
+| `Action.Execute` | Server-side processing | Sends data to your bot for processing. Best for forms and multi-step workflows. |
+| `Action.Submit` | Simple data submission | Legacy action type. Prefer `Action.Execute` for new projects. |
+| `Action.OpenUrl` | External navigation | Opens a URL in the user's browser. |
+| `Action.ShowCard` | Progressive disclosure | Displays a nested card when selected. |
+| `Action.ToggleVisibility` | UI state management | Shows or hides card elements dynamically. |
 
 > [!NOTE]
-> The `CardAction` actions differ from `potentialActions` for connector cards for Microsoft 365 Groups when used from connectors.
+> For complete reference on action types, see the [Adaptive Cards documentation](https://adaptivecards.microsoft.com/?topic=Action.Execute).
 
-| Type | Action |
-| --- | --- |
-| `openUrl` | Opens a URL in the default browser. |
-| `messageBack` | Sends a message and payload to the bot from the user who selected the button or tapped the card. Sends a separate message to the chat stream. |
-| `imBack`| Sends a message to the bot from the user who selected the button or tapped the card. This message from user to bot is visible to all conversation participants. |
-| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message isn't visible. |
-| `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
+## Create actions with the SDK
 
-> [!NOTE]
->
->* Teams does not support `CardAction` types not listed in the previous table.
->* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#suggest-action-using-button) in Bot Framework or Azure Bot Service.
->* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
+The SDK provides builder helpers that abstract the underlying JSON. You can create actions using strongly typed classes from the `Microsoft.Teams.Cards` namespace.
 
-## Action type openUrl
+### Action.Execute
 
-`openUrl` action type specifies a URL to launch in the default browser.
-
-> [!NOTE]
->
-> * Your bot doesn't receive any notice on which button was selected.
-> * URLs don't support machine names that include numbers. For example, a hostname such as *userhostname123* isn't supported.
-> * When using `Action.OpenUrl`, make sure to include the domain of the target URL in the validDomains section of your app manifest. If the domain isn’t listed, Teams displays the message **URL may lead to untrusted content**.
-
-With `openUrl`, you can create an action with the following properties:
-
-| Property | Description |
-| --- | --- |
-| `title` | Appears as the button label. |
-| `value` | This field must contain a full and properly formed URL. |
-
-# [JSON](#tab/json)
-
-The following code shows an example of `openUrl` action type in JSON:
-
-```json
-{
-    "type": "openUrl",
-    "title": "Tabs in Teams",
-    "value": "https://msdn.microsoft.com/microsoft-teams/tabs"
-}
-```
+`Action.Execute` is the recommended action type for server-side processing. When a user selects an Execute action, the input values and any configured data are sent to your bot as a `card.action` activity.
 
 # [C#](#tab/csharp)
 
-The following code shows an example of `openUrl` action type in C#:
+The following code shows an example of an `Action.Execute` action in C#:
 
 ```csharp
-var button = new CardAction()
+using Microsoft.Teams.Cards;
+
+var action = new ExecuteAction
 {
-    Type = ActionTypes.OpenUrl,
-    Title = "Tabs in Teams",
-    Value = "https://learn.microsoft.com/microsoftteams/platform/"
+    Title = "Submit Feedback",
+    Data = new Union<string, SubmitActionData>(new SubmitActionData
+    {
+        NonSchemaProperties = new Dictionary<string, object?>
+        {
+            { "action", "submit_feedback" }
+        }
+    }),
+    AssociatedInputs = AssociatedInputs.Auto
 };
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JSON](#tab/json)
 
-The following code shows an example of `openUrl` action type in JavaScript:
+The following code shows an example of an `Action.Execute` action in JSON:
 
-```javascript
-CardFactory.actions([
+```json
 {
-    type: 'openUrl',
-    title: 'Tabs in Teams',
-    value: 'https://learn.microsoft.com/microsoftteams/platform/'
-}])
+  "type": "Action.Execute",
+  "title": "Submit Feedback",
+  "data": {
+    "action": "submit_feedback"
+  },
+  "associatedInputs": "auto"
+}
 ```
 
 ---
 
-## Action type messageBack
+### Action.OpenUrl
 
-With `messageBack`, you can create a fully customized action with the following properties:
+`Action.OpenUrl` opens a specified URL in the user's browser.
 
-| Property | Description |
-| --- | --- |
-| `title` | Appears as the button label. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
-| `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
-| `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
+> [!NOTE]
+> When using `Action.OpenUrl`, make sure to include the domain of the target URL in the `validDomains` section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
 
-The flexibility of `messageBack` means that your code can't leave a visible user message in the history simply by not using `displayText`.
+# [C#](#tab/csharp)
+
+The following code shows an example of an `Action.OpenUrl` action in C#:
+
+```csharp
+using Microsoft.Teams.Cards;
+
+var action = new OpenUrlAction("https://adaptivecards.microsoft.com")
+{
+    Title = "Learn More"
+};
+```
 
 # [JSON](#tab/json)
 
-The following code shows an example of `messageBack` action type in JSON:
+The following code shows an example of an `Action.OpenUrl` action in JSON:
 
 ```json
 {
-  "buttons": [
+  "type": "Action.OpenUrl",
+  "url": "https://adaptivecards.microsoft.com",
+  "title": "Learn More"
+}
+```
+
+---
+
+### Action sets
+
+You can group multiple actions together using `ActionSet` within an Adaptive Card:
+
+# [C#](#tab/csharp)
+
+The following code shows an example of grouping actions in C#:
+
+```csharp
+using Microsoft.Teams.Cards;
+
+var card = new AdaptiveCard
+{
+    Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+    Actions = new List<Microsoft.Teams.Cards.Action>
     {
-    "type": "messageBack",
-    "title": "My MessageBack button",
-    "displayText": "I clicked this button",
-    "text": "User just clicked the MessageBack button",
-    "value": "{\"property\": \"propertyValue\" }"
+        new ExecuteAction
+        {
+            Title = "Submit Feedback",
+            Data = new Union<string, SubmitActionData>(new SubmitActionData
+            {
+                NonSchemaProperties = new Dictionary<string, object?>
+                {
+                    { "action", "submit_feedback" }
+                }
+            })
+        },
+        new OpenUrlAction("https://adaptivecards.microsoft.com")
+        {
+            Title = "Learn More"
+        }
+    }
+};
+```
+
+# [JSON](#tab/json)
+
+The following code shows an example of grouping actions in JSON:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "Submit Feedback",
+      "data": {
+        "action": "submit_feedback"
+      }
+    },
+    {
+      "type": "Action.OpenUrl",
+      "url": "https://adaptivecards.microsoft.com",
+      "title": "Learn More"
     }
   ]
 }
 ```
 
-The `value` property can be either a serialized JSON string or a JSON object.
+---
+
+### Raw JSON alternative
+
+If you prefer to work with raw JSON, you can deserialize it into the SDK types:
+
+```csharp
+var actionJson = """
+{
+  "type": "Action.OpenUrl",
+  "url": "https://adaptivecards.microsoft.com",
+  "title": "Learn More"
+}
+""";
+var action = OpenUrlAction.Deserialize(actionJson);
+```
+
+## Work with input values
+
+### Associate data with cards
+
+You can send a card and have it be associated with specific data. Set the `data` value to be sent back to the client so you can associate it with a particular entity.
 
 # [C#](#tab/csharp)
 
-The following code shows an example of `messageBack` action type in C#:
+The following code shows an example of associating data with card actions in C#:
 
 ```csharp
-var button = new CardAction()
+using Microsoft.Teams.Cards;
+
+private static AdaptiveCard CreateProfileCard()
 {
-    Type = ActionTypes.MessageBack,
-    Title = "My MessageBack button",
-    DisplayText = "I clicked this button",
-    Text = "User just clicked the MessageBack button",
-    Value = "{\"property\": \"propertyValue\" }"
-};
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-The following code shows an example of `messageBack` action type in JavaScript:
-
-```javascript
-CardFactory.actions([
-{
-    type: 'messageBack',
-    title: "My MessageBack button",
-    displayText: "I clicked this button",
-    text: "User just clicked the MessageBack button",
-    value: {property: "propertyValue" }
-}])
-```
-
----
-
-### Inbound message example
-
-`replyToId` contains the ID of the message that the card action came from. Use it if you want to update the message.
-
-The following code shows an example of inbound message:
-
-```json
-{
-   "text":"User just clicked the MessageBack button",
-   "value":{
-      "property":"propertyValue"
-   },
-   "type":"message",
-   "timestamp":"2017-06-22T22:38:47.407Z",
-   "id":"f:5261769396935243054",
-   "channelId":"msteams",
-   "serviceUrl":"https://smba.trafficmanager.net/amer-client-ss.msg/",
-   "from":{
-      "id":"29:102jd210jd010icsoaeclaejcoa9ue09u",
-      "name":"John Smith"
-   },
-   "conversation":{
-      "id":"19:malejcou081i20ojmlcau0@thread.skype;messageid=1498171086622"
-   },
-   "recipient":{
-      "id":"28:76096e45-119f-4736-859c-6dfff54395f7",
-      "name":"MyBot"
-   },
-   "entities":[
-      {
-        "locale": "en-US",
-        "country": "US",
-        "platform": "Windows",
-        "timezone": "America/Los_Angeles",
-        "type": "clientInfo" 
-      }
-   ],
-   "channelData":{
-      "channel":{
-         "id":"19:malejcou081i20ojmlcau0@thread.skype"
-      },
-      "team":{
-         "id":"19:12d021jdoijsaeoaue0u@thread.skype"
-      },
-      "tenant":{
-         "id":"bec8e231-67ad-484e-87f4-3e5438390a77"
-      }
-   },
-        "replyToId": "1575667808184",
-}
-```
-
-## Action type imBack
-
-The `imBack` action triggers a return message to your bot, as if the user typed it in a normal chat message. Your user and all other users in a channel can see the button response.
-
-With `imBack`, you can create an action with the following properties:
-
-| Property | Description |
-| --- | --- |
-| `title` | Appears as the button label. |
-| `value` | This field must contain the text string used in the chat and therefore sent back to the bot. This is the message text you process in your bot to perform the desired logic. |
-
-> [!NOTE]
-> The `value` field is a simple string. There is no support for formatting or hidden characters.
-
-# [JSON](#tab/json)
-
-The following code shows an example of `imBack` action type in JSON:
-
-```json
-{
-    "type": "imBack",
-    "title": "More",
-    "value": "Show me more"
-}
-```
-
-# [C#](#tab/csharp)
-
-The following code shows an example of `imBack` action type in C#:
-
-```csharp
-var button = new CardAction()
-{
-    Type = ActionTypes.ImBack,
-    Title = "More",
-    Value = "Show me more"
-};
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-The following code shows an example of `imBack` action type in JavaScript:
-
-```javascript
-CardFactory.actions([
-{
-    type: "imBack",
-    title: "More",
-    value: "Show me more"
-}])
-```
-
----
-
-## Action type invoke
-
-The `invoke` action is used for invoking [dialogs (referred as task modules in TeamsJS v1.x)](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-
-The `invoke` action contains three properties, `type`, `title`, and `value`.
-
-With `invoke`, you can create an action with the following properties:
-
-| Property | Description |
-| --- | --- |
-| `title` | Appears as the button label. |
-| `value` | This property can contain a string, a stringified JSON object, or a JSON object. |
-
-# [JSON](#tab/json)
-
-The following code shows an example of `invoke` action type in JSON:
-
-```json
-{
-    "type": "invoke",
-    "title": "Option 1",
-    "value": {
-        "option": "opt1"
-    }
-}
-```
-
-When a user selects the button, your bot receives the `value` object with some additional information.
-
-> [!NOTE]
-> The activity type is `invoke` instead of `message` that is `activity.Type == "invoke"`.
-
-# [C#](#tab/csharp)
-
-The following code shows an example of `invoke` action type in C#:
-
-```csharp
-var button = new CardAction()
-{
-    Title = "Option 1",
-    Type = "invoke",
-    Value = "{\"option\": \"opt1\"}"
-};
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-The following code shows an example of `invoke` action type in Node.js:
-
-```javascript
-CardFactory.actions([
-{
-    type: "invoke",
-    title: "Option 1",
-    value: {
-        option: "opt1"
-    }
-}])
-```
-
----
-
-### Example of incoming invoke message
-
-The top-level `replyToId` property contains the ID of the message that the card action came from. Use it if you want to update the message.
-
-The following code shows an example of incoming invoke message:
-
-```json
-{
-    "type": "invoke",
-    "value": {
-        "option": "opt1"
-    },
-    "timestamp": "2017-02-10T04:11:19.614Z",
-    "localTimestamp": "2017-02-09T21:11:19.614-07:00",
-    "id": "f:6894910862892785420",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1Eniglq0-uVL83xNB9GU6w_G5a4SZF0gcJLprZzhtEbel21G_5h-
-    NgoprRw45mP0AXUIZVeqrsIHSYV4ntgfVJQ",
-        "name": "John Doe"
-    },
-    "conversation": {
-        "id": "19:97b1ec61-45bf-453c-9059-6e8984e0cef4_8d88f59b-ae61-4300-bec0-caace7d28446@unq.gbl.spaces"
-    },
-    "recipient": {
-        "id": "28:8d88f59b-ae61-4300-bec0-caace7d28446",
-        "name": "MyBot"
-    },
-    "entities": [
+    return new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
         {
-            "locale": "en-US",
-            "country": "US",
-            "platform": "Web",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "channel": {
-            "id": "19:dc5ba12695be4eb7bf457cad6b4709eb@thread.skype"
+            new TextBlock("User Profile")
+            {
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new TextInput
+            {
+                Id = "name",
+                Label = "Name",
+                Value = "John Doe"
+            },
+            new TextInput
+            {
+                Id = "email",
+                Label = "Email",
+                Value = "john@contoso.com"
+            },
+            new ToggleInput("Subscribe to newsletter")
+            {
+                Id = "subscribe",
+                Value = "false"
+            }
         },
-        "team": {
-            "id": "19:712c61d0ef384e5fa681ba90ca943398@thread.skype"
-        },
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new ExecuteAction
+            {
+                Title = "Save",
+                Data = new Union<string, SubmitActionData>(new SubmitActionData
+                {
+                    NonSchemaProperties = new Dictionary<string, object?>
+                    {
+                        { "action", "save_profile" },
+                        { "entity_id", "12345" }
+                    }
+                }),
+                AssociatedInputs = AssociatedInputs.Auto
+            }
         }
-    },
-    "replyToId": "1575667808184"
+    };
 }
 ```
 
-## Action type sign-in
+When the user submits the card, the handler receives the input values merged with the action data:
 
-`signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
-
-Teams also supports [Adaptive Cards actions](#adaptive-cards-actions) that are only used by Adaptive Cards.
+```text
+data["action"]      → "save_profile"
+data["entity_id"]   → "12345"
+data["name"]        → "John Doe"
+data["email"]       → "john@contoso.com"
+data["subscribe"]   → "true"
+```
 
 # [JSON](#tab/json)
 
-The following code shows an example of `signin` action type in JSON:
+The following code shows an example of associating data with card actions in JSON:
 
 ```json
 {
-"type": "signin",
-"title": "Click me for signin",
-"value": "https://signin.com"
-}
-```
-
-# [C#](#tab/csharp)
-
-The following code shows an example of `signin` action type in C#:
-
-```csharp
-var button = new CardAction()
-{
-    Type = ActionTypes.Signin,
-    Title = "Click me for signin",
-    Value = "https://signin.com"
-};
-```
-
-# [JavaScript/Node.js](#tab/javascript)
-
-The following code shows an example of `signin` action type in JavaScript:
-
-```javascript
-CardFactory.actions([
-{
-    type: "signin",
-    title: "Click me for signin",
-    value: "https://signin.com"
-}])
-```
-
----
-
-## Adaptive Cards actions
-
-> [!IMPORTANT]
-> This documentation is considered legacy. For comprehensive information and resources related to Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/).
-
-Adaptive Cards support the following six action types:
-
-* [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl): Opens the specified url.
-* [Action.Submit](https://adaptivecards.microsoft.com/?topic=Action.Submit): Sends the result of the submit action to the bot.
-* [Action.ShowCard](https://adaptivecards.microsoft.com/?topic=Action.ShowCard): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
-* [Action.ToggleVisibility](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility): Shows or hides one or more elements in the card.
-* [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
-* [Action.ResetInputs](dynamic-search.md#actionresetinputs): Resets the values of the inputs in an Adaptive Card.
-
-### Action.Submit
-
-`Action.Submit` type is used to gather the input, combine the `data` properties, and send an event to the bot. When a user selects the submit action, Teams sends a message activity to the bot, which includes the user's input in key-value pairs for all input fields and hidden data that is defined in the card payload.
-
-In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or an `object`. A submit action behaves differently for each data property:
-
-* `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
-* `object`: An object submit action automatically sends an invisible message from the user to the bot that contains hidden data. An object submit action populates the activity’s value property while the text property is empty.
-
-Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
-
-> [!NOTE]
->
->* The bot doesn’t receive user input unless the user submits their actions in the Adaptive Card through a button, such as **Save** or **Submit**. For example, the bot doesn't consider user actions, such as selecting an option from multiple choices or filling out fields in a form, as inputs unless the user submits them.
->* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card dialog.
->* Primary or destructive `ActionStyle` isn't supported in Teams.
->* Your app has five seconds to respond to the invoke message.
-
-#### Example
-
-The following is an example of an `Action.Submit` card payload:
-
-The payload consists of a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
-
-```json
-{
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
   "version": "1.5",
-  "fallbackText": "fallback text for sample 01",
-  "speak": "This is Adaptive Card sample 1",
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "body": [
     {
-      "type": "Container",
-      "items": [
-        {
-          "id": "text-1",
-          "type": "Input.Text"
-        }
-      ]
+      "type": "TextBlock",
+      "text": "User Profile",
+      "weight": "Bolder",
+      "size": "Large"
+    },
+    {
+      "type": "Input.Text",
+      "id": "name",
+      "label": "Name",
+      "value": "John Doe"
+    },
+    {
+      "type": "Input.Text",
+      "id": "email",
+      "label": "Email",
+      "value": "john@contoso.com"
+    },
+    {
+      "type": "Input.Toggle",
+      "id": "subscribe",
+      "title": "Subscribe to newsletter",
+      "value": "false"
     }
   ],
   "actions": [
     {
-      "type": "Action.Submit",
+      "type": "Action.Execute",
+      "title": "Save",
       "data": {
-        "hiddenKey": 123.45
-      }
+        "action": "save_profile",
+        "entity_id": "12345"
+      },
+      "associatedInputs": "auto"
     }
   ]
 }
 ```
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-action-submit.png" alt-text="Screenshot shows an example of an Adaptive Card with the submit button.":::
+---
 
-The following is an example of the incoming activity to a bot when user types something in the input field and selects **Submit**. The `value` attribute includes the user's input in the `text-1` property and a hidden data payload in the `hiddenKey` property:
+### Input validation
 
- ```json
- 
+Input controls provide built-in validation. For more information, see the Adaptive Cards [input validation documentation](https://adaptivecards.microsoft.com/?topic=input-validation).
+
+# [C#](#tab/csharp)
+
+The following code shows an example of input validation in C#:
+
+```csharp
+using Microsoft.Teams.Cards;
+
+private static AdaptiveCard CreateProfileCardWithValidation()
 {
-  "type": "message",
-  "timestamp": "2023-07-18T23:45:41.699Z",
-  "localTimestamp": "2023-07-18T16:45:41.699-07:00",
-  "id": "f:9eb18f56-2259-8fa4-7dfc-111ffff58e67",
-  "channelId": "msteams",
-  "serviceUrl": "https://smba.trafficmanager.net/amer/",
-  "from": {
-    "id": "29:1E0NZYNZFQOCUI8zM9NY_EhlCsWgNbLGTHUNdBVX2ob8SLjhltEhQMPi07Gr6MLScFeS8SrKH1WGvJSiVKThnyw",
-    "name": "Megan Bowen",
-    "aadObjectId": "97b1ec61-45bf-453c-9059-6e8984e0cef4"
-  },
-  "conversation": {
-    "conversationType": "personal",
-    "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-    "id": "a:1H-RowZ3FrIheyjTupPnoCC6JvOLB5pCWms1xwqvAJG97j61D18EuSennYZE6tyfbQrnfIN3uIcwpOx73mg10hHp_uoTMMQlXhXosIu_q7QVCaYiW6Ch3bPWAitUw4aSX"
-  },
-  "recipient": {
-    "id": "28:159e1c0f-15ef-4597-a8c6-44ba1fd89b78",
-    "name": "Mushroom"
-  },
-  "entities": [
+    return new AdaptiveCard
     {
-      "locale": "en-US",
-      "country": "US",
-      "platform": "Web",
-      "timezone": "America/Los_Angeles",
-      "type": "clientInfo"
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock("Profile with Validation")
+            {
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new NumberInput
+            {
+                Id = "age",
+                Label = "Age",
+                IsRequired = true,
+                Min = 0,
+                Max = 120
+            },
+            new TextInput
+            {
+                Id = "name",
+                Label = "Name",
+                IsRequired = true,
+                ErrorMessage = "Name is required"
+            },
+            new TextInput
+            {
+                Id = "location",
+                Label = "Location"
+            }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new ExecuteAction
+            {
+                Title = "Save",
+                Data = new Union<string, SubmitActionData>(new SubmitActionData
+                {
+                    NonSchemaProperties = new Dictionary<string, object?>
+                    {
+                        { "action", "save_profile" }
+                    }
+                }),
+                AssociatedInputs = AssociatedInputs.Auto
+            }
+        }
+    };
+}
+```
+
+# [JSON](#tab/json)
+
+The following code shows an example of input validation in JSON:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Profile with Validation",
+      "weight": "Bolder",
+      "size": "Large"
+    },
+    {
+      "type": "Input.Number",
+      "id": "age",
+      "label": "Age",
+      "isRequired": true,
+      "min": 0,
+      "max": 120
+    },
+    {
+      "type": "Input.Text",
+      "id": "name",
+      "label": "Name",
+      "isRequired": true,
+      "errorMessage": "Name is required"
+    },
+    {
+      "type": "Input.Text",
+      "id": "location",
+      "label": "Location"
     }
   ],
-  "channelData": {
-    "tenant": {
-      "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "source": {
-      "name": "message"
-    },
-    "legacy": {
-      "replyToId": "1:1XFuAl7wF96vl6iAQk9tqus0uFrB89uujGpld-Qm-XEw"
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "Save",
+      "data": {
+        "action": "save_profile"
+      },
+      "associatedInputs": "auto"
     }
-  },
-  "replyToId": "1689723936016",
-  "value": {
-    "hiddenKey": 123.45,
-    "text-1": "HELLO"
-  },
-  "locale": "en-US",
-  "localTimezone": "America/Los_Angeles"
+  ]
 }
- ```
+```
+
+---
 
 ### Conditional enablement of action buttons
 
@@ -548,8 +428,8 @@ You can use the `conditionallyEnabled` property to disable action buttons until 
 
 Here's how the `conditionallyEnabled` property is defined:
 
-| Property| Type | Required | Description |
-|-----------|------|----------|-------------|
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
 | `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
 
 The following card payload shows a conditionally enabled button:
@@ -576,12 +456,12 @@ The following card payload shows a conditionally enabled button:
     ],
     "actions": [
         {
-            "type": "Action.Submit",
+            "type": "Action.Execute",
             "title": "Submit",
             "conditionallyEnabled": true
         },
         {
-            "type": "Action.Submit",
+            "type": "Action.Execute",
             "title": "Permanently disabled button",
             "isEnabled": false
         }
@@ -608,210 +488,187 @@ The following card payload shows a conditionally enabled button:
 
 :::row-end:::
 
-#### Form completion feedback
+## Server handlers
 
-You can build form completion feedback using an Adaptive Card. Form completion message appears in Adaptive Cards while sending a response to the bot. The message can be of two types, error or success:
+Card actions arrive as `card.action` activities in your app. These give you access to the validated input values plus any `data` values you had configured to be sent back to you.
 
-* **Error**: When a response sent to the bot is unsuccessful, **Something went wrong, Try again** message appears. The error occurs due to various reasons, such as:
-  * Too many requests
-  * Multiple concurrent operations on the same conversation
-  * Service dependency issue
-  * Gateway Timeout
+Use the `OnAdaptiveCardAction` handler to process card actions:
 
-     :::image type="content" source="../../assets/images/Cards/error-message.png" alt-text="Screenshot shows an Error message in an Adaptive Card."  :::
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Api.Activities.Invokes.AdaptiveCards;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Common.Logging;
 
-* **Success**: When a response sent to the bot is successful, **Your response was sent to the app** message appears.
+//...
 
-     :::image type="content" source="../../assets/images/Cards/success.PNG" alt-text="Screenshot shows a success message in an Adaptive Card.":::
+teams.OnAdaptiveCardAction(async context =>
+{
+    var activity = context.Activity;
+    context.Log.Info("[CARD_ACTION] Card action received");
 
-     You can select **Close** or switch chat to dismiss the message.
+    var data = activity.Value?.Action?.Data;
 
-     If you don't want to display the success message, set the attribute `hide` to `true` in the `msTeams` `feedback` property. Following is an example:
+    context.Log.Info($"[CARD_ACTION] Raw data: {JsonSerializer.Serialize(data)}");
 
-     ```json
-        "content": {
-            "type": "AdaptiveCard",
-            "title": "Card with hidden footer messages",
-            "version": "1.0",
-            "actions": [
+    if (data == null)
+    {
+        context.Log.Error("[CARD_ACTION] No data in card action");
+        return new ActionResponse.Message("No data specified") { StatusCode = 400 };
+    }
+
+    string? action = data.TryGetValue("action", out var actionObj) ? actionObj?.ToString() : null;
+
+    if (string.IsNullOrEmpty(action))
+    {
+        context.Log.Error("[CARD_ACTION] No action specified in card data");
+        return new ActionResponse.Message("No action specified") { StatusCode = 400 };
+    }
+    context.Log.Info($"[CARD_ACTION] Processing action: {action}");
+
+    string? GetFormValue(string key)
+    {
+        if (data.TryGetValue(key, out var val))
+        {
+            if (val is JsonElement element)
+                return element.GetString();
+            return val?.ToString();
+        }
+        return null;
+    }
+
+    switch (action)
+    {
+        case "submit_feedback":
+            var feedbackText = GetFormValue("feedback") ?? "No feedback provided";
+            await context.Send($"Feedback received: {feedbackText}");
+            break;
+
+        case "create_task":
+            var title = GetFormValue("title") ?? "Untitled";
+            var priority = GetFormValue("priority") ?? "medium";
+            var dueDate = GetFormValue("due_date") ?? "No date";
+            await context.Send($"Task created!\nTitle: {title}\nPriority: {priority}\nDue: {dueDate}");
+            break;
+
+        case "save_profile":
+            var name = GetFormValue("name") ?? "Unknown";
+            var email = GetFormValue("email") ?? "No email";
+            var subscribe = GetFormValue("subscribe") ?? "false";
+            await context.Send($"Profile saved!\nName: {name}\nEmail: {email}\nSubscribed: {subscribe}");
+            break;
+
+        default:
+            context.Log.Error($"[CARD_ACTION] Unknown action: {action}");
+            return new ActionResponse.Message("Unknown action") { StatusCode = 400 };
+    }
+
+    return new ActionResponse.Message("Action processed successfully") { StatusCode = 200 };
+});
+```
+
+> [!NOTE]
+> The `data` values come from JSON and need to be extracted using the helper method shown above to handle different JSON element types.
+
+## End-to-end example: Task form card
+
+The following example shows a complete card with input fields and an action handler.
+
+### Build the card
+
+```csharp
+using Microsoft.Teams.Cards;
+
+private static AdaptiveCard CreateTaskFormCard()
+{
+    return new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock("Create New Task")
             {
-                "type": "Action.Submit",
-                "title": "Submit",
-                "msTeams": {
-                    "feedback": {
-                    "hide": true
-                    }
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new TextInput
+            {
+                Id = "title",
+                Label = "Task Title",
+                Placeholder = "Enter task title"
+            },
+            new TextInput
+            {
+                Id = "description",
+                Label = "Description",
+                Placeholder = "Enter task details",
+                IsMultiline = true
+            },
+            new ChoiceSetInput
+            {
+                Id = "priority",
+                Label = "Priority",
+                Value = "medium",
+                Choices = new List<Choice>
+                {
+                    new() { Title = "High", Value = "high" },
+                    new() { Title = "Medium", Value = "medium" },
+                    new() { Title = "Low", Value = "low" }
                 }
+            },
+            new DateInput
+            {
+                Id = "due_date",
+                Label = "Due Date",
+                Value = DateTime.Now.ToString("yyyy-MM-dd")
             }
-            ]
-        } 
-     ```
-
-For more information on cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
-
-### Adaptive Cards with messageBack action
-
-To include a `messageBack` action with an Adaptive Card, include the following details in the `msteams` object:
-
-> [!NOTE]
-> You can include additional hidden properties in the `data` object, if required.
-
-| Property | Description |
-| --- | --- |
-| `type` | Set to `messageBack`. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text isn't sent to your bot. |
-| `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
-| `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
-
-The following code shows an example of Adaptive Cards with `messageBack` action:
-
-```json
-{
-  "type": "Action.Submit",
-  "title": "Click me for messageBack",
-  "data": {
-    "msteams": {
-        "type": "messageBack",
-        "displayText": "I clicked this button",
-        "text": "text to bots",
-        "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
-    }
-  }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new ExecuteAction
+            {
+                Title = "Create Task",
+                Data = new Union<string, SubmitActionData>(new SubmitActionData
+                {
+                    NonSchemaProperties = new Dictionary<string, object?>
+                    {
+                        { "action", "create_task" }
+                    }
+                }),
+                AssociatedInputs = AssociatedInputs.Auto,
+                Style = ActionStyle.Positive
+            }
+        }
+    };
 }
 ```
 
-### Adaptive Cards with imBack action
+### Send the card
 
-To include an `imBack` action with an Adaptive Card, include the following details in the `msteams` object:
-
-> [!NOTE]
-> The `value` field is a simple string that doesn’t support formatting or hidden characters.
-
-| Property | Description |
-| --- | --- |
-| `type` | Set to `imBack`. |
-| `value` | String that needs to be echoed back in the chat. |
-
-The following code shows an example of Adaptive Cards with `imBack` action:
-
-```json
+```csharp
+teams.OnMessage(async context =>
 {
-  "type": "Action.Submit",
-  "title": "Click me for imBack",
-  "data": {
-    "msteams": {
-        "type": "imBack",
-        "value": "Text to reply in chat"
+    var text = context.Activity.Text?.ToLowerInvariant() ?? "";
+
+    if (text.Contains("form"))
+    {
+        await context.Typing();
+        var card = CreateTaskFormCard();
+        await context.Send(card);
     }
-  }
-}
+});
 ```
-
-### Adaptive Cards with sign-in action
-
-To include a `signin` action with an Adaptive Card, include the following details in the `msteams` object:
-
-> [!NOTE]
-> You can include additional hidden properties in the `data` object, if required.
-
-| Property | Description |
-| --- | --- |
-| `type` | Set to `signin`. |
-| `value` | Set to the URL where you want to redirect.  |
-
-The following code shows an example of Adaptive Cards with `signin` action:
-
-```json
-{
-  "type": "Action.Submit",
-  "title": "Click me for signin",
-  "data": {
-    "msteams": {
-        "type": "signin",
-        "value": "https://signin.com"
-    }
-  }
-}
-```
-
-### Adaptive Cards with invoke action
-
-To include an `invoke` action with an Adaptive Card, include the following details in the `msteams` object:
-
-> [!NOTE]
-> You can include additional hidden properties in the `data` object, if required.
-
-| Property | Description |
-| --- | --- |
-| `type` | Set to `task/fetch`. |
-| `data` | Set the value.  |
-
-The following code shows an example of Adaptive Cards with `invoke` action:
-
-```json
-{
-  "type": "Action.Submit",
-  "title": "submit",
-  "data": {
-    "msteams": {
-        "type": "task/fetch"
-    }
-  }
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `type` | Set to `invoke`. |
-| `value` | Set the value to display. |
-
-The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
-
-```json
-[
-  {
-    "type": "Action.Submit",
-    "title": "submit with object value",
-    "data": {
-      "ab": "xy",
-      "msteams": {
-        "type": "invoke",
-        "value": { "a": "b" }
-      }
-    }
-  },
-  {
-    "type": "Action.Submit",
-    "title": "submit with stringified json value",
-    "data": {
-      "ab": "xy",
-      "msteams": {
-        "type": "invoke",
-        "value": "{ \"a\": \"b\"}"
-      }
-    }
-  }
-]
-```
-
-## Code samples
-
-|S.No.|Card| Description|.NET|Node.js|Python|Java|Manifest|
-|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|------|
-|1|Adaptive Card actions|This sample shows how to send Adaptive Cards with multiple action types using a Teams bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
-|2|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|NA|NA|
-|3|Adaptive Cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|NA|NA|
-|4|Card Formatting|This sample demonstrates a conditionally enabled button.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|NA|NA|NA|
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Universal Actions for Adaptive Cards](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+> [Building Adaptive Cards](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/building-adaptive-cards)
 
 ## See also
 
-* [Cards reference](./cards-reference.md)
-* [Types of cards](cards-reference.md)
-* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Adaptive Card-based Loop component](../../m365-apps/cards-loop-component.md)
+* [Adaptive Cards overview](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/overview)
+* [Executing Actions](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions)
+* [Listening to Activities](/microsoftteams/platform/teams-sdk/essentials/on-activity/overview)
+* [Adaptive Cards documentation](https://adaptivecards.microsoft.com/)
+* [Adaptive Cards Designer](https://adaptivecards.microsoft.com/designer.html)
