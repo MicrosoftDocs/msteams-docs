@@ -8,24 +8,27 @@ ms.date: 02/06/2025
 
 # Environments in Microsoft 365 Agents Toolkit
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) provides a way to run and test your app in different targets for deployment like dev, staging, production, or locally on your machine. To do this, Agents Toolkit includes an optional set of features that orchestrate the configuration of these different targets using information in environment files. The environment files represent a collection of all the resources of a deployment target. Agents Toolkit project templates include two default environment groupings: one for running the app on your machine named 'local' and another for hosting somewhere else named 'dev'. You can rename the 'dev' environment and add another environments using the Environments window or manually with a new `.env.{environment-name}` file. You can't rename the local environment.
+When you build an app with Microsoft 365 Agents Toolkit (formerly Teams Toolkit), you typically need to run the same project across multiple targets, such as local, development, or playground. Environments let you keep these targets isolated while reusing the same project structure and lifecycle commands.
 
-By adding different environment files, Agents Toolkit can help automate the provisioning of resources needed to run the app and deploy your code to those resources. You can have a single set of deployment rules for number of environments using these features.
+Agents Toolkit manages environment-specific settings through `.env.{environment-name}` files. These files hold the variables and outputs for each target environment, so you can provision, deploy, and publish consistently without manually reconfiguring resources each time.
+
+This article explains how environment files work, how local and remote environments differ, how to create additional environments in Visual Studio Code, and how to select the right target environment for your workflow.
 
 ## Using environment files with Agents Toolkit
 
-Agents Toolkit uses a naming convention for the environment files such as: `.env.{environment-name}`. Using the toolkit's lifecycle commands (Provision, Deploy, or Publish) you're required to provide an environment name. The name of the environment should be the same as the value chosen for `{environment-name}` when creating the environment file.
+Agents Toolkit follows a standard naming pattern for environment files, such as `.env.{environment-name}`. When you run lifecycle commands like Provision, Deploy, or Publish, you must specify an environment name. This name must match the `{environment-name}` used in the corresponding environment file.
 
 > [!NOTE]
 > You can define environment variables for Agents Toolkit in your current shell environment which override any values in the `.env` file during a naming conflict.
 
 ### Environment file location
 
-By default, Agents Toolkit doesn't load any env variables, and just proceed with executing actions and write outputs to `./env/.env.dev`. If `environmentFolderPath` isn't defined, Agents Toolkit doesn't load any environment variables from the `.env` file, and executes actions assuming the env is dev. The outputs are written to `./env/.env.dev`.
+By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to `./env/.env.dev`. If you don't specify an `environmentFolderPath`, it doesn't read variables from a .env file and assumes the environment is set to `dev`, with outputs directed to `./env/.env.dev`.
 
 ## Local environments
 
-To build a Microsoft Teams app, certain resources, such as app registrations and the Teams client are hosted in the cloud. However, the other resources, such as including the application logic can be hosted locally to simplify the testing changes during app development. All Agents Toolkit project templates and samples are configured with a `local` environment. The local environment has `./env/.env.local` and `./env/.env.local.user` files and helps you to run your app with a locally hosted web server. When using Visual Studio Code (VS Code) and Visual Studio (VS), the project templates and samples are set up to support debugging with breakpoints.
+Building a Microsoft Teams app involves both cloud and local resources.
+Cloud resources include app registrations and the Teams client, while application logic can run locally to speed up development and testing. All Agents Toolkit templates include a preconfigured `local` environment with `./env/.env.local` and `./env/.env.local.user` files. This setup lets you run your agent or app on a local web server and debug it with breakpoints in Visual Studio Code or Visual Studio.
 
 To differentiate between a local environment and all other environments, you can create a separate project file called `m365agents.local.yml` in the same directory as `m365agents.yml`.
 
@@ -50,9 +53,19 @@ To create a new environment:
 
 ## Targeting an environment
 
-When you have multiple environments and select the Production, dev, or local menu items, Agents Toolkit prompts you to select a target environment.
+When you have multiple environments, you can select the ennvironment in which you can build the app. If you want to build in the `Playground` or `local` environment,  
 
-   :::image type="content" source="../assets/images/toolkit-v2/target-environment.png" alt-text="Screenshot shows the Production environment selected.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/local-build.png" alt-text="Screenshot shows the option to select local environment for building the agent or app.":::
+
+To target a `dev` environment or a custom environment you created:
+
+1. Provision and deploy the agent or app using the Agents Toolkit:
+
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
+
+1. Select the environment that you want to target:
+
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
 
 ## See also
 
