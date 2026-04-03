@@ -10,14 +10,6 @@ ms.topic: reference
 
 With the introduction of Teams SDK, developers can create collaborative agents for Teams users. In addition to giving query responses, agents in Teams can summarize conversations, draft documents, manage tasks, automate processes, and provide personalized insights. These agents help users coordinate, communicate, and achieve more efficiently within Teams. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
 
-## What are agents in Teams?
-
-Agents in Teams are intelligent and conversational apps built with Teams SDK. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
-
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
-
- An agent in Teams understands user intent, performs tasks, and enhances collaboration.
-
 ## Why build agents for Teams?
 
 Building agents for Teams helps to enhance collaboration and increase productivity. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. Within Teams, agents can focus on high-priority work to enable better outcomes and success.
