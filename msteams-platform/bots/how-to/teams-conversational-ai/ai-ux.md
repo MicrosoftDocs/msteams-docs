@@ -68,10 +68,6 @@ Use the following types of updates while streaming responses:
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
->[!NOTE]
->
-> Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-
 ### Ensure the agent response contains citations
 
 Users must know the sources an agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
