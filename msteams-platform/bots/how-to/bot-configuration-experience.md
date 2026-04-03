@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 04/03/2026
 ---
 
 # Bot configuration experience
@@ -103,11 +103,44 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
-   protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-   {
-      ConfigResponseBase response = adaptiveCardForContinue();
-      return Task.FromResult(response);
-   }
+
+app.OnConfigFetch(async (context) =>
+{
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
+        {
+            new TextBlock("Configure your bot")
+            {
+                Weight = TextWeight.Bolder
+            }
+        },
+        Actions = new List<Action>
+        {
+            new SubmitAction
+            {
+                Title = "Submit"
+            }
+        }
+    };
+
+    var taskInfo = new TaskInfo
+    {
+        Title = "test card",
+        Width = new Union<int, Size>(600),
+        Height = new Union<int, Size>(500),
+        Card = new Attachment
+        {
+            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
+            Content = card
+        }
+    };
+
+    return new ConfigTaskResponse(
+        new ContinueTask(taskInfo)
+    );
+});
+
    ```
 
   # [JavaScript](#tab/JS1)
@@ -115,22 +148,65 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
    ```javascript
-   async handleTeamsConfigFetch(_context, _configData) {
-      let response = {};
-      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
-      response = {
-         config: {
-            value: {
-               card: adaptiveCard,
-               height: 500,
-               width: 600,
-               title: 'test card',
+app.on('config.fetch', async ({ activity }) => {
+  const card = new AdaptiveCard(
+    {
+      type: 'TextBlock',
+      text: 'Configure your bot',
+      weight: 'Bolder',
+    }
+  ).withActions(
+    new SubmitAction().withTitle('Submit')
+  );
+
+  return {
+    config: {
+      type: 'continue',
+      value: {
+        card: cardAttachment('adaptive', card),
+        height: 500,
+        width: 600,
+        title: 'test card',
+      },
+    },
+  };
+});
+   ```
+
+# [Python](#tab/Py1)
+
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
+
+   ```Python
+@app.on_config_open 
+async def handle_config_open(
+    ctx: ActivityContext[ConfigFetchInvokeActivity]
+) -> ConfigInvokeResponse:
+    card = AdaptiveCard(
+        body=[
+            TextBlock(
+                text="Configure your bot",
+                weight="Bolder"
+            )
+        ],
+        actions=[
+            SubmitAction().with_title("Submit")
+        ]
+    )
+
+    return ConfigInvokeResponse(
+        config={
+            "type": "continue",
+            "value": {
+                "card": card_attachment(
+                    AdaptiveCardAttachment(content=card)
+                ),
+                "height": 500,
+                "width": 600,
+                "title": "test card",
             },
-            type: 'continue',
-         },
-      };
-      return response;
-   }
+        }
+    )
    ```
 
 ---
@@ -145,22 +221,28 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
-   protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-   {
-      ConfigResponseBase response = new ConfigResponse<BotConfigAuth> {
-         Config = new BotConfigAuth {
-            SuggestedActions = new SuggestedActions {
-               Actions = new List<CardAction> {
-                  new CardAction {
-                     type: "openUrl",
-                     value: "https://example.com/auth",
-                     title: "Sign in to this app"
-                  }
-               }
-            },
-         Type = "auth"
-      }
-   };
+
+app.OnConfigFetch(async (context) =>
+{
+    return new ConfigAuthResponse(
+        new ConfigAuth
+        {
+            SuggestedActions = new SuggestedActions
+            {
+                Actions = new List<CardAction>
+                {
+                    new CardAction
+                    {
+                        Type = "openUrl",
+                        Value = "<https://example.com/auth>",
+                        Title = "Sign in to this app"
+                    }
+                }
+            }
+        }
+    );
+});
+
    ```
 
   # [JavaScript](#tab/JS2)
@@ -168,22 +250,47 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
    ```javascript
-   async handleTeamsConfigFetch(_context, _configData) {
-      let response = {};
-      response = {
-         config: {
-            type: "auth",
-            suggestedActions: {
-               actions: [{
-                  type: "openUrl",
-                  value: "https://example.com/auth",
-                  title: "Sign in to this app"
-               }]
+app.on('config.fetch', async ({ activity }) => {
+  return {
+    config: {
+      type: 'auth',
+      suggestedActions: {
+        actions: [
+          {
+            type: 'openUrl',
+            value: 'https://example.com/auth',
+            title: 'Sign in to this app',
+          },
+        ],
+      },
+    },
+  };
+});
+   ```
+
+# [Python](#tab/Py2)
+
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
+
+   ```Python
+@app.on_config_open
+async def handle_config_open(
+    ctx: ActivityContext[ConfigFetchInvokeActivity]
+) -> ConfigInvokeResponse:
+    return ConfigInvokeResponse(
+        config={
+            "type": "auth",
+            "suggestedActions": {
+                "actions": [
+                    {
+                        "type": "openUrl",
+                        "value": "https://example.com/auth",
+                        "title": "Sign in to this app",
+                    }
+                ]
             },
-        },
-      };
-      return response;
-   }
+        }
+    )
    ```
 
 ---
@@ -195,18 +302,14 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
    ```csharp
-   protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-   {
-      ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-      {
-         Config = new TaskModuleMessageResponse
-         {
-            Type = "message",
-            Value = "You have chosen to finish setting up bot"
-         }
-      };
-      return Task.FromResult(response);
-   }
+
+teamsApp.OnConfigSubmit(async (context) =>
+{
+    return new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up bot")
+    );
+});
+
    ```
 
   # [JavaScript](#tab/JS3)
@@ -214,16 +317,31 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
    ```javascript
-   async handleTeamsConfigSubmit(context, _configData) {
-      let response = {};
-      response = {
-         config: {
-            type: 'message',
-            value: 'You have chosen to finish setting up bot',
-         },
-      }
-      return response;
-   }
+app.on('config.submit', async ({ activity, send }) => {
+  return {
+    config: {
+      type: 'message',
+      value: 'You have chosen to finish setting up bot',
+    },
+  };
+});
+   ```
+
+# [Python](#tab/Py3)
+
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
+
+   ```Python
+@app.on_config_submit
+async def handle_config_submit(
+    ctx: ActivityContext[ConfigSubmitInvokeActivity]
+) -> ConfigInvokeResponse:
+    return ConfigInvokeResponse(
+        config={
+            "type": "message",
+            "value": "You have chosen to finish setting up bot",
+        }
+    )
    ```
 
 ---
