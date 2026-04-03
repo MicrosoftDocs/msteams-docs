@@ -123,7 +123,6 @@ app.OnConfigFetch(async (context) =>
             }
         }
     };
-
     var taskInfo = new TaskInfo
     {
         Title = "test card",
@@ -135,7 +134,6 @@ app.OnConfigFetch(async (context) =>
             Content = card
         }
     };
-
     return new ConfigTaskResponse(
         new ContinueTask(taskInfo)
     );
@@ -158,7 +156,6 @@ app.on('config.fetch', async ({ activity }) => {
   ).withActions(
     new SubmitAction().withTitle('Submit')
   );
-
   return {
     config: {
       type: 'continue',
@@ -245,7 +242,7 @@ app.OnConfigFetch(async (context) =>
 
    ```
 
-  # [JavaScript](#tab/JS2)
+# [JavaScript](#tab/JS2)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
@@ -272,7 +269,7 @@ app.on('config.fetch', async ({ activity }) => {
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
-   ```Python
+   ```python
 @app.on_config_open
 async def handle_config_open(
     ctx: ActivityContext[ConfigFetchInvokeActivity]
@@ -331,7 +328,7 @@ app.on('config.submit', async ({ activity, send }) => {
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
-   ```Python
+   ```python
 @app.on_config_submit
 async def handle_config_submit(
     ctx: ActivityContext[ConfigSubmitInvokeActivity]
