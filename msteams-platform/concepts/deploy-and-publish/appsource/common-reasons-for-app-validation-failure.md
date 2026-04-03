@@ -2,8 +2,6 @@
 title: Reasons for App Validation Failure
 description: Learn about inadequate app description, improper screenshots, Partner Center and app manifest mismatch, valid domains violation, or broken app functionality.
 ms.topic: overview
-author: surbhigupta
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 12/15/2022
 ---

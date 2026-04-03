@@ -1,6 +1,5 @@
 ---
 title: Build a workflow bot
-author: surbhigupta
 description: Learn about creating a workflow bot
 ms.topic: overview
 ms.localizationpriority: high
