@@ -1,10 +1,13 @@
+
 ---
-title: Manage Apps with Developer Portal
-description: Learn how to configure, develop, publish, manage, validate against Microsoft's test cases, and publish your apps using the Developer Portal for Teams.
-ms.localizationpriority: medium
+
+title: Manage apps with Developer Portal
+description: Learn how to configure, develop, validate, publish, and manage your apps using the Developer Portal for Microsoft Teams.
 ms.topic: overview
 ms.author: vikasalmal
 ms.date: 04/03/2026
+ms.localizationpriority: medium
+---
 
 # Manage your apps in Developer Portal
 
