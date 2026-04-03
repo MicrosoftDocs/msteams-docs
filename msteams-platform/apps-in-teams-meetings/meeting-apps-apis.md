@@ -24,12 +24,12 @@ The following table provides a list of APIs available across the Microsoft Teams
 | Method | Description | Source |
 | --- | --- | --- |
 | [**Get user context**](#get-user-context-api) | Get contextual information to display relevant content in a Microsoft Teams tab. | [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
-|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
+| [**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Teams SDK Framework](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest) |
+| [**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK Framework](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest) |
+| [**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Teams SDK Framework](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest) |
+| [**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+| [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Teams SDK Framework](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 
@@ -1502,7 +1502,7 @@ The following examples show how to capture the meeting start and end events:
 
 **Meeting Start Event**
 
-# [C#](#tab/dotnet1)
+# [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
@@ -1546,7 +1546,7 @@ teamsApp.OnMeetingStart(async context =>
 
 ```
 
-# [TypeScript](#tab/typescript1)
+# [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingstarteventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
@@ -1568,7 +1568,7 @@ app.on('meetingStart', async (context) => {
 
 ```
 
-# [Python](#tab/python1)
+# [Python](#tab/python)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
@@ -1592,7 +1592,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 **Meeting End Event**
 
-# [C#](#tab/dotnet2)
+# [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingendactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
@@ -1679,7 +1679,7 @@ teamsApp.OnMeetingEnd(async context =>
 
 ```
 
-# [TypeScript](#tab/typescript2)
+# [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingendeventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
@@ -1737,7 +1737,7 @@ app.on('meetingEnd', async (context) => {
 
 ```
 
-# [Python](#tab/python2)
+# [Python](#tab/python)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
@@ -1912,7 +1912,7 @@ The following examples show how to capture the participant join and leave events
 
 **Participant join event**
 
-# [C#](#tab/dotnet3)
+# [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantjoinactivity?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
@@ -1945,7 +1945,7 @@ teamsApp.OnMeetingJoin(async context =>
 
 ```
 
-# [TypeScript](#tab/typescript3)
+# [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
@@ -1972,7 +1972,7 @@ app.on('meetingParticipantJoin', async (context) => {
 
 ```
 
-# [Python](#tab/python3)
+# [Python](#tab/python)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
