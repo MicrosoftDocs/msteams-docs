@@ -1,8 +1,8 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
+description: Check FAQs on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and more.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 11/27/2025
 ms.localizationpriority: high
 ms.owner: angovil
 ---
@@ -95,7 +95,7 @@ App registration is disabled for the user or the user doesn't have enough permis
 </details>
 <details>
 
-<summary>How can I resolve the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'"?</summary>
+<summary>How can I resolve the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'?"</summary>
 
 * Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions and admin consent.
 * Sign in to your app to capture more information about the error.
@@ -153,7 +153,7 @@ Live Share supports scheduled meetings, one-on-one calls, group calls, and meet 
 <details>
 <summary>Will Live Share's media package work with DRM content?</summary>
 
-Live Share's media package doesn't work with DRM content. Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+Live Share's media package doesn't work with DRM content. Teams doesn't support encrypted media for tab applications on desktop. Chrome, Microsoft Edge, and mobile clients are supported.
 
 For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 <br>
@@ -186,7 +186,7 @@ Live Share only supports having one container using our provided Azure Fluid Rel
 Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
-> If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
+> If you're using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
 
 To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
 
@@ -257,7 +257,7 @@ If the problem continues, use the thumbs down indicator in the Microsoft 365 Cop
 
 <summary> What descriptions should I include in app manifest? </summary>
 
-Here's an example description that work for NPM Finder.
+Here's an example description that works for NPM Finder.
 
 ```json
  "name": { 
@@ -413,7 +413,7 @@ Yes, both declarative agents and custom engine agents will have the same invocat
 
 <summary>Can Independent Software Vendors (ISVs) enhance their existing wrapped declarative agents moving forward?</summary>
 
-ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they will be limited in terms of adding new instructions or knowledge to their agent.
+ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they'll be limited in terms of adding new instructions or knowledge to their agent.
 <br>
 &nbsp;
 </details>
@@ -540,7 +540,7 @@ No. Azure Marketplace is different than AppSource (and by extension Teams App St
 
 <summary>What are the additional steps to get Buy a subscription option on Teams Store?</summary>
 
-You must add the IDs to the manifest (and uploading through PC to validate) that shows the **Buy a subscription** button in Teams. Partners can continue to have apps available in Teams and require customers to purchase through AppSource. Going through a few additional steps brings the purchase option into the Teams Store.​
+You must add the IDs to the manifest (and uploading through PC to validate) that shows the **Buy a subscription** button in Teams. Partners can continue to have apps available in Teams and require customers to purchase through AppSource. Going through a few more steps brings the purchase option into the Teams Store.​
 
 </br>
 
@@ -918,7 +918,7 @@ You received this error message because your [account verification status](/part
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-If you're the primary contact, Global Administrator or account admin, you can monitor verification status and track progress on your profile page.
+If you're the primary contact, Global Administrator, or account admin, you can monitor verification status and track progress on your profile page.
 
 After the verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
@@ -998,6 +998,33 @@ The following resources can also assist:
 * [Microsoft 365 app submission FAQ](/office/dev/store/appsource-submission-faq).
 * [Commercial marketplace documentation](/azure/marketplace/).
 <br>
+
+</details>
+
+## Publisher verification for Teams apps
+
+<br>
+<details>
+<summary>How can I ensure publisher verification for my app if I have a personal or consumer (MSA) user account?</summary>
+
+Publisher Verification isn't supported for applications registered with Personal or Consumer (MSA) user accounts. To complete the process, you must initiate a new app registration with your organizational account in an Microsoft Entra (Azure AD) tenant.
+
+To enable the app to become eligible while minimizing disruption, the following steps are recommended:
+
+| Step # | Action for app verification|
+| --- | --- |
+| 1 | Create a new organizational Partner Center or MCPP account and go through the OneVet vetting process. |
+| 2 | In the organizational Entra tenant, create a new [Entra OAuth App Registration](/entra/identity-platform/quickstart-register-app?tabs=certificate). This generates a new **App ID**. |
+| 3 | Complete the Entra [Publisher verification](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fentra%2Fidentity-platform%2Fpublisher-verification-overview&data=05%7C02%7Crmandal%40microsoft.com%7Cabeca4d2db9140aba52e08dd357a7fa2%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638725522430992100%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=0UznYXv0uobW66NwtqwVoIWJ9590ZN9aDuX1NB8ZjrI%3D&reserved=0) process to add a verified publisher to the App Registration.|
+| 4 | Update the manifest of the existing Teams app with the new Entra AppId in the [WebApplicationInfo](/microsoftteams/platform/resources/schema/manifest-schema#webapplicationinfo) section of the Teams app manifest, replace the old Entra Id with the new one. Don't replace the Bot ID or the App ID in the manifest. |
+| 5 | Submit this manifest and app package over [email](mailto:teamsubm@microsoft.com). Microsoft Team will analyze this app package along with the existing app package, and share guidance with you the steps to ensure backward compatibility for the app.|
+| 6 | If the app name is already reserved or published, rename the existing listing (for example, **Contoso for Teams – Legacy**) to make the original name available. |
+| 7 | Wait for confirmation that the app name is released, [submit this manifest and app package](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) using the verified Partner Center account. |
+| 8 | The app submission is reviewed for compliance, security, and compatibility. |
+| 9 | After approval, the app is published to the store as an update to the existing app. |
+| 10 | Existing users see an update of the existing app. |
+| 11 | Upgraded and new users see a Consent trigger in the app. |
+| 12 | Once the app is published, the ratings and reviews of the existing app on the current appsource.microsoft.com page are migrated to the AppSource page for the new app. |
 
 </details>
 
@@ -1292,7 +1319,7 @@ Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCal
 <details>
 <summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
 
-Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensures the workflow is paused until the approval is granted.
+Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for seven days). This ensures the workflow is paused until the approval is granted.
 <br>
 &nbsp;
 </details>
