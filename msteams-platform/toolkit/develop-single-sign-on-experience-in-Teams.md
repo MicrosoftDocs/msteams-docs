@@ -1,6 +1,5 @@
 ---
 title: Develop Single Sign-on Experience
-author: surbhigupta
 description: Learn how to develop single sign-on experience in Teams app using Microsoft 365 Agents Toolkit.
 ms.topic: reference
 ms.date: 12/17/2024

@@ -5,12 +5,14 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: angovil
-ms.date: 02/26/2025
+ms.date: 03/16/2025
 ---
 
 # Send and receive messages
 
 Conversational bots communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that bot conversations are interactive, dynamic, adaptive, and user friendly.
+
+You can also send [targeted messages](../agents-in-teams/targeted-messages.md) using your agent or bot app.
 
 ## Message content
 
@@ -124,7 +126,7 @@ The following code shows an example of receiving a message activity:
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
 

@@ -4,8 +4,7 @@ description: Learn how to add the share in meeting button, which allows users to
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
-ms.date: 10/29/2024
-ms.owner: ryanbliss
+ms.date: 02/27/2026
 ---
 # Share in meeting
 
@@ -195,7 +194,7 @@ To add a deep link to share content in meetings, see [deep link to share content
 
 | **Sample name** | **Description** | **.NET** |**Node.js** | Manifest |
 |-----------------|-----------------|----------------|----------------|----------------|
-| Meeting Stageview | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest)|
+| Meeting Stageview | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp/demo-manifest)|
 
 ## See also
 

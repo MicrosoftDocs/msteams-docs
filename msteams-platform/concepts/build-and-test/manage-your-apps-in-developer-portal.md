@@ -4,8 +4,7 @@ description: Learn how to configure, develop, publish, manage, validate against 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: vikasalmal
-ms.date: 01/23/2025
----
+ms.date: 04/03/2026
 
 # Manage your apps in Developer Portal
 
@@ -288,7 +287,7 @@ Create and manage Agent Identity Blueprints in Developer Portal, while manage ag
 
 #### View and use existing Agent Identity Blueprints
 
-The Agent Identity Blueprint tool in Developer Portal displays a list of existing blueprints available in your tenant.
+The Agent Identity Blueprint tool in Developer Portal displays a list of existing blueprints available in your tenant. While Blueprints are visible to all users in a tenant, only the owners of a blueprint can make changes to it.
 
 :::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints" lightbox="../../assets/images/tdp/list-agent-blueprint.png":::
 
