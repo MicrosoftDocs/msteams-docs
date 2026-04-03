@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 04/03/2026
 ---
 
 # Create a commands menu
@@ -28,11 +28,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 ## Create a command menu for your bot
 
 > [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
-
-Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
+> It's recommended that you create a command bot by following the [Teams SDK quickstart](/microsoftteams/platform/teams-sdk/getting-started/quickstart) and reviewing the [code basics](/microsoftteams/platform/teams-sdk/getting-started/code-basics). For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
 
 ### Create a command menu for your bot using Developer Portal
 
@@ -159,59 +155,353 @@ The manifest example code for the menu for each scope is as follows:
 }
 ```
 
-You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
+You must handle menu commands in your bot code as you handle any message from users.
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they're mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available directly via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel), so you don't need to manually parse or strip bot mentions from the message text.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
-
-The C# code to parse out the **\@Mention** portion of the message text is as follows:
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/dotnet/bot-quickstart)
 
 ```csharp
-// Remove recipient mention text from Text property.
-// Use with caution because this function is altering the text on the Activity.
-var modifiedText = turnContext.Activity.RemoveRecipientMention();
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+using Microsoft.Teams.Plugins.AspNetCore.Extensions;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities;
+using Microsoft.Teams.Api.Activities;
+using Microsoft.Teams.Api.Clients;
+
+// Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
+var builder = WebApplication.CreateBuilder(args);
+builder.AddTeams();
+var webApp = builder.Build();
+var teamsApp = webApp.UseTeams(true);
+
+// Handle conversation update events (when bot is added or members join)
+teamsApp.OnConversationUpdate(async context =>
+{
+    var membersAdded = context.Activity.MembersAdded;
+    if (membersAdded != null)
+    {
+        foreach (var member in membersAdded)
+        {
+            // Check if bot was added to the conversation
+            if (member.Id == context.Activity.Recipient?.Id)
+            {
+                await SendWelcomeMessage(context);
+            }
+        }
+    }
+});
+
+// Handles incoming messages and routes to appropriate functions based on message content
+teamsApp.OnMessage(async context =>
+{
+    // Get message text and normalize it
+    var text = (context.Activity.Text ?? "").Trim().ToLower();
+
+    // Handle mention me command
+    if (text.Contains("mentionme") || text.Contains("mention me"))
+    {
+        await MentionUser(context);
+    }
+    // Handle whoami command
+    else if (text.Contains("whoami"))
+    {
+        await GetSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text.Contains("welcome"))
+    {
+        await SendWelcomeMessage(context);
+    }
+    // Echo greeting messages
+    else if (text.Contains("hi") || text.Contains("hello"))
+    {
+        await EchoMessage(context, text);
+    }
+    else
+    {
+        await SendWelcomeMessage(context);
+    }
+});
+
+// Sends a welcome message
+async Task SendWelcomeMessage<T>(IContext<T> context) where T : IActivity
+{
+    await context.Send("Welcome to the Teams Quickstart Bot!");
+}
+
+// Echo back the user's message
+async Task EchoMessage(IContext<MessageActivity> context, string text)
+{
+    await context.Send($"**Echo :** {text}");
+}
+
+// Retrieves and displays information about the current user
+async Task GetSingleMember(IContext<MessageActivity> context)
+{
+    await context.Send($"You are: {context.Activity.From.Name}");
+}
+
+// Mention a user in a message
+async Task MentionUser(IContext<MessageActivity> context)
+{
+    var member = context.Activity.From;
+    var mentionText = $"<at>{member.Name}</at>";
+    var activity = new MessageActivity()
+        .WithText($"Hello {mentionText}")
+        .AddMention(member, addText: false);
+
+    await context.Send(activity);
+}
+
+// Starts the Teams bot application and listens for incoming requests
+webApp.Run();
 ```
 
-# [JavaScript](#tab/javascript)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-removementiontext)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
-
-The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/nodejs/bot-quickstart)
 
 ```javascript
-// Remove mention text from Text property, this function is altering the text on the Activity.
-const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+import { App, IActivityContext } from '@microsoft/teams.apps';
+import { TeamsChannelAccount, IMessageActivity } from '@microsoft/teams.api';
+
+// Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
+// Note: .env file is only required when running on Teams (not needed for local development with devtools)
+const app = new App();
+
+// Handle conversation update events (when bot is added or members join)
+app.on('conversationUpdate', async (context) => {
+    const { activity } = context;
+    const membersAdded = (activity as any).membersAdded || [];
+
+    for (const member of membersAdded) {
+        // Check if bot was added to the conversation
+        if (member.id === activity.recipient.id) {
+            await sendWelcomeMessage(context);
+        }
+    }
+});
+
+// Handles incoming messages and routes to appropriate functions based on message content
+app.on('message', async (context) => {
+    const { activity } = context;
+
+    // Get message text and normalize it
+    const messageActivity = activity as IMessageActivity;
+    let text = (messageActivity.text || '').trim().toLowerCase();
+
+    // Handle mention me command
+    if (text.includes('mentionme') || text.includes('mention me')) {
+        await mentionUser(context);
+    }
+    // Handle whoami command
+    else if (text.includes('whoami')) {
+        await getSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text.includes('welcome')) {
+        await sendWelcomeMessage(context);
+    }
+    // Handle greeting messages
+    else if (text.includes('hi') || text.includes('hello')) {
+        await echoMessage(context, text);
+    }
+    // Default: echo back any other message
+    else if (text) {
+        await echoMessage(context, text);
+    }
+});
+
+// Sends a welcome message
+async function sendWelcomeMessage(context: IActivityContext): Promise<void> {
+    await context.send({
+        type: 'message',
+        text: 'Welcome to the Teams Quickstart Bot!'
+    });
+}
+
+// Echo back the user's message
+async function echoMessage(context: IActivityContext, text: string): Promise<void> {
+    await context.send({
+        type: 'message',
+        text: `**Echo:** ${text}`
+    });
+}
+
+// Retrieves and displays information about the current user
+async function getSingleMember(context: IActivityContext): Promise<void> {
+    const { activity } = context;
+    const conversationId = activity.conversation.id;
+    const userId = activity.from.id;
+
+    try {
+        const member: TeamsChannelAccount = await context.api.conversations.members(conversationId).getById(userId);
+        await context.send({
+            type: 'message',
+            text: `You are: ${member.name}`
+        });
+    } catch (error) {
+        console.error('Error getting member:', error);
+    }
+}
+
+// Mention a user in a message
+async function mentionUser(context: IActivityContext): Promise<void> {
+    const { activity } = context;
+    const conversationId = activity.conversation.id;
+    const userId = activity.from.id;
+
+    try {
+        const member: TeamsChannelAccount = await context.api.conversations.members(conversationId).getById(userId);
+
+        // Create a text message with user mention
+        const mentionText = `<at>${member.name}</at>`;
+        await context.send({
+            type: 'message',
+            text: `Hello ${mentionText}`,
+            entities: [
+                {
+                    type: 'mention',
+                    text: mentionText,
+                    mentioned: {
+                        id: userId,
+                        name: member.name,
+                        role: 'user'
+                    }
+                }
+            ]
+        });
+    } catch (error) {
+        console.error('Error mentioning user:', error);
+    }
+}
+
+// Starts the Teams bot application and listens for incoming requests
+app.start().catch(console.error);
 ```
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-remove-recipient-mention)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
-
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
-
-The Python code to parse out the **\@Mention** portion of the message text is as follows:
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/python/bot-quickstart)
 
 ```python
-# Remove recipient mention text from Text property, this function is altering the text on the Activity.
-modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
+# Copyright (c) Microsoft Corporation. All rights reserved.
+# Licensed under the MIT License.
+
+import asyncio
+
+from dotenv import load_dotenv
+from microsoft_teams.api import MessageActivity, MessageActivityInput
+from microsoft_teams.apps import ActivityContext, App
+
+# Load environment variables
+load_dotenv()
+
+# Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
+# Note: .env file is only required when running on Teams (not needed for local development with devtools)
+app = App()
+
+async def send_welcome_message(ctx: ActivityContext) -> None:
+    """Sends a welcome message with available commands."""
+    welcome_message = (
+        "Welcome to the Teams Quickstart Bot!"
+    )
+    await ctx.send(MessageActivityInput(text=welcome_message))
+
+
+async def echo_message(ctx: ActivityContext, text: str) -> None:
+    """Echo back the user's message."""
+    await ctx.send(MessageActivityInput(text=f"**Echo:** {text}"))
+
+
+async def get_single_member(ctx: ActivityContext[MessageActivity]) -> None:
+    """Retrieves and displays information about the current user."""
+    try:
+        conversationId = ctx.activity.conversation.id
+        userId = ctx.activity.from_.id
+        user = await ctx.api.conversations.members(conversationId).get(userId)
+        await ctx.send(MessageActivityInput(text=f"You are: {user.name}"))
+    except Exception as error:
+        print(f"Error getting member: {error}")
+
+
+async def mention_user(ctx: ActivityContext[MessageActivity]) -> None:
+    """Mention a user in a message."""
+    try:
+
+        conversationId = ctx.activity.conversation.id
+        userId = ctx.activity.from_.id
+
+        # Get user info directly from the activity
+        user = await ctx.api.conversations.members(conversationId).get(userId)
+        
+        # Create a text message with user mention
+        mention_text = f"<at>{user.name}</at>"
+        await ctx.send(MessageActivityInput(
+            text=f"Hello {mention_text}",
+            entities=[
+                {
+                    "type": "mention",
+                    "text": mention_text,
+                    "mentioned": {
+                        "id": userId,
+                        "name": user.name,
+                        "role": "user"
+                    }
+                }
+            ]
+        ))
+    except Exception as error:
+        print(f"Error mentioning user: {error}")
+
+
+@app.on_conversation_update
+async def handle_conversation_update(ctx: ActivityContext) -> None:
+    """Handle conversation update events (when bot is added or members join)."""
+    members_added = getattr(ctx.activity, 'members_added', [])
+    
+    for member in members_added:
+        # Check if bot was added to the conversation
+        if member.id == ctx.activity.recipient.id:
+            await send_welcome_message(ctx)
+
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
+    """Handles incoming messages and routes to appropriate functions based on message content."""
+    # Get message text and normalize it
+    text = (ctx.activity.text or "").strip().lower()
+        
+    # Handle mention me command
+    if "mentionme" in text or "mention me" in text:
+        await mention_user(ctx)
+    # Handle whoami command
+    elif "whoami" in text:
+        await get_single_member(ctx)
+    # Handle welcome command
+    elif 'welcome' in text:
+        await send_welcome_message(ctx)
+    # Handle hi/hello - echo back
+    elif "hi" in text or "hello" in text:
+        await echo_message(ctx, text)
+
+
+# Starts the Teams bot application and listens for incoming requests
+if __name__ == "__main__":
+    asyncio.run(app.start())
 ```
 
 * * *
@@ -228,7 +518,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 
