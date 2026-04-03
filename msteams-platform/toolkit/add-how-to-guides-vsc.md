@@ -1,8 +1,6 @@
 ---
 title: How-to Guides for Teams Apps
-author: surbhigupta
 description: Learn about the How-to guides from Microsoft 365 Agents Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook add-in capabilities.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 12/19/2024
