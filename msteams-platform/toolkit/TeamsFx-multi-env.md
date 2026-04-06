@@ -59,11 +59,11 @@ When you have multiple environments, you can select the ennvironment in which yo
 
 To target a `dev` environment or a custom environment you created:
 
-1. Provision and deploy the agent or app using the Agents Toolkit:
+1. Provision and deploy the agent or app using the Agents Toolkit.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
 
-1. Select the environment that you want to target:
+1. Select the environment that you want to target.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
 
