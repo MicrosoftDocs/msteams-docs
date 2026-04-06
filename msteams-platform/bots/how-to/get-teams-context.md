@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/31/2026
+ms.date: 04/06/2026
 ---
 # Get Teams specific context for your bot
 
@@ -18,6 +18,8 @@ The following sample code is used for fetching the roster:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -30,6 +32,8 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
+
 ```typescript
 app.on('message', async ({ activity, api }) => {
     const conversationId = activity.conversation.id;
@@ -40,6 +44,8 @@ app.on('message', async ({ activity, api }) => {
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
 
 ```python
 @app.on_message
@@ -103,6 +109,8 @@ The following sample code is used to get single member details:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -116,6 +124,8 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
+
 ```typescript
 app.on('message', async ({ activity, api }) => {
     const conversationId = activity.conversation.id;
@@ -127,6 +137,8 @@ app.on('message', async ({ activity, api }) => {
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
 
 ```python
 @app.on_message
@@ -186,6 +198,8 @@ The following sample code is used to get team's details:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -206,6 +220,8 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
+
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
     const teamId = activity.channelData?.team?.id;
@@ -221,6 +237,8 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
 
 ```python
 @app.on_message
@@ -267,6 +285,8 @@ The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -283,6 +303,8 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/typescript)
 
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
+
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
     const teamId = activity.channelData?.team?.id;
@@ -296,6 +318,8 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/python)
+
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
 
 ```python
 @app.on_message
