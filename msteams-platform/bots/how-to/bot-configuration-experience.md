@@ -77,26 +77,24 @@ For more information, see [app manifest schema](/microsoft-365/extensibility/sch
 
 ### Configure your bot
 
-When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit` as defined in the `teamsBot.js` file.
+When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config.fetch` or `config.submit`.
 
 If you set the `fetchTask` property in the app manifest to:
 
 * **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
-* **true**: The bot initiates either `config/fetch` or `config/submit` as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+* **true**: The bot initiates either `config.fetch` or `config.submit` as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
 The following table lists the response type associated with the invoke requests:
 
 |Invoke request |Response type |
 | --- | --- |
-| `config/fetch` | `Type: "continue"` or `Type = "auth"` |
-| `config/submit` | `Type: "continue"` or `Type: "message"` |
+| `config.fetch` | `Type: "continue"` or `Type = "auth"` |
+| `config.submit` | `Type: "continue"` or `Type: "message"` |
 
 * `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
-   The `adaptiveCardForContinue` is a custom function that returns the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
-
-   When the user submits the configuration, the `config/submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
+   When the user submits the configuration, the `config.submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
 # [C#](#tab/teams-bot-sdk1)
 
@@ -201,7 +199,7 @@ async def handle_config_open(
 
 ---
 
-* `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
+* `type: "auth"`: You can also request the user to authenticate as a response to `config.fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
 
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
@@ -324,7 +322,7 @@ async def handle_config_submit(
 
 ---
 
-When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
+When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config.fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
 * @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
 
