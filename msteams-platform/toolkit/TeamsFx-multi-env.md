@@ -51,11 +51,11 @@ To create a new environment:
 
    :::image type="content" source="../assets/images/toolkit-v2/environment-name.png" alt-text="Screenshot shows where to enter the environment name.":::
 
-## Targeting an environment
+## Targeting an environment for remote build
 
-When you have multiple environments, you can select the ennvironment in which you want to build the agent or app. If you want to build in the `Playground` or `local` environment.
+If you have multiple environments, you'll need to target one of them to debug and build your agent or app, as well as to view the remote app in Teams.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/local-build.png" alt-text="Screenshot shows the option to select local environment for building the agent or app.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/remote-build.png" alt-text="Screenshot shows the option to select the environment for building the agent or app.":::
 
 To target a `dev` environment or a custom environment you created:
 
