@@ -34,14 +34,14 @@ To differentiate between a local environment and all other environments, you can
 
 ## Create a new environment manually in Visual Studio Code
 
-Each project can have one local environment but multiple remote environments. After you create a project, Agents Toolkit configures the following default environments:
+Each project can have one local environment and multiple remote environments. After you create a project, Agents Toolkit configures the following default environments:
 
 * **local** environment to represent the local machine environment configuration.
 * **dev** environment to represent the remote or cloud environment configuration.
 
 To create a new environment:
 
-1. Open your Teams app project in Visual Studio Code.
+1. Open your Teams agent or app project workspace in Visual Studio Code.
 1. Select the Microsoft 365 Agents Toolkit icon from the Visual Studio Code activity bar.
 1. Select the **+** icon in the **ENVIRONMENT** section.
 
@@ -53,7 +53,7 @@ To create a new environment:
 
 ## Targeting an environment
 
-When you have multiple environments, you can select the ennvironment in which you can build the app. If you want to build in the `Playground` or `local` environment,  
+When you have multiple environments, you can select the ennvironment in which you want to build the agent or app. If you want to build in the `Playground` or `local` environment.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/local-build.png" alt-text="Screenshot shows the option to select local environment for building the agent or app.":::
 
@@ -66,6 +66,8 @@ To target a `dev` environment or a custom environment you created:
 1. Select the environment that you want to target:
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
+
+You can now build your agent or app in the selected environment.
 
 ## See also
 
