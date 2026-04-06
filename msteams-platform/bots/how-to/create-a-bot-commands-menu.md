@@ -17,7 +17,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Desktop-bot-menu":::
 
 # [Mobile](#tab/mobile)
 
@@ -164,6 +164,9 @@ In the Teams SDK, incoming messages are routed through an activity handler. You 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
+> [!IMPORTANT]
+> When routing messages based on command text, use exact (whole-word) matching instead of substring checks. For example, `text.Contains("hi")` in C# or `text.includes('hi')` in TypeScript also matches unrelated words like "this" or "thinking", which can route messages unexpectedly. Since command menus insert the exact command string into the compose box, use equality operators such as `==` (C#, Python) or `===` (TypeScript) to compare the normalized message text against each command.
+
 # [C#](#tab/dotnet)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/dotnet/bot-quickstart)
@@ -207,33 +210,29 @@ teamsApp.OnMessage(async context =>
     // Get message text and normalize it
     var text = (context.Activity.Text ?? "").Trim().ToLower();
 
-    switch (text)
+    // Handle mention me command - use exact matching to avoid false positives from substrings
+    if (text == "mentionme" || text == "mention me")
     {
-        // Handle mention me command
-        case "mentionme":
-        case "mention me":
-            await MentionUser(context);
-            break;
-
-        // Handle whoami command
-        case "whoami":
-            await GetSingleMember(context);
-            break;
-
-        // Handle welcome command
-        case "welcome":
-            await SendWelcomeMessage(context);
-            break;
-
-        // Echo greeting messages
-        case "hi":
-        case "hello":
-            await EchoMessage(context, text);
-            break;
-
-        default:
-            await SendWelcomeMessage(context);
-            break;
+        await MentionUser(context);
+    }
+    // Handle whoami command
+    else if (text == "whoami")
+    {
+        await GetSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text == "welcome")
+    {
+        await SendWelcomeMessage(context);
+    }
+    // Echo greeting messages
+    else if (text == "hi" || text == "hello")
+    {
+        await EchoMessage(context, text);
+    }
+    else
+    {
+        await SendWelcomeMessage(context);
     }
 });
 
@@ -246,7 +245,7 @@ async Task SendWelcomeMessage<T>(IContext<T> context) where T : IActivity
 // Echo back the user's message
 async Task EchoMessage(IContext<MessageActivity> context, string text)
 {
-    await context.Send($"**Echo :** {text}");
+    await context.Send($"**Echo:** {text}");
 }
 
 // Retrieves and displays information about the current user
@@ -275,7 +274,7 @@ webApp.Run();
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/nodejs/bot-quickstart)
 
-```javascript
+```typescript
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
@@ -307,20 +306,20 @@ app.on('message', async (context) => {
     const messageActivity = activity as IMessageActivity;
     let text = (messageActivity.text || '').trim().toLowerCase();
 
-    // Handle mention me command
-    if (text.includes('mentionme') || text.includes('mention me')) {
+    // Handle mention me command - use exact matching to avoid false positives from substrings
+    if (text === 'mentionme' || text === 'mention me') {
         await mentionUser(context);
     }
     // Handle whoami command
-    else if (text.includes('whoami')) {
+    else if (text === 'whoami') {
         await getSingleMember(context);
     }
     // Handle welcome command
-    else if (text.includes('welcome')) {
+    else if (text === 'welcome') {
         await sendWelcomeMessage(context);
     }
     // Handle greeting messages
-    else if (text.includes('hi') || text.includes('hello')) {
+    else if (text === 'hi' || text === 'hello') {
         await echoMessage(context, text);
     }
     // Default: echo back any other message
@@ -489,17 +488,17 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     # Get message text and normalize it
     text = (ctx.activity.text or "").strip().lower()
         
-    # Handle mention me command
-    if "mentionme" in text or "mention me" in text:
+    # Handle mention me command - use exact matching to avoid false positives from substrings
+    if text in ("mentionme", "mention me"):
         await mention_user(ctx)
     # Handle whoami command
-    elif "whoami" in text:
+    elif text == "whoami":
         await get_single_member(ctx)
     # Handle welcome command
-    elif 'welcome' in text:
+    elif text == "welcome":
         await send_welcome_message(ctx)
     # Handle hi/hello - echo back
-    elif "hi" in text or "hello" in text:
+    elif text in ("hi", "hello"):
         await echo_message(ctx, text)
 
 
