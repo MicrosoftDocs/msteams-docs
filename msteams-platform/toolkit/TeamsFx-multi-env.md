@@ -57,17 +57,19 @@ If you have multiple environments, you'll need to target one of them to debug an
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/remote-build.png" alt-text="Screenshot shows the option to select the environment for building the agent or app.":::
 
-To target a `dev` environment or a custom environment you created:
+To target the `dev` environment or a custom environment you created:
 
 1. Provision and deploy the agent or app using the Agents Toolkit.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
 
+    The toolkit prompts you to select one of the multiple environments for provisioning the agent or app.
+
 1. Select the environment that you want to target.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
 
-You can now build your agent or app in the selected environment.
+Agents toolkit provisions for your agent or app. You can now build your agent or app in the selected environment.
 
 ## See also
 
