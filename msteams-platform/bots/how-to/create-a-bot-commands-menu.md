@@ -159,7 +159,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle menu commands in your bot code
 
-In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available directly via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel), so you don't need to manually parse or strip bot mentions from the message text.
+In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel). However, in group chat and channel conversations, `activity.text` can include the bot `@mention` (for example, `<at>Bot Name</at>`), so strip the bot mention before matching the command text, or use the activity's mention entities or an SDK helper for mention removal where available.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
