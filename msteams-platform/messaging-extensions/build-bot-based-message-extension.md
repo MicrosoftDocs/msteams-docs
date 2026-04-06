@@ -1,6 +1,5 @@
 ---
 title: Build Bot-based Message Extensions
-author: surbhigupta
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview

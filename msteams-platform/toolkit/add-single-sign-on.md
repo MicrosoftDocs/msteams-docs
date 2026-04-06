@@ -1,8 +1,6 @@
 ---
 title: Add single sign-on to your Teams apps
-author: surbhigupta
 description: In this module, learn how to add single sign-on (SSO) of Microsoft 365 Agents Toolkit, enable SSO support, and update your application to use SSO.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022

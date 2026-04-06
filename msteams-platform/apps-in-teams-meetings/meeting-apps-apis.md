@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 03/02/2026
+ms.date: 03/16/2026
 ---
 
 # Meeting apps APIs
@@ -611,7 +611,7 @@ The following table includes the query parameters:
 # [C#](#tab/dotnet3)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -631,7 +631,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [JavaScript](#tab/javascript3)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1915,10 +1915,10 @@ The toggleIncomingClientAudio API allows an app to toggle the incoming audio sta
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|--------------|------|
-| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
+| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
-| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)||
-| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
+| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/nodejs)||
+| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
 | Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
 | Meeting Recruitment Sample |This sample app shows a meeting experience for recruitment scenario using Apps In Meetings.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip)|
 

@@ -3,7 +3,6 @@ title: Development Guidelines for Agents
 description: Discover the essential guidelines and best practices to create, upgrade, and optimize agents for Microsoft 365 Copilot.
 ms.topic: article
 author: v-preethah
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 09/16/2024
 ms.collection: ce-skilling-ai-copilot

@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
-ms.date: 11/14/2024
+ms.date: 03/16/2026
 ---
 
 # Conversation events in your Teams bot
@@ -358,7 +358,7 @@ The following code shows an example of a channel restored event:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
 protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -468,7 +468,7 @@ The following code shows an example of a team members added event:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersaddedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -644,7 +644,7 @@ The following code shows an example of a team members removed event:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersremovedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)

@@ -3,7 +3,6 @@ title: Activity Handlers and Bot Logic
 description: Learn about bot events and activity handlers for messages, channels, teams, members, mentions, auth, and card actions.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: surbhigupta
 ms.owner: angovil
 ms.date: 10/03/2024
 ---

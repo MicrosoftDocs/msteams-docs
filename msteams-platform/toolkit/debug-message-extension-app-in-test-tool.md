@@ -1,8 +1,6 @@
 ---
 title: Debug message extension app in Microsoft 365 Agents Playground
-author: surbhigupta 
 description: Learn how to emulate the Teams experience for your message extension app in Microsoft 365 Agents Playground.
-ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 04/25/2024

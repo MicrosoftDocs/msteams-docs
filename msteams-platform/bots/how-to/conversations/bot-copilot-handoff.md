@@ -4,7 +4,6 @@ description: Learn how to allow users to continue their conversation with custom
 ms.date: 09/16/2024
 ms.topic: conceptual
 ms.owner: ginobuzz
-ms.author: surbhigupta
 ---
 
 # Copilot handoff

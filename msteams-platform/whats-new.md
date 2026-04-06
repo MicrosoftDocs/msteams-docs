@@ -138,7 +138,7 @@ Teams platform features that are available to all app developers.</br>
 |12/04/2024|Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information|App manifest > [dashboardCards](/microsoft-365/extensibility/schema/dashboard-card)|
 |12/04/2024|Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the CodeBlock element.|Build cards and dialogs > [CodeBlock in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)|
 |12/04/2024|Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.|Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
-|10/04/2024|Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.|Extend your app across Microsoft 365 > [Outlook Add-ins](m365-apps/overview.md#outlook-add-ins)|
+|10/04/2024|Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.|Extend your app across Microsoft 365 > [Outlook Add-ins](m365-apps/overview.md)|
 |04/04/2024|Added support for python in Teams AI library.|Build bots > Teams AI library > [Teams AI library](bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)|
 |04/04/2024|Stageview API with the openmode property allows you to open your app content in different Stageview experience.|Build tabs > [Open content in Stageview](tabs/open-content-in-stageview.md)|
 |03/04/2024|Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.|Publish your app > Publish to the Teams Store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
@@ -485,9 +485,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md)
-
-<!--
+    **March 27, 2026**: [Enable targeted messages for agents](agents-in-teams/targeted-messages.md)
+<!--                    
 **2025 May**
 
 * ***May 16, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
@@ -495,6 +494,17 @@ Developer preview is a public program that provides early access to unreleased T
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams](/microsoftteams/platform/teams-ai-library/welcome/overview).
 -->
 <br/>
+
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
+
+</details>
+</br>
 
 <details>
 

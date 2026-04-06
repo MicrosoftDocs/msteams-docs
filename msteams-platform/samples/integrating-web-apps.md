@@ -1,7 +1,6 @@
 ---
 author: heath-hamilton
 description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep linking of your app with Teams.
-ms.author: surbhigupta
 ms.date: 01/23/2025
 ms.localizationpriority: medium
 ms.topic: conceptual

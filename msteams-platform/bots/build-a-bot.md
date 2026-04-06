@@ -4,7 +4,6 @@ description: Learn to build a basic chatbot. Additionally, learn to migrate  bui
 ms.localizationpriority: high
 ms.date: 09/25/2024
 ms.topic: conceptual
-ms.author: surbhigupta
 ---
 
 # Bots in Teams

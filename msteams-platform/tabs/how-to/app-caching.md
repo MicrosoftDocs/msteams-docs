@@ -1,6 +1,5 @@
 ---
 title: Enable App Suspension for Tab App
-author: surbhigupta
 description: Learn how to enable app suspension for tab app in Teams, improve app's subsequent launch time and about limitations, troubleshooting, and code sample.
 ms.topic: conceptual
 ms.author: vikasalmal
