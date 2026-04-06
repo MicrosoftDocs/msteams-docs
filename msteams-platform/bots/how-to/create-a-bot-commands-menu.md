@@ -207,29 +207,33 @@ teamsApp.OnMessage(async context =>
     // Get message text and normalize it
     var text = (context.Activity.Text ?? "").Trim().ToLower();
 
-    // Handle mention me command
-    if (text.Contains("mentionme") || text.Contains("mention me"))
+    switch (text)
     {
-        await MentionUser(context);
-    }
-    // Handle whoami command
-    else if (text.Contains("whoami"))
-    {
-        await GetSingleMember(context);
-    }
-    // Handle welcome command
-    else if (text.Contains("welcome"))
-    {
-        await SendWelcomeMessage(context);
-    }
-    // Echo greeting messages
-    else if (text.Contains("hi") || text.Contains("hello"))
-    {
-        await EchoMessage(context, text);
-    }
-    else
-    {
-        await SendWelcomeMessage(context);
+        // Handle mention me command
+        case "mentionme":
+        case "mention me":
+            await MentionUser(context);
+            break;
+
+        // Handle whoami command
+        case "whoami":
+            await GetSingleMember(context);
+            break;
+
+        // Handle welcome command
+        case "welcome":
+            await SendWelcomeMessage(context);
+            break;
+
+        // Echo greeting messages
+        case "hi":
+        case "hello":
+            await EchoMessage(context, text);
+            break;
+
+        default:
+            await SendWelcomeMessage(context);
+            break;
     }
 });
 
