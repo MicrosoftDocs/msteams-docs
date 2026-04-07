@@ -53,23 +53,23 @@ To create a new environment:
 
 ## Targeting an environment for remote build
 
-If your project has multiple environments, you must select one to debug and build your agent or app, and to preview the remote app in Microsoft Teams.
+When working with multiple environments, you must select a target environment to build, debug, and preview your agent or app in Microsoft Teams.
 
 You can choose the target environment directly from the build settings.
 
-### Select the target environment
+### Select an environment
 
-To target the `dev` environment or a custom environment you’ve created:
+To target the dev or a custom environment:
 
 1. From the **Lifecycle** section of Agents toolkit, select **Provision** for your agent or app.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
 
-1. When prompted, select an environment from the list of available environments (for example, `dev` or a custom environment).
+1. When prompted, select one of the available environments (for example, `dev` or a custom environment).
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select an environment.":::
 
-Agents Toolkit provisions for your agent or app. You can now build your agent or app in the selected environment.
+The Agents Toolkit provisions the agent or app for the chosen environment. You can now build your agent or app in the selected environment.
 
 ### Build in the selected environment
 
