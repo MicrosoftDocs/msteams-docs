@@ -149,7 +149,7 @@ Use the existing activity context when sending a reply.
 
 ```csharp
 
-(WIP)
+await turnContext.SendActivityAsync(MessageFactory.Text($"This is a reply to: {turnContext.Activity.Text}"), cancellationToken);
 
 ```
 
@@ -166,7 +166,31 @@ After your bot opts in to sessions, creating a new conversation with one user au
 Use the `CreateConversation` method to create a topic and send an initial message.-->
 
 ```csharp
-(WIP)
+var createParameters = new ConversationParameters
+{
+    Bot = new ChannelAccount(botAppId),
+    Members = new List<ChannelAccount>
+    {
+       new ChannelAccount(userId)
+    },
+    TenantId = tenantId,
+    Activity = new Activity() { Type = ActivityTypes.Message, Text = "Hello from Bot"}, // a message is required for creating a session
+};
+
+await adapter.CreateConversationAsync(
+        botId,
+        Channels.Msteams,
+        serviceUrl,
+        audience,
+        conversationParameters,
+        async (turnContext, cancellationToken) =>
+        {
+            await turnContext.SendActivityAsync(
+                MessageFactory.Text("👋 This is a new session."),
+                cancellationToken);
+        },
+        CancellationToken.None);
+
 ```
 
 When a bot creates a session:
