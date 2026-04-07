@@ -1,10 +1,10 @@
 ---
 title: SSO authentication for nested apps
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
-ms.date: 06/10/2025
+ms.date: 02/27/2026
 ms.topic: conceptual
-author: surbhigupta
-ms.author: surbhigupta
+author: vikasalmal
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ---
 
@@ -213,7 +213,7 @@ To improve performance and reduce authentication latency, nested app authenticat
 
 #### How to Enable Token Prefetching
 
-To enable token prefetching, update your [Teams app manifest](../../resources/schema/manifest-schema.md) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+To enable token prefetching, update your [Teams app manifest](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
 
  ```json
 {
@@ -272,7 +272,7 @@ This behavior is similar to the prefetch capability in the legacy Teams SSO mode
 
 | Sample name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|:--------|
-| Nested app authentication   | This sample showcases Microsoft Entra single sign-on (SSO) within a Microsoft Teams tab, utilizing the On-Behalf-Of (OBO) flow to call Microsoft Graph API on behalf of the user. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
+| Nested app authentication   | This sample showcases Microsoft Entra single sign-on (SSO) within a Microsoft Teams tab, utilizing the On-Behalf-Of (OBO) flow to call Microsoft Graph API on behalf of the user. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-nested-auth/nodejs)|
 
 ## See also
 

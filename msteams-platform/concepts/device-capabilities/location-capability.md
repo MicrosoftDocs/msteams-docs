@@ -1,10 +1,8 @@
 ---
 title: Add Location Capability with TeamsJS
-author: surbhigupta
 description: Learn how to use Teams JavaScript client library and location APIs to utilize location capabilities using code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 12/13/2022
 ---
 
@@ -56,7 +54,7 @@ To integrate location capabilities, you must:
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
+Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [

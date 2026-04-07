@@ -4,7 +4,6 @@ description: Learn to update and configure the app manifest to enable SSO for bo
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 03/11/2025
-ms.owner: ryanbliss
 ---
 # Update app manifest for SSO and preview your app
 
@@ -31,7 +30,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 
 The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
-For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
+For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
 ## To configure app manifest
 
@@ -41,7 +40,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > [!NOTE]
     >
     > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/).
 
 1. Open the `manifest.json` file.
 1. Add one of the following code snippets to the app manifest file to add the new property:
@@ -79,7 +78,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    > [!NOTE]
    > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Bot Framework. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
-6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
+6. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
 
 <br>
 <details>
@@ -87,8 +86,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.7",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.24/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.24",
   "version": "1.0",
   "id": "00000000-0000-0000-0000-000000000000",
   "packageName": "com.microsoft.teams.samples.auth",
@@ -143,7 +142,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     {
       "botId": "<<REGISTERED_BOT_ID>>",
       "scopes": [
-        "personal"
+        "personal",
+        "groupChat"
       ]
     }
   ],
@@ -190,11 +190,11 @@ To preview your app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The custom app is uploaded. The consent dialog appears to inform you of the permissions that might be required.
+    The custom app is uploaded. A consent dialog appears to inform you of the permissions that might be required.
 
-1. Select **Continue**.
+1. Select **View permissions** and provide the necessary permissions to authenticate the app.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." border="false" lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
 
   Teams opens the app and you can use it.
 

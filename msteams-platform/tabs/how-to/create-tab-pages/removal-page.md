@@ -4,7 +4,6 @@ description: Learn to enable your tab to be reconfigured after installation. Ext
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 02/06/2025
-ms.owner: ryanbliss
 ---
 # Create a removal page
 
@@ -122,7 +121,7 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 ## See also
 
 * [Build tabs for Teams](../../what-are-tabs.md)
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [RemoveEvent interface](/javascript/api/@microsoft/teams-js/pages.config.removeevent)
 * [Get context for your tab](../access-teams-context.md)
 * [Create a personal tab](../create-personal-tab.md)

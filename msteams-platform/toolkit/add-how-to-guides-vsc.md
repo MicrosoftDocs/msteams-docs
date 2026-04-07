@@ -1,8 +1,6 @@
 ---
 title: How-to Guides for Teams Apps
-author: surbhigupta
 description: Learn about the How-to guides from Microsoft 365 Agents Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook add-in capabilities.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 12/19/2024
@@ -59,4 +57,4 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 * [Walkthrough building an app that responds to chat commands](../sbs-gs-commandbot.yml).
 * [Walkthrough building an app that sends chat messages](../sbs-gs-notificationbot.yml).
 * [Walkthrough building an app with a workflow in chat](../sbs-gs-workflow-bot.yml)
-* [App manifest schema](../resources/schema/manifest-schema.md)
+* [App manifest schema](/microsoft-365/extensibility/schema/)

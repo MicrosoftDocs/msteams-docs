@@ -4,7 +4,6 @@ description: Learn final steps before you submit your Teams app to be listed on 
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
-ms.author: surbhigupta
 ms.date: 01/23/2025
 ---
 
@@ -32,7 +31,7 @@ The Teams app validation tool helps you identify and fix issues before submittin
 
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
+1. [Fix issues with your configurations](/microsoft-365/extensibility/schema) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## Compile testing instructions
 
@@ -77,7 +76,7 @@ A Teams Store listing may be someone's first impression of your app. Increase in
 
 ### Specify a short name
 
-Your app's name (specifically, its *[short name](~/resources/schema/manifest-schema.md#name)*) plays a crucial role in how users discover it in the Teams Store.
+Your app's name (specifically, its *[short name](/microsoft-365/extensibility/schema/root-name#short)*) plays a crucial role in how users discover it in the Teams Store.
 
 :::row:::
 

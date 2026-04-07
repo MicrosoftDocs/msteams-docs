@@ -3,7 +3,6 @@ title: Enable Third-party Cloud Storage
 description: Learn how to set third-party storage app for your Teams app for the files that are dragged and dropped in a message compose area of a Teams chat or channel.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.author: surbhigupta
 ms.date: 02/26/2025
 ---
 
@@ -198,4 +197,4 @@ Sample name | Description | Node.js | .NET | Python |
 
 ## See also
 
-[App manifest](../../resources/schema/manifest-schema.md)
+[App manifest](/microsoft-365/extensibility/schema/)

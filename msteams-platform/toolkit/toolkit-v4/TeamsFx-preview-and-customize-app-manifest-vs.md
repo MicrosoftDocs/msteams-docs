@@ -1,8 +1,6 @@
 ---
 title: Customize App Manifest in Agents Toolkit
-author: surbhigupta
 description: Learn how to customize and preview the app manifest for different environments in Agents Toolkit for Visual Studio, and sync local changes in Developer Portal.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
@@ -101,7 +99,7 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
-* [App manifest schema](~/resources/schema/manifest-schema.md)
+* [App manifest schema](/microsoft-365/extensibility/schema)
 * [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md)
 * [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)

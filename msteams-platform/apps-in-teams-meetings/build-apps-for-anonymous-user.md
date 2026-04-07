@@ -1,26 +1,26 @@
 ---
-title: Build apps for anonymous user
+title: Build app for anonymous user
 description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.owner: vichug
-ms.date: 02/07/2023
+ms.date: 03/16/2026
 ---
 
 # Build apps for anonymous users
 
-Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
+Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. These anonymous participants are external users, but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee, but they can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred to as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
 
 > [!NOTE]
 >
 > * Apps for anonymous users are supported in the new Teams desktop and mobile clients for Windows and Mac.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
-For anonymous users to interact with the apps in Teams meetings, ensure to:
+To enable anonymous users to interact with the apps in Teams meetings, ensure to:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
-2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
+2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in the Teams admin center.
 
 ## App manifest update for anonymous users
 
@@ -35,7 +35,7 @@ To allow anonymous users to interact with the tab app, update the `supportsAnony
 }
 ```
 
-For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
+For more information, see [app manifest schema.](/microsoft-365/extensibility/schema/root-meeting-extension-definition)
 
 ## Anonymous user authentication flow
 
@@ -43,9 +43,9 @@ Anonymous users can't be authenticated through Microsoft Entra authentication or
 
 ## Admin setting for anonymous user app interaction
 
-Admins can use Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
-To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
+To test your app's experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
 ## In-Meeting getContext from Teams client library
 
@@ -241,7 +241,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 |Sample name | Description | .NET |Node.js|
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Bot Framework, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
+| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Teams SDK, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-anonymous-users/nodejs)|
 
 ## Next step
 

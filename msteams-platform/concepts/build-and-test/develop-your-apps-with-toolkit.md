@@ -3,7 +3,6 @@ title: App Development with Agents Toolkit
 description: Learn how to integrate your app from Developer Portal to Microsoft 365 Agents Toolkit in Microsoft Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 04/24/2023
 ---
 
@@ -52,7 +51,7 @@ Following are the steps to open your app in Visual Studio Code from Developer Po
 
 1. Select your preferred programming language.
 
-    :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Agents Toolkit with Select a programming language highlighted in red.":::
+    :::image type="content" source="../../assets/images/tdp/select-language.png" alt-text="Screenshot shows Agents Toolkit with Select a programming language highlighted in red.":::
 
 1. Select your workspace folder.
 

@@ -1,7 +1,6 @@
 ---
 title: Invoke Dialogs from Tab, Bot, or Link
 description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
-author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/29/2023
@@ -38,7 +37,7 @@ The `UrlDialogInfo` object for HTML-based dialogs extends the `DialogInfo` objec
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
+| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in your app's manifest. |
 
 ### AdaptiveCardDialogInfo object
 

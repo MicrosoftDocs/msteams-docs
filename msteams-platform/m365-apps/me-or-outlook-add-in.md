@@ -2,7 +2,7 @@
 title: Message Extension vs. Outlook Add-in
 description: Learn how to decide whether Microsoft 365 app must be message extension or Outlook add-in, and customer relation, security, attachment, and signature management.
 ms.date: 01/05/2023
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
@@ -11,6 +11,8 @@ ms.subservice: m365apps
 An Outlook add-in and a message extension allow you to create rich and interactive content for email messages and meeting invitations. You can create an Outlook add-in and a message extension for your Teams app based on the scenario.
 
 If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, an Outlook add-in and a message extension. You must host both these apps at the same domain so that they can share files.
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 ## Guidelines for Outlook add-in and message extension
 

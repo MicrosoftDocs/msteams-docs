@@ -1,6 +1,5 @@
 ---
 title: Create a command menu for your bot
-author: surbhigupta
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -239,6 +238,6 @@ Following are the command menu best practices:
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Messages in bot conversations](conversations/conversation-messages.md)
 * [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

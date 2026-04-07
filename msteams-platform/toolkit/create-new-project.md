@@ -2,7 +2,6 @@
 title: Create New Teams App in Agents Toolkit
 author: zyxiaoyuer
 description: Learn how to create basic and scenario-based Teams app in VSC, its directory structure, and Teams app template available in Microsoft 365 Agents Toolkit.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
@@ -34,28 +33,23 @@ To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
-1. Select the **Microsoft 365 Agents Toolkit** > **Create a New Agent/App** > select **Teams App**.
+1. Select the **Microsoft 365 Agents Toolkit** > **Create a New Agent/App** > select **Teams Agents and Apps**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/toolkit-activity-bar.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
+
+1. Select **Other Teams Capabilities**
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/other-teams-capabilities.png" alt-text="Screenshot shows the Other Teams Capabilities to select.":::
 
 1. In this example, select **Tab** as app capability.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
 
-1. Select **Basic Tab** as app capability.
-
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows the option to select App Feature using a Tab as Basic Tab.":::
-
-1. Select **JavaScript** as the programming language.
-
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
-
 1. Select **Default folder** to store your project root folder in the default location.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
 
-    <details>
-    <summary>Learn to change the default folder:</summary>
+    To change the default location, follow these steps:
 
     1. Select **Browse**.
 
@@ -66,9 +60,8 @@ To create a basic Teams app:
         :::image type="content" source="../assets/images/toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
-    </details>
 
-    1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
@@ -111,7 +104,7 @@ To learn more about the directory structure of different types of basic Teams ap
 | --- | --- |
 | For tab app | [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) |
 | For bot app | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) |
-| For message extension app | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) |
+| For message extension app | [Build your first message extension app using JavaScript](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript) |
 
 </details>
 <br>
@@ -155,6 +148,8 @@ To learn more about the directory structure of different types of scenario-based
 
 </details>
 <br>
+
+For trying out more step-by-step guiges on building apps, see [Tutorials](../get-started/tutorials.md).
 
 ## See also
 

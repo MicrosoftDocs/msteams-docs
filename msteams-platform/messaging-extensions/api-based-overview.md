@@ -1,6 +1,5 @@
 ---
 title: Create API-based Message Extension
-author: surbhigupta
 description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Agents Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -20,6 +19,8 @@ Message extensions built using API (API-based) use a web service to manage user 
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 See the video to learn more about building an API-based message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 </br>
@@ -283,7 +284,7 @@ The following is an app manifest example with definitions for API-based message 
 |`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
-For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
+For more information, see [composeExtensions](/microsoft-365/extensibility/schema/root-compose-extensions).
 
 ### Response rendering template
 

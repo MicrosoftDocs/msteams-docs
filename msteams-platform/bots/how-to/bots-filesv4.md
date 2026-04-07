@@ -49,7 +49,7 @@ The next sections describe how to send file content as direct user interaction, 
 
 ### Configure the bot to support files
 
-To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the manifest reference.
+To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](/microsoft-365/extensibility/schema/root-bots#supportsfiles) section of the manifest reference.
 
 The definition looks like this, `"supportsFiles": true`. If the bot does not enable `supportsFiles`, the features listed in this section do not work.
 

@@ -1,6 +1,5 @@
 ---
 title: API secret service auth
-author: surbhigupta
 description: Learn how to enable API key authentication and register an API key for API_based message extensions.
 ms.localizationpriority: medium
 ms.topic: concept-article
@@ -95,7 +94,7 @@ The API key registration ID is updated as the value for the `apiSecretRegistrati
 
 ## Update app manifest
 
-Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer Portal for Teams. For more information, see [composeExtensions.commands.](../resources/schema/manifest-schema.md#composeextensionscommands)
+Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer Portal for Teams. For more information, see [composeExtensions.commands.](/microsoft-365/extensibility/schema/root-compose-extensions-commands)
 
 ```json
 "composeExtensions": [

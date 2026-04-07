@@ -1,6 +1,5 @@
 ---
 title: Message Extension as Agent for Copilot
-author: surbhigupta
 description: Learn how to build a bot-based message extension agent for Microsoft 365 Copilot using Developer Portal for Teams and Microsoft 365 Agents Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -22,6 +21,8 @@ ms.collection: ce-skilling-ai-copilot
 Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as an agent in Microsoft 365 Copilot, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Microsoft 365 Copilot. You can achieve this extension by developing an agent or connecting to an external data source.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 ## What is an agent?
 

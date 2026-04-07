@@ -1,8 +1,6 @@
 ---
 title: In-app Purchases for App Monetization
 description: Learn the basic tasks and concepts needed to implement in-app purchases such as app manifest update, purchase experience API, and trial functionality in Teams apps.
-author: surbhigupta
-ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 11/26/2024
@@ -35,7 +33,7 @@ You can activate the in-app purchase experience through one of the following way
 
 **Update from Developer Portal**
 
-1. In Teams Developer Portal, go to **Permissions**. 
+1. In Teams Developer Portal, go to **Permissions**.
 1. Enable **Show in-app purchase offers**.
 
 **Update manifest**
@@ -110,4 +108,4 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [App manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
+* [App manifest](/microsoft-365/extensibility/schema/)

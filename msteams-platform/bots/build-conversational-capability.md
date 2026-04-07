@@ -1,16 +1,18 @@
 ---
 title: Conversations with a Bot
 description: Learn about sending and receiving messages using a bot app
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.owner: angovil
-ms.date: 02/26/2025
+ms.date: 03/16/2025
 ---
 
 # Send and receive messages
 
 Conversational bots communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that bot conversations are interactive, dynamic, adaptive, and user friendly.
+
+You can also send [targeted messages](../agents-in-teams/targeted-messages.md) using your agent or bot app.
 
 ## Message content
 
@@ -124,7 +126,7 @@ The following code shows an example of receiving a message activity:
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
 
@@ -238,7 +240,7 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 To receive read receipts events for your bot, ensure the following:
 
-- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
+- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific#rsc-delegated-permissionsd), as follows:
 
   # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
@@ -1118,10 +1120,11 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the bot. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
-| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](~/feedback.md#developer-community-help). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
-| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](../feedback.md#report-issues). |
+[developer community forums](../feedback.md#developer-community-forums). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums).. |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
+| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
 
 ### Status codes retry guidance
 

@@ -320,4 +320,4 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
 * [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)

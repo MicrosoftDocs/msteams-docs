@@ -2,7 +2,6 @@
 title: Charts in Adaptive Cards
 description: Learn how to create charts in Adaptive Cards including donut, gauge, vertical bar, horizontal bar, line, and pie charts.
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.date: 11/07/2024
 ---
 
@@ -20,6 +19,9 @@ You can visually represent data through charts in Adaptive Cards. You can use ch
 * [Pie chart](https://adaptivecards.microsoft.com/?topic=Chart.Pie)
 * [Stacked horizontal bar chart](https://adaptivecards.microsoft.com/?topic=Chart.HorizontalBar.Stacked)
 * [Vertical bar chart](https://adaptivecards.microsoft.com/?topic=Chart.VerticalBar)
+
+> [!NOTE]
+> Charts in Adaptive Cards are not supported in Developer Portal.
 
 ## Donut chart
 

@@ -3,8 +3,7 @@ title: Configure OAuth Authentication for Tab
 description: Learn about third-party OAuth IdP authentication, navigation and authorization page, and how to configure and initiate authentication flow.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 12/13/2022
-ms.owner: ryanbliss
+ms.date: 03/16/2026
 ---
 # Configure third party OAuth IdP authentication
 
@@ -97,7 +96,7 @@ microsoftTeams.authentication.authenticate({
 
 * The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Microsoft Entra Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](/microsoft-365/extensibility/schema/root#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
 * If you fail to use `authenticate()`, the pop-up might not close at the end of the sign-in process, causing a problem.
 
@@ -242,7 +241,7 @@ Sample code showing the tab authentication process using Microsoft Entra ID:
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|--------------|
 | Tab SSO | This sample app showcases Microsoft Entra SSO within a tab, using the On-Behalf-Of flow to call Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
-| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
+| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest)|
 
 ## See also
 

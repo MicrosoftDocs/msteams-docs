@@ -1,9 +1,7 @@
 ---
 title: Build & Explore Command Bot in Teams
-author: surbhigupta
 description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 12/11/2024
@@ -133,7 +131,7 @@ You can edit the manifest template file `appPackage\manifest.json` to update the
 ]
 ```
 
-For more information, see [app manifest](../../../resources/schema/manifest-schema.md#botscommandlistscommands).
+For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots-command-lists-commands).
 
 <br>
 </details>

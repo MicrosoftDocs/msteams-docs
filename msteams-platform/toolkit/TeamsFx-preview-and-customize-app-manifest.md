@@ -1,8 +1,6 @@
 ---
 title: Customize app manifest in Agents Toolkit
-author: surbhigupta
 description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/13/2022
@@ -64,6 +62,7 @@ For example, you can customize app description by defining a new environment var
    ```text
    TEAMS_APP_DESCRIPTION=This is an amazing app
    ```
+
    `manifest.json`
 
    ```json
@@ -100,7 +99,6 @@ For example, you can customize app description by defining a new environment var
 
     You can also add the file path in `env/.env.xx`. Then, modify the parameter of `file()` to a placeholder in the `${{xx_xx}}` format.
 
-
    `.env.dev`
 
     ```text
@@ -119,8 +117,6 @@ For example, you can customize app description by defining a new environment var
         },
     }
     ```
-
-
 
 ## Validate your app
 
@@ -203,7 +199,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [App manifest schema](../resources/schema/manifest-schema.md)
+* [App manifest schema](/microsoft-365/extensibility/schema)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)

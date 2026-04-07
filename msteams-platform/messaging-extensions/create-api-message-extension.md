@@ -1,6 +1,5 @@
 ---
 title: Build API-based Message Extension
-author: surbhigupta
 description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Agents Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -14,6 +13,8 @@ ms.date: 02/26/2025
 > API-based message extensions only support search commands.
 
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 Before you get started, ensure that you meet the following requirements:
 
@@ -1157,11 +1158,13 @@ Now you've successfully created a message extension with multiple parameters.
 
 ## Step-by-step guides
 
-To build an API-based message extension, follow these step-by-step guides:
+To build an API-based message extension, see [build an API-based message extension](../get-started/tutorials.md#build-api-based-message-extension).
 
+<!--
 * [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Agents Toolkit.
-* [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
 
+[For advanced users](../get-started/tutorials.md#build-api-based-message-extension): Build an API-based message extension from the ground up.
+-->
 ## See also
 
 [Authentication for API-based message extensions](build-api-based-message-extension.md)

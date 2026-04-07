@@ -1,16 +1,38 @@
 ---
 title: Real-time Media Call & Meeting for Bots
-description: Learn how bot interacts with Teams calls and online meetings. Explore media sessions, frame rate, audio and video format, active speakers, and video subscription. 
+description: Learn how bot interacts with Teams calls and online meetings. Explore media sessions, frame rate, audio and video format, active speakers, and video subscription.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 06/02/2022
+ms.date: 02/03/2026
 ---
 
 # Real-time media calls and meetings with Microsoft Teams
 
 The Real-time Media Platform enables bots to interact with Microsoft Teams calls and meetings using real-time voice, video, and screen sharing. The Real-time Media Platform is an advanced capability that allows the bot to send and receive voice and video content frame by frame. The bot has raw access to the voice, video, and screen sharing media streams. There are simpler service-hosted media bots that rely on the Real-time Media Platform for all media processing. Bots that process media themselves are called application-hosted media bots.
 
-For example, in a 1:1 call with a bot, as the user speaks, the bot receives 50 audio frames per second. The bot receives audio frames with each frame of 20 milliseconds (ms) of audio. An application-hosted media bot can do real-time speech recognition as the audio frames are received. No need to wait for a recording after the user has stopped speaking. The bot can also send and receive high-definition-resolution video, including video-based screen sharing content.
+## Intended use cases
+
+Real-time Media bots are designed for specialized scenarios that require direct access to raw media streams, these integrations are provided via managed partners and in some cases certified by Microsoft.
+
+| Scenario | Description |
+|----------|-------------|
+| **Cloud Video Interop (CVI)** | Integrate third-party video conferencing systems with Teams meetings |
+| **Compliance Recording** | Capture and archive meeting content for regulatory compliance |
+| **Contact Center Integration** | Connect enterprise contact center platforms with Teams calling |
+
+> [!IMPORTANT]
+> **Building AI agents for meetings?** Real-time Media bots are not recommended for AI agent scenarios. Instead, use:
+> - [Microsoft Copilot Studio agents](/microsoft-copilot-studio/overview) for building agents that participate in Teams meetings
+> - [Graph API meeting transcripts](/graph/api/resources/calltranscript) to access meeting content after transcription
+> - [Meeting transcripts overview](/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts) for transcript access without raw media processing
+>
+> These approaches provide meeting intelligence without the complexity and infrastructure requirements of media processing.
+
+## Use case example: Compliance recording
+
+In a compliance recording scenario, the bot joins a call or meeting and receives 50 audio frames per second. The bot captures and archives the raw media streams to meet regulatory requirements, such as MiFID II, HIPAA, or other industry-specific mandates.
+
+For a complete implementation example, see the [Policy Recording Bot sample](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot).
 
 The platform provides a simple socket-like API for the bot to send and receive media. It handles the real-time encoding and decoding of audio or video packets. It uses codecs such as SILK and G.722 for audio and H.264 for video. The platform also handles all media packet encryption or decryption and packet network transmission. The bot is only concerned with the actual audio or video content. A real-time media bot participates in 1:1 calls and meetings with multiple participants.
 
@@ -50,7 +72,7 @@ The next section provides details about video subscription requests made by a bo
 
 ## Video subscription
 
-In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant’s main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is screen sharing.
+In a 1:1 call, the bot automatically receives the video of the caller if the bot is enabled to receive the video. In a Teams meeting, the bot must indicate to the platform which participants it wants to see. A video subscription is a request by the bot to receive a participant's main video or screen-sharing content. As the participants in the meeting conduct their conversation, the bot modifies its required video subscriptions. The bot modifies video subscriptions based on updates of the dominant speaker set or notifications that indicate which participant is screen sharing.
 
 The next section provides details about what you must install and the requirements to develop an application-hosted media bot.
 
@@ -60,11 +82,20 @@ To develop an application-hosted media bot, you must install the [Microsoft.Grap
 
 Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
+> [!NOTE]
+> Application-hosted media bots require significant infrastructure investment:
+> - Windows Server VMs with GPU capabilities for video processing
+> - High-bandwidth, low-latency network connectivity
+> - Scalable compute to handle concurrent calls/meetings
+> - Media processing expertise for codec handling
+>
+> Evaluate whether your scenario truly requires raw media access before choosing this approach.
+
 ## Code sample
 
 | **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
-| Policy recording bot | This sample demonstrates how a bot can receive media streams for recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
+| Policy recording bot | This sample demonstrates how a bot can receive media streams for compliance recording. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples/PolicyRecordingBot) |
 
 ## Next step
 
@@ -73,6 +104,14 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 
 ## See also
 
-* [Build bots for Teams](../what-are-bots.md)
+### For CVI and Compliance Recording
+
 * [Calls and online meetings bots](calls-meetings-bots-overview.md)
 * [Supported media formats for bots](requirements-considerations-application-hosted-media-bots.md)
+* [Policy-based recording for Teams calls and meetings](/microsoftteams/teams-recording-policy)
+* [Cloud Video Interop for Teams](/microsoftteams/cloud-video-interop)
+
+### For AI agents and meeting intelligence (recommended alternatives)
+
+* [Microsoft Copilot Studio agents](/microsoft-copilot-studio/overview) - Build AI agents for Teams meetings
+* [Get meeting transcripts using Graph APIs](/graph/api/resources/calltranscript) - Access meeting content without media processing

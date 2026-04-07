@@ -1,11 +1,10 @@
 ---
 title: Test Saas Preview Offer for Teams App
-author: surbhigupta
 description: Learn to create and test SaaS preview offers for Teams app. Generate a preview offer ID and configure your app with the preview offer ID to test the offer.
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
-ms.date: 11/26/2024
+ms.date: 03/02/2026
 ---
 
 # Test your SaaS offer
@@ -54,7 +53,7 @@ After you generate the preview offer ID, link the preview offer ID to your Teams
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Screenshot shows the plan and pricing screen to add offer ID." lightbox="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png":::
 
-You must add the `subscriptionOffer` property to your [app manifest](../../../../resources/schema/manifest-schema.md#subscriptionoffer).
+You must add the `subscriptionOffer` property to your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer).
 
 ```json
 "subscriptionOffer": {
@@ -97,7 +96,7 @@ Upon successful testing, you can push the offer to go live where app validations
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
 |-----------------|-----------------|----------------|----------------|
-| Tab app monetization | This sample demonstrates a Teams tab application that opens a purchase dialog and triggers a monetization flow through the Teams JS SDK. Users can experience app monetization features seamlessly integrated within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+| Tab app monetization | This sample demonstrates a Teams tab application that opens a purchase dialog and triggers a monetization flow through the Teams JS SDK. Users can experience app monetization features seamlessly integrated within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 
@@ -110,4 +109,4 @@ Upon successful testing, you can push the offer to go live where app validations
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Preview and subscribe](/partner-center/marketplace/test-saas-preview-offer)
 * [Unsubscribe from a test plan](/partner-center/marketplace/test-saas-unsubscribe)
-* [App manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
+* [App manifest](/microsoft-365/extensibility/schema)

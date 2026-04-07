@@ -2,7 +2,6 @@
 title: App Icon Badges for Meetings
 description: Learn how to enable app icon badging for your Microsoft Teams app in meeting, app manifest setting, and its code samples to enable app icon badging (Node.js, .NET).
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.owner: vichug
 ms.date: 01/23/2025
@@ -36,7 +35,7 @@ To enable app icon badging, follow these steps:
 To enable app icon badging, you must:
 
 * Ensure that you've configured `meetingSidePanel` as a `context` property for your app.
-* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization) as follows:
 
 ```json
 

@@ -2,8 +2,6 @@
 title: Upload your custom app
 description: Learn how to upload your custom app in Microsoft Teams. Custom app upload is common when testing and debugging an app during development.
 ms.topic: how-to
-author: surbhigupta
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 01/23/2025
 ---
@@ -66,7 +64,7 @@ If your app fails to upload or encounters any issues to upload, check the follow
 
 1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
-1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
+1. Ensure your app manifest matches with the latest [schema](/microsoft-365/extensibility/schema).
 
 ## Manage your apps
 

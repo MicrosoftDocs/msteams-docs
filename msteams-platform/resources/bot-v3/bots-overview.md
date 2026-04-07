@@ -26,7 +26,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves differently depending on what kind of conversation it's involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](~/resources/schema/manifest-schema.md).
+A bot behaves differently depending on what kind of conversation it's involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](/microsoft-365/extensibility/schema/root-bots#scopes).
 
 * `teams` Also called channel conversations.
 * `personal` Conversations between a bot and a single user.
@@ -109,7 +109,7 @@ The following articles guide you through the process of creating a great bot for
 > * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you'll see "Migration status" column and a blue "Migrate" button that takes you into the Microsoft Azure portal. Don't select the "Migrate" button unless that's what you want to do; instead, select the name of the bot and you can edit its properties:</br>
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
 > * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
-> * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Teams.
+> * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Teams.
 > * You can now use Developer Portal for Teams to register/update app and bot information directly within Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
 
 </details>

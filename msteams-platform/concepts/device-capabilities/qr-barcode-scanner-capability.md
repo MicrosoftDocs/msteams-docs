@@ -1,11 +1,10 @@
 ---
 title: Enable QR/Barcode Scanner Capability
-author: surbhigupta
 description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: surbhigupta
-ms.date: 02/08/2023
+ms.author: vikasalmal
+ms.date: 03/02/2026
 ---
 
 # Integrate QR or barcode scanner capability
@@ -29,7 +28,7 @@ It's important to familiarize yourself with the [API response errors](#error-han
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability. The update for app manifest is as follows:
+Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -106,8 +105,8 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 | Sample name           | Description | .NET |Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|:---------|
-|Bot join team by QR | 	This bot allows users to join Microsoft Teams by scanning a team-specific QR code. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
-|Tab product inspection | This application demonstrates how to scan products directly within Microsoft Teams, capturing images and allowing users to approve or reject items. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-product-inspection/csharp/demo-manifest/Tab-Product-Inspection.zip)
+|Bot join team by QR |  This bot allows users to join Microsoft Teams by scanning a team-specific QR code. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
+|Tab product inspection | This application demonstrates how to scan products directly within Microsoft Teams, capturing images and allowing users to approve or reject items. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/csharp/demo-manifest/Tab-Product-Inspection.zip)
 
 ## See also
 
@@ -115,4 +114,4 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 * [Integrate media capabilities](media-capabilities.md)
 * [Integrate location capabilities](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)

@@ -25,20 +25,20 @@ You can also install Agents Toolkit from the [Visual Studio Code Marketplace](ht
 To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
 
 ``` bash
-npm install -g @microsoft/atk-cli
+npm install -g @microsoft/m365agentstoolkit-cli
 ```
 
 Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
-sudo npm install -g --unsafe-perm @microsoft/atk-cli
+sudo npm install -g --unsafe-perm @microsoft/m365agentstoolkit-cli
 ```
 
 This condition is more common on Linux and macOS systems.
 
 Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.
 
-You can use the CLI with the `atk' command. Verify that the command is working by running `atk -h`.
+You can use the CLI with the `atk` command. Verify that the command is working by running`atk -h`.
 
 > [!CAUTION]
 > Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.

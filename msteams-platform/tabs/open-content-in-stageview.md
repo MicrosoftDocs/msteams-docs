@@ -1,9 +1,7 @@
 ---
 title: Multi-window Experience for App Content
-author: surbhigupta
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
@@ -295,7 +293,7 @@ Stageview Modal is useful to display rich content to the users, such as page, da
 
 <summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
 
-Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root#validdomains).
 
 </br>
 

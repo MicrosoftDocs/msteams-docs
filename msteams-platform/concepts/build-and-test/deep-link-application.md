@@ -1,12 +1,10 @@
 ---
 title: Explore & Configure Deep Links to Apps
-author: surbhigupta
 description: Learn how to create deep links to an application and navigate using them in your Microsoft Teams apps and tabs and generate deep link to share content to meetings.
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
-ms.date: 11/12/2024
-ms.owner: ryanbliss
+ms.date: 03/05/2026
 ---
 
 # Deep link to an application
@@ -100,7 +98,7 @@ You can configure deep links to browse within your app in the following ways:
 
 ### Configure deep link to browse within your app manually
 
-Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
+Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs#scopes).
 
 # [Deep link format](#tab/format2)
 
@@ -387,7 +385,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> <br> - The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
+| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> <br> - The [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. Specify `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send to any bot. |
 
 > [!NOTE]
@@ -450,5 +448,5 @@ You can invoke Stageview through a deep link from your tab by wrapping the deep 
 | Sample name | Description | .NET |Node.js| TypeScript|
 |-------------|-------------|------|----|
 | Deep link consuming `subEntityId` | This Teams sample application highlights deeplinks for various functionalities, such as initiating calls, chats, and navigating within tabs and apps. It features a comprehensive setup guide and supports interactions with both bots and tabs for enhanced user engagement. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) | NA|
-| Tab app navigation | This sample illustrates the tab navigation feature in a Microsoft Teams application, enabling smooth transitions between different tabs. Designed for use with Node.js, it highlights how users can effectively navigate within the app for an enhanced experience. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) | NA|
-| Tab deep link pass values | This sample app for Microsoft Teams illustrates the creation and usage of dynamic deep links to pass contextual values to tab and standalone web applications. It highlights the differences in link formatting and consumption based on the user's access environment, enhancing navigation and data display capabilities. | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink-pass-values/ts)|
+| Tab app navigation | This sample illustrates the tab navigation feature in a Microsoft Teams application, enabling smooth transitions between different tabs. Designed for use with Node.js, it highlights how users can effectively navigate within the app for an enhanced experience. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-app-navigation/nodejs) | NA|
+| Tab deep link pass values | This sample app for Microsoft Teams illustrates the creation and usage of dynamic deep links to pass contextual values to tab and standalone web applications. It highlights the differences in link formatting and consumption based on the user's access environment, enhancing navigation and data display capabilities. | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-deeplink-pass-values/ts)|

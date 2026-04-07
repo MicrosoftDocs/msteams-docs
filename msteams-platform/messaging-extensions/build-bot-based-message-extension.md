@@ -1,6 +1,5 @@
 ---
 title: Build Bot-based Message Extensions
-author: surbhigupta
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -14,6 +13,8 @@ ms.date: 09/16/2024
 Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
 
 Bot-based message extension takes advantage of the Bot Framework's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
@@ -94,7 +95,7 @@ You must add the following search parameter details that define the text visible
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 
@@ -185,7 +186,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 

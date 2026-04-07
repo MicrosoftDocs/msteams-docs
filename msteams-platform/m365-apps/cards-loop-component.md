@@ -21,7 +21,7 @@ Following is an example of an Adaptive Card-based Loop component:
 
 To build an Adaptive Card-based Loop component, follow these steps:
 
-1. [Build a message extension with a search command](../sbs-gs-msgext.yml).
+1. [Build a message extension with a search command](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript).
 
 1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) to the message extension.
 

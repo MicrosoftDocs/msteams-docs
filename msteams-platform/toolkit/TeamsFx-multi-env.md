@@ -1,8 +1,6 @@
 ---
 title: TeamsFx Environments in Agents Toolkit
-author: surbhigupta
 description: Learn about TeamsFX multiple environment, use env files with Microsoft 365 Agents Toolkit, create a new environment manually in Visual Studio Code, and select target environment.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 02/06/2025
@@ -59,7 +57,7 @@ When you have multiple environments and select the Production, dev, or local men
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
 * [Test app behavior in different environment](test-app-behavior.md)

@@ -1,6 +1,5 @@
 ---
 title: SSO for API-based message extensions
-author: surbhigupta
 description: Learn how to enable Microsoft Entra SSO authentication, register a new app, configure access token, API scopes, and authorize client application.
 ms.localizationpriority: medium
 ms.topic: concept-article
@@ -293,7 +292,7 @@ After the API-based message extension gets a request header with token, perform 
 
 Update the following properties in the app manifest file:
 
-* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The app ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The app ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
@@ -307,7 +306,7 @@ To configure app manifest:
     > [!NOTE]
     >
     > * The app manifest folder should be at the root of your app folder. For more information, see [create a Microsoft Teams app package](../concepts/build-and-test/apps-package.md).
-    > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
+    > * For more information on learning how to create a manifest.json, see [the app manifest schema](/microsoft-365/extensibility/schema).
 
 1. Open the `manifest.json` file.
 1. Add the following code snippet into the `webApplicationInfo` section of your app manifest file:

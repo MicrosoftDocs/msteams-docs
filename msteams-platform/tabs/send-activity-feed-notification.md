@@ -1,11 +1,11 @@
 ---
 title: Send activity feed notifications
 description: Learn how to send and customize activity feed notifications in chat or team, types and use cases of notification cards, and about reversed activity type.
-author: surbhigupta
+author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.owner: vishachadha
-ms.date: 12/17/2024
+ms.date: 02/27/2026
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
@@ -78,7 +78,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements to send activity feed notifications:
 
-* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-web-application-info).
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
     > [!NOTE]
@@ -239,7 +239,7 @@ The following are the benefits and limitations for the `systemDefault` activity 
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|
-|Send activity feed notifications |Sample app demonstrates how to send activity feed notifications using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-activity-feed/nodejs)|
+|Send activity feed notifications |Sample app demonstrates how to send activity feed notifications using Microsoft Graph API.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-activity-feed/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-activity-feed/nodejs)|
 
 ## Step-by-step guide
 

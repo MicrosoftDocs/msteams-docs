@@ -2,7 +2,6 @@
 title: Prerequisites to Create Teams App
 author: zyxiaoyuer
 description: Learn about the tools required to build a Teams app in Visual Studio Code, how to prepare accounts, verify and enable custom app upload.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/21/2024
@@ -109,7 +108,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
 
 ### SharePoint collection site administrator account
 

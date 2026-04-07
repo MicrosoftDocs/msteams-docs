@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Learn what you can do during the traction stage of your app to grow your app such as plan, build readiness, and drive adoption among customers.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 02/21/2023
 ---
 # Gain traction for your collaborative app in the market

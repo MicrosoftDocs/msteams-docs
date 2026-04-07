@@ -4,7 +4,6 @@ description: Learn about Teams authentication flow in tabs using third-party OAu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 03/02/2025
-ms.owner: ryanbliss
 ---
 # Enable authentication using third-party OAuth provider
 
@@ -72,4 +71,4 @@ For a detailed implementation for tab authentication using Microsoft Entra ID, s
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
-* [validDomains](../../../resources/schema/manifest-schema.md#validdomains)
+* [validDomains](/microsoft-365/extensibility/schema/root#validdomains)

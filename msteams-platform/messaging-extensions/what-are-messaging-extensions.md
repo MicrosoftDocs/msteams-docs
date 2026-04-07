@@ -1,6 +1,5 @@
 ---
 title: Message extensions
-author: surbhigupta
 description: Learn how to build message extensions and the scenarios where they are used. Explore samples on action and search based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -94,6 +93,8 @@ To build a message extension, if you don't already have one, there are two ways:
 * **Build message extensions using API (API-based)**: You can easily create a message extension from an existing API. An OpenAPI Description (OAD) document is required for this method.
 
 * **Build message extensions using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
+
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 The following table helps you select a message extension type to get started:
 

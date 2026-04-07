@@ -1,12 +1,9 @@
 ---
 title: Build Dashboard with Widget & Graph API
-author: surbhigupta
 description: Learn how to build dashboard tab app, customize layout, use a widget, make Graph API calls using Microsoft 365 Agents Toolkit, and embed a Power BI dashboard.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 01/17/2023
-ms.owner: ryanbliss
 ---
 
 # Build a dashboard tab app
@@ -161,7 +158,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab app
 
-Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs). Here's an example:
+Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs). Here's an example:
 
 ```json
 {

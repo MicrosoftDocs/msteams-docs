@@ -1,20 +1,21 @@
 ---
 title: Respond to Search Command in Teams
-author: surbhigupta
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.date: 03/06/2025
 ms.localizationpriority: medium
 ---
 # Respond to search command
 
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions). For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands#initialrun). For more information, see [default query](#default-query).
 
 This document guides you on how to respond to user requests in the form of cards and previews and the conditions under which Microsoft Teams issues a default query.
 

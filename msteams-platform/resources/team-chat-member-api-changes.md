@@ -4,7 +4,6 @@ author: ojasvichoudhary
 description: Learn about upcoming API changes, deprecating features, and limitations of Bot APIs used for retrieving members of team and chat.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.author: surbhigupta
 ms.date: 02/26/2025
 ms.owner: angovil
 ---

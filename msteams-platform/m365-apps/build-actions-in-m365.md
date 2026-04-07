@@ -1,8 +1,7 @@
 ---
 title: Create Actions in Microsoft 365
 description: Learn how to build Actions, configure app manifest, retrieve Actions information through context object, access content through Graph API, preinstall Actions.
-ms.date: 12/8/2023
-ms.author: mosdevdocs
+ms.date: 03/16/2026
 author: v-preethah
 ms.topic: conceptual
 ms.subservice: m365apps
@@ -62,7 +61,7 @@ The following is an app manifest example for Actions that can be triggered on fi
 }
 ```
 
-For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema/element-actions).
 
 When a user selects an action to open a personal tab and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
@@ -139,7 +138,7 @@ Follow instructions to preinstall your app for entire organization or user group
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
+| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/m365-actions-preview/nodejs)|
 
 ## Next step
 

@@ -1,9 +1,8 @@
 ---
 title: Explore Responses to Action Commands
-author: surbhigupta
 description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
 ms.date: 03/11/2025
@@ -31,6 +30,8 @@ If the app doesn't respond within five seconds, the Teams client retries the req
 >
 >* The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
 >* Your app has five seconds to respond to the invoke message.
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
@@ -636,6 +637,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)
 * [Respond to search command](../search-commands/respond-to-search.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

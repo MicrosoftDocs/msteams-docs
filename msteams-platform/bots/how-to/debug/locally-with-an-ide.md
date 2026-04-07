@@ -1,6 +1,5 @@
 ---
 title: Test and debug your bot locally
-author: surbhigupta
 description: Learn about testing and debugging your bot locally with an IDE within Teams environment via uploading a custom app and more.
 ms.topic: overview
 ms.localizationpriority: medium
@@ -36,7 +35,7 @@ If you're hosting your bot locally during development, you need to use a tunneli
 ngrok http <port> --host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md).
+Use the https endpoint provided by ngrok in your [app manifest](/microsoft-365/extensibility/schema/).
 
 > [!NOTE]
 >

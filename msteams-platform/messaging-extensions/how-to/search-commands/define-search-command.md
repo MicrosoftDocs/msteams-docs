@@ -1,14 +1,15 @@
 ---
 title: Create Search Commands for App
-author: surbhigupta
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.date: 09/16/2024
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
 # Define message extension search commands
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 The search command is invoked from any one or both of the following locations:
 
@@ -23,7 +24,7 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
+To add the search command to your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
 
 ### Create search message extension using Bot Framework
 

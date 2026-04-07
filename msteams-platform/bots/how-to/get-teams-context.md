@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/11/2025
+ms.date: 03/16/2026
 ---
 # Get Teams specific context for your bot
 
@@ -247,7 +247,7 @@ The following sample code is used to get team's details:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -350,7 +350,7 @@ The following sample code is used to get the list of channels in a team:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
 
 ```csharp
 public class MyBot : TeamsActivityHandler

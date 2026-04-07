@@ -2,8 +2,7 @@
 title: Package your app
 description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
-ms.topic: conceptual
-ms.author: surbhigupta
+ms.topic: article
 ms.date: 12/19/2024
 ---
 
@@ -24,7 +23,7 @@ When a user installs your app in Teams, they install an app package that contain
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
 
 > [!NOTE]
-> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must be aware that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
+> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must know that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
 
 ## App manifest
 
@@ -32,13 +31,13 @@ An app manifest describes your app's configuration, including its capabilities, 
 
 You can create an app and configure the app manifest through one of the following platforms:
 
-* **Teams Toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
+* **Microsoft 365 Agents toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When you create an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
 
 * **Developer Portal for Teams**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Developer Portal for Teams, see [create and register an app](teams-developer-portal.md).
 
 You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md#build-your-first-teams-app).
 
-When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](~/resources/schema/manifest-schema.md). For sample app manifest, see [Hello world sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
+When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](/microsoft-365/extensibility/schema/). For sample app manifest, see [Hello world sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
 ## App icons
 
@@ -47,8 +46,9 @@ Your app package must include two .png versions of your app icon: A color and ou
 > [!NOTE]
 > If your app has a bot or message extension, your icons are included in your Microsoft Azure Bot Service registration.
 
-For your app to pass Teams Store review, these icons must meet the following size requirements.
+For your app to pass Teams Store review, these icons must meet certain size requirements. For more information, see [Teams app icon for Teams Store and app bar](../design/design-teams-app-icon-store-appbar.md).
 
+<!--
 ### Color icon
 
 * **Teams**: The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (120x120 pixels) can be any color, but it must sit on a solid or fully transparent square background.
@@ -57,7 +57,7 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
   :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon and design guidance.":::
 
-* **Outlook and Microsoft 365 (Preview)**: You can specify a [32x32 color icon](~/resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) is used, which may not share the same look and feel of the host environment.
+* **Outlook and Microsoft 365**: You can specify a [32x32 color icon](/microsoft-365/extensibility/schema/root-icons#color32x32) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) is used, which may not share the same look and feel of the host environment.
 
   :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Screenshot shows the design guidance of an outline and 32x32 color icon.":::
 
@@ -122,6 +122,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 #### Message extension
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>":::
+-->
 
 ## Next step
 
