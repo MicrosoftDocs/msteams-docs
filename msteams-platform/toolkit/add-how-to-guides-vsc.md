@@ -19,7 +19,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
 | Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
-Apart from how-to guides for capabilities, Agents Toolkit also provides:
+Apart from capabilities, Agents Toolkit also provides how-to guides for:
 
 **Scenario**:
 
