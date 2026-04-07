@@ -159,7 +159,9 @@ This ensures that each session maintains independent conversation context.
 
 Bots can create new sessions to initiate conversations around specific tasks, updates, or workflows. Proactively creating sessions helps organize notifications and prevents unrelated messages from appearing in existing conversations.
 
-After your bot opts in to sessions, creating a new conversation with one user automatically creates a new session. Use the `CreateConversation` API with a message activity. A message activity is required to create a session. For more information, see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+Creating a session proactively uses the same API as [creating a conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation) between a user and a bot. Unlike a classic 1:1 conversation, session creation requires `supportsSessions` bot to be installed for the user in the personal scope and a message activity in `ConversationParameters`.
+
+After user installs the opt-in sessions bot in personal scope, creating a new conversation between  a user and a bot with a message activity automatically creates a new session, using the `CreateConversation` API. User has to install the opt in sessions bot in personal scope and a message activity is required to create a session. For more information, see see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 <!--### Start a new topic
 
