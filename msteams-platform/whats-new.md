@@ -485,7 +485,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-    **March 27, 2026**: [Enable targeted messages for agents](agents-in-teams/targeted-messages.md)
+**April 2, 2026**: [Enable prompt starters](bots/how-to/conversations/prompt-suggestions.md)
+
 <!--                    
 **2025 May**
 
@@ -501,6 +502,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 27/03/2026 | Targeted Messages for agents. | [Enable targeted messages for agents](agents-in-teams/targeted-messages.md) |
 | 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 </details>
