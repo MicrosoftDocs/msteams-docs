@@ -67,7 +67,7 @@ To target the `dev` environment or a custom environment you’ve created:
 
 1. When prompted, select an environment from the list of available environments (for example, Dev or a custom environment).
 
-   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select an environment.":::
 
 Agents toolkit provisions for your agent or app. You can now build your agent or app in the selected environment.
 
