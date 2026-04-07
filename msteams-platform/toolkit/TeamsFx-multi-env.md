@@ -75,7 +75,7 @@ Agents toolkit provisions for your agent or app. You can now build your agent or
 
 Once the environment is selected, the Agents Toolkit provisions the agent or app for that environment. You can now build, debug, and run your agent or app in the selected environment.
 
-1. Select the **Run and Debug** icon from the Visual Studio Code sidebar.
+1. Select the :::image type="icon" source="../assets/icons/run-build-vs.png" border="false"::: **Run and Debug** icon from the Visual Studio Code sidebar.
 1. Select the option to debug and to preview the remote app in Microsoft Teams.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/remote-build.png" alt-text="Screenshot shows the option to select the environment for building the agent or app.":::
