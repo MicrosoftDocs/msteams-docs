@@ -83,7 +83,7 @@ If the prerequisites are in place, let's begin!
 
 1. In this example, select **Tab** as app capability.
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
