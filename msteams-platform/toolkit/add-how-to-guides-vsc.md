@@ -10,14 +10,7 @@ ms.date: 12/19/2024
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Agents Toolkit.
 
-## How-to guides for adding capabilities
-
-|**Capability** | **How-to Guide** |
-|----------|----------|
-| Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
-| Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
-| Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
-| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
+## How-to guides in Agents Toolkit
 
 The how-to guides are available for:
 
@@ -27,6 +20,13 @@ Scenario:
 - Send notifications to Teams
 - Respond to chat commands in Teams
 - Embed a dashboard canvas in Teams
+
+|**Capability** | **How-to Guide** |
+|----------|----------|
+| Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
+| Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
+| Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
+| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
 Development:
 
