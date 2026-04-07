@@ -1,6 +1,6 @@
 ---
 title: Add Prompt Suggestions
-author: vikasalmal
+author: surbhigupta
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -43,7 +43,7 @@ Suggested actions help users continue conversations with your bot.
 
 >[!NOTE]
 >
-> * Prompt starters are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Prompt starters are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 >
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
 >
