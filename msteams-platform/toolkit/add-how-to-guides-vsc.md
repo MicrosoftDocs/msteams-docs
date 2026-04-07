@@ -12,23 +12,23 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 
 ## How-to guides in Agents Toolkit
 
-The how-to guides are available for:
+| Capability | How-to Guide |
+| --- | --- |
+| Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
+| Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
+| Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
+| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
-Scenario:
+Apart from how-to guides for capabilities, Agents Toolkit also provides:
+
+**Scenario**:
 
 - Initiate sequential workflow in Teams
 - Send notifications to Teams
 - Respond to chat commands in Teams
 - Embed a dashboard canvas in Teams
 
-|**Capability** | **How-to Guide** |
-|----------|----------|
-| Configure Tab Capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
-| Configure Bot Capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
-| Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
-| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
-
-Development:
+**Development**:
 
 - Develop single sign-on experience in Teams
 - Connect to an API
@@ -36,7 +36,7 @@ Development:
 - Run and debug on mobile client
 - Multi-tenant support
 
-Cloud service integration:
+**Cloud service integration**:
 
 - Integrate with Azure functions
 - Integrate with Azure SQL database
