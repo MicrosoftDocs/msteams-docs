@@ -71,16 +71,16 @@ To target the `dev` environment or a custom environment you’ve created:
 
 Agents toolkit provisions for your agent or app. You can now build your agent or app in the selected environment.
 
-### Build in the Selected Environment
+### Build in the selected environment
 
-Once the environment is selected, the Agents Toolkit provisions the agent or app for that environment You can now build, debug, and run your agent or app in the selected environment.
+Once the environment is selected, the Agents Toolkit provisions the agent or app for that environment. You can now build, debug, and run your agent or app in the selected environment.
 
-1. Select the Run and Debug icon from the Visual Studio Code sidebar.
-1. Select to debug and to preview the remote app in Microsoft Teams
+1. Select the **Run and Debug** icon from the Visual Studio Code sidebar.
+1. Select to debug and to preview the remote app in Microsoft Teams.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/remote-build.png" alt-text="Screenshot shows the option to select the environment for building the agent or app.":::
 
-The Agents toolkit builds the app in the environment for which you provisioned the agent or app. The remote app is build is available for viewing and testing in Teams.
+The Agents toolkit builds the agent or app in the environment for which you had provisioned. The remote app is build is available for viewing and testing in Teams.
 
 ## See also
 
