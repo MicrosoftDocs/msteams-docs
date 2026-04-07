@@ -1,8 +1,6 @@
 ---
 title: Agents Toolkit - Debug your Apps Locally
-author: surbhigupta 
 description: Learn how to set up Microsoft 365 Agents Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 12/11/2024

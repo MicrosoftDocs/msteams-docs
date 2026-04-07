@@ -3,7 +3,6 @@ title: Send notifications with a Bot
 description: Learn about sending notifications using a bot app
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: surbhigupta
 ms.owner: angovil
 ms.date: 10/03/2024
 ---

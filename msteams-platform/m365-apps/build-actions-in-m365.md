@@ -2,7 +2,6 @@
 title: Create Actions in Microsoft 365
 description: Learn how to build Actions, configure app manifest, retrieve Actions information through context object, access content through Graph API, preinstall Actions.
 ms.date: 03/16/2026
-ms.author: mosdevdocs
 author: v-preethah
 ms.topic: conceptual
 ms.subservice: m365apps
