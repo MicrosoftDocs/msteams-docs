@@ -428,7 +428,15 @@ Use the following code snippet to enable the agent or bot to delete its response
 
 # [C#](#tab/dotnet1)
 
-  [WIP: Add code snippet]
+  ```csharp
+  
+    // Hard delete TM flow
+    teams.OnMessageDelete(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true){
+        // Business logic when message hard delete flow is for TM
+      }
+    });
+  ```
 
 # [TypeScript](#tab/ts1)
 
@@ -443,7 +451,13 @@ Use the following code snippet to enable the agent or bot to delete its response
 
 # [Python](#tab/Py1)
 
-  [WIP: Add code snippet]
+  ```python
+  
+  @app.on_message_delete
+  async def handle_message_delete(ctx):
+    if getattr(ctx.activity.recipient, "is_targeted", False):
+      # Business logic when message hard delete flow is for TM
+  ```
 
 # [HTTP](#tab/api1)
 
