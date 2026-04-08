@@ -406,15 +406,68 @@ Use one of the following code snippets to edit the agent's response:
 
 # [C#](#tab/dotnet1)
 
-  [WIP: Add code snippet]
+  ```csharp
+  
+    teams.OnMessage(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true) {
+        var sent = await context.Send(
+          new MessageActivity("Processing your request...")
+            .WithRecipient(context.Activity.From!, isTargeted: true),
+          cancellationToken
+        );
+    
+        await context.Api.Conversations.Activities.UpdateTargetedAsync(
+          context.Activity.Conversation!.Id!,
+          sent!.Id!,
+          new MessageActivity("Updated private response"),
+          cancellationToken
+        );
+      }
+    });
+    ```
+  
 
 # [TypeScript](#tab/ts1)
 
-  [WIP: Add code snippet]
+  ```typescript
+  
+    app.on('message', async ({ send, activity, api }) => {
+      if (activity.Recipient.isTargeted) {
+        const sent = await send(
+          new MessageActivity('Processing your request...')
+            .withRecipient(activity.From, isTargeted: true)
+        );
+    
+        await api.conversations.activities.updateTargeted(
+          activity.Conversation.Id,
+          sent.Id,
+          new MessageActivity('Updated private response')
+        );
+      }
+    });
+    ```
+  
 
 # [Python](#tab/Py1)
 
-  [WIP: Add code snippet]
+  ```python
+  
+    @app.on_message
+    async def handle_message(ctx):
+        if getattr(ctx.activity.recipient, "is_targeted", False):
+            sent = await ctx.send(
+                MessageActivityInput("Processing your request...").with_recipient(
+                    ctx.activity.from_,
+                    is_targeted=True
+                )
+            )
+    
+            await ctx.api.conversations.activities.update_targeted(
+                ctx.activity.conversation.id,
+                sent.id,
+                MessageActivityInput("Updated private response")
+            )
+```
 
 # [HTTP](#tab/api1)
 
