@@ -77,8 +77,8 @@ You can import historical messages seamlessly into existing channels or chats by
 1. [Start migration](#step-1-start-migration)
 1. [Check migration status](#step-2-check-migration-status)
 1. [Import messages](#step-3-import-messages)
-1. [Complete migration mode](#step-4-complete-migration-mode)
-1. [Verify migration mode completion](#step-5-verify-migration-mode-completion)
+1. [Complete migration](#step-4-complete-migration)
+1. [Verify migration completion](#step-5-verify-migration-completion)
 
 ## Step 1: Start migration
 
