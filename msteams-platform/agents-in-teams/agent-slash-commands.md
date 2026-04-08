@@ -336,7 +336,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
       });
     ```
 
-# [TypeScript](#tab/ts1)
+  # [TypeScript](#tab/ts1)
 
     ```typescript
 
@@ -347,7 +347,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
       });
     ```
 
-# [Python](#tab/Py1)
+  # [Python](#tab/Py1)
 
     ```python
     
@@ -357,11 +357,11 @@ Use the following code snippets to enable your agent or bot to respond to a slas
           await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
     ```
 
-# [HTTP](#tab/api1)
+  # [HTTP](#tab/api1)
 
     [WIP: Add code snippet]
 
-    ---
+  ---
 
 **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
