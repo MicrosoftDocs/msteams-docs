@@ -543,7 +543,7 @@ To ensure that member A can see the 9 AM imported messages:
 1. Remove member A from the chat.
 1. Add member A with the `visibleHistoryStartDateTime` property set before 9 AM.
 
-## Step 5: Verify migration mode completion
+## Step 5: Verify migration completion
 
 Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
 [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true) to verify that the `migrationMode` is marked as `Completed`.
