@@ -16,10 +16,8 @@
 >
 > **Known issues**
 >
-> * Workflows app can't post in private channels as a flow bot. However, it can post on behalf of a user.
-> * Workflows support Adaptive Cards only. It doesn't support the older message card format that Office 365 Connectors use. Workflows don't support using the message card format. For more information, see [how to convert connector message card format to Adaptive Card](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/tools/message-card-to-ac-transformation).
-> * Workflows don't offer third-party connectors such as DataDog and Jenkins.
-> * Workflows can only be created in your default environment.
+> * Workflows app can post as a flow bot in shared channels. Support for posting as a flow bot in private channels is under development. Workflows can currently post messages on behalf of a user.
+> * Workflows support both Adaptive Cards and Message Card format (button rendering won't be supported). You can choose to convert Message Cards to Adaptive Card, see  [how to convert connector message card format to Adaptive Card](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/tools/message-card-to-ac-transformation).
 >
 > **Limitations**
 >

@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
 ms.date: 02/01/2023
-ms.owner: ryanbliss
 ---
 # Configure your tab app in Microsoft Entra ID
 

@@ -1,11 +1,8 @@
 ---
 title: Live Share code tutorial
-author: surbhigupta
 description: Learn how to get started with Live Share SDK, build Dice Roller sample using Live Share SDK, connect meeting Stageview to Live Share, and code sample (JavaScript).
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
-ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 

@@ -2,8 +2,6 @@
 title: Extend Message Extension to Outlook
 description: Learn how to update search-based message extension to run in Outlook, add Microsoft 365 channel for bot, and update Microsoft Entra app registration for SSO.
 ms.date: 02/06/2025
-ms.author: mosdevdocs
-author: erikadoyle
 ms.topic: tutorial
 ms.localizationpriority: high
 ms.subservice: m365apps
