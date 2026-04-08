@@ -5,7 +5,6 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 05/04/2023
-ms.owner: ryanbliss
 ---
 # Design your tab for Microsoft Teams
 

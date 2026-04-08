@@ -3,7 +3,6 @@ title: Designing your message extension
 description: Learn how to design a message extension and get the Microsoft Teams UI Kit. Describes Teams design guidelines reference message extensions tips and best practice.
 author: heath-hamilton
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.topic: conceptual
 ms.owner: ginobuzz
 ms.date: 05/17/2022

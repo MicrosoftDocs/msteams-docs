@@ -4,7 +4,6 @@ description: Learn to maintain your published app such as analyze usage, publish
 ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
-ms.author: surbhigupta
 ms.date: 02/10/2025
 ---
 # Maintain your published Microsoft Teams app
