@@ -424,9 +424,8 @@ Use one of the following code snippets to edit the agent's response:
         );
       }
     });
-    ```
+  ```
   
-
 # [TypeScript](#tab/ts1)
 
   ```typescript
@@ -445,9 +444,8 @@ Use one of the following code snippets to edit the agent's response:
         );
       }
     });
-    ```
+  ```
   
-
 # [Python](#tab/Py1)
 
   ```python
@@ -467,7 +465,7 @@ Use one of the following code snippets to edit the agent's response:
                 sent.id,
                 MessageActivityInput("Updated private response")
             )
-```
+  ```
 
 # [HTTP](#tab/api1)
 
