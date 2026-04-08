@@ -367,8 +367,13 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [C#](#tab/dotnet)
 
-  [WIP: Add code snippet]
-
+  ```csharp
+  
+    teams.OnMessage(async (context, cancellationToken) => {
+      await context.Send(new MessageActivity("Normal msg"), cancellationToken);
+    });
+  ```
+  
 # [TypeScript](#tab/ts)
 
   ```typescript
@@ -380,8 +385,13 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [Python](#tab/Py)
 
-  [WIP: Add code snippet]
-
+  ```python
+  
+    @app.on_message
+    async def handle_message(ctx):
+      await ctx.send(MessageActivityInput("Normal msg"))
+  ```
+  
 # [HTTP](#tab/api)
 
   [WIP: Add code snippet]
