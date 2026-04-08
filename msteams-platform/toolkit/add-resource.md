@@ -10,7 +10,7 @@ ms.date: 11/29/2024
 
 # Add cloud resources and API connection
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your app, tailored to your development needs. By adding more cloud resources in TeamsFx, you can autogenerate all configuration files and seamlessly connect to the Teams app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams apps.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your agent or app, tailored to your development needs. By adding more cloud resources, you can autogenerate all configuration files and seamlessly connect to the Teams agent or app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams agents or apps.
 
 > [!NOTE]
 > If you've created SharePoint Framework (SPFx) based tab project, you can't add Azure cloud resources.
@@ -21,13 +21,13 @@ You can add cloud resources in the following ways:
 
 ### To add cloud resources using Agents Toolkit
 
-   1. Open your Teams app project in **Visual Studio Code**.
+   1. Open your Teams agent or app project workspace in **Visual Studio Code**.
    1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select a how-to Guides under Development.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the selected how-to Guide.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
 
@@ -50,7 +50,7 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the selected how-to Guide.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
@@ -73,7 +73,7 @@ Add a connection to an existing API, developed by your organization or a third p
 
 1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the respective How-to Guide.
 
-    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the selection of Connect to an API option in the View How-to Guides list.":::
+    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the option for connecting to an API in the view how-to guides list.":::
 
       |**Development** | **How-to Guide** |
       |----------|----------|
