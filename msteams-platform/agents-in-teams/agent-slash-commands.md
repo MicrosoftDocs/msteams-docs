@@ -287,7 +287,14 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [C#](#tab/dotnet1)
 
-    [WIP: Add code snippet]
+    ```csharp
+
+      teams.OnMessage(async (context, cancellationToken) => {
+        if (context.Activity.Recipient?.IsTargeted == true){
+          await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
+        }
+      });
+    ```
 
   # [TypeScript](#tab/ts1)
 
@@ -302,7 +309,13 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [Python](#tab/Py1)
 
-    [WIP: Add code snippet]
+    ```python
+    
+      @app.on_message
+      async def handle_message(ctx):
+        if getattr(ctx.activity.recipient, "is_targeted", False):
+          await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
+    ```
 
   # [HTTP](#tab/api1)
 
