@@ -113,11 +113,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 # [`Action.Submit`](#tab/actionsubmit)
 
-Use `Action.Submit` to:
-
-- Render a suggested action as a standard suggested action button similar to the `IamBack` method
-- Send a bot invoke activity (same pipeline as card invoke / handoff) on click
--
+Use `Action.Submit` to provide a user experience similar to `IamBack`. The The action renders as a standard suggested action button, maintaining consistent UX expectations, but on interaction triggers a bot invoke activity.
 
 ---
 
