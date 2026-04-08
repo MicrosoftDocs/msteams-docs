@@ -78,7 +78,6 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 
 ## See also
 
-- [Walkthrough building an app that responds to chat commands](../sbs-gs-commandbot.yml).
-- [Walkthrough building an app that sends chat messages](../sbs-gs-notificationbot.yml).
-- [Walkthrough building an app with a workflow in chat](../sbs-gs-workflow-bot.yml)
-- [App manifest schema](/microsoft-365/extensibility/schema/)
+- [Enable single sign-on for Teams app](develop-single-sign-on-experience-in-Teams.md)
+- [Set up CI/CD pipelines](use-CICD-template.md)
+- [Add cloud resources and API connection](add-resource.md)
