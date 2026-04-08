@@ -111,6 +111,14 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
 
+# [`Action.Submit`](#tab/actionsubmit)
+
+Use `Action.Submit` to:
+
+- Render a suggested action as a standard suggested action button similar to the `IamBack` method
+- Send a bot invoke activity (same pipeline as card invoke / handoff) on click
+-
+
 ---
 
 <!--
