@@ -469,7 +469,7 @@ Use the following code snippet to enable the agent or bot to delete its response
 
 [WIP: Awaiting details on error codes]
 
-For more information on error codes for targeted messages, see [WIP: Add link].
+You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
 ## Code sample
 
