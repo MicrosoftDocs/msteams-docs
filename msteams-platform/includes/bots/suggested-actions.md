@@ -113,9 +113,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 # [`Action.Submit`](#tab/actionsubmit)
 
-Use `Action.Submit` to present quick-action buttons (suggested actions) that trigger server-side bot logic without sending a visible message on behalf of the user. The The action renders as a standard suggested action button, but on interaction triggers a bot invoke activity instead of a chat-visible message. By carrying a structured `name` and `value` payload, the action enables dispatching on the invoke name. It allows the agent or bot to process contextual data through the established invoke pipeline (aligned with card invoke and handoff flows), without any impact in the conversation.
-
-to provide a user experience similar to `IamBack`.
+Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured `name` and `value` payload so you can route and dispatch based on the invoke `name` and pass contextual data through your existing invoke pipeline,  that includes card invoke and handoff flows, without changing the conversation transcript.
 
 **Bot Payload (Outgoing from Bot)**
 
