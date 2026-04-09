@@ -179,6 +179,24 @@ case "suggestedAction/submit":
 
 The bot dispatches on `activity.name` and reads the structured payload from `activity.value`. This is identical to how bots handle `adaptiveCard/action`, `handoff/action`, or any other named invoke.
 
+**Parser Validation Rules**
+
+The parser applies strict validation before accepting an `Action.Invoke`:
+
+| &nbsp; | Condition | Result |
+| --- | --- |
+| `action.value` is not an object | Drop (return null) |
+| `action.value.name` is missing or not a string | Drop (return null) |
+| `action.value.value` is a string | Pass through as-is |
+| `action.value.value` is an object | JSON.stringify it |
+| `action.value.value` is null/undefined | Serialize as `"{}"` |
+
+This ensures only well-formed invoke actions reach the client, and the `value` field is always a valid JSON string for the mutation.
+
+**Telemetry**
+
+Click telemetry uses the existing `recordSuggestedActionClickedTelemetry` helper with `actionType: "SuggestedActionInvoke"`. The scenario name is `ExtBotsInvoke` (same as card invokes), allowing existing dashboards to capture suggested action invoke latency and success rates.
+
 ---
 
 <!--
