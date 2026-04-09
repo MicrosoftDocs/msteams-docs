@@ -73,8 +73,6 @@ This flow keeps slash command results focused between the user and the agent or 
 
       Use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
-    [Suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions)
-
     :::column-end:::
 :::row-end:::
 

@@ -44,7 +44,7 @@ When a user selects a button, it remains visible and accessible on the rich card
 >
 > `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
-Here are some examples that show how to implement and experience suggested actions using `imBack` and `Action.Compose`:
+Here are some examples that show how to implement and experience suggested actions using `imBack` `,Action.Compose`, and `Action.Submit`:
 
 # [`imBack`](#tab/iamback)
 
