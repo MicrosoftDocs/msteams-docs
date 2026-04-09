@@ -148,7 +148,7 @@ type SuggestedActionInvoke {
 }
 ```
 
-The `value` field is `String!` (not an object) because the existing `sendInvoke` mutation accepts `value: String!`. The parser serializes the object to JSON, and the chat service's `postInvokeContent` deserializes it back before sending to the bot. This keeps the mutation interface unchanged.
+The `value` field is `String!`, not an object. The existing `sendInvoke` mutation accepts `value: String!`.
 
 **Client Click Handler**
 
@@ -164,11 +164,11 @@ On click, the container calls the existing `sendInvoke` GraphQL mutation with:
 }
 ```
 
-This reuses the same mutation and resolver as `handoff/action` and card invokes. You don't need any new backend plumbing needed.
+This reuses the same mutation and resolver as `handoff/action` and card invokes. You don't need any new backend plumbing.
 
 **Bot Handler (Incoming to Bot)**
 
-The bot receives a standard Bot Framework invoke activity:
+The agent or bot receives a standard Bot Framework invoke activity:
 
 ```json
 
@@ -179,7 +179,7 @@ case "suggestedAction/submit":
   return { status: 200 };
 ```
 
-The bot dispatches on `activity.name` and reads the structured payload from `activity.value`. This is identical to how bots handle `adaptiveCard/action`, `handoff/action`, or any other named invoke.
+The agent or bot dispatches on `activity.name` and reads the structured payload from `activity.value`. This is identical to how agents or bots handle `adaptiveCard/action`, `handoff/action`, or any other named invoke.
 
 **Parser Validation Rules**
 
@@ -193,7 +193,7 @@ The parser applies strict validation before accepting an `Action.Invoke`:
 | `action.value.value` is an object | JSON.stringify it |
 | `action.value.value` is null/undefined | Serialize as `"{}"` |
 
-This ensures only well-formed invoke actions reach the client, and the `value` field is always a valid JSON string for the mutation.
+This ensures that only well-formed invoke actions reach the client, and the `value` field is always a valid JSON string for the mutation.
 
 **Telemetry**
 
