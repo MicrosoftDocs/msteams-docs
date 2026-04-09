@@ -251,8 +251,8 @@ const sendProactiveNotification = async (userId: string) => {
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=python)
 
 ```python
-from microsoft_teams.api import MessageActivityInput 
-from microsoft_teams.apps import App 
+from microsoft_teams.api import InstalledActivity, MessageActivityInput
+from microsoft_teams.apps import ActivityContext
 # ...
 
 # Store conversation IDs 
@@ -260,7 +260,7 @@ conversation_storage: dict[str, str] = {}
 
 @app.on_install_add 
 async def handle_install(ctx): 
-    user_id = ctx.activity.from_property.aad_object_id 
+    user_id = ctx.activity.from_.aad_object_id 
     conversation_storage[user_id] = ctx.activity.conversation.id 
     await ctx.send("Hi! I will send you proactive notifications.") 
 
