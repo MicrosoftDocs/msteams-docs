@@ -113,7 +113,9 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 # [`Action.Submit`](#tab/actionsubmit)
 
-Use `Action.Submit` to provide a user experience similar to `IamBack`. The The action renders as a standard suggested action button, but on interaction triggers a bot invoke activity instead of a chat-visible message. By carrying a structured `name` and `value` payload, the action enables dispatching on the invoke name. It allows the agent or bot to process contextual data through the established invoke pipeline (aligned with card invoke and handoff flows), without any impact in the conversation.
+Use `Action.Submit` to present quick-action buttons (suggested actions) that trigger server-side bot logic without sending a visible message on behalf of the user. The The action renders as a standard suggested action button, but on interaction triggers a bot invoke activity instead of a chat-visible message. By carrying a structured `name` and `value` payload, the action enables dispatching on the invoke name. It allows the agent or bot to process contextual data through the established invoke pipeline (aligned with card invoke and handoff flows), without any impact in the conversation.
+
+to provide a user experience similar to `IamBack`.
 
 **Bot Payload (Outgoing from Bot)**
 
