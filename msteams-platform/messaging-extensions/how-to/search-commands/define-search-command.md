@@ -4,7 +4,7 @@ author: vikasalmal
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/02/2026
+ms.date: 04/09/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -174,7 +174,7 @@ teams.OnQuery(async (ctx) =>
 });
 ```
 
-# [Node.js](#tab/nodejs)
+# [TypeScript](#tab/typescript)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=typescript)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
