@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 04/03/2026
+ms.date: 04/09/2026
 ---
 
 # Bot configuration experience
@@ -136,7 +136,7 @@ app.OnConfigFetch(async (context) =>
 });
    ```
 
-# [TypeScript](#tab/JS1)
+# [TypeScript](#tab/typescript1)
 
    ```typescript
 app.on('config.fetch', async ({ activity }) => {
@@ -220,7 +220,7 @@ app.OnConfigFetch(async (context) =>
                     new CardAction
                     {
                         Type = "openUrl",
-                        Value = "<https://example.com/auth>",
+                        Value = "https://example.com/auth",
                         Title = "Sign in to this app"
                     }
                 }
@@ -231,7 +231,7 @@ app.OnConfigFetch(async (context) =>
 
    ```
 
-# [TypeScript](#tab/JS2)
+# [TypeScript](#tab/typescript2)
 
    ```typescript
 app.on('config.fetch', async ({ activity }) => {
