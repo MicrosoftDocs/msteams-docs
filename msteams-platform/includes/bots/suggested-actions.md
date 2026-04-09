@@ -133,7 +133,7 @@ Use `Action.Submit` to provide a user experience similar to `IamBack`. The The a
 ```
 
 > [!NOTE]
-> The value is an object (not a string) that carries the data.
+> The `value` is an object (not a string) that carries the data.
 
 **GraphQL Schema**
 
@@ -145,6 +145,12 @@ type SuggestedActionInvoke {
   value: String!   # JSON-serialized payload
 }
 ```
+
+The `value` field is `String!` (not an object) because the existing `sendInvoke` mutation accepts `value: String!`. The parser serializes the object to JSON, and the chat service's `postInvokeContent` deserializes it back before sending to the bot. This keeps the mutation interface unchanged.
+
+**Client Click Handler**
+
+On click, the container calls the existing `sendInvoke` GraphQL mutation with:
 
 ---
 
