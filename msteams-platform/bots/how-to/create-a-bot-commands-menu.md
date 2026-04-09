@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/03/2026
+ms.date: 04/09/2026
 ---
 
 # Create a commands menu
@@ -169,41 +169,9 @@ In the Teams SDK, incoming messages are routed through an activity handler. You 
 
 # [C#](#tab/dotnet)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/dotnet/bot-quickstart)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
 
 ```csharp
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
-using Microsoft.Teams.Plugins.AspNetCore.Extensions;
-using Microsoft.Teams.Apps;
-using Microsoft.Teams.Apps.Activities;
-using Microsoft.Teams.Api.Activities;
-using Microsoft.Teams.Api.Clients;
-
-// Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
-var builder = WebApplication.CreateBuilder(args);
-builder.AddTeams();
-var webApp = builder.Build();
-var teamsApp = webApp.UseTeams(true);
-
-// Handle conversation update events (when bot is added or members join)
-teamsApp.OnConversationUpdate(async context =>
-{
-    var membersAdded = context.Activity.MembersAdded;
-    if (membersAdded != null)
-    {
-        foreach (var member in membersAdded)
-        {
-            // Check if bot was added to the conversation
-            if (member.Id == context.Activity.Recipient?.Id)
-            {
-                await SendWelcomeMessage(context);
-            }
-        }
-    }
-});
-
 // Handles incoming messages and routes to appropriate functions based on message content
 teamsApp.OnMessage(async context =>
 {
@@ -236,68 +204,13 @@ teamsApp.OnMessage(async context =>
     }
 });
 
-// Sends a welcome message
-async Task SendWelcomeMessage<T>(IContext<T> context) where T : IActivity
-{
-    await context.Send("Welcome to the Teams Quickstart Bot!");
-}
-
-// Echo back the user's message
-async Task EchoMessage(IContext<MessageActivity> context, string text)
-{
-    await context.Send($"**Echo:** {text}");
-}
-
-// Retrieves and displays information about the current user
-async Task GetSingleMember(IContext<MessageActivity> context)
-{
-    await context.Send($"You are: {context.Activity.From.Name}");
-}
-
-// Mention a user in a message
-async Task MentionUser(IContext<MessageActivity> context)
-{
-    var member = context.Activity.From;
-    var mentionText = $"<at>{member.Name}</at>";
-    var activity = new MessageActivity()
-        .WithText($"Hello {mentionText}")
-        .AddMention(member, addText: false);
-
-    await context.Send(activity);
-}
-
-// Starts the Teams bot application and listens for incoming requests
-webApp.Run();
 ```
 
 # [TypeScript](#tab/typescript)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/nodejs/bot-quickstart)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart)
 
 ```typescript
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
-import { App, IActivityContext } from '@microsoft/teams.apps';
-import { TeamsChannelAccount, IMessageActivity } from '@microsoft/teams.api';
-
-// Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
-// Note: .env file is only required when running on Teams (not needed for local development with devtools)
-const app = new App();
-
-// Handle conversation update events (when bot is added or members join)
-app.on('conversationUpdate', async (context) => {
-    const { activity } = context;
-    const membersAdded = (activity as any).membersAdded || [];
-
-    for (const member of membersAdded) {
-        // Check if bot was added to the conversation
-        if (member.id === activity.recipient.id) {
-            await sendWelcomeMessage(context);
-        }
-    }
-});
-
 // Handles incoming messages and routes to appropriate functions based on message content
 app.on('message', async (context) => {
     const { activity } = context;
@@ -328,160 +241,13 @@ app.on('message', async (context) => {
     }
 });
 
-// Sends a welcome message
-async function sendWelcomeMessage(context: IActivityContext): Promise<void> {
-    await context.send({
-        type: 'message',
-        text: 'Welcome to the Teams Quickstart Bot!'
-    });
-}
-
-// Echo back the user's message
-async function echoMessage(context: IActivityContext, text: string): Promise<void> {
-    await context.send({
-        type: 'message',
-        text: `**Echo:** ${text}`
-    });
-}
-
-// Retrieves and displays information about the current user
-async function getSingleMember(context: IActivityContext): Promise<void> {
-    const { activity } = context;
-    const conversationId = activity.conversation.id;
-    const userId = activity.from.id;
-
-    try {
-        const member: TeamsChannelAccount = await context.api.conversations.members(conversationId).getById(userId);
-        await context.send({
-            type: 'message',
-            text: `You are: ${member.name}`
-        });
-    } catch (error) {
-        console.error('Error getting member:', error);
-    }
-}
-
-// Mention a user in a message
-async function mentionUser(context: IActivityContext): Promise<void> {
-    const { activity } = context;
-    const conversationId = activity.conversation.id;
-    const userId = activity.from.id;
-
-    try {
-        const member: TeamsChannelAccount = await context.api.conversations.members(conversationId).getById(userId);
-
-        // Create a text message with user mention
-        const mentionText = `<at>${member.name}</at>`;
-        await context.send({
-            type: 'message',
-            text: `Hello ${mentionText}`,
-            entities: [
-                {
-                    type: 'mention',
-                    text: mentionText,
-                    mentioned: {
-                        id: userId,
-                        name: member.name,
-                        role: 'user'
-                    }
-                }
-            ]
-        });
-    } catch (error) {
-        console.error('Error mentioning user:', error);
-    }
-}
-
-// Starts the Teams bot application and listens for incoming requests
-app.start().catch(console.error);
 ```
 
 # [Python](#tab/python)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/abc97268bf41536509383283114c3a33684f0568/samples/bot-quickstart/python/bot-quickstart)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart)
 
 ```python
-# Copyright (c) Microsoft Corporation. All rights reserved.
-# Licensed under the MIT License.
-
-import asyncio
-
-from dotenv import load_dotenv
-from microsoft_teams.api import MessageActivity, MessageActivityInput
-from microsoft_teams.apps import ActivityContext, App
-
-# Load environment variables
-load_dotenv()
-
-# Initialize Teams App - automatically uses CLIENT_ID and CLIENT_SECRET from environment variables
-# Note: .env file is only required when running on Teams (not needed for local development with devtools)
-app = App()
-
-async def send_welcome_message(ctx: ActivityContext) -> None:
-    """Sends a welcome message with available commands."""
-    welcome_message = (
-        "Welcome to the Teams Quickstart Bot!"
-    )
-    await ctx.send(MessageActivityInput(text=welcome_message))
-
-
-async def echo_message(ctx: ActivityContext, text: str) -> None:
-    """Echo back the user's message."""
-    await ctx.send(MessageActivityInput(text=f"**Echo:** {text}"))
-
-
-async def get_single_member(ctx: ActivityContext[MessageActivity]) -> None:
-    """Retrieves and displays information about the current user."""
-    try:
-        conversationId = ctx.activity.conversation.id
-        userId = ctx.activity.from_.id
-        user = await ctx.api.conversations.members(conversationId).get(userId)
-        await ctx.send(MessageActivityInput(text=f"You are: {user.name}"))
-    except Exception as error:
-        print(f"Error getting member: {error}")
-
-
-async def mention_user(ctx: ActivityContext[MessageActivity]) -> None:
-    """Mention a user in a message."""
-    try:
-
-        conversationId = ctx.activity.conversation.id
-        userId = ctx.activity.from_.id
-
-        # Get user info directly from the activity
-        user = await ctx.api.conversations.members(conversationId).get(userId)
-        
-        # Create a text message with user mention
-        mention_text = f"<at>{user.name}</at>"
-        await ctx.send(MessageActivityInput(
-            text=f"Hello {mention_text}",
-            entities=[
-                {
-                    "type": "mention",
-                    "text": mention_text,
-                    "mentioned": {
-                        "id": userId,
-                        "name": user.name,
-                        "role": "user"
-                    }
-                }
-            ]
-        ))
-    except Exception as error:
-        print(f"Error mentioning user: {error}")
-
-
-@app.on_conversation_update
-async def handle_conversation_update(ctx: ActivityContext) -> None:
-    """Handle conversation update events (when bot is added or members join)."""
-    members_added = getattr(ctx.activity, 'members_added', [])
-    
-    for member in members_added:
-        # Check if bot was added to the conversation
-        if member.id == ctx.activity.recipient.id:
-            await send_welcome_message(ctx)
-
-
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     """Handles incoming messages and routes to appropriate functions based on message content."""
@@ -501,10 +267,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     elif text in ("hi", "hello"):
         await echo_message(ctx, text)
 
-
-# Starts the Teams bot application and listens for incoming requests
-if __name__ == "__main__":
-    asyncio.run(app.start())
 ```
 
 * * *
