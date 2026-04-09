@@ -115,6 +115,8 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured `name` and `value` payload so you can route and dispatch based on the invoke `name` and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
+Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](../../agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
+
 **Bot Payload (Outgoing from Bot)**
 
 ```json
