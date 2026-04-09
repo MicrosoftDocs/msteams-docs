@@ -529,9 +529,9 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 In addition to conventional bot features, you can also explore advanced features available in a Teams bot app:
 
-- [Teams Bot API Changes To Fetch Team Or Chat Members](../resources/team-chat-member-api-changes)
-- [Calls and Online Meetings Bots](calls-and-meetings/calls-meetings-bots-overview)
-- [Enable SSO For Your App](how-to/authentication/bot-sso-overview)
+- [Teams Bot API Changes To Fetch Team Or Chat Members](../resources/team-chat-member-api-changes.md)
+- [Calls and Online Meetings Bots](calls-and-meetings/calls-meetings-bots-overview.md)
+- [Enable SSO For Your App](how-to/authentication/bot-sso-overview.md)
 
 ## Code sample
 
