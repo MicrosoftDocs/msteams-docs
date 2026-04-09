@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 04/06/2026
+ms.date: 04/09/2026
 ---
 # Get Teams specific context for your bot
 
@@ -14,7 +14,7 @@ A bot can access additional context data about a team or chat where it's install
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team.
 
-The following sample code is used for fetching the roster:
+The following sample code is used to fetch the roster:
 
 # [C#](#tab/dotnet)
 
@@ -26,7 +26,7 @@ app.OnMessage(async context =>
     var conversationId = context.Activity.Conversation.Id;
 
     // Gets all members of the conversation.
-    var members = await context.Api.Conversations.Members.GetAsync(conversationId);
+    var members = await context.Api.Conversations.Members.Get(context.Conversation.Id);
 });
 ```
 
@@ -53,7 +53,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     conversation_id = ctx.activity.conversation.id
 
     # Gets all members of the conversation.
-    members = await ctx.api.conversations.members(conversation_id).get_all()
+    members = await ctx.api.conversations.members.get(ctx.activity.conversation.id)
 ```
 
 # [JSON](#tab/json)
@@ -147,7 +147,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     member_id = ctx.activity.from_.id
 
     # Gets a single member by ID.
-    member = await ctx.api.conversations.members(conversation_id).get(member_id)
+    member = await ctx.api.conversations.members.get_by_id(conversation_id, member_id)
 ```
 
 # [JSON](#tab/json)
