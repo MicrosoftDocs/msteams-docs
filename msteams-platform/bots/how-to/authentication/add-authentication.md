@@ -3,7 +3,7 @@ title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/16/2026
+ms.date: 04/09/2026
 ---
 
 # Add authentication to your Teams bot
@@ -16,7 +16,7 @@ See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understan
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
+- **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-bot-auth-quickstart-cs] to handle user sign-in credentials and the generating the authentication token.
 - **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication.
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
@@ -30,9 +30,9 @@ In this article you'll learn:
 
     | Sample |
     |:---|
-    | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] |
-    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] |
-    | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] |
+    | **Bot Auth Quickstart** in [cs-auth-sample][teams-bot-auth-quickstart-cs] |
+    | **Bot Auth Quickstart** in [js-auth-sample][teams-bot-auth-quickstart-js] |
+    | **Bot Auth Quickstart** in [py-auth-sample][teams-bot-auth-quickstart-py] |
 
 ## Create the resource group
 
@@ -283,7 +283,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [C#/.NET](#tab/dotnet)
 
-1. Clone [cs-auth-sample][teams-auth-bot-cs].
+1. Clone [cs-auth-sample][teams-bot-auth-quickstart-cs].
 1. Open Visual Studio.
 1. From the toolbar, select **File > Open > Project/Solution** and open the bot project.
 1. In C#, Update **appsettings.json** as follows:
@@ -312,7 +312,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [JavaScript](#tab/node-js)
 
-1. Clone [node-auth-sample][teams-auth-bot-js].
+1. Clone [node-auth-sample][teams-bot-auth-quickstart-js].
 1. In a console, go to the project: </br></br>
 `cd samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart`
 1. Install modules</br></br>
@@ -338,7 +338,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
 # [Python](#tab/python)
 
-1. Clone [py-auth-sample][teams-auth-bot-py] from the GitHub repository.
+1. Clone [py-auth-sample][teams-bot-auth-quickstart-py] from the GitHub repository.
 1. Update **config.py**:
 
     - Set `CONNECTION_NAME` to the name of the OAuth connection setting you added to your bot.
@@ -393,7 +393,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 ## Test locally using Microsoft 365 Agents Playground
 
 To test your bot locally, use the **Microsoft 365 Agents Playground**, which supports both agents and bots.  
-For setup and testing instructions, see [Test your agent locally with the Microsoft 365 Agents Toolkit](/microsoft-365/agents-sdk/test-with-toolkit-project?tabs=windows).
+For setup and testing instructions, see [Test your agent locally with the Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project?tabs=windows).
 
 ## Test the deployed bot
 
@@ -615,8 +615,8 @@ This sample demonstrates how to implement Single Sign-On (SSO) authentication fo
 
 [azure-portal]: https://ms.portal.azure.com
 
-[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart
+[teams-bot-auth-quickstart-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart
 
-[teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart
+[teams-bot-auth-quickstart-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart
 
-[teams-auth-bot-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart
+[teams-bot-auth-quickstart-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart
