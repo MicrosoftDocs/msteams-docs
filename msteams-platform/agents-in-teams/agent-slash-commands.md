@@ -70,6 +70,9 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row:::
     :::column span:::
       This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on agent private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
+
+      Use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+
     :::column-end:::
 :::row-end:::
 
