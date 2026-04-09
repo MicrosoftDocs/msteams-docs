@@ -152,6 +152,31 @@ The `value` field is `String!` (not an object) because the existing `sendInvoke`
 
 On click, the container calls the existing `sendInvoke` GraphQL mutation with:
 
+```json
+
+
+{
+  botInvokeParams: { threadId, botMri, appId, messageType: "Text" },
+  value: action.value,   // already JSON-serialized by the parser
+  name: action.name,     // suggestedAction/submit
+}
+```
+
+This reuses the same mutation and resolver as `handoff/action` and card invokes. You don't need any new backend plumbing needed.
+
+**Bot Handler (Incoming to Bot)**
+
+The bot receives a standard Bot Framework invoke activity:
+
+```json
+
+// In TeamsActivityHandler.onInvokeActivity():
+case "suggestedAction/submit":
+  const vote = context.activity.value;  // { vote: "approve" }
+  // Process the action...
+  return { status: 200 };
+```
+
 ---
 
 <!--
