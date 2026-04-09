@@ -177,6 +177,8 @@ case "suggestedAction/submit":
   return { status: 200 };
 ```
 
+The bot dispatches on `activity.name` and reads the structured payload from `activity.value`. This is identical to how bots handle `adaptiveCard/action`, `handoff/action`, or any other named invoke.
+
 ---
 
 <!--
