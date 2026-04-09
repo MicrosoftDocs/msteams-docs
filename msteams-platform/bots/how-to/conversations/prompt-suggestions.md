@@ -3,7 +3,7 @@ title: Add Prompt Suggestions
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/25/2024
+ms.date: 04/09/2026
 ---
 
 # Create prompt suggestions
@@ -155,48 +155,101 @@ Bots in a group or channel respond only when they're @mentioned in a message. Ev
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
-
-The C# code to parse out the **\@Mention** portion of the message text is as follows:
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
 
 ```csharp
-// Remove recipient mention text from Text property.
-// Use with caution because this function is altering the text on the Activity.
-var modifiedText = turnContext.Activity.RemoveRecipientMention();
+// Handles incoming messages and routes to appropriate functions based on message content
+teamsApp.OnMessage(async context =>
+{
+    // Get message text and normalize it
+    var text = (context.Activity.Text ?? "").Trim().ToLower();
+
+    // Handle mention me command - use exact matching to avoid false positives from substrings
+    if (text == "mentionme" || text == "mention me")
+    {
+        await MentionUser(context);
+    }
+    // Handle whoami command
+    else if (text == "whoami")
+    {
+        await GetSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text == "welcome")
+    {
+        await SendWelcomeMessage(context);
+    }
+    // Echo greeting messages
+    else if (text == "hi" || text == "hello")
+    {
+        await EchoMessage(context, text);
+    }
+    else
+    {
+        await SendWelcomeMessage(context);
+    }
+});
 ```
 
-# [JavaScript](#tab/javascript)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-removementiontext&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
+```typescript
+// Handles incoming messages and routes to appropriate functions based on message content
+app.on('message', async (context) => {
+    const { activity } = context;
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
+    // Get message text and normalize it
+    const messageActivity = activity as IMessageActivity;
+    let text = (messageActivity.text || '').trim().toLowerCase();
 
-The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
-
-```javascript
-// Remove mention text from Text property, this function is altering the text on the Activity.
-const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
+    // Handle mention me command - use exact matching to avoid false positives from substrings
+    if (text === 'mentionme' || text === 'mention me') {
+        await mentionUser(context);
+    }
+    // Handle whoami command
+    else if (text === 'whoami') {
+        await getSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text === 'welcome') {
+        await sendWelcomeMessage(context);
+    }
+    // Handle greeting messages
+    else if (text === 'hi' || text === 'hello') {
+        await echoMessage(context, text);
+    }
+    // Default: echo back any other message
+    else if (text) {
+        await echoMessage(context, text);
+    }
+});
 ```
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-remove-recipient-mention&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
-
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
-
-The Python code to parse out the **\@Mention** portion of the message text is as follows:
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart)
 
 ```python
-# Remove recipient mention text from Text property, this function is altering the text on the Activity.
-modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
+    """Handles incoming messages and routes to appropriate functions based on message content."""
+    # Get message text and normalize it
+    text = (ctx.activity.text or "").strip().lower()
+        
+    # Handle mention me command - use exact matching to avoid false positives from substrings
+    if text in ("mentionme", "mention me"):
+        await mention_user(ctx)
+    # Handle whoami command
+    elif text == "whoami":
+        await get_single_member(ctx)
+    # Handle welcome command
+    elif text == "welcome":
+        await send_welcome_message(ctx)
+    # Handle hi/hello - echo back
+    elif text in ("hi", "hello"):
+        await echo_message(ctx, text)
 ```
 
 * * *
