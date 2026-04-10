@@ -66,17 +66,17 @@ You can add cloud resources in the following ways:
 
 ## Add API connection
 
-Add a connection to an existing API, developed by your organization or a third party, using the following steps:
+Connect your agent or app to an existing API, developed by your organization or a third party, using the following steps:
 
-1. Open your Teams app project in **Microsoft Visual Studio Code**.
+1. Open your Teams agent or app project in **Microsoft Visual Studio Code**.
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
     :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the respective How-to Guide.
+1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the selected how-to guide.
 
-    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the option for connecting to an API in the view how-to guides list.":::
+    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the option for the how-to guide for connecting to an API in the view how-to guides list.":::
 
       |**Development** | **How-to Guide** |
       |----------|----------|
