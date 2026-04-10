@@ -1161,7 +1161,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
 * Bots must provide a valid response to **help** command.
 
