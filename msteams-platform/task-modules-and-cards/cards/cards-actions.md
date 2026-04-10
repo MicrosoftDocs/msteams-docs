@@ -3,7 +3,7 @@ title: Adaptive Card actions in Teams SDK
 description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 03/31/2026
+ms.date: 04/10/2026
 ---
 
 # Card actions
@@ -148,7 +148,7 @@ The following code shows an example of grouping actions in JSON:
 {
   "type": "AdaptiveCard",
   "version": "1.5",
-  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "actions": [
     {
       "type": "Action.Execute",
@@ -264,7 +264,7 @@ The following code shows an example of associating data with card actions in JSO
 {
   "type": "AdaptiveCard",
   "version": "1.5",
-  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "body": [
     {
       "type": "TextBlock",
@@ -378,7 +378,7 @@ The following code shows an example of input validation in JSON:
 {
   "type": "AdaptiveCard",
   "version": "1.5",
-  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "body": [
     {
       "type": "TextBlock",
@@ -490,7 +490,7 @@ The following card payload shows a conditionally enabled button:
 
 ## Server handlers
 
-Card actions arrive as `card.action` activities in your app. These give you access to the validated input values plus any `data` values you had configured to be sent back to you.
+Universal Action submissions are delivered to your bot as `invoke` activities named `adaptiveCard/action`. In the Teams SDK, these are surfaced to your app as `card.action` activities, which give you access to the validated input values plus any `data` values you configured to be sent back to you.
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 

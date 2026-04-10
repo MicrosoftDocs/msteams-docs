@@ -3,7 +3,7 @@ title: Use dialogs in Microsoft Teams bots
 description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, about Bot Framework card and Adaptive Card actions, deep links, and respond to messages.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 01/31/2023
+ms.date: 04/10/2026
 ---
 
 # Use dialogs with bots
@@ -12,8 +12,8 @@ Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams b
 
 There are two ways of invoking dialogs:
 
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#card-actions) for Adaptive Cards, with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#actionopenurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#card-actions) for Adaptive Cards, respectively. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+* A new invoke message `task/fetch`: Using the [`Action.Execute`](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) card action for Adaptive Cards with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
+* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the [`Action.OpenUrl`](~/task-modules-and-cards/cards/cards-actions.md#actionopenurl) card action for Adaptive Cards. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
@@ -28,9 +28,9 @@ When the `value` object of the `invoke` card action or `Action.Submit` is initia
 
 The following steps provide instructions on how to invoke a dialog (referred as task module in TeamsJS v1.x) using `task/fetch`:
 
-1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#actionexecute). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
-1. The bot receives the `invoke` HTTP POST message.
-1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
+1. This image shows an Adaptive Card with a **Buy** [`Action.Execute`](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) card action. The value of the `type` property is `task/fetch` and the rest of the `data` object can be of your choice.
+1. The bot receives a `card.action` activity. In the Teams SDK, you handle this using the `OnAdaptiveCardAction` handler. For more information, see [Executing Actions](https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions).
+1. The bot creates an `ActionResponse` object and returns it. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of the response body that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
 
     ```json
     {
