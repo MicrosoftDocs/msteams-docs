@@ -29,7 +29,7 @@ When the `value` object of the `invoke` card action or `Action.Submit` is initia
 The following steps provide instructions on how to invoke a dialog (referred as task module in TeamsJS v1.x) using `task/fetch`:
 
 1. This image shows an Adaptive Card with a **Buy** [`Action.Execute`](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) card action. The value of the `type` property is `task/fetch` and the rest of the `data` object can be of your choice.
-1. The bot receives a `card.action` activity. In the Teams SDK, you handle this using the `OnAdaptiveCardAction` handler. For more information, see [Executing Actions](https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions).
+1. The bot receives a `card.action` activity. In the Teams SDK, you handle this using the `OnAdaptiveCardAction` handler. For more information, see [Executing Actions](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions).
 1. The bot creates an `ActionResponse` object and returns it. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of the response body that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
 
     ```json
