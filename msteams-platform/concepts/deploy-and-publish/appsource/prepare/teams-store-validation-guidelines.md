@@ -1163,8 +1163,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
-
 * Bots must provide a valid response to **help** command.
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-help-command.png" alt-text="Graphic shows an example of bot sending a valid response to help command.":::
