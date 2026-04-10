@@ -36,12 +36,16 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 - Run and debug on mobile client
 - Multi-tenant support
 
+For more information, see [add API connection](add-resource.md#add-api-connection).
+
 **Cloud service integration**:
 
 - Integrate with Azure functions
 - Integrate with Azure SQL database
 - Integrate with Azure API management
 - Integrate with Azure key vault
+
+For more information, see [add cloud resources](add-resource.md#add-cloud-resources).
 
 ## Open the guides from Agents Toolkit
 
