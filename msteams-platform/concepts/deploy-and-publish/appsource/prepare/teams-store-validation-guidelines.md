@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 04/07/2026
+ms.date: 04/10/2026
 ---
 # Teams Store validation guidelines
 
@@ -543,7 +543,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 
    :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
-* Your app package must include three .png versions of your app icon: A full bleed PNG format at 192 x 192 pixels, a default or rest PNG format icon at 32 x 32 pixels, and a focused or pressed PNG format icon at 32 x 32 pixels. [*Must fix*]
+* Your app package must include a full bleed PNG format at 192 x 192 pixels and a default or rest PNG format icon at 32 x 32 pixels. Optionally, it can also include a focused or pressed PNG format icon at 32 x 32 pixels. [*Must fix*]
 * The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Must fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Must fix*]
 * The outline version of your icon is displayed in the following scenarios:
