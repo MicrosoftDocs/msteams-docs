@@ -5,7 +5,7 @@ description: Learn how to add cloud resources such as Azure Functions, Azure API
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2024
+ms.date: 04/10/2026
 ---
 
 # Add cloud resources and API connection
@@ -18,6 +18,9 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to 
 ## Add cloud resources
 
 You can add cloud resources in the following ways:
+
+- [To add cloud resources using Agents Toolkit](#to-add-cloud-resources-using-agents-toolkit)
+- [To add cloud resources using Command Palette](#to-add-cloud-resources-using-command-palette)
 
 ### To add cloud resources using Agents Toolkit
 
@@ -81,8 +84,8 @@ Add a connection to an existing API, developed by your organization or a third p
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Provision cloud resources](provision.md)
-* [Create a new Teams app](create-new-project.md)
-* [Deploy to the cloud](deploy.md)
-* [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+- [Provision cloud resources](provision.md)
+- [Create a new Teams app](create-new-project.md)
+- [Deploy to the cloud](deploy.md)
+- [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)
