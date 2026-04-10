@@ -24,7 +24,7 @@
     displayName: AI bot, Teams AI library, Teams SDK, custom agent
   - name: Enable targeted messages for agents
     href: agents-in-teams/targeted-messages.md
-    displayName: targeted messages, proactive messages, adaptive cards, message actions, message extension, notifications  
+    displayName: targeted messages, proactive messages, adaptive cards, message actions, message extension, notifications
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -52,7 +52,7 @@
           href: toolkit/tools-prerequisites.md
           displayName: accounts to build your Teams app
         - name: Create new Teams agent project
-          href: agents-in-teams/build-first-agent.md   
+          href: agents-in-teams/build-first-agent.md  
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC
