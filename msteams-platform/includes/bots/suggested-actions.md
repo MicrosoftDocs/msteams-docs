@@ -91,20 +91,25 @@ The following is an example to implement suggested actions using `imBack`:
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
-The following code snippet shows an example of implementing `Action.Compose`:
+The following code snippet shows a minimal example of implementing `Action.Compose`:
 
 ```json
-{ 
-   Type: “Action.Compose”, 
-   Title: “button title”, 
-   Value: { 
-      type: “Teams.chatMessage”, 
-      data: <GraphAPI Chat Message Object> 
-   } 
+{
+  "type": "Action.Compose",
+  "title": "button title",
+  "value": {
+    "type": "Teams.chatMessage",
+    "data": {
+      "body": {
+        "contentType": "html",
+        "content": "Hello from Action.Compose"
+      }
+    }
+  }
 }
 ```
 
-The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
+The `value.data` object must follow the Microsoft Graph [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) schema. Use that reference to add supported message content such as mentions, tags, emojis, gifs, and other rich objects.
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
