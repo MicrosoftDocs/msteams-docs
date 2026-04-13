@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/09/2026
+ms.date: 04/13/2026
 ---
 
 # Create a commands menu
@@ -163,9 +163,6 @@ In the Teams SDK, incoming messages are routed through an activity handler. You 
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
-
-> [!IMPORTANT]
-> When routing messages based on command text, use exact (whole-word) matching instead of substring checks. For example, `text.Contains("hi")` in C# or `text.includes('hi')` in TypeScript also matches unrelated words like "this" or "thinking", which can route messages unexpectedly. Since command menus insert the exact command string into the compose box, use equality operators such as `==` (C#, Python) or `===` (TypeScript) to compare the normalized message text against each command.
 
 # [C#](#tab/dotnet)
 
