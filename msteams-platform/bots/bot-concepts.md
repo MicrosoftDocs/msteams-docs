@@ -537,4 +537,4 @@ In addition to conventional bot features, you can also explore advanced features
 
 | Sample name | Description | TypeScript | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams conversation bot | This app demonstrates basic bot events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-quickstart/python/bot-quickstarts) |
+| Teams conversation bot | This app demonstrates basic bot events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
