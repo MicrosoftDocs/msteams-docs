@@ -4,7 +4,7 @@ author: vikasalmal
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/09/2026
+ms.date: 04/14/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -35,10 +35,10 @@ You can create a search message extension using Microsoft 365 Agents Toolkit (pr
 
 Before you get started, ensure that you meet the following requirements:
 
-* [Node.js](https://nodejs.org/en). Supported versions are 16, 18.
-* [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
-* [Dev environment for extending Teams apps across Microsoft 365 set up.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
-* [Agents Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI).
+* A supported version of [Node.js](https://nodejs.org/en) (16 or 18).
+* A [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program).
+* A [dev environment set up for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
+* [Agents Toolkit for Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 5.2.0 or later) or Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI).
 
 # [Agents Toolkit](#tab/Teams-toolkit)
 
