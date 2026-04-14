@@ -157,6 +157,8 @@ Bots in a group or channel respond only when they're @mentioned in a message. Ev
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
 
+In C#, Teams SDK does not feature a method to **\@Mention** portion. You can refer to the code snippet below on how to handle commands in your bot.
+
 ```csharp
 // Handles incoming messages and routes to appropriate functions based on message content
 teamsApp.OnMessage(async context =>
@@ -195,61 +197,26 @@ teamsApp.OnMessage(async context =>
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart)
 
+You can parse out the **\@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `stripMentionsText`.
+
+The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
+
 ```typescript
-// Handles incoming messages and routes to appropriate functions based on message content
-app.on('message', async (context) => {
-    const { activity } = context;
-
-    // Get message text and normalize it
-    const messageActivity = activity as IMessageActivity;
-    let text = (messageActivity.text || '').trim().toLowerCase();
-
-    // Handle mention me command - use exact matching to avoid false positives from substrings
-    if (text === 'mentionme' || text === 'mention me') {
-        await mentionUser(context);
-    }
-    // Handle whoami command
-    else if (text === 'whoami') {
-        await getSingleMember(context);
-    }
-    // Handle welcome command
-    else if (text === 'welcome') {
-        await sendWelcomeMessage(context);
-    }
-    // Handle greeting messages
-    else if (text === 'hi' || text === 'hello') {
-        await echoMessage(context, text);
-    }
-    // Default: echo back any other message
-    else if (text) {
-        await echoMessage(context, text);
-    }
-});
+// Remove mention text from Text property, this function is altering the text on the Activity.
+const text = context.activity.stripMentionsText().text.trim().toLowerCase();
 ```
 
 # [Python](#tab/python)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart)
 
+You can parse out the **@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `strip_mentions_text`.
+
+The Python code to parse out the **\@Mention** portion of the message text is as follows:
+
 ```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
-    """Handles incoming messages and routes to appropriate functions based on message content."""
-    # Get message text and normalize it
-    text = (ctx.activity.text or "").strip().lower()
-        
-    # Handle mention me command - use exact matching to avoid false positives from substrings
-    if text in ("mentionme", "mention me"):
-        await mention_user(ctx)
-    # Handle whoami command
-    elif text == "whoami":
-        await get_single_member(ctx)
-    # Handle welcome command
-    elif text == "welcome":
-        await send_welcome_message(ctx)
-    # Handle hi/hello - echo back
-    elif text in ("hi", "hello"):
-        await echo_message(ctx, text)
+# Remove recipient mention text from Text property, this function is altering the text on the Activity.
+text = context.activity.strip_mentions_text().text. Strip().lower()
 ```
 
 * * *
