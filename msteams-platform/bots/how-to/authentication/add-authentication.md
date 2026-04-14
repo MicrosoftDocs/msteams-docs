@@ -3,12 +3,12 @@ title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 04/09/2026
+ms.date: 04/14/2026
 ---
 
 # Add authentication to your Teams bot
 
-You can create bots in Microsoft Teams that access resources on behalf of the user, such as a mail service. You can use Teams SDK authentication, based on OAuth 2.0. This method makes it easier to develop a bot that can use authentication tokens based on the user's credentials. The key is the use of **identity providers**.
+You can create bots in Microsoft Teams that access resources on behalf of users (such as a mail service) by using Teams SDK authentication based on OAuth 2.0. This method makes it easier to develop a bot that can use authentication tokens based on the user's credentials. The key is the use of **identity providers**.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Microsoft Entra ID and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
@@ -16,9 +16,9 @@ See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understan
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-bot-auth-quickstart-cs] to handle user sign-in credentials and the generating the authentication token.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication.
-- **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
+- **How to create an authentication-enabled bot**: Use [cs-auth-sample][teams-bot-auth-quickstart-cs] to handle user sign-in credentials and generating the authentication token.
+- **How to deploy the bot to Azure and associate it with an identity provider**: The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which requires authentication.
+- **How to integrate the bot within Microsoft Teams**: Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
 
@@ -88,7 +88,10 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
     >[!IMPORTANT]
-    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continue to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **TENANT_ID** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
+    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continue to work for now.
+    > All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.
+    > When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.
+    > In all cases, the **TENANT_ID** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
@@ -98,7 +101,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 
 1. If the validation passes, select **Create**.
 
-    Azure provisions your bot in a few moments.
+    Azure provisions your bot.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="Screenshot shows how Azure bot validation passes.":::
 
@@ -120,7 +123,7 @@ To create client secret:
 
    :::image type="content" source="~/assets/images/manage-bot-label.png" alt-text="Screenshot shows how to create and manage a bot.":::
 
-1. In the **Client secrets** section, select **New client secret**.**Add a client secret** window appears.
+1. In the **Client secrets** section, select **New client secret**. **Add a client secret** window appears.
 
    :::image type="content" source="../../../assets/images/meetings-side-panel/newclientsecret.PNG" alt-text="Screenshot shows how to create new client secret.":::
 
@@ -263,7 +266,7 @@ You need an identity provider for authentication. In this procedure, you use a M
 1. Select the connection entry to open the connection you created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** panel.
 1. For the first time, it opens a new browser window asking you to select an account. Select the one you want to use.
-1. Next, allow to the identity provider to use your data (credentials). The following image is an example:
+1. Next, allow the identity provider to use your data (credentials). The following image is an example:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-connection-test-accept.PNG" alt-text="The screenshot shows how to add Teams bot auth connection string adv1.":::
 
@@ -368,7 +371,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. In the dropdown menu, select **Publish**.
 1. In the displayed window, select the **New** link.
 1. In the dialog window, select **App Service** and **Create New**.
-1. Select the **Publish** button.
+1. Select **Publish**.
 1. In the next dialog window, enter the required information.
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="Screenshot shows how to enter required information for auth app service.":::
@@ -422,7 +425,7 @@ and when for these, and just reference that from here, along with the set of ste
    :::image type="content" source="../../../assets/images/authentication/auth-bot-deployed-logout.PNG" alt-text="Screenshot shows how to sign out of the bot.":::
 
 > [!NOTE]
-> If you're having problems signing in, try to test the connection again as described in the previous steps. This could recreate the authentication token.
+> If you're having problems signing in, try to test the connection again as described in the [previous steps](#test-the-connection). This could recreate the authentication token.
 > With the Web Chat client in Azure, you may need to sign in several times before the authentication is established correctly.
 
 > [!div class="nextstepaction"]
