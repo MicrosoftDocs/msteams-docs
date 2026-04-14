@@ -177,3 +177,8 @@ If you see this message, update Microsoft Entra app permission and follow the in
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Upload%20Microsoft%20Entra%20app%20manifest%20to%20Azure%20portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23upload-microsoft-entra-app-manifest-to-azure-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
+## See also
+
+- [Build your first agent](../agents-in-teams/build-first-agent.md)
+- [Create a new Teams app](create-new-project.md)
