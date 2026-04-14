@@ -25,7 +25,7 @@ This section provides information for using existing Microsoft Entra app or manu
    * Leave the **Redirect URL** field blank for now.
    * Select **Register**.
 
-1. When the app is registered, you're taken to the app's **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
+1. When the agent or app is registered, you're taken to its **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-a-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -35,16 +35,15 @@ This section provides information for using existing Microsoft Entra app or manu
 ## Create client secret for Microsoft Entra app (optional)
 
 > [!NOTE]
-> You can skip this part if your application doesn't require client secret. This step can be automated by the `aadApp/create` action.
+> You can skip this part if your agent or app doesn't require client secret. This step can be automated by the `aadApp/create` action.
 
-1. Go to app's **Certificates & secrets** page, select **Client Secret** and select **New client secret**.
-   * **Description**: The description of your client secret.
-   * **Expires**: The expire time of your client secret.
-   * Select **Add**.
+1. Go to app's **Certificates & secrets** page, select **Client Secret** and select **New client secret**. Select the following details:
+
+   1. **Description**: The description of your client secret.
+   1. **Expires**: The expire time of your client secret.
+   1. Select **Add**.
 
 1. When the client secret is added, press the copy button under the **Value** column to copy the **Client Secret**.
-
-<a name='create-access-as-user-scope-for-azure-ad-app-optional'></a>
 
 ## Create access as user scope for Microsoft Entra app (optional)
 
