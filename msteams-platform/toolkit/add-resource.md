@@ -32,7 +32,7 @@ You can add cloud resources in the following ways:
 
    1. From the dropdown list that appears, select the cloud service integration you want to add to your agent or app. You're redirected to the selected how-to guide.
 
-        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options from the how-to guides.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options from the how-to guides list.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -47,11 +47,11 @@ You can add cloud resources in the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
+      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the command palette option under View.":::
 
    1. Enter **How-to Guides** and select **Microsoft 365 Agents: View How-to Guides** from the list.
 
-        :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of how-to guides from the list.":::
 
    1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the selected how-to guide.
 
