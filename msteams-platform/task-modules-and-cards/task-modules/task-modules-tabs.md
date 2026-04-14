@@ -82,7 +82,7 @@ The value of `UrlDialogInfo.url` is set to the location of the content of your d
  microsoftTeams.dialog.adaptiveCard.open(adaptiveCardDialogInfo, submitHandler);
 ```
 
-The value of `adaptiveCardDialogInfo.card` is the [JSON for an Adaptive Card](../../task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
+The value of `adaptiveCardDialogInfo.card` is the JSON for an Adaptive Card. You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
 
 The next section gives an example of invoking a dialog.
 
