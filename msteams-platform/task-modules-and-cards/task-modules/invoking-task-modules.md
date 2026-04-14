@@ -1,59 +1,39 @@
 ---
-title: Invoke Dialogs from Tab, Bot, or Link
-description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
+title: Invoke and dismiss dialogs
+description: Learn how to invoke and dismiss dialogs using Adaptive Card actions in the Teams SDK, including the TaskInfo object, dialog sizing, and code samples.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/29/2023
+ms.date: 04/13/2026
 ---
 
 # Invoke and dismiss dialogs
 
-Dialogs (referred as task modules in TeamsJS v1.x) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works.
+Dialogs (formerly known as task modules) provide a way to open modal windows within the Microsoft Teams interface. In the Teams SDK, dialogs are invoked from Adaptive Card actions using the `TaskFetchAction` and handled through `dialog.open` and `dialog.submit` events on the `App` class. The dialog content can be an Adaptive Card or a URL-based webpage.
 
 > [!NOTE]
-> The `task` capability is replaced with `dialog` capability in both HTML-based dialogs (starting with TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0). For more information, see [dialog](./../../m365-apps/teamsjs-support-m365.md#dialog).
+> In the Teams SDK (Teams AI Library), dialogs must be triggered via Adaptive Card actions and cannot be invoked directly from client-side tab JavaScript or deep links. For migration guidance, see [Migrate from BotBuilder](/microsoftteams/platform/teams-sdk/migrations/botbuilder/overview).
 
-| Invoked using | Dialog with HTML or JavaScript | Dialog with Adaptive Card |
+The following table summarizes how dialogs work in the Teams SDK:
+
+| Step | Dialog with Adaptive Card | Dialog with webpage URL |
 | --- | --- | --- |
-| JavaScript in a tab | 1. Use the Teams client library function `dialog.url.open()` with optional `submitHandler(err, result)` and `messageFromChildHandler(postMessageChannel)` callback functions. <br/><br/> 2. In the dialog code, when the user has performed the actions, call the TeamsJS library function `dialog.url.submit()` with (optionally) a `result` object as a parameter. If a `submitHandler` callback was specified in `dialog.open()`, Teams calls it with `result` as a parameter. If there was an error when invoking `dialog.open()`, the `submitHandler` function is called with an `err` string instead. | 1. Call the Teams client library function `dialog.adaptiveCard.open()` with a [AdaptiveCardDialogInfo object](#adaptivecarddialoginfo-object) specifying the JSON for the Adaptive Card (`AdaptiveCardDialogInfo.card`)  to show in the modal dialog. <br/><br/> 2. If a `submitHandler` callback was specified in `dialog.adaptiveCard.open()`, Teams calls it with an `err` string if there was an error when invoking the dialog or if the user closes the modal dialog. <br/><br/> 3. If the user presses an `Action.Submit` button then its `data` object is returned as the value of `result`. |
-| Bot card button | 1. Bot card buttons, depending on the type of button, can invoke dialogs from either a deep link URL, or by sending a `task/fetch` message. <br/><br/> 2. If the button's action `type` is [`task/fetch`](task-modules-bots.md#invoke-a-dialog-using-taskfetch) or `Action.Submit` button type for Adaptive Cards, a `task/fetch invoke` event that is an HTTP POST is sent to the bot. The bot responds to the POST with HTTP 200 and the response body containing a wrapper around the [DialogInfo object](#dialoginfo-object). Teams displays the dialog. <br/><br/> 3. After the user has performed the actions, call the `Actions.Submit` Adaptive Card action with the result. The bot receives a `task/submit invoke` message that contains the result. <br/><br/> 4. You have three different ways to respond to the `task/submit` message: do nothing (if the task completed successfully), display a message to the user in the dialog, or invoke another dialog. For more information, see [detailed discussion on `task/submit`](task-modules-bots.md#responds-to-the-tasksubmit-messages). | <ul><li> Like buttons on Bot Framework cards, buttons on Adaptive Cards support two ways of invoking dialogs: deep link URLs with `Action.openUrl` buttons, and `task/fetch` using `Action.Submit` buttons. </li></ul> <br/><br/> <ul><li> Dialogs with Adaptive Cards work similarly to the HTML or JavaScript case. The major difference is that, because there's no JavaScript when you're using Adaptive Cards, there's no way to call *submit()*. Instead, Teams takes the `data` object from `Action.Submit` and returns it as the payload of the `task/submit` event. For more information, see [Responds to the `task/submit` messages](task-modules-bots.md#responds-to-the-tasksubmit-messages). </li></ul> |
-|  Deep link URL*<br/><br/>*\*Deprecated; supported for backwards compability*| 1. Teams invokes the dialog that is the URL that appears inside the `<iframe>` specified in the `url` parameter of the deep link. There's no `submitHandler` callback. <br/><br/> 2. Within the JavaScript of the page in the dialog, call `tasks.submitTask()` to close it with a `result` object as a parameter, the same as when invoking it from a tab or a bot card button. However, completion logic is slightly different. If your completion logic resides on the client that is if there's no bot, there's no `submitHandler` callback, so any completion logic must be in the code preceding the call to `tasks.submitTask()`. Invocation errors are only reported through the console. If you have a bot, then you can specify a `completionBotId` parameter in the deep link to send the `result` object through a `task/submit` event. | 1. Teams invokes the dialog that is the JSON card body of the Adaptive Card that is specified as a URL-encoded value of the `card` parameter of the deep link. <br/><br/> 2. The user closes the dialog by selecting the X at the upper right of the dialog or by pressing an `Action.Submit` button on the card. Since there's no `submitHandler` to call, the user must have a bot to send the value of the Adaptive Card fields. The user must use the `completionBotId` parameter in the deep link to specify the bot to send the data to using a `task/submit invoke` event. |
+| Trigger the dialog | 1. Send an Adaptive Card with a `TaskFetchAction` button to the user. The action's `value` data specifies the type of dialog to open. <br/><br/> 2. When the user selects the button, Teams sends a `dialog.open` event to your app. | 1. Send an Adaptive Card with a `TaskFetchAction` button to the user. <br/><br/> 2. When the user selects the button, Teams sends a `dialog.open` event to your app. |
+| Handle the dialog open event | 3. In your `dialog.open` handler, return a response containing a `TaskInfo` object with the Adaptive Card to display. The response uses a `ContinueTask` wrapper. | 3. In your `dialog.open` handler, return a response containing a `TaskInfo` object with a `Url` property pointing to the webpage. The URL domain must be in the `validDomains` array in your app manifest. |
+| Handle the dialog submission | 4. When the user presses an `Action.Submit` button, Teams sends a `dialog.submit` event to your app with the form data. <br/><br/> 5. You can respond by: doing nothing (task completed), displaying a message using `MessageTask`, or chaining to another dialog using `ContinueTask`. | 4. The webpage calls the Teams JS client library to submit data back. Teams sends a `dialog.submit` event to your app with the result. |
 
-The next section specifies the `DialogInfo` object that defines certain attributes for a dialog.
+The next section specifies the `TaskInfo` object that defines certain attributes for a dialog.
 
-## DialogInfo object
+## TaskInfo object
 
-The base `DialogInfo` object contains basic metadata for a dialog:
+The `TaskInfo` object (from `Microsoft.Teams.Api.TaskModules`) contains the metadata for a dialog:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `title` | string | This attribute appears below the app name and to the right of the app icon. |
-| `height` | number or string | This attribute can be a number representing the dialog's height in pixels, or `small`, `medium`, or `large`. |
-| `width` | number or string | This attribute can be a number representing the dialog's width in pixels, or `small`, `medium`, or `large`. |
-
-### UrlDialogInfo object
-
-The `UrlDialogInfo` object for HTML-based dialogs extends the `DialogInfo` object and also includes:
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in your app's manifest. |
-
-### AdaptiveCardDialogInfo object
-
-The `AdaptiveCardDialogInfo` object for Adaptive Card-based dialogs extends the *DialogInfo* object and also includes:
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `card` | Adaptive Card or Adaptive Card bot card attachment | This attribute is the JSON for the Adaptive Card to appear in the dialog. If the user is invoking from a bot, use the Adaptive Card JSON in a Bot Framework `attachment` object. From a tab, the user must use an Adaptive Card. For more information, see [Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
-
-### BotAdaptiveCardDialogInfo object
-
-The `BotAdaptiveCardDialogInfo` object for bot-based Adaptive Card dialogs extends the *AdaptiveCardDialogInfo* object and also includes:
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| `completionBotId` | string | This attribute specifies a bot App ID to send the result of the user's interaction with the dialog. If specified, the bot receives a `task/submit invoke` event with a JSON object in the event payload. |
+| `Title` | string | This attribute appears below the app name and to the right of the app icon. |
+| `Height` | number or string | This attribute can be a number representing the dialog's height in pixels, or `small`, `medium`, or `large`. In C#, use `Union<int, Size>`. |
+| `Width` | number or string | This attribute can be a number representing the dialog's width in pixels, or `small`, `medium`, or `large`. In C#, use `Union<int, Size>`. |
+| `Url` | string | The URL of the page loaded as an `<iframe>` inside the dialog. The URL's domain must be in the app's [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in your app manifest. Use this for webpage-based dialogs. |
+| `Card` | Attachment | The Adaptive Card to display in the dialog, wrapped in an `Attachment` object with `ContentType` set to `application/vnd.microsoft.card.adaptive`. Use this for Adaptive Card-based dialogs. |
 
 > [!NOTE]
 > The dialog feature requires that the domains of any URLs you want to load are included in the `validDomains` array in your app's manifest.
@@ -62,166 +42,342 @@ The next section specifies dialog sizing that enables the user to set the height
 
 ## Dialog sizing
 
-The values of `DialogInfo.width` and `DialogInfo.height` set the height and width of the dialog in pixels. Depending on the size of the Teams window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
+The values of `TaskInfo.Width` and `TaskInfo.Height` set the height and width of the dialog in pixels. Depending on the size of the Teams window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
 
-If `DialogInfo.width` and `DialogInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
+If `TaskInfo.Width` and `TaskInfo.Height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 
 :::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="dialog sizing example":::
 
-Dialogs invoked from a tab can be dynamically resized. After calling `dialog.*.open()` you can call `dialog.update.resize(newSize)` where height and width properties on the newSize object conform to the [DialogSize](/javascript/api/@microsoft/teams-js/dialogsize) specification, for example `{ height: 'medium', width: 'medium' }`.
+The next section provides examples of triggering and handling dialogs using the Teams SDK.
 
-The next section provides examples of embedding dialogs in a YouTube video and a PowerApp.
+## Trigger a dialog with TaskFetchAction
 
-## CSS for HTML or JavaScript dialogs
+To open a dialog, send an Adaptive Card with a `TaskFetchAction` button. When the user selects the button, Teams sends a `dialog.open` event to your app.
 
-HTML or JavaScript-based dialogs have access to the entire area of the dialog below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, you must specify the CSS.
+# [C#](#tab/csharp)
 
-[!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
+```csharp
+using Microsoft.Teams.Api.Activities;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Cards;
+using Microsoft.Teams.Common.Logging;
 
-Here are a few examples of common use cases.
-
-### Example 1: YouTube video
-
-YouTube offers the ability to embed videos on web pages. It's easy to embed videos on web pages in a dialog using a simple stub web page.
-
-:::image type="content" source="../../assets/images/task-module/youtube-example.png" alt-text="Youtube example":::
-
-The following code provides an example of the HTML for the web page without the CSS:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  ⋮
-</head>
-<body>
-  <div id="embed-container">
-    <iframe width="1000" height="700" src="https://www.youtube.com/embed/rd0Rd8w3FZ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-</body>
-</html>
-```
-
-The following code provides an example of the CSS:
-
-```css
-#embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 95%;
-    height: 95%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-}
-```
-
-### Example 2: PowerApp
-
-You can use the same approach to embed a PowerApp. As the height or width of any individual PowerApp is customizable, you can adjust the height, and width to achieve the desired presentation.
-
-:::image type="content" source="../../assets/images/task-module/powerapp-example.png" alt-text="powerapp":::
-
-The following code provides an example of the HTML for PowerApp:
-
-```html
-<iframe width="720" height="520" src="https://web.powerapps.com/webplayer/iframeapp?source=iframe&screenColor=rgba(104,101,171,1)&appId=/providers/Microsoft.PowerApps/apps/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></iframe>
-```
-
-The following code provides an example of the CSS:
-
-```css
-#embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 94%;
-    height: 95%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-style: none;
-}
-```
-
-The next section provides details on invoking your card using Adaptive Card or Adaptive Card bot card attachment.
-
-## Adaptive Card or Adaptive Card bot card attachment
-
-Depending on how you're invoking your card, you'll need to use either an Adaptive Card or an Adaptive Card bot card attachment (an Adaptive Card wrapped in an `attachment` object).
-
-If you're invoking from a tab, use an Adaptive Card:
-
-```json
+[Message]
+public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client, [Context] ILogger log)
 {
-    "type": "AdaptiveCard",
-    "body": [
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
         {
-            "type": "TextBlock",
-            "text": "Here is a guitar:"
-        },
-        {
-            "type": "Image",
-            "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
-            "size": "Medium"
-        }
-    ],
-    "version": "1.0"
-}
-```
-
-If you're invoking from a bot, use an Adaptive Card bot card attachment:
-
-```json
-{
-    "contentType": "application/vnd.microsoft.card.adaptive",
-    "content": {
-        "type": "AdaptiveCard",
-        "body": [
+            new TextBlock("Select the examples you want to see!")
             {
-                "type": "TextBlock",
-                "text": "Here is a guitar:"
-            },
-            {
-                "type": "Image",
-                "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
-                "size": "Medium"
+                Size = TextSize.Large,
+                Weight = TextWeight.Bolder
             }
-        ],
-        "version": "1.0"
+        },
+        Actions = new List<Action>
+        {
+            new TaskFetchAction(new { opendialogtype = "simple_form" })
+            { Title = "Simple form test" },
+            new TaskFetchAction(new { opendialogtype = "webpage_dialog" })
+            { Title = "Webpage Dialog" },
+            new TaskFetchAction(new { opendialogtype = "multi_step_form" })
+            { Title = "Multi-step Form" }
+        }
+    };
+    await client.Send(card);
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+import { cardAttachment, MessageActivity } from '@microsoft/teams.api';
+import { App } from '@microsoft/teams.apps';
+import {
+  AdaptiveCard,
+  IAdaptiveCard,
+  TaskFetchAction,
+  TaskFetchData,
+} from '@microsoft/teams.cards';
+
+app.on('message', async ({ send }) => {
+  await send({ type: 'typing' });
+
+  const card: IAdaptiveCard = new AdaptiveCard({
+    type: 'TextBlock',
+    text: 'Select the examples you want to see!',
+    size: 'Large',
+    weight: 'Bolder',
+  }).withActions(
+    new TaskFetchAction({})
+      .withTitle('Simple form test')
+      .withValue(new TaskFetchData({ opendialogtype: 'simple_form' })),
+    new TaskFetchAction({})
+      .withTitle('Webpage Dialog')
+      .withValue(new TaskFetchData({ opendialogtype: 'webpage_dialog' })),
+    new TaskFetchAction({})
+      .withTitle('Multi-step Form')
+      .withValue(new TaskFetchData({ opendialogtype: 'multi_step_form' }))
+  );
+
+  await send(new MessageActivity('Enter this form').addCard('adaptive', card));
+});
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.api import MessageActivity, MessageActivityInput, TypingActivityInput
+from microsoft_teams.apps import ActivityContext
+from microsoft_teams.cards import AdaptiveCard, TextBlock, TaskFetchAction
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.reply(TypingActivityInput())
+
+    card = AdaptiveCard(
+        schema="http://adaptivecards.io/schemas/adaptive-card.json",
+        body=[
+            TextBlock(
+                text="Select the examples you want to see!",
+                size="Large",
+                weight="Bolder",
+            )
+        ]
+    ).with_actions([
+        TaskFetchAction(value={"OpenDialogType": "simple_form"}).with_title("Simple form test"),
+        TaskFetchAction(value={"OpenDialogType": "webpage_dialog"}).with_title("Webpage Dialog"),
+        TaskFetchAction(value={"OpenDialogType": "multi_step_form"}).with_title("Multi-step Form")
+    ])
+
+    message = MessageActivityInput(text="Enter this form").add_card(card)
+    await ctx.send(message)
+```
+
+---
+
+## Handle the dialog open event
+
+When Teams sends a `dialog.open` event, your app returns the dialog content. The content can be an Adaptive Card or a webpage URL, wrapped in a `TaskInfo` object.
+
+# [C#](#tab/csharp)
+
+```csharp
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities.Invokes;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Cards;
+using Microsoft.Teams.Common;
+using Microsoft.Teams.Common.Logging;
+
+[TaskFetch]
+public Task<Response> OnTaskFetch([Context] Tasks.FetchActivity activity, [Context] ILogger log)
+{
+    var dialogType = activity.Value?.Data?.GetType()
+        .GetProperty("opendialogtype")?.GetValue(activity.Value.Data)?.ToString();
+
+    if (dialogType == "simple_form")
+    {
+        var card = new AdaptiveCard
+        {
+            Body = new List<CardElement>
+            {
+                new TextBlock("This is a simple form") { Size = TextSize.Large, Weight = TextWeight.Bolder },
+                new TextInput { Id = "name", Label = "Name", Placeholder = "Enter your name", IsRequired = true }
+            },
+            Actions = new List<Action>
+            {
+                new SubmitAction { Title = "Submit", Data = new { submissiondialogtype = "simple_form" } }
+            }
+        };
+
+        var taskInfo = new TaskInfo
+        {
+            Title = "Simple Form Dialog",
+            Card = new Attachment
+            {
+                ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
+                Content = card
+            }
+        };
+
+        return Task.FromResult(new Response(new ContinueTask(taskInfo)));
+    }
+
+    if (dialogType == "webpage_dialog")
+    {
+        var taskInfo = new TaskInfo
+        {
+            Title = "Webpage Dialog",
+            Width = new Union<int, Size>(1000),
+            Height = new Union<int, Size>(800),
+            Url = $"{configuration["BotEndpoint"]}/tabs/dialog-form"
+        };
+
+        return Task.FromResult(new Response(new ContinueTask(taskInfo)));
+    }
+
+    return Task.FromResult(new Response(new MessageTask("Unknown dialog type")));
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+import { cardAttachment } from '@microsoft/teams.api';
+import { App } from '@microsoft/teams.apps';
+import { AdaptiveCard, TextInput, SubmitAction } from '@microsoft/teams.cards';
+
+app.on('dialog.open', async ({ activity }) => {
+  const dialogType = activity.value.data?.opendialogtype;
+
+  if (dialogType === 'simple_form') {
+    const dialogCard = new AdaptiveCard(
+      {
+        type: 'TextBlock',
+        text: 'This is a simple form',
+        size: 'Large',
+        weight: 'Bolder',
+      },
+      new TextInput()
+        .withLabel('Name')
+        .withIsRequired()
+        .withId('name')
+        .withPlaceholder('Enter your name')
+    ).withActions(
+      new SubmitAction().withTitle('Submit').withData({ submissiondialogtype: 'simple_form' })
+    );
+
+    return {
+      task: {
+        type: 'continue',
+        value: {
+          title: 'Simple Form Dialog',
+          card: cardAttachment('adaptive', dialogCard),
+        },
+      },
+    };
+  }
+});
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.api import TaskInfo, Attachment, ContentType
+from microsoft_teams.cards import AdaptiveCard, TextBlock, TextInput, SubmitAction
+
+@app.on_task_fetch
+async def handle_task_fetch(ctx):
+    dialog_type = ctx.activity.value.data.get("OpenDialogType")
+
+    if dialog_type == "simple_form":
+        card = AdaptiveCard(
+            body=[
+                TextBlock(text="This is a simple form", size="Large", weight="Bolder"),
+                TextInput(id="name", label="Name", placeholder="Enter your name", is_required=True)
+            ]
+        ).with_actions([
+            SubmitAction(title="Submit", data={"submissiondialogtype": "simple_form"})
+        ])
+
+        return {"task": {"type": "continue", "value": {"title": "Simple Form Dialog", "card": card}}}
+```
+
+---
+
+## Handle the dialog submission
+
+When a user presses `Action.Submit` in a dialog, Teams sends a `dialog.submit` event to your app. You can respond by completing the task, showing a message, or opening another dialog.
+
+# [C#](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities.Invokes;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Common.Logging;
+
+[TaskSubmit]
+public async Task<Response> OnTaskSubmit([Context] Tasks.SubmitActivity activity, [Context] IContext.Client client, [Context] ILogger log)
+{
+    var data = activity.Value?.Data as JsonElement?;
+    if (data == null)
+    {
+        return new Response(new MessageTask("No data found in the activity value"));
+    }
+
+    var submissionType = data.Value.TryGetProperty("submissiondialogtype", out var typeObj) && typeObj.ValueKind == JsonValueKind.String
+        ? typeObj.ToString()
+        : null;
+
+    switch (submissionType)
+    {
+        case "simple_form":
+            var name = data.Value.TryGetProperty("name", out var nameVal) ? nameVal.GetString() : "Unknown";
+            await client.Send($"Hi {name}, thanks for submitting the form!");
+            return new Response(new MessageTask("Form was submitted"));
+        default:
+            return new Response(new MessageTask("Unknown submission type"));
     }
 }
 ```
 
-The next section provides details on dialog accessibility.
+# [TypeScript](#tab/typescript)
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+app.on('dialog.submit', async ({ activity, send }) => {
+  const dialogType = activity.value.data?.submissiondialogtype;
+
+  if (dialogType === 'simple_form') {
+    const name = activity.value.data.name;
+    await send(`Hi ${name}, thanks for submitting the form!`);
+    return {
+      task: {
+        type: 'message',
+        value: 'Form was submitted',
+      },
+    };
+  }
+});
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_task_submit
+async def handle_task_submit(ctx):
+    submission_type = ctx.activity.value.data.get("submissiondialogtype")
+
+    if submission_type == "simple_form":
+        name = ctx.activity.value.data.get("name", "Unknown")
+        await ctx.send(f"Hi {name}, thanks for submitting the form!")
+        return {"task": {"type": "message", "value": "Form was submitted"}}
+```
+
+---
 
 ## Keyboard and accessibility guidelines
 
-With HTML or JavaScript-based dialogs, you must ensure that users can interact with your dialog with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. Following are the important considerations:
+For URL-based dialogs that load HTML content, ensure keyboard accessibility:
 
-* Using the [tabindex attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
-* Handling the <kbd>Esc</kbd> key in the JavaScript for your dialog. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
-
-    ```javascript
-    // Handle the Esc key
-    document.onkeyup = function(event) {
-    if ((event.key === 27) || (event.key === "Escape")) {
-      microsoftTeams.submitTask(null); // this will return an err object to the completionHandler()
-      }
-    }
-    ```
+* Use the [tabindex attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused and to define sequential keyboard navigation with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
+* Handle the <kbd>Esc</kbd> key appropriately in the JavaScript for your dialog page.
 
 Microsoft Teams ensures that keyboard navigation works properly from the dialog header into your HTML and vice-versa.
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js | Manifest|
+|Sample name | Description | .NET | Node.js | Python |
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample - Teams SDK | This sample app demonstrates how to use dialogs with the Teams SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/dotnet/bot-task-modules)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/nodejs/bot-task-modules) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules) |
 
 ## Next step
 
@@ -231,7 +387,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the dialog 
 ## See also
 
 * [Cards and dialogs](../cards-and-task-modules.md)
-* [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
-* [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
-* [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
-* [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
+* [Teams SDK overview](/microsoftteams/platform/teams-sdk/)
+* [Dialogs in the Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/dialogs/overview)
+* [Adaptive Cards in the Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/overview)
+* [Migrate from BotBuilder](/microsoftteams/platform/teams-sdk/migrations/botbuilder/overview)
