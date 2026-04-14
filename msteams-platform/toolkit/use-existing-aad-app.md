@@ -8,7 +8,7 @@ ms.date: 02/27/2025
 
 # Use existing Entra app in TeamsFx
 
-This section provides information for using existing Microsoft Entra app or manually creates Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required info is properly set in your TeamsFx project.
+This section provides information for using existing Microsoft Entra app or manually creating a Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required information is set properly in your TeamsFx project.
 
 <a name='create-an-azure-ad-app'></a>
 
@@ -84,29 +84,33 @@ This section provides information for using existing Microsoft Entra app or manu
 
 ## Get necessary info from existing Microsoft Entra app
 
+You must save the following configuration details from your existing Microsoft Entra app to add it to your TeamsFx project.
+
 > [!NOTE]
-> You may skip this part if you follow the instruction above to create a Microsoft Entra app.
+> You can skip this part if you followed the instructions above to create a Microsoft Entra app.
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
 1. Select **App Registrations** and find your existing Microsoft Entra app.
 
-1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
+1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
     > [!NOTE]
     > If you can't copy the secret, follow the [instructions](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
 
-1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
+1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client IDs, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20necessary%20info%20from%20existing%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23get-necessary-info-from-existing-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Set necessary info in TeamsFx project
 
+Add the information you saved from the Microsoft Entra app to your TeamsFx project.
+
 > [!NOTE]
-> If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following the below steps.
+> If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following these steps.
 
 1. Open `m365agents.yml` and find the `aadApp/create` action.
 
