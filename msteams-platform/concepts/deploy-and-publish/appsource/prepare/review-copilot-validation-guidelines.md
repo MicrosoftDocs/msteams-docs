@@ -322,18 +322,10 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
   For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
-   | Operation type | Actions | Expected value for `isConsequential` flag |
-   | --- | --- | --- |
-   | Create | Consequential | true |
-   | Read | Non-consequential | false or true |
-   | Update | Consequential | true |
-   | Delete | Consequential | true |
-
    | Command description | Consequential function? | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
+   | Returns a list of quote recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
    | Returns a list of meditation recommendations based on the user's preferences. | No | false or true |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
 
 [Back to top](#validation-guidelines-for-agents)
 

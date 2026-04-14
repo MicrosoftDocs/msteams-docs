@@ -1123,6 +1123,10 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
+* Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned. The bot must enable the users to know about the value proposition of the app. Bot must respond with various workflows it supports on asking for help or value it provides. Bot must provide a valid response even when the user hasn’t logged into the apps.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
+
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Must fix*]
   
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
@@ -1186,8 +1190,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bot user experience mustn't be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Must fix*]
 
 * To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
-
-* Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned.
 
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
