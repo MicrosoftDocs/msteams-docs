@@ -19,11 +19,12 @@ This section provides information for using existing Microsoft Entra app or manu
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
-1. Select **App Registrations** > **New registration** to create a new Microsoft Entra app:
-   * **Name**: The name of your configuration app.
-   * **Supported account types**: Select **Account in this organizational directory only**.
-   * Leave the **Redirect URL** field blank for now.
-   * Select **Register**.
+1. Select **App Registrations** > **New registration** to create a new Microsoft Entra app. Add the following details:
+
+   1. **Name**: The name of your configuration app.
+   1. **Supported account types**: Select **Account in this organizational directory only**.
+   1. Leave the **Redirect URL** field blank for now.
+   1. Select **Register**.
 
 1. When the agent or app is registered, you're taken to its **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 
@@ -50,26 +51,29 @@ This section provides information for using existing Microsoft Entra app or manu
 > [!NOTE]
 > You can skip this part if your M365 account has permission to update the Microsoft Entra app. We'll create the scope for you. This step can be automated by the `aadApp/update` action.
 
-1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**.
-   * Select **Save and continue**.
-   * **Scope name**: Fill in **access_as_user**.
-   * **Who can consent?**: Choose **Admins and users**.
-   * **Admin consent display name**: Fill in **Teams can access app’s web APIs**.
-   * **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user**.
-   * **User consent display name**: Fill in **Teams can access app’s web APIs and make requests on your behalf**.
-   * **User consent description**: Fill in **Enable Teams to call this app’s web APIs with the same rights that you have**.
-   * **State**: Choose **Enabled**.
-   * Select **Add scope**.
+1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**. Add the following details:
 
-1. On the same page, select **Add a client application** under **Authorized client applications**.
-   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
-   * **Authorized scopes**: Choose the existing **access_as_user** scope.
-   * Select **Add application**.
+   1. Select **Save and continue**.
+   1. **Scope name**: Fill in **access_as_user**.
+   1. **Who can consent?**: Choose **Admins and users**.
+   1. **Admin consent display name**: Fill in **Teams can access app’s web APIs**.
+   1. **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user**.
+   1. **User consent display name**: Fill in **Teams can access app’s web APIs and make requests on your behalf**.
+   1. **User consent description**: Fill in **Enable Teams to call this app’s web APIs with the same rights that you have**.
+   1. **State**: Choose **Enabled**.
+   1. Select **Add scope**.
 
-1. Select again on **Add a client application**.
-   * **Client ID**: Fill in **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** which is Client ID for Teams on web.
-   * **Authorized scopes**: Choose the existing **access_as_user** scope.
-   * Select **Add application**.
+1. On the same page, select **Add a client application** under **Authorized client applications**, and add the following details:
+
+   1. **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
+   1. **Authorized scopes**: Choose the existing **access_as_user** scope.
+   1. Select **Add application**.
+
+1. Select **Add a client application** and add the details:
+
+   1. **Client ID**: Fill in **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** which is Client ID for Teams on web.
+   1. **Authorized scopes**: Choose the existing **access_as_user** scope.
+   1. Select **Add application**.
 
 2. Go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
