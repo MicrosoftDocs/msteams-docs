@@ -7,13 +7,14 @@ ms.topic: how-to
 ms.subservice: m365apps
 ---
 
-# Register MCP servers as agent connectors for Microsoft 365 (preview)
+# Register MCP servers as agent connectors for Microsoft 365
 
 Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
-
+<!--
 > [!NOTE]
 >
 > Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) and only supported in Channel Agent for Microsoft Teams. Additional agent hosts will be supported in the future.
+-->
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
@@ -28,7 +29,7 @@ Once registered, your MCP server becomes available to any Microsoft 365 agent ca
 
 Before you begin, ensure you have:
 
-- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
+<!--- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)-->
 - A working MCP server with a secure public endpoint
 - Authentication credentials (OAuth configuration or API key)
 
@@ -40,12 +41,12 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 2. Locate or create the root-level `agentConnectors` array.
 
-3. Add a new connector object with a unique `id`, display name, and description:
+3. Add a new connector object with a unique `id`, `displayName`, and `description`:
 
 ````json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.27/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.27",
   ...
     "agentConnectors": [
       {
@@ -91,10 +92,8 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
-<!-- Uncomment once supported
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client creation
--->
 
 ### Use OAuth authentication
 
@@ -114,7 +113,6 @@ The `referenceId` points to a secure [OAuth configuration that you register in D
 
 When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
-<!-- Uncomment when supported
 ### Use API key authentication
 
 For API keys stored in a vault, configure the authorization type as `ApiKeyPluginVault`:
@@ -127,7 +125,6 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
 ````
 
 The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
--->
 
 ### Use no authentication
 
@@ -139,8 +136,7 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 Choose how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported.
 
-You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
-
+You can use inline definitions if your toolset is static or dynamic discovery if your toolset changes frequently.
 
 ### Enable dynamic tool discovery
 
@@ -149,8 +145,6 @@ Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which
 You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
-
--->
 
 ### Use inline tool definitions
 
@@ -179,8 +173,8 @@ The following is an example of a complete agent connector configuration, using *
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.27/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.27",
   ...
   "agentConnectors": [
   {
