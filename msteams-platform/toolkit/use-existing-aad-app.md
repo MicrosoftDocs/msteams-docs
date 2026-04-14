@@ -92,8 +92,6 @@ You must save the following configuration details from your existing Microsoft E
     > [!NOTE]
     > If you can't copy the secret, follow the [instructions](#create-client-secret-for-microsoft-entra-app-optional) to create a new client secret.
 
-[Create client secret for Microsoft Entra app (optional)](#create-client-secret-for-microsoft-entra-app-optional)
-
 1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client IDs, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
 > [!div class="nextstepaction"]
