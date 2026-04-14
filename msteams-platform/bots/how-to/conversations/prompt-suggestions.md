@@ -3,7 +3,7 @@ title: Add Prompt Suggestions
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 04/09/2026
+ms.date: 04/14/2026
 ---
 
 # Create prompt suggestions
@@ -157,7 +157,7 @@ Bots in a group or channel respond only when they're @mentioned in a message. Ev
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
 
-In C#, Teams SDK does not feature a method to **\@Mention** portion. You can refer to the code snippet below on how to handle commands in your bot.
+In C#, Teams SDK does not feature a method to remove **\@Mention** portion. You can refer to the code snippet below on how to handle commands in your bot.
 
 ```csharp
 // Handles incoming messages and routes to appropriate functions based on message content
