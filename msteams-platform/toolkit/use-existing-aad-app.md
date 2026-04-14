@@ -51,7 +51,7 @@ This section provides information for using existing Microsoft Entra app or manu
 > [!NOTE]
 > You can skip this part if your M365 account has permission to update the Microsoft Entra app. We'll create the scope for you. This step can be automated by the `aadApp/update` action.
 
-1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**. Add the following details:
+1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**, and following the given steps:
 
    1. Select **Save and continue**.
    1. **Scope name**: Fill in **access_as_user**.
@@ -150,16 +150,14 @@ Add the information you saved from the Microsoft Entra app to your TeamsFx proje
       > [!NOTE]
       > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 
-1. Open Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
+1. Open the Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20necessary%20info%20in%20TeamsFx%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23set-necessary-info-in-teamsfx-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-<a name='upload-azure-ad-app-manifest-to-azure-portal'></a>
-
 ## Upload Microsoft Entra app manifest to Azure portal
 
-If Agents Toolkit fails to update Microsoft Entra app, an error message appears:
+If Agents Toolkit doesn't update the Microsoft Entra app, an error message appears:
 
 ```yml
 Insufficient privileges to complete the operation.
