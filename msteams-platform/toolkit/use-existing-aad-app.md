@@ -25,7 +25,7 @@ This section provides information for using existing Microsoft Entra app or manu
    * Leave the **Redirect URL** field blank for now.
    * Select **Register**.
 
-1. When the agent or app is registered, you're taken to its **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
+1. When the agent or app is registered, you're taken to its **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-a-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -92,7 +92,7 @@ This section provides information for using existing Microsoft Entra app or manu
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
     > [!NOTE]
-    > If you can't copy the secret, please follow the [instruction](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
+    > If you can't copy the secret, follow the [instructions](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
 
 1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
@@ -106,7 +106,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 1. Open `m365agents.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Following are the default `writeToenvironmentFile` definitions if you create projects using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 
    ``` yaml
     writeToEnvironmentFile:
@@ -120,7 +120,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 1. Add values for each environment variable from step 2.
 
-   1. Add below environment variables and their values to `env\.env.{env}` file.
+   1. Add the following environment variables and their values to `env\.env.{env}` file.
 
       ```yml
       AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
@@ -133,7 +133,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
       `AAD_APP_OAUTH_AUTHORITY_HOST` represents the host of the authority URL of your Microsoft Entra tenant, for example, <https://login.microsoftonline.com>. Your bot uses this URL to authenticate users via OAuth 2.0. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
 
-   1. If your application requires a Microsoft Entra app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
+   1. If your agent or app requires a Microsoft Entra app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
 
       ```yml
       SECRET_AAD_APP_CLIENT_SECRET=<value of Microsoft Entra application's client secret>
@@ -157,7 +157,7 @@ If Agents Toolkit fails to update Microsoft Entra app, an error message appears:
 Insufficient privileges to complete the operation.
 ```
 
-If you see the above message, update Microsoft Entra app permission and follow the instructions to update permission.
+If you see this message, update Microsoft Entra app permission and follow the instructions to update permission.
 
 1. Find the Microsoft Entra app manifest under `build/aad.manifest.{env}.json`.
 
