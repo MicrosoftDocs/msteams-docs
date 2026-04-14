@@ -53,7 +53,7 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the selected how-to guide.
+   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the how-to guide for the selected cloud service.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
@@ -74,7 +74,7 @@ Connect your agent or app to an existing API, developed by your organization or 
 
     :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the selected how-to guide.
+1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the how-to guide.
 
     :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the option for the how-to guide for connecting to an API in the view how-to guides list.":::
 
@@ -86,6 +86,5 @@ Connect your agent or app to an existing API, developed by your organization or 
 
 - [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 - [Provision cloud resources](provision.md)
-- [Create a new Teams app](create-new-project.md)
 - [Deploy to the cloud](deploy.md)
 - [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)
