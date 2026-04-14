@@ -29,9 +29,9 @@ Once registered, your MCP server becomes available to any Microsoft 365 agent ca
 
 Before you begin, ensure you have:
 
-<!--- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)-->
+- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
 - A working MCP server with a secure public endpoint
-- Authentication credentials (OAuth configuration or API key)
+- Authentication credentials ([OAuth configuration](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal) or [API key](../messaging-extensions/api-based-secret-service-auth.md#api-key-authentication))
 
 ## Add the agent connector to your manifest
 
@@ -74,13 +74,13 @@ Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer`
 
 1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
-````json
-"toolSource": {
-  "remoteMcpServer": {
-    "mcpServerUrl": "https://mcp.mycompany.com"
-  }
-}
-````
+    ````json
+    "toolSource": {
+      "remoteMcpServer": {
+        "mcpServerUrl": "https://mcp.mycompany.com"
+      }
+    }
+    ````
 
 2. Ensure your endpoint uses HTTPS (for HTTP connections) or WSS (for WebSocket connections).
 
@@ -93,7 +93,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
-- **DynamicClientRegistration**: Dynamic OAuth client creation
+<!--- **DynamicClientRegistration**: Dynamic OAuth client creation-->
 
 ### Use OAuth authentication
 
@@ -134,10 +134,8 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Choose how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported.
-
-You can use inline definitions if your toolset is static or dynamic discovery if your toolset changes frequently.
-
+Configure how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported. Use inline definitions if your toolset is static.<!-- or dynamic discovery if your toolset changes frequently.-->
+<!--
 ### Enable dynamic tool discovery
 
 Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
@@ -145,7 +143,7 @@ Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which
 You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
-
+-->
 ### Use inline tool definitions
 
 For static toolsets that don't change frequently, add an `mcpToolDescription` object with your tool definitions:
@@ -228,11 +226,11 @@ This configuration is sufficient for Microsoft 365 agents, including the Channel
 
 ## Validate your configuration
 
-Before deploying your app, verify that your manifest and MCP server are correctly configured.
+Before deploying your agent or app, verify that your manifest and MCP server are correctly configured.
 
 1. Use the [Microsoft 365 app package validation](https://dev.teams.microsoft.com/tools/store-validation) tool in Developer Portal to check your manifest for errors.
 
-2. Verify your MCP server responds correctly to handshake messages by testing the connection manually.
+2. Verify if your MCP server responds correctly to handshake messages by testing the connection manually.
 
 3. Confirm that your `tools/list` endpoint returns schema-compliant tool definitions:
 
@@ -254,7 +252,7 @@ Before deploying your app, verify that your manifest and MCP server are correctl
 
 Validate your integration by testing with actual Microsoft 365 agents.
 
-1. Deploy your app to a test environment.
+1. Deploy your agent or app to a test environment.
 
 2. Open a [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another Microsoft 365 agent that supports MCP.
 
