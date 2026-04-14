@@ -85,14 +85,14 @@ You must save the following configuration details from your existing Microsoft E
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
-1. Select **App Registrations** and find your existing Microsoft Entra app.
-
-1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
+1. Select **App Registrations** and fse. Verify that the **Supported account types** is set to **My organization only**. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
     > [!NOTE]
-    > If you can't copy the secret, follow the [instructions](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
+    > If you can't copy the secret, follow the [instructions](#create-client-secret-for-microsoft-entra-app-optional) to create a new client secret.
+
+[Create client secret for Microsoft Entra app (optional)](#create-client-secret-for-microsoft-entra-app-optional)
 
 1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client IDs, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
