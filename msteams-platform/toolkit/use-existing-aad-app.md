@@ -8,9 +8,7 @@ ms.date: 02/27/2025
 
 # Use existing Entra app in TeamsFx
 
-This section provides information for using existing Microsoft Entra app or manually creating a Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required information is set properly in your TeamsFx project.
-
-<a name='create-an-azure-ad-app'></a>
+This section provides information for using existing Microsoft Entra app or manually creating a Microsoft Entra app for TeamsFx project. Follow the instructions and make sure all required information is set properly in your TeamsFx project.
 
 ## Create a Microsoft Entra app
 
@@ -30,8 +28,6 @@ This section provides information for using existing Microsoft Entra app or manu
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-a-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
-<a name='create-client-secret-for-azure-ad-app-optional'></a>
 
 ## Create client secret for Microsoft Entra app (optional)
 
@@ -79,8 +75,6 @@ This section provides information for using existing Microsoft Entra app or manu
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20access%20as%20user%20scope%20for%20Microsoft%20Entra%20app%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-access-as-user-scope-for-microsoft-entra-app-optional&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
-<a name='get-necessary-info-from-existing-azure-ad-app'></a>
 
 ## Get necessary info from existing Microsoft Entra app
 
@@ -167,7 +161,7 @@ If you see this message, update Microsoft Entra app permission and follow the in
 
 1. Find the Microsoft Entra app manifest under `build/aad.manifest.{env}.json`.
 
-1. Copy the content in the manifest file.
+1. Copy the content from the manifest file.
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
