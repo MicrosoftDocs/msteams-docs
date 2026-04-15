@@ -1,11 +1,11 @@
 ---
-title: Add single sign-on to your Teams agent or apps
-description: In this module, learn how to add single sign-on (SSO) of Microsoft 365 Agents Toolkit, enable SSO support, and update your agent or application to use SSO.
+title: Add autentication to your Teams agent or apps
+description: In this module, learn how to add single sign-on (SSO) of Microsoft 365 Agents Toolkit, enable SSO support, and update your agent or app to use SSO.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/20/2022
 ---
-# Add single sign-on to Teams agent or app
+# Add authentication to Teams agent or app
 
 Microsoft Teams provides single sign-on (SSO) function for an agent or app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs and enables you to add SSO features easily to your Teams agent or app.
 
