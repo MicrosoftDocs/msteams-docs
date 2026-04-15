@@ -1,7 +1,7 @@
 ---
 title: Get Started - Actions in Microsoft 365
 description: In this article, learn how to build and run the sample app for Actions in Microsoft 365 using Microsoft 365 Agents Toolkit in Visual Studio Code, its functions and use cases.
-ms.date: 03/16/2026
+ms.date: 04/15/2026
 ms.author: mosdevdocs
 author: v-preethah
 ms.topic: quickstart
@@ -24,7 +24,7 @@ Get started with Actions in Microsoft 365, which helps integrate an app into the
 
 Let's learn how to build and run a sample app in your local environment. You'll use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code to setup and upload the application to your tenant. Let’s get started!
 
-1. Go to the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/m365-actions-preview/nodejs).
+1. Go to the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
 1. Select **Code**.
 
