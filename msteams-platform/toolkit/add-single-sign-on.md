@@ -25,7 +25,7 @@ You can add authentication to your agents using one of the following:
 
 ### Add SSO to your Teams agents and app using Agents Toolkit
 
-You can perform the following steps to add SSO using Agents Toolkit in Visual Studio Code:
+You can perform the following steps to add SSO using Agents Toolkit:
 
 1. Open **Visual Studio Code**.
 2. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
@@ -48,6 +48,4 @@ You can perform the following steps to add SSO using Agents Toolkit in Visual St
 ## See also
 
 - [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-- [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-- [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
 - [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-agent-or-app)
