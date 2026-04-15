@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 
 # Enable single sign-on for Teams agent and app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) streamlines the process by incorporating certain Microsoft Entra workflows and integrations into straightforward, high-level APIs. As a result, you can effortlessly incorporate SSO capabilities into your Teams app. For more information, see [authenticate users in Microsoft Teams.](../concepts/authentication/authentication.md)
+Microsoft Teams enables single sign-on (SSO), allowing agents and apps to securely access the signed-in user’s token for Microsoft Graph and other APIs. The Microsoft 365 Agents Toolkit (formerly Teams Toolkit) simplifies this by abstracting Microsoft Entra workflows into high-level APIs, making it easy to add SSO to your Teams agents and app. For more information, see [authenticate users in Microsoft Teams.](../concepts/authentication/authentication.md)
 
 ## Key configurations
 
-To enable SSO, configure your Teams app as follows:
+To enable SSO, configure your Teams agent and app as follows:
 
 * **Microsoft Entra app manifest**: Ensure to define URIs, including the URI that identifies the Microsoft Entra authentication app and the redirect URI that returns the token.
 
@@ -20,7 +20,7 @@ To enable SSO, configure your Teams app as follows:
 
 * **Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams app.
 
-* **SSO app information in Agents Toolkit configuration files**: Ensure the authentication app registers on the backend service and Agents Toolkit initiates it during the debugging or previewing of the Teams app.
+* **SSO app information in Agents Toolkit configuration files**: Ensure the auth app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
 
 # [Tab app](#tab/tab-app)
 
