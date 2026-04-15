@@ -13,14 +13,12 @@ Microsoft Teams provides single sign-on (SSO) function for an agent or app to ob
 
 For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow.
 
-## Enable SSO support
+## Enable authentication
 
-Agents Toolkit helps you to add SSO authentication to the following Teams capabilities in Visual Studio Code:
+Agents Toolkit helps you to add SSO authentication to your Teams agents and apps:
 
-- Agent
-- Tab
-- Bot
-- Message extension
+- [Agent](#add-authentication-to-your-teams-agent): You can add authentication for Teams agents and Microsoft 365 agents as well using the Agents Toolkit.
+- [Apps](#add-sso-to-your-teams-app): You can add authentication to your tab, bot, and message extension apps.
 
 ### Add authentication to your Teams agent
 
@@ -45,7 +43,7 @@ You can perform the following steps to add SSO using Agents Toolkit in Visual St
 
    |**Development** | **How-to Guide** |
    | -------- | --------|
-   |Develop Single Sign-on Experience in Teams | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
+   |Develop Single Sign-on Experience in Teams tab app | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
 
 > [!NOTE]
 > When SSO is enabled, Agents Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams agent or app. For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
