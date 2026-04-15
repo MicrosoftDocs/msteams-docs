@@ -3,7 +3,7 @@ title: Add autentication to your Teams agent or apps
 description: In this module, learn how to add single sign-on (SSO) of Microsoft 365 Agents Toolkit, enable SSO support, and update your agent or app to use SSO.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/20/2022
+ms.date: 04/15/2026
 ---
 # Add authentication to Teams agent or app
 
@@ -11,10 +11,10 @@ Microsoft Teams provides single sign-on (SSO) function for an agent or app to ob
 
 ## Add SSO to Teams agent or app using Agents Toolkit
 
-For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow. Agents Toolkit helps you to add authentication to your Teams agents and apps:
+For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow. Agents Toolkit helps you to add authentication to your:
 
-- [Agent](#add-authentication-to-your-teams-agent): You can add authentication for Teams agents and Microsoft 365 agents as well using the Agents Toolkit.
-- [Apps](#add-sso-to-your-teams-app): You can add authentication to your tab, bot, and message extension apps.
+- [Agents](#add-authentication-to-your-teams-agent): You can add authentication for Teams agents and Microsoft 365 agents as well.
+- [Apps](#add-sso-to-your-teams-app): You can add authentication to your Teams tab, bot, and message extension apps.
 
 ### Add authentication to your agent using SDKs
 
@@ -25,7 +25,7 @@ You can add authentication to your agents using one of the following:
 
 ### Add SSO to your Teams agents and app using Agents Toolkit
 
-You can perform the following steps to add SSO using Agents Toolkit:
+You can perform the following steps to add SSO authentication using Agents Toolkit:
 
 1. Open **Visual Studio Code**.
 2. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
