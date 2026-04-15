@@ -28,7 +28,7 @@ To enable SSO, configure your Teams agent and app as follows:
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
 
-1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Add the downloaded app manifest template code to `./aad.manifest.json` file of your agent or app project. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
 ## Update Teams app manifest
 
@@ -51,7 +51,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
 
 1. Add the `aadApp/create` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra app used for SSO:
-  
+
     ```yaml
     - uses: aadApp/create
       with:
@@ -111,7 +111,7 @@ With the above changes implemented, your environment is prepared. You can now up
 
 ### Vanilla JavaScript
 
-For a tab app that doesn't uses React, use the following code as a basic example to obtain the SSO token:
+For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
 
 ```javascript
 function getSSOToken() {
@@ -152,7 +152,7 @@ To update your source code, follow these steps:
 
 For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
-# [Bot/message extension app](#tab/message-extension-app)
+# [Bot or message extension app](#tab/message-extension-app)
 
 ## Create Microsoft Entra app manifest
 
@@ -200,7 +200,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
 
 1. Add the following code `aadApp/create` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra apps used for SSO:
-  
+
     ```yaml
     - uses: aadApp/create
       with:
