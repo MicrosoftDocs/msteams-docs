@@ -11,19 +11,19 @@ Microsoft Teams provides single sign-on (SSO) function for an agent or app to ob
 
 ## Add SSO to Teams agent or app using Agents Toolkit
 
-For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow. Agents Toolkit helps you to add SSO authentication to your Teams agents and apps:
+For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow. Agents Toolkit helps you to add authentication to your Teams agents and apps:
 
 - [Agent](#add-authentication-to-your-teams-agent): You can add authentication for Teams agents and Microsoft 365 agents as well using the Agents Toolkit.
 - [Apps](#add-sso-to-your-teams-app): You can add authentication to your tab, bot, and message extension apps.
 
-### Add authentication to your Teams agent
+### Add authentication to your agent using SDKs
 
 You can add authentication to your agents using one of the following:
 
 - Use [Microsoft 365 SDK](/microsoft-365/agents-sdk/microsoft-authentication-library-configuration-options) to add authentication to agents that extend across Microsoft 365.
 - Use [Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/overview) to add SSO authentication to your Teams agents.
 
-### Add SSO to your Teams app
+### Add SSO to your Teams agents and app using Agents Toolkit
 
 You can perform the following steps to add SSO using Agents Toolkit in Visual Studio Code:
 
