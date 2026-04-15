@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 April**
 
-* ***April 15, 2026***:Customizable feedback forms are now generally available. (bot-messages-ai-generated-content.md)
+* ***April 15, 2026***: [Customizable feedback forms are now generally available.](bot-messages-ai-generated-content.md)
 
 :::column-end:::
 :::row-end:::

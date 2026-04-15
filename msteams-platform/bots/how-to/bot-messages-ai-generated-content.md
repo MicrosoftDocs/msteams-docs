@@ -327,9 +327,6 @@ When the user selects a feedback button, a feedback form appears based on the us
 
 ---
 
-> [!NOTE]
-> Customizable feedback forms are now generally available.
-
 Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user selects.
 
 ### Add feedback buttons
