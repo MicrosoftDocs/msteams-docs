@@ -45,16 +45,16 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 >
-> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
+> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn't send a welcome message.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields, `title`, `description`, `type`, and `prompt`.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
 
 * The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
 * The `description` field describes what the users accomplish.
 * The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
-* The `prompt`field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
+* The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
 
 >[!NOTE]
 >
@@ -62,36 +62,7 @@ To enable prompt starters, define the `commands` property in your bot's app mani
 
 ## Define `commands` in app manifest
 
-To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
-
-# [Developer Portal](#tab/developer-portal)
-
-To create prompt starters using Developer Portal:
-
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
-
-   :::image type="content" source="~/assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
-  
-1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
-
-1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
-
-1. Under **Commands**, select **Add a command**.
-
-   :::image type="content" source="~/assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
-
-1. Enter the values for the following fields:
-
-    * **Command**: Appears as the prompt for your bot.
-    * **Description**: A brief explanation of the purpose of the command.
-
-1. Select the personal scope and then select **Add**. This step defines where the command menu must appear.
-
-   :::image type="content" source="~/assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
-
-# [Manually in the app manifest](#tab/manually-in-the-app-manifest)
-
-Another way to create a prompt starter is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
+ To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
 * The `command` property supports up to 10 commands.
 * You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
@@ -163,7 +134,7 @@ The following image illustrates an example of prompt suggestions:
 
 ---
 
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enable users to review the prompts while interacting with your bot.
+Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. They enable users to review the prompts while interacting with your bot.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
