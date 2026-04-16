@@ -125,34 +125,28 @@ When sessions are enabled, incoming activities include a session-scoped conversa
 
 Use the conversation ID from the incoming activity when responding.
 :::tab-group
-
 :::tab C#
 
-```C#
+```csharp
 var conversationId = context.Activity.Conversation.Id;
 await app.Send(conversationId, "Hello from Bot");
 ```
 
-:::
-
-:::tab TypeScript
+::: :::tab TypeScript
 
 ```typescript
 const conversationId = activity.conversation.id;
 await app.send(conversationId, "Hello from Bot");
 ```
 
-:::
-
-:::tab Python
+::: :::tab Python
 
 ```python
 conversation_id = ctx.activity.conversation.id
 await app.send(conversation_id, "Hello from Bot")
 ```
 
-:::
-:::
+::: :::
 
 <!--### Extract topic identifiers
 
