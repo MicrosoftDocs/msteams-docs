@@ -36,8 +36,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-* ***April 15, 2026***: [Customizable feedback forms are now generally available.](bots/how-to/bot-messages-ai-generated-content.md)
-<!--    
+**2026 January**
+
+* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
+
 :::column-end:::
 :::row-end:::
 <br/>
@@ -45,15 +47,6 @@ Teams platform features that are available to all app developers.</br>
 </br>
 
 <details>
-
-<summary><b>2026</b></summary>
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ---------------- |
-| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
-
-</details>
-</br>
 
 <summary><b>2025</b></summary>
 
