@@ -46,10 +46,8 @@ Suggested actions help users continue conversations with your bot.
 > * Prompt starters are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 >
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn't send a welcome message.
->
-> * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
+Prompt starters are supported in one-on-one chats, group chats, and channels. To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
 
 * The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
 * The `description` field describes what the users accomplish.
@@ -136,64 +134,19 @@ The following image illustrates an example of prompt suggestions:
 
 Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. They enable users to review the prompts while interacting with your bot.
 
+# [Personal chat](#tab/pc)
+
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
+
+# [Group chat](#tab/gc)
 
 You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
 
-## Handle `commands` in your bot
+:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
 
-Bots in a group or channel respond only when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+# [Channel](#tab/channel)
 
-> [!NOTE]
-> Handle the commands in code, they're sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert preconfigured text into the text box. The user must then send that text as they do for any other message.
-
-# [C#](#tab/dotnet)
-
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable#microsoft-bot-schema-activityextensions-removerecipientmention(microsoft-bot-schema-imessageactivity)&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
-
-The C# code to parse out the **\@Mention** portion of the message text is as follows:
-
-```csharp
-// Remove recipient mention text from Text property.
-// Use with caution because this function is altering the text on the Activity.
-var modifiedText = turnContext.Activity.RemoveRecipientMention();
-```
-
-# [JavaScript](#tab/javascript)
-
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-removementiontext&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
-
-The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
-
-```javascript
-// Remove mention text from Text property, this function is altering the text on the Activity.
-const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
-```
-
-# [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-remove-recipient-mention&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
-
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
-
-The Python code to parse out the **\@Mention** portion of the message text is as follows:
-
-```python
-# Remove recipient mention text from Text property, this function is altering the text on the Activity.
-modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
-```
-
-* * *
+:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
 
 ## Suggested actions
 
