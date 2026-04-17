@@ -36,15 +36,22 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 January**
+**2026 April**
 
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
+* ***April 27, 2026***: [Prompt starters are now generally available.](./bots/how-to/conversations/prompt-suggestions.md)
 
 :::column-end:::
 :::row-end:::
 <br/>
 
 </br>
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 <details>
 
