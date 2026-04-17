@@ -3,7 +3,7 @@ title: Action-based Message Extensions
 description: Learn how to create and configure action-based message extensions for Microsoft Teams using Bot Framework SDK to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 04/02/2023
+ms.date: 04/17/2026
 ms.owner: slamba
 ---
 # Initiate actions with message extensions
@@ -241,7 +241,7 @@ When a user chooses a command with static parameters, Teams generates a form in 
 
 In this method, your service can define a custom Adaptive Card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command are ignored.
 
-In this method, your service receives a `composeExtensions/fetchTask` event and responds with an Adaptive Card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#taskinfo-object). Following is a sample response with an Adaptive Card:
+In this method, your service receives a `composeExtensions/fetchTask` event and responds with an Adaptive Card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata). Following is a sample response with an Adaptive Card:
 
 ```json
 {
@@ -292,7 +292,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the Adaptive Card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#taskinfo-object). Following is a sample response with an Adaptive Card:
+Just like in the Adaptive Card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata). Following is a sample response with an Adaptive Card:
 
 ```json
 {

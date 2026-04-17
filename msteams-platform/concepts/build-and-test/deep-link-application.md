@@ -4,7 +4,7 @@ description: Learn how to create deep links to an application and navigate using
 ms.topic: conceptual
 ms.author: vikasalmal
 ms.localizationpriority: high
-ms.date: 03/05/2026
+ms.date: 04/17/2026
 ---
 
 # Deep link to an application
@@ -376,7 +376,7 @@ A dialog deep link is a serialization of the `TaskInfo` object with two other de
 
 ---
 
-For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#taskinfo-object).
+For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata).
 
 > [!TIP]
 > Encode the deep link URL when using the `card` parameter, for example, JavaScript [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).

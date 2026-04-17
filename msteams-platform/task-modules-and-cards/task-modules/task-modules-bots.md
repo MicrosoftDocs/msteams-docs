@@ -3,7 +3,7 @@ title: Use dialogs in Microsoft Teams bots
 description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, about Bot Framework card and Adaptive Card actions, deep links, and respond to messages.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 01/31/2023
+ms.date: 04/17/2026
 ---
 
 # Use dialogs with bots
@@ -20,7 +20,7 @@ There are two ways of invoking dialogs:
 
 ## Invoke a dialog using `task/fetch`
 
-When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#taskinfo-object) embedded in a wrapper object, which Teams uses to display the dialog (referred as task module in TeamsJS v1.x).
+When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata) embedded in a wrapper object, which Teams uses to display the dialog (referred as task module in TeamsJS v1.x).
 
 [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
@@ -30,7 +30,7 @@ The following steps provide instructions on how to invoke a dialog (referred as 
 
 1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
 1. The bot receives the `invoke` HTTP POST message.
-1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#taskinfo-object) embedded in a wrapper object:
+1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata) embedded in a wrapper object:
 
     ```json
     {
