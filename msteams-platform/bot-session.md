@@ -123,30 +123,34 @@ The first message in a session becomes the session title, and the latest message
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your bot shouldn't parse or construct the conversation ID manually.
 
+# [C#](#tab/C#)
+
 Use the conversation ID from the incoming activity when responding.
-:::tab-group
-:::tab C#
 
 ```csharp
 var conversationId = context.Activity.Conversation.Id;
 await app.Send(conversationId, "Hello from Bot");
 ```
 
-::: :::tab TypeScript
+# [TypeScript](#tab/TypeScript)
+
+Use the conversation ID from the incoming activity when responding.
 
 ```typescript
 const conversationId = activity.conversation.id;
 await app.send(conversationId, "Hello from Bot");
 ```
 
-::: :::tab Python
+# [Python](#tab/Python)
+
+Use the conversation ID from the incoming activity when responding.
 
 ```python
 conversation_id = ctx.activity.conversation.id
 await app.send(conversation_id, "Hello from Bot")
 ```
 
-::: :::
+---
 
 <!--### Extract topic identifiers
 
