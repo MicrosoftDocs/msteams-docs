@@ -43,8 +43,6 @@ Suggested actions help users continue conversations with your bot.
 
 >[!NOTE]
 >
-> * Prompt starters are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
->
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn't send a welcome message.
 
 Prompt starters are supported in one-on-one chats, group chats, and channels. To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.

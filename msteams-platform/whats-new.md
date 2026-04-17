@@ -485,8 +485,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**April 2, 2026**: [Enable prompt starters](bots/how-to/conversations/prompt-suggestions.md)
-
 <!--                    
 **2025 May**
 
