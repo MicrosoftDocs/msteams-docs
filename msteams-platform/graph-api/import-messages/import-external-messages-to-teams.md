@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 04/08/2026
+ms.date: 04/17/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -14,9 +14,14 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Permissions
 
-| Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
-|---------- |-------------|-------------|------|----------------|-------------------------|
-| Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Creating and managing resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
+As **prerequisites**, the application must have the following permissions:
+
+* Creating Conversations
+
+| Task | Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
+|---------- |-------------|-------------|------|----------------|--------------|------------------|
+|Create Chat| Chat.Create | [Create chats](/graph/permissions-reference#chatcreate)| Allows the app to create chats without a signed-in user (application scenarios) / Allows the app to create chats on behalf of the signed-in user (delegated scenarios). | **Application and Delegated** | Application: Yes, Delegated: Yes | |
+|Create Team | Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All | | | | | |
 
 > [!NOTE]
 > Delegated authentication isn't supported.
