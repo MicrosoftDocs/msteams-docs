@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams bots
-description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, about Bot Framework card and Adaptive Card actions, deep links, and respond to messages.
+description: Learn how to use dialogs with Microsoft Teams bots using the Teams SDK, invoke and submit dialogs with Adaptive Cards, and respond to dialog events.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 04/17/2026
@@ -8,19 +8,19 @@ ms.date: 04/17/2026
 
 # Use dialogs with bots
 
-Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Dialogs are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using `TaskFetchAction` buttons on Adaptive Cards. Dialogs are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
 
-There are two ways of invoking dialogs:
-
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+When a user selects a `TaskFetchAction` button on an Adaptive Card, a `task/fetch` invoke message is sent to your bot. Your bot handles this event and returns dialog content — either an Adaptive Card or a URL to a webpage — which Teams displays in a pop-up dialog window.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
 
-## Invoke a dialog using `task/fetch`
+> [!NOTE]
+> In Teams client v1, dialogs were called task modules. They may occasionally be used synonymously.
 
-When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user selects the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata) embedded in a wrapper object, which Teams uses to display the dialog (referred as task module in TeamsJS v1.x).
+## Create a dialog launcher
+
+To invoke a dialog from a bot, send an Adaptive Card with `TaskFetchAction` buttons. Each button includes data that your bot uses to determine which dialog content to return.
 
 [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
@@ -55,200 +55,257 @@ The next section provides details on submitting the result of a dialog.
 
 ## Submit the result of a dialog
 
-When the user is finished with the dialog, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example of submitting the result of a dialog](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog). There are a few differences as follows:
+When the user finishes with the dialog, the result is submitted back to the bot. How submission works depends on the dialog content type:
 
-* HTML or JavaScript that is `TaskInfo.url`: Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the dialog (referred as task module in TeamsJS v1.x), but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This action allows Teams to validate that the app sending the result is the same one, which invoked the dialog. Your bot receives a `task/submit` message including `result`. For more information, see [payload of `task/fetch` and `task/submit` messages](#payload-of-taskfetch-and-tasksubmit-messages).
-* Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
+* **Adaptive Card (TaskInfo.card)**: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
+* **Webpage (TaskInfo.url)**: The webpage calls `microsoftTeams.tasks.submitTask(formData)` from the TeamsJS client library to send data back to the bot.
 
-The next section provides details on how to respond to the `task/submit` messages.
+## Handle dialog submit events
 
-## Responds to the `task/submit` messages
+When the user submits a dialog, the bot receives a `task/submit` invoke message. You have several options when responding:
 
-When the user finishes with a dialog (referred as task module in TeamsJS v1.x) invoked from a bot, the bot always receives a `task/submit invoke` message. You have several options when responding to the `task/submit` message as follows:
+| Response type | Scenario |
+|---|---|
+| No response | The simplest response is no response at all. Your bot isn't required to respond when the user finishes with the dialog. |
+| `MessageTask` | Teams displays a message in a pop-up message box in the dialog. |
+| `ContinueTask` | Allows you to chain sequences of Adaptive Cards together in a wizard or multi-step experience. |
 
-| HTTP body response                      | Scenario                                |
-| --------------------------------------- | --------------------------------------- |
-| None ignore the `task/submit` message | The simplest response is no response at all. Your bot isn't required to respond when the user is finished with the dialog. |
-| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams displays the value of `value` in a pop-up message box. |
-| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Allows you to chain sequences of Adaptive Cards together in a wizard or multi-step experience. |
-
-> [!NOTE]
-> Chaining Adaptive Cards into a sequence is an advanced scenario. The Node.js sample app supports it. For more information, see [Microsoft Teams dialog Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes).
-
-The next section provides details on payload of `task/fetch` and `task/submit` messages.
-
-## Payload of `task/fetch` and `task/submit` messages
-
-This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Bot Framework `Activity` object. The following table provides the properties of payload of `task/fetch` and `task/submit` messages:
-
-| Property | Description                          |
-| -------- | ------------------------------------ |
-| `type`   | Is always `invoke`.           |
-| `name`   | Is either `task/fetch` or `task/submit`. |
-| `value`  | Is the developer-defined payload. The structure of the `value` object is the same as what is sent from Teams. In this case, however, it's different. It requires support for dynamic fetch that is `task/fetch` from both Bot Framework, which is `value` and Adaptive Card `Action.Submit` actions, which is `data`. A way to communicate Teams `context` to the bot is required in addition to what is included in `value` or `data`.<br/><br/>Combine 'value' and 'data' into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
-
-The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
-
- The following tabs provide `task/fetch` and `task/submit` invoke messages in .NET, Node.js, and python:
+The following tabs show how to handle dialog submit events in .NET, TypeScript, and Python:
 
 # [.NET](#tab/csharp)
 
 ```csharp
-protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
-{
-    var asJobject = JObject.FromObject(taskModuleRequest.Data);
-    var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
+using System.Text.Json;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities.Invokes;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Common.Logging;
 
-    var taskInfo = new TaskModuleTaskInfo();
-    switch (value)
+[TaskSubmit]
+public async Task<Microsoft.Teams.Api.TaskModules.Response> OnTaskSubmit([Context] Tasks.SubmitActivity activity, [Context] IContext.Client client, [Context] ILogger log)
+{
+    var data = activity.Value?.Data as JsonElement?;
+    if (data == null)
     {
-        case TaskModuleIds.YouTube:
-            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
-            break;
-        case TaskModuleIds.CustomForm:
-            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
-            break;
-        case TaskModuleIds.AdaptiveCard:
-            taskInfo.Card = CreateAdaptiveCardAttachment();
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
-            break;
-        default:
-            break;
+        log.Info("[TASK_SUBMIT] No data found in the activity value");
+        return new Microsoft.Teams.Api.TaskModules.Response(
+            new Microsoft.Teams.Api.TaskModules.MessageTask("No data found in the activity value"));
     }
 
-    return Task.FromResult(taskInfo.ToTaskModuleResponse());
-}
+    var submissionType = data.Value.TryGetProperty("submissiondialogtype", out var submissionTypeObj) && submissionTypeObj.ValueKind == JsonValueKind.String
+        ? submissionTypeObj.ToString()
+        : null;
 
-protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
-{
-    var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
-    await turnContext.SendActivityAsync(reply, cancellationToken);
+    string? GetFormValue(string key)
+    {
+        if (data.Value.TryGetProperty(key, out var val))
+        {
+            if (val is JsonElement element)
+                return element.GetString();
+            return val.ToString();
+        }
+        return null;
+    }
 
-    return TaskModuleResponseFactory.CreateResponse("Thanks!");
-}
-
-private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConstants)
-{
-    taskInfo.Height = uIConstants.Height;
-    taskInfo.Width = uIConstants.Width;
-    taskInfo.Title = uIConstants.Title.ToString();
+    switch (submissionType)
+    {
+        case "simple_form":
+            var name = GetFormValue("name") ?? "Unknown";
+            await client.Send($"Hi {name}, thanks for submitting the form!");
+            return new Microsoft.Teams.Api.TaskModules.Response(
+                new Microsoft.Teams.Api.TaskModules.MessageTask("Form was submitted"));
+        default:
+            return new Microsoft.Teams.Api.TaskModules.Response(
+                new Microsoft.Teams.Api.TaskModules.MessageTask("Unknown submission type"));
+    }
 }
 ```
 
-# [Node.js](#tab/nodejs)
+# [TypeScript](#tab/nodejs)
 
 ```typescript
-handleTeamsTaskModuleFetch(context, taskModuleRequest) {
-    // Called when the user selects an options from the displayed HeroCard or
-    // AdaptiveCard.  The result is the action to perform.
+import { App } from '@microsoft/teams.apps';
+// ...
 
-    const cardTaskFetchValue = taskModuleRequest.data.data;
-    var taskInfo = {}; // TaskModuleTaskInfo
+app.on('dialog.submit', async ({ activity, send, next }) => {
+  const dialogType = activity.value.data?.submissiondialogtype;
 
-    if (cardTaskFetchValue === TaskModuleIds.YouTube) {
-        // Display the YouTube.html page
-        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.YouTube + '.html';
-        this.setTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
-    } else if (cardTaskFetchValue === TaskModuleIds.CustomForm) {
-        // Display the CustomForm.html page, and post the form data back via
-        // handleTeamsTaskModuleSubmit.
-        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.CustomForm + '.html';
-        this.setTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
-    } else if (cardTaskFetchValue === TaskModuleIds.AdaptiveCard) {
-        // Display an AdaptiveCard to prompt user for text, and post it back via
-        // handleTeamsTaskModuleSubmit.
-        taskInfo.card = this.createAdaptiveCardAttachment();
-        this.setTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
-    }
-
-    return TaskModuleResponseFactory.toTaskModuleResponse(taskInfo);
-}
-
-async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
-    // Called when data is being returned from the selected option (see `handleTeamsTaskModuleFetch').
-
-    // Echo the users input back.  In a production bot, this is where you'd add behavior in
-    // response to the input.
-    await context.sendActivity(MessageFactory.text('handleTeamsTaskModuleSubmit: ' + JSON.stringify(taskModuleRequest.data)));
-
-    // Return TaskModuleResponse
+  if (dialogType === 'simple_form') {
+    const name = activity.value.data.name;
+    await send(`Hi ${name}, thanks for submitting the form!`);
     return {
-        // TaskModuleMessageResponse
-        task: {
-            type: 'message',
-            value: 'Thanks!'
-        }
+      task: {
+        type: 'message',
+        value: 'Form was submitted',
+      },
     };
-}
+  }
 
-setTaskInfo(taskInfo, uiSettings) {
-    taskInfo.height = uiSettings.height;
-    taskInfo.width = uiSettings.width;
-    taskInfo.title = uiSettings.title;
-}
+  if (dialogType === 'webpage_dialog') {
+    const name = activity.value.data.name;
+    const email = activity.value.data.email;
+    await send(`Hi ${name}, thanks for submitting the form! We got that your email is ${email}`);
+    return {
+      status: 200,
+    };
+  }
+});
 ```
 
 # [Python](#tab/python)
 
 ```python
-async def on_teams_task_module_fetch(
-    self, turn_context: TurnContext, task_module_request: TaskModuleRequest
-) -> TaskModuleResponse:
-    """
-    Called when the user selects an options from the displayed HeroCard or
-    AdaptiveCard.  The result is the action to perform.
-    """
+from typing import Optional, Any
+from microsoft_teams.api import TaskSubmitInvokeActivity, InvokeResponse, TaskModuleResponse, TaskModuleMessageResponse
+from microsoft_teams.apps import ActivityContext
 
-    card_task_fetch_value = task_module_request.data["data"]
+@app.on_dialog_submit
+async def handle_dialog_submit(ctx: ActivityContext[TaskSubmitInvokeActivity]):
+    data: Optional[Any] = ctx.activity.value.data
+    dialog_type = data.get("submissiondialogtype") if data else None
 
-    task_info = TaskModuleTaskInfo()
-    if card_task_fetch_value == TaskModuleIds.YOUTUBE:
-        # Display the YouTube.html page
-        task_info.url = task_info.fallback_url = (
-            self.__base_url + "/" + TaskModuleIds.YOUTUBE + ".html"
+    if dialog_type == "webpage_dialog":
+        name = data.get("name") if data else None
+        email = data.get("email") if data else None
+        await ctx.send(f"Hi {name}, thanks for submitting the form! We got that your email is {email}")
+        return InvokeResponse(
+            body=TaskModuleResponse(task=TaskModuleMessageResponse(value="Form submitted successfully"))
         )
-        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.YOUTUBE)
-    elif card_task_fetch_value == TaskModuleIds.CUSTOM_FORM:
-        # Display the CustomForm.html page, and post the form data back via
-        # on_teams_task_module_submit.
-        task_info.url = task_info.fallback_url = (
-            self.__base_url + "/" + TaskModuleIds.CUSTOM_FORM + ".html"
-        )
-        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.CUSTOM_FORM)
-    elif card_task_fetch_value == TaskModuleIds.ADAPTIVE_CARD:
-        # Display an AdaptiveCard to prompt user for text, and post it back via
-        # on_teams_task_module_submit.
-        task_info.card = TeamsTaskModuleBot.__create_adaptive_card_attachment()
-        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.ADAPTIVE_CARD)
+```
 
-    return TaskModuleResponseFactory.to_task_module_response(task_info)
+---
 
-async def on_teams_task_module_submit(
-    self, turn_context: TurnContext, task_module_request: TaskModuleRequest
-) -> TaskModuleResponse:
-    """
-    Called when data is being returned from the selected option (see `on_teams_task_module_fetch').
-    """
+## Multi-step dialog chaining
 
-    # Echo the users input back.  In a production bot, this is where you'd add behavior in
-    # response to the input.
-    await turn_context.send_activity(
-        MessageFactory.text(
-            f"on_teams_task_module_submit: {json.dumps(task_module_request.data)}"
+You can chain Adaptive Cards into a multi-step wizard by returning a `ContinueTask` response from the submit handler. Each step returns a new card, and the final step returns a `MessageTask` to close the dialog.
+
+# [.NET](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Cards;
+
+// Add these cases to your OnTaskSubmit method
+case "webpage_dialog_step_1":
+    var nameStep1 = GetFormValue("name") ?? "Unknown";
+    var nextStepCardJson = $$"""
+    {
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Email",
+                "size": "Large",
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.Text",
+                "id": "email",
+                "label": "Email",
+                "placeholder": "Enter your email",
+                "isRequired": true
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "data": {"submissiondialogtype": "webpage_dialog_step_2", "name": "{{nameStep1}}"}
+            }
+        ]
+    }
+    """;
+
+    var nextStepCard = JsonSerializer.Deserialize<AdaptiveCard>(nextStepCardJson)
+        ?? throw new InvalidOperationException("Failed to deserialize next step card");
+
+    var nextStepTaskInfo = new TaskInfo
+    {
+        Title = $"Thanks {nameStep1} - Get Email",
+        Card = new Attachment
+        {
+            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
+            Content = nextStepCard
+        }
+    };
+
+    return new Response(new ContinueTask(nextStepTaskInfo));
+
+case "webpage_dialog_step_2":
+    var nameStep2 = GetFormValue("name") ?? "Unknown";
+    var emailStep2 = GetFormValue("email") ?? "No email";
+    await client.Send($"Hi {nameStep2}, thanks for submitting the form! We got that your email is {emailStep2}");
+    return new Response(new MessageTask("Multi-step form completed successfully"));
+```
+
+# [TypeScript](#tab/nodejs)
+
+```typescript
+import { cardAttachment } from '@microsoft/teams.api';
+import { AdaptiveCard, TextInput, SubmitAction } from '@microsoft/teams.cards';
+
+// Return from dialog.submit handler to chain to the next step
+const dialogCard = new AdaptiveCard(
+  {
+    type: 'TextBlock',
+    text: 'This is a multi-step form',
+    size: 'Large',
+    weight: 'Bolder',
+  },
+  new TextInput()
+    .withLabel('Name')
+    .withIsRequired()
+    .withId('name')
+    .withPlaceholder('Enter your name')
+)
+  .withActions(
+    new SubmitAction()
+      .withTitle('Submit')
+      .withData({ submissiondialogtype: 'webpage_dialog_step_1' })
+  );
+
+return {
+  task: {
+    type: 'continue',
+    value: {
+      title: 'Multi-step Form Dialog',
+      card: cardAttachment('adaptive', dialogCard),
+    },
+  },
+};
+```
+
+# [Python](#tab/python)
+
+```python
+# In your on_dialog_submit handler, return a ContinueTask to show the next step
+from microsoft_teams.api import TaskModuleResponse, TaskModuleContinueResponse, CardTaskModuleTaskInfo
+from microsoft_teams.cards import AdaptiveCard, TextInput, SubmitAction, Attachment
+
+next_card = AdaptiveCard(
+    body=[
+        {"type": "TextBlock", "text": "Step 2: Enter Email", "size": "Large", "weight": "Bolder"},
+        {"type": "Input.Text", "id": "email", "label": "Email", "placeholder": "Enter your email", "isRequired": True}
+    ],
+    actions=[
+        {"type": "Action.Submit", "title": "Submit", "data": {"submissiondialogtype": "webpage_dialog_step_2", "name": name}}
+    ]
+)
+
+return InvokeResponse(
+    body=TaskModuleResponse(
+        task=TaskModuleContinueResponse(
+            value=CardTaskModuleTaskInfo(
+                title=f"Thanks {name} - Get Email",
+                card=Attachment(content_type="application/vnd.microsoft.card.adaptive", content=next_card)
+            )
         )
     )
-
-    message_response = TaskModuleMessageResponse(value="Thanks!")
-    return TaskModuleResponse(task=message_response)
-
-@staticmethod
-def __set_task_info(task_info: TaskModuleTaskInfo, ui_constants: UISettings):
-    task_info.height = ui_constants.height
-    task_info.width = ui_constants.width
-    task_info.title = ui_constants.title
-
+)
 ```
 
 ---
@@ -263,12 +320,13 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js | Manifest|
+|Sample name | Description | .NET | Node.js | Manifest| Python |
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/dotnet/bot-task-modules)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/nodejs/bot-task-modules)| NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules) |
 
 ## See also
 
 * [Cards and dialogs](../cards-and-task-modules.md)
-* [Microsoft Teams dialog sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
-* [Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
+* [Teams SDK Dialogs overview](/microsoftteams/platform/teams-sdk/in-depth-guides/dialogs/overview)
+* [Teams SDK Adaptive Cards - Executing Actions](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions)
+* [Migrate from BotBuilder to Teams SDK](/microsoftteams/platform/teams-sdk/migrations/botbuilder/overview)

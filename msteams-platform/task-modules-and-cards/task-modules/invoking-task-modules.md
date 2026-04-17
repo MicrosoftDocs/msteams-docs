@@ -146,7 +146,7 @@ from microsoft_teams.apps import ActivityContext
 from microsoft_teams.cards import AdaptiveCard, TextBlock, TaskFetchAction
 
 @app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
+async def handle_message(context: ActivityContext[MessageActivity]) -> None:
     adaptive_card = AdaptiveCard(version="1.4").with_body(
         [TextBlock(text="Task Module Invocation from Adaptive Card", weight="Bolder", size="Large")]
     ).with_actions(
@@ -158,7 +158,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     )
 
     message = MessageActivityInput().add_card(adaptive_card)
-    await ctx.send(message)
+    await context.send(message)
 ```
 
 ---
@@ -340,8 +340,8 @@ from microsoft_teams.apps import ActivityContext
 from microsoft_teams.cards import AdaptiveCard, SubmitAction, SubmitActionData, TextBlock, TextInput
 
 @app.on_dialog_open
-async def handle_dialog_open(ctx: ActivityContext[TaskFetchInvokeActivity]):
-    data = ctx.activity.value.data
+async def handle_dialog_open(context: ActivityContext[TaskFetchInvokeActivity]):
+    data = context.activity.value.data
     card_data = data.get("data") if isinstance(data, dict) else data
 
     if card_data == "CustomForm":
@@ -530,8 +530,8 @@ from microsoft_teams.apps import ActivityContext
 from microsoft_teams.cards import AdaptiveCard, SubmitAction, SubmitActionData, TextBlock, TextInput
 
 @app.on_dialog_submit
-async def handle_dialog_submit(ctx: ActivityContext[TaskSubmitInvokeActivity]):
-    data = ctx.activity.value.data
+async def handle_dialog_submit(context: ActivityContext[TaskSubmitInvokeActivity]):
+    data = context.activity.value.data
     submission_type = data.get("submissiontype") if isinstance(data, dict) else None
 
     if submission_type == "multi_step_1":
@@ -561,13 +561,13 @@ async def handle_dialog_submit(ctx: ActivityContext[TaskSubmitInvokeActivity]):
     if submission_type == "multi_step_2":
         name = data.get("name")
         email = data.get("email")
-        await ctx.send(f"Hi {name}, thanks for submitting! Your email is {email}")
+        await context.send(f"Hi {name}, thanks for submitting! Your email is {email}")
         return InvokeResponse(
             body=TaskModuleResponse(task=TaskModuleMessageResponse(value="Multi-step form completed!"))
         )
 
     usertext = data.get("usertext") if data else None
-    await ctx.send(f"You submitted: {usertext}")
+    await context.send(f"You submitted: {usertext}")
     return InvokeResponse(
         body=TaskModuleResponse(task=TaskModuleMessageResponse(value="Thanks for submitting!"))
     )
@@ -588,7 +588,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the dialog 
 
 |Sample name | Description | .NET | Node.js | Python |
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample - Teams SDK | This sample app demonstrates how to use dialogs with the Teams SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/dotnet/bot-task-modules)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/nodejs/bot-task-modules) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules) |
+|Bot task modules | This sample app demonstrates how to use dialogs (referred as task modules in TeamsJS v1.x) using the Teams AI SDK. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/dotnet/bot-task-modules)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules)|
 
 ## Next step
 
