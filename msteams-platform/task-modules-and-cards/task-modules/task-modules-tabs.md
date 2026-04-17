@@ -3,7 +3,7 @@ title: Use dialogs in Microsoft Teams tabs
 description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 02/22/2023
+ms.date: 04/15/2026
 ---
 
 # Use dialogs in tabs
@@ -82,7 +82,7 @@ The value of `UrlDialogInfo.url` is set to the location of the content of your d
  microsoftTeams.dialog.adaptiveCard.open(adaptiveCardDialogInfo, submitHandler);
 ```
 
-The value of `adaptiveCardDialogInfo.card` is the JSON for an Adaptive Card. You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
+The value of `adaptiveCardDialogInfo.card` is the JSON for an [Adaptive Card](https://adaptivecards.io/explorer/). You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
 
 The next section gives an example of invoking a dialog.
 
