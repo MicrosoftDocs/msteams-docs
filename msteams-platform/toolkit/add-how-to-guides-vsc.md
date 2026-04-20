@@ -30,13 +30,13 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 
 **Development**:
 
-- Develop single sign-on experience in Teams
-- Connect to an API
-- Automate CI/CD pipelines
-- Run and debug on mobile client
-- Multi-tenant support
-
-For more information, see [add API connection](add-resource.md#add-api-connection).
+| Agent or app development | How-to Guide |
+| --- | --- |
+| Develop single sign-on experience in Teams | [Add single sign-on to Teams app](add-single-sign-on.md) |
+| Connect to an API | [Add cloud resources and API connection](add-resource.md) |
+| Automate CI/CD pipelines | [Set up CI/CD pipelines](use-CICD-template.md) |
+| Run and debug on mobile client | [Debug for mobile](debug-mobile.md) |
+| Multi-tenant support | [Multi tenancy support for Microsoft Entra app](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Multi-tenancy-Support-for-Microsoft-Entra-app) |
 
 **Cloud service integration**:
 
