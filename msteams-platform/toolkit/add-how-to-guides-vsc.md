@@ -54,15 +54,15 @@ For more information, see [add cloud resources](add-resource.md#add-cloud-resour
 
 ### Use Agents Toolkit pane
 
-   1. Open your app project in **Microsoft Visual Studio Code**.
-   1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
-   1. Select **View How-to Guides** in the **DEVELOPMENT** section.
+1. Open your agent or app project in **Microsoft Visual Studio Code**.
+1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
+1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-       :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the selected how-to guide.
+1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the selected how-to guide.
 
-       :::image type="content" source="~/assets/images/toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities listed.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities listed.":::
 
 ### Use the Command Palette
 
