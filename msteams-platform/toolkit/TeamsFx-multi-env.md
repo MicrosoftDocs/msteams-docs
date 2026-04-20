@@ -3,12 +3,12 @@ title: TeamsFx Environments in Agents Toolkit
 description: Learn about TeamsFX multiple environment, use env files with Microsoft 365 Agents Toolkit, create a new environment manually in Visual Studio Code, and select target environment.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 02/06/2025
+ms.date: 04/20/2026
 ---
 
 # Environments in Microsoft 365 Agents Toolkit
 
-When you build an app with Microsoft 365 Agents Toolkit (formerly Teams Toolkit), you typically need to run the same project across multiple targets, such as local, development, or playground. Environments let you keep these targets isolated while reusing the same project structure and lifecycle commands.
+When you build an agent or app with Microsoft 365 Agents Toolkit (formerly Teams Toolkit), you typically need to run the same project across multiple targets, such as local, development, or playground. Environments let you keep these targets isolated while reusing the same project structure and lifecycle commands.
 
 Agents Toolkit manages environment-specific settings through `.env.{environment-name}` files. These files hold the variables and outputs for each target environment, so you can provision, deploy, and publish consistently without manually reconfiguring resources each time.
 
@@ -19,11 +19,11 @@ This article explains how environment files work, how local and remote environme
 Agents Toolkit follows a standard naming pattern for environment files, such as `.env.{environment-name}`. When you run lifecycle commands like Provision, Deploy, or Publish, you must specify an environment name. This name must match the `{environment-name}` used in the corresponding environment file.
 
 > [!NOTE]
-> You can define environment variables for Agents Toolkit in your current shell environment which override any values in the `.env` file during a naming conflict.
+> You can define environment variables for Agents Toolkit in your current shell environment which overrides any values in the `.env` file during a naming conflict.
 
 ### Environment file location
 
-By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to `./env/.env.dev`. If you don't specify an `environmentFolderPath`, it doesn't read variables from a .env file and assumes the environment is set to `dev`, with outputs directed to `./env/.env.dev`.
+By default, Agents Toolkit doesn't load environment variables and simply executes actions, saving outputs to `./env/.env.dev`. If you don't specify an `environmentFolderPath`, it doesn't read variables from an .env file and assumes the environment is set to `dev`, with outputs directed to `./env/.env.dev`.
 
 ## Local environments
 
