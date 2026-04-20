@@ -1,5 +1,5 @@
 ---
-title: How-to Guides for Teams Apps
+title: How-to Guides for Teams Agents and Apps
 description: Learn about the How-to guides from Microsoft 365 Agents Toolkit in Visual Studio Code to configure tab, bot, message extension, Outlook add-in capabilities.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -8,7 +8,7 @@ ms.date: 04/10/2026
 
 # How-to guides for Microsoft Teams apps
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Agents Toolkit.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templates focus on getting started with an agent or app that implements a single [app capability](~/concepts/design/app-structure.md). However, agents and apps can have multiple capabilities. We've created a set of how-to guides with the steps needed to add different capabilities to a project created with Agents Toolkit.
 
 ## How-to guides in Agents Toolkit
 
