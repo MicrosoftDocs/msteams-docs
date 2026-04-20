@@ -66,19 +66,19 @@ For more information, see [add cloud resources](add-resource.md#add-cloud-resour
 
 ### Use the Command Palette
 
-   1. Open your app project in **Visual Studio Code**.
+1. Open your app project in **Visual Studio Code**.
 
-   1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
+1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="../assets/images/toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the command palette option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the command palette option.":::
 
-   1. Select **Microsoft 365 Agents: View How-to Guides**.
+1. Select **Microsoft 365 Agents: View How-to Guides**.
 
-      :::image type="content" source="~/assets/images/toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the selective how-to guide.
+1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the selective how-to guide.
 
-       :::image type="content" source="~/assets/images/toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities list.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/manual/notification-add-capabilities_1.png" alt-text="Screenshot shows the capabilities list.":::
 
 ## See also
 
