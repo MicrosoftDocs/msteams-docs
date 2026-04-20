@@ -240,6 +240,7 @@ Your agent or bot app now uses MSI for authentication.
 
 ## See Also
 
+* [Build your first agent](../agents-in-teams/build-first-agent.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
