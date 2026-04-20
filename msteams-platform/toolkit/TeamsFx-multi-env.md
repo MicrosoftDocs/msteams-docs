@@ -27,8 +27,7 @@ By default, Agents Toolkit doesn't load environment variables and simply execute
 
 ## Local environments
 
-Building a Microsoft Teams app involves both cloud and local resources.
-Cloud resources include app registrations and the Teams client, while application logic can run locally to speed up development and testing. All Agents Toolkit templates include a preconfigured `local` environment with `./env/.env.local` and `./env/.env.local.user` files. This setup lets you run your agent or app on a local web server and debug it with breakpoints in Visual Studio Code or Visual Studio.
+Building a Microsoft Teams agent or app involves both cloud and local resources. Cloud resources include app registrations and the Teams client, while agent or app logic can run locally to speed up development and testing. All Agents Toolkit templates include a preconfigured `local` environment with `./env/.env.local` and `./env/.env.local.user` files. This setup lets you run your agent or app on a local web server and debug it with breakpoints in Visual Studio Code (for JavaScript, TypeScript, or Python agent or app) or Visual Studio (for CSharp agent or app).
 
 To differentiate between a local environment and all other environments, you can create a separate project file called `m365agents.local.yml` in the same directory as `m365agents.yml`.
 
@@ -53,13 +52,11 @@ To create a new environment:
 
 ## Targeting an environment for remote build
 
-When working with multiple environments, you must select a target environment to build, debug, and preview your agent or app in Microsoft Teams.
-
-You can choose the target environment directly from the build settings.
+When working with multiple environments, you must select a target environment to build, debug, and preview your agent or app in Microsoft Teams. You can choose the target environment directly from the build settings.
 
 ### Select an environment
 
-To target the dev or a custom environment:
+To target dev or any other custom environment:
 
 1. From the **Lifecycle** section of Agents toolkit, select **Provision** for your agent or app.
 
@@ -76,7 +73,7 @@ The Agents Toolkit provisions the agent or app for the chosen environment. You c
 Once the environment is selected, the Agents Toolkit provisions the agent or app for that environment. You can now build, debug, and run your agent or app in the selected environment.
 
 1. Select the :::image type="icon" source="../assets/icons/run-build-vs.png" border="false"::: **Run and Debug** icon from the Visual Studio Code sidebar.
-1. Select the option to debug and to preview the remote app in Microsoft Teams.
+1. Select the option to debug and to preview the remote agent or app in Microsoft Teams.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/remote-build.png" alt-text="Screenshot shows the option to select the environment for building the agent or app.":::
 
