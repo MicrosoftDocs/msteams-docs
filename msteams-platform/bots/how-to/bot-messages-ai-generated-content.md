@@ -3,7 +3,7 @@ title: Bot Messages with AI-generated Content
 description: Learn how to add an AI label, sensitivity labels, citations, and feedback buttons for bots built using Teams SDK or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 01/23/2025
+ms.date: 04/15/2026
 ---
 
 # Enhance AI-generated bot messages
@@ -326,9 +326,6 @@ When the user selects a feedback button, a feedback form appears based on the us
 :::image type="content" source="../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams desktop client." lightbox="../../assets/images/bots/feedback-form-mobile.png":::
 
 ---
-
-> [!NOTE]
-> Customizable feedback forms are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 Feedback buttons are located at the footer of the bot’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user selects.
 
