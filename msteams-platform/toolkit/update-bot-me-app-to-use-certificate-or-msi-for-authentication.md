@@ -119,7 +119,7 @@ Your agent or bot app now uses the certificate for authentication.
 
 # [Update to MSI-based authentication](#tab/msi)
 
-To update your bot app to use MSI-based authentication:
+To update your agent or bot app to use MSI-based authentication:
 
 1. [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
 1. [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
@@ -178,7 +178,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 To update the bot app code for MSI, follow these steps:
 
-1. Open your bot app project in Visual Studio or Visual Studio Code.
+1. Open your agent or bot app project in Visual Studio or Visual Studio Code.
 1. Update your code.
 
    # [JavaScript](#tab/js2)
@@ -209,13 +209,13 @@ To update the bot app code for MSI, follow these steps:
 
     ---
 
-1. Update the `BOT_ID` in your `.env` file.
+1. Update the `BOT_ID` in the `.env` file.
 
-1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
+1. Ensure you test your agent or bot to confirm its operation aligns with the updated authentication.
 
 ## Delete bot secret
 
-Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
+Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
 
 To delete the bot secret:
 
@@ -231,7 +231,7 @@ To delete the bot secret:
 
     :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-Your bot app now uses MSI for authentication.
+Your agent or bot app now uses MSI for authentication.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20MSI-based%20authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=muyangamigo&platformId=7d7829c1-68d8-1e75-4de1-a7e56b7dc090&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
