@@ -1,14 +1,14 @@
 ---
-title: Use Certificate or MSI Authentication for Bots
-description: Learn how to use certificate or MSI-based authentication for your bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
+title: Use Certificate or MSI Authentication for Agents and Bots
+description: Learn how to use certificate or MSI-based authentication for your agent and bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 10/22/2024
+ms.date: 04/20/2026
 ---
 
-# Use certificate or MSI for app authentication
+# Use certificate or MSI for agent or app authentication
 
-You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+You can use certificate- or MSI-based authentication to validate your agent and bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ Follow the steps to update the bot app code:
 1. Open your bot app project in Visual Studio or Visual Studio Code.
 1. Update your code.
 
-    # [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
     ```javascript
         const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -84,7 +84,7 @@ Follow the steps to update the bot app code:
         const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
-    # [C#](#tab/cs1)
+   # [C#](#tab/cs1)
 
     ```csharp
         builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
@@ -181,7 +181,7 @@ To update the bot app code for MSI, follow these steps:
 1. Open your bot app project in Visual Studio or Visual Studio Code.
 1. Update your code.
 
-    # [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     ```javascript
         const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -198,7 +198,7 @@ To update the bot app code for MSI, follow these steps:
         const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
-    # [C#](#tab/cs2)
+   # [C#](#tab/cs2)
 
     ```csharp
         builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
