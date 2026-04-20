@@ -4,7 +4,7 @@ description: Learn how to create, package, and upload Microsoft Teams app, icons
 ms.localizationpriority: high
 ms.topic: article
 ms.author: v-sukanyadas
-ms.date: 04/09/2026
+ms.date: 04/20/2026
 ---
 
 # Teams app package
