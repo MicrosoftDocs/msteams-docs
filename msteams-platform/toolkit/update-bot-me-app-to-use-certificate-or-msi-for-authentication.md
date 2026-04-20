@@ -12,15 +12,15 @@ You can use certificate- or MSI-based authentication to validate your agent and 
 
 ## Prerequisites
 
-Ensure that you have a Teams bot app deployed to Azure with the following resources:
+Ensure that you have a Teams agent or bot app deployed to Azure with the following resources:
 
 * An Azure bot.
-* An Entra ID with a secret used for bot authentication.
+* An Entra ID with a secret used for agent or bot authentication.
 * A resource that hosts your bot app, such as Azure App Service, Azure Functions.
 
 # [Update to certificate-based Authentication](#tab/certificate)
 
-To update your bot app to use certificate-based authentication:
+To update your agent or bot app to use certificate-based authentication:
 
 1. [Create and upload certificate in Azure AD](#create-and-upload-certificate-in-azure-ad)
 1. [Update the bot app code](#update-the-bot-app-code)
@@ -28,7 +28,7 @@ To update your bot app to use certificate-based authentication:
 
 ## Create and upload certificate in Azure AD
 
-To use a certificate for bot authentication:
+To use a certificate for agent or bot authentication:
 
 1. Prepare a certificate and private key.
 
@@ -92,11 +92,11 @@ Follow the steps to update the bot app code:
 
     ---
 
-1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
+1. Ensure you test your agent or bot to confirm the operation aligns with the updated authentication.
 
 ## Delete bot secret
 
-Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
+Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
 
 To delete the bot secret:
 
@@ -112,7 +112,7 @@ To delete the bot secret:
 
     :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-Your bot app now uses the certificate for authentication.
+Your agent or bot app now uses the certificate for authentication.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20certificate-based%20Authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&platformId=7d7829c1-68d8-1e75-4de1-a7e56b7dc090&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
