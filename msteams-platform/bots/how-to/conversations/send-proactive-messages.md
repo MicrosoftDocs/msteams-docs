@@ -1,10 +1,10 @@
 ---
 title: Send proactive messages
-description: Learn how to send proactive messages with your Teams bot using the Teams SDK (Teams AI Library), and install your app using Microsoft Graph.
+description: Learn how to send proactive messages with your Teams bot using the Teams SDK (Teams AI Library)
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 4/15/2026  
+ms.date: 04/15/2026  
 ---
 # Proactive messages
 
@@ -302,7 +302,7 @@ const sendProactiveNotification = async (userId: string) => {
   }
   const activity = new MessageActivity('Hey! It\'s been a while. How are you?');
   await app.send(conversationId, activity);
-};s
+};
 ```
 
 # [Python](#tab/python)
