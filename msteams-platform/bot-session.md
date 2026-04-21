@@ -123,7 +123,7 @@ The first message in a session becomes the session title, and the latest message
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your bot shouldn't parse or construct the conversation ID manually.
 
-# [C#](#tab/C#)
+# [C#](#tab/csharp)
 
 Use the conversation ID from the incoming activity when responding.
 
