@@ -331,31 +331,14 @@ Feedback buttons are located at the footer of the bot’s message and include a 
 
 ### Add feedback buttons
 
-For a bot built using **Teams SDK**, Teams enables feedback buttons for all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
-
-```javascript
-export const app = new Application<ApplicationTurnState>({
-    ai: {
-        planner: planner,
-        enable_feedback_loop: true
-    },
-```
-
-For more information, see the [const app variable](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L65).
-
-After you enable feedback buttons, all `SAY` commands from the bot have `feedbackLoopEnabled` in the `channelData` object automatically set to `true`.
-
 To enable feedback buttons in a bot built using **Bot Framework SDK**, define a `feedbackLoop` object under the `channelData` object of your bot message.
 
 ```javascript
-await context.sendActivity({
-  type: ActivityTypes.Message,
-  text: `Hey! I'm a friendly AI bot!`,
-  channelData: {
-    feedbackLoop: { // Enable feedback buttons
-        type: "custom"
-  },
-});
+app.message(/feedback/i, async ({ send }) => { 
+
+  await send(new MessageActivity("This is an example of a feedback button - this helps to provide feedback for a message").addFeedback()); 
+
+}); 
 ```
 
 | Property | Type | Required | Description |
@@ -385,12 +368,10 @@ You must respond to this invoke call with a dialog (referred to as task modules 
 The bot receives user input from the feedback form through a bot invoke flow. For bots built using **Teams SDK**, the bot invoke request is automatically handled. To handle feedback, use the `app.feedbackLoop` method to register a feedback loop handler to be called when the user provides feedback.
 
 ```javascript
-app.feedbackLoop(async (_context: TurnContext, _state: TurnState, feedbackLoopData: FeedbackLoopData) => {
-  // custom logic here...
-});
+app.on("message.submit.feedback", async (context) => { 
+  // custom logic here... 
+}); 
 ```
-
-For more information, see the [asynchronous callback function](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts#L111).
 
 For a bot built using **Bot Framework SDK**, you must have an `onInvokeActivity` handler to process the feedback. Ensure that you return a status code `200` with an empty JSON object as a response.
 
