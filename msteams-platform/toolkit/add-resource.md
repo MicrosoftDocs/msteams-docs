@@ -13,7 +13,7 @@ ms.date: 04/10/2026
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your agent or app, tailored to your development needs. By adding more cloud resources, you can autogenerate all configuration files and seamlessly connect to the Teams agent or app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams agents or apps.
 
 > [!NOTE]
-> If you've created SharePoint Framework (SPFx) based tab project, you can't add Azure cloud resources.
+> Agents Toolkit doesn't adding support Azure cloud resources for SharePoint Framework (SPFx) based tabs.
 
 ## Add cloud resources
 
@@ -41,7 +41,7 @@ You can add cloud resources in the following ways:
       |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
-### To add cloud resources using Command Palette
+### To add cloud resources using command palette
 
    1. Open your Teams app project in Visual Studio Code.
 
@@ -53,7 +53,7 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the how-to guide for the selected cloud service.
+   1. From the dropdown list that appears, select the cloud service integration you want to add to your agent or app. You're redirected to the how-to guide for the selected cloud service.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
