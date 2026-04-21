@@ -23,6 +23,7 @@ Here are some of the how-to guides included in Agents Toolkit:
 | Configure message extension capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
 | Configure Outlook add-in capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
+<br>
 **Development**:
 
 | Agent or app development | How-to Guide |
@@ -49,7 +50,7 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 - Integrate with Azure API management
 - Integrate with Azure key vault
 
-For more information, see [add cloud resources](add-resource.md#add-cloud-resources).
+   For more information, see [add cloud resources](add-resource.md#add-cloud-resources).
 
 ## Open the guides from Agents Toolkit
 
@@ -86,6 +87,5 @@ For more information, see [add cloud resources](add-resource.md#add-cloud-resour
 
 ## See also
 
-- [Enable single sign-on for Teams app](develop-single-sign-on-experience-in-Teams.md)
-- [Set up CI/CD pipelines](use-CICD-template.md)
-- [Add cloud resources and API connection](add-resource.md)
+- [Build your first Teams agent](../agents-in-teams/build-first-agent.md)
+- [Create a new Teams app](create-new-project.md)
