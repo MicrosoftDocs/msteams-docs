@@ -14,18 +14,18 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 
 Here are some of the how-to guides included in Agents Toolkit:
 
-**Capability**:
+**App capabilities**:
 
 | Capability | How-to Guide |
 | --- | --- |
-| Configure tab capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
-| Configure bot capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
+| Configure tab capability | [How to configure tab capability within your Teams app](configure-tab-capability.md) |
+| Configure bot capability | [How to configure bot capability within your Teams app](configure-bot-capability.md) |
 | Configure message extension capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
 | Configure Outlook add-in capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
 
 <br>
 
-**Development**:
+**App development**:
 
 | Agent or app development | How-to Guide |
 | --- | --- |
