@@ -19,8 +19,8 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to 
 
 You can add cloud resources in the following ways:
 
-- [To add cloud resources using Agents Toolkit](#to-add-cloud-resources-using-agents-toolkit)
-- [To add cloud resources using Command Palette](#to-add-cloud-resources-using-command-palette)
+- [Add cloud resources using Agents Toolkit](#to-add-cloud-resources-using-agents-toolkit)
+- [Add cloud resources using Command Palette](#to-add-cloud-resources-using-command-palette)
 
 ### To add cloud resources using Agents Toolkit
 
@@ -66,7 +66,7 @@ You can add cloud resources in the following ways:
 
 ## Add API connection
 
-Connect your agent or app to an existing API, developed by your organization or a third party, using the following steps:
+To connect your agent or app to an existing API developed by your organization or a third party:
 
 1. Open your Teams agent or app project in **Microsoft Visual Studio Code**.
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
