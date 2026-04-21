@@ -166,29 +166,28 @@ app.on('config.fetch', async ({ activity }) => {
 # [Python](#tab/Py1)
 
    ```python
-return ConfigResponse(
-    config=TaskModuleContinueResponse(
-        value=CardTaskModuleTaskInfo(
-            card=card_attachment(AdaptiveCardAttachment(content=card)),
-            height=500,
-            width=600,
-            title="test card",
-        )
+@app.on_config_open
+async def handle_config_open(
+    ctx: ActivityContext[ConfigFetchInvokeActivity]
+) -> ConfigInvokeResponse:
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="Configure your bot", weight="Bolder")
+        ],
+        actions=[
+            SubmitAction(title="Submit")
+        ]
     )
-)
 
-    return ConfigInvokeResponse(
-        config={
-            "type": "continue",
-            "value": {
-                "card": card_attachment(
-                    AdaptiveCardAttachment(content=card)
-                ),
-                "height": 500,
-                "width": 600,
-                "title": "test card",
-            },
-        }
+    return ConfigResponse(
+        config=TaskModuleContinueResponse(
+            value=CardTaskModuleTaskInfo(
+                card=card_attachment(AdaptiveCardAttachment(content=card)),
+                height=500,
+                width=600,
+                title="test card",
+            )
+        )
     )
    ```
 
