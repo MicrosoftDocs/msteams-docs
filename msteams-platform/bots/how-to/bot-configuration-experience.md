@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: conceptual
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 04/09/2026
+ms.date: 04/21/2026
 ---
 
 # Bot configuration experience
@@ -166,21 +166,16 @@ app.on('config.fetch', async ({ activity }) => {
 # [Python](#tab/Py1)
 
    ```python
-@app.on_config_open 
-async def handle_config_open(
-    ctx: ActivityContext[ConfigFetchInvokeActivity]
-) -> ConfigInvokeResponse:
-    card = AdaptiveCard(
-        body=[
-            TextBlock(
-                text="Configure your bot",
-                weight="Bolder"
-            )
-        ],
-        actions=[
-            SubmitAction().with_title("Submit")
-        ]
+return ConfigResponse(
+    config=TaskModuleContinueResponse(
+        value=CardTaskModuleTaskInfo(
+            card=card_attachment(AdaptiveCardAttachment(content=card)),
+            height=500,
+            width=600,
+            title="test card",
+        )
     )
+)
 
     return ConfigInvokeResponse(
         config={
@@ -259,19 +254,19 @@ app.on('config.fetch', async ({ activity }) => {
 async def handle_config_open(
     ctx: ActivityContext[ConfigFetchInvokeActivity]
 ) -> ConfigInvokeResponse:
-    return ConfigInvokeResponse(
-        config={
-            "type": "auth",
-            "suggestedActions": {
-                "actions": [
-                    {
-                        "type": "openUrl",
-                        "value": "https://example.com/auth",
-                        "title": "Sign in to this app",
-                    }
-                ]
-            },
-        }
+    return ConfigResponse(
+        config=ConfigAuth(
+            suggested_actions=SuggestedActions(
+                to=[],
+                actions=[
+                    CardAction(
+                        type="openUrl",
+                        value="https://example.com/auth",
+                        title="Sign in to this app",
+                    )
+                ],
+            )
+        )
     )
    ```
 
@@ -312,11 +307,10 @@ app.on('config.submit', async ({ activity, send }) => {
 async def handle_config_submit(
     ctx: ActivityContext[ConfigSubmitInvokeActivity]
 ) -> ConfigInvokeResponse:
-    return ConfigInvokeResponse(
-        config={
-            "type": "message",
-            "value": "You have chosen to finish setting up bot",
-        }
+    return ConfigResponse(
+        config=TaskModuleMessageResponse(
+            value="You have chosen to finish setting up bot",
+        )
     )
    ```
 
