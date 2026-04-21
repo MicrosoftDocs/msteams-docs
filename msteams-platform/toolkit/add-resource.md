@@ -20,7 +20,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to 
 You can add cloud resources in the following ways:
 
 - [Add cloud resources using Agents Toolkit](#to-add-cloud-resources-using-agents-toolkit)
-- [Add cloud resources using Command Palette](#to-add-cloud-resources-using-command-palette)
+- [Add cloud resources using command palette](#to-add-cloud-resources-using-command-palette)
 
 ### To add cloud resources using Agents Toolkit
 
@@ -30,9 +30,9 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select a how-to guide from the Development section.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your agent or app. You're redirected to the selected how-to guide.
+   1. From the dropdown list that appears, select the cloud service you want to integrate with your agent or app. You're redirected to the selected how-to guide.
 
-        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options from the how-to guides list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the cloud service integration options from the how-to guides list.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -43,17 +43,17 @@ You can add cloud resources in the following ways:
 
 ### To add cloud resources using command palette
 
-   1. Open your Teams app project in Visual Studio Code.
+   1. Open your Teams agent or app project in Visual Studio Code.
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the command palette option under View.":::
+      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the command palette option under **View**.":::
 
    1. Enter **How-to Guides** and select **Microsoft 365 Agents: View How-to Guides** from the list.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your agent or app. You're redirected to the how-to guide for the selected cloud service.
+   1. From the dropdown list that appears, select the cloud service you want to integrate with your agent or app. You're redirected to the how-to guide for the selected cloud service.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
@@ -87,4 +87,4 @@ To connect your agent or app to an existing API developed by your organization o
 - [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 - [Provision cloud resources](provision.md)
 - [Deploy to the cloud](deploy.md)
-- [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)
+- [Publish Teams agents and apps using Microsoft 365 Agents Toolkit](publish.md)
