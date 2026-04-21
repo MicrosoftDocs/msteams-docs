@@ -4,7 +4,7 @@ author: vikasalmal
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/14/2026
+ms.date: 04/21/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -223,40 +223,40 @@ app.on('message.ext.query', async ({ activity }) => {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
-@app.on_message_ext_query 
-async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
-    command_id = ctx.activity.value.command_id 
-    params = ctx.activity.value.parameters or [] 
-    query = params[0].value if params else "" 
- 
-    print(f"Query: command={command_id}, query={query}") 
- 
-    # Route to appropriate search 
-    if command_id == "wikipediaSearch": 
-        results = await search_wikipedia(query) 
-        attachments = [ 
-            create_attachment( 
-                create_wikipedia_card(r), 
-                r['title'], 
-                re.sub(r'<[^>]+>', '', r.get('snippet', '')) 
-            ) 
-            for r in results 
-        ] 
- 
-    if not attachments: 
-        return MessagingExtensionInvokeResponse( 
-            compose_extension=MessagingExtensionResult( 
-                type=MessagingExtensionResultType.MESSAGE, 
-                text=f"No results found for '{query}'" 
-            ) 
-        ) 
- 
-    return MessagingExtensionInvokeResponse( 
-        compose_extension=MessagingExtensionResult( 
-            type=MessagingExtensionResultType.RESULT, 
-            attachment_layout=AttachmentLayout.LIST, 
-            attachments=attachments 
-        ) 
+@app.on_message_ext_query
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]):
+    command_id = ctx.activity.value.command_id
+    params = ctx.activity.value.parameters or []
+    query = params[0].value if params else ""
+
+    print(f"Query: command={command_id}, query={query}")
+
+    # Route to appropriate search
+    if command_id == "wikipediaSearch":
+        results = await search_wikipedia(query)
+        attachments = [
+            create_attachment(
+                create_wikipedia_card(r),
+                r["title"],
+                re.sub(r"&lt;[^&gt;]+&gt;", "", r.get("snippet", "")),
+            )
+            for r in results
+        ]
+
+    if not attachments:
+        return MessagingExtensionResponse(
+            compose_extension=MessagingExtensionResult(
+                type=MessagingExtensionResultType.MESSAGE,
+                text=f"No results found for '{query}'",
+            )
+        )
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type=MessagingExtensionResultType.RESULT,
+            attachment_layout=MessagingExtensionAttachmentLayout.LIST,
+            attachments=attachments,
+        )
     )
 ```
 
