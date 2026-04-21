@@ -12,21 +12,16 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 
 ## How-to guides in Agents Toolkit
 
+Here are some of the how-to guides included in Agents Toolkit:
+
+**Capability**
+
 | Capability | How-to Guide |
 | --- | --- |
 | Configure tab capability | [How to configure Tab capability within your Teams app](configure-tab-capability.md) |
 | Configure bot capability | [How to configure Bot capability within your Teams app](configure-bot-capability.md) |
 | Configure message extension capability | [How to configure Message Extension capability within your Teams app](configure-message-extension-capability.md) |
 | Configure Outlook add-in capability | [How to configure Outlook add-in capability within your Teams app](../m365-apps/combine-office-add-in-and-teams-app.md) |
-
-Apart from capabilities, Agents Toolkit also provides how-to guides for:
-
-**Scenario**:
-
-- Initiate sequential workflow in Teams
-- Send notifications to Teams
-- Respond to chat commands in Teams
-- Embed a dashboard canvas in Teams
 
 **Development**:
 
@@ -37,6 +32,15 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 | Automate CI/CD pipelines | [Set up CI/CD pipelines](use-CICD-template.md) |
 | Run and debug on mobile client | [Debug for mobile](debug-mobile.md) |
 | Multi-tenant support | [Multi tenancy support for Microsoft Entra app](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Multi-tenancy-Support-for-Microsoft-Entra-app) |
+
+Apart from capabilities, Agents Toolkit also provides how-to guides for:
+
+**Scenario**:
+
+- Initiate sequential workflow in Teams
+- Send notifications to Teams
+- Respond to chat commands in Teams
+- Embed a dashboard canvas in Teams
 
 **Cloud service integration**:
 
