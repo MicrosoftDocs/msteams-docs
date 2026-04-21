@@ -8,6 +8,8 @@ ms.topic: conceptual
 ms.date: 02/28/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Use sessions in bot conversations in Microsoft Teams
 
 Sessions allow users to organize conversations with your bot into independent discussion chats within a single one-on-one thread. Each session maintains its own conversation history, helping reduce context length, improve response relevance, and provide a structured way for users to manage multiple tasks or workflows with your bot.
@@ -123,9 +125,9 @@ The first message in a session becomes the session title, and the latest message
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your bot shouldn't parse or construct the conversation ID manually.
 
-# [C#](#tab/csharp)
-
 Use the conversation ID from the incoming activity when responding.
+
+# [C#](#tab/csharp)
 
 ```csharp
 var conversationId = context.Activity.Conversation.Id;
@@ -134,16 +136,12 @@ await app.Send(conversationId, "Hello from Bot");
 
 # [TypeScript](#tab/TypeScript)
 
-Use the conversation ID from the incoming activity when responding.
-
 ```typescript
 const conversationId = activity.conversation.id;
 await app.send(conversationId, "Hello from Bot");
 ```
 
 # [Python](#tab/Python)
-
-Use the conversation ID from the incoming activity when responding.
 
 ```python
 conversation_id = ctx.activity.conversation.id
@@ -168,11 +166,25 @@ Responding inside a session works the same way as responding in a normal one-on-
 
 Use the existing activity context when sending a reply.
 
+# [C#](#tab/csharp)
+
 ```csharp
-
-await turnContext.SendActivityAsync(MessageFactory.Text($"This is a reply to: {turnContext.Activity.Text}"), cancellationToken);
-
+await app.Send(conversationId, "Hello from Bot");
 ```
+
+# [TypeScript](#tab/TypeScript)
+
+```typescript
+await app.send(conversationId, "Hello from Bot");
+```
+
+# [Python](#tab/Python)
+
+```python
+await app.send(conversation_id, "Hello from Bot")
+```
+
+---
 
 This ensures that each session maintains independent conversation context.
 
