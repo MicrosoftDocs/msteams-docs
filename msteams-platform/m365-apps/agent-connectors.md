@@ -9,7 +9,7 @@ ms.subservice: m365apps
 
 # Register MCP servers as agent connectors for Microsoft 365
 
-Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
+Agents in Microsoft 365<!--, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams,--> can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 <!--
 > [!NOTE]
 >
@@ -23,19 +23,19 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 - Tool definitions (inline or dynamically discovered)
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
-Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP, including the Channel Agent in Microsoft Teams.
+Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP.<!--, including the Channel Agent in Microsoft Teams.-->
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
-- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
+- A test tenant to validate your MCP integration
 - A working MCP server with a secure public endpoint
 - Authentication credentials ([OAuth configuration](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal) or [API key](../messaging-extensions/api-based-secret-service-auth.md#api-key-authentication))
 
 ## Add the agent connector to your manifest
 
-First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-prev&preserve-view=true) array at the root level of your app manifest.
+First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-1.27&preserve-view=true) array at the root level of your app manifest.
 
 1. Open your Microsoft 365 app manifest (`manifest.json`) file.
 
@@ -48,19 +48,18 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.27/MicrosoftTeams.schema.json",
   "manifestVersion": "1.27",
   ...
-    "agentConnectors": [
-      {
-        "id": "my-mcp-server",
-        "displayName": "My Automation Server",
-        "description": "Provides workflow automation and task management tools.",
-        "toolSource": {
-          "remoteMcpServer": {
-            "mcpServerUrl": "https://mcp.mycompany.com"
-          }
+  "agentConnectors": [
+    {
+      "id": "my-mcp-server",
+      "displayName": "My Automation Server",
+      "description": "Provides workflow automation and task management tools.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://mcp.mycompany.com"
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ````
 
@@ -72,7 +71,7 @@ For MCP servers, use **remoteMcpServer** unless your server runs locally within 
 
 Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer` object.
 
-1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
+1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-1.27&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
     ````json
     "toolSource": {
@@ -222,7 +221,7 @@ The following is an example of a complete agent connector configuration, using *
 }
 ```
 
-This configuration is sufficient for Microsoft 365 agents, including the Channel Agent in Teams, to establish a connection and discover tools from your MCP server.
+This configuration is sufficient for Microsoft 365 agents<!--, including the Channel Agent in Teams,--> to establish a connection and discover tools from your MCP server.
 
 ## Validate your configuration
 
@@ -254,7 +253,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
 
 1. Deploy your agent or app to a test environment.
 
-2. Open a [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another Microsoft 365 agent that supports MCP.
+2. Open a <!--[Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another -->Microsoft 365 agent that supports MCP.
 
 3. Test natural language commands that should trigger your tools:
    - "Create a task in my project management system"
