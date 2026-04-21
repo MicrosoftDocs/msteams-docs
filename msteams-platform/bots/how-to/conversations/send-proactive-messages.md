@@ -64,7 +64,7 @@ Create the conversation, after you have the user or channel information.
 
 ## Create the conversation
 
-You can create the conversation if it doesn't exist, or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationId string` object.
+You can create the conversation if it doesn't exist or if you don't know the `conversationId`. Create the conversation only once, and store the resulting `conversationId` for future proactive messages.
 
 To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#create-conversation), you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
