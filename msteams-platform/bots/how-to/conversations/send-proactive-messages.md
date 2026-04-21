@@ -18,7 +18,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 
 > [!IMPORTANT]
 >
-> * To send proactive message, it's recommended to start with [building notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit). For more information, see [Microsoft 365 Agents Toolkit documents](../../../toolkit/agents-toolkit-fundamentals.md).
+> * To send proactive message, it's recommended to start with  [Teams SDK - Proactive Messaging](https://learn.microsoft.com/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit). For more information, see [Microsoft 365 Agents Toolkit documents](../../../toolkit/agents-toolkit-fundamentals.md).
 >
 > * Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments. For proactive messages, the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCC High: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DoD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
@@ -239,59 +239,25 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
-[Route("api/notify")]
-[ApiController]
-public class NotifyController : ControllerBase
+// Save the conversation ID and schedule a proactive reminder on install
+teams.OnInstall(async context =>
 {
-    private readonly IBotFrameworkHttpAdapter _adapter;
-    private readonly string _appId;
-    private readonly ConcurrentDictionary<string, ConversationReference> _conversationReferences;
-
-    public NotifyController(IBotFrameworkHttpAdapter adapter, IConfiguration configuration, ConcurrentDictionary<string, ConversationReference> conversationReferences)
+    context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    await context.Send("Hi! I am going to remind you to say something to me soon!");
+    notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
+});
+ 
+// Send proactive message using stored conversation ID
+public static class Notifications
+{
+    public static async Task SendProactive(string userId)
     {
-        _adapter = adapter;
-        _conversationReferences = conversationReferences;
-        _appId = configuration["MicrosoftAppId"] ?? string.Empty;
-    }
-
-    public async Task<IActionResult> Get()
-    {
-        foreach (var conversationReference in _conversationReferences.Values)
-        {
-            var newReference = new ConversationReference()
-            {
-                Bot = new ChannelAccount()
-                {
-                    Id = conversationReference.Bot.Id
-                },
-                Conversation = new ConversationAccount()
-                {
-                    Id = conversationReference.Conversation.Id
-                },
-                ServiceUrl = conversationReference.ServiceUrl,
-            };
-
-            // Sends a proactive message from the bot to a conversation.
-            await ((BotAdapter)_adapter).ContinueConversationAsync(_appId, newReference, BotCallback, default(CancellationToken));
-        }
-        
-        // Let the caller know proactive messages have been sent.
-        return new ContentResult()
-        {
-            Content = "<html><body><h1>Proactive messages have been sent.</h1></body></html>",
-            ContentType = "text/html",
-            StatusCode = (int)HttpStatusCode.OK,
-        };
-    }
-
-    private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
-    {
-        // If you encounter permission-related errors when sending this message, see
-        // https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp#avoiding-401-unauthorized-errors
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync("proactive hello");
+        var conversationId = (string?)storage.Get(userId);
+        if (conversationId is null) return;
+        await app.Send(conversationId, "Hey! It's been a while. How are you?");
     }
 }
+
 ```
 
 Example of a code snippet to demonstrate creating conversation reference.
@@ -311,29 +277,32 @@ Example of a code snippet to demonstrate creating conversation reference.
         };
 ```
 
-# [JavaScript](#tab/javascript)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getconversationreference)
+* [SDK reference](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/proactive-messaging)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
 
-```javascript
+```typescript
 
-async SendNotificationToAllUsersAsync(context) {
-     const TeamMembers = await TeamsInfo.getPagedMembers(context);
-     let Sent_msg_Cout = TeamMembers.members.length;
-     TeamMembers.members.map(async member => {
-         const ref = TurnContext.getConversationReference(context.activity);
-         ref.user = member;
-         await context.adapter.createConversation(ref, async (context) => {
-             const ref = TurnContext.getConversationReference(context.activity);
-             await context.adapter.continueConversation(ref, async (context) => {
-                 await context.sendActivity("Proactive hello.");
-             });
-         });
-     });
-    await context.sendActivity(MessageFactory.text("Message sent:" + Sent_msg_Cout));
-}
-
+// This would be some persistent storage
+const myConversationIdStorage = new Map<string, string>();
+ 
+// Save the conversation ID on app install
+app.on('install.add', async ({ activity, send }) => {
+  myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
+  await send('Hi! I am going to remind you to say something to me soon!');
+  notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
+});
+ 
+// Send proactive message using stored conversation ID
+const sendProactiveNotification = async (userId: string) => {
+  const conversationId = myConversationIdStorage.get(userId);
+  if (!conversationId) {
+    return;
+  }
+  const activity = new MessageActivity('Hey! It\'s been a while. How are you?');
+  await app.send(conversationId, activity);
+};
 ```
 
 # [Python](#tab/python)
@@ -342,44 +311,23 @@ async SendNotificationToAllUsersAsync(context) {
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
 
 ```python
-# Send message to all members.
-async def _message_all_members(self, turn_context: TurnContext):
-    team_members = await self._get_paged_members(turn_context)
+# This would be some persistent storage
+storage = dict[str, str]()
 
-    for member in team_members:
-        # A conversation reference for the conversation that contains this activity.
-        conversation_reference = TurnContext.get_conversation_reference(
-            turn_context.activity
-        )
+# Save the conversation_id when the app is installed
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext[InstalledActivity]):
+    storage[ctx.activity.from_.aad_object_id] = ctx.activity.conversation.id
+    await ctx.send("Hi! I am going to remind you to say something to me soon!")
+    notification_queue.add_reminder(ctx.activity.from_.aad_object_id, send_proactive_notification, 60000)
 
-        conversation_parameters = ConversationParameters(
-            is_group=False,
-            bot=turn_context.activity.recipient,
-            members=[member],
-            tenant_id=turn_context.activity.conversation.tenant_id,
-        )
-
-        async def get_ref(tc1):
-            conversation_reference_inner = TurnContext.get_conversation_reference(
-                tc1.activity
-            )
-            return await tc1.adapter.continue_conversation(
-                conversation_reference_inner, send_message, self._app_id
-            )
-
-        async def send_message(tc2: TurnContext):
-            return await tc2.send_activity(
-                f"Hello {member.name}. I'm a Teams conversation bot."
-            )
-
-        await turn_context.adapter.create_conversation(
-            conversation_reference, get_ref, conversation_parameters
-        )
-
-    # Sends an activity to the sender of the incoming activity.
-    await turn_context.send_activity(
-        MessageFactory.text("All messages have been sent")
-    )
+# Send proactive message using stored conversation ID
+async def send_proactive_notification(user_id: str):
+    conversation_id = storage.get(user_id, "")
+    if not conversation_id:
+        return
+    activity = MessageActivityInput(text="Hey! It's been a while. How are you?")
+    await app.send(conversation_id, activity)
 
 ```
 
