@@ -19,7 +19,7 @@ This section walks you through wiring up Microsoft Entra ID for a TeamsFx projec
 
 1. Select **App Registrations** > **New registration** to create a new Microsoft Entra app. Add the following details:
 
-   1. **Name**: The name of your configuration app.
+   1. **Name**: The name for your configuration app.
    1. **Supported account types**: Select **Account in this organizational directory only**.
    1. Leave the **Redirect URL** field blank for now.
    1. Select **Register**.
