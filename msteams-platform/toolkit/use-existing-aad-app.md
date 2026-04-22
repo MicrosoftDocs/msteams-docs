@@ -103,7 +103,7 @@ If you have an already registered Azure app, you can reuse it in your TeamsFx pr
 Add the information you saved from the Microsoft Entra app to your TeamsFx project.
 
 > [!NOTE]
-> If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following these steps.
+> If you don't use `aadApp/create` action to create Microsoft Entra app, you can add required environment variables with your preferred name without following these steps.
 
 1. Open `m365agents.yml` and find the `aadApp/create` action.
 
@@ -132,7 +132,7 @@ Add the information you saved from the Microsoft Entra app to your TeamsFx proje
       AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
       ```
 
-      `AAD_APP_OAUTH_AUTHORITY_HOST` represents the host of the authority URL of your Microsoft Entra tenant, for example, <https://login.microsoftonline.com>. Your bot uses this URL to authenticate users via OAuth 2.0. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
+      `AAD_APP_OAUTH_AUTHORITY_HOST` is the Microsoft Entra authority host (for example, <https://login.microsoftonline.com>) that your agent or bot uses as the OAuth 2.0 sign-in endpoint. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
 
    1. If your agent or app requires a Microsoft Entra app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
 
@@ -141,7 +141,7 @@ Add the information you saved from the Microsoft Entra app to your TeamsFx proje
       ```
 
       > [!NOTE]
-      > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
+      > Remember to update the environment variable names given in the examples if you use different names in `writeToEnvironmentFile`.
 
 1. Open the Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
 
