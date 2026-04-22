@@ -23,84 +23,87 @@ As **prerequisites**, the application must have the following permissions:
 | Create Chat | Chat.Create | [Create chats](/graph/permissions-reference#chatcreate)| Allows the app to create chats without a signed-in user (application scenarios) / Allows the app to create chats on behalf of the signed-in user (delegated scenarios). |
 | Create Team | <ul> <li> Team.Create </li> <li> Directory.ReadWrite.All </li> <li> Group.ReadWrite.All</li> <li> Teamwork.Migrate.All </li> </ul> | <ul> <li> [Create teams](/graph/permissions-reference#teamcreate) </li> <li> [Read and write directory data](/graph/permissions-reference#directoryreadwriteall) </li> <li> [Read and write all groups](/graph/permissions-reference#groupreadwriteall) </li> <li> [Migrate teamwork data](/graph/permissions-reference#teamworkmigrateall) </li> </ul> | <ul> <li> Allows the app to create teams either without a signed-in user (application) or on behalf of the signed-in user (delegated). </li> <li> Allows the app to read and write directory data (such as users and groups) either with a signed-in user (delegated) or without one (application), but does not allow deleting users or groups or resetting user passwords. </li> <li> Allows the app, without a signed-in user, to create and delete groups, read and update all group properties and memberships, and read and write conversations, and in delegated scenarios, allows the app to create groups, read group properties and memberships, enable group owners to manage their groups, and allow group members to update group content on behalf of the signed-in user. </li> <li> Allows the app to send chat and channel messages without a signed-in user, specifying the sender, backdating messages, and posting to any chat or channel in the organization. </li> </ul> |
 
+
 <table>
   <thead>
     <tr>
-      <th>Scenario</th>
-      <th>Permissions</th>
+      <th>Task</th>
+      <th>Scope name</th>
+      <th>Display name</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
+    <!-- Create Chat -->
     <tr>
-      <td><strong>Create team</strong></td>
+      <td>Create Chat</td>
+      <td><code>Chat.Create</code></td>
       <td>
-        <table>
-          <thead>
-            <tr>
-              <th>Permission</th>
-              <th>Reference</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>Team.Create</code></td>
-              <td>
-                <a href="/graph/permissions-reference#teamcreate">Create teams</a>
-              </td>
-              <td>
-                Allows the app to create teams either without a signed-in user
-                (application) or on behalf of the signed-in user (delegated).
-              </td>
-            </tr>
-            <tr>
-              <td><code>Directory.ReadWrite.All</code></td>
-              <td>
-                <a href="/graph/permissions-reference#directoryreadwriteall">
-                  Read and write directory data
-                </a>
-              </td>
-              <td>
-                Allows the app to read and write directory data (users and groups)
-                with or without a signed-in user, but does not allow deleting users
-                or groups or resetting user passwords.
-              </td>
-            </tr>
-            <tr>
-              <td><code>Group.ReadWrite.All</code></td>
-              <td>
-                <a href="/graph/permissions-reference#groupreadwriteall">
-                  Read and write all groups
-                </a>
-              </td>
-              <td>
-                Application: create and delete groups, read and update group
-                properties and memberships, and read and write conversations.<br />
-                Delegated: create groups, read group properties and memberships,
-                allow owners to manage groups, and allow members to update group
-                content.
-              </td>
-            </tr>
-            <tr>
-              <td><code>Teamwork.Migrate.All</code></td>
-              <td>
-                <a href="/graph/permissions-reference#teamworkmigrateall">
-                  Migrate teamwork data
-                </a>
-              </td>
-              <td>
-                Allows the app to send chat and channel messages without a
-                signed-in user, including specifying the sender, backdating
-                messages, and posting to any chat or channel in the organization.
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <a href="/graph/permissions-reference#chatcreate">Create chats</a>
+      </td>
+      <td>
+        Allows the app to create chats without a signed-in user (application scenarios) or
+        create chats on behalf of the signed‑in user (delegated scenarios).
+      </td>
+    </tr>
+
+    <!-- Create Team : sub-rows -->
+    <tr>
+      <td rowspan="4">Create Team</td>
+      <td><code>Team.Create</code></td>
+      <td>
+        <a href="/graph/permissions-reference#teamcreate">Create teams</a>
+      </td>
+      <td>
+        Allows the app to create teams either without a signed‑in user (application)
+        or on behalf of the signed‑in user (delegated).
+      </td>
+    </tr>
+    <tr>
+      <td><code>Directory.ReadWrite.All</code></td>
+      <td>
+        <a href="/graph/permissions-reference#directoryreadwriteall">
+          Read and write directory data
+        </a>
+      </td>
+      <td>
+        Allows the app to read and write directory data (users and groups) in application
+        or delegated scenarios, but does not allow deleting users or groups, or resetting
+        user passwords.
+      </td>
+    </tr>
+    <tr>
+      <td><code>Group.ReadWrite.All</code></td>
+      <td>
+        <a href="/graph/permissions-reference#groupreadwriteall">
+          Read and write all groups
+        </a>
+      </td>
+      <td>
+        Application: create and delete groups; read and update all group properties,
+        memberships, and conversations.<br><br>
+        Delegated: create groups; read group properties and memberships; allow group
+        owners to manage groups and members to update group content.
+      </td>
+    </tr>
+    <tr>
+      <td><code>Teamwork.Migrate.All</code></td>
+      <td>
+        <a href="/graph/permissions-reference#teamworkmigrateall">
+          Migrate teamwork data
+        </a>
+      </td>
+      <td>
+        Allows the app to send chat and channel messages without a signed‑in user,
+        including specifying the sender, backdating messages, and posting to any chat
+        or channel in the organization.
       </td>
     </tr>
   </tbody>
 </table>
-``
+```
+
+
 
 
 Create Team - Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
