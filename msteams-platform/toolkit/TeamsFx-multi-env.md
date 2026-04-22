@@ -14,7 +14,7 @@ In this article, you’ll learn how these environment files work, how local and 
 
 ## Using environment files with Agents Toolkit
 
-Agents Toolkit follows a standard naming pattern for environment files, such as `.env.{environment-name}`. When you run lifecycle commands like Provision, Deploy, or Publish, you must specify an environment name. This name must match the `{environment-name}` used in the corresponding environment file.
+Agents Toolkit follows a standard naming pattern for environment files, such as `.env.{environment-name}`. When you run lifecycle commands like **Provision**, **Deploy**, or **Publish**, you must specify an environment name. This name must match the `{environment-name}` used in the corresponding environment file.
 
 > [!NOTE]
 > You can define environment variables for Agents Toolkit in your current shell environment which overrides any values in the `.env` file during a naming conflict.

@@ -36,9 +36,9 @@ You can add cloud resources in the following ways:
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
-      |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
-      |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
+      |Integrate with Azure SQL database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
+      |Integrate with Azure API management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
 ### To add cloud resources using command palette
@@ -57,11 +57,11 @@ You can add cloud resources in the following ways:
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
-      |**Cloud service integration** | **How-to Guide** |
+      | **Cloud service integration** | **How-to Guide** |
       |----------|----------|
-      |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
-      |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
+      |Integrate with Azure SQL database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
+      |Integrate with Azure API management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
 ## Add API connection
