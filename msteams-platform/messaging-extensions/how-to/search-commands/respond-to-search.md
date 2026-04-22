@@ -29,7 +29,7 @@ The request parameters are found in the `value` object in the request, which inc
 
 # [C#/.NET](#tab/dotnet1)
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -219,7 +219,7 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 
 ### Response example
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 # [.NET](#tab/dotnet)
