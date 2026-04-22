@@ -93,12 +93,12 @@ If you have an already registered Azure app, you can reuse it in your TeamsFx pr
     > [!NOTE]
     > If you can't copy the secret, follow the [instructions](#create-client-secret-for-microsoft-entra-app-optional) to create a new client secret.
 
-1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client IDs, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
+1. Go to app's **Expose an API** page. If the **access_as_user** scope is already defined and the two Teams client IDs are pre-authorized, open **Manifest** and copy the **id** value under **oauth2Permissions** and enter it as the **Access As User Scope ID**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20necessary%20info%20from%20existing%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23get-necessary-info-from-existing-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-## Set necessary info in TeamsFx project
+## Set Entraa app information in TeamsFx project
 
 Add the information you saved from the Microsoft Entra app to your TeamsFx project.
 
