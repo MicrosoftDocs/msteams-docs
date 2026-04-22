@@ -10,10 +10,10 @@ ms.date: 04/10/2026
 
 # Add cloud resources and API connection
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your agent or app, tailored to your development needs. By adding more cloud resources, you can autogenerate all configuration files and seamlessly connect to the Teams agent or app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams agents or apps.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your agent or app, tailored to your development needs. Adding cloud resources lets you automatically generate configuration files and easily connect to the Teams agent or app with Agents Toolkit. Agents Toolkit also enables you to use existing APIs from your organization or third parties to build Teams agents or apps.
 
 > [!NOTE]
-> Agents Toolkit doesn't adding support Azure cloud resources for SharePoint Framework (SPFx) based tabs.
+> Agents Toolkit doesn't support adding Azure cloud resources for SharePoint Framework (SPFx) based tabs.
 
 ## Add cloud resources
 
