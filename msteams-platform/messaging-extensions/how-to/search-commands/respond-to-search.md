@@ -3,7 +3,7 @@ title: Respond to Search Command in Teams
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/21/2025
+ms.date: 04/22/2025
 ms.localizationpriority: medium
 ---
 # Respond to search command
@@ -29,7 +29,7 @@ The request parameters are found in the `value` object in the request, which inc
 
 # [C#/.NET](#tab/dotnet1)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -44,7 +44,7 @@ teams.OnQuery(async (ctx) =>
 
 # [TypeScript/Node.js](#tab/typescript)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
 ```typescript
 const app = new App() 
@@ -58,6 +58,8 @@ app.on('message.ext.query', async ({ activity }) => {
 ```
 
 # [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
 app = App() 
@@ -180,15 +182,14 @@ A `message` response is used when your extension needs to display a plain text m
 The following code snippet is an example of a `message` response returned by the app:
 
 ```csharp
-
-{ 
-    ComposeExtension = new MsgExt.Result 
-    { 
-        Type = MsgExt.ResultType.Message, 
-        Text = "Here is the message you want to show!" 
-    } 
+return new MsgExt.Response
+{
+    ComposeExtension = new MsgExt.Result
+    {
+        Type = MsgExt.ResultType.Message,
+        Text = "Here is the message you want to show!"
+    }
 };
-
 ```
 
 :::image type="content" source="../../../assets/images/messaging-extension/message-response-type.png" alt-text="Screenshot shows the message response type.":::
@@ -217,6 +218,9 @@ For the hero or thumbnail card, except for the invoke action, other actions such
 To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a hero or thumbnail card and the respective card is generated as preview. If a `preview` property isn't specified in the `attachment` object, a preview isn't generated. For more information, see [using connector cards for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 ### Response example
+
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 # [.NET](#tab/dotnet)
 
@@ -267,7 +271,7 @@ teams.OnQuery(async (ctx) =>
 
 # [TypeScript/Node.js](#tab/typescript2)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
 ```typescript
 app.on('message.ext.query', async ({ activity }) => { 
@@ -440,6 +444,8 @@ app.on('message.ext.query', async ({ activity }) => {
 
 # [Python](#tab/python1)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
 ```python
 @app.on_message_ext_query 
 async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
@@ -602,7 +608,7 @@ The default query has the same structure as any regular user query, except it ha
 
 | Sample name | Description | .NET | Node.js | Python | Manifest |
 |:---------------------|:--------------|:---------|:--------|:--------|:--------|
-| Bot Message Extensions | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)|NA
+| Bot Message Extensions | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)| NA |
 |Teams message extension auth and config | This sample demonstrates how to implement authentication in a message extension for Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
