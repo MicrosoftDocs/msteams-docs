@@ -78,15 +78,16 @@ This section walks you through wiring up Microsoft Entra ID for a TeamsFx projec
 
 ## Get existing Microsoft Entra app information
 
-You must save the following configuration details from your existing Microsoft Entra app to add it to your TeamsFx project.
+If you have an already registered Azure app, you can reuse it in your TeamsFx project instead of creating a new registration. Before you start, capture the required configuration values from the existing app registration so you can add them to your TeamsFx project.
 
 > [!NOTE]
 > You can skip this part if you followed the instructions above to create a Microsoft Entra app.
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
-
-1. Select **App Registrations** and fse. Verify that the **Supported account types** is set to **My organization only**. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
-
+1. Select **App Registrations** and and find your existing Microsoft Entra app.
+1. Go to app's Overview page, copy the Application (client) ID, Object ID, and Directory (tenant) ID; it's needed later.
+1. Verify that the **Supported account types** is set to **My organization only**.
+1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
     > [!NOTE]
