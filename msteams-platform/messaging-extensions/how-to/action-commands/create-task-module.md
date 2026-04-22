@@ -5,11 +5,9 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 04/22/2026
 ---
 # Create and send dialogs
-
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 You can create a modal dialog (referred as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
 the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
@@ -461,21 +459,60 @@ The following code section is an example of `fetchTask` request:
 
 # [C#/.NET](#tab/dotnet)
 
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
-{
-  //handle fetch task
-}
+using Microsoft.Teams.Apps; 
+using Microsoft.Teams.Plugins.AspNetCore.Extensions; 
+ 
+var builder = WebApplication.CreateBuilder(args); 
+builder.AddTeams(); 
+var app = builder.Build(); 
+var teams = app.UseTeams(); 
+ 
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    var parameters = ctx.Activity.Value.Parameters; 
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+    // handle query 
+});
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+
 ```javascript
-class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionFetchTask(context, action) {
-    //hand fetch task
-  }
-}
+import { App } from '@microsoft/teams.apps' 
+ 
+const app = new App() 
+ 
+app.on('message.ext.query', async ({ activity }) => { 
+  const commandId = activity.value?.commandId 
+  const params = activity.value?.parameters || [] 
+  const query = params[0]?.value || '' 
+  // handle query 
+})
+```
+
+# [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+from microsoft_teams.apps import ActivityContext, App 
+from microsoft_teams.api import MessageExtensionQueryInvokeActivity 
+ 
+app = App() 
+ 
+@app.on_message_ext_query 
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
+    command_id = ctx.activity.value.command_id 
+    params = ctx.activity.value.parameters or [] 
+    query = params[0].value if params else "" 
+    # handle query 
 ```
 
 # [JSON](#tab/json)
@@ -546,26 +583,46 @@ The following section is an example of the `value` object:
 
 # [C#/.NET](#tab/dotnet)
 
-```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
-{
-  var messageText = action.MessagePayload.Body.Content;
-  var fromId = action.MessagePayload.From.User.Id;
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
-  //finish handling the fetchTask
-}
+```csharp
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    var parameters = ctx.Activity.Value.Parameters; 
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+ 
+    Console.WriteLine($"Query: command={commandId}, query={query}"); 
+    // Route to appropriate handler based on commandId 
+});
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionFetchTask(context, action) {
-    const messageText = action.messagePayload.body.content;
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-    //finish handling the fetchTask
-  }
-}
+```javascript
+app.on('message.ext.query', async ({ activity }) => { 
+  const commandId = activity.value?.commandId 
+  const params = activity.value?.parameters || [] 
+  const query = params[0]?.value || '' 
+  console.log(`Query: command=${commandId}, query=${query}`) 
+  // Route to appropriate handler based on commandId 
+})
+```
+
+# [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+@app.on_message_ext_query 
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
+    command_id = ctx.activity.value.command_id 
+    params = ctx.activity.value.parameters or [] 
+    query = params[0].value if params else "" 
+    print(f"Query: command={command_id}, query={query}")
 ```
 
 # [JSON](#tab/json)
@@ -670,103 +727,136 @@ The following code section is an example to `fetchTask` response with an Adaptiv
 
 # [C#/.NET](#tab/dotnet)
 
-This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
+This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Teams SDK.
+
+* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest%20%20TextBlock:%20https://learn.microsoft.com/en-us/dotnet/api/microsoft.teams.cards.textblock?view=msteams-sdk-dotnet-latest)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
-{
-  string placeholder = "Not invoked from message";
-
-  if (action.MessagePayload != null)
-  {
-      var messageText = action.MessagePayload.Body.Content;
-      var fromId = action.MessagePayload.From.User.Id;
-      placeholder = "Invoked from message";
-  }
-
-  var response = new MessagingExtensionActionResponse()
-  {
-    Task = new TaskModuleContinueResponse()
-    {
-      Value = new TaskModuleTaskInfo()
-      {
-        Height = "small",
-        Width = "small",
-        Title = "Example dialog",
-        Card = new Attachment()
-        {
-          ContentType = AdaptiveCard.ContentType,
-          Content = new AdaptiveCard("1.0")
-          {
-            Body = new List<AdaptiveElement>()
-            {
-              new AdaptiveTextInput() { Id = "FormField1", Placeholder = placeholder},
-              new AdaptiveTextInput() { Id = "FormField2", Placeholder = "FormField2"},
-              new AdaptiveTextInput() { Id = "FormField3", Placeholder = "FormField3"},
-            },
-            Actions = new List<AdaptiveAction>()
-            {
-              new AdaptiveSubmitAction()
-              {
-                Type = AdaptiveSubmitAction.TypeName,
-                Title = "Submit",
-              },
-            },
-          },
-        },
-      },
-    },
-  };
-  return response;
-}
+using Microsoft.Teams.Api.Cards; 
+using Microsoft.Teams.Cards; 
+using MsgExt = Microsoft.Teams.Api.MessageExtensions; 
+ 
+// Inside the OnQuery handler: 
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    var parameters = ctx.Activity.Value.Parameters; 
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+ 
+    var card = new AdaptiveCard() 
+    { 
+        Version = Microsoft.Teams.Cards.Version.Version1_4, 
+        Body = [ 
+            new TextBlock(title) { Weight = TextWeight.Bolder, Size = TextSize.Large }, 
+            new TextBlock(snippet) { Wrap = true, IsSubtle = true } 
+        ], 
+        Actions = [ 
+            new OpenUrlAction("https://example.com") { Title = "Open Link" } 
+        ] 
+    }; 
+ 
+    return new MsgExt.Response 
+    { 
+        ComposeExtension = new MsgExt.Result 
+        { 
+            Type = MsgExt.ResultType.Result, 
+            AttachmentLayout = Attachment.Layout.List, 
+            Attachments = new List<MsgExt.Attachment> 
+            { 
+                new MsgExt.Attachment(ContentType.AdaptiveCard) 
+                { 
+                    Content = card, 
+                    Preview = new Attachment(new ThumbnailCard 
+                    { 
+                        Title = title, 
+                        Text = text 
+                    }) 
+                } 
+            } 
+        } 
+    }; 
+});
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-    handleTeamsMessagingExtensionFetchTask(context, action) {
-      const adaptiveCard = CardFactory.adaptiveCard({
-        actions: [{
-          data: { submitLocation: 'messagingExtensionFetchTask'},
-          title: 'Submit',
-          type: 'Action.Submit'
-        }],
-        body: [
-          { text: 'Task Module', type: 'TextBlock', weight: 'bolder'},
-          { type: 'TextBlock', text: 'Enter text for Question:' },
-          { id: 'Question', placeholder: 'Question text here', type: 'Input.Text', value: userText },
-          { type: 'TextBlock', text: 'Options for Question:' },
-          { type: 'TextBlock', text: 'Is Multi-Select:' },
-          {
-            choices: [{ title: 'True', value: 'true' }, { title: 'False', value: 'false' }],
-            id: 'MultiSelect',
-            isMultiSelect: false,
-            style: 'expanded',
-            type: 'Input.ChoiceSet',
-            value: isMultiSelect ? 'true' : 'false'
-          },
-          { id: 'Option1', placeholder: 'Option 1 here', type: 'Input.Text', value: option1 },
-          { id: 'Option2', placeholder: 'Option 2 here', type: 'Input.Text', value: option2 }
-        ],
-        type: 'AdaptiveCard',
-        version: '1.0'
-      });
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-      return {
-        task: {
-          type: 'continue',
-          value: {
-            card: adaptiveCard,
-            height: 450,
-            title: 'Task Module Fetch Example',
-            url: null,
-            width: 500
-          }
-        }
-      };
-    }
-}
+```javascript
+import { 
+  cardAttachment, 
+  ThumbnailCard, 
+  MessagingExtensionAttachment, 
+} from '@microsoft/teams.api' 
+import { AdaptiveCard, TextBlock, OpenUrlAction, ActionSet } from '@microsoft/teams.cards' 
+ 
+app.on('message.ext.query', async ({ activity }) => { 
+  const card = new AdaptiveCard( 
+    new TextBlock(title, { weight: 'Bolder', size: 'Large' }), 
+    new TextBlock(snippet, { wrap: true, isSubtle: true }), 
+    new ActionSet( 
+      new OpenUrlAction('https://example.com', { title: 'Open Link' }) 
+    ) 
+  ) 
+ 
+  const attachment = cardAttachment('adaptive', card) 
+  const preview = cardAttachment('thumbnail', { title, text } as ThumbnailCard) 
+ 
+  return { 
+    composeExtension: { 
+      type: 'result', 
+      attachmentLayout: 'list', 
+      attachments: [{ 
+        contentType: attachment.contentType, 
+        content: attachment.content, 
+        preview, 
+      }], 
+    }, 
+  } 
+})
+```
+
+# [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+from microsoft_teams.api import ( 
+    card_attachment, AdaptiveCardAttachment, ThumbnailCard, 
+    ThumbnailCardAttachment, AttachmentLayout, 
+    MessagingExtensionAttachment, MessagingExtensionInvokeResponse, 
+    MessagingExtensionResult, MessagingExtensionResultType, 
+) 
+from microsoft_teams.cards import AdaptiveCard, TextBlock, OpenUrlAction 
+ 
+@app.on_message_ext_query 
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
+    card = AdaptiveCard( 
+        body=[ 
+            TextBlock(text=title, weight="Bolder", size="Large"), 
+            TextBlock(text=snippet, wrap=True, is_subtle=True), 
+        ], 
+        actions=[ 
+            OpenUrlAction(title="Open Link", url="https://example.com") 
+        ] 
+    ) 
+ 
+    attachment = card_attachment(AdaptiveCardAttachment(content=card)) 
+    preview = card_attachment(ThumbnailCardAttachment( 
+        content=ThumbnailCard(title=title, text=text))) 
+ 
+    return MessagingExtensionInvokeResponse( 
+        compose_extension=MessagingExtensionResult( 
+            type=MessagingExtensionResultType.RESULT, 
+            attachment_layout=AttachmentLayout.LIST, 
+            attachments=[MessagingExtensionAttachment( 
+                content_type=attachment.content_type, 
+                content=attachment.content, 
+                preview=preview 
+            )] 
+        ) 
+    )
 ```
 
 # [JSON](#tab/json)
