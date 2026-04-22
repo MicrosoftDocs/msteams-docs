@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 04/17/2026
+ms.date: 04/22/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -16,12 +16,16 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 As **prerequisites**, the application must have the following permissions:
 
-* Creating Conversations
+* For creating conversations
 
-| Task | Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
-|---------- |-------------|-------------|------|----------------|--------------|------------------|
-|Create Chat| Chat.Create | [Create chats](/graph/permissions-reference#chatcreate)| Allows the app to create chats without a signed-in user (application scenarios) / Allows the app to create chats on behalf of the signed-in user (delegated scenarios). | **Application and Delegated** | Application: Yes, Delegated: Yes | |
-|Create Team | Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All | | | | | |
+| Task | Scope name | Display name | Description |
+| ---- | ---------- | ------------ | ----------- |
+| Create Chat | Chat.Create | [Create chats](/graph/permissions-reference#chatcreate)| Allows the app to create chats without a signed-in user (application scenarios) / Allows the app to create chats on behalf of the signed-in user (delegated scenarios). |
+| Create Team | <ul> <li> Team.Create </li> <li> Directory.ReadWrite.All </li> <li> Group.ReadWrite.All</li> <li> Teamwork.Migrate.All </li> </ul> | <ul> <li> [Create teams](/graph/permissions-reference#teamcreate) </li> <li> [Read and write directory data](/graph/permissions-reference#directoryreadwriteall) </li> <li> [Read and write all groups](/graph/permissions-reference#groupreadwriteall) </li> <li> [Migrate teamwork data](/graph/permissions-reference#teamworkmigrateall) </li> </ul> [Create chat and channel messages with anyone's identity and with any timestamp](/graph/permissions-reference#teamworkmigrateall)</li> </ul> | <ul> <li> Allows the app to create teams either without a signed-in user (application) or on behalf of the signed-in user (delegated). </li> <li> Allows the app to read and write directory data (such as users and groups) either with a signed-in user (delegated) or without one (application), but does not allow deleting users or groups or resetting user passwords. </li> <li> Allows the app, without a signed-in user, to create and delete groups, read and update all group properties and memberships, and read and write conversations, and in delegated scenarios, allows the app to create groups, read group properties and memberships, enable group owners to manage their groups, and allow group members to update group content on behalf of the signed-in user. </li> <li> Allows the app to send chat and channel messages without a signed-in user, specifying the sender, backdating messages, and posting to any chat or channel in the organization. </li> </ul> |
+
+Create Team - Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
+Create Channel - Channel.Create.Group, Channel.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
+
 
 > [!NOTE]
 > Delegated authentication isn't supported.
