@@ -59,7 +59,7 @@ app.on('message.ext.query', async ({ activity }) => {
 
 # [Python](#tab/python)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-extensions/python/bot-message-extensions/main.py)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
 app = App() 
@@ -219,10 +219,10 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 
 ### Response example
 
+# [.NET](#tab/dotnet)
+
 * [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-# [.NET](#tab/dotnet)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
