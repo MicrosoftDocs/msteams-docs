@@ -101,9 +101,6 @@ As **prerequisites**, the application must have the following permissions:
     </tr>
   </tbody>
 </table>
-```
-
-
 
 
 Create Team - Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
