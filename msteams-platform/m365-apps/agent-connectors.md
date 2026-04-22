@@ -1,8 +1,8 @@
 ---
 title: Register MCP Servers as Agent Connectors for Microsoft 365
-description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents like the Channel Agent in Teams.
+description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 01/28/2026
+ms.date: 04/27/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -20,7 +20,7 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 
 - The network endpoint of your MCP server
 - Authentication and authorization configuration
-- Tool definitions (inline or dynamically discovered)
+- Tool definitions
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
 Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP.<!--, including the Channel Agent in Microsoft Teams.-->
@@ -35,7 +35,7 @@ Before you begin, ensure you have:
 
 ## Add the agent connector to your manifest
 
-First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-1.27&preserve-view=true) array at the root level of your app manifest.
+First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors) array at the root level of your app manifest.
 
 1. Open your Microsoft 365 app manifest (`manifest.json`) file.
 
@@ -55,7 +55,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
       "description": "Provides workflow automation and task management tools.",
       "toolSource": {
         "remoteMcpServer": {
-          "mcpServerUrl": "https://mcp.mycompany.com"
+          "mcpServerUrl": "https://mcp.example.com"
         }
       }
     }
@@ -71,12 +71,12 @@ For MCP servers, use **remoteMcpServer** unless your server runs locally within 
 
 Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer` object.
 
-1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-1.27&preserve-view=true), specify the `remoteMcpServer` endpoint:
+1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source), specify the `remoteMcpServer` endpoint:
 
     ````json
     "toolSource": {
       "remoteMcpServer": {
-        "mcpServerUrl": "https://mcp.mycompany.com"
+        "mcpServerUrl": "https://mcp.example.com"
       }
     }
     ````
@@ -100,7 +100,7 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 
 ````json
 "remoteMcpServer": {
-  "mcpServerUrl": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.example.com",
   "authorization": {
     "type": "OAuthPluginVault",
     "referenceId": "my-oauth-config"
@@ -149,7 +149,7 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 
 ````json
 "remoteMcpServer": {
-  "mcpServerUrl": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.example.com",
   "authorization": {
     "type": "ApiKeyPluginVault",
     "referenceId": "my-apikey"
