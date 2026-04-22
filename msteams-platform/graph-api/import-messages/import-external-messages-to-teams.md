@@ -46,7 +46,6 @@ As **prerequisites**, the application must have the following permissions:
         create chats on behalf of the signed‑in user (delegated scenarios).
       </td>
     </tr>
-
     <!-- Create Team : sub-rows -->
     <tr>
       <td rowspan="4">Create Team</td>
@@ -101,7 +100,6 @@ As **prerequisites**, the application must have the following permissions:
     </tr>
   </tbody>
 </table>
-
 
 Create Team - Team.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
 Create Channel - Channel.Create.Group, Channel.Create, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All
