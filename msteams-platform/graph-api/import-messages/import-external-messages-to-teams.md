@@ -90,7 +90,6 @@ As **prerequisites**, the application must have the following permissions:
         or channel in the organization.
       </td>
     </tr>
-</tr>
     <!-- Create Channel : sub-rows -->
     <tr>
       <td rowspan="4">Create Channel</td>
@@ -137,6 +136,7 @@ As **prerequisites**, the application must have the following permissions:
         Allows the app to create and delete groups; read and update all group properties,
         memberships, and conversations (application), and create groups; read group properties and memberships; allow group owners to manage groups and members to update group content (delegated).
       </td>
+    </tr>
     </tr>
     <tr>
       <td><code>Teamwork.Migrate.All</code></td>
