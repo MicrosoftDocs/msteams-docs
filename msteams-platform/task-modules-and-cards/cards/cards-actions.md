@@ -3,7 +3,7 @@ title: Adaptive Card actions in Teams SDK
 description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 04/10/2026
+ms.date: 04/22/2026
 ---
 
 # Card actions
@@ -54,6 +54,30 @@ var action = new ExecuteAction
 };
 ```
 
+# [TypeScript](#tab/typescript)
+
+The following code shows an example of an `Action.Execute` action in TypeScript:
+
+```typescript
+import { ExecuteAction } from '@microsoft/teams.cards';
+
+const action = new ExecuteAction({ title: 'Submit Feedback' })
+  .withData({ action: 'submit_feedback' })
+  .withAssociatedInputs('auto');
+```
+
+# [Python](#tab/python)
+
+The following code shows an example of an `Action.Execute` action in Python:
+
+```python
+from microsoft_teams.cards.core import ExecuteAction
+
+action = ExecuteAction(title="Submit Feedback") \
+    .with_data({"action": "submit_feedback"}) \
+    .with_associated_inputs("auto")
+```
+
 # [JSON](#tab/json)
 
 The following code shows an example of an `Action.Execute` action in JSON:
@@ -89,6 +113,28 @@ var action = new OpenUrlAction("https://adaptivecards.microsoft.com")
 {
     Title = "Learn More"
 };
+```
+
+# [TypeScript](#tab/typescript)
+
+The following code shows an example of an `Action.OpenUrl` action in TypeScript:
+
+```typescript
+import { OpenUrlAction } from '@microsoft/teams.cards';
+
+const action = new OpenUrlAction('https://adaptivecards.microsoft.com')
+  .withTitle('Learn More');
+```
+
+# [Python](#tab/python)
+
+The following code shows an example of an `Action.OpenUrl` action in Python:
+
+```python
+from microsoft_teams.cards.core import OpenUrlAction
+
+action = OpenUrlAction(url="https://adaptivecards.microsoft.com") \
+    .with_title("Learn More")
 ```
 
 # [JSON](#tab/json)
@@ -140,6 +186,39 @@ var card = new AdaptiveCard
 };
 ```
 
+# [TypeScript](#tab/typescript)
+
+The following code shows an example of grouping actions in TypeScript:
+
+```typescript
+import { ActionSet, ExecuteAction, OpenUrlAction } from '@microsoft/teams.cards';
+
+const actionSet = new ActionSet(
+  new ExecuteAction({ title: 'Submit Feedback' })
+    .withData({ action: 'submit_feedback' })
+    .withAssociatedInputs('auto'),
+  new OpenUrlAction('https://adaptivecards.microsoft.com')
+    .withTitle('Learn More')
+);
+```
+
+# [Python](#tab/python)
+
+The following code shows an example of grouping actions in Python:
+
+```python
+from microsoft_teams.cards.core import ActionSet, ExecuteAction, OpenUrlAction
+
+action_set = ActionSet(
+    actions=[
+        ExecuteAction(title="Submit Feedback")
+            .with_data({"action": "submit_feedback"}),
+        OpenUrlAction(url="https://adaptivecards.microsoft.com")
+            .with_title("Learn More")
+    ]
+)
+```
+
 # [JSON](#tab/json)
 
 The following code shows an example of grouping actions in JSON:
@@ -172,6 +251,8 @@ The following code shows an example of grouping actions in JSON:
 
 If you prefer to work with raw JSON, you can deserialize it into the SDK types:
 
+# [C#](#tab/csharp)
+
 ```csharp
 var actionJson = """
 {
@@ -182,6 +263,30 @@ var actionJson = """
 """;
 var action = OpenUrlAction.Deserialize(actionJson);
 ```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+import { IOpenUrlAction } from '@microsoft/teams.cards';
+
+const actionJson = {
+  type: 'Action.OpenUrl',
+  url: 'https://adaptivecards.microsoft.com',
+  title: 'Learn More',
+} as const satisfies IOpenUrlAction;
+```
+
+# [Python](#tab/python)
+
+```python
+action_json = {
+    "type": "Action.OpenUrl",
+    "url": "https://adaptivecards.microsoft.com",
+    "title": "Learn More",
+}
+```
+
+---
 
 ## Work with input values
 
@@ -370,6 +475,75 @@ private static AdaptiveCard CreateProfileCardWithValidation()
 }
 ```
 
+# [TypeScript](#tab/typescript)
+
+The following code shows an example of input validation in TypeScript:
+
+```typescript
+import {
+  AdaptiveCard,
+  NumberInput,
+  TextInput,
+  ActionSet,
+  ExecuteAction,
+} from '@microsoft/teams.cards';
+
+function createProfileCardInputValidation() {
+  const ageInput = new NumberInput({ id: 'age' })
+    .withLabel('Age')
+    .withIsRequired(true)
+    .withMin(0)
+    .withMax(120);
+
+  const nameInput = new TextInput({ id: 'name' })
+    .withLabel('Name')
+    .withIsRequired()
+    .withErrorMessage('Name is required');
+
+  const card = new AdaptiveCard(
+    ageInput,
+    nameInput,
+    new TextInput({ id: 'location' }).withLabel('Location'),
+    new ActionSet(
+      new ExecuteAction({ title: 'Save' })
+        .withData({ action: 'save_profile' })
+        .withAssociatedInputs('auto')
+    )
+  );
+
+  return card;
+}
+```
+
+# [Python](#tab/python)
+
+The following code shows an example of input validation in Python:
+
+```python
+from microsoft_teams.cards import AdaptiveCard, ActionSet, ExecuteAction, NumberInput, TextInput
+
+def create_profile_card_input_validation():
+    age_input = NumberInput(id="age").with_label("Age").with_is_required(True).with_min(0).with_max(120)
+    name_input = TextInput(id="name").with_label("Name").with_is_required(True).with_error_message("Name is required")
+
+    card = AdaptiveCard(
+        schema="http://adaptivecards.io/schemas/adaptive-card.json",
+        body=[
+            age_input,
+            name_input,
+            TextInput(id="location").with_label("Location"),
+            ActionSet(
+                actions=[
+                    ExecuteAction(title="Save")
+                        .with_data({"action": "save_profile"})
+                        .with_associated_inputs("auto")
+                ]
+            ),
+        ],
+    )
+    return card
+```
+
 # [JSON](#tab/json)
 
 The following code shows an example of input validation in JSON:
@@ -494,6 +668,8 @@ Universal Action submissions are delivered to your bot as `invoke` activities na
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 
+# [C#](#tab/csharp)
+
 ```csharp
 using System.Text.Json;
 using Microsoft.Teams.Api.Activities.Invokes.AdaptiveCards;
@@ -568,6 +744,147 @@ teams.OnAdaptiveCardAction(async context =>
 });
 ```
 
+# [TypeScript](#tab/typescript)
+
+```typescript
+import {
+  AdaptiveCardActionErrorResponse,
+  AdaptiveCardActionMessageResponse,
+} from '@microsoft/teams.api';
+import { App } from '@microsoft/teams.apps';
+
+// ...
+
+app.on('card.action', async ({ activity, send }) => {
+  const data = activity.value?.action?.data;
+
+  if (!data?.action) {
+    return {
+      statusCode: 400,
+      type: 'application/vnd.microsoft.error',
+      value: {
+        code: 'BadRequest',
+        message: 'No action specified',
+        innerHttpError: {
+          statusCode: 400,
+          body: { error: 'No action specified' },
+        },
+      },
+    } satisfies AdaptiveCardActionErrorResponse;
+  }
+
+  console.debug('Received action data:', data);
+
+  switch (data.action) {
+    case 'submit_feedback':
+      await send(`Feedback received: ${data.feedback}`);
+      break;
+
+    case 'create_task':
+      await send(
+        `Task created!\nTitle: ${data.title}\nPriority: ${data.priority}\nDue: ${data.due_date}`
+      );
+      break;
+
+    case 'save_profile':
+      await send(
+        `Profile saved!\nName: ${data.name}\nEmail: ${data.email}\nSubscribed: ${data.subscribe}`
+      );
+      break;
+
+    default:
+      return {
+        statusCode: 400,
+        type: 'application/vnd.microsoft.error',
+        value: {
+          code: 'BadRequest',
+          message: 'Unknown action',
+          innerHttpError: {
+            statusCode: 400,
+            body: { error: 'Unknown action' },
+          },
+        },
+      } satisfies AdaptiveCardActionErrorResponse;
+  }
+
+  return {
+    statusCode: 200,
+    type: 'application/vnd.microsoft.activity.message',
+    value: 'Action processed successfully',
+  } satisfies AdaptiveCardActionMessageResponse;
+});
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.api import (
+    AdaptiveCardInvokeActivity,
+    AdaptiveCardActionErrorResponse,
+    AdaptiveCardActionMessageResponse,
+    HttpError,
+    InnerHttpError,
+    AdaptiveCardInvokeResponse,
+)
+from microsoft_teams.apps import ActivityContext
+
+# ...
+
+@app.on_card_action
+async def handle_card_action(
+    ctx: ActivityContext[AdaptiveCardInvokeActivity],
+) -> AdaptiveCardInvokeResponse:
+    data = ctx.activity.value.action.data
+
+    if not data.get("action"):
+        return AdaptiveCardActionErrorResponse(
+            status_code=400,
+            type="application/vnd.microsoft.error",
+            value=HttpError(
+                code="BadRequest",
+                message="No action specified",
+                inner_http_error=InnerHttpError(
+                    status_code=400,
+                    body={"error": "No action specified"},
+                ),
+            ),
+        )
+
+    print("Received action data:", data)
+
+    if data["action"] == "submit_feedback":
+        await ctx.send(f"Feedback received: {data.get('feedback')}")
+    elif data["action"] == "create_task":
+        await ctx.send(
+            f"Task created!\nTitle: {data.get('title')}\nPriority: {data.get('priority')}\nDue: {data.get('due_date')}"
+        )
+    elif data["action"] == "save_profile":
+        await ctx.send(
+            f"Profile saved!\nName: {data.get('name')}\nEmail: {data.get('email')}\nSubscribed: {data.get('subscribe')}"
+        )
+    else:
+        return AdaptiveCardActionErrorResponse(
+            status_code=400,
+            type="application/vnd.microsoft.error",
+            value=HttpError(
+                code="BadRequest",
+                message="Unknown action",
+                inner_http_error=InnerHttpError(
+                    status_code=400,
+                    body={"error": "Unknown action"},
+                ),
+            ),
+        )
+
+    return AdaptiveCardActionMessageResponse(
+        status_code=200,
+        type="application/vnd.microsoft.activity.message",
+        value="Action processed successfully",
+    )
+```
+
+---
+
 > [!NOTE]
 > The `data` values come from JSON and need to be extracted using the helper method shown above to handle different JSON element types.
 
@@ -576,6 +893,8 @@ teams.OnAdaptiveCardAction(async context =>
 The following example shows a complete card with input fields and an action handler.
 
 ### Build the card
+
+# [C#](#tab/csharp)
 
 ```csharp
 using Microsoft.Teams.Cards;
@@ -644,7 +963,99 @@ private static AdaptiveCard CreateTaskFormCard()
 }
 ```
 
+# [TypeScript](#tab/typescript)
+
+```typescript
+import {
+  AdaptiveCard,
+  TextBlock,
+  TextInput,
+  ChoiceSetInput,
+  DateInput,
+  ActionSet,
+  ExecuteAction,
+} from '@microsoft/teams.cards';
+
+function createTaskFormCard() {
+  return new AdaptiveCard(
+    new TextBlock('Create New Task', {
+      size: 'Large',
+      weight: 'Bolder',
+    }),
+    new TextInput({ id: 'title' })
+      .withLabel('Task Title')
+      .withPlaceholder('Enter task title'),
+    new TextInput({ id: 'description' })
+      .withLabel('Description')
+      .withPlaceholder('Enter task details')
+      .withIsMultiline(true),
+    new ChoiceSetInput(
+      { title: 'High', value: 'high' },
+      { title: 'Medium', value: 'medium' },
+      { title: 'Low', value: 'low' }
+    )
+      .withId('priority')
+      .withLabel('Priority')
+      .withValue('medium'),
+    new DateInput({ id: 'due_date' })
+      .withLabel('Due Date')
+      .withValue(new Date().toISOString().split('T')[0]),
+    new ActionSet(
+      new ExecuteAction({ title: 'Create Task' })
+        .withData({ action: 'create_task' })
+        .withAssociatedInputs('auto')
+        .withStyle('positive')
+    )
+  );
+}
+```
+
+# [Python](#tab/python)
+
+```python
+from datetime import datetime
+from microsoft_teams.cards import (
+    AdaptiveCard, TextBlock, ActionSet, ExecuteAction,
+    Choice, ChoiceSetInput, DateInput, TextInput,
+)
+
+def create_task_form_card():
+    return AdaptiveCard(
+        schema="http://adaptivecards.io/schemas/adaptive-card.json",
+        body=[
+            TextBlock(text="Create New Task", weight="Bolder", size="Large"),
+            TextInput(id="title")
+                .with_label("Task Title")
+                .with_placeholder("Enter task title"),
+            TextInput(id="description")
+                .with_label("Description")
+                .with_placeholder("Enter task details")
+                .with_is_multiline(True),
+            ChoiceSetInput(choices=[
+                Choice(title="High", value="high"),
+                Choice(title="Medium", value="medium"),
+                Choice(title="Low", value="low"),
+            ]).with_id("priority").with_label("Priority").with_value("medium"),
+            DateInput(id="due_date")
+                .with_label("Due Date")
+                .with_value(datetime.now().strftime("%Y-%m-%d")),
+            ActionSet(
+                actions=[
+                    ExecuteAction(title="Create Task")
+                        .with_data({"action": "create_task"})
+                        .with_associated_inputs("auto")
+                        .with_style("positive")
+                ]
+            ),
+        ],
+    )
+```
+
+---
+
 ### Send the card
+
+# [C#](#tab/csharp1)
 
 ```csharp
 teams.OnMessage(async context =>
@@ -659,6 +1070,49 @@ teams.OnMessage(async context =>
     }
 });
 ```
+
+# [TypeScript](#tab/typescript1)
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+// ...
+
+app.on('message', async ({ send, activity }) => {
+  const text = activity.text?.toLowerCase() ?? '';
+
+  if (text.includes('form')) {
+    await send({ type: 'typing' });
+    const card = createTaskFormCard();
+    await send(card);
+  }
+});
+```
+
+# [Python](#tab/python1)
+
+```python
+from microsoft_teams.api import MessageActivity, TypingActivityInput
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    text = (ctx.activity.text or "").lower()
+
+    if "form" in text:
+        await ctx.reply(TypingActivityInput())
+        card = create_task_form_card()
+        await ctx.send(card)
+```
+
+---
+
+## Code samples
+
+|S.No.|Card| Description|.NET|Node.js|Python|Java|Manifest|
+|:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|------|
+|1|Bot Cards|This sample shows how to use the Teams SDK to send and handle various card types, including Adaptive Cards with interactive actions, in Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/python/bot-cards)|NA|NA|
+|2|Card Formatting|This sample demonstrates how to use the `conditionallyEnabled` property with `Action.Execute` to disable action buttons until required inputs are filled.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs/bot-cards)|NA|NA|NA|
 
 ## Next step
 
