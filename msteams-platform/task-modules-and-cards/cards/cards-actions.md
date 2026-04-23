@@ -253,7 +253,7 @@ The following code shows an example of grouping actions in JSON:
 
 If you prefer to work with raw JSON, you can deserialize it into the SDK types:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp2)
 
 ```csharp
 var actionJson = """
@@ -266,7 +266,7 @@ var actionJson = """
 var action = OpenUrlAction.Deserialize(actionJson);
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 ```typescript
 import { IOpenUrlAction } from '@microsoft/teams.cards';
@@ -278,7 +278,7 @@ const actionJson = {
 } as const satisfies IOpenUrlAction;
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 ```python
 action_json = {
@@ -296,7 +296,7 @@ action_json = {
 
 You can send a card and have it be associated with specific data. Set the `data` value to be sent back to the client so you can associate it with a particular entity.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp3)
 
 The following code shows an example of associating data with card actions in C#:
 
@@ -363,7 +363,7 @@ data["email"]       → "john@contoso.com"
 data["subscribe"]   → "true"
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 The following code shows an example of associating data with card actions in JSON:
 
@@ -670,7 +670,7 @@ Universal Action submissions are delivered to your bot as `invoke` activities na
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp4)
 
 ```csharp
 using System.Text.Json;
@@ -746,7 +746,7 @@ teams.OnAdaptiveCardAction(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript3)
 
 ```typescript
 import {
@@ -817,7 +817,7 @@ app.on('card.action', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 ```python
 from microsoft_teams.api import (
@@ -896,7 +896,7 @@ The following example shows a complete card with input fields and an action hand
 
 ### Build the card
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp5)
 
 ```csharp
 using Microsoft.Teams.Cards;
@@ -965,7 +965,7 @@ private static AdaptiveCard CreateTaskFormCard()
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript4)
 
 ```typescript
 import {
@@ -1012,7 +1012,7 @@ function createTaskFormCard() {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 ```python
 from datetime import datetime
