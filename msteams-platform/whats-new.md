@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 April**
 
-* ***April 27, 2026***: [Prompt starters are now generally available.](bots/how-to/conversations/prompt-suggestions)
+* ***April 27, 2026***: [Prompt starters are now generally available.](bots/how-to/conversations/prompt-suggestions.md)
 
 :::column-end:::
 :::row-end:::
