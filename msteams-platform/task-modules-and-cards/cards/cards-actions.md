@@ -35,7 +35,7 @@ The SDK provides builder helpers that abstract the underlying JSON. You can crea
 
 `Action.Execute` is the recommended action type for server-side processing. When a user selects an Execute action, the input values and any configured data are sent to your bot as a `card.action` activity.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp1)
 
 The following code shows an example of an `Action.Execute` action in C#:
 
@@ -56,7 +56,7 @@ var action = new ExecuteAction
 };
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript1)
 
 The following code shows an example of an `Action.Execute` action in TypeScript:
 
@@ -68,7 +68,7 @@ const action = new ExecuteAction({ title: 'Submit Feedback' })
   .withAssociatedInputs('auto');
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 The following code shows an example of an `Action.Execute` action in Python:
 
@@ -80,7 +80,7 @@ action = ExecuteAction(title="Submit Feedback") \
     .with_associated_inputs("auto")
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 The following code shows an example of an `Action.Execute` action in JSON:
 
@@ -104,7 +104,7 @@ The following code shows an example of an `Action.Execute` action in JSON:
 > [!NOTE]
 > When using `Action.OpenUrl`, make sure to include the domain of the target URL in the `validDomains` section of your app manifest. If the domain isn't listed, Teams displays the message **URL may lead to untrusted content**.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp2)
 
 The following code shows an example of an `Action.OpenUrl` action in C#:
 
@@ -117,7 +117,7 @@ var action = new OpenUrlAction("https://adaptivecards.microsoft.com")
 };
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 The following code shows an example of an `Action.OpenUrl` action in TypeScript:
 
@@ -128,7 +128,7 @@ const action = new OpenUrlAction('https://adaptivecards.microsoft.com')
   .withTitle('Learn More');
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 The following code shows an example of an `Action.OpenUrl` action in Python:
 
@@ -139,7 +139,7 @@ action = OpenUrlAction(url="https://adaptivecards.microsoft.com") \
     .with_title("Learn More")
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 The following code shows an example of an `Action.OpenUrl` action in JSON:
 
@@ -157,7 +157,7 @@ The following code shows an example of an `Action.OpenUrl` action in JSON:
 
 You can group multiple actions together using `ActionSet` within an Adaptive Card:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp3)
 
 The following code shows an example of grouping actions in C#:
 
@@ -188,7 +188,7 @@ var card = new AdaptiveCard
 };
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript3)
 
 The following code shows an example of grouping actions in TypeScript:
 
@@ -204,7 +204,7 @@ const actionSet = new ActionSet(
 );
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 The following code shows an example of grouping actions in Python:
 
@@ -221,7 +221,7 @@ action_set = ActionSet(
 )
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 The following code shows an example of grouping actions in JSON:
 
@@ -253,7 +253,7 @@ The following code shows an example of grouping actions in JSON:
 
 If you prefer to work with raw JSON, you can deserialize it into the SDK types:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp4)
 
 ```csharp
 var actionJson = """
@@ -266,7 +266,7 @@ var actionJson = """
 var action = OpenUrlAction.Deserialize(actionJson);
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript4)
 
 ```typescript
 import { IOpenUrlAction } from '@microsoft/teams.cards';
@@ -278,7 +278,7 @@ const actionJson = {
 } as const satisfies IOpenUrlAction;
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 ```python
 action_json = {
@@ -296,7 +296,7 @@ action_json = {
 
 You can send a card and have it be associated with specific data. Set the `data` value to be sent back to the client so you can associate it with a particular entity.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp5)
 
 The following code shows an example of associating data with card actions in C#:
 
@@ -363,7 +363,7 @@ data["email"]       → "john@contoso.com"
 data["subscribe"]   → "true"
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript5)
 
 The following code shows an example of associating data with card actions in TypeScript:
 
@@ -405,7 +405,7 @@ data.email       → "john@contoso.com"
 data.subscribe   → "true"
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python5)
 
 The following code shows an example of associating data with card actions in Python:
 
@@ -440,7 +440,7 @@ data["email"]       → "john@contoso.com"
 data["subscribe"]   → "true"
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 The following code shows an example of associating data with card actions in JSON:
 
@@ -495,7 +495,7 @@ The following code shows an example of associating data with card actions in JSO
 
 Input controls provide built-in validation. For more information, see the Adaptive Cards [input validation documentation](https://adaptivecards.microsoft.com/?topic=input-validation).
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp6)
 
 The following code shows an example of input validation in C#:
 
@@ -554,7 +554,7 @@ private static AdaptiveCard CreateProfileCardWithValidation()
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript6)
 
 The following code shows an example of input validation in TypeScript:
 
@@ -594,7 +594,7 @@ function createProfileCardInputValidation() {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python6)
 
 The following code shows an example of input validation in Python:
 
@@ -623,7 +623,7 @@ def create_profile_card_input_validation():
     return card
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json5)
 
 The following code shows an example of input validation in JSON:
 
@@ -747,7 +747,7 @@ Universal Action submissions are delivered to your bot as `invoke` activities na
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp7)
 
 ```csharp
 using System.Text.Json;
@@ -823,7 +823,7 @@ teams.OnAdaptiveCardAction(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript7)
 
 ```typescript
 import {
@@ -894,7 +894,7 @@ app.on('card.action', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python7)
 
 ```python
 from microsoft_teams.api import (
@@ -973,7 +973,7 @@ The following example shows a complete card with input fields and an action hand
 
 ### Build the card
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp8)
 
 ```csharp
 using Microsoft.Teams.Cards;
@@ -1042,7 +1042,7 @@ private static AdaptiveCard CreateTaskFormCard()
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript8)
 
 ```typescript
 import {
@@ -1089,7 +1089,7 @@ function createTaskFormCard() {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python8)
 
 ```python
 from datetime import datetime
@@ -1154,8 +1154,6 @@ teams.OnMessage(async context =>
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
-
-// ...
 
 app.on('message', async ({ send, activity }) => {
   const text = activity.text?.toLowerCase() ?? '';
