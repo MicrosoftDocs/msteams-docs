@@ -1523,6 +1523,10 @@
       {
         "source_path": "msteams-platform/resources/schema/localization-schema.md",
         "redirect_url": "/microsoft-365/extensibility/schema/loc-schema/root"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/add-power-virtual-agents-bot-to-teams.md",
+        "redirect_url": "/microsoft-copilot-studio/unified-authoring-conversion"
       }
     ]
 }

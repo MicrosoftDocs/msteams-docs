@@ -1,6 +1,5 @@
 ---
 title: Device capabilities - Overview
-author: surbhigupta
 description: Learn how to integrate native device capabilities, such as, location and media (camera, microphone, gallery, QR or barcode scanner) with Microsoft Teams app.
 ms.author: vikasalmal
 ms.localizationpriority: medium

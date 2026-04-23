@@ -1,8 +1,6 @@
 ---
 title: Debug Teams App
-author: surbhigupta 
 description: In this module, learn how to debug Teams app both locally and using Agents Playground, launch Teams app as web app, and about key features of Agents Toolkit.
-ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022

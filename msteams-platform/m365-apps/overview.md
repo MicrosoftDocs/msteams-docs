@@ -2,7 +2,7 @@
 title: Use Agents and Apps across Microsoft 365
 description: Learn how to extend Teams agents and apps across Microsoft 365 (running in Teams, Outlook, Word, Excel, PowerPoint and Microsoft 365 as application hosts).
 ms.date: 03/27/2026
-ms.author: mosdevdocs
+ms.author: rickki 
 author: rick-kirkham
 ms.topic: overview
 ms.localizationpriority: medium
