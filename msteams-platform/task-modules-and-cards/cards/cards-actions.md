@@ -3,7 +3,7 @@ title: Adaptive Card actions in Teams SDK
 description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 04/22/2026
+ms.date: 04/23/2026
 ---
 
 # Card actions
@@ -349,6 +349,83 @@ private static AdaptiveCard CreateProfileCard()
         }
     };
 }
+```
+
+When the user submits the card, the handler receives the input values merged with the action data:
+
+```text
+data["action"]      → "save_profile"
+data["entity_id"]   → "12345"
+data["name"]        → "John Doe"
+data["email"]       → "john@contoso.com"
+data["subscribe"]   → "true"
+```
+
+# [TypeScript](#tab/typescript)
+
+The following code shows an example of associating data with card actions in TypeScript:
+
+```typescript
+import {
+  AdaptiveCard,
+  TextInput,
+  ToggleInput,
+  ActionSet,
+  ExecuteAction,
+} from '@microsoft/teams.cards';
+
+function editProfileCard() {
+  const card = new AdaptiveCard(
+    new TextInput({ id: 'name' }).withLabel('Name').withValue('John Doe'),
+    new TextInput({ id: 'email', label: 'Email', value: 'john@contoso.com' }),
+    new ToggleInput('Subscribe to newsletter').withId('subscribe').withValue('false'),
+    new ActionSet(
+      new ExecuteAction({ title: 'Save' })
+        .withData({
+          action: 'save_profile',
+          entity_id: '12345',
+        })
+        .withAssociatedInputs('auto')
+    )
+  );
+
+  return card;
+}
+```
+
+When the user submits the card, the handler receives the input values merged with the action data:
+
+```text
+data.action      → "save_profile"
+data.entity_id   → "12345"
+data.name        → "John Doe"
+data.email       → "john@contoso.com"
+data.subscribe   → "true"
+```
+
+# [Python](#tab/python)
+
+The following code shows an example of associating data with card actions in Python:
+
+```python
+from microsoft_teams.cards import AdaptiveCard, ActionSet, ExecuteAction
+from microsoft_teams.cards.core import TextInput, ToggleInput
+
+profile_card = AdaptiveCard(
+    schema="http://adaptivecards.io/schemas/adaptive-card.json",
+    body=[
+        TextInput(id="name").with_label("Name").with_value("John Doe"),
+        TextInput(id="email", label="Email", value="john@contoso.com"),
+        ToggleInput(title="Subscribe to newsletter").with_id("subscribe").with_value("false"),
+        ActionSet(
+            actions=[
+                ExecuteAction(title="Save")
+                    .with_data({"action": "save_profile", "entity_id": "12345"})
+                    .with_associated_inputs("auto"),
+            ]
+        ),
+    ],
+)
 ```
 
 When the user submits the card, the handler receives the input values merged with the action data:
