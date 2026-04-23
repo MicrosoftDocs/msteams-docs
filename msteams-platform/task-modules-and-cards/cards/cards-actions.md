@@ -6,6 +6,8 @@ ms.topic: conceptual
 ms.date: 04/23/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Card actions
 
 [!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
