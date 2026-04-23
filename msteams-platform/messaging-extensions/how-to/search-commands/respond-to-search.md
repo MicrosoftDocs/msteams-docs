@@ -3,7 +3,7 @@ title: Respond to Search Command in Teams
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/22/2025
+ms.date: 04/23/2026
 ms.localizationpriority: medium
 ---
 # Respond to search command
