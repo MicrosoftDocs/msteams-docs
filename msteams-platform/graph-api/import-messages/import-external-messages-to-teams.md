@@ -42,7 +42,7 @@ As **prerequisites**, the application must have the following permissions:
     </tr>
     <!-- Create Team : sub-rows -->
     <tr>
-      <td rowspan="4">Create Team</td>
+      <td rowspan="5">Create Team</td>
       <td><code>Team.Create</code></td>
       <td>
         <a href="/graph/permissions-reference#teamcreate">Create teams</a>
