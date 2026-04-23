@@ -13,7 +13,7 @@ Microsoft Teams supports single sign-on (SSO), which allows an agent or app to s
 
 For an agent or app that interacts with the user in a chat, team, or channel, SSO authentication manifests as an Adaptive Card. The user can interact with the card to invoke the Microsoft Entra consent flow. Agents Toolkit helps you to add authentication to your agents and apps.
 
-### Use SDKs
+### SDK options agents and apps authentication
 
 Based on how you distribute your agent or app, using one of the following SDKs:
 
