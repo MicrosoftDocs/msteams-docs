@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/22/2026
+ms.date: 04/23/2026
 ---
 # Create and send dialogs
 
