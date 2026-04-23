@@ -127,6 +127,19 @@ You must ensure to meet the following guidelines for agents:
 
 [Back to top](#validation-guidelines-for-agents)
 
+## Agent to Agent Communication
+
+For utilising `worker_agents` property in your Declarative agent manifest, ensure [*Must fix*]
+
+* Only declarative agents can be referenced within `worker_agent` node of the manifest. Custom engine agents are currently not supported.
+* The description and disclaimer must clearly list all referenced worker agents and explicitly instruct users to acquire them where required.
+* The agent must provide meaningful standalone value, independent of any worker agents. This value must be clearly described in the agent description.
+* Each referenced worker agent must independently meet the minimum value bar and provide meaningful functionality on its own.
+* Any prompt that depends on a worker agent must fail gracefully if the worker agent has not been acquired.
+* If a parent agent references a worker agent published by a different publisher, the parent agent publisher remains responsible for handling integration issues, user experience gaps, and graceful failure behavior.
+
+[Back to top](#validation-guidelines-for-agents)
+
 ## Screenshots
 
 You must ensure to meet the following guidelines for agents:
@@ -292,9 +305,9 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 * Action taken by a user must be correctly reflected in third-party service. [*Must fix*]
 * Modification requests by the user prior to confirmation of the action must be honored. [*Must fix*]
 * Highly consequential tasks such as bulk delete mustn't be supported. [*Good-to-fix*]
-* The declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [*Must fix*]
+* For consequential actions, the declarative agent must provide confirmation prompts aligned with user-initiated actions, using clear language that explicitly seeks the user's permission. [*Must fix*]
 
-   Confirmation prompt can be set by using `body` property in the `Confirmation` object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
+   Confirmation body can be set by using `body` property in the `Confirmation` object in the function's Function capabilities object in the manifest. For more information, see [customizing confirmation text](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#customizing-confirmation-text).
 
    | Pass example | Fail example |
    | --- | --- |
@@ -302,24 +315,17 @@ For action scenarios, agents must share user disclosure and seek user confirmati
    | For a function that creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Doesn't seek permission |
    | For a function that creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Doesn't seek permission |
 
-* Consequential actions (Create, Update, or Delete API calls) must require explicit user permission before execution. To achieve this, for
+* Consequential actions that mutate a system must require explicit user permission before execution. To achieve this, for
   * Plugin action, `isConsequential` flag should be set to ‘true’ for such calls
   * MCP Server action, `readOnlyHint` annotation should be set to ‘false’ for such calls
+  * Obtaining user confirmation via a custom built CTA that clearly informs users about the action being performed
 
   For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
-   | Operation type | Actions | Expected value for `isConsequential` flag |
-   | --- | --- | --- |
-   | Create | Consequential | true |
-   | Read | Non-consequential | false or true |
-   | Update | Consequential | true |
-   | Delete | Consequential | true |
-
    | Command description | Consequential function? | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
+   | Returns a list of quote recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
    | Returns a list of meditation recommendations based on the user's preferences. | No | false or true |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -418,6 +424,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
   * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
 
 * An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
+
+* Agents must implement safeguards to prevent attacks that attempt to manipulate or override system instructions, safety controls, or developer defined behavior.
 
 ## Graceful error handling
 
