@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: vikasalmal
 ms.owner: slamba
-ms.date: 04/10/2026
+ms.date: 04/23/2026
 ---
 # Link unfurling
 
@@ -366,7 +366,7 @@ To get your app ready for zero install link unfurling, follow these steps:
          }
       },
       "value":{
-         "url":"https://test.test.com/test"
+         "url":"https://example.com/test"
       },
       "locale":"en-US",
       "localTimezone":"America/Los_Angeles"
