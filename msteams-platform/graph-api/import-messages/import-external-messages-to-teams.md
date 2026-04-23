@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 04/22/2026
+ms.date: 04/23/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -642,7 +642,6 @@ For existing channels or chats already in migration mode, use the `completeMigra
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/completeMigration
- 
 ```
 
 ### Response
@@ -654,7 +653,7 @@ HTTP/1.1 204 NoContent
 ### Request (complete existing chat migration)
 
 ```HTTP
-POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration 
+POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration
 ```
 
 ### Response
