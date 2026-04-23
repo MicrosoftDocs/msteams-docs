@@ -45,7 +45,7 @@ This section explains how to connect Microsoft Entra ID to your TeamsFx project,
 ## Create access as user scope for Microsoft Entra app (optional)
 
 > [!NOTE]
-> You can skip this part if your M365 account has permission to update the Microsoft Entra app. We'll create the scope for you. This step can be automated by the `aadApp/update` action.
+> You can skip this part if your Microsoft 365 account has permission to update the Microsoft Entra app. Agents Toolkit creates the scope for the app. This step can be automated by the `aadApp/update` action.
 
 1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**, and following the given steps:
 
