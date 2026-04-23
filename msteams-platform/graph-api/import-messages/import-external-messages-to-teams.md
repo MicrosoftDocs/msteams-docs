@@ -125,6 +125,8 @@ As **prerequisites**, the application must have the following permissions:
         or delegated scenarios, but does not allow deleting users or groups, or resetting
         user passwords.
       </td>
+      </tr>
+    <tr>
       <td><code>Group.ReadWrite.All</code></td>
       <td>
         <a href="/graph/permissions-reference#groupreadwriteall">
@@ -132,10 +134,8 @@ As **prerequisites**, the application must have the following permissions:
         </a>
       </td>
       <td>
-        - Application: create and delete groups; read and update all group properties,
-        memberships, and conversations.<br><br>
-        - Delegated: create groups; read group properties and memberships; allow group
-        owners to manage groups and members to update group content.
+        Allows the app to create and delete groups; read and update all group properties,
+        memberships, and conversations (application), and create groups; read group properties and memberships; allow group owners to manage groups and members to update group content (delegated).
       </td>
     </tr>
     <tr>
