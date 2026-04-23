@@ -1134,7 +1134,7 @@ def create_task_form_card():
 
 ### Send the card
 
-# [C#](#tab/csharp1)
+# [C#](#tab/csharp9)
 
 ```csharp
 teams.OnMessage(async context =>
@@ -1150,7 +1150,7 @@ teams.OnMessage(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript1)
+# [TypeScript](#tab/typescript9)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -1166,7 +1166,7 @@ app.on('message', async ({ send, activity }) => {
 });
 ```
 
-# [Python](#tab/python1)
+# [Python](#tab/python9)
 
 ```python
 from microsoft_teams.api import MessageActivity, TypingActivityInput
