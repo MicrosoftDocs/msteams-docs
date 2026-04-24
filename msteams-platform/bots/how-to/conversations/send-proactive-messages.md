@@ -97,7 +97,7 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.Send()` method, and the `conversationId` and `tenantId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.Send()` method, and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
@@ -182,7 +182,7 @@ To update or delete a proactive message sent by a notification only bot:
 
 1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
 
-1. Use `context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity)` or `context.Api.Conversations.Activities.UpdateAsync(...)` methods to update or delete the original message.
+1. Use `context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity)` or `context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId)` methods to update or delete the original message.
 
 ### Scheduled messages
 
