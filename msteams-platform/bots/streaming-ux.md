@@ -9,12 +9,11 @@ ms.localizationpriority: high
 
 # Stream bot messages
 
->[!NOTE]
+> [!NOTE]
 >
-> Streaming bot message is available:
->
-> - only for one-on-one chats.
-> - is generally available on web, desktop, and mobile.
+> Streaming bot messages are supported only in one-on-one chats.
+> Teams supports only one concurrent streaming response per chat at a time.
+> Streaming is generally available on web, desktop, and mobile.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
