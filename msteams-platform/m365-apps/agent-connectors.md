@@ -90,7 +90,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
-- **DynamicClientRegistration**: Dynamic OAuth client creation
+- **DynamicClientRegistration**: Dynamic OAuth client registration
 
 ### Use OAuth authentication
 
@@ -131,7 +131,7 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Configure how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported. Use inline definitions if your toolset is static.<!-- or dynamic discovery if your toolset changes frequently.-->
+Configure how Microsoft 365 agents discover the tools your MCP server provides. <!--Currently only inline tool definitions are supported. Use inline definitions if your toolset is static. or dynamic discovery if your toolset changes frequently.-->
 <!--
 ### Enable dynamic tool discovery
 
@@ -141,7 +141,6 @@ You can enable dynamic tool discovery by omitting the [mcpToolDescription](/micr
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
 -->
-### Use inline tool definitions
 
 For static toolsets that don't change frequently, add an `mcpToolDescription` object with your tool definitions:
 
