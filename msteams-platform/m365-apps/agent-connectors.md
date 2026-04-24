@@ -63,9 +63,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 }
 ````
 
-Each connector must have a unique `id` that distinguishes it from other connectors in your manifest. The `toolSource` object must include exactly one of `remoteMcpServer`, `localMcpServer`, or `plugin`.
-
-For MCP servers, use **remoteMcpServer** unless your server runs locally within the Teams client environment (advanced scenarios).
+Each connector must have a unique `id` that distinguishes it from other connectors in your manifest.<!-- The `toolSource` object must include exactly one of `remoteMcpServer`, `localMcpServer`, or `plugin`.For MCP servers, use **remoteMcpServer** unless your server runs locally within the Teams client environment (advanced scenarios).-->
 
 ## Configure the remote MCP server endpoint
 
@@ -92,7 +90,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
-<!--- **DynamicClientRegistration**: Dynamic OAuth client creation-->
+- **DynamicClientRegistration**: Dynamic OAuth client creation
 
 ### Use OAuth authentication
 
@@ -156,7 +154,7 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
   },
   "mcpToolDescription": {
     "description": {
-      // Tool definitions following MCP protocol schema
+      "file": "toolDescription.json"
     }
   }
 }
@@ -164,7 +162,7 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 
 The `description` object must match the schema returned by your MCP server's `tools/list` response.
 
-## Example schema
+<!--## Example schema
 
 The following is an example of a complete agent connector configuration, using *OAuthPluginVault* authentication and inline tool definitions:
 
@@ -221,7 +219,7 @@ The following is an example of a complete agent connector configuration, using *
 }
 ```
 
-This configuration is sufficient for Microsoft 365 agents<!--, including the Channel Agent in Teams,--> to establish a connection and discover tools from your MCP server.
+This configuration is sufficient for Microsoft 365 agents<!--, including the Channel Agent in Teams, to establish a connection and discover tools from your MCP server.-->
 
 ## Validate your configuration
 
