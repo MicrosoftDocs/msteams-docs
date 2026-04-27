@@ -67,7 +67,7 @@ In the `./appPackages/manifest.json` file, add the following code:
     ```
 
     > [!NOTE]
-    > Replace the `name` value with the desired name for your Teams app.
+    > Replace the `name` value with the desired name for your Teams agent or app.
 
     For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
 
@@ -107,7 +107,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 ## Update source code
 
-With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams app.
+With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams agent or app.
 
 ### Vanilla JavaScript
 
