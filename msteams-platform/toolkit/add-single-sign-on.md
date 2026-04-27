@@ -22,7 +22,7 @@ Based on how you distribute your agent or app, use one of the following SDKs:
 - Use [Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/overview) to add SSO authentication to your Teams agents.
 - Use [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/microsoft-authentication-library-configuration-options) to add authentication to agents that extend across Microsoft 365.
 
-### Add SSO to your Teams agents and app using Agents Toolkit
+### View the how-to guide for adding SSO using Microsoft Agents Toolkit
 
 Follow these steps to add SSO authentication using Agents Toolkit:
 
