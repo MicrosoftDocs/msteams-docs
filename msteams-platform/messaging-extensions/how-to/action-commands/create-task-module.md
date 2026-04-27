@@ -515,7 +515,7 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
     # handle query 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
 {
@@ -625,7 +625,7 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
     print(f"Query: command={command_id}, query={query}")
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -859,7 +859,7 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
     )
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
  {​
