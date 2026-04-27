@@ -172,56 +172,37 @@ Your app must have the following permissions as a prerequisite to import message
     </tr>
   </thead>
   <tbody>
-<!-- Create Team : sub-rows -->
+<!-- Add Chat Member : sub-rows -->
 <tr>
-  <td rowspan="4">Create Team</td>
-  <td><code>Team.Create</code></td>
+  <td rowspan="4">Add Chat Member</td>
+  <td><code>Chat.Manage.Chat</code></td>
   <td>
-    <a href="/graph/permissions-reference#teamcreate">Create channels</a>
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">Add Chat Member</a>
   </td>
   <td>
-    Allows the app to create teams without a signed-in user
-    (application) or on behalf of the signed-in user (delegated).
+    Allows the app to manage the chat, the chat's members and grant access to the chat's data, without a signed-in user.
   </td>
 </tr>
 <tr>
-  <td><code>Directory.ReadWrite.All</code></td>
+  <td><code>Chat.ReadWrite.All</code></td>
   <td>
-    <a href="/graph/permissions-reference#directoryreadwriteall">
+    <a href="/graph/permissions-reference#chatreadwriteall">Read and write all chats</a>
       Read and write directory data
     </a>
   </td>
   <td>
-    Allows the app to read and write directory data (users and groups) in application
-    or delegated scenarios, but does not allow deleting users or groups, or resetting
-    user passwords.
+    Allows apps to read and write Microsoft Teams one‑to‑one, group, and channel chat messages (Application) without a signed‑in user and (Delegated) on behalf of a signed‑in user. Does not allow sending messages.
   </td>
 </tr>
 <tr>
-  <td><code>Group.ReadWrite.All</code></td>
+  <td><code>ChatMember.ReadWrite.All</code></td>
   <td>
-    <a href="/graph/permissions-reference#groupreadwriteall">
+    <a href="/graph/permissions-reference#chatmemberreadwriteall">
       Read and write all groups
     </a>
   </td>
   <td>
-    Allows the app to create and delete groups; read and update all group properties,
-    memberships, and conversations (application), and create groups; read group
-    properties and memberships; allow group owners to manage groups and members
-    to update group content (delegated).
-  </td>
-</tr>
-<tr>
-  <td><code>Teamwork.Migrate.All</code></td>
-  <td>
-    <a href="/graph/permissions-reference#teamworkmigrateall">
-      Migrate teamwork data
-    </a>
-  </td>
-  <td>
-    Allows the app to send chat and channel messages without a signed‑in user,
-    including specifying the sender, backdating messages, and posting to any chat
-    or channel in the organization.
+    Add and remove members from all chats, without a signed-in user. Delegated is not supported.
   </td>
 </tr>
 <!-- Create Channel : sub-rows -->
