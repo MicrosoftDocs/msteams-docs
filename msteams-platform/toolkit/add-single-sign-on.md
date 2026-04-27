@@ -51,3 +51,4 @@ Follow these steps to add SSO authentication using Agents Toolkit:
 
 - [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 - [Prepare Accounts to build your Teams app](tools-prerequisites.md#accounts-to-build-your-teams-agent-or-app)
+- [Configure your .NET agent to use OAuth](/microsoft-365/agents-sdk/agent-oauth-configuration-dotnet)
