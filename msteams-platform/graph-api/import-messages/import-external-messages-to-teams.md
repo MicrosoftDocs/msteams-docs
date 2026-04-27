@@ -174,7 +174,7 @@ Your app must have the following permissions as a prerequisite to import message
   <tbody>
 <!-- Add Chat Member : sub-rows -->
 <tr>
-  <td rowspan="4">Add Chat Member</td>
+  <td rowspan="3">Add Chat Member</td>
   <td><code>Chat.Manage.Chat</code></td>
   <td>
     <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">Add Chat Member</a>
@@ -205,40 +205,40 @@ Your app must have the following permissions as a prerequisite to import message
     Add and remove members from all chats, without a signed-in user. Delegated is not supported.
   </td>
 </tr>
-<!-- Create Channel : sub-rows -->
+<!-- Remove Chat Member : sub-rows -->
 <tr>
-  <td rowspan="5">Create Channel</td>
-  <td><code>Channel.Create</code></td>
+  <td rowspan="2">Remove Chat Member</td>
+  <td><code>Chat.Manage.Chat</code></td>
+<tr>
   <td>
-    <a href="/graph/permissions-reference#channelcreate">Create channels</a>
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">Remove Chat Member</a>
   </td>
   <td>
-    Allows the app to create channels in any team, without a signed-in user
-    (application) or on behalf of the signed-in user (delegated).
+    Allows the app to manage the chat, the chat's members and grant access to the chat's data, without a signed-in user.
   </td>
-</tr>
 <tr>
-  <td><code>Channel.Create.Group (RSC)</code></td>
+  <td><code>ChatMember.ReadWrite.All</code></td>
   <td>
-    <a href="/graph/permissions-reference##resource-specific-consent-rsc-permissions">
-      Create channels in this team
+    <a href="/graph/permissions-reference#chatmemberreadwriteall">
+      Read and write all groups
     </a>
   </td>
   <td>
-    Allows the app to create channels in this team, without a signed-in user.
+    Add and remove members from all chats, without a signed-in user. Delegated is not supported.
   </td>
 </tr>
+<!-- Add Channel Member : sub-rows -->
 <tr>
-  <td><code>Directory.ReadWrite.All</code></td>
+  <td rowspan="2">Add Channel Member</td>
+  <td><code>ChannelMember.ReadWrite.Group</code></td>
+<tr>
   <td>
-    <a href="/graph/permissions-reference#directoryreadwriteall">
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
       Read and write directory data
     </a>
   </td>
   <td>
-    Allows the app to read and write directory data (users and groups) in application
-    or delegated scenarios, but does not allow deleting users or groups, or resetting
-    user passwords.
+    Read and write the members of channels of a team, without a signed-in user. Delegated is not supported.
   </td>
 </tr>
 <tr>
