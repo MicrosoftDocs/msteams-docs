@@ -7,7 +7,9 @@ ms.date: 04/15/2026
 ---
 # Add authentication to Teams agent or app
 
-Microsoft Teams SSO lets your app get a signed-in user token to call Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit (formerly Teams Toolkit) wraps key Microsoft Entra ID flows behind simple APIs, so you can add SSO to your Teams app with minimal code.
+Microsoft Teams supports single sign-on (SSO), which allows an agent or app to securely request an access token for the currently signed-in Teams user. This token can then be used to call Microsoft Graph and other protected APIs without prompting the user to sign in again.
+
+Microsoft 365 Agents Toolkit (formerly Teams Toolkit) simplifies this process by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs. The toolkit enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams agent or app using Agents Toolkit
 
