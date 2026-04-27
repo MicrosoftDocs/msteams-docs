@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/23/2026
+ms.date: 04/27/2026
 ---
 # Create and send dialogs
 
@@ -459,7 +459,7 @@ The following code section is an example of `fetchTask` request:
 
 # [C#/.NET](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -583,7 +583,7 @@ The following section is an example of the `value` object:
 
 # [C#/.NET](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -729,7 +729,7 @@ The following code section is an example to `fetchTask` response with an Adaptiv
 
 This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Teams SDK.
 
-* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest%20%20TextBlock:%20https://learn.microsoft.com/en-us/dotnet/api/microsoft.teams.cards.textblock?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -1075,7 +1075,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |:---------------------|:--------------|:---------|:--------|:--------|:--------|
 |Teams message extension action| This sample demonstrates how to create Action-Based Messaging Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
 |Message extension action preview| This sample app illustrates how to utilize action previews in Teams Messaging Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Bot Message Extensions | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)|NA
 
 ## Next step
 
