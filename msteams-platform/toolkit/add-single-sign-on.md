@@ -45,7 +45,7 @@ Follow these steps to add SSO authentication using Agents Toolkit:
 > [!NOTE]
 > When SSO is enabled, the Agents Toolkit automatically creates a dedicated Microsoft Entra app. This setup allows only users and guest accounts within the same directory as your M365 account to access your Teams agent or app.
 >
-> For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
+> For more information on supporting multitenant to update your TeamsFx project, see [multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
 
 ## See also
 
