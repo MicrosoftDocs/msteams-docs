@@ -476,11 +476,11 @@ teams.OnFetchTask(async (ctx) =>
 });
 ```
 
-# [JavaScript/Node.js](#tab/javascript1)
+# [TypeScript/Node.js](#tab/typescript1)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-```javascript
+```typescript
 import { App } from '@microsoft/teams.apps';
 
 // ...
@@ -594,11 +594,11 @@ teams.OnFetchTask(async (ctx) =>
 });
 ```
 
-# [JavaScript/Node.js](#tab/javascript2)
+# [TypeScript/Node.js](#tab/typescript2)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-```javascript
+```typescript
 app.on('message.ext.open', async ({ activity }) => {
     const messageText: string | undefined =
         activity.value?.messagePayload?.body?.content;
@@ -777,11 +777,11 @@ teams.OnFetchTask(async (ctx) =>
 });
 ```
 
-# [JavaScript/Node.js](#tab/javascript3)
+# [TypeScript/Node.js](#tab/typescript3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-```javascript
+```typescript
 import { cardAttachment } from '@microsoft/teams.api';
 import { App } from '@microsoft/teams.apps';
 import { AdaptiveCard } from '@microsoft/teams.cards';
@@ -999,9 +999,9 @@ teams.OnFetchTask(async (ctx) =>
             }
 ```
 
-# [JavaScript/Node.js](#tab/javascript4)
+# [TypeScript/Node.js](#tab/typescript4)
 
-```javascript
+```typescript
 app.on('message.ext.open', async ({ activity }) => {
   return {
     task: {
