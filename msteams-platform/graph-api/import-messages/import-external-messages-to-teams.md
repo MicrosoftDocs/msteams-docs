@@ -228,10 +228,9 @@ Your app must have the following permissions as a prerequisite to import message
     Add and remove members from all chats, without a signed‑in user. Delegated is not supported.
   </td>
 </tr>
-
-<!-- Add Channel Member : sub-rows -->
+<!-- Add Channel Member, Remove Channel Member : sub-rows -->
 <tr>
-  <td rowspan="2">Add Channel Member</td>
+  <td rowspan="2">Add Channel Member, Remove Channel Member</td>
   <td><code>ChannelMember.ReadWrite.Group (RSC)</code></td>
   <td>
     <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
@@ -243,21 +242,42 @@ Your app must have the following permissions as a prerequisite to import message
   </td>
 </tr>
 <tr>
-  <td><code>Group.ReadWrite.All</code></td>
+  <td><code>ChannelMember.ReadWrite.All</code></td>
   <td>
-    <a href="/graph/permissions-reference#groupreadwriteall">
-      Read and write all groups
+    <a href="/graph/permissions-reference#channelmemberreadwriteall">
+      	Add and remove members from all channels
     </a>
   </td>
   <td>
-    Allows the app to create, read, update, and delete groups; manage memberships, properties, and conversations without a signed-in user (application), and let signed-in users and group owners manage groups and content (delegated).
+    Allows the app to Add and remove channel members and change member roles without a signed-in user (Application) and on behalf of the signed-in user (Delegated).
+  </td>
+</tr>
+<!-- Add Team Member, Remove Team Member : sub-rows -->
+<tr>
+  <td rowspan="2">Add Team Member, Remove Team Member</td>
+  <td><code>TeamMember.ReadWriteNonOwnerRole.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teammemberreadwritenonownerroleall">
+      Add and remove members with non-owner role for all teams
+    </a>
+  </td>
+  <td>
+    Add and remove members from all teams without a signed-in user; cannot add or remove owners or promote a member to owner (Application) and on behalf of the signed-in user; cannot add or remove owners or promote a member to owner (Delegated).
+  </td>
+</tr>
+<tr>
+  <td><code>TeamMember.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teammemberreadwriteall">
+      	Add and remove members from teams
+    </a>
+  </td>
+  <td>
+    Add and remove members from teams and change member roles without a signed-in user across all teams (Application) and on behalf of the signed-in user (Delegated).
   </td>
 </tr>
 </tbody>
 </table>
-
-> [!NOTE]
-> Delegated authentication isn't supported.
 
 ## Supported channel and chat types
 
