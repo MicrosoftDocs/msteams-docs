@@ -3,7 +3,7 @@ title: Adaptive Card actions in Teams SDK
 description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 04/23/2026
+ms.date: 04/28/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -12,7 +12,7 @@ ms.date: 04/23/2026
 
 [!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
-Adaptive Cards support interactive elements through actions—buttons, links, and input submission triggers that respond to user interaction. You can use these to collect form input, trigger workflows, open URLs, and more.
+Adaptive Cards support interactive elements through actions buttons, links, and input submission triggers that respond to user interaction. You can use these to collect form input, trigger workflows, open URLs, and more.
 
 The Teams SDK provides builder helpers and server-side handlers that simplify working with card actions. The following action types are supported:
 
