@@ -994,9 +994,11 @@ teams.OnFetchTask(async (ctx) =>
             {
                 Title = "Example dialog",
                 Height = new Union<int, Size>(Size.Small),
-                Width  = new Union<int, Size>(Size.Small),
-                Url    = "https://contoso.com/msteams/taskmodules/newcustomer"
-            }
+                Width = new Union<int, Size>(Size.Small),
+                Url = "https://contoso.com/msteams/taskmodules/newcustomer"
+            })
+    };
+});
 ```
 
 # [TypeScript/Node.js](#tab/typescript4)
@@ -1033,7 +1035,7 @@ async def handle_fetch_task(
     )
 
     task = TaskModuleContinueResponse(value=card_info)
-    return MessagingExtensionActionInvokeResponse
+    return MessagingExtensionActionInvokeResponse(task=task)
 ```
 
 # [JSON](#tab/json4)
