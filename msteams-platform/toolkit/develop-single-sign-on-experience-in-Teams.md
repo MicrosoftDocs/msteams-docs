@@ -18,11 +18,11 @@ To enable SSO, configure your Teams agent and app as follows:
 
 * **Microsoft Entra app manifest**: Ensure to define URIs, including the URI that identifies the Microsoft Entra authentication app and the redirect URI that returns the token.
 
-* **Teams app manifest**: Connect your SSO app to your Teams app by incorporating the correct configuration.
+* **Teams app manifest**: Connect your Microsoft Entra authentication app to your Teams agent or app by incorporating the correct configuration.
 
-* **Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams app.
+* **Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams agent or app.
 
-* **SSO app information in Agents Toolkit configuration files**: Ensure the auth app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
+* **SSO app information in Agents Toolkit configuration files**: Ensure the Microsoft Entra authentication app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
 
 # [Tab app](#tab/tab-app)
 
