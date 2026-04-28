@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 04/27/2026
+ms.date: 04/28/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -175,7 +175,7 @@ Your app must have the following permissions as a prerequisite to import message
 <!-- Add Chat Member : sub-rows -->
 <tr>
   <td rowspan="3">Add Chat Member</td>
-  <td><code>Chat.Manage.Chat</code></td>
+  <td><code>Chat.Manage.Chat (RSC)</code></td>
   <td>
     <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">Add Chat Member</a>
   </td>
@@ -186,9 +186,7 @@ Your app must have the following permissions as a prerequisite to import message
 <tr>
   <td><code>Chat.ReadWrite.All</code></td>
   <td>
-    <a href="/graph/permissions-reference#chatreadwriteall">Read and write all chats</a>
-      Read and write directory data
-    </a>
+    <a href="/graph/permissions-reference#chatreadwriteall">Read the members of all chats, without a signed-in user. Delegated is noty supported</a>
   </td>
   <td>
     Allows apps to read and write Microsoft Teams one‑to‑one, group, and channel chat messages (Application) without a signed‑in user and (Delegated) on behalf of a signed‑in user. Does not allow sending messages.
@@ -198,7 +196,7 @@ Your app must have the following permissions as a prerequisite to import message
   <td><code>ChatMember.ReadWrite.All</code></td>
   <td>
     <a href="/graph/permissions-reference#chatmemberreadwriteall">
-      Read and write all groups
+      Add and remove members from all chats
     </a>
   </td>
   <td>
@@ -212,7 +210,7 @@ Your app must have the following permissions as a prerequisite to import message
   <td><code>Chat.Manage.Chat</code></td>
   <td>
     <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
-      Remove chat member
+      Manage this chat
     </a>
   </td>
   <td>
@@ -223,7 +221,7 @@ Your app must have the following permissions as a prerequisite to import message
   <td><code>ChatMember.ReadWrite.All</code></td>
   <td>
     <a href="/graph/permissions-reference#chatmemberreadwriteall">
-      Read and write all chat members
+      Add and remove members from all chats
     </a>
   </td>
   <td>
@@ -234,14 +232,14 @@ Your app must have the following permissions as a prerequisite to import message
 <!-- Add Channel Member : sub-rows -->
 <tr>
   <td rowspan="2">Add Channel Member</td>
-  <td><code>ChannelMember.ReadWrite.Group</code></td>
+  <td><code>ChannelMember.ReadWrite.Group (RSC)</code></td>
   <td>
     <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
       Read and write channel members
     </a>
   </td>
   <td>
-    Read and write the members of channels in a team, without a signed‑in user. Delegated is not supported.
+    Read and write the members of channels of a team.
   </td>
 </tr>
 <tr>
@@ -252,7 +250,7 @@ Your app must have the following permissions as a prerequisite to import message
     </a>
   </td>
   <td>
-    Create, update, and delete groups; manage group memberships and conversations (application), and manage groups and members on behalf of a signed‑in user (delegated).
+    Allows the app to create, read, update, and delete groups; manage memberships, properties, and conversations without a signed-in user (application), and let signed-in users and group owners manage groups and content (delegated).
   </td>
 </tr>
 </tbody>
