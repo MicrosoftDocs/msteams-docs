@@ -28,7 +28,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 ## Create a command menu for your bot
 
 > [!NOTE]
-> It's recommended that you create a command bot by following the [Teams SDK quickstart](/microsoftteams/platform/teams-sdk/getting-started/quickstart) and reviewing the [code basics](/microsoftteams/platform/teams-sdk/getting-started/code-basics). For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
+> We recommend creating a command bot by following the [Teams SDK quickstart](/microsoftteams/platform/teams-sdk/getting-started/quickstart) and reviewing the [code basics](/microsoftteams/platform/teams-sdk/getting-started/code-basics). For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
 
 ### Create a command menu for your bot using Developer Portal
 
@@ -162,7 +162,7 @@ You must handle menu commands in your bot code as you handle any message from us
 In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel). However, in group chat and channel conversations, `activity.text` can include the bot `@mention` (for example, `<at>Bot Name</at>`), so strip the bot mention before matching the command text, or use the activity's mention entities or an SDK helper for mention removal where available.
 
 > [!NOTE]
-> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
+> To handle the commands in code, they're sent to your bot as a regular message. Handle them as you would any other message from your users. The commands insert pre-configured text into the text box. After that, the user sends the text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
