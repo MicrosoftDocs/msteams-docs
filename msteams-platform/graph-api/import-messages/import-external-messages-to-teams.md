@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 04/23/2026
+ms.date: 04/28/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -14,9 +14,11 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Permissions
 
-As **prerequisites**, the application must have the following permissions:
+To import messages into Teams, your app needs the following permissions.
 
-* For creating conversations
+### Prerequisites
+
+#### Create Conversations
 
 <table>
   <thead>
@@ -40,6 +42,58 @@ As **prerequisites**, the application must have the following permissions:
         create chats on behalf of the signed‑in user (delegated).
       </td>
     </tr>
+<!-- Create Team : sub-rows -->
+<tr>
+  <td rowspan="4">Create Team</td>
+  <td><code>Team.Create</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teamcreate">Create channels</a>
+  </td>
+  <td>
+    Allows the app to create teams without a signed-in user
+    (application) or on behalf of the signed-in user (delegated).
+  </td>
+</tr>
+<tr>
+  <td><code>Directory.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#directoryreadwriteall">
+      Read and write directory data
+    </a>
+  </td>
+  <td>
+    Allows the app to read and write directory data (users and groups) in application
+    or delegated scenarios, but doesn't allow deleting users or groups, or resetting
+    user passwords.
+  </td>
+</tr>
+<tr>
+  <td><code>Group.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#groupreadwriteall">
+      Read and write all groups
+    </a>
+  </td>
+  <td>
+    Allows the app to create and delete groups; read and update all group properties,
+    memberships, and conversations (application), and create groups; read group
+    properties and memberships; allow group owners to manage groups and members
+    to update group content (delegated).
+  </td>
+</tr>
+<tr>
+  <td><code>Teamwork.Migrate.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teamworkmigrateall">
+      Migrate teamwork data
+    </a>
+  </td>
+  <td>
+    Allows the app to send chat and channel messages without a signed‑in user,
+    including specifying the sender, backdating messages, and posting to any chat
+    or channel in the organization.
+  </td>
+</tr>
 <!-- Create Channel : sub-rows -->
 <tr>
   <td rowspan="5">Create Channel</td>
@@ -72,7 +126,7 @@ As **prerequisites**, the application must have the following permissions:
   </td>
   <td>
     Allows the app to read and write directory data (users and groups) in application
-    or delegated scenarios, but does not allow deleting users or groups, or resetting
+    or delegated scenarios, but doesn't allow deleting users or groups, or resetting
     user passwords.
   </td>
 </tr>
@@ -106,9 +160,130 @@ As **prerequisites**, the application must have the following permissions:
 </tbody>
 </table>
 
+#### Manage Conversation Members
 
-> [!NOTE]
-> Delegated authentication isn't supported.
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Scope name</th>
+      <th>Display name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<!-- Add Chat Member : sub-rows -->
+<tr>
+  <td rowspan="3">Add Chat Member</td>
+  <td><code>Chat.Manage.Chat (RSC)</code></td>
+  <td>
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">Add Chat Member</a>
+  </td>
+  <td>
+    Allows the app to manage the chat, the chat's members and grant access to the chat's data, without a signed-in user.
+  </td>
+</tr>
+<tr>
+  <td><code>Chat.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#chatreadwriteall">Read the members of all chats, without a signed-in user. Delegated is noty supported</a>
+  </td>
+  <td>
+    Allows the app to read and write Microsoft Teams one‑to‑one, group, and channel chat messages (Application) without a signed‑in user and (Delegated) on behalf of a signed‑in user. Does not allow sending messages.
+  </td>
+</tr>
+<tr>
+  <td><code>ChatMember.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#chatmemberreadwriteall">
+      Add and remove members from all chats
+    </a>
+  </td>
+  <td>
+    Allows the app to add and remove members from all chats, without a signed-in user. Delegated is not supported.
+  </td>
+</tr>
+
+<!-- Remove Chat Member : sub-rows -->
+<tr>
+  <td rowspan="2">Remove Chat Member</td>
+  <td><code>Chat.Manage.Chat</code></td>
+  <td>
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
+      Manage this chat
+    </a>
+  </td>
+  <td>
+    Allows the app to manage a chat, including its members and data, without a signed‑in user.
+  </td>
+</tr>
+<tr>
+  <td><code>ChatMember.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#chatmemberreadwriteall">
+      Add and remove members from all chats
+    </a>
+  </td>
+  <td>
+    Allows the app to add and remove members from all chats without a signed‑in user. Delegated permissions aren't supported.
+  </td>
+</tr>
+<!-- Add Channel Member, Remove Channel Member : sub-rows -->
+<tr>
+  <td rowspan="2">Add Channel Member, Remove Channel Member</td>
+  <td><code>ChannelMember.ReadWrite.Group (RSC)</code></td>
+  <td>
+    <a href="/graph/permissions-reference#resource-specific-consent-rsc-permissions">
+      Read and write channel members
+    </a>
+  </td>
+  <td>
+    Allows the app to read and write the members of channels of a team.
+  </td>
+</tr>
+<tr>
+  <td><code>ChannelMember.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#channelmemberreadwriteall">
+      	Add and remove members from all channels
+    </a>
+  </td>
+  <td>
+    Allows the app to Add and remove channel members and change member roles without a signed-in user (Application) and on behalf of the signed-in user (Delegated).
+  </td>
+</tr>
+<!-- Add Team Member, Remove Team Member : sub-rows -->
+<tr>
+  <td rowspan="2">Add Team Member, Remove Team Member</td>
+  <td><code>TeamMember.ReadWriteNonOwnerRole.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teammemberreadwritenonownerroleall">
+      Add and remove members with non-owner role for all teams
+    </a>
+  </td>
+  <td>
+    Allows the app to add and remove members from all teams without a signed-in user. You can't add or remove owners or promote a member to owner (Application). On behalf of the signed-in user, you can't add or remove owners or promote a member to owner (Delegated).
+  </td>
+</tr>
+<tr>
+  <td><code>TeamMember.ReadWrite.All</code></td>
+  <td>
+    <a href="/graph/permissions-reference#teammemberreadwriteall">
+      	Add and remove members from teams
+    </a>
+  </td>
+  <td>
+    Allows the app to add and remove members from teams and change member roles without a signed-in user across all teams (Application) and on behalf of the signed-in user (Delegated).
+  </td>
+</tr>
+</tbody>
+</table>
+
+## Migration requests
+
+Migration APIs| Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
+|---------- |---------- |-------------|-------------|------|----------------|-----------|
+| <ul><li>StartChatMigration</li><li>StartChannelMigration</li><li>ImportChatMessage</li><li>ImportChannelMessage</li><li>CompleteChatMigration</li><li>CompleteChannelMigration</li></ul> | Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Allows yuor app to create and manage resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
 
 ## Supported channel and chat types
 
@@ -129,12 +304,12 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 
 The following table provides the content scope for existing channels and chats.
 
-|In-scope | Out-of-scope|
+|In scope | Out of scope|
 |----------|--------------------------|
-|Team (general)|Announcements|
-|Created time of the original message|Videos|
-|Inline images as part of the message|Stickers|
-|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Cross posts between channels|
+|Team (general)|Videos|
+|Created time of the original message|Cross posts between channels|
+|Inline images as part of the message||
+|Links to existing files in Microsoft 365, SharePoint Online (SPO) or OneDrive (OD)||
 |Messages with rich text||
 |Message reply chain||
 |High throughput processing||
@@ -144,6 +319,8 @@ The following table provides the content scope for existing channels and chats.
 |@mentions and emojis||
 |Code snippets||
 |Quotes||
+|Announcements||
+|Stickers||
 
 ## Prerequisites
 
@@ -171,115 +348,11 @@ You can import historical messages seamlessly into existing channels or chats by
 
 ## Step 1: Start migration
 
-To start migrating a user's message history from any third-party platform to Teams, you can use an existing channel or chat.
-
-<!-- ### Create a team and standard channel in migration mode
-
-In this scenario, create a new team and standard channel in `migrationMode` to proceed with importing existing messages. `migrationMode` is supported only for standard channels.
-
-#### Create a new team
-
-* [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the `createdDateTime` property.
-* Place the new team in `migrationMode` by setting `teamCreationMode` to `migration`.
-
-> [!NOTE]
-> The `createdDateTime` field is only populated for migrated teams or channels. If you update `createdDateTime` to a past timestamp, you can't move it to a future timestamp again.
-> `migrationMode` ensures that the original message timestamps are preserved, and prevents new messages from being sent when the migration is in progress.
-
-##### Request (create a team in migration mode)
-
-```HTTP
-POST https://graph.microsoft.com/v1.0/teams
-Content-Type:application/json
-
-{
-  "@microsoft.graph.teamCreationMode":"migration",
-  "template@odata.bind":"https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-  "displayName":"My Sample Team",
-  "description":"My Sample Team’s Description",
-  "createdDateTime":"2020-03-14T11:22:17.043Z"
-}
-```
-
-##### Response
-
-```HTTP
-HTTP/1.1 202 Accepted
-Location: /teams/{team-id}/operations/{operation-id}
-Content-Location: /teams/{team-id}
-```
-
-##### Error message
-
-```HTTP
-400 Bad Request
-```
-
-You can receive the error message in the following scenarios:
-
-* If `createdDateTime` is set for future.
-* If `createdDateTime` is correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.
-
-#### Create a new channel
-
-* [Create a new channel](/graph/api/channel-post?view=graph-rest-1.0&viewFallbackFrom=graph-rest-v1.0&tabs=http&preserve-view=true) with a back-in-time timestamp using the `createdDateTime` property of the channel resource.
-* Place the new channel in migration mode by setting `channelCreationMode` to `migration`.
-
-#### Request (create a channel in migration mode)
-
-```HTTP
-POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
-Content-Type: application/json
-
-{
-  "@microsoft.graph.channelCreationMode":"migration",
-  "displayName":"Architecture Discussion",
-  "description":"This channel is where we debate all future architecture plans",
-  "membershipType":"standard",
-  "createdDateTime":"2020-03-14T11:22:17.047Z"
-}
-```
-
-#### Response
-
-```HTTP
-HTTP/1.1 202 Accepted
-
-{
-   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
-   "id":"id-value",
-   "createdDateTime":null,
-   "displayName":"Architecture Discussion",
-   "description":"This channel is where we debate all future architecture plans",
-   "isFavoriteByDefault":null,
-   "email":null,
-   "webUrl":null,
-   "membershipType":null,
-   "moderationSettings":null
-}
-```
-
-#### Error message
-
-```HTTP
-400 Bad Request
-```
-
-You can receive the error message in the following scenarios:
-
-* If `createdDateTime` is set for future.
-* If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
-
-After you create a new team and standard channel, complete migration with the following steps:
-
-1. [Check migration status](#step-2-check-migration-status)
-1. [Import messages](#step-3-import-messages)
-1. [Complete migration mode](#step-4-complete-migration-mode)
-1. [Verify migration mode completion](#step-5-verify-migration-mode-completion) -->
+To start migrating a user's message history from any third-party platform to Teams, use an existing channel or chat.
 
 ### Start migration on existing channels and chats
 
-On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&preserve-view=true) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta&preserve-view=true)
+On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&preserve-view=true) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta&preserve-view=true).
 `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
@@ -292,7 +365,7 @@ To enable migration mode on existing channels, use the `startMigration` API.
 ##### Request (existing channel in migration mode)
 
 ```HTTP
-POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/startMigration
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels/{channel-id}/startMigration
 {
   "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
@@ -313,7 +386,7 @@ HTTP/1.1 204 No Content
 ##### Example
 
 ```HTTP
-POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
+POST https://graph.microsoft.com/v1.0/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
 {
   "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
@@ -327,7 +400,7 @@ To enable migration mode on existing chats, use the `startMigration` API.
 ##### Request (existing chat in migration mode)
 
 ```HTTP
-POST https://graph.microsoft.com/beta/chats/{chat-id}/startMigration
+POST https://graph.microsoft.com/v1.0/chats/{chat-id}/startMigration
 {
   "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
@@ -348,7 +421,7 @@ HTTP/1.1 204 No Content
 ##### Example
 
 ```HTTP
-POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
+POST https://graph.microsoft.com/v1.0/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
 
 { 
   "conversationCreationDateTime":"2024-01-01T00:00:00Z" 
@@ -373,10 +446,7 @@ Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is se
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 You can also verify that target chat or channel is in `migrationMode` state in Teams through a banner which says **Migration for this conversation is in progress. Messages may be out of order during this time**. <br>
-This banner will remain visible in the Teams UI until the migration is completed for the target chat or channel.
-
-> [!NOTE]
-> The `migrationMode` flag is currently available only in the beta version.
+This banner remains visible in the Teams UI until the migration is completed for the target chat or channel.
 
 ## Step 3: Import messages
 
@@ -528,72 +598,12 @@ HTTP/1.1 200 OK
 
 ## Step 4: Complete migration
 
-<!-- ### Complete new team and channel migration
-
-Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http&preserve-view=true)
-This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
-
-#### Request (end channel migration mode)
-
-```http
-POST https://graph.microsoft.com/beta/teams/team-id/channels/channel-id/completeMigration
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 NoContent
-```
-
-#### Request (end team migration mode)
-
-```http
-POST https://graph.microsoft.com/beta/teams/team-id/completeMigration
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 NoContent
-```
-
-### Add team members
-
-After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)
-
- You can also use Microsoft Graph to [add a single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
-
-#### Request (add member)
-
-```http
-POST https://graph.microsoft.com/beta/teams/{team-id}/members
-Content-type:application/json
-Content-length:30
-
-{
-   "@odata.type":"#microsoft.graph.aadUserConversationMember",
-   "roles":[],
-   "user@odata.bind":"https://graph.microsoft.com/beta/users/{user-id}"
-}
-```
-
-#### Response
-
-```http
-HTTP/1.1 204 No Content
-```
-
-Once you complete new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
-
-> [!NOTE]
-> The `migrationMode` flag is currently available only in the beta version, not in V1. -->
-
 For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http&preserve-view=true ). Completing the migration is necessary to ensure that all the users of chat or channel see the same messages. Not completing the migration can result into inconsistent view of the chat or channel on Microsoft Teams clients.
 
 ### Request (complete existing channel migration)
 
 ```HTTP
-POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels/{channel-id}/completeMigration
 ```
 
 ### Response
@@ -605,7 +615,7 @@ HTTP/1.1 204 NoContent
 ### Request (complete existing chat migration)
 
 ```HTTP
-POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration
+POST https://graph.microsoft.com/v1.0/chats/{chat-id}/completeMigration
 ```
 
 ### Response
