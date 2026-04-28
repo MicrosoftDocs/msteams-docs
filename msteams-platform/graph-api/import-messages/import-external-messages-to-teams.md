@@ -14,7 +14,7 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Permissions
 
-Your app must have the following permissions to import messages into Teams.
+To import messages into Teams, your app needs the following permissions.
 
 ### Prerequisites
 
@@ -63,7 +63,7 @@ Your app must have the following permissions to import messages into Teams.
   </td>
   <td>
     Allows the app to read and write directory data (users and groups) in application
-    or delegated scenarios, but does not allow deleting users or groups, or resetting
+    or delegated scenarios, but doesn't allow deleting users or groups, or resetting
     user passwords.
   </td>
 </tr>
@@ -126,7 +126,7 @@ Your app must have the following permissions to import messages into Teams.
   </td>
   <td>
     Allows the app to read and write directory data (users and groups) in application
-    or delegated scenarios, but does not allow deleting users or groups, or resetting
+    or delegated scenarios, but doesn't allow deleting users or groups, or resetting
     user passwords.
   </td>
 </tr>
@@ -189,7 +189,7 @@ Your app must have the following permissions to import messages into Teams.
     <a href="/graph/permissions-reference#chatreadwriteall">Read the members of all chats, without a signed-in user. Delegated is noty supported</a>
   </td>
   <td>
-    Allows apps to read and write Microsoft Teams one‑to‑one, group, and channel chat messages (Application) without a signed‑in user and (Delegated) on behalf of a signed‑in user. Does not allow sending messages.
+    Allows the app to read and write Microsoft Teams one‑to‑one, group, and channel chat messages (Application) without a signed‑in user and (Delegated) on behalf of a signed‑in user. Does not allow sending messages.
   </td>
 </tr>
 <tr>
@@ -200,7 +200,7 @@ Your app must have the following permissions to import messages into Teams.
     </a>
   </td>
   <td>
-    Add and remove members from all chats, without a signed-in user. Delegated is not supported.
+    Allows the app to add and remove members from all chats, without a signed-in user. Delegated is not supported.
   </td>
 </tr>
 
@@ -225,7 +225,7 @@ Your app must have the following permissions to import messages into Teams.
     </a>
   </td>
   <td>
-    Add and remove members from all chats, without a signed‑in user. Delegated is not supported.
+    Allows the app to add and remove members from all chats without a signed‑in user. Delegated permissions aren't supported.
   </td>
 </tr>
 <!-- Add Channel Member, Remove Channel Member : sub-rows -->
@@ -238,7 +238,7 @@ Your app must have the following permissions to import messages into Teams.
     </a>
   </td>
   <td>
-    Read and write the members of channels of a team.
+    Allows the app to read and write the members of channels of a team.
   </td>
 </tr>
 <tr>
@@ -262,7 +262,7 @@ Your app must have the following permissions to import messages into Teams.
     </a>
   </td>
   <td>
-    Add and remove members from all teams without a signed-in user; cannot add or remove owners or promote a member to owner (Application) and on behalf of the signed-in user; cannot add or remove owners or promote a member to owner (Delegated).
+    Allows the app to add and remove members from all teams without a signed-in user. You can't add or remove owners or promote a member to owner (Application). On behalf of the signed-in user, you can't add or remove owners or promote a member to owner (Delegated).
   </td>
 </tr>
 <tr>
@@ -273,17 +273,17 @@ Your app must have the following permissions to import messages into Teams.
     </a>
   </td>
   <td>
-    Add and remove members from teams and change member roles without a signed-in user across all teams (Application) and on behalf of the signed-in user (Delegated).
+    Allows the app to add and remove members from teams and change member roles without a signed-in user across all teams (Application) and on behalf of the signed-in user (Delegated).
   </td>
 </tr>
 </tbody>
 </table>
 
-## Migration Requests
+## Migration requests
 
 Migration APIs| Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
 |---------- |---------- |-------------|-------------|------|----------------|-----------|
-| <ul><li>StartChatMigration</li><li>StartChannelMigration</li><li>ImportChatMessage</li><li>ImportChannelMessage</li><li>CompleteChatMigration</li><li>CompleteChannelMigration</li></ul> | Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Creating and managing resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
+| <ul><li>StartChatMigration</li><li>StartChannelMigration</li><li>ImportChatMessage</li><li>ImportChannelMessage</li><li>CompleteChatMigration</li><li>CompleteChannelMigration</li></ul> | Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Allows yuor app to create and manage resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
 
 ## Supported channel and chat types
 
@@ -304,12 +304,12 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 
 The following table provides the content scope for existing channels and chats.
 
-|In-scope | Out-of-scope|
+|In scope | Out of scope|
 |----------|--------------------------|
-|Team (general)|Announcements|
-|Created time of the original message|Videos|
-|Inline images as part of the message|Stickers|
-|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Cross posts between channels|
+|Team (general)|Videos|
+|Created time of the original message|Cross posts between channels|
+|Inline images as part of the message||
+|Links to existing files in Microsoft 365, SharePoint Online (SPO) or OneDrive (OD)||
 |Messages with rich text||
 |Message reply chain||
 |High throughput processing||
@@ -319,6 +319,8 @@ The following table provides the content scope for existing channels and chats.
 |@mentions and emojis||
 |Code snippets||
 |Quotes||
+|Announcements||
+|Stickers||
 
 ## Prerequisites
 
@@ -346,11 +348,11 @@ You can import historical messages seamlessly into existing channels or chats by
 
 ## Step 1: Start migration
 
-To start migrating a user's message history from any third-party platform to Teams, you can use an existing channel or chat.
+To start migrating a user's message history from any third-party platform to Teams, use an existing channel or chat.
 
 ### Start migration on existing channels and chats
 
-On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&preserve-view=true) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta&preserve-view=true)
+On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&preserve-view=true) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta&preserve-view=true).
 `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
@@ -444,7 +446,7 @@ Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is se
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 You can also verify that target chat or channel is in `migrationMode` state in Teams through a banner which says **Migration for this conversation is in progress. Messages may be out of order during this time**. <br>
-This banner will remain visible in the Teams UI until the migration is completed for the target chat or channel.
+This banner remains visible in the Teams UI until the migration is completed for the target chat or channel.
 
 ## Step 3: Import messages
 
