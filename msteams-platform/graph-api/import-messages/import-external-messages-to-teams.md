@@ -279,6 +279,21 @@ Your app must have the following permissions as a prerequisite to import message
 </tbody>
 </table>
 
+## Migration Requests
+
+Migration APIs| Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
+|---------- |---------- |-------------|-------------|------|----------------|-----------|
+| 
+<ul>
+  <li>StartChatMigration</li>
+  <li>StartChannelMigration</li>
+  <li>ImportChatMessage</li>
+  <li>ImportChannelMessage</li>
+  <li>CompleteChatMigration</li>
+  <li>CompleteChannelMigration</li>
+</ul>
+| Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Creating and managing resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
+
 ## Supported channel and chat types
 
 Teams supports migrating external message to existing channels or chats. Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
