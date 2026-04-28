@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/24/2026
+ms.date: 04/28/2026
 ---
 
 # Create a commands menu
