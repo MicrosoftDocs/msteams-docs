@@ -467,8 +467,6 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    ---
 
----
-
 ### Debug your app
 
 To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
