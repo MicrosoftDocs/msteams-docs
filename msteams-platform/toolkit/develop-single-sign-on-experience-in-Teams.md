@@ -517,3 +517,5 @@ Teams [app manifest](/entra/identity-platform/reference-app-manifest) enables yo
 
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
+* [Authentication setup using Teams SDK](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview)
+* [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview)
