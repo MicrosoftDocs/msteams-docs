@@ -18,6 +18,10 @@ Ensure that you have a Teams agent or bot app deployed to Azure with the followi
 * An Entra ID with a secret used for agent or bot authentication.
 * A resource that hosts your bot app, such as Azure App Service, Azure Functions.
 
+## Update authentication method
+
+Choose one of the following to update authentication for your Teams agent or app.
+
 # [Update to certificate-based Authentication](#tab/certificate)
 
 To update your agent or bot app to use certificate-based authentication:

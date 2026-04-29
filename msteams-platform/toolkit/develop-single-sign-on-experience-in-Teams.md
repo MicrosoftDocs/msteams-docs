@@ -33,6 +33,8 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 ## Enable SSO for Teams apps
 
+Choose one of the following to enable SSO for your Teams app.
+
 # [Tab app](#tab/tab-app)
 
 To enable SSO for your tab app:
