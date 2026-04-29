@@ -6,6 +6,9 @@ ms.topic: overview
 ms.date: 04/20/2026
 ---
 
+<!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
+
 # Use certificate or MSI for agent or app authentication
 
 You can use certificate- or MSI-based authentication to validate your agent and bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
@@ -30,7 +33,7 @@ To update your agent or bot app to use certificate-based authentication:
 1. [Update the bot app code](#update-the-bot-app-code)
 1. [Delete bot secret](#delete-bot-secret)
 
-## Create and upload certificate in Azure AD
+### Create and upload certificate in Azure AD
 
 To use a certificate for agent or bot authentication:
 
@@ -63,7 +66,7 @@ To use a certificate for agent or bot authentication:
 
     :::image type="content" source="../assets/images/toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
-## Update the bot app code
+### Update the bot app code
 
 Follow the steps to update the bot app code:
 
@@ -98,7 +101,7 @@ Follow the steps to update the bot app code:
 
 1. Ensure you test your agent or bot to confirm the operation aligns with the updated authentication.
 
-## Delete bot secret
+### Delete bot secret
 
 Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
 
@@ -132,7 +135,7 @@ To update your agent or bot app to use MSI-based authentication:
 > [!NOTE]
 > The **Azure Bot** service ID and type can't be modified after creation.
 
-## Create bot service with MSI type in Azure AD
+### Create bot service with MSI type in Azure AD
 
 To create a new **Azure Bot** service with MSI type, follow these steps:
 
@@ -178,7 +181,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Add the managed identity that you've created.
 
-## Update your bot app code for MSI
+### Update your bot app code for MSI
 
 To update the bot app code for MSI, follow these steps:
 
@@ -217,7 +220,7 @@ To update the bot app code for MSI, follow these steps:
 
 1. Ensure you test your agent or bot to confirm its operation aligns with the updated authentication.
 
-## Delete bot secret
+### Delete bot secret
 
 Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
 
