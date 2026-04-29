@@ -3,18 +3,26 @@ title: Invoke and dismiss dialogs in the Teams SDK
 description: Learn how to invoke and dismiss dialogs using Adaptive Card actions in the Teams SDK (Teams AI Library), including the TaskInfo object, dialog sizing, and code samples.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/17/2026
+ms.date: 04/28/2026
 ---
 
 # Invoke and dismiss dialogs in the Teams SDK
 
-This article covers how to invoke and dismiss dialogs (formerly known as task modules) using the Teams SDK (Teams AI Library). In the Teams SDK, dialogs are invoked from Adaptive Card actions using the `TaskFetchAction` and handled through dialog open and submit events on the `App` class. The event registration varies by language: `app.on('dialog.open', ...)` and `app.on('dialog.submit', ...)` in TypeScript, `teamsApp.OnTaskFetch(...)` and `teamsApp.OnTaskSubmit(...)` in C#, and `@app.on_dialog_open` and `@app.on_dialog_submit` in Python. The dialog content can be an Adaptive Card or a URL-based webpage.
+This article covers how to invoke and dismiss dialogs (formerly known as task modules) using the Teams SDK (Teams AI Library). In the Teams SDK, dialogs are invoked from Adaptive Card actions using the `TaskFetchAction` and handled through dialog open and submit events on the `App` class.
+
+The event registration varies by language:
+
+* **TypeScript**: `app.on('dialog.open', ...)` and `app.on('dialog.submit', ...)`
+* **C#**: `teamsApp.OnTaskFetch(...)` and `teamsApp.OnTaskSubmit(...)`
+* **Python**: `@app.on_dialog_open` and `@app.on_dialog_submit`
+
+ The dialog content can be an Adaptive Card or a URL-based webpage.
 
 Dialogs can also be invoked through other approaches depending on your app architecture:
 
-* **From tabs using the TeamsJS client library** &mdash; see [Use dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-* **From bots using Bot Framework or deep links** &mdash; see [Use dialogs with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
-* **From a deep link URL** &mdash; see [Deep link to open a dialog](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog).
+* **From tabs using the TeamsJS client library.** See [Use dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* **From bots using Bot Framework or deep links.** See [Use dialogs with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+* **From a deep link URL.** See [Deep link to open a dialog](~/concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog).
 
 For migration guidance from Bot Framework to the Teams SDK, see [Migrate from BotBuilder](/microsoftteams/platform/teams-sdk/migrations/botbuilder/overview).
 
@@ -24,7 +32,7 @@ The following table summarizes how dialogs work in the Teams SDK:
 | --- | --- | --- |
 | Trigger the dialog | 1. Send an Adaptive Card with a `TaskFetchAction` button to the user. The action's `value` data specifies the type of dialog to open. <br/><br/> 2. When the user selects the button, Teams sends a task fetch invoke to your app. | 1. Send an Adaptive Card with a `TaskFetchAction` button to the user. <br/><br/> 2. When the user selects the button, Teams sends a task fetch invoke to your app. |
 | Handle the dialog open event | 3. In your dialog open handler, return a task module continue response containing dialog metadata (title, dimensions, and the Adaptive Card to display). In C#, use `TaskInfo` with a `ContinueTask` wrapper. In TypeScript, use `CardTaskModuleTaskInfo`. In Python, use `CardTaskModuleTaskInfo` within a `TaskModuleContinueResponse`. | 3. In your dialog open handler, return a task module continue response containing dialog metadata with a `url` property pointing to the webpage. The URL domain must be in the `validDomains` array in your app manifest. In C#, use `TaskInfo`. In TypeScript, use `UrlTaskModuleTaskInfo`. In Python, use `UrlTaskModuleTaskInfo` within a `TaskModuleContinueResponse`. |
-| Handle the dialog submission | 4. When the user presses an `Action.Submit` button, Teams sends a task submit invoke to your app with the form data. <br/><br/> 5. You can respond by: doing nothing (task completed), displaying a message (C#: `MessageTask`, TypeScript/Python: `TaskModuleMessageResponse`), or chaining to another dialog (C#: `ContinueTask`, TypeScript/Python: `TaskModuleContinueResponse`). | 4. The webpage calls the Teams JS client library to submit data back. Teams sends a task submit invoke to your app with the result. |
+| Handle the dialog submission | 4. When the user presses an `Action.Submit` button, Teams sends a task submit invoke to your app with the form data. <br/><br/> 5. You can respond by: <br/> &bull; Doing nothing (task completed) <br/> &bull; Displaying a message (C#: `MessageTask`, TypeScript/Python: `TaskModuleMessageResponse`) <br/> &bull; Chaining to another dialog (C#: `ContinueTask`, TypeScript/Python: `TaskModuleContinueResponse`) | 4. The webpage calls the Teams JS client library to submit data back. Teams sends a task submit invoke to your app with the result. |
 
 The next section describes the dialog metadata that defines the content and appearance of a dialog.
 
@@ -55,7 +63,7 @@ The next section specifies dialog sizing that enables the user to set the height
 
 The values of `width` and `height` set the height and width of the dialog in pixels. Depending on the size of the Teams window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
 
-If `width` and `height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
+If `width` and `height` are `small`, `medium`, or `large`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 
 :::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="dialog sizing example":::
 

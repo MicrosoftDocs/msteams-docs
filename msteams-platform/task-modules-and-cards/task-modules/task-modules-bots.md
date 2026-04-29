@@ -3,14 +3,14 @@ title: Use dialogs in Microsoft Teams bots
 description: Learn how to use dialogs with Microsoft Teams bots using the Teams SDK, invoke and submit dialogs with Adaptive Cards, and respond to dialog events.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 04/17/2026
+ms.date: 04/29/2026
 ---
 
 # Use dialogs with bots
 
-Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using `TaskFetchAction` buttons on Adaptive Cards. Dialogs are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using `TaskFetchAction` buttons on Adaptive Cards. Dialogs provide a focused interaction by opening a pop-up window for the user, making them ideal for complex forms or multi-step workflows.
 
-When a user selects a `TaskFetchAction` button on an Adaptive Card, a `task/fetch` invoke message is sent to your bot. Your bot handles this event and returns dialog content — either an Adaptive Card or a URL to a webpage — which Teams displays in a pop-up dialog window.
+When a user selects a `TaskFetchAction` button on an Adaptive Card, Teams sends a dialog open event to your app. Your app handles this event and returns dialog content, either an Adaptive Card or a URL to a webpage, which Teams displays in a pop-up dialog window. For more information, see [Creating Dialogs](/microsoftteams/platform/teams-sdk/in-depth-guides/dialogs/creating-dialogs?pivots=csharp).
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
@@ -55,10 +55,10 @@ The next section provides details on submitting the result of a dialog.
 
 ## Submit the result of a dialog
 
-When the user finishes with the dialog, the result is submitted back to the bot. How submission works depends on the dialog content type:
+When the user finishes with the dialog, the result is submitted back to your app. How submission works depends on the dialog content type:
 
-* **Adaptive Card (TaskInfo.card)**: The Adaptive Card body as filled in by the user is sent to the bot through a `task/submit` message when the user selects any `Action.Submit` button.
-* **Webpage (TaskInfo.url)**: The webpage calls `microsoftTeams.tasks.submitTask(formData)` from the TeamsJS client library to send data back to the bot.
+* **Adaptive Card (TaskInfo.card)**: When the user selects an `Action.Submit` button, Teams sends a dialog submit event to your app. Your dialog submit handler receives the form data from the card. In C#, use the `[TaskSubmit]` attribute. In TypeScript, use `app.on('dialog.submit', ...)`. In Python, use `@app.on_dialog_submit`.
+* **Webpage (TaskInfo.url)**: The webpage calls `microsoftTeams.tasks.submitTask(formData)` from the TeamsJS client library, which triggers the same dialog submit event in your app.
 
 ## Handle dialog submit events
 
