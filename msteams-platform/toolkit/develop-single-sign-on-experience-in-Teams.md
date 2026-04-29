@@ -35,6 +35,15 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 # [Tab app](#tab/tab-app)
 
+To enable SSO for your tab app:
+
+1. [Create Microsoft Entra app manifest](#create-microsoft-entra-app-manifest)
+1. [Update Teams app manifest](#update-teams-app-manifest)
+1. [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
+1. [Update source code](#update-source-code)
+1. [Debug your app](#debug-your-app)
+1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
+
 ### Create Microsoft Entra app manifest
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
@@ -165,13 +174,13 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 # [Bot or message extension app](#tab/message-extension-app)
 
-### Create Microsoft Entra app manifest
+### Create the Microsoft Entra app manifest
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
 
 1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
-### Update Teams app manifest
+### Update the Teams app manifest
 
 1. In the `./appPackages/manifest.json` file, add the following code:
 
@@ -327,7 +336,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
 
-   ### Update Source Code
+   ### Update the source code
 
    # [Bot](#tab/bot)
 
@@ -471,7 +480,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
 
-### Customize Microsoft Entra apps
+### Customize Microsoft Entra app
 
 Teams [app manifest](/entra/identity-platform/reference-app-manifest) enables you to customize different aspects of your app registration. You can update the manifest as required. See [edit Microsoft Entra manifest](AAD-manifest-customization.md) to:
 
