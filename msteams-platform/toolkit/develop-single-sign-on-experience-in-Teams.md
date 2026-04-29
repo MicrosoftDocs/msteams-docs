@@ -66,6 +66,8 @@ In the `./appPackages/manifest.json` file, add the following code:
 > [!NOTE]
 > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
+[Back to top](#create-microsoft-entra-app-manifest)
+
 ### Update Agents Toolkit configuration files
 
 1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
@@ -125,6 +127,8 @@ In the `./appPackages/manifest.json` file, add the following code:
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
+[Back to top](#create-microsoft-entra-app-manifest)
+
 ### Update source code
 
 With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams agent or app.
@@ -171,6 +175,8 @@ To update your source code, follow these steps:
 1. Import and add `InitTeamsFx` in `Welcome.*`.
 
 For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+
+[Back to top](#create-microsoft-entra-app-manifest)
 
 # [Bot or message extension app](#tab/message-extension-app)
 
@@ -226,6 +232,8 @@ To enable SSO for your bot or message extension app:
     ]
     ```
 
+[Back to top](#create-the-microsoft-entra-app-manifest)
+
 ### Update the Agents Toolkit configuration files
 
 1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
@@ -278,6 +286,8 @@ To enable SSO for your bot or message extension app:
       M365_AUTHORITY_HOST: ${{AAD_APP_OAUTH_AUTHORITY_HOST}}
       M365_APPLICATION_ID_URI: api://botid-${{BOT_ID}}
     ```
+
+[Back to top](#create-the-microsoft-entra-app-manifest)
 
 ### Update Infra configuration
 
@@ -346,6 +356,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         ```bash
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
+[Back to top](#create-the-microsoft-entra-app-manifest)
 
    ### Update the source code
 
@@ -484,6 +495,8 @@ To use the `teamsFx` tab or bot template, follow these steps:
             }
         ]
       ```
+
+    [Back to top](#create-the-microsoft-entra-app-manifest)
 
    ---
 
