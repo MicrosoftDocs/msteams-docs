@@ -168,7 +168,7 @@ Add hovercard experience for all agents and bots. Hovercards provide valuable an
 
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
-To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
+To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
 
 ## See also
 
