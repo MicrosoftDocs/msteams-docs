@@ -8,7 +8,7 @@ ms.date: 12/15/2022
 
 # Common reasons for app validation failure
 
-Most apps don't pass Microsoft Teams Store submission process due to issues during app development. The most common issues or reasons are addressed in this article to help you prepare your app better before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). To increase the likelihood of your app passing Teams Store submission process, avoid the common failure scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies).
+Apps can encounter common issues during the Microsoft Teams Store submission process. This article highlights those issues and provides guidance to help you prepare your app before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). To increase the likelihood of your app passing Teams Store submission process, avoid the common failure scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies).
 
 The following are the most common reasons for your app to get rejected:
 
