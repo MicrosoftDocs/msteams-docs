@@ -30,7 +30,7 @@ Choose one of the following to update authentication for your Teams agent or app
 To update your agent or bot app to use certificate-based authentication:
 
 1. [Create and upload certificate in Azure AD](#create-and-upload-certificate-in-azure-ad)
-1. [Update the bot app code](#update-the-bot-app-code)
+1. [Update the agent or bot app code](#update-the-agent-or-bot-app-code)
 1. [Delete bot secret](#delete-bot-secret)
 
 ### Create and upload certificate in Azure AD
@@ -126,10 +126,10 @@ Your agent or bot app now uses the certificate for authentication.
 
 # [Update to MSI-based authentication](#tab/msi)
 
-To update your agent or bot app to use MSI-based authentication:
+To update your agent or bot to use MSI-based authentication:
 
 1. [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
-1. [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
+1. [Update your agent or bot app code for MSI](#update-your-agent-or-bot-app-code-for-msi)
 1. [Delete bot secret](#delete-bot-secret-1)
 
 > [!NOTE]
@@ -181,12 +181,12 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Add the managed identity that you've created.
 
-### Update your bot app code for MSI
+### Update your agent or bot app code for MSI
 
-To update the bot app code for MSI, follow these steps:
+Follow the steps to update the code for the agent or bot:
 
-1. Open your agent or bot app project in Visual Studio or Visual Studio Code.
-1. Update your code.
+1. Open your agent or bot project in Visual Studio or Visual Studio Code.
+1. Update the code.
 
    # [JavaScript](#tab/js2)
 
