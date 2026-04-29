@@ -174,6 +174,17 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 # [Bot or message extension app](#tab/message-extension-app)
 
+To enable SSO for your bot or message extension app:
+
+1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
+1. [Update the Teams app manifest](#update-the-teams-app-manifest)
+1. [Update the Agents Toolkit configuration files](#update-the-agents-toolkit-configuration-files)
+1. [Update Infra configuration](#update-infra-configuration)
+1. [Update the source code](#update-the-source-code)
+1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
+1. [Debug your app](#debug-your-app)
+1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
+
 ### Create the Microsoft Entra app manifest
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
