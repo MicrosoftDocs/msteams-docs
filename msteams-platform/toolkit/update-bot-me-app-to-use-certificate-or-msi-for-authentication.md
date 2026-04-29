@@ -23,7 +23,7 @@ Ensure that you have a Teams agent or bot app deployed to Azure with the followi
 
 ## Update authentication method
 
-Choose one of the following to update authentication for your Teams agent or app.
+Choose one of the following to update authentication for your Teams agent or app:
 
 # [Update to certificate-based Authentication](#tab/certificate)
 
@@ -66,12 +66,12 @@ To use a certificate for agent or bot authentication:
 
     :::image type="content" source="../assets/images/toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
-### Update the bot app code
+### Update the agent or bot app code
 
-Follow the steps to update the bot app code:
+Follow the steps to update the code for the agent or bot:
 
-1. Open your bot app project in Visual Studio or Visual Studio Code.
-1. Update your code.
+1. Open your agent or bot project in Visual Studio or Visual Studio Code.
+1. Update the code:
 
    # [JavaScript](#tab/js1)
 
@@ -103,7 +103,7 @@ Follow the steps to update the bot app code:
 
 ### Delete bot secret
 
-Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
+Ensure that your agent or bot uses the certificate for authentication before you delete the bot secret.
 
 To delete the bot secret:
 
