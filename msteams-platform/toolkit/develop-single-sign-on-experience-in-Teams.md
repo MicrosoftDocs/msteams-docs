@@ -429,6 +429,8 @@ To use the `teamsFx` tab or bot template, follow these steps:
         });
         ```
 
+    [Back to top](#create-the-microsoft-entra-app-manifest)
+
    # [Message extension](#tab/messaging-extension)
 
    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
