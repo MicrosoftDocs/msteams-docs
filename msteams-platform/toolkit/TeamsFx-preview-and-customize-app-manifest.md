@@ -3,12 +3,12 @@ title: Customize app manifest in Agents Toolkit
 description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/13/2022
+ms.date: 04/30/2026
 ---
 
 # Customize app manifest
 
-App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
 To preview app manifest with actual content, Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
 
