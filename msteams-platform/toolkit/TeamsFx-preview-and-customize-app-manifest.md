@@ -8,9 +8,9 @@ ms.date: 04/30/2026
 
 # Customize app manifest
 
-The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default UAM file is available at `appPackage/manifest.json`. The UAM file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
-To preview the UAM with actual content, Agents Toolkit generates the preview UAM files under `appPackage/build` folder as shown in the following folder structure:
+To preview the manifest with actual content, Agents Toolkit generates the preview manifest files under `appPackage/build` folder as shown in the following folder structure:
 
 ```text
 └───appPackage
@@ -199,7 +199,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [App manifest schema](/microsoft-365/extensibility/schema)
+* [Microsoft 365 app manifest schema](/microsoft-365/extensibility/schema)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
 * [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
