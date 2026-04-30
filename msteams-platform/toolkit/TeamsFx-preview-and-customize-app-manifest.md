@@ -1,5 +1,5 @@
 ---
-title: Customize United App Manifest in Agents Toolkit
+title: Customize Unified App Manifest in Agents Toolkit
 description: Learn how to edit and preview united app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update agent or app.
 ms.localizationpriority: medium
 ms.topic: overview
