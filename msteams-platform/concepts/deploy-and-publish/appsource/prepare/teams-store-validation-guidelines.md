@@ -461,6 +461,8 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for AI functionality.":::
 
+* Apps must implement safeguards to prevent attacks that attempt to manipulate or override system instructions, safety controls, or developer defined behavior.
+
 #### Apps using facial recognition capabilities
 
 > [!NOTE]
@@ -1121,6 +1123,10 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
+* Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned. The bot must enable the users to know about the value proposition of the app. Bot must respond with various workflows it supports on asking for help or value it provides. Bot must provide a valid response even when the user hasn’t logged into the apps.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
+
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Must fix*]
   
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
@@ -1131,11 +1137,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
-* You must list at least one valid bot command in the `items.commands.title` section of the app manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the app manifest surface as prepopulated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Good-to-fix*]
-
 * Bot response mustn't contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Must fix*]
-
-* Bots must respond to user commands without displaying a continuous loading indicator. [*Must fix*]
 
 * Bot help command response mustn't redirect the user outside Teams. Bot help command response can redirect user to a canvas within the Teams app or provide a way forward response in an Adaptive Card. [*Must fix*]
 
@@ -1162,10 +1164,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Bots mustn't contain duplicate commands. [*Must fix*]
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Must fix*]
-
-* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged on to the app. [*Must fix*]
-
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
@@ -1207,7 +1205,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * The bot must enable the users to know about the value proposition of the app.
+  * Bot must respond with various workflows it supports on asking for help or value it provides.Bot must provide a valid response even when the user hasn’t logged into the apps. [*Must fix*]
   * Prompt starters or commands must be functional and return responses. [*Must fix*]
   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
