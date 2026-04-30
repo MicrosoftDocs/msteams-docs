@@ -4,7 +4,7 @@ author: zyxiaoyuer
 description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Agents Toolkit, app development lifecycle, and view app in Azure portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 02/06/2025
+ms.date: 04/30/2026
 ---
 
 # Edit Microsoft Entra manifest
@@ -18,7 +18,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Mic
 You can customize Microsoft Entra manifest template to update Microsoft Entra application.
 
 1. Open `aad.template.json` in your project.
-  
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
@@ -27,7 +27,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Add an application permission</summary>
 
-     If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
+     If the Teams agent or app requires more permissions to call an API with additional permissions, you must update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
 
     ```JSON
     "requiredResourceAccess": [
@@ -89,13 +89,13 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      ```
 
-     `preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
+     `preAuthorizedApplications.appId` property is used for the app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
 
      1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
 
-     1. Select **All applications** and search for the application name.
+     1. Select **All applications** and search for the app name.
 
-     1. Select the application name and get the application ID from the overview page.
+     1. Select the app name and get the app ID from the overview page.
 
     </details>
 
