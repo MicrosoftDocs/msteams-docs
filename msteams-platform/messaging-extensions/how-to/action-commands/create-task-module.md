@@ -5,12 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ---
 # Create and send dialogs
 
-You can create a modal dialog (referred as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
-the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
+You can create a modal dialog (referred to as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
 > If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
 
