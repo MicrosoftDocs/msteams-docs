@@ -1,16 +1,16 @@
 ---
-title: Customize app manifest in Agents Toolkit
-description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
+title: Customize United App Manifest in Agents Toolkit
+description: Learn how to edit and preview united app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update agent or app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/30/2026
 ---
 
-# Customize app manifest
+# Customize united app manifest
 
-App manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+Unified app manifest (UAM, previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default UAM file is available at `appPackage/manifest.json`. The UAM file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
-To preview app manifest with actual content, Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
+To preview the UAM with actual content, Agents Toolkit generates the preview UAM files under `appPackage/build` folder as shown in the following folder structure:
 
 ```text
 └───appPackage
@@ -25,7 +25,7 @@ You can preview the app manifest file in local and remote environments.
 
 ## Preview the app manifest file in local environment
 
-To preview the app manifest file in local environment, select the F5 key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
+To preview the app manifest file in local environment, press the F5 key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
