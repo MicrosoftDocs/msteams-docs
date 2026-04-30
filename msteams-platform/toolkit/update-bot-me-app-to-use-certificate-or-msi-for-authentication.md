@@ -103,9 +103,7 @@ Follow the steps to update the code for the agent or bot:
 
 ### Delete bot secret
 
-Ensure that your agent or bot uses the certificate for authentication before you delete the bot secret.
-
-To delete the bot secret:
+Ensure that your agent or bot uses the certificate for authentication before you delete the bot secret. To delete the bot secret:
 
 1. Go to [Azure portal](https://ms.portal.azure.com).
 1. Select **App registrations**.
@@ -186,7 +184,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 Follow the steps to update the code for the agent or bot:
 
 1. Open your agent or bot project in Visual Studio or Visual Studio Code.
-1. Update the code.
+1. Update the code:
 
    # [JavaScript](#tab/js2)
 
@@ -222,9 +220,7 @@ Follow the steps to update the code for the agent or bot:
 
 ### Delete bot secret
 
-Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret.
-
-To delete the bot secret:
+Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret. To delete the bot secret:
 
 1. Go to [Azure portal](https://ms.portal.azure.com).
 1. Select **App registrations**.
