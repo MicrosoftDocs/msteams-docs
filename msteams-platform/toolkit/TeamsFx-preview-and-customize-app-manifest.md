@@ -1,14 +1,14 @@
 ---
-title: Customize Unified App Manifest in Agents Toolkit
-description: Learn how to edit and preview unified app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update agent or app.
+title: Customize Microsoft 365 App Manifest in Agents Toolkit
+description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update agent or app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 04/30/2026
 ---
 
-# Customize unified app manifest
+# Customize app manifest
 
-Unified app manifest (UAM, previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default UAM file is available at `appPackage/manifest.json`. The UAM file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default UAM file is available at `appPackage/manifest.json`. The UAM file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
 To preview the UAM with actual content, Agents Toolkit generates the preview UAM files under `appPackage/build` folder as shown in the following folder structure:
 
@@ -21,7 +21,7 @@ To preview the UAM with actual content, Agents Toolkit generates the preview UAM
         └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
-You can preview the app manifest file in local and remote environments.
+You can preview the manifest file in local and remote environments.
 
 ## Preview the manifest file in local environment
 
