@@ -21,8 +21,10 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      :::image type="content" source="../assets/images/toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
 
-2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
+2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Manage-AAD-application-in-Teams-Toolkit/e2ec3673cdc36a4a5d06ce08dd9b061feebd1c90#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
   
+    For more information see, [customize AAD manifest](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/aad-manifest-customization)
+
     <details>
 
     <summary>Add an app permission</summary>
