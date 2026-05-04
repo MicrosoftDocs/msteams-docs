@@ -143,7 +143,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
    1. The changes for Microsoft Entra app used in local or dev environment are deployed.
 
-   1. Additionally, you can open the command palette and select **Teams: Update Microsoft Entra App** to update Microsoft Entra app.
+   1. Additionally, you can open the command palette and select **Microsoft 365 Agents: Update Microsoft Entra App** to update Microsoft Entra app.
 
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
 
