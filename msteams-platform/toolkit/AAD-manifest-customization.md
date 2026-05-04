@@ -23,12 +23,13 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Manage-AAD-application-in-Teams-Toolkit/e2ec3673cdc36a4a5d06ce08dd9b061feebd1c90#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
   
-    For more information see, [customize AAD manifest](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/aad-manifest-customization)
+    For more information see, [customize AAD manifest](AAD-manifest-customization.md)
+
+[Edit Microsoft Entra manifest]
 
     <details>
 
     <summary>Add an app permission</summary>
-
      If the Teams agent or app requires more permissions to call an API with additional permissions, you must update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
 
     ```JSON
