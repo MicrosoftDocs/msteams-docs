@@ -25,8 +25,6 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
   
     For more information see, [customize AAD manifest](AAD-manifest-customization.md)
 
-[Edit Microsoft Entra manifest]
-
     <details>
 
     <summary>Add an app permission</summary>
