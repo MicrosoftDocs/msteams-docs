@@ -21,9 +21,9 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      :::image type="content" source="../assets/images/toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
 
-2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Manage-AAD-application-in-Teams-Toolkit/e2ec3673cdc36a4a5d06ce08dd9b061feebd1c90#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
-  
-    For more information see, [customize AAD manifest](AAD-manifest-customization.md)
+2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Manage-AAD-application-in-Teams-Toolkit/e2ec3673cdc36a4a5d06ce08dd9b061feebd1c90#Placeholders-in-AAD-manifest-template). For more information see, [customize AAD manifest](AAD-manifest-customization.md)
+
+    Following are the customization scenarios:
 
     <details>
 
@@ -144,6 +144,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
    1. The changes for Microsoft Entra app used in local or dev environment are deployed.
 
    1. Additionally, you can open the command palette and select **Teams: Update Microsoft Entra App** to update Microsoft Entra app.
+
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
 
 > [!div class="nextstepaction"]
