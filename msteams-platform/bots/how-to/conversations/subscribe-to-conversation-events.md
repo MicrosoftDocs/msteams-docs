@@ -32,11 +32,13 @@ The following video demonstrates how a conversation bot can improve customer eng
 You can use conversation update events to provide better notifications and effective bot actions.
 
 > [!IMPORTANT]
+
+* You can add new events any time and your bot begins to receive them.
+* You must design your bot to receive unexpected events.
 >
-> * You can add new events any time and your bot begins to receive them.
-> * You must design your bot to receive unexpected events.
-> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
-> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
+> * If you are using the Teams SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+>
+* When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -1486,7 +1488,7 @@ Similar to the `conversationUpdate` event that's sent when bot is added to a tea
 
 In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities is set to the ID of the Response channel in the Daves Demo team.
 
-![Create a selected channel](~/assets/videos/addteam.gif)
+:::image type="content" source="~/assets/videos/addteam.gif" alt-text="Create a selected channel.":::
 
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
