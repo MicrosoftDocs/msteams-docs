@@ -32,7 +32,6 @@ The following video demonstrates how a conversation bot can improve customer eng
 You can use conversation update events to provide better notifications and effective bot actions.
 
 > [!IMPORTANT]
-
 >
 > * You can add new events anytime and your bot begins to receive them.
 > * Design your bot to receive unexpected events.
