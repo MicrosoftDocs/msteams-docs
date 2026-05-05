@@ -33,12 +33,11 @@ You can use conversation update events to provide better notifications and effec
 
 > [!IMPORTANT]
 
-* You can add new events anytime and your bot begins to receive them.
-* Design your bot to receive unexpected events.
 >
+> * You can add new events anytime and your bot begins to receive them.
+> * Design your bot to receive unexpected events.
 > * If you are using the Teams SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
->
-* When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
+> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -543,7 +542,7 @@ The following code shows an example of a team members removed event:
 
 # [C#](#tab/dotnet)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
 
 ```csharp
 app.OnMembersRemoved(async context =>
@@ -1336,10 +1335,10 @@ When you uninstall an app, the bot is also uninstalled. When a user sends a mess
 
 When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-* You build your bot without the Teams SDK, and as a result the bot gives an exception on receiving an unexpected event.
-* You build your bot with the Teams SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your bot without Teams SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with Teams SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Teams SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using Teams SDK, your bot automatically responds with a `200 - OK` to any events you don't choose to handle.
 
 ## Handling errors in conversation events
 
