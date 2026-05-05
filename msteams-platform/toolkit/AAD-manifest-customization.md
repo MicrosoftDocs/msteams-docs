@@ -9,7 +9,7 @@ ms.date: 04/30/2026
 
 # Edit Microsoft Entra manifest
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra app with the app manifest file as the source of truth during your Microsoft Teams app development lifecycle.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra app with the manifest file as the source of truth during your Microsoft Teams agent or app development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
@@ -27,7 +27,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <details>
 
-    <summary>Add an app permission</summary>
+    <summary>Add an agent or app permission</summary>
      If the Teams agent or app requires more permissions to call an API with additional permissions, you must update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
 
     ```JSON
@@ -90,7 +90,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      ```
 
-     `preAuthorizedApplications.appId` property is used for the app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
+     The `preAuthorizedApplications.appId` property is used for the agent or app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
 
      1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
 
@@ -178,7 +178,7 @@ There's a preview CodeLens at the beginning of the Microsoft Entra manifest temp
 
 ### Placeholder argument CodeLens
 
-Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows tooltip box for the values of all the environments.
+The Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows the tooltip box for the values of all the environments.
 
 :::image type="content" source="../assets/images/toolkit-v2/manual/add arguments.png" alt-text="Screenshot shows the add arguments.":::
 
