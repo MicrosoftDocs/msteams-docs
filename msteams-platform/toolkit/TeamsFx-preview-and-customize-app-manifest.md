@@ -122,7 +122,7 @@ For example, you can customize app description by defining a new environment var
 
 After customization, you might want to validate your the manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
 
-:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of validate application under utility.":::
 
 ### Validate using the manifest schema
 
