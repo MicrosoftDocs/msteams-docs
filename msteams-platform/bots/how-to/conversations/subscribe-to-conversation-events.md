@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
-ms.date: 05/04/2026
+ms.date: 05/05/2026
 ---
 
 # Conversation events in your Teams bot
@@ -33,8 +33,8 @@ You can use conversation update events to provide better notifications and effec
 
 > [!IMPORTANT]
 
-* You can add new events any time and your bot begins to receive them.
-* You must design your bot to receive unexpected events.
+* You can add new events anytime and your bot begins to receive them.
+* Design your bot to receive unexpected events.
 >
 > * If you are using the Teams SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 >
@@ -407,7 +407,7 @@ A member added event is sent to your bot in the following scenarios:
 
    > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
-The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
+The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `Context object`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
 > [!TIP]
 > Use the [`InstallationUpdate` event](#installation-update-event) to determine when your bot is added or removed from a conversation.
@@ -561,7 +561,7 @@ A member removed event is sent to your bot in the following scenarios:
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `Context object`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -978,12 +978,11 @@ The following code shows an example of a team unarchived event:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
 
 ```csharp
-protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+app.OnTeamUnarchived(async context =>
 {
-    var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
-    // Sends an activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-}
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.Send($"{teamName} is the team name");
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -991,19 +990,10 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 * [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamunarchivedevent)
 
 ```typescript
-export class MyBot extends app {
-    constructor() {
-        super();
-        // Invoked when a Team Unarchived event activity is received from the connector. Team.
-        this.onTeamsTeamUnarchivedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Team archived', `${teamInfo.name} is the team name`);
-            const message = MessageFactory.attachment(card);
-            // Sends an activity to the sender of the incoming activity.
-            await turnContext.sendActivity(message);
-            await next();
-        });
-    }
-}
+app.on('teamUnarchived', async ({ activity, send }) => {
+    const teamName = activity.channelData.team.name;
+    await send(`${teamName} is the team name`);
+});
 ```
 
 # [JSON](#tab/json)
@@ -1046,14 +1036,10 @@ export class MyBot extends app {
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-unarchived)
 
 ```python
-# Invoked when a Team Unarchived event activity is received from the connector. Team Unarchived correspond to the user unarchiving a team.
-async def on_teams_team_unarchived(
- self, team_info: TeamInfo, turn_context: TurnContext
-):
-# Sends an activity to the sender of the incoming activity.
- return await turn_context.send_activity(
-  MessageFactory.text(f"The team name is {team_info.name}")
- )
+@app.on_team_unarchived
+async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
 ```
 
 ---
@@ -1079,16 +1065,14 @@ The following code shows an example of reactions to a bot message:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L22)
 
 ```csharp
-protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+app.OnReactionsAdded(async context =>
 {
-    foreach (var reaction in messageReactions)
+    foreach (var reaction in context.Activity.ReactionsAdded)
     {
-      var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{turnContext.Activity.ReplyToId}'";
-      var replyActivity = MessageFactory.Text(newReaction);
-      // Sends an activity to the sender of the incoming activity.
-      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{context.Activity.ReplyToId}'";
+        await context.Send(newReaction);
     }
-}
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -1104,24 +1088,15 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 
 ```typescript
 
-export class MyBot extends app {
-    constructor() {
-        super();
-         // Override this in a derived class to provide logic for when reactions to a previous activity.
-        this.onReactionsAdded(async (context, next) => {
-           const reactionsAdded = context.activity.reactionsAdded;
-            if (reactionsAdded && reactionsAdded.length > 0) {
-                for (let i = 0; i < reactionsAdded.length; i++) {
-                    const reaction = reactionsAdded[i];
-                    const newReaction = `You reacted with '${reaction.type}' to the following message: '${context.activity.replyToId}'`;
-                    // Sends an activity to the sender of the incoming activity.
-                    const resourceResponse = context.sendActivity(newReaction);
-                    // Save information about the sent message and its ID (resourceResponse.id).
-                }
-            }
-        });
+app.on('reactionsAdded', async ({ activity, send }) => {
+    const reactionsAdded = activity.reactionsAdded;
+    if (reactionsAdded && reactionsAdded.length > 0) {
+        for (const reaction of reactionsAdded) {
+            const newReaction = `You reacted with '${reaction.type}' to the following message: '${activity.replyToId}'`;
+            await send(newReaction);
+        }
     }
-}
+});
 ```
 
 # [JSON](#tab/json)
@@ -1174,25 +1149,12 @@ export class MyBot extends app {
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-reactions-added)
 
 ```python
-# Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
-async def on_reactions_added(
- self, message_reactions: List[MessageReaction], turn_context: TurnContext
-):
- for reaction in message_reactions:
-  activity = await self._log.find(turn_context.activity.reply_to_id)
-  if not activity:
-    # Sends an activity to the sender of the incoming activity.
-   await self._send_message_and_log_activity_id(
-    turn_context,
-    f"Activity {turn_context.activity.reply_to_id} not found in log",
-   )
-  else:
-    # Sends an activity to the sender of the incoming activity.
-   await self._send_message_and_log_activity_id(
-    turn_context,
-    f"You added '{reaction.type}' regarding '{activity.text}'",
-   )
- return
+@app.on_reactions_added
+async def handle_reactions_added(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_added:
+        await ctx.send(
+            f"You added '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
 ```
 
 ---
@@ -1207,17 +1169,14 @@ The following code shows an example of reactions removed from bot message:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L27)
 
 ```csharp
-protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+app.OnReactionsRemoved(async context =>
 {
-    foreach (var reaction in messageReactions)
+    foreach (var reaction in context.Activity.ReactionsRemoved)
     {
-      var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{turnContext.Activity.ReplyToId}'";
-
-      var replyActivity = MessageFactory.Text(newReaction);
-      // Sends an activity to the sender of the incoming activity.
-      var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{context.Activity.ReplyToId}'";
+        await context.Send(newReaction);
     }
-}
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -1233,24 +1192,15 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 <!-- Verify -->
 
 ```typescript
-export class MyBot extends app {
-    constructor() {
-        super();
-         // Override this in a derived class to provide logic for when reactions to a previous activity.
-        this.onReactionsRemoved(async(context,next)=>{
-            const reactionsRemoved = context.activity.reactionsRemoved;
-            if (reactionsRemoved && reactionsRemoved.length > 0) {
-                for (let i = 0; i < reactionsRemoved.length; i++) {
-                    const reaction = reactionsRemoved[i];
-                    const newReaction = `You removed the reaction '${reaction.type}' from the message: '${context.activity.replyToId}'`;
-                     // Sends an activity to the sender of the incoming activity.
-                    const resourceResponse = context.sendActivity(newReaction);
-                    // Save information about the sent message and its ID (resourceResponse.id).
-                }
-            }
-        });
+app.on('reactionsRemoved', async ({ activity, send }) => {
+    const reactionsRemoved = activity.reactionsRemoved;
+    if (reactionsRemoved && reactionsRemoved.length > 0) {
+        for (const reaction of reactionsRemoved) {
+            const newReaction = `You removed the reaction '${reaction.type}' from the message: '${activity.replyToId}'`;
+            await send(newReaction);
+        }
     }
-}
+});
 ```
 
 # [JSON](#tab/json)
@@ -1303,25 +1253,12 @@ export class MyBot extends app {
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-reactions-removed)
 
 ```python
-# Override this in a derived class to provide logic specific to removed activities.
-async def on_reactions_removed(
- self, message_reactions: List[MessageReaction], turn_context: TurnContext
-):
- for reaction in message_reactions:
-  activity = await self._log.find(turn_context.activity.reply_to_id)
-  if not activity:
-    # Sends an activity to the sender of the incoming activity.
-   await self._send_message_and_log_activity_id(
-    turn_context,
-    f"Activity {turn_context.activity.reply_to_id} not found in log",
-   )
-  else:
-    # Sends an activity to the sender of the incoming activity.
-   await self._send_message_and_log_activity_id(
-    turn_context,
-    f"You removed '{reaction.type}' regarding '{activity.text}'",
-   )
- return
+@app.on_reactions_removed
+async def handle_reactions_removed(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_removed:
+        await ctx.send(
+            f"You removed '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
 ```
 
 ---
@@ -1352,25 +1289,24 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
 
 ```csharp
-protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+app.OnInstall(async context =>
 {
-    var activity = turnContext.Activity;
-    if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    var action = context.Activity.Action;
+    if (string.Equals(action, "Add", StringComparison.InvariantCultureIgnoreCase))
     {
-        // TO:DO Installation workflow.
+        await context.Send("Added");
     }
     else
     {
-        // TO:DO Uninstallation workflow.
+        await context.Send("Uninstalled");
     }
-    return;
-}
+});
 ```
 
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
-protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> Context object, CancellationToken cancellationToken)
 {
     // TO:DO Installation workflow return;
 }
@@ -1381,17 +1317,13 @@ protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstall
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L72-L78)
 
 ```typescript
-async onInstallationUpdateActivity(context: TurnContext) {
-        var activity = context.activity.action;
-        if(activity == "Add") {
-            // Sends an activity to the sender of the incoming activity to add.
-            await context.sendActivity(MessageFactory.text("Added"));
-        }
-        else {
-            // Sends an activity to the sender of the incoming activity to uninstalled.
-            await context.sendActivity(MessageFactory.text("Uninstalled"));
-        }
-    }
+app.on('install.add', async ({ send }) => {
+    await send('Added');
+});
+
+app.on('install.remove', async ({ send }) => {
+    await send('Uninstalled');
+});
 ```
 
 # [JSON](#tab/json)
@@ -1456,14 +1388,13 @@ async onInstallationUpdateActivity(context: TurnContext) {
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-installation-update)
 
 ```python
-# Override this in a derived class to provide logic specific to InstallationUpdate activities.
-async def on_installation_update(self, turn_context: TurnContext):
-   if turn_context.activity.action == "add": 
-        # Sends an activity to the sender of the incoming activity to add.
-       await turn_context.send_activity(MessageFactory.text("Added"))
-   else:
-        # Sends an activity to the sender of the incoming activity to uninstalled.
-       await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext):
+    await ctx.send("Added")
+
+@app.on_install_remove
+async def handle_install_remove(ctx: ActivityContext):
+    await ctx.send("Uninstalled")
 ```
 
 ---
@@ -1495,7 +1426,7 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
 |---------------|--------------|--------|-------------|--------|--------|
-| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 
 ## Next step
 
