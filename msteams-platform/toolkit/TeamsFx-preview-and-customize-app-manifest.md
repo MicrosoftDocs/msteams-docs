@@ -156,6 +156,7 @@ It has other validation rules than the app manifest schema. For example, if stat
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/toolkit-v2/customize app manifest/validation-output.png":::
 
+<!--
 ## Update Teams agent or app
 
 After you've previewed and validated the app manifest file, you can sync your local changes to Teams Developer Portal by triggering **Teams: Update Teams App** command from command palette.
@@ -178,6 +179,7 @@ If the manifest file is outdated due to configuration file change or template ch
 * **Preview only**: Local app manifest file is overwritten according to current configuration.
 * **Preview and update**: Local app manifest file is overwritten according to current configuration and also updated to Teams platform.
 * **Cancel**: No action is taken.
+-->
 
 ## To preview values for local and dev environment
 
