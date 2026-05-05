@@ -37,7 +37,7 @@ To preview the manifest file in remote environment, you can trigger **Provision*
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
-:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the option to zip the Teams app package.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the option to zip the Teams app package.":::
 
 ## Customize manifest in Visual Studio Code
 
