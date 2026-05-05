@@ -72,8 +72,7 @@ The following code shows an example of a channel created event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -86,8 +85,6 @@ app.OnChannelCreated(async context =>
 # [TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamschannelcreatedevent)
 
 ```typescript
 app.on('channelCreated', async ({ activity, send }) => {
@@ -136,8 +133,6 @@ app.on('channelCreated', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-channel-created)
-
 ```python
 @app.on_channel_created
 async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -155,8 +150,7 @@ The following code shows an example of a channel renamed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
 
 ```csharp
 app.OnChannelRenamed(async context =>
@@ -167,8 +161,6 @@ app.OnChannelRenamed(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamschannelrenamedevent)
 
 ```typescript
 app.on('channelRenamed', async ({ activity, send }) => {
@@ -217,8 +209,6 @@ app.on('channelRenamed', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-channel-renamed)
-
 ```python
 @app.on_channel_renamed
 async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -236,8 +226,7 @@ The following code shows an example of a channel deleted event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
 
 ```csharp
 app.OnChannelDeleted(async context =>
@@ -248,8 +237,6 @@ app.OnChannelDeleted(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamschanneldeletedevent)
 
 ```typescript
 app.on('channelDeleted', async ({ activity, send }) => {
@@ -298,10 +285,6 @@ app.on('channelDeleted', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-channel-deleted)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?&preserve-view=true)
-
 ```python
 @app.on_channel_deleted
 async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -319,8 +302,7 @@ The following code shows an example of a channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
 app.OnChannelRestored(async context =>
@@ -331,8 +313,6 @@ app.OnChannelRestored(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamschannelrestoredevent)
 
 ```typescript
 
@@ -382,8 +362,6 @@ app.on('channelRestored', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-channel-restored)
-
 ```python
 @app.on_channel_restored
 async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -416,8 +394,7 @@ The following code shows an example of a team members added event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsmembersaddedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -438,8 +415,6 @@ app.OnMembersAdded(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsmembersaddedevent)
 
 ```typescript
 app.on('membersAdded', async ({ activity, send }) => {
@@ -542,8 +517,6 @@ The message your bot receives when the bot is added to a one-to-one chat.
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-members-added)
-
 ```python
 @app.on_conversation_update
 async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -570,7 +543,6 @@ The following code shows an example of a team members removed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsmembersremovedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
 
 ```csharp
@@ -592,8 +564,6 @@ app.OnMembersRemoved(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-[SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsmembersremovedevent)
 
 ```typescript
 app.on('membersRemoved', async ({ activity, send }) => {
@@ -648,8 +618,6 @@ The `channelData` object in the following payload example is based on adding a m
 
 # [Python](#tab/python)
 
-* [SDK  reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-members-removed)
-
 ```python
 @app.on_conversation_update
 async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -668,8 +636,7 @@ The following code shows an example of a team renamed event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
 
 ```csharp
 app.OnTeamRenamed(async context =>
@@ -680,8 +647,6 @@ app.OnTeamRenamed(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamrenamedevent)
 
 ```typescript
 app.on('teamRenamed', async ({ activity, send }) => {
@@ -727,8 +692,6 @@ app.on('teamRenamed', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-renamed)
-
 ```python
 @app.on_team_renamed
 async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -746,8 +709,6 @@ The following code shows an example of a team deleted event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamdeletedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-
 ```csharp
 app.OnTeamDeleted(async context =>
 {
@@ -756,8 +717,6 @@ app.OnTeamDeleted(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamdeletedevent)
 
 ```typescript
 app.on('teamDeleted', async ({ activity }) => {
@@ -802,8 +761,6 @@ app.on('teamDeleted', async ({ activity }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-deleted)
-
 ```python
 @app.on_team_deleted
 async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -821,8 +778,6 @@ The following code shows an example of a team restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-
 ```csharp
 app.OnTeamRestored(async context =>
 {
@@ -832,8 +787,6 @@ app.OnTeamRestored(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamrestoredevent)
 
 ```typescript
 app.on('teamRestored', async ({ activity, send }) => {
@@ -879,8 +832,6 @@ app.on('teamRestored', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-restored)
-
 ```python
 @app.on_team_restored
 async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -898,8 +849,6 @@ The following code shows an example of team archived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamarchivedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-
 ```csharp
 app.OnTeamArchived(async context =>
 {
@@ -909,8 +858,6 @@ app.OnTeamArchived(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamarchivedevent)
 
 ```typescript
 app.on('teamArchived', async ({ activity, send }) => {
@@ -956,8 +903,6 @@ app.on('teamArchived', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-archived)
-
 ```python
 @app.on_team_archived
 async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -975,8 +920,6 @@ The following code shows an example of a team unarchived event:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.app.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-
 ```csharp
 app.OnTeamUnarchived(async context =>
 {
@@ -986,8 +929,6 @@ app.OnTeamUnarchived(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder/app?view=botbuilder-ts-latest&preserve-view=true#botbuilder-app-onteamsteamunarchivedevent)
 
 ```typescript
 app.on('teamUnarchived', async ({ activity, send }) => {
@@ -1033,8 +974,6 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.app?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-app-on-teams-team-unarchived)
-
 ```python
 @app.on_team_unarchived
 async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
@@ -1061,8 +1000,7 @@ The following code shows an example of reactions to a bot message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L22)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L22)
 
 ```csharp
 app.OnReactionsAdded(async context =>
@@ -1077,7 +1015,6 @@ app.OnReactionsAdded(async context =>
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onreactionsadded)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
@@ -1146,8 +1083,6 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-reactions-added)
-
 ```python
 @app.on_reactions_added
 async def handle_reactions_added(ctx: ActivityContext):
@@ -1165,8 +1100,7 @@ The following code shows an example of reactions removed from bot message:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L27)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L27)
 
 ```csharp
 app.OnReactionsRemoved(async context =>
@@ -1180,8 +1114,6 @@ app.OnReactionsRemoved(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onreactionsremoved)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
 
@@ -1250,8 +1182,6 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-reactions-removed)
-
 ```python
 @app.on_reactions_removed
 async def handle_reactions_removed(ctx: ActivityContext):
@@ -1285,8 +1215,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
 
 ```csharp
 app.OnInstall(async context =>
@@ -1384,8 +1313,6 @@ app.on('install.remove', async ({ send }) => {
 ```
 
 # [Python](#tab/python)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-installation-update)
 
 ```python
 @app.on_install_add
