@@ -51,7 +51,7 @@ If the app contains a conversational bot, install the bot in the conversation, a
 
 Examples of receiving the invoke message are as follows:
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet1)
 
 ```csharp
 // New Teams SDK uses minimal API / event registration instead of class inheritance. 
@@ -65,7 +65,7 @@ teams.OnQuery(async (ctx) =>
 }); 
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript1)
 
 ```javascript
 import { App } from '@microsoft/teams.apps' 
@@ -78,7 +78,7 @@ app.on('message.ext.query', async ({ activity }) => {
 })
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 ```python
 from microsoft_teams.apps import ActivityContext, App
@@ -92,7 +92,7 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
     # handle the query and return MessagingExtensionInvokeResponse 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 The following example is a JSON object that you receive. The `commandContext` parameter indicates where your message extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields:
 
@@ -126,7 +126,7 @@ The following example is a JSON object that you receive. The `commandContext` pa
 
 The most common way to respond to the `composeExtensions/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet2)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -185,7 +185,7 @@ return new MsgExt.Response
 };
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript2)
 
 ```javascript
 import {
@@ -245,7 +245,7 @@ return {
 };
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 ```python
 from microsoft_teams.api import (
@@ -301,7 +301,7 @@ return MessagingExtensionInvokeResponse(
 )
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -372,7 +372,7 @@ To configure the poll:
 
 Your dialog must respond to the initial `composeExtensions/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is already installed.
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet3)
 
 ```csharp
 // AdaptiveCard construction — use new Teams.Cards SDK:
@@ -406,7 +406,7 @@ var card = new AdaptiveCard
 // Doc team needs to determine the correct new SDK API for botMessagePreview responses.
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript3)
 
 ```javascript
 import { AdaptiveCard, TextBlock, ActionSet } from '@microsoft/teams.cards';
@@ -442,7 +442,7 @@ const card = new AdaptiveCard(
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 > [!NOTE]
 >
@@ -471,7 +471,7 @@ const card = new AdaptiveCard(
 
 Your message extension must respond to two new types of the `composeExtensions/submitAction` invoke, where `value.botMessagePreviewAction = "send"`and `value.botMessagePreviewAction = "edit"`.
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet4)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
@@ -488,7 +488,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript4)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -505,7 +505,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 ```json
 {
@@ -547,7 +547,7 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a message with the Adaptive Card to the conversation, and also reply to the invoke.
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet5)
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
@@ -588,7 +588,7 @@ protected override async Task<MessagingExtensionActionResponse> OnTeamsMessaging
 }
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript5)
 
 ```javascript
 class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
@@ -641,7 +641,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json5)
 
 You receive a new `composeExtensions/submitAction` message similar to the following json:
 
@@ -686,7 +686,7 @@ The following images display an Adaptive Card message sent by a bot. The left-si
 
 To use the user attribution in teams, you must add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
-# [C#/.NET](#tab/dotnet-1)
+# [C#/.NET](#tab/dotnet6)
 
 ```csharp
 // Attribute the message to the user on whose behalf the bot is posting
@@ -705,7 +705,7 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 
 ```
 
-# [JavaScript/Node.js](#tab/javascript-1)
+# [JavaScript/Node.js](#tab/javascript6)
 
 ```javascript
     const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
@@ -719,7 +719,7 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
     }};
 ```
 
-# [JSON](#tab/json-1)
+# [JSON](#tab/json6)
 
 ```json
 {
