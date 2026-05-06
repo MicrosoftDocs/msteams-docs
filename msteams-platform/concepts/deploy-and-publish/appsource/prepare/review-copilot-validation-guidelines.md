@@ -140,6 +140,19 @@ For utilising `worker_agents` property in your Declarative agent manifest, ensur
 
 [Back to top](#validation-guidelines-for-agents)
 
+## Agents extended to Agent 365
+
+* Every agent extended for Agent 365 should generate consistent observability traces across Invoke agent, execute tool & inference call in Sentinel, Defender, Purview. [*Must fix*]. For more information, see [observability](/microsoft-agent-365/developer/observability?tabs=python).
+* Agents using `agenticUserTemplate` node must follow these guidelines [*Must fix*]:
+  1. `agentIdentityBlueprintId` in the `agenticUserTemplate` node of the manifest must be unique.
+  1. The `id` field in the manifest file MUST match the `id` field present in the `agenticUserTemplate` file.
+  1. Agent must generate observability traces for both the Blueprint ID and the Agent ID.
+  1. Such agents must not be bundled with other offer types (apps, plugins, other agents).
+* Agents extended for Agent 365 should highlight the value proposition of Agent 365 in their description. [*Good to fix*]
+* All UX design guidelines applicable to CEAs are also applicable to agents published through `agenticUserTemplate` manifest node.
+
+[Back to top](#validation-guidelines-for-agents)
+
 ## Screenshots
 
 You must ensure to meet the following guidelines for agents:
@@ -382,6 +395,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
 * Declarative agents only support static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
 * Prompts that depend on add‑in actions must provide a graceful failure message in Copilot hubs where add‑in isn't supported.
+
+* Publishing MCP server tools via the `agentConnector` node of the manifest is not permitted for ISV developers.
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
