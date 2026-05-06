@@ -136,9 +136,22 @@ For example, you can customize app description by defining a new environment var
 
 ## Validate your agent or app
 
-After customization, you might want to validate the manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
+After customization, you might want to validate the manifest or app package. You can trigger **Validate Application** from tree view, or **Microsoft 365 Agents: Validate Application** from command palette.
+
+# [Tree view](#tab/tree)
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of validate application under utility.":::
+
+# [Command palette](#tab/command)
+
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/validate-app.png" alt-text="Screenshot shows the option of validate application under utility.":::
+
+---
+
+Choose the validation option from:
+
+- [Validate using manifest schema](#validate-using-the-manifest-schema)
+- [Validate app package using validation rules](#validate-app-package-using-validation-rules)
 
 ### Validate using the manifest schema
 
@@ -216,9 +229,9 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Microsoft 365 app manifest schema](/microsoft-365/extensibility/schema)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-* [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+- [Microsoft 365 app manifest schema](/microsoft-365/extensibility/schema)
+- [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+- [Manage multiple environments](TeamsFx-multi-env.md)
+- [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
+- [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
