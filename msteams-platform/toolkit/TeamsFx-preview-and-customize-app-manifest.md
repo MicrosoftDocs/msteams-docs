@@ -37,6 +37,8 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the option of Zip Teams App Package.":::
 
+---
+
 ## Preview manifest file in remote environment
 
 To preview the manifest file in remote environment, you can trigger **Provision** from tree view or **Teams: Provision** from command palette. It generates environment variables for remote Teams app, build app package and the preview app manifest under `appPackage/build` folder.
