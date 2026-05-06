@@ -5,12 +5,10 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 05/06/2026
 ---
 
 # Respond to the dialog submit action
-
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's dialog (referred as task module in TeamsJS v1.x) submit action.
 After a user submits the dialog, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
@@ -56,23 +54,42 @@ Examples of receiving the invoke message are as follows:
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken) {
-  //code to handle the submit action
-}
+// New Teams SDK uses minimal API / event registration instead of class inheritance. 
+// Search handler example from bot-message-extensions sample: 
+var teams = app.UseTeams(); 
+
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    // handle the query and return MsgExt.Response 
+}); 
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  constructor() {
-  handleTeamsMessagingExtensionSubmitAction(context, action) {
-  
-  //code to handle the submit action
-    }
-  }
-}
+import { App } from '@microsoft/teams.apps' 
+
+const app = new App() 
+
+app.on('message.ext.query', async ({ activity }) => { 
+  const commandId = activity.value?.commandId 
+  // handle the query and return response 
+})
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.apps import ActivityContext, App
+from microsoft_teams.api import MessageExtensionQueryInvokeActivity
+
+app = App()
+
+@app.on_message_ext_query 
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
+    command_id = ctx.activity.value.command_id 
+    # handle the query and return MessagingExtensionInvokeResponse 
 ```
 
 # [JSON](#tab/json)
@@ -112,57 +129,176 @@ The most common way to respond to the `composeExtensions/submitAction` request i
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Cards;
+using Microsoft.Teams.Cards;
+
+using MsgExt = Microsoft.Teams.Api.MessageExtensions;
+using AdaptiveCard = Microsoft.Teams.Cards.AdaptiveCard;
+
+// Inside the action handler:
+
+var card = new AdaptiveCard
 {
-    var response = new MessagingExtensionActionResponse
-    {
-        ComposeExtension = new MessagingExtensionResult
+    Version = Microsoft.Teams.Cards.Version.Version1_4,
+    Body =
+    [
+        new TextBlock(title)
         {
-            AttachmentLayout = "list",
-            Type = "result",
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
         },
-    };
-    var createCardData = ((JObject)action.Data).ToObject<CreateCardData>();
-var card = new HeroCard
-{
-     Title = createCardData.Title,
-     Subtitle = createCardData.Subtitle,
-     Text = createCardData.Text,
+        new TextBlock(subtitle)
+        {
+            IsSubtle = true
+        },
+        new TextBlock(text)
+        {
+            Wrap = true
+        }
+    ]
 };
-    var attachments = new List<MessagingExtensionAttachment>();
-    attachments.Add(new MessagingExtensionAttachment
+
+var attachments = new List<MsgExt.Attachment>
+{
+    new MsgExt.Attachment(ContentType.AdaptiveCard)
     {
         Content = card,
-        ContentType = HeroCard.ContentType,
-        Preview = card.ToAttachment(),
-    });
-    response.ComposeExtension.Attachments = attachments;
-    return response;
-}
+        Preview = new Attachment(
+            new ThumbnailCard
+            {
+                Title = title,
+                Text = text
+            }
+        )
+    }
+};
+
+return new MsgExt.Response
+{
+    ComposeExtension = new MsgExt.Result
+    {
+        Type = MsgExt.ResultType.Result,
+        AttachmentLayout = Attachment.Layout.List,
+        Attachments = attachments
+    }
+};
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionSubmitAction(context, action) {
-    const data = action.data;
-    const heroCard = CardFactory.heroCard(data.title, data.text);
-    heroCard.content.subtitle = data.subTitle;
-    const attachment = { contentType: heroCard.contentType, content: heroCard.content, preview: heroCard };
+import {
+  cardAttachment,
+  ThumbnailCard,
+  MessagingExtensionAttachment,
+} from '@microsoft/teams.api';
 
-    return {
-      composeExtension: {
-        type: 'result',
-        attachmentLayout: 'list',
-        attachments: [
-          attachment
-        ]
-      }
-    }
-  }
-}
+import {
+  AdaptiveCard,
+  TextBlock,
+} from '@microsoft/teams.cards';
+
+// Inside the action handler:
+
+const titleBlock = new TextBlock(title, {
+  weight: 'Bolder',
+  size: 'Large',
+});
+
+const subtitleBlock = new TextBlock(subtitle, {
+  isSubtle: true,
+});
+
+const textBlock = new TextBlock(text, {
+  wrap: true,
+});
+
+const card = new AdaptiveCard(
+  titleBlock,
+  subtitleBlock,
+  textBlock,
+);
+
+const adaptive = cardAttachment('adaptive', card);
+
+const preview = cardAttachment(
+  'thumbnail',
+  {
+    title,
+    text,
+  } as ThumbnailCard,
+);
+
+const attachment: MessagingExtensionAttachment = {
+  contentType: adaptive.contentType,
+  content: adaptive.content,
+  preview,
+};
+
+return {
+  composeExtension: {
+    type: 'result',
+    attachmentLayout: 'list',
+    attachments: [attachment],
+  },
+};
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.api import (
+    card_attachment,
+    AdaptiveCardAttachment,
+    ThumbnailCard,
+    ThumbnailCardAttachment,
+    AttachmentLayout,
+    MessagingExtensionAttachment,
+    MessagingExtensionInvokeResponse,
+    MessagingExtensionResult,
+    MessagingExtensionResultType,
+)
+from microsoft_teams.cards import AdaptiveCard, TextBlock
+
+
+# Inside the action handler:
+
+card = AdaptiveCard(
+    body=[
+        TextBlock(text=title, weight="Bolder", size="Large"),
+        TextBlock(text=subtitle, is_subtle=True),
+        TextBlock(text=text, wrap=True),
+    ]
+)
+
+attachment = card_attachment(
+    AdaptiveCardAttachment(content=card)
+)
+
+preview = card_attachment(
+    ThumbnailCardAttachment(
+        content=ThumbnailCard(
+            title=title,
+            text=text,
+            images=None,
+        )
+    )
+)
+
+return MessagingExtensionInvokeResponse(
+    compose_extension=MessagingExtensionResult(
+        type=MessagingExtensionResultType.RESULT,
+        attachment_layout=AttachmentLayout.LIST,
+        attachments=[
+            MessagingExtensionAttachment(
+                content_type=attachment.content_type,
+                content=attachment.content,
+                preview=preview,
+            )
+        ],
+    )
+)
 ```
 
 # [JSON](#tab/json)
@@ -239,81 +375,71 @@ Your dialog must respond to the initial `composeExtensions/submitAction` message
 # [C#/.NET](#tab/dotnet)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionSubmitActionAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
-{
-  dynamic createCardData = ((JObject) action.Data).ToObject(typeof(JObject));
-  var response = new MessagingExtensionActionResponse
-  {
-    ComposeExtension = new MessagingExtensionResult
-    {
-      Type = "botMessagePreview",
-      ActivityPreview = MessageFactory.Attachment(new Attachment
-      {
-        Content = new AdaptiveCard("1.0")
-        {
-          Body = new List<AdaptiveElement>()
-          {
-            new AdaptiveTextBlock() { Text = "FormField1 value was:", Size = AdaptiveTextSize.Large },
-            new AdaptiveTextBlock() { Text = Data["FormField1"] as string }
-          },
-          Height = AdaptiveHeight.Auto,
-          Actions = new List<AdaptiveAction>()
-          {
-            new AdaptiveSubmitAction
-            {
-              Type = AdaptiveSubmitAction.TypeName,
-              Title = "Submit",
-              Data = new JObject { { "submitLocation", "messagingExtensionFetchTask" } },
-            },
-          }
-        },
-        ContentType = AdaptiveCard.ContentType
-      }) as Activity
-    }
-  };
+// AdaptiveCard construction — use new Teams.Cards SDK:
 
-  return response;
-}
+using Microsoft.Teams.Cards;
+using AdaptiveCard = Microsoft.Teams.Cards.AdaptiveCard;
+
+var card = new AdaptiveCard
+{
+    Version = Microsoft.Teams.Cards.Version.Version1_4,
+    Body =
+    [
+        new TextBlock("FormField1 value was:")
+        {
+            Size = TextSize.Large
+        },
+        new TextBlock(formField1Value)
+    ],
+    Actions =
+    [
+        new SubmitAction
+        {
+            Title = "Submit"
+        }
+    ]
+};
+
+// The botMessagePreview response wrapper needs the new SDK's equivalent
+// of Type = "botMessagePreview" with ActivityPreview.
+// This specific pattern is NOT demonstrated in the bot-message-extensions sample.
+// Doc team needs to determine the correct new SDK API for botMessagePreview responses.
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
 
 ```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionSubmitAction(context, action) {
-    const submittedData = action.data;
-    const adaptiveCard = CardFactory.adaptiveCard({
-      actions: [
-        { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
-      ],
-      body: [
-          { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
-          { text: `${ submittedData.Question }`, type: 'TextBlock', id: 'Question' },
-          { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
-        {
-          choices: [
-            { title: submittedData.Option1, value: submittedData.Option1 },
-            { title: submittedData.Option2, value: submittedData.Option2 },
-            { title: submittedData.Option3, value: submittedData.Option3 }
-          ],
-          id: 'Choices',
-          isMultiSelect: submittedData.MultiSelect,
-          style: 'expanded',
-          type: 'Input.ChoiceSet'
-        }
-      ],
-      type: 'AdaptiveCard',
-      version: '1.0'
-    });
-    return {
-      composeExtension: {
-        activityPreview: MessageFactory.attachment(adaptiveCard, null, null, InputHints.ExpectingInput),
-        type: 'botMessagePreview'
-      }
-    };
-  }
-}
+import { AdaptiveCard, TextBlock, ActionSet } from '@microsoft/teams.cards';
+
+// AdaptiveCard construction — use new @microsoft/teams.cards SDK:
+
+const headerBlock = new TextBlock('Adaptive Card from Task Module', {
+  weight: 'Bolder',
+});
+
+const questionBlock = new TextBlock(submittedData.Question, {
+  id: 'Question',
+});
+
+const card = new AdaptiveCard(
+  headerBlock,
+  questionBlock,
+);
+
+// The botMessagePreview response wrapper — e.g.:
+
+// return {
+//   composeExtension: {
+//     type: 'botMessagePreview',
+//     activityPreview: {
+//       ...
+//     }, // new SDK equivalent needed
+//   }
+// };
+
+// This specific pattern is NOT demonstrated in the bot-message-extensions sample.
+// Doc team needs to determine the correct new SDK API for botMessagePreview responses.
+
 ```
 
 # [JSON](#tab/json)
@@ -624,11 +750,11 @@ The following section is a description of the entities in the `OnBehalfOf` Array
   
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest|
-|:---------------------|:--------------|:---------|:--------|:--------|
-|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search | This sample demonstrates how to create a message extension in Microsoft Teams that allows users to perform searches and retrieve results.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+| Sample name           | Description | .NET    | Node.js   | Python | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|:--------|
+|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+|Bot Message Extensions | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)| NA
 
 ## Next Step
 
