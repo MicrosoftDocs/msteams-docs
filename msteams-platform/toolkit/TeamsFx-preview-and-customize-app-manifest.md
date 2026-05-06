@@ -57,7 +57,7 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 ## Customize manifest in Visual Studio Code
 
-During local debug or provision, Agents Toolkit loads the manifest from `appPackage/manifest.json`. It resolves the manifest using environment variables defined in `env/.env.xx`, then creates or updates the Teams agent or app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+During local debug or provision, Agents Toolkit loads the manifest from `appPackage/manifest.json`. It resolves the manifest using environment variables defined in `env/.env.xx`, then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. You can define your own *manifest.json* file in `m365agents.yml` and `m365agents.local.yml`.
 For example, you can put your *manifest.json* file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
@@ -136,7 +136,7 @@ For example, you can customize app description by defining a new environment var
 
 ## Validate your agent or app
 
-After customization, you might want to validate your the manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
+After customization, you might want to validate the manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of validate application under utility.":::
 
@@ -152,7 +152,7 @@ Alternatively, use the following Microsoft 365 Agents Toolkit command line inter
 atk validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Agents Toolkit can't find corresponding environment variables defined in *manifest.json*. You may need to run **Provision** or select **F5** to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+The `MissingEnvironmentVariablesError` error indicates that Agents Toolkit couldn't locate the required environment variables specified in manifest.json. You might need to run Provision or press F5 to generate the environment variables. Alternatively, you can manually update the `.env.xx` file to set the required values.
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
