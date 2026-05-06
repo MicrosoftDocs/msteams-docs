@@ -1,11 +1,10 @@
 ---
 title: Use sessions in bot conversations in Microsoft Teams
-author: vikasalmal
 description: Sessions enable bots in Microsoft Teams to organize one-on-one conversations into separate, focused chats, helping maintain context, improve response relevance, and support multi-task workflows.
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 02/28/2026
+ms.date: 04/28/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -80,10 +79,10 @@ After you update the manifest:
 After sessions are enabled, users see new controls in the chat header that allow them to create and switch between sessions.
 
 Clicking on the new session icon starts a new session.​
-:::image type="content" source="assets/images/bots/create-new-session.png" alt-text="screenshot shows creating a new session button" lightbox="assets/images/bots/create-new-session.png":::
+:::image type="content" source="assets/images/bots/create-new-session.png" alt-text="Screenshot shows creating a new session button" lightbox="assets/images/bots/create-new-session.png":::
 
 After a message is sent, the session is created and saved in the sessions panel.
-:::image type="content" source="assets/images/bots/sessions-panel.png" alt-text="screenshot shows the sessions panel" lightbox="assets/images/bots/sessions-panel.png":::
+:::image type="content" source="assets/images/bots/sessions-panel.png" alt-text="Screenshot shows the sessions panel" lightbox="assets/images/bots/sessions-panel.png":::
 
 <!--### Create and navigate topics
 
@@ -112,11 +111,8 @@ Selecting any notification automatically opens the correct topic and message.
 Sessions allow users to:
 
 - Create a new session
-
 - Switch between sessions
-
 - View unread sessions
-
 - Navigate to activity inside a session
 
 The first message in a session becomes the session title, and the latest message appears as the preview.
@@ -134,14 +130,14 @@ var conversationId = context.Activity.Conversation.Id;
 await app.Send(conversationId, "Hello from Bot");
 ```
 
-# [TypeScript](#tab/TypeScript)
+# [TypeScript](#tab/typeScript)
 
 ```typescript
 const conversationId = activity.conversation.id;
 await app.send(conversationId, "Hello from Bot");
 ```
 
-# [Python](#tab/Python)
+# [Python](#tab/python)
 
 ```python
 conversation_id = ctx.activity.conversation.id
@@ -172,13 +168,13 @@ Use the existing activity context when sending a reply.
 await app.Send(conversationId, "Hello from Bot");
 ```
 
-# [TypeScript](#tab/TypeScript)
+# [TypeScript](#tab/typeScript)
 
 ```typescript
 await app.send(conversationId, "Hello from Bot");
 ```
 
-# [Python](#tab/Python)
+# [Python](#tab/python)
 
 ```python
 await app.send(conversation_id, "Hello from Bot")
@@ -194,7 +190,7 @@ Bots can create new sessions to initiate conversations around specific tasks, up
 
 Creating a session proactively uses the same API as [creating a conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation) between a user and a bot. Unlike a classic 1:1 conversation, session creation requires `supportsSessions` bot to be installed for the user in the personal scope and a message activity in `ConversationParameters`.
 
-After user installs the opt-in sessions bot in personal scope, creating a new conversation between  a user and a bot with a message activity automatically creates a new session, using the `CreateConversation` API. User has to install the opt in sessions bot in personal scope and a message activity is required to create a session. For more information, see see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+After user installs the opt-in sessions bot in personal scope, creating a new conversation between a user and a bot with a message activity automatically creates a new session, using the `CreateConversation` API. User has to install the opt in sessions bot in personal scope and a message activity is required to create a session. For more information, see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
 <!--### Start a new topic
 
@@ -285,9 +281,7 @@ When sessions are enabled for an existing bot, previous messages are automatical
 During migration:
 
 - Teams groups existing messages into a default session
-
 - Users can continue chatting without interruption
-
 - New sessions can be created after migration completes
 
 ## Best practices
@@ -316,3 +310,8 @@ Topics introduce a structured conversation model that may differ from traditiona
 
 Bots should also consider strategies for handling inactive topics and guiding users toward relevant conversations.
 -->
+
+## See also
+
+- [Send proactive messages](bots/how-to/conversations/send-proactive-messages.md)
+- [Bot conversations overview](bots/how-to/conversations/conversation-basics.md)
