@@ -29,7 +29,13 @@ To preview the manifest file in local environment, press the **F5** key to run l
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview manifest file and app package.
 
+# [Teams agent](#tab/agent)
+
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
+
+# [Teams app](#tab/app)
+
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the option of Zip Teams App Package.":::
 
 ## Preview manifest file in remote environment
 
