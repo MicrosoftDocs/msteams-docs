@@ -152,7 +152,7 @@ Alternatively, use the following Microsoft 365 Agents Toolkit command line inter
 atk validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
-The `MissingEnvironmentVariablesError` error indicates that Agents Toolkit couldn't locate the required environment variables specified in manifest.json. You might need to run Provision or press F5 to generate the environment variables. Alternatively, you can manually update the `.env.xx` file to set the required values.
+The `MissingEnvironmentVariablesError` error indicates that Agents Toolkit couldn't locate the required environment variables specified in manifest.json. You might need to run **Provision** or press **F5** to generate the environment variables. Alternatively, you can manually update the `.env.xx` file to set the required values.
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
