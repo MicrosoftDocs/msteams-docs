@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 04/20/2026
+ms.date: 05/06/2026
 ---
 # Teams Store validation guidelines
 
@@ -545,7 +545,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 
    :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
-* Your app package must include a full bleed PNG format at 192 x 192 pixels and a default or rest PNG format icon at 32 x 32 pixels. Optionally, it can also include a focused or pressed PNG format icon at 32 x 32 pixels. [*Must fix*]
+* Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Must fix*]
 * The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Must fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Must fix*]
 * The outline version of your icon is displayed in the following scenarios:
@@ -682,9 +682,9 @@ The long description must provide an engaging narrative that highlights your app
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.png" alt-text="Graphic shows an example of app long description without errors.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft.png" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
 
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
@@ -692,9 +692,9 @@ The long description must provide an engaging narrative that highlights your app
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire app manifest or AppSource long description or app content.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.png" alt-text="Graphic shows an example of app long description without errors.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft.png" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
 * Include links to AppSource.
 
