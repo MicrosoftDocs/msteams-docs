@@ -49,7 +49,6 @@ You can control the visibility of agent responses to slash commands through defi
 
 - [Private agent-to-user response](#private-agent-to-user-response)
 - [Public agent-to-user response](#public-agent-to-user-response)
-- Prompt preview
 
 #### Private agent-to-user response
 
@@ -99,7 +98,7 @@ When the response is useful to the wider audience, you can choose to enable your
     :::column-end:::
 :::row-end:::
 
-#### Prompt preview
+### Prompt preview
 
 When a bot replies to a user’s targeted message, it can optionally enable the Prompt Preview feature.
 Prompt Preview displays a contextual box at the top of the bot’s response containing the user’s original query. This allows the recipient to easily view the user’s original message and agent's or bot’s response
@@ -409,6 +408,41 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     @app.on_message
     async def handle_message(ctx):
       await ctx.send(MessageActivityInput("Normal msg"))
+  ```
+  
+# [HTTP](#tab/api)
+
+  [WIP: Add code snippet]
+
+---
+
+**Enable prompt preview**: Prompt Preview is supported when sending agent or bot responses through the following APIs:
+
+    1. Targeted Message Send API
+
+        1. The bot replies privately to the user’s message
+        1. The response is visible only to the targeted user
+
+    2. Normal Message Send API
+        1. The bot replies in the conversation normally
+        1. The response is visible to all participants in the chat
+
+    In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
+
+# [C#](#tab/dotnet)
+
+  ```csharp
+  ```
+  
+# [TypeScript](#tab/ts)
+
+  ```typescript
+  ```
+
+# [Python](#tab/Py)
+
+  ```python
+  
   ```
   
 # [HTTP](#tab/api)
