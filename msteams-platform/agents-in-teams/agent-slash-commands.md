@@ -49,6 +49,7 @@ You can control the visibility of agent responses to slash commands through defi
 
 - [Private agent-to-user response](#private-agent-to-user-response)
 - [Public agent-to-user response](#public-agent-to-user-response)
+- Prompt preview
 
 #### Private agent-to-user response
 
@@ -97,6 +98,11 @@ When the response is useful to the wider audience, you can choose to enable your
         This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
+
+#### Prompt preview
+
+When a bot replies to a user’s targeted message, it can optionally enable the Prompt Preview feature.
+Prompt Preview displays a contextual box at the top of the bot’s response containing the user’s original query.
 
 ## Why use slash commands
 
