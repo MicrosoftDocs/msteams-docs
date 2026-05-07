@@ -148,7 +148,7 @@ After customization, you might want to validate the manifest or app package. You
 
 ---
 
-Choose the validation option from:
+Validate your agent or app using one of the following options:
 
 - [Validate using manifest schema](#validate-using-the-manifest-schema)
 - [Validate app package using validation rules](#validate-app-package-using-validation-rules)
