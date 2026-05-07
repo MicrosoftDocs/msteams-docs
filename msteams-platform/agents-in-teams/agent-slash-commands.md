@@ -444,22 +444,54 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 Attach the entity manually using the targeted message ID:
 
   ```csharp
+    var message = new MessageActivity("Here is the result!")
+      .AddTargetedMessageInfo(targetedMessageId);
+    
+    // Targeted reply (only the user sees it)
+    message.WithRecipient(userAccount, true);
+    await context.Send(message, cancellationToken);
+    
+    // OR public reply (everyone sees it)
+    await context.Send(message, cancellationToken);
   ```
   
 # [TypeScript](#tab/ts)
 
   ```typescript
+  const message = new MessageActivity('Here is the result!')
+  .addTargetedMessageInfo(targetedMessageId);
+
+  // Targeted reply (only the user sees it)
+  message.withRecipient(userAccount, true);
+  await send(message);
+    
+  // OR public reply (everyone sees it)
+  await send(message);
   ```
 
 # [Python](#tab/Py)
 
   ```python
-  
+  message = MessageActivityInput(text="Here is the result!")
+  message.add_targeted_message_info(targeted_message_id)
+    
+  # Targeted reply (only the user sees it)
+  message.with_recipient(user_account, is_targeted=True)
+  await ctx.send(message)
+    
+  # OR public reply (everyone sees it)
+  await ctx.send(message)
   ```
   
 # [HTTP](#tab/api)
 
-  [WIP: Add code snippet]
+  ```http
+  "entities": [{
+    "type": "targetedMessageInfo",
+    "messageId": "1772129782775"
+    }]
+  }
+  ```
 
 ---
 
