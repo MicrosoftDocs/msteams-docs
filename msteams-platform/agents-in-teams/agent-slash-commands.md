@@ -141,7 +141,7 @@ Update your app manifest to opt in to targeted messaging and (optionally) list t
 - List the specific slash commands the agent or bot exposes.
 - Specify whether it supports natural-language prompts when invoked via slash commands.
 
-For more information, see [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax).
+For more information, see [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
 The following options are supported:
 
