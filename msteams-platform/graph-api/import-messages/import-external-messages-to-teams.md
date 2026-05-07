@@ -22,18 +22,20 @@ To import messages into Teams, your app needs the following permissions.
 
 |Task|Scope name|
 |----|-----------|
-|Create Chat|Chat.Create|
-|Create Team|Team.Create, Directory.Read.All, Group.ReadWrite.All, Teamwork.Migrate.All|
-|Create Channel|Channel.Create, Channel.Create.Group, Directory.ReadWrite.All, Group.ReadWrite.All, Teamwork.Migrate.All|
+|Create Chat|[Chat.Create](/graph/api/chat-post?view=graph-rest-1.0&tabs=http)|
+|Create Team|[Team.Create](/graph/api/team-post?view=graph-rest-1.0&tabs=http), [Directory.Read.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http), [Group.ReadWrite.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http), [Teamwork.Migrate.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http)|
+|Create Channel|[Channel.Create](/graph/api/channel-post?view=graph-rest-1.0&tabs=http), [Channel.Create.Group](/graph/api/channel-post?view=graph-rest-1.0&tabs=http), [Directory.ReadWrite.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http), [Group.ReadWrite.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http), [Teamwork.Migrate.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http)|
 
 #### Manage Conversation Members
 
 |Task|Scope name|
 |----|-----------|
-|Add Chat Member|Chat.Manage.Chat (RSC), Chat.ReadWrite.All, ChatMember.ReadWrite.All|
-|Remove Chat Member|Chat.Manage.Chat (RSC), ChatMember.ReadWrite.All|
-|Add Channel Member, Remove Channel Member|ChannelMember.ReadWrite.Group, ChannelMember.ReadWrite.All|
-|Add Team Member, Remove Team Member|TeamMember.ReadWriteNonOwnerRole.All, TeamMember.ReadWrite.All|
+|Add Chat Member|[Chat.Manage.Chat](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http), [Chat.ReadWrite.All](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http), [ChatMember.ReadWrite.All](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http)|
+|Remove Chat Member|[Chat.Manage.Chat](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http), [ChatMember.ReadWrite.All](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http)|
+|Add Team Member|[TeamMember.ReadWriteNonOwnerRole.All](/graph/api/team-post-members?view=graph-rest-1.0&tabs=http), [TeamMember.ReadWrite.All](/graph/api/team-post-members?view=graph-rest-1.0&tabs=http)|
+|Remove Team Member|[TeamMember.ReadWriteNonOwnerRole.All](/graph/api/team-update-members?view=graph-rest-1.0&tabs=http), [TeamMember.ReadWrite.All](/graph/api/team-update-members?view=graph-rest-1.0&tabs=http)|
+|Add Channel Member|[ChannelMember.ReadWrite.Group](/graph/api/channel-post-members?view=graph-rest-1.0&tabs=http), [ChannelMember.ReadWrite.All](/graph/api/channel-post-members?view=graph-rest-1.0&tabs=http)|
+|Remove Channel Member|[ChannelMember.ReadWrite.Group](/graph/api/channel-delete-members?view=graph-rest-1.0&tabs=http), [ChannelMember.ReadWrite.All](/graph/api/channel-delete-members?view=graph-rest-1.0&tabs=http)|
 
 ## Migration requests
 
