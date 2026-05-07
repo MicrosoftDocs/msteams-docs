@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 05/06/2026
+ms.date: 05/07/2026
 ---
 
 # Respond to the dialog submit action
@@ -53,6 +53,9 @@ Examples of receiving the invoke message are as follows:
 
 # [C#/.NET](#tab/dotnet1)
 
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
 ```csharp
 // New Teams SDK uses minimal API / event registration instead of class inheritance. 
 // Search handler example from bot-message-extensions sample: 
@@ -65,9 +68,11 @@ teams.OnQuery(async (ctx) =>
 }); 
 ```
 
-# [JavaScript/Node.js](#tab/javascript1)
+# [TypeScript/Node.js](#tab/typescript1)
 
-```javascript
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+
+```typescript
 import { App } from '@microsoft/teams.apps' 
 
 const app = new App() 
@@ -79,6 +84,8 @@ app.on('message.ext.query', async ({ activity }) => {
 ```
 
 # [Python](#tab/python1)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
 from microsoft_teams.apps import ActivityContext, App
@@ -127,6 +134,9 @@ The following example is a JSON object that you receive. The `commandContext` pa
 The most common way to respond to the `composeExtensions/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 # [C#/.NET](#tab/dotnet2)
+
+* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -185,9 +195,11 @@ return new MsgExt.Response
 };
 ```
 
-# [JavaScript/Node.js](#tab/javascript2)
+# [TypeScript/Node.js](#tab/typescript2)
 
-```javascript
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+
+```typescript
 import {
   cardAttachment,
   ThumbnailCard,
@@ -246,6 +258,8 @@ return {
 ```
 
 # [Python](#tab/python2)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
 ```python
 from microsoft_teams.api import (
@@ -340,7 +354,7 @@ You can select to respond to the `submitAction` event with additional dialog. It
 * Dynamically change the information collection based on user input.
 * Validate the information submitted by the user and resend the form with an error message if something is wrong.
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Bot Framework SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Teams SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
 
 ## Bot response with Adaptive Card
 
@@ -406,9 +420,9 @@ var card = new AdaptiveCard
 // Doc team needs to determine the correct new SDK API for botMessagePreview responses.
 ```
 
-# [JavaScript/Node.js](#tab/javascript3)
+# [TypeScript/Node.js](#tab/typescript3)
 
-```javascript
+```typescript
 import { AdaptiveCard, TextBlock, ActionSet } from '@microsoft/teams.cards';
 
 // AdaptiveCard construction — use new @microsoft/teams.cards SDK:
