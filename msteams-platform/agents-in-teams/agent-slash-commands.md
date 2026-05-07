@@ -418,14 +418,14 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Enable prompt preview**: Prompt Preview is supported when sending agent or bot responses through the following APIs:
 
-    1. Targeted Message Send API
+  1. Targeted Message Send API
 
-        1. The bot replies privately to the user’s message
-        1. The response is visible only to the targeted user
+    1. The bot replies privately to the user’s message
+    1. The response is visible only to the targeted user
 
-    2. Normal Message Send API
-        1. The bot replies in the conversation normally
-        1. The response is visible to all participants in the chat
+  2. Normal Message Send API
+    1. The bot replies in the conversation normally
+    1. The response is visible to all participants in the chat
 
     In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
 
