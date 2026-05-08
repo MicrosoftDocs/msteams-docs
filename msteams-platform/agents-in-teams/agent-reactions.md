@@ -10,6 +10,10 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
+> [!NOTE]
+>
+> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
 # Enable agent reactions in Teams
 
 You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
