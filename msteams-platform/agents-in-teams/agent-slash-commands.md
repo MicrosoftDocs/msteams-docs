@@ -301,7 +301,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [Private message to a user](#tab/private)
 
-**Private message to a user**: Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a message to a single user.
+Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a message to a single user.
 
 - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
@@ -381,14 +381,10 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [Public response by the agent](#tab/public)
 
-**Public response by the agent**:
-
-  If the response is relevant to all members, you can enable the agent or bot to send a public response in:
+If the response is relevant to all members, you can enable the agent or bot to send a public response in:
 
 - Group
 - Channel
-
-  Use one of the following code snippets for public responses:
 
   # [C#](#tab/dotnet)
 
@@ -421,9 +417,9 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     [WIP: Add code snippet]
 
-# [Enable prompt preview](#tab/preview)
+# [Prompt preview](#tab/preview)
 
-**Enable prompt preview**: You can enable prompt preview using Teams SDK or REST APIs.
+You can enable prompt preview using Teams SDK or REST APIs.
 
 - Use REST APIs: Prompt preview is supported when sending agent or bot responses through the following APIs:
 
