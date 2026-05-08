@@ -6,13 +6,11 @@ ms.date: 01/23/2026
 ms.localizationpriority: high
 ---
 
+# Teams Reactions Reference
+
 > [!NOTE]
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
-# Teams Reactions Reference
-
-<!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
 This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work. To use a Teams Reaction:
 
