@@ -129,12 +129,10 @@ The following code shows an example of receiving a message activity:
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
-
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+app.OnMessage(async context =>
 {
-  // Sends an activity to the sender of the incoming activity.
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
-}
+    await context.Send($"Echo: {context.Activity.Text}");
+});
 
 ```
 
