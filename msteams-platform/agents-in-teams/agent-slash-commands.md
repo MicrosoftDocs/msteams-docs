@@ -299,87 +299,91 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 [WIP: Add link to Teams SDK docs]
 
+# [Private message to a user](#tab/private)
+
 **Private message to a user**: Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a message to a single user.
 
-- **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
-
-  # [C#](#tab/dotnet1)
-
-    ```csharp
-
-      teams.OnMessage(async (context, cancellationToken) => {
-        if (context.Activity.Recipient?.IsTargeted == true){
-          await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
-        }
-      });
-    ```
-
-  # [TypeScript](#tab/ts1)
-
-    ```typescript
+    - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
     
-      app.on('message', async ({ send, activity }) => {
-        if(activity.Recipient.isTargeted) {
-          send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+      # [C#](#tab/dotnet1)
+    
+        ```csharp
+    
+          teams.OnMessage(async (context, cancellationToken) => {
+            if (context.Activity.Recipient?.IsTargeted == true){
+              await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
+            }
+          });
+        ```
+    
+      # [TypeScript](#tab/ts1)
+    
+        ```typescript
+        
+          app.on('message', async ({ send, activity }) => {
+            if(activity.Recipient.isTargeted) {
+              send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+              }
+          });
+        ```
+    
+      # [Python](#tab/Py1)
+    
+        ```python
+        
+          @app.on_message
+          async def handle_message(ctx):
+            if getattr(ctx.activity.recipient, "is_targeted", False):
+              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
+        ```
+    
+      # [HTTP](#tab/api1)
+    
+        [WIP: Add code snippet]
+    
+        ---
+
+    - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
+    
+      # [C#](#tab/dotnet1)
+    
+        ```csharp
+    
+        teams.OnMessage(async (context, cancellationToken) => {
+          if (context.Activity.Recipient?.IsTargeted == true) {
+            await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
           }
-      });
-    ```
-
-  # [Python](#tab/Py1)
-
-    ```python
+          });
+        ```
     
-      @app.on_message
-      async def handle_message(ctx):
-        if getattr(ctx.activity.recipient, "is_targeted", False):
-          await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
-    ```
-
-  # [HTTP](#tab/api1)
-
-    [WIP: Add code snippet]
-
-    ---
-
-- **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
-
-  # [C#](#tab/dotnet1)
-
-    ```csharp
-
-    teams.OnMessage(async (context, cancellationToken) => {
-      if (context.Activity.Recipient?.IsTargeted == true) {
-        await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
-      }
-      });
-    ```
-
-  # [TypeScript](#tab/ts1)
-
-    ```typescript
-
-      app.on('message', async ({ send, activity }) => {
-        if(activity.Recipient.isTargeted) {
-          send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-        }
-      });
-    ```
-
-  # [Python](#tab/Py1)
-
-    ```python
+      # [TypeScript](#tab/ts1)
     
-      @app.on_message
-      async def handle_message(ctx):
-        if getattr(ctx.activity.recipient, "is_targeted", False):
-          await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
-    ```
+        ```typescript
+    
+          app.on('message', async ({ send, activity }) => {
+            if(activity.Recipient.isTargeted) {
+              send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+            }
+          });
+        ```
+    
+      # [Python](#tab/Py1)
+    
+        ```python
+        
+          @app.on_message
+          async def handle_message(ctx):
+            if getattr(ctx.activity.recipient, "is_targeted", False):
+              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
+        ```
+    
+      # [HTTP](#tab/api1)
+    
+        [WIP: Add code snippet]
+    
+      ---
 
-  # [HTTP](#tab/api1)
-
-    [WIP: Add code snippet]
-
-  ---
+# [Public response by the agent](#tab/public)
 
 **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
@@ -416,82 +420,86 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 ---
 
+# [Enable prompt preview](#tab/preview)
+
 **Enable prompt preview**: You can enable prompt preview using Teams SDK or REST APIs.
 
-- Use REST APIs: Prompt preview is supported when sending agent or bot responses through the following APIs:
-
-  1. Targeted Message Send API: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
-
-  2. Normal Message Send API: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
-
-  In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
-
-- Use Teams SDK: Prompt preview is supported for agent's response to user in the following scenarios:
-
-  - Reactive Scenarios: When an agent or bot replies within the context of an incoming user interaction (for example, using `send()` or `reply()`):
-
-    - The SDK automatically attaches the `targetedMessageInfo` entity.
-    - No additional code is required from the developer.
-
-  Prompt Preview is rendered automatically using the original message context
-
-  - Proactive Scenarios: When a bot sends a message outside of a reactive context (for example, follow-ups, delayed responses, or background workflows):
-    - The developer must manually attach the entity.
-    - The `messageId` of the original user message must be provided.
-
-# [C#](#tab/dotnet)
-
-Attach the entity manually using the targeted message ID:
-
-  ```csharp
-    var message = new MessageActivity("Here is the result!")
-      .AddTargetedMessageInfo(targetedMessageId);
+    - Use REST APIs: Prompt preview is supported when sending agent or bot responses through the following APIs:
     
-    // Targeted reply (only the user sees it)
-    message.WithRecipient(userAccount, true);
-    await context.Send(message, cancellationToken);
+      1. Targeted Message Send API: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
     
-    // OR public reply (everyone sees it)
-    await context.Send(message, cancellationToken);
-  ```
-  
-# [TypeScript](#tab/ts)
-
-  ```typescript
-  const message = new MessageActivity('Here is the result!')
-  .addTargetedMessageInfo(targetedMessageId);
-
-  // Targeted reply (only the user sees it)
-  message.withRecipient(userAccount, true);
-  await send(message);
+      2. Normal Message Send API: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
     
-  // OR public reply (everyone sees it)
-  await send(message);
-  ```
-
-# [Python](#tab/Py)
-
-  ```python
-  message = MessageActivityInput(text="Here is the result!")
-  message.add_targeted_message_info(targeted_message_id)
+      In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
     
-  # Targeted reply (only the user sees it)
-  message.with_recipient(user_account, is_targeted=True)
-  await ctx.send(message)
+    - Use Teams SDK: Prompt preview is supported for agent's response to user in the following scenarios:
     
-  # OR public reply (everyone sees it)
-  await ctx.send(message)
-  ```
-  
-# [HTTP](#tab/api)
+      - Reactive Scenarios: When an agent or bot replies within the context of an incoming user interaction (for example, using `send()` or `reply()`):
+    
+        - The SDK automatically attaches the `targetedMessageInfo` entity.
+        - No additional code is required from the developer.
+    
+      Prompt Preview is rendered automatically using the original message context
+    
+      - Proactive Scenarios: When a bot sends a message outside of a reactive context (for example, follow-ups, delayed responses, or background workflows):
+        - The developer must manually attach the entity.
+        - The `messageId` of the original user message must be provided.
 
-  ```http
-  "entities": [{
-    "type": "targetedMessageInfo",
-    "messageId": "1772129782775"
-    }]
-  }
-  ```
+    # [C#](#tab/dotnet)
+    
+    Attach the entity manually using the targeted message ID:
+    
+      ```csharp
+        var message = new MessageActivity("Here is the result!")
+          .AddTargetedMessageInfo(targetedMessageId);
+        
+        // Targeted reply (only the user sees it)
+        message.WithRecipient(userAccount, true);
+        await context.Send(message, cancellationToken);
+        
+        // OR public reply (everyone sees it)
+        await context.Send(message, cancellationToken);
+      ```
+      
+    # [TypeScript](#tab/ts)
+    
+      ```typescript
+      const message = new MessageActivity('Here is the result!')
+      .addTargetedMessageInfo(targetedMessageId);
+    
+      // Targeted reply (only the user sees it)
+      message.withRecipient(userAccount, true);
+      await send(message);
+        
+      // OR public reply (everyone sees it)
+      await send(message);
+      ```
+    
+    # [Python](#tab/Py)
+    
+      ```python
+      message = MessageActivityInput(text="Here is the result!")
+      message.add_targeted_message_info(targeted_message_id)
+        
+      # Targeted reply (only the user sees it)
+      message.with_recipient(user_account, is_targeted=True)
+      await ctx.send(message)
+        
+      # OR public reply (everyone sees it)
+      await ctx.send(message)
+      ```
+      
+    # [HTTP](#tab/api)
+    
+      ```http
+      "entities": [{
+        "type": "targetedMessageInfo",
+        "messageId": "1772129782775"
+        }]
+      }
+      ```
+    
+    ---
 
 ---
 
