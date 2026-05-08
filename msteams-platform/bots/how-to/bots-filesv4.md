@@ -10,7 +10,7 @@ ms.owner: angovil
 
 > [!IMPORTANT]
 >
-> * This article is based on the [Teams SDK (Teams AI Library)](~/teams-sdk/why.md).
+> * This article is based on the [Teams SDK (Teams AI Library)](/microsoftteams/platform/teams-sdk/).
 > * Bots don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send files to and receive files:
@@ -39,7 +39,7 @@ Graph APIs work in all Teams scopes. For more information, see [send chat messag
 
 Alternately, you can send files to and receive files from a bot using the Teams SDK file consent APIs.
 
-## Use the Teams bot APIs
+## Use the Teams SDK file consent file APIs
 
 Teams SDK file consent APIs work only in the `personal` context. They don't work in the `channel` or `groupchat` context.
 
@@ -250,7 +250,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-# [Python](#tab/Python1)
+# [Python](#tab/python1)
 
 ```python
 import httpx
@@ -304,15 +304,15 @@ app.on('message', async ({ activity, send }) => {
 
 ---
 
-### Basic example
+## Basic example
 
 The following example shows how to handle the complete file consent workflow, including sending consent cards, handling accepted and declined responses, and uploading files to OneDrive.
 
-## Send File Consent Card
+### Send File Consent Card
 
 The following code sends a file consent card to the user, requesting permission to upload the received file to their OneDrive:
 
-# [C#](#tab/csharp2)
+#### [C#](#tab/csharp2)
 
 ```csharp
 async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string fileId, int fileSize)
@@ -344,7 +344,7 @@ async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string f
 }
 ```
 
-# [TypeScript](#tab/typescript2)
+#### [TypeScript](#tab/typescript2)
 
 ```typescript
 async function sendFileConsentCard(context: any, filename: string, fileId: string): Promise<void> {
@@ -365,7 +365,7 @@ async function sendFileConsentCard(context: any, filename: string, fileId: strin
 }
 ```
 
-# [Python](#tab/python2)
+#### [Python](#tab/python2)
 
 ```python
 async def _send_file_consent_card(ctx: ActivityContext, filename: str, file_id: str) -> None:
@@ -384,11 +384,11 @@ async def _send_file_consent_card(ctx: ActivityContext, filename: str, file_id: 
 
 ---
 
-## Handle File Upload
+### Handle File Upload
 
-The following code performs the actual file upload after the user accepts the consent card, uploads the content to OneDrive, and sends a success message with a file info attachment. In C#, this logic is inline within the `OnFileConsent` handler shown above:
+The following code performs the actual file upload after the user accepts the consent card, uploads the content to OneDrive, and sends a success message with a file info attachment. In C#, this logic is inline within the `OnFileConsent` handler.
 
-# [TypeScript](#tab/typescript3)
+#### [TypeScript](#tab/typescript3)
 
 ```typescript
 async function handleFileUpload(context: any, uploadInfo: FileUploadInfo, fileId: string): Promise<void> {
@@ -430,7 +430,7 @@ async function uploadToOnedrive(url: string, content: Buffer): Promise<void> {
 }
 ```
 
-# [Python](#tab/Python3)
+#### [Python](#tab/python3)
 
 ```python
 async def _handle_file_upload(ctx: ActivityContext, upload_info: FileUploadInfo, file_id: str) -> None:
@@ -482,7 +482,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 ## See also
 
-* [Teams SDK overview](~/teams-sdk/why.md)
-* [User authentication](~/teams-sdk/in-depth-guides/user-authentication.md)
-* [Sending messages](~/teams-sdk/essentials/sending-messages/overview.md)
-* [Teams core concepts](~/teams-sdk/teams/core-concepts.md)
+* [Teams SDK overview](/microsoftteams/platform/teams-sdk/why)
+* [User authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication?tabs=portal&pivots=csharp)
+* [Sending messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp)
+* [Teams core concepts](/microsoftteams/platform/teams-sdk/teams/core-concepts)
