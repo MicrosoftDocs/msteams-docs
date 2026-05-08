@@ -307,79 +307,79 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [C#](#tab/dotnet1)
 
-      ```csharp
+  ```csharp
   
-        teams.OnMessage(async (context, cancellationToken) => {
-          if (context.Activity.Recipient?.IsTargeted == true){
-            await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
-          }
-        });
-      ```
+    teams.OnMessage(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true){
+        await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
+      }
+    });
+  ```
 
   # [TypeScript](#tab/ts1)
 
-      ```typescript
+  ```typescript
         
-        app.on('message', async ({ send, activity }) => {
-          if(activity.Recipient.isTargeted) {
-            send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-            }
-        });
-      ```
+    app.on('message', async ({ send, activity }) => {
+      if(activity.Recipient.isTargeted) {
+        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+        }
+    });
+  ```
 
   # [Python](#tab/Py1)
 
-      ```python
+  ```python
         
-        @app.on_message
-        async def handle_message(ctx):
-          if getattr(ctx.activity.recipient, "is_targeted", False):
-            await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
-      ```
+    @app.on_message
+    async def handle_message(ctx):
+      if getattr(ctx.activity.recipient, "is_targeted", False):
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
+  ```
 
   # [HTTP](#tab/api1)
 
-      [WIP: Add code snippet]
+  [WIP: Add code snippet]
   
-      ---
+  ---
 
 - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
 
   # [C#](#tab/dotnet1)
 
-      ```csharp
+  ```csharp
     
-      teams.OnMessage(async (context, cancellationToken) => {
-        if (context.Activity.Recipient?.IsTargeted == true) {
-          await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
-        }
-        });
-      ```
+  teams.OnMessage(async (context, cancellationToken) => {
+    if (context.Activity.Recipient?.IsTargeted == true) {
+      await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
+    }
+    });
+  ```
 
   # [TypeScript](#tab/ts1)
 
-    ```typescript
+  ```typescript
     
-        app.on('message', async ({ send, activity }) => {
-          if(activity.Recipient.isTargeted) {
-            send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-          }
-        });
-      ```
+  app.on('message', async ({ send, activity }) => {
+    if(activity.Recipient.isTargeted) {
+    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+      }
+  });
+  ```
 
   # [Python](#tab/Py1)
 
-      ```python
+  ```python
       
-        @app.on_message
-        async def handle_message(ctx):
-          if getattr(ctx.activity.recipient, "is_targeted", False):
-              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
-      ```
+    @app.on_message
+    async def handle_message(ctx):
+      if getattr(ctx.activity.recipient, "is_targeted", False):
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
+  ```
 
   # [HTTP](#tab/api1)
 
-      [WIP: Add code snippet]
+  [WIP: Add code snippet]
 
   ---
 
