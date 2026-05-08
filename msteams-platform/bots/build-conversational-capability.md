@@ -143,16 +143,9 @@ app.OnMessage(async context =>
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            // Sends a message activity to the sender of the incoming activity.
-            await context.sendActivity(`Echo: '${context.activity.text}'`);
-            await next();
-        });
-    }
-}
+app.on('message', async ({ activity, send }) => {
+    await send(`Echo: '${activity.text}'`);
+});
 
 ```
 
@@ -163,9 +156,9 @@ export class MyBot extends TeamsActivityHandler {
 
 ```python
 
-async def on_message_activity(self, turn_context: TurnContext):
-    // Sends a message activity to the sender of the incoming activity.
-    return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.send(f"Echo: {ctx.activity.text}")
 
 ```
 
