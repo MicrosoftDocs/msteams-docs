@@ -303,122 +303,125 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Private message to a user**: Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a message to a single user.
 
-    - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
-    
-      # [C#](#tab/dotnet1)
-    
-        ```csharp
-    
-          teams.OnMessage(async (context, cancellationToken) => {
-            if (context.Activity.Recipient?.IsTargeted == true){
-              await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
-            }
-          });
-        ```
-    
-      # [TypeScript](#tab/ts1)
-    
-        ```typescript
-        
-          app.on('message', async ({ send, activity }) => {
-            if(activity.Recipient.isTargeted) {
-              send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-              }
-          });
-        ```
-    
-      # [Python](#tab/Py1)
-    
-        ```python
-        
-          @app.on_message
-          async def handle_message(ctx):
-            if getattr(ctx.activity.recipient, "is_targeted", False):
-              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
-        ```
-    
-      # [HTTP](#tab/api1)
-    
-        [WIP: Add code snippet]
-    
-        ---
+- **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
-    - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
-    
-      # [C#](#tab/dotnet1)
-    
-        ```csharp
-    
+  # [C#](#tab/dotnet1)
+
+      ```csharp
+  
         teams.OnMessage(async (context, cancellationToken) => {
-          if (context.Activity.Recipient?.IsTargeted == true) {
-            await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
+          if (context.Activity.Recipient?.IsTargeted == true){
+            await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
           }
-          });
-        ```
-    
-      # [TypeScript](#tab/ts1)
-    
-        ```typescript
-    
-          app.on('message', async ({ send, activity }) => {
-            if(activity.Recipient.isTargeted) {
-              send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-            }
-          });
-        ```
-    
-      # [Python](#tab/Py1)
-    
-        ```python
+        });
+      ```
+
+  # [TypeScript](#tab/ts1)
+
+      ```typescript
         
-          @app.on_message
-          async def handle_message(ctx):
-            if getattr(ctx.activity.recipient, "is_targeted", False):
-              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
-        ```
-    
-      # [HTTP](#tab/api1)
-    
-        [WIP: Add code snippet]
-    
+        app.on('message', async ({ send, activity }) => {
+          if(activity.Recipient.isTargeted) {
+            send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+            }
+        });
+      ```
+
+  # [Python](#tab/Py1)
+
+      ```python
+        
+        @app.on_message
+        async def handle_message(ctx):
+          if getattr(ctx.activity.recipient, "is_targeted", False):
+            await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
+      ```
+
+  # [HTTP](#tab/api1)
+
+      [WIP: Add code snippet]
+  
       ---
+
+- **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
+
+  # [C#](#tab/dotnet1)
+
+      ```csharp
+    
+      teams.OnMessage(async (context, cancellationToken) => {
+        if (context.Activity.Recipient?.IsTargeted == true) {
+          await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
+        }
+        });
+      ```
+
+  # [TypeScript](#tab/ts1)
+
+    ```typescript
+    
+        app.on('message', async ({ send, activity }) => {
+          if(activity.Recipient.isTargeted) {
+            send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+          }
+        });
+      ```
+
+  # [Python](#tab/Py1)
+
+      ```python
+      
+        @app.on_message
+        async def handle_message(ctx):
+          if getattr(ctx.activity.recipient, "is_targeted", False):
+              await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
+      ```
+
+  # [HTTP](#tab/api1)
+
+      [WIP: Add code snippet]
+
+  ---
 
 # [Public response by the agent](#tab/public)
 
-**Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
+**Public response by the agent**: If the response is relevant to all members, you can enable the agent or bot to send a public response in:
 
-# [C#](#tab/dotnet)
+- Group
+- Channel
 
-  ```csharp
+  # [C#](#tab/dotnet)
+
+    ```csharp
   
-    teams.OnMessage(async (context, cancellationToken) => {
-      await context.Send(new MessageActivity("Normal msg"), cancellationToken);
+      teams.OnMessage(async (context, cancellationToken) => {
+        await context.Send(new MessageActivity("Normal msg"), cancellationToken);
+      });
+    ```
+  
+  # [TypeScript](#tab/ts)
+
+    ```typescript
+
+    app.on('message', async ({ send, activity }) => {
+      send(new MessageActivity('Normal msg'))  
     });
-  ```
+    ```
+
+  # [Python](#tab/Py)
+
+    ```python
   
-# [TypeScript](#tab/ts)
-
-  ```typescript
-
-  app.on('message', async ({ send, activity }) => {
-    send(new MessageActivity('Normal msg'))  
-  });
-  ```
-
-# [Python](#tab/Py)
-
-  ```python
+      @app.on_message
+      async def handle_message(ctx):
+        await ctx.send(MessageActivityInput("Normal msg"))
+    ```
   
-    @app.on_message
-    async def handle_message(ctx):
-      await ctx.send(MessageActivityInput("Normal msg"))
-  ```
-  
-# [HTTP](#tab/api)
+  # [HTTP](#tab/api)
 
-  [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
----
+  ---
 
 # [Enable prompt preview](#tab/preview)
 
