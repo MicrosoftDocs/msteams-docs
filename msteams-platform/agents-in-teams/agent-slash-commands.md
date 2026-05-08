@@ -341,8 +341,6 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   [WIP: Add code snippet]
   
-  ---
-
 - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
 
   # [C#](#tab/dotnet1)
