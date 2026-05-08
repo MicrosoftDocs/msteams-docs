@@ -381,10 +381,14 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [Public response by the agent](#tab/public)
 
-**Public response by the agent**: If the response is relevant to all members, you can enable the agent or bot to send a public response in:
+**Public response by the agent**:
+
+  If the response is relevant to all members, you can enable the agent or bot to send a public response in:
 
 - Group
 - Channel
+
+  Use one of the following code snippets for public responses:
 
   # [C#](#tab/dotnet)
 
