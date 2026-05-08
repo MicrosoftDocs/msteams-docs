@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 05/07/2026
+ms.date: 05/08/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -20,6 +20,8 @@ To import messages into Teams, your app needs the following permissions.
 >Teamwork.Migrate.All is the baseline permission needed for a significant number of operations. Individual APIs might require additional permissions, refer to linked documentation for each API.
 
 ### Prerequisites
+
+The following permissions are required as prerequisites for migrating messages.
 
 #### Create Conversations
 
@@ -40,7 +42,9 @@ To import messages into Teams, your app needs the following permissions.
 |Add Channel Member|[ChannelMember.ReadWrite.Group](/graph/api/channel-post-members?view=graph-rest-1.0&tabs=http&preserve-view=true), [ChannelMember.ReadWrite.All](/graph/api/channel-post-members?view=graph-rest-1.0&tabs=http&preserve-view=true)|
 |Remove Channel Member|[ChannelMember.ReadWrite.Group](/graph/api/channel-delete-members?view=graph-rest-1.0&tabs=http&preserve-view=true), [ChannelMember.ReadWrite.All](/graph/api/channel-delete-members?view=graph-rest-1.0&tabs=http&preserve-view=true)|
 
-## Migration requests
+### Migration requests
+
+The following permissions are required to migrate messages into Teams.
 
 Migration APIs| Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
 |---------- |---------- |-------------|-------------|------|----------------|-----------|
