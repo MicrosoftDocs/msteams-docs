@@ -3,7 +3,6 @@ title: Introduction to Moodle LMS
 description: Learn how to integrate Moodle LMS with Teams for audio or video calls, chats, course management, insights, and ensure accessibility with mConnect.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 11/26/2024
 ---
 

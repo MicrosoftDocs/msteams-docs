@@ -1,12 +1,9 @@
 ---
 title: Build Dashboard with Widget & Graph API
-author: surbhigupta
 description: Learn how to build dashboard tab app, customize layout, use a widget, make Graph API calls using Microsoft 365 Agents Toolkit, and embed a Power BI dashboard.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 01/17/2023
-ms.owner: ryanbliss
 ---
 
 # Build a dashboard tab app

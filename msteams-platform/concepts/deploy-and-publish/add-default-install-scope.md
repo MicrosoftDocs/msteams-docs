@@ -3,7 +3,6 @@ title: Configure default options for your app
 description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: surbhigupta
 ms.date: 03/05/2025
 ---
 # Configure default options for Teams app

@@ -1,12 +1,9 @@
 ---
 title: Create Configuration Page in Tabs
-author: surbhigupta
 description: Learn to create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.date: 02/06/2025
-ms.owner: ryanbliss
 ---
 # Create a configuration page
 

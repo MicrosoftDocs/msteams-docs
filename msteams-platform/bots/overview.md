@@ -4,7 +4,6 @@ description: Learn about bots and the application of bots across industry, and b
 ms.localizationpriority: high
 ms.date: 05/07/2025
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.owner: angovil
 ---
 

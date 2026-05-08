@@ -1,7 +1,6 @@
 ---
 title: Loop Component Key Features
 description: Learn how to design Adaptive Card-based Loop components, its key features, and the various elements, such as the body, header, and border.
-ms.author: mobajemu
 ms.date: 10/11/2024
 ms.topic: tutorial
 ms.custom: m365apps

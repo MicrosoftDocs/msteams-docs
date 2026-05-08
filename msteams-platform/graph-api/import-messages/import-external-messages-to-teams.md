@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 12/17/2025
+ms.date: 04/01/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -23,24 +23,15 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Supported channel and chat types
 
-Teams supports migrating external messages to the following channel and chat types:
-
-* **New team and standard channel**: Create a new team and its standard channels in migration mode to import content. This approach lets you import the exact structure of your external system into the new channel.
-To enable `migrationMode` for a new standard team and channel, see [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode).
-
-* **Existing channel or chat**: Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
+Teams supports migrating external message to existing channels or chats. Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 To enable migration mode in an existing channel or chat, see [Existing channel migration](#existing-channel-migration).
 
 > [!NOTE]
->
-> * Only standard channels are supported when creating a channel in migration mode from scratch.
-> * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
+> Federated content can't be imported. All imported content must come from the authenticated tenant.<br>
+> The application that calls `startMigration` on a thread owns that migration session end-to-end. The same app must invoke `importMessage` and `completeMigration`. No other app can call these APIs on the thread until the owning app completes migration.
 
-`migrationMode` is a special state that ensures data integrity by preventing the following operations during data migration.
+`migrationMode` is a special state that ensures data integrity by preventing certain operations during data migration.
 
-* For new teams and standard channels:
-  * It restricts receipt of new messages
-  * It prevents adding or removing members
 * For all supported channels and chat types:
   * It allows importing historical messages with custom timestamps
   * It maintains the original conversation structure and hierarchy
@@ -53,15 +44,17 @@ The following table provides the content scope for existing channels and chats.
 |----------|--------------------------|
 |Team (general)|Announcements|
 |Created time of the original message|Videos|
-|Inline images as part of the message|Code snippets|
-|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Stickers|
-|Messages with rich text|Cross posts between channels|
-|Message reply chain|Quotes|
+|Inline images as part of the message|Stickers|
+|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Cross posts between channels|
+|Messages with rich text||
+|Message reply chain||
 |High throughput processing||
 |1:1 and group chat messages||
 |Standard, private, and shared channel messages||
 |Up to 250 reactions||
 |@mentions and emojis||
+|Code snippets||
+|Quotes||
 
 ## Prerequisites
 
@@ -74,12 +67,12 @@ The following table provides the content scope for existing channels and chats.
 
 ### Set up your Microsoft 365 tenant
 
-* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenant for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
 
 ## Import historical messages into Teams
 
-You can import historical messages seamlessly into both existing and newly created channels or chats by performing the following steps:
+You can import historical messages seamlessly into existing channels or chats by performing the following steps:
 
 1. [Start migration](#step-1-start-migration)
 1. [Check migration status](#step-2-check-migration-status)
@@ -89,12 +82,9 @@ You can import historical messages seamlessly into both existing and newly creat
 
 ## Step 1: Start migration
 
-To start migrating a user's message history from any third-party platform to Teams, you can either create a new team and standard channel or use an existing channel or chat. Depending on your scenario, choose either of the following options:
+To start migrating a user's message history from any third-party platform to Teams, you can use an existing channel or chat.
 
-* [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
-* [Start migration on existing channels and chats](#start-migration-on-existing-channels-and-chats)
-
-### Create a team and standard channel in migration mode
+<!-- ### Create a team and standard channel in migration mode
 
 In this scenario, create a new team and standard channel in `migrationMode` to proceed with importing existing messages. `migrationMode` is supported only for standard channels.
 
@@ -196,7 +186,7 @@ After you create a new team and standard channel, complete migration with the fo
 1. [Check migration status](#step-2-check-migration-status)
 1. [Import messages](#step-3-import-messages)
 1. [Complete migration mode](#step-4-complete-migration-mode)
-1. [Verify migration mode completion](#step-5-verify-migration-mode-completion)
+1. [Verify migration mode completion](#step-5-verify-migration-mode-completion) -->
 
 ### Start migration on existing channels and chats
 
@@ -292,6 +282,9 @@ Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is se
 
 * [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
+
+You can also verify that target chat or channel is in `migrationMode` state in Teams through a banner which says **Migration for this conversation is in progress. Messages may be out of order during this time**. <br>
+This banner will remain visible in the Teams UI until the migration is completed for the target chat or channel.
 
 > [!NOTE]
 > The `migrationMode` flag is currently available only in the beta version.
@@ -446,12 +439,7 @@ HTTP/1.1 200 OK
 
 ## Step 4: Complete migration mode
 
-Use the `completeMigration` API to finish the migration process for new and existing channels and chats. For more information, see:
-
-* [Complete new team and channel migration](#complete-new-team-and-channel-migration)
-* [Complete existing channel or chat migration](#complete-existing-channel-or-chat-migration)
-
-### Complete new team and channel migration
+<!-- ### Complete new team and channel migration
 
 Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http&preserve-view=true)
 This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
@@ -509,38 +497,36 @@ HTTP/1.1 204 No Content
 Once you complete new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
 
 > [!NOTE]
-> The `migrationMode` flag is currently available only in the beta version, not in V1.
-
-### Complete existing channel or chat migration
+> The `migrationMode` flag is currently available only in the beta version, not in V1. -->
 
 For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http&preserve-view=true ). This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
 
-#### Request (complete existing channel migration)
+### Request (complete existing channel migration)
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/completeMigration
  
 ```
 
-#### Response
+### Response
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### Request (complete existing chat migration)
+### Request (complete existing chat migration)
 
 ```HTTP
 POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration 
 ```
 
-#### Response
+### Response
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### Optional: Update group chat member history after migration
+### Optional: Update group chat member history after migration
 
 When you complete message migration in a group chat, you can optionally update members’ share history by using the `visibleHistoryStartDateTime` property in Microsoft Graph. This property sets the earliest time a chat member can view messages in a conversation. If imported messages are older than the property's value, they don’t appear unless you update the property.
 
@@ -549,7 +535,7 @@ To update the `visibleHistoryStartDateTime` property:
 1. [Remove the member](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http&preserve-view=true) from the chat.
 1. [Add the member](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http&preserve-view=true) back with a new `visibleHistoryStartDateTime` that includes the imported messages.
 
-##### Example
+#### Example
 
 Consider a scenario where the original chat was created at 10 PM, updated at 1 AM, messages were imported at 9 AM, and member A’s share history starts at 10 AM.
 To ensure that member A can see the 9 AM imported messages:
@@ -572,7 +558,7 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 
 * After calling `completeMigration` on an existing channel or chat, you can continue importing messages by using the `startMigration` API.
 
-* You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This rule applies only to the newly created team and standard channel.
+<!-- * You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This rule applies only to the newly created team and standard channel. -->
 
 * Throttling: Messages import at five RPS per channel.
 

@@ -1,11 +1,9 @@
 ---
 title: OAuth 2.0 Bot Authentication with Azure
-author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.owner: ryanbliss
-ms.date: 12/11/2024
+ms.date: 03/16/2026
 ---
 
 # Add authentication to your Teams bot
@@ -698,7 +696,7 @@ This section provides Bot authentication v3 SDK sample.
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |---------------|------------|------------|-------------|---------------|---------------|
 | Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
-| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)
+| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip)
 
 ## See also
 

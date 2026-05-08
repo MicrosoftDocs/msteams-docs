@@ -1,7 +1,6 @@
 ---
 title: Facilitate App Adoption
 author: ashishguptaiitb
-ms.author: surbhigupta
 manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion, understand how to drive app adoption and track app usage analytics.
 ms.topic: reference
