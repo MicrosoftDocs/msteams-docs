@@ -20,7 +20,7 @@ There are two ways to send files to and receive files:
   * `channel`
   * `groupchat`
 
-* [**Use the Teams SDK file consent APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
+* [**Use the Teams SDK file consent APIs:**](#use-the-teams-sdk-file-consent-file-apis) These only support files in `personal` context.
 
 The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
 
@@ -478,7 +478,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Activity type reference](~/teams-sdk/essentials/on-activity/activity-ref.md)
+> [Activity type reference](/microsoftteams/platform/teams-sdk/essentials/on-activity/activity-ref)
 
 ## See also
 
