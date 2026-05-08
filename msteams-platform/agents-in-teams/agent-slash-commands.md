@@ -43,7 +43,7 @@ When someone uses a slash command, it shows up as a private message just for the
 > - Public responses must be used when visibility in the group or channel adds value.
 > - The original private message expires after 24 hours.
 
-### Agent response visibility
+### Agent response and prompt preview visibility
 
 Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses. When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message. You can control the visibility of agent responses to slash commands through defined agent‑to‑user response flows:
 
@@ -51,7 +51,7 @@ Your agents and bots can send a private or public response to a user's query. Yo
 - [Public agent-to-user response](#public-agent-to-user-response)
 
 > [!NOTE]
-> Including the user’s prompt in the response is optional. Use prompt preview to maintain the context if the conversation is long-running.
+> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain the context if the conversation is long-running.
 
 #### Private agent-to-user response
 
