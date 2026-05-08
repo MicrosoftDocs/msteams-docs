@@ -100,18 +100,10 @@ When the response is useful to the wider audience, you can choose to enable your
 
 ### Prompt preview
 
-When a bot replies to a user’s targeted message, it can optionally enable the Prompt Preview feature.
-Prompt Preview displays a contextual box at the top of the bot’s response containing the user’s original query. This allows the recipient to easily view the user’s original message and agent's or bot’s response
-within a single, self-contained message experience.
+You can choose to enable the agent or bot to include prompt preview in its response to the user's query. When an agent or bot replies to a user’s targeted message, prompt preview displays the user’s original query in a contextual box within a single self-contained message. Use prompt preview to maintain the context if the conversation is long-running.
 
 > [!NOTE]
 > Including the user’s prompt in the response is optional.
-
-This improves readability and preserves context, especially in cases where:
-
-- The reply is delayed.
-- The conversation is long-running.
-- The response is consumed outside the immediate message flow.
 
 ## Why use slash commands
 
