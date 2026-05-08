@@ -3,7 +3,7 @@ title: Package your app
 description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 05/06/2026
+ms.date: 05/08/2026
 ---
 
 # Teams app package
