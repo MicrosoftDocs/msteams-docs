@@ -51,9 +51,6 @@ When someone uses a slash command, it shows up as a private message just for the
 
 Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses.
 
-> [!NOTE]
-> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
-
 You can control the visibility of agent responses to slash commands through defined agent‑to‑user response flows:
 
 # [Private agent-to-user response](#tab/private)
@@ -83,6 +80,8 @@ This flow keeps slash command results focused between the user and the agent or 
 
     :::column-end:::
 :::row-end:::
+
+Next, enable [private agent-to-user responses](#private-agent-to-user-response).
 
 # [Public agent-to-user response](#tab/public)
 
@@ -119,6 +118,9 @@ When an agent or bot replies to a user, prompt preview displays the user’s que
 - Public agent-to-user response: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
+
+> [!NOTE]
+> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
 
 ---
 
