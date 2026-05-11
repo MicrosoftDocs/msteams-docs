@@ -380,6 +380,8 @@ Configure your agent or bot to send a reply only to the person who ran the slash
 
   [WIP: Add code snippet]
 
+  ---
+
 # [Public response by the agent](#tab/public)
 
 If the response is relevant to all members, you can enable the agent or bot to send a public response in a group or channel. Use one of the following code snippets examples for sending a public response:
