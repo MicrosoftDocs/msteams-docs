@@ -49,7 +49,7 @@ When someone uses a slash command, it shows up as a private message just for the
 
 ### Agent response and prompt preview visibility
 
-Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses. When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message.
+Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses.
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
@@ -107,6 +107,10 @@ When the response is useful to the wider audience, you can choose to enable your
         This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
+
+# [Prompt preview](#tab/preview)
+
+When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message.
 
 ---
 
@@ -478,6 +482,7 @@ You can enable prompt preview using Teams SDK or REST APIs.
   # [HTTP](#tab/api)
 
   ```http
+  {
   "entities": [{
     "type": "targetedMessageInfo",
     "messageId": "1772129782775"
