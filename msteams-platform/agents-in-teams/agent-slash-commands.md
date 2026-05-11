@@ -382,12 +382,10 @@ Configure your agent or bot to send a reply only to the person who ran the slash
 
 # [Public response by the agent](#tab/public)
 
-If the response is relevant to all members, you can enable the agent or bot to send a public response in a group or a channel if:
+You can enable the agent or bot to send a public response in a group or a channel if:
 
 - The message requires collaboration from all members
 - The broader visibility adds value
-
-  Use one of the following code snippets for sending a public agent:
 
   # [C#](#tab/dotnet)
 
