@@ -114,7 +114,11 @@ When an agent or bot replies to a user, prompt preview displays the user’s que
 
 - Private agent-to-user response: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
 
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
+
 - Public agent-to-user response: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
 ---
 
