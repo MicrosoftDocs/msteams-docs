@@ -87,7 +87,7 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
 - Send and receive messages.
   - [Receive a message activity](#receive-a-message-activity).
   - [Receive a read receipt](#receive-a-read-receipt).
-  - [Receive edit message activity](#receive-edit-message-activity)
+  - [Receive edit message activity](#receive-edit-message-activity).
   - [Send a message](#send-a-message).
   - [Receive undelete message activity](#receive-undelete-message-activity).
   - [Receive soft delete message activity](#receive-soft-delete-message-activity).
