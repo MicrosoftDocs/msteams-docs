@@ -380,26 +380,34 @@ Configure your agent or bot to send a reply only to the person who ran the slash
 
   [WIP: Add code snippet]
 
-  ---
-
 # [Public response by the agent](#tab/public)
 
-If the response is relevant to all members, you can enable the agent or bot to send a public response in a group or channel. Use one of the following code snippets examples for sending a public response:
+If the response is relevant to all members, you can enable the agent or bot to send a public response in:
 
-```csharp
+- Group
+- Channel
+
+  # [C#](#tab/dotnet)
+
+    ```csharp
   
       teams.OnMessage(async (context, cancellationToken) => {
         await context.Send(new MessageActivity("Normal msg"), cancellationToken);
       });
     ```
   
-```typescript
+  # [TypeScript](#tab/ts)
+
+    ```typescript
 
     app.on('message', async ({ send, activity }) => {
       send(new MessageActivity('Normal msg'))  
     });
     ```
-```python
+
+  # [Python](#tab/Py)
+
+    ```python
   
       @app.on_message
       async def handle_message(ctx):
@@ -452,7 +460,7 @@ You can enable prompt preview using Teams SDK or REST APIs.
     await context.Send(message, cancellationToken);
   ```
 
-# [TypeScript](#tab/ts)
+  # [TypeScript](#tab/ts)
 
   ```typescript
   const message = new MessageActivity('Here is the result!')
@@ -466,7 +474,7 @@ You can enable prompt preview using Teams SDK or REST APIs.
   await send(message);
   ```
 
-# [Python](#tab/Py)
+  # [Python](#tab/Py)
 
   ```python
   message = MessageActivityInput(text="Here is the result!")
@@ -480,7 +488,7 @@ You can enable prompt preview using Teams SDK or REST APIs.
   await ctx.send(message)
   ```
 
-# [HTTP](#tab/api)
+  # [HTTP](#tab/api)
 
   ```http
   {
