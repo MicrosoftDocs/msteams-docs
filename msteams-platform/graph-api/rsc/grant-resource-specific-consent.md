@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.topic: reference
 ms.owner: vishachadha
-ms.date: 02/27/2026
+ms.date: 05/11/2026
 ---
 
 # Grant RSC permissions to your app
