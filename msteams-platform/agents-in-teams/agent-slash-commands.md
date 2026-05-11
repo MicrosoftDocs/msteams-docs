@@ -147,15 +147,7 @@ You can enable slash commands for your agents and bots in the following ways:
 
 ### Manifest updates for slash commands
 
-Update your app manifest to opt in to targeted messaging and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
-
-- Declare whether the agent or bot supports slash commands.
-- List the specific slash commands the agent or bot exposes.
-- Specify whether it supports natural-language prompts when invoked via slash commands.
-
-For more information, see [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
-
-The following options are supported:
+Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt in to slash commands and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
 - **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent or bot capabilities).
 
