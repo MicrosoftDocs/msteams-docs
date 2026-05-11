@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: angovil
-ms.date: 05/08/2026
+ms.date: 05/11/2026
 ---
 
 # Send and receive messages
@@ -275,9 +275,9 @@ To receive read receipts events for your bot, ensure the following:
 
     You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
-- Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
+- Override the method `OnReadReceipt` with `context.Activity.Value.LastReadMessageId`.
 
-  The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
+  The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
 
     ```csharp
    app.OnReadReceipt(async context =>
@@ -331,9 +331,9 @@ After the bot is enabled in a user to bot chat scenario, the bot promptly receiv
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
-To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
+To get an edit message activity notification in a bot, you can override `OnMessageEdit` handler.
 
-The following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
+The following is an example of an edit message activity notification using `OnMessageEdit` when a sent message is edited:
 
 # [C#](#tab/dotnet2)
 
@@ -397,7 +397,6 @@ app.on('messageEdit', async ({ activity, send }) => {
     await send(`The edited message is ${editedMessage}`);
 });
 
-
 ```
 
 # [HTTP](#tab/http1)
@@ -417,13 +416,13 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ### Send a message
 
-To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
+To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `context.Send(...)` method to send a single message response. Use the object's `multiple context.Send(...) calls` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
 # [C#](#tab/dotnet3)
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
+- [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
 
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
@@ -444,7 +443,7 @@ app.OnMembersAdded(async context =>
 
 # [TypeScript](#tab/typescript2)
 
-- [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
+- [SDK reference](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
@@ -457,12 +456,11 @@ app.OnMembersAdded(async context =>
     }
 });
 
-
 ```
 
 # [Python](#tab/python2)
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-send-activity)
+- [SDK reference](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
 ```python
@@ -537,9 +535,9 @@ Messages sent between users and bots include internal channel data within the me
 
 When you undelete a message, the bot gets a notification of the undelete message activity.
 
-To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+To get an undelete message activity notification in a bot, you can override `OnMessageUndelete` handler.
 
-The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
+The following is an example of an undelete message activity notification using `OnMessageUndelete` when a deleted message is restored:
 
 # [C#](#tab/dotnet4)
 
@@ -624,9 +622,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 When you soft delete a message, the bot gets a notification of the soft delete message activity.
 
-To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
+To get a soft delete message activity notification in a bot, you can override `OnMessageSoftDelete` handler.
 
-The following example shows a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+The following example shows a soft delete message activity notification using `OnMessageSoftDelete` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 
@@ -697,7 +695,7 @@ app.on('messageSoftDelete', async ({ activity, send }) => {
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK Framework's `DeleteActivity` method.
+Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
 > [!NOTE]
 > A bot can't update or delete messages sent by the user in Microsoft Teams.
@@ -710,10 +708,9 @@ It is not necessary for the new message to match the original in type. For examp
 
 # [C#](#tab/csharp2)
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
 
 ```csharp
 app.OnMessage(async context =>
@@ -756,7 +753,7 @@ app.on('message', async ({ activity, api, send }) => {
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
 
 ```python
 @app.on_message
@@ -794,12 +791,11 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/dotnet6)
+# [C#](#tab/csharp)
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
 
 ```csharp
 app.OnMessage(async context =>
@@ -838,7 +834,7 @@ app.on('message', async ({ activity, api }) => {
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.
+To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `ctx.api.conversations.activities(conversation_id).update(...)` method of the `TurnContext` class.
 
 ```python
 @app.on_message
@@ -872,14 +868,13 @@ Now that you have updated cards, you can delete messages using the Teams SDK Fra
 
 #### Delete messages
 
-In Teams SDK Framework, every message has its unique activity identifier. Messages can be deleted using the Teams SDK Framework's `DeleteActivity` method.
+In Teams SDK Framework, every message has its unique activity identifier. Messages can be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
 # [C#](#tab/csharp1)
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
 
-To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class.
+To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` class.
 
 ```csharp
 app.OnMessage(async context =>
@@ -895,10 +890,9 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/ts1)
 
-- [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-deleteactivity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
 
-To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object.
+To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` object.
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
