@@ -3,7 +3,7 @@ title: Configure Incoming Call Notifications
 description: Learn about incoming notification protocol to convert the call from legacy to Graph format, redirects for region affinity and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 04/02/2019
+ms.date: 05/11/2026
 ---
 
 # Incoming call notifications
@@ -82,6 +82,21 @@ The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/
 * `iss` is the token issuer, `https://api.botframework.com`.
 
 For your code handling, the webhook must validate the token, ensure it hasn't expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
+
+### Azure US Government (GCC High)
+
+In GCC High, the `/api/calls` webhook JWT is signed by the GCC High Platform Media Agent (PMA), not by the commercial Bot Framework or Skype calling platform. The `iss` claim is still `https://api.botframework.com`, but the signing keys are **not** published at `api.aps.skype.com`, `login.botframework.com`, or any commercial Azure AD endpoint. Validating against the commercial OpenID configuration fails with `IDX10503: SecurityTokenSignatureKeyNotFoundException`.
+
+For bots running in GCC High, use the sovereign OpenID metadata endpoint instead:
+
+| Cloud | OpenID configuration |
+| --- | --- |
+| Commercial | `https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration` |
+| Azure US Government (GCC High) | `https://pma.gov.teams.microsoft.us/v1/.well-known/openid-configuration` |
+
+The GCC High endpoint publishes a `jwks_uri` of `https://pma.gov.teams.microsoft.us/v1/keys`. The `issuer`, `aud`, `nbf`, and `exp` claim validation rules are unchanged from commercial.
+
+Bots intended to run in both commercial and GCC High should select the OpenID metadata URL at startup based on the cloud they're deployed in, rather than hardcoding the commercial URL.
 
 For more information, see [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 
