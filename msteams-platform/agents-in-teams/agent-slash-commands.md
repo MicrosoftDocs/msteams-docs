@@ -112,9 +112,9 @@ When the response is useful to the wider audience, you can choose to enable your
 
 When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message.
 
-Private agent-to-user response: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
+- Private agent-to-user response: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
 
-Public agent-to-user response: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
+- Public agent-to-user response: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
 
 ---
 
