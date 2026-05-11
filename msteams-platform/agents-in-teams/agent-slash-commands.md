@@ -422,6 +422,20 @@ If the response is relevant to all members, you can enable the agent or bot to s
 
 You can enable prompt preview using Teams SDK or REST APIs.
 
+- Use Teams SDK: Prompt preview is supported for agent's response to user in the following scenarios:
+
+  - Reactive response: When an agent or bot responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
+
+    - The SDK automatically attaches the `targetedMessageInfo` entity.
+    - No additional code is required from the developer.
+
+      Prompt Preview is rendered automatically using the original message context
+
+  - Proactive response: When an agent or bot sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
+  
+    - The developer must manually attach the entity.
+    - The `messageId` of the original user message must be provided.
+
 - Use REST APIs: Prompt preview is supported when sending agent or bot responses through the following APIs:
 
   - Targeted Message Send API: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
@@ -429,19 +443,6 @@ You can enable prompt preview using Teams SDK or REST APIs.
   - Normal Message Send API: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
 
   In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
-
-- Use Teams SDK: Prompt preview is supported for agent's response to user in the following scenarios:
-
-  - Reactive Scenarios: When an agent or bot replies within the context of an incoming user interaction (for example, using `send()` or `reply()`):
-
-    - The SDK automatically attaches the `targetedMessageInfo` entity.
-    - No additional code is required from the developer.
-
-      Prompt Preview is rendered automatically using the original message context
-
-  - Proactive Scenarios: When a bot sends a message outside of a reactive context (for example, follow-ups, delayed responses, or background workflows):
-    - The developer must manually attach the entity.
-    - The `messageId` of the original user message must be provided.
 
   # [C#](#tab/dotnet)
 
