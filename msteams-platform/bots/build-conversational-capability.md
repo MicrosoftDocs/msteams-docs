@@ -87,7 +87,7 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
 - Send and receive messages.
   - [Receive a message activity](#receive-a-message-activity).
   - [Receive a read receipt](#receive-a-read-receipt).
-  - [Receive edit message activity](#receive-edit-message-activity).
+  - [Receive edit message activity](#receive-edit-message-activity)
   - [Send a message](#send-a-message).
   - [Receive undelete message activity](#receive-undelete-message-activity).
   - [Receive soft delete message activity](#receive-soft-delete-message-activity).
@@ -122,7 +122,7 @@ To receive a text message, use the `Text` property of an `Activity` object. In t
 
 The following code shows an example of receiving a message activity:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/csharp)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
@@ -327,7 +327,7 @@ The following example shows a read receipts event request that a bot receives:
 
 After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
-### Receive edit message activity
+## Receive edit message activity
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
@@ -335,7 +335,7 @@ To get an edit message activity notification in a bot, you can override `OnMessa
 
 The following is an example of an edit message activity notification using `OnMessageEdit` when a sent message is edited:
 
-# [C#](#tab/dotnet2)
+# [C#](#tab/csharp2)
 
 ```csharp
 
@@ -420,7 +420,7 @@ To send a text message, specify the string you want to send as an activity. In t
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/dotnet3)
+# [C#](#tab/csharp3)
 
 - [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
 
@@ -539,7 +539,7 @@ To get an undelete message activity notification in a bot, you can override `OnM
 
 The following is an example of an undelete message activity notification using `OnMessageUndelete` when a deleted message is restored:
 
-# [C#](#tab/dotnet4)
+# [C#](#tab/csharp4)
 
 ```csharp
 
@@ -626,7 +626,7 @@ To get a soft delete message activity notification in a bot, you can override `O
 
 The following example shows a soft delete message activity notification using `OnMessageSoftDelete` when a message is soft deleted:
 
-# [C#](#tab/dotnet5)
+# [C#](#tab/csharp5)
 
 ```csharp
 
@@ -791,7 +791,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp4)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
