@@ -3,7 +3,7 @@ title: Teams JavaScript client library SDK
 description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.subservice: m365apps
-ms.topic: conceptual
+ms.topic: article
 keywords: SDK TeamsJS Teams client JavaScript library
 ms.date: 12/19/2024
 ---
