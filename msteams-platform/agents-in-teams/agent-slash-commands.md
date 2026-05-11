@@ -55,7 +55,9 @@ Your agents and bots can send a private or public response to a user's query. Yo
 - [Public agent-to-user response](#public-agent-to-user-response)
 
 > [!NOTE]
-> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain the context if the conversation is long-running.
+> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
+
+# [Private agent-to-user response](#tab/private)
 
 #### Private agent-to-user response
 
@@ -83,6 +85,8 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
+# [Public agent-to-user response](#tab/public)
+
 #### Public agent-to-user response
 
 When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly. Use public response flow for status updates, confirmations, or shared signals.
@@ -104,6 +108,8 @@ When the response is useful to the wider audience, you can choose to enable your
         This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
+
+---
 
 ## Why use slash commands
 
