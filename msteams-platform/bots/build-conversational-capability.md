@@ -122,7 +122,7 @@ To receive a text message, use the `Text` property of an `Activity` object. In t
 
 The following code shows an example of receiving a message activity:
 
-# [C#](#tab/csharp)
+# [C#](#tab/dotnet)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
@@ -271,9 +271,9 @@ To receive read receipts events for your bot, ensure the following:
             
     ```
 
-    ---
+---
 
-    You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
+You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 - Override the method `OnReadReceipt` with `context.Activity.Value.LastReadMessageId`.
 
@@ -327,7 +327,7 @@ The following example shows a read receipts event request that a bot receives:
 
 After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
-## Receive edit message activity
+### Receive edit message activity
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
@@ -335,7 +335,7 @@ To get an edit message activity notification in a bot, you can override `OnMessa
 
 The following is an example of an edit message activity notification using `OnMessageEdit` when a sent message is edited:
 
-# [C#](#tab/csharp2)
+# [C#](#tab/dotnet2)
 
 ```csharp
 
@@ -420,7 +420,7 @@ To send a text message, specify the string you want to send as an activity. In t
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/csharp3)
+# [C#](#tab/dotnet3)
 
 - [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
 
@@ -539,7 +539,7 @@ To get an undelete message activity notification in a bot, you can override `OnM
 
 The following is an example of an undelete message activity notification using `OnMessageUndelete` when a deleted message is restored:
 
-# [C#](#tab/csharp4)
+# [C#](#tab/dotnet4)
 
 ```csharp
 
@@ -626,7 +626,7 @@ To get a soft delete message activity notification in a bot, you can override `O
 
 The following example shows a soft delete message activity notification using `OnMessageSoftDelete` when a message is soft deleted:
 
-# [C#](#tab/csharp5)
+# [C#](#tab/dotnet5)
 
 ```csharp
 
@@ -791,7 +791,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/csharp4)
+# [C#](#tab/csharp6)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
@@ -810,7 +810,7 @@ app.OnMessage(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript4)
+# [TypeScript](#tab/typescript6)
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -829,7 +829,7 @@ app.on('message', async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python4)
+# [Python](#tab/python6)
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -847,7 +847,7 @@ async def handle_update_card(ctx: ActivityContext[MessageActivity]):
     )
 ```
 
-# [REST API](#tab/restapi4)
+# [REST API](#tab/rest6)
 
 > [!NOTE]
 > You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
