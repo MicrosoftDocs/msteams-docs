@@ -180,13 +180,9 @@ The following options are supported:
 
   You can declare a command list for your agent or bot in one of the following scenarios:
 
-  - **Scenario 1**: Agent or bot with separate @mention and slash command lists
-  - **Scenario 2**: Agent or bot with same commands available in both @mention and slash triggers
-  - **Scenario 3**: Message extension actions with slash commands
+  # [Scenario 1](#tab/sc1)
 
-    Use the following examples to declare slash commands in the app manifest:
-
-    # [Scenario 1](#tab/sc1)
+      **Scenario 1**: Agent or bot with separate @mention and slash command lists
 
       Use the following example to configure the app manifest for supporting an agent or a bot that offers separate commands for @mention and slash triggers.
 
@@ -219,7 +215,9 @@ The following options are supported:
     }
     ```
 
-    # [Scenario 2](#tab/sc2)
+  # [Scenario 2](#tab/sc2)
+
+      **Scenario 2**: Agent or bot with same commands available in both @mention and slash triggers
 
       Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
@@ -245,7 +243,9 @@ The following options are supported:
     }
     ```
 
-    # [Scenario 3](#tab/sc3)
+  # [Scenario 3](#tab/sc3)
+
+      **Scenario 3**: Message extension actions with slash commands
 
       Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
