@@ -335,7 +335,7 @@ To get an edit message activity notification in a bot, you can override `OnMessa
 
 The following is an example of an edit message activity notification using `OnMessageEdit` when a sent message is edited:
 
-# [C#](#tab/csharp2)
+# [C#](#tab/csharp)
 
 ```csharp
 
@@ -420,7 +420,7 @@ To send a text message, specify the string you want to send as an activity. In t
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/csharp3)
+# [C#](#tab/csharp)
 
 - [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
 
@@ -539,7 +539,7 @@ To get an undelete message activity notification in a bot, you can override `OnM
 
 The following is an example of an undelete message activity notification using `OnMessageUndelete` when a deleted message is restored:
 
-# [C#](#tab/csharp4)
+# [C#](#tab/csharp)
 
 ```csharp
 
@@ -626,7 +626,7 @@ To get a soft delete message activity notification in a bot, you can override `O
 
 The following example shows a soft delete message activity notification using `OnMessageSoftDelete` when a message is soft deleted:
 
-# [C#](#tab/csharp5)
+# [C#](#tab/csharp)
 
 ```csharp
 
@@ -706,7 +706,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
-# [C#](#tab/csharp2)
+# [C#](#tab/csharp)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
@@ -791,7 +791,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/csharp4)
+# [C#](#tab/csharp)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
@@ -870,7 +870,7 @@ Now that you have updated cards, you can delete messages using the Teams SDK Fra
 
 In Teams SDK Framework, every message has its unique activity identifier. Messages can be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
-# [C#](#tab/csharp1)
+# [C#](#tab/csharp)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
 
