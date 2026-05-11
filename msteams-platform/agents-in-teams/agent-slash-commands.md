@@ -49,13 +49,12 @@ When someone uses a slash command, it shows up as a private message just for the
 
 ### Agent response and prompt preview visibility
 
-Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses. When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message. You can control the visibility of agent responses to slash commands through defined agent‑to‑user response flows:
-
-- [Private agent-to-user response](#private-agent-to-user-response)
-- [Public agent-to-user response](#public-agent-to-user-response)
+Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses. When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message.
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
+
+You can control the visibility of agent responses to slash commands through defined agent‑to‑user response flows:
 
 # [Private agent-to-user response](#tab/private)
 
@@ -203,7 +202,7 @@ The following options are supported:
                         ]
                     },
                     {
-                        "scopes": ["team", "groupChat"],
+                        "scopes": ["team", "gro54upChat"],
                         "triggers": ["slash"],
                         "commands": [
                             { "title": "Review", "description": "Review a document" }
