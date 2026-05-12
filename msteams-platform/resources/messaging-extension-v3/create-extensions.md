@@ -1,14 +1,14 @@
 ---
 title: Action-based Message Extensions
-description: Learn how to create and configure action-based message extensions for Microsoft Teams using Bot Framework SDK to allow users to trigger external services.
+description: Learn how to create and configure action-based message extensions for Microsoft Teams using Teams SDK to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 04/02/2023
+ms.date: 05/12/2026
 ms.owner: slamba
 ---
 # Initiate actions with message extensions
 
-[!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)]
+<!-- [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)] -->
 
 Action-based message extensions allow your users to trigger actions in external services while in Teams.
 
@@ -499,222 +499,399 @@ When responding to the `edit` request, you must respond with a `task` response w
 
 # [TypeScript/Node.js](#tab/typescript)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)
 
 ```typescript
-teamChatConnector.onComposeExtensionSubmitAction((
-    event: builder.IEvent,
-    request: teamBuilder.IComposeExtensionActionCommandRequest,
-    callback: (err: Error, result: any, statusCode: number) => void) => {
-        let invokeValue = (<any> event).value;
 
-        if (invokeValue.botMessagePreviewAction ) {
-            let attachment = invokeValue.botActivityPreview[0].attachments[0];
+import { cardAttachment, MessagingExtensionActionResponse } from '@microsoft/teams.api'
+import { App } from '@microsoft/teams.apps'
+import { AdaptiveCard, TextBlock, TextInput, SubmitAction } from '@microsoft/teams.cards'
 
-            if (invokeValue.botMessagePreviewAction === 'send') {
-                let msg = new builder.Message()
-                    .address(event.address)
-                    .addAttachment(attachment);
-                teamChatConnector.send([msg.toMessage()],
-                    (error) => {
-                        if(error){
-                            // TODO: Handle error and callback.
-                        }
-                        else {
-                            callback(null, null, 200);
-                        }
-                    }
-                );
-            }
+const app = new App()
 
-            else if (invokeValue.botMessagePreviewAction === 'edit') {
-              // Create the card and populate with user-inputted information.
-              let card = { ... }
+// Handle composeExtension/fetchTask — present the task module
 
-              let taskResponse = {
-                task: {
-                  type: "continue",
-                  value: {
-                    title: "Card Preview",
-                    card: {
-                      contentType: 'application/vnd.microsoft.card.adaptive',
-                      content: card
-                    }
-                  }
-                }
-              }
-              callback(null, taskResponse, 200);
-            }
+app.on('message.ext.open', async ({ activity }) =>; {
+    const card = new AdaptiveCard(
+        new TextBlock('Please enter the following information:', { size: 'Large' }),
+        new TextBlock('Card Message:'),
+        new TextInput({ id: 'cardMessage', placeholder: 'Card message goes here.' }),
+        new SubmitAction({ title: 'Submit' })
+    )
 
-        else {
-            let attachment = {
-                  // Create Adaptive Card.
-                };
-            let activity = new builder.Message().addAttachment(attachment).toMessage();
-            let response = teamBuilder.ComposeExtensionResponse.messagePreview()
-                .preview(activity)
-                .toResponse();
-            callback(null, response, 200);
+    return {
+        task: {
+            type: 'continue' as const,
+            value: {
+                title: 'Task Module',
+                card: cardAttachment('adaptive', card),
+            },
+        },
+    }
+})
+
+
+// Handle composeExtension/submitAction — process submission
+
+app.on('message.ext.submit', async ({ activity, send }) =>; {
+    const action = activity.value
+
+
+    // Handle botMessagePreview send action
+
+    if (action.botMessagePreviewAction === 'send') {
+        const cardAttach = action.botActivityPreview?.[0]?.attachments?.[0]
+        if (cardAttach) {
+            await send({ type: 'message', attachments: [cardAttach] })
         }
-    });
+        return {}
+    }
+
+
+    // Handle botMessagePreview edit action
+
+    if (action.botMessagePreviewAction === 'edit') {
+        const card = new AdaptiveCard(
+            new TextBlock('Please enter the following information:', { size: 'Large' }),
+            new TextBlock('Card Message:'),
+            new TextInput({ id: 'cardMessage', placeholder: 'Card message goes here.' }),
+            new SubmitAction({ title: 'Submit' })
+        )
+
+        return {
+            task: {
+                type: 'continue' as const,
+                value: {
+                    title: 'Card Preview',
+                    card: cardAttachment('adaptive', card),
+                },
+            },
+        }
+    }
+
+
+    // Initial submission — return a botMessagePreview
+
+    const text = (action.data as Record&lt;string, string=>;)?.cardMessage || ''
+
+
+    const previewCard = new AdaptiveCard(
+        new TextBlock('This card will be inserted into the conversation by the bot.', {
+            size: 'Large',
+            wrap: true,
+        }),
+        new TextBlock('The text below is what you provided.'),
+        new TextBlock(text)
+    )
+
+
+    return {
+        composeExtension: {
+            type: 'botMessagePreview' as const,
+            activityPreview: {
+                type: 'message',
+                attachments: [cardAttachment('adaptive', previewCard)],
+            },
+        },
+    } satisfies MessagingExtensionActionResponse
+})
+
+
+app.start().catch(console.error)
 ```
 
 # [C#/.NET](#tab/dotnet)
 
-This sample shows this flow using the [Microsoft.Bot.Connector.Teams SDK (v3)](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams).
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)
 
 ```csharp
-public class MessagesController : ApiController
+
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities.Invokes;
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Activities;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Cards;
+using Microsoft.Teams.Plugins.AspNetCore.Extensions;
+using MsgExt = Microsoft.Teams.Api.MessageExtensions;
+using Newtonsoft.Json.Linq;
+using AdaptiveCard = Microsoft.Teams.Cards.AdaptiveCard;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.AddTeams();
+var app = builder.Build();
+var teams = app.UseTeams();
+
+// Handle composeExtension/fetchTask — present the task module to the user
+teams.OnFetchTask(async (ctx) =>;
 {
-
-    [BotAuthentication]
-    public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
+    var card = new AdaptiveCard()
     {
-        MicrosoftAppCredentials.TrustServiceUrl(activity.ServiceUrl, DateTime.MaxValue);
-        ConnectorClient connectorClient = new ConnectorClient(
-            new Uri(activity.ServiceUrl),
-            ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppIdKey],
-            ConfigurationManager.AppSettings[MicrosoftAppCredentials.MicrosoftAppPasswordKey]);
+        Version = Microsoft.Teams.Cards.Version.Version1_4,
+        Body =
+        [
+            new TextBlock("Please enter the following information:") { Size = TextSize.Large },
+            new TextBlock("Card Message:"),
+            new TextInput() { Id = "cardMessage", Placeholder = "Card message goes here." }
+        ],
+        Actions =
+        [
+            new SubmitAction() { Title = "Submit" }
+        ]
+    };
 
-        if (activity.Type == ActivityTypes.Invoke)
+
+    var taskInfo = new TaskInfo
+    {
+        Title = "Task Module",
+        Card = new Attachment(ContentType.AdaptiveCard) { Content = card }
+    };
+
+
+    return new MsgExt.ActionResponse
+    {
+        Task = new ContinueTask(taskInfo)
+    };
+
+});
+
+// Handle composeExtension/submitAction — process submission and return bot message preview
+teams.OnSubmitAction(async (ctx) =>;
+{
+    var action = ctx.Activity.Value;
+
+
+    // Handle botMessagePreview send action
+
+    if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
+    {
+        // Send the card to the channel
+
+        var previewActivity = action.BotActivityPreview?.FirstOrDefault();
+
+        if (previewActivity is MessageActivity previewMsg &amp;&amp; previewMsg.Attachments?.Any() == true)
         {
-            // Initial task module presented to the user.
-            if (activity.Name == "composeExtension/fetchTask")
+            await ctx.Send(new MessageActivity
             {
-                string task = GetTaskModule();
-
-                return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
-            }
-            else if (activity.Name == "composeExtension/submitAction")
-            {
-                dynamic activityValue = JObject.FromObject(activity.Value);
-                string botMessagePreviewAction = activityValue["botMessagePreviewAction"];
-
-                // This is the initial card response sent after the task module is submitted.
-                if (botMessagePreviewAction is null)
-                {
-                    string text = activityValue.data.cardMessage;
-
-                    AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
-                    card.Body.Add(new AdaptiveTextBlock()
-                    {
-                        Text = "This card will be inserted into the conversation by the bot.",
-                        Size = AdaptiveTextSize.Large,
-                        Wrap = true
-                    });
-                    card.Body.Add(new AdaptiveTextBlock()
-                    {
-                        Text = "The text below is what you provided."
-                    });
-                    card.Body.Add(new AdaptiveTextBlock()
-                    {
-                        Text = text,
-                    });
-
-                    string cardJson = card.ToJson();
-
-                    string cardMessage = $@"{{
-                        'composeExtension': {{
-                        'type': 'botMessagePreview',
-                        'activityPreview': {{
-                            'type': 'message',
-                            'attachments': [{{
-                                'contentType': 'application/vnd.microsoft.card.adaptive',
-                                'content': {cardJson}
-                            }}]
-                        }}
-                        }}
-                    }}";
-
-                    JObject res = JObject.Parse(cardMessage);
-                    return Request.CreateResponse(HttpStatusCode.OK, res);
-
-                }
-                else
-                {
-                    // This is the "send the card to the channel" event.
-                    if (botMessagePreviewAction.Equals("send"))
-                    {
-                        string cardJson = JsonConvert.SerializeObject(activityValue.botActivityPreview[0].attachments[0].content);
-
-                        AdaptiveCardParseResult cardResult = AdaptiveCard.FromJson(cardJson);
-                        AdaptiveCard card = cardResult.Card;
-                        Attachment cardAttachment = new Attachment
-                        {
-                            ContentType = AdaptiveCard.ContentType,
-                            Content = card
-                        };
-
-
-                        Activity response = activity.CreateReply();
-                        response.Attachments.Add(cardAttachment);
-
-                        var result = await connectorClient.Conversations.SendToConversationAsync(response);
-                    }
-                    // This is fired if the user edits the card before sending it.
-                    else if (botMessagePreviewAction.Equals("edit"))
-                    {
-                        string task = GetTaskModule();
-
-                        return Request.CreateResponse(HttpStatusCode.OK, JObject.Parse(task));
-                    }
-                    else
-                    {
-                        return Request.CreateResponse(HttpStatusCode.NotImplemented);
-                    }
-                }
-            }
+                Attachments = previewMsg.Attachments
+            });
         }
 
-        return Request.CreateResponse(HttpStatusCode.NotImplemented);
-
+        return new MsgExt.ActionResponse();
     }
 
-    private static string GetTaskModule()
+
+    // Handle botMessagePreview edit action
+    if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Edit)
     {
-        AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion("1.0"));
-        card.Body.Add(new AdaptiveTextBlock()
+        var editCard = new AdaptiveCard()
         {
-            Text = "Please enter the following information:",
-            Size = AdaptiveTextSize.Large
-        });
-        card.Body.Add(new AdaptiveTextBlock()
-        {
-            Text = "Card Message:"
-        });
-        card.Body.Add(new AdaptiveTextInput()
-        {
-            Id = "cardMessage",
-            Spacing = AdaptiveSpacing.None,
-            Placeholder = "Card message goes here."
-        });
-        card.Actions.Add(new AdaptiveSubmitAction()
-        {
-            Title = "Submit"
-        });
+            Version = Microsoft.Teams.Cards.Version.Version1_4,
+            Body =
+            [
+                new TextBlock("Please enter the following information:") { Size = TextSize.Large },
+                new TextBlock("Card Message:"),
+                new TextInput() { Id = "cardMessage", Placeholder = "Card message goes here." }
+            ],
+            Actions =
+            [
+                new SubmitAction() { Title = "Submit" }
+            ]
+        };
 
-        string cardJson = card.ToJson();
 
-        // Create the task module response.
-        string task = $@"{{
-                            'task': {{
-                                'type': 'continue',
-                                'value': {{
-                                    'card': {{
-                                        'contentType': 'application/vnd.microsoft.card.adaptive',
-                                        'content': {cardJson}
-                                        }}
-                                    }}
-                                }}
-                            }}";
-        return task;
+        return new MsgExt.ActionResponse
+        {
+            Task = new ContinueTask(new TaskInfo
+            {
+                Title = "Card Preview",
+                Card = new Attachment(ContentType.AdaptiveCard) { Content = editCard }
+            })
+        };
     }
 
-}
+    // Initial submission — build a preview card and return botMessagePreview
+
+    var data = action.Data as JObject;
+
+    var text = data?["cardMessage"]?.ToString() ?? "";
+
+    var previewCard = new AdaptiveCard()
+    {
+        Version = Microsoft.Teams.Cards.Version.Version1_4,
+        Body =
+        [
+            new TextBlock("This card will be inserted into the conversation by the bot.") { Size = TextSize.Large, Wrap = true },
+            new TextBlock("The text below is what you provided."),
+            new TextBlock(text)
+        ]
+    };
+
+
+    return new MsgExt.ActionResponse
+    {
+        ComposeExtension = new MsgExt.Result
+        {
+            Type = MsgExt.ResultType.BotMessagePreview,
+            ActivityPreview = new MessageActivity
+            {
+                Attachments =
+                [
+                    new Attachment(ContentType.AdaptiveCard) { Content = previewCard }
+                ]
+            }
+        }
+    };
+});
+
+app.Run();
+```
+
+# [Python](#tab/python)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)
+
+```python
+
+import asyncio
+from dotenv import load_dotenv
+from microsoft_teams.api import (
+    MessageExtensionFetchTaskInvokeActivity,
+    MessageExtensionSubmitActionInvokeActivity,
+    MessagingExtensionActionInvokeResponse,
+    MessagingExtensionResult,
+    MessagingExtensionResultType,
+    TaskModuleContinueResponse,
+    CardTaskModuleTaskInfo,
+    MessageActivity,
+    Account,
+    ConversationAccount,
+    card_attachment,
+    AdaptiveCardAttachment,
+)
+
+from microsoft_teams.apps import ActivityContext, App
+from microsoft_teams.cards import AdaptiveCard, TextBlock, TextInput, SubmitAction
+
+load_dotenv()
+app = App()
+
+
+@app.on_message_ext_open
+async def handle_fetch_task(ctx: ActivityContext[MessageExtensionFetchTaskInvokeActivity]):
+    """Handle composeExtension/fetchTask - present the task module to the user."""
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="Please enter the following information:", size="Large"),
+            TextBlock(text="Card Message:"),
+            TextInput(id="cardMessage", placeholder="Card message goes here."),
+        ],
+        actions=[SubmitAction(title="Submit")],
+    )
+
+
+    return MessagingExtensionActionInvokeResponse(
+        task=TaskModuleContinueResponse(
+            value=CardTaskModuleTaskInfo(
+                title="Task Module",
+                card=card_attachment(AdaptiveCardAttachment(content=card)),
+            )
+        )
+    )
+
+
+@app.on_message_ext_submit
+async def handle_submit_action(ctx: ActivityContext[MessageExtensionSubmitActionInvokeActivity]):
+    """Handle composeExtension/submitAction - process submission and bot message preview."""
+
+    action = ctx.activity.value
+
+
+    # Handle botMessagePreview send action
+
+    if action.bot_message_preview_action == "send":
+
+        card_attach = None
+
+        if action.bot_activity_preview:
+            preview_activity = action.bot_activity_preview[0]
+
+            if hasattr(preview_activity, "attachments") and preview_activity.attachments:
+                card_attach = preview_activity.attachments[0]
+
+        if card_attach:
+            from microsoft_teams.api import MessageActivityInput
+
+            await ctx.send(MessageActivityInput(text="", attachments=[card_attach]))
+
+        return MessagingExtensionActionInvokeResponse()
+
+
+    # Handle botMessagePreview edit action
+
+    if action.bot_message_preview_action == "edit":
+
+        card = AdaptiveCard(
+            body=[
+                TextBlock(text="Please enter the following information:", size="Large"),
+                TextBlock(text="Card Message:"),
+                TextInput(id="cardMessage", placeholder="Card message goes here."),
+            ],
+            actions=[SubmitAction(title="Submit")],
+        )
+
+        return MessagingExtensionActionInvokeResponse(
+            task=TaskModuleContinueResponse(
+                value=CardTaskModuleTaskInfo(
+                    title="Card Preview",
+                    card=card_attachment(AdaptiveCardAttachment(content=card)),
+                )
+            )
+        )
+
+
+    # Initial submission - build a preview card and return botMessagePreview
+
+    text = (action.data or {}).get("cardMessage", "")
+
+
+    preview_card = AdaptiveCard(
+        body=[
+            TextBlock(
+                text="This card will be inserted into the conversation by the bot.",
+                size="Large",
+                wrap=True,
+            ),
+            TextBlock(text="The text below is what you provided."),
+            TextBlock(text=text),
+        ]
+    )
+
+
+    return MessagingExtensionActionInvokeResponse(
+        compose_extension=MessagingExtensionResult(
+            type=MessagingExtensionResultType.BOT_MESSAGE_PREVIEW,
+            activity_preview=MessageActivity(
+                type="message",
+                id="preview",
+                from_=Account(id="bot", name="Bot"),
+                conversation=ConversationAccount(id="conv"),
+                recipient=Account(id="user", name="User"),
+                attachments=[
+                    card_attachment(AdaptiveCardAttachment(content=preview_card))
+                ],
+            ),
+        )
+    )
+
+
+if __name__ == "__main__":
+    asyncio.run(app.start())
 ```
 
 ---
 
 ## See also
 
-[Bot Framework samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
+[Teams SDK samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
