@@ -17,7 +17,7 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Slash commands are shortcuts initiated by typing a forward slash (`/`) in the compose box on Teams. It gives users a clear, predictable way to trigger agent or bot actions using simple text commands.
+Use slash commands in Teams as a clear, predictable way to trigger agent or bot actions with simple text commands.
 
 **Key points**
 
@@ -55,8 +55,6 @@ You can control the visibility of agent responses to slash commands through defi
 
 # [Private agent-to-user response](#tab/private)
 
-#### Private agent-to-user response
-
 This flow keeps slash command results focused between the user and the agent or bot. Use private response flow for drafts, summaries, personal tasks.
 
 :::row:::
@@ -82,8 +80,6 @@ This flow keeps slash command results focused between the user and the agent or 
 Next, enable [private agent-to-user responses](#send-an-agent-response).
 
 # [Public agent-to-user response](#tab/public)
-
-#### Public agent-to-user response
 
 When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly. Use public response flow for status updates, confirmations, or shared signals.
 
