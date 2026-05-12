@@ -65,8 +65,6 @@ This flow keeps slash command results focused between the user and the agent or 
 
         1. When a user runs a slash command, it shows up as a private message.
         1. If the agent or bot responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
-        1. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
-
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
@@ -74,6 +72,8 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row-end:::
 :::row:::
     :::column span:::
+        1. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
+
       This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on agent private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
 
       Use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
@@ -81,7 +81,9 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses](#private-agent-to-user-response).
+Next, enable [private agent-to-user responses]
+
+[[Private agent-to-user response](#tab/private)](#private-agent-to-user-responsetabprivate)
 
 # [Public agent-to-user response](#tab/public)
 
