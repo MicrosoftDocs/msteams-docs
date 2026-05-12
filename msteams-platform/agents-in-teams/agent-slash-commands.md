@@ -646,5 +646,5 @@ You can also see more information on [error codes for targeted messages](targete
 
 ## See also
 
-- Enable targeted messages [WIP: Add link]
+- [Enable targeted messages](targeted-messages.md)
 - Teams SDK docs [WIP: Add link]
