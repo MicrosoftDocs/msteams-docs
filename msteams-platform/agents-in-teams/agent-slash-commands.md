@@ -61,8 +61,6 @@ This flow keeps slash command results focused between the user and the agent or 
 
 :::row:::
     :::column span="2":::
-        <br>
-
         1. When a user runs a slash command, it shows up as a private message.
         1. If the agent or bot responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
     :::column-end:::
@@ -81,7 +79,7 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses](#send-an-agent-response)
+Next, enable [private agent-to-user responses](#send-an-agent-response).
 
 # [Public agent-to-user response](#tab/public)
 
@@ -91,10 +89,8 @@ When the response is useful to the wider audience, you can choose to enable your
 
 :::row:::
     :::column span="2":::
-        <br>
-
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent or bot is configured for public replies, the response is posted to all members in the group or channel. 
+        1. If the agent or bot is configured for public replies, the response is posted to all members in the group or channel.
         1. The agent or bot response quotes the user’s prompt.
     :::column-end:::
     :::column span="3":::
@@ -106,6 +102,8 @@ When the response is useful to the wider audience, you can choose to enable your
         This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
+
+Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
@@ -121,6 +119,8 @@ When an agent or bot replies to a user, prompt preview displays the user’s que
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
+
+Next, enable [prompt preview](#send-an-agent-response).
 
 ---
 
