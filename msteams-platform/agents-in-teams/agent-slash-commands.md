@@ -72,7 +72,7 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column span:::
         3. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
 
-      This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on agent private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
+      This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on sending private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
 
       Use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
