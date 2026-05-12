@@ -82,8 +82,8 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent or bot is configured for public replies, the response is posted to all members in the group or channel.
-        1. The agent or bot response quotes the user’s prompt.
+        1. If the agent or bot is configured for relevant public replies, the response is posted to all members in the group or channel.
+        1. The agent or bot responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
@@ -99,18 +99,18 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
-When an agent or bot replies to a user, prompt preview displays the user’s query in a single self-contained message.
+When an agent or bot replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message:
 
-- Private agent-to-user response: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
+- **Private agent-to-user response**: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
 
-- Public agent-to-user response: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
+- **Public agent-to-user response**: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
 > [!NOTE]
-> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
+> Including the user’s prompt in the agent or bot response is optional. Use prompt preview to maintain context in ongoing conversations.
 
 Next, enable [prompt preview](#send-an-agent-response).
 
