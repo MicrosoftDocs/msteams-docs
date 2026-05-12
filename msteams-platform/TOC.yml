@@ -53,9 +53,9 @@
         items:
         - name: Prerequisites to create Teams agent or app
           href: toolkit/tools-prerequisites.md
-          displayName: accounts to build your Teams app 
+          displayName: accounts to build your Teams app
         - name: Create new Teams agent project
-          href: agents-in-teams/build-first-agent.md
+          href: agents-in-teams/build-first-agent.md  
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC
@@ -886,7 +886,7 @@
       displayName: Multitenancy, SharePoint
     - name: Create Virtual Assistant
       href: samples/virtual-assistant.md 
-      displayname: OnMessageActivityAsync, multi-language support
+      displayName: OnMessageActivityAsync, multi-language support
     - name: Power Platform apps
       items:
       - name: Low-code custom apps
