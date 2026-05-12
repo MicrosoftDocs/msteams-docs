@@ -81,9 +81,7 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses]
-
-[[Private agent-to-user response](#tab/private)](#private-agent-to-user-responsetabprivate)
+Next, enable [[private agent-to-user responses]](#send-an-agent-response)
 
 # [Public agent-to-user response](#tab/public)
 
