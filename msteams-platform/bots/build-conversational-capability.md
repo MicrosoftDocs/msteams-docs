@@ -321,7 +321,7 @@ The following example shows a read receipts event request that a bot receives:
         }
     }
     
-    ```
+```
 
 - Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
 
@@ -1119,10 +1119,6 @@ To enable your bots to get only those channel or chat messages where your bot is
 ```
 
 If you want your bot to receive all messages, then you don't need to filter the @mention messages.
-
-### Step-by-step guide
-
-Follow the [step-by-step](../sbs-teams-conversation-bot.yml) guide to create a Teams conversation bot.
 
 ## Next step
 
