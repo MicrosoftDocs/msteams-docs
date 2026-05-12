@@ -57,7 +57,7 @@ This flow keeps slash command results focused between the user and the agent or 
 
 :::row:::
     :::column span="2":::
-        1. When a user runs a slash command, it shows up as a private message.
+        1. The initial slash command shows up as a private message.
         1. If the agent or bot responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
     :::column-end:::
     :::column span="3":::
@@ -66,11 +66,9 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row-end:::
 :::row:::
     :::column span:::
-        3. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
+        3. If the user chooses to allow, the agent or bot posts a single message with its response along with the prompt preview.
 
-      This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on sending private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
-
-      Use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast, and context-aware. Additionally, use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
     :::column-end:::
 :::row-end:::
