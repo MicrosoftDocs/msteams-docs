@@ -72,7 +72,7 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row-end:::
 :::row:::
     :::column span:::
-        1. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
+        3. If the user chooses to allow, the agent or bot posts a single message with its response along with the quoted prompt.
 
       This flow minimizes noise in shared conversations for private, fast, and context-aware interactions. For more information on agent private message to a single user, see [enable targeted messages for agents](targeted-messages.md).
 
@@ -81,7 +81,7 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
-Next, enable [[private agent-to-user responses]](#send-an-agent-response)
+Next, enable [private agent-to-user responses](#send-an-agent-response)
 
 # [Public agent-to-user response](#tab/public)
 
