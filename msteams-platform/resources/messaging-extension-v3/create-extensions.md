@@ -8,8 +8,6 @@ ms.owner: slamba
 ---
 # Initiate actions with message extensions
 
-<!-- [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-me.md)] -->
-
 Action-based message extensions allow your users to trigger actions in external services while in Teams.
 
 :::image type="content" source="../../assets/images/compose-extensions/ceexample.png" alt-text="The screenshot is an example that shows the message extension card.":::
@@ -511,7 +509,7 @@ const app = new App()
 
 // Handle composeExtension/fetchTask — present the task module
 
-app.on('message.ext.open', async ({ activity }) =>; {
+app.on('message.ext.open', async ({ activity }) => {
     const card = new AdaptiveCard(
         new TextBlock('Please enter the following information:', { size: 'Large' }),
         new TextBlock('Card Message:'),
@@ -533,7 +531,7 @@ app.on('message.ext.open', async ({ activity }) =>; {
 
 // Handle composeExtension/submitAction — process submission
 
-app.on('message.ext.submit', async ({ activity, send }) =>; {
+app.on('message.ext.submit', async ({ activity, send }) => {
     const action = activity.value
 
 
@@ -572,7 +570,7 @@ app.on('message.ext.submit', async ({ activity, send }) =>; {
 
     // Initial submission — return a botMessagePreview
 
-    const text = (action.data as Record&lt;string, string=>;)?.cardMessage || ''
+    const text = (action.data as Record&lt;string, string=>)?.cardMessage || ''
 
 
     const previewCard = new AdaptiveCard(
@@ -623,7 +621,7 @@ var app = builder.Build();
 var teams = app.UseTeams();
 
 // Handle composeExtension/fetchTask — present the task module to the user
-teams.OnFetchTask(async (ctx) =>;
+teams.OnFetchTask(async (ctx) =>
 {
     var card = new AdaptiveCard()
     {
@@ -656,7 +654,7 @@ teams.OnFetchTask(async (ctx) =>;
 });
 
 // Handle composeExtension/submitAction — process submission and return bot message preview
-teams.OnSubmitAction(async (ctx) =>;
+teams.OnSubmitAction(async (ctx) =>
 {
     var action = ctx.Activity.Value;
 
@@ -669,7 +667,7 @@ teams.OnSubmitAction(async (ctx) =>;
 
         var previewActivity = action.BotActivityPreview?.FirstOrDefault();
 
-        if (previewActivity is MessageActivity previewMsg &amp;&amp; previewMsg.Attachments?.Any() == true)
+        if (previewActivity is MessageActivity previewMsg &&; previewMsg.Attachments?.Any() == true)
         {
             await ctx.Send(new MessageActivity
             {
