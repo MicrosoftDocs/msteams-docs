@@ -105,7 +105,7 @@ When an agent or bot replies to a user, prompt preview displays the user’s ini
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
 
-- **Public agent-to-user response**: The agent or bot replies normally to the user's message, making the reply visible to everyone in the chat.
+- **Public agent-to-user response**: The agent or bot sends a public reply to the user's message that is visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
@@ -120,15 +120,13 @@ Next, enable [prompt preview](#send-an-agent-response).
 
 Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 
-[WIP: Add details and scenarios/examples]
-
 ## Slash commands developer experience
 
 Enabling slash commands typically involves the following:
 
-- [Select one or more of the scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
-- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
-- [Implement the command handling in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private message to a single user or as public message to the group or channel.
+- [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
+- [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
+- [Handle slash commands in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private message to a single user or as public message to the group or channel.
 
 ### Supported scenarios for slash commands
 
@@ -151,7 +149,7 @@ You can enable slash commands for your agents and bots in the following ways:
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
 
-### Manifest updates for slash commands
+### Update app manifest for slash commands
 
 Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt in to slash commands and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
