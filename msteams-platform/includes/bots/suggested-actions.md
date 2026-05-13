@@ -91,7 +91,7 @@ The following is an example to implement suggested actions using `imBack`:
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
-The following code snippet shows a minimal example of implementing `Action.Compose`:
+The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
 {
