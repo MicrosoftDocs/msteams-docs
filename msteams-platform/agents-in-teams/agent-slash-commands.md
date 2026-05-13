@@ -438,7 +438,7 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
 
   In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
 -->
-
+<!--
 # [C#](#tab/dotnet)
 
   Attach the entity manually using the targeted message ID:
@@ -482,8 +482,8 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
   # OR public reply (everyone sees it)
   await ctx.send(message)
   ```
-
-# [HTTP](#tab/api)
+---
+-->
 
   ```http
   {
@@ -493,8 +493,6 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
     }]
   }
   ```
-
----
 
 #### Update an agent response
 
