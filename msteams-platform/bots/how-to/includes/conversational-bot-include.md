@@ -3,7 +3,7 @@ title: Build an conversational bot
 description: Learn about creating a conversational bot
 ms.topic: overview
 ms.localizationpriority: high
-ms-author: surbhigupta
+ms-author: vikas almal
 ms.date: 01/29/2023
 ---
 
