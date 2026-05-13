@@ -38,7 +38,7 @@ For more information, see [supported scenarios for slash commands](#supported-sc
 
 ## User experience for slash commands
 
-When a user enters a slash command, it appears as a private message visible only to them. The agent or bot can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent or bot logic.
+When a user enters a slash command, it appears as a private message visible only to them. The agent can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent logic.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
@@ -53,7 +53,7 @@ Your agents can send a private or public response to a user's query. You can als
 
 # [Private agent-to-user response](#tab/private)
 
-This flow keeps slash command results focused between the user and the agent or bot. Use private response flow for drafts, summaries, personal tasks.
+This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
 
 :::row:::
     :::column span="2":::
@@ -82,8 +82,8 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent or bot is configured for relevant public replies, the response is posted to all members in the group or channel.
-        1. The agent or bot responds with the prompt preview.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
+        1. The agent responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
@@ -119,7 +119,7 @@ Next, enable [prompt preview](#send-an-agent-response).
 <!--
 ## Why use slash commands
 
-Slash commands make agents easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
+Slash commands make agents easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 -->
 
 ## Slash commands developer experience
@@ -128,23 +128,23 @@ Enabling slash commands typically involves the following:
 
 - [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
-- [Handle slash commands in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private message to a single user or as public message to the group or channel.
+- [Handle slash commands in your agent](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent response.
 
 ### Supported scenarios for slash commands
 
 You can enable slash commands for your agents in the following ways:
 
-- **App-defined slash commands**: Agents can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
-
-  - `/help`
-  - `/settings`
-
-- **User-to-agent interaction**: Slash commands can initiate one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
+- **User-to-agent interaction**: Slash commands can initiate one-turn interaction with agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
 
-  To support natural-language prompts, you must explicitly opt in so agents or bots that want to support only fixed commands can do so without enabling free-form prompting.
+  To support natural-language prompts, you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
+
+- **App-defined slash commands**: Agents can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
+
+  - `/help`
+  - `/settings`
 
 - **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
@@ -155,7 +155,7 @@ You can enable slash commands for your agents in the following ways:
 
 Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt in to slash commands and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
-- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent or bot capabilities).
+- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
 
     Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
@@ -171,15 +171,15 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
-- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent or bot commands can be reused, or you can introduce new commands optimized for slash usage.
+- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
   After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
 
-  You can declare a command list for your agent or bot in one of the following scenarios:
+  You can declare a command list for your agent in one of the following scenarios:
 
   # [Scenario 1](#tab/sc1)
 
-  **Scenario 1**: Agent or bot with separate @mention and slash command lists
+  **Scenario 1**: Agent with separate @mention and slash command lists
 
   Use the following example to configure the app manifest for supporting an agent or a bot that offers separate commands for @mention and slash triggers.
 
@@ -214,7 +214,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
   # [Scenario 2](#tab/sc2)
 
-  **Scenario 2**: Agent or bot with same commands available in both @mention and slash triggers
+  **Scenario 2**: Agent with same commands available in both @mention and slash triggers
 
   Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
@@ -286,17 +286,17 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 ### Handle slash commands
 
-You can enable the agent or bot to send a private message to that user or a public message to the group or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
+You can enable the agent to send a private message to that user or a public message to the group or channel. You can also enable the agent to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
-Use the following code snippets to enable your agent or bot to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
+Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
 
 [WIP: Add link to Teams SDK docs]
 
 # [Private message to a user](#tab/private)
 
-Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
+Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
 
 - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
@@ -376,7 +376,7 @@ Configure your agent or bot to send a reply only to the person who ran the slash
 
 # [Public response by the agent](#tab/public)
 
-You can enable the agent or bot to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
+You can enable the agent to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
 
 - The message requires collaboration from all members
 - The broader visibility adds value
@@ -418,23 +418,23 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
 
 - **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
-  - Reactive response: When an agent or bot responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
+  - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
 
     - The SDK automatically attaches the `targetedMessageInfo` entity.
     - No additional code is required from the developer.
 
       Prompt Preview is rendered automatically using the original message context
 
-  - Proactive response: When an agent or bot sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
+  - Proactive response: When an agent sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
   
     - The developer must manually attach the entity.
     - The `messageId` of the original user message must be provided.
 
-- **Use REST APIs**: Prompt preview is supported when sending agent or bot responses through the following APIs:
+- **Use REST APIs**: Prompt preview is supported when sending agent responses through the following APIs:
 
-  - **Private agent-to-user response**: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
+  - **Private agent-to-user response**: The agent replies privately to the user’s message. The response is visible only to the targeted user.
 
-  - **Public agent-to-user response**: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
+  - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
 
   In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
 
@@ -497,7 +497,7 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
 
 #### Update an agent response
 
-The agent or bot can edit its original message, if needed. The updated message appears only in the intended user’s view.
+The agent can edit its original message, if needed. The updated message appears only in the intended user’s view.
 
 Use one of the following code snippets to edit the agent's response:
 
@@ -572,7 +572,7 @@ Use one of the following code snippets to edit the agent's response:
 
 #### Delete an agent response
 
-Use the following code snippet to enable the agent or bot to delete its response:
+Use the following code snippet to enable the agent to delete its response:
 
 # [C#](#tab/dotnet1)
 
@@ -615,7 +615,7 @@ Use the following code snippet to enable the agent or bot to delete its response
 
 ## Response codes for slash commands
 
-Ensure to handle these errors appropriately in your agent or bot. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
+Ensure to handle these errors appropriately in your agent. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
