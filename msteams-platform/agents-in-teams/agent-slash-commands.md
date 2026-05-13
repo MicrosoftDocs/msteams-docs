@@ -242,43 +242,43 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 - **Declare Message extension actions with slash commands**: Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
-> [!NOTE]
-> You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+  > [!NOTE]
+  > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
-```json
-{
-    "composeExtensions": [
-        {
-            "botId": "{{BOT_ID}}",
-            "commands": [
-                {
-                    "id": "summarizeCommand",
-                    "type": "action",
-                    "title": "Summarize",
-                    "description": "Summarize a document",
-                    "context": ["compose", "commandBox"]
-                },
-                {
-                    "id": "draftCommand",
-                    "type": "action",
-                    "title": "Draft",
-                    "description": "Draft a document",
-                    "context": ["compose", "commandBox"],
-                    "triggers": ["slash"]
-                },
-                {
-                    "id": "reviewCommand",
-                    "type": "action",
-                    "title": "Review",
-                    "description": "Review a document",
-                    "context": ["compose", "commandBox"],
-                    "triggers": ["slash"]
-                }
-            ]
-        }
-    ]
-}
-```
+    ```json
+    {
+        "composeExtensions": [
+            {
+                "botId": "{{BOT_ID}}",
+                "commands": [
+                    {
+                        "id": "summarizeCommand",
+                        "type": "action",
+                        "title": "Summarize",
+                        "description": "Summarize a document",
+                        "context": ["compose", "commandBox"]
+                    },
+                    {
+                        "id": "draftCommand",
+                        "type": "action",
+                        "title": "Draft",
+                        "description": "Draft a document",
+                        "context": ["compose", "commandBox"],
+                        "triggers": ["slash"]
+                    },
+                    {
+                        "id": "reviewCommand",
+                        "type": "action",
+                        "title": "Review",
+                        "description": "Review a document",
+                        "context": ["compose", "commandBox"],
+                        "triggers": ["slash"]
+                    }
+                ]
+            }
+        ]
+    }
+    ```
 
 ### Handle slash commands
 
