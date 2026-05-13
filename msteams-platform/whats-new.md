@@ -36,13 +36,25 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 January**
+**2026 April**
 
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
+* ***April 27, 2026***: [Prompt starters are now generally available.](bots/how-to/conversations/prompt-suggestions.md)
 
 :::column-end:::
 :::row-end:::
 <br/>
+
+</br>
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
+
+<br/>
+</details>
 
 </br>
 
@@ -485,7 +497,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-    **March 27, 2026**: [Enable targeted messages for agents](agents-in-teams/targeted-messages.md)
 <!--                    
 **2025 May**
 
@@ -501,6 +512,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 27/03/2026 | Targeted Messages for agents. | [Enable targeted messages for agents](agents-in-teams/targeted-messages.md) |
 | 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 </details>
@@ -546,7 +558,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
 | 12/02/2024 | Build API-based message extension using Developer Portal for Teams. | Build message extension > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
 | 06/02/2024 | Introduced `systemDefault` reserved activity type for send activity feed notifications| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
-|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
 |12/01/2024| Introduced Teams Toolkit command line interface v3. | Tools and SDKs > Tools > [Teams Toolkit command line interface](toolkit/teams-toolkit-CLI.md)|
 
 </details>
