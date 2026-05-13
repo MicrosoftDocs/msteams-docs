@@ -414,7 +414,7 @@ You can enable the agent or bot to send for the [public response scenario](#agen
 
 You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
 
-- Use Teams SDK: Prompt preview is supported for agent's response to user in the following scenarios:
+- **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
   - Reactive response: When an agent or bot responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
 
@@ -428,13 +428,13 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
     - The developer must manually attach the entity.
     - The `messageId` of the original user message must be provided.
 
-- Use REST APIs: Prompt preview is supported when sending agent or bot responses through the following APIs:
+- **Use REST APIs**: Prompt preview is supported when sending agent or bot responses through the following APIs:
 
-  - Targeted Message Send API: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
+  - **Private agent-to-user response**: The agent or bot replies privately to the user’s message. The response is visible only to the targeted user.
 
-  - Normal Message Send API: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
+  - **Public agent-to-user response**: The agent or bot replies in the conversation normally. The response is visible to all participants in the chat.
 
-  In both cases, the prompt preview experience is achieved through the same mechanism and is independent of the visibility scope.
+  In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
 
   # [C#](#tab/dotnet)
 
