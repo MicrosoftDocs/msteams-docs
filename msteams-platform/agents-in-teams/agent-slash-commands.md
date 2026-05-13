@@ -282,7 +282,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 ### Handle slash commands
 
-You can enable the agent to send a private message to that user or a public message to the group or channel. You can also enable the agent to update or delete a message that it had previously sent.
+You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
