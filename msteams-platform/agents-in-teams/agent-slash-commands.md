@@ -1,6 +1,6 @@
 ---
 title: Enable Slash Commands for Agents
-description: Learn how to enable slash commands for your agents and bots
+description: Learn how to enable slash commands for your agents and apps
 ms.localizationpriority: high
 ms.date: 03/11/2026
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Enable slash commands for agents and bots
+# Enable slash commands for agents and apps
 
 > [!NOTE]
 >
@@ -119,7 +119,7 @@ Next, enable [prompt preview](#send-an-agent-response).
 <!--
 ## Why use slash commands
 
-Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
+Slash commands make agents easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 -->
 
 ## Slash commands developer experience
@@ -132,9 +132,9 @@ Enabling slash commands typically involves the following:
 
 ### Supported scenarios for slash commands
 
-You can enable slash commands for your agents and bots in the following ways:
+You can enable slash commands for your agents in the following ways:
 
-- **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
+- **App-defined slash commands**: Agents can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
   - `/help`
   - `/settings`
