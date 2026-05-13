@@ -68,7 +68,7 @@ This flow keeps slash command results focused between the user and the agent. Us
     :::column span:::
         3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview.
 
-      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast, and context-aware. Additionally, use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast, and context-aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
     :::column-end:::
 :::row-end:::
@@ -415,7 +415,7 @@ You can enable the agent to send for the [public response scenario](#agent-respo
 # [Prompt preview](#tab/preview)
 
 You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
-
+<!--
 - **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
   - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
@@ -437,8 +437,9 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
   - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
 
   In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
+-->
 
-  # [C#](#tab/dotnet)
+# [C#](#tab/dotnet)
 
   Attach the entity manually using the targeted message ID:
 
@@ -454,7 +455,7 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
     await context.Send(message, cancellationToken);
   ```
 
-  # [TypeScript](#tab/ts)
+# [TypeScript](#tab/ts)
 
   ```typescript
   const message = new MessageActivity('Here is the result!')
@@ -468,7 +469,7 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
   await send(message);
   ```
 
-  # [Python](#tab/Py)
+# [Python](#tab/Py)
 
   ```python
   message = MessageActivityInput(text="Here is the result!")
@@ -482,7 +483,7 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
   await ctx.send(message)
   ```
 
-  # [HTTP](#tab/api)
+# [HTTP](#tab/api)
 
   ```http
   {
