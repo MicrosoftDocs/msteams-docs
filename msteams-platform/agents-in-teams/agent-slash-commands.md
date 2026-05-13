@@ -17,13 +17,13 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Use slash commands in Teams as a clear, predictable way to trigger agent or bot actions with simple text commands.
+Use slash commands in Teams as a clear, predictable way to invoke agent or app responses with simple text commands.
 
 **Key points**
 
 - [What is a slash command](#what-is-a-slash-command)
 - [User experience for slash commands](#user-experience-for-slash-commands)
-- [Why use slash commands](#why-use-slash-commands)
+<!--- [Why use slash commands](#why-use-slash-commands)-->
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
@@ -32,13 +32,13 @@ Use slash commands in Teams as a clear, predictable way to trigger agent or bot 
 
 ## What is a slash command
 
-A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent or bot as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features, workflows, and any installed agents or bots.
+A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
 
 For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 ## User experience for slash commands
 
-When a user enters a slash command, it appears as a private message visible only to them. The agent or bot can reply privately or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent or bot logic, ensuring they're made public when they could benefit others.
+When a user enters a slash command, it appears as a private message visible only to them. The agent or bot can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent or bot logic.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
@@ -49,7 +49,7 @@ When a user enters a slash command, it appears as a private message visible only
 
 ### Agent response and prompt preview visibility
 
-Your agents and bots can send a private or public response to a user's query. You can also choose to include prompt preview in agent or bot responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
 
 # [Private agent-to-user response](#tab/private)
 
