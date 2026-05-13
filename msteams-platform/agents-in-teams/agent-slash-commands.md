@@ -240,49 +240,45 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
-  # [Scenario 3](#tab/sc3)
+- **Declare Message extension actions with slash commands**: Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
-  **Scenario 3**: Message extension actions with slash commands
+> [!NOTE]
+> You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
-  Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
-
-  > [!NOTE]
-  > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
-
-    ```json
-    {
-        "composeExtensions": [
-            {
-                "botId": "{{BOT_ID}}",
-                "commands": [
-                    {
-                        "id": "summarizeCommand",
-                        "type": "action",
-                        "title": "Summarize",
-                        "description": "Summarize a document",
-                        "context": ["compose", "commandBox"]
-                    },
-                    {
-                        "id": "draftCommand",
-                        "type": "action",
-                        "title": "Draft",
-                        "description": "Draft a document",
-                        "context": ["compose", "commandBox"],
-                        "triggers": ["slash"]
-                    },
-                    {
-                        "id": "reviewCommand",
-                        "type": "action",
-                        "title": "Review",
-                        "description": "Review a document",
-                        "context": ["compose", "commandBox"],
-                        "triggers": ["slash"]
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+```json
+{
+    "composeExtensions": [
+        {
+            "botId": "{{BOT_ID}}",
+            "commands": [
+                {
+                    "id": "summarizeCommand",
+                    "type": "action",
+                    "title": "Summarize",
+                    "description": "Summarize a document",
+                    "context": ["compose", "commandBox"]
+                },
+                {
+                    "id": "draftCommand",
+                    "type": "action",
+                    "title": "Draft",
+                    "description": "Draft a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                },
+                {
+                    "id": "reviewCommand",
+                    "type": "action",
+                    "title": "Review",
+                    "description": "Review a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ### Handle slash commands
 
@@ -415,6 +411,7 @@ You can enable the agent to send for the [public response scenario](#agent-respo
 # [Prompt preview](#tab/preview)
 
 You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
+
 <!--
 - **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
@@ -493,6 +490,8 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
     }]
   }
   ```
+
+  ---
 
 #### Update an agent response
 
