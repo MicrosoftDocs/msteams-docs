@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 05/07/2026
+ms.date: 05/13/2026
 ---
 
 # Respond to the dialog submit action
@@ -135,7 +135,7 @@ The most common way to respond to the `composeExtensions/submitAction` request i
 
 # [C#/.NET](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
@@ -711,7 +711,7 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
       {
         ItemId = 0,
         MentionType = "person",
-        Mri = turnContext.Activity.From.Id,
+        Mri = ctx.Activity.From.Id,
         DisplayName = turnContext.Activity.From.Name
       }  
     }
@@ -719,18 +719,21 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 
 ```
 
-# [JavaScript/Node.js](#tab/javascript6)
+# [TypeScript/Node.js](#tab/typescript6)
 
 ```javascript
-    const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
-        onBehalfOf: [ { 
-            itemId: 0, 
-            mentionType: 'person', 
-            mri: context.activity.from.id, 
-            displayname: context.activity.from.name 
-            }
-        ]
-    }};
+const responseActivity = { 
+  type: 'message', 
+  attachments: [cardAttachment('adaptive', card)], 
+  channelData: { 
+    onBehalfOf: [{ 
+      itemId: 0, 
+      mentionType: 'person', 
+      mri: activity.from.id, 
+      displayname: activity.from.name 
+    }] 
+  } 
+}
 ```
 
 # [JSON](#tab/json6)
