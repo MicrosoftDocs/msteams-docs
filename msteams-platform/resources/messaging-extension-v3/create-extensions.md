@@ -667,7 +667,7 @@ teams.OnSubmitAction(async (ctx) =>
 
         var previewActivity = action.BotActivityPreview?.FirstOrDefault();
 
-        if (previewActivity is MessageActivity previewMsg &&; previewMsg.Attachments?.Any() == true)
+        if (previewActivity is MessageActivity previewMsg && previewMsg.Attachments?.Any() == true)
         {
             await ctx.Send(new MessageActivity
             {
