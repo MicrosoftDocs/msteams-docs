@@ -58,7 +58,7 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row:::
     :::column span="2":::
         1. The initial slash command shows up as a private message.
-        1. If the agent or bot responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
+        1. If the agent responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
@@ -66,7 +66,7 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row-end:::
 :::row:::
     :::column span:::
-        3. If the user chooses to allow, the agent or bot posts a single message with its response along with the prompt preview.
+        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview.
 
       This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast, and context-aware. Additionally, use [`Action.Submit`](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions) to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
@@ -77,7 +77,7 @@ Next, enable [private agent-to-user responses](#send-an-agent-response).
 
 # [Public agent-to-user response](#tab/public)
 
-When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly. Use public response flow for status updates, confirmations, or shared signals.
+When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
 
 :::row:::
     :::column span="2":::
@@ -91,7 +91,7 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row-end:::
 :::row:::
     :::column span:::
-        This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
+        This flow is useful for sharing status updates, confirmations, or other information meant for everyone in group or channel.
     :::column-end:::
 :::row-end:::
 
@@ -99,26 +99,28 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
-When an agent or bot replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message:
+When an agent replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message:
 
-- **Private agent-to-user response**: The agent or bot replies privately to the user's targeted message, so only the intended user can see the reply.
+- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
 
-- **Public agent-to-user response**: The agent or bot sends a public reply to the user's message that is visible to everyone in the chat.
+- **Public agent-to-user response**: The agent sends a public reply to the user's message that is visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
 > [!NOTE]
-> Including the user’s prompt in the agent or bot response is optional. Use prompt preview to maintain context in ongoing conversations.
+> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
 
 Next, enable [prompt preview](#send-an-agent-response).
 
 ---
 
+<!--
 ## Why use slash commands
 
 Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
+-->
 
 ## Slash commands developer experience
 
