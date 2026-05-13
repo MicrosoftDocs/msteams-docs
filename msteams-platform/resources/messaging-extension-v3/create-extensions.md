@@ -3,7 +3,7 @@ title: Action-based Message Extensions
 description: Learn how to create and configure action-based message extensions for Microsoft Teams using Teams SDK to allow users to trigger external services.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 05/12/2026
+ms.date: 05/13/2026
 ms.owner: slamba
 ---
 # Initiate actions with message extensions
@@ -570,7 +570,7 @@ app.on('message.ext.submit', async ({ activity, send }) => {
 
     // Initial submission — return a botMessagePreview
 
-    const text = (action.data as Record&lt;string, string=>)?.cardMessage || ''
+    const text = (action.data as Record<string, string>)?.cardMessage || ''
 
 
     const previewCard = new AdaptiveCard(
