@@ -17,18 +17,18 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Use slash commands in Teams as a clear, predictable way to invoke agent or app responses with simple text commands.
+Use slash commands in Teams as a clear, predictable way to interact with agents or apps with simple text commands.
 
 **Key points**
 
 - [What is a slash command](#what-is-a-slash-command)
 - [User experience for slash commands](#user-experience-for-slash-commands)
-<!--- [Why use slash commands](#why-use-slash-commands)-->
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
   - [Handle slash commands](#handle-slash-commands)
   - [Response codes for slash commands](#response-codes-for-slash-commands)
+<!--- [Why use slash commands](#why-use-slash-commands)-->
 
 ## What is a slash command
 
@@ -45,7 +45,7 @@ When a user enters a slash command, it appears as a private message visible only
 > [!NOTE]
 >
 > - Public responses must be used when visibility in the group or channel adds value.
-> - The original private message expires after 24 hours.
+> - The private message expires after 24 hours.
 
 ### Agent response and prompt preview visibility
 
