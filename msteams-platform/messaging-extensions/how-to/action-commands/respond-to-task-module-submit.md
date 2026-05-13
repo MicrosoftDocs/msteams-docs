@@ -413,11 +413,6 @@ var card = new AdaptiveCard
         }
     ]
 };
-
-// The botMessagePreview response wrapper needs the new SDK's equivalent
-// of Type = "botMessagePreview" with ActivityPreview.
-// This specific pattern is NOT demonstrated in the bot-message-extensions sample.
-// Doc team needs to determine the correct new SDK API for botMessagePreview responses.
 ```
 
 # [TypeScript/Node.js](#tab/typescript3)
@@ -439,21 +434,6 @@ const card = new AdaptiveCard(
   headerBlock,
   questionBlock,
 );
-
-// The botMessagePreview response wrapper — e.g.:
-
-// return {
-//   composeExtension: {
-//     type: 'botMessagePreview',
-//     activityPreview: {
-//       ...
-//     }, // new SDK equivalent needed
-//   }
-// };
-
-// This specific pattern is NOT demonstrated in the bot-message-extensions sample.
-// Doc team needs to determine the correct new SDK API for botMessagePreview responses.
-
 ```
 
 # [JSON](#tab/json3)
@@ -712,7 +692,7 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
         ItemId = 0,
         MentionType = "person",
         Mri = ctx.Activity.From.Id,
-        DisplayName = turnContext.Activity.From.Name
+        DisplayName = ctx.Activity.From.Name
       }  
     }
   };
@@ -721,7 +701,7 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 
 # [TypeScript/Node.js](#tab/typescript6)
 
-```javascript
+```typescript
 const responseActivity = { 
   type: 'message', 
   attachments: [cardAttachment('adaptive', card)], 
