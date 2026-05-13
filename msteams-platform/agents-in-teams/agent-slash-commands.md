@@ -26,7 +26,7 @@ Use slash commands in Teams as a clear, predictable way to trigger agent or bot 
 - [Why use slash commands](#why-use-slash-commands)
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
-  - [Manifest updates](#manifest-updates-for-slash-commands)
+  - [Manifest updates](#update-app-manifest-for-slash-commands)
   - [Handle slash commands](#handle-slash-commands)
   - [Response codes for slash commands](#response-codes-for-slash-commands)
 
