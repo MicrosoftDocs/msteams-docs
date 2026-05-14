@@ -557,68 +557,48 @@ After the user selects the **Send**, you receive a `composeExtensions/submitActi
 # [C#/.NET](#tab/dotnet5)
 
 ```csharp
-if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Edit)
+if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
 {
-    var editCard = new AdaptiveCard()
+    // Extract the card from the bot activity preview
+    var cardAttachment = action.BotActivityPreview?.FirstOrDefault()?.Attachments?.FirstOrDefault();
+    if (cardAttachment != null)
     {
-        Version = Microsoft.Teams.Cards.Version.Version1_4,
-        Body = [
-            new TextBlock("Please enter the following information:") { Size = TextSize.Large },
-            new TextBlock("Card Message:"),
-            new TextInput() { Id = "cardMessage", Placeholder = "Card message goes here." }
-        ],
-        Actions = [new SubmitAction() { Title = "Submit" }]
-    };
-    return new MsgExt.ActionResponse
-    {
-        Task = new ContinueTask(new TaskInfo
+        await ctx.Send(new Activity
         {
-            Title = "Card Preview",
-            Card = new Attachment(ContentType.AdaptiveCard) { Content = editCard }
-        })
-    };
+            Type = "message",
+            Attachments = [cardAttachment]
+        });
+    }
+    return new MsgExt.ActionResponse();
 }
 ```
 
 # [TypeScript/Node.js](#tab/typescript5)
 
 ```typescript
-if (action.botMessagePreviewAction === 'edit') {
-    const card = new AdaptiveCard(
-        new TextBlock('Please enter the following information:', { size: 'Large' }),
-        new TextBlock('Card Message:'),
-        new TextInput({ id: 'cardMessage', placeholder: 'Card message goes here.' }),
-        new SubmitAction({ title: 'Submit' })
-    )
-    return {
-        task: {
-            type: 'continue' as const,
-            value: { title: 'Card Preview', card: cardAttachment('adaptive', card) },
-        },
+if (action.botMessagePreviewAction === 'send') {
+    // Extract the card from the bot activity preview
+    const cardAttach = action.botActivityPreview?.[0]?.attachments?.[0]
+    if (cardAttach) {
+        await send({ type: 'message', attachments: [cardAttach] })
     }
+    return {}
 }
 ```
 
 # [Python](#tab/python5)
 
 ```python
-if action.bot_message_preview_action == "edit":
-    card = AdaptiveCard(
-        body=[
-            TextBlock(text="Please enter the following information:", size="Large"),
-            TextBlock(text="Card Message:"),
-            TextInput(id="cardMessage", placeholder="Card message goes here."),
-        ],
-        actions=[SubmitAction(title="Submit")],
-    )
-    return MessagingExtensionActionInvokeResponse(
-        task=TaskModuleContinueResponse(
-            value=CardTaskModuleTaskInfo(
-                title="Card Preview",
-                card=card_attachment(AdaptiveCardAttachment(content=card)),
-            )
-        )
-    )
+if action.bot_message_preview_action == "send":
+    # Extract the card from the bot activity preview
+    card_attach = None
+    if action.bot_activity_preview:
+        attachments = action.bot_activity_preview[0].attachments
+        if attachments:
+            card_attach = attachments[0]
+    if card_attach:
+        await ctx.send(MessageActivityInput(text="", attachments=[card_attach]))
+    return MessagingExtensionActionInvokeResponse()
 ```
 
 # [JSON](#tab/json5)
