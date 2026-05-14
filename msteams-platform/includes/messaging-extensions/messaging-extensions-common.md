@@ -23,7 +23,7 @@ The extension definition is an object that has the following structure:
 
 | Property name | Purpose | Required? |
 |---|---|---|
-| `botId` | The bot ID provisioned for your app. When using Microsoft 365 Agents Toolkit, this is typically `${{BOT_ID}}`. | Yes |
+| `botId` | The unique Microsoft app ID for the bot as registered with the Azure Bot Service. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal`, `team`, or `groupChat` scopes. | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
 | `commands` | Array of commands that this message extension supports. | Yes |
