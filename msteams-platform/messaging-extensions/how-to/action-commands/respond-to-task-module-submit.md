@@ -57,15 +57,13 @@ Examples of receiving the invoke message are as follows:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-// New Teams SDK uses minimal API / event registration instead of class inheritance. 
-// Search handler example from bot-message-extensions sample: 
-var teams = app.UseTeams(); 
-
-teams.OnQuery(async (ctx) => 
-{ 
-    var commandId = ctx.Activity.Value.CommandId; 
-    // handle the query and return MsgExt.Response 
-}); 
+var teams = app.UseTeams();
+ 
+teams.OnSubmitAction(async (ctx) =>
+{
+    var action = ctx.Activity.Value;
+    // handle the submit action and return MsgExt.ActionResponse
+});
 ```
 
 # [TypeScript/Node.js](#tab/typescript1)
@@ -77,9 +75,9 @@ import { App } from '@microsoft/teams.apps'
 
 const app = new App() 
 
-app.on('message.ext.query', async ({ activity }) => { 
-  const commandId = activity.value?.commandId 
-  // handle the query and return response 
+app.on('message.ext.submit', async ({ activity }) => {
+  const action = activity.value
+  // handle the submit action and return response
 })
 ```
 
@@ -93,10 +91,10 @@ from microsoft_teams.api import MessageExtensionQueryInvokeActivity
 
 app = App()
 
-@app.on_message_ext_query 
-async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
-    command_id = ctx.activity.value.command_id 
-    # handle the query and return MessagingExtensionInvokeResponse 
+@app.on_message_ext_submit
+async def handle_submit(ctx: ActivityContext[MessageExtensionSubmitActionInvokeActivity]):
+    action = ctx.activity.value
+    # handle the submit action and return MessagingExtensionActionInvokeResponse
 ```
 
 # [JSON](#tab/json1)
