@@ -73,7 +73,7 @@ This flow keeps slash command results focused between the user and the agent. Us
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses](#send-an-agent-response).
+Next, enable [private agent-to-user responses](#private-response).
 
 # [Public agent-to-user response](#tab/public)
 
@@ -297,6 +297,8 @@ Use the following code snippets to enable your agent to respond to a slash comma
 [WIP: Add link to Teams SDK docs]
 
 # [Private message to a user](#tab/private)
+
+<a id="private-response"></a>
 
 Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
 
