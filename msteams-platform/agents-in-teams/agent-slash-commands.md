@@ -53,6 +53,8 @@ Your agents can send a private or public response to a user's query. You can als
 
 # [Private agent-to-user response](#tab/private)
 
+<a id="private-response-1"></a>
+
 This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
 
 :::row:::
@@ -73,9 +75,11 @@ This flow keeps slash command results focused between the user and the agent. Us
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses](#private-response).
+Next, enable [private agent-to-user responses](#private-response-2).
 
 # [Public agent-to-user response](#tab/public)
+
+<a id="public-response-1"></a>
 
 When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
 
@@ -95,9 +99,11 @@ When the response is useful to the wider audience, you can choose to enable your
     :::column-end:::
 :::row-end:::
 
-Next, enable [public agent-to-user responses](#send-an-agent-response).
+Next, enable [public agent-to-user responses](#public-response-2).
 
 # [Prompt preview](#tab/preview)
+
+<a id="prompt-preview-1"></a>
 
 When an agent replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message:
 
@@ -114,7 +120,7 @@ The prompt preview is always included at the top of the agent response. You can 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
 
-Next, enable [prompt preview](#send-an-agent-response).
+Next, enable [prompt preview](#prompt-preview-2).
 
 ---
 
@@ -298,9 +304,9 @@ Use the following code snippets to enable your agent to respond to a slash comma
 
 # [Private message to a user](#tab/private)
 
-<a id="private-response"></a>
+<a id="private-response-2"></a>
 
-Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
+Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#private-response-1) to send a message to a single user.
 
 - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
@@ -380,7 +386,9 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
 # [Public response by the agent](#tab/public)
 
-You can enable the agent to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
+<a id="public-response-2"></a>
+
+You can enable the agent to send for the [public response scenario](#public-response-1) in a group or a channel if:
 
 - The message requires collaboration from all members
 - The broader visibility adds value
@@ -418,7 +426,12 @@ You can enable the agent to send for the [public response scenario](#agent-respo
 
 # [Prompt preview](#tab/preview)
 
-You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
+<a id="prompt-preview-2"></a>
+
+You can enable [prompt preview](#prompt-preview-1) using Teams SDK or REST APIs.
+
+For using Teams SDK, follow the code snippet examples given in [private agent-to-user responses](#private-response-2) and [public agent-to-user responses](#public-response-2).
+
 <!--
 - **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
