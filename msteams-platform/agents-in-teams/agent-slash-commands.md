@@ -177,7 +177,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
   After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
 
-  You can declare a command list for your agent in one of the following scenarios:
+  You can declare a command list using the new `triggers` property for your agent in one of the following scenarios:
 
   # [Scenario 1](#tab/sc1)
 
@@ -244,7 +244,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 <a id="me"></a>
 
-- **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
+- **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
   > [!NOTE]
   > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
@@ -306,7 +306,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
   
     teams.OnMessage(async (context, cancellationToken) => {
       if (context.Activity.Recipient?.IsTargeted == true){
-        await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true),cancellationToken);
+        await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true), cancellationToken);
       }
     });
   ```
@@ -344,7 +344,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
     
   teams.OnMessage(async (context, cancellationToken) => {
     if (context.Activity.Recipient?.IsTargeted == true) {
-      await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>",Role = Role.User},true),    cancellationToken);
+      await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>", Role = Role.User}, true), cancellationToken);
     }
     });
   ```
@@ -355,7 +355,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
     
   app.on('message', async ({ send, activity }) => {
     if(activity.Recipient.isTargeted) {
-    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>, Name: <user Name>, Role: User}, isTargeted: true))
       }
   });
   ```
@@ -367,7 +367,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
     @app.on_message
     async def handle_message(ctx):
       if getattr(ctx.activity.recipient, "is_targeted", False):
-        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER),is_targeted=True))
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER), is_targeted=True))
   ```
 
   # [HTTP](#tab/api1)
