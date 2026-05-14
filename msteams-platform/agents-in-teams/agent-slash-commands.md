@@ -109,7 +109,7 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
-The prompt preview is always included at the top of the agent response. The prompt preview appears doesn't appear for normal messaages. You can include a number of prompt previews in a single agent response.
+The prompt preview is always included at the top of the agent response. You can include a number of prompt previews in a single agent response. However, it appears doesn't appear for normal messages.
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
