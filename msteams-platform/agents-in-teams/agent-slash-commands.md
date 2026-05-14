@@ -82,7 +82,7 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#best-practices) for more guielines.
         1. The agent responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
@@ -108,6 +108,8 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 - **Public agent-to-user response**: The agent sends a public reply to the user's message that is visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
+
+The prompt preview is always included at the top of the agent response. The prompt preview appears doesn't appear for normal messaages. You can include a number of prompt previews in a single agent response.
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
@@ -415,7 +417,6 @@ You can enable the agent to send for the [public response scenario](#agent-respo
 # [Prompt preview](#tab/preview)
 
 You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
-
 <!--
 - **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
 
@@ -636,7 +637,8 @@ You can also see more information on [error codes for targeted messages](targete
 - Use slash commands for private or quick actions, and @mentions for richer conversations.
 - Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
 - Provide clear command descriptions to improve discoverability.
-- Add aliases for high-traffic commands  where appropriate.
+- Add aliases for high-traffic commands where appropriate.
+- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](#delete-an-agent-response) and then re-share the response publicly.
 
 ## See also
 
