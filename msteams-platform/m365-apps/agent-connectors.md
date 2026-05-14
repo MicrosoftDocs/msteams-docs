@@ -132,23 +132,22 @@ The `referenceId` points to an [API key that you register in Developer Portal](h
 
 Dynamic client registration enables Microsoft 365 to register as an OAuth client with your MCP server at runtime using the [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) protocol. This approach is useful when your server supports dynamic OAuth flows and you don't want to pre-register client credentials.
 
-Configure the authorization type as `DynamicClientRegistration`:
+Configure the authorization type as `DynamicClientRegistration` with a `referenceId`:
 
 ````json
 "authorization": {
-  "type": "DynamicClientRegistration"
+  "type": "DynamicClientRegistration",
+  "referenceId": "my-dcr-config"
 }
 ````
 
-When this type is configured, Microsoft 365 automatically negotiates client credentials with your MCP server's OAuth registration endpoint. Your server must:
+The `referenceId` points to a dynamic client registration configuration that you register in [Developer Portal](https://dev.teams.microsoft.com). This configuration provides the necessary authorization values that Microsoft 365 uses when negotiating client credentials with your MCP server's OAuth registration endpoint.
+
+Your server must:
 
 - Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) compliant client registration endpoint.
 - Return a `client_id` and `client_secret` that Microsoft 365 can use to obtain access tokens.
 - Support token refresh for long-lived sessions.
-
-> [!NOTE]
->
-> No `referenceId` is required for this authorization type because client credentials are negotiated dynamically.
 
 ### Use Azure Key Vault authentication (preview)
 
