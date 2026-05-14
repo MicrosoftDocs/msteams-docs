@@ -70,7 +70,7 @@ This flow keeps slash command results focused between the user and the agent. Us
     :::column span:::
         3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview.
 
-      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast, and context-aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
     :::column-end:::
 :::row-end:::
@@ -86,7 +86,7 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#best-practices) for more guielines.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#best-practices) for more guidelines.
         1. The agent responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
@@ -113,7 +113,7 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
-The prompt preview is always included at the top of the agent response. You can include a number of prompt previews in a single agent response. However, it appears doesn't appear for normal messages.
+The prompt preview is always included at the top of the agent response. A single agent response can include multiple prompt previews. However, it appears doesn't appear for normal messages.
 
 > [!NOTE]
 > Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
@@ -335,7 +335,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
     @app.on_message
     async def handle_message(ctx):
       if getattr(ctx.activity.recipient, "is_targeted", False):
-        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from_, is_targeted=True))
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from, is_targeted=True))
   ```
 
   # [HTTP](#tab/api1)
@@ -384,8 +384,8 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
 You can enable the agent to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
 
-- The message requires collaboration from all members
-- The broader visibility adds value
+- The message requires collaboration from all members.
+- The broader visibility adds value.
 
   # [C#](#tab/dotnet)
 
@@ -583,7 +583,7 @@ Use one of the following code snippets to edit the agent's response:
         if getattr(ctx.activity.recipient, "is_targeted", False):
             sent = await ctx.send(
                 MessageActivityInput("Processing your request...").with_recipient(
-                    ctx.activity.from_,
+                    ctx.activity.from,
                     is_targeted=True
                 )
             )
@@ -650,8 +650,8 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID doesn't refer to a targeted message when adding a prompt preview in the response. | Ensure that the message ID for the targeted message is correct. |
-| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID provided when including a prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response could not be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
