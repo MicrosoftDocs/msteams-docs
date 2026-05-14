@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 05/13/2026
+ms.date: 05/14/2026
 ---
 
 # Respond to the dialog submit action
@@ -468,35 +468,50 @@ Your message extension must respond to two new types of the `composeExtensions/s
 # [C#/.NET](#tab/dotnet4)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewEditAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+teams.OnSubmitAction(async (ctx) =>
 {
-  //handle the event
-}
+    var action = ctx.Activity.Value;
 
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
-{
-  //handle the event
-}
+    if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
+    {
+        // handle send
+    }
 
+    if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Edit)
+    {
+        // handle edit
+    }
+});
 ```
 
-# [JavaScript/Node.js](#tab/javascript4)
+# [TypeScript/Node.js](#tab/typescript4)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionBotMessagePreviewEdit(context, action) {
+```typescript
+app.on('message.ext.submit', async ({ activity, send }) => {
+    const action = activity.value
 
-    //handle the event
-  }
-  
-  handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
+    if (action.botMessagePreviewAction === 'send') {
+        // handle send
+    }
 
-    //handle the event
-  }
-}
+    if (action.botMessagePreviewAction === 'edit') {
+        // handle edit
+    }
+})
+```
 
+# [Python](#tab/python4)
+
+```python
+@app.on_message_ext_submit
+async def handle_submit(ctx: ActivityContext[MessageExtensionSubmitActionInvokeActivity]):
+    action = ctx.activity.value
+
+    if action.bot_message_preview_action == "send":
+        # handle send
+
+    if action.bot_message_preview_action == "edit":
+        # handle edit
 ```
 
 # [JSON](#tab/json4)
@@ -544,95 +559,68 @@ After the user selects the **Send**, you receive a `composeExtensions/submitActi
 # [C#/.NET](#tab/dotnet5)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionBotMessagePreviewSendAsync(
-  ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Edit)
 {
-  var activityPreview = action.BotActivityPreview[0];
-  var attachmentContent = activityPreview.Attachments[0].Content;
-  var previewedCard = JsonConvert.DeserializeObject<AdaptiveCard>(attachmentContent.ToString(),
-          new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
-  
-  previewedCard.Version = "1.0";
-
-  var responseActivity = Activity.CreateMessageActivity();
-  Attachment attachment = new Attachment()
-  {
-    ContentType = AdaptiveCard.ContentType,
-    Content = previewedCard
-  };
-  responseActivity.Attachments.Add(attachment);
-  
-  // Attribute the message to the user on whose behalf the bot is posting
-  responseActivity.ChannelData = new {
-    OnBehalfOf = new []
+    var editCard = new AdaptiveCard()
     {
-      new
-      {
-        ItemId = 0,
-        MentionType = "person",
-        Mri = turnContext.Activity.From.Id,
-        DisplayName = turnContext.Activity.From.Name
-      }  
-    }
-  };
-  
-  await turnContext.SendActivityAsync(responseActivity);
-
-  return new MessagingExtensionActionResponse();
+        Version = Microsoft.Teams.Cards.Version.Version1_4,
+        Body = [
+            new TextBlock("Please enter the following information:") { Size = TextSize.Large },
+            new TextBlock("Card Message:"),
+            new TextInput() { Id = "cardMessage", Placeholder = "Card message goes here." }
+        ],
+        Actions = [new SubmitAction() { Title = "Submit" }]
+    };
+    return new MsgExt.ActionResponse
+    {
+        Task = new ContinueTask(new TaskInfo
+        {
+            Title = "Card Preview",
+            Card = new Attachment(ContentType.AdaptiveCard) { Content = editCard }
+        })
+    };
 }
 ```
 
-# [JavaScript/Node.js](#tab/javascript5)
+# [TypeScript/Node.js](#tab/typescript5)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-    async handleTeamsMessagingExtensionBotMessagePreviewSend(context, action) {
-      // The data has been returned to the bot in the action structure.
-      const activityPreview = action.botActivityPreview[0];
-      const attachmentContent = activityPreview.attachments[0].content;
-      const userText = attachmentContent.body[1].text;
-      const choiceSet = attachmentContent.body[3];
-
-      const submitData = {
-        MultiSelect: choiceSet.isMultiSelect ? 'true' : 'false',
-        Option1: choiceSet.choices[0].title,
-        Option2: choiceSet.choices[1].title,
-        Option3: choiceSet.choices[2].title,
-        Question: userText
-      };
-
-      const adaptiveCard = CardFactory.adaptiveCard({
-        actions: [
-          { type: 'Action.Submit', title: 'Submit', data: { submitLocation: 'messagingExtensionSubmit' } }
-        ],
-        body: [
-          { text: 'Adaptive Card from Task Module', type: 'TextBlock', weight: 'bolder' },
-          { text: `${ submitData.Question }`, type: 'TextBlock', id: 'Question' },
-          { id: 'Answer', placeholder: 'Answer here...', type: 'Input.Text' },
-          {
-            choices: [
-                { title: submitData.Option1, value: submitData.Option1 },
-                { title: submitData.Option2, value: submitData.Option2 },
-                { title: submitData.Option3, value: submitData.Option3 }
-            ],
-            id: 'Choices',
-            isMultiSelect: submitData.MultiSelect,
-            style: 'expanded',
-            type: 'Input.ChoiceSet'
-          }
-        ],
-        type: 'AdaptiveCard',
-        version: '1.0'
-      });
-      const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
-          onBehalfOf: [
-              { itemId: 0, mentionType: 'person', mri: context.activity.from.id, displayname: context.activity.from.name }
-          ]
-      }};
-
-      await context.sendActivity(responseActivity);
+```typescript
+if (action.botMessagePreviewAction === 'edit') {
+    const card = new AdaptiveCard(
+        new TextBlock('Please enter the following information:', { size: 'Large' }),
+        new TextBlock('Card Message:'),
+        new TextInput({ id: 'cardMessage', placeholder: 'Card message goes here.' }),
+        new SubmitAction({ title: 'Submit' })
+    )
+    return {
+        task: {
+            type: 'continue' as const,
+            value: { title: 'Card Preview', card: cardAttachment('adaptive', card) },
+        },
     }
 }
+```
+
+# [Python](#tab/python5)
+
+```python
+if action.bot_message_preview_action == "edit":
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="Please enter the following information:", size="Large"),
+            TextBlock(text="Card Message:"),
+            TextInput(id="cardMessage", placeholder="Card message goes here."),
+        ],
+        actions=[SubmitAction(title="Submit")],
+    )
+    return MessagingExtensionActionInvokeResponse(
+        task=TaskModuleContinueResponse(
+            value=CardTaskModuleTaskInfo(
+                title="Card Preview",
+                card=card_attachment(AdaptiveCardAttachment(content=card)),
+            )
+        )
+    )
 ```
 
 # [JSON](#tab/json5)
