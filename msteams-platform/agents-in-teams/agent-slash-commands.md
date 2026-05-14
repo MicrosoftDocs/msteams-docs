@@ -622,8 +622,8 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID doesn't refer to a targeted message. | Ensure that the message ID for the targeted message is correct. |
-| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID doesn't refer to a targeted message when adding a prompt preview in the response. | Ensure that the message ID for the targeted message is correct. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID provided when including a prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
