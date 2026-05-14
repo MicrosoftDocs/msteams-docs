@@ -42,7 +42,9 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
 > [!NOTE]
-> When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
+>
+> - When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
+> - A targeted message can't be converted into a normal message.
 
 <br>
 Some common user scenarios include:
