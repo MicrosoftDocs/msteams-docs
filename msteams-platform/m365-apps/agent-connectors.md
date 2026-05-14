@@ -23,6 +23,10 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 - Tool definitions
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
+> [!NOTE]
+>
+> Microsoft 365 includes built-in agent connectors for select Microsoft services. This article covers only custom agent connectors that you register through the app manifest for your own MCP servers.
+
 Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP.<!--, including the Channel Agent in Microsoft Teams.-->
 
 ## Prerequisites
@@ -138,7 +142,7 @@ Configure the authorization type as `DynamicClientRegistration`:
 
 When this type is configured, Microsoft 365 automatically negotiates client credentials with your MCP server's OAuth registration endpoint. Your server must:
 
-- Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)-compliant client registration endpoint.
+- Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) compliant client registration endpoint.
 - Return a `client_id` and `client_secret` that Microsoft 365 can use to obtain access tokens.
 - Support token refresh for long-lived sessions.
 
