@@ -146,6 +146,8 @@ You can enable slash commands for your agents in the following ways:
   - `/help`
   - `/settings`
 
+  Similar to using @mentions in the compose box, and you can also enable slash commands to offer the same functionality.
+
 - **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
   > [!NOTE]
