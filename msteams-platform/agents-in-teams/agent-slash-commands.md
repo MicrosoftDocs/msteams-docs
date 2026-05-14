@@ -139,14 +139,14 @@ You can enable slash commands for your agents in the following ways:
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
 
-  To support natural-language prompts, you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
+  To [support natural-language prompts](#command-list), you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
 
 - **App-defined slash commands**: Similar to using @mentions in the compose box, agents can publish a curated set of [slash commands](#command-list). Users can discover and run common actions without leaving the compose box. They can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
   - `/help`
   - `/settings`
 
-- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
+- **Message extension actions as slash commands**: You can [surface action-type message extensions as slash commands](#me). When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
@@ -242,7 +242,9 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
-- **Declare Message extension actions with slash commands**: Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
+<a id="me"></a>
+
+- **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
   > [!NOTE]
   > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
