@@ -141,12 +141,10 @@ You can enable slash commands for your agents in the following ways:
 
   To support natural-language prompts, you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
 
-- **App-defined slash commands**: Agents can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
+- **App-defined slash commands**: Similar to using @mentions in the compose box, agents can publish a curated set of slash commands. Users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
   - `/help`
   - `/settings`
-
-  Similar to using @mentions in the compose box, and you can also enable slash commands to offer the same functionality.
 
 - **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
