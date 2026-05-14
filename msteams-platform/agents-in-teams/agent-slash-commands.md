@@ -488,11 +488,30 @@ You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) u
 -->
 
   ```http
+  POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+  Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+  Content-Type: application/json
   {
-  "entities": [{
-    "type": "targetedMessageInfo",
-    "messageId": "1772129782775"
-    }]
+      "type": "message",
+      "from": {
+          "id": "28:c9e...",
+          "name": "Contoso"
+      },
+      "conversation": {
+          "id":"x:17I0...",
+          "name": "Convo1"
+      },
+      "recipient": {
+          "id": "29:1XJ...",
+          "name": "Megan Bowen"
+      },    
+      "text": "My bot's reply",
+  "entities": [
+      {
+        "type": "targetedMessageInfo",
+        "messageId": "1772129782775"
+      }
+    ]
   }
   ```
 
