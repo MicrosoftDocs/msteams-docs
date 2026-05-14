@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 04/24/2026
+ms.date: 05/14/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -148,7 +148,9 @@ When this type is configured, Microsoft 365 automatically negotiates client cred
 
 ### Use Azure Key Vault authentication (preview)
 
-[!INCLUDE [preview-feature](~/includes/preview-feature.md)]
+> [!NOTE]
+>
+> Azure Key Vault authentication is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Azure Key Vault authentication allows you to store and manage your MCP server credentials in your own [Azure Key Vault](/azure/key-vault/general/overview) instance. This gives you full control over secret lifecycle management, including rotation, access policies, and audit logging.
 
@@ -169,10 +171,6 @@ To set up Azure Key Vault authentication:
 1. Grant the Microsoft 365 service principal access to read the secret by configuring an [access policy](/azure/key-vault/general/assign-access-policy) or [Azure RBAC role](/azure/key-vault/general/rbac-guide) on your vault.
 1. Register the secret reference in [Developer Portal](https://dev.teams.microsoft.com) and note the registration ID.
 1. Use the registration ID as the `referenceId` in your manifest.
-
-> [!NOTE]
->
-> Azure Key Vault authentication is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md). The configuration experience in Developer Portal may change before general availability.
 
 ### Use no authentication
 
