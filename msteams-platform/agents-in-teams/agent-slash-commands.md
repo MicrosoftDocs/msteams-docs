@@ -109,12 +109,7 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
- A single agent response can include multiple prompt previews. However, it appears doesn't appear for normal messages.
-
-> [!NOTE]
->
-
-Next, enable [prompt preview](#send-an-agent-response).
+ A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
 ---
 
