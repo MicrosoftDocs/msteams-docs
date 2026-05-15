@@ -53,8 +53,6 @@ Your agents can send a private or public response to a user's query. You can als
 
 # [Private agent-to-user response](#tab/private)
 
-<a id="private-response-1"></a>
-
 This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
 
 :::row:::
@@ -78,8 +76,6 @@ This flow keeps slash command results focused between the user and the agent. Us
 Next, enable [private agent-to-user responses](#send-an-agent-response).
 
 # [Public agent-to-user response](#tab/public)
-
-<a id="public-response-1"></a>
 
 When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
 
@@ -208,7 +204,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
                         ]
                     },
                     {
-                        "scopes": ["team", "gro54upChat"],
+                        "scopes": ["team", "groupChat"],
                         "triggers": ["slash"],
                         "commands": [
                             { "title": "Review", "description": "Review a document" }
@@ -419,8 +415,6 @@ You can enable the agent to send for the [public response scenario](#agent-respo
     [WIP: Add code snippet]
 
 # [Prompt preview](#tab/preview)
-
-<a id="prompt-preview-2"></a>
 
 You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
 
