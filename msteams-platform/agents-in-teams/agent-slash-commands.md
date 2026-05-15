@@ -99,7 +99,7 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
-When an agent replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message:
+When an agent replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message. Use prompt preview to maintain context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, the prompt preview is always included at the top of the agent response.
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply.
 
@@ -109,10 +109,10 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
-The prompt preview is always included at the top of the agent response. A single agent response can include multiple prompt previews. However, it appears doesn't appear for normal messages.
+ A single agent response can include multiple prompt previews. However, it appears doesn't appear for normal messages.
 
 > [!NOTE]
-> Including the user’s prompt in the agent response is optional. Use prompt preview to maintain context in ongoing conversations.
+>
 
 Next, enable [prompt preview](#send-an-agent-response).
 
@@ -661,6 +661,7 @@ You can also see more information on [error codes for targeted messages](targete
 - Provide clear command descriptions to improve discoverability.
 - Add aliases for high-traffic commands where appropriate.
 - When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](#delete-an-agent-response) and then re-share the response publicly.
+- Use prompt preview to maintain context in ongoing conversations.
 
 ## See also
 
