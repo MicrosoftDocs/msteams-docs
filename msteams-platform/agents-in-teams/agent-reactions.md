@@ -49,8 +49,6 @@ The following code snippet shows an example of adding the *Waving hand* reaction
 
 # [CSharp](#tab/cs1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -67,8 +65,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/ts1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
   await send("Hello! I'll react to this message.");
@@ -80,8 +76,6 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/py1)
-
-[WIP: Add link to Teams SDK docs.]
 
 ```python
 @app.on_message
@@ -130,8 +124,6 @@ The following code snippet shows an example of removing a reaction from a messag
 
 # [CSharp](#tab/cs1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -154,8 +146,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/ts1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```typescript
 app.on('message', async ({ activity, api }) => {
   // First, add a reaction
@@ -168,8 +158,6 @@ app.on('message', async ({ activity, api }) => {
 ```
 
 # [Python](#tab/py1)
-
-[WIP: Add link to Teams SDK docs.]
 
 ```python
 import asyncio
@@ -243,8 +231,6 @@ The following code snippet shows an example of selecting a specific skin tone of
 
 # [CSharp](#tab/cs1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -261,8 +247,6 @@ app.OnMessage(async context =>
 
 # [TypeScript](#tab/ts1)
 
-[WIP: Add link to Teams SDK docs.]
-
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
   await send("Hello! I'll react to this message.");
@@ -273,8 +257,6 @@ app.on('message', async ({ activity, api, send }) => {
 ```
 
 # [Python](#tab/py1)
-
-[WIP: Add link to Teams SDK docs.]
 
 ```python
 @app.on_message
@@ -313,31 +295,5 @@ Where,
 
 ## See also
 
-- Teams SDK [WIP: Links to be added when available]
+- [Teams SDK](https://microsoft.github.io/teams-sdk/typescript/in-depth-guides/message-reactions/)
 - [Teams reaction reference](teams-reactions-reference.md)
-
-<!-- **Client error codes**
-| `401` | `BotNotRegistered` | The agent or bot doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
-| `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the agent or bot token is valid, not expired, and issued for the correct audience. |
-| `403` | `BotNotInConversation` | The agent or bot attempted to react in a conversation it doesn't have access to. | The agent or bot must be installed in the chat or channel before sending reactions. |
-| `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the `conversationId` is correct and the conversation still exists. |
-| `404` | `messageId` not found | The `messageId` couldn't be found, or the request URL is malformed. | Verify the `messageId` exists and the URL contains no whitespace or invalid characters. |
-| `405` | `ApiNotEnabled` | Reaction extensibility isn't enabled for this environment. | Confirm the feature is available in your tenant. |
-| `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the `Retry-After` header duration. |
-### Server error codes
-
-| Response codes | Error message | Description | Action |
-| --- | --- | --- | --- |
-| `500` | Internal Server Error | An unexpected error occurred on the server. | Retry the request. If persistent, file a support ticket with the `x-ms-request-id` from response headers. |
-| `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. |
-| `504` | Gateway Timeout | An upstream service dependency timed out. | Retry after a brief delay. If persistent, check [Teams Service Health](https://admin.microsoft.com/servicestatus) . |
-
-### Success codes
-### Error codes
-
-| Response codes | Error message | Description | Action |
-| --- | --- | --- | --- |
-| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
-
-You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
--->
