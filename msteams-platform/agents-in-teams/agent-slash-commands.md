@@ -32,9 +32,9 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 
 ## What is a slash command
 
-Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows a menu of available commands.
+Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows a menu of [available commands](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b).
 
-Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters.
+Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters. Slash commands for agents are supported for mobile clients across platforms.
 
 <!--
 A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
