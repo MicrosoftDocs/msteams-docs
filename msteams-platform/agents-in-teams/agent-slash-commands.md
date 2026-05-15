@@ -17,7 +17,7 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Use slash commands in Teams as a clear, predictable way to interact with agents or apps with simple text commands.
+Use slash commands in Teams as a clear, predictable way to interact with agents or apps with convenient text commands.
 
 **Key points**
 
@@ -32,9 +32,15 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 
 ## What is a slash command
 
+Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows a menu of available commands.
+
+Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters.
+
+<!--
 A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
 
 For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
+-->
 
 ## User experience for slash commands
 
@@ -44,8 +50,8 @@ When a user enters a slash command, it appears as a private message visible only
 
 > [!NOTE]
 >
-> - Public responses must be used when visibility in the group or channel adds value.
-> - The private message expires after 24 hours.
+> - Use public responses when visibility in the group or channel adds value.
+> - The private message is removed after 24 hours. The user can't view or respond to the private message after that.
 
 ### Agent response and prompt preview visibility
 
@@ -99,7 +105,7 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
-When an agent responds to a user, prompt preview shows the user’s initial slash command query as a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
+When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply.
 
