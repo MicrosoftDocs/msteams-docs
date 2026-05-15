@@ -77,6 +77,8 @@ app.on('message', async ({ activity, api, send }) => {
 
 ```
 
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?branch=main&branchFallbackFrom=pr-en-us-13991&pivots=typescript).
+
 # [Python](#tab/py1)
 
 ```python
@@ -91,6 +93,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         '1f44b_wavinghand'
     )
 ```
+
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?branch=main&branchFallbackFrom=pr-en-us-13991&pivots=python).
 
 # [API](#tab/h1)
 
