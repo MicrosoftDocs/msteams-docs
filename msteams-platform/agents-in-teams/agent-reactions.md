@@ -77,7 +77,7 @@ app.on('message', async ({ activity, api, send }) => {
 
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript).
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#adding-a-reaction).
 
 # [Python](#tab/py1)
 
@@ -94,7 +94,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     )
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python).
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#adding-a-reaction).
 
 # [API](#tab/h1)
 
