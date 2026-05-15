@@ -150,6 +150,8 @@ app.OnMessage(async context =>
 });
 ```
 
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=csharp#removing-a-reaction).
+
 # [TypeScript](#tab/ts1)
 
 ```typescript
@@ -162,6 +164,8 @@ app.on('message', async ({ activity, api }) => {
   await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
 ```
+
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#removing-a-reaction).
 
 # [Python](#tab/py1)
 
@@ -185,6 +189,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         '1f44b_wavinghand'
     )
 ```
+
+See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#removing-a-reaction).
 
 # [API](#tab/h1)
 
