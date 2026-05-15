@@ -6,7 +6,7 @@ author: akjo
 ms.topic: tutorial
 ms.owner: vishachadha
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
-ms.date: 03/28/2023
+ms.date: 05/11/2026
 ---
 
 # Test resource-specific consent permissions in Teams

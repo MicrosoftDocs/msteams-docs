@@ -5,7 +5,7 @@ ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
 ms.owner: vishachadha
-ms.date: 10/31/2022
+ms.date: 05/11/2026
 ---
 
 # Permissions in Teams app

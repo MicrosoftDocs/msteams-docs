@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: MSFTRickyCastaneda
 ms.author: rcastaneda
 ms.topic: conceptual
-ms.date: 08/29/2023
+ms.date: 05/11/2026
 ---
 
 # Preapproval of RSC permissions
