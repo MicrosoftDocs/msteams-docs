@@ -57,7 +57,7 @@ app.OnMessage(async context =>
 
     if (mentions != null && mentions.Any())
     {
-        var firstMention = mentions[0].Properties["mentioned"]["name"]?.ToString();
+        var firstMention = mentions[0].Properties["mentioned"]?["name"]?.ToString();
         await context.Send($"Hello {firstMention}");
     }
     else
@@ -216,7 +216,6 @@ The `text` field in the object in the `entities` array must match a portion of t
 
 ```python
 @app.on_message 
-
 async def handle_message(ctx: ActivityContext[MessageActivity]): 
     await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=ctx.activity.from_))
 
@@ -391,7 +390,7 @@ The following table lists the throttling limits for tag mentions in a bot:
 
 ## Send a message on installation
 
-When your bot is first added to a group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. Use the `install.add` lifecycle route to listen for the installation event. For more information, see [https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging)proactive messaging.
+When your bot is first added to a group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. Use the `install.add` lifecycle route to listen for the installation event. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
 
 You can also store the `conversationId` during installation to enable [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) later.
 
@@ -421,7 +420,6 @@ app.on('install.add', async ({ send }) =>
 
 ```python
 @app.on_install_add 
-
 async def handle_install_add(ctx: ActivityContext[InstalledActivity]): 
     await ctx.send("Hello! I'm your bot. Here's what I can do...") 
 
