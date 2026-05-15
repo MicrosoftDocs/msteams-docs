@@ -99,7 +99,7 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 # [Prompt preview](#tab/preview)
 
-When an agent replies to a user, prompt preview displays the user’s initial slash command query in a single self-contained message. Use prompt preview to maintain context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, the prompt preview is always included at the top of the agent response.
+When an agent responds to a user, prompt preview shows the user’s initial slash command query as a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply.
 
@@ -119,7 +119,7 @@ When an agent replies to a user, prompt preview displays the user’s initial sl
 Slash commands make agents easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 -->
 
-## Slash commands developer experience
+## Implement slash commands
 
 Enabling slash commands typically involves the following:
 
