@@ -1,8 +1,8 @@
 ---
-title: Agent Reactions in Teams - Overview
+title: React to messages from Teams agents
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
-ms.date: 01/28/2026
+ms.date: 05/18/2026
 ms.topic: reference
 ---
 
@@ -10,13 +10,13 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Enable agent reactions in Teams
+# React to messages from Teams agents
 
 > [!NOTE]
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
+Agents in Teams can react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
 
 # [Desktop](#tab/desktop)
 
@@ -28,8 +28,6 @@ You can build agents that react to messages as well as send text, minimizing not
 
 ---
 
-Map emojis and reactions to specific agent actions and use the ID to send the right reaction in the conversation.
-
 **Key highlights**:
 
 - [Add reactions](#enable-an-agent-to-add-reactions)
@@ -38,16 +36,20 @@ Map emojis and reactions to specific agent actions and use the ID to send the ri
 - [Select skin tone for emojis](#modify-skin-tone-for-emojis)
 - [Best practices](#best-practices)
 
-## Enable an agent to add reactions
+## Add and remove reactions on messages
+
+Like users, agents can attach one or more reactions to each message in a conversation, and can remove reactions after adding them. Users and agents can only remove their own reactions, not those placed by others.
 
 You can enable an agent to send reactions using Teams SDK or REST APIs. An agent can send up to two reactions per second. To enable an agent to send a reaction to a message:
 
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add.
 1. Use [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript) or REST API to add reactions to messages.
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
 # [C#](#tab/cs1)
+
+
 
 ```csharp
 app.OnMessage(async context =>
@@ -96,7 +98,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#adding-a-reaction).
 
-# [API](#tab/h1)
+# [REST API](#tab/h1)
 
 ```REST
 PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand

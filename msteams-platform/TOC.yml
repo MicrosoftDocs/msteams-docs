@@ -19,7 +19,7 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
-  - name: Enable agent reactions
+  - name: React to messages with emoji
     href: agents-in-teams/agent-reactions.md
     displayName: reactions, like, dislike, emoji, Teams SDK, REST APIs, agents in Teams, custom engine agent, agent reactions
   - name: Teams reactions reference
