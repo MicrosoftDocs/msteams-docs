@@ -97,8 +97,6 @@ Key steps for enabling the agent to send a targeted message are as follows:
     });
     ```
 
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=csharp#targeted-messages).
-
    # [TypeScript](#tab/ts1)
 
     ```typescript
@@ -112,8 +110,6 @@ Key steps for enabling the agent to send a targeted message are as follows:
       );
     });
     ```
-
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript#targeted-messages).
 
    # [Python](#tab/Py1)
 
@@ -129,8 +125,6 @@ Key steps for enabling the agent to send a targeted message are as follows:
               .with_recipient(ctx.activity.from_, is_targeted=True)
       )
    ```
-
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=python#targeted-messages).
 
    # [HTTP](#tab/api1)
 

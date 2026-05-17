@@ -72,7 +72,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 > [!NOTE]
 > The **Bot Framework SDK** and **Bot Framework Emulator** have been archived on GitHub and are no longer updated or maintained. Support tickets for the Bot Framework SDK are no longer serviced after December 31, 2025.
 >
-> We recommend planning your transition to the [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome) for building agents in Microsoft Teams. To extend your agent's capabilities across other Microsoft 365 platforms, use the [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/).
+> We recommend planning your transition to the [Teams SDK](/microsoftteams/platform/teams-sdk-overview) for building agents in Microsoft Teams. To extend your agent's capabilities across other Microsoft 365 platforms, use the [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/).
 
 ## Tools
 
