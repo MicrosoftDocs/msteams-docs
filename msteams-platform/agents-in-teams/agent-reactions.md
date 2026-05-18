@@ -58,7 +58,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType("1f44b_wavinghand")
+        new ReactionType("1f44b_wavinghand")
     );
 });
 ```
@@ -137,7 +137,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType("1f44b_wavinghand")
+        new ReactionType("1f44b_wavinghand")
     );
 
     // Wait a bit, then remove it
@@ -145,7 +145,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.DeleteAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType("1f44b_wavinghand")
+        new ReactionType("1f44b_wavinghand")
     );
 });
 ```
@@ -252,7 +252,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType("1f44b_wavinghand-tone4")
+        new ReactionType("1f44b_wavinghand-tone4")
     );
 });
 ```
