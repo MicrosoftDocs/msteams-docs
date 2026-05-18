@@ -109,11 +109,11 @@ Next, enable [public agent-to-user responses](#send-an-agent-response).
 
 When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
 
-- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply.
+- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
 
-- **Public agent-to-user response**: The agent sends a public reply to the user's message that is visible to everyone in the chat.
+- **Public agent-to-user response**: The agent sends a public response to the user's request that is visible to everyone in the chat. It includes the prompt preview in its response.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
