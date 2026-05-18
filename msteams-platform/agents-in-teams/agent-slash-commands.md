@@ -48,7 +48,7 @@ When a user enters a slash command, it appears as a private message visible only
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
-Your agent's implementation determines the action it takes in response to a slash command and how it replies, including whether that reply is sent privately as a targeted message or as a public message visible to the entire chat. Agent slash command activations are only ever visible to the user who sent them, so consider whether the agent's response should be a private message back to the user. See [best practices](#best-practices).
+Your agent's implementation determines the action it takes in response to a slash command and how it replies. The agent response can be sent privately as a targeted message or as a public message visible to the entire chat. Agent slash command activations are visible only to the user who triggered them. So, consider whether the response should be private message back to the user. See [best practices](#best-practices).
 
 > [!NOTE]
 >
@@ -74,7 +74,7 @@ This flow keeps slash command results focused between the user and the agent. Us
 :::row-end:::
 :::row:::
     :::column span:::
-        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview.
+        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview. See [best practices](#best-practices).
 
       This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
