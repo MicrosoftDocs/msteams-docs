@@ -1,6 +1,18 @@
 {
   "redirections": [
       {
+        "source_path": "msteams-platform/m365-apps/actions-in-m365-quick-start-guide.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/actions-in-m365.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/build-actions-in-m365.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
           "source_path": "msteams-platform/concepts/building-an-app.md",
           "redirect_url": "/microsoftteams/platform/overview"
       },
