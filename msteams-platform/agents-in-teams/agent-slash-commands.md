@@ -113,7 +113,7 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
 
-- **Public agent-to-user response**: The agent sends a public response to the user's request that is visible to everyone in the chat. It includes the prompt preview in its response.
+- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
@@ -139,17 +139,17 @@ Enabling slash commands typically involves the following:
 
 You can enable slash commands for your agents in the following ways:
 
+- **App-defined slash commands**: Similar to using @mentions in the compose box, agents can publish a curated set of [slash commands](#command-list). Users can discover and run common actions without leaving the compose box. They can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
+
+  - `/help`
+  - `/settings`
+
 - **User-to-agent interaction**: Slash commands can initiate one-turn interaction with agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
 
   To [support natural-language prompts](#command-list), you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
-
-- **App-defined slash commands**: Similar to using @mentions in the compose box, agents can publish a curated set of [slash commands](#command-list). Users can discover and run common actions without leaving the compose box. They can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
-
-  - `/help`
-  - `/settings`
 
 - **Message extension actions as slash commands**: You can [surface action-type message extensions as slash commands](#me). When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
@@ -159,22 +159,6 @@ You can enable slash commands for your agents in the following ways:
 ### Update app manifest for slash commands
 
 Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt in to slash commands and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
-
-- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
-
-    Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
-
-    ```json
-    {
-        "bots": [
-            {
-                "botId": "{{BOT_ID}}",
-                "scopes": ["personal", "team", "groupChat"],
-                "supportsTargetedMessages": true
-            }
-        ]
-    }
-    ```
 
 <a id="command-list"></a>
 
@@ -248,6 +232,22 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     ```
 
 <a id="me"></a>
+
+- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
+
+    Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
+
+    ```json
+    {
+        "bots": [
+            {
+                "botId": "{{BOT_ID}}",
+                "scopes": ["personal", "team", "groupChat"],
+                "supportsTargetedMessages": true
+            }
+        ]
+    }
+    ```
 
 - **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
