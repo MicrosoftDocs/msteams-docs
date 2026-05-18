@@ -5,7 +5,7 @@ description: Learn how to create and handle a prompt starter and suggested actio
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: vikasalmal
-ms.date: 4/7/2026
+ms.date: 05/17/2026
 ---
 
 # Create prompt suggestions
@@ -52,18 +52,12 @@ Prompt starters are supported in one-on-one chats, group chats, and channels. To
 * The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
 * The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
 
->[!NOTE]
->
->If you're building an agent, you must set `type` to **prompt** and provide a valid prompt value. If the `prompt` field is empty, the app manifest fails validation during submission.
-
-## Define `commands` in app manifest
+### Define `commands` in app manifest
 
  To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
 * The `command` property supports up to 10 commands.
 * You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
-
-#### Manifest example for prompt starters
 
 The manifest example code for prompt starters is as follows:
 
@@ -118,7 +112,7 @@ The manifest example code for prompt starters is as follows:
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
-The following image illustrates an example of prompt suggestions:
+The following image illustrates an example of prompt starters:
 
 # [Desktop](#tab/desktop)
 
@@ -130,7 +124,7 @@ The following image illustrates an example of prompt suggestions:
 
 ---
 
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. They enable users to review the prompts while interacting with your bot.
+After the user begins a conversation, the prompt starters will disappear from the conversation pane but remain available in the **View Prompts** flyout above the compose box, enabling users to review the prompts while interacting with your bot.
 
 # [Personal chat](#tab/pc)
 
