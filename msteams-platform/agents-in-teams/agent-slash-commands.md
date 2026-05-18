@@ -40,10 +40,9 @@ Teams agents designed to respond to specific named commands can be implemented a
 A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
 
 For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
--->
 
 ## User experience for slash commands
-
+-->
 When a user enters a slash command, it appears as a private message visible only to them. The agent can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent logic.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
