@@ -22,13 +22,14 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 **Key points**
 
 - [What is a slash command](#what-is-a-slash-command)
-- [User experience for slash commands](#user-experience-for-slash-commands)
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
   - [Handle slash commands](#handle-slash-commands)
   - [Response codes for slash commands](#response-codes-for-slash-commands)
-<!--- [Why use slash commands](#why-use-slash-commands)-->
+<!--- [Why use slash commands](#why-use-slash-commands)
+- [User experience for slash commands](#user-experience-for-slash-commands)
+-->
 
 ## What is a slash command
 
