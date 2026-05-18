@@ -1,9 +1,8 @@
-Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
+Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Suggested actions can be generated and placed dynamically during a conversation, meaning that you can use your bot’s large language model (LLM) to generate them along with a response during a conversation turn.
 
-> [!IMPORTANT]
-> The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
+Teams supports displaying up to three suggested actions at any given time. Suggested actions cards remain visible and accessible until they are replaced or removed by the bot's actions.
 
-When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
+Suggested actions are supported in all scopes:
 
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
 - `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
