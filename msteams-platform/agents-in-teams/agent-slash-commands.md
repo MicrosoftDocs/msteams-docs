@@ -46,7 +46,7 @@ For more information, see [supported scenarios for slash commands](#supported-sc
 -->
 When a user enters a slash command, it appears as a private message visible only to them. The agent can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent logic.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands-small.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
 Your agent's implementation determines the action it takes in response to a slash command and how it replies. The agent response can be sent privately as a targeted message or as a public message visible to the entire chat. Agent slash command activations are visible only to the user who triggered them. So, consider whether the response should be private message back to the user. See [best practices](#best-practices).
 
