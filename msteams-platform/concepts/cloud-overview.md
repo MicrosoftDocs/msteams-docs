@@ -4,7 +4,7 @@ author: v-preethah
 description: Learn about the Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DoD) environments. Get an overview on how to deploy Teams in government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 02/06/2025
+ms.date: 04/23/2026
 ---
 
 # Plan for government clouds
@@ -29,7 +29,7 @@ Government Community Cloud (GCC), GCC High, Department of Defense (DoD) are limi
 
 Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Due to security and compliance restrictions, all the features available in commercial tenants might not be accessible in government tenants while other features take time to roll out in government tenant. We recommend that you have the understanding of the Teams apps and its capabilities supported in government tenants to ensure effective utilization.
 
-[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+<!--[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]-->
 
 The following table details the Teams apps and its capabilities for GCC, GCC High, and DoD:
 

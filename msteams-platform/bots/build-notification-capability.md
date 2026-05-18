@@ -249,7 +249,7 @@ You can customize sending the notification to the following targets:
     // list all installation targets
     for (const target of await notificationApp.notification.installations()) {
         // "Channel" means this bot is installed to a Team (default to notify General channel)
-        if (target.type === "Channel") {
+        if (target.type === "channel") {
             // Directly notify the Team (to the default General channel)
             await target.sendAdaptiveCard(...);
 
