@@ -158,7 +158,7 @@ You can enable slash commands for your agents in the following ways:
 
 ### Update app manifest for slash commands
 
-Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt in to slash commands and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
+Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt for slash commands in your agent and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
 <a id="command-list"></a>
 
