@@ -504,6 +504,11 @@ Developer preview is a public program that provides early access to unreleased T
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams](/microsoftteams/platform/teams-ai-library/welcome/overview).
 -->
+
+**2026 May**
+
+* ***May 15, 2026***: [Enable agent reactions in Teams](agents-in-teams/agent-reactions.md).
+
 <br/>
 
 <details>
