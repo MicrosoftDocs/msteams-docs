@@ -47,7 +47,7 @@ You can enable an agent to send reactions using Teams SDK or REST APIs. An agent
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
-# [CSharp](#tab/cs1)
+# [C#](#tab/cs1)
 
 ```csharp
 app.OnMessage(async context =>
@@ -58,7 +58,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType.1f44b_wavinghand
+        new ReactionType("1f44b_wavinghand")
     );
 });
 ```
@@ -128,7 +128,7 @@ You can choose to enable an agent to remove its reaction from messages. To remov
 
 The following code snippet shows an example of removing a reaction from a message:
 
-# [CSharp](#tab/cs1)
+# [C#](#tab/cs1)
 
 ```csharp
 app.OnMessage(async context =>
@@ -137,7 +137,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType.1f44b_wavinghand
+        new ReactionType("1f44b_wavinghand")
     );
 
     // Wait a bit, then remove it
@@ -145,7 +145,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.DeleteAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType.1f44b_wavinghand
+        new ReactionType("1f44b_wavinghand")
     );
 });
 ```
@@ -241,7 +241,7 @@ The [Teams reactions reference](teams-reactions-reference.md) shows skin tone op
 
 The following code snippet shows an example of selecting a specific skin tone of a diverse reaction to a message:
 
-# [CSharp](#tab/cs1)
+# [C#](#tab/cs1)
 
 ```csharp
 app.OnMessage(async context =>
@@ -252,7 +252,7 @@ app.OnMessage(async context =>
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        ReactionType.1f44b_wavinghand-tone4
+        new ReactionType("1f44b_wavinghand-tone4")
     );
 });
 ```
