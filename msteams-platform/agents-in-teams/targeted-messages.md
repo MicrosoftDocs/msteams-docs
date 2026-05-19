@@ -70,9 +70,13 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 
 You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview). You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
 
-### Send a targeted message
+You can also build your agent to handle [slash commands](agent-slash-commands.md) and agent responses to them.
+
+### Handle targeted messages
 
 Sending a targeted message is similar to sending a regular message. Only an agent or a bot can send a targeted message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+
+#### Send a targeted message
 
 Key steps for enabling the agent to send a targeted message are as follows:
 
@@ -168,7 +172,7 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
     Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The POST payload is the activity (message) to send, same as for a standard message activity.
 
-### Update a targeted message
+#### Update a targeted message
 
 The agent can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
 
@@ -233,7 +237,7 @@ Content-Type: application/json
 
 ---
 
-### Delete a targeted message
+#### Delete a targeted message
 
 Agents can delete messages within 24 hours if they've been acted on or they are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
@@ -272,6 +276,357 @@ Content-Type: application/json
 
 No body required.
 ```
+
+---
+
+### Handle agent responses for slash commands
+
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flows](agent-slash-commands.md#agent-response-and-prompt-preview-visibility).
+
+Use Teams SDK or REST APIs to handle the user's request and to send the agent response. You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
+
+#### Send an agent response
+
+Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
+
+# [Private message to a user](#tab/private)
+
+Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
+
+- **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
+
+  # [C#](#tab/dotnet1)
+
+  ```csharp
+  
+    teams.OnMessage(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true){
+        await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true), cancellationToken);
+      }
+    });
+  ```
+
+  # [TypeScript](#tab/ts1)
+
+  ```typescript
+        
+    app.on('message', async ({ send, activity }) => {
+      if(activity.Recipient.isTargeted) {
+        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+        }
+    });
+  ```
+
+  # [Python](#tab/Py1)
+
+  ```python
+        
+    @app.on_message
+    async def handle_message(ctx):
+      if getattr(ctx.activity.recipient, "is_targeted", False):
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from, is_targeted=True))
+  ```
+
+  # [HTTP](#tab/api1)
+
+  See [Send a targeted message](targeted-messages.md#send-a-targeted-message).
+  
+- **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
+
+  # [C#](#tab/dotnet1)
+
+  ```csharp
+    
+  teams.OnMessage(async (context, cancellationToken) => {
+    if (context.Activity.Recipient?.IsTargeted == true) {
+      await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>", Role = Role.User}, true), cancellationToken);
+    }
+    });
+  ```
+
+  # [TypeScript](#tab/ts1)
+
+  ```typescript
+    
+  app.on('message', async ({ send, activity }) => {
+    if(activity.Recipient.isTargeted) {
+    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>, Name: <user Name>, Role: User}, isTargeted: true))
+      }
+  });
+  ```
+
+  # [Python](#tab/Py1)
+
+  ```python
+      
+    @app.on_message
+    async def handle_message(ctx):
+      if getattr(ctx.activity.recipient, "is_targeted", False):
+        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER), is_targeted=True))
+  ```
+
+  # [HTTP](#tab/api1)
+
+  [WIP: Add code snippet]
+
+# [Public response by the agent](#tab/public)
+
+You can enable the agent to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
+
+- The message requires collaboration from all members.
+- The broader visibility adds value.
+
+  # [C#](#tab/dotnet)
+
+    ```csharp
+  
+      teams.OnMessage(async (context, cancellationToken) => {
+        await context.Send(new MessageActivity("Normal msg"), cancellationToken);
+      });
+    ```
+  
+  # [TypeScript](#tab/ts)
+
+    ```typescript
+
+    app.on('message', async ({ send, activity }) => {
+      send(new MessageActivity('Normal msg'))  
+    });
+    ```
+
+  # [Python](#tab/Py)
+
+    ```python
+  
+      @app.on_message
+      async def handle_message(ctx):
+        await ctx.send(MessageActivityInput("Normal msg"))
+    ```
+  
+  # [HTTP](#tab/api)
+
+    [WIP: Add code snippet]
+
+# [Prompt preview](#tab/preview)
+
+You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
+
+For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
+
+- **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
+
+  - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
+
+    - The SDK automatically attaches the `targetedMessageInfo` entity.
+    - No additional code is required from the developer.
+
+      Prompt Preview is rendered automatically using the original message context
+
+  - Proactive response: When an agent sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
+  
+    - The developer must manually attach the entity.
+    - The `messageId` of the original user message must be provided.
+
+- **Use REST APIs**: Prompt preview is supported when sending agent responses through the following APIs:
+
+  - **Private agent-to-user response**: The agent replies privately to the user’s message. The response is visible only to the targeted user.
+
+  - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
+
+  In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
+
+<!--
+# [C#](#tab/dotnet)
+
+  Attach the entity manually using the targeted message ID:
+
+  ```csharp
+    var message = new MessageActivity("Here is the result!")
+      .AddTargetedMessageInfo(targetedMessageId);
+        
+    // Targeted reply (only the user sees it)
+    message.WithRecipient(userAccount, true);
+    await context.Send(message, cancellationToken);
+        
+    // OR public reply (everyone sees it)
+    await context.Send(message, cancellationToken);
+  ```
+
+# [TypeScript](#tab/ts)
+
+  ```typescript
+  const message = new MessageActivity('Here is the result!')
+  .addTargetedMessageInfo(targetedMessageId);
+    
+  // Targeted reply (only the user sees it)
+  message.withRecipient(userAccount, true);
+  await send(message);
+        
+  // OR public reply (everyone sees it)
+  await send(message);
+  ```
+
+# [Python](#tab/Py)
+
+  ```python
+  message = MessageActivityInput(text="Here is the result!")
+  message.add_targeted_message_info(targeted_message_id)
+        
+  # Targeted reply (only the user sees it)
+  message.with_recipient(user_account, is_targeted=True)
+  await ctx.send(message)
+        
+  # OR public reply (everyone sees it)
+  await ctx.send(message)
+  ```
+---
+-->
+
+  ```http
+  POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+  Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+  Content-Type: application/json
+  {
+      "type": "message",
+      "from": {
+          "id": "28:c9e...",
+          "name": "Contoso"
+      },
+      "conversation": {
+          "id":"x:17I0...",
+          "name": "Convo1"
+      },
+      "recipient": {
+          "id": "29:1XJ...",
+          "name": "Megan Bowen"
+      },    
+      "text": "My bot's reply",
+  "entities": [
+      {
+        "type": "targetedMessageInfo",
+        "messageId": "1772129782775"
+      }
+    ]
+  }
+  ```
+
+  ---
+
+#### Update an agent response
+
+The agent can edit its original message, if needed. The updated message appears only in the intended user’s view.
+
+Use one of the following code snippets to edit the agent's response:
+
+# [C#](#tab/dotnet1)
+
+  ```csharp
+  
+    teams.OnMessage(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true) {
+        var sent = await context.Send(
+          new MessageActivity("Processing your request...")
+            .WithRecipient(context.Activity.From!, isTargeted: true),
+          cancellationToken
+        );
+    
+        await context.Api.Conversations.Activities.UpdateTargetedAsync(
+          context.Activity.Conversation!.Id!,
+          sent!.Id!,
+          new MessageActivity("Updated private response"),
+          cancellationToken
+        );
+      }
+    });
+  ```
+  
+# [TypeScript](#tab/ts1)
+
+  ```typescript
+  
+    app.on('message', async ({ send, activity, api }) => {
+      if (activity.Recipient.isTargeted) {
+        const sent = await send(
+          new MessageActivity('Processing your request...')
+            .withRecipient(activity.From, isTargeted: true)
+        );
+    
+        await api.conversations.activities.updateTargeted(
+          activity.Conversation.Id,
+          sent.Id,
+          new MessageActivity('Updated private response')
+        );
+      }
+    });
+  ```
+  
+# [Python](#tab/Py1)
+
+  ```python
+  
+    @app.on_message
+    async def handle_message(ctx):
+        if getattr(ctx.activity.recipient, "is_targeted", False):
+            sent = await ctx.send(
+                MessageActivityInput("Processing your request...").with_recipient(
+                    ctx.activity.from,
+                    is_targeted=True
+                )
+            )
+    
+            await ctx.api.conversations.activities.update_targeted(
+                ctx.activity.conversation.id,
+                sent.id,
+                MessageActivityInput("Updated private response")
+            )
+  ```
+
+# [HTTP](#tab/api1)
+
+  [WIP: Add code snippet]
+
+---
+
+#### Delete an agent response
+
+Use the following code snippet to enable the agent to delete its response:
+
+# [C#](#tab/dotnet1)
+
+  ```csharp
+  
+    // Hard delete TM flow
+    teams.OnMessageDelete(async (context, cancellationToken) => {
+      if (context.Activity.Recipient?.IsTargeted == true){
+        // Business logic when message hard delete flow is for TM
+      }
+    });
+  ```
+
+# [TypeScript](#tab/ts1)
+
+  ```typescript
+
+    app.on('messageDelete', async ({ activity, next }) => {
+      if(activity.Recipient.isTargeted) {
+        // Business logic when message hard delete flow is for TM
+      }
+    });
+  ```
+
+# [Python](#tab/Py1)
+
+  ```python
+  
+  @app.on_message_delete
+  async def handle_message_delete(ctx):
+    if getattr(ctx.activity.recipient, "is_targeted", False):
+      # Business logic when message hard delete flow is for TM
+  ```
+
+# [HTTP](#tab/api1)
+
+  [WIP: Add code snippet]
 
 ---
 
