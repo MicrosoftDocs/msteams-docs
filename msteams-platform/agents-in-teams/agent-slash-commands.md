@@ -47,16 +47,16 @@ For more information, see [supported scenarios for slash commands](#supported-sc
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
-When a user enters a slash command, it appears as a private message visible only to them. The agent can reply privately to a user or, when it's relevant, share the response with the whole group or channel. You can manage who sees responses using the agent logic.
-
-Your agent's implementation determines the action it takes in response to a slash command and how it replies. The agent response can be sent privately as a targeted message or as a public message visible to the entire chat. Agent slash command activations are visible only to the user who triggered them. So, consider whether the response should be private message back to the user.
+- Slash commands are **visible only to the user** who triggers them.
+- Your **agent's implementation** determines both the action and response visibility.
+- Agent responses can be **[targeted (private) messages](targeted-messages.md) or public messages** shared with the group/channel.
+- Always assess if a **private response is more appropriate** before replying publicly. Use public responses when visibility in the group or channel adds value.
 
 See [best practices](#best-practices).
 
 > [!NOTE]
 >
-> - Use public responses when visibility in the group or channel adds value.
-> - The private message is removed after 24 hours. The user can't view or respond to the private message after that.
+> The private message is removed after 24 hours. The user can't view or respond to the private message after that.
 
 ## Implement slash commands
 
@@ -328,13 +328,6 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     ```
 
 ## Agent design guidelines and best practices
-
-[Notes]
-
-- Slash commands are visible only to the user who triggers them.
-- Agent responses can be targeted (private) or shared with the group/channel.
-- The agent’s logic determines both the action and response visibility.
-- Always assess if a private response is more appropriate before replying publicly
 
 [Best practices]
 
