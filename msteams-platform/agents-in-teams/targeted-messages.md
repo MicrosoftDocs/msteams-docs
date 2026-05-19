@@ -288,11 +288,11 @@ Use Teams SDK or REST APIs to handle the user's request and to send the agent re
 
 #### Send an agent response
 
-Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
+Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands):
 
 # [Private message to a user](#tab/private)
 
-Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
+Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands) to send a message to a single user.
 
 - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
@@ -372,7 +372,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
 # [Public response by the agent](#tab/public)
 
-You can enable the agent to send for the [public response scenario](#agent-response-and-prompt-preview-visibility) in a group or a channel if:
+You can enable the agent to send for the [public response scenario](agent-slash-commands.md#supported-scenarios-for-slash-commands) in a group or a channel if:
 
 - The message requires collaboration from all members.
 - The broader visibility adds value.
@@ -410,7 +410,7 @@ You can enable the agent to send for the [public response scenario](#agent-respo
 
 # [Prompt preview](#tab/preview)
 
-You can enable [prompt preview](#agent-response-and-prompt-preview-visibility) using Teams SDK or REST APIs.
+You can enable [prompt preview](agent-slash-commands.md#supported-scenarios-for-slash-commands) using Teams SDK or REST APIs.
 
 For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
 
@@ -643,7 +643,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
 
 Ensure to handle these errors appropriately in your agent or bot.
 
-# [Teams SDK](#tab/tsdk)
+# [Teams SDK](#tab/tsdk1)
 
 The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
@@ -654,7 +654,7 @@ The following table lists error codes, error descriptions, and developer actions
 | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
-# [HTTP](#tab/api)
+# [HTTP](#tab/api1)
 
 The following table lists error codes, error descriptions, and developer actions for REST APIs:
 

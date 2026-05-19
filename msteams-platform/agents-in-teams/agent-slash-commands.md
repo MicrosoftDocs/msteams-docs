@@ -25,8 +25,9 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
-  - [Handle slash commands](#handle-slash-commands)
+  - [Implement slash commands](#implement-slash-commands)
   - [Response codes for slash commands](#response-codes-for-slash-commands)
+
 <!--- [Why use slash commands](#why-use-slash-commands)
 - [User experience for slash commands](#user-experience-for-slash-commands)
 -->
@@ -54,7 +55,7 @@ For more information, see [supported scenarios for slash commands](#supported-sc
 
 When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as MessageActivity events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
 
-See [best practices](#best-practices).
+See [best practices](#agent-design-guidelines-and-best-practices).
 
 > [!NOTE]
 >
@@ -360,7 +361,7 @@ This flow keeps slash command results focused between the user and the agent. Us
 :::row-end:::
 :::row:::
     :::column span:::
-        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview. See [best practices](#best-practices).
+        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview. See [best practices](#agent-design-guidelines-and-best-practices).
 
       This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
 
@@ -376,7 +377,7 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#best-practices) for more guidelines.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#agent-design-guidelines-and-best-practices) for more guidelines.
         1. The agent responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
