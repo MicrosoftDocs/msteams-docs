@@ -409,8 +409,9 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
 
 ### Handle agent responses
 
-You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
+You can enable the agent to [send a private or a public message](targeted-messages.md#handle-agent-responses-for-slash-commands). You can also enable the agent to update or delete a message that it had previously sent.
 
+<!---
 #### Send an agent response
 
 Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
@@ -757,6 +758,9 @@ Use the following code snippet to enable the agent to delete its response:
 
 ---
 
+-->
+
+<!--
 ## Response codes for slash commands
 
 Ensure to handle these errors appropriately in your agent. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
@@ -767,6 +771,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response could not be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
+-->
 
 ## Code sample
 

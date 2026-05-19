@@ -68,9 +68,10 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 
 ## Targeted message developer experience
 
-You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview). You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
+You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview).
 
-You can also build your agent to handle [slash commands](agent-slash-commands.md) and agent responses to them.
+- [Handle targeted messages](#handle-targeted-messages): You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
+- [Handle agent responses for slash commands](#handle-agent-responses-for-slash-commands): You can also build your agent to handle [slash commands](agent-slash-commands.md) and agent responses to them.
 
 ### Handle targeted messages
 
@@ -667,6 +668,17 @@ The following table lists error codes, error descriptions, and developer actions
 ---
 > [!TIP]
 > It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
+
+### Error codes for prompt preview in agent responses
+
+Ensure to handle these errors appropriately in your agent. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
+
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response could not be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+
+You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
 You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
