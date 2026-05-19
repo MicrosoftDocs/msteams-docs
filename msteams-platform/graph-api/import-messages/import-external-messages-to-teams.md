@@ -28,8 +28,8 @@ The following permissions are required as prerequisites for migrating messages.
 |Task|Scope name|
 |----|-----------|
 |Create Chat|[Chat.Create](/graph/api/chat-post?view=graph-rest-1.0&tabs=http&preserve-view=true)|
-|Create Team|[Team.Create](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Directory.Read.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Group.ReadWrite.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Teamwork.Migrate.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true)|
-|Create Channel|[Channel.Create](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Channel.Create.Group](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Directory.ReadWrite.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Group.ReadWrite.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Teamwork.Migrate.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true)|
+|Create Team|[Team.Create](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Teamwork.Migrate.All](/graph/api/team-post?view=graph-rest-1.0&tabs=http&preserve-view=true)|
+|Create Channel|[Channel.Create](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Channel.Create.Group](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true), [Teamwork.Migrate.All](/graph/api/channel-post?view=graph-rest-1.0&tabs=http&preserve-view=true)|
 
 #### Manage Conversation Members
 
