@@ -407,12 +407,11 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
  A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
 ---
-
+<!---
 ### Handle agent responses
 
 You can enable the agent to [send a private or a public message](targeted-messages.md#handle-agent-responses-for-slash-commands). You can also enable the agent to update or delete a message that it had previously sent.
 
-<!---
 #### Send an agent response
 
 Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
@@ -611,6 +610,7 @@ For using Teams SDK, follow the code snippet examples given in private message t
 ---
 -->
 
+<!--
   ```http
   POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
   Authorization: Bearer eyJhbGciOiJIUzI1Ni...
