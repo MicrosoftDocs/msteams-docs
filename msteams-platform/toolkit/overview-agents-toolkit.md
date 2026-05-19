@@ -4,7 +4,6 @@ description: Microsoft 365 Agents Toolkit is a suite of tools for building enter
 ms.topic: overview
 ms.date: 01/26/2026
 ---
-# Microsoft 365 Agents Toolkit
 
 Microsoft 365 Agents Toolkit is a suite of tools for building enterprise-ready agents and apps that work across Microsoft 365 Copilot, Teams, Office, web, and other third-party messaging channels. It streamlines the development of production AI agents and apps with built-in project scaffolding, testing, deployment, and integration with AI tools including Microsoft 365 Agents SDK, Azure AI Foundry, and TypeSpec for Copilot.
 
