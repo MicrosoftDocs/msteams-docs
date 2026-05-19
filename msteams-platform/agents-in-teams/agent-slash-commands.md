@@ -55,6 +55,27 @@ Your agent's implementation determines the action it takes in response to a slas
 > - Use public responses when visibility in the group or channel adds value.
 > - The private message is removed after 24 hours. The user can't view or respond to the private message after that.
 
+### Supported scenarios for slash commands
+
+You can enable slash commands for your agents in the following ways:
+
+- **App-defined slash commands**: Similar to using @mentions in the compose box, agents can publish a curated set of [slash commands](#command-list). Users can discover and run common actions without leaving the compose box. They can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`. For example:
+
+  - `/help`
+  - `/settings`
+
+- **User-to-agent interaction**: Slash commands can initiate one-turn interaction with agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
+
+  - `/contoso incident summarize the last 24 hours and suggest next steps`
+  - `/contoso create-task fix login issue for mobile users`
+
+  To [support natural-language prompts](#command-list), you must explicitly opt in so agents that want to support only fixed commands can do so without enabling free-form prompting.
+
+- **Message extension actions as slash commands**: You can [surface action-type message extensions as slash commands](#me). When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
+
+  > [!NOTE]
+  > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+
 ### Agent response and prompt preview visibility
 
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
@@ -135,6 +156,7 @@ Enabling slash commands typically involves the following:
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
 - [Handle slash commands in your agent](#handle-slash-commands): Use Teams SDK or REST APIs to handle the user's request and to send the agent response.
 
+<!--
 ### Supported scenarios for slash commands
 
 You can enable slash commands for your agents in the following ways:
@@ -155,6 +177,7 @@ You can enable slash commands for your agents in the following ways:
 
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+-->
 
 ### Update app manifest for slash commands
 
