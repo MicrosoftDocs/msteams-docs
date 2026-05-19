@@ -52,6 +52,8 @@ For more information, see [supported scenarios for slash commands](#supported-sc
 - Agent responses can be **[targeted (private) messages](targeted-messages.md) or public messages** shared with the group/channel.
 - Always assess if a **private response is more appropriate** before replying publicly. Use public responses when visibility in the group or channel adds value.
 
+When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as MessageActivity events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
+
 See [best practices](#best-practices).
 
 > [!NOTE]
