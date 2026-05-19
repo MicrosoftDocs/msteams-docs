@@ -297,8 +297,6 @@ You can enable the agent to send a private or a public message. You can also ena
 
 Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
 
-[WIP: Add link to Teams SDK docs]
-
 # [Private message to a user](#tab/private)
 
 Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](#agent-response-and-prompt-preview-visibility) to send a message to a single user.
@@ -339,7 +337,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
   # [HTTP](#tab/api1)
 
-  [WIP: Add code snippet]
+  See [Send a targeted message](targeted-messages.md#send-a-targeted-message).
   
 - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
 
