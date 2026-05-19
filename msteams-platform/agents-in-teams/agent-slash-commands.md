@@ -55,6 +55,13 @@ Your agent's implementation determines the action it takes in response to a slas
 > - Use public responses when visibility in the group or channel adds value.
 > - The private message is removed after 24 hours. The user can't view or respond to the private message after that.
 
+## Implement slash commands
+
+Enabling slash commands typically involves the following:
+
+- [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
+- [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
+
 ### Supported scenarios for slash commands
 
 You can enable slash commands for your agents in the following ways:
@@ -148,12 +155,14 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
 Slash commands make agents easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 -->
 
+<!--
 ## Implement slash commands
 
 Enabling slash commands typically involves the following:
 
 - [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
+-->
 - [Handle slash commands in your agent](#handle-slash-commands): Use Teams SDK or REST APIs to handle the user's request and to send the agent response.
 
 <!--
