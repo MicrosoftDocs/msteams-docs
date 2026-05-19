@@ -86,6 +86,7 @@ You can enable slash commands for your agents in the following ways:
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
 
+<!--
 ### Agent response and prompt preview visibility
 
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
@@ -151,6 +152,7 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
  A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
 ---
+-->
 
 <!--
 ## Why use slash commands
@@ -165,8 +167,9 @@ Enabling slash commands typically involves the following:
 
 - [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
--->
+
 - [Handle slash commands in your agent](#handle-slash-commands): Use Teams SDK or REST APIs to handle the user's request and to send the agent response.
+-->
 
 <!--
 ### Supported scenarios for slash commands
@@ -324,7 +327,92 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
-### Handle slash commands
+## Agent design guidelines and best practices
+
+[Notes]
+
+- Slash commands are visible only to the user who triggers them.
+- Agent responses can be targeted (private) or shared with the group/channel.
+- The agent’s logic determines both the action and response visibility.
+- Always assess if a private response is more appropriate before replying publicly
+
+[Best practices]
+
+- Keep slash commands short and action-oriented.
+- Use slash commands for private or quick actions, and @mentions for richer conversations.
+- Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
+- Provide clear command descriptions to improve discoverability.
+- Add aliases for high-traffic commands where appropriate.
+- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](#delete-an-agent-response) and then re-share the response publicly.
+- Use prompt preview to maintain context in ongoing conversations.
+
+### Agent response and prompt preview visibility
+
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
+
+# [Private agent-to-user response](#tab/private)
+
+This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
+
+:::row:::
+    :::column span="2":::
+        1. The initial slash command shows up as a private message.
+        1. If the agent responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
+    :::column-end:::
+    :::column span="3":::
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span:::
+        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview. See [best practices](#best-practices).
+
+      This flow minimizes noise in shared conversations to enable [private interactions with a single user](targeted-messages.md) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+
+    :::column-end:::
+:::row-end:::
+
+Next, enable [private agent-to-user responses](#send-an-agent-response).
+
+# [Public agent-to-user response](#tab/public)
+
+When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
+
+:::row:::
+    :::column span="2":::
+        1. When a user runs a slash command, it appears right away as a private message.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#best-practices) for more guidelines.
+        1. The agent responds with the prompt preview.
+    :::column-end:::
+    :::column span="3":::
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span:::
+        This flow is useful for sharing status updates, confirmations, or other information meant for everyone in group or channel.
+    :::column-end:::
+:::row-end:::
+
+Next, enable [public agent-to-user responses](#send-an-agent-response).
+
+# [Prompt preview](#tab/preview)
+
+When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
+
+- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
+
+- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
+
+ A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
+
+---
+
+### Handle agent responses
 
 You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
 
@@ -688,16 +776,6 @@ You can also see more information on [error codes for targeted messages](targete
 ## Code sample
 
 [WIP: Add details and link to the code sample.]
-
-## Best practices
-
-- Keep slash commands short and action-oriented.
-- Use slash commands for private or quick actions, and @mentions for richer conversations.
-- Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
-- Provide clear command descriptions to improve discoverability.
-- Add aliases for high-traffic commands where appropriate.
-- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](#delete-an-agent-response) and then re-share the response publicly.
-- Use prompt preview to maintain context in ongoing conversations.
 
 ## See also
 
