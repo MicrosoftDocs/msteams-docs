@@ -332,14 +332,14 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 ## Agent design guidelines and best practices
 
-[Best practices]
+[WIP: Best practices]
 
 - Keep slash commands short and action-oriented.
 - Use slash commands for private or quick actions, and @mentions for richer conversations.
 - Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
 - Provide clear command descriptions to improve discoverability.
 - Add aliases for high-traffic commands where appropriate.
-- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](#delete-an-agent-response) and then re-share the response publicly.
+- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
 - Use prompt preview to maintain context in ongoing conversations.
 
 ### Agent response and prompt preview visibility
