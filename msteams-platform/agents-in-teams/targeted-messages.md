@@ -643,7 +643,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
 
 Ensure to handle these errors appropriately in your agent or bot.
 
-# [Teams SDK](#tab/tsdk1)
+# [Teams SDK](#tab/sdk)
 
 The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 

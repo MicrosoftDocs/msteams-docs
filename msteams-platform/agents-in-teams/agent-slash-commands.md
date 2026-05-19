@@ -26,10 +26,10 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
   - [Implement slash commands](#implement-slash-commands)
-  - [Response codes for slash commands](#response-codes-for-slash-commands)
 
 <!--- [Why use slash commands](#why-use-slash-commands)
 - [User experience for slash commands](#user-experience-for-slash-commands)
+  - [Response codes for slash commands](#response-codes-for-slash-commands)
 -->
 
 ## What is a slash command
@@ -368,7 +368,7 @@ This flow keeps slash command results focused between the user and the agent. Us
     :::column-end:::
 :::row-end:::
 
-Next, enable [private agent-to-user responses](#send-an-agent-response).
+Next, enable [private agent-to-user responses](targeted-messages.md#handle-agent-responses-for-slash-commands).
 
 # [Public agent-to-user response](#tab/public)
 
@@ -390,7 +390,7 @@ When the response is useful to the wider audience, you can choose to enable your
     :::column-end:::
 :::row-end:::
 
-Next, enable [public agent-to-user responses](#send-an-agent-response).
+Next, enable [public agent-to-user responses](targeted-messages.md#handle-agent-responses-for-slash-commands).
 
 # [Prompt preview](#tab/preview)
 
