@@ -421,6 +421,7 @@ The following table lists the throttling limits for tag mentions in a bot:
 * Tag mentions aren't supported in shared and private channels.
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in a bot.
+* Teams channel bot messages are not supported as user-private ephemeral replies within the shared channel thread. Messages posted by a bot to a channel conversation are visible according to the channel conversation scope, and Teams does not provide a Slack-style ephemeral message capability for third-party bots in channel chats. This applies to standard bot messaging in channels even when the bot is mentioned by a single user. Private follow-up requires a separate supported conversation scope such as personal chat.
 
 ## Send a message on installation
 
