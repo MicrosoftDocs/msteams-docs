@@ -342,6 +342,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 - When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
 - Use prompt preview to maintain context in ongoing conversations.
 
+<!--
 ### Agent response and prompt preview visibility
 
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
@@ -407,6 +408,8 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
  A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
 ---
+-->
+
 <!---
 ### Handle agent responses
 

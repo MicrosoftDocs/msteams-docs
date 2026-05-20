@@ -90,7 +90,7 @@ When the response is useful to the wider audience, you can choose to enable your
 :::row:::
     :::column span="2":::
         1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel. See [best practices](#agent-design-guidelines-and-best-practices) for more guidelines.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
         1. The agent responds with the prompt preview.
     :::column-end:::
     :::column span="3":::
