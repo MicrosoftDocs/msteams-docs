@@ -331,7 +331,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
   # [HTTP](#tab/api1)
 
-  See [Send a targeted message](targeted-messages.md#send-a-targeted-message).
+  See [Send a targeted message](#send-a-targeted-message).
   
 - **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
 
@@ -369,7 +369,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
   # [HTTP](#tab/api1)
 
-  [WIP: Add code snippet]
+  See [Send a targeted message](#send-a-targeted-message).
 
 # [Public response by the agent](#tab/public)
 
@@ -407,7 +407,7 @@ You can enable the agent to send for the [public response scenario](agent-slash-
   
   # [HTTP](#tab/api)
 
-    [WIP: Add code snippet]
+  See [Send a targeted message](#send-a-targeted-message).
 
 # [Prompt preview](#tab/preview)
 
