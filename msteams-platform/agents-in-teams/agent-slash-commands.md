@@ -24,27 +24,14 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 - [What is a slash command](#what-is-a-slash-command)
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
-  - [Manifest updates](#update-app-manifest-for-slash-commands)
   - [Implement slash commands](#implement-slash-commands)
-
-<!--- [Why use slash commands](#why-use-slash-commands)
-- [User experience for slash commands](#user-experience-for-slash-commands)
-  - [Response codes for slash commands](#response-codes-for-slash-commands)
--->
+  - [Manifest updates](#update-app-manifest-for-slash-commands)
 
 ## What is a slash command
 
 Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows a menu of [available commands](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b).
 
 Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters. Slash commands for agents are supported for mobile clients across platforms.
-
-<!--
-A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
-
-For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
-
-## User experience for slash commands
--->
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
@@ -88,6 +75,14 @@ You can enable slash commands for your agents in the following ways:
 
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+
+<!--
+A slash command is a shortcut initiated by typing a forward slash (`/`) in the compose box on Teams, for example, `/contoso`. You can add it to your agent as a command, with optional parameters, to trigger specific actions. Teams shows a menu of available commands from built-in features and any installed agents or apps.
+
+For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
+
+## User experience for slash commands
+-->
 
 <!--
 ### Agent response and prompt preview visibility
@@ -349,6 +344,15 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 - Use prompt preview to maintain context in ongoing conversations.
 - Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
 - Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
+
+## Code sample
+
+[WIP: Add details and link to the code sample.]
+
+## See also
+
+- [Enable targeted messages](targeted-messages.md)
+- Teams SDK docs [WIP: Add link]
 
 <!--
 ### Agent response and prompt preview visibility
@@ -785,11 +789,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 -->
 
-## Code sample
-
-[WIP: Add details and link to the code sample.]
-
-## See also
-
-- [Enable targeted messages](targeted-messages.md)
-- Teams SDK docs [WIP: Add link]
+<!--- [Why use slash commands](#why-use-slash-commands)
+- [User experience for slash commands](#user-experience-for-slash-commands)
+  - [Response codes for slash commands](#response-codes-for-slash-commands)
+-->
