@@ -339,8 +339,16 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 - Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
 - Provide clear command descriptions to improve discoverability.
 - Add aliases for high-traffic commands where appropriate.
-- When a user chooses to share a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
+- Default slash command responses are set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
+
+  - Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
+  - Use public responses only when content benefits the wider group (for example, updates or confirmations).
+
+- - Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
+
 - Use prompt preview to maintain context in ongoing conversations.
+- Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
+- Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
 
 <!--
 ### Agent response and prompt preview visibility
