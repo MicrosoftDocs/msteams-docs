@@ -651,7 +651,7 @@ Use one of the following code snippets to edit the agent's response:
 
 # [HTTP](#tab/api1)
 
-    See [Send a targeted message](#update-a-targeted-message).
+  See [Send a targeted message](#update-a-targeted-message).
 
 ---
 
@@ -694,7 +694,7 @@ Use the following code snippet to enable the agent to delete its response:
 
 # [HTTP](#tab/api1)
 
-    See [Send a targeted message](#delete-a-targeted-message).
+  See [Send a targeted message](#delete-a-targeted-message).
 
 ---
 
