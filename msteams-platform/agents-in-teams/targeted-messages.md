@@ -651,7 +651,7 @@ Use one of the following code snippets to edit the agent's response:
 
 # [HTTP](#tab/api1)
 
-  [WIP: Add code snippet]
+    See [Send a targeted message](#update-a-targeted-message).
 
 ---
 
@@ -694,7 +694,7 @@ Use the following code snippet to enable the agent to delete its response:
 
 # [HTTP](#tab/api1)
 
-  [WIP: Add code snippet]
+    See [Send a targeted message](#delete-a-targeted-message).
 
 ---
 
@@ -721,7 +721,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
   | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
   | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
- # [HTTP](#tab/api1)
+  # [HTTP](#tab/a1)
 
   The following table lists error codes, error descriptions, and developer actions for REST APIs:
 
@@ -733,6 +733,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
   | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
   ---
+
 > [!TIP]
 > It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
 
