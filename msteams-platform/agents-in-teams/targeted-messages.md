@@ -349,7 +349,7 @@ No body required.
 
 ### Handle agent responses for slash commands
 
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flows](agent-slash-commands.md#agent-response-and-prompt-preview-visibility).
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-and-prompt-preview-visibility).
 
 Use Teams SDK or REST APIs to handle the user's request and to send the agent response. You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
 
@@ -710,29 +710,29 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
 
 Ensure to handle these errors appropriately in your agent or bot.
 
-# [Teams SDK](#tab/sdk)
+  # [Teams SDK](#tab/sdk)
 
-The following table lists error codes, error descriptions, and developer actions for Teams SDK:
+  The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
-| Status code | Error code | Description | Developer action |
-| --- | --- | --- | --- | --- |
-| 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
-| 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
-| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
-| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+  | Status code | Error code | Description | Developer action |
+  | --- | --- | --- | --- | --- |
+  | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
+  | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
+  | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+  | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
-# [HTTP](#tab/api1)
+ # [HTTP](#tab/api1)
 
-The following table lists error codes, error descriptions, and developer actions for REST APIs:
+  The following table lists error codes, error descriptions, and developer actions for REST APIs:
 
-| Status code | Error code | Description | Developer action |
-| --- | --- | --- | --- | --- |
-| 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-| 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
-| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
-| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+  | Status code | Error code | Description | Developer action |
+  | --- | --- | --- | --- | --- |
+  | 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+  | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+  | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+  | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
----
+  ---
 > [!TIP]
 > It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
 
