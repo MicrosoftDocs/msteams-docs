@@ -708,9 +708,9 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
   > [!NOTE]
   > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported.
 
-Ensure to handle these errors appropriately in your agent or bot.
+  Ensure to handle these errors appropriately in your agent or bot.
 
-  # [Teams SDK](#tab/sdk)
+  # [Teams SDK](#tab/t1)
 
   The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
