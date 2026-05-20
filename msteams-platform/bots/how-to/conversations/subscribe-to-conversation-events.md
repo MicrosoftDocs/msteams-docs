@@ -463,6 +463,10 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 > [!TIP]
 > Use the [`InstallationUpdate` event](#installation-update-event) to determine when your bot is added or removed from a conversation.
 
+#### Limitations
+
+Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
+
 The following code shows an example of a team members added event:
 
 # [C#](#tab/dotnet)
@@ -491,8 +495,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
     }
 }
 
-```
-
+```markdown
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onteamsmembersaddedevent)
@@ -525,6 +528,9 @@ The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
 > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
+
+> [!IMPORTANT]
+> Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
 
 ```json
 {
@@ -1060,6 +1066,8 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1491,6 +1499,10 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
+### Limitations
+
+Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
+
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
@@ -1627,6 +1639,10 @@ When you use the install and uninstall events, there are some instances where bo
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+## Limitation
+
+Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
 
 ## Handling errors in conversation events
 
