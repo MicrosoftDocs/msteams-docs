@@ -209,6 +209,8 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
+When you implement slash commands, you should also determine how the agent or app responds to the user's query. The agent can respond privately to the user or to the group or channel, as needed. For more information, see [agent response scenarios for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands).
+
 ## Agent design guidelines and best practices
 
 - Keep slash commands short and action-oriented.
@@ -234,8 +236,7 @@ You can determine the [visibility of agent responses](targeted-messages.md#agent
 
 ## See also
 
-- [Enable targeted messages](targeted-messages.md)
-- Teams SDK docs [WIP: Add link]
+[Implement Agent responses for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands)
 
 <!--
 ### Agent response and prompt preview visibility
