@@ -38,17 +38,15 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 - Auto-purged from clients in 24 hours but might be retained in secure storage based on organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
-A targeted message helps an agent deliver the right response in the right context. It can send rich content—such as buttons, images, Adaptive Cards, and files—to a single user within a group conversation, keeping shared threads uncluttered. Agents can also respond to slash commands privately or publicly, with an optional prompt preview to retain the user’s original query for context.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
 
-Agent responses for slash commands
+To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
+
+Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. Agent responses for slash commands:
 
 - Private response: Keeps the interaction between the user and the agent, ideal for drafts, summaries, and personal tasks.
 - Public response: Shares the response with the broader conversation when the information is useful to others.
 - Prompt preview: Optionally shows the user’s original slash command at the top of the response to preserve context.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
-
-To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
 > [!NOTE]
 >
