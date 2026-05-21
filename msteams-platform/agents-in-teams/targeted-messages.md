@@ -128,6 +128,13 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
 
 Here's the recommended guideline for agent response to a slash command:
 
+1. A Slash command handling: When a user sends a slash command, the agent receives a MessageActivity event in the OnMessage handler with Recipient.IsTargeted = true.
+
+- Private user query: The slash command appears as a targeted private message visible only to the user who triggered it.
+- Targeted agent response: The agent replies privately to that user and can optionally include a prompt preview to preserve context in a group chat.
+- Suggested actions: The agent can include Action.Submit actions to let the user share the private response with the group or channel.
+- Recommended sharing flow: If the user chooses to share the response publicly, first delete the private response and then repost it to the group or channel.
+
 1. When a user sends a slash command, the agent receives the `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
 1. The user query appears as a targeted private message visble only the user who triggered the slash command.
 1. The agent responds to the slash command as a targeted message to the user who sent the slash command query. The agent can include the prompt preview to maintain context in a group chat.
