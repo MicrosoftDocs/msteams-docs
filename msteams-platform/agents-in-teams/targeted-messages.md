@@ -61,7 +61,7 @@ Some common user scenarios include:
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
 | Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
 
-## Why use targeted messages
+### Why use targeted messages
 
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
