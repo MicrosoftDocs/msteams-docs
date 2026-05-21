@@ -42,7 +42,7 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
-Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-responses-for-slash-commands).
+Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-response-scenarios-for-slash-commands).
 
 > [!NOTE]
 >
@@ -362,7 +362,7 @@ No body required.
 
 ### Handle agent responses for slash commands
 
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-and-prompt-preview-visibility).
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-scenarios-for-slash-commands).
 
 Use Teams SDK or REST APIs to handle the user's request and to send the agent response. You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
 

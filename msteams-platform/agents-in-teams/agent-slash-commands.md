@@ -219,7 +219,7 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 **Design guidelines for agent responses**:
 
-You can determine the [visibility of agent responses](targeted-messages.md#agent-response-and-prompt-preview-visibility) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
+You can determine the [visibility of agent responses](targeted-messages.md#agent-response-scenarios-for-slash-commands) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
 
 - Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
 - Use public responses only when content benefits the wider group (for example, updates or confirmations).
