@@ -23,7 +23,7 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 
 - [What is a slash command](#what-is-a-slash-command)
 - **Slash commands developer experience**
-  - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
+  - [Supported scenarios for slash commands](#supported-for-slash-commands)
   - [Implement slash commands](#implement-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
 
@@ -52,7 +52,7 @@ See [best practices](#agent-design-guidelines-and-best-practices).
 
 Enabling slash commands typically involves the following:
 
-- [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
+- [Select one or more of the supported scenarios for enabling slash commands](#supported-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
 
 ### Supported scenarios for slash commands
@@ -209,9 +209,9 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
     }
     ```
 
-When you implement slash commands, you should also determine how the agent or app responds to the user's query. The agent can respond privately to the user or to the group or channel, as needed. For more information, see [agent response scenarios for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands).
+When you implement slash commands, you should also determine how the agent or app responds to the user's query. The agent can respond privately to the user or to the group or channel, as needed. For more information, see [agent response scenarios for slash commands](targeted-messages.md#agent-response-for-slash-commands).
 
-## Agent design guidelines and best practices
+## Best practices
 
 - Keep slash commands short and action-oriented.
 - Use slash commands for private or quick actions, and @mentions for richer conversations.
@@ -219,16 +219,7 @@ When you implement slash commands, you should also determine how the agent or ap
 - Provide clear command descriptions to improve discoverability.
 - Add aliases for high-traffic commands where appropriate.
 
-**Design guidelines for agent responses**:
-
-You can determine the [visibility of agent responses](targeted-messages.md#agent-response-scenarios-for-slash-commands) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
-
-- Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
-- Use public responses only when content benefits the wider group (for example, updates or confirmations).
-- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
-- Use prompt preview to maintain context in ongoing conversations.
-- Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
-- Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
+For more information on best practices for determining agent responses for slash commands, see [design guidelines for agent responses](targeted-messages.md#design-guidelines-for-agent-responses).
 
 ## Code sample
 
@@ -237,7 +228,7 @@ You can determine the [visibility of agent responses](targeted-messages.md#agent
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Agent responses for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands)
+> [Agent responses for slash commands](targeted-messages.md#agent-response-for-slash-commands)
 
 <!--
 ### Agent response and prompt preview visibility

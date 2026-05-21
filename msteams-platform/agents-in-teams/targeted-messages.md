@@ -16,14 +16,17 @@ ms.topic: reference
 >
 > Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. You can also enable an agent or bot to edit or delete targeted messages it sends in a conversation.
+Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. Additionally, agents can respond to slash commands from users. You can also enable an agent or bot to edit or delete targeted messages it sends in a conversation. Teams supports agent-to-user messaging in two ways:
+
+- Targeted agent-to-user messages
+- Agent responses for slash commands
 
 **Key points**:
 
 - **About targeted messages**
   - [What is a targeted message](#what-is-a-targeted-message)
   - [Why use targeted messages](#why-use-targeted-messages)
-  - [Agent response scenarios for slash commands](#agent-response-scenarios-for-slash-commands)
+  - [Agent response for slash commands](#agent-response-for-slash-commands)
   - [Recommended Response Flow for Agent Interactions](#recommended-response-flow-for-agent-interactions)
 - **Enable targeted messages**
   - [Handle targeted messages](#handle-targeted-messages)
@@ -42,7 +45,7 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
-Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-response-scenarios-for-slash-commands).
+Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-response-for-slash-commands).
 
 > [!NOTE]
 >
@@ -286,7 +289,7 @@ No body required.
 
 ---
 
-## Agent response scenarios for slash commands
+## Agent response for slash commands
 
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
 
@@ -358,23 +361,23 @@ Here's the recommended guideline for agent response to a slash command:
 
 1. **Slash command handling**: When a user sends a slash command, the agent receives a `MessageActivity` event in the `OnMessage` handler with `Recipient.IsTargeted = true`.
 1. **Private user query**: The slash command appears as a targeted private message visible only to the user who triggered it.
-1. **Targeted agent response**: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-scenarios-for-slash-commands) to preserve context in a group chat.
+1. **Targeted agent response**: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-for-slash-commands) to preserve context in a group chat.
 1. **Share suggested actions**: The agent can include `Action.Submit` actions to let the user share the private response with the group or channel.
 1. *Optional* - **Share private message publicly**: If the user chooses to share the response publicly, first [delete the private response](#delete-an-agent-response) and then repost it to the group or channel.
 
 ### Handle agent responses for slash commands
 
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-scenarios-for-slash-commands).
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-for-slash-commands).
 
 Use Teams SDK or REST APIs to handle the user's request and to send the agent response. You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
-Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands):
+Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](agent-slash-commands.md#supported-for-slash-commands):
 
 # [Private message to a user](#tab/private)
 
-Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands) to send a message to a single user.
+Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](agent-slash-commands.md#supported-for-slash-commands) to send a message to a single user.
 
 - **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
@@ -454,7 +457,7 @@ Configure your agent to send a reply only to the person who ran the slash comman
 
 # [Public response by the agent](#tab/public)
 
-You can enable the agent to send for the [public response scenario](agent-slash-commands.md#supported-scenarios-for-slash-commands) in a group or a channel if:
+You can enable the agent to send for the [public response scenario](agent-slash-commands.md#supported-for-slash-commands) in a group or a channel if:
 
 - The message requires collaboration from all members.
 - The broader visibility adds value.
@@ -492,7 +495,7 @@ You can enable the agent to send for the [public response scenario](agent-slash-
 
 # [Prompt preview](#tab/preview)
 
-You can enable [prompt preview](agent-slash-commands.md#supported-scenarios-for-slash-commands) using Teams SDK or REST APIs.
+You can enable [prompt preview](agent-slash-commands.md#supported-for-slash-commands) using Teams SDK or REST APIs.
 
 For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
 
@@ -764,6 +767,17 @@ Ensure to handle these errors appropriately in your agent. The following table l
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
 You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
+
+## Design guidelines for agent responses
+
+You can determine the [visibility of agent responses](targeted-messages.md#agent-response-for-slash-commands) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
+
+- Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
+- Use public responses only when content benefits the wider group (for example, updates or confirmations).
+- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
+- Use prompt preview to maintain context in ongoing conversations.
+- Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
+- Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
 
 ## See also
 
