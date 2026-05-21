@@ -38,6 +38,10 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 - Auto-purged from clients in 24 hours but might be retained in secure storage based on organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
+This section introduces two communication patterns that help agents deliver the right information in the right context: targeted messages and slash-command responses. A targeted message enables an agent or bot to send rich, user-specific content including buttons, images, Adaptive Cards, and files to a single recipient within a group conversation, helping keep shared threads uncluttered. These messages are visible only to the intended user, are automatically removed from clients after 24 hours (while still potentially retained in secure storage according to organizational policy), and limit actions such as reactions, replies, and forwarding.
+
+In parallel, agents responding to slash commands can be configured to return either private or public responses depending on whether the result is meant for an individual or a broader audience. They can also optionally include a prompt preview, which displays the user’s original slash command at the top of the response to preserve context within the conversation.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
