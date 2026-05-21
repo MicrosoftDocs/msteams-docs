@@ -291,6 +291,9 @@ No body required.
 
 ## Agent response for slash commands
 
+> [!div class="nextstepaction"]
+> [Learn about slash commands](agent-slash-commands.md)
+
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
 
 # [Private agent-to-user response](#tab/private)
