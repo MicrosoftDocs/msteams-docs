@@ -43,6 +43,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   Your app is thoroughly reviewed by a validator to ensure compliance with the [Microsoft Commercial Marketplace certification policies](/legal/marketplace/certification-policies).
   There's a focus on deep functional and user experience testing, usability checks, and metadata checks. App validation is performed across desktop, web, and mobile clients. We work hard to provide you with a detailed test report in 24 working hours post submission.
+  Notification-only Teams bots are evaluated under the same Microsoft Teams app validation process as other bots. Store review focuses on manifest accuracy, declared capabilities, user value, compliance, privacy disclosures, security, and whether the app behavior matches the submission metadata. A bot that only sends proactive or informational messages can be publishable if its user experience and permissions are clearly represented in the app package and listing information. The absence of tabs or rich in-client workflows does not by itself exclude store submission. Documentation should explicitly map these validation principles to notification-focused bot scenarios.
 
 * **Guided app publish through concierge service**
 
