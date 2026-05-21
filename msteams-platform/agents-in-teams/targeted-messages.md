@@ -23,7 +23,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
 - **About targeted messages**
   - [What is a targeted message](#what-is-a-targeted-message)
   - [Why use targeted messages](#why-use-targeted-messages)
-  - [Agent response and prompt preview visibility](#agent-response-and-prompt-preview-visibility)
+  - [Agent responses for slash commands](#agent-responses-for-slash-commands)
   - [Recommended Response Flow for Agent Interactions](#recommended-response-flow-for-agent-interactions)
 - **Enable targeted messages**
   - [Handle targeted messages](#handle-targeted-messages)
