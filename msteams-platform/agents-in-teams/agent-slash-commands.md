@@ -23,7 +23,7 @@ Use slash commands in Teams as a clear, predictable way to interact with agents 
 
 - [What is a slash command](#what-is-a-slash-command)
 - **Slash commands developer experience**
-  - [Supported scenarios for slash commands](#supported-for-slash-commands)
+  - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Implement slash commands](#implement-slash-commands)
   - [Manifest updates](#update-app-manifest-for-slash-commands)
 
@@ -42,7 +42,7 @@ Teams agents designed to respond to specific named commands can be implemented a
 
 When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
 
-See [best practices](#agent-design-guidelines-and-best-practices).
+See [best practices](#best-practices).
 
 > [!NOTE]
 >
@@ -52,7 +52,7 @@ See [best practices](#agent-design-guidelines-and-best-practices).
 
 Enabling slash commands typically involves the following:
 
-- [Select one or more of the supported scenarios for enabling slash commands](#supported-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
+- [Select one or more of the supported scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update app manifest and declare supported commands](#update-app-manifest-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
 
 ### Supported scenarios for slash commands
