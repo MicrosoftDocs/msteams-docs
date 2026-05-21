@@ -234,14 +234,16 @@ You can determine the [visibility of agent responses](targeted-messages.md#agent
 
 [WIP: Add details and link to the code sample.]
 
-## See also
+## Next steps
 
-[Implement Agent responses for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands)
+> [!div class="nextstepaction"]
+> [Agent responses for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands)
 
 <!--
 ### Agent response and prompt preview visibility
 
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
+Your agents can send a private or 
+public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
 
 # [Private agent-to-user response](#tab/private)
 
