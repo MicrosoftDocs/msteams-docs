@@ -771,7 +771,7 @@ You can also see more information on [error codes for targeted messages](targete
 
 You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
-## Design guidelines for agent responses
+## Best practices for agent responses
 
 You can determine the [visibility of agent responses](targeted-messages.md#agent-response-for-slash-commands) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
 

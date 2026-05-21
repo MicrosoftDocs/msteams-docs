@@ -219,7 +219,7 @@ When you implement slash commands, you should also determine how the agent or ap
 - Provide clear command descriptions to improve discoverability.
 - Add aliases for high-traffic commands where appropriate.
 
-For more information on best practices for determining agent responses for slash commands, see [design guidelines for agent responses](targeted-messages.md#design-guidelines-for-agent-responses).
+For more information on best practices for determining agent responses for slash commands, see [design guidelines for agent responses](targeted-messages.md#best-practices-for-agent-responses).
 
 ## Code sample
 
