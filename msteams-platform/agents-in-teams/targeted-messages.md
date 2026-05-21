@@ -42,15 +42,12 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
-Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. Agent responses for slash commands:
-
-- Private response: Keeps the interaction between the user and the agent, ideal for drafts, summaries, and personal tasks.
-- Public response: Shares the response with the broader conversation when the information is useful to others.
-- Prompt preview: Optionally shows the user’s original slash command at the top of the response to preserve context.
+Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-responses-for-slash-commands).
 
 > [!NOTE]
 >
-> - When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
+>
+> - Waen you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
 > - A targeted message can't be converted into a normal message.
 
 <br>
