@@ -23,7 +23,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
 - **About targeted messages**
   - [What is a targeted message](#what-is-a-targeted-message)
   - [Why use targeted messages](#why-use-targeted-messages)
-  - [Agent responses for slash commands](#agent-responses-for-slash-commands)
+  - [Agent response scenarios for slash commands](#agent-response-scenarios-for-slash-commands)
   - [Recommended Response Flow for Agent Interactions](#recommended-response-flow-for-agent-interactions)
 - **Enable targeted messages**
   - [Handle targeted messages](#handle-targeted-messages)
@@ -58,7 +58,7 @@ Some common user scenarios include:
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
 | Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
 
-### Agent responses for slash commands
+### Agent response scenarios for slash commands
 
 Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
 
@@ -128,18 +128,11 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
 
 Here's the recommended guideline for agent response to a slash command:
 
-1. A Slash command handling: When a user sends a slash command, the agent receives a MessageActivity event in the OnMessage handler with Recipient.IsTargeted = true.
-
-- Private user query: The slash command appears as a targeted private message visible only to the user who triggered it.
-- Targeted agent response: The agent replies privately to that user and can optionally include a prompt preview to preserve context in a group chat.
-- Suggested actions: The agent can include Action.Submit actions to let the user share the private response with the group or channel.
-- Recommended sharing flow: If the user chooses to share the response publicly, first delete the private response and then repost it to the group or channel.
-
-1. When a user sends a slash command, the agent receives the `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
-1. The user query appears as a targeted private message visble only the user who triggered the slash command.
-1. The agent responds to the slash command as a targeted message to the user who sent the slash command query. The agent can include the prompt preview to maintain context in a group chat.
-1. The agent can include suggested actions (`Action.Submit`) to provide the option of sharing the private message with the group or channel.
-1. If the user chooses to share the private agent response publicly, it is recommended that it must first [delete the private response](#delete-an-agent-response) and then re-share the response with the group or channel.
+1. A Slash command handling: When a user sends a slash command, the agent receives a `MessageActivity` event in the `OnMessage` handler with `Recipient.IsTargeted = true`.
+1. Private user query: The slash command appears as a targeted private message visible only to the user who triggered it.
+1. Targeted agent response: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-scenarios-for-slash-commands) to preserve context in a group chat.
+1. Share suggested actions with the user: The agent can include `Action.Submit` actions to let the user share the private response with the group or channel.
+1. *Optional* - Share private message publicly: If the user chooses to share the response publicly, first [delete the private response](#delete-an-agent-response) and then repost it to the group or channel.
 
 ## Why use targeted messages
 
