@@ -58,82 +58,6 @@ Some common user scenarios include:
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
 | Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
 
-### Agent response scenarios for slash commands
-
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
-
-# [Private agent-to-user response](#tab/private)
-
-This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
-
-:::row:::
-    :::column span="2":::
-        1. The initial slash command shows up as a private message.
-        1. If the agent responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
-    :::column-end:::
-    :::column span="3":::
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span:::
-        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview..
-
-      This flow minimizes noise in shared conversations to enable [private interactions with a single user](#handle-agent-responses-for-slash-commands) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
-
-    :::column-end:::
-:::row-end:::
-
-Next, enable [private agent-to-user responses](#handle-agent-responses-for-slash-commands).
-
-# [Public agent-to-user response](#tab/public)
-
-When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
-
-:::row:::
-    :::column span="2":::
-        1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
-        1. The agent responds with the prompt preview.
-    :::column-end:::
-    :::column span="3":::
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span:::
-        This flow is useful for sharing status updates, confirmations, or other information meant for everyone in group or channel.
-    :::column-end:::
-:::row-end:::
-
-Next, enable [public agent-to-user responses](#handle-agent-responses-for-slash-commands).
-
-# [Prompt preview](#tab/preview)
-
-When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
-
-- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
-
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
-
-- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
-
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
-
- A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
-
----
-
-### Recommended Response Flow for Agent Interactions
-
-Here's the recommended guideline for agent response to a slash command:
-
-1. **Slash command handling**: When a user sends a slash command, the agent receives a `MessageActivity` event in the `OnMessage` handler with `Recipient.IsTargeted = true`.
-1. **Private user query**: The slash command appears as a targeted private message visible only to the user who triggered it.
-1. **Targeted agent response**: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-scenarios-for-slash-commands) to preserve context in a group chat.
-1. **Share suggested actions**: The agent can include `Action.Submit` actions to let the user share the private response with the group or channel.
-1. *Optional* - **Share private message publicly**: If the user chooses to share the response publicly, first [delete the private response](#delete-an-agent-response) and then repost it to the group or channel.
-
 ## Why use targeted messages
 
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
@@ -146,12 +70,14 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 - **Real-time interaction**: <br>
     Prompt responses from the agent to the user's requirement in the group setting reinforce that the agent is alert to user actions.
 
+<!--
 ## Targeted message developer experience
 
 You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview).
 
 - [Handle targeted messages](#handle-targeted-messages): You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
 - [Handle agent responses for slash commands](#handle-agent-responses-for-slash-commands): You can also build your agent to handle [slash commands](agent-slash-commands.md) and agent responses to them.
+-->
 
 ### Handle targeted messages
 
@@ -359,6 +285,82 @@ No body required.
 ```
 
 ---
+
+## Agent response scenarios for slash commands
+
+Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
+
+# [Private agent-to-user response](#tab/private)
+
+This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
+
+:::row:::
+    :::column span="2":::
+        1. The initial slash command shows up as a private message.
+        1. If the agent responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
+    :::column-end:::
+    :::column span="3":::
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span:::
+        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview..
+
+      This flow minimizes noise in shared conversations to enable [private interactions with a single user](#handle-agent-responses-for-slash-commands) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
+
+    :::column-end:::
+:::row-end:::
+
+Next, enable [private agent-to-user responses](#handle-agent-responses-for-slash-commands).
+
+# [Public agent-to-user response](#tab/public)
+
+When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
+
+:::row:::
+    :::column span="2":::
+        1. When a user runs a slash command, it appears right away as a private message.
+        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
+        1. The agent responds with the prompt preview.
+    :::column-end:::
+    :::column span="3":::
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column span:::
+        This flow is useful for sharing status updates, confirmations, or other information meant for everyone in group or channel.
+    :::column-end:::
+:::row-end:::
+
+Next, enable [public agent-to-user responses](#handle-agent-responses-for-slash-commands).
+
+# [Prompt preview](#tab/preview)
+
+When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
+
+- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
+
+- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
+
+ A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
+
+---
+
+### Recommended Response Flow for Agent Interactions
+
+Here's the recommended guideline for agent response to a slash command:
+
+1. **Slash command handling**: When a user sends a slash command, the agent receives a `MessageActivity` event in the `OnMessage` handler with `Recipient.IsTargeted = true`.
+1. **Private user query**: The slash command appears as a targeted private message visible only to the user who triggered it.
+1. **Targeted agent response**: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-scenarios-for-slash-commands) to preserve context in a group chat.
+1. **Share suggested actions**: The agent can include `Action.Submit` actions to let the user share the private response with the group or channel.
+1. *Optional* - **Share private message publicly**: If the user chooses to share the response publicly, first [delete the private response](#delete-an-agent-response) and then repost it to the group or channel.
 
 ### Handle agent responses for slash commands
 

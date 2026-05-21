@@ -234,7 +234,7 @@ You can determine the [visibility of agent responses](targeted-messages.md#agent
 
 [WIP: Add details and link to the code sample.]
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Agent responses for slash commands](targeted-messages.md#agent-response-scenarios-for-slash-commands)
