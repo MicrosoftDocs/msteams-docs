@@ -16,13 +16,6 @@ ms.topic: reference
 >
 > Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-<!--
-Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. Additionally, agents can respond to slash commands from users. You can also enable an agent or bot to edit or delete targeted messages it sends in a conversation. Teams supports agent-to-user messaging in two ways:
-
-- Targeted agent-to-user messages
-- Agent responses for slash commands
--->
-
 Targeted messaging enables users and agents to privately communicate with each other within channels, group chats and meeting chats.
 
 With targeted messages, a user can privately message or send a command to an agent. The agent retains the context of the group conversation. It can then respond in the chat, channel, or meeting chat. The response is visible only to that user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
@@ -93,6 +86,8 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 ### Handle targeted messages
 
 Sending a targeted message is similar to sending a regular message. Only an agent or a bot can send a targeted message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+
+To let your agents receieve targeted messages as slash commands, you must opt-in in the agent's manifest file. For more information, see [supported scenarios for slash commands](agent-slash-commands.md#supported-scenarios-for-slash-commands).
 
 #### Send a targeted message
 
