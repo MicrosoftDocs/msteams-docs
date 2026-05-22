@@ -58,7 +58,7 @@ Agents can also respond to [slash commands](agent-slash-commands.md) privately o
 > [!NOTE]
 >
 >
-> - Waen you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
+> - When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
 > - A targeted message can't be converted into a normal message.
 
 <br>
@@ -732,7 +732,7 @@ Use the following code snippet to enable the agent to delete its response:
 After the agent sends a targeted message using Teams SDK or REST APIs, it receives one of the following responses:
 
 - If successful, the targeted user gets the message sent by the agent.
-- A send event can fail if the user isn’t a group member or the client doesn’t support targeted messages.
+- An agent might fail to send a targeted message if the user isn’t a member of the conversation or the client doesn’t support targeted messages.
 
   > [!NOTE]
   > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported.
@@ -773,7 +773,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
 | 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
-| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response could not be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
 
@@ -785,7 +785,7 @@ You can determine the [visibility of agent responses](targeted-messages.md#agent
 
 - Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
 - Use public responses only when content benefits the wider group (for example, updates or confirmations).
-- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then re-share the response publicly.
+- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then repost the response publicly.
 - Use prompt preview to maintain context in ongoing conversations.
 - Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
 - Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
