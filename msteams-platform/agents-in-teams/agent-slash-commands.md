@@ -29,14 +29,7 @@ Agent slash commands in Teams help users discover clear, predictable ways to int
 
 ## What is a slash command
 
-Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows an autocomplete menu of [available commands](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b). The list includes a set of built-in [commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b), as well as the names of agents that are eligible to receive targeted messages. Users use these agent-named commands to send targeted messages to agents.
-
-You can configure your agent or app to add slash commands to the list to help users discover command-style behavior that it offers. Two types of commands can be added:
-
-- **Conversational slash commands**: when activated, these commands populate the compose box with a targeted (private) message to the agent that includes the name of the command. Users can modify or append to the text before sending the message. Conversational slash commands are useful for surfacing functionality that users may want to use privately in group conversations.
-- **Message extension slash commands**: apps that implement action-type message extensions can surface them as discoverable slash commands. When activated, message extension slash commands immediately open the associated task module or dialog and do not populate the compose box or send a message. Search-type message extensions cannot be exposed as commands.
-
-Slash command names don't need to be globally unique. Each command in the autocomplete box is displayed with the name and icon of the agent that provides them, enabling users to differentiate between them. Unlike the built-in slash commands, agent commands are supported across mobile platforms.
+Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows an autocomplete menu of [available commands](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b).
 
 Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters. Slash commands for agents are supported for mobile clients across platforms.
 
