@@ -35,14 +35,11 @@ Teams agents designed to respond to specific named commands can be implemented a
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png":::
 
-- Slash commands are **visible only to the user** who triggers them.
-- Your **agent's implementation** determines both the action and response visibility.
-- Agent responses can be **[targeted (private) messages](targeted-messages.md) or public messages** shared with the group/channel.
-- Always assess if a **private response is more appropriate** before replying publicly. Use public responses when visibility in the group or channel adds value.
+When a user activates a conversational slash or @mention command to populate the compose box and then sends the message, the result is a standard text message to the agent (either targeted or public). The agent's implementation is responsible for interpreting the text as a named command and handling it appropriately. Message extension slash commands activate the extension as normal.
+
+Always consider whether a response should be private or public given the context. See [best practices](#best-practices).
 
 When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
-
-See [best practices](#best-practices).
 
 > [!NOTE]
 >

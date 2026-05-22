@@ -10,7 +10,7 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Send and receive targeted messages in group conversations
+# Send and receive targeted messages
 
 > [!NOTE]
 >
