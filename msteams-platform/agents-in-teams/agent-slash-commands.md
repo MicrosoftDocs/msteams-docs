@@ -17,7 +17,7 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Use slash commands in Teams as a clear, predictable way to interact with agents or apps with convenient text commands.
+Agent slash commands in Teams help users discover clear, predictable ways to interact with agents or apps using convenient text commands.
 
 **Key points**
 
