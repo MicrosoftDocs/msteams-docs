@@ -11,7 +11,7 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Enable slash commands for agents and apps
+# Expose slash commands and @mention commands from agents and apps
 
 > [!NOTE]
 >
@@ -29,7 +29,17 @@ Agent slash commands in Teams help users discover clear, predictable ways to int
 
 ## What is a slash command
 
-Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a forward slash (`/`) in the compose box, Teams shows an autocomplete menu of [available commands](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b).
+Slash commands are text-based shortcuts in Teams that let users perform specific actions from the compose box in chats and meetings. When a user types a <kbd>/</kbd> in the compose box, Teams shows an autocomplete menu of available commands. The list includes a set of built-in [commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b), as well as the names of agents that are eligible to receive targeted messages. Users use these agent-named commands to send targeted messages to agents; see [Send and receive targeted (private) messages](targeted-messages.md).
+
+If your agent or app implements behaviors that are intended to be accessed via named commands, you can configure your app or agent to add them to the list to help users discover. Three types of commands can be added:
+
+- **Conversational slash commands**: when activated, these commands populate the compose box with a targeted (private) message (TODO link) to the agent that includes the name of the command. Users can modify or append to the text before sending the message. Conversational slash commands are useful for surfacing functionality that users may want to use privately in group conversations.
+- **Conversational @mention commands**: these function just like conversational slash commands, but are listed in an autocomplete box that appears when @mentioning the agent. Activating one populates the compose box with a public message that @mentions the agent and includes the name of the command.
+- **Message extension slash commands**: apps that implement action-type message extensions can surface them as discoverable slash commands. When activated, message extension slash commands immediately open the associated task module or dialog and do not populate the compose box or send a message. (TODO I think these can be activated from the command box too?). Search-type message extensions cannot be exposed as commands.
+
+Slash command names do not need to be globally unique. Each command in the autocomplete box is displayed with the name and icon of the agent that provides them, enabling users to differentiate between them.
+
+Unlike the built-in slash commands, agent commands are supported across mobile platforms.
 
 Teams agents designed to respond to specific named commands can be implemented as slash commands with optional parameters. Slash commands for agents are supported for mobile clients across platforms.
 
@@ -40,10 +50,6 @@ When a user activates a conversational slash or @mention command to populate the
 Always consider whether a response should be private or public given the context. See [best practices](#best-practices).
 
 When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
-
-> [!NOTE]
->
-> The private message is removed after 24 hours. The user can't view or respond to the private message after that.
 
 ## Implement slash commands
 

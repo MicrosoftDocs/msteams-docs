@@ -10,784 +10,289 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Send and receive targeted messages
+# Send and receive targeted (private) messages in group conversations
 
 > [!NOTE]
 >
 > Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Targeted messaging enables users and agents to privately communicate with each other within channels, group chats and meeting chats.
+_Targeted messaging_ enables users and agents to privately communicate with each other in channels, group chats and meeting chats.
 
-With targeted messages, a user can privately message or send a command to an agent. The agent retains the context of the group conversation. It can then respond in the chat, channel, or meeting chat. The response is visible only to that user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
 
-Users can send targeted messages only to a single agent, and agents can send targeted messages only to a single user.
+<!-- TODO smaller pic -->
 
-**Key points**:
+With targeted messages, a user can privately send a message or command to an agent that carries the context of a group conversation. When the agent responds in the chat or channel, it can use a targeted message to make the response visible only to that user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
 
-- **About targeted messages**
-  - [What is a targeted message](#what-is-a-targeted-message)
-  - [Why use targeted messages](#why-use-targeted-messages)
-  - [Agent response for slash commands](#agent-response-for-slash-commands)
-  - [Recommended Response Flow for Agent Interactions](#recommended-response-flow-for-agent-interactions)
-- **Enable targeted messages**
-  - [Handle targeted messages](#handle-targeted-messages)
-  - [Handle agent responses for slash commands](#handle-agent-responses-for-slash-commands)
-  - [Handle errors](#handle-errors)
+Targeted messages can only be sent by a user to a single agent, or by an agent to a single user.
 
-## What is a targeted message
+## What are targeted messages
 
-A targeted message lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
+Targeted messages are one-to-one messages between a user and an agent in a group conversation. They are presented in the flow of the conversation, but can only be seen by the sender and their single recipient.
 
-- Delivered to only one user in a group context.
-- Auto-purged from clients in 24 hours but might be retained in secure storage based on organizational policy.
-- Restricted for user actions such as reaction, replies, and forwarding.
+Sending targeted messages to any user in a group conversation is a capability of all Teams agents. To be eligible to _receive_ targeted messages, an agent must opt in via its configuration; see [Receive a targeted message](#receive-a-targeted-message).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
+Targeted messages enable users to privately chat with agents without cluttering the conversation or exposing interactions and information that aren't meant for the group. Consider the following scenarios:
 
-To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
+- A user can ask an agent to generate a summary of the discussion without the other participants seeing the request or the response.
+- A user asks for information from an agent (publicly or privately) with the intent of sharing it with the group, but wants to confirm the contents of the message first. The agent can respond privately, with a suggested action (TODO or adaptive card? also add link) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
+- A user can exchange multiple messages with an agent to direct and monitor work, referencing questions and comments in the conversation, without distracting the other participants.
+- An agent can detect a new user entering a large, long-running conversation and send them a private welcome message and a summary.
 
-Agents can also respond to [slash commands](agent-slash-commands.md) privately or publicly, with an optional prompt preview to retain the user’s original query for context. See [agent responses for slash commands](#agent-response-for-slash-commands).
+> [!IMPORTANT]
+> When designing your agent's interactions, carefully consider scenarios where public messages or public activity generated by Adaptive Card actions may violate user expectations. By default, messages sent by message-response operations inherit the visibility of the received message (TODO this is worded poorly, and might need specific API references). See [Best practices and design guidance](#best-practices-and-design-guidance) for more information.
 
-> [!NOTE]
->
->
-> - When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
-> - A targeted message can't be converted into a normal message.
+### Key aspects of targeted messages
 
-<br>
-Some common user scenarios include:
+Targeted messages:
 
-| Scenario | Use for ... | To ... |
-| --- | --- | --- |
-| AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
-| Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
+- Are enabled only for one-to-one interactions between an agent and a user. They can be sent only to a single recipient and are not available for user-to-user or agent-to-agent communications.
+- Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files.
+- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages they have sent (TODO link), but targeted messages cannot be made publicly visible once sent. If a scenario calls for a private message to be made public, the sender should resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
+- Expire 24 hours after being sent. When a targeted message expires, it is deleted from all Teams clients and no longer visible, although it may be retained in secure storage basd on organizational policy. TODO we should explain the intent of this, and it may need more visibility than this bullet list provides.
+- Will not be shown to untargeted users even if they are using an older version of the Teams client that does not support targeted messages.
+- Implement a modified version of quoted responses called _[prompt preview](#prompt-preview)_.
 
-### Why use targeted messages
+<!-- TODO There was originally a comment here about "Restricted for user actions such as reaction, replies, and forwarding", but above we say "supports all message capabilities". Can we get a little more crisp on that? -->
 
-Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
+## User experience
 
-- **Human-in-the-loop scenarios**: <br>
-    It's useful for scenarios such as approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere.
+Targeted messages sent or received by a user are presented in the flow of the conversation with an indicator stating **Only you can see this message**.
 
-- **Enhanced user experience**: <br>
-    A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
-- **Real-time interaction**: <br>
-    Prompt responses from the agent to the user's requirement in the group setting reinforce that the agent is alert to user actions.
+TODO screenshot
 
-<!--
-## Targeted message developer experience
+User-to-agent targeted messaging is implemented as a slash command named for the agent.
 
-You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview).
+To send a targeted message, a user enters a <kbd>/</kbd> in the empty compose box to display the slash command autocomplete menu. For each agent that is in the user's context and eligible to receive targeted messages (see [Receive a targeted message](#receive-a-targeted-message)), the menu will include a command named for the agent, displayed next to its icon.
 
-- [Handle targeted messages](#handle-targeted-messages): You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
-- [Handle agent responses for slash commands](#handle-agent-responses-for-slash-commands): You can also build your agent to handle [slash commands](agent-slash-commands.md) and agent responses to them.
--->
+TODO screenshot
 
-### Handle targeted messages
+Selecting one of these agent-named commands populates the compose box with a _slash-mention_ of the agent and places the cursor to allow the user to enter message text. In this state, the compose box displays a notice stating that the message will be sent privately. When the user enters message text and selects **Send**, the resulting message will be targeted to the agent and only visible to the agent and the sending user.
 
-Sending a targeted message is similar to sending a regular message. Only an agent or a bot can send a targeted message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+TODO screenshot
 
-To let your agents receieve targeted messages as slash commands, you must opt-in in the agent's manifest file. For more information, see [supported scenarios for slash commands](agent-slash-commands.md#supported-scenarios-for-slash-commands).
+See [Expose slash commands and @mention commands from agents and apps](agent-slash-commands.md) for information about registering additional named slash commands for an agent.
 
-#### Send a targeted message
+### Prompt preview
 
-Key steps for enabling the agent to send a targeted message are as follows:
+<!-- TODO this is based on information I got about prompt preview from the dev team -->
 
-1. Determine when a targeted message is appropriate:
+Prompt preview is a modified quoted response (TODO link) experience used when an agent responds to a targeted message from a user.
 
-    Use a targeted message when the response is for one person, or when sharing it with others would add noise, distraction, or confusion. Common characteristics of these scenarios include (but aren't limited to):
+When an agent responds to a targeted message with `send()` or `reply()`, the quoted message included in the response... TODO.
 
-    - The agent's response is relevant only to the user who initiated the interaction.
-    - The agent must respond proactively and in context to a specific user’s message or state.
-    - The agent is sharing a personalized recommendation, insight, or follow-up that isn’t relevant to others in the thread or channel.
+TODO screenshot
 
-2. Use any of the following code snippets to send a targeted message:
+<!-- TODO language-specificity -->
 
-   # [C#](#tab/dotnet1)
+## Implement targeted messages
 
-    ```csharp
-    app.OnMessage(async context =>
-    {
-    // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
-    await context.Send(
-            new MessageActivity("This message is only visible to you!")
-                .WithRecipient(context.Activity.From, isTargeted: true)
-        );
-    });
-    ```
+Targeted messages are sent and received using the same operations as standard single-recipient messages (TODO link) in the Teams SDK, but have a boolean property indicating whether they are targeted.
 
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=csharp#targeted-messages).
-
-   # [TypeScript](#tab/ts1)
-
-    ```typescript
-    import { MessageActivity } from '@microsoft/teams.api';
-    
-    app.on('message', async ({ send, activity }) => {
-      // Using withRecipient with isTargeted=true explicitly targets the specified recipient
-      await send(
-        new MessageActivity('This message is only visible to you!')
-          .withRecipient(activity.from, true)
-      );
-    });
-    ```
-
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript#targeted-messages).
-
-   # [Python](#tab/Py1)
-
-   ```python
-   from microsoft_teams.api import MessageActivity, MessageActivityInput
-   from microsoft_teams.apps import ActivityContext
- 
-    @app.on_message
-    async def handle_message(ctx: ActivityContext[MessageActivity]):
-      # Using with_recipient with is_targeted=True explicitly targets the specified recipient
-      await ctx.send(
-          MessageActivityInput(text="This message is only visible to you!")
-              .with_recipient(ctx.activity.from_, is_targeted=True)
-      )
-   ```
-
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=python#targeted-messages).
-
-   # [HTTP](#tab/api1)
-
-   Include the 'targeted' designation in the `Send TM` API.
-
-   ```REST
-   POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-   Authorization: Bearer eyJhbGciOiJIUzI1Ni...
-   Content-Type: application/json
-   {
-       "type": "message",
-       "from": {
-           "id": "28:c9e...",
-           "name": "Contoso"
-       },
-       "conversation": {
-           "id":"x:17I0...",
-           "name": "Convo1"
-       },
-       "recipient": {
-           "id": "29:1XJ...",
-           "name": "Megan Bowen"
-       },    
-       "text": "My bot's reply"
-   }
-   ```
-
-    Ensure that you specify the following when the agent sends the message:
-
-- To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
-- The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
-- A flag or API call that marks the message as targeted or ephemeral.
-
-    Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The POST payload is the activity (message) to send, same as for a standard message activity.
-
-#### Update a targeted message
-
-The agent can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
-
-Use one of the following code snippets to edit targeted message:
+### Send a targeted message
 
 # [C#](#tab/dotnet1)
 
-```csharp
-// Update
-var response = await context.Send(
-    new MessageActivity("Original targeted message")
-        .WithRecipient(context.Activity.From, true), cancellationToken);
-var conversationId = context.Activity.Conversation.Id;
-var messageId = response.Id;
+To send a targeted message, use `WithRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
 
-var updatedMessage = new MessageActivity("This message has been updated!");
-await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
+```csharp
+app.OnMessage(async context =>
+{
+// Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+await context.Send(
+        new MessageActivity("This message is only visible to you!")
+            .WithRecipient(context.Activity.From, isTargeted: true)
+    );
+});
 ```
+
+<!-- TODO what happens if you use withrecipient and set isTargeted to false? -->
+<!-- TODO I think this needs more examples of like reply(), **especially now that they have a default behavior of matching the visibility of the incoming message**, as well as indicators (if not examples of) the other messaging APIs showing where withRecipient can be specified? Also if the page should be pivoted and not tabbed, especially if the snippets get longer or we have more of them. -->
 
 # [TypeScript](#tab/ts1)
 
-```typescript
-// Update
-const response = await context.send(
-    new MessageActivity('Original targeted message')
-        .withRecipient(context.activity.from, true), cancellationToken);
-const conversationId = context.activity.conversation.id;
-const messageId = response.id;
+To send a targeted message, use `withRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
 
-const updatedMessage = new MessageActivity('This message has been updated!');
-await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
+```typescript
+import { MessageActivity } from '@microsoft/teams.api';
+
+app.on('message', async ({ send, activity }) => {
+  // Using withRecipient with isTargeted=true explicitly targets the specified recipient
+  await send(
+    new MessageActivity('This message is only visible to you!')
+      .withRecipient(activity.from, true)
+  );
+});
 ```
 
 # [Python](#tab/Py1)
 
-```python
-# Update
-response = await ctx.send(
-    MessageActivityInput(text="Original targeted message")
-        .with_recipient(ctx.activity.from_property, True), cancellation_token)
-conversation_id = ctx.activity.conversation.id
-message_id = response.id
+To send a targeted message, use `with_recipient` to specify a single recipient by their ID, and provide a value of `True` for the `is_targeted` argument. The recipient must be a member of the chat or channel.
 
-updated_message = MessageActivityInput(text="This message has been updated!")
-await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
+```python
+from microsoft_teams.api import MessageActivity, MessageActivityInput
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+  # Using with_recipient with is_targeted=True explicitly targets the specified recipient
+  await ctx.send(
+      MessageActivityInput(text="This message is only visible to you!")
+          .with_recipient(ctx.activity.from_, is_targeted=True)
+  )
 ```
 
 # [HTTP](#tab/api1)
 
-The agent calls the `Edit TM` API using the message’s `activityId`.
+<!-- TODO this looks incomplete? -->
+
+Include the 'targeted' designation in the `Send TM` API.
 
 ```REST
-PUT {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJh...
+POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
 Content-Type: application/json
 {
     "type": "message",
-    "text": "This message has been updated"
+    "from": {
+        "id": "28:c9e...",
+        "name": "Contoso"
+    },
+    "conversation": {
+        "id":"x:17I0...",
+        "name": "Convo1"
+    },
+    "recipient": {
+        "id": "29:1XJ...",
+        "name": "Megan Bowen"
+    },    
+    "text": "My bot's reply"
 }
 ```
 
 ---
 
-#### Delete a targeted message
+If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
-Agents can delete messages within 24 hours if they've been acted on or they are no longer relevant. Messages are automatically purged from clients after 24 hours.
+### Receive a targeted message
 
-Use one of the following code snippets to delete targeted message:
+An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, the slash-command autocomplete menu will not contain an agent-named command allowing users to target it.
+
+To opt in to receive targeted messages, an agent's `bots` entry in its app manifest must include a `true` value for the `supportsTargetedMessages` property.
+
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true
+        }
+    ]
+}
+```
+
+<!-- TODO explicit note here about how TM is only relevant to certain scopes? -->
 
 # [C#](#tab/dotnet1)
+
+Targeted messages are recieved via standard message events (TODO link) and can be detected via the `IsTargeted` property of the recipient object.
 
 ```csharp
-// Delete
-await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
+
+  teams.OnMessage(async (context, cancellationToken) => {
+    if (context.Activity.Recipient?.IsTargeted == true){
+      // Handle message event
+    }
+  });
 ```
 
 # [TypeScript](#tab/ts1)
+
+Targeted messages are recieved via standard message events (TODO link) and can be detected via the `isTargeted` property of the recipient object.
 
 ```typescript
-// Delete
-await api.conversations.activities.deleteTargeted(conversationId, messageId);
-```
-
-# [Python](#tab/Py1)
-
-```python
-#Delete
-await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
-```
-
-# [HTTP](#tab/api1)
-
-Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
-
-```REST
-DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJh...
-Content-Type: application/json
-
-No body required.
-```
-
----
-
-## Agent response for slash commands
-
-> [!div class="nextstepaction"]
-> [Learn about slash commands](agent-slash-commands.md)
-
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined response flows:
-
-# [Private agent-to-user response](#tab/private)
-
-This flow keeps slash command results focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
-
-:::row:::
-    :::column span="2":::
-        1. The initial slash command shows up as a private message.
-        1. If the agent responds privately, the reply appears only to the initiating user and quotes the user’s prompt. You can include an option for the user to share it publicly if they want.
-    :::column-end:::
-    :::column span="3":::
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span:::
-        3. If the user chooses to allow, the agent posts a single message with its response along with the prompt preview..
-
-      This flow minimizes noise in shared conversations to enable [private interactions with a single user](#handle-agent-responses-for-slash-commands) that are fast and context aware. Additionally, use `Action.Submit` to add (suggested action) buttons that trigger server-side logic via an invoke activity without any user-visible chat message.
-
-    :::column-end:::
-:::row-end:::
-
-Next, enable [private agent-to-user responses](#handle-agent-responses-for-slash-commands).
-
-# [Public agent-to-user response](#tab/public)
-
-When the response is useful to the wider audience, you can choose to enable your agent to show it publicly.
-
-:::row:::
-    :::column span="2":::
-        1. When a user runs a slash command, it appears right away as a private message.
-        1. If the agent is configured for relevant public replies, the response is posted to all members in the group or channel.
-        1. The agent responds with the prompt preview.
-    :::column-end:::
-    :::column span="3":::
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column span:::
-        This flow is useful for sharing status updates, confirmations, or other information meant for everyone in group or channel.
-    :::column-end:::
-:::row-end:::
-
-Next, enable [public agent-to-user responses](#handle-agent-responses-for-slash-commands).
-
-# [Prompt preview](#tab/preview)
-
-When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
-
-- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
-
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
-
-- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
-
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
-
- A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
-
----
-
-### Recommended Response Flow for Agent Interactions
-
-Here's the recommended guideline for agent response to a slash command:
-
-1. **Slash command handling**: When a user sends a slash command, the agent receives a `MessageActivity` event in the `OnMessage` handler with `Recipient.IsTargeted = true`.
-1. **Private user query**: The slash command appears as a targeted private message visible only to the user who triggered it.
-1. **Targeted agent response**: The agent replies privately to that user and can optionally include a [prompt preview](#agent-response-for-slash-commands) to preserve context in a group chat.
-1. **Share suggested actions**: The agent can include `Action.Submit` actions to let the user share the private response with the group or channel.
-1. *Optional* - **Share private message publicly**: If the user chooses to share the response publicly, first [delete the private response](#delete-an-agent-response) and then repost it to the group or channel.
-
-### Handle agent responses for slash commands
-
-Your agents can send a private or public response to a user's query. You can also choose to include prompt preview in agent responses. You can manage the visibility of agent responses to slash commands and prompt preview using the defined [response flow scenarios](#agent-response-for-slash-commands).
-
-Use Teams SDK or REST APIs to handle the user's request and to send the agent response. You can enable the agent to send a private or a public message. You can also enable the agent to update or delete a message that it had previously sent.
-
-#### Send an agent response
-
-Use the following code snippets to enable your agent to respond to a slash command based on [supported scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands):
-
-# [Private message to a user](#tab/private)
-
-Configure your agent to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following [private message scenarios](agent-slash-commands.md#supported-scenarios-for-slash-commands) to send a message to a single user.
-
-- **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
-
-  # [C#](#tab/dotnet1)
-
-  ```csharp
-  
-    teams.OnMessage(async (context, cancellationToken) => {
-      if (context.Activity.Recipient?.IsTargeted == true){
-        await context.Send(new MessageActivity("Reactive TM").WithRecipient(context.Activity.From, true), cancellationToken);
-      }
-    });
-  ```
-
-  # [TypeScript](#tab/ts1)
-
-  ```typescript
-        
-    app.on('message', async ({ send, activity }) => {
-      if(activity.Recipient.isTargeted) {
-        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-        }
-    });
-  ```
-
-  # [Python](#tab/Py1)
-
-  ```python
-        
-    @app.on_message
-    async def handle_message(ctx):
-      if getattr(ctx.activity.recipient, "is_targeted", False):
-        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(ctx.activity.from, is_targeted=True))
-  ```
-
-  # [HTTP](#tab/api1)
-
-  See [Send a targeted message](#send-a-targeted-message).
-  
-- **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
-
-  # [C#](#tab/dotnet1)
-
-  ```csharp
-    
-  teams.OnMessage(async (context, cancellationToken) => {
-    if (context.Activity.Recipient?.IsTargeted == true) {
-      await context.Send(new MessageActivity("Reactive TM").WithRecipient(new Account {Id = "<userMRI>",Name = "<user Name>", Role = Role.User}, true), cancellationToken);
-    }
-    });
-  ```
-
-  # [TypeScript](#tab/ts1)
-
-  ```typescript
-    
+      
   app.on('message', async ({ send, activity }) => {
     if(activity.Recipient.isTargeted) {
-    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>, Name: <user Name>, Role: User}, isTargeted: true))
+       // Handle message event
       }
   });
-  ```
+```
 
-  # [Python](#tab/Py1)
+# [Python](#tab/Py1)
 
-  ```python
+Targeted messages are recieved via standard message events (TODO link) and can be detected via the `is_targeted` attribute of the recipient object.
+
+```python
       
-    @app.on_message
-    async def handle_message(ctx):
-      if getattr(ctx.activity.recipient, "is_targeted", False):
-        await ctx.send(MessageActivityInput("Reactive TM").with_recipient(Account(id="<userMRI>", name="<user Name>", role=Role.USER), is_targeted=True))
-  ```
-
-  # [HTTP](#tab/api1)
-
-  See [Send a targeted message](#send-a-targeted-message).
-
-# [Public response by the agent](#tab/public)
-
-You can enable the agent to send for the [public response scenario](agent-slash-commands.md#supported-scenarios-for-slash-commands) in a group or a channel if:
-
-- The message requires collaboration from all members.
-- The broader visibility adds value.
-
-  # [C#](#tab/dotnet)
-
-    ```csharp
-  
-      teams.OnMessage(async (context, cancellationToken) => {
-        await context.Send(new MessageActivity("Normal msg"), cancellationToken);
-      });
-    ```
-  
-  # [TypeScript](#tab/ts)
-
-    ```typescript
-
-    app.on('message', async ({ send, activity }) => {
-      send(new MessageActivity('Normal msg'))  
-    });
-    ```
-
-  # [Python](#tab/Py)
-
-    ```python
-  
-      @app.on_message
-      async def handle_message(ctx):
-        await ctx.send(MessageActivityInput("Normal msg"))
-    ```
-  
-  # [HTTP](#tab/api)
-
-  See [Send a targeted message](#send-a-targeted-message).
-
-# [Prompt preview](#tab/preview)
-
-You can enable [prompt preview](agent-slash-commands.md#supported-scenarios-for-slash-commands) using Teams SDK or REST APIs.
-
-For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
-
-- **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
-
-  - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
-
-    - The SDK automatically attaches the `targetedMessageInfo` entity.
-    - No additional code is required from the developer.
-
-      Prompt Preview is rendered automatically using the original message context
-
-  - Proactive response: When an agent sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
-  
-    - The developer must manually attach the entity.
-    - The `messageId` of the original user message must be provided.
-
-- **Use REST APIs**: Prompt preview is supported when sending agent responses through the following APIs:
-
-  - **Private agent-to-user response**: The agent replies privately to the user’s message. The response is visible only to the targeted user.
-
-  - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
-
-  In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
-
-<!--
-# [C#](#tab/dotnet)
-
-  Attach the entity manually using the targeted message ID:
-
-  ```csharp
-    var message = new MessageActivity("Here is the result!")
-      .AddTargetedMessageInfo(targetedMessageId);
-        
-    // Targeted reply (only the user sees it)
-    message.WithRecipient(userAccount, true);
-    await context.Send(message, cancellationToken);
-        
-    // OR public reply (everyone sees it)
-    await context.Send(message, cancellationToken);
-  ```
-
-# [TypeScript](#tab/ts)
-
-  ```typescript
-  const message = new MessageActivity('Here is the result!')
-  .addTargetedMessageInfo(targetedMessageId);
-    
-  // Targeted reply (only the user sees it)
-  message.withRecipient(userAccount, true);
-  await send(message);
-        
-  // OR public reply (everyone sees it)
-  await send(message);
-  ```
-
-# [Python](#tab/Py)
-
-  ```python
-  message = MessageActivityInput(text="Here is the result!")
-  message.add_targeted_message_info(targeted_message_id)
-        
-  # Targeted reply (only the user sees it)
-  message.with_recipient(user_account, is_targeted=True)
-  await ctx.send(message)
-        
-  # OR public reply (everyone sees it)
-  await ctx.send(message)
-  ```
----
--->
-
-  ```http
-  POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-  Authorization: Bearer eyJhbGciOiJIUzI1Ni...
-  Content-Type: application/json
-  {
-      "type": "message",
-      "from": {
-          "id": "28:c9e...",
-          "name": "Contoso"
-      },
-      "conversation": {
-          "id":"x:17I0...",
-          "name": "Convo1"
-      },
-      "recipient": {
-          "id": "29:1XJ...",
-          "name": "Megan Bowen"
-      },    
-      "text": "My bot's reply",
-  "entities": [
-      {
-        "type": "targetedMessageInfo",
-        "messageId": "1772129782775"
-      }
-    ]
-  }
-  ```
-
-  ---
-
-#### Update an agent response
-
-The agent can edit its original message, if needed. The updated message appears only in the intended user’s view.
-
-Use one of the following code snippets to edit the agent's response:
-
-# [C#](#tab/dotnet1)
-
-  ```csharp
-  
-    teams.OnMessage(async (context, cancellationToken) => {
-      if (context.Activity.Recipient?.IsTargeted == true) {
-        var sent = await context.Send(
-          new MessageActivity("Processing your request...")
-            .WithRecipient(context.Activity.From!, isTargeted: true),
-          cancellationToken
-        );
-    
-        await context.Api.Conversations.Activities.UpdateTargetedAsync(
-          context.Activity.Conversation!.Id!,
-          sent!.Id!,
-          new MessageActivity("Updated private response"),
-          cancellationToken
-        );
-      }
-    });
-  ```
-  
-# [TypeScript](#tab/ts1)
-
-  ```typescript
-  
-    app.on('message', async ({ send, activity, api }) => {
-      if (activity.Recipient.isTargeted) {
-        const sent = await send(
-          new MessageActivity('Processing your request...')
-            .withRecipient(activity.From, isTargeted: true)
-        );
-    
-        await api.conversations.activities.updateTargeted(
-          activity.Conversation.Id,
-          sent.Id,
-          new MessageActivity('Updated private response')
-        );
-      }
-    });
-  ```
-  
-# [Python](#tab/Py1)
-
-  ```python
-  
-    @app.on_message
-    async def handle_message(ctx):
-        if getattr(ctx.activity.recipient, "is_targeted", False):
-            sent = await ctx.send(
-                MessageActivityInput("Processing your request...").with_recipient(
-                    ctx.activity.from,
-                    is_targeted=True
-                )
-            )
-    
-            await ctx.api.conversations.activities.update_targeted(
-                ctx.activity.conversation.id,
-                sent.id,
-                MessageActivityInput("Updated private response")
-            )
-  ```
-
-# [HTTP](#tab/api1)
-
-  See [Send a targeted message](#update-a-targeted-message).
-
----
-
-#### Delete an agent response
-
-Use the following code snippet to enable the agent to delete its response:
-
-# [C#](#tab/dotnet1)
-
-  ```csharp
-  
-    // Hard delete TM flow
-    teams.OnMessageDelete(async (context, cancellationToken) => {
-      if (context.Activity.Recipient?.IsTargeted == true){
-        // Business logic when message hard delete flow is for TM
-      }
-    });
-  ```
-
-# [TypeScript](#tab/ts1)
-
-  ```typescript
-
-    app.on('messageDelete', async ({ activity, next }) => {
-      if(activity.Recipient.isTargeted) {
-        // Business logic when message hard delete flow is for TM
-      }
-    });
-  ```
-
-# [Python](#tab/Py1)
-
-  ```python
-  
-  @app.on_message_delete
-  async def handle_message_delete(ctx):
+  @app.on_message
+  async def handle_message(ctx):
     if getattr(ctx.activity.recipient, "is_targeted", False):
-      # Business logic when message hard delete flow is for TM
-  ```
+      # Handle message event
+```
 
 # [HTTP](#tab/api1)
 
-  See [Send a targeted message](#delete-a-targeted-message).
+TODO is there a REST example?
 
 ---
 
-## Handle errors
+### Update or delete a targeted message
 
-After the agent sends a targeted message using Teams SDK or REST APIs, it receives one of the following responses:
+Targeted messages can be updated and deleted in the same way as standard messages, with the following limitations:
 
-- If successful, the targeted user gets the message sent by the agent.
-- An agent might fail to send a targeted message if the user isn’t a member of the conversation or the client doesn’t support targeted messages.
+- The visibility of a targeted message cannot be changed
+- Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message will result in an error.
 
-  > [!NOTE]
-  > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported.
+See messaging (TODO link)
 
-  Ensure to handle these errors appropriately in your agent or bot.
+<!-- TODO maybe a small section explicitly specifying that all message events, like OnMessageDelete, are supported, and you can check the visibility on the message). -->
 
-  # [Teams SDK](#tab/t1)
+## Best practices and design guidance
 
-  The following table lists error codes, error descriptions, and developer actions for Teams SDK:
+Targeted messaging is a standard capability of agents in Teams. Users will expect conservative, careful behavior from agents with respect to the visibility of messages in group conversations.
 
-  | Status code | Error code | Description | Developer action |
-  | --- | --- | --- | --- | --- |
-  | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
-  | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
-  | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
-  | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
-  | 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
-  | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+In most situations, private messages are the appropriate choice for all messages intended for a specific user, unless the situation or activity explicitly calls for a public message. Agents can use a suggested action (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response.
 
-  # [HTTP](#tab/a1)
-
-  The following table lists error codes, error descriptions, and developer actions for REST APIs:
-
-  | Status code | Error code | Description | Developer action |
-  | --- | --- | --- | --- | --- |
-  | 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-  | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
-  | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
-  | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
-
-  ---
-
-> [!TIP]
-> It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
-
-<!--
-### Error codes for prompt preview in agent responses
-
-Ensure to handle these errors appropriately in your agent. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
-
-| Status code | Error code | Description | Developer action |
-| --- | --- | --- | --- | --- |
-| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
-| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
--->
-
-You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
-
-## Best practices for agent responses
-
-You can determine the [visibility of agent responses](targeted-messages.md#agent-response-for-slash-commands) to slash commands. Default agent response for a slash command is set to private visibility. Users can allow users to optionally share publicly. You can let agent logic dynamically decide visibility based on context and relevance:
+<!-- TODO similar question as above: Is there even a concept of having a "single" or "specific group" recipient of a message that is *not* targeted, as opposed to an @mention? What would that look like? -->
 
 - Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
 - Use public responses only when content benefits the wider group (for example, updates or confirmations).
-- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent must [delete the initial response](targeted-messages.md#delete-an-agent-response) and then repost the response publicly.
+- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent delete the original private response and then repost the response publicly. Take care to ensure that the contents of the follow-up message are identical to the deleted message, and consider whether the user wants their original prompt included as a quoted response.
 - Use prompt preview to maintain context in ongoing conversations.
 - Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
 - Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
+
+<!-- TODO clean this up -->
+
+## Errors
+
+<!-- TODO tables like this are for ref content, this should be condensed into prose that summarizes the main TM-specific errors you might run in to -->
+
+| HTTP Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
+| 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+| 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+
+More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
 ## See also
 
 - [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
 - [Send and receive messages](../bots/build-conversational-capability.md)
+
+<!-- TODO link slash commands -->
+<!-- TODO link quoted responses -->
+<!-- TODO link suggested actions -->
+<!-- TODO The second link's gotta go, it's all bot framework, use an SDK docs link in the interim -->
