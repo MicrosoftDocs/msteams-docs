@@ -27,31 +27,35 @@ If your agent or app implements behaviors that are intended to be accessed via n
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png":::
 
-Apps and agents can expose three types of commands in Teams: conversational slash commands, conversational @mention commands, and message extension slash commands.
+## Types of slash commands
+
+Apps and agents can expose three types of commands in Teams: conversational slash commands, conversational @mention commands, and message extension slash commands. All three types are supported across all client platforms, including mobile.
 
 ### Conversational slash commands
 
-When activated, conversational slash commands prepare the compose box with a targeted (private) message to the agent that includes the name of the command as the message text. Users can modify or append to the text before sending the message, for commands that support additional parameters or input. Conversational slash commands are useful for surfacing functionality that users may want to use privately in group conversations.
+When activated, conversational slash commands prepare the compose box with a targeted (private) message to the agent that includes the name of the command as the message text; see [Send and receive targeted (private) messages in group conversations](targeted-messages.md) for more information about targeted messages. For commands that take additional text input, users can modify or append to the text before sending the message. When the user sends the message, it is sent as a targeted message to the agent that can't be seen by other participants in the conversation.
+
+TODO screenshot
+
+Conversational slash commands are useful for surfacing named command functionality that users may want to use privately in group conversations. TODO examples
+
+Slash command names do not need to be globally unique. Each command in the autocomplete box is displayed with the name and icon of the agent that provides them, enabling users to differentiate between them.
 
 ### Conversational @mention commands
 
 Conversational @mention commands function just like conversational slash commands, but are exposed via a separate autocomplete box that appears after the user inserts an @mention of the agent in the compose box. Activating an @mention command autocompletes the command name into the compose box as message text. The resulting message is a public message containing an @mention shown to all participants in the conversation.
 
+TODO screenshot
+
 ### Message extension slash commands
 
 Apps that implement action-type message extensions can surface them as discoverable slash commands. When activated, message extension slash commands immediately open the associated task module or dialog and do not populate the compose box or send a message. (TODO I think these can be activated from the command box too?). Search-type message extensions cannot be exposed as commands.
 
-Slash command names do not need to be globally unique. Each command in the autocomplete box is displayed with the name and icon of the agent that provides them, enabling users to differentiate between them.
-
 TODO screenshot
 
-Agent commands are supported across all client platforms, including mobile.
+## Conversational slash command behavior implementation
 
-## Slash command behavior implementation
-
-When a user activates a conversational slash or @mention command to populate the compose box and then sends the message, the result is a standard text message sent to the agent (either targeted or public). The agent's implementation is responsible for interpreting the text as a named command and handling it appropriately. Message extension slash commands activate the extension as normal.
-
-When an agent receives a message, it is handled through the `message` event. The agent can determine whether the message is a targeted message by checking `Recipient.IsTargeted`. If true, it is a targeted message. Slash commands are delivered as `MessageActivity` events within the `OnMessage` handler with `Recipient.IsTargeted = true`.
+When a user activates a conversational slash or @mention command to populate the compose box and then sends the message, the result is a standard or targeted message sent to the agent. The agent's message handler implementation is responsible for interpreting the text as a named command and handling it appropriately.
 
 ## Implement slash commands
 
@@ -220,9 +224,11 @@ When you implement slash commands, you should also determine how the agent or ap
 
 - Keep slash commands short and action-oriented.
 - Use slash commands for private or quick actions, and @mentions for richer conversations.
-- Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
-- Provide clear command descriptions to improve discoverability.
+- Avoid turning long prompt suggestions into slash commands. Keep them lightweight. TODO use xxx instead.
+- Provide clear command descriptions to improve discoverability, including params and expected text.
 - Add aliases for high-traffic commands where appropriate.
+
+TODO blanket guidance - is there any reason *not* to do this if you have named commands?
 
 TODO see best practices for targeted msgs too
 
