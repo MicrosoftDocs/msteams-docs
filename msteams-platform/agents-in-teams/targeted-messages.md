@@ -25,9 +25,9 @@ Use targeted messages in your agents or bots to send temporary, private messages
 
 Targeted messaging enables users and agents to privately communicate with each other within channels, group chats and meeting chats.
 
-With targeted messages, a user can privately send a message or command to an agent that retains the context of the group conversation, and the agent can respond in the chat or channel with a message visible only to the user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
+With targeted messages, a user can privately message or send a command to an agent. The agent retains the context of the group conversation. It can then respond in the chat, channel, or meeting chat. The response is visible only to that user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
 
-Targeted messages can only be sent by a user to a single agent, or by an agent to a single user.
+Users can send targeted messages only to a single agent, and agents can send targeted messages only to a single user.
 
 **Key points**:
 
