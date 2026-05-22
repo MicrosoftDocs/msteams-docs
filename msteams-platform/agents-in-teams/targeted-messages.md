@@ -749,6 +749,8 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
   | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
   | 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
   | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+  | 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
+  | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
   # [HTTP](#tab/a1)
 
@@ -766,6 +768,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, it receiv
 > [!TIP]
 > It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
 
+<!--
 ### Error codes for prompt preview in agent responses
 
 Ensure to handle these errors appropriately in your agent. The following table lists error codes, error descriptions, and developer actions for Teams SDK:
@@ -774,8 +777,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | --- | --- | --- | --- | --- |
 | 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
 | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
-
-You can also see more information on [error codes for targeted messages](targeted-messages.md#handle-errors).
+-->
 
 You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
