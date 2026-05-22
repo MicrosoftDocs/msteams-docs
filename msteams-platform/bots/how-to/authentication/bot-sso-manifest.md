@@ -28,6 +28,15 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 > [!NOTE]
 > Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
+> [!IMPORTANT]
+> If your bot is created using **User-Assigned Managed Identity**, an App Registration (Entra App ID) isn't automatically created. RSC permissions are mapped against the `webApplicationInfo.id` property, which must correspond to an App Registration in Microsoft Entra ID. To use RSC permissions with a managed identity bot, you must:
+>
+> 1. Create a new App Registration in the [Azure portal](https://portal.azure.com).
+> 1. Assign the required RSC permissions to the App Registration.
+> 1. Use the Application (client) ID of the new App Registration as the `id` value in the `webApplicationInfo` section of your app manifest.
+>
+> If you use the managed identity ID directly in `webApplicationInfo` without an associated App Registration, app installation fails with the error: *Failed to execute TeamsGraphService backend request IsUserAuthorizedToGrantPersonalScopeResourceSpecificPermissionsRequestV2*.
+
 The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
 For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
