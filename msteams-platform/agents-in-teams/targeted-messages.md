@@ -253,7 +253,7 @@ See messaging (TODO link)
 
 Targeted messaging is a standard capability of agents in Teams. Users will expect conservative, careful behavior from agents with respect to the visibility of messages in group conversations.
 
-In most situations, private messages are the appropriate choice for all messages intended for a specific user, unless the situation or activity explicitly calls for a public message. Agents can use a suggested action (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response.
+In most situations, private messages are the appropriate choice for all messages intended for a specific user, unless the situation or activity explicitly calls for a public message. Agents can use suggested actions (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response.
 
 <!-- TODO similar question as above: Is there even a concept of having a "single" or "specific group" recipient of a message that is *not* targeted, as opposed to an @mention? What would that look like? -->
 
