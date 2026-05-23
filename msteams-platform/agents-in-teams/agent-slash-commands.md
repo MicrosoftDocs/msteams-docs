@@ -80,6 +80,8 @@ Command implementations should also inspect the received message to determine wh
 
 ## Add commands to manifest configuration
 
+<!-- TODO stopped here, this needs a touch up but is mostly good -->
+
 ### Conversational commands
 
 Conversational slash commands require that the agent is opted in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
