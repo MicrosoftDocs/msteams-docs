@@ -30,7 +30,7 @@ Targeted messages can only be sent by a user to a single agent, or by an agent t
 
 Targeted messages are one-to-one messages between a user and an agent in a group conversation. They are presented in the flow of the conversation, but can only be seen by the sender and their single recipient.
 
-Sending targeted messages to any user in a group conversation is a capability of all Teams agents. To be eligible to _receive_ targeted messages, an agent must opt in via its configuration; see [Receive a targeted message](#receive-a-targeted-message).
+Sending targeted messages to any user in a group conversation is a capability of all Teams agents. To be eligible to _receive_ targeted messages, an agent must opt in via its configuration; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
 Targeted messages enable users to privately chat with agents without cluttering the conversation or exposing interactions and information that aren't meant for the group. Consider the following scenarios:
 
@@ -63,7 +63,7 @@ TODO screenshot
 
 User-to-agent targeted messaging is implemented as a slash command named for the agent.
 
-To send a targeted message, a user enters a <kbd>/</kbd> in the empty compose box to display the slash command autocomplete menu. For each agent that is in the user's context and eligible to receive targeted messages (see [Receive a targeted message](#receive-a-targeted-message)), the menu will include a command named for the agent, displayed next to its icon.
+To send a targeted message, a user enters a <kbd>/</kbd> in the empty compose box to display the slash command autocomplete menu. For each agent that is in the user's context and eligible to receive targeted messages (see [Receive targeted messages](targeted-messages.md#receive-targeted-messages)), the menu will include a command named for the agent, displayed next to its icon.
 
 TODO screenshot
 
@@ -174,7 +174,7 @@ Content-Type: application/json
 
 If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
-### Receive a targeted message
+### Receive targeted messages
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, the slash-command autocomplete menu will not contain an agent-named command allowing users to target it.
 
