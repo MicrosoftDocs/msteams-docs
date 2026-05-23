@@ -37,7 +37,7 @@ Apps and agents can expose three types of commands via their configuration: conv
 
 ### Conversational slash commands
 
-When activated, conversational slash commands prepare the compose box with a targeted (private) message to the agent that includes the name of the command as the message text; see [Send and receive targeted (private) messages in group conversations](targeted-messages.md) for more information about targeted messages. For commands that take additional text input, users can modify or append to the text before sending the message. When the user sends the message, it is sent as a targeted message to the agent that can't be seen by other participants in the conversation.
+When a user activates a conversational slash command provided by an agent, Teams prepares the compose box with a targeted (private) message to the agent that includes the name of the command as the message text; see [Send and receive targeted (private) messages in group conversations](targeted-messages.md) for more information about targeted messages. For commands that take additional text input, the user can modify or append to the text before sending the message. When the user sends the message, it is sent as a targeted message to the agent that can't be seen by other participants in the conversation.
 
 TODO screenshot
 
@@ -54,7 +54,7 @@ TODO screenshot
 
 ### Conversational @mention commands
 
-Conversational @mention commands function just like conversational slash commands, but are exposed via a separate autocomplete box that appears after the user inserts an @mention of the agent in the compose box. Activating an @mention command appends the command name into the compose box as message text. The result is a public message containing an @mention shown to all participants in the conversation.
+Conversational @mention commands work like conversational slash commands, but are exposed via a separate autocomplete box that appears after the user inserts an @mention of the agent in the compose box. When a user activates an @mention command, Teams appends the command name into the compose box as message text. The result is a public message containing an @mention shown to all participants in the conversation.
 
 TODO screenshot
 
@@ -62,7 +62,7 @@ TODO screenshot
 
 ### Message extension slash commands
 
-Apps that implement action-type message extensions can surface them as discoverable slash commands. When activated from the autocomplete menu, message extension slash commands immediately open the associated task module or dialog and do not populate the compose box or send a message. Search-type message extensions cannot be exposed as commands.
+Apps that implement action-type message extensions can surface them as discoverable slash commands. When a user activates one from the autocomplete menu, Teams immediately opens the associated task module or dialog and does not populate the compose box or send a message. Search-type message extensions cannot be exposed as commands.
 
 TODO screenshot
 
@@ -88,7 +88,7 @@ Conversational slash commands require that the agent is opted in to receive targ
 
 ### Message extension slash commands
 
-Message extension slash commands do not require
+Message extension slash commands do not require...
 
 Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt for slash commands in your agent and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
