@@ -61,17 +61,17 @@ Targeted messages sent or received by a user are presented in the flow of the co
 
 TODO screenshot
 
-User-to-agent targeted messaging is implemented as a slash command named for the agent.
+Users send targeted messages to an agent by invoking its name as a _slash command_.
 
-To send a targeted message, a user enters a <kbd>/</kbd> in the empty compose box to display the slash command autocomplete menu. For each agent that is in the user's context and eligible to receive targeted messages (see [Receive targeted messages](targeted-messages.md#receive-targeted-messages)), the menu will include a command named for the agent, displayed next to its icon.
-
-TODO screenshot
-
-Selecting one of these agent-named commands populates the compose box with a _slash-mention_ of the agent and places the cursor to allow the user to enter message text. In this state, the compose box displays a notice stating that the message will be sent privately. When the user enters message text and selects **Send**, the resulting message will be targeted to the agent and only visible to the agent and the sending user.
+When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them. In addition to the built-in commands, the menu will also include a command for each agent in the current conversation that is eligible to receive targeted messages. Commands for sending targeted messages to an agent are always named for the agent and display its icon.
 
 TODO screenshot
 
-See [Expose slash commands and @mention commands from agents and apps](agent-slash-commands.md) for information about registering additional named slash commands for an agent.
+Activating one of these agent-named commands switches the compose box to targeted message mode for the agent, displaying a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+
+TODO screenshot
+
+For more about slash commands, including how to register additional named slash commands that can be dispatched to your agent, see [Expose slash commands and @mention commands from agents and apps](agent-slash-commands.md).
 
 ### Prompt preview
 
