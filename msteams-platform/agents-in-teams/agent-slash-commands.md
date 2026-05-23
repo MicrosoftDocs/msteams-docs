@@ -17,13 +17,13 @@ ms.topic: reference
 >
 > Support for slash commands is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-*Slash commands* and *@mention commands* help users discover and use named functionality in Teams agents and apps with convenient text commands.
+*Slash commands* and *@mention commands* provide convenient text commands to help users discover and use named functionality in Teams agents and apps.
 
 If your agent or app implements functionality that you want users to be able to invoke via named commands, you can add configuration to your agent that makes those commands quickly discoverable and accessible from conversational surfaces in Teams. TODO add a couple named-command scenarios here.
 
 ## What is a slash command
 
-Slash commands in Teams are text-based shortcuts that let users perform specific actions from the compose box in conversations. When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them.
+Slash commands in Teams are text-based shortcuts that let users perform actions from the compose box in conversations. When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them.
 
 With the right configuration in your app manifest, you can add named commands to this list that will be dispatched to your app or agent.
 

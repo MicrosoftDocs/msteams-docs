@@ -251,13 +251,13 @@ See messaging (TODO link)
 
 ## Best practices and design guidance
 
-TODO need blanket guidance here, why _wouldn't_ you opt in your agent to targeted messaging? also explicitly enumerate the two or three "standard workflows" here briefly.
+TODO need blanket guidance here, why _wouldn't_ you opt in your agent to targeted messaging? also explicitly enumerate the two or three "standard workflows" here very briefly.
 
-Targeted messaging is a standard capability of agents in Teams. Users will expect conservative, careful behavior from agents with respect to the visibility of messages in group conversations. Unless an activity explicitly calls for a public message, targeted messages are usually the appropriate choice for messages intended for a specific user.
+Targeted messaging is a standard capability of agents in Teams. Users will expect conservative, careful behavior from agents with respect to the visibility of messages in group conversations. Unless an activity explicitly calls for a public message, targeted messages are usually the best choice for messages intended for a specific user.
 
 Message handlers should _always_ consider the visibility of received messages when forming responses. TODO rephrase: consider using the reply operations that automatically inherit visibility from the received message.
 
-Agents can use suggested actions (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response.
+Agents can use suggested actions (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response. (TODO this can go as one of the "standard workflows" mentioned above. If that gets long enough, make it its own section.)
 
 <!-- TODO similar question as above: Is there even a concept of having a "single" or "specific group" recipient of a message that is *not* targeted, as opposed to an @mention? What would that look like? -->
 
