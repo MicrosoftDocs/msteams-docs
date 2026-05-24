@@ -12,35 +12,29 @@ ms.topic: reference
 
 <!-- TODO do away with the infographics and put in code/CLI snippets and client UX screenshots instead -->
 
-An agent in Teams is a kind of *bot*: an app that users install into Teams and interact with conversationally in Teams chat. *Agents* are bots that use modern AI techniques to converse naturally, adapt to context, and help users get work done.
+An agent in Teams is a kind of *bot*: an app that users install into Teams and interact with conversationally in Teams chat. *Agents* are bots that rely on large language models (LLMs) to converse naturally, adapt to context, and dynamically take action.
 
-Unlike rule-based bots with fixed behavior, agents rely on large language models (LLMs) to understand users' intent, dynamically make decisions, and respond with natural language. When connected to other services, agents can take action and perform tasks on users' behalf.
-
-## Building agents for Teams
+## Creating agents for Teams
 
 <!-- REVIEW NOTE: The old version's "Agent developer experience" which gave no insight. Note that we don't position Teams SDK here as "primary" to Agent's SDKs "secondary/compatible", we simply don't mention Agents SDK here at all, which is why this section doesn't talk about Teams SDK's "first-class"ness either - it's simply the one. -->
 
-From a developer's perspective, the core of a Teams agent is a web service that handles events received from the Teams platform and makes calls to the platform's API. Developers build these web services with Teams SDK (TODO link) and can host them anywhere on the web. Teams SDK uses patterns and frameworks familiar to TypeScript, C#, and Python developers to help them efficiently create event-driven web services that can receive Teams events.
+For developers, creating a Teams agent means writing a web service. The service behind a Teams agent handles events sent by the Teams platform and makes calls to the platform's API. Developers use Teams SDK (TODO link) to create these services and can host them anywhere on the web. Teams SDK uses web service frameworks that are familiar to TypeScript, C#, and Python developers to help them structure their Teams apps, and offers tools for simplifying common Teams app concerns and accelerating app development.
 
-With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just bots and agents.. TODO rewrite For bot and agent apps, though, the main focus is handling and responding to conversational messages in chats.
+With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just conversational assistants. TODO rewrite For bot and agent apps, the main focus is handling and responding to messages in chats.
 
-Traditional bots are typically command-driven and are built to react to predefined phrases that are addressed to them directly. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
+Traditional bots are typically built to react to predefined commands that are addressed to them directly. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
 
 <!-- TODO should I pivot this article or use tabs? -->
 
 *TODO Snippet of simple bot message handler with pseudocode inside a real message handler: check if in 1:1 or if @mentioned, read command, act and respond. Be careful not to infer that the pseudocode represents APIs offered by TSDK.*
 
-Agents, by contrast, rely on LLMs to drive their actions and responses. Agents track each of their conversations as context for the LLMs that drive their behavior. Here's the message handler for an agent that... TODO
+Agents work differently. They can also respond to commands with predefined behaviors, but generally an agent relies on an LLM to drive its actions and responses. Agents can track every message of a conversation to form an understanding of users' intent, dynamically make decisions, and reply with natural language that fits the context of the conversation. When connected to other services, agents can take action and perform tasks on users' behalf. Here's the message handler for an agent that... TODO
 
 *TODO Snippet of simple LLM-driven agent message handler with pseudocode inside a real message handler. This one shouldn't be deeply integrated with Teams, just a messenger, integration comes below.*
 
 ## What's possible with agents in Teams
 
-Applications outside of teams typically present agents as one-to-one chat assistants in a dedicated interface or integrated with another tool. Teams offers unique, rich opportunities for agents with group conversations, unique conversational features, and its established role as the place where users collaborate in chat to get work done.
-
-TODO expand on all 3: groups, features, user expectaations.
-
-An agent placed into a group conversation, like a team chat or channel, can absorb all of its messages to form an understanding of the discussion.
+Most applications that feature agents present them as one-to-one chat assistants in a dedicated interface or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to collaborate in chat to get work done.
 
 Consider these scenarios:
 
