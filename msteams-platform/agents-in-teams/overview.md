@@ -8,71 +8,55 @@ ms.topic: reference
 
 # Agents in Teams
 
-With the introduction of Teams SDK, developers can create collaborative agents for Teams users. In addition to giving query responses, agents in Teams can summarize conversations, draft documents, manage tasks, automate processes, and provide personalized insights. These agents help users coordinate, communicate, and achieve more efficiently within Teams. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
+<!-- REVIEW NOTE: Distinguishing this from the old article: This condenses the old intro, "what are agents" and "why build agents for teams" into one section. The orginal text was marketing-ish and used broad value statements, and relied on one big scenario further down that didn't  highlight the value of putting agents specifically into Teams. This version focuses on the developer perspective with a technical definition (with a next steps link that points to a new article about the Teams app model, in addition to the existing one that goes to the quickstart), and uses multiple, small, concrete scenarios that paint a picture and focus on Teams' distinguished value as an environment for agents -->
 
-## What are agents in Teams?
+<!-- TODO do away with the infographics and put in code/CLI snippets and client UX screenshots instead -->
 
-Agents in Teams are intelligent and conversational apps built with Teams SDK. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
+An *agent* in Teams is a kind of *bot*: an app that users install into Teams and interact with conversationally in Teams chat. Agents are bots that use modern AI techniques to converse naturally, adapt to context, and help users get work done.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
+Unlike rule-based bots with fixed behavior, agents rely on large language models (LLMs) to understand users' intent and respond dynamically with natural language. Given connectivity to other services, agents can map that intent to action and perform tasks on users' behalf.
 
- An agent in Teams understands user intent, performs tasks, and enhances collaboration.
+Agents are a natural fit for Teams, where people already collaborate in chat to accomplish their work. What truly sets Teams apart as an environment for agents, though, is shared group context. Consider these scenarios:
 
-## Why build agents for Teams?
+<!-- TODO Get more of these. I need mini, two-sentence scenarios that get specific, in order to paint a picture. and make them concrete: not "an agent; information; tasks," but an agent that does a specific things; is asked for specific information and to do a specific task. Ideas should come from unique Teamsy stuff for agents, like interesting events it can respond to, or maybe like adding in message extension capabilities to do really cool stuff. Maybe genericize some real customer apps; these should be inspiring. Also access to org M365 data. -->
 
-Building agents for Teams helps to enhance collaboration and increase productivity. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. Within Teams, agents can focus on high-priority work to enable better outcomes and success.
+- A team adds an agent to their group chat to ask it for information and direct it to perform tasks. The agent can infer intent based on the conversation and share the results back into the thread.
+- An agent in a long-running channel absorbs details about decisions and process. When appropriate, it proactively suggests actions, carry them out, and and carry them out on the team's behalf.
+- An agent that can...
 
-### Agent user experience
+## Building agents for Teams
 
-- **In-context intelligence**: Users can interact directly with agents within their Teams usage during conversations and meetings.
-- **Task automation**: Agents can handle repetitive or complex tasks, such as summarizing chats, scheduling meetings, or pulling business data.
-- **Personalized assistance**: Agents can adapt to user preferences and roles for more relevant and actionable insights.
+<!-- REVIEW NOTE: The old version's "Agent developer experience" which gave no insight. Note that we don't position Teams SDK here as "primary" to Agent's SDKs "secondary/compatible", we simply don't mention Agents SDK here at all, which is why this section doesn't talk about Teams SDK's "first-class"ness either - it's simply the one. -->
 
-### Agent developer experience
+From a developer's perspective, a Teams app consists of two main components:
 
-- **Native Teams integration**: Simplified development using Teams SDK with built-in support for Teams' authentication, messaging, and UI components.
-- **Security and compliance**: Benefit from identity, compliance, and data protection frameworks.
-- **Extensibility across Microsoft 365**: Agents can evolve beyond Teams into other Microsoft 365 experiences using Microsoft 365 Agents SDK.
+1. A web service, built with Teams SDK (TODO link), that receives events from the Teams platform and makes calls to its API. The service can be hosted anywhere on the web.
 
-### Example user scenario
+2. The app manifest, a JSON configuration file that describes the functionality and configuration of the application. A developer deploys the app manifest to the Teams platform to make the app available to users.
 
-Here's a knowledge hub scenario for which you can build an agent in Teams:
+An agent's behavior and capabilities are mainly defined by how its service handles events triggered by user actions in Teams, but agents can act proactively as well. Teams SDK provides a framework in idiomatic TypeScript, C# and Python for creating services that handle Teams events. For example...
 
-**Knowledge hub**: Get instant and personalized guidance and support with the knowledge hub agent. This agent is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation. By responding to targeted prompts, it helps students make informed decisions about their education and future career paths. This comprehensive tool provides:
+<!--TODO medium sized code snippet in 3-lang tabs that has some LLMness, not just an echo response -->
 
-- **Personalized course recommendations**: Suggests courses to build AI skills and other in-demand competencies.
-- **Career-aligned academic planning**: Guides students in choosing courses that match their career goals.
-- **Sample course plans**: Generates tailored course plans based on individual aspirations.
-- **Institutional insights**: Provides information about top educational institutions in IT and related fields.
-- **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
-- **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
+Teams SDK also simplifies other aspects of developing Teams apps, including request and response authentication, user authentication and enterprise single sign-on, calling the Teams platform and Microsoft Graph APIs, and managing agent conversation state.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
+## Agents and apps in the Microsoft 365 ecosystem
 
-For more information, see [code samples for agents](build-first-agent.md#code-sample).
+Do mention that they can go in Copilot, M365 etc. etc. too. The teams app model is actually the M365 app model, these concepts are everywhere, etc.
 
-## Choose an approach to build your agent
+<!-- TODO we can add an additional "more concepts" nextsteps button at the bottom that goes to the "app model" page. -->
 
-Developers and organizations can choose from multiple approaches depending on the app requirements:
+## Links (TODO rename)
 
-- **Low-code or no-code**: Use Microsoft Copilot Studio to design conversational experiences with minimal code.
-- **Pro-code**: Use Teams SDK to build fully customized agents, integrated with agents to handle complex or domain-specific needs.
+<!-- TODO sdk page -->
+<!-- TODO what else? -->
 
-## Tools and SDKs for building agents
-
-Here's a list of tools and SDKs you can use to build agents for Teams:
-
-- **Teams SDK**: This is the latest SDK for building agents specifically tailored for the Teams environment It simplifies the development process by providing:
-
-  - Simplified message handling
-  - Integration with Adaptive Cards and Teams UI components
-  - Native support for OpenAI and Azure OpenAI models
-
-- **Microsoft 365 Agents SDK**: The Microsoft 365 Agents SDK allows developers to extend their Teams agents and apps beyond Teams. It helps make the agents and apps available for Microsoft 365 Chat,  Outlook, and other Microsoft 365 hubs. This enables developers to deliver consistent experience across platforms in the Microsoft ecosystem.
-
-- **Microsoft 365 Agent Toolkit**: Microsoft 365 Agents Toolkit is the pro-code option for building and debugging agents and actions (plugins). You can use the toolkit to build agents tailored for Teams. It also provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for Visual Studio Code and Visual Studio.
-
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Build your first agent](build-first-agent.md)
+
+<!-- TODO
+> [!div class="nextstepaction"]
+> [Learn more about the Teams application model](xxx)
+-->
