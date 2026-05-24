@@ -22,39 +22,37 @@ Unlike rule-based bots with fixed behavior, agents rely on large language models
 
 From a developer's perspective, the core of a Teams agent is a web service that handles events received from the Teams platform and makes calls to the platform's API. Developers build these web services with Teams SDK (TODO link) and can host them anywhere on the web. Teams SDK uses patterns and frameworks familiar to TypeScript, C#, and Python developers to help them efficiently create event-driven web services that can receive Teams events.
 
-With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just bots and agents.. TODO rewrite The main focus of bot and agent apps is handling and responding to conversational messages in chats.
+With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just bots and agents.. TODO rewrite For bot and agent apps, though, the main focus is handling and responding to conversational messages in chats.
 
 Traditional bots are typically command-driven and are built to react to predefined phrases that are addressed to them directly. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
 
+<!-- TODO should I pivot this article or use tabs? -->
+
 *TODO Snippet of simple bot message handler with pseudocode inside a real message handler: check if in 1:1 or if @mentioned, read command, act and respond. Be careful not to infer that the pseudocode represents APIs offered by TSDK.*
 
-Agents, by contrast, rely on LLMs to drive their actions and responses. Agents track each of their conversations as context for the LLMs that drive their behavior.
+Agents, by contrast, rely on LLMs to drive their actions and responses. Agents track each of their conversations as context for the LLMs that drive their behavior. Here's the message handler for an agent that... TODO
 
 *TODO Snippet of simple LLM-driven agent message handler with pseudocode inside a real message handler. This one shouldn't be deeply integrated with Teams, just a messenger, integration comes below.*
 
 ## What's possible with agents in Teams
 
-Agents are a natural fit for Teams, where people are already primed to accomplish their work by collaborating in chat. What truly sets Teams apart as an environment for agents, though, are its group conversations and unique conversational features.
+Applications outside of teams typically present agents as one-to-one chat assistants in a dedicated interface or integrated with another tool. Teams offers unique, rich opportunities for agents with group conversations, unique conversational features, and its established role as the place where users collaborate in chat to get work done.
+
+TODO expand on all 3: groups, features, user expectaations.
 
 An agent placed into a group conversation, like a team chat or channel, can absorb all of its messages to form an understanding of the discussion.
 
-Conversational features.
-
- TODO idea that agents can assemble context across discussions.
-
-Shallow or deep integration: react on status, or prompt an LLM to tell it it's in Teams. An agent LLM prompted to recognize that it's operating within Teams can generate
-
-<!-- TODO the scenarios should include aspects of both group context and features, but I also maybe want short code snippets for features, figure out if those should be interleaved or put afterwards. Maybe I could inline them? Put a pivot on the article? -->
-
 Consider these scenarios:
 
-<!-- TODO Get more of these. I need mini, two-sentence scenarios that get specific, in order to paint a picture. and make them concreete: not "an agent; information; tasks," but an agent that does a specific things; is asked for specific information and to do a specific task. Ideas should come from and use unique Teamsy stuff for agents, like interesting events it can respond to, using reactions, mentions, suggested actions, slash commands etc, or maybe like adding in message extension capabilities to do really cool stuff. Maybe genericize some real customer apps; these should be inspiring. Also access to org M365 data. -->
+<!-- TODO Refine these, have a handful, pack them with features but keep them short. The idea is to concisely pack every cool feature into a few short illustrative scenarios to inspire (a few short punchy ones are better than one long-running one). I need mini, two or three sentence scenarios that get specific, in order to paint a picture. and make them concreete: not "an agent; information; tasks," but an agent that does a specific things; is asked for specific information and to do a specific task. Ideas should come from and use unique Teamsy stuff for agents, like interesting events it can respond to, using reactions, mentions, suggested actions, slash commands etc, or maybe like adding in message extension capabilities to do really cool stuff. Maybe genericize some real customer apps; these should be inspiring. Also access to org M365 data. -->
 
 - A team adds an agent to their group chat to ask it for information and direct it to perform tasks. The agent can infer intent based on the conversation and share the results back into the thread.
 - An agent in a long-running channel absorbs details about decisions and process. When appropriate, it proactively suggests actions, requests approval, and acts on the team's behalf.
-- An agent that can...
--
-- <!-- TODO also code samples that do like reactions and other Teams-only stuff. @mentions, emoji reactions on messages, quoted and threaded replies, command autocomplete, detection of channel and meeting events, citations and disclosure labels on AI-generated content, user feedback intake, custom dialogs and more-->
+- An agent that "learns" across conversations by creating memories. Can mention the feedback feature in this one.
+- An agent is prompted to be aware that it's operating in the context of Teams dynamcally uses conversation features like mentions, reactions, quoting, and targeted (private) messages in group conversations.
+- An agent that proactively offers information or action without having to be explicitly addressed, without being obnoxious. Uses buttons for quick approval.
+
+- <!--  @mentions, emoji reactions on messages, quoted and threaded replies, command autocomplete, detection of channel and meeting events, citations and disclosure labels on AI-generated content, user feedback intake, custom dialogs and more-->
 
 ## The development process
 
