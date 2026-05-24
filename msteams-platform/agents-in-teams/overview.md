@@ -18,29 +18,29 @@ An agent in Teams is a kind of *bot*: an app that users install into Teams and i
 
 <!-- REVIEW NOTE: The old version's "Agent developer experience" which gave no insight. Note that we don't position Teams SDK here as "primary" to Agent's SDKs "secondary/compatible", we simply don't mention Agents SDK here at all, which is why this section doesn't talk about Teams SDK's "first-class"ness either - it's simply the one. -->
 
-For developers, creating a Teams agent means writing a web service. The service behind a Teams agent handles events sent by the Teams platform and makes calls to the platform's API. Developers use Teams SDK (TODO link) to create these services and can host them anywhere on the web. Teams SDK uses web service frameworks that are familiar to TypeScript, C#, and Python developers to help them structure their Teams apps, and offers tools for simplifying common Teams app concerns and accelerating app development.
+For developers, creating a Teams agent means writing a web service. The service behind a Teams agent handles events sent by the Teams platform and makes calls to the platform's API. Developers use Teams SDK (TODO link) to create these services and can host them anywhere on the web. Teams SDK uses web service frameworks that are familiar to TypeScript, C#, and Python developers to help them structure their Teams apps, and offers tools for simplifying common app concerns and accelerating development.
 
 With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just conversational assistants. For bot and agent apps, the main focus of development is handling and responding to chat messages.
 
-## Comparing bots and agents
+## Comparing bots and agent design
 
-Traditional bots typically react to predefined commands that are addressed to them directly in chat. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
+Traditional bots react to predefined commands with deterministic responses, and only when they are addressed directly in chat. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
 
 <!-- TODO should I pivot this article or use tabs? -->
 
-*TODO Snippet of simple bot message handler with pseudocode inside a real message handler: check if in 1:1 or if @mentioned, read command, act and respond. Be careful not to infer that the pseudocode represents APIs offered by TSDK.*
+*TODO Snippet of simple bot message handler with pseudocode inside a real message handler: check if in 1:1 or if @mentioned, detect command, act and respond. Be careful to imply that the pseudocode methods are implemented elsewhre, not that they represent APIs offered by TSDK.*
 
-Agents work differently. They can also respond to commands with predefined behaviors, but generally an agent relies on an LLM to drive its actions and responses. Agents can track every message of a conversation to form an understanding of users' intent, dynamically make decisions, and reply with natural language that fits the context of the conversation. When connected to other services, agents can intelligently take action and perform tasks on users' behalf. Here's the message handler for an agent that... TODO
+Agents work differently. They can offer deterministic behavior with named commands, but generally agents rely on LLMs to interpret natural-language requests and drive behavior. Agents can track every message in a discussion to build context for the LLM, which it will use to form an understanding of users' intent, dynamically make decisions, and reply conversationally. When connected to other services, agents can intelligently take action and perform tasks on users' behalf. Here's the message handler for an agent that... TODO
 
-*TODO Snippet of simple LLM-driven agent message handler with pseudocode inside a real message handler. This one shouldn't be deeply integrated with Teams, just a messenger, integration comes below.*
+*TODO Snippet of simple LLM-driven agent message handler with pseudocode inside a real message handler. Keep it short, don't worry about integrating deeply with chat features unless it's snappy, the focus is the LLM-driven architecture*
 
 ## What's possible with agents in Teams
 
-Outside of Teams, most agents are presented as one-to-one assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to collaborate in chat to get work done.
+Outside of Teams, most conversational agents are presented as one-to-one assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to collaborate in chat to get work done.
 
 Consider these scenarios:
 
-<!-- TODO Refine these, have a handful, pack them with features but keep them short. The idea is to concisely pack every cool feature into a few short illustrative scenarios to inspire (a few short punchy ones are better than one long-running one). I need mini, two or three sentence scenarios that get specific, in order to paint a picture. and make them concreete: not "an agent; information; tasks," but an agent that does a specific things; is asked for specific information and to do a specific task. Ideas should come from and use unique Teamsy stuff for agents, like interesting events it can respond to, using reactions, mentions, suggested actions, slash commands etc, or maybe like adding in message extension capabilities to do really cool stuff. Maybe genericize some real customer apps; these should be inspiring. Also access to org M365 data. -->
+*TODO Refine these, have a handful, pack them with features but keep them short. A few 2-3 sentence scenarios are better than one extended one. The goal here is to both illustrate the possibilities and to inspire. They should paint a picture and be concrete, not generically referring to "information" and "tasks" but showcasing specific, hypothetical real-world requests, actions and responses. Ideas should come from and use unique Teamsy stuff for agents, like interesting events they can respond to, using reactions, mentions, suggested actions, slash commands, targeted messages, feedback intake, citations and disclosure labels, maybe like adding in message extension capabilities to do really cool stuff. Should also leverage identity and access to workplace data. Maybe genericize some real customer apps*
 
 - A team adds an agent to their group chat to ask it for information and direct it to perform tasks. The agent can infer intent based on the conversation and share the results back into the thread.
 - An agent in a long-running channel absorbs details about decisions and process. When appropriate, it proactively suggests actions, requests approval, and acts on the team's behalf.
@@ -48,15 +48,13 @@ Consider these scenarios:
 - An agent is prompted to be aware that it's operating in the context of Teams dynamcally uses conversation features like mentions, reactions, quoting, and targeted (private) messages in group conversations.
 - An agent that proactively offers information or action without having to be explicitly addressed, without being obnoxious. Uses buttons for quick approval.
 
-- <!--  @mentions, emoji reactions on messages, quoted and threaded replies, command autocomplete, detection of channel and meeting events, citations and disclosure labels on AI-generated content, user feedback intake, custom dialogs and more-->
-
 ## Agents and apps in the Microsoft 365 ecosystem
 
 Do mention that they can go in Copilot, M365 etc. etc. too. The teams app model is actually the M365 app model, these concepts are everywhere, etc.
 
 <!-- TODO we can add an additional "more concepts" nextsteps button at the bottom that goes to the "app model" page. -->
 
-## Links (TODO rename)
+## Related resources
 
 <!-- TODO sdk page -->
 <!-- TODO what else? -->
