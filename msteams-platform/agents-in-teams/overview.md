@@ -14,23 +14,25 @@ ms.topic: reference
 
 An *agent* in Teams is a kind of *bot*: an app that users install into Teams and interact with conversationally in Teams chat. Agents are bots that use modern AI techniques to converse naturally, adapt to context, and help users get work done.
 
-Unlike rule-based bots with fixed behavior, agents rely on large language models (LLMs) to understand users' intent, dynamically make decisions, and respond with natural language. Given connectivity to other services, agents can take action and perform tasks on users' behalf.
+Unlike rule-based bots with fixed behavior, agents rely on large language models (LLMs) to understand users' intent, dynamically make decisions, and respond with natural language. When connected to other services, agents can take action and perform tasks on users' behalf.
 
 ## Building agents for Teams
 
 <!-- REVIEW NOTE: The old version's "Agent developer experience" which gave no insight. Note that we don't position Teams SDK here as "primary" to Agent's SDKs "secondary/compatible", we simply don't mention Agents SDK here at all, which is why this section doesn't talk about Teams SDK's "first-class"ness either - it's simply the one. -->
 
-From a developer's perspective, a Teams app consists of two main components:
+Teams supports multiple kinds of apps, including bots and agents. From a developer's perspective, all Teams apps have two main parts:
 
-1. A web service, built with Teams SDK (TODO link), that receives events from the Teams platform and makes calls to its API. The service can be hosted anywhere on the web.
+1. A web service that receives events from the Teams platform and makes calls to the platform's API. The web service part of a Teams app is built with Teams SDK (TODO link) and can be hosted anywhere on the web.
 
-2. The app manifest, a JSON configuration file that describes the functionality and configuration of the application. A developer deploys the app manifest to the Teams platform to make the app available to users.
+2. The app manifest, a JSON configuration file that describes the functionality and configuration of the app. During development, you can use the manifest to install the application locally for testing and debugging. When you are ready to release the app to your organization or to the Teams Store, you deploy the manifest to the Teams platform and publish it.
 
-An agent's behavior and capabilities are mainly defined by the way its service handles events triggered by user actions in Teams, but agents can act proactively as well. Teams SDK provides a framework in idiomatic TypeScript, C# and Python for creating services that handle Teams events. For example...
+<!-- TODO mention bot registration as a third component? Or should I even cut this from "two main parts" to "the core focus is a web service" and mention the manifest as an incidental further down when talking about sideloading? TODO, think I'll do the latter, focus on code.-->
 
-<!--TODO medium sized code snippet in 3-lang tabs that has some LLMness, not just an echo response -->
+The web service is the core of the app and its development process. Teams SDK provides a framework that models the event-driven structure of a Teams app in idiomatic TypeScript, C#, and Python, and simplifies common tasks. For example...
 
-Teams SDK also simplifies other important parts of developing Teams apps, including request and response authentication, user authentication and enterprise single sign-on, calling the Teams platform and Microsoft Graph APIs, and managing agent conversation state.
+<!--A good code snippet or 3 small ones, in all 3 langs. Call out if they're toys and spend a sentence explaining how you'd make them real by using an LLM or whatever. See note below - pivot this article? -->
+
+Teams SDK also includes a developer CLI tool to accelerate development. The workflow enabled by the Teams developer CLI is designed to help you quickly get started with a new project and have it running in Teams at the very beginning of development.
 
 ## Scenarios for Teams agents
 
