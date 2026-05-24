@@ -6,6 +6,8 @@ ms.date: 02/06/2025
 ms.topic: reference
 ---
 
+<!-- TODO refresh metadata -->
+
 # Agents in Teams
 
 <!-- REVIEW NOTE: Distinguishing this from the old article: This condenses things; the old vesrion was marketing-ish and used broad value statements, and relied on one big scenario further down that didn't  highlight the value of putting agents specifically into Teams. This version focuses on the developer perspective with a technical definition (with a next steps link that points to a new article about the Teams app model, in addition to the existing one that goes to the quickstart), and uses multiple, small, concrete scenarios that paint a picture and focus on Teams' distinguished value as an environment for agents -->
@@ -36,11 +38,11 @@ Agents work differently. Like traditional bots, they can offer deterministic beh
 
 ## What's possible with agents in Teams
 
-Outside of Teams, most conversational agents are presented as private assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to get work done by collaborating in chat.
+Outside of Teams, most conversational agents are presented as private assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique opportunities for creating agents that expressively interact with users in group conversations, in the place where users already go to collaborate on work.
 
 Consider these scenarios:
 
-*TODO Refine these, have a handful, pack them with features but keep them short. A few 2-3 sentence scenarios are better than one extended one. The goal here is to both illustrate the possibilities and to inspire. They should paint a picture and be concrete, not generically referring to "information" and "tasks" but showcasing specific, hypothetical real-world requests, actions and responses. Ideas should come from and use unique Teamsy stuff for agents, like interesting events they can respond to, using reactions, mentions, suggested actions, slash commands, targeted messages, feedback intake, citations and disclosure labels, maybe like adding in message extension capabilities to do really cool stuff. Should also leverage identity and access to workplace data. Maybe genericize some real customer apps*
+*TODO Refine these, have a handful, pack them with features but keep them short. A few 2-3 sentence scenarios are better than one extended one. The goal here is to both illustrate the possibilities and to inspire. They should paint a picture and be concrete, not generically referring to "information" and "tasks" but showcasing specific, hypothetical real-world requests, actions and responses. Ideas should come from and use unique Teamsy stuff for agents, like interesting events they can respond to, proactive messaging, using reactions, mentions, suggested actions, slash commands, targeted messages, feedback intake, citations and disclosure labels, maybe like adding in message extension capabilities to do really cool stuff. Should also leverage identity and access to workplace data. Maybe genericize some real customer apps*
 
 - A team adds an agent to their group chat to ask it for information and direct it to perform tasks. The agent can infer intent based on the conversation and share the results back into the thread.
 - Make sure to feature a 1:1 personal agent too, just to indicate it can be done. This scenario can emphasize other aspects like workplace data access, reactions, slash commands etc.
