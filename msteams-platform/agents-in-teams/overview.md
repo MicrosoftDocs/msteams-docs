@@ -22,27 +22,28 @@ For developers, creating a Teams agent means writing a web service. The service 
 
 With the Teams SDK, developers can build apps that offer a variety of interactions in Teams, not just conversational assistants. For bot and agent apps, the main focus of development is handling and responding to chat messages.
 
-## Comparing bots and agent design
+## Comparing bot and agent design
 
-Traditional bots react to predefined commands with deterministic responses, and only when they are addressed directly in chat. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
+Traditional bots typically react to predefined commands with deterministic responses, and only when they are addressed directly in chat. Here's the message handler for a bot that... TODO bot should respond to 1:1s or to @mentions in groups and parse commands.
 
 <!-- TODO should I pivot this article or use tabs? -->
 
 *TODO Snippet of simple bot message handler with pseudocode inside a real message handler: check if in 1:1 or if @mentioned, detect command, act and respond. Be careful to imply that the pseudocode methods are implemented elsewhre, not that they represent APIs offered by TSDK.*
 
-Agents work differently. They can offer deterministic behavior with named commands, but generally agents rely on LLMs to interpret natural-language requests and drive behavior. Agents can track every message in a discussion to build context for the LLM, which it will use to form an understanding of users' intent, dynamically make decisions, and reply conversationally. When connected to other services, agents can intelligently take action and perform tasks on users' behalf. Here's the message handler for an agent that... TODO
+Agents work differently. Like traditional bots, they can offer deterministic behavior with named commands, but generally agents rely on LLMs to interpret natural-language requests and drive behavior. Agents can track every message in a discussion to build context for the LLM and form an understanding of users' intent, dynamically make decisions, and reply in a conversational style. When connected to other services, agents can intelligently take action and perform tasks on users' behalf. Here's the message handler for an agent that... TODO
 
 *TODO Snippet of simple LLM-driven agent message handler with pseudocode inside a real message handler. Keep it short, don't worry about integrating deeply with chat features unless it's snappy, the focus is the LLM-driven architecture*
 
 ## What's possible with agents in Teams
 
-Outside of Teams, most conversational agents are presented as one-to-one assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to collaborate in chat to get work done.
+Outside of Teams, most conversational agents are presented as private assistants in dedicated chat interfaces or integrated with another tool. Teams offers unique, rich opportunities for creating agents that expressively interact with users in the place where they already come to get work done by collaborating in chat.
 
 Consider these scenarios:
 
 *TODO Refine these, have a handful, pack them with features but keep them short. A few 2-3 sentence scenarios are better than one extended one. The goal here is to both illustrate the possibilities and to inspire. They should paint a picture and be concrete, not generically referring to "information" and "tasks" but showcasing specific, hypothetical real-world requests, actions and responses. Ideas should come from and use unique Teamsy stuff for agents, like interesting events they can respond to, using reactions, mentions, suggested actions, slash commands, targeted messages, feedback intake, citations and disclosure labels, maybe like adding in message extension capabilities to do really cool stuff. Should also leverage identity and access to workplace data. Maybe genericize some real customer apps*
 
 - A team adds an agent to their group chat to ask it for information and direct it to perform tasks. The agent can infer intent based on the conversation and share the results back into the thread.
+- Make sure to feature a 1:1 personal agent too, just to indicate it can be done. This scenario can emphasize other aspects like workplace data access, reactions, slash commands etc.
 - An agent in a long-running channel absorbs details about decisions and process. When appropriate, it proactively suggests actions, requests approval, and acts on the team's behalf.
 - An agent that "learns" across conversations by creating memories. Can mention the feedback feature in this one.
 - An agent is prompted to be aware that it's operating in the context of Teams dynamcally uses conversation features like mentions, reactions, quoting, and targeted (private) messages in group conversations.
