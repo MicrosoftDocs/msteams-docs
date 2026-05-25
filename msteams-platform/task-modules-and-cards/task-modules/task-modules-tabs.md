@@ -3,7 +3,7 @@ title: Use dialogs in Microsoft Teams tabs
 description: Learn how to invoke dialogs (task modules) from Teams tabs and submitting its result using the Teams JavaScript client library (TeamsJS). It includes code samples.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 02/22/2023
+ms.date: 04/15/2026
 ---
 
 # Use dialogs in tabs
@@ -82,7 +82,7 @@ The value of `UrlDialogInfo.url` is set to the location of the content of your d
  microsoftTeams.dialog.adaptiveCard.open(adaptiveCardDialogInfo, submitHandler);
 ```
 
-The value of `adaptiveCardDialogInfo.card` is the [JSON for an Adaptive Card](../../task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
+The value of `adaptiveCardDialogInfo.card` is the JSON for an [Adaptive Card](https://adaptivecards.io/explorer/). You can specify a `submitHandler` to be called with an *err* string, if there was an error when invoking `open()` or if the user closes the dialog using the **X** (Exit) button.
 
 The next section gives an example of invoking a dialog.
 
@@ -161,8 +161,8 @@ Teams then invokes your `submitHandler` where `err` is *null* and `result` is th
 
 When you invoke the dialog with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as its `data` object. If the user presses the **Esc** key or selects **X** to exit the dialog, your `submitHandler` is called with the `err` string. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` ([BotAdaptiveCardDialogInfo](/javascript/api/@microsoft/teams-js/botadaptivecarddialoginfo)) object.
 
-The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
-The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive Cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for dialog submit messages](../../task-modules-and-cards/task-modules/task-modules-bots.md#handle-dialog-submit-events).
+The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive Cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#handle-dialog-submit-events).
 
 The following code is the example of payload:
 
