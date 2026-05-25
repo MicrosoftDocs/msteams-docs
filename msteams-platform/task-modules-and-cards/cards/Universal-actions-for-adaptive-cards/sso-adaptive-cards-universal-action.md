@@ -3,7 +3,7 @@ title: SSO for Adaptive Card Universal Actions
 description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 02/06/2023
+ms.date: 05/25/2026
 ---
 
 # Add code to enable SSO for Adaptive Cards Universal Actions
@@ -118,13 +118,13 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 1. The bot returns a non-error response to the Teams client using either a card or message.
 
 > [!NOTE]
-> To handle the access token in case the app user logs out, see [handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
+> To handle the access token in case the app user logs out, see [handle app user sign out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-sign-out).
 
 ## Code sample
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest** |
 | --- | --- | --- | --- | --- |
-| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp/demo-manifest) | 
+| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp/demo-manifest) |
 
 ## See also
 
