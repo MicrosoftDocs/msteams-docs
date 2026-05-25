@@ -136,23 +136,17 @@ Prompt starters reappear in the **View Prompts** flyout above the compose box du
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
-## Suggested actions
-
-[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
-
 # [Group chat](#tab/gc)
 
 You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
 
-## Suggested actions
-
-[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
-
 # [Channel](#tab/channel)
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
+
+---
 
 ## Suggested actions
 
