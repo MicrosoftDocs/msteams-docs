@@ -160,31 +160,31 @@ Suggested actions are supported in all scopes:
 
 **Desktop**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-personal-chat.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../../assets/images/bots/suggested-action-personal-chat.png":::
 
 **Mobile**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a personal chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a personal chat in a mobile client." lightbox="../../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
 
 # [Group chat](#tab/gc)
 
 **Desktop**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../../assets/images/bots/suggested-action-gc.png":::
 
 **Mobile**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc-mobile.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-gc-mobile-lightbox.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-gc-mobile.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../../assets/images/bots/suggested-action-gc-mobile-lightbox.png":::
 
 # [Channel](#tab/channel)
 
 **Desktop**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-channel.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../../assets/images/bots/suggested-action-channel.png":::
 
 **Mobile**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-channel-mobile.png" alt-text="Image shows suggested actions in a channel in a mobile client." lightbox="../../assets/images/bots/suggested-action-channel-mobile-lightbox.png":::
+:::image type="content" source="../../../assets/images/bots/suggested-action-channel-mobile.png" alt-text="Image shows suggested actions in a channel in a mobile client." lightbox="../../../assets/images/bots/suggested-action-channel-mobile-lightbox.png":::
 
 ---
 
