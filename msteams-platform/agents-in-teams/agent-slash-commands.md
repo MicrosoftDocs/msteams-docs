@@ -169,7 +169,8 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 - **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
   > [!NOTE]
-  > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+  > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+  > - The message extension is accessible both via message extension action and slash command declared in the manifest.
 
     ```json
     {
