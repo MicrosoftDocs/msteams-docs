@@ -1,7 +1,7 @@
 ---
 title: Map Use Cases to App Features
 description: Learn to identify how your app's use cases can work within the Teams experience, app features, and capabilities, and map common use cases with capabilities.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.author: anclear
 ms.date: 02/06/2025
