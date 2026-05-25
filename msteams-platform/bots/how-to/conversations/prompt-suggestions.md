@@ -65,7 +65,7 @@ The following image illustrates an example of prompt starters:
 
 ---
 
-### Define `commands` in app manifest
+## Define `commands` in app manifest
 
  To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
@@ -147,6 +147,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 Suggested actions enable bots to present predefined options as buttons in a bot message. Users can select a button to send a predefined response or trigger an action without typing in the compose box.
 The buttons are displayed below the bot message and remain available until replaced or removed by the bot. In one-on-one conversations, they are removed after a user selects an option.
+
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Suggested actions can be generated and placed dynamically during a conversation, meaning that you can use your bot’s large language model (LLM) to generate them along with a response during a conversation turn.
 
 Teams supports displaying up to three suggested actions at any given time. Suggested actions cards remain visible and accessible until they are replaced or removed by the bot's actions.
@@ -191,6 +192,12 @@ Suggested actions are supported in all scopes:
 > [!NOTE]
 >
 > `SuggestedActions` aren't supported in bot messages that include attachments, regardless of the conversation type.
+
+You can build the following suggested actions in your agent or bot:
+
+* **imBack**: Use `imBack` to add suggested actions. Set `activity.suggestedActions` to a list of card actions (buttons) to display to the user.
+
+* **Action.Compose**: Use `Action.Compose` to prefill the compose box with a message, including tags, @mentions, and rich content such as emojis, GIFs, and other semantic objects.
 
 Here are some examples that show how to implement and experience suggested actions using `imBack` and `Action.Compose`:
 
