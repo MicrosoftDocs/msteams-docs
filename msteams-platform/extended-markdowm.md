@@ -268,7 +268,7 @@ Each `adaptivecard` fenced block must contain exactly one valid Adaptive Card JS
 
 ### Example: Build report with inline actions
 
-<!-- TODO: Replace with validated sample from engineering -->
+TODO: Replace with validated sample
 
 ### Guidelines for inline Adaptive Cards
 
@@ -297,7 +297,7 @@ Each entity representation is a JSON object with the following fields:
 
 ### Example: File entity representation
 
-<!-- TODO: Replace with validated sample from engineering -->
+TODO: Replace with validated sample
 
 ### Supported entity types
 
