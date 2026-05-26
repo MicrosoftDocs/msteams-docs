@@ -249,6 +249,105 @@ See messaging (TODO link)
 
 <!-- TODO maybe a small section explicitly specifying that all message events, like OnMessageDelete, are supported, and you can check the visibility on the message). -->
 
+Use one of the following code snippets to update a targeted message:
+
+# [C#](#tab/dotnet1)
+
+```csharp
+// Update
+var response = await context.Send(
+    new MessageActivity("Original targeted message")
+        .WithRecipient(context.Activity.From, true), cancellationToken);
+var conversationId = context.Activity.Conversation.Id;
+var messageId = response.Id;
+
+var updatedMessage = new MessageActivity("This message has been updated!");
+await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
+```
+
+# [TypeScript](#tab/ts1)
+
+```typescript
+// Update
+const response = await context.send(
+    new MessageActivity('Original targeted message')
+        .withRecipient(context.activity.from, true), cancellationToken);
+const conversationId = context.activity.conversation.id;
+const messageId = response.id;
+
+const updatedMessage = new MessageActivity('This message has been updated!');
+await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
+```
+
+# [Python](#tab/Py1)
+
+```python
+# Update
+response = await ctx.send(
+    MessageActivityInput(text="Original targeted message")
+        .with_recipient(ctx.activity.from_property, True), cancellation_token)
+conversation_id = ctx.activity.conversation.id
+message_id = response.id
+
+updated_message = MessageActivityInput(text="This message has been updated!")
+await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
+```
+
+# [HTTP](#tab/api1)
+
+The agent calls the `Edit TM` API using the message’s `activityId`.
+
+```REST
+PUT {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+Authorization: Bearer eyJh...
+Content-Type: application/json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
+```
+
+---
+
+Use one of the following code snippets to delete a targeted message:
+
+# [C#](#tab/dotnet1)
+
+```csharp
+// Delete
+await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
+```
+
+# [TypeScript](#tab/ts1)
+
+```typescript
+// Delete
+await api.conversations.activities.deleteTargeted(conversationId, messageId);
+```
+
+# [Python](#tab/Py1)
+
+```python
+#Delete
+await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
+```
+
+# [HTTP](#tab/api1)
+
+Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
+
+```REST
+DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+Authorization: Bearer eyJh...
+Content-Type: application/json
+
+No body required.
+```
+
+---
+
 ## Best practices and design guidance
 
 TODO need blanket guidance here, why _wouldn't_ you opt in your agent to targeted messaging? also explicitly enumerate the two or three "standard workflows" here very briefly.
