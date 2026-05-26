@@ -46,6 +46,9 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
+> [!NOTE]
+> Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
+
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
@@ -490,6 +493,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
         }
     }
 }
+```
 
 ```
 
@@ -1060,6 +1064,8 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1212,7 +1218,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reactions added to bot message](#reactions-added-to-bot-message).           | All   |
-| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All |
+| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All   |
 
 ### Reactions added to bot message
 
@@ -1595,6 +1601,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     "action": "add"
     }
 ```
+
 
 # [Python](#tab/python)
 
