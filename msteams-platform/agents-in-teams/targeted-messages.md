@@ -274,6 +274,14 @@ Agents can use suggested actions (TODO link) to request approval to share a resp
 
 <!-- TODO tables like this are for ref content, this should be condensed into prose that summarizes the main TM-specific errors you might run in to -->
 
+Targeted message operations can return `400 Bad argument` when the payload is invalid. On create, this usually means the recipient is missing. Call `WithRecipient(account, isTargeted: true)` with a valid Account object. The same requirement applies to the `Send TM` API.
+`400 Bad argument` can also occur when recipient data is included where it should not be. Do not pass a recipient on update or delete, and do not include it in the `Edit TM` API payload.
+`403 BotNotInConversationRoster` means the bot is not a member of the conversation. Install the bot in the conversation before sending targeted messages.
+`404 ActivityNotFoundInConversation` means the message ID was not found. The message may have been deleted or auto-removed after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
+In prompt preview scenarios, `400 INVALID_TARGETED_MESSAGE_ID` means the targeted message ID is invalid. Verify that the ID is correct. `404 TARGETED_MESSAGE_EXPIRED_OR_DELETED` means the referenced message was deleted or auto-removed after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
+
+<!--
+
 | HTTP Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
 | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
@@ -288,6 +296,7 @@ Agents can use suggested actions (TODO link) to request approval to share a resp
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 | 400 | `INVALID_TARGETED_MESSAGE_ID` | The message ID used for the prompt preview is invalid. | Ensure that the message ID for the targeted message is correct. |
 | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | The message ID associated with the prompt preview in the agent response couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+-->
 
 More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
