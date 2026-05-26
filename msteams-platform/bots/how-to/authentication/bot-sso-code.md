@@ -4,16 +4,16 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
-ms.date: 05/25/2026
+ms.date: 05/26/2026
 ---
 # Add code to enable SSO in your bot app
 
 Before you add code to enable single sign-on (SSO), ensure to configure your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
-> [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
+> [Configure bot app in Azure Bot Service](bot-sso-register-aad.md)
 
-You need to configure your app's code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the bot app.
+You need to configure your app's code to obtain an access token from Azure Bot Service. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
 > If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript, TypeScript, and C# apps in Visual Studio Code.
@@ -30,7 +30,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
+You've configured client secret and OAuth connection setting for the app in Azure Bot Service. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -38,9 +38,9 @@ To update the development environment variables:
 1. Open the environment file (`.env`) for your project.
 1. Update the following variables:
 
-    - For `CLIENT_ID`, update the bot ID from Microsoft Entra ID.
+    - For `CLIENT_ID`, update the bot ID from Azure Bot Service.
     - For `CLIENT_SECRET`, update the client secret.
-    - For `CONNECTION_NAME`, update the name of the OAuth connection you configured in Microsoft Entra ID.
+    - For `CONNECTION_NAME`, update the name of the OAuth connection you configured in Azure Bot Service.
     - For `TENANT_ID`, update the tenant ID.
 
     > [!NOTE]
@@ -86,7 +86,7 @@ const app = new App({
 
 ```python
 import os
-from teams import App
+from microsoft_teams.apps import App
 
 app = App(default_connection_name=os.getenv("CONNECTION_NAME", "graph"))
 ```
@@ -246,7 +246,7 @@ async def handle_sign_in(event: SignInEvent):
 
 When using SSO, if the token exchange fails, Teams sends a `signin/failure` invoke activity to your app. The SDK includes a built-in default handler that logs a warning with actionable troubleshooting guidance. You can optionally register your own handler to customize the behavior:
 
-# [C#](#tab/cs-failure)
+# [C#](#tab/cs5)
 
 ```csharp
 teams.OnSignInFailure(async (context, cancellationToken) =>
@@ -257,7 +257,7 @@ teams.OnSignInFailure(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/ts-failure)
+# [TypeScript](#tab/ts5)
 
 ```typescript
 app.on('signin.failure', async ({ activity, send }) => {
@@ -267,7 +267,7 @@ app.on('signin.failure', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/py-failure)
+# [Python](#tab/py5)
 
 ```python
 @app.on_signin_failure()

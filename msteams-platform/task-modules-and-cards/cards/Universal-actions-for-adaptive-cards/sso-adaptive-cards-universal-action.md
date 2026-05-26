@@ -118,7 +118,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 1. The bot returns a non-error response to the Teams client using either a card or message.
 
 > [!NOTE]
-> To handle the access token in case the app user logs out, see [handle app user sign out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-sign-out).
+> To handle the access token in case the app user signs out, see [handle app user sign out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-sign-out).
 
 ## Code sample
 

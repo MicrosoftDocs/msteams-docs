@@ -82,6 +82,7 @@ const app = new App({
 # [Python](#tab/py2)
 
 ```python
+import os
 from microsoft_teams.apps import App, AppOptions
 
 app = App(
@@ -358,6 +359,9 @@ app.message('/signout', async ({ send, signout, isSignedIn }) => {
 # [Python](#tab/py7)
 
 ```python
+from microsoft_teams.api import MessageActivity
+from microsoft_teams.apps import ActivityContext
+
 @app.on_message_pattern("signout")
 async def handle_signout(ctx: ActivityContext[MessageActivity]):
     if not ctx.is_signed_in:
