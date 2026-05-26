@@ -19,7 +19,7 @@ Teams apps bring new features and experiences to the Teams interface, similar to
 
 In the Teams app model, developers customize a set of predefined surfaces and interactions in Teams called *app capabilities*.
 
-To create a Teams app, a developer builds a web app or a web service that implements the behavior of one or more app capabilities. When a user interacts with the app's capabilities in Teams, it connects to the web app or web service to power their experience.
+To create a Teams app, a developer builds a web app or a web service that implements one or more app capabilities. When a user interacts with the app in Teams, it connects to the web app or web service to power their experience.
 
 Teams offers three app capabilities that developers can implement:
 
@@ -29,35 +29,34 @@ Teams offers three app capabilities that developers can implement:
 - **Tab**: Display a website or web application in a browser frame that users can add to their Teams conversations and meetings. Developers can use Teams' client-side libraries to create web applications that integrate closely with Teams when displayed in tabs.
 - **Message extension**: Display custom dialogs in Teams that perform actions or searches, and use the results to create rich, interactive messages in Teams chats.
 
-The web app or web service that powers a Teams app can be hosted anywhere on the web, but hosting is the developer's responsibility. Teams does not host or run application code.
+> [!NOTE]
+> TODO Note on bot vs agent, sometimes all conversational apps are called bots; link to "agents in teams", disavow bot framework.
 
-## manifest and package
+The web app or web service that powers a Teams app can be hosted anywhere on the web, but hosting is the developer's responsibility. Teams does not host or run application code. In the Teams client and platform, an application is represented entirely by a configuration file call its manifest.
 
-When a user installs a Teams app, the only elements deployed to their device are the app's icons and a JSON configuration file called the *app manifest*. The manifest declares and configures the capabilities used by the app, including the URLs of the web apps and web services that power them. Developers typically treat their app's manifest as part of the app's source code, storing it in source control and updating it as the app evolves during development.
+TODO scopes anywhere?
 
-Teams apps are distributed as *app packages*, which are just zip files containing the app's icons and manifest. During development, developers can package and install their app directly to their local copy of Teams for testing. When a developer publishes the finished app and a user selects it from the Teams Store or their organizational app catalog, Teams downloads its package and installs it.
+## App manifest and package
+
+An app's *manifest* is a JSON configuration file that specifies the capabilities used by the app, including the locations of the web apps and web services that power them. Developers typically treat their app's manifest as part of the app's source code, storing it in source control and updating it as the app evolves during development. When a user installs a Teams app, the only elements deployed to their device are the app's icons and a JSON configuration file called the *app manifest*.
+
+Teams apps are distributed as *app packages*, which are just zip files containing the app's icons and manifest. During development, developers can package and install their app directly to their local copy of Teams for testing. When a developer publishes the finished app and a user installs it from the Teams Store or their organizational app catalog, Teams downloads its package and loads its configuration.
 
 ## Bot and Entra ID registration
 
-Agents and other bot-capability apps require
+When users chat with an agent or bot app, behavior is in web service, but platform doesn't talk directly to the web service
+
+Not billable Azure resources
+
+You will need an Azure account and billable Azure subscription to create an Azure bot
+
+Teams platform doesn't communicate directly with bots, it uses botservice as an intermediary
+
+"The web service that defines an agent's behavior can be hosted anywhere, but Teams' identity infrastructure lives in Azure."
 
 ## The development process: TDP and CLI, SDK
 
 Teams SDK: Teams apps interact with the Teams API, Graph API, need to validate requests, etc. etc.
-
-## App capabilities
-
-<!-- TODO should I make this "the primary three"? I don't want to leave anything out, I know there's "meeting apps" but I'm not sure how to articulate that, what else? -->
-
-## Any other small app stuff: scopes?
-
-## Components
-
-### package, manifest, registration, TDP and CLI
-
-### bot registration and Entra ID app
-
-## Package and manifest registration, dev process?s
 
 App packages and their manifests can be created manually, but it's recommended to do it by creating an *app registration* with the Teams platform. Creating an app registration initializes a new app package and manifest and sets up the means for publishing the app to the Teams Store or your organization's app catalog when the app is finished. Registering the app also initializes important infrastruture needed for bot and agent apps during development, see below. Registering apps with Teams platform requires a Microsoft 365 organizational account with access to Teams, but is otherwise free.
 
@@ -65,15 +64,11 @@ The Teams developer CLI and Teams Developer Portal facilitate this workflow. The
 
 The platform registration itself isn't needed until you're ready to distribute your app, but creating a registration also facilitates creating a bot registration and entra ID app, and is the only way to do it unless you have an azure subscription through which you can access the portal.
 
-During development, you can use the manifest to install the application locally for testing and debugging. When you are ready to release the app to your organization or to the Teams Store, you deploy the manifest to the Teams platform and publish it.
-
 As an app's features evolve during development Can edit in portal live with graphical editor for ease of use or modify locally and deploy to teams client.
 
 do this at the startt of development.
 
 Deploying locally requires "install custom app".
-
-The best way to create an app
 
 Developers are encouraged to get their apps installed and running in Teams at the very beginning of the development process so they can test and experience their app in Teams as they work on it.
 
@@ -84,14 +79,11 @@ To create and manage app packages and manifests, developers use the Teams Develo
 
 The portal and CLI offer various capabilites for verifying and modifying a
 
-An app's registration is the only component of an app that lives on the Teams platform - Teams does not host or run application code.
-rm.
-
 Deploying is separate from publishing
 
 Created and managed in TDP. You can start by creating in TDP and downloading.
 
-Developers typically manage an app's manifest JSON file alongside the source code for the app. The Teams developer CLI includes functionality for scaffolding, validating and updating manifests.
+The Teams developer CLI includes functionality for scaffolding, validating and updating manifests.
 
 TODO rewrite The development process facilitated by the Teams developer CLI encourages developers to sideload ASAP
 
@@ -102,12 +94,6 @@ TODO rewrite The development process facilitated by the Teams developer CLI enco
 Teams SDK also includes a developer CLI tool to accelerate development. The workflow enabled by the Teams developer CLI is designed to help you quickly get started with a new project and have it running in Teams at the very beginning of development. -->
 
 ---
-
-Teams platform doesn't communicate directly with bots, it uses botservice as an intermediary
-
-"The web service that defines an agent's behavior can be hosted anywhere, but Teams' identity infrastructure lives in Azure."
-
-## The dev process
 
 ## Apps are M365 apps
 
