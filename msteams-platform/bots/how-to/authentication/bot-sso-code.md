@@ -11,9 +11,9 @@ ms.date: 05/26/2026
 Before you add code to enable single sign-on (SSO), ensure to configure your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
-> [Configure bot app in Azure Bot Service](bot-sso-register-aad.md)
+> [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
 
-You need to configure your app's code to obtain an access token from Azure Bot Service. The access token is issued on behalf of the bot app.
+You need to configure your app's code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
 > If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript, TypeScript, and C# apps in Visual Studio Code.
@@ -30,7 +30,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure Bot Service. You must configure the code with these values.
+You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -38,9 +38,9 @@ To update the development environment variables:
 1. Open the environment file (`.env`) for your project.
 1. Update the following variables:
 
-    - For `CLIENT_ID`, update the bot ID from Azure Bot Service.
+    - For `CLIENT_ID`, update the bot ID from Microsoft Entra ID.
     - For `CLIENT_SECRET`, update the client secret.
-    - For `CONNECTION_NAME`, update the name of the OAuth connection you configured in Azure Bot Service.
+    - For `CONNECTION_NAME`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `TENANT_ID`, update the tenant ID.
 
     > [!NOTE]
@@ -283,9 +283,6 @@ async def handle_signin_failure(ctx):
 ```
 
 ---
-
-> [!TIP]
-> The most common failure codes are `installedappnotfound` (bot app not installed for the user) and `resourcematchfailed` (Token Exchange URL doesn't match the Application ID URI). For more information, see [SSO Troubleshooting](/microsoftteams/platform/teams-sdk/teams/user-authentication/troubleshooting-sso).
 
 ## Handle app user sign out
 
