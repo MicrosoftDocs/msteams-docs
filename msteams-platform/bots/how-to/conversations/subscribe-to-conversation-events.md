@@ -62,6 +62,10 @@ The following table shows a list of Teams conversation update events with more d
 | Team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [A team is unarchived](#team-unarchived).       | Team |
 | Team restored        | teamRestored      | OnTeamsTeamRestoredAsync    | [A team is restored](#team-restored)       | Team |
 
+### Limitations
+
+Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
+
 ### Channel created
 
 The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
@@ -490,6 +494,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
         }
     }
 }
+```
 
 ```
 
@@ -525,6 +530,7 @@ The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
 > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
+
 
 ```json
 {
@@ -1058,6 +1064,8 @@ export class MyBot extends TeamsActivityHandler {
         });
     }
 }
+```
+
 ```
 
 # [JSON](#tab/json)
@@ -1596,6 +1604,8 @@ async onInstallationUpdateActivity(context: TurnContext) {
     }
 ```
 
+```
+
 # [Python](#tab/python)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-installation-update)
@@ -1655,3 +1665,4 @@ In the development phase, it's always helpful to send meaningful messages in con
 * [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
 * [Create Teams conversation bot](channel-and-group-conversations.md)
 * [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
+```
