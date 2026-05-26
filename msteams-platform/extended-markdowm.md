@@ -114,7 +114,6 @@ The `markdown++` format supports a comprehensive set of Markdown features organi
 | Mermaid diagrams | ` ```mermaid ` | Flowcharts, sequence diagrams, and visualizations |
 | Math (LaTeX) | `$...$` (inline) / `$$...$$` (block) | Mathematical equations using KaTeX |
 | Anchors | `[Jump](#section)` | In-document navigation links |
-<!-- | Collapsible sections | `:::spoiler Title ... :::` | Expandable/collapsible content blocks | -->
 | Definition lists | `Term\n: Definition` | Term-definition pairs |
 | Footnotes | `Text[^1]` / `[^1]: note` | Reference-style footnotes |
 | Inline Adaptive Card | ` ```adaptivecard ` | Embed an Adaptive Card within the Markdown flow |
@@ -523,8 +522,7 @@ Verify rendering on desktop, web, and mobile clients. Complex layouts may displa
 
 ## See also
 
-- [Format your bot messages](format-your-bot-messages.md)
-- [Bot messages with AI-generated content](format-ai-bot-messages.md)
-- [Adaptive Cards in Teams](cards/cards-overview.md)
-- [Send and receive messages](conversations/conversation-basics.md)
-- [Send proactive messages](conversations/send-proactive-messages.md)
+- [Format cards in Teams](task-modules-and-cards/cards/cards-format.md)
+- [Adaptive Cards in Teams](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md)
+- [Channel and group chat conversations](bots/how-to/conversations/channel-and-group-conversations.md)
+- [Send proactive messages](bots/how-to/conversations/send-proactive-messages.md)
