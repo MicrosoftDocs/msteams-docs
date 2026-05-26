@@ -62,8 +62,11 @@ using Microsoft.Teams.Plugins.AspNetCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionName = builder.Configuration["CONNECTION_NAME"]
+    ?? throw new InvalidOperationException("Missing required configuration value: CONNECTION_NAME");
+
 var appBuilder = App.Builder()
-    .AddOAuth("graph");
+    .AddOAuth(connectionName);
 
 builder.AddTeams(appBuilder);
 var app = builder.Build();
