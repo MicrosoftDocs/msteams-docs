@@ -275,9 +275,10 @@ Agents can use suggested actions (TODO link) to request approval to share a resp
 <!-- TODO tables like this are for ref content, this should be condensed into prose that summarizes the main TM-specific errors you might run in to -->
 
 Targeted message operations can return `400 Bad argument` when the payload is invalid. On create, this usually means the recipient is missing. Call `WithRecipient(account, isTargeted: true)` with a valid Account object. The same requirement applies to the `Send TM` API.
+
 `400 Bad argument` can also occur when recipient data is included where it should not be. Do not pass a recipient on update or delete, and do not include it in the `Edit TM` API payload.
-`403 BotNotInConversationRoster` means the bot is not a member of the conversation. Install the bot in the conversation before sending targeted messages.
-`404 ActivityNotFoundInConversation` means the message ID was not found. The message may have been deleted or auto-removed after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
+`403 BotNotInConversationRoster` means the bot is not a member of the conversation. Install the bot in the conversation before sending targeted messages. `404 ActivityNotFoundInConversation` means the message ID was not found. The message may have been deleted or auto-removed after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
+
 In prompt preview scenarios, `400 INVALID_TARGETED_MESSAGE_ID` means the targeted message ID is invalid. Verify that the ID is correct. `404 TARGETED_MESSAGE_EXPIRED_OR_DELETED` means the referenced message was deleted or auto-removed after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
 
 <!--
