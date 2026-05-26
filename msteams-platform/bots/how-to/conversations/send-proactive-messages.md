@@ -28,6 +28,8 @@ You can [proactively install your app using Microsoft Graph](#proactively-instal
 
 Sending a proactive message is different from sending a regular message. There's no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
+Proactive bot messages in Teams are sent by the bot service using a previously established conversation reference. External applications do not send directly to Teams through the Teams SDK; instead, they invoke a trusted service that holds bot credentials and the required conversation identifiers for the target user, chat, or channel. Proactive delivery depends on supported installation and conversation state, including the app being installed for the target scope and the bot being available in the conversation. Multi-tenant designs use the same pattern with tenant-aware identity and stored conversation context.
+
 To send a proactive message, follow these steps:
 
 1. [Get the Microsoft Entra user ID, user ID, team ID, or channel ID](#get-the-user-aad-id-user-id-team-id-or-channel-id), if necessary.
@@ -317,7 +319,10 @@ Example of a code snippet to demonstrate creating conversation reference.
 # [JavaScript](#tab/javascript)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getconversationreference)
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
+
+Proactive bot messages in Teams are sent by the bot service using a previously established conversation reference. External applications do not send directly to Teams through the Teams SDK; instead, they invoke a trusted service that holds bot credentials and the required conversation identifiers for the target user, chat, or channel. Proactive delivery depends on supported installation and conversation state, including the app being installed for the target scope and the bot being available in the conversation. Multi-tenant designs use the same pattern with tenant-aware identity and stored conversation context.
 
 ```javascript
 
@@ -343,6 +348,8 @@ async SendNotificationToAllUsersAsync(context) {
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.botframeworkadapter?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-botframeworkadapter-create-conversation)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L200)
+
+Proactive bot messages in Teams are sent by the bot service using a previously established conversation reference. External applications do not send directly to Teams through the Teams SDK; instead, they invoke a trusted service that holds bot credentials and the required conversation identifiers for the target user, chat, or channel. Proactive delivery depends on supported installation and conversation state, including the app being installed for the target scope and the bot being available in the conversation. Multi-tenant designs use the same pattern with tenant-aware identity and stored conversation context.
 
 ```python
 # Send message to all members.
