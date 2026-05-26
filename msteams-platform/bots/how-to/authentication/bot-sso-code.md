@@ -78,9 +78,11 @@ var teams = app.UseTeams();
 ```typescript
 import { App } from '@microsoft/teams.apps';
 
+const connectionName = process.env.CONNECTION_NAME ?? 'graph';
+
 const app = new App({
   oauth: {
-    defaultConnectionName: 'graph',
+    defaultConnectionName: connectionName,
   },
 });
 ```
