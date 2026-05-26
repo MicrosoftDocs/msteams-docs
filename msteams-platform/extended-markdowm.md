@@ -184,7 +184,7 @@ The equation $E = mc^2$ describes mass-energy equivalence.
 
 ```markdown
 $$
-\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+r = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2}\sqrt{\sum(y_i - \bar{y})^2}}
 $$
 ```
 
@@ -379,7 +379,7 @@ For mentions within an inline Adaptive Card fenced block, use the `msteams.entit
 Images in enriched Markdown messages use standard Markdown image syntax. The platform processes image URLs to ensure security and proper rendering.
 
 ```markdown
-![Build status chart](https://example.com/build-4829.png)
+![Build status chart](https://example.com/image.png)
 ```
 
 **Image processing behaviors:**
