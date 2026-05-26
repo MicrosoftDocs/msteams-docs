@@ -255,17 +255,18 @@ TODO need blanket guidance here, why _wouldn't_ you opt in your agent to targete
 
 Targeted messaging is a standard capability of agents in Teams. Users will expect conservative, careful behavior from agents with respect to the visibility of messages in group conversations. Unless an activity explicitly calls for a public message, targeted messages are usually the best choice for messages intended for a specific user.
 
+Targeted messages are not recommended for one-to-one bot chats or for group scenarios that are purely informational and do not require user-specific context.
+
 Message handlers should _always_ consider the visibility of received messages when forming responses. TODO rephrase: consider using the reply operations that automatically inherit visibility from the received message.
 
 Agents can use suggested actions (TODO link) to request approval to share a response publicly, then resend the message as public if the user agrees. Consider asking the user whether they want their original prompt included as a quoted response. (TODO this can go as one of the "standard workflows" mentioned above. If that gets long enough, make it its own section.)
 
 <!-- TODO similar question as above: Is there even a concept of having a "single" or "specific group" recipient of a message that is *not* targeted, as opposed to an @mention? What would that look like? -->
 
-- Use private responses for user-specific tasks (for example, drafts, summaries, personal actions).
+- Use private responses for user-specific tasks (for example, drafts, summaries, personal actions). Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
 - Use public responses only when content benefits the wider group (for example, updates or confirmations).
-- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent delete the original private response and then repost the response publicly. Take care to ensure that the contents of the follow-up message are identical to the deleted message, and consider whether the user wants their original prompt included as a quoted response.
-- Use prompt preview to maintain context in ongoing conversations. TODO think twice on public messages.
-- Keep responses concise, relevant, and audience-appropriate to avoid noise in shared channels.
+- Enable private-to-public transitions to give users control over sharing. When a user shares a private agent response with the group or channel, it's recommended that the agent delete the original private response and then repost the response publicly. Take care to ensure that the contents of the follow-up message are identical to the deleted message, and consider whether the user wants their original prompt included as a prompt preview.
+- Use prompt preview to maintain context in ongoing conversations. Use caution before posting messages publicly with prompt preview.
 - Use suggested action `Action.Submit` to trigger backend workflows without extra chat messages.
 
 <!-- TODO clean this up -->
