@@ -10,9 +10,9 @@ ms.date: 05/26/2026
 
 # Format bot messages with enriched Markdown
 
-Enriched Markdown enables your bot to send messages that combine rich formatted text and interactive UI elements in a single payload. Instead of choosing between a text message or a card attachment, your bot can intermix formatted content (tables, code blocks, math equations, diagrams) with interactive components (buttons, forms, fact sets) seamlessly within one message.
+Enriched Markdown is a new message type that extends standard Markdown rendering for bot messages in Microsoft Teams. To use it, set `textFormat` to `markdown++` in the message activity.
 
-By setting `textFormat` to `markdown++` in your bot's message activity, the Teams client parses and renders Markdown directly on the client side, enabling modern formatting features and first-class support for streaming updates.
+With enriched Markdown, a bot can include tables, code blocks with syntax highlighting, math equations, Mermaid diagrams, callouts, and inline Adaptive Cards in a single `text` field. The Teams client renders this content on the client side and supports streaming, so users see content progressively as the bot generates it.
 
 In this article:
 
@@ -220,7 +220,7 @@ Callouts create visually distinct blocks that help users identify important info
 :::
 ```
 
-**Example — Compliance bot flagging a policy violation:**
+**Example: Compliance bot flagging a policy violation:**
 
 ```markdown
 :::danger
@@ -379,7 +379,7 @@ For mentions within an inline Adaptive Card fenced block, use the `msteams.entit
 Images in enriched Markdown messages use standard Markdown image syntax. The platform processes image URLs to ensure security and proper rendering.
 
 ```markdown
-![Build status chart](https://example.com/charts/build-4829.png)
+![Build status chart](https://example.com/build-4829.png)
 ```
 
 **Image processing behaviors:**
