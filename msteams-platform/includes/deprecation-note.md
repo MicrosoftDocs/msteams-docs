@@ -17,7 +17,7 @@
 > **Known issues**
 >
 > * Workflows app can post as a flow bot in shared channels. Support for posting as a flow bot in private channels is under development. Workflows can currently post messages on behalf of a user.
-> * Workflows support both Adaptive Cards and Message Card format (button rendering won't be supported). You can choose to convert Message Cards to Adaptive Card, see  [how to convert connector message card format to Adaptive Card](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/tools/message-card-to-ac-transformation).
+> * Workflows support both Adaptive Cards and Message Card format (button rendering won't be supported).
 >
 > **Limitations**
 >
