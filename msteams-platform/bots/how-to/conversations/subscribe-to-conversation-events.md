@@ -46,6 +46,10 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
+### Limitations
+
+Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
+
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
@@ -490,6 +494,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
         }
     }
 }
+```
 
 ```
 
@@ -638,6 +643,9 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+
+> [!IMPORTANT]
+> Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
 
 The following code shows an example of a team members removed event:
 
@@ -1058,6 +1066,8 @@ export class MyBot extends TeamsActivityHandler {
         });
     }
 }
+```
+
 ```
 
 # [JSON](#tab/json)
@@ -1491,6 +1501,10 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
+### Limitations
+
+Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
+
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
@@ -1627,6 +1641,10 @@ When you use the install and uninstall events, there are some instances where bo
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+## Limitation
+
+Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
 
 ## Handling errors in conversation events
 
