@@ -46,6 +46,9 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
+> [!NOTE]
+> Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
+
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
@@ -490,6 +493,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
         }
     }
 }
+```
 
 ```
 
@@ -525,6 +529,9 @@ The message your bot receives when the bot is added to a team.
 
 > [!NOTE]
 > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
+
+> [!NOTE]
+> Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
 
 ```json
 {
@@ -1060,6 +1067,8 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1484,6 +1493,9 @@ Use the `installationUpdate` event to send an introductory message from your bot
 
 Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
+> [!NOTE]
+> Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
+
 In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities is set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
@@ -1627,6 +1639,9 @@ When you use the install and uninstall events, there are some instances where bo
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+> [!NOTE]
+> Teams bot activities do not provide a built-in company routing identifier beyond the IDs included in the activity payload. Installation and conversation events include identifiers such as tenant, conversation, and user IDs, but they do not expose a separate tenant-scoped business key or custom installation state for later routing. This behavior is by design and applies to bot activities delivered through a single configured endpoint. Any company-to-pod routing context must be resolved by application-owned mapping outside the Teams activity schema.
 
 ## Handling errors in conversation events
 
