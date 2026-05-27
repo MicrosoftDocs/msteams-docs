@@ -196,44 +196,44 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
 
 (TODO)
 
-You can opt in the app manifest to invoke message extensions using slash commands. The message extension is accessible both via message extension action and slash command declared in the manifest. You can also opt for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+You can opt in the app manifest to invoke message extension actions using slash commands. The message extension is accessible both via message extension action and slash command declared in the manifest. You can also opt for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
 Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
-    ```json
-    {
-        "composeExtensions": [
-            {
-                "botId": "{{BOT_ID}}",
-                "commands": [
-                    {
-                        "id": "summarizeCommand",
-                        "type": "action",
-                        "title": "Summarize",
-                        "description": "Summarize a document",
-                        "context": ["compose", "commandBox"]
-                    },
-                    {
-                        "id": "draftCommand",
-                        "type": "action",
-                        "title": "Draft",
-                        "description": "Draft a document",
-                        "context": ["compose", "commandBox"],
-                        "triggers": ["slash"]
-                    },
-                    {
-                        "id": "reviewCommand",
-                        "type": "action",
-                        "title": "Review",
-                        "description": "Review a document",
-                        "context": ["compose", "commandBox"],
-                        "triggers": ["slash"]
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+```json
+{
+    "composeExtensions": [
+        {
+            "botId": "{{BOT_ID}}",
+            "commands": [
+                {
+                    "id": "summarizeCommand",
+                    "type": "action",
+                    "title": "Summarize",
+                    "description": "Summarize a document",
+                    "context": ["compose", "commandBox"]
+                },
+                {
+                    "id": "draftCommand",
+                    "type": "action",
+                    "title": "Draft",
+                    "description": "Draft a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                },
+                {
+                    "id": "reviewCommand",
+                    "type": "action",
+                    "title": "Review",
+                    "description": "Review a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ## Best practices and design guidance
 
