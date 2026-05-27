@@ -19,13 +19,13 @@ ms.topic: reference
 
 *Slash commands* help users discover and use named command functionality in Teams agents and apps.
 
-If your agent or app implements functionality that you want users to be able to invoke via named commands, you can add configuration to your agent that makes those commands quickly discoverable and accessible from the message compose box in Teams. TODO add a couple named-command scenarios here.
+If your agent or app implements functionality that you want users to be able to invoke via named commands, you can add configuration that makes those commands quickly discoverable and accessible from the message compose box in Teams. TODO add a couple named-command scenarios here.
 
 ## What is a slash command
 
 Slash commands in Teams are text-based shortcuts that let users perform actions from the compose box in conversations. When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them.
 
-The slash commands feature enables agents to add their own commands to this list to help users discover and use them.
+The slash commands feature enables apps and agents to add their own commands to this list to help users discover and use them.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png":::
 
@@ -33,9 +33,9 @@ The slash commands feature enables agents to add their own commands to this list
 
 Apps and agents can expose three types of commands via their configuration:
 
-- **Targeted messaging**: When a user enters an agent's name as a slash command, the compose box enters targeted message mode, enabling the user to send a targeted message to the agent
-- **Conversational slash commands**: Surface named commands that appear in the slash command autocomplete menu
-- *Message extension slash commands*: Enable users to activate your agent or app's message extensions with a slash command
+- **Targeted messaging**: Users send targeted messages to agents by entering an agent's name as a slash command, switching the compose box to targeted message mode
+- **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu
+- **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command
 
 All three types are supported across all client platforms, including mobile.
 
@@ -44,25 +44,21 @@ All three types are supported across all client platforms, including mobile.
 
 ### Targeted messaging
 
-Users send [targeted messages](targeted-messages.md) to agents by entering the agent's name as a slash command. Activating an agent's command switches the compose box to targeted message mode for the agent and displays a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+Users send [targeted messages](targeted-messages.md) to agents by entering an agent's name as a slash command. Activating an agent's command switches the compose box to targeted message mode and displays a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 TODO screenshot
 
-See [Send and receive targeted messages in group conversations](targeted-messages.md) for information about targeted messaging, including how to configure an agent to be able to receive targeted messages.
+### Agent slash commands
 
-### Conversational slash commands
-
-Conversational slash commands are named commands that agents can surface to users via the slash command autocomplete menu.
+Agent slash commands are named commands that agents can surface to users via the slash command autocomplete menu.
 
 When a user enters <kbd>/</kbd>, the autocomplete menu that opens will include all slash commands registered by all agents in the current conversation. Each command is displayed with its description and its agent's name and icon, enabling users to discover functionality and differentiate between commands with the same name.
 
-When a user activates a conversational slash command provided by an agent, Teams switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
+When a user activates a agent slash command provided by an agent, Teams switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
 TODO screenshot
 
-Conversational slash commands are useful for surfacing named command functionality that users may want to use privately in group conversations. TODO examples
-
-Conversational slash commands rely on targeted messaging, and require that the agent is opted in to receive targeted messages; see [Send and receive targeted messages in group conversations](targeted-messages.md) for more information.
+Agent slash commands are useful for surfacing named command functionality that users may want to use privately in group conversations. TODO examples
 
 ### Message extension slash commands
 
@@ -75,9 +71,11 @@ Message extension slash commands can be configured to appear as autocomplete ent
 <!-- TODO what's the requirement here relative to scope and context? Does the agent have to have been added to the chat already? What scopes does this work in? -->
 <!-- TODO guidance: any reason not to just do this for all your MEs? -->
 
-## Implementing conversational command functionality
+## Implementing command handling
 
-Messages created via command activations are not identifiable as "command messages". The agent's message handler is responsible for using a message's contents to determine whether it should be interpreted as a command invocation and handling it appropriately.
+Configuring agent commands only surfaces them to users in the Teams client, it does not assist with their implementation.
+
+When a user activates an agent slash command, Teams switches the compose box to targeted message mode and inserts the command name, then returns control to the user to allow them to enter additional text and send the message. The agent's message handler is responsible for using the contents of the message to determine whether it should be interpreted as a command invocation and handling it appropriately.
 
 See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
 
@@ -87,13 +85,19 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 
 TODO haven't done this section yet
 
-### Conversational commands
+### Targeted messaging
 
-Conversational slash commands require that the agent is opted in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
+See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
+
+### Agent slash commands
+
+Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
+
+TODO additional manifest info for slash commands
 
 ### Message extension slash commands
 
-Message extension slash commands do not require...
+TODO
 
 Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt for slash commands in your agent and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 

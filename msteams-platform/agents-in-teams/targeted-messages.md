@@ -93,6 +93,8 @@ Targeted messages are sent and received using the same operations as standard si
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, users will not be shown the option to send a targeted message to the agent.
 
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. See [Best practices and design guidance](#best-practices-and-design-guidance) for more information.
+
 To opt in to receive targeted messages, an agent's `bots` entry in its app manifest must include a `true` value for the `supportsTargetedMessages` property.
 
 ```json
@@ -107,12 +109,9 @@ To opt in to receive targeted messages, an agent's `bots` entry in its app manif
 }
 ```
 
-> [!IMPORTANT]
-> To avoid violating user expectations, agents that can receive targeted messages should always consider the visibility of messages they receive when generating responses and tracking the context of a conversation. By default, messages sent with message-response operations inherit the visibility of the received message (TODO this is worded poorly, and might need specific API references). See [Best practices and design guidance](#best-practices-and-design-guidance) for more information.
+Targeted messages are recieved via standard message events (TODO link) and can be detected as shown below.
 
 # [C#](#tab/dotnet1)
-
-Targeted messages are recieved via standard message events (TODO link) and can be detected via the `IsTargeted` property of the recipient object.
 
 ```csharp
 
@@ -125,8 +124,6 @@ Targeted messages are recieved via standard message events (TODO link) and can b
 
 # [TypeScript](#tab/ts1)
 
-Targeted messages are recieved via standard message events (TODO link) and can be detected via the `isTargeted` property of the recipient object.
-
 ```typescript
       
   app.on('message', async ({ send, activity }) => {
@@ -137,8 +134,6 @@ Targeted messages are recieved via standard message events (TODO link) and can b
 ```
 
 # [Python](#tab/Py1)
-
-Targeted messages are recieved via standard message events (TODO link) and can be detected via the `is_targeted` attribute of the recipient object.
 
 ```python
       
@@ -156,9 +151,9 @@ TODO is there a REST example?
 
 ### Send a targeted message
 
-# [C#](#tab/dotnet1)
-
 All agents in Teams are eligible to send targeted messages without additional configuration.
+
+# [C#](#tab/dotnet1)
 
 To send a targeted message, use `WithRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
 
@@ -353,9 +348,9 @@ No body required.
 
 ## Best practices and design guidance
 
-Agents that opt in to receive targeted messages should always check the visibility of messages they receive and consider it when generating responses and tracking the context of a conversation. Users expect the contents of targeted messages to remain private across all contexts.
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. Users expect the contents of targeted messages to remain private across all contexts.
 
-Targeted requests should only result in targeted responses unless the user or the situation explicitly calls for a public response. Choosing between a public or targeted response to a public request may require careful judgement. Public messages should generally benefit the entire group and should not contain any private information.
+Targeted requests to an agent should only result in targeted responses unless the user or the situation explicitly calls for a public response. Choosing between a public or targeted response to a public request may require careful judgement. Public messages should always benefit the entire group and should not contain any private information.
 
 Take care when using Adaptive Cards in targeted messages. Using a targeted message to send an interactive Adaptive Card does not prevent it from generating public activity, which users may not expect.
 
