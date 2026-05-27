@@ -174,8 +174,6 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
     }
     ```
 
-<a id="me"></a>
-
 - **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
 
     Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
