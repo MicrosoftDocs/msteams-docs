@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 05/21/2026
+ms.date: 05/27/2026
 ---
 
 # Meeting apps APIs
@@ -23,12 +23,12 @@ The following table provides a list of APIs available across the Teams SDK and t
 
 | Method | Description | Source |
 | --- | --- | --- |
-| [**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest) |
-| [**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest) |
-| [**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest) |
+| [**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
 | [**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 | [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Teams SDK](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest) |
+| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Teams SDK](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest&preserve-view=true) |
 
 ## Get participant API
 
@@ -59,7 +59,7 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet3)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -81,7 +81,7 @@ app.OnMessage(async (context, cancellationToken) =>
 
 # [TypeScript](#tab/javascript3)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
@@ -101,7 +101,7 @@ app.on('message', async ({ activity, api, send }) => {
 
 # [Python](#tab/python3)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_message
@@ -210,7 +210,7 @@ The following table includes the query parameter:
 
 # [C#](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -234,7 +234,7 @@ app.OnMessage(async (context, cancellationToken) =>
 
 # [TypeScript](#tab/javascript2)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('message', async ({ send }) => {
@@ -551,7 +551,7 @@ The following table lists the query parameter:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -571,7 +571,7 @@ app.OnMessage(async (context, cancellationToken) =>
 
 # [TypeScript](#tab/javascript)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
@@ -587,7 +587,7 @@ app.on('message', async ({ activity, api, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_message
@@ -1000,7 +1000,7 @@ The following examples show how to capture the meeting start and end events:
 
 # [C#](#tab/dotnet4)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
@@ -1044,7 +1044,7 @@ teamsApp.OnMeetingStart(async (context, cancellationToken) =>
 
 # [TypeScript](#tab/typescript4)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingstarteventactivity?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingstarteventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('meetingStart', async ({ activity, send }) => {
@@ -1065,7 +1065,7 @@ app.on('meetingStart', async ({ activity, send }) => {
 
 # [Python](#tab/python4)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_meeting_start
@@ -1088,7 +1088,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 # [C#](#tab/dotnet5)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingendactivity?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingendactivity?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
@@ -1175,7 +1175,7 @@ teamsApp.OnMeetingEnd(async context =>
 
 # [TypeScript](#tab/typescript5)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingendeventactivity?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingendeventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('meetingEnd', async ({ activity, api, send }) => {
@@ -1232,7 +1232,7 @@ app.on('meetingEnd', async ({ activity, api, send }) => {
 
 # [Python](#tab/python5)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_meeting_end
@@ -1406,7 +1406,7 @@ The following examples show how to capture the participant join and leave events
 
 # [C#](#tab/dotnet6)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantjoinactivity?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantjoinactivity?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
@@ -1439,7 +1439,7 @@ teamsApp.OnMeetingJoin(async context =>
 
 # [TypeScript](#tab/typescript6)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('meetingParticipantJoin', async ({ activity, send }) => {
@@ -1465,7 +1465,7 @@ app.on('meetingParticipantJoin', async ({ activity, send }) => {
 
 # [Python](#tab/python6)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_meeting_participant_join
@@ -1492,7 +1492,7 @@ async def handle_meeting_participant_join(ctx: ActivityContext[MeetingParticipan
 
 # [C#](#tab/dotnet7)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantleaveactivity?view=msteams-sdk-dotnet-latest)
+* [SDK reference](/dotnet/api/microsoft.teams.api.activities.events.meetingparticipantleaveactivity?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
@@ -1522,7 +1522,7 @@ teamsApp.OnMeetingLeave(async context =>
 
 # [TypeScript](#tab/typescript7)
 
-* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantleaveeventactivity?view=msteams-sdk-ts-latest)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantleaveeventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
 app.on('meetingParticipantLeave', async ({ activity, send }) => {
@@ -1548,7 +1548,7 @@ app.on('meetingParticipantLeave', async ({ activity, send }) => {
 
 # [Python](#tab/python7)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest)
+* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
 
 ```python
 @app.on_meeting_participant_leave
