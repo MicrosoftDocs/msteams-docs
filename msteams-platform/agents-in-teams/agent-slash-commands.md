@@ -99,46 +99,44 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
 
-- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
+You can define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
-  After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
+After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
 
-  You can declare a command list using the new `triggers` property for your agent in one of the following scenarios:
+You can declare a command list using the new `triggers` property for your agent in one of the following scenarios:
 
-  # [Scenario 1](#tab/sc1)
+You can opt your agent with separate @mention and slash command lists
 
-  **Scenario 1**: Agent with separate @mention and slash command lists
+Use the following example to configure the app manifest for supporting an agent or a bot that offers separate commands for @mention and slash triggers.
 
-  Use the following example to configure the app manifest for supporting an agent or a bot that offers separate commands for @mention and slash triggers.
-
-    ```json
-    {
-        "bots": [
-            {
-                "botId": "{{BOT_ID}}",
-                "scopes": ["personal", "team", "groupChat"],
-                "supportsTargetedMessages": true,
-                "commandLists": [
-                    {
-                        "scopes": ["personal", "team", "groupChat"],
-                        "triggers": ["mention"],
-                        "commands": [
-                            { "title": "Summarize", "description": "Summarize a document" },
-                            { "title": "Draft", "description": "Draft a document" }
-                        ]
-                    },
-                    {
-                        "scopes": ["team", "groupChat"],
-                        "triggers": ["slash"],
-                        "commands": [
-                            { "title": "Review", "description": "Review a document" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true,
+            "commandLists": [
+                {
+                    "scopes": ["personal", "team", "groupChat"],
+                    "triggers": ["mention"],
+                    "commands": [
+                        { "title": "Summarize", "description": "Summarize a document" },
+                        { "title": "Draft", "description": "Draft a document" }
+                    ]
+                },
+                {
+                    "scopes": ["team", "groupChat"],
+                    "triggers": ["slash"],
+                    "commands": [
+                        { "title": "Review", "description": "Review a document" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ### Agent slash commands
 
@@ -146,11 +144,7 @@ TODO additional manifest info for slash commands
 
 Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages). Use one of the following scenarios to opt for slash commands:
 
-# [Scenario 2](#tab/sc2)
-
-  **Scenario 2**: Agent with same commands available in both @mention and slash triggers
-
-  Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
+- Agent with same commands available in both @mention and slash triggers: Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
     ```json
     {
@@ -174,9 +168,9 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
     }
     ```
 
-- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
+- Opt for agent-specific commands without a command list: With this opt-in, users can invoke your agent from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent via <`/agent-name`> and provide free-form input (depending on your agent capabilities).
 
-    Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
+  Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
     ```json
     {
