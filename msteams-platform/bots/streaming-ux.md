@@ -54,6 +54,8 @@ You can implement streaming bot messages in your app in one of the following way
 
 In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
 
+For guidance on formatting bot messages during streaming, including code examples for different text formats, see [Format your bot messages](how-to/format-your-bot-messages.md).
+
 ## Stream message through Teams SDK
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
@@ -83,7 +85,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 3. **Format the final streamed message**:
 
-    Using AI SDK, text messages and simple markdown can be formatted while they're being streamed. However, for Adaptive Cards, images, or rich HTML, the formatting can be applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+    Using AI SDK, text messages and simple markdown (including enriched Markdown with `markdown++`) can be formatted while they're being streamed. Enriched Markdown content such as math equations, Mermaid diagrams, callouts, and inline Adaptive Cards render progressively at safe boundaries. However, for standard Adaptive Cards attachments, images, or rich HTML, the formatting can be applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
 
     The following example shows the streaming response in an AI-powered bot:
 
@@ -96,6 +98,17 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
     The following example shows the final streamed response in an AI-powered bot after the formatting is completed:
 
     :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI-powered bot." border="false":::
+
+### Streaming enriched Markdown (markdown++)
+
+When streaming with enriched Markdown, your bot can progressively send content that includes:
+
+- **Callouts** (notes, warnings, tips)
+- **Math equations** (LaTeX/KaTeX)
+- **Mermaid diagrams** (flowcharts, sequence diagrams, etc.)
+- **Inline Adaptive Cards** (interactive elements)
+
+These enriched features render at safe streaming boundaries to provide a smooth user experience. For more information about supported features and syntax, see [Format your bot messages — Enriched Markdown (markdown++) features](how-to/format-your-bot-messages.md#enable-enriched-markdown-markdown).
 
 4. **Enable AI-powered features for final message**:
 
