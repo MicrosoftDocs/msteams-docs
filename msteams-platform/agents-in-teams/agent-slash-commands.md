@@ -194,7 +194,7 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
 
 ### Message extension slash commands
 
-TODO
+(TODO)
 
 You can opt in the app manifest to invoke message extensions using slash commands. The message extension is accessible both via message extension action and slash command declared in the manifest. You can also opt for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
