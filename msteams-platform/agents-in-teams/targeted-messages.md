@@ -87,7 +87,7 @@ TODO screenshot
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as standard single-recipient messages (TODO link) in the Teams SDK, but have a boolean property indicating whether they are targeted. TODO I need to get a better understanding of the model and which parts of this are new, because it IsTargeted appears to be a property of the _recipient_, and I don't really understand the concept of a _message recipient_ in the programming model.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) (TODO link) in the Teams SDK, but have a boolean property indicating whether they are targeted. TODO I need to get a better understanding of the model and which parts of this are new, because it IsTargeted appears to be a property of the _recipient_, and I don't really understand the concept of a _message recipient_ in the programming model.
 
 ### Receive targeted messages
 
