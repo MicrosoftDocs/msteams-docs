@@ -69,8 +69,6 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 
 TODO screenshot
 
-:::image type="content" source="../assets/videos/targeted-messages.gif" alt-text="Video shows user experience for slash commands in Teams.":::
-
 Activating one of these agent-named commands switches the compose box to targeted message mode for the agent, displaying a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 <!-- TODO screenshot-->
