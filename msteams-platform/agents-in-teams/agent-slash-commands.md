@@ -48,6 +48,8 @@ Users send [targeted messages](targeted-messages.md) to agents by entering an ag
 
 TODO screenshot
 
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message in a group conversation.":::
+
 ### Agent slash commands
 
 Agent slash commands are named commands that agents can surface to users via the slash command autocomplete menu.
@@ -57,6 +59,8 @@ When a user enters <kbd>/</kbd>, the autocomplete menu that opens will include a
 When a user activates a agent slash command provided by an agent, Teams switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
 TODO screenshot
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-example.png" alt-text="Image shows an example of slash commands in Teams.":::
 
 Agent slash commands are useful for surfacing named command functionality that users may want to use privately in group conversations. TODO examples
 
