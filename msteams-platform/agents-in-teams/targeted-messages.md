@@ -47,7 +47,7 @@ Targeted messaging enables users to privately interact with agents without distr
 Targeted messages:
 
 - Are enabled only for one-to-one interactions between an agent and a user. They can be sent only to a single recipient and are not available for user-to-user or agent-to-agent communications.
-- Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files.
+- Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
 - Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages they have sent (TODO link), but targeted messages cannot be made publicly visible once sent. If a scenario calls for a private message to be made public, the sender should resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
 - Expire 24 hours after being sent. When a targeted message expires, it is deleted from all Teams clients and no longer visible, although it may be retained in secure storage basd on organizational policy.
 - Will not be shown to untargeted users even if they are using an older version of the Teams client that does not support targeted messages.
