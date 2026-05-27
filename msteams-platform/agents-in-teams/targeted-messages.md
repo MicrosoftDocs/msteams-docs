@@ -91,7 +91,7 @@ TODO screenshot
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) (TODO link) in the Teams SDK, but have a boolean property indicating whether they are targeted. TODO I need to get a better understanding of the model and which parts of this are new, because it IsTargeted appears to be a property of the _recipient_, and I don't really understand the concept of a _message recipient_ in the programming model.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they are targeted. TODO I need to get a better understanding of the model and which parts of this are new, because it IsTargeted appears to be a property of the _recipient_, and I don't really understand the concept of a _message recipient_ in the programming model.
 
 ### Receive targeted messages
 
@@ -247,7 +247,7 @@ Targeted messages can be updated and deleted in the same way as standard message
 - The visibility of a targeted message cannot be changed
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message will result in an error.
 
-See messaging (TODO link)
+See [messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript).
 
 <!-- TODO maybe a small section explicitly specifying that all message events, like OnMessageDelete, are supported, and you can check the visibility on the message). -->
 
