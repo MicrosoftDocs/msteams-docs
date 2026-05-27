@@ -237,7 +237,7 @@ Use the following example to configure the app manifest for supporting message e
 
 TODO blanket design guidance:
 
-- When should I offer named commands from my agent?
+- When should I offer named commands from my agent? - Updated below.
 - If I do, is there any reason *not* to configure them with this feature?
 
 TODO any implementation guidance for detecting commands and branching? A sample?
