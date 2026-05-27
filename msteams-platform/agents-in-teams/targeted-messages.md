@@ -309,7 +309,7 @@ In prompt preview scenarios, `400 INVALID_TARGETED_MESSAGE_ID` means the targete
 
 More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
-## See also
+## Related content
 
 - [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
 - [Send and receive messages](../bots/build-conversational-capability.md)

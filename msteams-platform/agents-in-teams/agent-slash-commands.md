@@ -188,7 +188,7 @@ Keep slash commands short and action-oriented, and consider adding shortnames or
 
 Provide clear command descriptions to improve discoverability, including any expected input beyond the command name.
 
-## Related Content
+## Related content
 
 - [Send and receive targeted messages in group conversations](targeted-messages.md)
 - [Prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters)
