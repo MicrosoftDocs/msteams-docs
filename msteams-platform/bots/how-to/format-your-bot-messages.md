@@ -29,44 +29,48 @@ Microsoft Teams supports the following formatting options:
 | --- | --- |
 | `plain` | The text must be treated as raw text with no formatting applied.|
 | `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
-| `markdown++` | The text must be treated as enriched Markdown, supporting extended features such as math equations, Mermaid diagrams, callouts, and inline Adaptive Cards. |
+| `extendedMarkdown` | The text must be treated as extended Markdown, supporting richer client-side rendering such as math equations, callouts, images, and inline Adaptive Cards. |
 | `xml` | The text is simple XML markup. |
 
-Teams supports a subset of `markdown`, `markdown++`, and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+Teams supports a subset of `markdown`, `extendedMarkdown`, and `xml` or HTML formatting tags. For extended Markdown text content, only the `<at>` and `<cite>` HTML tags are supported. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
-### Enable enriched Markdown (markdown++)
+### Enable extended Markdown
 
-To use enriched Markdown formatting in bot messages, set the `textFormat` property to `"markdown++"` in your `Activity` object:
+To use extended Markdown formatting in bot messages, set the `textFormat` property to `"extendedMarkdown"` in your `Activity` object:
 
 # [JSON](#tab/json)
 
 ```json
 {
   "type": "message",
-  "text": "Here's a math equation: $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$",
-  "textFormat": "markdown++"
+  "textFormat": "extendedMarkdown",
+  "text": "markdownContent"
 }
 ```
 
 # [C#](#tab/csharp)
 
 ```csharp
-var activity = MessageFactory.Text(
-    "Here's a math equation: $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$",
-    inputHint: InputHints.IgnoringInput
-);
-activity.TextFormat = "markdown++";
-await turnContext.SendActivityAsync(activity);
+var activity = new Activity
+{
+    Type = ActivityTypes.Message,
+    Text = markdownContent,
+    TextFormat = "extendedMarkdown"
+};
+
+await app.SendActivity(conversationId, activity);
 ```
 
-# [TypeScript](#tab/ts)
+# [TypeScript](#tab/typescript)
 
 ```typescript
-const activity = MessageFactory.text(
-  "Here's a math equation: $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$"
-);
-activity.textFormat = "markdown++";
-await context.sendActivity(activity);
+const activity = {
+  type: "message",
+  text: markdownContent,
+  textFormat: "extendedMarkdown"
+};
+
+await app.sendActivity(conversationId, activity);
 ```
 
 # [Python](#tab/python)
@@ -74,20 +78,33 @@ await context.sendActivity(activity);
 ```python
 activity = Activity(
     type=ActivityTypes.message,
-    text="Here's a math equation: $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$",
-    text_format="markdown++"
+    text=markdown_content,
+    text_format="extendedMarkdown"
 )
-await context.send_activity(activity)
+
+await app.send_activity(conversation_id, activity)
 ```
 
 ---
+
+### How Teams processes bot text formats
+
+For existing values (`plain`, `markdown`, `xml`) and when `textFormat` is omitted, Teams clients currently receive a `RichText/Html` payload.
+
+- The backend converts supported Markdown/formatting into HTML.
+- Example: bot text `***bold text***` is converted to `<strong>bold text</strong>` in the client payload.
+
+For `textFormat: "extendedMarkdown"`, Teams clients receive `RichText/ExtendedMarkdown`.
+
+- The backend bypasses HTML conversion and sends the raw bot content.
+- Client-side rendering handles supported extended Markdown features.
 
 The following limitations apply to formatting:
 
 - Text-only messages in `plain` format don't support table formatting.
 - Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- Rich cards don't support Markdown or `markdown++` or table formatting.
-- `markdown++` is rendered client-side and requires Teams SDK support. Older clients fall back to `markdown` rendering.
+- Rich cards don't support Markdown or `extendedMarkdown` or table formatting.
+- `extendedMarkdown` is rendered client-side. Older or unsupported clients receive unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
@@ -109,70 +126,78 @@ Some styles aren't supported across all platforms. The following table provides 
 | Hyperlink                 | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ |
 
-## Enriched Markdown (markdown++) features
+## Extended Markdown features
 
-When using `textFormat: "markdown++"`, the following enriched features are available in text-only messages:
+When using `textFormat: "extendedMarkdown"`, the following features are available in text-only messages:
 
-| Feature | Description | Text-only messages | Notes |
-| --- | --- | :---: | --- |
-| **Callouts** | Colored highlighted blocks for notes, warnings, tips | ✔️ | Use `> [!TYPE]` syntax |
-| **Math equations** | Inline and block LaTeX/KaTeX rendering | ✔️ | Delimited by `$...$` (inline) or `$$...$$` (block) |
-| **Mermaid diagrams** | Embedded flowcharts, sequence diagrams, etc. | ✔️ | Fenced code block with \`\`\`mermaid |
-| **Inline Adaptive Cards** | Embed interactive card elements within Markdown | ✔️ | Fenced block using special syntax |
-| **At-mentions** | Reference users or groups | ✔️ | Standard `<at>User Name</at>` or `<at>GroupName</at>` |
-| **Entity representations** | Structured data (dates, files, etc.) | ✔️ | Rendered as semantic elements |
+| Feature | Syntax | Description |
+| --- | --- | --- |
+| **Callouts** | `> [!NOTE]`, `> [!WARNING]`, `> [!TIP]`, `> [!IMPORTANT]` | Colored highlighted blocks for notes, warnings, tips |
+| **Math equations** | `$...$` (inline) / `$$...$$` (block) | Mathematical equations using KaTeX |
+| **Inline Adaptive Cards** | ` ```adaptivecard ` | Embed interactive card elements within Markdown |
+| **Fenced blocks** | Use triple backticks with a language identifier, for example ` ```python ` or ` ```adaptivecard ` | Use fenced blocks for supported custom rendering blocks |
+| **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
+| **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
+| **Citations** | `<cite>number</cite>` | Inline citation markers in message text |
+| **Tables** | Pipe-delimited rows with separator line | Structured tabular data with optional column alignment |
+| **Task lists** | `- [ ] item` / `- [x] item` | Checklist-style items; checkboxes are read-only |
+| **Code blocks** | `` ```language `` | Syntax-highlighted code fences |
+| **Footnotes** | `Text[^1]` and `[^1]: note` | Reference-style supplementary notes |
 
 ### Callouts and directives
 
-Callouts highlight important information such as notes, warnings, and tips:
+Callouts create visually distinct blocks that help users identify important information by severity or type. Use directives to highlight warnings, tips, informational notes, or critical errors.
+
+| Directive | Use case |
+|-----------|----------|
+| `> [!NOTE]` | General information the user should know |
+| `> [!TIP]` | Helpful suggestions or best practices |
+| `> [!WARNING]` | Important caution that could affect outcomes |
+| `> [!IMPORTANT]` | Critical alerts requiring immediate attention |
 
 ```markdown
 > [!NOTE]
 > This is a note callout.
 
-> [!WARNING]
-> This is a warning callout.
-
 > [!TIP]
 > This is a tip callout.
+
+> [!WARNING]
+> This is a warning callout.
 
 > [!IMPORTANT]
 > This is an important callout.
 ```
 
-**Note:** Callouts require `textFormat: "markdown++"` and are rendered with distinct visual styling in Teams clients.
+**Note:** Callouts require `textFormat: "extendedMarkdown"` and are rendered with distinct visual styling in Teams clients.
 
 ### Math equations
 
-Math equations use LaTeX syntax and are rendered client-side. Inline equations are delimited with `$...$`, while block equations use `$$...$$`:
+Use LaTeX/KaTeX syntax to render mathematical equations. Inline math uses single dollar signs, and block math uses double dollar signs.
+
+**Inline math:**
 
 ```markdown
-The quadratic formula is: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
-
-For a block equation:
-$$\int_0^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
+The equation $E = mc^2$ describes mass-energy equivalence.
 ```
 
-### Mermaid diagrams
-
-Embed Mermaid diagrams for flowcharts, sequence diagrams, and more:
+**Block math:**
 
 ```markdown
-\`\`\`mermaid
-graph LR
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Process]
-    B -->|No| D[Skip]
-    C --> E[End]
-\`\`\`
+$$
+r = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2}\sqrt{\sum(y_i - \bar{y})^2}}
+$$
 ```
+
+> [!NOTE]
+> Math rendering uses KaTeX. For the full list of supported LaTeX commands, see [KaTeX supported functions](https://katex.org/docs/supported).
 
 ### Inline Adaptive Cards
 
 Embed interactive Adaptive Card elements inline within Markdown text:
 
 ```markdown
-\`\`\`<icard>
+```adaptivecard
 {
   "type": "AdaptiveCard",
   "version": "1.6",
@@ -194,18 +219,9 @@ Embed interactive Adaptive Card elements inline within Markdown text:
 \`\`\`
 ```
 
-### Entity representations
-
-EntityRepresentations allow you to include structured data inline. For example, referencing a user or date:
-
-```markdown
-Assigned to: <at>John Doe</at>
-Due date: <date value="2026-12-31">December 31, 2026</date>
-```
-
 ### At-mention support
 
-Mention users and groups in your bot messages. At-mentions work with both standard Markdown and enriched Markdown:
+Mention users and groups in your bot messages. At-mentions work with both standard Markdown and extended Markdown:
 
 ```markdown
 Hello <at>Jane Smith</at>, please review this.
@@ -213,14 +229,40 @@ Hello <at>Jane Smith</at>, please review this.
 Notifying team: <at>Engineering Team</at>
 ```
 
-## Streaming with enriched Markdown
+### Tables
 
-When using `markdown++` in streaming scenarios, your bot can stream content progressively. Enriched content (Mermaid diagrams, math equations, inline Adaptive Cards) renders at safe boundaries to ensure a smooth user experience:
+Use GitHub Flavored Markdown (GFM) table syntax to present structured data. Tables support column alignment using colons in the separator row.
+
+```markdown
+| Feature | Status | Priority |
+|:--------|:------:|----------:|
+| Tables  | Done   | High      |
+| Math    | Done   | High      |
+```
+
+In this example, the first column is left-aligned, the second is centered, and the third is right-aligned.
+
+### Task lists
+
+Use task list syntax to display completed and pending items in your bot messages.
+
+```markdown
+- [x] Checkout code
+- [x] Install dependencies
+- [x] Run unit tests
+- [ ] Deploy to production
+```
+
+> [!NOTE]
+> Task list checkboxes are read-only. Users can't interact with them to change their state.
+
+## Streaming with extended Markdown
+
+When using `extendedMarkdown` in streaming scenarios, your bot can stream content progressively. Extended Markdown content renders at safe boundaries to ensure a smooth user experience:
 
 - **Callouts**: Render after the closing `>` block
 - **Inline math**: Rendered as content arrives
 - **Block math** (`$$...$$`): Renders after the closing `$$` delimiter
-- **Mermaid diagrams**: Render after the closing \`\`\` fence
 - **Inline Adaptive Cards**: Render after the closing \`\`\` fence
 
 For detailed information about streaming implementation, see [Stream bot messages](../streaming-ux.md).
