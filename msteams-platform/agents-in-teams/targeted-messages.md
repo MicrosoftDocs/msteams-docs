@@ -1,6 +1,6 @@
 ---
-title: Targeted Messages
-description: Learn about enabling targeted messages for agents in Teams.
+title: Send and Receive Targeted Messages
+description: Use targeted messages to enable agents to privately interact with users in group conversations without distracting other users or revealing private information.
 ms.localizationpriority: high
 ms.date: 05/27/2026
 ms.topic: article

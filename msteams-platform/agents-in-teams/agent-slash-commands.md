@@ -1,6 +1,6 @@
 ---
-title: Enable Slash Commands for Agents
-description: Learn how to enable slash commands for your agents and apps
+title: Expose Slash Commands from Agents and Spps
+description: Expose slash commands for your agents and apps to make frequently-used functionality discoverable and quickly usable as named commands.
 ms.localizationpriority: high
 ms.date: 05/27/2026
 ms.topic: article
