@@ -242,6 +242,8 @@ TODO blanket design guidance:
 
 TODO any implementation guidance for detecting commands and branching? A sample?
 
+Offer named commands for common actions that users need to access quickly and repeatedly. They are especially useful in group conversations when an action should remain private or the result is user-specific, such as viewing settings, creating follow-up tasks, or checking personal status. Named commands work best for actions that users are likely to invoke frequently and benefit from being easy to discover and reuse.
+
 As with all message-based activity, the design of conversational command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. See [Targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance) for general guidance about agent response visibility.
 
 - Keep slash commands short and action-oriented. Consider using [prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) for longer prompts.
