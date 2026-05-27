@@ -196,7 +196,7 @@ $$
 
 Embed interactive Adaptive Card elements inline within Markdown text:
 
-```markdown
+````markdown
 ```adaptivecard
 {
   "type": "AdaptiveCard",
@@ -216,8 +216,8 @@ Embed interactive Adaptive Card elements inline within Markdown text:
     }
   ]
 }
-\`\`\`
 ```
+````
 
 ### At-mention support
 
