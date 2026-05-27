@@ -61,13 +61,13 @@ Targeted messages sent or received by a user are presented in the flow of the co
 
 TODO screenshot
 
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message.":::
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message." border="false":::
 
 Users send targeted messages to an agent by invoking its name as a _slash command_.
 
 When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them. In addition to the built-in commands, the menu will also include a command for each agent in the current conversation that is eligible to receive targeted messages. Commands for sending targeted messages to an agent are always named for the agent and display its icon.
 
-TODO screenshot
+TODO screenshot - .gif file to be added
 
 Activating one of these agent-named commands switches the compose box to targeted message mode for the agent, displaying a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
@@ -85,7 +85,7 @@ When an agent responds to a targeted message with `send()` or `reply()`, the quo
 
 TODO screenshot
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows an example of prompt preview.":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows an example of prompt preview."  border="false":::
 
 <!-- TODO language-specificity on the API references -->
 
