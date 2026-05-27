@@ -48,7 +48,7 @@ Users send [targeted messages](targeted-messages.md) to agents by entering an ag
 
 TODO screenshot
 
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message in a group conversation.":::
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message in a group conversation." border="false":::
 
 ### Agent slash commands
 
@@ -60,7 +60,7 @@ When a user activates a agent slash command provided by an agent, Teams switches
 
 TODO screenshot
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-example.png" alt-text="Image shows an example of slash commands in Teams.":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-example.png" alt-text="Image shows an example of slash commands in Teams." border="false":::
 
 Agent slash commands are useful for surfacing named command functionality that users may want to use privately in group conversations. TODO examples
 
