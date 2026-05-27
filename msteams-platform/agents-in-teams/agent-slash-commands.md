@@ -101,9 +101,9 @@ See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) 
 
 ### Agent slash commands
 
-Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
-
 TODO additional manifest info for slash commands
+
+Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages). Use one of the following scenarios to opt for slash commands:
 
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
@@ -196,14 +196,9 @@ TODO additional manifest info for slash commands
 
 TODO
 
-In the manifest, you must:
+You can opt in the app manifest to invoke message extensions using slash commands. The message extension is accessible both via message extension action and slash command declared in the manifest. You can also opt for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
-<a id="command-list"></a>
-
-- **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
-
-  > [!NOTE]
-  > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
     ```json
     {
