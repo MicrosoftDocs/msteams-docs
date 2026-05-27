@@ -40,11 +40,13 @@ Apps and agents can expose three types of commands via their configuration:
 All three types are supported across all client platforms, including mobile.
 
 > [!IMPORTANT]
-> When designing agent interactions for group conversations, avoid public messages or Adaptive Card actions that conflict with user expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> When designing agent interactions for group conversations, avoid public messages or Adaptive Card actions that might conflict with user expectations of privacy. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Targeted messaging
 
 Users send [targeted messages](targeted-messages.md) to agents by entering an agent's name as a slash command. Activating an agent's command switches the compose box to targeted message mode and displays a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+
+For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
 
 ### Agent slash commands
 
@@ -62,17 +64,9 @@ Apps that implement action-type [message extensions](../messaging-extensions/wha
 
 Message extension slash commands can be configured to appear as autocomplete entries in both the compose box and the Teams command box.
 
-## Implementing command handling
-
-Configuring agent commands only surfaces them to users in the Teams client, it doesn't assist with their implementation.
-
-When a user activates an agent slash command, Teams switches the compose box to targeted message mode and inserts the command name, then returns control to the user to allow them to enter more text and send the message. The agent's message handler is responsible for using the contents of the message to determine whether it should be interpreted as a command invocation and handling it appropriately.
-
-See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
-
 ## Add commands
 
-Targeted messaging and slash commands are configured via the app or agent's manifest [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
+Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
 ### Targeted messaging
 
@@ -113,29 +107,29 @@ Declare commands by configuring the `bots[].commandLists[]` section of the manif
 }
 ```
 
-Agent with same commands available in both @mention and slash triggers: Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
+Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
-    ```json
-    {
-        "bots": [
-            {
-                "botId": "{{BOT_ID}}",
-                "scopes": ["personal", "team", "groupChat"],
-                "supportsTargetedMessages": true,
-                "commandLists": [
-                    {
-                        "scopes": ["team", "groupChat"],
-                        "triggers": ["mention", "slash"],
-                        "commands": [
-                            { "title": "Ask privately", "description": "Send a private question to the bot" },
-                            { "title": "Help", "description": "Get help using this bot" }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-    ```
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true,
+            "commandLists": [
+                {
+                    "scopes": ["team", "groupChat"],
+                    "triggers": ["mention", "slash"],
+                    "commands": [
+                        { "title": "Ask privately", "description": "Send a private question to the bot" },
+                        { "title": "Help", "description": "Get help using this bot" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ### Message extension slash commands
 
@@ -176,11 +170,19 @@ Use the `triggers` property of `composeExtensions[].commands[]` to expose messag
 }
 ```
 
+## Implementing command handling
+
+Configuring agent commands only surfaces them to users in the Teams client, it doesn't assist with their implementation.
+
+When a user activates an agent slash command, Teams switches the compose box to targeted message mode and inserts the command name, then returns control to the user to allow them to enter more text and send the message. The agent's message handler is responsible for using the contents of the message to determine whether it should be interpreted as a command invocation and handling it appropriately.
+
+See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
+
 ## Best practices and design guidance
 
 Offer named commands for common actions that users need to access quickly and repeatedly. They're especially useful in group conversations when an action should remain private or the result is user-specific, such as viewing settings, creating follow-up tasks, or checking personal status. Named commands work best for actions that users are likely to invoke frequently and benefit from being easy to discover and reuse.
 
-As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. See [Targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance) for general guidance about agent response visibility.
+As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [Targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
 
 Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) for longer prompts.
 

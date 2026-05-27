@@ -38,7 +38,7 @@ Targeted messaging enables users to privately interact with agents without distr
 - An agent can detect a new user entering a large, long-running conversation and proactively send them a private welcome message and a summary.
 
 > [!IMPORTANT]
-> When designing agent interactions for group conversations, avoid public messages or Adaptive Card actions that conflict with user expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> When designing agent interactions for group conversations, avoid public messages or Adaptive Card actions that might conflict with user expectations of privacy. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Key aspects of targeted messages
 
@@ -70,7 +70,7 @@ Targeted messages are sent and received using the same operations as [standard s
 
 ### Receive targeted messages
 
-An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, users aren't the option to send a targeted message to the agent.
+An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, users aren't given the option to send a targeted message to the agent.
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
@@ -88,7 +88,7 @@ To opt in to receive targeted messages, an agent's `bots` entry in its app manif
 }
 ```
 
-Agents receive messages are received via standard message events and can be detected as shown in the following snippets.
+Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippets.
 
 # [C#](#tab/dotnet1)
 
