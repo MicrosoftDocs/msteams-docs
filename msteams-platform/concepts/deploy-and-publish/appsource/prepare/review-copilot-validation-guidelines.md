@@ -1,7 +1,7 @@
 ---
 title: Guidelines to Validate Agents
 description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
-ms.topic: conceptual
+ms.topic: article
 author: v-preethah
 ms.author: vikasalmal
 ms.localizationpriority: high
