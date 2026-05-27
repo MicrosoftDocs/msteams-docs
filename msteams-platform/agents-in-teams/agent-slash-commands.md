@@ -93,6 +93,8 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 
 TODO haven't done this section yet
 
+Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt for slash commands in your agent and (optionally) list the commands you want to show in the compose box.
+
 ### Targeted messaging
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
@@ -102,14 +104,6 @@ See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) 
 Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
 TODO additional manifest info for slash commands
-
-### Message extension slash commands
-
-TODO
-
-Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true) to opt for slash commands in your agent and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
-
-<a id="command-list"></a>
 
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
@@ -197,6 +191,14 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
         ]
     }
     ```
+
+### Message extension slash commands
+
+TODO
+
+In the manifest, you must:
+
+<a id="command-list"></a>
 
 - **Enable message extension actions as slash commands**: Use the following example to configure the app manifest for supporting message extension actions as slash commands using the new `triggers` property.
 
