@@ -99,12 +99,6 @@ Update your [app manifest](/microsoft-365/extensibility/schema/root-compose-exte
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
 
-### Agent slash commands
-
-TODO additional manifest info for slash commands
-
-Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages). Use one of the following scenarios to opt for slash commands:
-
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
   After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
@@ -146,7 +140,13 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
     }
     ```
 
-  # [Scenario 2](#tab/sc2)
+### Agent slash commands
+
+TODO additional manifest info for slash commands
+
+Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages). Use one of the following scenarios to opt for slash commands:
+
+# [Scenario 2](#tab/sc2)
 
   **Scenario 2**: Agent with same commands available in both @mention and slash triggers
 
