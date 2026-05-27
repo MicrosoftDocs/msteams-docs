@@ -109,7 +109,7 @@ When streaming with extended Markdown, your bot can progressively send content t
 - **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
 - **Inline Adaptive Cards** (interactive elements): Render only when the complete card JSON fenced block is received; partial JSON is buffered
 
-These extended features render at safe streaming boundaries to provide a smooth user experience. For more information about supported features and syntax, see [Format your bot messages — Extended Markdown features](how-to/format-your-bot-messages.md#enable-enriched-markdown-markdown).
+These extended features render at safe streaming boundaries to provide a smooth user experience. For more information about supported features and syntax, see [Format your bot messages — Extended Markdown features](how-to/format-your-bot-messages.md#enable-extended-markdown).
 
 4. **Enable AI-powered features for final message**:
 
