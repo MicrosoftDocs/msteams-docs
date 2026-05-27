@@ -19,7 +19,7 @@ ms.topic: reference
 
 *Slash commands* help users discover and use named command functionality in Teams agents and apps.
 
-If your agent or app implements functionality that you want users to be able to invoke via named commands, you can add configuration that makes those commands quickly discoverable and accessible from the message compose box in Teams. TODO add a couple named-command scenarios here.
+If your agent or app implements functionality that you want users to be able to invoke via named commands, you can add configuration that makes those commands quickly discoverable and accessible from the message compose box in Teams. Named slash commands can help users access guidance, create personal follow-up tasks, or manage personalization options.
 
 ## What is a slash command
 
@@ -66,7 +66,7 @@ TODO screenshot
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-example.png" alt-text="Image shows an example of slash commands in Teams." border="false":::
 
-Agent slash commands are useful for exposing named commands that users may want to invoke privately in group conversations, such as /help and /settings.
+Agent slash commands are useful for exposing named commands that users may want to invoke privately in group conversations, such as `/help` and `/settings`.
 
 ### Message extension slash commands
 
