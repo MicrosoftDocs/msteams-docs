@@ -10,7 +10,7 @@ ms.date: 05/17/2026
 
 # Create prompt suggestions
 
-Prompt suggestions are prewritten prompts and response buttons that help users start and continue conversations wtih bots.
+Prompt suggestions are prewritten prompts and response buttons that help users start and continue conversations with bots.
 
 Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
@@ -43,7 +43,7 @@ Suggested actions help users continue conversations with your bot.
 
 Prompt starters are prewritten prompts that users can select to insert them into the compose box.
 
-In one-on-one chats, prompt starters appear in the **View Prompts** flyout above the compose box. For bots that don't send [proactive welcome messages](send-proactive-messages.md), Teams will also display prompt starters as cards in the conversation pane until the user sends their first message.
+In one-on-one chats, prompt starters appear in the **View Prompts** flyout above the compose box. For bots that don't send [proactive welcome messages](send-proactive-messages.md), Teams also displays prompt starters as cards in the conversation pane until the user sends their first message.
 
 # [Desktop](#tab/desktop)
 
@@ -71,7 +71,7 @@ In group chats and channels, prompt starters are displayed in an autocomplete me
 
 ## Define prompt starters
 
-To define prompt starters, set the `bots[].commandLists[].commands` property in your bot's app manifest. Each `commandList` can define a different scope in which the prompts will appear, its `commands` property supports up to 10 commands.
+To define prompt starters, set the `bots[].commandLists[].commands` property in your bot's app manifest. Each `commandList` can define a different scope in which its prompts appear, and supports up to 10 commands.
 
 Each command contains four fields: `title`, `description`, `type`, and `prompt`.
 
@@ -177,7 +177,7 @@ In group chats and channels, the buttons are displayed below the bot message and
 
 ---
 
-Teams supports displaying up to three suggested actions at any given time. Suggested actions cards remain visible and accessible until they are replaced or removed by the bot's actions.
+Teams supports displaying up to three suggested actions at any given time. Suggested actions cards remain visible and accessible until the bot removes or replaces them.
 
 You can build the following suggested actions in your agent or bot:
 
@@ -193,7 +193,7 @@ Here are some examples that show how to implement and experience suggested actio
 
 To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
-The following is an example to implement suggested actions using `imBack`:
+The following example implements suggested actions using `imBack`:
 
 ``` json
 {
