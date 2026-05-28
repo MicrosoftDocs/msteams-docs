@@ -39,11 +39,9 @@ Suggested actions help users continue conversations with your bot.
 
 :::row-end:::
 
-## Prompt starters
+## Prompt starters user experience
 
 Prompt starters are prewritten prompts that users can select to insert them into the compose box.
-
-### User experience
 
 In one-on-one chats, prompt starters appear in the **View Prompts** flyout above the compose box. For bots that don't send [proactive welcome messages](send-proactive-messages.md), Teams will also display prompt starters as cards in the conversation pane until the user sends their first message.
 
@@ -71,15 +69,16 @@ In group chats and channels, prompt starters are displayed in an autocomplete me
 
 ---
 
-### Define prompt starters
+## Define prompt starters
 
-To define prompt starters, set the `bots[].commandLists[].commands` property in your bot's app manifest. `commands` supports up to 10 commands, and each command contains four fields: `title`, `description`, `type`, and `prompt`.
+To define prompt starters, set the `bots[].commandLists[].commands` property in your bot's app manifest. Each `commandList` can define a different scope in which the prompts will appear, its `commands` property supports up to 10 commands.
+
+Each command contains four fields: `title`, `description`, `type`, and `prompt`.
 
 - The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
 - The `description` field describes what the users accomplish.
 - The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
 - The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters. When `type` is set to `prompt`, you must provide a valid `prompt` value.
--
 
 The manifest example code for prompt starters is as follows:
 
@@ -132,7 +131,7 @@ The manifest example code for prompt starters is as follows:
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
-## Suggested actions
+## Suggested actions user experience
 
 Suggested actions are predefined user responses presented to users as buttons with a bot message. Users can select a button to send the response or trigger an action without typing in the compose box.
 
@@ -186,7 +185,7 @@ You can build the following suggested actions in your agent or bot:
 
 - **Action.Compose**: Use `Action.Compose` to prefill the compose box with a message, including tags, @mentions, and rich content such as emojis, GIFs, and other semantic objects.
 
-### Define suggested actions
+## Define suggested actions
 
 Here are some examples that show how to implement and experience suggested actions using `imBack` and `Action.Compose`:
 
