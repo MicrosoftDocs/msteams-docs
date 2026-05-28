@@ -1,7 +1,7 @@
 ---
 title: Introduction to Microsoft 365 Plugins
 description: In this article, you'll have Microsoft 365 plugins, plugin list and labels, Microsoft 365, and One Note interaction and more.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 12/21/2022
 ---
