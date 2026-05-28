@@ -1,6 +1,6 @@
 ---
 title: Accessibility Guidelines for HTML Widgets in Teams
-author: SuzanneTocco
+author: Suzanne Tocco
 description: TODO
 ms.topic: article
 ms.date: 05/27/2026
