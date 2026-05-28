@@ -22,7 +22,7 @@ _Targeted messaging_ enables users and agents to privately communicate with each
 
 With targeted messages, a user can privately send a message or command to an agent that remains in the context of a group conversation. When the agent responds in the chat or channel, it can use a targeted message to make the response visible only to that user. Agents can also proactively send targeted messages to users to privately communicate contextual information, offer assistance, or provide reminders relevant to the group conversation.
 
-Targeted messages can be sent by a user to a single agent, or by an agent to a single user. Targeted messaging between two users or two agents isn't supported.
+Targeted messaging isn't available in one-on-one chats, where the conversation is already private anyway. Targeted messages can only be sent between a single user and a single agent, not between two users or two agents.
 
 ## What are targeted messages
 
@@ -38,17 +38,17 @@ Targeted messaging enables users to privately interact with agents without distr
 - An agent can detect a new user entering a large, long-running conversation and proactively send them a private welcome message and a summary.
 
 > [!IMPORTANT]
-> When designing agent interactions for group conversations, avoid public messages or Adaptive Card actions that might conflict with user expectations of privacy. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> Targeted messaging is a fundamental part of agent design for group conversations, and requires careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Key aspects of targeted messages
 
 Targeted messages:
 
-- Are enabled only for one-to-one interactions between an agent and a user. They can be sent only to a single recipient and aren't available for user-to-user or agent-to-agent communications.
+- Can be used only for one-to-one interactions between an agent and a user in channels, group chats, and meeting chats.
 - Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
-- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but targeted messages can't be made publicly visible once sent. If a scenario calls for a private message to be made public, the sender should resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
-- Expire 24 hours after being sent. When a targeted message expires, it's deleted from all Teams clients and no longer visible, although it might be retained in secure storage based on organizational policy.
-- Aren't to untargeted users even if they're using an older version of the Teams client that doesn't support targeted messages.
+- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
+- Expire 24 hours after being sent. When a targeted message expires, Teams deletes it from all clients, although it might be retained in secure storage based on organizational policy.
+- Aren't visible to untargeted users, even if they're using an older version of the Teams client that doesn't support targeted messages.
 
 ## User experience
 
@@ -56,11 +56,11 @@ Targeted messages sent or received by a user are presented in the flow of the co
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-message-example.png" alt-text="Image shows an example of targeted message." border="false":::
 
-Users send targeted messages to an agent by invoking its name as a _slash command_.
+Users send targeted messages to an agent in a channel, group chat, or meeting chat by invoking its name as a _slash command_.
 
-When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them. In addition to the built-in commands, the menu also includes a command for each agent in the current conversation that's eligible to receive targeted messages. Commands for sending targeted messages to an agent are always named for the agent and display its icon.
+When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b). If the conversation includes agents that are eligible to receive targeted messages, the menu will also include a targeted-message command for each of them, named after the agent and displaying its icon.
 
-Activating one of these agent-named commands switches the compose box to targeted message mode for the agent, displaying a notice that the message will be sent privately. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
@@ -70,7 +70,7 @@ Targeted messages are sent and received using the same operations as [standard s
 
 ### Receive targeted messages
 
-An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, users aren't given the option to send a targeted message to the agent.
+An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
@@ -288,15 +288,17 @@ No body required.
 
 ## Best practices and design guidance
 
-Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. Users expect the contents of targeted messages to remain private across all contexts.
+Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates.
 
-Targeted requests to an agent should only result in targeted responses unless the user or the situation explicitly calls for a public response. Choosing between a public or targeted response to a public request can require careful judgement. Public messages should always benefit the entire group and shouldn't contain any private information.
+Agents that can receive targeted messages should **always** check the visibility of messages received in group contexts and use it to inform response generation and conversation context tracking.
 
-Take care when using Adaptive Cards in targeted messages. Using a targeted message to send an interactive Adaptive Card doesn't prevent it from generating public activity, which users might not expect.
+When designing agent interactions for group conversations, choosing between public and targeted messages in different situations requires careful judgment:
 
-Consider using a targeted message to ask a user if information should be made public. The visibility of a targeted message can't be changed, but the agent can attach [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) to request approval to share the contents publicly, then delete the original message and resend it as public if the user approves.
+- A targeted request to an agent should result in a targeted response, unless the user or the situation explicitly calls for a public response.
+- Public messages should be used in situations that are purely informational and don't require user-specific context. They should benefit the entire group and shouldn't contain any private information.
+- Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
 
-Targeted messages aren't recommended for one-to-one bot chats or for group scenarios that are purely informational and don't require user-specific context.
+Consider using [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
 
 ## Errors
 
