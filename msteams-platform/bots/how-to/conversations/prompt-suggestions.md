@@ -132,8 +132,6 @@ The manifest example code for prompt starters is as follows:
 }
 ```
 
----
-
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
@@ -160,6 +158,8 @@ In one-on-one conversations, the buttons are displayed above the compose box, an
 # [Mobile](#tab/mobile)
 
 -:::image type="content" source="../../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a personal chat in a mobile client." lightbox="../../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
+
+---
 
 In group chats and channels, the buttons are displayed below the bot message and remain available until replaced or removed by the bot.
 
@@ -261,8 +261,6 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
-
----
 
 ## Code sample
 
