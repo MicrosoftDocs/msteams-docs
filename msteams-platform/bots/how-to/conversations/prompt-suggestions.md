@@ -14,7 +14,7 @@ Prompt suggestions are prewritten prompts and response buttons that help users s
 
 Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
-There are two types of prompt suggestions that you can use:
+There are two types of prompt suggestions that you can use, and both are supported in one-on-one chats, group chats, and channels.
 
 :::row:::
 :::column span="2":::
@@ -41,7 +41,7 @@ Suggested actions help users continue conversations with your bot.
 
 ## Prompt starters
 
-Prompt starters are prewritten prompts that users can select to insert them into the compose box. Prompt starters supported in one-on-one chats, group chats, and channels.
+Prompt starters are prewritten prompts that users can select to insert them into the compose box.
 
 ### User experience
 
@@ -49,13 +49,13 @@ In one-on-one chats, prompt starters appear in the **View Prompts** flyout above
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the prompt starter cards displayed in an empty conversation pane." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows use of the View Prompts menu." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows prompt starters cards in an empty conversation pane in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
 
 ---
 
@@ -63,26 +63,23 @@ In group chats and channels, prompt starters are displayed in an autocomplete me
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the prompt starters autocomplete menu in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the prompt starters autocomplete menu in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
 
 ---
 
 ### Define prompt starters
 
-To enable prompt starters, define the `bots[].commandLists[].commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
+To define prompt starters, set the `bots[].commandLists[].commands` property in your bot's app manifest. `commands` supports up to 10 commands, and each command contains four fields: `title`, `description`, `type`, and `prompt`.
 
 - The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
 - The `description` field describes what the users accomplish.
 - The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
 - The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters. When `type` is set to `prompt`, you must provide a valid `prompt` value.
-
- To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
-
-- The `commands` property supports up to 10 commands. You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
+-
 
 The manifest example code for prompt starters is as follows:
 
@@ -137,17 +134,13 @@ The manifest example code for prompt starters is as follows:
 
 ## Suggested actions
 
-Suggested actions are predefined responses presented to users as buttons in a bot message. Users can select a button to send a
-predefined response or trigger an action without typing in the compose box.
+Suggested actions are predefined user responses presented to users as buttons with a bot message. Users can select a button to send the response or trigger an action without typing in the compose box.
 
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Suggested actions can be generated and placed dynamically during a conversation, meaning that you can use your bot’s large language model (LLM) to generate them along with a response during a conversation turn.
 
-> [!NOTE]
-> `SuggestedActions` aren't supported in bot messages that include attachments, regardless of the conversation type.
+Suggested actions aren't supported in bot messages that include attachments, regardless of the conversation type.
 
 ### User experience
-
-Suggested actions are supported in all scopes: personal, team and group chat.
 
 In one-on-one conversations, the buttons are displayed above the compose box, and are removed after the user selects an option.
 
