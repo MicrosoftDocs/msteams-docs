@@ -44,19 +44,19 @@ All three types are supported across all client platforms, including mobile.
 
 ### Targeted messaging
 
-Users in channels, group chats and meeting chats send [targeted messages](targeted-messages.md) to agents by entering an agent's name as a slash command.
+Users send [targeted messages](targeted-messages.md) to agents by entering an agent's name as a slash command.
 
-When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b). If the conversation includes agents that are eligible to receive targeted messages, the menu will also include a targeted-message command for each of them, named after the agent and displaying its icon.
+In channels, group chats, and meeting chats, the slash command autocomplete menu includes commands named after each agent in the conversation eligible to receive targeted messages.
 
-Activating an agent's command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+Activating one of these commands switches the compose box to targeted message mode for the agent. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
 
 ### Agent slash commands
 
-Agent slash commands enable agents to surface named commands that users can privately invoke in channels, group chats and meeting chats. Slash commands are useful for functionality that users need to access quickly and privately in group conversations.
+Agent slash commands enable agents to surface named commands that users can privately invoke in channels, group chats, and meeting chats. Slash commands are useful for functionality that users need to access quickly and privately in group conversations.
 
-When a user activates the command autocomplete menu with <kbd>/</kbd> in an empty compose box, the menu lists all commands registered by agents in the current conversation. Each command is displayed with its description and its agent's name and icon, making commands discoverable and distinguishing between commands with the same name.
+In channels, group chats, and meeting chats, the slash command autocomplete menu includes all commands registered by agents in the current conversation. Each command is displayed with its description and its agent's name and icon, making them discoverable and distinguishing between commands with the same name.
 
 Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
