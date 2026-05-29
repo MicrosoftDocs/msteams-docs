@@ -507,6 +507,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2026 May**
 
+* ***May 29, 2026***: [Expose slash commands from agents and apps](agents-in-teams/agent-slash-commands.md).
 * ***May 15, 2026***: [Enable agent reactions in Teams](agents-in-teams/agent-reactions.md).
 
 <br/>
