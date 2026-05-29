@@ -18,6 +18,7 @@ This article describes the minimum accessibility requirements for HTML widgets a
 
 These guidelines apply to all partner-built HTML widgets (MCP apps) that are rendered inside an `<iframe>` in Teams chat. The requirements are in addition to general web accessibility standards such as [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/).
 
+
 ## Responsibility model
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
@@ -208,12 +209,50 @@ Widgets must adapt to the chat container and remain usable at different zoom lev
 
   
 
-- ## Motion, animation, and timing
+## Motion, animation, and timing
 
 Motion and animation must not cause discomfort or interfere with usability.
 
-- **Reduced motion:** Respect the user's prefers-reduced-motion setting by reducing or disabling non-essential animations
+- **Reduced motion:** Respect the user's `prefers-reduced-motion` setting by reducing or disabling non-essential animations
 - **Safe motion:** Avoid flashing content or rapid animations that could trigger photosensitive reactions
 - **Auto-advancing content:** Don't auto-advance carousels or content without user input. If auto-advance is necessary, provide controls to pause, stop, and manually navigate
 
+
+
+## Error handling inside the widget
+
+> [!IMPORTANT]
+> Teams handles widget-level loading and error states. Partners are responsible for accessible error handling within their own widget content.
+
+
+**Announcements**
+
+Use `aria-live="assertive"` or an appropriate live region to announce critical errors to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: false` for error announcements.
+
+
+**Clear messaging**
+
+Error messages must:
+
+- Describe what went wrong in clear, concise language
+- Explain how the user can fix the issue or try again
+  
+
+**Input errors**
+
+For invalid fields:
+
+- Set `aria-invalid="true"` on the input
+- Associate the error message with the input using `aria-describedby` or a similar mechanism
+
+
+## Loading states inside the widget
+
+> [!IMPORTANT]
+> Teams handles the widget-level loading state. The requirements below apply to any loading states that occur within your widget content after initial render.
+
+- **Visible indicator:** Show a clear loading indicator when your widget fetches or processes data after initial render
+- **Announcements:** Use `aria-live="polite"` to announce loading and completion states to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: true`
+- **Focus behavior:** Don't trap focus during loading — users must still be able to move focus within the widget
+- **Skeleton UI:** If you use skeleton screens, either hide them from assistive technologies using `aria-hidden="true"`, or provide meaningful labels that describe the loading state
 
