@@ -22,19 +22,22 @@ These guidelines apply to all partner-built HTML widgets (MCP apps) that are ren
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
 
-| Requirement                                  | Teams | Partner |
-|----------------------------------------------|-------|---------|
-| Widget container label (e.g. "Scout widget") | x     |         |
-| Tab stop for widget container                | x     |         |
-| Tab order of message elements                | x     |         |
-| Focus into and out of the widget container   | x     |         |
-| Widget-level loading and error states        | x     |         |
-| Keyboard navigation inside widget            |       | x       |
-| ARIA labels for interactive elements         |       | x       |
-| Screen reader support for widget content     |       | x       |
-| Color contrast inside widget                 |       | x       |
-| High contrast support inside widget          |       | x       |
-| Error handling for content inside widget     |       | x       |
+| Requirement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Teams | Partner |
+|-------------------------------------------|:-----:|:-------:|
+| Widget container label (e.g. "Scout widget") | ✅ |   |
+| Tab stop for widget container | ✅ |   |
+| Tab order of message elements | ✅ |   |
+| Focus into and out of the widget container | ✅ |   |
+| Widget-level loading and error states | ✅ |   |
+| Keyboard navigation inside widget |   | ✅ |
+| ARIA labels for interactive elements |   | ✅ |
+| Screen reader support for widget content |   | ✅ |
+| Color contrast inside widget |   | ✅ |
+| High contrast support inside widget |   | ✅ |
+| Error handling for content inside widget |   | ✅ |
+
+
+
 
 ### Keyboard accessibility
 
@@ -53,15 +56,28 @@ Teams and partners share responsibility for accessibility. The following table c
 
 **Focus restoration**: When an element is removed from the DOM after a user action (for example, after submitting a form or closing a panel), focus must be restored to a logical element rather than dropping to the document body. Use Fluent V9's [useRestoreFocusSource and useRestoreFocusTarget](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-userestorefocussource--docs) hooks to handle this automatically.
 
-Do:
 
-- Use Fluent V9 Dialog or Popover for modal experiences
+
+<table>
+<tr>
+<th align="left">✅ Do</th>
+<th align="left">❌ Don't</th>
+</tr>
+<tr>
+<td>
+
+- Use Fluent UI React v9 Dialog or Popover for modal experiences
 - Restore focus to the triggering element after a dialog or panel closes
 
-Don't:
+</td>
+<td>
 
 - Don't remove focus outlines without providing an accessible alternative
 - Don't auto-advance focus between controls without a clear user action
+
+</td>
+</tr>
+</table>
 
 ## Screen reader semantics
 
@@ -92,15 +108,30 @@ If you are using Fluent V9 and React, use [AriaLiveAnnouncer](https://storybooks
 
 Images that convey meaning must include descriptive `alt` text. Decorative images should be marked with empty `alt=""` or hidden from assistive technologies.
 
-Do:
+
+<table>
+<tr>
+<th align="left">✅ Do</th>
+<th align="left">❌ Don't</th>
+</tr>
+<tr>
+<td>
 
 - Use headings (`<h1>`–`<h3>`) to structure content and help screen reader users navigate
 - Treat the widget as a self-contained web application — don't rely on Teams to provide roles or labels for content inside the iframe
 
-Don't:
+</td>
+<td>
 
 - Don't use generic `<div>` or `<span>` elements as controls without roles and labels
 - Don't override correct native semantics with ARIA when native elements already provide the needed behavior
+
+</td>
+</tr>
+</table>
+
+
+
 
 ## Focus management
 
@@ -122,6 +153,8 @@ If the widget opens a modal dialog:
 - Trap focus within the dialog while it's open
 - Return focus to the triggering element when the dialog closes
 
+  
+
 ## Color, contrast, and high contrast mode
 
 Widgets must remain perceivable in different contrast settings, including Windows High Contrast Mode.
@@ -141,14 +174,46 @@ Ensure that interactive elements, focus indicators, and key icons remain visible
 
 Don't rely on color alone to convey meaning. Use text, icons, patterns, or other indicators in addition to color.
 
-Do:
+<table>
+<tr>
+<th align="left">✅ Do</th>
+<th align="left">❌ Don't</th>
+</tr>
+<tr>
+<td>
 
 - Test in Windows High Contrast Mode before submission
 - Pair color with a label or icon to communicate state
 - Use [Fluent UI React v9 color tokens](https://storybooks.fluentui.dev/react/?path=/docs/theme-colors--docs) for backgrounds, borders, and text
 
-Don’t:
+</td>
+<td>
 
 - Don't use low-contrast text or icons for critical information
 - Don't use placeholder text as the only label for an input
 - Don't hardcode color values — use [Fluent UI React v9 color tokens](https://storybooks.fluentui.dev/react/?path=/docs/theme-colors--docs) or CSS variables so your widget adapts to Teams themes
+
+</td>
+</tr>
+</table>
+
+
+## Responsive layout and zoom
+
+Widgets must adapt to the chat container and remain usable at different zoom levels and viewport sizes.
+
+- **Zoom support:** Support at least 200% browser zoom without loss of content or functionality
+- **Flexible layout:** Avoid fixed pixel heights — allow the widget to grow vertically as needed so content isn't clipped
+- **No horizontal scrolling:** Layout should adapt to the narrow widths typical of chat containers
+
+  
+
+- ## Motion, animation, and timing
+
+Motion and animation must not cause discomfort or interfere with usability.
+
+- **Reduced motion:** Respect the user's prefers-reduced-motion setting by reducing or disabling non-essential animations
+- **Safe motion:** Avoid flashing content or rapid animations that could trigger photosensitive reactions
+- **Auto-advancing content:** Don't auto-advance carousels or content without user input. If auto-advance is necessary, provide controls to pause, stop, and manually navigate
+
+
