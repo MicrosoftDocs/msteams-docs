@@ -1,7 +1,7 @@
 ---
 title: Live Share Media Synchronization
 description: In this module, learn more about Live Share media capabilities, suspensions and wait points, audio ducking, and synchronizing video and audio.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 04/07/2022
 ---
