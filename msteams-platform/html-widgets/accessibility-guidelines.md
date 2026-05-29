@@ -6,7 +6,7 @@ ms.topic: article
 ms.date: 05/27/2026
 ---
 
-TODO
+
 
 # Accessibility guidelines for HTML widgets in Microsoft Teams 365
 
