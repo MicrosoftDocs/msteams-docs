@@ -9,11 +9,6 @@ ms.date: 04/15/2026
 
 Microsoft Teams supports adding authentication to your agents or apps. You can add single sign-on (SSO) or OAuth authentication.
 
-When you [enable SSO for your Teams agent or app](develop-single-sign-on-experience-in-Teams.md#enable-sso-for-teams-agents) project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
-
-> [!NOTE]
-> For more information on supporting multitenant to update your TeamsFx project, see [multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
-
 Based on how you distribute your agent or app, use one of the following SDKs to add authentication:
 
 - Use Teams SDK to add SSO authentication to your Teams agents.
@@ -26,8 +21,7 @@ Here are helpful how-to guides for adding authentication to your agent or app:
 | Add authentication to agents and apps using Teams SDK | [Add authentication using Teams SDK](/microsoftteams/platform/teams-sdk/essentials/app-authentication?branch=main&pivots=csharp) |
 | Add SSO authentication to agents and apps using Teams SDK | [SSO setup for agents and apps](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp) |
 | Add authentication to Teams agent using Microsoft 365 Agents SDK | [Add authentication using Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/configure-authentication-msal?pivots=python) |
-| Develop SSO experience in Teams tab app | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
-| Develop SSO experience in Teams bot and message extension app | [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md) |
+| Develop SSO experience in Teams app | [Enable SSO for Teams apps](develop-single-sign-on-experience-in-Teams.md#enable-sso-for-teams-apps) |
 
 ## Access how-to guide for adding SSO from Agents Toolkit
 
