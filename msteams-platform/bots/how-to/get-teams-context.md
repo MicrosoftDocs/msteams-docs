@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/16/2026
+ms.date: 05/29/2026
 ---
 # Get Teams specific context for your bot
 
