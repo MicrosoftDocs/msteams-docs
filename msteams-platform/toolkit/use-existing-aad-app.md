@@ -8,9 +8,7 @@ ms.date: 02/27/2025
 
 # Use existing Entra app in TeamsFx
 
-This section provides information for using existing Microsoft Entra app or manually creates Microsoft Entra app for TeamsFx project. Follow the instruction and make sure all required info is properly set in your TeamsFx project.
-
-<a name='create-an-azure-ad-app'></a>
+This section explains how to connect Microsoft Entra ID to your TeamsFx project, either by using an existing Entra app registration or creating a new one. Follow the steps to set the necessary authentication settings and TeamsFx values before you run or deploy your agent or app.
 
 ## Create a Microsoft Entra app
 
@@ -19,95 +17,97 @@ This section provides information for using existing Microsoft Entra app or manu
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
-1. Select **App Registrations** > **New registration** to create a new Microsoft Entra app:
-   * **Name**: The name of your configuration app.
-   * **Supported account types**: Select **Account in this organizational directory only**.
-   * Leave the **Redirect URL** field blank for now.
-   * Select **Register**.
+1. Select **App Registrations** > **New registration** to create a new Microsoft Entra app. Add the following details:
 
-1. When the app is registered, you're taken to the app's **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
+   1. **Name**: The name for your configuration app.
+   1. **Supported account types**: Select **Account in this organizational directory only**.
+   1. Leave the **Redirect URL** field blank for now.
+   1. Select **Register**.
+
+1. After the app is registered, you're taken to its **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-a-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-<a name='create-client-secret-for-azure-ad-app-optional'></a>
-
 ## Create client secret for Microsoft Entra app (optional)
 
 > [!NOTE]
-> You can skip this part if your application doesn't require client secret. This step can be automated by the `aadApp/create` action.
+> You can skip this part if your agent or app doesn't require client secret. This step can be automated by the `aadApp/create` action.
 
-1. Go to app's **Certificates & secrets** page, select **Client Secret** and select **New client secret**.
-   * **Description**: The description of your client secret.
-   * **Expires**: The expire time of your client secret.
-   * Select **Add**.
+1. Go to app's **Certificates & secrets** page, select **Client Secret** and select **New client secret**. Select the following details:
+
+   1. **Description**: The description of your client secret.
+   1. **Expires**: The expire time of your client secret.
+   1. Select **Add**.
 
 1. When the client secret is added, press the copy button under the **Value** column to copy the **Client Secret**.
-
-<a name='create-access-as-user-scope-for-azure-ad-app-optional'></a>
 
 ## Create access as user scope for Microsoft Entra app (optional)
 
 > [!NOTE]
-> You can skip this part if your M365 account has permission to update the Microsoft Entra app. We'll create the scope for you. This step can be automated by the `aadApp/update` action.
+> You can skip this part if your Microsoft 365 account has permission to update the Microsoft Entra app. Agents Toolkit creates the scope for the app. This step can be automated by the `aadApp/update` action.
 
-1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**.
-   * Select **Save and continue**.
-   * **Scope name**: Fill in **access_as_user**.
-   * **Who can consent?**: Choose **Admins and users**.
-   * **Admin consent display name**: Fill in **Teams can access app’s web APIs**.
-   * **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user**.
-   * **User consent display name**: Fill in **Teams can access app’s web APIs and make requests on your behalf**.
-   * **User consent description**: Fill in **Enable Teams to call this app’s web APIs with the same rights that you have**.
-   * **State**: Choose **Enabled**.
-   * Select **Add scope**.
+1. Go to app's **Expose an API** page, select **Add a scope** under **Scopes defined by this API**, and following the given steps:
 
-1. On the same page, select **Add a client application** under **Authorized client applications**.
-   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
-   * **Authorized scopes**: Choose the existing **access_as_user** scope.
-   * Select **Add application**.
+   1. Select **Save and continue**.
+   1. **Scope name**: Fill in **access_as_user**.
+   1. **Who can consent?**: Choose **Admins and users**.
+   1. **Admin consent display name**: Fill in **Teams can access app’s web APIs**.
+   1. **Admin consent description**: Fill in **Allows Teams to call the app’s web APIs as the current user**.
+   1. **User consent display name**: Fill in **Teams can access app’s web APIs and make requests on your behalf**.
+   1. **User consent description**: Fill in **Enable Teams to call this app’s web APIs with the same rights that you have**.
+   1. **State**: Choose **Enabled**.
+   1. Select **Add scope**.
 
-1. Select again on **Add a client application**.
-   * **Client ID**: Fill in **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** which is Client ID for Teams on web.
-   * **Authorized scopes**: Choose the existing **access_as_user** scope.
-   * Select **Add application**.
+1. On the same page, select **Add a client application** under **Authorized client applications**, and add the following details:
+
+   1. **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
+   1. **Authorized scopes**: Choose the existing **access_as_user** scope.
+   1. Select **Add application**.
+
+1. Select **Add a client application** and add the details:
+
+   1. **Client ID**: Fill in **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** which is Client ID for Teams on web.
+   1. **Authorized scopes**: Choose the existing **access_as_user** scope.
+   1. Select **Add application**.
 
 2. Go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20access%20as%20user%20scope%20for%20Microsoft%20Entra%20app%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23create-access-as-user-scope-for-microsoft-entra-app-optional&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-<a name='get-necessary-info-from-existing-azure-ad-app'></a>
+## Get existing Microsoft Entra app information
 
-## Get necessary info from existing Microsoft Entra app
+If you have an already registered Azure app, you can reuse it in your TeamsFx project instead of creating a new registration. Before you start, capture the required configuration values from the existing app registration so you can add them to your TeamsFx project.
 
 > [!NOTE]
-> You may skip this part if you follow the instruction above to create a Microsoft Entra app.
+> You can skip this part if you followed the instructions above to create a Microsoft Entra app.
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
-
-1. Select **App Registrations** and find your existing Microsoft Entra app.
-
-1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
-
+1. Select **App Registrations** and and find your existing Microsoft Entra app.
+1. Go to app's Overview page, copy the Application (client) ID, Object ID, and Directory (tenant) ID; it's needed later.
+1. Verify that the **Supported account types** is set to **My organization only**.
+1. Go to app's **Overview** page, copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID** for later use. Verify that the **Supported account types** is set to **My organization only**.
 1. Go to app's **Certificates & secrets** page, press the copy button under the **Value** column to copy the **Client Secret**.
 
     > [!NOTE]
-    > If you can't copy the secret, please follow the [instruction](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
+    > If you can't copy the secret, follow the [instructions](#create-client-secret-for-microsoft-entra-app-optional) to create a new client secret.
 
-1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
+1. Go to app's **Expose an API** page. If the **access_as_user** scope is already defined and the two Teams client IDs are pre-authorized, open **Manifest** and copy the **id** value under **oauth2Permissions** and enter it as the **Access As User Scope ID**.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20necessary%20info%20from%20existing%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23get-necessary-info-from-existing-microsoft-entra-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-## Set necessary info in TeamsFx project
+## Set Entraa app information in TeamsFx project
+
+Add the information you saved from the Microsoft Entra app to your TeamsFx project.
 
 > [!NOTE]
-> If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following the below steps.
+> If you don't use `aadApp/create` action to create Microsoft Entra app, you can add required environment variables with your preferred name without following these steps.
 
 1. Open `m365agents.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Following are the default `writeToenvironmentFile` definitions if you create projects using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 
    ``` yaml
     writeToEnvironmentFile:
@@ -121,7 +121,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 1. Add values for each environment variable from step 2.
 
-   1. Add below environment variables and their values to `env\.env.{env}` file.
+   1. Add the following environment variables and their values to `env\.env.{env}` file.
 
       ```yml
       AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
@@ -132,37 +132,35 @@ This section provides information for using existing Microsoft Entra app or manu
       AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
       ```
 
-      `AAD_APP_OAUTH_AUTHORITY_HOST` represents the host of the authority URL of your Microsoft Entra tenant, for example, <https://login.microsoftonline.com>. Your bot uses this URL to authenticate users via OAuth 2.0. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
+      `AAD_APP_OAUTH_AUTHORITY_HOST` is the Microsoft Entra authority host (for example, <https://login.microsoftonline.com>) that your agent or bot uses as the OAuth 2.0 sign-in endpoint. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
 
-   1. If your application requires a Microsoft Entra app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
+   1. If your agent or app requires a Microsoft Entra app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
 
       ```yml
       SECRET_AAD_APP_CLIENT_SECRET=<value of Microsoft Entra application's client secret>
       ```
 
       > [!NOTE]
-      > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
+      > Remember to update the environment variable names given in the examples if you use different names in `writeToEnvironmentFile`.
 
-1. Open Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
+1. Open the Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20necessary%20info%20in%20TeamsFx%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23set-necessary-info-in-teamsfx-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-<a name='upload-azure-ad-app-manifest-to-azure-portal'></a>
-
 ## Upload Microsoft Entra app manifest to Azure portal
 
-If Agents Toolkit fails to update Microsoft Entra app, an error message appears:
+If Agents Toolkit doesn't update the Microsoft Entra app, an error message appears:
 
 ```yml
 Insufficient privileges to complete the operation.
 ```
 
-If you see the above message, update Microsoft Entra app permission and follow the instructions to update permission.
+If you see this message, update Microsoft Entra app permission and follow the instructions to update permission.
 
 1. Find the Microsoft Entra app manifest under `build/aad.manifest.{env}.json`.
 
-1. Copy the content in the manifest file.
+1. Copy the content from the manifest file.
 
 1. Go to the [Azure portal](https://portal.azure.com) and select **Microsoft Entra ID**.
 
@@ -172,3 +170,8 @@ If you see the above message, update Microsoft Entra app permission and follow t
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Upload%20Microsoft%20Entra%20app%20manifest%20to%20Azure%20portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app%23upload-microsoft-entra-app-manifest-to-azure-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&platformId=ab1895f1-42ea-6bfc-6ad9-88809224d7d6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
+## See also
+
+- [Build your first agent](../agents-in-teams/build-first-agent.md)
+- [Create a new Teams app](create-new-project.md)
