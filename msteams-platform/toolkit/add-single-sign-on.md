@@ -16,14 +16,16 @@ When you [enable SSO for your Teams agent or app](develop-single-sign-on-experie
 
 Based on how you distribute your agent or app, use one of the following SDKs to add authentication:
 
-- Use [Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/overview) to add SSO authentication to your Teams agents.
-- Use [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/microsoft-authentication-library-configuration-options) to add authentication to agents that extend across Microsoft 365.
+- Use Teams SDK to add SSO authentication to your Teams agents.
+- Use Microsoft 365 Agents SDK to add authentication to agents that extend across Microsoft 365.
 
 Here are helpful how-to guides for adding authentication to your agent or app:
 
 |**Development** | **How-to Guide** |
-| -------- | --------|
+| -------- | -------- |
+| Add authentication to agents and apps using Teams SDK | [Add authentication using Teams SDK](/microsoftteams/platform/teams-sdk/essentials/app-authentication?branch=main&pivots=csharp) |
 | Add SSO authentication to agents and apps using Teams SDK | [SSO setup for agents and apps](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp) |
+| Add authentication to Teams agent using Microsoft 365 Agents SDK | [Add authentication using Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/configure-authentication-msal?pivots=python) |
 | Develop SSO experience in Teams tab app | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
 | Develop SSO experience in Teams bot and message extension app | [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md) |
 
