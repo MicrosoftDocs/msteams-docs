@@ -16,9 +16,9 @@ Here are a few helpful articles to get you started with authentication for your 
 - [Add authentication to Teams agent using Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/configure-authentication-msal?pivots=python)
 - [Develop SSO experience in Teams app](develop-single-sign-on-experience-in-Teams.md#enable-sso-for-teams-apps)
 
-## Access how-to guide for adding SSO from Agents Toolkit
+## View how-to guide from Agents Toolkit
 
-Follow these steps to open SSO authentication how-to guide:
+Follow these steps to access SSO authentication how-to guide:
 
 1. Open **Visual Studio Code** and select **Microsoft 365 Agents Toolkit** from the activity bar.
 3. Select **View How-to Guides** in the **DEVELOPMENT** section.
