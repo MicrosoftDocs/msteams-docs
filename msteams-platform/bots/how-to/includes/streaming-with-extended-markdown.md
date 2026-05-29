@@ -4,4 +4,4 @@ When streaming with extended Markdown, your bot can progressively send content t
 - **Math equations** (LaTeX/KaTeX): Inline math renders after the closing `$`, block math renders after the closing `$$`
 - **Fenced blocks** (including custom fenced content): Render only after the closing ` ``` ` fence is received on its own line
 - **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
-- **Inline Adaptive Cards** (interactive elements): Render only when the complete card JSON fenced block is received; partial JSON is buffered
+- **Inline Adaptive Cards** (interactive elements): Render only when the complete card JSON fenced block is received, and buffer partial JSON
