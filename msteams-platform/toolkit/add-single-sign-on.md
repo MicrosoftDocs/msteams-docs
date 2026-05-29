@@ -9,8 +9,6 @@ ms.date: 04/15/2026
 
 Microsoft Teams supports adding authentication to your agents or apps. You can add single sign-on (SSO) or OAuth authentication. Microsoft 365 Agents Toolkit (formerly Teams Toolkit) enables you to add authentication using Microsoft 365 Agents SDK and Teams SDK as well.
 
-## SDK options for adding authentication
-
 Based on how you distribute your agent or app, use one of the following SDKs:
 
 - Use [Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/overview) to add SSO authentication to your Teams agents.
