@@ -42,7 +42,7 @@ Teams and partners share responsibility for accessibility. The following table c
 
 ### Keyboard accessibility
 
-> [!IMPORTANT]
+> [!NOTE]
 > Teams manages focus into and out of the widget container. The requirements below apply to keyboard navigation within the widget content only.
 
 **Keyboard operability**: All interactive elements must be reachable and operable using standard keyboard input such as Tab, Shift+Tab, arrow keys, Enter, and Space, as appropriate for the control type.
@@ -221,7 +221,7 @@ Motion and animation must not cause discomfort or interfere with usability.
 
 ## Error handling inside the widget
 
-> [!IMPORTANT]
+> [!NOTE]
 > Teams handles widget-level loading and error states. Partners are responsible for accessible error handling within their own widget content.
 
 
@@ -248,11 +248,47 @@ For invalid fields:
 
 ## Loading states inside the widget
 
-> [!IMPORTANT]
+> [!NOTE]
 > Teams handles the widget-level loading state. The requirements below apply to any loading states that occur within your widget content after initial render.
 
 - **Visible indicator:** Show a clear loading indicator when your widget fetches or processes data after initial render
 - **Announcements:** Use `aria-live="polite"` to announce loading and completion states to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: true`
 - **Focus behavior:** Don't trap focus during loading — users must still be able to move focus within the widget
 - **Skeleton UI:** If you use skeleton screens, either hide them from assistive technologies using `aria-hidden="true"`, or provide meaningful labels that describe the loading state
+
+
+
+## Minimum accessibility bar for submission
+
+Widgets must meet all of the following requirements to be accepted. Widgets that don't meet this bar may be rejected or require remediation before publishing.
+
+| Requirements |
+|:---|
+| ✅ Fully operable with a keyboard, with no focus traps inside the widget |
+| ✅ Usable with screen readers, with meaningful roles, names, and states on all interactive elements |
+| ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
+| ✅ Remains usable in Windows High Contrast Mode |
+| ✅ Provides accessible error handling and loading states for content inside the widget |
+| ✅ Supports at least 200% zoom without loss of content or functionality |
+| ✅ Respects `prefers-reduced-motion` and avoids harmful flashing |
+| ✅ Adapts to the chat container without requiring horizontal scrolling |
+
+> [!WARNING]
+> Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
+
+
+## Recommended best practices
+
+The following practices aren't required but are strongly recommended to improve the overall experience.
+
+- **Skip links:** Provide a "Skip to main content" link at the top of the widget to let keyboard and screen reader users bypass repeated navigation
+- **Headings:** Use headings (`<h1>`–`<h3>`) to structure content and make navigation easier for screen reader users
+- **Simple interaction models:** Prefer simple, predictable interaction patterns over highly custom or novel controls
+- **Scrolling:** Avoid complex nested scroll regions. If a scrollable region is necessary, ensure it has a clear label and is keyboard accessible
+- **Tooltips:** Implement accessible tooltips using `aria-describedby` and ensure they're available on focus as well as hover
+- **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
+
+
+
+
 
