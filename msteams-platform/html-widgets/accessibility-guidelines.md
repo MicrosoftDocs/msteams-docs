@@ -289,6 +289,14 @@ The following practices aren't required but are strongly recommended to improve 
 - **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
 
 
+## Testing guidance
 
+Partners should validate accessibility using a combination of automated and manual testing before submission. Because widgets run inside a sandboxed iframe, some automated tools may not scan iframe content by default — open your widget content directly in a browser tab to get accurate results from automated tools.
 
-
+| Tool | Type | Notes |
+|---|---|---|
+| [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching common issues. No install required. |
+| [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed accessibility analysis than Lighthouse. Free version available. |
+| [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Good for quick visual checks. |
+| [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Desktop tool | Checks contrast ratios for text and UI elements against WCAG standards. |
+| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Web-based | Quick browser-based contrast ratio checker. No install required. |
