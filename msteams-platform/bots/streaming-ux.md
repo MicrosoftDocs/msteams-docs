@@ -85,7 +85,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 3. **Format the final streamed message**:
 
-    Using AI SDK, text messages and simple markdown (including extended Markdown with `extendedMarkdown`) can be formatted while they're being streamed. Extended Markdown content such as math equations, callouts, fenced blocks, images, and inline Adaptive Cards render progressively at safe boundaries. However, for standard Adaptive Cards attachments, images, or rich HTML, the formatting can be applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+    Text messages with extended Markdown (using `textFormat: "extendedMarkdown"`) are formatted as they're streamed. Extended Markdown content such as math equations, callouts, fenced blocks, images, and inline Adaptive Cards render progressively at safe boundaries. For standard Adaptive Cards attachments or rich HTML, formatting is applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
 
     The following example shows the streaming response in an AI-powered bot:
 
@@ -101,13 +101,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 ### Streaming extended Markdown
 
-When streaming with extended Markdown, your bot can progressively send content that includes:
-
-- **Callouts** (notes, warnings, tips): Render after the complete `> [!TYPE]` block is received
-- **Math equations** (LaTeX/KaTeX): Inline math renders after the closing `$`, block math renders after the closing `$$`
-- **Fenced blocks** (including custom fenced content): Render only after the closing ` ``` ` fence is received on its own line
-- **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
-- **Inline Adaptive Cards** (interactive elements): Render only when the complete card JSON fenced block is received; partial JSON is buffered
+[!INCLUDE [streaming-with-extended-markdown](how-to/includes/streaming-with-extended-markdown.md)]
 
 These extended features render at safe streaming boundaries to provide a smooth user experience. For more information about supported features and syntax, see [Format your bot messages — Extended Markdown features](how-to/format-your-bot-messages.md#enable-extended-markdown).
 

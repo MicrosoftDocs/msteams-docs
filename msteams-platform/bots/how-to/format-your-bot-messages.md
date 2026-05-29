@@ -27,9 +27,9 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| `plain` | The text must be treated as raw text with no formatting applied.|
-| `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
-| `extendedMarkdown` | The text must be treated as extended Markdown, supporting richer client-side rendering such as math equations, callouts, images, and inline Adaptive Cards. |
+| `plain` | The text is treated as raw text with no formatting applied.|
+| `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
+| `extendedMarkdown` | The text is treated as extended Markdown, supporting richer client-side rendering such as math equations, callouts, images, and inline Adaptive Cards. |
 | `xml` | The text is simple XML markup. |
 
 Teams supports a subset of `markdown`, `extendedMarkdown`, and `xml` or HTML formatting tags. For extended Markdown text content, only the `<at>` and `<cite>` HTML tags are supported. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
@@ -89,7 +89,7 @@ await app.send_activity(conversation_id, activity)
 
 ### How Teams processes bot text formats
 
-For existing values (`plain`, `markdown`, `xml`) and when `textFormat` is omitted, Teams clients currently receive a `RichText/Html` payload.
+For `plain`, `markdown`, `xml`, and when `textFormat` is omitted, Teams clients receive a `RichText/Html` payload.
 
 - The backend converts supported Markdown/formatting into HTML.
 - Example: bot text `***bold text***` is converted to `<strong>bold text</strong>` in the client payload.
@@ -258,12 +258,7 @@ Use task list syntax to display completed and pending items in your bot messages
 
 ## Streaming with extended Markdown
 
-When using `extendedMarkdown` in streaming scenarios, your bot can stream content progressively. Extended Markdown content renders at safe boundaries to ensure a smooth user experience:
-
-- **Callouts**: Render after the closing `>` block
-- **Inline math**: Rendered as content arrives
-- **Block math** (`$$...$$`): Renders after the closing `$$` delimiter
-- **Inline Adaptive Cards**: Render after the closing \`\`\` fence
+[!INCLUDE [streaming-with-extended-markdown](includes/streaming-with-extended-markdown.md)]
 
 For detailed information about streaming implementation, see [Stream bot messages](../streaming-ux.md).
 
