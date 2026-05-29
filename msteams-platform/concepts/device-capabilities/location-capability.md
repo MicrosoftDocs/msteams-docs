@@ -1,7 +1,7 @@
 ---
 title: Add Location Capability with TeamsJS
 description: Learn how to use Teams JavaScript client library and location APIs to utilize location capabilities using code snippets and samples.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 12/13/2022
 ---
