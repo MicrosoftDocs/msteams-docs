@@ -111,6 +111,9 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 * **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. Use dialogs in a content page to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
+    > [!NOTE]
+    > The `window.alert`, `window.confirm`, and `window.prompt` APIs aren't supported in the new Teams client. Use a [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or a TeamsJS dialog instead. For more information, see [new Teams client limitations](~/resources/teams-updates.md#limitations).
+
 * **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](/microsoft-365/extensibility/schema/root#validdomains).
 
 > [!NOTE]
