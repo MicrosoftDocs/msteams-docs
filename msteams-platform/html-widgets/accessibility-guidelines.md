@@ -293,6 +293,9 @@ The following practices aren't required but are strongly recommended to improve 
 
 Partners should validate accessibility using a combination of automated and manual testing before submission. Because widgets run inside a sandboxed iframe, some automated tools may not scan iframe content by default — open your widget content directly in a browser tab to get accurate results from automated tools.
 
+
+### Automated testing tools
+
 | Tool | Type | Notes |
 |---|---|---|
 | [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching common issues. No install required. |
@@ -300,3 +303,15 @@ Partners should validate accessibility using a combination of automated and manu
 | [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Good for quick visual checks. |
 | [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Desktop tool | Checks contrast ratios for text and UI elements against WCAG standards. |
 | [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Web-based | Quick browser-based contrast ratio checker. No install required. |
+
+
+### Manual testing tools
+
+| Test type | What to verify |
+|---|---|
+| Keyboard-only | Navigate the entire widget using only the keyboard. Verify no focus traps and a logical tab order throughout. |
+| Screen reader | Test with at least one screen reader — Narrator or NVDA on Windows, VoiceOver on Mac. Verify all elements are announced meaningfully. |
+| High contrast | Enable Windows High Contrast Mode and verify that content, controls, and focus indicators remain visible. |
+| Zoom | Increase browser zoom to 200% and confirm content and functionality are fully preserved. |
+| Reduced motion | Enable reduced motion in OS settings and verify animations are minimized or disabled. |
+| Responsive | Test in narrow viewports representative of Teams chat container widths. |
