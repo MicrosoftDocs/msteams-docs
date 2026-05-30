@@ -315,3 +315,14 @@ Partners should validate accessibility using a combination of automated and manu
 | Zoom | Increase browser zoom to 200% and confirm content and functionality are fully preserved. |
 | Reduced motion | Enable reduced motion in OS settings and verify animations are minimized or disabled. |
 | Responsive | Test in narrow viewports representative of Teams chat container widths. |
+
+
+## Related content
+
+- [HTML widgets overview for Microsoft Teams](#)
+- [UX guidelines for HTML widgets in Microsoft Teams](#)
+- [Teams store validation guidelines](#)
+- [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs)
+- [Fluent UI React v9 components](https://react.fluentui.dev/)
+- [WCAG 2.2 contrast requirements](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
