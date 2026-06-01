@@ -41,8 +41,7 @@ To enable SSO for your agent:
 
 1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
 1. [Update the Teams app manifest](#update-the-teams-app-manifest)
-1. [Update the Agents Toolkit configuration files](#update-the-agents-toolkit-configuration-files)
-1. [Update Infra configuration](#update-infra-configuration)
+1. [Update the Agents Toolkit configuration and infra files](#update-the-agents-toolkit-configuration-and-infra-files)
 1. [Update the source code](#update-the-source-code)
 1. [Debug your app](#debug-your-app)
 1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
@@ -92,7 +91,7 @@ You can use the same steps for your Teams bot or message extension app as well.
 
 [Back to top](#create-the-microsoft-entra-app-manifest)
 
-### Update the Agents Toolkit configuration files
+### Update the Agents Toolkit configuration and infra files
 
 1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
 
@@ -147,7 +146,7 @@ You can use the same steps for your Teams bot or message extension app as well.
 
 [Back to top](#create-the-microsoft-entra-app-manifest)
 
-### Update Infra configuration
+#### Update Infra configuration
 
 Update Microsoft Entra-related configurations in your remote service. The following example shows the configuration settings on an Azure Web App:
 
