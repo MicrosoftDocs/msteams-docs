@@ -25,8 +25,6 @@ To enable SSO, configure your Teams agent and app as follows:
 
 * **SSO app information in Agents Toolkit configuration files**: Ensure the Microsoft Entra authentication app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
 
-## Enable SSO for Teams agents
-
 Microsoft Teams supports single sign-on (SSO), which allows an agent or app to securely request an access token for the currently signed-in Teams user. This token can then be used to call Microsoft Graph and other protected APIs without prompting the user to sign in again.
 
 When you [enable SSO for your Teams agent or app](#enable-sso-for-teams-agents) project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
@@ -187,9 +185,9 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 [Back to top](#create-microsoft-entra-app-manifest)
 
-# [Bot or message extension app](#tab/message-extension-app)
+# [Agent, bot, or message extension app](#tab/message-extension-app)
 
-To enable SSO for your bot or message extension app:
+To enable SSO for your agent, bot, or message extension app:
 
 1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
 1. [Update the Teams app manifest](#update-the-teams-app-manifest)
