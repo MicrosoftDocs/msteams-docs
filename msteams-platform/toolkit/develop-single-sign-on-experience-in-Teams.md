@@ -183,7 +183,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 [Back to top](#create-microsoft-entra-app-manifest)
 
-# [Agent, bot, or message extension app](#tab/message-extension-app)
+# [Agent or app](#tab/message-extension-app)
 
 To enable SSO for your agent, bot, or message extension app:
 
