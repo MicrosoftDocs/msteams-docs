@@ -22,9 +22,6 @@ These guidelines apply to all partner-built HTML widgets (MCP apps) that are ren
 
 
 
-
-
-
 ## Responsibility model
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
@@ -59,7 +56,13 @@ Teams and partners share responsibility for accessibility. The following table c
 
 **Custom controls**: Custom widgets and controls must follow the keyboard interaction patterns defined in the [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) for their respective roles (for example,`button`, `menu`, `dialog`, `listbox`).
 
-**Dialogs and modals**: If your widget opens a modal dialog, use Fluent V9's [Dialog](https://storybooks.fluentui.dev/react/?path=/docs/components-dialog--docs) or [Popover](https://storybooks.fluentui.dev/react/?path=/docs/components-popover--docs) components rather than a custom implementation. These handle focus trapping, focus restoration, and ARIA attributes correctly out of the box. If you need custom modal behavior, use [useModalAttributes](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-usemodalattributes--docs) and consult your accessibility champion before doing so.
+**Dialogs and modals**: Modal dialogs and overlays are possible within a widget but are not recommended. Because widgets render inside a small iframe, a modal will be constrained to that space and may feel disorienting to users. If your use case requires a modal, consider whether the expanded surface would be a better fit for that interaction.
+If you do implement a modal inside your widget, if you are using Fluent UI React v9 use the [Dialog](https://storybooks.fluentui.dev/react/?path=/docs/components-dialog--docs) or [Popover](https://storybooks.fluentui.dev/react/?path=/docs/components-popover--docs) components rather than a custom implementation, as they handle focus trapping, focus restoration, and ARIA attributes correctly out of the box. For custom modal behavior, [useModalAttributes](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-usemodalattributes--docs)  is available.
+
+
+
+
+
 
 **Focus restoration**: When an element is removed from the DOM after a user action (for example, after submitting a form or closing a panel), focus must be restored to a logical element rather than dropping to the document body. Use Fluent V9's [useRestoreFocusSource and useRestoreFocusTarget](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-userestorefocussource--docs) hooks to handle this automatically.
 
