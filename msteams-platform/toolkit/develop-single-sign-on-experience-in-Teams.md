@@ -11,15 +11,15 @@ ms.localizationpriority: medium
 
 # Enable single sign-on for Teams agent and app
 
-Microsoft 365 Agents Toolkit (formerly Teams Toolkit) simplifies adding SSO authentication to your agents and apps. The toolkit abstracts few of the Microsoft Entra ID flows and integrations behind simple APIs, enabling you to add SSO features easily to your Teams agent or app.
-
-Microsoft Teams supports single sign-on (SSO), which allows an agent or app to securely request an access token for the currently signed-in Teams user. This token can then be used to call Microsoft Graph and other protected APIs without prompting the user to sign in again.
+Microsoft Teams supports single sign-on (SSO) for agents and apps, which allows an agent or app to request an access token for the currently signed-in Teams user. You can use this token to call Microsoft Graph and other protected APIs without prompting the user to sign in again. Microsoft 365 Agents Toolkit, previously known as Teams Toolkit, simplifies adding SSO by abstracting parts of the Microsoft Entra ID setup and integration behind high-level APIs, enabling you to add SSO features easily to your Teams agent or app.
 
 ## Key configurations
 
 To enable SSO, configure your Teams agent and app as follows:
 
-* **Microsoft Entra app manifest**: Ensure to define URIs, including the URI that identifies the Microsoft Entra authentication app and the redirect URI that returns the token. When you [enable SSO for your Teams agent or app](#enable-sso-for-teams-agents) project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
+* **Microsoft Entra app manifest**: Before you enable SSO, make sure you define the required URIs for your app registration. This includes the Microsoft Entra app ID URI, which identifies the authentication app, and the redirect URI, which is used to return the token after sign-in.
+
+  When you [enable SSO for your Teams agent or app](#enable-sso-for-teams-agent-or-app) project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
 
 * **Teams app manifest**: Connect your Microsoft Entra authentication app to your Teams agent or app by incorporating the correct configuration.
 
