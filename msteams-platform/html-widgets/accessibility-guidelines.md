@@ -6,11 +6,10 @@ ms.topic: article
 ms.date: 05/27/2026
 ---
 
-TEST TEST
 
 # Accessibility guidelines for HTML widgets in Microsoft Teams 365
 
-HTML widgets (MCP apps) allow partners to render custom HTML and JavaScript experiences inside a sandboxed `<iframe>` within Copilot chat. Because these widgets appear inline with conversational content, they must meet a consistent accessibility bar so that all users, including those who use assistive technologies, can perceive, understand, and operate them.
+HTML widgets (MCP apps) allow partners to render custom HTML and JavaScript experiences inside a sandboxed `<iframe>` within Teams chat. Because these widgets appear inline with conversational content, they must meet a consistent accessibility bar so that all users, including those who use assistive technologies, can perceive, understand, and operate them.
 
 This article describes the minimum accessibility requirements for HTML widgets and provides recommended best practices and testing guidance.
 
