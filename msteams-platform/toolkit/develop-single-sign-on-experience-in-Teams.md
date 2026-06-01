@@ -29,9 +29,6 @@ To enable SSO, configure your Teams agent and app as follows:
 
 For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
 
-> [!NOTE]
-> For more information on supporting multitenant to update your TeamsFx project, see [multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
-
 You can enable [SSO authentication for users with Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/sso-setup).
 
 ## Enable SSO for Teams agent or app
