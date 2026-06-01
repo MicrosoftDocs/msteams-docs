@@ -44,7 +44,6 @@ To enable SSO for your agent:
 1. [Update the Agents Toolkit configuration files](#update-the-agents-toolkit-configuration-files)
 1. [Update Infra configuration](#update-infra-configuration)
 1. [Update the source code](#update-the-source-code)
-1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
 1. [Debug your app](#debug-your-app)
 1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
 
