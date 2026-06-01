@@ -33,7 +33,7 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 ## Enable SSO for Teams agent or app
 
-Choose one of the following to enable SSO for your Teams agent or app:
+Choose one of the following to add SSO authentication for your Teams agent or app:
 
 # [Tab app](#tab/tab-app)
 
@@ -180,9 +180,9 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 [Back to top](#create-microsoft-entra-app-manifest)
 
-# [Agent or app](#tab/message-extension-app)
+# [Agent](#tab/agent)
 
-To enable SSO for your agent, bot, or message extension app:
+To enable SSO for your agent:
 
 1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
 1. [Update the Teams app manifest](#update-the-teams-app-manifest)
@@ -192,6 +192,8 @@ To enable SSO for your agent, bot, or message extension app:
 1. [Create the Microsoft Entra app manifest](#create-the-microsoft-entra-app-manifest)
 1. [Debug your app](#debug-your-app)
 1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
+
+You can use the same steps for your Teams bot or message extension app as well.
 
 ### Create the Microsoft Entra app manifest
 
