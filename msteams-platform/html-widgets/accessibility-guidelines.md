@@ -18,6 +18,13 @@ This article describes the minimum accessibility requirements for HTML widgets a
 
 These guidelines apply to all partner-built HTML widgets (MCP apps) that are rendered inside an `<iframe>` in Teams chat. The requirements are in addition to general web accessibility standards such as [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and the [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/).
 
+> [!TIP]
+> If you are building your widget with React, we recommend using [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components and tokens. They implement accessible, Teams-compatible patterns out of the box and reduce the amount of custom accessibility work required. Fluent UI React v9 is not required — partners may use any framework or library as long as the accessibility requirements in this article are met.
+
+
+
+
+
 
 ## Responsibility model
 
