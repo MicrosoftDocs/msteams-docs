@@ -35,151 +35,6 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 Choose one of the following to add SSO authentication for your Teams agent or app:
 
-# [Tab app](#tab/tab-app)
-
-To enable SSO for your tab app:
-
-1. [Create Microsoft Entra app manifest](#create-microsoft-entra-app-manifest)
-1. [Update Teams app manifest](#update-teams-app-manifest)
-1. [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
-1. [Update source code](#update-source-code)
-1. [Debug your app](#debug-your-app)
-1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
-
-### Create Microsoft Entra app manifest
-
-1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
-
-1. Add the downloaded app manifest template code to `./aad.manifest.json` file of your agent or app project. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
-
-### Update Teams app manifest
-
-In the `./appPackages/manifest.json` file, add the following code:
-
-```json
-"webApplicationInfo": {
-  "id": "${{AAD_APP_CLIENT_ID}}",
-  "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-}
-```
-
-`webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
-
-> [!NOTE]
-> You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
-
-[Back to top](#create-microsoft-entra-app-manifest)
-
-### Update Agents Toolkit configuration files
-
-1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
-
-1. Add the `aadApp/create` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra app used for SSO:
-
-    ```yaml
-    - uses: aadApp/create
-      with:
-        name: "YOUR_AAD_APP_NAME"
-        generateClientSecret: true
-        signInAudience: "AzureADMyOrg"
-      writeToEnvironmentFile:
-          clientId: AAD_APP_CLIENT_ID
-          clientSecret: SECRET_AAD_APP_CLIENT_SECRET
-          objectId: AAD_APP_OBJECT_ID
-          tenantId: AAD_APP_TENANT_ID
-          authority: AAD_APP_OAUTH_AUTHORITY
-    ```
-
-    > [!NOTE]
-    > Replace the `name` value with the desired name for your Teams agent or app.
-
-    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
-
-1. Add the `aadApp/update` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
-
-    ```yaml
-    - uses: aadApp/update
-      with:
-        manifestPath: "./aad.manifest.json"
-        outputFilePath: "./build/aad.manifest.${{TEAMSFX_ENV}}.json"
-    ```
-
-    > [!NOTE]
-    > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
-    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
-
-    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
-
-1. For a React project, update `cli/runNpmCommand` under `deploy`.
-
-1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `m365agents.yml` file and add the following environment variables:
-
-    ```yaml
-    env:
-      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-    ```
-
-1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `m365agents.local.yml` file and add the following environment variables:
-
-    ```yaml
-    envs:
-      ...
-      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
-    ```
-
-[Back to top](#create-microsoft-entra-app-manifest)
-
-### Update source code
-
-With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams agent or app.
-
-#### Vanilla JavaScript
-
-For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
-
-```javascript
-function getSSOToken() {
-  return new Promise((resolve, reject) => {
-    microsoftTeams.authentication.getAuthToken()
-      .then((token) => resolve(token))
-      .catch((error) => reject("Error getting token: " + error));
-  });
-}
-
-function getBasicUserInfo() {
-  getSSOToken().then((ssoToken) => {
-    const tokenObj = JSON.parse(window.atob(ssoToken.split(".")[1]));
-    console.log(`username: ${tokenObj.name}`);
-    console.log(`user email: ${tokenObj.preferred_username}`);
-  });
-}
-```
-
-#### React
-
-For React projects, ensure the following environment variables are set in your deployment process:
-
-* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
-
-* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
-
-To update your source code, follow these steps:
-
-1. Move the `auth-start.html` and `auth-end.html` files from the `auth/public` folder to the `public/` folder. These HTML files serve the purpose of handling authentication redirects.
-
-1. Move `sso` folder under `auth/` to `src/sso/`.
-
-    1. `InitTeamsFx`: This file executes a function that initializes the TeamsFx SDK. After the SDK initialization, it opens the `GetUserProfile` component.
-    1. `GetUserProfile`: This file executes a function to retrieve user information by invoking the Microsoft Graph API.
-
-1. Import and add `InitTeamsFx` in `Welcome.*`.
-
-For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
-
-[Back to top](#create-microsoft-entra-app-manifest)
-
 # [Agent](#tab/agent)
 
 To enable SSO for your agent:
@@ -505,6 +360,153 @@ To use the `teamsFx` tab or bot template, follow these steps:
     [Back to top](#create-the-microsoft-entra-app-manifest)
 
    ---
+
+# [Tab app](#tab/tab-app)
+
+To enable SSO for your tab app:
+
+1. [Create Microsoft Entra app manifest](#create-microsoft-entra-app-manifest)
+1. [Update Teams app manifest](#update-teams-app-manifest)
+1. [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
+1. [Update source code](#update-source-code)
+1. [Debug your app](#debug-your-app)
+1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
+
+### Create Microsoft Entra app manifest
+
+1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
+
+1. Add the downloaded app manifest template code to `./aad.manifest.json` file of your agent or app project. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+
+### Update Teams app manifest
+
+In the `./appPackages/manifest.json` file, add the following code:
+
+```json
+"webApplicationInfo": {
+  "id": "${{AAD_APP_CLIENT_ID}}",
+  "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+}
+```
+
+`webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+
+> [!NOTE]
+> You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
+
+[Back to top](#create-microsoft-entra-app-manifest)
+
+### Update Agents Toolkit configuration files
+
+1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
+
+1. Add the `aadApp/create` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra app used for SSO:
+
+    ```yaml
+    - uses: aadApp/create
+      with:
+        name: "YOUR_AAD_APP_NAME"
+        generateClientSecret: true
+        signInAudience: "AzureADMyOrg"
+      writeToEnvironmentFile:
+          clientId: AAD_APP_CLIENT_ID
+          clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+          objectId: AAD_APP_OBJECT_ID
+          tenantId: AAD_APP_TENANT_ID
+          authority: AAD_APP_OAUTH_AUTHORITY
+    ```
+
+    > [!NOTE]
+    > Replace the `name` value with the desired name for your Teams agent or app.
+
+    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
+
+1. Add the `aadApp/update` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
+
+    ```yaml
+    - uses: aadApp/update
+      with:
+        manifestPath: "./aad.manifest.json"
+        outputFilePath: "./build/aad.manifest.${{TEAMSFX_ENV}}.json"
+    ```
+
+    > [!NOTE]
+    > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
+    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
+
+    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
+
+1. For a React project, update `cli/runNpmCommand` under `deploy`.
+
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `m365agents.yml` file and add the following environment variables:
+
+    ```yaml
+    env:
+      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+    ```
+
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `m365agents.local.yml` file and add the following environment variables:
+
+    ```yaml
+    envs:
+      ...
+      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+    ```
+
+[Back to top](#create-microsoft-entra-app-manifest)
+
+### Update source code
+
+With the above changes implemented, your environment is prepared. You can now update your code to incorporate SSO into your Teams agent or app.
+
+#### Vanilla JavaScript
+
+For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
+
+```javascript
+function getSSOToken() {
+  return new Promise((resolve, reject) => {
+    microsoftTeams.authentication.getAuthToken()
+      .then((token) => resolve(token))
+      .catch((error) => reject("Error getting token: " + error));
+  });
+}
+
+function getBasicUserInfo() {
+  getSSOToken().then((ssoToken) => {
+    const tokenObj = JSON.parse(window.atob(ssoToken.split(".")[1]));
+    console.log(`username: ${tokenObj.name}`);
+    console.log(`user email: ${tokenObj.preferred_username}`);
+  });
+}
+```
+
+#### React
+
+For React projects, ensure the following environment variables are set in your deployment process:
+
+* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+
+* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+
+To update your source code, follow these steps:
+
+1. Move the `auth-start.html` and `auth-end.html` files from the `auth/public` folder to the `public/` folder. These HTML files serve the purpose of handling authentication redirects.
+
+1. Move `sso` folder under `auth/` to `src/sso/`.
+
+    1. `InitTeamsFx`: This file executes a function that initializes the TeamsFx SDK. After the SDK initialization, it opens the `GetUserProfile` component.
+    1. `GetUserProfile`: This file executes a function to retrieve user information by invoking the Microsoft Graph API.
+
+1. Import and add `InitTeamsFx` in `Welcome.*`.
+
+For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+
+[Back to top](#create-microsoft-entra-app-manifest)
+
+---
 
 ### Debug your app
 
