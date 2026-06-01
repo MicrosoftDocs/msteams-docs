@@ -359,8 +359,6 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
     [Back to top](#create-the-microsoft-entra-app-manifest)
 
-   ---
-
 # [Tab app](#tab/tab-app)
 
 To enable SSO for your tab app:
