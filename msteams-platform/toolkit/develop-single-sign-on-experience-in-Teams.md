@@ -43,8 +43,6 @@ To enable SSO for your agent:
 1. [Update the Teams app manifest](#update-the-teams-app-manifest)
 1. [Update the Agents Toolkit configuration and infra files](#update-the-agents-toolkit-configuration-and-infra-files)
 1. [Update the source code](#update-the-source-code)
-1. [Debug your app](#debug-your-app)
-1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
 
 You can use the same steps for your Teams bot or message extension app as well.
 
@@ -365,8 +363,6 @@ To enable SSO for your tab app:
 1. [Update Teams app manifest](#update-teams-app-manifest)
 1. [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
 1. [Update source code](#update-source-code)
-1. [Debug your app](#debug-your-app)
-1. [Customize Microsoft Entra app](#customize-microsoft-entra-app)
 
 ### Define URIs in the Microsoft Entra app manifest
 
