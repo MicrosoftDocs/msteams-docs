@@ -31,7 +31,7 @@ For apps that interact with the user in a chat, Team, or channel, SSO manifests 
 
 You can enable [SSO authentication for users with Teams SDK](/microsoftteams/platform/teams-sdk/teams/user-authentication/sso-setup).
 
-## Enable SSO for Teams agent or app
+## Add SSO authentication to Teams agent or app
 
 Choose one of the following to add SSO authentication for your Teams agent or app:
 
