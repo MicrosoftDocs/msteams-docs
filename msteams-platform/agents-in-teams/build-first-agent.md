@@ -13,6 +13,8 @@ Agents utilize AI to automate and execute business processes, functioning alongs
 
 ::: zone pivot="teams-developer-cli"
 
+TODO link somewhere, maybe next steps, to learn more about the teams app model, and one to a TBD tutorial that follows up from this with app dev
+
 ## Prerequisites
 
 - Node.js 20 or later
@@ -30,11 +32,9 @@ teams login
 
 `teams status` should show `Sideloading: enabled`. If it shows `disabled`, your tenant admin needs to enable [custom app upload](/microsoftteams/teams-custom-app-policies-and-settings) before you can install your bot.
 
-## Create project scaffolding 
+## Create project scaffolding
 
-The `project new` command of the Teams Developer CLI creates the source code scaffolding for a new Teams agent application. The CLI includes templates for different kinds of starter functionality that span the SDK's three supported languages: TypeScript, Python and C#.
-
-Run the `teams new` command as shown below for the language of your choice to create the scaffolding for a new application. By not providing a template name, the CLI will scaffold a project using the default `echo` template, which responds to user messages by echoing them back:
+Run the `teams new` command as shown below for the language of your choice to create the scaffolding for a new application. By not providing a template name, the CLI will scaffold a project using the default `echo` template, which responds to user messages by echoing them back.
 
 # [TypeScript](#tab/typescript)
 
@@ -63,14 +63,10 @@ cd echo-bot
 
 ## Start a DevTunnel and register the app with Teams
 
-Installing and using your app in Teams requires that it be reachable from the Internet, registered with the Teams platform, and deployed via its manifest. Achieving these milestones now will help you develop your app by enabling you to experience it in Teams the same way that users will, from the beginning to the end of the development process.
-
-Here, you use the `app create` command of the Teams Developer CLI to both register your application and deploy its manifest. Registration requires a publicly reachable URL for your app, which you will need during development anyway, so you will use `devtunnel` to create that first.
-
 1. Follow the instructions [here](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started#login) to log in to `devtunnel` and create a new tunnel. Make note of resulting tunnel URL and port.
 1. Run the `app create` command as shown below for your language to register your app and deploy its manifest:
 
-    # [TypeScript](#tab/typescript)
+   # [TypeScript](#tab/typescript)
 
     ```bash
     teams app create \
@@ -79,7 +75,7 @@ Here, you use the `app create` command of the Teams Developer CLI to both regist
     --env .env
     ```
 
-    # [C#](#tab/csharp)
+   # [C#](#tab/csharp)
 
     ```bash
     teams app create \
@@ -90,7 +86,7 @@ Here, you use the `app create` command of the Teams Developer CLI to both regist
 
     Credentials are written under a `Teams` section with PascalCase keys (`ClientId`, `ClientSecret`, `TenantId`).
 
-    # [Python](#tab/python)
+   # [Python](#tab/python)
 
     ```bash
     teams app create \

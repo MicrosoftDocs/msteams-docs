@@ -8,7 +8,7 @@ ms.date: 05/23/2026
 
 # The Teams application model and dev workflow
 
-TODO lead-in: xplicitly explain what is in this article: app model and its components, dev workflow (consider that for the title)
+TODO lead-in: xplicitly explain what is in this article: app model and its components, dev workflow specifically for agents (consider that for the title)
 
 TODO explain that this builds on "Agents in Teams".
 
@@ -41,9 +41,11 @@ A Teams app installer - its *app package* - is just a zip file containing the ap
 
 When development is complete, a developer submits the finished app package to the Teams platform for distribution. Users don't interact with app packages directly: when a user installs an app from the Teams Store or their organizational app catalog, Teams downloads its package and loads its configuration.
 
-## Bot registration and Entra ID identity
+## Bot registration and Entra ID identity TODO
 
 Bots have a few extra resources
+
+"identity and messaging infrastructure"
 
 When users chat with an agent or bot app, behavior is in web service, but platform doesn't talk directly to the web service
 
@@ -57,17 +59,25 @@ Teams platform doesn't communicate directly with bots, it uses botservice as an 
 
 ## Teams SDK
 
+TODO link to SDK page.
+
 and dev cli
 
 ## The development process: TDP and CLI, SDK
 
-TODO link to new SDK page
-
 Teams SDK: Teams apps interact with the Teams API, Graph API, need to validate requests, etc. etc.
 
-## The Teams app development process
+## The Teams agent development process
 
-Teams app development typically begins by using the Teams developer CLI to scaffold the source code for a new project. For agents, this means using one of the agent templates that creates a web application.
+TDP and CLI
+
+(This is basically a narrative of the quickstart, point that out and link it.)
+
+Teams agent development begins with starter code for a new web service that responds to Teams conversational events. `teams project new` creates the source code scaffolding for a new Teams app. The CLI includes agent starter templates with basic conversational functionality across the SDK's three supported languages: TypeScript, Python and C#.
+
+Being able to experience your agent from Teams as you develop it, the same way your users will, is important to building great agent experiences. Teams SDK encourages getting your agent connected to Teams at the very beginning of the development process so you can see your app evolve as you iterate. Teams needs your agent's web service to be reachable from the Internet, so the next step is to use `devtunnel` to give it a public URL when you run it from your development environment.
+
+Next is the app's registration, the one-time process that creates the Entra ID identity for your app and the Azure Bot Service messaging infrastructure used by Teams to connect to your agent's web service. `teams app create` registers your agent Azure Bot Service and Entra ID. TODO also creates app registration
 
 App packages and their manifests can be created manually, but it's recommended to do it by creating an *app registration* with the Teams platform. Creating an app registration initializes a new app package and manifest and sets up the means for publishing the app to the Teams Store or your organization's app catalog when the app is finished. Registering the app also initializes important infrastruture needed for bot and agent apps during development, see below. Registering apps with Teams platform requires a Microsoft 365 organizational account with access to Teams, but is otherwise free.
 
