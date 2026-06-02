@@ -31,7 +31,62 @@ To define URIs in Entra app manifest:
 
 1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
-* **Teams app manifest**: Connect your Microsoft Entra authentication app to your Teams agent or app by incorporating the correct configuration.
+### Update the Teams app manifest
+
+Connect your Microsoft Entra authentication app to your Teams agent or app by incorporating the correct configuration.
+
+# [Agent](#tab/agent)
+
+1. In the `./appPackages/manifest.json` file, add the following code:
+
+    ```json
+    "webApplicationInfo": {
+      "id": "${{AAD_APP_CLIENT_ID}}",
+      "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+    }
+    ```
+
+    `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+
+    > [!NOTE]
+    > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
+
+1. Register one or more commands in `commandLists`.
+
+    The `commandLists` includes commands that your bot can suggest to users. If you're using the `teamsFx` bot template, set the following values:
+
+    ```bash
+    {
+      "title": "profile",
+      "description": "Show user profile using Single Sign On feature"
+    }
+    ```
+
+1. The `validDomains` field includes the domains for websites that the app loads within the Teams client. Update the following value:
+
+    ```bash
+    "validDomains": [
+    "${{BOT_DOMAIN}}"
+    ]
+    ```
+
+# [App](#tab/app)
+
+In the `./appPackages/manifest.json` file, add the following code:
+
+```json
+"webApplicationInfo": {
+  "id": "${{AAD_APP_CLIENT_ID}}",
+  "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+}
+```
+
+`webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+
+> [!NOTE]
+> You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
+
+---
 
 * **Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams agent or app.
 
