@@ -17,12 +17,12 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 ## Key configurations to add SSO authentication
 
-To enable SSO, configure your Teams agent and app as follows:
+Add SSO to your agent or app using the following key steps:
 
-- [Update Microsoft Entra app manifest](#update-microsoft-entra-app-manifest).
-- [Update the Teams app manifest](#update-the-teams-app-manifest).
-- [Agents Toolkit configuration](#agents-toolkit-configuration).
-- [Update source code](#update-source-code).
+- [Update Microsoft Entra app manifest](#update-microsoft-entra-app-manifest)
+- [Update the Teams app manifest](#update-the-teams-app-manifest)
+- [Agents Toolkit configuration](#agents-toolkit-configuration)
+- [Update source code](#update-source-code)
 
 ### Update Microsoft Entra app manifest
 
