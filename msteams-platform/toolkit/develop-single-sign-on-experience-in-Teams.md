@@ -39,10 +39,10 @@ Choose one of the following to add SSO authentication for your Teams agent or ap
 
 To enable SSO for your agent:
 
-1. [Define URIs in Microsoft Entra app manifest](#define-uris-in-microsoft-entra-app-manifest)
-1. [Update the Teams app manifest](#update-the-teams-app-manifest)
-1. [Update the Agents Toolkit configuration and infra files](#update-the-agents-toolkit-configuration-and-infra-files)
-1. [Update the source code](#update-the-source-code)
+* [Define URIs in Microsoft Entra app manifest](#define-uris-in-microsoft-entra-app-manifest)
+* [Update the Teams app manifest](#update-the-teams-app-manifest)
+* [Update the Agents Toolkit configuration and infra files](#update-the-agents-toolkit-configuration-and-infra-files)
+* [Update the source code](#update-the-source-code)
 
 You can use the same steps for your Teams bot or message extension app as well.
 
@@ -359,10 +359,10 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 To enable SSO for your tab app:
 
-1. [Define URIs in the Microsoft Entra app manifest](#define-uris-in-the-microsoft-entra-app-manifest)
-1. [Update Teams app manifest](#update-teams-app-manifest)
-1. [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
-1. [Update source code](#update-source-code)
+* [Define URIs in the Microsoft Entra app manifest](#define-uris-in-the-microsoft-entra-app-manifest)
+* [Update Teams app manifest](#update-teams-app-manifest)
+* [Update Agents Toolkit configuration files](#update-agents-toolkit-configuration-files)
+* [Update source code](#update-source-code)
 
 ### Define URIs in the Microsoft Entra app manifest
 
