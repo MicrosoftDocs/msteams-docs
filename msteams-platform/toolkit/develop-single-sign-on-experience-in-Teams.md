@@ -217,89 +217,166 @@ Ensure the Microsoft Entra authentication app is registered with the backend ser
 
 For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
 
-# [Agent](#tab/agent)
+# [Agent](#tab/agent1)
 
-Update source code for:
+To update source code for Agent or bot:
 
-- Agent or bot
-- Message extension
+  1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
-  # [Agent or Bot](#tab/bot)
+  1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
-    1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
+  1. Run the following command in `./` folder:
 
-    1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+     ```bash
+     npm install copyfiles --save-dev
+     ```
 
-    1. Run the following command in `./` folder:
+  1. Update the following command in `package.json` file:
 
-       ```bash
-       npm install copyfiles --save-dev
-       ```
+    ```json
+      "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
 
-    1. Update the following command in `package.json` file:
+     The HTML pages used for auth redirect are copied when building this bot project.
 
-        ```json
-        "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
-        ```
+  1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
-       The HTML pages used for auth redirect are copied when building this bot project.
+    ```bash
+     require("isomorphic-fetch");
+    ```
 
-    1. In `src/index` file, add the following command to import `isomorphic-fetch`:
+  1. Add the following command to redirect to auth pages:
 
-        ```bash
-         require("isomorphic-fetch");
-        ```
+    ```bash
+   server.get(
+       "/auth-:name(start|end).html",
+       restify.plugins.serveStatic({
+         directory: path.join(__dirname, "public"),
+       })
+   );
 
-    1. Add the following command to redirect to auth pages:
+   ```
 
-         ```bash
-         server.get(
-             "/auth-:name(start|end).html",
-             restify.plugins.serveStatic({
-               directory: path.join(__dirname, "public"),
-             })
-         );
-         ```
+  1. Update `commandApp.requestHandler` to ensure auth works with the following code:
 
-    1. Update `commandApp.requestHandler` to ensure auth works with the following code:
+    ```bash
+    await commandApp.requestHandler(req, res).catch((err) => {
+        // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+        if (!err.message.includes("412")) {
+        throw err;
+        }
+    });
+    ```
 
-         ```bash
-         await commandApp.requestHandler(req, res).catch((err) => {
-             // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
-             if (!err.message.includes("412")) {
-             throw err;
-             }
-         });
-         ```
+1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
 
-    1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
-
-         ```bash
-         import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+    ```bash
+    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
             
-         export const commandBot = new ConversationBot({
-             ...
-             // To learn more about ssoConfig, please refer atk sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
-             ssoConfig: {
-             aad :{
-               scopes:["User.Read"],
-             },
-             },
-             command: {
-             enabled: true,
-             commands: [new HelloWorldCommandHandler() ],
-             ssoCommands: [new ProfileSsoCommandHandler()],
-             },
-         });
-         ```
+    export const commandBot = new ConversationBot({
+        ...
+        // To learn more about ssoConfig, please refer atk sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+        ssoConfig: {
+        aad :{
+          scopes:["User.Read"],
+        },
+        },
+        command: {
+        enabled: true,
+        commands: [new HelloWorldCommandHandler() ],
+        ssoCommands: [new ProfileSsoCommandHandler()],
+        },
+    });
+    ```
 
-  # [Message extension](#tab/messaging-extension)
+# [App](#tab/app)
 
-    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
+You can update the source for following apps:
 
-    1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+- Bot
+- Message extension
+- Tab
 
-    1. Update your `src/index` file to add the appropriate `restify`:
+    # [Bot](#tab/bot)
+
+  To update source code for Agent or bot:
+
+  1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
+
+  1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+
+  1. Run the following command in `./` folder:
+
+     ```bash
+     npm install copyfiles --save-dev
+     ```
+
+  1. Update the following command in `package.json` file:
+
+    ```json
+      "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
+
+     The HTML pages used for auth redirect are copied when building this bot project.
+
+  1. In `src/index` file, add the following command to import `isomorphic-fetch`:
+
+    ```bash
+     require("isomorphic-fetch");
+    ```
+
+  1. Add the following command to redirect to auth pages:
+
+    ```bash
+   server.get(
+       "/auth-:name(start|end).html",
+       restify.plugins.serveStatic({
+         directory: path.join(__dirname, "public"),
+       })
+   );
+
+   ```
+
+  1. Update `commandApp.requestHandler` to ensure auth works with the following code:
+
+    ```bash
+    await commandApp.requestHandler(req, res).catch((err) => {
+        // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+        if (!err.message.includes("412")) {
+        throw err;
+        }
+    });
+    ```
+
+  1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
+
+    ```bash
+    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+            
+    export const commandBot = new ConversationBot({
+        ...
+        // To learn more about ssoConfig, please refer atk sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+        ssoConfig: {
+        aad :{
+          scopes:["User.Read"],
+        },
+        },
+        command: {
+        enabled: true,
+        commands: [new HelloWorldCommandHandler() ],
+        ssoCommands: [new ProfileSsoCommandHandler()],
+        },
+    });
+
+    ```
+
+    # [Message extension](#tab/messaging-extension)
+
+  1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
+
+  1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+
+  1. Update your `src/index` file to add the appropriate `restify`:
 
        ```bash
        const path = require("path");
@@ -360,9 +437,7 @@ Update source code for:
          ]
        ```
 
-# [App](#tab/app)
-
-You can update the source for tab app using JavaScript or React.
+    # [Tab](#tab/tab1)
 
 #### Vanilla JavaScript
 
