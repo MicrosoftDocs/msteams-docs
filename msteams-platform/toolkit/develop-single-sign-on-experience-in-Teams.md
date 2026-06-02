@@ -227,27 +227,27 @@ To update source code for Agent or bot:
 
   1. Run the following command in `./` folder:
 
-     ```bash
+  ```bash
      npm install copyfiles --save-dev
-     ```
+  ```
 
   1. Update the following command in `package.json` file:
 
-    ```json
+  ```json
       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
-    ```
+  ```
 
      The HTML pages used for auth redirect are copied when building this bot project.
 
   1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
-    ```bash
+  ```bash
      require("isomorphic-fetch");
-    ```
+  ```
 
   1. Add the following command to redirect to auth pages:
 
-    ```bash
+  ```bash
    server.get(
        "/auth-:name(start|end).html",
        restify.plugins.serveStatic({
@@ -255,23 +255,23 @@ To update source code for Agent or bot:
        })
    );
 
-   ```
+  ```
 
   1. Update `commandApp.requestHandler` to ensure auth works with the following code:
 
-    ```bash
+  ```bash
     await commandApp.requestHandler(req, res).catch((err) => {
         // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
         if (!err.message.includes("412")) {
         throw err;
         }
     });
-    ```
+  ```
 
-1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
+  1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
 
-    ```bash
-    import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+  ```bash
+  import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
             
     export const commandBot = new ConversationBot({
         ...
@@ -287,7 +287,7 @@ To update source code for Agent or bot:
         ssoCommands: [new ProfileSsoCommandHandler()],
         },
     });
-    ```
+  ```
 
 # [App](#tab/app)
 
@@ -297,7 +297,7 @@ You can update the source for following apps:
 - Message extension
 - Tab
 
-    # [Bot](#tab/bot)
+  # [Bot](#tab/bot)
 
   To update source code for Agent or bot:
 
@@ -350,7 +350,7 @@ You can update the source for following apps:
 
   1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
 
-    ```bash
+  ```bash
     import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
             
     export const commandBot = new ConversationBot({
@@ -368,9 +368,9 @@ You can update the source for following apps:
         },
     });
 
-    ```
+  ```
 
-    # [Message extension](#tab/messaging-extension)
+# [Message extension](#tab/messaging-extension)
 
   1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
 
@@ -401,19 +401,19 @@ You can update the source for following apps:
        );
        ```
 
-    1. Run the following commands under `./` folder:
+  1. Run the following commands under `./` folder:
 
-       ```bash
+  ```bash
        npm install @microsoft/atk
        ```
 
        ```bash
        npm install isomorphic-fetch
-       ```
+  ```
 
-    1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
+  1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
 
-    1. Install `copyfiles` npm packages in your TypeScript bot project and update the `build` script in `src/package.json` file as follows:
+  1. Install `copyfiles` npm packages in your TypeScript bot project and update the `build` script in `src/package.json` file as follows:
 
        ```json
        "build": "tsc --build && copyfiles ./public/*.html lib/",
@@ -421,7 +421,7 @@ You can update the source for following apps:
 
        The HTML pages used for auth redirect are copied when building this bot project.
 
-    1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
+  1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
 
        ```json
        "requiredResourceAccess": [
@@ -437,7 +437,7 @@ You can update the source for following apps:
          ]
        ```
 
-    # [Tab](#tab/tab1)
+# [Tab](#tab/tab1)
 
 #### Vanilla JavaScript
 
