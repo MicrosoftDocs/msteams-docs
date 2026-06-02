@@ -502,7 +502,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 
 ## Debug your app
 
-After you've added SSO to your agent or app, you can debug and preview it locally in browser or in Agents Playground. To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
+After you've added SSO to your agent or app, you can debug and preview it locally in browser or in [Agents Playground](debug-your-agents-playground.md). To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
 
 ## Customize Microsoft Entra app
 
