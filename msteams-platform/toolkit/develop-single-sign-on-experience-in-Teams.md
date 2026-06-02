@@ -23,7 +23,7 @@ To enable SSO, configure your Teams agent and app as follows:
 
 Before you enable SSO, make sure you define the required URIs for your app registration. This includes the Microsoft Entra app ID URI, which identifies the authentication app, and the redirect URI, which is used to return the token after sign-in.
 
-When you [enable SSO for your Teams agent or app](#add-sso-authentication-to-teams-agent-or-app) project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
+When you enable SSO for your Teams agent or app project, the Agents Toolkit creates a dedicated Microsoft Entra app registration for the agent or app. The Entra app registration is tenant-scoped to the Microsoft 365 tenant associated with the app, so only member users and guest accounts in the same Microsoft Entra tenant can sign-in and access the Teams agent or app.
 
 To define URIs in Entra app manifest:
 
