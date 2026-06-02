@@ -439,50 +439,51 @@ You can update the source for following apps:
 
   # [Tab](#tab/tab1)
 
-#### Vanilla JavaScript
+  #### Vanilla JavaScript
 
-For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
+    For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
 
-```javascript
-function getSSOToken() {
-  return new Promise((resolve, reject) => {
-    microsoftTeams.authentication.getAuthToken()
-      .then((token) => resolve(token))
-      .catch((error) => reject("Error getting token: " + error));
-  });
-}
-    
-function getBasicUserInfo() {
-  getSSOToken().then((ssoToken) => {
-    const tokenObj = JSON.parse(window.atob(ssoToken.split(".")[1]));
-    console.log(`username: ${tokenObj.name}`);
-    console.log(`user email: ${tokenObj.preferred_username}`);
-  });
-}
-```
+    ```javascript
+    function getSSOToken() {
+      return new Promise((resolve, reject) => {
+        microsoftTeams.authentication.getAuthToken()
+          .then((token) => resolve(token))
+          .catch((error) => reject("Error getting token: " + error));
+      });
+    }
+        
+    function getBasicUserInfo() {
+      getSSOToken().then((ssoToken) => {
+        const tokenObj = JSON.parse(window.atob(ssoToken.split(".")[1]));
+        console.log(`username: ${tokenObj.name}`);
+        console.log(`user email: ${tokenObj.preferred_username}`);
+      });
+    }
+    ```
 
-#### React
+  #### React
 
-For React projects, ensure the following environment variables are set in your deployment process:
+    For React projects, ensure the following environment variables are set in your deployment process:
 
-- For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+  - For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
 
-- For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+  - For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
-To update your source code, follow these steps:
+    To update your source code, follow these steps:
 
-1. Move the `auth-start.html` and `auth-end.html` files from the `auth/public` folder to the `public/` folder. These HTML files serve the purpose of handling authentication redirects.
+    1. Move the `auth-start.html` and `auth-end.html` files from the `auth/public` folder to the `public/` folder. These HTML files serve the purpose of handling authentication redirects.
 
-1. Move `sso` folder under `auth/` to `src/sso/`.
+    1. Move `sso` folder under `auth/` to `src/sso/`.
 
-    1. `InitTeamsFx`: This file executes a function that initializes the TeamsFx SDK. After the SDK initialization, it opens the `GetUserProfile` component.
-    1. `GetUserProfile`: This file executes a function to retrieve user information by invoking the Microsoft Graph API.
+        1. `InitTeamsFx`: This file executes a function that initializes the TeamsFx SDK. After the SDK initialization, it opens the `GetUserProfile` component.
+        1. `GetUserProfile`: This file executes a function to retrieve user information by invoking the Microsoft Graph API.
 
-1. Import and add `InitTeamsFx` in `Welcome.*`.
+    1. Import and add `InitTeamsFx` in `Welcome.*`.
 
-  For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+      For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
   ---
+
 ---
 
 ## Debug your app
