@@ -19,6 +19,11 @@ You can enable [SSO authentication for users with Teams SDK](/microsoftteams/pla
 
 To enable SSO, configure your Teams agent and app as follows:
 
+- [Update Microsoft Entra app manifest](#update-microsoft-entra-app-manifest).
+- [Update the Teams app manifest](#update-the-teams-app-manifest).
+- [Agents Toolkit configuration](#agents-toolkit-configuration).
+- [Update source code](#update-source-code).
+
 ### Update Microsoft Entra app manifest
 
 Before you enable SSO, make sure you define the required URIs for your app registration. This includes the Microsoft Entra app ID URI, which identifies the authentication app, and the redirect URI, which is used to return the token after sign-in.
@@ -180,8 +185,8 @@ Ensure the necessary configurations are in place to enable SSO for your Teams ag
     ```
 
     > [!NOTE]
-    > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
-    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
+    > - Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
+    > - In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
 
     For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
 
@@ -216,8 +221,8 @@ For apps that interact with the user in a chat, Team, or channel, SSO manifests 
 
 Update source code for:
 
-* Agent or bot
-* Message extension
+- Agent or bot
+- Message extension
 
   # [Agent or Bot](#tab/bot)
 
@@ -385,9 +390,9 @@ function getBasicUserInfo() {
 
 For React projects, ensure the following environment variables are set in your deployment process:
 
-* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+- For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
 
-* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+- For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
 To update your source code, follow these steps:
 
@@ -412,15 +417,15 @@ After you've added SSO to your agent or app, you can debug and preview it locall
 
 You can tailor Microsoft Entra app as per your agent or app requirement by modifying the [Entra app manifest](/entra/identity-platform/reference-app-manifest) to customize different aspects of your app. See [edit Microsoft Entra manifest](AAD-manifest-customization.md) to:
 
-* Include additional API permissions to access your desired APIs.
-* View your Microsoft Entra app in Azure portal.
+- Include additional API permissions to access your desired APIs.
+- View your Microsoft Entra app in Azure portal.
 
 ## See also
 
-* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
-* [Authentication setup using Teams SDK](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview)
-* [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview)
+- [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+- [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
+- [Authentication setup using Teams SDK](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview)
+- [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview)
 
 <!--
 ## Add SSO authentication to Teams agent or app
