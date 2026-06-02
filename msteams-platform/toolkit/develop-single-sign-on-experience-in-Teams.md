@@ -87,7 +87,7 @@ You can use the same steps for your Teams bot or message extension app as well.
     ]
     ```
 
-[Back to top](#create-the-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-microsoft-entra-app-manifest)
 
 ### Update the Agents Toolkit configuration and infra files
 
@@ -142,7 +142,7 @@ You can use the same steps for your Teams bot or message extension app as well.
       M365_APPLICATION_ID_URI: api://botid-${{BOT_ID}}
     ```
 
-[Back to top](#create-the-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-microsoft-entra-app-manifest)
 
 #### Update Infra configuration
 
@@ -211,7 +211,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         ```bash
         WEBSITE_NODE_DEFAULT_VERSION: '14.20.0'
         ```
-[Back to top](#create-the-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-microsoft-entra-app-manifest)
 
    ### Update the source code
 
@@ -284,7 +284,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         });
         ```
 
-    [Back to top](#create-the-microsoft-entra-app-manifest)
+    [Back to top](#define-uris-in-microsoft-entra-app-manifest)
 
    # [Message extension](#tab/messaging-extension)
 
@@ -353,7 +353,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         ]
       ```
 
-    [Back to top](#create-the-microsoft-entra-app-manifest)
+    [Back to top](#define-uris-in-microsoft-entra-app-manifest)
 
 # [Tab app](#tab/tab-app)
 
@@ -386,7 +386,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 > [!NOTE]
 > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
-[Back to top](#create-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-the-microsoft-entra-app-manifest)
 
 ### Update Agents Toolkit configuration files
 
@@ -447,7 +447,7 @@ In the `./appPackages/manifest.json` file, add the following code:
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
-[Back to top](#create-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-the-microsoft-entra-app-manifest)
 
 ### Update source code
 
@@ -496,7 +496,7 @@ To update your source code, follow these steps:
 
 For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
-[Back to top](#create-microsoft-entra-app-manifest)
+[Back to top](#define-uris-in-the-microsoft-entra-app-manifest)
 
 ---
 
