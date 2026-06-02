@@ -14,7 +14,7 @@ Here are a few helpful articles to get you started with authentication for your 
 - [Add authentication to agents and apps using Teams SDK](/microsoftteams/platform/teams-sdk/essentials/app-authentication?branch=main&pivots=csharp)
 - [Add SSO authentication to agents and apps using Teams SDK](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp)
 - [Add authentication to Teams agent using Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/configure-authentication-msal?pivots=python)
-- [Develop SSO experience in Teams app](develop-single-sign-on-experience-in-Teams.md#enable-sso-for-teams-agent-or-app)
+- [Develop SSO experience in Teams app](develop-single-sign-on-experience-in-Teams.md#add-sso-authentication-to-teams-agent-or-app)
 
 ## View how-to guide from Agents Toolkit
 
