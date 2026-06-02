@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 05/08/2026
+ms.date: 06/02/2026
 ---
 # Teams Store validation guidelines
 
