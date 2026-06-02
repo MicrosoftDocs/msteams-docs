@@ -88,7 +88,123 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 ---
 
-* **Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams agent or app.
+### Agents Toolkit configuration
+
+Ensure the necessary configurations are in place to enable SSO for your Teams agent or app.
+
+# [Agent](#tab/agent)
+
+1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
+
+1. Add the following code `aadApp/create` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra apps used for SSO:
+
+    ```yaml
+    - uses: aadApp/create
+      with:
+        name: "YOUR_AAD_APP_NAME"
+        generateClientSecret: true
+        signInAudience: "AzureADMyOrg"
+      writeToEnvironmentFile:
+          clientId: AAD_APP_CLIENT_ID
+          clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+          objectId: AAD_APP_OBJECT_ID
+          tenantId: AAD_APP_TENANT_ID
+          authority: AAD_APP_OAUTH_AUTHORITY
+          authorityHost: AAD_APP_OAUTH_AUTHORITY_HOST
+    ```
+
+    > [!NOTE]
+    > Replace the `name` value with the desired name for your Microsoft Teams app.
+
+    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
+
+1. Add the following code `aadApp/update` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
+
+    ```yaml
+    - uses: aadApp/update
+      with:
+        manifestPath: "./aad.manifest.json"
+        outputFilePath: "./build/aad.manifest.${{TEAMSFX_ENV}}.json"
+    ```
+
+    > [!NOTE]
+    > Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
+
+    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
+
+1. Locate the `createOrUpdateEnvironmentFile` action in `m365agents.local.yml` file and add the following environment variables:
+
+    ```yaml
+    envs:
+      ...
+      M365_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+      M365_CLIENT_SECRET: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+      M365_TENANT_ID: ${{AAD_APP_TENANT_ID}}
+      INITIATE_LOGIN_ENDPOINT: ${{BOT_ENDPOINT}}/auth-start.html
+      M365_AUTHORITY_HOST: ${{AAD_APP_OAUTH_AUTHORITY_HOST}}
+      M365_APPLICATION_ID_URI: api://botid-${{BOT_ID}}
+    ```
+
+# [App](#tab/app)
+
+1. Locate your Agents Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
+
+1. Add the `aadApp/create` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra app used for SSO:
+
+    ```yaml
+    - uses: aadApp/create
+      with:
+        name: "YOUR_AAD_APP_NAME"
+        generateClientSecret: true
+        signInAudience: "AzureADMyOrg"
+      writeToEnvironmentFile:
+          clientId: AAD_APP_CLIENT_ID
+          clientSecret: SECRET_AAD_APP_CLIENT_SECRET
+          objectId: AAD_APP_OBJECT_ID
+          tenantId: AAD_APP_TENANT_ID
+          authority: AAD_APP_OAUTH_AUTHORITY
+    ```
+
+    > [!NOTE]
+    > Replace the `name` value with the desired name for your Teams agent or app.
+
+    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
+
+1. Add the `aadApp/update` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
+
+    ```yaml
+    - uses: aadApp/update
+      with:
+        manifestPath: "./aad.manifest.json"
+        outputFilePath: "./build/aad.manifest.${{TEAMSFX_ENV}}.json"
+    ```
+
+    > [!NOTE]
+    > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
+    > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
+
+    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
+
+1. For a React project, update `cli/runNpmCommand` under `deploy`.
+
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `m365agents.yml` file and add the following environment variables:
+
+    ```yaml
+    env:
+      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+    ```
+
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `m365agents.local.yml` file and add the following environment variables:
+
+    ```yaml
+    envs:
+      ...
+      REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
+      REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+    ```
+
+---
 
 * **SSO app information in Agents Toolkit configuration files**: Ensure the Microsoft Entra authentication app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
 
