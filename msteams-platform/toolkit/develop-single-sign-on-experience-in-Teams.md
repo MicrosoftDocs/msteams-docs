@@ -217,7 +217,7 @@ Ensure the Microsoft Entra authentication app is registered with the backend ser
 
 For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
 
-# [Agent](#tab/agent1)
+# [Agent](#tab/agent)
 
 To update source code for Agent or bot:
 
@@ -237,7 +237,7 @@ To update source code for Agent or bot:
       "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
   ```
 
-     The HTML pages used for auth redirect are copied when building this bot project.
+  The HTML pages used for auth redirect are copied when building this bot project.
 
   1. In `src/index` file, add the following command to import `isomorphic-fetch`:
 
