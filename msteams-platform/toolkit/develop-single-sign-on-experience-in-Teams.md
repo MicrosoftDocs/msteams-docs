@@ -370,7 +370,7 @@ You can update the source for following apps:
 
   ```
 
-# [Message extension](#tab/messaging-extension)
+  # [Message extension](#tab/messaging-extension)
 
   1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
 
@@ -437,7 +437,7 @@ You can update the source for following apps:
          ]
        ```
 
-# [Tab](#tab/tab1)
+  # [Tab](#tab/tab1)
 
 #### Vanilla JavaScript
 
