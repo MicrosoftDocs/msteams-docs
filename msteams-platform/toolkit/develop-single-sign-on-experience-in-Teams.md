@@ -393,6 +393,25 @@ To update your source code, follow these steps:
 
 For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
+## Debug your app
+
+After you've added SSO to your agent or app, you can debug and preview it locally in browser or in [Agents Playground](debug-your-agents-playground.md). To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
+
+## Customize Microsoft Entra app
+
+You can tailor Microsoft Entra app as per your agent or app requirement by modifying the [Entra app manifest](/entra/identity-platform/reference-app-manifest) to customize different aspects of your app. See [edit Microsoft Entra manifest](AAD-manifest-customization.md) to:
+
+* Include additional API permissions to access your desired APIs.
+* View your Microsoft Entra app in Azure portal.
+
+## See also
+
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
+* [Authentication setup using Teams SDK](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview)
+* [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview)
+
+<!--
 ## Add SSO authentication to Teams agent or app
 
 Choose one of the following to add SSO authentication for your Teams agent or app:
@@ -857,21 +876,4 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/mi
 [Back to top](#define-uris-in-the-microsoft-entra-app-manifest)
 
 ---
-
-## Debug your app
-
-After you've added SSO to your agent or app, you can debug and preview it locally in browser or in [Agents Playground](debug-your-agents-playground.md). To debug your app, select the **F5** key. Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally](debug-local.md).
-
-## Customize Microsoft Entra app
-
-You can tailor Microsoft Entra app as per your agent or app requirement by modifying the [Entra app manifest](/entra/identity-platform/reference-app-manifest) to customize different aspects of your app. See [edit Microsoft Entra manifest](AAD-manifest-customization.md) to:
-
-* Include additional API permissions to access your desired APIs.
-* View your Microsoft Entra app in Azure portal.
-
-## See also
-
-* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)
-* [Authentication setup using Teams SDK](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview)
-* [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview)
+-->
