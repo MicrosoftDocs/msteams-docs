@@ -482,6 +482,7 @@ To update your source code, follow these steps:
 
   For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
+  ---
 ---
 
 ## Debug your app
