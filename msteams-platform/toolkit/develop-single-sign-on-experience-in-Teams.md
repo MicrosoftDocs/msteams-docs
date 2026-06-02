@@ -206,15 +206,196 @@ Ensure the necessary configurations are in place to enable SSO for your Teams ag
 
 ---
 
-* **SSO app information in Agents Toolkit configuration files**: Ensure the Microsoft Entra authentication app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
+### Update source code
+
+Ensure the Microsoft Entra authentication app is registered with the backend service, and that the Agents Toolkit triggers it when debugging or previewing the Teams agent or app.
 
 For apps that interact with the user in a chat, Team, or channel, SSO manifests as an Adaptive Card, which the user can interact with to invoke the Microsoft Entra consent flow.
+
+# [Bot](#tab/bot)
+
+1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
+
+1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+
+1. Run the following command in `./` folder:
+
+   ```bash
+   npm install copyfiles --save-dev
+   ```
+
+1. Update the following command in `package.json` file:
+
+    ```json
+    "build": "tsc --build && shx cp -r ./src/adaptiveCards ./lib/src && copyfiles src/public/*.html lib/",
+    ```
+
+   The HTML pages used for auth redirect are copied when building this bot project.
+
+1. In `src/index` file, add the following command to import `isomorphic-fetch`:
+
+    ```bash
+     require("isomorphic-fetch");
+    ```
+
+1. Add the following command to redirect to auth pages:
+
+     ```bash
+     server.get(
+         "/auth-:name(start|end).html",
+         restify.plugins.serveStatic({
+           directory: path.join(__dirname, "public"),
+         })
+     );
+     ```
+
+1. Update `commandApp.requestHandler` to ensure auth works with the following code:
+
+     ```bash
+     await commandApp.requestHandler(req, res).catch((err) => {
+         // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+         if (!err.message.includes("412")) {
+         throw err;
+         }
+     });
+     ```
+
+1. Add `ssoConfig` and `ssoCommands` in `ConversationBot` in `src/internal/initialize`:
+
+     ```bash
+     import { ProfileSsoCommandHandler } from "../profileSsoCommandHandler";
+        
+     export const commandBot = new ConversationBot({
+         ...
+         // To learn more about ssoConfig, please refer atk sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+         ssoConfig: {
+         aad :{
+           scopes:["User.Read"],
+         },
+         },
+         command: {
+         enabled: true,
+         commands: [new HelloWorldCommandHandler() ],
+         ssoCommands: [new ProfileSsoCommandHandler()],
+         },
+     });
+     ```
+
+# [Message extension](#tab/messaging-extension)
+
+1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
+
+1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
+
+1. Update your `src/index` file to add the appropriate `restify`:
+
+   ```bash
+   const path = require("path");
+       
+   // Listen for incoming requests.
+   server.post("/api/messages", async (req, res) => {
+       await adapter.process(req, res, async (context) => {
+       await bot.run(context);
+       }).catch((err) => {
+       // Error message including "412" means it is waiting for user's consent, which is a normal process of SSO, sholdn't throw this error.
+       if(!err.message.includes("412")) {
+             throw err;
+         }
+       })
+   });
+        
+   server.get(
+       "/auth-:name(start|end).html",
+       restify.plugins.serveStatic({
+       directory: path.join(__dirname, "public"),
+       })
+   );
+   ```
+
+1. Run the following commands under `./` folder:
+
+   ```bash
+   npm install @microsoft/atk
+   ```
+
+   ```bash
+   npm install isomorphic-fetch
+   ```
+
+1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`.
+
+1. Install `copyfiles` npm packages in your TypeScript bot project and update the `build` script in `src/package.json` file as follows:
+
+   ```json
+   "build": "tsc --build && copyfiles ./public/*.html lib/",
+   ```
+
+   The HTML pages used for auth redirect are copied when building this bot project.
+
+1. Update `templates/appPackage/aad.template.json` file with the scopes you use in the `handleMessageExtensionQueryWithSSO` function:
+
+   ```json
+   "requiredResourceAccess": [
+         {
+         "resourceAppId": "Microsoft Graph",
+         "resourceAccess": [
+                 {
+                     "id": "User.Read",
+                     "type": "Scope"
+                 }
+         ]
+         }
+     ]
+   ```
+
+---
+
+#### Vanilla JavaScript
+
+For a tab app that doesn't use React, use the following code as a basic example to obtain the SSO token:
+
+```javascript
+function getSSOToken() {
+  return new Promise((resolve, reject) => {
+    microsoftTeams.authentication.getAuthToken()
+      .then((token) => resolve(token))
+      .catch((error) => reject("Error getting token: " + error));
+  });
+}
+
+function getBasicUserInfo() {
+  getSSOToken().then((ssoToken) => {
+    const tokenObj = JSON.parse(window.atob(ssoToken.split(".")[1]));
+    console.log(`username: ${tokenObj.name}`);
+    console.log(`user email: ${tokenObj.preferred_username}`);
+  });
+}
+```
+
+#### React
+
+For React projects, ensure the following environment variables are set in your deployment process:
+
+* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+
+* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+
+To update your source code, follow these steps:
+
+1. Move the `auth-start.html` and `auth-end.html` files from the `auth/public` folder to the `public/` folder. These HTML files serve the purpose of handling authentication redirects.
+
+1. Move `sso` folder under `auth/` to `src/sso/`.
+
+    1. `InitTeamsFx`: This file executes a function that initializes the TeamsFx SDK. After the SDK initialization, it opens the `GetUserProfile` component.
+    1. `GetUserProfile`: This file executes a function to retrieve user information by invoking the Microsoft Graph API.
+
+1. Import and add `InitTeamsFx` in `Welcome.*`.
+
+For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
 ## Add SSO authentication to Teams agent or app
 
 Choose one of the following to add SSO authentication for your Teams agent or app:
-
-# [Agent](#tab/agent)
 
 To enable SSO for your agent:
 
@@ -533,8 +714,6 @@ To use the `teamsFx` tab or bot template, follow these steps:
       ```
 
     [Back to top](#define-uris-in-microsoft-entra-app-manifest)
-
-# [Tab app](#tab/tab-app)
 
 To enable SSO for your tab app:
 
