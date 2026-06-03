@@ -1,7 +1,7 @@
 ---
 title: Send Notifications to Users in Meetings
 description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples and its feature compatibility by user types.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.owner: kanchankaur
 ms.date: 02/02/2023
