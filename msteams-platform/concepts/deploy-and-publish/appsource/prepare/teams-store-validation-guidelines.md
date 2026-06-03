@@ -99,9 +99,9 @@ Apps must provide value to the users by enabling them to complete functional wor
 
 Tabs must provide value beyond hosting an existing website. [*Must fix*]
 
-:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-app-provides-workflows-new.jpg" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-website-i-framed-new.jpg" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
 </details>
 <br>
@@ -198,7 +198,7 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-region-app-manifest-new.jpg" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
 
 ### Suitable for workplace consumption
 
@@ -214,7 +214,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 
 Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-content-aggregator-app.png" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-content-aggregator-app-new.jpg" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
 
 </details>
 
