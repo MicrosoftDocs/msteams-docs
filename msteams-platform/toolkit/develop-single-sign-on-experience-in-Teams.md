@@ -219,7 +219,7 @@ For apps that interact with the user in a chat, Team, or channel, SSO manifests 
 
 # [Agent](#tab/agent)
 
-To update source code for Agent or bot:
+To update source code for an agent:
 
   1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
@@ -299,7 +299,7 @@ You can update the source for following apps:
 
   # [Bot](#tab/bot)
 
-  To update source code for Agent or bot:
+  To update source code for a bot:
 
   1. Move the files located in the `auth/sso` folder to `src`. The `ProfileSsoCommandHandler` class serves as an SSO command handler, designed to retrieve user information using an SSO token. You can adopt this method to develop your own SSO command handler.
 
