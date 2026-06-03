@@ -34,7 +34,7 @@ To define URIs in Entra app manifest:
 
 1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
 
-1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
+1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [Entra app manifest](/entra/identity-platform/reference-app-manifest).
 
 ### Update the Teams app manifest
 
