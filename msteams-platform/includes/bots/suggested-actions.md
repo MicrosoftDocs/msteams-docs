@@ -127,11 +127,10 @@ This pattern is particularly useful for the targeted messages workflow where an 
 
 **Bot Handler (Incoming to Bot)**
 
-The agent or bot receives a standard Bot Framework invoke activity:
+The agent or bot receives a standard Bot invoke activity:
 
 ```json
 
-// In TeamsActivityHandler.onInvokeActivity():
 case "suggestedAction/submit":
   const vote = context.activity.value;  // { vote: "approve" }
   // Process the action...
@@ -140,12 +139,12 @@ case "suggestedAction/submit":
 
 The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
-## Teams SDK snippets for `Action.Submit`
+## Teams SDK implementation
 
 Use the page pivot to view Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
 
 > [!NOTE]
-> The `Action.Submit` APIs are currently marked as experimental in Teams SDK. Check the linked SDK docs for the latest availability status.
+> The `Action.Submit` APIs are currently marked as experimental in Teams SDK.
 
 ::: zone pivot="teams-sdk-csharp"
 
