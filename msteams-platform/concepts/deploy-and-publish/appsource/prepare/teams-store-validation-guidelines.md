@@ -572,9 +572,9 @@ If your app package contains custom activity icons for activity feed notificatio
 
 You must have a short and long description for your app. App description helps improve your app discoverability in the Teams Store. The descriptions in your app configuration and Partner Center must be the same.
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information-new.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-adequete-information-new.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequete-new.png" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-inadequete-new.png" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
 
 <br></br>
 <details><summary>Expand to know more</summary>
@@ -583,13 +583,13 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail-new.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-comparitive-marketing-fail-new.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
 * Hyperlink contact details, get started, help, or sign up in app description. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked-new.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-contact-deatils-hyperlinked-new.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-not-hyperlinked-new.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-contact-deatils-not-hyperlinked-new.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
 
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Must fix*]
 
@@ -606,17 +606,17 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
   * Role based functionality
   * Dependency on native app
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-calledout-pass-new.png" alt-text="Graphic shows an example of limitations called out in app description.":::
+  :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-limitations-calledout-pass-new.png" alt-text="Graphic shows an example of limitations called out in app description.":::
   
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-not-calledout-fail-new.png" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
+  :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-limitations-not-calledout-fail-new.png" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in app manifest, Partner Center, and AppSource for that offer.
 
 * If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass-new.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-teams-reference-pass-new.png" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-fail-new.png" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-teams-reference-fail-new.png" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
 
 #### Short description
 
@@ -676,15 +676,15 @@ The long description must provide an engaging narrative that highlights your app
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-abbreviated-new.png" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-microsoft-abbreviated-new.png" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-not-abbreviated-new.png" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-microsoft-not-abbreviated-new.png" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft-new.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-offering-from-microsoft-new.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft-new.png" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-no-offering-indication-from-microsoft-new.png" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
 
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
@@ -692,13 +692,13 @@ The long description must provide an engaging narrative that highlights your app
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire app manifest or AppSource long description or app content.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass-new.png" alt-text="Graphic shows an example of app long description without errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-pass-new.png" alt-text="Graphic shows an example of app long description without errors.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail-new.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-fail-new.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
 * Include links to AppSource.
 
-  :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource-new.png" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
+  :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-link-to-appsource-new.png" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
@@ -730,7 +730,7 @@ Remember the following:
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-app-functionality-mobile-new.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Must fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Must fix*]
@@ -741,7 +741,7 @@ Remember the following:
 
 * Must depict app functionality or integration with Teams. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-new.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
@@ -759,13 +759,13 @@ Remember the following:
 
 * If your Teams app is extensible across Microsoft Copilot, the screenshots provided must depict the app's functionality within Copilot. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/Copilot/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/teams-app-in-copilot-new.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
 **Don'ts:**
 
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside Teams.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality-teams.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-teams-new.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
 
 </details>
 
