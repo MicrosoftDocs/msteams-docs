@@ -1,7 +1,7 @@
 ---
 title: Send and Receive Files
 description: Learn how to send and receive files using Microsoft Graph APIs and Teams SDK for personal, channel, and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 05/08/2026
+ms.date: 06/03/2026
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.owner: angovil
@@ -15,14 +15,11 @@ ms.owner: angovil
 
 There are two ways to send files to and receive files:
 
-* [**Use the Microsoft Graph APIs:**](#use-the-graph-apis) This method works in all Microsoft Teams scopes:
-  * `personal`
-  * `channel`
-  * `groupchat`
+* [**Use the Microsoft Graph APIs:**](#use-the-graph-apis) This method works in all (`personal`, `channel`, `groupchat`) Microsoft Teams scopes.
 
 * [**Use the Teams SDK file consent APIs:**](#use-the-teams-sdk-file-consent-file-apis) These only support files in `personal` context.
 
-The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
+The following video shows how a bot makes sending and receiving files easy:
 
 <br>
 
