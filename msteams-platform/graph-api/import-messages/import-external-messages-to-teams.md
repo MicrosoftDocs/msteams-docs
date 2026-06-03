@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 05/08/2026
+ms.date: 06/03/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
