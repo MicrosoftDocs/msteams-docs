@@ -149,8 +149,6 @@ Use the page pivot to view Teams SDK snippets for creating and handling `Action.
 
 ::: zone pivot="teams-sdk-csharp"
 
-### C\#
-
 ```csharp
 #pragma warning disable ExperimentalTeamsSuggestedAction
 using System.Text.Json;
@@ -182,13 +180,9 @@ teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 });
 ```
 
-For the full sample, see [Teams SDK C# best practices: Suggested actions](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/ai/best-practices/#suggested-actions).
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
-
-### TypeScript
 
 ```typescript
 import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
@@ -210,13 +204,9 @@ app.on("suggested-action.submit", async ({ send, activity }) => {
 });
 ```
 
-For the full sample, see [Teams SDK TypeScript best practices: Suggested actions](https://microsoft.github.io/teams-sdk/typescript/in-depth-guides/ai/best-practices/#suggested-actions).
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
-
-### Python
 
 ```python
 import json
@@ -242,8 +232,6 @@ async def handle_suggested_action_submit(ctx):
   payload = json.dumps(ctx.activity.value)
   await ctx.send(f"Got vote: {payload}")
 ```
-
-For the full sample, see [Teams SDK Python best practices: Suggested actions](https://microsoft.github.io/teams-sdk/python/in-depth-guides/ai/best-practices/#suggested-actions).
 
 ::: zone-end
 
