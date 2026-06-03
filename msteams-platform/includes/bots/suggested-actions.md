@@ -99,9 +99,11 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 # [`Action.Submit`](#tab/actionsubmit)
 
-Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured `name` and `value` payload so you can route and dispatch based on the invoke `name` and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
+Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
 
 Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](../../agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
+
+This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
 
 **Bot Payload (Outgoing from Bot)**
 
@@ -136,6 +138,113 @@ case "suggestedAction/submit":
   return { status: 200 };
 ```
 
-The agent or bot dispatches on `activity.name` and reads the structured payload from `activity.value`. This is identical to how agents or bots handle `adaptiveCard/action`, `handoff/action`, or any other named invoke.
+The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
 ---
+
+## Teams SDK snippets for `Action.Submit`
+
+Use the page pivot to view Teams SDK implementation examples for creating and handling `Action.Submit` suggested actions in C\#, TypeScript, and Python.
+
+> [!NOTE]
+> The `Action.Submit` APIs are currently marked as experimental in Teams SDK. Check the linked SDK docs for the latest availability status.
+
+::: zone pivot="teams-sdk-csharp"
+
+### C\#
+
+```csharp
+#pragma warning disable ExperimentalTeamsSuggestedAction
+using System.Text.Json;
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Activities;
+using CardAction = Microsoft.Teams.Api.Cards.Action;
+using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
+
+var reply = new MessageActivity("Approve or reject the request:")
+{
+  SuggestedActions = new SuggestedActions
+  {
+    Actions =
+    {
+      new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
+      new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
+    }
+  }
+};
+
+await context.Send(reply);
+
+teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
+{
+  var payload = ctx.Activity.Value is JsonElement value
+    ? value.GetRawText()
+    : "<none>";
+  await ctx.Send($"Got vote: {payload}", cancellationToken);
+});
+```
+
+For the full sample, see [Teams SDK C# best practices: Suggested actions](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/ai/best-practices/#suggested-actions).
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+### TypeScript
+
+```typescript
+import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
+
+const reply = new MessageActivity("Approve or reject the request:");
+reply.suggestedActions = {
+  to: [],
+  actions: [
+    { type: "Action.Submit", title: "Approve", value: { vote: "approve" } },
+    { type: "Action.Submit", title: "Reject", value: { vote: "reject" } }
+  ]
+} satisfies SuggestedActions;
+
+await send(reply);
+
+app.on("suggested-action.submit", async ({ send, activity }) => {
+  const payload = activity.value != null ? JSON.stringify(activity.value) : "<none>";
+  await send(`Got vote: ${payload}`);
+});
+```
+
+For the full sample, see [Teams SDK TypeScript best practices: Suggested actions](https://microsoft.github.io/teams-sdk/typescript/in-depth-guides/ai/best-practices/#suggested-actions).
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+### Python
+
+```python
+import json
+from microsoft_teams.api import MessageActivityInput
+from microsoft_teams.api.models.card.card_action import CardAction
+from microsoft_teams.api.models.card.card_action_type import CardActionType
+from microsoft_teams.api.models.suggested_actions import SuggestedActions
+
+reply = MessageActivityInput(text="Approve or reject the request:").with_suggested_actions(
+  SuggestedActions(
+    to=[],
+    actions=[
+      CardAction(type=CardActionType.SUBMIT, title="Approve", value={"vote": "approve"}),
+      CardAction(type=CardActionType.SUBMIT, title="Reject", value={"vote": "reject"}),
+    ],
+  )
+)
+
+await ctx.send(reply)
+
+@app.on_suggested_action_submit
+async def handle_suggested_action_submit(ctx):
+  payload = json.dumps(ctx.activity.value)
+  await ctx.send(f"Got vote: {payload}")
+```
+
+For the full sample, see [Teams SDK Python best practices: Suggested actions](https://microsoft.github.io/teams-sdk/python/in-depth-guides/ai/best-practices/#suggested-actions).
+
+::: zone-end
