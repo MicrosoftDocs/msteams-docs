@@ -140,18 +140,14 @@ case "suggestedAction/submit":
 
 The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
----
-
 ## Teams SDK snippets for `Action.Submit`
 
-Use the page pivot to view Teams SDK implementation examples for creating and handling `Action.Submit` suggested actions in C\#, TypeScript, and Python.
+Use the following Teams SDK snippets to create and handle `Action.Submit` suggested actions.
 
 > [!NOTE]
 > The `Action.Submit` APIs are currently marked as experimental in Teams SDK. Check the linked SDK docs for the latest availability status.
 
-::: zone pivot="teams-sdk-csharp"
-
-### C\#
+#### C\#
 
 ```csharp
 #pragma warning disable ExperimentalTeamsSuggestedAction
@@ -186,11 +182,7 @@ teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 
 For the full sample, see [Teams SDK C# best practices: Suggested actions](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/ai/best-practices/#suggested-actions).
 
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-### TypeScript
+#### TypeScript
 
 ```typescript
 import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
@@ -214,11 +206,7 @@ app.on("suggested-action.submit", async ({ send, activity }) => {
 
 For the full sample, see [Teams SDK TypeScript best practices: Suggested actions](https://microsoft.github.io/teams-sdk/typescript/in-depth-guides/ai/best-practices/#suggested-actions).
 
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-### Python
+#### Python
 
 ```python
 import json
@@ -247,4 +235,4 @@ async def handle_suggested_action_submit(ctx):
 
 For the full sample, see [Teams SDK Python best practices: Suggested actions](https://microsoft.github.io/teams-sdk/python/in-depth-guides/ai/best-practices/#suggested-actions).
 
-::: zone-end
+---
