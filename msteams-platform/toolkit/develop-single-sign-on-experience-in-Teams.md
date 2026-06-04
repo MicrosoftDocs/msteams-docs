@@ -236,7 +236,7 @@ To update source code for an agent:
   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
   > [!NOTE]
-  > To use Teams SDK for adding SSO to your C#, TypeScript, and Python agents, see [app authentication](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp).
+  > If you're adding SSO to agents built with C#, TypeScript, or Python, see [Teams SDK app authentication](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp).
 
 <!--
   1. Run the following command in `./` folder:
