@@ -82,7 +82,8 @@ Connect your Microsoft Entra authentication app to your Teams agent or app by in
     "validDomains": [
     "${{BOT_DOMAIN}}"
     ]
--->    ```
+    ```
+-->
 
 # [App](#tab/app)
 
