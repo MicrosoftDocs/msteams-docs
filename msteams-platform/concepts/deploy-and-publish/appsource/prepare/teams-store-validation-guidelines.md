@@ -682,9 +682,9 @@ The long description must provide an engaging narrative that highlights your app
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-offering-from-microsoft-new.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-offering-from-microsoft-new.jpg" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-no-offering-indication-from-microsoft-new.png" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-no-offering-indication-from-microsoft-new.jpg" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
 
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
@@ -692,13 +692,13 @@ The long description must provide an engaging narrative that highlights your app
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire app manifest or AppSource long description or app content.
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-pass-new.png" alt-text="Graphic shows an example of app long description without errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-pass-new.jpg" alt-text="Graphic shows an example of app long description without errors.":::
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-fail-new.png" alt-text="Graphic shows an example of app long description with typos and errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-fail-new.jpg" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
 * Include links to AppSource.
 
-  :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-link-to-appsource-new.png" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-link-to-appsource-new.jpg" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
@@ -730,7 +730,7 @@ Remember the following:
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-app-functionality-mobile-new.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-app-functionality-mobile-new.jpg" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
 * You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Must fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Must fix*]
@@ -988,7 +988,7 @@ The following are the navigation guidelines:
   * Page headers
   * Hamburger menus
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-in-meeting-improper-navigation-levels-new.jpg" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
 * Deep links in tabs mustn't link to an external webpage but within Teams. For example, dialogs or other tabs. [*Must fix*]
 
