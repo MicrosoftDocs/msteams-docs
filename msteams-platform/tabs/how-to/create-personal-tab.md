@@ -6,7 +6,6 @@ ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
 ms.date: 03/16/2026
-ms.owner: ryanbliss
 ---
 
 # Create a tab

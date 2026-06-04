@@ -3,7 +3,6 @@ title: Best practices for building agent in Teams user experience
 description: Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 09/27/2024
 ---
 
@@ -68,10 +67,6 @@ Use the following types of updates while streaming responses:
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
-
->[!NOTE]
->
-> Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the agent response contains citations
 
@@ -168,9 +163,6 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 To achieve this, the agent must leverage the conversation context and history, ensuring prompt suggestions are timely and fit for the query.
 
 ### Enable app profile card
-
-> [!NOTE]
-> Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
 
 Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 

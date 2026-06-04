@@ -1,8 +1,6 @@
 ---
 title: Prepare to Build App with Visual Studio
-author: surbhigupta
 description: Learn about build environments such as C# and Blazor of Teams Toolkit in Visual Studio to integrate Azure capabilities and cloud services for building apps.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 02/06/2025
