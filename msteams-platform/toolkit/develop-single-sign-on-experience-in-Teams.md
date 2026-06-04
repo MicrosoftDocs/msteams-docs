@@ -45,17 +45,26 @@ Connect your Microsoft Entra authentication app to your Teams agent or app by in
 1. In the `./appPackages/manifest.json` file, add the following code:
 
     ```json
-    "webApplicationInfo": {
-      "id": "${{AAD_APP_CLIENT_ID}}",
-      "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-    }
+    "validDomains": [
+        ...
+        // highlight-next-line
+        "xxx.xxxxx.xxx"
+     ],
+     // highlight-start
+     "webApplicationInfo": {
+        "id": "<Your-Application-Id>",
+        "resource": "api://<Your-Application-Id>"
+      }
+     // highlight-end
     ```
 
-    `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+    - `webApplicationInfo` provides your Microsoft Entra App ID and Microsoft Graph information to assist users sign in to your app.
+    - `validDomains` includes the domains for websites that the app loads within the Teams client.
 
     > [!NOTE]
     > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
+<!--
 1. Register one or more commands in `commandLists`.
 
     The `commandLists` includes commands that your bot can suggest to users. If you're using the `teamsFx` bot template, set the following values:
@@ -73,7 +82,7 @@ Connect your Microsoft Entra authentication app to your Teams agent or app by in
     "validDomains": [
     "${{BOT_DOMAIN}}"
     ]
-    ```
+-->    ```
 
 # [App](#tab/app)
 
