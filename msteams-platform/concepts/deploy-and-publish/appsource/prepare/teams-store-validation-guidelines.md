@@ -541,9 +541,9 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 
 * App's color and outline icon submitted in the app listing must match. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-same.png" alt-text="Screenshot shows color icon and outline icon are same.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/color-outline-icon-same-new.jpg" alt-text="Screenshot shows color icon and outline icon are same.":::
 
-   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/color-outline-icon-not-same-new.jpg" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Must fix*]
 * The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Must fix*]
@@ -741,7 +741,7 @@ Remember the following:
 
 * Must depict app functionality or integration with Teams. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-new.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-new.jpg" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
@@ -765,7 +765,7 @@ Remember the following:
 
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside Teams.
 
-   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-teams-new.png" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-teams-new.jpg" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
 
 </details>
 
@@ -921,7 +921,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Tab setup **mustn't dead-end** a new user. Provide a message on how to complete the action or workflow. [*Must fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-tabs-setup-new-user-new.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
 
 * The user mustn't leave the tab configuration experience inside Teams to create content outside Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Must fix*]
 
@@ -937,9 +937,9 @@ If your app includes a tab, ensure that it adheres to these guidelines.
   * Provide an appropriate way forward guidance for the user to acquire or generate the URL. [*Must fix*]
   * Check for URL that is relevant or appropriate to the app’s functionality as per the app description. [*Must fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-pass.png" alt-text="Screenshot shows an example of tab configuration with a way forward for user to generate a URL.":::
-  
-    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-fail.png" alt-text="Screenshot shows an example of tab configuration without a way forward for user to generate a URL.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-configuration-way-forward-url-pass-new.jpg" alt-text="Screenshot shows an example of tab configuration with a way forward for user to generate a URL.":::
+
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-configuration-way-forward-url-fail-new.jpg" alt-text="Screenshot shows an example of tab configuration without a way forward for user to generate a URL.":::
 
 * Hyperlink the contact us information in the configuration screen instead of plain text to help users to contact you for support requirements. [*Must fix*]
 
@@ -960,7 +960,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Tabs mustn't have a duplicate header. Remove duplicate logos from the I-frame since the tab framework already displays the app icon and name. [*Good-to-fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-views-no-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-views-no-duplicate-header-logo-new.jpg" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab with duplicate headers and logos.":::
 
@@ -975,9 +975,9 @@ The following are the navigation guidelines:
 
    Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.png" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-navigation-static-tab-new.jpg" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.png" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-navigation-left-navigation-new.jpg" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
 
 * If your tab has a toolbar on the left rail without any navigation component, the toolbar must leave 20 pixels spacing from Teams left navigation. [*Must fix*]
 
@@ -1007,27 +1007,27 @@ The following are the navigation guidelines:
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-allowed-scenarios.png" alt-text="Graphic shows examples of all the scenarios in mobile where horizontal scroll is allowed.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-allowed-scenarios-new.jpg" alt-text="Graphic shows examples of all the scenarios in mobile where horizontal scroll is allowed.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-allowed-kanban.png" alt-text="Graphic shows an example of horizontal scroll in Kanban board.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-list-view-components.png" alt-text="Graphic shows an example of list view with many  components.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-fixed-board.png" alt-text="Graphic shows an example of horizontal scroll in a white board with infinite canvas and fixed board.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-fixed-board-new.jpg" alt-text="Graphic shows an example of horizontal scroll in a white board with infinite canvas and fixed board.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.png" alt-text="Graphic shows an example of horizontal scroll in list view.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-in-list-view-new.jpg" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
 * The user must have an option to go to previous work state. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/back-button-available.png" alt-text=" Screenshot shows back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/back-button-available-new.png" alt-text="Screenshot shows back button option available.":::
 
-   :::image type="content" source="../../../../assets/images/submission/no-back-button-available.png" alt-text="Screenshot shows failed scenario of no back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/no-back-button-available-new.jpg" alt-text="Screenshot shows failed scenario of no back button option available.":::
 
 * Horizontal scroll in Adaptive Cards mustn't be present in Teams. [*Must fix*]
 
 * Bottom rail used for navigation in tabs mustn't conflict with Teams native mobile app navigation. [*Must fix*]
 
-  :::image type="content" source="../../../../assets/images/submission/validation-tab-bottom-rail-conflicts-with-teams-mobile.png" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-bottom-rail-conflicts-with-teams-mobile-new.jpg" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
 
 </details>
 </br>
@@ -1050,7 +1050,7 @@ The following are the navigation guidelines:
 
 * Tabs must use Teams styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Good-to-fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.png" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-app-uses-diff-font-new.jpg" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Good-to-fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md). [*Good-to-fix*]
