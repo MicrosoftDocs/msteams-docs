@@ -1125,11 +1125,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned. The bot must enable the users to know about the value proposition of the app. Bot must respond with various workflows it supports on asking for help or value it provides. Bot must provide a valid response even when the user hasn’t logged into the apps.
 
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-valid-response-lowercase-new.jpg" alt-text="Graphic shows an example of bot providing a valid response for a command in lowercase or uppercase.":::
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Must fix*]
-  
-  :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
+
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-commands-generic-response-pass-new.jpg" alt-text="Graphic shows an example of bot responding to generic commands.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
@@ -1218,7 +1218,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
-     :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.png" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
+      :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-welcome-message-new.jpg" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
 
      :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
 
