@@ -306,7 +306,7 @@ To update source code for an agent:
 
 # [App](#tab/app)
 
-You can update the source for following apps:
+Update source code for the following Teams apps to add SSO:
 
 - Bot
 - Message extension
