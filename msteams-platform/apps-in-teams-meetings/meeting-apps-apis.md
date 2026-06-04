@@ -1,11 +1,11 @@
-﻿---
+---
 title: Enhance Meeting Experience with APIs
 description: Learn meeting apps API references available through the Teams SDK and TeamsJS library with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 05/27/2026
+ms.date: 06/04/2026
 ---
 
 # Meeting apps APIs
@@ -898,7 +898,7 @@ POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&
 Host: api.captions.office.microsoft.com
 Content-Type: text/plain
 Content-Length: 22
-Hello Iâ€™m Cortana, welcome to my meeting. 
+Hello I'm Cortana, welcome to my meeting.
 ```
 
 > [!NOTE]  
@@ -942,7 +942,7 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 "webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
-    },
+    }
 "authorization": {
     "permissions": {
         "resourceSpecific": [
@@ -1052,10 +1052,10 @@ app.on('meetingStart', async ({ activity, send }) => {
 
   const card = new AdaptiveCard(
     new TextBlock('The meeting has started.', { weight: 'Bolder', size: 'Large', wrap: true }),
-    new TextBlock(`**Title:** ${value.Title || 'N/A'}`, { wrap: true }),
-    new TextBlock(`**Start Time:** ${value.StartTime || 'N/A'}`, { wrap: true })
+    new TextBlock(`**Title:** ${value.title || 'N/A'}`, { wrap: true }),
+    new TextBlock(`**Start Time:** ${value.startTime || 'N/A'}`, { wrap: true })
   ).withActions(
-    new OpenUrlAction(value.JoinUrl, { title: 'Join Meeting' })
+    new OpenUrlAction(value.joinUrl, { title: 'Join Meeting' })
   );
   
   await send(card);
@@ -1096,7 +1096,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 teamsApp.OnMeetingEnd(async context =>
 {
     var activity = context.Activity.Value;
-    var meetingId = activity.Id;
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
     
     // Get meeting info from API
     var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
@@ -1220,7 +1220,7 @@ app.on('meetingEnd', async ({ activity, api, send }) => {
 
   const card = new AdaptiveCard(
     new TextBlock('The meeting has ended.', { weight: 'Bolder', size: 'Large', wrap: true }),
-    new TextBlock(`**End Time:** ${value.EndTime}`, { wrap: true }),
+    new TextBlock(`**End Time:** ${value.endTime}`, { wrap: true }),
     new TextBlock('**Transcript:**', { weight: 'Bolder', wrap: true }),
     ...transcriptBlocks
   );
@@ -1339,7 +1339,7 @@ The following code provides an example of meeting end event payload:
     "joinUrl": "join_url",
     "title": "Example meeting",
     "meetingType": "Scheduled",
-    "EndTime": "2023-02-23T20:30:07.478Z"
+    "endTime": "2023-02-23T20:30:07.478Z"
   },
   "channelData": {
     "tenant": {
@@ -1375,7 +1375,7 @@ The following code provides an example of meeting end event payload:
 | **value.Id** | The default ID associated with the meeting. |
 | **value.JoinUrl** | The join URL of the meeting. |
 | **value.StartTime** | The meeting start time in UTC. |
-| **value.EndTime** | The meeting end time in UTC. |
+| **value.endTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
 ### Receive meeting participant events
