@@ -235,9 +235,10 @@ To update source code for an agent:
 
   1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 
-    > [!NOTE]
-    > To use Teams SDK for adding SSO, see [app authentication](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp).
+  > [!NOTE]
+  > To use Teams SDK for adding SSO, see [app authentication](/microsoftteams/platform/teams-sdk/essentials/app-authentication?pivots=csharp).
 
+<!--
   1. Run the following command in `./` folder:
 
   ```bash
@@ -301,6 +302,7 @@ To update source code for an agent:
         },
     });
   ```
+-->
 
 # [App](#tab/app)
 
