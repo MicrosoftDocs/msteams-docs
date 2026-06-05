@@ -72,7 +72,7 @@ Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to 
 
 Users must know the sources an agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/ai-citation-new.png" alt-text="Image shows an example of citations in agents." border="false":::
+:::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-citation-new.png" alt-text="Image shows an example of citations in agents." border="false":::
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
@@ -88,11 +88,11 @@ Examples of AI label:
 
 - Example of AI-generated label:
 
-    :::image type="content" source="../../../assets/images/bots/agent user experience/ai-labels-1-new.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
+    :::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-labels-1-new.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
 
 - Example of sensitivity label:
 
-    :::image type="content" source="../../../assets/images/bots/agent user experience/ai-labels-2-new.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
+    :::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-labels-2-new.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
@@ -111,7 +111,7 @@ Use Teams SDK to ensure intelligent context-based conversation and to manage and
 
 An agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps users overcome challenges during both initial and subsequent interactions with the agent.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/ai-zero-prompts-new.png" alt-text="Image shows an example of prompt starters." border="false":::
+:::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-zero-prompts-new.png" alt-text="Image shows an example of prompt starters." border="false":::
 
 - **Prompt starters**: Prompt starters are the initial prompts users see when an agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
 - **Contextual prompts**: Contextual prompts are dynamic recommendations from an agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
@@ -131,7 +131,7 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 Develop the capability in the agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/ai-feedback-loop-new.png" alt-text="Image shows an example of feedback loop." border="false":::
+:::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-feedback-loop-new.png" alt-text="Image shows an example of feedback loop." border="false":::
 
 To collect user feedback, you must:
 
@@ -158,7 +158,7 @@ Design your agent to understand and refer to conversational history and context.
 
 Enhance your agent's user experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/ai-suggested-prompts-new.png" alt-text="Image shows an example of suggested prompts." border="false":::
+:::image type="content" source="../../../assets/images/bots/agent-user-experience/ai-suggested-prompts-new.png" alt-text="Image shows an example of suggested prompts." border="false":::
 
 To achieve this, the agent must leverage the conversation context and history, ensuring prompt suggestions are timely and fit for the query.
 
@@ -166,7 +166,7 @@ To achieve this, the agent must leverage the conversation context and history, e
 
 Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/contoso-app-profile-card-new.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/agent user experience/contoso-app-profile-card-new.png":::
+:::image type="content" source="../../../assets/images/bots/agent-user-experience/contoso-app-profile-card-new.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/agent-user-experience/contoso-app-profile-card-new.png":::
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
 
