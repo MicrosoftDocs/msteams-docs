@@ -3,7 +3,7 @@ title: Get All Channel and Chat Messages for Bot and Agents
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 06/05/2026
 ---
 
 # Receive all messages for bots and agents
@@ -289,7 +289,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 # [Node.js](#tab/nodejs)
 
 - [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
 

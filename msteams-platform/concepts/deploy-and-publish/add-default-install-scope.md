@@ -3,7 +3,7 @@ title: Configure default options for your app
 description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 03/05/2025
+ms.date: 06/05/2026
 ---
 # Configure default options for Teams app
 
@@ -338,7 +338,7 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|
-| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
+| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
 
 ## Next step
 
