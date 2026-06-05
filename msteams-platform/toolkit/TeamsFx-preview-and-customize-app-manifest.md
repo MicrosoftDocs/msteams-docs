@@ -9,11 +9,11 @@ ms.date: 04/30/2026
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Customize app manifest
+# Customize the Microsoft 365 app manifest
 
 The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
-To preview the manifest with actual content, Agents Toolkit generates the preview manifest files under `appPackage/build` folder as shown in the following folder structure:
+When you preview the resolved manifest, Agents Toolkit creates files in the `appPackage/build` folder similar to the following structure:
 
 ```text
 └───appPackage
