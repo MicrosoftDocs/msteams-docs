@@ -5,7 +5,7 @@ description: Learn how to create and handle a prompt starter and suggested actio
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: vikasalmal
-ms.date: 4/7/2026
+ms.date: 06/05/2026
 ---
 
 # Create prompt suggestions
@@ -156,7 +156,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
-| Prompt starters bot | Microsoft Teams Create Commands Menu to implement prompt starters in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
+| Prompt starters bot | Microsoft Teams Create Commands Menu to implement prompt starters in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-commands-menu/nodejs) |
 
 ## See also
 

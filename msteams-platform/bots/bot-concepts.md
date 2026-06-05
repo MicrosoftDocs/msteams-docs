@@ -4,7 +4,7 @@ description: Learn about bot events and activity handlers for messages, channels
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: angovil
-ms.date: 10/03/2024
+ms.date: 06/05/2026
 ---
 
 # Understand bot concepts
@@ -274,7 +274,7 @@ The following code provides an example of a bot activity for a channel team scop
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
 
 ```csharp
 
@@ -301,7 +301,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onmessage)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```javascript
 
@@ -333,7 +333,7 @@ The following code provides an example of bot activity for a one-to-one chat:
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
 ```csharp
 

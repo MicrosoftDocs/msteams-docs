@@ -3,7 +3,7 @@ title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 03/02/2025
+ms.date: 06/05/2026
 ---
 # Enable authentication using third-party OAuth provider
 
@@ -63,7 +63,7 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |-----------------|-----------------|-------------|------------|------------|
-| App complete authentication | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
+| App complete authentication | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## See also
 

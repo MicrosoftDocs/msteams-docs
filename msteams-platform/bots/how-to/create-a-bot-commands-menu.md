@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 06/05/2026
 ---
 
 # Create a commands menu
@@ -172,7 +172,7 @@ Bots in a group or channel respond only when they're mentioned `@botname` in a m
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
 
@@ -228,7 +228,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 
