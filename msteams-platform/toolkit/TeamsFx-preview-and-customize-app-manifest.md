@@ -182,7 +182,7 @@ Alternatively, use the following Agents Toolkit CLI command:
 atk validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 ```
 
-Validation rules can also catch packaging issues that aren't covered by the manifest schema. For example, if a static tab includes entityId set to conversations together with a name value that violates the rules, validation returns an error.
+Validation rules can also catch packaging issues that aren't covered by the manifest schema. For example, if a static tab includes `entityId` set to conversations together with a name value that violates the rules, validation returns an error.
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/toolkit-v2/customize app manifest/validation-output.png":::
 
