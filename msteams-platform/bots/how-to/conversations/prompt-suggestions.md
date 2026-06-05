@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: nickwalker
+ms.author: vikasalmal
 ms.date: 06/05/2026
 ---
 

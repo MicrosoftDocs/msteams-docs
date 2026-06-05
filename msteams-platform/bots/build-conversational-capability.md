@@ -3,7 +3,7 @@ title: Conversations with a Bot
 description: Learn about sending and receiving messages using a bot app
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: nickwalker
+ms.author: vikasalmal
 ms.owner: angovil
 ms.date: 06/05/2026
 ---
