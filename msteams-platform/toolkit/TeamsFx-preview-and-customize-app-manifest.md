@@ -11,18 +11,16 @@ ms.date: 04/30/2026
 
 # Customize the Microsoft 365 app manifest
 
-The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with environment files such as `env/.env.dev` and `env/.env.local`.
 
 When you preview the resolved manifest, Agents Toolkit creates files in the `appPackage/build` folder similar to the following structure:
 
-```structure
-└───appPackage
-    └───build
-        ├───appPackage.{env}.zip - Zipped app package of remote Teams app
-        ├───appPackage.local.zip - Zipped app package of local Teams app
-        ├───manifest.{env}.json  - Previewed manifest of remote Teams app
-        └───manifest.local.json  - Previewed manifest of local Teams app
-```
+    └───appPackage
+        └───build
+            ├───appPackage.{env}.zip - Zipped app package of remote Teams app
+            ├───appPackage.local.zip - Zipped app package of local Teams app
+            ├───manifest.{env}.json  - Previewed manifest of remote Teams app
+            └───manifest.local.json  - Previewed manifest of local Teams app
 
 You can preview the manifest file in local and remote environments.
 
