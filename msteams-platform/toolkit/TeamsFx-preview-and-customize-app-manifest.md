@@ -60,7 +60,7 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 ## Customize manifest in Visual Studio Code
 
-During local debug or provision, Agents Toolkit loads the manifest from `appPackage/manifest.json`. It resolves the manifest using environment variables defined in `env/.env.xx`, then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+During local debug or provisioning, Agents Toolkit reads the manifest from `appPackage/manifest.json`, resolves the values by using environment variables defined in `env/.env.xx`, and then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. You can define your own `manifest.json` file in `m365agents.yml` and `m365agents.local.yml`.
 For example, you can put your `manifest.json` file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
