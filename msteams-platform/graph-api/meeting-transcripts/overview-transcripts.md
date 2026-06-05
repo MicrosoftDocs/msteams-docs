@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vichug
 ms.author: vikasalmal
-ms.date: 03/02/2026
+ms.date: 05/01/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -104,11 +104,11 @@ Your app can directly fetch AI-generated meeting summaries, including conversati
 
 ## Code samples
 
-| Sample name | Description | Node.js | C# |
-| --- | --- | --- | --- |
-| Online meeting transcript bot | This sample app retrieves meeting transcripts using Microsoft Graph API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) |
-| Online meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/csharp) |
-| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-adhoccalls-transcript-recording/nodejs) |  |
+| Sample name | Description | Node.js | C# | Python |
+| --- | --- | --- | --- | --- |
+| Bot meetings | This sample demonstrates how to handle real-time meeting events and retrieve meeting transcripts in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/nodejs/bot-meetings) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/dotnet/bot-meetings) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/python/bot-meetings) |
+| Online meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/csharp) | NA |
+| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-adhoccalls-transcript-recording/nodejs) | NA | NA |
 
 ## Next step
 

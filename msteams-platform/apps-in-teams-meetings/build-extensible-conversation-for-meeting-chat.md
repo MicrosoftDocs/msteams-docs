@@ -1,9 +1,10 @@
 ---
 title: Build Extensible Conversations
 description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
-ms.topic: article
+ms.topic: conceptual
+ms.author: vikasalmal
 ms.localizationpriority: medium
-ms.date: 01/11/2023
+ms.date: 05/01/2026
 ms.owner: ginobuzz
 ---
 
@@ -21,9 +22,9 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ### Code samples - Bots
 
-| Sample name | Description | .NETCore | Node.js | Python | Java | Manifest |
-|----------------|-----------------|--------------|----------------|----------------|----------------|----------------|
-| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Sample name | Description | .NETCore | Node.js | Python | Java |
+|----------------|-----------------|--------------|----------------|----------------|----------------|
+| Bot Quickstart | This sample demonstrates how to handle various bot conversation events in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | NA |
 | Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Message extensions
