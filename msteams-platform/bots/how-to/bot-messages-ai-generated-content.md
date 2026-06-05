@@ -450,7 +450,7 @@ Bot responses might contain confidential information or be accessible only to ce
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/bot messages/sensitivity-label-mobile-new.png" border="false" alt-text="Screenshot shows an AI-powered bot with sensitivity label in the Teams mobile client." lightbox="../../assets/images/bots/sensitivity-label-mobile.png":::
+:::image type="content" source="../../assets/images/bots/bot messages/sensitivity-label-mobile-new.png" border="false" alt-text="Screenshot shows an AI-powered bot with sensitivity label in the Teams mobile client." lightbox="../../assets/images/bots/bot messages/sensitivity-label-mobile-new.png":::
 
 ---
 
