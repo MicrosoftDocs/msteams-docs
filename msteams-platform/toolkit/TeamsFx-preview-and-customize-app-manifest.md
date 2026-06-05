@@ -58,12 +58,12 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 ## Customize manifest in Visual Studio Code
 
-During local debug or provisioning, Agents Toolkit reads the manifest from `appPackage/manifest.json`, resolves the values by using environment variables defined in `env/.env.xx`, and then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+During local debugging or provisioning, Agents Toolkit reads the manifest from `appPackage/manifest.json`, resolves the values by using environment variables defined in `env/.env.xx`, and then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. You can define your own `manifest.json` file in `m365agents.yml` and `m365agents.local.yml`.
 For example, you can put your `manifest.json` file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
 
-    ```text
+    ```yaml
     - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
       with:
       manifestPath: ./test/test.json # Path to manifest template
@@ -72,11 +72,11 @@ For example, you can put your `manifest.json` file in `test/test.json`, and upda
     ```
 
 1. You can define your own environment variables. The default `manifest.json` contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in the `manifest.json` file.
-For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update `manifest.json` with corresponding placeholder.
+For example, you can customize app description by defining a new environment variable in `env/.env.xx` file, and update `manifest.json` with corresponding placeholder.
 
    `.env.dev`
 
-   ```text
+   ```json
    TEAMS_APP_DESCRIPTION=This is an amazing app
    ```
 
@@ -149,7 +149,7 @@ After customization, you might want to validate the manifest or app package. You
 
 ---
 
-Validate your agent or app using one of the following options:
+Validate your agent or app by using one of the following options:
 
 - [Validate using manifest schema](#validate-using-the-manifest-schema)
 - [Validate app package using validation rules](#validate-app-package-using-validation-rules)
