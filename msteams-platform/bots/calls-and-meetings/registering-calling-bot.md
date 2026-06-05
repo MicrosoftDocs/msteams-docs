@@ -1,7 +1,7 @@
 ---
 title: Register Calls & Meetings Bot
 description: Learn to register audio and video call bot, create a bot or add calling capability, and add graph permissions. Sample to create call, join meeting and transfer call.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 05/01/2026
 ---
