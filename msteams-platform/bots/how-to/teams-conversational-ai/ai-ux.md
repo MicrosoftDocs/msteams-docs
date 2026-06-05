@@ -92,7 +92,6 @@ Examples of AI label:
 
 - Example of sensitivity label:
 
-    :::image type="content" source="../../../assets/images/bots/agent user experience/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
     :::image type="content" source="../../../assets/images/bots/agent user experience/ai-labels-2-new.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
@@ -167,7 +166,7 @@ To achieve this, the agent must leverage the conversation context and history, e
 
 Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
-:::image type="content" source="../../../assets/images/bots/agent user experience/contoso-app-profile-card-new.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
+:::image type="content" source="../../../assets/images/bots/agent user experience/contoso-app-profile-card-new.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/agent user experience/contoso-app-profile-card-new.png":::
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
 
