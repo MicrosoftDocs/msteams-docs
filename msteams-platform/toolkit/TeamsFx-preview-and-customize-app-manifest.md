@@ -186,6 +186,8 @@ atk validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 
 It has other validation rules than the app manifest schema. For example, if static tab section has entityId `conversations` and name, the following error appears:
 
+Validation rules can also catch packaging issues that aren't covered by the manifest schema. For example, if a static tab includes entityId set to conversations together with a name value that violates the rules, validation returns an error.
+
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/toolkit-v2/customize app manifest/validation-output.png":::
 
 <!--
