@@ -15,7 +15,7 @@ The Microsoft 365 app manifest (previously called Teams app manifest) describes 
 
 When you preview the resolved manifest, Agents Toolkit creates files in the `appPackage/build` folder similar to the following structure:
 
-```text
+```structure
 └───appPackage
     └───build
         ├───appPackage.{env}.zip - Zipped app package of remote Teams app
