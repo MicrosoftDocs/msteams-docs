@@ -15,12 +15,14 @@ The Microsoft 365 app manifest (previously called Teams app manifest) describes 
 
 When you preview the resolved manifest, Agents Toolkit creates files in the `appPackage/build` folder similar to the following structure:
 
+```text
 └───appPackage
     └───build
         ├───appPackage.{env}.zip - Zipped app package of remote Teams app
         ├───appPackage.local.zip - Zipped app package of local Teams app
         ├───manifest.{env}.json  - Previewed manifest of remote Teams app
         └───manifest.local.json  - Previewed manifest of local Teams app
+```
 
 You can preview the manifest file in local and remote environments.
 

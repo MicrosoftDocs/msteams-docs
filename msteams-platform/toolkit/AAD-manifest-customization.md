@@ -11,6 +11,8 @@ ms.date: 04/30/2026
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra app with the manifest file as the source of truth during your Microsoft Teams agent or app development lifecycle.
 
+This article explains how to customize and deploy the Microsoft Entra app manifest in Microsoft 365 Agents Toolkit, including permissions, preauthorized applications, redirect URIs, placeholders, and lifecycle behavior across local and cloud environments.
+
 <a name='customize-azure-ad-manifest-template'></a>
 
 ## Customize Microsoft Entra manifest template
@@ -28,7 +30,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
     <details>
 
     <summary>Add an agent or app permission</summary>
-     If the Teams agent or app requires more permissions to call an API with additional permissions, you must update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
+     If the Teams agent or app must call an API that requires additional permissions, update the requiredResourceAccess property in the Microsoft Entra manifest template. Use Scope for delegated permissions and Role for application permissions, and note that Microsoft Graph and Office 365 SharePoint Online can use readable names in this template while other APIs require UUID values. Here's a code snippet example:
 
     ```JSON
     "requiredResourceAccess": [
@@ -233,7 +235,7 @@ You can use the existing Microsoft Entra app for the Teams project. For more inf
 
 ## Microsoft Entra app in Teams app development lifecycle
 
-You need to interact with Microsoft Entra app during various stages of your Teams app development lifecycle.
+You interact with the Microsoft Entra app throughout the Teams app development lifecycle. In each phase, Agents Toolkit either reuses an existing app from the relevant `.env` file or creates and updates one from `aad.template.json`, then fills in context-dependent values such as `identifierUris` and `redirectUris` once the required endpoints are known.
 
 1. **To create Project**
 
