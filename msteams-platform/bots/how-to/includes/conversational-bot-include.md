@@ -3,8 +3,8 @@ title: Build an conversational bot
 description: Learn about creating a conversational bot
 ms.topic: overview
 ms.localizationpriority: high
-ms-author: surbhigupta
-ms.date: 01/29/2023
+ms-author: vikas almal
+ms.date: 05/13/2026
 ---
 
 ## Build a conversational bot
@@ -59,23 +59,22 @@ The following code shows an example of retrieving mentions:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+app.OnMessage(async context =>
 {
-    // Resolves the mentions from the entities activity.
-    Mention[] mentions = turnContext.Activity.GetMentions();
-    if(mentions != null)
+    var mentions = (context.Activity.Entities ?? [])
+        .OfType<MentionEntity>()
+        .ToList();
+ 
+    if (mentions.Any())
     {
-        ChannelAccount firstMention = mentions[0].Mentioned;
-
-        // Sends a message activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync($"Hello {firstMention.Name}");
+        var firstMention = mentions[0].Mentioned;
+        await context.Send($"Hello {firstMention.Name}");
     }
     else
     {
-        // Sends a message activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync("Aw, no one was mentioned.");
+        await context.Send("Aw, no one was mentioned.");
     }
-}
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -83,21 +82,14 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getmentions)
 
 ```typescript
-this.onMessage(async (turnContext, next) => {
-
-    // Resolves the mentions from the entities activity.
-    const mentions = TurnContext.getMentions(turnContext.activity);
-    if (mentions){
+app.on('message', async ({ send, activity }) => {
+    const mentions = activity.entities?.filter(e => e.type === 'mention');
+    if (mentions && mentions.length > 0) {
         const firstMention = mentions[0].mentioned;
-
-        // Sends a message activity to the sender of the incoming activity.
-        await turnContext.sendActivity(`Hello ${firstMention.name}.`);
+        await send(`Hello ${firstMention.name}.`);
     } else {
-        // Sends a message activity to the sender of the incoming activity.
-        await turnContext.sendActivity(`Aw, no one was mentioned.`);
+        await send('Aw, no one was mentioned.');
     }
-
-    await next();
 });
 
 ```
@@ -149,15 +141,18 @@ this.onMessage(async (turnContext, next) => {
 [SDK reference](/python/api/botbuilder-schema/botbuilder.schema.activity?view=botbuilder-py-latest&preserve-view=true#botbuilder-schema-activity-get-mentions)
 
 ```python
-@staticmethod
-// Resolves the mentions from the entities of this activity.
-def get_mentions(activity: Activity) -> List[Mention]:
-    result: List[Mention] = []
-    if activity.entities is not None:
-        for entity in activity.entities:
-            if entity.type.lower() == "mention":
-                    result.append(entity)
-     return result
+@app.on_message
+async def handle_message(ctx):
+    mentions = [
+        entity for entity in (ctx.activity.entities or [])
+        if getattr(entity, 'type', '').lower() == 'mention'
+    ]
+    if mentions:
+        first_mention = mentions[0].mentioned
+        await ctx.send(f"Hello {first_mention.name}")
+    else:
+        await ctx.send("Aw, no one was mentioned.")
+
 ```
 
 * * *
@@ -178,7 +173,7 @@ The `Mention` object has two properties that you must set using the following:
 * Include *@username* in the message text.
 * Include the mention object inside the entities collection.
 
-The Bot Framework SDK provides helper methods and objects to create mentions.
+The Teams SDK provides helper methods and objects to create mentions.
 
 The following code shows an example of adding mentions to your messages:
 
@@ -188,44 +183,24 @@ The following code shows an example of adding mentions to your messages:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L300)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+app.OnMessage(async context =>
 {
-    var mention = new Mention
-    {
-        Mentioned = turnContext.Activity.From,
-        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
-        Type = "mention",
-    };
-
-    // Returns a simple text message.
-    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
-    replyActivity.Entities = new List<Entity> { mention };
-
-    // Sends an activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-}
+    var member = context.Activity.From;
+    var mentionText = $"<at>{member.Name}</at>";
+    var activity = new MessageActivity()
+        .WithText($"Hello {mentionText}")
+        .AddMention(member, addText: false);
+ 
+    await context.Send(activity);
+});
 
 ```
 
 # [TypeScript](#tab/typescript)
 
 ```typescript
-this.onMessage(async (turnContext, next) => {
-    const mention = {
-        mentioned: turnContext.activity.from,
-        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
-        type: "mention",
-    } as Mention;
-
-    // Returns a simple text message.
-    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
-    replyActivity.entities = [mention];
-
-    // Sends a message activity to the sender of the incoming activity.
-    await turnContext.sendActivity(replyActivity);
-
-    // By calling next() you ensure that the next BotHandler is run.
-    await next();
+app.on('message', async ({ send, activity }) => {
+    await send(new MessageActivity('Hi!').addMention(activity.from));
 });
 
 ```
@@ -280,17 +255,9 @@ The `text` field in the object in the `entities` array must match a portion of t
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L94)
 
 ```python
-async def _mention_activity(self, turn_context: TurnContext):
-        mention = Mention(
-            mentioned=turn_context.activity.from_property,
-            text=f"<at>{turn_context.activity.from_property.name}</at>",
-            type="mention"
-        )
-        // Returns a simple text message.
-        reply_activity = MessageFactory.text(f"Hello {mention.text}")
-        # Sends a message activity to the sender of the incoming activity.
-        reply_activity.entities = [Mention().deserialize(mention.serialize())]
-        await turn_context.send_activity(reply_activity)
+@app.on_message
+async def handle_message(ctx):
+    await ctx.send(MessageActivityInput(text='hi!').add_mention(account=ctx.activity.from_))
 ```
 
 * * *
@@ -315,17 +282,19 @@ The `type:tag` is added as a `Properties` in ChannelAccount.
 [SDK reference](/dotnet/api/microsoft.bot.schema.channelaccount?view=botbuilder-dotnet-stable&branch=main&preserve-view=true)
 
 ```csharp
-​var mention = new ChannelAccount(tagId, "Test Tag"); 
-​mention.Properties = JObject.Parse("{'type': 'tag'}"); 
-​var mentionObj = new Mention 
-​{ 
-​    Mentioned = mention, 
-​    Text = "<at>Test Tag</at>" 
-​}; 
-
-​var replyActivity = MessageFactory.Text("Hello " + mentionObj.Text); 
-​replyActivity.Entities = new List<Microsoft.Bot.Schema.Entity> { mentionObj }; 
-​await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
+​app.OnMessage(async context =>
+{
+    var tagAccount = new Account() { Id = tagId, Name = "Test Tag" };
+    tagAccount.Properties = JObject.Parse("{'type': 'tag'}");
+ 
+    var mentionText = $"<at>{tagAccount.Name}</at>";
+    var activity = new MessageActivity()
+        .WithText($"Hello {mentionText}")
+        .AddMention(tagAccount, addText: false);
+ 
+    await context.Send(activity);
+});
+ 
 ```
 
 ##### Mention tags in an Adaptive Card
