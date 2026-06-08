@@ -19,6 +19,7 @@ Bots in a group or channel only receive messages when they're mentioned @botname
 >
 > * Using resource-specific consent (RSC), a bot can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-for-bots-and-agents.md).
 > * Posting a message or Adaptive Card to a private channel isn't supported.
+> * Bots added to a team operate at the team conversation scope, and message delivery behavior is not based on installing the same bot separately in each channel. Standard channel messages are delivered according to Teams bot conversation rules, including mention requirements and supported conversation contexts. Reinstalling or adding the app again in another channel of the same team does not create an independent bot scope for that channel. Channel behavior is determined by the team installation and the activity type that Teams sends to the bot.
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
