@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 04/24/2026
+ms.date: 05/14/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -22,6 +22,10 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 - Authentication and authorization configuration
 - Tool definitions
 - Optional metadata that helps agents orchestrate the right tool during user interactions
+
+> [!NOTE]
+>
+> Microsoft 365 includes built-in agent connectors for select Microsoft services. This article covers only custom agent connectors that you register through the app manifest for your own MCP servers.
 
 Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP.<!--, including the Channel Agent in Microsoft Teams.-->
 
@@ -91,6 +95,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client registration
+- **AzureKeyVault** *(preview)*: Secrets stored in your own Azure Key Vault instance
 
 ### Use OAuth authentication
 
@@ -122,6 +127,53 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
 ````
 
 The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
+
+### Use dynamic client registration
+
+Dynamic client registration enables Microsoft 365 to register as an OAuth client with your MCP server at runtime using the [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) protocol. This approach is useful when your server supports dynamic OAuth flows and you don't want to pre-register client credentials.
+
+Configure the authorization type as `DynamicClientRegistration` with a `referenceId`:
+
+````json
+"authorization": {
+  "type": "DynamicClientRegistration",
+  "referenceId": "my-dcr-config"
+}
+````
+
+The `referenceId` points to a dynamic client registration configuration that you register in [Developer Portal](https://dev.teams.microsoft.com). This configuration provides the necessary authorization values that Microsoft 365 uses when negotiating client credentials with your MCP server's OAuth registration endpoint.
+
+Your server must:
+
+- Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) compliant client registration endpoint.
+- Return a `client_id` and `client_secret` that Microsoft 365 can use to obtain access tokens.
+- Support token refresh for long-lived sessions.
+
+### Use Azure Key Vault authentication (preview)
+
+> [!NOTE]
+>
+> Azure Key Vault authentication is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
+Azure Key Vault authentication allows you to store and manage your MCP server credentials in your own [Azure Key Vault](/azure/key-vault/general/overview) instance. This gives you full control over secret lifecycle management, including rotation, access policies, and audit logging.
+
+Configure the authorization type as `AzureKeyVault`:
+
+````json
+"authorization": {
+  "type": "AzureKeyVault",
+  "referenceId": "my-keyvault-secret"
+}
+````
+
+The `referenceId` points to a secret identifier registered in Developer Portal that maps to your Azure Key Vault secret.
+
+To set up Azure Key Vault authentication:
+
+1. Store your MCP server credentials (API key or client secret) as a secret in your [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
+1. Grant the Microsoft 365 service principal access to read the secret by configuring an [access policy](/azure/key-vault/general/assign-access-policy) or [Azure RBAC role](/azure/key-vault/general/rbac-guide) on your vault.
+1. Register the secret reference in [Developer Portal](https://dev.teams.microsoft.com) and note the registration ID.
+1. Use the registration ID as the `referenceId` in your manifest.
 
 ### Use no authentication
 
