@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 04/28/2026
 ---
 
 # Create a commands menu
@@ -17,7 +17,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Desktop-menu-sample":::
 
 # [Mobile](#tab/mobile)
 
@@ -28,11 +28,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 ## Create a command menu for your bot
 
 > [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
-
-Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
+> We recommend creating a command bot by following the [Teams SDK quickstart](/microsoftteams/platform/teams-sdk/getting-started/quickstart) and reviewing the [code basics](/microsoftteams/platform/teams-sdk/getting-started/code-basics). For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
 
 ### Create a command menu for your bot using Developer Portal
 
@@ -159,59 +155,82 @@ The manifest example code for the menu for each scope is as follows:
 }
 ```
 
-You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
+You must handle menu commands in your bot code as you handle any message from users.
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they're mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel). However, in group chat and channel conversations, `activity.text` can include the bot `@mention` (for example, `<at>Bot Name</at>`), so strip the bot mention before matching the command text, or use the activity's mention entities or an SDK helper for mention removal where available.
 
 > [!NOTE]
-> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
+> To handle the commands in code, they're sent to your bot as a regular message. Handle them as you would any other message from your users. The commands insert pre-configured text into the text box. After that, the user sends the text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
-
-The C# code to parse out the **\@Mention** portion of the message text is as follows:
+In C#, Teams SDK does not feature a method to remove **\@Mention** portion. You can refer to the code snippet below on how to handle commands in your bot.
 
 ```csharp
-// Remove recipient mention text from Text property.
-// Use with caution because this function is altering the text on the Activity.
-var modifiedText = turnContext.Activity.RemoveRecipientMention();
+// Handles incoming messages and routes to appropriate functions based on message content
+teamsApp.OnMessage(async context =>
+{
+    // Get message text and normalize it
+    var text = (context.Activity.Text ?? "").Trim().ToLower();
+
+    // Handle mention me command - use exact matching to avoid false positives from substrings
+    if (text == "mentionme" || text == "mention me")
+    {
+        await MentionUser(context);
+    }
+    // Handle whoami command
+    else if (text == "whoami")
+    {
+        await GetSingleMember(context);
+    }
+    // Handle welcome command
+    else if (text == "welcome")
+    {
+        await SendWelcomeMessage(context);
+    }
+    // Echo greeting messages
+    else if (text == "hi" || text == "hello")
+    {
+        await EchoMessage(context, text);
+    }
+    else
+    {
+        await SendWelcomeMessage(context);
+    }
+});
+
 ```
 
-# [JavaScript](#tab/javascript)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-removementiontext)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
+You can parse out the **\@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `stripMentionsText`.
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
+The TypeScript code to parse out the **\@Mention** portion of the message text is as follows:
 
-The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
-
-```javascript
+```typescript
 // Remove mention text from Text property, this function is altering the text on the Activity.
-const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnContext.activity.recipient.id);
+const text = context.activity.stripMentionsText().text.trim().toLowerCase();
+
 ```
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-remove-recipient-mention)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
-
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `strip_mentions_text`.
 
 The Python code to parse out the **\@Mention** portion of the message text is as follows:
 
 ```python
 # Remove recipient mention text from Text property, this function is altering the text on the Activity.
-modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
+text = context.activity.strip_mentions_text().text. Strip().lower()
+
 ```
 
 * * *
@@ -228,7 +247,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 
