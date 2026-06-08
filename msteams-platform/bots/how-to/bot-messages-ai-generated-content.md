@@ -3,7 +3,7 @@ title: Bot Messages with AI-generated Content
 description: Learn how to add an AI label, sensitivity labels, citations, and feedback buttons for bots built using Teams SDK or Bot Framework SDK.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/05/2026
+ms.date: 06/08/2026
 ---
 
 # Enhance AI-generated bot messages

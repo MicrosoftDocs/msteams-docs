@@ -3,7 +3,7 @@ title: Best practices for building agent in Teams user experience
 description: Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 06/05/2024
+ms.date: 06/08/2026
 ---
 
 # Agents user experience
