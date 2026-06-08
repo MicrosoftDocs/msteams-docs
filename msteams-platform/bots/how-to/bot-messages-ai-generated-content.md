@@ -135,7 +135,7 @@ Citing sources in bot messages helps users ask follow-up questions or conduct in
 
 **Modal window**
 
-:::image type="content" source="../../assets/images/bots/bot-messages/ai-bot-citation-adaptive-card.png" border="false" alt-text="Screenshot shows a modal window pop-up from a citation in an AI-powered bot message in the Teams desktop client." lightbox="../../assets/images/bots/bot-messagess/ai-bot-citation-adaptive-card.png":::
+:::image type="content" source="../../assets/images/bots/ai-bot-citation-adaptive-card.png" border="false" alt-text="Screenshot shows a modal window pop-up from a citation in an AI-powered bot message in the Teams desktop client." lightbox="../../assets/images/bots/bot-messagess/ai-bot-citation-adaptive-card.png":::
 
 :::column-end:::
 
@@ -311,7 +311,7 @@ Feedback buttons in bot messages are essential for tracking user engagement, ide
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/bot-messages/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/bot-messages/feedback-buttons-mobile.png":::
+:::image type="content" source="../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/bot-messages/feedback-buttons-mobile.png":::
 
 ---
 
