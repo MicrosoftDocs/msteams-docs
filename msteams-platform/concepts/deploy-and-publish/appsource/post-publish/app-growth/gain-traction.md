@@ -2,7 +2,7 @@
 title: Accelerate Market Traction for App
 author: heath-hamilton
 description: Learn what you can do during the traction stage of your app to grow your app such as plan, build readiness, and drive adoption among customers.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/21/2023
 ---
