@@ -1,16 +1,14 @@
 ---
-title: Best practices for building agent in Teams user experience
-description: Learn about the user experience for agents in Teams
+title: TODO Best practices for building agent in Teams user experience
+description: TODO Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 09/27/2024
+ms.date: 06/10/2026
 ---
 
-# Agents user experience
+# Agents interactions best practices
 
-[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
-
-An agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
+This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
 - **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
