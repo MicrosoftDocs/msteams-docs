@@ -14,15 +14,15 @@ This guide provides UX guidance for partners building HTML widgets in Microsoft 
 
 Building a great widget for Teams means delivering a focused, conversational experience that surfaces the right information or action at the right time.
 
-**Complement the conversation**: Widgets exist alongside agent-generated text in a chat thread. They should add structured or visual context — not replace the conversation or compete with it.
+**Complement the conversation**: Widgets exist alongside agent-generated text in a chat thread. They may be display-only, interactive, or prompt the user for input — but they should always feel like a natural part of the conversation, not compete with or replace it.
 
-**Surface capabilities, not full apps**: A widget should expose a focused, high-value capability — not your entire product. Identify the atomic action or piece of information that provides value in this moment.
+**Surface capabilities, not full apps**: A widget should expose a focused, high-value capability — not your entire product. Each widget should represent a single, focused interaction.
 
-**Be transparent and predictable**: Users must understand what a widget is showing and what will happen when they interact with it. Avoid hidden actions, ambiguous states, or unclear outcomes.
+**Be transparent and predictable**: Widget content should be clear and any interactions obvious. Users should always understand what a widget is showing and what will happen when they interact with it.
 
-**Scale to the task**: Match your widget's footprint to the complexity of the task. Lightweight confirmations and previews belong inline. Deeper workflows belong in the expanded surface.
+**Scale to the task**: Widgets always appear inline in the chat. If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
 
-**Preserve human control**: Users must remain in control, particularly when actions affect data or trigger external workflows. Provide clear visibility into what the widget is doing, explicit confirmations for significant actions, and transparent outcomes.
+**Preserve human control**: Allow users to remain in control of their experience. Make it clear what the widget is doing, confirm important actions before they happen, and always communicate the expected outcome.
 
 ---
 
