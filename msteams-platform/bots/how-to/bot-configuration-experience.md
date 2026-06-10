@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 06/10/2026
 ---
 
 # Bot configuration experience
@@ -100,7 +100,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [C#](#tab/teams-bot-sdk1)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
    protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -112,7 +112,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [JavaScript](#tab/JS1)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app/nodejs/teamsBot.js#L52)
 
    ```javascript
    async handleTeamsConfigFetch(_context, _configData) {
@@ -142,7 +142,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [C#](#tab/teams-bot-sdk2)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
    protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -165,7 +165,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [JavaScript](#tab/JS2)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
    ```javascript
    async handleTeamsConfigFetch(_context, _configData) {
@@ -192,7 +192,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [C#](#tab/teams-bot-sdk3)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
    ```csharp
    protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -211,7 +211,7 @@ The following table lists the response type associated with the invoke requests:
 
   # [JavaScript](#tab/JS3)
 
-   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
    ```javascript
    async handleTeamsConfigSubmit(context, _configData) {
@@ -253,8 +253,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
 |----------------|-----------------|--------------|--------------|--------------|
-| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## See also
 
