@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur
-ms.date: 03/16/2026
+ms.date: 06/10/2026
 ---
 
 # Meeting apps APIs
@@ -749,7 +749,7 @@ The following table includes the query parameter:
 # [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
 // Specifies the type of text data in a message attachment.
@@ -1503,7 +1503,7 @@ The following examples show how to capture the meeting start and end events:
 **Meeting Start Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
 // Invoked when a Teams Meeting Start event activity is received from the connector.
@@ -1517,7 +1517,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 **Meeting End Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
 // Invoked when a Teams Meeting End event activity is received from the connector.
@@ -1661,7 +1661,7 @@ The following examples show how to capture the participant join and leave events
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 //Invoked on participant join a meeting
@@ -1676,7 +1676,7 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 //Invoked on participant leave a meeting
@@ -1919,7 +1919,7 @@ The toggleIncomingClientAudio API allows an app to toggle the incoming audio sta
 | In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
 | Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/nodejs)||
 | Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
-| Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
+| Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
 | Meeting Recruitment Sample |This sample app shows a meeting experience for recruitment scenario using Apps In Meetings.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip)|
 
 ## See also

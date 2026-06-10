@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 06/10/2026
 ---
 
 # Create a commands menu
@@ -188,7 +188,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-removementiontext)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
 
@@ -228,7 +228,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 
