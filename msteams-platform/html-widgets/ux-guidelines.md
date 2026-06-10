@@ -8,12 +8,7 @@ ms.date: 06/01/2026
 
 # UX guidelines for HTML widgets in Microsoft Teams
 
-HTML widgets let partners render custom HTML and JavaScript experiences directly inside a Teams chat message. Because widgets appear inline alongside agent-generated text, they must feel like a natural part of the conversation — not an application embedded inside it.
-
-This guide provides UX principles and design guidance to help partners create widgets that are focused, appropriate for a professional chat environment, and consistent enough to meet a minimum quality bar. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
-
-> [!NOTE]
-> Most partners build one widget that runs across multiple platforms including Teams, ChatGPT, and Claude. These guidelines are designed to be achievable for partners optimizing for broad reach, not just Teams-specific polish. The required items in this guide represent the minimum bar for any widget to function well in Teams chat.
+This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
 ## UX principles
 
