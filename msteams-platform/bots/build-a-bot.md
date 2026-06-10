@@ -3,7 +3,7 @@ title: Bots in Teams
 description: Learn to build a basic chatbot. Additionally, learn to migrate  build an agent.
 ms.localizationpriority: high
 ms.date: 09/25/2024
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Bots in Teams
