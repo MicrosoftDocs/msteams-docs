@@ -87,7 +87,7 @@ app.on('message.ext.submit', async ({ activity }) => {
 
 ```python
 from microsoft_teams.apps import ActivityContext, App
-from microsoft_teams.api import MessageExtensionQueryInvokeActivity
+from microsoft_teams.api import MessageExtensionSubmitActionInvokeActivity
 
 app = App()
 
