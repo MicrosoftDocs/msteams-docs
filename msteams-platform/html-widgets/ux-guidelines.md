@@ -16,6 +16,33 @@ This guide provides UX guidance for partners building HTML widgets in Microsoft 
 
 Building a great widget for Teams means delivering a focused experience that surfaces the right information or action at the right time. HTML widgets should feel like a natural part of the Teams conversation — not an application embedded inside it.
 
+
+
+
+<table>
+<tr>
+<th align="left">✅ Do</th>
+<th align="left">❌ Don't</th>
+</tr>
+<tr>
+<td>
+
+- Use Fluent UI React v9 Dialog or Popover for modal experiences
+- Restore focus to the triggering element after a dialog or panel closes
+
+</td>
+<td>
+
+- Don't remove focus outlines without providing an accessible alternative
+- Don't auto-advance focus between controls without a clear user action
+
+</td>
+</tr>
+</table>
+
+
+
+
 ![Complement the conversation icon](assets/images/html-widgets/ux-guidelines/icon-conversation.png)
 
 ### Complement the conversation
