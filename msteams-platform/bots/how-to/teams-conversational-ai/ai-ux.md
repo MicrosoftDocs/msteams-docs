@@ -66,7 +66,7 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-sdk-overview) to add streaming to the agent.
 
 ### Ensure the agent response contains citations
 
@@ -74,7 +74,7 @@ Users must know the sources an agent uses to generate its final response. Identi
 
 :::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-sdk-overview) to add streaming to the agent.
 
 > [!NOTE]
 >
@@ -94,7 +94,7 @@ Examples of AI label:
 
     :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-sdk-overview) to add streaming to the agent.
 
 ### Ensure that the agent maintains intelligent conversation
 

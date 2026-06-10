@@ -43,7 +43,7 @@ Map emojis and reactions to specific agent actions and use the ID to send the ri
 You can enable an agent to send reactions using Teams SDK or REST APIs. An agent can send up to two reactions per second. To enable an agent to send a reaction to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
-1. Use [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript) or REST API to add reactions to messages.
+1. Use Teams SDK or REST API to add reactions to messages.
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
@@ -63,8 +63,6 @@ app.OnMessage(async context =>
 });
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=csharp#adding-a-reaction).
-
 # [TypeScript](#tab/ts1)
 
 ```typescript
@@ -76,8 +74,6 @@ app.on('message', async ({ activity, api, send }) => {
 });
 
 ```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#adding-a-reaction).
 
 # [Python](#tab/py1)
 
@@ -93,8 +89,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         '1f44b_wavinghand'
     )
 ```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#adding-a-reaction).
 
 # [API](#tab/h1)
 
@@ -150,8 +144,6 @@ app.OnMessage(async context =>
 });
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=csharp#removing-a-reaction).
-
 # [TypeScript](#tab/ts1)
 
 ```typescript
@@ -165,7 +157,6 @@ app.on('message', async ({ activity, api }) => {
 });
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#removing-a-reaction).
 
 # [Python](#tab/py1)
 
@@ -189,8 +180,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         '1f44b_wavinghand'
     )
 ```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#removing-a-reaction).
 
 # [API](#tab/h1)
 
@@ -307,5 +296,4 @@ Where,
 
 ## See also
 
-- [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript)
 - [Teams reaction reference](teams-reactions-reference.md)

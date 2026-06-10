@@ -17,7 +17,7 @@ To build an agent in Microsoft Teams, ensure you have the following:
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python (in public preview) build environments. Use the latest version. |
-| [Teams SDK](/microsoftteams/platform/teams-ai-library/teams/overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
+| [Teams SDK](/microsoftteams/platform/teams-sdk-overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
 | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your agent. Use the latest version. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through agents and apps for chat, meetings, and calls all in one place. |
@@ -110,36 +110,6 @@ Microsoft 365 Agents Toolkit creates and scaffolds the agent project workspace. 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
 
 Congratulations! You've created and ran your first agent in Microsoft Teams.
-
-## Choose your programming language
-
-Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Microsoft Teams.
-
-:::row:::
-   :::column:::
-      **Description**
-   :::column-end:::
-   :::column span="3":::
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Choose your build environment**
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      Build with ...
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
-   :::column-end:::
-:::row-end:::
 
 ## Code sample
 
