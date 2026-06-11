@@ -6,95 +6,19 @@ ms.topic: overview
 ms.date: 06/10/2026
 ---
 
-# Agents interactions best practices
+# Agents interactions best practices checklist
 
-This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
+This article provides a comprehensive checklist of conversational Teams features for agents. It highlights capabilities and integration points that can improve usability, productivity, and overall user experience. Review and consider each item in this list to ensure your agent makes effective use of features that contribute to a complete, high-quality experience that meets the expectations of your users.
 
-- **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
-- **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
+TODO many of these are required for copilot, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-To achieve this, you must follow mandatory requirements and best practices. For more information, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+TODO we should be clearer here that by "agent", we specifically mean an LLM-backed bot. Can link to some of the new content under development about the app model.
 
-## Ensure mandatory requirements for an agent in Teams
+## Context management (required)
 
-The following requirements are mandatory for building the agent UX:
+**MAJOR TODO**, extending to all the platform docs and not just this article: what actual developer guidance and facilities do we offer for this that we can link to? I haven't modified the contents here yet... "Use Teams SDK to ensure intelligent context-based conversation", but what does Teams SDK offer to do that? This is arguably the most critical part of making an agent work and we have virtually no concrete guidance on it anywhere I've seen; most of our feature docs are just *bot* features until someone does the work to connect an LLM. A sample agent implementation that we could dissect in documentation would be extremely helpful here.
 
-- [Update the app manifest an agent](#update-the-app-manifest-an-agent)
-- [Stream the agent response to the user](#stream-the-agent-response-to-the-user)
-- [Ensure the agent response contains citations](#ensure-the-agent-response-contains-citations)
-- [Ensure the agent response contains an AI label](#ensure-the-agent-response-contains-an-ai-label)
-- [Ensure that the agent maintains intelligent conversation](#ensure-that-the-agent-maintains-intelligent-conversation)
-- [Ensure that the agent offers prompt starters or a welcome card](#ensure-that-the-agent-offers-prompt-starters-or-a-welcome-card)
-
-### Update the app manifest an agent
-
-You must update the app manifest for the agent to define specific properties and configurations that characterize its capabilities and behavior.
-
-Here's an example for updating the app manifest. You must add the `botID` property to the `copilotAgents` node in the app manifest.
-
-<details>
-<summary>App manifest update example:</summary>
-
-```json
-    "bots": [
-        { 
-          "botId": "00001111-aaaa-2222-bbbb-3333cccc4444", 
-          // ... existing bot node fields
-        } 
-      ],
-      "copilotAgents": {
-        "customEngineAgents": [{ // New 
-          "type": "bot", // Only option 
-          "id": "00001111-aaaa-2222-bbbb-3333cccc4444"  // Validated against bots node 
-        }] 
-      },
-
-```
-
-</details>
-
-### Stream the agent response to the user
-
-An agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
-
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming agent messages" border="false":::
-
-Use the following types of updates while streaming responses:
-
-- Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
-- Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
-
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
-
-### Ensure the agent response contains citations
-
-Users must know the sources an agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
-
-:::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
-
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
-
-> [!NOTE]
->
-> Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-
-### Ensure the agent response contains an AI label
-
-An agent must identify that it uses AI. Informing users that a response is AI-generated helps build trust in the agent's capabilities. To ensure this, an agent must include a flag in each AI-generated response to indicate it was generated by AI. This flag automatically adds an AI label next to the response.
-
-Examples of AI label:
-
-- Example of AI-generated label:
-
-    :::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
-
-- Example of sensitivity label:
-
-    :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
-
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
-
-### Ensure that the agent maintains intelligent conversation
+---
 
 An agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
@@ -105,9 +29,41 @@ Use Teams SDK to ensure intelligent context-based conversation and to manage and
 - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
 - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
-### Ensure that the agent offers prompt starters or a welcome card
+## AI-generated indicator (required)
 
-An agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps users overcome challenges during both initial and subsequent interactions with the agent.
+Teams agents are required to include the standard **AI generated** label on messages generated via LLM.
+
+:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
+
+See [AI label](../bot-messages-ai-generated-content.md#ai-label).
+
+## Message streaming
+
+Like many LLM chat experiences, Teams agents can stream messages, delivering content to users as it is generated. While waiting for response generation to begin, Teams can display a customizable, updateable "thinking indicator" to indicate liveness and provide insight about how the message is being generated.
+
+:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated" border="false":::
+
+Agents should always use streaming and thinking indicators where applicable to provide a responsive, low-latency user experience.
+
+TODO only works 1:1
+
+TODO do we have a standard name for "thinking indicator"? Maybe "status indicator" It was "informative message" here before, which was too generic to imply the usage.
+
+[Stream bot messages](../../streaming-ux.md)
+
+## Proactive messaging
+
+Agent interactions are typically thought of as being initiated by users, but
+
+## Welcome messages and prompt starters
+
+Agents can detect when they are added to a meeting or group chat, or installed as a personal app with one-on-one chat capabilities, and proactively send a welcome message
+
+TODO do we have anything to link to about how to actually do a welcome message? There's <https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?tabs=dotnet> but that's really scattered; I have already given feedback on it in one of the samples-update PRs that's modifying it.
+
+## Prompt starters
+
+*Prompt starters* are prewritten prompts that help users interact with an agent and understand its capabilities.
 
 :::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
 
@@ -115,44 +71,70 @@ An agent must assist users by offering prompt suggestions on how to best utilize
 - **Contextual prompts**: Contextual prompts are dynamic recommendations from an agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
 - **Suggested action**: Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and must be customized to match the response.
 
-## Best practices for agents in Teams
+## Suggested actions
 
-The following best practices can help enhance the overall effectiveness of an agent:
+## Named commands
 
-- [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
-- [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
-- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
-- [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
-- [Enable app profile card](#enable-app-profile-card).
+## Sensitivity labels
 
-### Ensure that agent's response contains feedback button
+Agent messages that contain information that might be confidential, or that might be accessible only to certain individuals, should include a standard sensitivity label.
 
-Develop the capability in the agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
+- Example of sensitivity label:
 
-:::image type="content" source="../../../assets/images/bots/ai-feedback-loop.png" alt-text="Image shows an example of feedback loop." border="false":::
+    :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
-To collect user feedback, you must:
+See [Sensitivity label](../bot-messages-ai-generated-content.md#sensitivity-label).
 
-- Provide feedback buttons with every response.
-- Provide the feedback received from users to the agent.
-- Use the feedback to enhance the quality of the agent's responses.
+## Citations
 
-Use Teams SDK to add the feedback button property to the AI module. This property automatically adds a feedback button to each AI-generated message.
+Agents should cite the data sources they use to generate messages.
+
+:::image type="content" source="../../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
+
+See [Citations](../bot-messages-ai-generated-content.md#citations)
+
+TODO in public preview
+
+> [!NOTE]
+>
+> Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+
+## Feedback
+
+Teams provides standardized controls and invocation events for gathering user feedback about agent messages. The feedback workflow is opt-in: agent developers must enable it in their agent and then implement
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams desktop client.":::
+
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams desktop client.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/feedback-buttons-mobile.png":::
+
+:::image type="content" source="../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams desktop client." lightbox="../../assets/images/bots/feedback-form-mobile.png":::
+
+---
+
+See [Feedback buttons](../bot-messages-ai-generated-content.md#feedback-buttons).
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
-### Enable Teams Azure AD single sign-on
+### Enable Teams Azure AD single sign-on (TODO best practice)
+
+TODO currently 1:1 only
 
 Add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
 
-### Enable the agent to understand conversational history and context
+### Enable the agent to understand conversational history and context (TODO reconcile with above, required)
 
 Design your agent to understand and refer to conversational history and context. This ensures that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate.
 
 <!--For more information, see [messages in bot conversations](../conversations/conversation-messages.md).-->
 
-### Offer dynamic and contextual suggestion prompts
+### Offer dynamic and contextual suggestion prompts (TODO best practice)
 
 Enhance your agent's user experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically.
 
@@ -160,13 +142,15 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 
 To achieve this, the agent must leverage the conversation context and history, ensuring prompt suggestions are timely and fit for the query.
 
-### Enable app profile card
+### Enable app profile card (TODO best practice, name)
 
 Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
+
+TODO targeted messages, sessions, reply in threads, full channel awareness, commands
 
 ## See also
 
