@@ -143,7 +143,7 @@ Citing sources in bot messages helps users ask follow-up questions or conduct in
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/bot-citation-mobile.png" border="false" alt-text="Screenshot shows an AI-powered bot response with in-text citation and the citation reference in the Teams mobile client." lightbox="../../assets/images/bots/bot-citation-mobile.png":::
+:::image type="content" source="../../assets/images/bots/bot-citation-mobile.png" border="false" alt-text="Screenshot shows an AI-powered bot respond with in-text citation and the citation reference in the Teams mobile client." lightbox="../../assets/images/bots/bot-citation-mobile.png":::
 
 ---
 
@@ -311,7 +311,7 @@ Feedback buttons in bot messages are essential for tracking user engagement, ide
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/bot-messages/feedback-buttons-mobile.png":::
+:::image type="content" source="../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/bot-messages/feedback-buttons-mobile.png":::
 
 ---
 
