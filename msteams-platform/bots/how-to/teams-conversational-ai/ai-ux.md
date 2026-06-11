@@ -10,13 +10,23 @@ ms.date: 06/10/2026
 
 This article provides a comprehensive checklist of conversational Teams features for agents. It highlights capabilities and integration points that can improve usability, productivity, and overall user experience. Review and consider each item in this list to ensure your agent makes effective use of features that contribute to a complete, high-quality experience that meets the expectations of your users.
 
-TODO many of these are required for copilot, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+TODO need to square what's here with actual requirements as they are written in the Teams Store validation guidelines article and the Copilot [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md). Those may need updates too.
 
 TODO we should be clearer here that by "agent", we specifically mean an LLM-backed bot. Can link to some of the new content under development about the app model.
 
-## Context management (required)
+## AI-generated indicator (required)
 
-**MAJOR TODO**, extending to all the platform docs and not just this article: what actual developer guidance and facilities do we offer for this that we can link to? I haven't modified the contents here yet... "Use Teams SDK to ensure intelligent context-based conversation", but what does Teams SDK offer to do that? This is arguably the most critical part of making an agent work and we have virtually no concrete guidance on it anywhere I've seen; most of our feature docs are just *bot* features until someone does the work to connect an LLM. A sample agent implementation that we could dissect in documentation would be extremely helpful here.
+Teams agents are required to display the **AI generated** indicator on messages generated with an LLM.
+
+:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
+
+See [AI label](../bot-messages-ai-generated-content.md#ai-label).
+
+## Context management and conversational intelligence (required)
+
+**MAJOR TODO and input needed**, extending to all the platform docs and not just this article: what actual developer guidance and facilities do we offer for this that we can link to? I haven't modified the contents here yet... "Use Teams SDK to ensure intelligent context-based conversation", but what does Teams SDK and our docs offer in that direction? "Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams" - but we don't give any guidance on how to derive any meaningful benefit from doing that. This is arguably the most critical part of making an actual LLM agent really "light up" in Teams. People are going to use these features to build better *bots* unless we give at least some glimmer of insight how to use Teams SDK to build a Teams-flavored harness around an LLM. We would derive huge benefit from a larger, "agent reference implementation" sample that shows these features being used from an LLM-powered *agent* and not a toy bot; we could dissect it in documentation and use snippets from it as feature examples.
+
+TODO: To what extent is this actually a requirement? Do we expect/require all agents to receive and track all messages?
 
 ---
 
@@ -29,13 +39,7 @@ Use Teams SDK to ensure intelligent context-based conversation and to manage and
 - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
 - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
-## AI-generated indicator (required)
-
-Teams agents are required to include the standard **AI generated** label on messages generated via LLM.
-
-:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
-
-See [AI label](../bot-messages-ai-generated-content.md#ai-label).
+TODO we could have a section or subsection here for proactive messaging: "Agents aren't limited to request-response workflows, and can proactively message users for notifications, scheduled tasks, or just to offer help when intelligently monitoring the conversation".  This is also a good place to mention it, prior to welcome messages below
 
 ## Message streaming
 
@@ -51,19 +55,15 @@ TODO do we have a standard name for "thinking indicator"? Maybe "status indicato
 
 [Stream bot messages](../../streaming-ux.md)
 
-## Proactive messaging
+## Adaptive cards
 
-Agent interactions are typically thought of as being initiated by users, but
+TODO
 
-## Welcome messages and prompt starters
+## Prompt starters and named commands
 
-Agents can detect when they are added to a meeting or group chat, or installed as a personal app with one-on-one chat capabilities, and proactively send a welcome message
+*Prompt starters* are prewritten prompts that help users interact with an agent and understand its capabilities. Unlike suggested actions, prompt starters aren't dynamic, but are meant to  
 
-TODO do we have anything to link to about how to actually do a welcome message? There's <https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?tabs=dotnet> but that's really scattered; I have already given feedback on it in one of the samples-update PRs that's modifying it.
-
-## Prompt starters
-
-*Prompt starters* are prewritten prompts that help users interact with an agent and understand its capabilities.
+static and preconfigured
 
 :::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
 
@@ -73,7 +73,21 @@ TODO do we have anything to link to about how to actually do a welcome message? 
 
 ## Suggested actions
 
-## Named commands
+Whenever an agent sends a message, it can include a set of *suggested actions*: buttons that users can select to quickly respond or take action. Unlike preconfigured prompt starters or command names, suggested actions can be generated at runtime, enabling agents to dynamically generate context-aware options to guide users thorugh workflows or intelligently suggest next steps.
+
+TODO screenshots
+
+Suggested actions are particularly important for "human in the loop" workflows in which an agent requests user approval or confirmation before taking action, but are useful in any scenario in which users would benefit from quick, contextual options. They can be configured to issue a pre-configured chat response to the agent, silently invoke agent behaviors without a chat message, or insert a pre-constructed message into the user's compose box.
+
+See [Suggested actions](../conversations/prompt-suggestions.md#suggested-actions)
+
+## Welcome messages
+
+Agents can proactively send welcome messages when added to a conversation or installed as a personal app with one-on-one chat capabilities. An agent's welcome message should explain the value it offers, provide configuration instructions, and describe any commands it exposes. In group contexts, an agent's welcome message should mention the user who installed it.
+
+Welcome messages are optional, but for agents installed in personal scope (one-on-one conversations), agents that don't send a welcome message must provide prompt starters instead.
+
+TODO do we have anything to link to about how to actually *do* a welcome message? There's <https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?tabs=dotnet> but that's really scattered; I have already given feedback on it in one of the samples-update PRs that's modifying it. <https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages> has some language in that direction but I don't think it has clear guidance.
 
 ## Sensitivity labels
 
