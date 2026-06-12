@@ -48,7 +48,7 @@ A widget should expose a focused, high-value capability — not your entire prod
 <table>
 <tr>
 <th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"></th>
-<th align="left"><img src="images/icon-puzzle.png" alt="chat bubble" width="52"></th>
+<th align="left"><img src="images/icon-arrowUp.png" alt="chat bubble" width="48"></th>
 </tr>
 <tr>
 <td>
