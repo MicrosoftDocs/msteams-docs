@@ -9,7 +9,7 @@ ms.date: 04/30/2026
 
 # Edit Microsoft Entra manifest
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra app with the manifest file as the source of truth during your Microsoft Teams agent or app development lifecycle.
+Microsoft 365 Agents Toolkit (previously called Teams Toolkit) uses the Microsoft Entra manifest file as the source of truth for managing your Microsoft Entra app throughout the Teams agent or app development lifecycle.
 
 This article explains how to customize and deploy the Microsoft Entra app manifest in Microsoft 365 Agents Toolkit, including permissions, preauthorized applications, redirect URIs, placeholders, and lifecycle behavior across local and cloud environments.
 
@@ -17,7 +17,7 @@ This article explains how to customize and deploy the Microsoft Entra app manife
 
 ## Customize Microsoft Entra manifest template
 
-You can customize Microsoft Entra manifest template to update Microsoft Entra app.
+You can customize Microsoft Entra manifest template to update Microsoft Entra app configuration for your project.
 
 1. Open `aad.template.json` in your project.
 
@@ -30,7 +30,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
     <details>
 
     <summary>Add an agent or app permission</summary>
-     If the Teams agent or app must call an API that requires additional permissions, update the requiredResourceAccess property in the Microsoft Entra manifest template. Use Scope for delegated permissions and Role for application permissions, and note that Microsoft Graph and Office 365 SharePoint Online can use readable names in this template while other APIs require UUID values. Here's a code snippet example:
+     If your Teams agent or app needs additional permissions to call an API, update the `requiredResourceAccess` property in the Microsoft Entra manifest template. Use `Scope` for delegated permissions and `Role` for application permissions, and note that Microsoft Graph and Office 365 SharePoint Online can use readable names in this template while other APIs require UUID values. Here's a code snippet example:
 
     ```JSON
     "requiredResourceAccess": [
@@ -60,7 +60,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     ```
 
-    The following list provides different property IDs and their usage:
+    The following properties are used in different ways depending on the API and permission type:
 
     - The `resourceAppId` property is used for different APIs. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the name directly instead of UUID, and for other APIs use UUID.
 
