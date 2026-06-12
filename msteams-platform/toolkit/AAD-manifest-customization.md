@@ -192,36 +192,36 @@ Microsoft Entra manifest template in Agents Toolkit also supports user readable 
 
 ### Preauthorized applications CodeLens
 
-CodeLens shows the app name for the preauthorized app ID for the `preAuthorizedApplications` property inside api property.
+CodeLens displays the app name that corresponds to the preauthorized app ID in the `preAuthorizedApplications` property inside the `api` section.
 
 <a name='view-azure-ad-application-on-the-azure-portal'></a>
 
 ## View Microsoft Entra app on the Azure portal
 
-1. Copy the Microsoft Entra app client ID from `.env.xxx` () file in the `AAD_APP_CLIENT_ID` property.
+1. Copy the Microsoft Entra app client ID from the appropriate `.env.xxx` file by locating the `AAD_APP_CLIENT_ID` value.
   
      :::image type="content" source="../assets/images/toolkit-v2/manual/add view1.png" alt-text="Screenshot shows the client ID." lightbox="../assets/images/toolkit-v2/manual/add view1.png":::
 
    > [!NOTE]
-   > xxx in the client ID indicates the environment name where you have deployed the Microsoft Entra app.
+   > In this context, xxx represents the environment name where you have deployed the Microsoft Entra app.
 
 1. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
-   > Ensure that login credentials of Teams app and M365 account are the same.
+   > Ensure that you sign in with the same account for both the Teams app and Microsoft 365.
 
-1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra app using client ID that you copied before.
-  
+1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra app by using the client ID you copied earlier.
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add-view-app-registrations.png" alt-text="Screenshot shows the client ID under All applications tab.":::
 
-1. Select Microsoft Entra app from search result to view the detailed information.
+1. Select Microsoft Entra app from search result to view its detailed information.
   
-1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this app. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/entra/identity-platform/reference-microsoft-graph-app-manifest).
-  
+1. On  the Microsoft Entra app information page, select **Manifest** to view the manifest of this app. The schema matches the one used in the `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/entra/identity-platform/reference-microsoft-graph-app-manifest).
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
-1. You can select **Other Menu** to view or configure Microsoft Entra app through its portal.
-  
+1. You can use the other menu options to view or configure the Microsoft Entra app in the portal.
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20View%20Microsoft%20Entra%20application%20on%20the%20Azure%20portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Faad-manifest-customization%23view-microsoft-entra-application-on-the-azure-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FAAD-manifest-customization.md&documentVersionIndependentId=70b95cac-24c1-4279-8656-cd3c5d0b5235&author=surbhigupta&platformId=d983c833-f680-17be-bf5e-ec2810040727&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
