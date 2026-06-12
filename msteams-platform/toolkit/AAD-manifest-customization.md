@@ -239,11 +239,11 @@ You interact with the Microsoft Entra app at several stages of the Teams app dev
 
 1. **To create Project**
 
-      You can create a project with Agents Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams app using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Agents Toolkit creates or updates the Microsoft Entra app during local development or while you move the app to the cloud.
+      You can create a project in Agents Toolkit with single sign-on (SSO) enabled by default, such as an SSO-enabled tab app. For more information, see [create a new Teams app using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is created automatically in `aad.template.json`, and Agents Toolkit creates or updates the Microsoft Entra app during local development and when you move the app to the cloud.
 
 1. **To add SSO to your bot or tab**
 
-      After you create a Teams agent or app without built-in SSO, Agents Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
+      After you create a Teams agent or app without built-in SSO, Agents Toolkit can help you add SSO to the project. As part of that process, a Microsoft Entra manifest file is created automatically in `aad.template.json`.
 
       Agents Toolkit creates or updates the Microsoft Entra app during next local development session or while you move the app to the cloud.
 
