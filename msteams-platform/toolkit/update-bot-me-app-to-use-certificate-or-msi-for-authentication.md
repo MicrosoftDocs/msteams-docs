@@ -1,34 +1,41 @@
 ---
-title: Use Certificate or MSI Authentication for Bots
-description: Learn how to use certificate or MSI-based authentication for your bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
+title: Use Certificate or MSI Authentication for Agents and Bots
+description: Learn how to use certificate or MSI-based authentication for your agent and bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 10/22/2024
+ms.date: 04/20/2026
 ---
 
-# Use certificate or MSI for app authentication
+<!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
 
-You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+# Use certificate or MSI for agent or app authentication
+
+You can use certificate- or MSI-based authentication to validate your agent and bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
-Ensure that you have a Teams bot app deployed to Azure with the following resources:
+Ensure that you have a Teams agent or bot app deployed to Azure with the following resources:
 
 * An Azure bot.
-* An Entra ID with a secret used for bot authentication.
+* An Entra ID with a secret used for agent or bot authentication.
 * A resource that hosts your bot app, such as Azure App Service, Azure Functions.
+
+## Update authentication method
+
+Choose one of the following to update authentication for your Teams agent or app:
 
 # [Update to certificate-based Authentication](#tab/certificate)
 
-To update your bot app to use certificate-based authentication:
+To update your agent or bot app to use certificate-based authentication:
 
 1. [Create and upload certificate in Azure AD](#create-and-upload-certificate-in-azure-ad)
-1. [Update the bot app code](#update-the-bot-app-code)
+1. [Update the agent or bot app code](#update-the-agent-or-bot-app-code)
 1. [Delete bot secret](#delete-bot-secret)
 
-## Create and upload certificate in Azure AD
+### Create and upload certificate in Azure AD
 
-To use a certificate for bot authentication:
+To use a certificate for agent or bot authentication:
 
 1. Prepare a certificate and private key.
 
@@ -59,14 +66,14 @@ To use a certificate for bot authentication:
 
     :::image type="content" source="../assets/images/toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
-## Update the bot app code
+### Update the agent or bot app code
 
-Follow the steps to update the bot app code:
+Follow the steps to update the code for the agent or bot:
 
-1. Open your bot app project in Visual Studio or Visual Studio Code.
-1. Update your code.
+1. Open your agent or bot project in Visual Studio or Visual Studio Code.
+1. Update the code:
 
-    # [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
     ```javascript
         const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -84,7 +91,7 @@ Follow the steps to update the bot app code:
         const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
-    # [C#](#tab/cs1)
+   # [C#](#tab/cs1)
 
     ```csharp
         builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
@@ -92,13 +99,11 @@ Follow the steps to update the bot app code:
 
     ---
 
-1. Ensure you test your bot to confirm the operation aligns with the updated authentication.
+1. Ensure you test your agent or bot to confirm the operation aligns with the updated authentication.
 
-## Delete bot secret
+### Delete bot secret
 
-Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
-
-To delete the bot secret:
+Ensure that your agent or bot uses the certificate for authentication before you delete the bot secret. To delete the bot secret:
 
 1. Go to [Azure portal](https://ms.portal.azure.com).
 1. Select **App registrations**.
@@ -112,23 +117,23 @@ To delete the bot secret:
 
     :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-Your bot app now uses the certificate for authentication.
+Your agent or bot app now uses the certificate for authentication.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20certificate-based%20Authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&platformId=7d7829c1-68d8-1e75-4de1-a7e56b7dc090&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [Update to MSI-based authentication](#tab/msi)
 
-To update your bot app to use MSI-based authentication:
+To update your agent or bot to use MSI-based authentication:
 
 1. [Create bot service with MSI type in Azure AD](#create-bot-service-with-msi-type-in-azure-ad)
-1. [Update your bot app code for MSI](#update-your-bot-app-code-for-msi)
+1. [Update your agent or bot app code for MSI](#update-your-agent-or-bot-app-code-for-msi)
 1. [Delete bot secret](#delete-bot-secret-1)
 
 > [!NOTE]
 > The **Azure Bot** service ID and type can't be modified after creation.
 
-## Create bot service with MSI type in Azure AD
+### Create bot service with MSI type in Azure AD
 
 To create a new **Azure Bot** service with MSI type, follow these steps:
 
@@ -174,14 +179,14 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. Add the managed identity that you've created.
 
-## Update your bot app code for MSI
+### Update your agent or bot app code for MSI
 
-To update the bot app code for MSI, follow these steps:
+Follow the steps to update the code for the agent or bot:
 
-1. Open your bot app project in Visual Studio or Visual Studio Code.
-1. Update your code.
+1. Open your agent or bot project in Visual Studio or Visual Studio Code.
+1. Update the code:
 
-    # [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     ```javascript
         const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
@@ -198,7 +203,7 @@ To update the bot app code for MSI, follow these steps:
         const adapter = new CloudAdapter(botFrameworkAuthentication);
     ```
 
-    # [C#](#tab/cs2)
+   # [C#](#tab/cs2)
 
     ```csharp
         builder.Configuration["MicrosoftAppType"] = "UserAssignedMsi";
@@ -209,15 +214,13 @@ To update the bot app code for MSI, follow these steps:
 
     ---
 
-1. Update the `BOT_ID` in your `.env` file.
+1. Update the `BOT_ID` in the `.env` file.
 
-1. Ensure you test your bot to confirm its operation aligns with the updated authentication.
+1. Ensure you test your agent or bot to confirm its operation aligns with the updated authentication.
 
-## Delete bot secret
+### Delete bot secret
 
-Ensure that your bot app uses the certificate for authentication before you delete the bot secret.
-
-To delete the bot secret:
+Ensure that your agent or bot app uses the certificate for authentication before you delete the bot secret. To delete the bot secret:
 
 1. Go to [Azure portal](https://ms.portal.azure.com).
 1. Select **App registrations**.
@@ -231,7 +234,7 @@ To delete the bot secret:
 
     :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
-Your bot app now uses MSI for authentication.
+Your agent or bot app now uses MSI for authentication.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20MSI-based%20authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=muyangamigo&platformId=7d7829c1-68d8-1e75-4de1-a7e56b7dc090&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -240,6 +243,7 @@ Your bot app now uses MSI for authentication.
 
 ## See Also
 
+* [Build your first agent](../agents-in-teams/build-first-agent.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
