@@ -26,6 +26,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 - Content should support the conversation, not feel like a separate or disconnected experience.
 
 
+
 <img src="images/icon-puzzle.png" alt="puzzle piece" width="52">
 
 ### Surface capabilities, not full apps
@@ -34,25 +35,30 @@ Avoid embedding your full application experience inside a widget. Instead, ident
  
 - A widget should expose a focused, high-value capability — not your entire product.
 - Each widget should represent a single, focused interaction.
-<img src="images/icon-mouse.png" alt="mouse cursor" width="52">
 
+
+
+<img src="images/icon-mouse.png" alt="mouse cursor" width="52">
 
 ### Be transparent and predictable
  
 - Widget content should be clear and any interactions obvious.
 - Users should always understand what a widget is showing.
 - The expected outcome of any interaction should be obvious before the user acts.
-<img src="images/icon-arrowUp.png" alt="arrow expanding" width="52">
 
+
+
+<img src="images/icon-arrowUp.png" alt="arrow expanding" width="52">
 
 ### Scale to the task
  
 Match the visual footprint of your widget to what the user needs in the moment.
  
 - Widgets always appear inline in the chat.
-- If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
-<img src="images/icon-shield.png" alt="shield" width="52">
+- If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.\\
 
+
+<img src="images/icon-shield.png" alt="shield" width="52">
 
 ### Preserve human control
  
