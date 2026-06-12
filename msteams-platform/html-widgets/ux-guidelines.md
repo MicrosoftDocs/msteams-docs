@@ -43,31 +43,31 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 
 
-![Complement the conversation icon](assets/images/html-widgets/ux-guidelines/icon-conversation.png)
+
 
 ### Complement the conversation
 
 Widgets exist alongside agent-generated text in a chat thread. They may be display-only, interactive, or prompt the user for input — but they should always feel like a natural part of the conversation, not compete with or replace it.
 
-![Surface capabilities icon](assets/images/html-widgets/ux-guidelines/icon-prohibited.png)
+
 
 ### Surface capabilities, not full apps
 
 A widget should expose a focused, high-value capability — not your entire product. Each widget should represent a single, focused interaction.
 
-![Transparent icon](assets/images/html-widgets/ux-guidelines/icon-transparency.png)
+
 
 ### Be transparent and predictable
 
 Widget content should be clear and any interactions obvious. Users should always understand what a widget is showing and what will happen when they interact with it.
 
-![Scale icon](assets/images/html-widgets/ux-guidelines/icon-scale.png)
+
 
 ### Scale to the task
 
 Widgets always appear inline in the chat. If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
 
-![Human control icon](assets/images/html-widgets/ux-guidelines/icon-shield.png)
+
 
 ### Preserve human control
 
