@@ -74,7 +74,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Preauthorize a client application</summary>
 
-     You can use `preAuthorizedApplications` property to authorize a client app to indicate that the API trusts the app. Users don't consent when the client calls exposed API. You can see the following example for this property:
+     Use the `preAuthorizedApplications` property when the exposed API should trust a specific client application so users do not need to consent each time that client calls the API on their behalf. This is useful when you already know which agent or app will consume the API and want to streamline the authentication experience. You can see the following example for this property:
 
      ```JSON
      "api": {
@@ -106,7 +106,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Update redirect URL for authentication response</summary>
 
-     Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `redirectUris` inside `web`, `spa`, `publicClient`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
+     Redirect URIs define where authentication responses, such as tokens, are sent after sign-in completes. Configure the `redirectUris` property under `publicClient`, `web`, or `spa` based on the agent or app type you are building, and ensure each value matches the actual endpoint used by that client flow. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
 
       ``` JSON
      "publicClient": {
