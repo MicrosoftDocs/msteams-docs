@@ -66,7 +66,7 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-For detailed streaming implementation guidance, see [Stream bot messages](../../streaming-ux.md). You can also format streamed content using extended Markdown (`textFormat: "extendedMarkdown"`) for rich formatting. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
+For detailed streaming implementation guidance, see [Stream agent messages](../../streaming-ux.md). You can also format streamed content using extended Markdown (`textFormat: "extendedMarkdown"`) for rich formatting. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
 
 ### Ensure the agent response contains citations
 
@@ -173,5 +173,5 @@ To enable the app profile card for your agents or bots, add the `features` field
 ## See also
 
 - [Teams SDK](teams-conversation-ai-overview.md)
-- [Stream bot messages](../../streaming-ux.md)
+- [Stream agent messages](../../streaming-ux.md)
 - [Enhance AI-generated bot messages](../bot-messages-ai-generated-content.md)

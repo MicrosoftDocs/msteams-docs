@@ -1,7 +1,8 @@
 When streaming with extended Markdown, your bot can progressively send content that includes:
 
-- **Callouts** (notes, warnings, tips): Render after the complete `> [!TYPE]` block is received
-- **Math equations** (LaTeX/KaTeX): Inline math renders after the closing `$`, block math renders after the closing `$$`
-- **Fenced blocks** (including custom fenced content): Render only after the closing ` ``` ` fence is received on its own line
+- **Fenced code blocks**: Render only after the closing ` ``` ` fence is received on its own line
 - **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
-- **Inline Adaptive Cards** (interactive elements): Render only when the complete card JSON fenced block is received, and buffer partial JSON
+- **At-mentions**: Render when `<at>...</at>` tags are complete and valid
+- **Citations**: Render when `<cite>...</cite>` tags are complete and valid
+- **Tables**: Render when enough rows are received to form a valid table structure
+- **Task lists**: Render when list items and checkbox markers (`- [ ]`, `- [x]`) are complete

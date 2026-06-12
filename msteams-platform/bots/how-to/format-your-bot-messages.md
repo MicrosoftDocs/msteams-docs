@@ -27,9 +27,9 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| `plain` | The text is treated as raw text with no formatting applied.|
+| `plain` | The text is treated as raw text with no formatting applied. |
 | `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
-| `extendedMarkdown` | The text is treated as extended Markdown, supporting richer client-side rendering such as math equations, callouts, images, and inline Adaptive Cards. |
+| `extendedMarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
 | `xml` | The text is simple XML markup. |
 
 Teams supports a subset of `markdown`, `extendedMarkdown`, and `xml` or HTML formatting tags. For extended Markdown text content, only the `<at>` and `<cite>` HTML tags are supported. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
@@ -44,7 +44,7 @@ To use extended Markdown formatting in bot messages, set the `textFormat` proper
 {
   "type": "message",
   "textFormat": "extendedMarkdown",
-  "text": "markdownContent"
+  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>."
 }
 ```
 
@@ -54,7 +54,7 @@ To use extended Markdown formatting in bot messages, set the `textFormat` proper
 var activity = new Activity
 {
     Type = ActivityTypes.Message,
-    Text = markdownContent,
+    Text = "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
     TextFormat = "extendedMarkdown"
 };
 
@@ -66,7 +66,7 @@ await app.SendActivity(conversationId, activity);
 ```typescript
 const activity = {
   type: "message",
-  text: markdownContent,
+  text: "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
   textFormat: "extendedMarkdown"
 };
 
@@ -78,7 +78,7 @@ await app.sendActivity(conversationId, activity);
 ```python
 activity = Activity(
     type=ActivityTypes.message,
-    text=markdown_content,
+    text="### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
     text_format="extendedMarkdown"
 )
 
@@ -87,7 +87,7 @@ await app.send_activity(conversation_id, activity)
 
 ---
 
-### How Teams processes bot text formats
+## How Teams processes bot text formats
 
 For `plain`, `markdown`, `xml`, and when `textFormat` is omitted, Teams clients receive a `RichText/Html` payload.
 
@@ -97,14 +97,14 @@ For `plain`, `markdown`, `xml`, and when `textFormat` is omitted, Teams clients 
 For `textFormat: "extendedMarkdown"`, Teams clients receive `RichText/ExtendedMarkdown`.
 
 - The backend bypasses HTML conversion and sends the raw bot content.
-- Client-side rendering handles supported extended Markdown features.
+- Teams clients render supported extended Markdown features.
 
 The following limitations apply to formatting:
 
 - Text-only messages in `plain` format don't support table formatting.
 - Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- Rich cards don't support Markdown or `extendedMarkdown` or table formatting.
-- `extendedMarkdown` is rendered client-side. Older or unsupported clients receive unsupported constructs as plain text.
+- For rich card payload properties, `markdown` and `extendedMarkdown` formatting aren't supported.
+- Older or unsupported clients can show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
@@ -132,92 +132,12 @@ When using `textFormat: "extendedMarkdown"`, the following features are availabl
 
 | Feature | Syntax | Description |
 | --- | --- | --- |
-| **Callouts** | `> [!NOTE]`, `> [!WARNING]`, `> [!TIP]`, `> [!IMPORTANT]` | Colored highlighted blocks for notes, warnings, tips |
-| **Math equations** | `$...$` (inline) / `$$...$$` (block) | Mathematical equations using KaTeX |
-| **Inline Adaptive Cards** | ` ```adaptivecard ` | Embed interactive card elements within Markdown |
-| **Fenced blocks** | Use triple backticks with a language identifier, for example ` ```python ` or ` ```adaptivecard ` | Use fenced blocks for supported custom rendering blocks |
+| **Fenced code blocks** | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences |
 | **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
 | **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
 | **Citations** | `<cite>number</cite>` | Inline citation markers in message text |
 | **Tables** | Pipe-delimited rows with separator line | Structured tabular data with optional column alignment |
 | **Task lists** | `- [ ] item` / `- [x] item` | Checklist-style items; checkboxes are read-only |
-| **Code blocks** | `` ```language `` | Syntax-highlighted code fences |
-| **Footnotes** | `Text[^1]` and `[^1]: note` | Reference-style supplementary notes |
-
-### Callouts and directives
-
-Callouts create visually distinct blocks that help users identify important information by severity or type. Use directives to highlight warnings, tips, informational notes, or critical errors.
-
-| Directive | Use case |
-|-----------|----------|
-| `> [!NOTE]` | General information the user should know |
-| `> [!TIP]` | Helpful suggestions or best practices |
-| `> [!WARNING]` | Important caution that could affect outcomes |
-| `> [!IMPORTANT]` | Critical alerts requiring immediate attention |
-
-```markdown
-> [!NOTE]
-> This is a note callout.
-
-> [!TIP]
-> This is a tip callout.
-
-> [!WARNING]
-> This is a warning callout.
-
-> [!IMPORTANT]
-> This is an important callout.
-```
-
-**Note:** Callouts require `textFormat: "extendedMarkdown"` and are rendered with distinct visual styling in Teams clients.
-
-### Math equations
-
-Use LaTeX/KaTeX syntax to render mathematical equations. Inline math uses single dollar signs, and block math uses double dollar signs.
-
-**Inline math:**
-
-```markdown
-The equation $E = mc^2$ describes mass-energy equivalence.
-```
-
-**Block math:**
-
-```markdown
-$$
-r = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2}\sqrt{\sum(y_i - \bar{y})^2}}
-$$
-```
-
-> [!NOTE]
-> Math rendering uses KaTeX. For the full list of supported LaTeX commands, see [KaTeX supported functions](https://katex.org/docs/supported).
-
-### Inline Adaptive Cards
-
-Embed interactive Adaptive Card elements inline within Markdown text:
-
-````markdown
-```adaptivecard
-{
-  "type": "AdaptiveCard",
-  "version": "1.6",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Click the button below:",
-      "weight": "bolder"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.OpenUrl",
-      "title": "Learn more",
-      "url": "https://learn.microsoft.com"
-    }
-  ]
-}
-```
-````
 
 ### At-mention support
 
