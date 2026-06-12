@@ -10,7 +10,7 @@ ms.date: 06/01/2026
 
 This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
----
+
 
 ## UX principles
 
@@ -61,7 +61,7 @@ Trust matters, especially when widget actions affect data or trigger external wo
 - Confirm important actions before they happen.
 - Always communicate the expected outcome.
 
----
+
 
 ## Understanding the chat surface
 
@@ -81,7 +81,7 @@ Keep in mind:
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - The same widget may render across multiple platforms — Teams, ChatGPT, Claude, and others
 
----
+
 
 ## Widget anatomy
 
@@ -89,18 +89,19 @@ A well-structured widget follows a predictable layout that helps users orient qu
 
 | Element | Description | Required |
 |---|---|---|
-| **Title** | Identifies the widget or the entity it represents | Recommended when the widget is document-based or contains items with a parent element |
-| **Body content** | The primary information or interactive content | Required |
-| **Actions** | Buttons that allow the user to take the next step | Optional — maximum two primary actions |
+| **Title** | Identifies the widget or what it represents| Gives users an immediate sense of what the widget is and what to expect, helping it stand out clearly within the conversation. |
+| **Body content** | The primary information, media, or interactive content| The core of most widgets — may be the only element present |
+| **Actions** | Buttons, links, or other interactive elements that let the user take the next step | Optional. Interactive elements may appear throughout the widget, not only at the bottom — but when a widget includes a dedicated action area, it's typically placed at the bottom
 
-Structure your widget top to bottom:
 
-1. Title (if applicable)
-2. Primary content — key information, data, or media
-3. Secondary content — supporting details, metadata
-4. Actions — placed at the bottom of the widget
+When a widget does follow this common pattern, content typically flows top to bottom:
 
----
+Title (if applicable)
+Primary content — key information, data, or media
+Secondary content — supporting details, metadata
+Action area (if present) — placed at the bottom
+
+
 
 ## Required
 
@@ -143,7 +144,7 @@ Widgets must communicate the outcome of user actions clearly.
 > [!NOTE]
 > Teams handles the widget-level loading and error states. The requirements above apply to state handling within your widget content.
 
----
+
 
 ## Strongly recommended
 
@@ -235,7 +236,7 @@ If your widget includes a form or input fields:
 - Validate input inline and surface error messages adjacent to the relevant field
 - Keep forms short — if a form requires more than four or five fields, consider moving it to the expanded surface
 
----
+
 
 ## Expanded surface
 
@@ -255,7 +256,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - **Scope to one task** — the expanded surface should support a single coherent workflow
 - **Preserve context** — the chat remains visible when the expanded surface is open. Design the expanded content to work alongside the conversation
 
----
+
 
 ## Best practices
 
@@ -286,7 +287,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 </tr>
 </table>
 
----
+
 
 ## Nice to have
 
@@ -298,7 +299,7 @@ The following items are optional but contribute to a higher-quality widget exper
 - **Media elements**: For inline video or rich media, provide a clear play control and a static thumbnail. Autoplay is not recommended.
 - **Illustrations**: Use illustrations sparingly and purposefully. Avoid decorative illustrations that add height without adding value.
 
----
+
 
 ## Minimum UX bar for submission
 
@@ -317,7 +318,7 @@ Widgets must meet all of the following requirements to be accepted.
 > [!WARNING]
 > Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
 
----
+
 
 ## Related content
 
