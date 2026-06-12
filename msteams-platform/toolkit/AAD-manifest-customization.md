@@ -251,13 +251,13 @@ You interact with the Microsoft Entra app at several stages of the Teams app dev
 
     Agents Toolkit performs the following functions during local development:
 
-    - Reads the `.env.local` file to determine whether an existing Microsoft Entra app is available. If one already exists, Agents Toolkit reuses the existing app. Otherwise, you need to create a new Microsoft Entra app by using the `aad.template.json` file.
+    - The Agents Toolkit reads the `.env.local` file to determine whether an existing Microsoft Entra app is available. If one already exists, Agents Toolkit reuses the existing app. Otherwise, you need to create a new Microsoft Entra app by using the `aad.template.json` file.
 
-    - Initially ignores some properties in the manifest file that require additional context, such as `redirectUris`, which depend on the local development endpoint when a new Microsoft Entra app is created from the manifest file.
+    - Initially the toolkit ignores some properties in the manifest file that require additional context, such as `redirectUris`, which depend on the local development endpoint when a new Microsoft Entra app is created from the manifest file.
 
-    - After the local dev environment starts successfully, the Microsoft Entra app's `identifierUris`, `redirectUris`, and other properties that aren't available during creation stage are updated accordingly.
+    - After the local development environment starts successfully, Agents Toolkit updates the Microsoft Entra app with values such as `identifierUris`, `redirectUris`, and other properties that were not available during the initial creation stage.
 
-    - The changes you've done to your Microsoft Entra app are loaded during next local development session. You can see [Microsoft Entra app changes](https://github.com/OfficeDev/TeamsFx/wiki/) applied manually.
+    - The toolkit loads any changes you made to the Microsoft Entra app during the next local development session. You can also see [Microsoft Entra app changes](https://github.com/OfficeDev/TeamsFx/wiki/) that were applied manually.
 
 1. **To provision for cloud resources**
 
