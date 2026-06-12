@@ -229,13 +229,13 @@ CodeLens displays the app name that corresponds to the preauthorized app ID in t
 
 ## Use an existing Microsoft Entra app
 
-You can use the existing Microsoft Entra app for the Teams project. For more information, see [use an existing Microsoft Entra app for your Teams agent or app](/microsoftteams/platform/toolkit/use-existing-aad-app).
+You can also use an existing Microsoft Entra app for a Teams agent or app project. For more information, see [use an existing Microsoft Entra app](/microsoftteams/platform/toolkit/use-existing-aad-app).
 
 <a name='azure-ad-application-in-teams-application-development-lifecycle'></a>
 
 ## Microsoft Entra app in Teams app development lifecycle
 
-You interact with the Microsoft Entra app throughout the Teams app development lifecycle. In each phase, Agents Toolkit either reuses an existing app from the relevant `.env` file or creates and updates one from `aad.template.json`, then fills in context-dependent values such as `identifierUris` and `redirectUris` once the required endpoints are known.
+You interact with the Microsoft Entra app at several stages of the Teams app development lifecycle. In each phase, Agents Toolkit either reuses an existing app from the relevant `.env` file or creates and updates one from `aad.template.json`, then fills in context-dependent values such as `identifierUris` and `redirectUris` once the required endpoints are known.
 
 1. **To create Project**
 
