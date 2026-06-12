@@ -10,7 +10,7 @@ ms.date: 06/01/2026
 
 This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
----
+
 
 ## UX principles
 
@@ -24,7 +24,6 @@ Building a great widget for Teams means delivering a focused experience that sur
 - Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
 - A widget may be display-only, interactive, or prompt the user for input.
 - Content should support the conversation, not feel like a separate or disconnected experience.
-
 
 
 <img src="images/icon-puzzle.png" alt="puzzle piece" width="52">
@@ -66,10 +65,9 @@ Trust matters, especially when widget actions affect data or trigger external wo
 
 
 
----
 
 ## Understanding the chat surface
-HTML widgets render inline inside a Teams chat message. Understanding this context is essential before making design decisions.
+HTML widgets render inline inside a Teams chat message, alongside the agent's text response and other messages in the thread.
 
 When designing for Teams, follow these core principles:
 
@@ -85,7 +83,7 @@ Keep in mind:
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - The same widget may render across multiple platforms — Teams, ChatGPT, Claude, and others
 
----
+
 
 ## Widget anatomy
 
@@ -104,7 +102,7 @@ Structure your widget top to bottom:
 3. Secondary content — supporting details, metadata
 4. Actions — placed at the bottom of the widget
 
----
+
 
 ## Required
 
@@ -147,7 +145,7 @@ Widgets must communicate the outcome of user actions clearly.
 > [!NOTE]
 > Teams handles the widget-level loading and error states. The requirements above apply to state handling within your widget content.
 
----
+
 
 ## Strongly recommended
 
