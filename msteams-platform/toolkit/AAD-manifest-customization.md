@@ -74,7 +74,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Preauthorize a client application</summary>
 
-     Use the `preAuthorizedApplications` property when the exposed API should trust a specific client application so users do not need to consent each time that client calls the API on their behalf. This is useful when you already know which agent or app will consume the API and want to streamline the authentication experience. You can see the following example for this property:
+     You can use the preAuthorizedApplications property to authorize a client app and indicate that your API trusts it. When the client calls the exposed API, users do not need to provide consent again. The following example shows this property. This is useful when you already know which agent or app will consume the API and want to streamline the authentication experience. You can see the following example for this property:
 
      ```JSON
      "api": {
@@ -92,7 +92,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      ```
 
-     The `preAuthorizedApplications.appId` property is used for the agent or app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
+     The `preAuthorizedApplications.appId` property identifies the agent or app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
 
      1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
 
@@ -143,9 +143,9 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy3.png" alt-text="Screenshot shows the deploy option highlighted." lightbox="../assets/images/toolkit-v2/manual/add deploy3.png":::
 
-   1. The changes for Microsoft Entra app used in local or dev environment are deployed.
+   1. The changes are deployed to the Microsoft Entra app used in the local or dev environment.
 
-   1. Additionally, you can open the command palette and select **Microsoft 365 Agents: Update Microsoft Entra App** to update Microsoft Entra app.
+   1. You can also open the command palette and select **Microsoft 365 Agents: Update Microsoft Entra App** to update Microsoft Entra app.
 
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
 
@@ -156,13 +156,13 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
 ## Microsoft Entra manifest template placeholders
 
-The Microsoft Entra manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can reference to environment variables with the placeholder arguments.
+The Microsoft Entra manifest template includes placeholder values in the form ${{...}}. These values are resolved during the build process for each environment, allowing you to reference environment-specific settings without hardcoding them in the template.
 
 <a name='reference-environment-variable-in-azure-ad-manifest-template'></a>
 
 ### Reference environment variable in Microsoft Entra manifest template
 
-You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the environment variable values.
+Microsoft Entra manifest template file supports reference environment variable values. You don't need to store permanent values directly in the Microsoft Entra manifest template. Instead, you can reference environment variables by using the syntax `${{YOUR_ENV_VARIABLE_NAME}}` to resolve the environment variable values wherever a parameter value is needed.
 
 <a name='edit-and-preview-azure-ad-manifest-with-codelens'></a>
 
