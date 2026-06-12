@@ -21,8 +21,8 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 <table>
 <tr>
-<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble"></th>
-<th align="left">❌ Don't</th>
+<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"></th>
+<th align="left"><img src="images/icon-puzzle.png" alt="chat bubble" width="52"></th>
 </tr>
 <tr>
 <td>
