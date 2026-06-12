@@ -168,19 +168,19 @@ Microsoft Entra manifest template file supports reference environment variable v
 
 ## Edit and preview Microsoft Entra manifest with CodeLens
 
-Microsoft Entra manifest template file has CodeLens to review and edit the code.
+The Microsoft Entra manifest template includes CodeLens features that help you preview, inspect, and edit the manifest more efficiently.
 
 <a name='azure-ad-manifest-template-file'></a>
 
 ### Microsoft Entra manifest template file
 
-There's a preview CodeLens at the beginning of the Microsoft Entra manifest template file. Select the CodeLens to generate a Microsoft Entra manifest based as per your environment.
+A Preview CodeLens appears at the top of the Microsoft Entra manifest template file. Select it to generate a view of the Microsoft Entra manifest based on the environment you choose.
 
 :::image type="content" source="../assets/images/toolkit-v2/manual/add codelens.png" alt-text="Screenshot shows the preview of add codelens.":::
 
 ### Placeholder argument CodeLens
 
-The Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows the tooltip box for the values of all the environments.
+The Placeholder argument CodeLens helps you view the values used for local debugging and other environments. If you hover the mouse on a placeholder argument, a tooltip shows the resolved value for each environment.
 
 :::image type="content" source="../assets/images/toolkit-v2/manual/add arguments.png" alt-text="Screenshot shows the add arguments.":::
 
