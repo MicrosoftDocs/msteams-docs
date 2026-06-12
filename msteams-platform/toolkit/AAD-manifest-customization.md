@@ -251,9 +251,9 @@ You interact with the Microsoft Entra app at several stages of the Teams app dev
 
     Agents Toolkit performs the following functions during local development:
 
-    - Read the `.env.local` file to find an existing Microsoft Entra app. If a Microsoft Entra app already exists, Agents Toolkit reuses the existing Microsoft Entra app. Otherwise, you need to create a new app using the `aad.template.json` file.
+    - Reads the `.env.local` file to determine whether an existing Microsoft Entra app is available. If one already exists, Agents Toolkit reuses the existing app. Otherwise, you need to create a new Microsoft Entra app by using the `aad.template.json` file.
 
-    - Initially ignores some properties in the manifest file that requires more context, such as `redirectUris` property that requires a local development endpoint during the creation of a new Microsoft Entra app with the manifest file.
+    - Initially ignores some properties in the manifest file that require additional context, such as `redirectUris`, which depend on the local development endpoint when a new Microsoft Entra app is created from the manifest file.
 
     - After the local dev environment starts successfully, the Microsoft Entra app's `identifierUris`, `redirectUris`, and other properties that aren't available during creation stage are updated accordingly.
 
