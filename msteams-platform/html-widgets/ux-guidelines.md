@@ -16,51 +16,72 @@ This guide provides UX guidance for partners building HTML widgets in Microsoft 
 
 Building a great widget for Teams means delivering a focused experience that surfaces the right information or action at the right time. HTML widgets should feel like a natural part of the Teams conversation — not an application embedded inside it.
 
-![](images/icon-conversation-bubble.png)
+<table>
 
+  <tr>
+<td width="50%" valign="top">
+<img src="images/icon-conversation-bubble.png" alt="" width="56">
+  
 ### Complement the conversation
-
+  
 - Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
 - A widget may be display-only, interactive, or prompt the user for input.
 - Content should support the conversation, not feel like a separate or disconnected experience.
+</td>
 
-![](images/icon-puzzle.png)
-
+    
+<td width="50%" valign="top">
+<img src="images/icon-puzzle.png" alt="" width="56">
+  
 ### Surface capabilities, not full apps
-
+  
 Avoid embedding your full application experience inside a widget. Instead, identify the single most valuable thing a user needs in this moment.
-
 - A widget should expose a focused, high-value capability — not your entire product.
 - Each widget should represent a single, focused interaction.
+</td>
+</tr>
 
-![](images/icon-mouse.png)
 
+<tr>
+<td width="50%" valign="top">
+<img src="images/icon-mouse.png" alt="" width="56">
+  
 ### Be transparent and predictable
 
 - Widget content should be clear and any interactions obvious.
 - Users should always understand what a widget is showing.
 - The expected outcome of any interaction should be obvious before the user acts.
+</td>
 
-![](images/icon-arrowUp.png)
 
+<td width="50%" valign="top">
+<img src="images/icon-arrowUp.png" alt="" width="56">
+  
 ### Scale to the task
 
 Match the visual footprint of your widget to what the user needs in the moment.
-
 - Widgets always appear inline in the chat.
 - If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
+</td>
+</tr>
 
-![](images/icon-shield.png)
 
+<tr>
+<td width="50%" valign="top">
+<img src="images/icon-shield.png" alt="" width="56">
+  
 ### Preserve human control
 
 Trust matters, especially when widget actions affect data or trigger external workflows.
-
 - Allow users to remain in control of their experience.
 - Make it clear what the widget is doing.
 - Confirm important actions before they happen.
 - Always communicate the expected outcome.
-
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
+</table>
 
 
 ## Understanding the chat surface
