@@ -27,23 +27,90 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| `plain` | The text must be treated as raw text with no formatting applied.|
-| `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
+| `plain` | The text is treated as raw text with no formatting applied. |
+| `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
+| `extendedMarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
 | `xml` | The text is simple XML markup. |
 
-Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+Teams supports a subset of `markdown`, `extendedMarkdown`, and `xml` or HTML formatting tags. For extended Markdown text content, only the `<at>` and `<cite>` HTML tags are supported. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+
+### Enable extended Markdown
+
+To use extended Markdown formatting in bot messages, set the `textFormat` property to `"extendedMarkdown"` in your `Activity` object:
+
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "textFormat": "extendedMarkdown",
+  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>."
+}
+```
+
+# [C#](#tab/csharp)
+
+```csharp
+var activity = new Activity
+{
+    Type = ActivityTypes.Message,
+    Text = "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
+    TextFormat = "extendedMarkdown"
+};
+
+await app.SendActivity(conversationId, activity);
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+const activity = {
+  type: "message",
+  text: "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
+  textFormat: "extendedMarkdown"
+};
+
+await app.sendActivity(conversationId, activity);
+```
+
+# [Python](#tab/python)
+
+```python
+activity = Activity(
+    type=ActivityTypes.message,
+    text="### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending\n\nFor details, see <cite>1</cite>.",
+    text_format="extendedMarkdown"
+)
+
+await app.send_activity(conversation_id, activity)
+```
+
+---
+
+## How Teams processes bot text formats
+
+For `plain`, `markdown`, `xml`, and when `textFormat` is omitted, Teams clients receive a `RichText/Html` payload.
+
+- The backend converts supported Markdown/formatting into HTML.
+- Example: bot text `***bold text***` is converted to `<strong>bold text</strong>` in the client payload.
+
+For `textFormat: "extendedMarkdown"`, Teams clients receive `RichText/ExtendedMarkdown`.
+
+- The backend bypasses HTML conversion and sends the raw bot content.
+- Teams clients render supported extended Markdown features.
 
 The following limitations apply to formatting:
 
-- Text-only messages don't support table formatting.
+- Text-only messages in `plain` format don't support table formatting.
 - Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- Rich cards don't support Markdown or table formatting.
+- For rich card payload properties, `markdown` and `extendedMarkdown` formatting aren't supported.
+- Older or unsupported clients can show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
-## Cross-platform support
+## Standard Markdown support
 
-Some styles aren't supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
+Some styles aren't supported across all platforms. The following table provides a list of standard Markdown styles and which of these styles are supported in text-only messages and rich cards:
 
 | Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |
@@ -58,6 +125,62 @@ Some styles aren't supported across all platforms. The following table provides 
 | Blockquote                | ✔️ | ✔️ |
 | Hyperlink                 | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ |
+
+## Extended Markdown features
+
+When using `textFormat: "extendedMarkdown"`, the following features are available in text-only messages:
+
+| Feature | Syntax | Description |
+| --- | --- | --- |
+| **Fenced code blocks** | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences |
+| **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
+| **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
+| **Citations** | `<cite>number</cite>` | Inline citation markers in message text |
+| **Tables** | Pipe-delimited rows with separator line | Structured tabular data with optional column alignment |
+| **Task lists** | `- [ ] item` / `- [x] item` | Checklist-style items; checkboxes are read-only |
+
+### At-mention support
+
+Mention users and groups in your bot messages. At-mentions work with both standard Markdown and extended Markdown:
+
+```markdown
+Hello <at>Jane Smith</at>, please review this.
+
+Notifying team: <at>Engineering Team</at>
+```
+
+### Tables
+
+Use GitHub Flavored Markdown (GFM) table syntax to present structured data. Tables support column alignment using colons in the separator row.
+
+```markdown
+| Feature | Status | Priority |
+|:--------|:------:|----------:|
+| Tables  | Done   | High      |
+| Math    | Done   | High      |
+```
+
+In this example, the first column is left-aligned, the second is centered, and the third is right-aligned.
+
+### Task lists
+
+Use task list syntax to display completed and pending items in your bot messages.
+
+```markdown
+- [x] Checkout code
+- [x] Install dependencies
+- [x] Run unit tests
+- [ ] Deploy to production
+```
+
+> [!NOTE]
+> Task list checkboxes are read-only. Users can't interact with them to change their state.
+
+## Streaming with extended Markdown
+
+[!INCLUDE [streaming-with-extended-markdown](includes/streaming-with-extended-markdown.md)]
+
+For detailed information about streaming implementation, see [Stream bot messages](../streaming-ux.md).
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
