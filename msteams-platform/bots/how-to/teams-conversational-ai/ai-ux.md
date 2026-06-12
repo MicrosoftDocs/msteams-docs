@@ -1,20 +1,18 @@
 ---
-title: Agent features and best practices checklist
+title: Agent best practices and features checklist
 description: TODO Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 06/10/2026
 ---
 
-# Agent features and best practices checklist
+# Agent best practices and features checklist
 
-This article provides a list of Teams agent capabilities and best practices that developers should consider implementing in all Teams agents.
+This article provides a list of best practices and conversational features that developers should consider implementing in all Teams agents.
 
-These features and practices represent basic user expectations for agents and are broadly applicable; agents that omit any of them should have a strong reason for doing so. Review each item to ensure your agent provides a great experience in Teams.
+These practices and features represent standard user expectations for agents in Teams and are broadly applicable; agents that omit any of them should have a strong reason for doing so. Review each item to ensure your agent provides a great experience in Teams.
 
 TODO "Some of these may be required" need to square what's here with actual requirements as they are written in the Teams Store validation guidelines article and the Copilot [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md). Those may need updates too.
-
-TODO we should be clearer here that by "agent", we specifically mean an LLM-backed bot. Can link to some of the new content under development about the app model.
 
 TODO targeted messages, sessions, reply in threads, full channel awareness. These all seem like they could go under one "conversational intelligence" header.
 
@@ -26,6 +24,8 @@ TODO targeted messages, sessions, reply in threads, full channel awareness. Thes
 > TODO: To what extent is this actually a requirement? Do we expect/require all agents to receive and track all messages?
 
 TODO should also have stuff here about collaboration in group contexts
+
+TODO this is a good place to differentiate *agent* from *bot* (LLM) and link to the app model, overview or wherever we end up defining that. "Conversational intelligence is what differentiates agents from bots".
 
 An agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
@@ -48,7 +48,7 @@ Teams provides a built-in [indicator for AI-generated messages](../bot-messages-
 
 ## Message streaming and thinking indicator
 
-Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updateable "thinking indicator" to indicate liveness and provide insight about how the message is being generated.
+Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updateable *thinking indicator* to indicate liveness and provide insight about how the message is being generated.
 
 :::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated" border="false":::
 
@@ -70,27 +70,29 @@ TODO more and better screenshots.
 
 ## Welcome messages
 
-Agents can proactively send welcome messages when added to a conversation or installed as a personal app with one-on-one chat capabilities. Agents should use welcome messages to explain the value they offer, provide configuration instructions, and describe any commands they expose.
+Agents can proactively send welcome messages when users add them to a conversation or install them as a personal app with one-on-one chat capabilities. Agents should use welcome messages to explain the value they provide, present configuration instructions, offer example prompts, and describe any commands they expose.
 
 TODO screenshot
 
-Agents distributed through the Teams Store that users can install in personal scope (one-on-one conversations) must implement welcome messages, prompt starters, or both.
+Agents distributed through the Teams Store that users can install in personal scope (one-on-one conversations) must implement welcome messages, prompt starters, or both. TODO move this to prompt starters if that goes later.
 
 TODO we need a solid, unambiguous page on welcome messages, or a very strong and clear scetion. There's <https://learn.microsoft.com/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?tabs=dotnet> but that's really scattered; I have already given feedback on it in one of the samples-update PRs that's modifying it. <https://learn.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages> has some language in that direction but I don't think it has clear guidance.
 
 ## Named commands
 
-Agents can use [named commands](../../../agents-in-teams/agent-slash-commands.md) to surface consistent command-style functionality in chat. Named commands are discoverable through Teams' slash command and @mention autocomplete menus.
+Agents that implement command-style functionality can make it discoverable with [named commands](../../../agents-in-teams/agent-slash-commands.md). An agent's named commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
+
+TODO maybe a short statement about slash vs atmention, private vs. public
 
 TODO screenshot
 
 ## Suggested actions
 
-[Suggested actions](../conversations/prompt-suggestions.md#suggested-actions-1) are buttons that agents can attach to their messages that enable users to quickly respond or take action. Unlike prompt starters and command names, agents can dynamically generate and attach suggested actions with each message they send, enabling them to guide users through workflows with context-aware options or intelligently suggest next steps.
+[Suggested actions](../conversations/prompt-suggestions.md#suggested-actions-1) are buttons on agent messages that enable users to quickly respond or take action. Unlike prompt starters and command names, agents can dynamically generate and attach suggested actions with each message they send, guiding users through workflows with context-aware options or intelligently suggesting next steps.
 
 TODO screenshots
 
-Suggested actions are key to enabling efficient and satisfying *human in the loop* workflows, where an agent requests user approval or confirmation before taking action, but are useful in any scenario that calls for quick user interaction. They can be configured to send a command-style chat response to the agent, silently invoke an agent behavior without a chat message, or insert a pre-constructed message into the user's compose box.
+Suggested actions are key to enabling efficient and satisfying *human in the loop* workflows, where an agent requests user approval or confirmation before taking action, but are useful in any scenario that benefits from quick user interaction. They can be configured to send a command-style chat response to the agent, silently invoke an agent behavior without a chat message, or insert a pre-constructed message into the user's compose box.
 
 ## Sensitivity labels
 
@@ -112,7 +114,7 @@ TODO in public preview
 
 ## User feedback
 
-Teams agents can implement standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) that enable users to like or dislike individual messages and optionally provide detailed feedback.
+Agents can attached standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages to enable users to like or dislike and optionally provide detailed feedback.
 
 # [Desktop](#tab/desktop)
 
@@ -146,6 +148,8 @@ Add hovercard experience for all agents and bots. Hovercards provide valuable an
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
+
+TODO next steps; this article is all about links so I don't think we need a see also section
 
 ## See also
 
