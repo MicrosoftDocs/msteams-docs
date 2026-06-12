@@ -29,7 +29,9 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 ### Complement the conversation
 
-Widgets exist alongside agent-generated text in a chat thread. They may be display-only, interactive, or prompt the user for input — but they should always feel like a natural part of the conversation, not compete with or replace it.
+Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
+Widgets may be display-only, interactive, or prompt the user for input — sometimes the widget itself is the conversational turn.
+Widget content should support the conversation, not feel like a separate or disconnected experience.
 
 </td>
 <td>
