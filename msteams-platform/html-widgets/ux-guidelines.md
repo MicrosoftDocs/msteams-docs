@@ -47,7 +47,7 @@ A widget should expose a focused, high-value capability — not your entire prod
 
 <table>
 <tr>
-<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"></th>
+<th align="left"><img src="images/icon-mouse.png" alt="chat bubble" width="52"></th>
 <th align="left"><img src="images/icon-arrowUp.png" alt="chat bubble" width="48"></th>
 </tr>
 <tr>
@@ -75,8 +75,7 @@ Widgets always appear inline in the chat. If your widget contains rich content o
 
 <table>
 <tr>
-<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"></th>
-<th align="left"><img src="images/icon-puzzle.png" alt="chat bubble" width="52"></th>
+<th align="left"><img src="images/icon-shield.png" alt="chat bubble" width="52"></th>
 </tr>
 <tr>
 <td>
@@ -85,11 +84,6 @@ Widgets always appear inline in the chat. If your widget contains rich content o
 ### Preserve human control
 Allow users to remain in control of their experience. Make it clear what the widget is doing, confirm important actions before they happen, and always communicate the expected outcome.
 
-</td>
-<td>
-
-### Understanding the chat surface
-HTML widgets render inline inside a Teams chat message. Understanding this context is essential before making design decisions.
 
 </td>
 </tr>
@@ -101,7 +95,8 @@ HTML widgets render inline inside a Teams chat message. Understanding this conte
 
 ---
 
-
+## Understanding the chat surface
+HTML widgets render inline inside a Teams chat message. Understanding this context is essential before making design decisions.
 
 When designing for Teams, follow these core principles:
 
