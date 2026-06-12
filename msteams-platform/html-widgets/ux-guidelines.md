@@ -18,27 +18,27 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 
 
-
 <table>
 <tr>
-<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"></th>
-<th align="left"><img src="images/icon-puzzle.png" alt="chat bubble" width="52"></th>
-</tr>
-<tr>
-<td>
+<td valign="top" width="50%">
+  
+<img src="images/icon-conversation-bubble.png" alt="chat bubble" width="52"> <p>
 
 ### Complement the conversation
-
-Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
-Widgets may be display-only, interactive, or prompt the user for input — sometimes the widget itself is the conversational turn.
-Widget content should support the conversation, not feel like a separate or disconnected experience.
+- Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
+- A widget may be display-only, interactive, or prompt the user for input.
+- Content should support the conversation, not feel like a separate or disconnected experience.
 
 </td>
-<td>
+<td valign="top" width="50%">
+
+<img src="images/icon-puzzle.png" alt="puzzle piece" width="52"> <p>
 
 ### Surface capabilities, not full apps
+Avoid embedding your full application experience inside a widget. Instead, identify the single most valuable thing a user needs in this moment.
+- A widget should expose a focused, high-value capability — not your entire product.
+- Each widget should represent a single, focused interaction.
 
-A widget should expose a focused, high-value capability — not your entire product. Each widget should represent a single, focused interaction.
 
 </td>
 </tr>
@@ -46,50 +46,55 @@ A widget should expose a focused, high-value capability — not your entire prod
 
 
 
-
 <table>
 <tr>
-<th align="left"><img src="images/icon-mouse.png" alt="chat bubble" width="52"></th>
-<th align="left"><img src="images/icon-arrowUp.png" alt="chat bubble" width="48"></th>
-</tr>
-<tr>
-<td>
-
+<td valign="top" width="50%">
+  
+<img src="images/icon-mouse.png" alt="chat bubble" width="52"> <p>
 
 ### Be transparent and predictable
-
-Widget content should be clear and any interactions obvious. Users should always understand what a widget is showing and what will happen when they interact with it.
+- Widget content should be clear and any interactions obvious.
+- Users should always understand what a widget is showing.
+- The expected outcome of any interaction should be obvious before the user acts.
 
 </td>
-<td>
+<td valign="top" width="50%">
+
+<img src="images/icon-arrowUp.png" alt="puzzle piece" width="52"> <p>
 
 ### Scale to the task
-
-Widgets always appear inline in the chat. If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
+Match the visual footprint of your widget to what the user needs in the moment.
+- Widgets always appear inline in the chat.
+- If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
 
 </td>
 </tr>
 </table>
-
-
 
 
 
 <table>
 <tr>
-<th align="left"><img src="images/icon-shield.png" alt="chat bubble" width="52"></th>
-</tr>
-<tr>
-<td>
-
+<td valign="top" width="50%">
+  
+<img src="images/icon-shield.png" alt="chat bubble" width="52"> <p>
 
 ### Preserve human control
-Allow users to remain in control of their experience. Make it clear what the widget is doing, confirm important actions before they happen, and always communicate the expected outcome.
-
+Trust matters, especially when widget actions affect data or trigger external workflows.
+- Allow users to remain in control of their experience.
+- Make it clear what the widget is doing.
+- Confirm important actions before they happen.
+- Always communicate the expected outcome.
 
 </td>
+
 </tr>
 </table>
+
+
+
+
+
 
 
 
