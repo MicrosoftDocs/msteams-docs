@@ -21,20 +21,22 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 <table>
 <tr>
-<th align="left">✅ Do</th>
+<th align="left"><img src="images/icon-conversation-bubble.png" alt="chat bubble"></th>
 <th align="left">❌ Don't</th>
 </tr>
 <tr>
 <td>
 
-- Use Fluent UI React v9 Dialog or Popover for modal experiences
-- Restore focus to the triggering element after a dialog or panel closes
+### Complement the conversation
+
+Widgets exist alongside agent-generated text in a chat thread. They may be display-only, interactive, or prompt the user for input — but they should always feel like a natural part of the conversation, not compete with or replace it.
 
 </td>
 <td>
 
-- Don't remove focus outlines without providing an accessible alternative
-- Don't auto-advance focus between controls without a clear user action
+### Surface capabilities, not full apps
+
+A widget should expose a focused, high-value capability — not your entire product. Each widget should represent a single, focused interaction.
 
 </td>
 </tr>
@@ -45,15 +47,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 
 
-### Complement the conversation
 
-Widgets exist alongside agent-generated text in a chat thread. They may be display-only, interactive, or prompt the user for input — but they should always feel like a natural part of the conversation, not compete with or replace it.
-
-
-
-### Surface capabilities, not full apps
-
-A widget should expose a focused, high-value capability — not your entire product. Each widget should represent a single, focused interaction.
 
 
 
