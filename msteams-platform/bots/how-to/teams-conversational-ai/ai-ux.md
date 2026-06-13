@@ -16,6 +16,8 @@ TODO "Some of these may be required" need to square what's here with actual requ
 
 TODO targeted messages, sessions, reply in threads, full channel awareness. These all seem like they could go under one "conversational intelligence" header.
 
+TODO reactions
+
 ## Context management and conversational intelligence
 
 > [!IMPORTANT]
@@ -42,19 +44,15 @@ TODO we could have a section or subsection here for proactive messaging: "Agents
 
 TODO AI label, citations, feedback buttons, and sensitivity label all link to the same article, which looks a little similar to this, but is scoped to just those features and includes implementation inforamation. Might want to group them together in one place, and maybe a little lower down.
 
-Teams provides a built-in [indicator for AI-generated messages](../bot-messages-ai-generated-content.md#ai-label) that agents should always use when applicable. Correct usage of the AI indicator is a policy requirement for agents distributed through the Teams Store.
+Agents in Teams can display a built-in [indicator on AI-generated messages](../bot-messages-ai-generated-content.md#ai-label) that should always be used when applicable. Correct usage of the AI indicator is a policy requirement for agents distributed through the Teams Store.
 
-:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
+:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message.":::
 
 ## Message streaming and thinking indicator
 
-Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updateable *thinking indicator* to indicate liveness and provide insight about how the message is being generated.
+Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updateable *thinking indicator* to indicate liveness and provide insight about how the message is being generated. Streaming and thinking indicators are supported in one-on-one chats.
 
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated" border="false":::
-
-TODO only works 1:1
-
-TODO do we have a standard name for "thinking indicator"? Maybe "status indicator" It was "informative message" here before, which was too generic to imply the usage.
+:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated":::
 
 ## Adaptive cards
 
@@ -64,9 +62,7 @@ TODO
 
 [Prompt starters](../conversations/prompt-suggestions.md#prompt-starters-1) are prewritten prompts that help users understand an agent's capabilities and quickly begin interacting with it. Prompt starters are conveniently accessible and discoverable in all chat scenarios. In one-on-one chats, they are displayed prominently before the conversation starts for agents that do not send a welcome message.
 
-:::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
-
-TODO more and better screenshots.
+:::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters.":::
 
 ## Welcome messages
 
@@ -76,11 +72,9 @@ TODO screenshot
 
 Agents distributed through the Teams Store that users can install in personal scope (one-on-one conversations) must implement welcome messages, prompt starters, or both. TODO move this to prompt starters if that goes later.
 
-TODO we need a solid, unambiguous page on welcome messages, or a very strong and clear scetion. There's <https://learn.microsoft.com/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?tabs=dotnet> but that's really scattered; I have already given feedback on it in one of the samples-update PRs that's modifying it. <https://learn.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages> has some language in that direction but I don't think it has clear guidance.
-
 ## Named commands
 
-Agents that implement command-style functionality can make it discoverable with [named commands](../../../agents-in-teams/agent-slash-commands.md). An agent's named commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
+Agents that provide command-style functionality can make it discoverable with [named commands](../../../agents-in-teams/agent-slash-commands.md). An agent's named commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
 
 TODO maybe a short statement about slash vs atmention, private vs. public
 
@@ -106,15 +100,9 @@ Suggested actions are key to enabling efficient and satisfying *human in the loo
 
 :::image type="content" source="../../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
 
-TODO in public preview
-
-> [!NOTE]
->
-> Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-
 ## User feedback
 
-Agents can attached standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages to enable users to like or dislike and optionally provide detailed feedback.
+Agents can attache standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
 
 # [Desktop](#tab/desktop)
 
@@ -130,15 +118,6 @@ Agents can attached standardized [feedback controls](../bot-messages-ai-generate
 
 ---
 
-> [!NOTE]
-> Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-
-### Enable Teams Azure AD single sign-on (TODO best practice)
-
-TODO currently 1:1 only
-
-Add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
-
 ### App profile card
 
 TODO
@@ -149,10 +128,4 @@ Add hovercard experience for all agents and bots. Hovercards provide valuable an
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
 
-TODO next steps; this article is all about links so I don't think we need a see also section
-
-## See also
-
-- [Teams SDK](teams-conversation-ai-overview.md)
-- [Stream bot messages](../../streaming-ux.md)
-- [Enhance AI-generated bot messages](../bot-messages-ai-generated-content.md)
+## Next steps
