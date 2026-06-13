@@ -12,11 +12,11 @@ ms.localizationpriority: high
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-This article provides a reference list of emoji reactions and their corresponding reaction IDs, needed to [add reactions to messages](agent-reactions.md).
+This article provides a complete list of emoji reactions available in Teams and their corresponding reaction IDs, used to [add reactions to messages](agent-reactions.md).
 
 ## Skin tones
 
-Most of the reaction emoji in the [hand gestures](#hand-gestures) and [people](#people) categories support five skin tones in addition to the default skin tone. Skin tones are applied by appending a tone suffix, `-tone1` through `-tone5`, to the base reaction ID. All skin tone options and their full reaction IDs are included in this reference.
+Most of the reaction emoji in the [hand gestures](#hand-gestures) and [people](#people) categories support five skin tones in addition to the default tone. Skin tones are applied by appending a tone suffix, `-tone1` through `-tone5`, to the base reaction ID. All skin tone options and their full reaction IDs are included in this reference.
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
 

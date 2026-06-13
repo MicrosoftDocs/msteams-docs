@@ -3,7 +3,6 @@ title: Use Emoji Reactions in Teams Agents
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
 ms.date: 05/18/2026
-ms.topic: reference
 zone_pivot_groups: dev-lang
 ---
 
@@ -13,27 +12,27 @@ zone_pivot_groups: dev-lang
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Reactions in Teams are lightweight emoji markers that participants can attach to chat messages. Agents can use reactions to acknowledge message receipt, indicate status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reaction events.
+Reactions in Teams are lightweight emoji markers that participants can attach to chat messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile-mini.png" alt-text="Image shows agent reactions in the moble client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png"
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile-mini.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png"
 
 ---
 
 ## Add and remove reactions on messages
 
-Like users, agents can attach one or more different reactions to any message in a conversation, and can remove reactions after adding them. Both users and agents can only remove their own reactions, not those placed by others.
+Like users, agents can attach one or more different reactions to any message in a conversation, and can remove reactions after adding them. Both users and agents can only remove their own reactions, not reactions placed by others.
 
 ::: zone pivot="csharp"
 
-Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The `ReactionTypes` static class exposes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, the `ReactionTypes` static class exposes named constants for a few of the most commonly used reaction IDs.
 
-Use the `AddAsync` and `DeleteAsync` methods on `ReactionClient` to add and remove reactions from messages.
+To add and remove reactions from messages, use the `AddAsync` and `DeleteAsync` methods on `ReactionClient`.
 
 ```csharp
 app.OnMessage(async context =>
@@ -59,9 +58,9 @@ app.OnMessage(async context =>
 
 ::: zone pivot="typescript"
 
-Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The SDK includes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, Teams SDK includes named constants for a few of the most commonly used reaction IDs.
 
-Use the `add` and `delete` methods on `ReactionClient` to add and remove reactions from messages.
+To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`.
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
@@ -78,9 +77,9 @@ app.on('message', async ({ activity, api }) => {
 
 ::: zone pivot="python"
 
-Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The SDK includes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, Teams SDK includes named constants for a few of the most commonly used reaction IDs.
 
-Use the `add` and `delete` methods on `ReactionClient` to add and remove reactions from messages.
+To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`.
 
 ```python
 import asyncio
@@ -107,15 +106,15 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 To replace a reaction on a message, remove the existing reaction and add the new one.
 
-Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent. Repeated calls to add or remove a specific reaction from a message will not have any effect, but will not throw an exception.
+Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent. Repeated calls to add or remove a specific reaction from a message have no effect, but don't throw an exception.
 
-### Exception handilng
+### Exception handling
 
 Reaction activity is a common source of exceptions and should always use dedicated exception handling.
 
 In particular, rate limiting exceptions (`429 Too Many Requests`) can be more common than developers expect. Reaction adds and removes are rate-limited to two per second across all conversations an agent participates in. Handle rate limiting exceptions by using the value of the response's `Retry-After` header as part of an exponential backoff and retry strategy.
 
-Reaction operations will fail if the target message has been deleted or the agent has been removed from the conversation, and should not be retried.
+Reaction operations fail if the target message is deleted or the agent is removed from the conversation, and shouldn't be retried.
 
 <!-- 
 
@@ -161,7 +160,7 @@ No additional payload is required as the reaction is defined in the URL.
 
 ::: zone pivot="csharp"
 
-Agents can process reaction activity in conversations they are a part of by listening for the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
+Agents can process reaction activity in conversations they're a part of by listening for the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
 
 ```csharp
 app.OnMessageReactionAdded(async (context, cancellationToken) =>
@@ -185,7 +184,7 @@ app.OnMessageReactionRemoved(async (context, cancellationToken) =>
 
 ::: zone pivot="typescript"
 
-Agents can process reaction activity in conversations they are a part of by listening for the `messageReaction` event.
+Agents can process reaction activity in conversations they're a part of by listening for the `messageReaction` event.
 
 ```typescript
 app.on('messageReaction', async ({ activity }) => {
@@ -203,7 +202,7 @@ app.on('messageReaction', async ({ activity }) => {
 
 ::: zone pivot="python"
 
-Agents can process reaction activity in conversations they are a part of by listening for the `on_message_reaction` event.
+Agents can process reaction activity in conversations they're a part of by listening for the `on_message_reaction` event.
 
 ```python
 @app.on_message_reaction
@@ -220,15 +219,15 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ## Best practices and design guidance
 
-**Exception handling**: Reaction activity is a common source of exceptions and should always have dedicated exception handling, especially for rate limiting. See [Exception handilng](#exception-handilng).
+**Exception handling**: Reaction activity is a common source of exceptions and should always have dedicated exception handling, especially for rate limiting. See [Exception handling](#exception-handling).
 
-**Use reactions selectively:**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users often use reactions to express sentiment, but generally expect productivity agents to use reactions only to communicate acknowledgement or status. Use a small set of unambiguous emoji that don't require a guide to understand.
+**Use reactions sparingly**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users generally expect productivity agents to use reactions only to communicate acknowledgment or status, not sentiment. Use a small set of unambiguous emoji that doesn't require a guide to understand.
 
-**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgement of commands and requests. Using reactions to immediately acknowledge messages is effective in scenarios in which the user expects a message response later, or not at all, but is excessive in situations where the agent replies immediately.
+**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgment of commands and requests. Using reactions to immediately acknowledge messages is excessive in situations where the agent replies quickly with a message.
 
-**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Prefer messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
+**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Use messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
 
-**Interpreting reaction events**: User reactions are not a reliable or consistent indicator of intent, and should not be used to drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to discourage the use of reactions for feedback, which can be ambiguous and hard to interpret.
+**Interpreting reaction events**: User reactions aren't a reliable or consistent indicator of intent, and shouldn't be used to drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to discourage the use of reactions for feedback, which can be ambiguous and hard to interpret.
 
 ## See also
 
