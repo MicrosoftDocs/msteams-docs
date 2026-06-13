@@ -16,7 +16,7 @@
   - name: Build your first agent
     href: agents-in-teams/build-first-agent.md
     displayName: create, run, first agent, Teams AI library, Teams SDK, custom engine agent, AI bot, JavaScript, Python, C#, code sample
-  - name: Agents user experience
+  - name: Agent best practices and features checklist
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
   - name: Enable agent reactions
