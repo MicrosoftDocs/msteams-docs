@@ -106,3 +106,11 @@ groups:
       title: TypeScript
     - id: python
       title: Python
+- id: developer-tooling
+  title: Developer tooling
+  prompt: Choose the developer tooling you want to use
+  pivots:
+    - id: teams-developer-cli
+      title: Teams Developer CLI
+    - id: agents-toolkit
+      title: Microsoft 365 Agents Toolkit
