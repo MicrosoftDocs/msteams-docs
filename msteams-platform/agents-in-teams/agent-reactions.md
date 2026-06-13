@@ -13,7 +13,7 @@ zone_pivot_groups: dev-lang
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Reactions in Teams are lightweight emoji markers that users can attach to chat messages to acknowledge receipt, express sentiment, and provide feedback without interrupting the flow of the conversation. Agents in Teams can add and remove reactions and listen for reaction events. TODO short sentence here about scenarios.
+Reactions in Teams are lightweight emoji markers that participants can attach to chat messages. Agents can use reactions to acknowledge message receipt, indicate status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reaction events.
 
 # [Desktop](#tab/desktop)
 
@@ -105,11 +105,17 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-Reaction adds and removes are rate-limited to two per second. Exceeding the limit will result in a `429 Too Many Requests` error that should be handled with exponential backoff and retrying, taking the value of the `Retry-After` header included in the response into consideration.
-
 To replace a reaction on a message, remove the existing reaction and add the new one.
 
-Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent: multiple calls to add or remove a specific reaction from a message will not fail, but will not have any effect beyond the first call.
+Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent. Repeated calls to add or remove a specific reaction from a message will not have any effect, but will not throw an exception.
+
+### Exception handilng
+
+Reaction activity is a common source of exceptions and should always use dedicated exception handling.
+
+In particular, rate limiting exceptions (`429 Too Many Requests`) can be more common than developers expect. Reaction adds and removes are rate-limited to two per second across all conversations an agent participates in. Handle rate limiting exceptions by using the value of the response's `Retry-After` header as part of an exponential backoff and retry strategy.
+
+Reaction operations will fail if the target message has been deleted or the agent has been removed from the conversation, and should not be retried.
 
 <!-- 
 
@@ -151,13 +157,81 @@ Where,
 No additional payload is required as the reaction is defined in the URL.
  -->
 
-## Best practices
+## Listen for reaction events
 
-- Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
-- Avoid excessive use of reactions to minimize notification fatigue for users.
-- Ensure your agent's reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+::: zone pivot="csharp"
+
+Agents can process reaction activity in conversations they are a part of by listening for the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
+
+```csharp
+app.OnMessageReactionAdded(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
+    {
+        Console.WriteLine($"User added reaction: {reaction.Type}");
+    }
+});
+
+app.OnMessageReactionRemoved(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
+    {
+        Console.WriteLine($"User removed reaction: {reaction.Type}");
+    }
+});
+```
+
+::: zone-end
+
+::: zone pivot="typescript"
+
+Agents can process reaction activity in conversations they are a part of by listening for the `messageReaction` event.
+
+```typescript
+app.on('messageReaction', async ({ activity }) => {
+  for (const reaction of activity.reactionsAdded ?? []) {
+    console.log(`User added reaction: ${reaction.type}`);
+  }
+
+  for (const reaction of activity.reactionsRemoved ?? []) {
+    console.log(`User removed reaction: ${reaction.type}`);
+  }
+});
+```
+
+::: zone-end
+
+::: zone pivot="python"
+
+Agents can process reaction activity in conversations they are a part of by listening for the `on_message_reaction` event.
+
+```python
+@app.on_message_reaction
+async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
+    for reaction in ctx.activity.reactions_added or []:
+        print(f"User added reaction: {reaction.type}")
+
+    for reaction in ctx.activity.reactions_removed or []:
+        print(f"User removed reaction: {reaction.type}")
+
+```
+
+::: zone-end
+
+## Best practices and design guidance
+
+**Exception handling**: Reaction activity is a common source of exceptions and should always have dedicated exception handling, especially for rate limiting. See [Exception handilng](#exception-handilng).
+
+**Use reactions selectively:**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users often use reactions to express sentiment, but generally expect productivity agents to use reactions only to communicate acknowledgement or status. Use a small set of unambiguous emoji that don't require a guide to understand.
+
+**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgement of commands and requests. Using reactions to immediately acknowledge messages is effective in scenarios in which the user expects a message response later, or not at all, but is excessive in situations where the agent replies immediately.
+
+**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Prefer messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
+
+**Interpreting reaction events**: User reactions are not a reliable or consistent indicator of intent, and should not be used to drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to discourage the use of reactions for feedback, which can be ambiguous and hard to interpret.
 
 ## See also
 
-- [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript)
 - [Teams reaction reference](teams-reactions-reference.md)
+
+## Next steps
