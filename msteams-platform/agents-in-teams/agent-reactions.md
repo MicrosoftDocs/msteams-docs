@@ -1,22 +1,19 @@
 ---
-title: Agent Reactions in Teams - Overview
+title: Use Emoji Reactions in Teams Agents
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
-ms.date: 01/28/2026
+ms.date: 05/18/2026
 ms.topic: reference
+zone_pivot_groups: dev-lang
 ---
 
-<!-- markdownlint-disable MD051 -->
-<!-- markdownlint-disable MD001 -->
-<!-- markdownlint-disable MD024 -->
-
-# Enable agent reactions in Teams
+# Use emoji reactions in Teams agents
 
 > [!NOTE]
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
+Reactions in Teams are lightweight emoji markers that participants can attach to chat messages. Agents can use reactions to acknowledge message receipt, indicate status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reaction events.
 
 # [Desktop](#tab/desktop)
 
@@ -28,107 +25,15 @@ You can build agents that react to messages as well as send text, minimizing not
 
 ---
 
-Map emojis and reactions to specific agent actions and use the ID to send the right reaction in the conversation.
+## Add and remove reactions on messages
 
-**Key highlights**:
+Like users, agents can attach one or more different reactions to any message in a conversation, and can remove reactions after adding them. Both users and agents can only remove their own reactions, not those placed by others.
 
-- [Add reactions](#enable-an-agent-to-add-reactions)
-- [Remove reactions](#enable-an-agent-to-remove-reactions)
-- [View response codes](#response-codes)
-- [Select skin tone for emojis](#modify-skin-tone-for-emojis)
-- [Best practices](#best-practices)
+::: zone pivot="csharp"
 
-## Enable an agent to add reactions
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The `ReactionTypes` static class exposes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
 
-You can enable an agent to send reactions using Teams SDK or REST APIs. An agent can send up to two reactions per second. To enable an agent to send a reaction to a message:
-
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
-1. Use [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript) or REST API to add reactions to messages.
-
-The following code snippet shows an example of adding the *Waving hand* reaction to a message:
-
-# [C#](#tab/cs1)
-
-```csharp
-app.OnMessage(async context =>
-{
-    await context.Send("Hello! I'll react to this message.");
-
-    // Add a reaction to the incoming message
-    await context.Api.Conversations.Reactions.AddAsync(
-        context.Activity.Conversation.Id,
-        context.Activity.Id,
-        new ReactionType("1f44b_wavinghand")
-    );
-});
-```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=csharp#adding-a-reaction).
-
-# [TypeScript](#tab/ts1)
-
-```typescript
-app.on('message', async ({ activity, api, send }) => {
-  await send("Hello! I'll react to this message.");
-
-  // Add a reaction to the incoming message
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
-});
-
-```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#adding-a-reaction).
-
-# [Python](#tab/py1)
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    await ctx.send("Hello! I'll react to this message.")
-
-    # Add a reaction to the incoming message
-    await ctx.api.conversations.reactions.add(
-        ctx.activity.conversation.id,
-        ctx.activity.id,
-        '1f44b_wavinghand'
-    )
-```
-
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#adding-a-reaction).
-
-# [API](#tab/h1)
-
-```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
-```
-
-Where,
-
-- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
-- `tenantId` is the ID of the tenant agent or app is registered.
-- `conversationId` is the thread or chat identifier.
-- `activityId` represents the message or activity ID.
-- `reactionId` is the ID of the emoji that you want to add.
-
----
-
-### Handle existing agent reactions
-
-You can handle reaction requests when an agent has already reacted to a message.
-
-- **Reaction already added**: If an agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
-- **Replace a reaction**: To enable the agent to replace a reaction it already added, [remove the reaction](#enable-an-agent-to-remove-reactions) that was added, and then [add the new reaction](#enable-an-agent-to-add-reactions).
-
-## Enable an agent to remove reactions
-
-You can choose to enable an agent to remove its reaction from messages. To remove the agent's reaction from a message:
-
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to remove.
-1. Use Teams SDK or REST API to remove reactions from messages.
-
-The following code snippet shows an example of removing a reaction from a message:
-
-# [C#](#tab/cs1)
+Use the `AddAsync` and `DeleteAsync` methods on `ReactionClient` to add and remove reactions from messages.
 
 ```csharp
 app.OnMessage(async context =>
@@ -150,13 +55,17 @@ app.OnMessage(async context =>
 });
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=csharp#removing-a-reaction).
+::: zone-end
 
-# [TypeScript](#tab/ts1)
+::: zone pivot="typescript"
+
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The SDK includes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
+
+Use the `add` and `delete` methods on `ReactionClient` to add and remove reactions from messages.
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
-  // First, add a reaction
+// First, add a reaction
   await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 
   // Wait a bit, then remove it
@@ -165,9 +74,13 @@ app.on('message', async ({ activity, api }) => {
 });
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript#removing-a-reaction).
+::: zone-end
 
-# [Python](#tab/py1)
+::: zone pivot="python"
+
+Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. The SDK includes named constants for a few of the most commonly-used reaction IDs, but any reaction ID listed in the [Teams Reactions Reference](teams-reactions-reference.md) can be used.
+
+Use the `add` and `delete` methods on `ReactionClient` to add and remove reactions from messages.
 
 ```python
 import asyncio
@@ -190,7 +103,42 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     )
 ```
 
-See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=python#removing-a-reaction).
+::: zone-end
+
+To replace a reaction on a message, remove the existing reaction and add the new one.
+
+Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent. Repeated calls to add or remove a specific reaction from a message will not have any effect, but will not throw an exception.
+
+### Exception handilng
+
+Reaction activity is a common source of exceptions and should always use dedicated exception handling.
+
+In particular, rate limiting exceptions (`429 Too Many Requests`) can be more common than developers expect. Reaction adds and removes are rate-limited to two per second across all conversations an agent participates in. Handle rate limiting exceptions by using the value of the response's `Retry-After` header as part of an exponential backoff and retry strategy.
+
+Reaction operations will fail if the target message has been deleted or the agent has been removed from the conversation, and should not be retried.
+
+<!-- 
+
+TODO 
+
+# [REST API](#tab/h1)
+
+```REST
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
+```
+
+Where,
+
+- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
+- `tenantId` is the ID of the tenant agent or app is registered.
+- `conversationId` is the thread or chat identifier.
+- `activityId` represents the message or activity ID.
+- `reactionId` is the ID of the emoji that you want to add.
+ -->
+
+<!-- 
+
+TODO
 
 # [API](#tab/h1)
 
@@ -207,105 +155,83 @@ Where,
 - `reactionId` is the ID of the emoji that you want to remove.
 
 No additional payload is required as the reaction is defined in the URL.
+ -->
 
----
+## Listen for reaction events
 
-## Response codes
+::: zone pivot="csharp"
 
-The following are the success and error codes:
-
-| Response codes | Description | Action |
-| --- | --- | --- |
-| **Success codes** | &nbsp; | &nbsp; |
-| `200 OK` | Reaction added successfully | NA |
-| `200 OK` | Deleted reaction successfully | NA |
-| `200 OK` | Deleted non-existent reaction | NA |
-| **Error codes** | &nbsp; | &nbsp; |
-| `400 Bad request` | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from [Teams reactions reference](teams-reactions-reference.md). |
-
-> [!NOTE]
->
-> - `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
-> - You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
-
-## Modify skin tone for emojis
-
-The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**. To select a particular skin tone:
-
-1. Choose a reaction tagged as **Diverse**.
-1. Copy the `reactionId` for the **Diverse - skin tone** that you want to use in your agent.
-
-    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/select-diverse-skin-tone.png" alt-text="Image shows a list of diverse skin tones." border="false":::
-
-1. Use the copied `reactionId` in your agent's payload to send the selected reaction in the conversation.
-
-The following code snippet shows an example of selecting a specific skin tone of a diverse reaction to a message:
-
-# [C#](#tab/cs1)
+Agents can process reaction activity in conversations they are a part of by listening for the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
 
 ```csharp
-app.OnMessage(async context =>
+app.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
-    await context.Send("Hello! I'll react to this message.");
+    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
+    {
+        Console.WriteLine($"User added reaction: {reaction.Type}");
+    }
+});
 
-    // Add a reaction to the incoming message
-    await context.Api.Conversations.Reactions.AddAsync(
-        context.Activity.Conversation.Id,
-        context.Activity.Id,
-        new ReactionType("1f44b_wavinghand-tone4")
-    );
+app.OnMessageReactionRemoved(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
+    {
+        Console.WriteLine($"User removed reaction: {reaction.Type}");
+    }
 });
 ```
 
-# [TypeScript](#tab/ts1)
+::: zone-end
+
+::: zone pivot="typescript"
+
+Agents can process reaction activity in conversations they are a part of by listening for the `messageReaction` event.
 
 ```typescript
-app.on('message', async ({ activity, api, send }) => {
-  await send("Hello! I'll react to this message.");
+app.on('messageReaction', async ({ activity }) => {
+  for (const reaction of activity.reactionsAdded ?? []) {
+    console.log(`User added reaction: ${reaction.type}`);
+  }
 
-  // Add a reaction to the incoming message
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand-tone4');
+  for (const reaction of activity.reactionsRemoved ?? []) {
+    console.log(`User removed reaction: ${reaction.type}`);
+  }
 });
 ```
 
-# [Python](#tab/py1)
+::: zone-end
+
+::: zone pivot="python"
+
+Agents can process reaction activity in conversations they are a part of by listening for the `on_message_reaction` event.
 
 ```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    await ctx.send("Hello! I'll react to this message.")
+@app.on_message_reaction
+async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
+    for reaction in ctx.activity.reactions_added or []:
+        print(f"User added reaction: {reaction.type}")
 
-    # Add a reaction to the incoming message
-    await ctx.api.conversations.reactions.add(
-        ctx.activity.conversation.id,
-        ctx.activity.id,
-        '1f44b_wavinghand-tone4'
-    )
+    for reaction in ctx.activity.reactions_removed or []:
+        print(f"User removed reaction: {reaction.type}")
+
 ```
 
-# [API](#tab/h1)
+::: zone-end
 
-```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand-tone4}
-```
+## Best practices and design guidance
 
-Where,
+**Exception handling**: Reaction activity is a common source of exceptions and should always have dedicated exception handling, especially for rate limiting. See [Exception handilng](#exception-handilng).
 
-- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
-- `tenantId` is the ID of the tenant agent or app is registered.
-- `conversationId` is the thread or chat identifier.
-- `activityId` represents the message or activity ID.
-- `reactionId` is the ID of the emoji that you want to add.
+**Use reactions selectively:**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users often use reactions to express sentiment, but generally expect productivity agents to use reactions only to communicate acknowledgement or status. Use a small set of unambiguous emoji that don't require a guide to understand.
 
----
+**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgement of commands and requests. Using reactions to immediately acknowledge messages is effective in scenarios in which the user expects a message response later, or not at all, but is excessive in situations where the agent replies immediately.
 
-## Best practices
+**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Prefer messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
 
-- Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
-- Avoid excessive use of reactions to minimize notification fatigue for users.
-- Ensure your agent's reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+**Interpreting reaction events**: User reactions are not a reliable or consistent indicator of intent, and should not be used to drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to discourage the use of reactions for feedback, which can be ambiguous and hard to interpret.
 
 ## See also
 
-- [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-reactions?pivots=typescript)
 - [Teams reaction reference](teams-reactions-reference.md)
+
+## Next steps
