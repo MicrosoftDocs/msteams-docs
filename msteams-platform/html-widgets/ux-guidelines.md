@@ -108,6 +108,8 @@ Keep in mind:
 
 A well-structured widget follows a predictable layout that helps users orient quickly.
 
+<img src="images/cardAnatomy.png" alt="">
+
 | Element | Description | Required |
 |---|---|---|
 | **Title** | Identifies the widget or what it represents| Gives users an immediate sense of what the widget is and what to expect, helping it stand out clearly within the conversation. |
