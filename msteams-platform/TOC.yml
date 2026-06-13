@@ -880,6 +880,17 @@
       - name: Use dialogs from bots
         href: task-modules-and-cards/task-modules/task-modules-bots.md
         displayName: create dialogue box, invoke dialog, submit action 
+  - name: Build HTML widgets
+    items:
+    - name: Overview
+      href: html-widgets/integrate-web-apps-overview.md
+      displayName: widgets
+    - name: User experience guidelines
+      href: html-widgets/user-experience-guidelines.md
+      displayName: widgets
+    - name: Accessibility guidelines
+      href: html-widgets/accessibility-guidelines.md
+      displayName: widgets, WCAG, MCP apps, iframe, assistive, ARIA, fluent, screen reader, contrast
   - name: Integrate with Teams
     items:
     - name: Web app integration
