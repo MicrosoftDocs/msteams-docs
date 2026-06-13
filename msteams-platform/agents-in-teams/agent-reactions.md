@@ -105,6 +105,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
+Reaction adds and removes are rate-limited to two per second. Exceeding the limit will result in a `429 Too Many Requests` error that should be handled with exponential backoff and retrying, taking the value of the `Retry-After` header included in the response into consideration.
+
 To replace a reaction on a message, remove the existing reaction and add the new one.
 
 Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent: multiple calls to add or remove a specific reaction from a message will not fail, but will not have any effect beyond the first call.
