@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 06/12/2026
 ---
 
-# Enhance AI-generated bot
+# Enhance AI-generated bot messages
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
 
