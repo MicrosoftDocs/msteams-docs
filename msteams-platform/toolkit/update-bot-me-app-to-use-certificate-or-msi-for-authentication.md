@@ -11,15 +11,15 @@ ms.date: 04/20/2026
 
 # Use certificate or MSI for agent or app authentication
 
-Use certificate-based authentication or managed identity (MSI) to authenticate your agent or bot app instead of using a client secret. These options can help you meet security and compliance requirements by reducing or eliminating secret-based credentials. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+Use certificate-based authentication or managed identity (MSI) to authenticate your agent or bot app instead of using a client secret. These approaches can help you meet security and compliance requirements by reducing or eliminating secret-based credentials. This approach addresses the compliance concerns tied to Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
-Ensure that you have a Teams agent or bot app deployed to Azure with the following resources:
+Before you begin, ensure your Teams agent or bot app is deployed in Azure and includes the following resources:
 
-* An Azure bot.
-* An Entra ID with a secret used for agent or bot authentication.
-* A resource that hosts your bot app, such as Azure App Service, Azure Functions.
+* An Azure bot resource.
+* A Microsoft Entra app registration configured with a client secret for agent or bot authentication.
+* A hosting resource for your app, such as Azure App Service or Azure Functions.
 
 ## Update authentication method
 
