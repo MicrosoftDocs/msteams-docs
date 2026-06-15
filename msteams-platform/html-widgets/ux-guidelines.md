@@ -162,7 +162,7 @@ Widgets must communicate the outcome of user actions clearly.
 
 - Confirm successful actions with a visible success state inside the widget
 - Show a clear error state with a recovery option when an action fails
-- Show a loading indicator when the widget is fetching or processing data internally. Use a [Fluent 2 Spinner](https://fluent2.microsoft.design/components/web/react/core/spinner/usage/) for short loading states, or a  [Fluent 2 Shimmer](https://fluent2.microsoft.design/components/web/react/core/skeleton/usage)to display a skeleton layout while content loads.
+- Show a loading indicator when the widget is fetching or processing data internally. Use a [Fluent 2 Spinner](https://fluent2.microsoft.design/components/web/react/core/spinner/usage/) for short loading states, or a  [Fluent 2 Skeleton](https://fluent2.microsoft.design/components/web/react/core/skeleton/usage) to display a placeholder layout while content loads.
 - Do not rely on the agent's body text alone to communicate widget state
 
 
