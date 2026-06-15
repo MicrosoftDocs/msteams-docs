@@ -235,9 +235,11 @@ You can also use an existing Microsoft Entra app for a Teams agent or app projec
 
 ## Microsoft Entra app in Teams app development lifecycle
 
-Agents Toolkit either reuses an existing app from the relevant `.env` file or creates and updates one from `aad.template.json` during app development lifecycle, then fills in context-dependent values such as `identifierUris` and `redirectUris` once the required endpoints are known. You interact with the Microsoft Entra app at several stages of the Teams app development lifecycle.
+During the Teams app development lifecycle, Agents Toolkit works with the Microsoft Entra app at several stages. Based on the relevant `.env` file, it either reuses an existing app or creates and updates one from `aad.template.json`. Once the required endpoints are known, it fills in context-dependent values such as `identifierUris` and `redirectUris`.
 
-1. **To create Project**
+Here are examples of how Microsoft Entra app interacts with app development lifecycle in Agents Toolkit:
+
+1. **Create Project**
 
       You can create a project in Agents Toolkit with single sign-on (SSO) enabled by default, such as an SSO-enabled tab app. For more information, see [create a new Teams app using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is created automatically in `aad.template.json`, and Agents Toolkit creates or updates the Microsoft Entra app during local development and when you move the app to the cloud.
 
