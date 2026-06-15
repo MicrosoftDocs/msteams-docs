@@ -243,13 +243,13 @@ Here are examples of how Microsoft Entra app interacts with app development life
 
       You can create a project in Agents Toolkit with single sign-on (SSO) enabled by default, such as an SSO-enabled tab app. For more information, see [create a new Teams app using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is created automatically in `aad.template.json`, and Agents Toolkit creates or updates the Microsoft Entra app during local development and when you move the app to the cloud.
 
-1. **To add SSO to your bot or tab**
+1. **Add SSO to your bot or tab**
 
       After you create a Teams agent or app without built-in SSO, Agents Toolkit can help you add SSO to the project. As part of that process, a Microsoft Entra manifest file is created automatically in `aad.template.json`.
 
       Agents Toolkit creates or updates the Microsoft Entra app during next local development session or while you move the app to the cloud.
 
-1. **To build locally**
+1. **Build locally**
 
     Agents Toolkit performs the following functions during local development:
 
@@ -261,15 +261,15 @@ Here are examples of how Microsoft Entra app interacts with app development life
 
     - The toolkit loads any changes you made to the Microsoft Entra app during the next local development session. You can also see [Microsoft Entra app changes](https://github.com/OfficeDev/TeamsFx/wiki/) that were applied manually.
 
-1. **To provision for cloud resources**
+1. **Provision for cloud resources**
 
-      You need to provision cloud resources and deploy your app while moving your app to the cloud. At stages, such as local debug, Agents Toolkit:
+    When you move your app to the cloud, you must provision cloud resources and deploy the app. During this stage, Agents Toolkit behaves much like it does during local debugging:
 
-      - Reads the `.env.{env}` file to find an existing Microsoft Entra app. If a Microsoft Entra app already exists, Agents Toolkit reuses the existing Microsoft Entra app. Otherwise, you need to create a new app using the `aad.template.json` file.
+    - Reads the `.env.{env}` file to find an existing Microsoft Entra app. If a Microsoft Entra app already exists, Agents Toolkit reuses the existing Microsoft Entra app. Otherwise, you need to create a new app using the `aad.template.json` file.
 
-      - Ignores some properties in the manifest file initially that requires more context such as `redirectUris` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra app with the manifest file.
+    - Ignores some properties in the manifest file initially that requires more context such as `redirectUris` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra app with the manifest file.
 
-      - Completes other resources provision, then Microsoft Entra app's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
+    - Completes other resources provision, then Microsoft Entra app's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
 
 1. **To build app**
 
