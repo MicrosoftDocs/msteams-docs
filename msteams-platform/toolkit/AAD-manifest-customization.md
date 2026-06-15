@@ -269,7 +269,7 @@ Here are examples of how Microsoft Entra app interacts with app development life
 
     - Initially ignores manifest properties that need more context, such as `redirectUris`, because those values depend on the frontend or bot endpoint when the Microsoft Entra app is first created from the manifest file.
 
-    - Completes other resources provision, then Microsoft Entra app's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
+    - After other resources are provisioned, Agents Toolkit updates the Microsoft Entra app values, including `identifierUris` and `redirectUris`, so they match the correct endpoints.
 
 1. **Build app**
 
