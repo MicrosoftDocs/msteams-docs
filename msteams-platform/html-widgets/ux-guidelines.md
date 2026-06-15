@@ -102,6 +102,7 @@ Keep in mind:
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - The same widget may render across multiple platforms — Teams, ChatGPT, Claude, and others
 
+For general design best practices that apply across widget surfaces, see [Adaptive Cards design best practices](https://fluent2.microsoft.design/color) .
 
 
 ## Widget anatomy
