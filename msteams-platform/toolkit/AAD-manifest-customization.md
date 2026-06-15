@@ -290,7 +290,7 @@ Here are examples of how Microsoft Entra app interacts with app development life
       |`logoUrl`|Read-only and can't change|
       |`publisherDomain`|Read-only and can't change|
 
-2. The `requiredResourceAccess` property is used for user readable resource app name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
+2. The `requiredResourceAccess` property supports human-readable resource app names or permission names only for `Microsoft Graph` and `Office 365 SharePoint Online`. For other APIs, you must use UUID values. To retrieve those IDs from the Azure portal, follow these steps:
 
     1. Register a new Microsoft Entra app on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
     1. Select `API permissions` from the Microsoft Entra app page.
