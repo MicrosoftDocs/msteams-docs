@@ -142,7 +142,7 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 ### Responsive scaling
 
-Widgets must adapt to the width of the chat container.
+Widgets must adapt to the width of the chat container. See [Responsive layout](https://fluent2.microsoft.design/color) in the Adaptive Cards documentation for guidance on building flexible layouts.
 
 - Use flexible, fluid layouts rather than fixed pixel widths
 - Avoid fixed pixel heights — allow the widget to grow vertically as content requires
