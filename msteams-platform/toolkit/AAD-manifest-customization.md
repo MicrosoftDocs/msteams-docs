@@ -267,11 +267,11 @@ Here are examples of how Microsoft Entra app interacts with app development life
 
     - Reads the `.env.{env}` file to find an existing Microsoft Entra app. If a Microsoft Entra app already exists, Agents Toolkit reuses the existing Microsoft Entra app. Otherwise, you need to create a new app using the `aad.template.json` file.
 
-    - Ignores some properties in the manifest file initially that requires more context such as `redirectUris` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra app with the manifest file.
+    - Initially ignores manifest properties that need more context, such as `redirectUris`, because those values depend on the frontend or bot endpoint when the Microsoft Entra app is first created from the manifest file.
 
     - Completes other resources provision, then Microsoft Entra app's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
 
-1. **To build app**
+1. **Build app**
 
     - The cloud command deploys your app to the provisioned resources. It doesn't include deploying Microsoft Entra app changes you've made.
 
