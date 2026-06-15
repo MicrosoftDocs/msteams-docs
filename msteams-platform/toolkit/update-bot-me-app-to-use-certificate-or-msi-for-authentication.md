@@ -72,33 +72,36 @@ Follow the steps to update the code for the agent or bot:
 
 Update the code in your Teams agent or bot project to use certificate-based credentials in Visual Studio or Visual Studio Code:
 
-# [JavaScript](#tab/js1)
+1. Open your agent or bot project in Visual Studio or Visual Studio Code.
+1. Update the code:
 
-```javascript
-    const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
-    MicrosoftAppId: config.botId,
-    CertificatePrivateKey: '{your private key}',
-    CertificateThumbprint: '{your cert thumbprint}',
-    MicrosoftAppType: "MultiTenant",
-    });
-    
-    const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
-    {},
-    credentialsFactory
-    );
-    
-    const adapter = new CloudAdapter(botFrameworkAuthentication);
-```
+   # [JavaScript](#tab/js1)
 
-# [C#](#tab/cs1)
+    ```javascript
+        const credentialsFactory = new ConfigurationServiceClientCredentialFactory({
+        MicrosoftAppId: config.botId,
+        CertificatePrivateKey: '{your private key}',
+        CertificateThumbprint: '{your cert thumbprint}',
+        MicrosoftAppType: "MultiTenant",
+        });
+        
+        const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
+        {},
+        credentialsFactory
+        );
+        
+        const adapter = new CloudAdapter(botFrameworkAuthentication);
+    ```
 
-```csharp
-    builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
-```
+   # [C#](#tab/cs1)
 
----
+    ```csharp
+        builder.Services.AddSingleton<ServiceClientCredentialsFactory>((e) => new CertificateServiceClientCredentialsFactory("{your certificate}", "{your entra id}"));
+    ```
 
-After you update the code, test your agent or bot app to confirm that authentication works as expected.
+    ---
+
+1. Ensure you test your agent or bot to confirm the operation aligns with the updated authentication.
 
 ### Delete bot secret
 
