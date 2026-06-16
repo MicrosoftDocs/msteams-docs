@@ -10,7 +10,7 @@ ms.date: 06/16/2026
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams agent and app. Debugging is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
-## Debug your Teams agent or app for Visual Studio Code
+## Debug your Teams agent or app in Visual Studio Code
 
 Agents Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the Teams agent or app. You can also customize debug settings to create your tab or bot apps.
 
@@ -70,13 +70,17 @@ Agents Playground makes debugging your agent or bot-based apps effortless. You c
 
 Agents Toolkit helps you to debug and preview your Microsoft Teams agent and app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
+Microsoft 365 Agents Toolkit helps you debug and preview Teams agents and apps in Visual Studio Code. It automates local setup, starts services and debuggers, validates prerequisites, and supports testing in the Teams web client, Teams desktop client, and Microsoft 365 Agents Playground.
+
 ## Prepare for debug
 
 The following steps help you to prepare for debug:
 
 1. Sign in to Microsoft 365:
 
-  If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
+  Before you start debugging, ensure you're signed in to your Microsoft 365 account and that your local development environment is configured for the app components you plan to run. Depending on your scenario, this can include frontend, bot, message extension, or Azure Functions components.
+  
+    If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
 
 1. Toggle breakpoints:
 
