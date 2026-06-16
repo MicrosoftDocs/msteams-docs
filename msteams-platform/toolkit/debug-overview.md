@@ -1,6 +1,6 @@
 ---
 title: Debug Teams Agents and Apps using Agents Toolkit
-description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
+description: Learn how to prepare and debug Teams agents and apps locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 06/16/2026
@@ -8,18 +8,18 @@ ms.date: 06/16/2026
 
 # Debug your Teams agents and apps
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams agent and app. Debugging is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ## Debug your Teams app for Visual Studio Code
 
-Agents Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
+Agents Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the Teams agent or app. You can also customize debug settings to create your tab or bot apps.
 
 During the debug process:
 
-* Agents Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
+* Agents Toolkit automatically starts app services, launches debuggers, and uploads the Teams agent or app.
 * Agents Toolkit checks the prerequisites during the debug background process.
-* Your Teams app is available for preview in Teams web client locally after debugging.
-* You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
+* Your Teams agen or app is available for preview in Teams web client locally after debugging.
+* You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured agent or app.
 * Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
 
 ## Key debug features of Agents Toolkit
@@ -34,7 +34,7 @@ Agents Toolkit supports the following debug features:
 * [Microsoft 365 Agents Playground](#microsoft-365-agents-playground) (previously known as Teams App Test Tool)
 * [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
-Agents Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Agents Toolkit. In the setup process you can register and configure your Teams app.
+Agents Toolkit performs background functions during debug process, which includes verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Agents Toolkit. In the setup process, you can register and configure your Teams agent or app.
 
 ### Start debugging
 
