@@ -64,23 +64,23 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
 ### Microsoft 365 Agents Playground
 
-Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
+Agents Playground makes debugging your agent or bot-based apps effortless. You can chat with your agent or bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
 
 ### Debug agents and apps in Teams desktop client
 
-Agents Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
+Agents Toolkit helps you to debug and preview your Microsoft Teams agent and app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
 ## Prepare for debug
 
 The following steps help you to prepare for debug:
 
-### Sign in to Microsoft 365
+1. Sign in to Microsoft 365:
 
-If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
+  If you've signed up for Microsoft 365 already, sign in to Microsoft 365. For more information, see [Microsoft 365 developer program](tools-prerequisites.md#microsoft-365-developer-program).
 
-### Toggle breakpoints
+1. Toggle breakpoints:
 
-Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. For more information, see [Toggle breakpoints](#toggle-breakpoints).
+  Ensure that you can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. For more information, see [Toggle breakpoints](#toggle-breakpoints).
 
 ## Customize debug settings
 
