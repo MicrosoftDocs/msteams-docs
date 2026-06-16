@@ -130,7 +130,7 @@ You must ensure to meet the following guidelines for agents:
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Agent to Agent Communication
 
@@ -143,7 +143,7 @@ For utilising `worker_agents` property in your Declarative agent manifest, ensur
 * Any prompt that depends on a worker agent must fail gracefully if the worker agent has not been acquired.
 * If a parent agent references a worker agent published by a different publisher, the parent agent publisher remains responsible for handling integration issues, user experience gaps, and graceful failure behavior.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Agents extended to Agent 365
 
@@ -156,7 +156,7 @@ For utilising `worker_agents` property in your Declarative agent manifest, ensur
 * Agents extended for Agent 365 should highlight the value proposition of Agent 365 in their description. [*Good to fix*]
 * All UX design guidelines applicable to CEAs are also applicable to agents published through `agenticUserTemplate` manifest node.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Screenshots
 
@@ -165,7 +165,7 @@ You must ensure to meet the following guidelines for agents:
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
 * Apps with agent functionality must have at least one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Agent name
 
@@ -177,7 +177,7 @@ You must ensure to meet the following guidelines for agents:
   * `name` in the declarative agent json file
   * `name_for_human` in the plugin json files
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Prompts
 
@@ -204,7 +204,7 @@ Prompt starters guide users on how to start using declarative agents and custom 
 * A declarative agent or a custom engine agent must have at least three prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Adaptive Card response
 
@@ -221,7 +221,7 @@ Agent responses provided as an Adaptive Card must meet the following requirement
 * Adaptive Card must be well-formatted to suit the desktop, web, and mobile (iOS and Android) clients. [*Must fix*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.microsoft.com/?topic=CardMetadata), which allows cards to be easily copied from one hub to another. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Compatibility
 
@@ -294,7 +294,7 @@ You must ensure to meet the following guidelines for agents:
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Technical requirements
 
@@ -310,7 +310,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## User disclosure and confirmation for action scenarios
 
@@ -345,7 +345,7 @@ For action scenarios, agents must share user disclosure and seek user confirmati
    | Returns a list of quote recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
    | Returns a list of meditation recommendations based on the user's preferences. | No | false or true |
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Bot requirements for custom engine agents
 
@@ -376,7 +376,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 8. The `commandList.type` field in manifest.json file should be blank for the `copilot` scope to ensure consistency with Declarative agents.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Action and knowledge source
 <!--
@@ -415,7 +415,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
     :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Duplicate agents
 
@@ -462,7 +462,7 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
   :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Security requirements for server calls (message extension, OpenAPIs, MCP servers)
 
@@ -479,7 +479,7 @@ Agents that use OpenAPI specs must ensure the following security standards:
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## See also
 
