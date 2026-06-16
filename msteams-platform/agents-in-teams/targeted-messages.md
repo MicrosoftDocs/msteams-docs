@@ -4,6 +4,7 @@ description: Use targeted messages to enable agents to privately interact with u
 ms.localizationpriority: high
 ms.date: 06/16/2026
 ms.topic: article
+zone_pivot_groups: ai-library-quick-start
 ---
 
 <!-- markdownlint-disable MD023 -->
@@ -63,6 +64,8 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
+
+::: zone pivot="qs-javascript"
 
 ## Implement targeted messages
 
@@ -285,6 +288,36 @@ No body required.
 ```
 
 ---
+
+::: zone-end
+
+::: zone pivot="qs-csharp"
+
+## Implement targeted messages
+
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted.
+
+### Receive targeted messages
+
+An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
+
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+
+::: zone-end
+
+::: zone pivot="qs-python"
+
+## Implement targeted messages
+
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted.
+
+### Receive targeted messages
+
+An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
+
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+
+::: zone-end
 
 ## Best practices and design guidance
 
