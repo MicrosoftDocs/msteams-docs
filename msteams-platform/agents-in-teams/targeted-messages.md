@@ -2,7 +2,7 @@
 title: Send and Receive Targeted Messages
 description: Use targeted messages to enable agents to privately interact with users in group conversations without distracting other users or revealing private information.
 ms.localizationpriority: high
-ms.date: 05/27/2026
+ms.date: 06/16/2026
 ms.topic: article
 ---
 
