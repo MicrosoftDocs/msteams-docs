@@ -5,13 +5,14 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vichug
 ms.author: vikasalmal
-ms.date: 03/02/2026
+ms.date: 06/16/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
 
 > [!NOTE]
 > The APIs to fetch meeting transcripts and recordings are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
+> Transcript content returned depends on tenant admin settings. Speaker attribution may be removed based on policy. For more information, see [].
 
 You can now configure your app to fetch Microsoft Teams transcripts and recordings after the meeting or call ends. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for the following instances:
 
@@ -31,6 +32,21 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 |Fetch transcript and recordings post-call for **PSTN calls** | You have a call center where human assistants provide customer support using incoming or outgoing PSTN calls using Microsoft Teams. The assistants need to manually update external systems of record with notes from each call after the call ends.| Using Graph APIs in your app to fetch transcript and recordings post-call reduces the manual work required by each assistant to update records. Also it allows your app to trigger automations using call transcript. |
 
 ## Get meeting and call transcripts and recordings
+
+#### Enable transcript access for your app
+
+To configure your app to access transcripts for online meetings and ad hoc calls:
+
+1. Log into Teams Admin Centre.
+1. Under Teams, navigate to **Meeting Settings** > **Recording & transcription**.
+1. Turn on the toggle for Allow third-party apps and agents to access meeting transcripts via Graph**. It is turned off by default. Your app will now be able to access meeting transcripts for both online meetings and ad hoc calls.
+1. For online meetings, the transcript is generated when the meeting ends. For ad hoc calls, the transcript is generated when the call ends or transcription is stopped. Your app can fetch the transcript for a meeting or call when it's generated after the meeting or call ends.
+
+#### Enable speaker attribution in transcripts
+
+Speaker attribution in meeting transcripts is turned off by default. If your app requires speaker attribution in the transcripts, the tenant admin needs to turn on the toggle for **Include speaker attribution in transcripts shared via Graph** under Teams Admin Centre > Meeting Settings > Recording & transcription. When this setting is turned on, the transcript content will have speaker attribution information.
+
+### Fetch transcripts and recordings using Graph APIs
 
 To fetch the transcript and recording for a particular meeting and call:
 
@@ -72,7 +88,7 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 
 ### Get notified when a transcript or recording is available
 
-After you configure the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meetings and ad hoc calls.
+Configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meetings and ad hoc calls.
 For online meetings, notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after the meeting ends.
 For ad hoc calls, meeting ID won't be available as these are spontaneous events (PSTN, 1:1, group calls). While there are no restrictions on notifications path for ad hoc calls, `getAll` APIs aren't available for ad hoc call instances as well (For example, listing of artifacts at call level).
 The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
