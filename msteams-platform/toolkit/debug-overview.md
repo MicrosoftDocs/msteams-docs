@@ -1,12 +1,12 @@
 ---
-title: Debug Teams App using Agents Toolkit
+title: Debug Teams Agents and Apps using Agents Toolkit
 description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 06/16/2026
 ---
 
-# Debug your Teams app
+# Debug your Teams agents and apps
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
