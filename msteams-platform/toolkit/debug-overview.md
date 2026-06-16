@@ -10,7 +10,7 @@ ms.date: 06/16/2026
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams agent and app. Debugging is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
-## Debug your Teams app for Visual Studio Code
+## Debug your Teams agent or app for Visual Studio Code
 
 Agents Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the Teams agent or app. You can also customize debug settings to create your tab or bot apps.
 
@@ -32,7 +32,7 @@ Agents Toolkit supports the following debug features:
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
 * [Microsoft 365 Agents Playground](#microsoft-365-agents-playground) (previously known as Teams App Test Tool)
-* [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
+* [Debug agent and apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
 Agents Toolkit performs background functions during debug process, which includes verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Agents Toolkit. In the setup process, you can register and configure your Teams agent or app.
 
@@ -66,7 +66,7 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
 Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
 
-### Debug apps in Teams desktop client
+### Debug agents and apps in Teams desktop client
 
 Agents Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
