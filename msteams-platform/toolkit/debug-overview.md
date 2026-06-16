@@ -3,7 +3,7 @@ title: Debug Teams App using Agents Toolkit
 description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 03/21/2022
+ms.date: 06/16/2026
 ---
 
 # Debug your Teams app
@@ -62,7 +62,7 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
-### Microsoft 365 Agents Playground 
+### Microsoft 365 Agents Playground
 
 Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
 
