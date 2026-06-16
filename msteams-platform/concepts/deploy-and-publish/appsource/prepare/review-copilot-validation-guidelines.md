@@ -99,6 +99,7 @@ Agents should be designed to complete enterprise workflows and must deliver diff
 * Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
   * Skills — Custom skills can be published using the agentSkills manifest node
   * Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
+  
   All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
 
 ## Description

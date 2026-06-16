@@ -1193,7 +1193,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Ensure that bot commands are consistent –
 
-  * Within each scope (personal/ groupChat/ team/ copilot) make sure that `commandList.type` values are consistent.
+  * Within each scope (personal/ groupChat/ team/ copilot) and make sure that `commandList.type` values are consistent.
   * The `prompt`, `description`, and `title` for each bot command should be consistent and coherent with one another.
 
 > [!TIP]
