@@ -10,11 +10,12 @@ ms.date: 05/11/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Validation guidelines for agents
+# Agent Store Validation Guidelines
+
+These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent and Copilot Cowork Plugins on the store.
 
 > [!IMPORTANT]
 >
-> * These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent on the store.
 > * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
@@ -95,6 +96,10 @@ Agents should be designed to complete enterprise workflows and must deliver diff
 * Achieving workflows that cannot be achieved easily via Copilot. For example, a **Contoso Ticket Management Agent** that allows users to create tickets directly on the Contoso platform.
 * Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
 * Using specialized orchestration or fine-tuned models for domain-specific workflows. For example, a **Contoso Pharma Agent** fine-tuned on pharma data to help identify domain-specific chemicals.
+* Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
+  * Skills — Custom skills can be published using the agentSkills manifest node
+  * Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
+  All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
 
 ## Description
 
@@ -369,6 +374,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
     1. The domain `api.botframework.com` must be included in the agent’s allowed domains.
     1. The agent must specify exactly one valid domain corresponding to the Microsoft Copilot Studio Dataverse geographic region/environment where the agent is hosted.
 
+8. The `commandList.type` field in manifest.json file should be blank for the `copilot` scope to ensure consistency with Declarative agents.
+
 [Back to top](#validation-guidelines-for-agents)
 
 ## Action and knowledge source
@@ -395,8 +402,6 @@ A custom engine agent is a conversational Teams bot that must meet the following
 * Declarative agents only support static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
 * Prompts that depend on add‑in actions must provide a graceful failure message in Copilot hubs where add‑in isn't supported.
-
-* Publishing MCP server tools via the `agentConnector` node of the manifest is not permitted for ISV developers.
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -432,7 +437,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
   * Instructions field in manifest
   * Test notes
 
-* All search results in the message extension capability must include a relevant title and subtitle, which will also appear in citations of your agent [*Must fix*].
+* All search results in the message extension capability must include a relevant title, subtitle, and url which will also appear in citations of your agent [*Must fix*].
 
 * A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
 
