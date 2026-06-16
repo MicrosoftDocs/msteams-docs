@@ -52,7 +52,7 @@ You can toggle breakpoints on the source codes of agent, apps, and Azure Functi
 
 ### Hot reload
 
-You can update and save the source codes of agent, tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
+You can update and save the source codes of agent, agent, and Azure Functions at the same time when you're debugging the Teams agent or app. The app reloads and the debugger reattach to the programming languages.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/hot-reload.png" alt-text="Screenshot shows the hot reload for source codes." lightbox="../assets/images/toolkit-v2/debug/hot-reload.png":::
 
