@@ -38,21 +38,21 @@ Agents Toolkit performs background functions during debug process, which include
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. Agents Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Agents Toolkit checks prerequisites, registers Microsoft Entra app, starts Teams agent or app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
-Agents Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+Agents Toolkit utilizes multi-target debugging feature to debug agents, apps, and Azure Functions at the same time.
 
 ### Toggle breakpoints
 
-You can toggle breakpoints on the source codes of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in a web browser. The following image shows toggle breakpoint:
+You can toggle breakpoints on the source codes of agent, apps, and Azure Functions. The breakpoints execute when you interact with the Teams agent or app in a web browser. The following image shows toggle breakpoint:
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/toggle-points.png" alt-text="Screenshot shows the toggle breakpoints." lightbox="../assets/images/toolkit-v2/debug/toggle-points.png":::
 
 ### Hot reload
 
-You can update and save the source codes of tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
+You can update and save the source codes of agent, tab, bot, message extension, and Azure Functions at the same time when you're debugging the Teams app. The app reloads and the debugger reattach to the programming languages.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/hot-reload.png" alt-text="Screenshot shows the hot reload for source codes." lightbox="../assets/images/toolkit-v2/debug/hot-reload.png":::
 
