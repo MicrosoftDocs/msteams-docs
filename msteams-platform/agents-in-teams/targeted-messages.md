@@ -4,7 +4,7 @@ description: Use targeted messages to enable agents to privately interact with u
 ms.localizationpriority: high
 ms.date: 06/16/2026
 ms.topic: article
-zone_pivot_groups: ai-library-quick-start
+zone_pivot_groups: select-language
 ---
 
 <!-- markdownlint-disable MD023 -->
@@ -65,7 +65,7 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
-::: zone pivot="qs-javascript"
+::: zone pivot="qs-typescript"
 
 ## Implement targeted messages
 
@@ -291,7 +291,7 @@ No body required.
 
 ::: zone-end
 
-::: zone pivot="qs-csharp"
+::: zone pivot="csharp"
 
 ## Implement targeted messages
 
@@ -305,7 +305,7 @@ Agents that opt in to receive targeted messages should always check the visibili
 
 ::: zone-end
 
-::: zone pivot="qs-python"
+::: zone pivot="python"
 
 ## Implement targeted messages
 
