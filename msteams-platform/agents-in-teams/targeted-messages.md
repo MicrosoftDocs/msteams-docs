@@ -304,6 +304,27 @@ Agents that opt in to receive targeted messages should always check the visibili
       # Handle message event
 ```
 
+### Send a targeted message
+
+All agents in Teams are automatically eligible to send targeted messages.
+
+To send a targeted message, use `with_recipient` to specify a single recipient by their ID, and provide a value of `True` for the `is_targeted` argument. The recipient must be a member of the chat or channel.
+
+```python
+from microsoft_teams.api import MessageActivity, MessageActivityInput
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+  # Using with_recipient with is_targeted=True explicitly targets the specified recipient
+  await ctx.send(
+      MessageActivityInput(text="This message is only visible to you!")
+          .with_recipient(ctx.activity.from_, is_targeted=True)
+  )
+```
+
+If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
+
 ::: zone-end
 
 ## Best practices and design guidance
