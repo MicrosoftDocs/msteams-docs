@@ -65,7 +65,7 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
-::: zone pivot="qs-typescript"
+::: zone pivot="typescript"
 
 ## Implement targeted messages
 
