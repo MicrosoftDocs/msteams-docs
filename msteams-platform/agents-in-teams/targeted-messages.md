@@ -69,6 +69,10 @@ For more about slash commands, including how to register extra named slash comma
 
 Prompt Preview lets an agent or bot include a compact preview of the user’s original prompt at the top of its reply. This helps preserve context, especially when the response is targeted to a specific user, so the recipient can immediately understand which request the bot is addressing without needing to scroll back through the conversation.
 
+Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the bot sends a message outside the original interaction context, the bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
+
+For more information on prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+
 ::: zone pivot="typescript"
 
 ## Implement targeted messages
