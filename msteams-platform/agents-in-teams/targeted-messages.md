@@ -228,6 +228,7 @@ Targeted messages can be updated and deleted in the same way as standard message
 - The visibility of a targeted message can't be changed
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message results in an error.
 
+<!--
 To update a targeted message, use one of the following code snippets:
 
 # [C#](#tab/dotnet2)
@@ -288,9 +289,11 @@ Content-Type: application/json
 ```
 
 ---
+-->
 
 Delete a targeted message using one of the following code snippets:
 
+<!--
 # [C#](#tab/dotnet2)
 
 ```csharp
@@ -326,6 +329,7 @@ No body required.
 ```
 
 ---
+-->
 
 ## Best practices and design guidance
 
