@@ -434,7 +434,7 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Graph chat migration | This sample app can be used to migrate historical messages from external platforms to Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-chat-migration/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-chat-migration/csharp) | NA |
+| Graph chat migration | This sample app can be used to migrate historical messages from external platforms to Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-chat-migration/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-chat-migration/csharp) | NA |
 
 ## See also
 
