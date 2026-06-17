@@ -93,19 +93,6 @@ To opt in to receive targeted messages, an agent's `bots` entry in its app manif
 
 Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippets.
 
-# [C#](#tab/dotnet1)
-
-```csharp
-
-  teams.OnMessage(async (context, cancellationToken) => {
-    if (context.Activity.Recipient?.IsTargeted == true){
-      // Handle message event
-    }
-  });
-```
-
-# [TypeScript](#tab/ts1)
-
 ```typescript
       
   app.on('message', async ({ send, activity }) => {
@@ -115,36 +102,9 @@ Agents receive messages via standard message events. Targeted messages can be di
   });
 ```
 
-# [Python](#tab/Py1)
-
-```python
-      
-  @app.on_message
-  async def handle_message(ctx):
-    if getattr(ctx.activity.recipient, "is_targeted", False):
-      # Handle message event
-```
-
----
-
 ### Send a targeted message
 
 All agents in Teams are automatically eligible to send targeted messages.
-
-# [C#](#tab/dotnet1)
-
-To send a targeted message, use `WithRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
-
-```csharp
-app.OnMessage(async context =>
-{
-// Using WithRecipient with isTargeted=true explicitly targets the specified recipient
-await context.Send(
-        new MessageActivity("This message is only visible to you!")
-            .WithRecipient(context.Activity.From, isTargeted: true)
-    );
-});
-```
 
 # [TypeScript](#tab/ts1)
 
@@ -161,25 +121,6 @@ app.on('message', async ({ send, activity }) => {
   );
 });
 ```
-
-# [Python](#tab/Py1)
-
-To send a targeted message, use `with_recipient` to specify a single recipient by their ID, and provide a value of `True` for the `is_targeted` argument. The recipient must be a member of the chat or channel.
-
-```python
-from microsoft_teams.api import MessageActivity, MessageActivityInput
-from microsoft_teams.apps import ActivityContext
-
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-  # Using with_recipient with is_targeted=True explicitly targets the specified recipient
-  await ctx.send(
-      MessageActivityInput(text="This message is only visible to you!")
-          .with_recipient(ctx.activity.from_, is_targeted=True)
-  )
-```
-
----
 
 If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
