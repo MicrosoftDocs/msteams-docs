@@ -240,6 +240,50 @@ An agent must opt in via its manifest to be able to receive targeted messages. I
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
+To opt in to receive targeted messages, an agent's `bots` entry in its app manifest must include a `true` value for the `supportsTargetedMessages` property.
+
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true
+        }
+    ]
+}
+```
+
+Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippet:
+
+# [C#](#tab/dotnet1)
+
+```csharp
+
+  teams.OnMessage(async (context, cancellationToken) => {
+    if (context.Activity.Recipient?.IsTargeted == true){
+      // Handle message event
+    }
+  });
+```
+
+### Send a targeted message
+
+All agents in Teams are automatically eligible to send targeted messages.
+
+To send a targeted message, use `WithRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
+
+```csharp
+app.OnMessage(async context =>
+{
+// Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+await context.Send(
+        new MessageActivity("This message is only visible to you!")
+            .WithRecipient(context.Activity.From, isTargeted: true)
+    );
+});
+```
+
 ::: zone-end
 
 ::: zone pivot="python"
