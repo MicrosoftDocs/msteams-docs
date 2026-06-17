@@ -256,8 +256,6 @@ To opt in to receive targeted messages, an agent's `bots` entry in its app manif
 
 Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippet:
 
-# [C#](#tab/dotnet1)
-
 ```csharp
 
   teams.OnMessage(async (context, cancellationToken) => {
@@ -297,6 +295,14 @@ Targeted messages are sent and received using the same operations as [standard s
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+
+```python
+      
+  @app.on_message
+  async def handle_message(ctx):
+    if getattr(ctx.activity.recipient, "is_targeted", False):
+      # Handle message event
+```
 
 ::: zone-end
 
