@@ -67,9 +67,9 @@ For more about slash commands, including how to register extra named slash comma
 
 ### Prompt Preview
 
-Prompt Preview lets an agent or bot include a compact preview of the user’s original prompt at the top of its reply. This helps preserve context, especially when the response is targeted to a specific user, so the recipient can immediately understand which request the bot is addressing without needing to scroll back through the conversation.
+Prompt Preview lets an agent or bot include a compact preview of the user’s original prompt at the top of its reply. This helps preserve context, especially when the response is targeted to a specific user, so the recipient can immediately understand which request the agent or bot is addressing without needing to scroll back through the conversation.
 
-Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the bot sends a message outside the original interaction context, the bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
+Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the agent or bot sends a message outside the original interaction context, the agent ot bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
 
 For more information on prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
@@ -237,108 +237,6 @@ Targeted messages can be updated and deleted in the same way as standard message
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message results in an error.
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
-
-<!--
-To update a targeted message, use one of the following code snippets:
-
-# [C#](#tab/dotnet2)
-
-```csharp
-// Update
-var response = await context.Send(
-    new MessageActivity("Original targeted message")
-        .WithRecipient(context.Activity.From, true), cancellationToken);
-var conversationId = context.Activity.Conversation.Id;
-var messageId = response.Id;
-
-var updatedMessage = new MessageActivity("This message has been updated!");
-await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
-```
-
-# [TypeScript](#tab/ts2)
-
-```typescript
-// Update
-const response = await context.send(
-    new MessageActivity('Original targeted message')
-        .withRecipient(context.activity.from, true), cancellationToken);
-const conversationId = context.activity.conversation.id;
-const messageId = response.id;
-
-const updatedMessage = new MessageActivity('This message has been updated!');
-await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
-```
-
-# [Python](#tab/Py2)
-
-```python
-# Update
-response = await ctx.send(
-    MessageActivityInput(text="Original targeted message")
-        .with_recipient(ctx.activity.from_property, True), cancellation_token)
-conversation_id = ctx.activity.conversation.id
-message_id = response.id
-
-updated_message = MessageActivityInput(text="This message has been updated!")
-await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
-```
-
-# [HTTP](#tab/api2)
-
-The agent calls the `Edit TM` API using the message’s `activityId`.
-
-```REST
-PUT {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJh...
-Content-Type: application/json
-{
-    "type": "message",
-    "text": "This message has been updated"
-}
-```
-
----
--->
-<!--
-Delete a targeted message using one of the following code snippets:
-
-# [C#](#tab/dotnet2)
-
-```csharp
-// Delete
-await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
-```
-
-# [TypeScript](#tab/ts2)
-
-```typescript
-// Delete
-await api.conversations.activities.deleteTargeted(conversationId, messageId);
-```
-
-# [Python](#tab/Py2)
-
-```python
-#Delete
-await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
-```
-
-# [HTTP](#tab/api2)
-
-Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
-
-```REST
-DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJh...
-Content-Type: application/json
-
-No body required.
-```
-
----
--->
 
 ## Best practices and design guidance
 
