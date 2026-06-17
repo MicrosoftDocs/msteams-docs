@@ -65,6 +65,10 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
+### Prompt Preview
+
+Prompt Preview lets an agent or bot include a compact preview of the user’s original prompt at the top of its reply. This helps preserve context, especially when the response is targeted to a specific user, so the recipient can immediately understand which request the bot is addressing without needing to scroll back through the conversation.
+
 ::: zone pivot="typescript"
 
 ## Implement targeted messages
