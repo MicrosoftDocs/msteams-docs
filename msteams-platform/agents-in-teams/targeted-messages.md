@@ -91,7 +91,7 @@ To opt in to receive targeted messages, an agent's `bots` entry in its app manif
 }
 ```
 
-Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippets.
+Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippet:
 
 ```typescript
       
@@ -104,11 +104,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 ### Send a targeted message
 
-All agents in Teams are automatically eligible to send targeted messages.
-
-# [TypeScript](#tab/ts1)
-
-To send a targeted message, use `withRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
+All agents in Teams are automatically eligible to send targeted messages. To send a targeted message, use `withRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
 
 ```typescript
 import { MessageActivity } from '@microsoft/teams.api';
