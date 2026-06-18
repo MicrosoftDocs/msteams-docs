@@ -46,5 +46,10 @@ This workflow progresses as follows:
 
   Include prompt preview in the private reply so the original user request appears at the top of the agent’s response. This creates a single message that shows both the prompt and the answer together, which makes review easier and helps when the same content is later promoted to a public reply. In reactive scenarios, SDK methods that reply directly to a targeted message can attach the prompt preview information automatically. In proactive scenarios, you must attach it manually by using the original targeted message ID.
 
-1. Offer suggested actions for user approval
-1. Repost agent response publicly only after approval
+1. Offer suggested actions for user approval:
+
+  Add suggested actions at the bottom of the private reply to help the user decide what happens next. For this workflow, the most common buttons are Allow, Share to channel, Edit prompt, or Dismiss. Suggested actions are useful because they reduce typing, guide the next step, and disappear after selection so the interaction stays clean.
+
+1. Repost agent response publicly only after approval:
+
+  If the user selects the approval action, your app receives that choice and can repost the content publicly in the same conversation. The public message can include the same response body and the same prompt preview so everyone sees both the original request and the approved answer together. If the user does not approve, keep the exchange private and do not publish the content to the conversation.
