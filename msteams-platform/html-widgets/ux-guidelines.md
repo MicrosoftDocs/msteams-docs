@@ -175,10 +175,10 @@ Map your widget's text styles to the following recommended values, which align w
 
 | Style | Size | Weight | Use for |
 |---|---|---|---|
-| Title | 16px | Semibold | Widget or entity title |
+| Title | 18px | Semibold | Widget or entity title |
 | Subtitle | 14px | Semibold | Section headers, secondary titles |
 | Body | 14px | Regular | Primary content and descriptions |
-| Caption / metadata | 12px | Regular | Supporting details, timestamps, labels |
+| Caption / metadata | 12px | Regular or semibold | Supporting details, timestamps, labels |
 
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
