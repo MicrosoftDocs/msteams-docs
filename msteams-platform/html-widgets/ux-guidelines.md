@@ -203,7 +203,7 @@ Map your widget's text styles to the following recommended values, which align w
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-<img src="images/icon_icon.png" alt="" width="16"> [Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icon_Icon.png" alt="" width="16"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
