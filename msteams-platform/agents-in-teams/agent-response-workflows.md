@@ -34,8 +34,17 @@ Before you start, ensure your agent or app is enabled for targeted messaging in 
 
 This workflow progresses as follows:
 
-1. Receive the user’s request as a targeted message
-1. Send the first agent reply privately
-1. Add prompt preview to preserve context
+1. Receive the user’s request as a targeted message:
+
+  When a user sends a slash command or otherwise invokes the agent uing @mention in a shared conversation, capture the interaction as a targeted message. This keeps the request visible only to the user and the agent while still preserving the group context. It is the right starting point when the question or output could be distracting, sensitive, or not yet ready for broad sharing.
+
+1. Send the first agent reply privately:
+
+  Reply to the targeted message with a private response so only the requesting user can see it. This is the default response workflow for the Teams agent.
+
+1. Add prompt preview to preserve context:
+
+  Include prompt preview in the private reply so the original user request appears at the top of the agent’s response. This creates a single message that shows both the prompt and the answer together, which makes review easier and helps when the same content is later promoted to a public reply. In reactive scenarios, SDK methods that reply directly to a targeted message can attach the prompt preview information automatically. In proactive scenarios, you must attach it manually by using the original targeted message ID.
+
 1. Offer suggested actions for user approval
 1. Repost agent response publicly only after approval
