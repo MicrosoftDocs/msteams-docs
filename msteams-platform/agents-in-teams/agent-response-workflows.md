@@ -72,3 +72,7 @@ JSON example
   "messageId": "1772129782775"
 }]
 ```
+
+### Reactive and proactive agent responses
+
+In reactive scenarios, when your bot replies directly to a targeted message by using reply-style SDK methods, the prompt preview metadata is typically attached automatically. In proactive scenarios, when you send outside the original turn, you must attach the targeted message information yourself before sending either a private or public response.
