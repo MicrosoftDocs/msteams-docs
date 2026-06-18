@@ -167,7 +167,7 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 Use the following base text styles to create clear visual hierarchy in your widget. These styles align with the Teams design system and cover the most common text roles in a widget.
 
-![Typography examples in a widget card](images/typography-examples.png)
+
 
 | Style | Fluent token | Size / Weight | Use for |
 |---|---|---|---|
@@ -184,8 +184,16 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
 
+![Typography examples in a widget card](images/Typography.png)
+
+
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
+
+
+
+
+
 
 <img src="images/icon_textA.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
 
