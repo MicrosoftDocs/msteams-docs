@@ -16,9 +16,9 @@ zone_pivot_groups: select-language
 Use agent response workflows when you want an agent to respond privately in a channel, group chat, or meeting chat first, then let the user decide whether that same response should be shared with everyone.
 These workflows support three capabilities: targeted messaging for the private response, prompt preview to preserve the user’s original request in the reply, and suggested actions so the user can approve a public repost when needed.
 
-- Targeted messages are private one-to-one exchanges between a user and an agent inside a group conversation, and they disappear from Teams clients after 24 hours to reduce clutter.
-- Prompt preview lets the agent’s reply include the user’s original query in the same message.
-- Suggested actions provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
+- *Targeted messages* are private one-to-one exchanges between a user and an agent inside a group conversation, and they disappear from Teams clients after 24 hours to reduce clutter.
+- *Prompt preview* lets the agent’s reply include the user’s original query in the same message.
+- *Suggested actions* provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
 
 Each workflow option offers advantages based on your agent scenario. Choose response workflow based on:
 
@@ -36,20 +36,20 @@ This workflow progresses as follows:
 
 1. Receive the user’s request as a targeted message:
 
-  When a user sends a slash command or otherwise invokes the agent uing @mention in a shared conversation, capture the interaction as a targeted message. This keeps the request visible only to the user and the agent while still preserving the group context. It is the right starting point when the question or output could be distracting, sensitive, or not yet ready for broad sharing.
+    When a user sends a slash command or otherwise invokes the agent uing @mention in a shared conversation, capture the interaction as a targeted message. This keeps the request visible only to the user and the agent while still preserving the group context. It is the right starting point when the question or output could be distracting, sensitive, or not yet ready for broad sharing.
 
 1. Send the first agent reply privately:
 
-  Reply to the targeted message with a private response so only the requesting user can see it. This is the default response workflow for the Teams agent.
+    Reply to the targeted message with a private response so only the requesting user can see it. This is the default response workflow for the Teams agent.
 
 1. Add prompt preview to preserve context:
 
-  Include prompt preview in the private reply so the original user request appears at the top of the agent’s response. This creates a single message that shows both the prompt and the answer together, which makes review easier and helps when the same content is later promoted to a public reply. In reactive scenarios, SDK methods that reply directly to a targeted message can attach the prompt preview information automatically. In proactive scenarios, you must attach it manually by using the original targeted message ID.
+    Include prompt preview in the private reply so the original user request appears at the top of the agent’s response. This creates a single message that shows both the prompt and the answer together, which makes review easier and helps when the same content is later promoted to a public reply. In reactive scenarios, SDK methods that reply directly to a targeted message can attach the prompt preview information automatically. In proactive scenarios, you must attach it manually by using the original targeted message ID.
 
 1. Offer suggested actions for user approval:
 
-  Add suggested actions at the bottom of the private reply to help the user decide what happens next. For this workflow, the most common buttons are Allow, Share to channel, Edit prompt, or Dismiss. Suggested actions are useful because they reduce typing, guide the next step, and disappear after selection so the interaction stays clean.
+    Add suggested actions at the bottom of the private reply to help the user decide what happens next. For this workflow, the most common buttons are Allow, Share to channel, Edit prompt, or Dismiss. Suggested actions are useful because they reduce typing, guide the next step, and disappear after selection so the interaction stays clean.
 
 1. Repost agent response publicly only after approval:
 
-  If the user selects the approval action, your app receives that choice and can repost the content publicly in the same conversation. The public message can include the same response body and the same prompt preview so everyone sees both the original request and the approved answer together. If the user does not approve, keep the exchange private and do not publish the content to the conversation.
+    If the user selects the approval action, your app receives that choice and can repost the content publicly in the same conversation. The public message can include the same response body and the same prompt preview so everyone sees both the original request and the approved answer together. If the user does not approve, keep the exchange private and do not publish the content to the conversation.
