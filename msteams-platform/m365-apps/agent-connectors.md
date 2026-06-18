@@ -23,10 +23,6 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 - Tool definitions
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
-> [!NOTE]
->
-> Microsoft 365 includes built-in agent connectors for select Microsoft services. This article covers only custom agent connectors that you register through the app manifest for your own MCP servers.
-
 Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP.<!--, including the Channel Agent in Microsoft Teams.-->
 
 ## Prerequisites
@@ -149,11 +145,7 @@ Your server must:
 - Return a `client_id` and `client_secret` that Microsoft 365 can use to obtain access tokens.
 - Support token refresh for long-lived sessions.
 
-### Use Azure Key Vault authentication (preview)
-
-> [!NOTE]
->
-> Azure Key Vault authentication is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+### Use Azure Key Vault authentication
 
 Azure Key Vault authentication allows you to store and manage your MCP server credentials in your own [Azure Key Vault](/azure/key-vault/general/overview) instance. This gives you full control over secret lifecycle management, including rotation, access policies, and audit logging.
 
@@ -183,16 +175,9 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Configure how Microsoft 365 agents discover the tools your MCP server provides. <!--Currently only inline tool definitions are supported. Use inline definitions if your toolset is static. or dynamic discovery if your toolset changes frequently.-->
-<!--
-### Enable dynamic tool discovery
+Configure how Microsoft 365 agents discover the tools your MCP server provides. Use static inline tool definitions when your toolset is stable, or enable dynamic tool discovery when your toolset changes frequently.
 
-Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
-
-You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
-
-When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
--->
+### Use static tool definitions
 
 For static toolsets that don't change frequently, add an `mcpToolDescription` object with your tool definitions:
 
@@ -212,6 +197,30 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 ````
 
 The `description` object must match the schema returned by your MCP server's `tools/list` response.
+
+### Use dynamic tool discovery
+
+Dynamic tool discovery allows Microsoft 365 agents to fetch your tool list at runtime by calling your server's `tools/list` method. This approach is recommended when your toolset changes frequently, as it eliminates the need to republish your app each time tools are added, updated, or removed.
+
+To enable dynamic tool discovery, omit the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration:
+
+````json
+"remoteMcpServer": {
+  "mcpServerUrl": "https://mcp.example.com",
+  "authorization": {
+    "type": "OAuthPluginVault",
+    "referenceId": "my-oauth-config"
+  }
+}
+````
+
+When `mcpToolDescription` is omitted, Microsoft 365 agents:
+
+- Connect to your MCP server endpoint.
+- Call the `tools/list` method to retrieve the available tools at runtime.
+- Update the available tool list without requiring a manifest republish.
+
+Your MCP server must return a valid `tools/list` response that includes each tool's name, description, and input schema.
 
 <!--## Example schema
 
@@ -333,7 +342,8 @@ If your MCP server isn't working as expected, check these common issues:
 
 - Verify `tools/list` returns valid tool definitions
 - Check that tool descriptions are clear and complete
-- Validate the JSON schema of inline tool definitions
+- For static definitions, validate the JSON schema of your inline tool definitions
+- For dynamic discovery, confirm `mcpToolDescription` is omitted and your server correctly responds to `tools/list` at runtime
 
 ### Authentication failures
 
