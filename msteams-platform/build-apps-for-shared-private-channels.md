@@ -2,10 +2,10 @@
 title: Teams connects shared and private channels
 author: vikasalmal
 description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 06/10/2026
+ms.date: 06/18/2026
 ---
 
 # Apps for shared and private channels

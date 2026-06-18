@@ -4,8 +4,8 @@ description: Learn how to use the Meeting AI Insights API to fetch Teams meeting
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
-ms.author: vikasalmal
-ms.date: 06/10/2026
+ms.author: nickwalk
+ms.date: 06/18/2026
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
