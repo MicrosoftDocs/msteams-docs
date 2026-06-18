@@ -75,38 +75,11 @@ Prompt Preview can be enabled when an agent or bot replies to a user’s message
 
 Agent-to-user response flows:
 
-- **Private response mode (default)**
+- Private response mode (default)
+- Public response mode
+- Private-to-public response flow
 
-    This flow supports focused, one-to-one interactions between the user and the agent or bot.
-
-  - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
-  - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
-  - When the user selects Allow, a single message is displayed that includes:
-    - The bot’s response
-    - The user’s prompt rendered as a block quote
-  - The initial targeted message containing the user’s prompt expires after 24 hours.
-
-This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
-
-- **Public response mode**
-
-    In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
-
-  - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
-  - If the bot is configured to respond publicly, a single message is shown in the conversation that includes:
-
-    - The bot’s response
-    - The user’s prompt rendered as a block quote
-
-  - The initial targeted message containing the user’s prompt expires after 24 hours.
-
-This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
-
-- **Private-to-public response flow**
-
-To support a private-by-default experience, agents or bots can include suggested actions (for example, Allow or Share to channel) at the bottom of a private response. These actions let users explicitly promote an otherwise-private response to a public message. When a user selects Allow, the app is informed of that choice, enabling the bot developer’s logic to post the approved response in the channel or chat.
-
-For more information on prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+For more information on implementing prompt preview, see [agent response workflows](agent-response-workflows.md) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
 ::: zone pivot="typescript"
 
