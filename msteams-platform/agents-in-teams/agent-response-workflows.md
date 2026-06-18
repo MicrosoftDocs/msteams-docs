@@ -53,3 +53,22 @@ This workflow progresses as follows:
 1. Repost agent response publicly only after approval:
 
     If the user selects the approval action, your app receives that choice and can repost the content publicly in the same conversation. The public message can include the same response body and the same prompt preview so everyone sees both the original request and the approved answer together. If the user does not approve, keep the exchange private and do not publish the content to the conversation.
+
+## Implement agent response workflows
+
+Here's how to implement response workflows for Teams agents and apps.
+
+### Prompt preview entity
+
+To enable prompt preview, include the targeted message information in the reply activity. The reply uses the original targeted message ID so Teams can display the user’s original request above the response.
+
+JSON example
+
+```json
+
+
+"entities": [{
+  "type": "targetedMessageInfo",
+  "messageId": "1772129782775"
+}]
+```
