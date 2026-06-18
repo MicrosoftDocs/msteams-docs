@@ -20,6 +20,14 @@ These workflows support three capabilities: targeted messaging for the private r
 - Prompt preview lets the agent’s reply include the user’s original query in the same message.
 - Suggested actions provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
 
+Each workflow option offers advantages based on your agent scenario. Choose response workflow based on:
+
+| Workflow capability | How it works | How it helps |
+| --- | --- | --- |
+| Targeted messaging | It starts the exchange privately inside a shared conversation. | It helps keep sensitive or user-specific interactions private while cutting down on noise for everyone else. |
+| Prompt preview | | |
+| Suggested actions | | |
+
 ## Response workflow
 
 Before you start, ensure your agent or app is enabled for targeted messaging in Teams and that your scenario runs in a channel, group chat, or meeting chat rather than a one-to-one chat. You should also determine whether agent replies remain private by default and only become public after explicit user approval. In such case, you must preserve the original targeted message ID so you can attach prompt preview data to the reply.
