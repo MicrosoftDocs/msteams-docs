@@ -25,8 +25,8 @@ Each workflow option offers advantages based on your agent scenario. Choose resp
 | Workflow capability | How it works | How it helps |
 | --- | --- | --- |
 | Targeted messaging | It starts the exchange privately inside a shared conversation. | It helps keep sensitive or user-specific interactions private while cutting down on noise for everyone else. |
-| Prompt preview | | |
-| Suggested actions | | |
+| Prompt preview | It shows the original user request together with the agent’s reply. | It keeps context, improves readability, and makes public reposts easier to understand. |
+| Suggested actions | It lets the user approve, share, refine, or dismiss the response. | It helps to create an explicit consent step before private content becomes visible to the group. |
 
 ## Response workflow
 
