@@ -71,6 +71,41 @@ Prompt Preview lets an agent or bot include a compact preview of the user’s or
 
 Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the agent or bot sends a message outside the original interaction context, the agent ot bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
 
+Agent response flows with slash commands
+
+Slash commands supports two distinct agent-to-user response flows:
+
+- **Private Agent-to-User Response (Default)**
+
+    This flow supports focused, one-to-one interactions between the user and the agent or bot.
+
+  - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
+  - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
+  - When the user selects Allow, a single message is displayed that includes:
+    - The bot’s response
+    - The user’s prompt rendered as a block quote
+  - The initial targeted message containing the user’s prompt expires after 24 hours.
+
+This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+
+- **Public Agent-to-User Response (Developer-Enabled)**
+
+    In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
+
+  - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
+  - If the bot is configured to respond publicly, a single message is shown in the conversation that includes:
+
+    - The bot’s response
+    - The user’s prompt rendered as a block quote
+
+  - The initial targeted message containing the user’s prompt expires after 24 hours.
+
+This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+
+- **Support for showing a private response publicly**
+
+To support a private-by-default experience, agents or bots can include suggested actions (for example, Allow or Share to channel) at the bottom of a private response. These actions let users explicitly promote an otherwise-private response to a public message. When a user selects Allow, the app is informed of that choice, enabling the bot developer’s logic to post the approved response in the channel or chat.
+
 For more information on prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
 ::: zone pivot="typescript"
