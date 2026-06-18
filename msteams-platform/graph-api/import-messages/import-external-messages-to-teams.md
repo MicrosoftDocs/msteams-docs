@@ -2,10 +2,10 @@
 title: Import third-party platform messages to Teams using Microsoft Graph
 description: Learn how to use Microsoft Graph to import messages such as message history and data from any third-party platform to Teams.
 ms.localizationpriority: high
-author: "vikasalmal"
+ms.author: nickwalk
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 06/03/2026
+ms.date: 06/18/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph

@@ -3,8 +3,9 @@ title: Teams Specific Context for Bot
 description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
 ms.topic: article
 ms.localizationpriority: high
+ms.author: nickwalk
 ms.owner: angovil
-ms.date: 03/16/2026
+ms.date: 06/18/2026
 ---
 # Get Teams specific context for your bot
 
@@ -27,7 +28,7 @@ The following sample code uses the paged endpoint for fetching the roster:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -53,7 +54,7 @@ public class MyBot : TeamsActivityHandler
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getpagedmembers)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {

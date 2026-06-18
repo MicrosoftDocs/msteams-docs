@@ -3,7 +3,7 @@ title: Teams bot samples
 description: With this learning module, learn about Teams samples for Bot Framework, which includes working samples demonstrating the functionality.
 localization_priority: Normal
 ms.topic: overview
-ms.date: 02/26/2025
+ms.date: 06/18/2026
 ---
 
 ## Code sample
