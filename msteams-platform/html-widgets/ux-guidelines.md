@@ -165,7 +165,7 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
   
-<img src="images/icon_colorBrush.png" alt="" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
+<img src="images/icon_colorBrush.png" alt="" width="16"> [Color tokens](https://fluent2.microsoft.design/color)
 
 
 
@@ -183,7 +183,7 @@ Map your widget's text styles to the following recommended values, which align w
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
 
-→[Fluent 2 > Typography](https://fluent2.microsoft.design/typography)
+<img src="images/icon_text.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
 
 #### Containers and borders
 
@@ -191,7 +191,7 @@ Map your widget's text styles to the following recommended values, which align w
 - Use border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) for containers and images
 - Avoid deep nesting — limit container and column nesting to a maximum of two levels
 
-→[Fluent 2 > Shapes](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="images/icon_shape.png" alt="" width="16"> [Shapes and corner radius](https://fluent2.microsoft.design/typography)
 
 #### Spacing
 
@@ -203,7 +203,7 @@ Map your widget's text styles to the following recommended values, which align w
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-→[Fluent 2 > Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icon_icon.png" alt="" width="16"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
