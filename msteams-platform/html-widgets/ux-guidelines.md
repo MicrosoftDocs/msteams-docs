@@ -165,7 +165,7 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
   
-🎨 [Fluent 2 > Color](https://fluent2.microsoft.design/color)
+➔ [Color tokens](https://fluent2.microsoft.design/color)
 
 #### Typography
 
