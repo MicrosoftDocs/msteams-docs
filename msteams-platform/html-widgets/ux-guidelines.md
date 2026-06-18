@@ -183,7 +183,7 @@ Map your widget's text styles to the following recommended values, which align w
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
 
-<img src="images/icon_text.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="images/icon_textA.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
 
 #### Containers and borders
 
