@@ -161,13 +161,11 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
 
-[Fluent 2 > Color](https://fluent2.microsoft.design/color)
+<img src="images/icon_colorBrush.png" alt="" width="16"> [Color tokens](https://fluent2.microsoft.design/color)
 
 #### Typography
 
 Use the following base text styles to create clear visual hierarchy in your widget. These styles align with the Teams design system and cover the most common text roles in a widget.
-
-
 
 | Style | Fluent token | Size / Weight | Use for |
 |---|---|---|---|
@@ -184,16 +182,10 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
 
-
-
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-
 ![Typography examples in a widget card](images/Typography.png)
-
-
-
 
 <img src="images/icon_textA.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
 
@@ -203,7 +195,7 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) for containers and images
 - Avoid deep nesting — limit container and column nesting to a maximum of two levels
 
-[Fluent 2 > Shapes](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="images/icon_shape.png" alt="" width="16"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
 #### Spacing
 
@@ -215,7 +207,7 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-[Fluent 2 > Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icon_Icon.png" alt="" width="16"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
