@@ -1,339 +1,189 @@
 ---
-title: Teams Specific Context for Bot
-description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
+title: Teams specific context for bots
+description: Learn how to get Teams-specific context in bots by using Teams SDK APIs for roster, member, team, and channel information.
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/16/2026
+ms.date: 06/19/2026
 ---
+<!-- markdownlint-disable MD024 -->
 # Get Teams specific context for your bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot can access additional context data about a team or chat where it's installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
+A bot can access additional context data about the team or chat where it's installed. This information can be used to personalize responses and build richer workflows.
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Use the Teams SDK conversations members API to retrieve roster information.
+
+For conversation member retrieval:
+
+* Minimum page size: `50`
+* Default page size: `200`
+* Maximum page size: `500`
+
+Don't use non-paginated member retrieval in teams and channels. For large rosters, non-paginated calls can be incomplete or throttled.
 
 > [!NOTE]
 >
-> * Pagination is available in a team and a channel.
-> * Pagination isn't supported in chats. For chats, the entire roster is always returned.
+> * Pagination is available in team and channel conversations.
+> * Pagination isn't supported in chat conversations. In chats, the full roster is returned by the service.
 
-The following sample code uses the paged endpoint for fetching the roster:
+The following sample code uses paged member retrieval:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-public class MyBot : TeamsActivityHandler
-{
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
-        var members = new List<TeamsChannelAccount>();
-        string continuationToken = null;
-
-        do
-        {   
-            // Gets a paginated list of members of one-on-one, group, or team conversation.
-            var currentPage = await TeamsInfo.GetPagedMembersAsync(turnContext, 100, continuationToken, cancellationToken);
-            continuationToken = currentPage.ContinuationToken;
-            members.AddRange(currentPage.Members);
-         }
-         while (continuationToken != null);
-     }
-}
+// TODO: Add .NET Teams SDK paged members snippet when the Learn-approved
+// method signature is finalized for this article.
+// Reference: https://microsoft.github.io/teams-sdk/csharp/essentials/api/
 ```
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getpagedmembers)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
 ```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
+app.on("message", async ({ activity, api }) => {
+  const membersClient = api.conversations.members(activity.conversation.id);
+  const allMembers = [];
+  let continuationToken = undefined;
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
-        this.onMessage(async (turnContext, next) => {
-            var continuationToken;
-            var members = [];
+  do {
+    const page = await membersClient.getPaged({
+      pageSize: 50,
+      continuationToken,
+    });
 
-            do {
-                // Gets a paginated list of members of one-on-one, group, or team conversation.
-                var pagedMembers = await TeamsInfo.getPagedMembers(turnContext, 100, continuationToken);
-                continuationToken = pagedMembers.continuationToken;
-                members.push(...pagedMembers.members);
-            }
-            while(continuationToken !== undefined)
-
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
-    }
-}
+    allMembers.push(...page.members);
+    continuationToken = page.continuationToken;
+  } while (continuationToken);
+});
 ```
 
 # [Python](#tab/python)
 
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-members)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
-async def _show_members(
-    self, turn_context: TurnContext
-):
-    # Get a conversationMember from a team.
-    members = await TeamsInfo.get_team_members(turn_context)
-```
+@app.on_message
+async def list_members(ctx: ActivityContext[MessageActivity]) -> None:
+    members_client = ctx.api.conversations.members(ctx.activity.conversation.id)
 
-# [JSON](#tab/json)
+    all_members = []
+    continuation_token: str | None = None
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`. The response payload also indicates if the user is a regular or anonymous user.
+    while True:
+        result = await members_client.get_paged(
+            page_size=50,
+            continuation_token=continuation_token,
+        )
+        all_members.extend(result.members)
 
-```http
-GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
+        if not result.continuation_token:
+            break
 
-Response body
-{
-   "continuationToken":"asdfqwerueiqpiewr",
-   "members":[
-      {
-         "id":"29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-         "name":"Anon1 (Guest)",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"anonymous"
-      },
-      {
-         "id":"29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-         "objectId":"76b0b09f-d410-48fd-993e-84da521a597b",
-         "givenName":"John",
-         "surname":"Patterson",
-         "email":"johnp@fabrikam.com",
-         "userPrincipalName":"johnp@fabrikam.com",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"user"
-      },
-      {
-         "id":"29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-         "objectId":"6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-         "givenName":"Rick",
-         "surname":"Stevens",
-         "email":"Rick.Stevens@fabrikam.com",
-         "userPrincipalName":"rstevens@fabrikam.com",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"user"
-      }
-   ]
-}
+        continuation_token = result.continuation_token
 ```
 
 * * *
 
-After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.
+After you fetch the roster, you can get details for a single member.
 
 ## Get single member details
 
-You can also retrieve the details of a particular user using their Teams user ID, UPN, or Microsoft Entra Object ID.
+You can retrieve details of a specific member using user identifiers from the activity context.
 
-The following sample code is used to get single member details:
+The following sample code uses Teams SDK APIs:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/SequentialUserSpecificFlow/Bots/UserSpecificBot.cs#L37)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-public class MyBot : TeamsActivityHandler
-{
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {   
-        // Gets the account of a single conversation member.
-        // This works in one-on-one, group, and team scoped conversations.
-        var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
-    }
-}
+// TODO: Add .NET Teams SDK single-member snippet after API shape
+// for member lookup is finalized for this article.
 ```
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmember)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L186)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
 ```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
+app.on("message", async ({ activity, api }) => {
+  const memberId = activity.from?.id;
+  if (!memberId) {
+    return;
+  }
 
-        // See learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
-        this.onMessage(async (turnContext, next) => {
-            const member = await TeamsInfo.getMember(turnContext, encodeURI('someone@somecompany.com'));
-
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
-    }
-}
+  const member = await api.conversations
+    .members(activity.conversation.id)
+    .get(memberId);
+});
 ```
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-member)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L67)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
-async def _show_members(
-    self, turn_context: TurnContext
-):
-    # TeamsInfo.get_member: Gets the member of a team scoped conversation.
-    member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
-```
-
-# [JSON](#tab/json)
-
-You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`. This can be used for regular users and anonymous users.
-
-The following is the response sample for regular user:
-
-```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
-
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-    "givenName": "Larry",
-    "surname": "Brown",
-    "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com",
-    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
-    "userRole":"user"
-}
-```
-
-The following is the response sample for anonymous user:
-
-```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
-
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "name": "Anon1 (Guest)",
-    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
-    "userRole":"anonymous"
-}
+@app.on_message
+async def get_member(ctx: ActivityContext[MessageActivity]) -> None:
+    member_id = ctx.activity.from_.id
+    member = await ctx.api.conversations.members(ctx.activity.conversation.id).get(member_id)
 ```
 
 * * *
 
-After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
+After you get details for a member, you can retrieve team details.
 
 ## Get team's details
 
-When installed in a team, your bot can query for metadata about that team including the Microsoft Entra group ID.
+When installed in a team, your bot can query metadata such as team ID and Microsoft Entra group ID.
 
-The following sample code is used to get team's details:
+The following sample code uses Teams SDK APIs:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-public class MyBot : TeamsActivityHandler
-{
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
-        // Gets the details for the given team id. This only works in team scoped conversations.
-        // TeamsGetTeamInfo: Gets the TeamsInfo object from the current activity.
-        TeamDetails teamDetails = await TeamsInfo.GetTeamDetailsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
-        if (teamDetails != null) {
-            await turnContext.SendActivityAsync($"The groupId is: {teamDetails.AadGroupId}");
-        }
-        else {
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.SendActivityAsync($"Message did not come from a channel in a team.");
-        }
-    }
-}
+// TODO: Add .NET Teams SDK team-details snippet when the Learn-approved
+// API method mapping is finalized.
 ```
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamdetails)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
 ```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
+app.on("message", async ({ activity, api }) => {
+  const teamId = activity.channelData?.team?.id;
+  if (!teamId) {
+    return;
+  }
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
-        this.onMessage(async (turnContext, next) => {
-
-            // Gets the details for the given team id.
-            const teamDetails = await TeamsInfo.getTeamDetails(turnContext);
-            if (teamDetails) {
-
-                // Sends a message activity to the sender of the incoming activity.
-                await turnContext.sendActivity(`The group ID is: ${teamDetails.aadGroupId}`);
-            } else {
-                await turnContext.sendActivity('This message did not come from a channel in a team.');
-            }
-
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
-    }
-}
+  const team = await api.teams.get(teamId);
+});
 ```
 
 # [Python](#tab/python)
 
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-details)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
-async def _show_details(self, turn_context: TurnContext):
-
-    # Gets the details for the given team id.
-    team_details = await TeamsInfo.get_team_details(turn_context)
-
-    # MessageFactory.text(): Specifies the type of text data in a message attachment.
-    reply = MessageFactory.text(f"The team name is {team_details.name}. The team ID is {team_details.id}. The AADGroupID is {team_details.aad_group_id}.")
-
-    # Sends a message activity to the sender of the incoming activity.
-    await turn_context.send_activity(reply)
-```
-
-# [JSON](#tab/json)
-
-You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`.
-
-```http
-GET /v3/teams/19:ja0cu120i1jod12j@skype.net
-
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "name": "The Team Name",
-    "aadGroupId": "02ce3874-dd86-41ba-bddc-013f34019978"
-}
+@app.on_message
+async def get_team_details(ctx: ActivityContext[MessageActivity]) -> None:
+    team_id = ctx.activity.channel_data.team.id
+    team = await ctx.api.teams.get(team_id)
 ```
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
+After you get team details, you can get the list of channels in that team.
 
 ## Get the list of channels in a team
 
@@ -348,90 +198,42 @@ The following sample code is used to get the list of channels in a team:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-public class MyBot : TeamsActivityHandler
-{
-    // Override this in a derived class to provide logic specific to Message activities.
-    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-    {
-        // Returns a list of channels in a Team. This only works in team scoped conversations.
-        IEnumerable<ChannelInfo> channels = await TeamsInfo.GetTeamChannelsAsync(turnContext, turnContext.Activity.TeamsGetTeamInfo().Id, cancellationToken);
-
-        // Sends a message activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync($"The channel count is: {channels.Count()}");
-    }
-}
+// TODO: Add .NET Teams SDK channel-list snippet when Learn-approved
+// API method mapping is finalized.
 ```
 
 # [TypeScript](#tab/typescript)
 
-[SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamchannels)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
 ```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
+app.on("message", async ({ activity, api }) => {
+  const teamId = activity.channelData?.team?.id;
+  if (!teamId) {
+    return;
+  }
 
-        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the message and other activity types.
-        this.onMessage(async (turnContext, next) => {
-
-            // Supports retrieving channels hosted by a team.
-            const channels = await TeamsInfo.getTeamChannels(turnContext);
-
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.sendActivity(`The channel count is: ${channels.length}`);
-
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
-    }
-}
+  const channels = await api.teams.channels.list(teamId);
+});
 ```
 
 # [Python](#tab/python)
 
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-team-channels)
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
-async def _show_channels(
-    self, turn_context: TurnContext
-):
-    # Supports retrieving channels hosted by a team.
-    channels = await TeamsInfo.get_team_channels(turn_context)
-    reply = MessageFactory.text(f"Total of {len(channels)} channels are currently in team")
-    await turn_context.send_activity(reply)
-```
-
-# [JSON](#tab/json)
-
-You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`.
-
-```http
-GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
-
-Response body
-{
-    "conversations": [{
-        "id": "19:033451497ea84fcc83d17ed7fb08a1b6@thread.skype",
-        "name": null
-    }, {
-        "id": "19:cc25e4aae50746ecbb11473bba24c70a@thread.skype",
-        "name": "Materials"
-    }, {
-        "id": "19:b7b84cba410c406ba671dbbf5e0a3519@thread.skype",
-        "name": "Design"
-    }, {
-        "id": "19:fc5db2aed489454e8f8c06829ed6c986@thread.skype",
-        "name": "Marketing"
-    }]
-}
+@app.on_message
+async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
+    team_id = ctx.activity.channel_data.team.id
+    channels = await ctx.api.teams.channels.list(team_id)
 ```
 
 * * *
+
+If you need raw connector REST endpoints, use the Teams SDK API for most bot scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
@@ -448,3 +250,4 @@ Response body
 * [Bot activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
 * [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)
+<!-- markdownlint-enable MD024 -->
