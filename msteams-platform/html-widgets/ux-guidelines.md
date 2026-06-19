@@ -18,7 +18,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-conversation-bubble.png":::
+    :::image type="icon" source="images/icon-conversation-bubble.png" width="48px":::
 
     ### Complement the conversation
 
@@ -30,7 +30,7 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column:::
 
   
-    :::image type="icon" source="images/icon-puzzle.png":::
+    :::image type="icon" source="images/icon-puzzle.png" width="48px":::
 
     ### Surface capabilities, not full apps
 
@@ -46,7 +46,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-mouse.png":::
+    :::image type="icon" source="images/icon-mouse.png" width="48px":::
 
     ### Be transparent and predictable
 
@@ -58,7 +58,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
   
   :::column:::
-    :::image type="icon" source="images/icon-arrowUp.png":::
+    :::image type="icon" source="images/icon-arrowUp.png" width="48px":::
 
     ### Scale to the task
 
@@ -74,7 +74,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-shield.png":::
+    :::image type="icon" source="images/icon-shield.png" width="48px":::
 
     ### Preserve human control
 
