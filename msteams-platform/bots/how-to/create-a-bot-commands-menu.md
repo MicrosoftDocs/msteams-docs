@@ -3,9 +3,9 @@ title: Create a command menu for your bot
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: nickwalk
 ms.owner: ginobuzz
-ms.date: 04/28/2026
+ms.date: 06/19/2026
 ---
 
 # Create a commands menu
@@ -154,88 +154,6 @@ The manifest example code for the menu for each scope is as follows:
   ...
 }
 ```
-
-You must handle menu commands in your bot code as you handle any message from users.
-
-## Handle menu commands in your bot code
-
-In the Teams SDK, incoming messages are routed through an activity handler. You register a message handler using `app.on('message', ...)` (TypeScript), `app.OnMessage(...)` (C#), or `@app.on_message` (Python), and the message text is available via `activity.text`. The SDK's activity router handles message delivery across all scopes (personal, group chat, and channel). However, in group chat and channel conversations, `activity.text` can include the bot `@mention` (for example, `<at>Bot Name</at>`), so strip the bot mention before matching the command text, or use the activity's mention entities or an SDK helper for mention removal where available.
-
-> [!NOTE]
-> To handle the commands in code, they're sent to your bot as a regular message. Handle them as you would any other message from your users. The commands insert pre-configured text into the text box. After that, the user sends the text as they do for any other message.
-
-# [C#](#tab/dotnet)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)
-
-In C#, Teams SDK does not feature a method to remove **\@Mention** portion. You can refer to the code snippet below on how to handle commands in your bot.
-
-```csharp
-// Handles incoming messages and routes to appropriate functions based on message content
-teamsApp.OnMessage(async context =>
-{
-    // Get message text and normalize it
-    var text = (context.Activity.Text ?? "").Trim().ToLower();
-
-    // Handle mention me command - use exact matching to avoid false positives from substrings
-    if (text == "mentionme" || text == "mention me")
-    {
-        await MentionUser(context);
-    }
-    // Handle whoami command
-    else if (text == "whoami")
-    {
-        await GetSingleMember(context);
-    }
-    // Handle welcome command
-    else if (text == "welcome")
-    {
-        await SendWelcomeMessage(context);
-    }
-    // Echo greeting messages
-    else if (text == "hi" || text == "hello")
-    {
-        await EchoMessage(context, text);
-    }
-    else
-    {
-        await SendWelcomeMessage(context);
-    }
-});
-
-```
-
-# [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart)
-
-You can parse out the **\@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `stripMentionsText`.
-
-The TypeScript code to parse out the **\@Mention** portion of the message text is as follows:
-
-```typescript
-// Remove mention text from Text property, this function is altering the text on the Activity.
-const text = context.activity.stripMentionsText().text.trim().toLowerCase();
-
-```
-
-# [Python](#tab/python)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart)
-
-You can parse out the **@Mention** portion of the message text using a static method provided with Teams SDK. It's a method of the `TurnContext` class named `strip_mentions_text`.
-
-The Python code to parse out the **\@Mention** portion of the message text is as follows:
-
-```python
-# Remove recipient mention text from Text property, this function is altering the text on the Activity.
-text = context.activity.strip_mentions_text().text. Strip().lower()
-
-```
-
-* * *
-
-To enable smooth functioning of your bot code, there are few best practices that you must follow.
 
 ## Command menu best practices
 
