@@ -153,7 +153,7 @@ Widgets must adapt to the width of the chat container.
 - Avoid fixed pixel heights — allow the widget to grow vertically as content requires
 - Test at multiple viewport widths representative of Teams chat on desktop and mobile
 
-<img src="images/icon_colorBrush.png" alt="" width="200">
+<img src="images/responsive.png" alt="">
 
 
 
