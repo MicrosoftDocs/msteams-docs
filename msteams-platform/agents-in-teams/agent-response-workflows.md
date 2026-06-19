@@ -76,3 +76,7 @@ JSON example
 ### Reactive and proactive agent responses
 
 In reactive scenarios, when your bot replies directly to a targeted message by using reply-style SDK methods, the prompt preview metadata is typically attached automatically. In proactive scenarios, when you send outside the original turn, you must attach the targeted message information yourself before sending either a private or public response.
+
+## Suggested actions
+
+Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
