@@ -1197,3 +1197,17 @@
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
+- name: SDK Reference
+  items:
+  - name: Teams SDK for .NET (TODO)
+    href: /dotnet/api/microsoft.teams.ai.annotations
+    displayName: Reference
+  - name: Teams SDK for TypeScript
+    href: /javascript/api/teams-sdk-typescript
+    displayName: Reference
+  - name: Teams SDK for Python
+    href: /python/api/msteams-sdk-python/overview
+    displayName: Reference
+  - name: Teams client-side TypeScript libraries
+    href: /javascript/api/overview/msteams-client
+    displayName: Reference, TeamsJS, client
