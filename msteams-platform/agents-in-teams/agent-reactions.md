@@ -223,7 +223,7 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 **Use reactions sparingly**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users generally expect productivity agents to use reactions only to communicate acknowledgment or status, not sentiment. Use a small set of unambiguous emoji that doesn't require a guide to understand.
 
-**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgment of commands and requests. Using reactions to immediately acknowledge messages is excessive in situations where the agent replies quickly with a message.
+**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgment of commands and requests. Using reactions to immediately acknowledge messages is effective in many scenarios, but might be excessive if the agent responds quickly with a message anyway, especially if the agent uses [message streaming](../bots/streaming-ux.md) and thinking indicators.
 
 **Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Use messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
 
