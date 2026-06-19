@@ -47,6 +47,9 @@ Targeted messages:
 
 - Can be used only for one-to-one interactions between an agent and a user in channels, group chats, and meeting chats.
 - Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
+
+    A targeted message can still contain normal message content such as buttons, images, Adaptive Cards, and files, but Teams doesn't let that targeted message participate in the usual social or threading actions that would expose or propagate it more broadly. Targeted messages are private, temporary, and visible to a single-user only in a shared conversation, so features that create secondary visible artifacts, shared thread context, or message redistribution are intentionally disabled. The default agent response to a slash command is targeted message, and then on approval to resend it as a public message rather than trying to reply to, react to, or forward the targeted one.
+
 - Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
 - Expire 24 hours after being sent. When a targeted message expires, Teams deletes it from all clients, although it might be retained in secure storage based on organizational policy.
 - Aren't visible to untargeted users, even if they're using an older version of the Teams client that doesn't support targeted messages.
@@ -80,9 +83,7 @@ This is useful because a message can still be addressed to a specific account fo
 - Use `isTargeted: true` when privacy is part of the product behavior and the message must be visible only to one user in a shared chat.
 - Use `isTargeted: false` when you are building a normal message flow and don't want private visibility.
 
-This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context.
-
-Agent-to-user response flows:
+This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context. You can implement the following agent-to-user response flows:
 
 - Private response mode (default)
 - Public response mode
