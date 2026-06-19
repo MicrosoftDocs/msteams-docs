@@ -3,7 +3,7 @@ title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/16/2026
+ms.date: 06/19/2026
 ---
 
 # Add authentication to your Teams bot
@@ -296,7 +296,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-     [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
+     [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
 
 1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots#botid).
 
@@ -334,7 +334,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
       Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-      [!code-python[config](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/config.py?range=14-16)]
+      [!code-python[config](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/config.py?range=14-16)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+Python&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dpython%252Cdotnet-sample%23prepare-the-bot-sample-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -593,13 +593,13 @@ An **Invoke Activity** is sent to the bot rather than the Event Activity used by
 
 **Bots/DialogBot.cs**
 
-[!code-csharp[ActivityHandler](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/Bots/DialogBot.cs?range=19-51)]
+[!code-csharp[ActivityHandler](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/DialogBot.cs?range=19-51)]
 
 **Bots/TeamsBot.cs**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-csharp[ActivityHandler](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs?range=34-42)]
+[!code-csharp[ActivityHandler](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs?range=34-42)]
 
 #### TeamsActivityHandler.cs
 
@@ -662,27 +662,27 @@ Within the following dialog step, check for the presence of a token in the resul
 
 **bots/dialog_bot.py**
 
-[!code-python[ActivityHandler](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/bots/dialog_bot.py?range=10-42)]
+[!code-python[ActivityHandler](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/bots/dialog_bot.py?range=10-42)]
 
 **bots/teams_bot.py**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-python[on_token_response_event](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/bots/teams_bot.py?range=38-45)]
+[!code-python[on_token_response_event](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/bots/teams_bot.py?range=38-45)]
 
 **dialogs/main_dialog.py**
 
 Within a dialog step, use `begin_dialog` to start the OAuth prompt, which asks the user to sign in. If the user is already signed in, it generates a token response event, without prompting the user. Otherwise, it prompts the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-python[Add OAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/dialogs/main_dialog.py?range=48-49)]
+[!code-python[Add OAuthPrompt](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/dialogs/main_dialog.py?range=48-49)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it isn't null, then the user successfully signed in.
 
-[!code-python[Add OAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/dialogs/main_dialog.py?range=51-61)]
+[!code-python[Add OAuthPrompt](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/dialogs/main_dialog.py?range=51-61)]
 
 **dialogs/logout_dialog.py**
 
-[!code-python[allow logout](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/dialogs/logout_dialog.py?range=29-36&highlight=6)]
+[!code-python[allow logout](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-teams-authentication/python/dialogs/logout_dialog.py?range=29-36&highlight=6)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handling+Invoke+Activity+using+Python&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23handling-invoke-activity&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -695,7 +695,7 @@ This section provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |---------------|------------|------------|-------------|---------------|---------------|
-| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
+| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
 | Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip)
 
 ## See also
@@ -712,8 +712,8 @@ This section provides Bot authentication v3 SDK sample.
 [concept-dialogs]: /azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
 [simple-dialog]: /azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
-[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp
+[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp
 
-[teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python
+[teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/python
 
-[teams-auth-bot-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs
+[teams-auth-bot-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/nodejs
