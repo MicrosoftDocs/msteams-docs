@@ -211,13 +211,17 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 \* Header is a custom size not included in the Fluent UI React v9 type ramp. Use 18px / 600 directly.
 
+ <img src="images/typography.png" alt="">
+ 
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
+
+
 
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-![Typography examples in a widget card](images/Typography.png)
+
 
 <img src="images/icon_textA.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
 
