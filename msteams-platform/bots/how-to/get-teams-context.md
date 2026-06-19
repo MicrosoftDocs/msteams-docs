@@ -9,8 +9,6 @@ ms.date: 06/19/2026
 <!-- markdownlint-disable MD024 -->
 # Get Teams specific context for your bot
 
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
-
 A bot can access additional context data about the team or chat where it's installed. This information can be used to personalize responses and build richer workflows.
 
 ## Fetch the roster or user profile
@@ -37,9 +35,26 @@ The following sample code uses paged member retrieval:
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-// TODO: Add .NET Teams SDK paged members snippet when the Learn-approved
-// method signature is finalized for this article.
-// Reference: https://microsoft.github.io/teams-sdk/csharp/essentials/api/
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var membersClient = context.Api.Conversations.Members;
+    var allMembers = new List<TeamsChannelAccount>();
+    string? continuationToken = null;
+
+    do
+    {
+        var page = await membersClient.GetPagedAsync(
+            context.Conversation.Id,
+            pageSize: 50,
+            continuationToken: continuationToken,
+            cancellationToken: cancellationToken
+        );
+
+        allMembers.AddRange(page.Members.Where(m => m is not null).Select(m => m!));
+        continuationToken = page.ContinuationToken;
+    }
+    while (!string.IsNullOrEmpty(continuationToken));
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -104,8 +119,20 @@ The following sample code uses Teams SDK APIs:
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-// TODO: Add .NET Teams SDK single-member snippet after API shape
-// for member lookup is finalized for this article.
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var memberId = context.Activity.From?.Id;
+    if (string.IsNullOrEmpty(memberId))
+    {
+        return;
+    }
+
+    var member = await context.Api.Conversations.Members.GetByIdAsync(
+        context.Conversation.Id,
+        memberId,
+        cancellationToken: cancellationToken
+    );
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -151,8 +178,19 @@ The following sample code uses Teams SDK APIs:
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-// TODO: Add .NET Teams SDK team-details snippet when the Learn-approved
-// API method mapping is finalized.
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var teamId = context.Activity.ChannelData?.Team?.Id;
+    if (string.IsNullOrEmpty(teamId))
+    {
+        return;
+    }
+
+    var team = await context.Api.Teams.GetByIdAsync(
+        teamId,
+        cancellationToken: cancellationToken
+    );
+});
 ```
 
 # [TypeScript](#tab/typescript)
@@ -201,8 +239,19 @@ The following sample code is used to get the list of channels in a team:
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
-// TODO: Add .NET Teams SDK channel-list snippet when Learn-approved
-// API method mapping is finalized.
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var teamId = context.Activity.ChannelData?.Team?.Id;
+    if (string.IsNullOrEmpty(teamId))
+    {
+        return;
+    }
+
+    var channels = await context.Api.Teams.GetConversationsAsync(
+        teamId,
+        cancellationToken: cancellationToken
+    );
+});
 ```
 
 # [TypeScript](#tab/typescript)
