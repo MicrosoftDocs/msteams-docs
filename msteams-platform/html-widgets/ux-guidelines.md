@@ -66,6 +66,70 @@ Trust matters, especially when widget actions affect data or trigger external wo
 
 ---
 
+## UX principles
+
+Building a great Copilot agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
+
+:::row:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-conversation-bubble.png":::
+
+    ### Deliver conversational value
+
+    - Agent should provide greater value inside Copilot than as a standalone UI.
+    - Leverage natural language, thread context, and multi-turn interaction to enable workflows that would be difficult or inefficient in a traditional navigation model.
+    - Design experiences that take advantage of conversation, not replicate existing flows.
+  :::column-end:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-prohibited.png":::
+
+    ### Extract capabilities, don't replicate interfaces
+
+    Avoid porting your full application experience into Copilot. Instead, identify high-value, atomic capabilities that can be exposed as tools. Each capability should:
+
+    - Require only the minimum necessary inputs
+    - Return structured, reliable outputs
+    - Enable model to confidently determine the next step
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-copilot.png":::
+
+    ### Design to feel native to Copilot
+
+    - Leverage Copilot’s design system, components, and interaction patterns to ensure a seamless, predictable experience.
+    - Consistency reduces cognitive load, increases predictability, and minimizes the need for users to learn new interaction models.
+  :::column-end:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-shield.png":::
+
+    ### Preserve human control
+
+    Trust is foundational to enterprise adoption. Users must remain the ultimate decision-makers, particularly when actions affect enterprise data. Provide:
+
+    - Clear visibility into agent actions
+    - Explicit confirmations for sensitive operations
+    - Transparent outcomes of what was created, modified, or updated
+  :::column-end:::
+:::row-end:::
+:::row:::
+  :::column:::
+    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-chart-increasing.png":::
+
+    ### Scale density with intent
+
+    Adapt the visual footprint of your UI to the user’s immediate need.
+
+    - Use the inline widget for glanceable summaries and high-level actions.
+    - Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
+  :::column-end:::
+  :::column:::
+  :::column-end:::
+:::row-end:::
+
+---
+
 ## Understanding the chat surface
 
 HTML widgets render inline inside a Teams chat message. Understanding this context is essential before making design decisions.
