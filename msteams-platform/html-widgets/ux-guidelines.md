@@ -10,119 +10,81 @@ ms.date: 06/01/2026
 
 This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
----
+
 
 ## UX principles
 
 Building a great widget for Teams means delivering a focused experience that surfaces the right information or action at the right time. HTML widgets should feel like a natural part of the Teams conversation — not an application embedded inside it.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<img src="images/icon-conversation-bubble.png" alt="" width="48"><br><br>
-<b>Complement the conversation</b>
-- Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
-- A widget may be display-only, interactive, or prompt the user for input.
-- Content should support the conversation, not feel like a separate or disconnected experience.
-</td>
-<td width="50%" valign="top">
-<img src="images/icon-puzzle.png" alt="" width="48"><br><br>
-<b>Surface capabilities, not full apps</b>
-Avoid embedding your full application experience inside a widget. Instead, identify the single most valuable thing a user needs in this moment.
-- A widget should expose a focused, high-value capability — not your entire product.
-- Each widget should represent a single, focused interaction.
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<img src="images/icon-mouse.png" alt="" width="48"><br><br>
-<b>Be transparent and predictable</b>
-- Widget content should be clear and any interactions obvious.
-- Users should always understand what a widget is showing.
-- The expected outcome of any interaction should be obvious before the user acts.
-</td>
-<td width="50%" valign="top">
-<img src="images/icon-arrowUp.png" alt="" width="48"><br><br>
-<b>Scale to the task</b>
-Match the visual footprint of your widget to what the user needs in the moment.
-- Widgets always appear inline in the chat.
-- If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<img src="images/icon-shield.png" alt="" width="48"><br><br>
-<b>Preserve human control</b>
-Trust matters, especially when widget actions affect data or trigger external workflows.
-- Allow users to remain in control of their experience.
-- Make it clear what the widget is doing.
-- Confirm important actions before they happen.
-- Always communicate the expected outcome.
-</td>
-<td width="50%" valign="top">
-</td>
-</tr>
-</table>
-
----
-
-## UX principles
-
-Building a great Copilot agent with the MCP based rich UI means delivering a focused, conversational experience that feels native to Copilot. Copilot agents should feel like helpful extensions of the conversation surfacing the right action at the right time rather than full applications rebuilt inside Copilot.
-
 :::row:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-conversation-bubble.png":::
+    :::image type="icon" source="images/icon-conversation-bubble.png":::
 
-    ### Deliver conversational value
+    ### Complement the conversation
 
-    - Agent should provide greater value inside Copilot than as a standalone UI.
-    - Leverage natural language, thread context, and multi-turn interaction to enable workflows that would be difficult or inefficient in a traditional navigation model.
-    - Design experiences that take advantage of conversation, not replicate existing flows.
+     - Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
+     - A widget may be display-only, interactive, or prompt the user for input.
+     - Content should support the conversation, not feel like a separate or disconnected experience.
+     
   :::column-end:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-prohibited.png":::
 
-    ### Extract capabilities, don't replicate interfaces
+  
+    :::image type="icon" source="images/icon-puzzle.png":::
 
-    Avoid porting your full application experience into Copilot. Instead, identify high-value, atomic capabilities that can be exposed as tools. Each capability should:
+    ### Surface capabilities, not full apps
 
-    - Require only the minimum necessary inputs
-    - Return structured, reliable outputs
-    - Enable model to confidently determine the next step
+   Avoid embedding your full application experience inside a widget. Instead, identify the single most valuable thing a user needs in this moment.
+
+    - A widget should expose a focused, high-value capability — not your entire product.
+    - Each widget should represent a single, focused interaction.
+
   :::column-end:::
 :::row-end:::
+
+
+
 :::row:::
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-copilot.png":::
+    :::image type="icon" source="images/icon-mouse.png":::
 
-    ### Design to feel native to Copilot
+    ### Be transparent and predictable
 
-    - Leverage Copilot’s design system, components, and interaction patterns to ensure a seamless, predictable experience.
-    - Consistency reduces cognitive load, increases predictability, and minimizes the need for users to learn new interaction models.
+     - Widget content should be clear and any interactions obvious.
+     - Users should always understand what a widget is showing.
+     - The expected outcome of any interaction should be obvious before the user acts.
+    
   :::column-end:::
+
+  
   :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-shield.png":::
+    :::image type="icon" source="images/icon-arrowUp.png":::
+
+    ### Scale to the task
+
+    Match the visual footprint of your widget to what the user needs in the moment.
+    
+     - Widgets always appear inline in the chat.
+     - If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
+
+  
+  :::column-end:::
+:::row-end:::
+
+
+:::row:::
+  :::column:::
+    :::image type="icon" source="images/icon-shield.png":::
 
     ### Preserve human control
 
-    Trust is foundational to enterprise adoption. Users must remain the ultimate decision-makers, particularly when actions affect enterprise data. Provide:
+    Trust matters, especially when widget actions affect data or trigger external workflows.
+      - Allow users to remain in control of their experience.
+      - Make it clear what the widget is doing.
+      - Confirm important actions before they happen.
+      - Always communicate the expected outcome.
 
-    - Clear visibility into agent actions
-    - Explicit confirmations for sensitive operations
-    - Transparent outcomes of what was created, modified, or updated
-  :::column-end:::
-:::row-end:::
-:::row:::
-  :::column:::
-    :::image type="icon" source="assets/images/declarative-agents/widget-ux-guidelines/icon-chart-increasing.png":::
-
-    ### Scale density with intent
-
-    Adapt the visual footprint of your UI to the user’s immediate need.
-
-    - Use the inline widget for glanceable summaries and high-level actions.
-    - Use the expanded view for tasks where the user needs a larger real estate to work alongside the chat.
+    
   :::column-end:::
   :::column:::
   :::column-end:::
