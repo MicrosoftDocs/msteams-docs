@@ -63,8 +63,6 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 
 Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
-Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message.
-
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
 ### Prompt Preview
@@ -73,7 +71,16 @@ Prompt Preview lets an agent or bot include a compact preview of the user’s or
 
 Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the agent or bot sends a message outside the original interaction context, the agent ot bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
 
-### Response visibility modes and promotion flow
+### Response visibility modes
+
+Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message.
+
+This is useful because a message can still be addressed to a specific account for routing or replying while remaining a normal message from a visibility perspective:
+
+- Use `isTargeted: true` when privacy is part of the product behavior and the message must be visible only to one user in a shared chat.
+- Use `isTargeted: false` when you are building a normal message flow and don't want private visibility.
+
+This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context.
 
 Agent-to-user response flows:
 
