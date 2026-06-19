@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 05/14/2026
+ms.date: 06/19/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -91,7 +91,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client registration
-- **AzureKeyVault** *(preview)*: Secrets stored in your own Azure Key Vault instance
+- **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance
 
 ### Use OAuth authentication
 
