@@ -80,3 +80,39 @@ In reactive scenarios, when your bot replies directly to a targeted message by u
 ## Suggested actions
 
 Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
+
+Use Action.Submit for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
+
+Use Action.Submit to add suggested action buttons to agent responses to slash commands, so users can choose a next step without disrupting the conversation.
+
+Bot Payload (Outgoing from Bot)
+
+JSON
+
+{
+  "suggestedActions": {
+    "actions": [{
+      "type": "Action.Submit",
+      "title": "Approve",
+      "value": {
+        "vote": "approve"
+      }
+    }]
+  }
+}
+ Note
+
+The value is an object (not a string) that carries the data.
+
+Bot Handler (Incoming to Bot)
+
+The agent or bot receives a standard Bot Framework invoke activity:
+
+JSON
+
+// In TeamsActivityHandler.onInvokeActivity():
+case "suggestedAction/submit":
+  const vote = context.activity.value;  // { vote: "approve" }
+  // Process the action...
+  return { status: 200 };
+The agent or bot dispatches on activity.name and reads the structured payload from activity.value. This is identical to how agents or bots handle adaptiveCard/action, handoff/action, or any other named invoke.
