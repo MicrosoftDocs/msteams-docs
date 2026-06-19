@@ -3,22 +3,26 @@ title: Channel/Group Conversation Chat Bot
 description: Learn how to work with user mentions, send messages, and handle bot installation in channel and group chats using the Teams SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: nickwalk
 ms.owner: angovil
-ms.date: 05/15/2026
+ms.date: 06/19/2026
 ---
 # Channel and group chat conversations with a bot
 
 <!-- [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)] -->
 
+This article focuses on bot conversations in teams and group chats, not in personal (1:1) chats.
+
+## Install your bot in teams and group chats
+
 To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it. The Teams SDK provides a dedicated `mention` activity route to handle @mention events.
+By default, bots in group chats and channels only receive messages when they're directly @mentioned. They don't receive other messages sent to the conversation. For example, your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it. The Teams SDK provides a dedicated `mention` activity route to handle @mention events.
 
 > [!NOTE]
 >
-> * Using resource-specific consent (RSC), a bot can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-for-bots-and-agents.md).
-> * Posting a message or Adaptive Card to a private channel isn't supported.
+> * Using resource-specific consent (RSC), a bot can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [receive all messages for bots and agents](channel-messages-for-bots-and-agents.md).
+> * Private channel support for bot apps is limited. You can add bot-enabled apps in private channels where private channel app support is enabled, but bots can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
@@ -28,15 +32,68 @@ See the following video to learn about channel and group chat conversations with
 
 ## Design guidelines
 
-Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+In group chats and channels, design your bot for collaborative conversations with clear value, concise responses, and minimal noise. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
-Now, you can send proactive messages and easily manage different conversations in channels. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
+## Send a message on installation
+
+When your bot is first added to a group or team, you can send an introduction message by using the `install.add` lifecycle route. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
+
+If you send an introduction message, include a brief description of the bot's features and how to use them.
+
+You can also store the `conversationId` during installation to enable [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) later.
+
+The following code shows an example of sending welcome messages on installation:
+
+# [C#](#tab/dotnet2)
+
+```csharp
+app.OnInstall(async context => 
+{ 
+    await context.Send("Hello! I'm your bot. Here's what I can do..."); 
+}); 
+
+```
+
+# [TypeScript](#tab/typescript2)
+
+```typescript
+app.on('install.add', async ({ send }) => 
+{ 
+    await send('Hello! I\'m your bot. Here\'s what I can do...'); 
+}); 
+
+```
+
+# [Python](#tab/python2)
+
+```python
+@app.on_install_add 
+async def handle_install_add(ctx: ActivityContext[InstalledActivity]): 
+    await ctx.send("Hello! I'm your bot. Here's what I can do...") 
+
+```
+
+* * *
+
+Don't send proactive welcome messages to users individually when the bot is installed in a team or group chat. If you send a welcome message, post it in the installed conversation and mention the person who added the bot.
+
+>[!NOTE]
+> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+
+Don't send a message in the following cases:
+
+* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* Your bot is first mentioned in a group or channel instead of being first added to a team.
+* A group or channel is renamed.
+* A team member is added to a group or channel.
+
+[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
+In group chats and channels, messages that @mention your bot include a mention entity in the message text. If your bot is configured to receive all messages, such as with RSC, some incoming messages might not include an @mention. Your bot can retrieve other users mentioned in a message and add mentions to messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
 
-You must also strip out the @mentions from the content of the message your bot receives.
+For messages that include @mentions, the message text contains mention markup such as `<at>@botname</at>`.
 
 ### Retrieve mentions
 
@@ -388,59 +445,6 @@ The following table lists the throttling limits for tag mentions in a bot:
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in a bot.
 
-## Send a message on installation
-
-When your bot is first added to a group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. Use the `install.add` lifecycle route to listen for the installation event. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
-
-You can also store the `conversationId` during installation to enable [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) later.
-
-The following code shows an example of sending welcome messages on installation:
-
-# [C#](#tab/dotnet2)
-
-```csharp
-app.OnInstall(async context => 
-{ 
-    await context.Send("Hello! I'm your bot. Here's what I can do..."); 
-}); 
-
-```
-
-# [TypeScript](#tab/typescript2)
-
-```typescript
-app.on('install.add', async ({ send }) => 
-{ 
-    await send('Hello! I\'m your bot. Here\'s what I can do...'); 
-}); 
-
-```
-
-# [Python](#tab/python2)
-
-```python
-@app.on_install_add 
-async def handle_install_add(ctx: ActivityContext[InstalledActivity]): 
-    await ctx.send("Hello! I'm your bot. Here's what I can do...") 
-
-```
-
-* * *
-
-You can send a personal message to each member of the team when the bot is added. To do this, fetch the team roster and send each user a direct message using the `app.Send(conversationId, message)` method. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
-
->[!NOTE]
-> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
-
-Don't send a message in the following cases:
-
-* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel instead of being first added to a team.
-* A group or channel is renamed.
-* A team member is added to a group or channel.
-
-[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -450,5 +454,7 @@ Don't send a message in the following cases:
 
 * [Teams SDK - API Client](/microsoftteams/platform/teams-sdk/essentials/api)
 * [Teams SDK - Microsoft Graph Integration](/microsoftteams/platform/teams-sdk/essentials/graph)
+* [Send and receive targeted messages in group conversations](~/agents-in-teams/targeted-messages.md)
+* [Expose slash commands from agents and apps](~/agents-in-teams/agent-slash-commands.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
 * [Teams SDK - Teams Integration Overview](/microsoftteams/platform/teams-sdk/teams/overview)

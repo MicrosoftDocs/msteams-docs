@@ -3,8 +3,8 @@ title: Build an conversational bot
 description: Learn about creating a conversational bot
 ms.topic: overview
 ms.localizationpriority: high
-ms-author: surbhigupta
-ms.date: 01/29/2023
+ms-author: nickwalk
+ms.date: 06/19/2026
 ---
 
 ## Build a conversational bot
@@ -13,13 +13,12 @@ ms.date: 01/29/2023
 
 To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they're mentioned @botname. They don't receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
+By default, bots in group chats and channels only receive messages when they're directly @mentioned. They don't receive other messages sent to the conversation. For example, your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
 > [!NOTE]
 >
-> * RSC for all *chat* messages is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Using resource-specific consent (RSC), bots can receive all channel messages in teams that it's installed in without being @mentioned. For more information, see [receive all channel messages with RSC].
-> * Posting a message or Adaptive Card to a private channel isn't supported.
+> * Using resource-specific consent (RSC), bots can receive all channel and group chat messages in conversations where they're installed without being @mentioned. For more information, see [receive all messages for bots and agents].
+> * Private channel support for bot apps is limited. You can add bot-enabled apps in private channels where private channel app support is enabled, but bots can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 See the following video to learn about channel and group chat conversations with a bot:
 <br>
 
@@ -28,7 +27,7 @@ See the following video to learn about channel and group chat conversations with
 
 ## Design guidelines
 
-Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+In group chats and channels, design your bot for collaborative conversations with clear value, concise responses, and minimal noise. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
 Now, you can create new conversation threads and easily manage different conversations in channels.
 
@@ -40,9 +39,9 @@ Next, you can retrieve mentions using the `entities` object and add mentions to 
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
+In group chats and channels, messages that @mention your bot include a mention entity in the message text. If your bot is configured to receive all messages, such as with RSC, some incoming messages might not include an @mention. Your bot can retrieve other users mentioned in a message and add mentions to messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
 
-You must also strip out the @mentions from the content of the message your bot receives.
+For messages that include @mentions, the message text contains mention markup such as `<at>@botname</at>`.
 
 ### Retrieve mentions
 
@@ -386,9 +385,9 @@ The following table lists the throttling limits for tag mentions in a bot:
 
 ## Send a message on installation
 
-When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is first added to a group or team, you can send an introduction message. If you send one, include a brief description of the bot's features and how to use them. To send this message, subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType. The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
-You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+Don't send proactive welcome messages to users individually when the bot is installed in a team or group chat. If you send a welcome message, post it in the installed conversation and mention the person who added the bot.
 
 >[!NOTE]
 > Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
