@@ -211,7 +211,7 @@ Use the following base text styles to create clear visual hierarchy in your widg
 | **Caption Subtle Label** | `Caption1Strong` + `ColorNeutralForeground3` | 12px / 600 | Subtle section labels, metadata keys |
 | **Caption Subtle** | `Caption1` + `ColorNeutralForeground3` | 12px / 400 | De-emphasized text, secondary metadata |
 
-\* Header is a custom size not included in the Fluent UI React v9 type ramp. Use 18px / 600 directly.
+\* _Header is a custom size not included in the Fluent UI React v9 type ramp. Use 18px / 600 directly._
 
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
