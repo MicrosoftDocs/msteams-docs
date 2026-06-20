@@ -144,6 +144,8 @@ Widgets must render correctly in both Teams light mode and dark mode.
 - Test your widget in both themes before submission
 - Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes
 
+<img src="images/themes.png" alt="">
+
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
 
