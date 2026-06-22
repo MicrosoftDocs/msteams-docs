@@ -29,7 +29,7 @@ Each workflow option offers advantages based on your agent scenario. Choose resp
 
 ## Response workflow
 
-Before you start, ensure your agent or app is enabled for targeted messaging in Teams and that your scenario runs in a channel, group chat, or meeting chat rather than a one-to-one chat. You should also determine whether agent replies remain private by default and only become public after explicit user approval. In such case, you must preserve the original targeted message ID so you can attach prompt preview data to the reply.
+Before you implement this workflow, confirm that your app supports targeted messaging in Teams and that the scenario runs in a channel, group chat, or meeting chat. If you want the response to remain private until the user approves sharing it, store the original targeted message ID because you need it later to attach prompt preview metadata to the private or public reply.
 
 This workflow progresses as follows:
 
