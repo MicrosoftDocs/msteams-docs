@@ -26,7 +26,7 @@ Choose this workflow when your scenario needs all three of the following behavio
 | Prompt preview | It shows the original user request together with the agent’s reply. | It keeps context, improves readability, and makes public reposts easier to understand. |
 | Suggested actions | It lets the user approve, share, refine, or dismiss the response. | It helps to create an explicit consent step before private content becomes visible to the group. |
 
-## Response workflow
+## End-to-end response workflow
 
 Before you implement this workflow, confirm that your app supports targeted messaging in Teams and that the scenario runs in a channel, group chat, or meeting chat. If you want the response to remain private until the user approves sharing it, store the original targeted message ID because you need it later to attach prompt preview metadata to the private or public reply.
 
@@ -54,7 +54,9 @@ This workflow progresses as follows:
 
 ## Implement agent response workflows
 
-Here's how to implement response workflows for Teams agents and apps.
+To learn more about targeted messaging behavor in Teams, see [send and receive targeted messages in group conversations](targeted-messages.md).
+
+Here's how to implement prompt preview workflows for Teams agents and apps.
 
 ### Prompt preview entity
 
@@ -67,21 +69,13 @@ JSON example
 
 "entities": [{
   "type": "targetedMessageInfo",
-  "messageId": "1772129782775"
+  "messageId": "xxxxxxxxxxxxx"
 }]
 ```
 
 ### Reactive and proactive agent responses
 
-In reactive scenarios, when your bot replies directly to a targeted message by using reply-style SDK methods, the prompt preview metadata is typically attached automatically. In proactive scenarios, when you send outside the original turn, you must attach the targeted message information yourself before sending either a private or public response.
-
-## Suggested actions
-
-Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
-
-Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
-
-For more information, see [Add link to Teams SDK suggested actions article].
+In reactive scenarios, when your agent or bot replies directly to a targeted message by using `reply()`, the prompt preview is typically attached automatically. In proactive scenarios, when you send outside the original response, you must attach the targeted message ID manually before sending either a private or public response.
 
 Next, enable prompt preview in agent-to-user interactions.
 
@@ -200,3 +194,11 @@ For using Teams SDK, follow the code snippet examples given in private message t
   ```
 
   ---
+
+## Suggested actions
+
+Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
+
+Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
+
+For more information, see [Add link to Teams SDK suggested actions article].
