@@ -165,110 +165,107 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     For proactive scenarios, attach the original message ID explicitly before sending the reply.
 
-        # [C#](#tab/dotnet)
+    # [C#](#tab/dotnet)
 
-          Attach the entity manually using the targeted message ID:
+    Attach the entity manually using the targeted message ID:
 
-          ```csharp
-            var message = new MessageActivity("Here is the result!")
-              .AddTargetedMessageInfo(targetedMessageId);
+    ```csharp
+      var message = new MessageActivity("Here is the result!")
+        .AddTargetedMessageInfo(targetedMessageId);
         
-            // Targeted reply (only the user sees it)
-            message.WithRecipient(userAccount, true);
-            await context.Send(message, cancellationToken);
+      // Targeted reply (only the user sees it)
+      message.WithRecipient(userAccount, true);
+      await context.Send(message, cancellationToken);
         
-            // OR public reply (everyone sees it)
-            await context.Send(message, cancellationToken);
-          ```
+      // OR public reply (everyone sees it)
+      await context.Send(message, cancellationToken);
+    ```
 
-        **C# example**
+      **C# example**
 
-        ```C#
-        var targetedMessageId = "1772050244572";
-        var conversationId = "19:groupchat-id@thread.v2";
-        var userAccount = new Account
-        {
-        Id = "29:1AbCDef...",
-        Name = "Adele Vance"
-        };
+      ```C#
+      var targetedMessageId = "1772050244572";
+      var conversationId = "19:groupchat-id@thread.v2";
+      var userAccount = new Account
+      {
+      Id = "29:1AbCDef...",
+      Name = "Adele Vance"
+      };
         
-        var targetedMessage = new MessageActivity("Here is the result!")
-        .AddTargetedMessageInfo(targetedMessageId)
-        .WithRecipient(userAccount, isTargeted: true);
+      var targetedMessage = new MessageActivity("Here is the result!")
+      .AddTargetedMessageInfo(targetedMessageId)
+      .WithRecipient(userAccount, isTargeted: true);
+      
+      await app.Send(conversationId, targetedMessage);
+      ```
+
+    # [TypeScript](#tab/ts)
+
+    ```typescript
+    const message = new MessageActivity('Here is the result!')
+    .addTargetedMessageInfo(targetedMessageId);
         
-        await app.Send(conversationId, targetedMessage);
-        ```
-
-        # [TypeScript](#tab/ts)
-
-          ```typescript
-          const message = new MessageActivity('Here is the result!')
-          .addTargetedMessageInfo(targetedMessageId);
+    // Targeted reply (only the user sees it)
+      message.withRecipient(userAccount, true);
+      await send(message);
         
-          // Targeted reply (only the user sees it)
-          message.withRecipient(userAccount, true);
-          await send(message);
+    // OR public reply (everyone sees it)
+      await send(message);
+    ```
+
+    # [Python](#tab/Py)
+
+    ```python
+    message = MessageActivityInput(text="Here is the result!")
+    message.add_targeted_message_info(targeted_message_id)
         
-          // OR public reply (everyone sees it)
-          await send(message);
-          ```
-
-        # [Python](#tab/Py)
-
-          ```python
-          message = MessageActivityInput(text="Here is the result!")
-          message.add_targeted_message_info(targeted_message_id)
+    # Targeted reply (only the user sees it)
+    message.with_recipient(user_account, is_targeted=True)
+    await ctx.send(message)
         
-          # Targeted reply (only the user sees it)
-          message.with_recipient(user_account, is_targeted=True)
-          await ctx.send(message)
-        
-          # OR public reply (everyone sees it)
-          await ctx.send(message)
-          ```
+    # OR public reply (everyone sees it)
+    await ctx.send(message)
+    ```
 
-        This sends a private response to the user and preserves the original prompt above the reply.
+    This sends a private response to the user and preserves the original prompt above the reply.
 
-        # [HTTP](#tab/api)
+    # [HTTP](#tab/api)
 
-        **HTTP example**
+    If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
 
-        If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
+    ```HTTP
+    POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+    Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+    Content-Type: application/json
+    Show more lines
+    JSON
+    {
+    "type": "message",
+    "from": {
+    "id": "28:c9e...",
+    "name": "Contoso"
+    },
+    "conversation": {
+    "id": "x:17I0...",
+    "name": "Convo1"
+    },
+    "recipient": {
+    "id": "29:1XJ...",
+    "name": "Megan Bowen"
+    },
+    "text": "My bot's reply",
+    "entities": [
+    {
+    "type": "targetedMessageInfo",
+    "messageId": "1772129782775"
+    }
+    ]
+    }
+    ```
 
+    Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
 
-        ```HTTP
-        POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-        Authorization: Bearer eyJhbGciOiJIUzI1Ni...
-        Content-Type: application/json
-        Show more lines
-        JSON
-        {
-        "type": "message",
-        "from": {
-        "id": "28:c9e...",
-        "name": "Contoso"
-        },
-        "conversation": {
-        "id": "x:17I0...",
-        "name": "Convo1"
-        },
-        "recipient": {
-        "id": "29:1XJ...",
-        "name": "Megan Bowen"
-        },
-        "text": "My bot's reply",
-        "entities": [
-        {
-        "type": "targetedMessageInfo",
-        "messageId": "1772129782775"
-        }
-        ]
-        }
-        ```
-
-        Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
-
-        ---
+    ---
 
 1. Add suggested actions for approval
 
