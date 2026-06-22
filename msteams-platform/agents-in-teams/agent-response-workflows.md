@@ -32,13 +32,13 @@ To learn more about targeted messaging behavor in Teams, see [send and receive t
 
 ## Prompt preview
 
-Use the Teams SDK when the agent responds within an incoming interaction or sends a follow-up outside that turn. For reactive replies, the SDK usually attaches targetedMessageInfo automatically. For proactive replies, add the entity yourself and set the original targeted message ID before you send the activity. When you use REST APIs, prompt preview works the same way for both private and public replies: include the targetedMessageInfo entity in the activity and use the original targeted message ID.
+Use the Teams SDK when the agent responds within an incoming interaction or sends a follow-up outside that turn. For reactive replies, the SDK usually attaches `targetedMessageInfo` automatically. For proactive replies, add the entity yourself and set the original targeted message ID before you send the activity. When you use REST APIs, prompt preview works the same way for both private and public replies. Include the `targetedMessageInfo` entity in the activity and use the original targeted message ID.
 
 Visibility is controlled by how you send the response, not by a different prompt preview mechanism.
 
 ### Prompt preview user experience
 
-Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes targetedMessageInfo that references the original targeted message. The difference is only who can see the reply after it is sent:
+Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent:
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
