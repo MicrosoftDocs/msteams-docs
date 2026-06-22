@@ -12,14 +12,13 @@ ms.topic: article
 
 # Support for agent response workflows
 
-Use agent response workflows when you want an agent to respond privately in a channel, group chat, or meeting chat first, then let the user decide whether that same response should be shared with everyone.
-These workflows support three capabilities: targeted messaging for the private response, prompt preview to preserve the user’s original request in the reply, and suggested actions so the user can approve a public repost when needed.
+Use agent response workflows when your agent should answer a user privately in a channel, group chat, or meeting chat first, then let that user decide whether to share the same response with everyone. This article explains the three core capabilities involved in that flow—targeted messaging, prompt preview, and suggested actions—and shows how they work together in private and public responses.
 
 - *Targeted messages* are private one-to-one exchanges between a user and an agent inside a group conversation, and they disappear from Teams clients after 24 hours to reduce clutter.
 - *Prompt preview* lets the agent’s reply include the user’s original query in the same message.
 - *Suggested actions* provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
 
-Each workflow option offers advantages based on your agent scenario. Choose response workflow based on:
+Choose this workflow when your scenario needs all three of the following behaviors: the first response must stay private to the requesting user, the original prompt must remain visible with the response, and the user must explicitly approve any repost to the broader conversation. The following capabilities combine to enable that experience:
 
 | Workflow capability | How it works | How it helps |
 | --- | --- | --- |
