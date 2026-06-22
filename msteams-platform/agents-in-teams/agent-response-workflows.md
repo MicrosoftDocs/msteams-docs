@@ -86,7 +86,7 @@ For more information, see [Add link to Teams SDK suggested actions article].
 
 Next, enable prompt preview in agent-to-user interactions.
 
-# [Prompt preview](#tab/preview)
+### Prompt preview user experience
 
 When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
 
