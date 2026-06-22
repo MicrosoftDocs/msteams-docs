@@ -255,6 +255,7 @@ The following are commonly used spacing values for widget layouts. These map to 
 The following examples show how spacing tokens apply in real widget layouts.
 <img src="images/spacing.png" alt="">
 
+
 #### Iconography
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
