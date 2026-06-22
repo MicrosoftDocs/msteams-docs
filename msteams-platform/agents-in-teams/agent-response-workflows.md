@@ -75,7 +75,7 @@ JSON example
 
 In *reactive* scenarios, reply-style SDK methods usually attach the `targetedMessageInfo` entity automatically because the response is still tied to the incoming user interaction. In *proactive* scenarios, the response is sent outside that original turn, so you must add the `targetedMessageInfo` entity yourself before sending the private or public message.
 
-Next, enable prompt preview in agent-to-user interactions.
+The following examples show how to add prompt preview in SDK-based and REST-based responses.
 
 ### Prompt preview user experience
 
@@ -95,27 +95,9 @@ For using Teams SDK, follow the code snippet examples given in private message t
 
 ## Implement prompt preview
 
-- **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
+Use the Teams SDK when the agent responds within an incoming interaction or sends a follow-up outside that turn. For reactive replies, the SDK usually attaches targetedMessageInfo automatically. For proactive replies, add the entity yourself and set the original targeted message ID before you send the activity. When you use REST APIs, prompt preview works the same way for both private and public replies: include the targetedMessageInfo entity in the activity and use the original targeted message ID.
 
-  - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
-
-    - The SDK automatically attaches the `targetedMessageInfo` entity.
-    - No additional code is required from the developer.
-
-      Prompt Preview is rendered automatically using the original message context
-
-  - Proactive response: When an agent sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
-  
-    - The developer must manually attach the entity.
-    - The `messageId` of the original user message must be provided.
-
-- **Use REST APIs**: Prompt preview is supported when sending agent responses:
-
-  - Private agent-to-user response: The agent replies privately to the user’s message. The response is visible only to the targeted user.
-
-  - Public agent-to-user response: The agent replies in the conversation normally. The response is visible to all participants in the chat.
-
-  In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
+Visibility is controlled by how you send the response, not by a different prompt preview mechanism.
 
 # [C#](#tab/dotnet)
 
