@@ -271,10 +271,10 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     After the private response is sent, provide suggested actions so the user can decide what happens next. Typical actions include:
 
-        - Allow
-        - Share to channel
-        - Edit prompt
-        - Dismiss
+    - Allow
+    - Share to channel
+    - Edit prompt
+    - Dismiss
 
     You can use `Action.Submit` for quick actions that trigger server-side logic without posting a visible user message.
 
