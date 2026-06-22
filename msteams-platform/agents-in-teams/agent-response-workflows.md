@@ -58,11 +58,11 @@ To learn more about targeted messaging behavor in Teams, see [send and receive t
 
 Here's how to implement prompt preview workflows for Teams agents and apps.
 
-### Prompt preview entity
+### Prompt preview entity JSON example
 
 To enable prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the original targeted message ID. Teams uses that entity to render the user's original request above the agent response.
 
-JSON example
+The following example shows the entities array required to enable prompt preview on a reply activity.
 
 ```json
 
@@ -91,7 +91,7 @@ Prompt preview can appear in both private and public agent responses, but the im
 
  A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
-For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
+The following examples show private and public responses with prompt preview in C#, TypeScript, Python, and HTTP.
 
 ## Implement prompt preview
 
