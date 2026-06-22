@@ -84,3 +84,19 @@ Suggested actions give users context-aware ideas for what to ask next based on t
 Use Action.Submit for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
 For more information, see [Add link to Teams SDK suggested actions article].
+
+Next, enable [public agent-to-user responses](targeted-messages.md#handle-agent-responses-for-slash-commands).
+
+# [Prompt preview](#tab/preview)
+
+When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
+
+- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response.":::
+
+- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
+
+  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
+
+ A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
