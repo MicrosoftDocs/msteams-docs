@@ -99,6 +99,7 @@ Use the Teams SDK when the agent responds within an incoming interaction or send
 
 Visibility is controlled by how you send the response, not by a different prompt preview mechanism.
 
+<!--
 # [C#](#tab/dotnet)
 
   Attach the entity manually using the targeted message ID:
@@ -174,6 +175,7 @@ Visibility is controlled by how you send the response, not by a different prompt
   ```
 
   ---
+-->
 
 ## Suggested actions
 
@@ -244,6 +246,50 @@ Use this workflow when your agent should reply privately first, keep the origina
     1. Implement prompt preview in proactive targeted replies
 
         For proactive scenarios, attach the original message ID explicitly before sending the reply.
+
+        # [C#](#tab/dotnet)
+
+          Attach the entity manually using the targeted message ID:
+
+          ```csharp
+            var message = new MessageActivity("Here is the result!")
+              .AddTargetedMessageInfo(targetedMessageId);
+        
+            // Targeted reply (only the user sees it)
+            message.WithRecipient(userAccount, true);
+            await context.Send(message, cancellationToken);
+        
+            // OR public reply (everyone sees it)
+            await context.Send(message, cancellationToken);
+          ```
+
+        # [TypeScript](#tab/ts)
+
+          ```typescript
+          const message = new MessageActivity('Here is the result!')
+          .addTargetedMessageInfo(targetedMessageId);
+        
+          // Targeted reply (only the user sees it)
+          message.withRecipient(userAccount, true);
+          await send(message);
+        
+          // OR public reply (everyone sees it)
+          await send(message);
+          ```
+
+        # [Python](#tab/Py)
+
+          ```python
+          message = MessageActivityInput(text="Here is the result!")
+          message.add_targeted_message_info(targeted_message_id)
+        
+          # Targeted reply (only the user sees it)
+          message.with_recipient(user_account, is_targeted=True)
+          await ctx.send(message)
+        
+          # OR public reply (everyone sees it)
+          await ctx.send(message)
+          ```
 
         **C# example**
 
