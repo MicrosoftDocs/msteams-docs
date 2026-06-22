@@ -199,6 +199,15 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 <img src="images/icon_colorBrush.png" alt="" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
 
+
+<div style="display:flex;align-items:center;gap:6px">
+<img src="images/icon_colorBrush.png" alt="" width="20"> <a href="https://fluent2.microsoft.design/color">Color tokens</a>
+</div>
+
+
+
+
+
 #### Typography
 
 Use the following base text styles to create clear visual hierarchy in your widget. These styles align with the Teams design system and cover the most common text roles in a widget.
