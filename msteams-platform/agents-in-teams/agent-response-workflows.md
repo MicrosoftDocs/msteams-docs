@@ -4,7 +4,6 @@ description: Learn how to use targeted messaging, prompt preview, and suggested 
 ms.localizationpriority: high
 ms.date: 06/18/2026
 ms.topic: article
-zone_pivot_groups: select-language
 ---
 
 <!-- markdownlint-disable MD023 -->
