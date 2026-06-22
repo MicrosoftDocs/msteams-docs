@@ -218,16 +218,13 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
   
- <img src="images/typography.png" alt="">
+ <img src="images/text.png" alt="" width="20">
 
 
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-
-
-
-<img src="images/icon_textA.png" alt="" width="16"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="images/icon_text.png" alt="" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
 #### Containers and borders
 
@@ -235,15 +232,13 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) for containers and images
 - Avoid deep nesting — limit container and column nesting to a maximum of two levels
 
-<img src="images/icon_shape.png" alt="" width="16"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="images/icon_shapes.png" alt="" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
 #### Spacing
 
 The recommended global padding for a widget is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
 
-The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents. For the full spacing scale, see [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
-
-| Name | Token | Size | Common use |
+The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents. 
 |---|---|---|---|
 | Extra Small | `spacingVerticalXS` | 4px | Between an icon and its label, inside a badge |
 | Small | `spacingVerticalS` | 8px | Between buttons or tightly grouped elements |
@@ -255,6 +250,9 @@ The following are commonly used spacing values for widget layouts. These map to 
 The following examples show how spacing tokens apply in real widget layouts.
 <img src="images/spacing.png" alt="">
 
+For the full spacing scale, see <img src="images/icon_spacing.png" alt="" width="20">  [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
+
+| Name | Token | Size | Common use |
 
 #### Iconography
 
