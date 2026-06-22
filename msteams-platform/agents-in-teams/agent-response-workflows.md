@@ -188,7 +188,15 @@ For implementation details and payload requirements, see the suggested actions d
 Use this workflow when your agent should reply privately first, keep the original user prompt visible with the response, and allow the user to decide whether to share the response publicly.
 
 1. Capture the user request as a targeted message
+
+    Start when a user invokes the agent in a channel, group chat, or meeting chat. The user can initiate the interaction using a slash command or an @mention message. Capture that request as a targeted message so the interaction begins privately between the user and the agent by using `IsTargeted == true` in the message event.
+
+    This is the right pattern when the request may be sensitive, distracting, or not yet ready to share broadly.
+
 1. Store the original targeted message ID
+
+    Save the original targeted message ID as soon as the request is received. You need this ID later to enable prompt preview, because the reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
+
 1. Send the first reply privately
 1. Attach prompt preview metadata
 1. Handle reactive and proactive replies correctly
