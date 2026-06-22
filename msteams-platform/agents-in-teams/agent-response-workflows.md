@@ -161,9 +161,9 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     The following examples show private and public responses with prompt preview in C#, TypeScript, Python, and HTTP.
 
-    1. Implement prompt preview in proactive targeted replies
+    Implement prompt preview in proactive targeted replies using Teams SDK or REST API.
 
-        For proactive scenarios, attach the original message ID explicitly before sending the reply.
+    For proactive scenarios, attach the original message ID explicitly before sending the reply.
 
         # [C#](#tab/dotnet)
 
@@ -180,6 +180,24 @@ Use this workflow when your agent should reply privately first, keep the origina
             // OR public reply (everyone sees it)
             await context.Send(message, cancellationToken);
           ```
+
+        **C# example**
+
+        ```C#
+        var targetedMessageId = "1772050244572";
+        var conversationId = "19:groupchat-id@thread.v2";
+        var userAccount = new Account
+        {
+        Id = "29:1AbCDef...",
+        Name = "Adele Vance"
+        };
+        
+        var targetedMessage = new MessageActivity("Here is the result!")
+        .AddTargetedMessageInfo(targetedMessageId)
+        .WithRecipient(userAccount, isTargeted: true);
+        
+        await app.Send(conversationId, targetedMessage);
+        ```
 
         # [TypeScript](#tab/ts)
 
@@ -209,31 +227,14 @@ Use this workflow when your agent should reply privately first, keep the origina
           await ctx.send(message)
           ```
 
-        **C# example**
-
-        ```C#
-        var targetedMessageId = "1772050244572";
-        var conversationId = "19:groupchat-id@thread.v2";
-        var userAccount = new Account
-        {
-        Id = "29:1AbCDef...",
-        Name = "Adele Vance"
-        };
-        
-        var targetedMessage = new MessageActivity("Here is the result!")
-        .AddTargetedMessageInfo(targetedMessageId)
-        .WithRecipient(userAccount, isTargeted: true);
-        
-        await app.Send(conversationId, targetedMessage);
-        ```
-
         This sends a private response to the user and preserves the original prompt above the reply.
 
-    1. Support the same pattern with REST APIs
+        # [HTTP](#tab/api)
+
+        **HTTP example**
 
         If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
 
-        **HTTP example**
 
         ```HTTP
         POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
@@ -266,6 +267,8 @@ Use this workflow when your agent should reply privately first, keep the origina
         ```
 
         Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
+
+        ---
 
 1. Add suggested actions for approval
 
