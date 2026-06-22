@@ -232,6 +232,15 @@ Use this workflow when your agent should reply privately first, keep the origina
     Teams uses this entity to display the user’s original request above the agent’s response.
 
 1. Handle reactive and proactive replies correctly
+
+    Prompt preview works differently depending on how the reply is sent.
+
+    **Reactive replies**
+    If the agent replies directly in the current interaction using SDK reply methods such as `send()` or `reply()`, the SDK usually attaches `targetedMessageInfo` automatically. No additional code is required.
+
+    **Proactive replies**
+    If the agent sends a later follow-up, delayed result, or background workflow message, you must attach `targetedMessageInfo` manually and provide the original targeted message ID.
+
 1. Implement prompt preview in proactive targeted replies
 1. Support the same pattern with REST APIs
 1. Add suggested actions for approval
