@@ -304,4 +304,16 @@ Use this workflow when your agent should reply privately first, keep the origina
         Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
 
 1. Add suggested actions for approval
+
+    After the private response is sent, provide suggested actions so the user can decide what happens next. Typical actions include:
+
+        - Allow
+        - Share to channel
+        - Edit prompt
+        - Dismiss
+
+    You can use `Action.Submit` for quick actions that trigger server-side logic without posting a visible user message.
+
 1. Repost publicly only after explicit user approval
+
+    Only repost the response publicly if the user explicitly approves it. If the user does not approve, keep the entire exchange private and do not publish the content to the shared conversation.
