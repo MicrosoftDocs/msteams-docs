@@ -195,7 +195,7 @@ For using Teams SDK, follow the code snippet examples given in private message t
 
 ## Implement suggested actions
 
-Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
+Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. In this workflow, use suggested actions to let the user decide what happens after the private reply. Common actions include sharing the response to the conversation, refining the prompt, or dismissing the result. If your implementation uses `Action.Submit`, send a structured payload so your app can handle the user's choice without posting a visible user message.
 
 Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
