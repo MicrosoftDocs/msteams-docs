@@ -84,7 +84,7 @@ Use Action.Submit for quick-action (suggested action) buttons that run server-si
 
 For more information, see [Add link to Teams SDK suggested actions article].
 
-Next, enable [public agent-to-user responses](targeted-messages.md#handle-agent-responses-for-slash-commands).
+Next, enable prompt preview in agent-to-user interactions.
 
 # [Prompt preview](#tab/preview)
 
