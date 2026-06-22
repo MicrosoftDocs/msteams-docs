@@ -52,7 +52,7 @@ This workflow progresses as follows:
 
     If the user selects the approval action, your app receives that choice and can repost the content publicly in the same conversation. The public message can include the same response body and the same prompt preview so everyone sees both the original request and the approved answer together. If the user does not approve, keep the exchange private and do not publish the content to the conversation.
 
-## Implement agent response workflows
+## Agent response workflows
 
 To learn more about targeted messaging behavor in Teams, see [send and receive targeted messages in group conversations](targeted-messages.md).
 
@@ -175,10 +175,24 @@ Visibility is controlled by how you send the response, not by a different prompt
 
   ---
 
-## Implement suggested actions
+## Suggested actions
 
 Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. In this workflow, use suggested actions to let the user decide what happens after the private reply. Common actions include sharing the response to the conversation, refining the prompt, or dismissing the result. If your implementation uses `Action.Submit`, send a structured payload so your app can handle the user's choice without posting a visible user message.
 
 Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
 For implementation details and payload requirements, see the suggested actions documentation for Teams messaging extensions and bots. [WIP: Add link to Teams SDK suggested actions article].
+
+## Implement prompt preview in a targeted message
+
+Use this workflow when your agent should reply privately first, keep the original user prompt visible with the response, and allow the user to decide whether to share the response publicly.
+
+1. Capture the user request as a targeted message
+1. Store the original targeted message ID
+1. Send the first reply privately
+1. Attach prompt preview metadata
+1. Handle reactive and proactive replies correctly
+1. Implement prompt preview in proactive targeted replies
+1. Support the same pattern with REST APIs
+1. Add suggested actions for approval
+1. Repost publicly only after explicit user approval
