@@ -252,13 +252,14 @@ The following are commonly used spacing values for widget layouts. These map to 
 | Extra Large | `spacingVerticalXL` | 20px | Separation between distinct content sections |
 | Extra Extra Large | `spacingVerticalXXL` | 24px | Global card padding, generous breathing room |
 
-- 
+The following examples show how spacing tokens apply in real widget layouts.
+<img src="images/spacing.png" alt="">
 
 #### Iconography
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-<img src="images/icon_Icon.png" alt="" width="16"> [Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icons.png" alt=""> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
