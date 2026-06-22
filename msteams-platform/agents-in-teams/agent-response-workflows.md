@@ -118,11 +118,11 @@ For using Teams SDK, follow the code snippet examples given in private message t
     - The developer must manually attach the entity.
     - The `messageId` of the original user message must be provided.
 
-- **Use REST APIs**: Prompt preview is supported when sending agent responses through the following APIs:
+- **Use REST APIs**: Prompt preview is supported when sending agent responses:
 
-  - **Private agent-to-user response**: The agent replies privately to the user’s message. The response is visible only to the targeted user.
+  - Private agent-to-user response: The agent replies privately to the user’s message. The response is visible only to the targeted user.
 
-  - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
+  - Public agent-to-user response: The agent replies in the conversation normally. The response is visible to all participants in the chat.
 
   In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
 
