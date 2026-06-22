@@ -79,7 +79,7 @@ Next, enable prompt preview in agent-to-user interactions.
 
 ### Prompt preview user experience
 
-When an agent responds to a user, prompt preview shows the user’s initial slash command query within a single self-contained message. Use it to preserve context in ongoing conversations. Including the user’s prompt in the agent response is optional. When implemented, prompt preview always appears at the top of the agent response.
+Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes targetedMessageInfo that references the original targeted message. The difference is only who can see the reply after it is sent:
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
@@ -199,4 +199,4 @@ Suggested actions give users context-aware ideas for what to ask next based on t
 
 Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
-For more information, see [Add link to Teams SDK suggested actions article].
+For implementation details and payload requirements, see the suggested actions documentation for Teams messaging extensions and bots. [WIP: Add link to Teams SDK suggested actions article].
