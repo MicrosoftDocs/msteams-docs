@@ -258,7 +258,7 @@ For the full spacing scale, see <img src="images/icon_spacing.png" alt="" width=
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-<img src="images/icons.png" alt=""> [Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icon_icon.png" alt="" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
