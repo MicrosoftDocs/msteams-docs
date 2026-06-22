@@ -198,7 +198,39 @@ Use this workflow when your agent should reply privately first, keep the origina
     Save the original targeted message ID as soon as the request is received. You need this ID later to enable prompt preview, because the reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
 
 1. Send the first reply privately
+
+    Reply to the requesting user with a targeted private message so only that user can see it.
+
+    **C# example**
+
+    ```C#
+    app.OnMessage(async (context, cancellationToken) =>
+    {
+    await context.Send(
+    new MessageActivity("This message is only visible to you!")
+    .WithRecipient(context.Activity.From, isTargeted: true),
+    cancellationToken
+    );
+    });
+    ```
+
+    This keeps the conversation private while preserving the context of the shared space.
+
 1. Attach prompt preview metadata
+
+    To enable prompt preview, include a targetedMessageInfo entity in the outgoing reply and set its messageId to the original targeted message ID.
+
+    **JSON example**
+
+    ```JSON
+    "entities": [{
+    "type": "targetedMessageInfo",
+    "messageId": "xxxxxxxxxxxxx"
+    }]
+    ```
+
+    Teams uses this entity to display the user’s original request above the agent’s response.
+
 1. Handle reactive and proactive replies correctly
 1. Implement prompt preview in proactive targeted replies
 1. Support the same pattern with REST APIs
