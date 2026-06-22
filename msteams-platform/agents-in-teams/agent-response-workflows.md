@@ -14,7 +14,7 @@ ms.topic: article
 
 Use agent response workflows when your agent should answer a user privately in a channel, group chat, or meeting chat first, then let that user decide whether to share the same response with everyone. This article explains the three core capabilities involved in that flow—targeted messaging, prompt preview, and suggested actions—and shows how they work together in private and public responses.
 
-- *Targeted messages* are private one-to-one exchanges between a user and an agent inside a group conversation, and they disappear from Teams clients after 24 hours to reduce clutter.
+- *Targeted messaging* lets an agent send a one-to-one reply to the requesting user from within a shared conversation such as a channel, group chat, or meeting chat. Use it when the reply should stay private until the user decides whether to share it more broadly.
 - *Prompt preview* lets the agent’s reply include the user’s original query in the same message.
 - *Suggested actions* provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
 
@@ -60,7 +60,7 @@ Here's how to implement prompt preview workflows for Teams agents and apps.
 
 ### Prompt preview entity
 
-To enable prompt preview, include the targeted message information in the reply activity. The reply uses the original targeted message ID so Teams can display the user’s original request above the response.
+To enable prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the original targeted message ID. Teams uses that entity to render the user's original request above the agent response.
 
 JSON example
 
@@ -73,9 +73,7 @@ JSON example
 }]
 ```
 
-### Reactive and proactive agent responses
-
-In reactive scenarios, when your agent or bot replies directly to a targeted message by using `reply()`, the prompt preview is typically attached automatically. In proactive scenarios, when you send outside the original response, you must attach the targeted message ID manually before sending either a private or public response.
+In *reactive* scenarios, reply-style SDK methods usually attach the `targetedMessageInfo` entity automatically because the response is still tied to the incoming user interaction. In *proactive* scenarios, the response is sent outside that original turn, so you must add the `targetedMessageInfo` entity yourself before sending the private or public message.
 
 Next, enable prompt preview in agent-to-user interactions.
 
