@@ -80,7 +80,7 @@ In reactive scenarios, when your bot replies directly to a targeted message by u
 
 Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
 
-Use Action.Submit for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
+Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
 
 For more information, see [Add link to Teams SDK suggested actions article].
 
@@ -99,3 +99,108 @@ When an agent responds to a user, prompt preview shows the user’s initial slas
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response.":::
 
  A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
+
+For using Teams SDK, follow the code snippet examples given in private message to user and public message by the agent.
+
+## Implement prompt preview
+
+- **Use Teams SDK**: Prompt preview is supported for agent's response to user in the following scenarios:
+
+  - Reactive response: When an agent responds within the context of an incoming user interaction (for example, using `send()` or `reply()`):
+
+    - The SDK automatically attaches the `targetedMessageInfo` entity.
+    - No additional code is required from the developer.
+
+      Prompt Preview is rendered automatically using the original message context
+
+  - Proactive response: When an agent sends a proactive message, for example, follow-ups, delayed responses, or background workflows:
+  
+    - The developer must manually attach the entity.
+    - The `messageId` of the original user message must be provided.
+
+- **Use REST APIs**: Prompt preview is supported when sending agent responses through the following APIs:
+
+  - **Private agent-to-user response**: The agent replies privately to the user’s message. The response is visible only to the targeted user.
+
+  - **Public agent-to-user response**: The agent replies in the conversation normally. The response is visible to all participants in the chat.
+
+  In both cases, you can implement the prompt preview experience through the same mechanism. It's independent of the visibility scope.
+
+<!--
+# [C#](#tab/dotnet)
+
+  Attach the entity manually using the targeted message ID:
+
+  ```csharp
+    var message = new MessageActivity("Here is the result!")
+      .AddTargetedMessageInfo(targetedMessageId);
+        
+    // Targeted reply (only the user sees it)
+    message.WithRecipient(userAccount, true);
+    await context.Send(message, cancellationToken);
+        
+    // OR public reply (everyone sees it)
+    await context.Send(message, cancellationToken);
+  ```
+
+# [TypeScript](#tab/ts)
+
+  ```typescript
+  const message = new MessageActivity('Here is the result!')
+  .addTargetedMessageInfo(targetedMessageId);
+    
+  // Targeted reply (only the user sees it)
+  message.withRecipient(userAccount, true);
+  await send(message);
+        
+  // OR public reply (everyone sees it)
+  await send(message);
+  ```
+
+# [Python](#tab/Py)
+
+  ```python
+  message = MessageActivityInput(text="Here is the result!")
+  message.add_targeted_message_info(targeted_message_id)
+        
+  # Targeted reply (only the user sees it)
+  message.with_recipient(user_account, is_targeted=True)
+  await ctx.send(message)
+        
+  # OR public reply (everyone sees it)
+  await ctx.send(message)
+  ```
+---
+-->
+
+<!--
+
+  ```http
+  POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+  Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+  Content-Type: application/json
+  {
+      "type": "message",
+      "from": {
+          "id": "28:c9e...",
+          "name": "Contoso"
+      },
+      "conversation": {
+          "id":"x:17I0...",
+          "name": "Convo1"
+      },
+      "recipient": {
+          "id": "29:1XJ...",
+          "name": "Megan Bowen"
+      },
+      "text": "My bot's reply",
+  "entities": [
+      {
+        "type": "targetedMessageInfo",
+        "messageId": "1772129782775"
+      }
+    ]
+  }
+  ```
+
+  ---
