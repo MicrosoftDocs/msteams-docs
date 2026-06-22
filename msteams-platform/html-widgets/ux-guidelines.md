@@ -218,13 +218,13 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
   
- <img src="images/text.png" alt="" width="20">
+ <img src="images/typography.png" alt="" width="20">
 
 
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-<img src="images/icon_text.png" alt="" width="20"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="images/icontext.png" alt="" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
 #### Containers and borders
 
