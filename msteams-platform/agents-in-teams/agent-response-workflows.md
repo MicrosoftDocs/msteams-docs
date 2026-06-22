@@ -195,7 +195,7 @@ For using Teams SDK, follow the code snippet examples given in private message t
 
   ---
 
-## Suggested actions
+## Implement suggested actions
 
 Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. Instead of fixed prompts, your agent or bot can use its LLM to generate up to three relevant suggestions with each response, surface them as selectable options, and use `Action.Submit` for slash-command suggestions that invoke server-side logic without posting a visible chat message.
 
