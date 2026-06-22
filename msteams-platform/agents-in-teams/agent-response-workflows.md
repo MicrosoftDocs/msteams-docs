@@ -241,7 +241,67 @@ Use this workflow when your agent should reply privately first, keep the origina
     **Proactive replies**
     If the agent sends a later follow-up, delayed result, or background workflow message, you must attach `targetedMessageInfo` manually and provide the original targeted message ID.
 
-1. Implement prompt preview in proactive targeted replies
-1. Support the same pattern with REST APIs
+    1. Implement prompt preview in proactive targeted replies
+
+        For proactive scenarios, attach the original message ID explicitly before sending the reply.
+
+        **C# example**
+
+        ```C#
+        var targetedMessageId = "1772050244572";
+        var conversationId = "19:groupchat-id@thread.v2";
+        var userAccount = new Account
+        {
+        Id = "29:1AbCDef...",
+        Name = "Adele Vance"
+        };
+        
+        var targetedMessage = new MessageActivity("Here is the result!")
+        .AddTargetedMessageInfo(targetedMessageId)
+        .WithRecipient(userAccount, isTargeted: true);
+        
+        await app.Send(conversationId, targetedMessage);
+        ```
+
+        This sends a private response to the user and preserves the original prompt above the reply.
+
+    1. Support the same pattern with REST APIs
+
+        If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
+
+        **HTTP example**
+
+        ```HTTP
+        POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+        Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+        Content-Type: application/json
+        Show more lines
+        JSON
+        {
+        "type": "message",
+        "from": {
+        "id": "28:c9e...",
+        "name": "Contoso"
+        },
+        "conversation": {
+        "id": "x:17I0...",
+        "name": "Convo1"
+        },
+        "recipient": {
+        "id": "29:1XJ...",
+        "name": "Megan Bowen"
+        },
+        "text": "My bot's reply",
+        "entities": [
+        {
+        "type": "targetedMessageInfo",
+        "messageId": "1772129782775"
+        }
+        ]
+        }
+        ```
+
+        Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
+
 1. Add suggested actions for approval
 1. Repost publicly only after explicit user approval
