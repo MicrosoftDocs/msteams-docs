@@ -239,9 +239,20 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 #### Spacing
 
-- Use 16px internal padding on all sides as a baseline for widget content
-- Use 8px spacing between related elements and 16px between distinct content sections
-- Give content room to breathe — overcrowded widgets feel lower quality and are harder to scan
+The recommended global padding for a widget is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
+
+The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents. For the full spacing scale, see [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
+
+| Name | Token | Size | Common use |
+|---|---|---|---|
+| Extra Small | `spacingVerticalXS` | 4px | Between an icon and its label, inside a badge |
+| Small | `spacingVerticalS` | 8px | Between buttons or tightly grouped elements |
+| Medium | `spacingVerticalM` | 12px | Vertical rhythm between text blocks and inputs |
+| Large | `spacingVerticalL` | 16px | Standard internal padding for cards and containers |
+| Extra Large | `spacingVerticalXL` | 20px | Separation between distinct content sections |
+| Extra Extra Large | `spacingVerticalXXL` | 24px | Global card padding, generous breathing room |
+
+- 
 
 #### Iconography
 
