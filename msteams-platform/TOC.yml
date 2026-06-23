@@ -47,6 +47,9 @@
     - name: Teams SDK programming model
       href: teams-sdk-programming-model.md
       displayName: App
+  - name: Teams developer CLI
+    href: teams-developer-cli.md
+    displayName: scaffold, coding agent, manifest, authentication, package, rsc, register, deploy
   - name: Teams JavaScript client libraries
     href: tabs/how-to/using-teams-client-library.md
     displayName: Teamsjs, live share, liveshare, tab, iFrame, execute URL, getTabInstances

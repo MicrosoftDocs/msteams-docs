@@ -27,20 +27,4 @@ The Teams Platform documentation primarily uses the Teams SDK APIs and tools to 
 * **Model Context Protocol (MCP) and Agent-to-Agent (A2A) protocol adapters** - Enable your app to communicate with other tools and agents with server and client support for Model Context Protocol and Agent-to-Agent protocol
 * **Microsoft 365 Copilot compatibility** - Agents built with Teams SDK can run in both Teams and Microsoft 365 Copilot.
 
-## Developer tools
-
-The **Teams Developer CLI** provides tools for creating, configuring, and managing Teams apps:
-
-* **Project scaffolding** - Get an agent or app up and running on Teams in minutes with project templates in TypeScript, C# and Python
-* **App registration and lifecycle management** - Register agents and apps with the Teams platform and manage their configuration
-* **Authentication** - Manage Entra ID app credentials and agent authentication
-
-The developer CLI supports interactive usage for humans and structured JSON output for AI-assisted workflows.
-
 Teams SDK is also integrated with the **Microsoft 365 Agents Toolkit**. The Agents Toolkit provides additional experiences in Visual Studio Code and Visual Studio for scaffolding, provisioning, debugging, testing, and deployment.
-
-<!-- TODO explicit recommendation/choice guidance section? This could be the place for https://microsoft.github.io/teams-sdk/teams/choosing-an-sdk/, or that could go in a separate page linked from here. -->
-
-## Related content
-
-* [Teams JavaScript client library](tabs/how-to/using-teams-client-library.md)
