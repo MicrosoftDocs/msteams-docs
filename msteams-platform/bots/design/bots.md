@@ -2,7 +2,7 @@
 title: Designing your bot
 description: Learn how to design, add, introduce, and manage a Microsoft Teams bot and its use cases, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.owner: ginobuzz
 ms.date: 01/23/2025

@@ -108,7 +108,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
+| [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-agent-or-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
 | [Endpoint address](../bots/how-to/authentication/bot-sso-manifest.md) | It's used in Developer Portal to configure SSO for a bot app. It's the endpoint where messages are sent to your bot. <br> **See also**: [Bot handle](#b); [Messaging endpoint](#m); [OAuth connection](#o); [SSO](#s) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Agents Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Agents Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |

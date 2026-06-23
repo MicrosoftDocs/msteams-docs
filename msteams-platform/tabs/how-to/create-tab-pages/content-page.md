@@ -2,9 +2,8 @@
 title: Build a Content Page for Tab
 description: Learn about webpage within Teams client in personal, channel, or group custom tab. Create content page and embed it as webview inside dialog (task module).
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.date: 11/23/2022
-ms.owner: ryanbliss
 ---
 
 # Create a content page
@@ -111,6 +110,9 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 * **Deep links**: You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
 * **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. Use dialogs in a content page to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+
+    > [!NOTE]
+    > The `window.alert`, `window.confirm`, and `window.prompt` APIs aren't supported in the new Teams client. Use a [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or a TeamsJS dialog instead. For more information, see [new Teams client limitations](~/resources/teams-updates.md#limitations).
 
 * **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](/microsoft-365/extensibility/schema/root#validdomains).
 

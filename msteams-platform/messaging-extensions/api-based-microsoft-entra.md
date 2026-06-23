@@ -1,6 +1,5 @@
 ---
 title: SSO for API-based message extensions
-author: surbhigupta
 description: Learn how to enable Microsoft Entra SSO authentication, register a new app, configure access token, API scopes, and authorize client application.
 ms.localizationpriority: medium
 ms.topic: concept-article

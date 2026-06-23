@@ -1,8 +1,7 @@
 ---
 title: Get All Channel and Chat Messages for Bot and Agents
-author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 03/16/2026
 ---

@@ -1,6 +1,18 @@
 {
   "redirections": [
       {
+        "source_path": "msteams-platform/m365-apps/actions-in-m365-quick-start-guide.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/actions-in-m365.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/build-actions-in-m365.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
           "source_path": "msteams-platform/concepts/building-an-app.md",
           "redirect_url": "/microsoftteams/platform/overview"
       },
@@ -1523,6 +1535,14 @@
       {
         "source_path": "msteams-platform/resources/schema/localization-schema.md",
         "redirect_url": "/microsoft-365/extensibility/schema/loc-schema/root"
-      }
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/add-power-virtual-agents-bot-to-teams.md",
+        "redirect_url": "/microsoft-copilot-studio/unified-authoring-conversion"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teams-toolkit-CLI.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli"
+      }      
     ]
 }

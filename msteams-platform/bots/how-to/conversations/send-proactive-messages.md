@@ -4,7 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 01/23/2025
+ms.date: 04/23/2026
 ---
 # Proactive messages
 
@@ -67,6 +67,9 @@ Create the conversation, after you have the user or channel information.
 You can create the conversation if it doesn't exist, or you don't know the `conversationId`. Create the conversation only once and store the `conversationId` value or `conversationReference` object.
 
 To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#create-conversation), you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
+
+>[!NOTE]
+> To create the conversation, pass the `aadObjetId` value in the `Id` parameter.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
