@@ -13,6 +13,8 @@ A bot can access additional context data about the team or chat where it's insta
 
 ## Fetch the roster or user profile
 
+Your bot can query the list of members in the current team or chat and use that data to personalize responses or target follow-up actions.
+
 Use the Teams SDK conversations members API to retrieve roster information.
 
 For conversation member retrieval:
@@ -300,7 +302,7 @@ async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
 
 If you need raw connector REST endpoints, use the Teams SDK API for most bot scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
-[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+<!-- [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)] -->
 
 ## Next step
 
@@ -315,4 +317,5 @@ If you need raw connector REST endpoints, use the Teams SDK API for most bot sce
 * [Bot activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
 * [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)
+* [Bot Meetings sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings)
 <!-- markdownlint-enable MD024 -->
