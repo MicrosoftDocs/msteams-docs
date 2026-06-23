@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about TeamsFX multiple environment, use env files with Microsoft 365 Agents Toolkit, create a new environment manually in Visual Studio Code, and select target environment.
 ms.author: nickwalk
 ms.localizationpriority: medium
-ms.topic: concept
+ms.topic: article
 ms.date: 06/23/2026
 ---
 
