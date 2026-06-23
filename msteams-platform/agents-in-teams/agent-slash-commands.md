@@ -77,9 +77,7 @@ Invoking a command from the menu switches the compose box to targeted messaging 
   - `/contoso draft a customer update from this thread`
   - `/contoso find the latest rollout plan and highlight open risks`
 
-  Natural language support may be preferable as explicit commands for high-confidence, repeatable actions. Agents are most valuable when they can understand intent, parameters, and context expressed in natural language. A useful slash-command design should combine discoverable commands with flexible phrasing, so users can say what they need instead of learning a long commands.
-
-  From a platform perspective, slash commands should support the experience, not define it end to end. They’re best used to surface common actions in a way that's easy to find and use way. The agent should handle natural-language requests, fill in missing details when it makes sense, and ask brief follow-up questions when something is unclear. It’s usually best to keep the command set small so that the users don't need to memorize syntax or choose from identical options.
+  Natural-language support is often preferable to relying only on explicit commands for high-confidence, repeatable actions: agents are most valuable when they can understand intent, parameters, and context expressed in natural language, so slash-command design should combine discoverable commands with flexible phrasing that lets users say what they need instead of learning a long command catalog. From a platform perspective, slash commands should support the experience, not define it end to end; use them to surface common actions in a way that’s easy to find and invoke, then let the agent handle natural-language requests, infer missing details when appropriate, and ask brief follow-up questions when something is unclear. Keep the command set small so users don’t need to memorize syntax or choose between nearly identical options.
 
   To support natural-language prompts, an agent must explicitly opt in. This keeps the behavior intentional. Agents that are designed to interpret free-form requests can enable natural-language prompting and provide a more conversational experience.
 
