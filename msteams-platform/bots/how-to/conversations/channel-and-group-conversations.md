@@ -1,11 +1,11 @@
 ---
 title: Channel/Group Conversation Chat Bot
 description: Learn how to work with user mentions, send messages, and handle bot installation in channel and group chats using the Teams SDK.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.owner: angovil
-ms.date: 06/19/2026
+ms.date: 06/23/2026
 ---
 # Channel and group chat conversations with a bot
 
@@ -23,12 +23,6 @@ By default, bots in group chats and channels only receive messages when they're 
 >
 > * Using resource-specific consent (RSC), a bot can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [receive all messages for bots and agents](channel-messages-for-bots-and-agents.md).
 > * Private channel support for bot apps is limited. You can add bot-enabled apps in private channels where private channel app support is enabled, but bots can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
-
-See the following video to learn about channel and group chat conversations with a bot:
-<br>
-
-> [!VIDEO a22d3980-2cf0-45fe-89a2-02a13cf8640e]
-<br>
 
 ## Design guidelines
 
@@ -202,7 +196,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ### Add mentions to your messages
 
-Your bot can mention other users in messages posted in channels. The Teams SDK provides the `AddMention` method on `MessageActivity` to include user mentions in your messages.
+Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
 
 The following code shows an example of adding mentions to your messages:
 
@@ -211,7 +205,9 @@ The following code shows an example of adding mentions to your messages:
 ```csharp
 app.OnMessage(async context =>
 {
-    await context.Send(new MessageActivity($"Hello!").AddMention(context.Activity.From));
+    var user = context.Activity.From;
+    var message = new MessageActivity($"Hello <at>{user.Name}</at>!").AddMention(user);
+    await context.Send(message);
 });
 
 ```
@@ -220,14 +216,16 @@ app.OnMessage(async context =>
 
 ```typescript
 app.on('message', async ({ send, activity }) => {
-    await send(new MessageActivity('Hello!').addMention(activity.from));
+    const user = activity.from;
+    const message = new MessageActivity(`Hello <at>${user.name}</at>!`).addMention(user);
+    await send(message);
 });
 
 ```
 
 # [JSON](#tab/json1)
 
-The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it doesn't, the mention is ignored.
+The `text` field in the mention entity must match exactly the mention markup in the message `text` field. If it doesn't match, the mention is ignored.
 
 ```json
 {
