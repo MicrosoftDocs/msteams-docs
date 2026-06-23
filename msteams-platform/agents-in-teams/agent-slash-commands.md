@@ -70,7 +70,12 @@ Invoking a command from the menu switches the compose box to targeted messaging 
 
 - **Natural-language support for slash commands**:
 
-    In this model, the user enters the slash command and, optionally, a natural-language request. The agent response is delivered privately to the user, which makes the pattern well suited for drafting, lookup, and summarization.
+    In this model, the user enters the slash command and, optionally, a natural-language request. The agent response is delivered privately to the user, which makes the pattern well suited for drafting, lookup, summarization, lightweight workflow initiation, and other personal productivity tasks that benefit from staying in the context of the current conversation. For example:
+
+  - `/contoso incident summarize the last 24 hours and suggest next steps`
+  - `/contoso create-task fix login issue for mobile users`
+  - `/contoso draft a customer update from this thread`
+  - `/contoso find the latest rollout plan and highlight open risks`
 
 ### Message extension slash commands
 
