@@ -83,7 +83,7 @@ app.on("message", async ({ activity, api }) => {
 
 ::: zone-end
 
-});\n```\n\n::: zone-end\n\n::: zone pivot="teams-sdk-python"
+::: zone pivot="teams-sdk-python"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -147,14 +147,14 @@ app.OnMessage(async (context, cancellationToken) =>
 
 ```typescript
 app.on("message", async ({ activity, api }) => {
-  const memberId = activity.from?.id;
-  if (!memberId) {
-    return;
-  }
+    const memberId = activity.from?.id;
+    if (!memberId) {
+        return;
+    }
 
-  const member = await api.conversations
-    .members(activity.conversation.id)
-    .get(memberId);
+    const member = await api.conversations
+        .members(activity.conversation.id)
+        .getById(memberId);
 });
 ```
 
@@ -168,7 +168,7 @@ app.on("message", async ({ activity, api }) => {
 @app.on_message
 async def get_member(ctx: ActivityContext[MessageActivity]) -> None:
     member_id = ctx.activity.from_.id
-    member = await ctx.api.conversations.members(ctx.activity.conversation.id).get(member_id)
+    member = await ctx.api.conversations.members(ctx.activity.conversation.id).get_by_id(member_id)
 ```
 
 ::: zone-end
@@ -209,12 +209,12 @@ app.OnMessage(async (context, cancellationToken) =>
 
 ```typescript
 app.on("message", async ({ activity, api }) => {
-  const teamId = activity.channelData?.team?.id;
-  if (!teamId) {
-    return;
-  }
+    const teamId = activity.channelData?.team?.id;
+    if (!teamId) {
+        return;
+    }
 
-  const team = await api.teams.get(teamId);
+    const team = await api.teams.getById(teamId);
 });
 ```
 
@@ -228,7 +228,7 @@ app.on("message", async ({ activity, api }) => {
 @app.on_message
 async def get_team_details(ctx: ActivityContext[MessageActivity]) -> None:
     team_id = ctx.activity.channel_data.team.id
-    team = await ctx.api.teams.get(team_id)
+    team = await ctx.api.teams.get_by_id(team_id)
 ```
 
 ::: zone-end
