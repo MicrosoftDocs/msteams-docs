@@ -105,17 +105,17 @@ This workflow progresses as follows:
 
 Use this workflow when your agent should reply privately first, keep the original user prompt visible with the response, and allow the user to decide whether to share the response publicly.
 
-1. Capture the user request as a targeted message
+1. **Capture the user request as a targeted message**
 
     Start when a user invokes the agent in a channel, group chat, or meeting chat. The user can initiate the interaction using a slash command or an @mention message. Capture that request as a targeted message so the interaction begins privately between the user and the agent by using `IsTargeted == true` in the message event.
 
     This is the right pattern when the request may be sensitive, distracting, or not yet ready to share broadly.
 
-1. Store the original targeted message ID
+1. **Store the original targeted message ID**
 
     Save the original targeted message ID as soon as the request is received. You need this ID later to enable prompt preview, because the reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
 
-1. Send the first reply privately
+1. **Send the first reply privately**
 
     Reply to the requesting user with a targeted private message so only that user can see it.
 
@@ -134,7 +134,7 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     This keeps the conversation private while preserving the context of the shared space.
 
-1. Attach prompt preview metadata
+1. **Attach prompt preview metadata**
 
     To enable prompt preview, include a targetedMessageInfo entity in the outgoing reply and set its messageId to the original targeted message ID.
 
@@ -149,7 +149,7 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     Teams uses this entity to display the user’s original request above the agent’s response.
 
-1. Handle reactive and proactive replies correctly
+1. **Handle reactive and proactive replies correctly**
 
     Prompt preview works differently depending on how the reply is sent.
 
@@ -267,7 +267,7 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     ---
 
-1. Add suggested actions for approval
+1. **Add suggested actions for approval**
 
     After the private response is sent, provide suggested actions so the user can decide what happens next. Typical actions include:
 
@@ -278,6 +278,6 @@ Use this workflow when your agent should reply privately first, keep the origina
 
     You can use `Action.Submit` for quick actions that trigger server-side logic without posting a visible user message.
 
-1. Repost publicly only after explicit user approval
+1. **Repost publicly only after explicit user approval**
 
     Only repost the response publicly if the user explicitly approves it. If the user does not approve, keep the entire exchange private and do not publish the content to the shared conversation.
