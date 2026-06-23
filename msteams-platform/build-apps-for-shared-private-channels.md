@@ -565,11 +565,8 @@ Perform the following steps to validate the private channel support:
 
 1. Add the app to Team A, and then add it to the private channel.
 1. Verify that your tab loads correctly in the private channel.
-1. Test bot responses for different user types:
-   * In-tenant member
-   * Guest user or external user
 1. If your app lists members or assigns tasks, confirm it only uses channel members and not the complete team.
-5. Add a new member to the private channel and check:
+1. Add a new member to the private channel and check:
    * Whether your app receives a membership change event
    * Whether your membership API reflects the new member
 
