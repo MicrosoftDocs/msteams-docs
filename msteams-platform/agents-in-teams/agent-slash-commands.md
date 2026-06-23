@@ -77,6 +77,10 @@ Invoking a command from the menu switches the compose box to targeted messaging 
   - `/contoso draft a customer update from this thread`
   - `/contoso find the latest rollout plan and highlight open risks`
 
+    Natural language support may be preferable as explicit commands for high-confidence, repeatable actions. Agents are most valuable when they can understand intent, parameters, and context expressed in natural language. A useful slash-command design should combine discoverable commands with flexible phrasing, so users can say what they need instead of learning a long commands.
+
+    From a platform perspective, slash commands should support the experience, not define it end to end. They’re best used to surface common actions in a way that's easy to find and use way. The agent should handle natural-language requests, fill in missing details when it makes sense, and ask brief follow-up questions when something is unclear. It’s usually best to keep the command set small so that the users don't need to memorize syntax or choose from identical options.
+
 ### Message extension slash commands
 
 Apps that implement action-type [message extensions](../messaging-extensions/what-are-messaging-extensions.md) can surface them as slash commands. When a user activates one from the autocomplete menu, Teams immediately opens the associated task module or dialog. Activating a message extension slash command only opens the task module or dialog, and doesn't send a message. Search-type message extensions can't be exposed as commands.
