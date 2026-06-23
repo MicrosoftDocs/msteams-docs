@@ -36,7 +36,7 @@ Here are some examples that show how to implement and experience suggested actio
 
 To add suggested actions to a message, specify a list of [card action](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/models/card/card-action.ts) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/models/suggested-actions.ts) property of the [activity](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/activities/activity.ts) object.
 
-The following is an example to implement suggested actions using `imBack`:
+The following JSON shows the payload structure to implement suggested actions using `imBack`:
 
 ``` json
 {
