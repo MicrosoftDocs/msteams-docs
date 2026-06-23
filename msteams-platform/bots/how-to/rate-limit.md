@@ -147,7 +147,7 @@ The following table provides the per bot per thread limits:
 | Get conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They are throttled to five requests per minute and return a maximum of 10K members per team. To update your implementation to use paginated member retrieval, see [Get Teams specific context for your bot](get-teams-context.md#fetch-the-roster-or-user-profile).
+> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They are throttled to five requests per minute and return a maximum of 10K members per team. To update your implementation to use paginated member retrieval, see [Get Teams specific context for your bot](get-teams-context.md).
 
 You can also handle rate limit using the per thread limit for all bots.
 

@@ -1,9 +1,8 @@
 ---
-title: Teams specific context for bots
+title: Teams Specific Context for Bots
 description: Learn how to get Teams-specific context in bots by using Teams SDK APIs for roster, member, team, and channel information.
 ms.topic: article
 ms.localizationpriority: high
-ms.owner: angovil
 zone_pivot_groups: teams-sdk-languages
 ms.date: 06/19/2026
 ---

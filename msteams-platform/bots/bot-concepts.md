@@ -579,7 +579,7 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 In addition to conventional bot features, you can also explore advanced features available in a Teams bot app:
 
-* [Get Teams specific context for your bot](how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
+* [Get Teams specific context for your bot](how-to/get-teams-context.md).
 * [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
 * [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
 
