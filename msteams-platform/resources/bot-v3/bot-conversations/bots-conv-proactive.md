@@ -3,7 +3,7 @@ title: Proactive Messages & Event Notification
 description: In this module, learn how to use proactive messaging for bots and best practices for proactive messaging in Microsoft Teams
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 04/02/2023
+ms.date: 06/05/2026
 ms.owner: angovil
 ---
 # Proactive messaging for bots
@@ -169,7 +169,7 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 # [C#](#tab/csharp)
 
-The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/AppCompleteSample/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
+The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-complete-sample/csharp/AppCompleteSample/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;

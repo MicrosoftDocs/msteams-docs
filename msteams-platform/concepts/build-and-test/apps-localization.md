@@ -3,7 +3,7 @@ title: App Localization - Factors to Consider
 description: Learn considerations for localizing your Microsoft Teams app, localize strings in your app manifest, and handle localized text submissions from your users.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/17/2024
+ms.date: 06/05/2026
 ---
 # Localize your app
 
@@ -153,7 +153,7 @@ If you provide localized versions of your application, the users respond with th
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| App Localization | This sample demonstrates how to implement localization for Microsoft Teams apps using Bots and Tabs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App Localization | This sample demonstrates how to implement localization for Microsoft Teams apps using Bots and Tabs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-localization/nodejs) |
 
 ## Next step
 

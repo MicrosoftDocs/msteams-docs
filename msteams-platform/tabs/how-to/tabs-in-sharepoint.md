@@ -3,7 +3,7 @@ title: Integrate Teams Tab to SharePoint
 description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 12/11/2024
+ms.date: 06/05/2026
 ---
 
 # Add Teams tab to SharePoint
@@ -34,7 +34,7 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 ## Test the sample app
 
-1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
+1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
 1. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -48,7 +48,7 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot of the app details dialog to add the sample app to Teams.":::
 
-1. Select **Open** to open the app in personal scope. 
+1. Select **Open** to open the app in personal scope.
 
    Alternatively, you can either search and select the required scope or select a channel or meeting from the list, and move through the dialog to select **Go**.
 
@@ -111,7 +111,7 @@ After you publish your page, explore [single part app pages in SharePoint](/shar
 
 | **Sample name** | **Description** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx web part | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and message extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
+| SPFx web part | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and message extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/) |
 
 ## See also
 

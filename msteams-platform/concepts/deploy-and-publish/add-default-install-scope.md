@@ -3,7 +3,7 @@ title: Configure default options for your app
 description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 03/05/2025
+ms.date: 06/05/2026
 ---
 # Configure default options for Teams app
 
@@ -325,7 +325,7 @@ To ensure that IT admins perform the relevant tasks, developers can block an app
 
 :::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="Screenshot shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
 
-The admins can do their due diligence about your app and they can read the [app documentation that you provide]() before they allow their users to use your app. For example, the admins can purchase the required licenses and distribute the licenses before allowing users to use the app. To allow the app with **Blocked by publisher** status, an admin can select **Allow** in the **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in Teams admin center.
+The admins can do their due diligence about your app and they can read the [app documentation that you provide](appsource/prepare/submission-checklist.md) before they allow their users to use your app. For example, the admins can purchase the required licenses and distribute the licenses before allowing users to use the app. To allow the app with **Blocked by publisher** status, an admin can select **Allow** in the **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in Teams admin center.
 
 :::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="Screenshot shows the Allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 
@@ -338,7 +338,7 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|
-| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
+| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
 
 ## Next step
 

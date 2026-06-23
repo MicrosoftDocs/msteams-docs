@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/16/2026
+ms.date: 06/05/2026
 ---
 # Get Teams specific context for your bot
 
@@ -272,7 +272,7 @@ public class MyBot : TeamsActivityHandler
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamdetails)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {

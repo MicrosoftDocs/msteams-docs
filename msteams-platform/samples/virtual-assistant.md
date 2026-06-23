@@ -3,7 +3,7 @@ title: Create Virtual Assistant Bot in Teams
 description: Learn how to create a Virtual Assistant bot using code examples and snippets, with features such as Adaptive Cards and handling interruptions.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 12/21/2022
+ms.date: 06/05/2026
 ---
 
 # Create Virtual Assistant
@@ -578,7 +578,7 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 
 | **Sample name** | **Description** |**.NET** |
 |----------|-----------------|---------------------------|
-| Updated visual studio template | This sample showcases a customizable virtual assistant template that integrates seamlessly with Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-virtual-assistant/csharp) |
+| Updated visual studio template | This sample showcases a customizable virtual assistant template that integrates seamlessly with Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-virtual-assistant/csharp) |
 | Book-a-room bot skill code | Book-a-room bot lets you quickly find and book a meeting room on the go. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 ## See also

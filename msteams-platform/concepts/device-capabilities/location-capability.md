@@ -3,7 +3,7 @@ title: Add Location Capability with TeamsJS
 description: Learn how to use Teams JavaScript client library and location APIs to utilize location capabilities using code snippets and samples.
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 12/13/2022
+ms.date: 06/05/2026
 ---
 
 # Integrate location capabilities
@@ -182,7 +182,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
-| App check-in current location | This sample showcases a Microsoft Teams bot that allows users to check in their current location and view all previous check-ins seamlessly. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
+| App check-in current location | This sample showcases a Microsoft Teams bot that allows users to check in their current location and view all previous check-ins seamlessly. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
 
 ## See also
 
