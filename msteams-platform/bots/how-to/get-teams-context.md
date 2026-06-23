@@ -4,9 +4,9 @@ description: Learn how to get Teams-specific context in bots by using Teams SDK 
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
+zone_pivot_groups: teams-sdk-languages
 ms.date: 06/19/2026
 ---
-<!-- markdownlint-disable MD024 -->
 # Get Teams specific context for your bot
 
 A bot can access additional context data about the team or chat where it's installed. This information can be used to personalize responses and build richer workflows.
@@ -30,7 +30,7 @@ Don't use non-paginated member retrieval in teams and channels. For large roster
 
 The following sample code uses paged member retrieval:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -57,7 +57,9 @@ app.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -79,7 +81,9 @@ app.on("message", async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+});\n```\n\n::: zone-end\n\n::: zone pivot="teams-sdk-python"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -104,7 +108,7 @@ async def list_members(ctx: ActivityContext[MessageActivity]) -> None:
         continuation_token = result.continuation_token
 ```
 
-* * *
+::: zone-end
 
 After you fetch the roster, you can get details for a single member.
 
@@ -114,7 +118,7 @@ You can retrieve details of a specific member using user identifiers from the ac
 
 The following sample code uses Teams SDK APIs:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -135,7 +139,9 @@ app.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -152,7 +158,9 @@ app.on("message", async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -163,7 +171,7 @@ async def get_member(ctx: ActivityContext[MessageActivity]) -> None:
     member = await ctx.api.conversations.members(ctx.activity.conversation.id).get(member_id)
 ```
 
-* * *
+::: zone-end
 
 After you get details for a member, you can retrieve team details.
 
@@ -173,7 +181,7 @@ When installed in a team, your bot can query metadata such as team ID and Micros
 
 The following sample code uses Teams SDK APIs:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -193,7 +201,9 @@ app.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -208,7 +218,9 @@ app.on("message", async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -219,7 +231,7 @@ async def get_team_details(ctx: ActivityContext[MessageActivity]) -> None:
     team = await ctx.api.teams.get(team_id)
 ```
 
-* * *
+::: zone-end
 
 After you get team details, you can get the list of channels in that team.
 
@@ -234,7 +246,7 @@ Your bot can query the list of channels in a team.
 
 The following sample code is used to get the list of channels in a team:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -254,7 +266,9 @@ app.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -269,7 +283,9 @@ app.on("message", async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -280,7 +296,7 @@ async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
     channels = await ctx.api.teams.channels.list(team_id)
 ```
 
-* * *
+::: zone-end
 
 If you need raw connector REST endpoints, use the Teams SDK API for most bot scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
