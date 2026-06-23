@@ -60,11 +60,17 @@ In channels, group chats, and meeting chats, the slash command autocomplete menu
 
 Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
-They can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as:
+- **App-defined slash commands**:
 
-- `/create-task` to turn the current conversation into a tracked task, prefilled with the channel, requester, and due-date details based on context.
-- `/list-tasks` to list open tasks or action items in the conversation with task details and its owner name.
-- `/status-check` to retrieve the latest status for a work item, incident, or customer request without leaving the compose box.
+    Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as:
+
+  - `/create-task` to turn the current conversation into a tracked task, prefilled with the channel, requester, and due-date details based on context.
+  - `/list-tasks` to list open tasks or action items in the conversation with task details and its owner name.
+  - `/status-check` to retrieve the latest status for a work item, incident, or customer request without leaving the compose box.
+
+- **Natural-language support for slash commands**:
+
+    In this model, the user enters the slash command and, optionally, a natural-language request. The agent response is delivered privately to the user, which makes the pattern well suited for drafting, lookup, and summarization.
 
 ### Message extension slash commands
 
