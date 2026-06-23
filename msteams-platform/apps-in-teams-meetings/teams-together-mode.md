@@ -10,7 +10,7 @@ ms.date: 06/22/2026
 # Custom Together Mode scenes in Teams
 
 > [!IMPORTANT]
-> Custom Together Mode and Scene Studio in the Teams Developer Portal are being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
+> Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
 > [!NOTE]
 >
