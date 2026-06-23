@@ -2,7 +2,7 @@
 title: Microsoft Teams SDK overview
 description: Overview and positioning of the Microsoft Teams SDK, the primary way to build applications and agents for Microsoft Teams.
 ms.topic: overview
-ms.date: 05/19/2026
+ms.date: 06/23/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ---
@@ -22,9 +22,6 @@ The Teams Platform documentation primarily uses the Teams SDK APIs and tools to 
 * **Authentication and security** - Automatic handling of request validation, user authentication, and token management, including enterprise single sign-on
 * **Microsoft Graph integration** - Built-in support for calling Microsoft Graph APIs to access and interact with users' work data on their behalf
 * **Teams-native features for conversational agents** - @mentions, emoji reactions on messages, quoted and threaded replies, command autocomplete, detection of channel and meeting events, citations and disclosure labels on AI-generated content, user feedback intake, custom dialogs and more
-* **AI helpers** - Abstractions for building conversational agents powered by OpenAI and Azure OpenAI APIs.
 * **Adaptive Card support** - Define rich, interactive UX components for messages and dialogs inline, in the language you're working in, or design them interactively with the Adaptive Card designer and paste the resulting JSON straight into your project
 * **Model Context Protocol (MCP) and Agent-to-Agent (A2A) protocol adapters** - Enable your app to communicate with other tools and agents with server and client support for Model Context Protocol and Agent-to-Agent protocol
 * **Microsoft 365 Copilot compatibility** - Agents built with Teams SDK can run in both Teams and Microsoft 365 Copilot.
-
-Teams SDK is also integrated with the **Microsoft 365 Agents Toolkit**. The Agents Toolkit provides additional experiences in Visual Studio Code and Visual Studio for scaffolding, provisioning, debugging, testing, and deployment.
