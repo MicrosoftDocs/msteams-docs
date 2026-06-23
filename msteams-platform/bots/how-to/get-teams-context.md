@@ -155,8 +155,7 @@ app.on("message", async ({ activity, api }) => {
     }
 
     const member = await api.conversations
-        .members(activity.conversation.id)
-        .getById(memberId);
+        .member.getById(activity.conversation.id, memberId);
 });
 ```
 
@@ -170,7 +169,7 @@ app.on("message", async ({ activity, api }) => {
 @app.on_message
 async def get_member(ctx: ActivityContext[MessageActivity]) -> None:
     member_id = ctx.activity.from_.id
-    member = await ctx.api.conversations.members(ctx.activity.conversation.id).get_by_id(member_id)
+    member = await ctx.api.conversations.member.get_by_id(ctx.activity.conversation.id, member_id)
 ```
 
 ::: zone-end
@@ -281,7 +280,7 @@ app.on("message", async ({ activity, api }) => {
     return;
   }
 
-  const channels = await api.teams.channels.list(teamId);
+  const channels = await api.teams.getConversations(teamId);
 });
 ```
 
@@ -295,7 +294,7 @@ app.on("message", async ({ activity, api }) => {
 @app.on_message
 async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
     team_id = ctx.activity.channel_data.team.id
-    channels = await ctx.api.teams.channels.list(team_id)
+    channels = await ctx.api.teams.get_conversations(team_id)
 ```
 
 ::: zone-end
