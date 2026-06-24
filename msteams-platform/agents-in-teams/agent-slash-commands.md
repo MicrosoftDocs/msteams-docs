@@ -106,7 +106,13 @@ The `triggers` property defines where a command appears and how users can invoke
 - Use `slash` triggers for commands that users should be able to discover and invoke quickly from an empty compose box. Slash commands are well suited for frequent actions, private lookups, lightweight workflow starts, and commands that should be easy to find without first mentioning the agent.
 - Use `@mention` triggers for commands that are closely tied to an explicit interaction with the agent. This pattern is useful when users are already addressing the agent directly, especially in personal scope or in conversations where the user expects the command to be part of a visible agent exchange.
 
-Declare commands by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
+When a command supports both invocation patterns, declare both trigger values in the same command list. This keeps the command catalog consistent while giving users flexibility to start from either @mention or slash. You can choose to define separate command lists so that each trigger can have its own scope, command set, and user guidance.
+
+- Use `@mention` when users are intentionally addressing the agent and may expect an agent-visible conversation flow.
+- Use `slash` when users need fast discovery, private command invocation, or a shortcut from the compose box.
+- Use both when the same command should be available through both discovery surfaces without changing the command behavior.
+
+Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
 ```json
 {
