@@ -3,7 +3,7 @@ title: Container Layouts in Adaptive Cards
 description: Learn about container layouts in Adaptive Cards, including Layout.Flow, Layout.AreaGrid, and Layout.Stack, to create responsive and flexible card designs.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/07/2024
+ms.date: 06/10/2026
 ---
 
 # Container layouts
@@ -530,7 +530,7 @@ The elements in the card's body are assigned a grid area through the `grid.area`
 
 | Name | Description |.Node.js | .NET |
 |---|---|---|---|
-| Cards Formatting | Sample which demonstrates different formatting supported in cards using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) |
+| Cards Formatting | Sample which demonstrates different formatting supported in cards using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp) |
 
 ## See also
 

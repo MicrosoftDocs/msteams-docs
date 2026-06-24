@@ -4,7 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 04/23/2026
+ms.date: 06/10/2026
 ---
 # Proactive messages
 
@@ -431,7 +431,7 @@ The following table provides a simple code sample that incorporates basic conver
 | Teams Conversation Bot | This sample shows how to incorporate basic conversational flow into a Teams application. You can also use this sample to learn how to get `serviceURL` from the incoming request. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs) | NA | NA | NA |
 
 > [!div class="nextstepaction"]
-> [More code sample of proactive messaging](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [More code sample of proactive messaging](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx)
 
 ## Next step
 
@@ -441,7 +441,7 @@ The following table provides a simple code sample that incorporates basic conver
 ## See also
 
 * [Send proactive messages - Tutorial](../../../get-started/tutorials.md#send-proactive-messages)
-* [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp)
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Respond to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)

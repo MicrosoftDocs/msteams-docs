@@ -4,8 +4,8 @@ description: Install app proactively using Graph APIs. Check if your bot is curr
 ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
-ms.owner: vishachadha
-ms.date: 12/15/2022
+ms.owner: vikasalmal
+ms.date: 06/10/2026
 ---
 
 # Send proactive installation messages
@@ -249,7 +249,7 @@ server.get('/api/notify', async (req, res) => {
 ## Additional code samples
 >
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp)
 
 ## See also
 
