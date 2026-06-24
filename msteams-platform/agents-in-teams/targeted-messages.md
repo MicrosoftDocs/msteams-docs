@@ -72,6 +72,8 @@ For more about slash commands, including how to register extra named slash comma
 
 Prompt Preview lets an agent or bot include a compact preview of the user’s original prompt at the top of its reply. This helps preserve context, especially when the response is targeted to a specific user, so the recipient can immediately understand which request the agent or bot is addressing without needing to scroll back through the conversation.
 
+Prompt Preview helps preserve conversational context for targeted messages by showing a compact preview of the user’s original request at the top of the agent’s response. Because targeted messages appear inline in a shared conversation but are visible only to the sender and the targeted recipient, the preview helps the user quickly understand which private request the agent is answering without exposing that prompt to other participants.
+
 Prompt Preview can be enabled when an agent or bot replies to a user’s message through supported messaging APIs. In reactive scenarios, such as replying with `send()` or `reply()` to a targeted message, the SDK can attach the required entity automatically. In proactive scenarios, where the agent or bot sends a message outside the original interaction context, the agent ot bot must attach the entity manually by referencing the targeted message ID. Because Adaptive Cards may not align with this experience in some implementations, suggested actions can be used instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
 
 ### Response visibility modes
