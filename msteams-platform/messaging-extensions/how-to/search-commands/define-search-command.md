@@ -1,10 +1,10 @@
 ---
 title: Create Search Commands for App
-author: vikasalmal
+author: nickwalk
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/21/2026
+ms.date: 06/24/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -25,89 +25,41 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
+To add the search command to your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command by using Teams Developer CLI or by updating the manifest manually.
 
 ### Create search message extension using Teams SDK
 
-You can create a search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) and Developer Portal for Teams.
+You can create a search message extension using [Teams Developer CLI | Teams SDK](https://microsoft.github.io/teams-sdk/cli/) and [Agent Skills | Teams SDK](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills).
 
 #### Prerequisites
 
 Before you get started, ensure that you meet the following requirements:
 
-* A supported version of [Node.js](https://nodejs.org/en) (16 or 18).
+* [Node.js](https://nodejs.org/en) 20 or later.
 * A [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program).
 * A [dev environment set up for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
-* [Agents Toolkit for Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 5.2.0 or later) or Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI).
+* [Teams Developer CLI | Teams SDK](https://microsoft.github.io/teams-sdk/cli/).
+* (Optional) [Agent Skills | Teams SDK](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills) to let your AI assistant orchestrate Teams Developer CLI workflows through natural language.
 
-# [Agents Toolkit](#tab/Teams-toolkit)
+To create a search-based message extension with Teams Developer CLI, follow these steps:
 
-To create a search-based message extension using Agents Toolkit, follow these steps:
+1. Install Teams Developer CLI.
 
-1. Open **Visual Studio Code**.
-1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New Agents/App** > **Teams Agents and Apps** > **Other Teams Capabilities**.
-1. Select **Message Extension**.
-1. Select a **programming language**.
-1. Select **Default folder**.
-1. Enter the name of your app/agent and select **Enter**.
+  ```bash
+  npm install -g @microsoft/teams.cli
+  ```
 
-   Agents Toolkit scaffolds your project and creates a search message extension.
-
-To run the message extension in Teams, follow these steps:
-
-1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
-
-   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Agents Toolkit.":::
-
-1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Agents Toolkit launches Teams web client in a browser window.
-1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
+1. Sign in to your Microsoft 365 tenant.
+1. Create or open your Teams app project and configure bot-based message extension capability.
+1. Update your app manifest to add the `composeExtensions` definition for a search command.
+1. Configure the command details in your manifest, including command ID, command title, command description, context in which the command works, parameter name, parameter title, parameter description, and input type.
+1. Package and preview your app in Teams using Teams Developer CLI.
+1. In Teams, go to a chat message and select the **Actions and apps** icon. Search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
 1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
 
-# [Developer Portal for Teams](#tab/developer-portal-for-teams)
-
-1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home).
-1. Go to **Apps**.
-1. Select **Create a new app**.
-1. Under **Configure**, select **App features**.
-1. Select **Messaging extension**.
-
-   :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
-
-1. Under **Message extension type**, select **Bot**.
-
-   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**. Select **Yes, change**.
-
-   :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
-
-1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
-
-   1. If you don't have an existing bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
-
-1. Select **Save**.
-
-1. Select the required scopes.
-
-1. Under **Command**, select **+ Add a command**.
-
-   A command details page appears.
-
-1. In the Command details page, select **Search** as the type of command and update the following fields:
-   * Command ID
-   * Command title
-   * Command description
-   * Context in which the command works
-   * Parameter name
-   * Parameter title
-   * Parameter description
-   * Select the type of input
-
-1. Select **Save**. A search message extension is created.
-1. At the upper-right corner, select **Preview in Teams**. The app opens in Teams desktop or web client.
+If you're using an AI coding assistant, install the `teams-dev` agent skill from [Agent Skills | Teams SDK](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills). The skill helps your assistant orchestrate Teams Developer CLI workflows and related app management tasks through natural language.
 
 ---
 
@@ -275,5 +227,6 @@ async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]
 
 ## See also
 
-* [Developer Portal for Teams](../../../concepts/build-and-test/teams-developer-portal.md)
+* [Teams Developer CLI | Teams SDK](https://microsoft.github.io/teams-sdk/cli/)
+* [Agent Skills | Teams SDK](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills)
 * [Message extensions](../../what-are-messaging-extensions.md)
