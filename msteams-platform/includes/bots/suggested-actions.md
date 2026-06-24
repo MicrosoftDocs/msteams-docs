@@ -34,9 +34,9 @@ Here are some examples that show how to implement and experience suggested actio
 
 # [`imBack`](#tab/iamback)
 
-To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+To add suggested actions to a message, specify a list of [card action](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/models/card/card-action.ts) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/models/suggested-actions.ts) property of the [activity](https://github.com/microsoft/teams.ts/blob/main/packages/api/src/activities/activity.ts) object.
 
-The following is an example to implement suggested actions using `imBack`:
+The following JSON shows the payload structure to implement suggested actions using `imBack`:
 
 ``` json
 {
@@ -80,19 +80,22 @@ You can use the `Action.Compose` to insert a message in the compose box, which h
 The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
-{ 
-   Type: “Action.Compose”, 
-   Title: “button title”, 
-   Value: { 
-      type: “Teams.chatMessage”, 
-      data: <GraphAPI Chat Message Object> 
-   } 
+{
+  "type": "Action.Compose",
+  "title": "button title",
+  "value": {
+    "type": "Teams.chatMessage",
+    "data": {
+      "body": {
+        "contentType": "html",
+        "content": "Hello from Action.Compose"
+      }
+    }
+  }
 }
 ```
 
-The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
-
-For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
+The `value.data` object must follow the Microsoft Graph [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) schema. Use that reference to add supported message content such as mentions, tags, emojis, gifs, and other rich objects.
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
