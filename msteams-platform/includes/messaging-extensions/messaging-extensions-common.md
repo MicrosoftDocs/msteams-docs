@@ -6,7 +6,7 @@ A message extension is a bot-based extensibility point in your Teams app that le
 
 ### Provision your bot identity
 
-Provision a bot identity for your app using [Microsoft 365 Agents Toolkit](/microsoftteams/platform/teams-sdk/teams/configuration/agents-toolkit), the [Teams CLI](/microsoftteams/platform/teams-sdk/developer-tools/cli), or the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). The toolkit handles bot registration, credential setup (client secret or federated identity), and supplies the bot ID through the `${{BOT_ID}}` placeholder used in your app manifest. For details, see [App authentication setup](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview).
+Provision a bot identity for your app using [Teams CLI](/microsoftteams/platform/teams-sdk/developer-tools/cli). The CLI handles bot registration, credential setup (client secret or federated identity), and supplies the bot ID through the `${{BOT_ID}}` placeholder used in your app manifest. For details, see [App authentication setup](/microsoftteams/platform/teams-sdk/teams/app-authentication/overview).
 
 ### Update your app manifest
 
