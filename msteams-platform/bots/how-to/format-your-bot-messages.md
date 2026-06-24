@@ -32,7 +32,7 @@ Microsoft Teams supports the following formatting options:
 | `extendedMarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
 | `xml` | The text is simple XML markup. |
 
-For `textFormat: "markdown"`, Teams supports a subset of Markdown formatting. For `textFormat: "extendedMarkdown"`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `textFormat: "xml"`, Teams supports a subset of XML formatting tags.
+For `markdown`, Teams supports a subset of Markdown formatting. For `extendedMarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
 
 Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
@@ -46,7 +46,7 @@ To use extended Markdown formatting in bot messages, set the `textFormat` proper
 {
   "type": "message",
   "textFormat": "extendedMarkdown",
-  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
+  "text": "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending"
 }
 ```
 
@@ -56,7 +56,7 @@ To use extended Markdown formatting in bot messages, set the `textFormat` proper
 var activity = new Activity
 {
     Type = ActivityTypes.Message,
-    Text = "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
+    Text = "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
     TextFormat = "extendedMarkdown"
 };
 
@@ -68,7 +68,7 @@ await app.SendActivity(conversationId, activity);
 ```typescript
 const activity = {
   type: "message",
-  text: "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
+  text: "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
   textFormat: "extendedMarkdown"
 };
 
@@ -80,7 +80,7 @@ await app.sendActivity(conversationId, activity);
 ```python
 activity = Activity(
     type=ActivityTypes.message,
-    text="### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
+    text="### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
     text_format="extendedMarkdown"
 )
 
