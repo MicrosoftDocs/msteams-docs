@@ -99,6 +99,10 @@ See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) 
 
 Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
+#### Triggers: slash and @mention
+
+The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. For agent command lists, use `@mention` when the command should appear in the traditional @mention command menu, use `slash` when the command should appear in the slash command picker, or include both values when the same command should be available from both entry points.
+
 Declare commands by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
 ```json
