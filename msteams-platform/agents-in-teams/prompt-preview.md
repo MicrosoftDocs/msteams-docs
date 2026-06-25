@@ -47,14 +47,6 @@ The following example shows the entities array required to enable prompt preview
 
 In *reactive* scenarios, reply-style SDK methods usually attach the `targetedMessageInfo` entity automatically because the response is still tied to the incoming user interaction. In *proactive* scenarios, the response is sent outside that original turn, so you must add the `targetedMessageInfo` entity yourself before sending the private or public message.
 
-## Suggested actions
-
-Suggested actions give users context-aware ideas for what to ask next based on the current response or conversation. In this workflow, use suggested actions to let the user decide what happens after the private reply. Common actions include sharing the response to the conversation, refining the prompt, or dismissing the result. If your implementation uses `Action.Submit`, send a structured payload so your app can handle the user's choice without posting a visible user message.
-
-Use `Action.Submit` for quick-action (suggested action) buttons that run server-side bot logic without posting a user-visible chat message. The button looks like any other suggested action, but when clicked it sends an invoke activity to your agent or bot, instead of a normal message activity. Include a structured name and value payload so you can route and dispatch based on the invoke name and pass contextual data through your existing invoke pipeline, that includes card invoke and handoff flows, without changing the conversation transcript.
-
-For implementation details and payload requirements, see the suggested actions documentation for Teams messaging extensions and bots. [WIP: Add link to Teams SDK suggested actions article].
-
 ## End-to-end response workflow
 
 Before you implement this workflow, confirm that your app supports targeted messaging in Teams and that the scenario runs in a channel, group chat, or meeting chat. If you want the response to remain private until the user approves sharing it, store the original targeted message ID because you need it later to attach prompt preview metadata to the private or public reply.
