@@ -10,27 +10,7 @@ ms.topic: article
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Support for agent response workflows
-
-Use agent response workflows when your agent should answer a user privately in a channel, group chat, or meeting chat first, then let that user decide whether to share the same response with everyone. This article explains the three core capabilities involved in that flow—targeted messaging, prompt preview, and suggested actions—and shows how they work together in private and public responses.
-
-- *Targeted messaging* lets an agent send a one-to-one reply to the requesting user from within a shared conversation such as a channel, group chat, or meeting chat. Use it when the reply should stay private until the user decides whether to share it more broadly.
-- *Prompt preview* lets the agent’s reply include the user’s original query in the same message.
-- *Suggested actions* provide an easy approval step, such as Allow or Share to channel, so the user controls whether the response becomes public.
-
-Choose this workflow when your scenario needs all three of the following behaviors: the first response must stay private to the requesting user, the original prompt must remain visible with the response, and the user must explicitly approve any repost to the broader conversation. The following capabilities combine to enable that experience:
-
-| Workflow capability | How it works | How it helps |
-| --- | --- | --- |
-| Targeted messaging | It starts the exchange privately inside a shared conversation. | It helps keep sensitive or user-specific interactions private while cutting down on noise for everyone else. |
-| Prompt preview | It shows the original user request together with the agent’s reply. | It keeps context, improves readability, and makes public reposts easier to understand. |
-| Suggested actions | It lets the user approve, share, refine, or dismiss the response. | It helps to create an explicit consent step before private content becomes visible to the group. |
-
-## Agent response workflows for targeted messages
-
-To learn more about targeted messaging behavor in Teams, see [send and receive targeted messages in group conversations](targeted-messages.md).
-
-## Prompt preview
+# Support for prompt preview for targeted messages
 
 Use the Teams SDK when the agent responds within an incoming interaction or sends a follow-up outside that turn. For reactive replies, the SDK usually attaches `targetedMessageInfo` automatically. For proactive replies, add the entity yourself and set the original targeted message ID before you send the activity. When you use REST APIs, prompt preview works the same way for both private and public replies. Include the `targetedMessageInfo` entity in the activity and use the original targeted message ID.
 
