@@ -3,9 +3,9 @@ title: Channel/Group Conversation Chat Bot
 description: Learn how to create new conversation threads, user and tag mentions, and send message on installation. Explore Teams file upload sample (.NET, JavaScript, Python).
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: nickwalk
 ms.owner: angovil
-ms.date: 01/23/2025
+ms.date: 06/25/2026
 ---
 # Channel and group chat conversations with a bot
 
@@ -56,7 +56,7 @@ The following code shows an example of retrieving mentions:
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)

@@ -4,7 +4,7 @@ description: Learn about bot events and activity handlers for messages, channels
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: angovil
-ms.date: 10/03/2024
+ms.date: 06/25/2026
 ---
 
 # Understand bot concepts
@@ -587,5 +587,5 @@ In addition to conventional bot features, you can also explore advanced features
 
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
-| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
+| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation/python)|
 | Bot samples | Set of Bot Framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|

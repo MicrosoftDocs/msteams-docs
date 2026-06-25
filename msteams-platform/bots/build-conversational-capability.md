@@ -3,9 +3,9 @@ title: Conversations with a Bot
 description: Learn about sending and receiving messages using a bot app
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.owner: angovil
-ms.date: 03/16/2025
+ms.date: 06/25/2026
 ---
 
 # Send and receive messages
@@ -161,7 +161,7 @@ export class MyBot extends TeamsActivityHandler {
 # [Python](#tab/python1)
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L103)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
 ```python
 
@@ -469,7 +469,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 # [TypeScript](#tab/typescript2)
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
 
@@ -781,7 +781,7 @@ It is not necessary for the new message to match the original in type. For examp
 # [C#](#tab/csharp2)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 

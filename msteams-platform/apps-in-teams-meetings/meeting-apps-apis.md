@@ -3,9 +3,9 @@ title: Enhance Meeting Experience with APIs
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.owner: kanchankaur
-ms.date: 03/16/2026
+ms.date: 06/25/2026
 ---
 
 # Meeting apps APIs
@@ -765,7 +765,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 # [JavaScript](#tab/javascript2)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```javascript
 // MessageFactory.text(): Specifies the type of text data in a message attachment.

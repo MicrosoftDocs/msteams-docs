@@ -2,8 +2,8 @@
 title: Respond to Search Command in Teams
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: article
-ms.author: anclear
-ms.date: 03/06/2025
+ms.author: nickwalk
+ms.date: 06/25/2026
 ms.localizationpriority: medium
 ---
 # Respond to search command
@@ -30,7 +30,7 @@ The request parameters are found in the `value` object in the request, which inc
 # [C#/.NET](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)

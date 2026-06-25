@@ -1,7 +1,7 @@
 ---
 title: Copilot Handoffs for Bots
 description: Learn how to allow users to continue their conversation with custom engine agent from Microsoft 365 Copilot to your bot service.
-ms.date: 09/16/2024
+ms.date: 06/25/2026
 ms.topic: article
 ms.owner: ginobuzz
 ---
@@ -151,4 +151,4 @@ To enable copilot handoff in Teams, follow these steps:
 
 |Sample name | Description | Node.js|
 | ----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Northwind inventory message extension                               | This sample is a Teams message extension that works as an agent for Microsoft 365 Copilot. It features copilot handoff and enables users to transition their chat from Microsoft 365 Copilot to Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts)              |
+| Northwind inventory message extension                               | This sample is a Teams message extension that works as an agent for Microsoft 365 Copilot. It features copilot handoff and enables users to transition their chat from Microsoft 365 Copilot to Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-copilot-handoff/ts)              |
