@@ -236,7 +236,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 
 # [TypeScript/Node.js](#tab/typescript2)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
 ```typescript
 class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
