@@ -70,7 +70,7 @@ For more about slash commands, including how to register extra named slash comma
 
 ### Prompt Preview
 
-Prompt Preview helps preserve conversational context for targeted messages by showing a compact preview of the user’s original request at the top of the agent’s response, especially when the response is targeted to a specific user. Targeted messages appear inline in a shared conversation but are visible only to the sender and the targeted recipient. The preview helps the user quickly understand which private request the agent is answering without exposing that prompt to other participants.
+Prompt Preview helps preserve conversational context for targeted messages by showing a compact preview of the user’s original request at the top of the agent’s response, especially when the response is targeted to a specific user. Targeted messages appear inline in a shared conversation but are visible only to the targeted recipient. It keeps targeted agent responses grounded in the user’s original request helping the user understand context without exposing the prompt to everyone else.
 
 In reactive flows, such as replying with `send()` or `reply()` to a user’s targeted message or slash-command request, Prompt Preview can be attached automatically by the supported SDK or messaging API so the response stays tied to the original prompt. In proactive flows, where the agent sends a targeted message outside the original interaction context, the agent must explicitly reference the targeted message ID so the preview points to the correct user request. When a private response might be shared publicly, use suggested actions such as Approve or Reject to let the user confirm the content before the agent deletes or resends it as a standard public message.
 
