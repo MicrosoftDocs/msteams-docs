@@ -76,6 +76,8 @@ In reactive flows, such as replying with `send()` or `reply()` to a user’s tar
 
 Adaptive Cards may not align with this experience in some implementations. Use suggested actions instead to provide lightweight call-to-action options such as Approve or Reject options while preserving the new prompt preview experience.
 
+Prompt Preview and [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp) both help preserve context, but they serve different needs. Prompt Preview is built for targeted-message workflows: it shows the user’s original private prompt with the agent’s response and can carry that context into a public repost after approval. Quoted replies are general conversation references that point back to earlier messages; they help readers follow the thread but don’t provide an approval mechanism or targeted-message-specific context.
+
 ### Response visibility modes
 
 Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` with `WithRecipient` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message.
