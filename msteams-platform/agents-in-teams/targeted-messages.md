@@ -88,7 +88,7 @@ Setting `isTargeted: true` with `WithRecipient` delivers this message as a priva
 
 For targeted messaging, the user approval matters because the agent’s first response is intentionally private. It is an important targeted-messaging safeguard. The private response can be reviewed in context with prompt preview. As the agent’s first response is private, the user should explicitly confirm  before the agent or app publishes that response into the shared conversation. You can buuld this experience using Adaptive Cards, or suggested actions for offering options to the user such as approving, sharing, or updating the message.
 
-For more information on implementing prompt preview, see [agent response workflows](agent-response-workflows.md) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+For more information on implementing prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
 ::: zone pivot="typescript"
 
