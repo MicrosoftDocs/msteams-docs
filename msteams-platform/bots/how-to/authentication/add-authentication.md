@@ -3,7 +3,7 @@ title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/16/2026
+ms.date: 06/25/2026
 ---
 
 # Add authentication to your Teams bot
@@ -317,7 +317,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set the `connectionName` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
-     [!code-javascript[settings](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/.env)]
+     [!code-javascript[settings](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/.env)]
 
 1. In the `teamsAppManifest` folder, open `manifest.json` and set `id`  to your **Microsoft App ID** and `botId` to the **bot App ID** you saved at the time of the bot registration.
 
@@ -630,13 +630,13 @@ protected virtual Task OnSigninVerifyStateAsync(ITurnContext<IInvokeActivity> tu
 
 **bots/dialogBot.js**
 
-[!code-javascript[ActivityHandler](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/bots/dialogBot.js?range=4-46)]
+[!code-javascript[ActivityHandler](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/bots/dialogBot.js?range=4-46)]
 
 **bots/teamsBot.js**
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-javascript[ActivityHandler](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/bots/teamsBot.js?range=4-33)]
+[!code-javascript[ActivityHandler](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/bots/teamsBot.js?range=4-33)]
 
 **dialogs/mainDialog.js**
 
@@ -645,15 +645,15 @@ Within a dialog step, use `beginDialog` to start the OAuth prompt, which asks th
 - If the user is already signed in, it generates a token response event, without prompting the user.
 - Otherwise, it prompts the user to sign in. The Azure Bot Service sends the token response event after the user attempts to sign in.
 
-[!code-javascript[AddOAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/mainDialog.js?range=50-52)]
+[!code-javascript[AddOAuthPrompt](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/dialogs/mainDialog.js?range=50-52)]
 
 Within the following dialog step, check for the presence of a token in the result from the previous step. If it isn't null, then the user successfully signed in.
 
-[!code-javascript[AddOAuthPrompt](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/mainDialog.js?range=50-64)]
+[!code-javascript[AddOAuthPrompt](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/dialogs/mainDialog.js?range=50-64)]
 
 **dialogs/logoutDialog.js**
 
-[!code-javascript[allow-logout](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/logoutDialog.js?range=31-42&highlight=7)]
+[!code-javascript[allow-logout](~/../Microsoft-Teams-Samples/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js/dialogs/logoutDialog.js?range=31-42&highlight=7)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handling+Invoke+Activity+using+JavaScript&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cnode-js-dialog-sample%23handling-invoke-activity&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)

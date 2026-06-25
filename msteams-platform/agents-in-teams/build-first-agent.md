@@ -2,7 +2,7 @@
 title: Create your first agent
 description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 06/25/2026
 ms.topic: reference
 ---
 
@@ -145,7 +145,7 @@ Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides
 
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
-| Contoso knowledge hub | An intelligent agent built on the Teams SDK that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/python) |
+| Contoso knowledge hub | An intelligent agent built on the Teams SDK that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/python) |
 
 ## See also
 

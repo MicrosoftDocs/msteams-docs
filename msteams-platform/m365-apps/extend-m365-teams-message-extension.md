@@ -1,7 +1,7 @@
 ---
 title: Extend Message Extension to Outlook
 description: Learn how to update search-based message extension to run in Outlook, add Microsoft 365 channel for bot, and update Microsoft Entra app registration for SSO.
-ms.date: 02/06/2025
+ms.date: 06/25/2026
 ms.topic: tutorial
 ms.localizationpriority: high
 ms.subservice: m365apps
@@ -218,7 +218,7 @@ Use the [Teams developer community channels](/microsoftteams/platform/feedback) 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
-| Teams Link Unfurling | This sample app showcases a Node.js bot that implements link unfurling within Teams messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs) |
+| Teams Link Unfurling | This sample app showcases a Node.js bot that implements link unfurling within Teams messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-link-unfurling/nodejs) |
 | Tab in Stageview | This sample app demonstrates the use of Teams tab in stage view using Node.js, featuring collaborative elements and interactive capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 | Teams action-based message extension for Microsoft 365| Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/dev/templates/vsc/js) |
 

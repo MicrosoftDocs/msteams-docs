@@ -3,9 +3,9 @@ title: Create a command menu for your bot
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: nickwalk
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 06/25/2026
 ---
 
 # Create a commands menu
@@ -228,7 +228,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 

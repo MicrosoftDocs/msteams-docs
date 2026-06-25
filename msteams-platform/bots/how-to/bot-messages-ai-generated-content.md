@@ -3,7 +3,7 @@ title: Bot Messages with AI-generated Content
 description: Learn how to add an AI label, sensitivity labels, citations, and feedback buttons for bots built using Teams SDK or Bot Framework SDK.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/12/2026
+ms.date: 06/25/2026
 ---
 
 # Enhance AI-generated bot messages
@@ -562,7 +562,7 @@ For more information about `PredictedSayCommand`, see [PredictedSayCommand inter
 
 | Sample name | Description | Node.js | .NET |
 |:--|--|--|
-| Teams conversation bot | This sample app displays the AI label, citation, feedback buttons, and sensitivity label in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | NA |
+| Teams conversation bot | This sample app displays the AI label, citation, feedback buttons, and sensitivity label in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation/nodejs) | NA |
 | Azure OpenAI on your data | This conversational bot uses Teams SDK and contains the AI label, feedback buttons, sensitivity label, and citation in its generated messages. | NA | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/08.datasource.azureopenai) |
 
 ## See also

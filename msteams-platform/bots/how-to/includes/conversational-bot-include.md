@@ -3,8 +3,8 @@ title: Build an conversational bot
 description: Learn about creating a conversational bot
 ms.topic: overview
 ms.localizationpriority: high
-ms-author: surbhigupta
-ms.date: 01/29/2023
+ms-author: nickwalk
+ms.date: 06/25/2026
 ---
 
 ## Build a conversational bot
@@ -56,7 +56,7 @@ The following code shows an example of retrieving mentions:
 
 * [SDK reference](/dotnet/api/microsoft.bot.schema.activity.getmentions?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-archive-groupchat-messages/csharp/FetchGroupChatMessages/Bots/ActivityBot.cs#L182)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)

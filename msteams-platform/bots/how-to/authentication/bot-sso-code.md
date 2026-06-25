@@ -4,7 +4,7 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
-ms.date: 11/13/2024
+ms.date: 06/25/2026
 ---
 # Add code to enable SSO in your bot app
 
@@ -543,7 +543,7 @@ Use the following code snippet to handle the access token in case the app user s
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
+| Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 

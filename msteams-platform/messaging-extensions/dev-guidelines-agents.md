@@ -2,9 +2,9 @@
 title: Development Guidelines for Agents
 description: Discover the essential guidelines and best practices to create, upgrade, and optimize agents for Microsoft 365 Copilot.
 ms.topic: article
-author: v-preethah
+author: nickwalk
 ms.localizationpriority: high
-ms.date: 09/16/2024
+ms.date: 06/25/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -700,7 +700,7 @@ Agents customize and extend the Microsoft 365 Copilot experience by bringing mor
 
 | Sample name | Description | TypeScript |
 |----------------|-----------------|--------------|
-| Northwind inventory message extension | This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts) |
+| Northwind inventory message extension | This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-copilot-handoff/ts) |
 
 ## See also
 
