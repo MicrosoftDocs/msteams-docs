@@ -63,7 +63,7 @@ The manifest example code for prompt starters is as follows:
           "commands":[
             {
               "title":"Help",
-              "description":"Displays this help message",
+              "description":"Displays this help message"
             },
             {
               "title":"Search Flights",

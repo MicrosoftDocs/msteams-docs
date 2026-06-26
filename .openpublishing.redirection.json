@@ -1545,6 +1545,10 @@
         "redirect_url": "/microsoft-copilot-studio/unified-authoring-conversion"
       },
       {
+        "source_path": "msteams-platform/resources/team-chat-member-api-changes.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/get-teams-context"
+      },
+      {
         "source_path": "msteams-platform/toolkit/teams-toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli"
       }      
