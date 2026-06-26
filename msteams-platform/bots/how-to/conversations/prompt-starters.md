@@ -1,44 +1,22 @@
 ---
-title: Add Prompt Suggestions
+title: Add Prompt Starters
 author: surbhigupta
-description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
+description: Learn how to create and handle prompt starters for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-zone_pivot_groups: teams-sdk-languages
 ms.author: vikasalmal
 ms.date: 4/7/2026
 ---
 
-# Create prompt suggestions
+# Create prompt starters
 
-Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat.
+Prompt starters are commands that are presented to users in the Microsoft Teams chat.
 
-Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
-
-There are two types of prompt suggestions that you can use:
-
-:::row:::
-:::column span="2":::
-
-##### [Prompt starters](#prompt-starters)
-
-Prompt starters help users start a conversation with your bot.
+Prompt starters help users discover and start common interactions with your bot. Prompt starters use the `commands` section of the app manifest. When a user selects a prompt starter, Teams prefills the compose box with the configured prompt, making it easier for the user to begin a conversation with your bot.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
-:::column-end:::
-
-:::column span="2":::
-
-##### [Suggested actions](#suggested-actions-1)
-
-Suggested actions help users continue conversations with your bot.
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." lightbox="~/assets/images/Cards/suggested-actions.png":::
-
-:::column-end:::
-
-:::row-end:::
+For guidance on follow-up options that help users continue a conversation, see [Create suggested actions](suggested-actions.md).
 
 ## Prompt starters
 
@@ -64,7 +42,7 @@ Prompt starters are supported in one-on-one chats, group chats, and channels. To
 * The `command` property supports up to 10 commands.
 * You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
 
-#### Manifest example for prompt starters
+### Manifest example for prompt starters
 
 The manifest example code for prompt starters is as follows:
 
@@ -119,7 +97,7 @@ The manifest example code for prompt starters is as follows:
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
-The following image illustrates an example of prompt suggestions:
+The following image illustrates an example of prompt starters:
 
 # [Desktop](#tab/desktop)
 
@@ -147,12 +125,6 @@ You must handle menu commands in your bot code as you handle any message from us
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
 
----
-
-## Suggested actions
-
-[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
-
 ## Code sample
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |
@@ -162,6 +134,7 @@ You must handle menu commands in your bot code as you handle any message from us
 ## See also
 
 * [Build bots for Teams](~/bots/what-are-bots.md)
+* [Create suggested actions](suggested-actions.md)
 * [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
 * [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
 * [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

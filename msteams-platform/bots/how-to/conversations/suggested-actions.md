@@ -1,3 +1,24 @@
+---
+title: Add Suggested Actions
+author: surbhigupta
+description: Learn how to create and handle suggested actions for your Microsoft Teams bot to help users continue conversations.
+ms.topic: how-to
+ms.localizationpriority: medium
+zone_pivot_groups: teams-sdk-languages
+ms.author: vikasalmal
+ms.date: 6/26/2026
+---
+
+# Create suggested actions
+
+Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
+
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." lightbox="~/assets/images/Cards/suggested-actions.png":::
+
+For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
+
+## Suggested actions
+
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your agent or bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. You can build the following suggested actions in your agent or bot:
 
 - `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
@@ -66,9 +87,9 @@ The following is an example to implement suggested actions using `imBack`:
         "type": "imBack",
         "title": "Create a new work item for this feature",
         "value": "Create a new work item for this feature"
-            }
-        ]
-    },
+      }
+    ]
+  },
   "replyToId": "5d5cdc723"
 }
 ```
@@ -81,12 +102,12 @@ The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
 { 
-   Type: “Action.Compose”, 
-   Title: “button title”, 
-   Value: { 
+  Type: “Action.Compose”, 
+  Title: “button title”, 
+  Value: { 
       type: “Teams.chatMessage”, 
       data: <GraphAPI Chat Message Object> 
-   } 
+  } 
 }
 ```
 
@@ -105,7 +126,7 @@ Use `Action.Submit` to add suggested action buttons to [agent responses to slash
 
 This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
 
-**Bot Payload (Outgoing from Bot)**
+Bot payload (outgoing from bot):
 
 ```json
 
@@ -125,7 +146,7 @@ This pattern is particularly useful for the targeted messages workflow where an 
 > [!NOTE]
 > The `value` is an object (not a string) that carries the data.
 
-**Bot Handler (Incoming to Bot)**
+Bot handler (incoming to bot):
 
 The agent or bot receives a standard Bot invoke activity:
 
@@ -158,24 +179,24 @@ using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
 
 var reply = new MessageActivity("Approve or reject the request:")
 {
-  SuggestedActions = new SuggestedActions
-  {
-    Actions =
+    SuggestedActions = new SuggestedActions
     {
-      new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
-      new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
+        Actions =
+        {
+            new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
+            new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
+        }
     }
-  }
 };
 
 await context.Send(reply);
 
 teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 {
-  var payload = ctx.Activity.Value is JsonElement value
-    ? value.GetRawText()
-    : "<none>";
-  await ctx.Send($"Got vote: {payload}", cancellationToken);
+    var payload = ctx.Activity.Value is JsonElement value
+        ? value.GetRawText()
+        : "<none>";
+    await ctx.Send($"Got vote: {payload}", cancellationToken);
 });
 ```
 
@@ -215,23 +236,28 @@ from microsoft_teams.api.models.card.card_action_type import CardActionType
 from microsoft_teams.api.models.suggested_actions import SuggestedActions
 
 reply = MessageActivityInput(text="Approve or reject the request:").with_suggested_actions(
-  SuggestedActions(
-    to=[],
-    actions=[
-      CardAction(type=CardActionType.SUBMIT, title="Approve", value={"vote": "approve"}),
-      CardAction(type=CardActionType.SUBMIT, title="Reject", value={"vote": "reject"}),
-    ],
-  )
+    SuggestedActions(
+        to=[],
+        actions=[
+            CardAction(type=CardActionType.SUBMIT, title="Approve", value={"vote": "approve"}),
+            CardAction(type=CardActionType.SUBMIT, title="Reject", value={"vote": "reject"}),
+        ],
+    )
 )
 
 await ctx.send(reply)
 
 @app.on_suggested_action_submit
 async def handle_suggested_action_submit(ctx):
-  payload = json.dumps(ctx.activity.value)
-  await ctx.send(f"Got vote: {payload}")
+    payload = json.dumps(ctx.activity.value)
+    await ctx.send(f"Got vote: {payload}")
 ```
 
 ::: zone-end
 
----
+## See also
+
+- [Create prompt starters](prompt-starters.md)
+- [Build bots for Teams](~/bots/what-are-bots.md)
+- [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+- [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

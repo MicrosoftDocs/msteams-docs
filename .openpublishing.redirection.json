@@ -1,6 +1,10 @@
 {
   "redirections": [
       {
+        "source_path": "msteams-platform/bots/how-to/conversations/prompt-suggestions.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/prompt-starters"
+      },
+      {
         "source_path": "msteams-platform/m365-apps/actions-in-m365-quick-start-guide.md",
         "redirect_url": "/microsoftteams/platform/overview"
       },
