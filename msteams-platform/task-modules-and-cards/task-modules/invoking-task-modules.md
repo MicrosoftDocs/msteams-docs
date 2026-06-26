@@ -1,7 +1,7 @@
 ---
 title: Invoke Dialogs from Tab, Bot, or Link
 description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 01/29/2023
 ---
