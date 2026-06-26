@@ -7,6 +7,8 @@ author: nickwalkmsft
 ms.author: nickwalk
 ---
 
-# Teams SDK programming model
+# Teams SDK programming model **for agents**
 
-TODO
+In [The Teams application model and developer workflow](concepts/teams-application-model.md), we saw how apps are powered by web apps
+
+That article is overall arch model and workflow, this is Temas SDK app model

@@ -12,6 +12,7 @@ ms.author: nickwalk
 The Teams Developer CLI provides tools for creating, configuring, and managing Teams apps.
 
 * **Project scaffolding** - Get an agent or app up and running on Teams in minutes with project templates in TypeScript, C# and Python
+* **App manifest management** -
 * **App registration and lifecycle management** - Register agents and apps with the Teams platform and manage their configuration
 * **Authentication** - Manage Entra ID app credentials and agent authentication
 
