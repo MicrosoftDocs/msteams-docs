@@ -3,8 +3,8 @@ title: Create Search Commands for App
 author: nickwalk
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
-ms.author: anclear
-ms.date: 06/24/2026
+ms.author: nickwalk
+ms.date: 06/26/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -49,17 +49,17 @@ To create a search-based message extension with Teams Developer CLI, follow thes
   npm install -g @microsoft/teams.cli
   ```
 
-1. Sign in to your Microsoft 365 tenant.
-1. Create or open your Teams app project and configure bot-based message extension capability.
-1. Update your app manifest to add the `composeExtensions` definition for a search command.
-1. Configure the command details in your manifest, including command ID, command title, command description, context in which the command works, parameter name, parameter title, parameter description, and input type.
-1. Package and preview your app in Teams using Teams Developer CLI.
-1. In Teams, go to a chat message and select the **Actions and apps** icon. Search for your app.
-1. Select your message extension from the list and enter a search command in the search box.
-1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
-1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
-
 If you're using an AI coding assistant, install the `teams-dev` agent skill from [Agent Skills | Teams SDK](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills). The skill helps your assistant orchestrate Teams Developer CLI workflows and related app management tasks through natural language.
+
+2. Sign in to your Microsoft 365 tenant.
+3. Create or open your Teams app project and configure bot-based message extension capability.
+4. Using the CLI or manually, update your app manifest to add the `composeExtensions` definition for a search command.
+5. Configure the command details in your manifest, including command ID, command title, command description, context in which the command works, parameter name, parameter title, parameter description, and input type.
+6. Package and preview your app in Teams using Teams Developer CLI.
+7. In Teams, go to a chat message and select the **Actions and apps** icon. Search for your app.
+8. Select your message extension from the list and enter a search command in the search box.
+9. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
+10. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
 
 ---
 
