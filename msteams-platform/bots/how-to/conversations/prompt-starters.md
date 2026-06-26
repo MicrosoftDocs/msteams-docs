@@ -1,52 +1,57 @@
 ---
-title: Add Prompt Starters
-description: Learn how to create and handle prompt starters for your Microsoft Teams bot to help your users initiate conversations.
+title: Guide Agent Interactions with Prompt Starters
+description: Learn how to configure prewritten prompt texts that help users discover and use agent functionality, with design guidance and best practices.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 6/26/2026
 ---
 
-# Create prompt starters
+# Guide agent interactions with prompt starters
 
-Prompt starters are commands that are presented to users in the Microsoft Teams chat.
+Prompt starters are prewritten prompt texts that help users discover and use agent functionality.
 
-Prompt starters help users discover and start common interactions with your bot. Prompt starters use the `commands` section of the app manifest. When a user selects a prompt starter, Teams prefills the compose box with the configured prompt, making it easier for the user to begin a conversation with your bot.
+When a user selects a prompt starter in chat, Teams inserts the prompt into the compose box, making it easier to start or continue agent conversations.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
-For guidance on follow-up options that help users continue a conversation, see [Create suggested actions](suggested-actions.md).
+Prompt starters are available in one-on-one chats, group chats, and channels.
 
-## Prompt starters
+## User experience
 
->[!NOTE]
->
-> Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn't send a welcome message.
+In one-on-one chats with an agent, prompt starters are always available from the **View Prompts** flyout above the compose box.
 
-Prompt starters are supported in one-on-one chats, group chats, and channels. To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
+# [Desktop](#tab/desktop)
 
-* The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
-* The `description` field describes what the users accomplish.
-* The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
-* The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
->[!NOTE]
->
->If you're building an agent, you must set `type` to **prompt** and provide a valid prompt value. If the `prompt` field is empty, the app manifest fails validation during submission.
+# [Mobile](#tab/mobile)
 
-## Define `commands` in app manifest
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
 
- To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
+---
 
-* The `command` property supports up to 10 commands.
-* You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
+For agents that don't proactively start a conversation with a [welcome message](send-proactive-messages.md), Teams displays their prompt starters as cards in the conversation pane until the user sends their first message.
 
-### Manifest example for prompt starters
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
-The manifest example code for prompt starters is as follows:
+In group chats and channels, an agent's prompt starters appear in an autocomplete menu next to a user's compose box after @mentioning the agent.
+
+# [Group chat](#tab/gc)
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
+
+# [Channel](#tab/channel)
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
+
+---
+
+## Define prompt starters for an agent
+
+Prompt starters are configured as `commands` of type `prompt` in an agent's app manifest.
 
 ```json
 {
-  ⋮
   "bots":[
     {
       "botId":"[Microsoft App ID for your bot]",
@@ -90,49 +95,23 @@ The manifest example code for prompt starters is as follows:
 }
 ```
 
----
+Prompt starter commands must have a `type` of `"prompt"` and include a `prompt` value of up to 4,000 characters. Each prompt starter's `title` and `description` are presented to users in Teams chat. When a prompt is selected, the value of `prompt` is inserted into the user's compose box.
 
-> [!NOTE]
-> If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+Each `commandList` can specify one or more scopes. Agents can present different prompt starters in different scopes by creating multiple `commandList`s. Each `commands` supports up to 10 command objects.
 
-The following image illustrates an example of prompt starters:
+`commandLists` and `commands` in the app manifest are also used for configuring [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). For more information about the app manifest structure, see the [app manifest reference](/microsoft-365/extensibility/schema/root-bots-command-lists?view=m365-app-1.29&tabs=syntax).
 
-# [Desktop](#tab/desktop)
+## Best practices and design guidance
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+Teams agents should always help users understand their capabilities by "introducing themselves" with prompt starters, [welcome messages](send-proactive-messages.md), or both. Agents distributed through the Teams Store that can be installed in personal scope (one-on-one conversations with users) must implement one or the other.
 
-# [Mobile](#tab/mobile)
+Prompt starters aren't dynamic or contextual, and you can only change them by republishing an agent's manifest. To provide users with dynamic response options, consider using [suggested actions](suggested-actions.md) and [Adaptive Cards](https://adaptivecards.microsoft.com/).
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
-
----
-
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. They enable users to review the prompts while interacting with your bot.
-
-# [Personal chat](#tab/pc)
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
-
-# [Group chat](#tab/gc)
-
-You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
-
-# [Channel](#tab/channel)
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
-
-## Code sample
-
-| **Sample name** | **Description** |**.NET** |**Node.js** |
-|-----------------|-----------------|----------------|----------------|
-| Prompt starters bot | Microsoft Teams Create Commands Menu to implement prompt starters in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
+Use prompt starters with natural-language agent prompts. To enhance discoverability of short text commands that your agent exposes, configure [slash commands](../../../agents-in-teams/agent-slash-commands.md).
 
 ## See also
 
-* [Build bots for Teams](~/bots/what-are-bots.md)
+* [App manifest command structure](/microsoft-365/extensibility/schema/root-bots-command-lists?view=m365-app-1.29&tabs=syntax)
+* [Proactive messages](send-proactive-messages.md)
 * [Create suggested actions](suggested-actions.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
-* [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
-* [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
+* [Teams Store validation guidelines](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
