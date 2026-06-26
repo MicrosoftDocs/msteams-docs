@@ -893,3 +893,5 @@ if __name__ == "__main__":
 ## See also
 
 [Teams SDK samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/README.md)
+[Teams CLI](https://microsoft.github.io/teams-sdk/cli/)
+[Agents Skills](https://microsoft.github.io/teams-sdk/developer-tools/agent-skills)
