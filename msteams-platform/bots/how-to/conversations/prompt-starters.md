@@ -1,16 +1,16 @@
 ---
-title: Guide Agent Interactions with Prompt Starters
-description: Learn how to configure natural-language prompt texts for an agent that help users understand its capabilities and start or continue conversations with it.
+title: Highlight Agent Capabilities with Prompt Starters
+description: Learn how to configure ready-to-use natural language prompts included with an agent that highlight the agent's purpose and capabilities.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 6/26/2026
 ---
 
-# Guide agent interactions with prompt starters
+# Highlight agent capabilities with prompt starters
 
-Prompt starters are natural-language prompts provided by an agent that help users understand its capabilities and start or continue conversations with it.
+Prompt starters are ready-to-use natural language prompts included with an agent that highlight the agent's purpose and capabilities.
 
-When a user selects a prompt starter in chat, Teams inserts its prompt text into the compose box.
+Prompt starters are discoverable by users in Teams chat. When a user selects one of an agent's prompt starters, Teams inserts its prompt text into the compose box.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
@@ -107,9 +107,9 @@ Agents can present different prompt starters in different scopes by creating mul
 
 Teams agents should always help users understand their capabilities by "introducing themselves" with prompt starters, [welcome messages](send-proactive-messages.md), or both. Agents distributed through the Teams Store that can be installed in personal scope (one-on-one conversations with users) must implement one or the other.
 
-Prompt starters aren't dynamic or contextual, and you can only change them by republishing an agent's manifest. To provide users with dynamic response options, consider using [suggested actions](suggested-actions.md) and [Adaptive Cards](https://adaptivecards.microsoft.com/).
+Prompt starters aren't dynamic or contextual, and you can only change them by republishing an agent's manifest. To dynamically provide users with quick command and response options in chat, use [suggested actions](suggested-actions.md) and [Adaptive Cards](https://adaptivecards.microsoft.com/).
 
-Prompt starters are for surfacing natural-language agent prompts. To enhance discoverability of short text commands that your agent exposes, configure [slash commands](../../../agents-in-teams/agent-slash-commands.md) instead.
+Prompt starters are for surfacing natural-language agent prompts. To enhance discoverability and usability of short text commands that your agent exposes, configure [slash commands](../../../agents-in-teams/agent-slash-commands.md) instead.
 
 ## See also
 

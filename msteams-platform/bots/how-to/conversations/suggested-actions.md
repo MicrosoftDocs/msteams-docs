@@ -1,5 +1,5 @@
 ---
-title: Add Suggested Actions
+title: Dynamically Guide Users with Suggested Actions
 description: Learn how to create and handle suggested actions for your Microsoft Teams bot to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ zone_pivot_groups: teams-sdk-languages
 ms.date: 6/26/2026
 ---
 
-# Create suggested actions
+# Dynamically guide users with suggested actions
 
 Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
 
