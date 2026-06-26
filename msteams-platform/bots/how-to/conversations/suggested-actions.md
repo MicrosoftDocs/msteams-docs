@@ -23,7 +23,7 @@ Suggested actions help users with ideas of what to ask next, based on the previo
 
 - `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
 - `Action.Compose`: Use `Action.Compose` to prefill the compose box with a message (including tags, @mentions, and rich content like emojis, GIFs, and other semantic objects).
-- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](../../agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
+- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](~/agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
 
 > [!IMPORTANT]
 > The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
@@ -35,15 +35,15 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 # [Personal chat](#tab/pc)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-personal-chat.png":::
+:::image type="content" source="~/assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-personal-chat.png":::
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
+:::image type="content" source="~/assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-gc.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-channel.png":::
+:::image type="content" source="~/assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-channel.png":::
 
 ---
 
@@ -122,7 +122,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
 
-Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](../../agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
+Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](~/agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
 
 This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
 
