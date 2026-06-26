@@ -1,11 +1,9 @@
 ---
 title: Add Prompt Starters
-author: surbhigupta
 description: Learn how to create and handle prompt starters for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: vikasalmal
-ms.date: 4/7/2026
+ms.date: 6/26/2026
 ---
 
 # Create prompt starters

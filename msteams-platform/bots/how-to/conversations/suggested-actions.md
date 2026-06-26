@@ -1,11 +1,9 @@
 ---
 title: Add Suggested Actions
-author: surbhigupta
 description: Learn how to create and handle suggested actions for your Microsoft Teams bot to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
 zone_pivot_groups: teams-sdk-languages
-ms.author: vikasalmal
 ms.date: 6/26/2026
 ---
 
@@ -254,6 +252,8 @@ async def handle_suggested_action_submit(ctx):
 ```
 
 ::: zone-end
+
+---
 
 ## See also
 
