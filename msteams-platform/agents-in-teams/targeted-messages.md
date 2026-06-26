@@ -82,9 +82,12 @@ Prompt preview can appear in both private and public agent responses, but the im
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
-Prompt Preview can be added automatically in reactive flows such as when replying with `send()` or `reply()` to a user’s targeted message or slash-command request through a supported SDK or messaging API so the response remains tied to the original prompt. In these reactive scenarios, reply-style SDK methods typically attach the `targetedMessageInfo` entity automatically because the response is still associated with the incoming user interaction. In proactive flows, however, the agent sends the response outside the original turn, so it must explicitly add the `targetedMessageInfo` entity and reference the targeted message ID before sending the private or public message, ensuring the preview points to the correct original request. To enable prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the original targeted message ID. Teams uses that entity to render the user's original request above the agent response.
+The implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
+Prompt Preview can be added automatically such as when replying with `send()` or `reply()` to a user’s targeted message or slash-command request through Teams SDK or REST API so the response remains tied to the original prompt.
 
-This example demonstrates the `entities` array needed to enable prompt preview with `messageId` on a reply activity, so the original message appears in the prompt preview.
+In _reactive_ scenarios, reply-style SDK methods typically attach the `targetedMessageInfo` entity automatically because the response is still associated with the incoming user interaction. In _proactive_ flows, however, the agent sends the response outside the original turn, so it must explicitly add the `targetedMessageInfo` entity and reference the targeted message ID before sending the private or public message, ensuring the preview points to the correct original request.
+
+To enable prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the original targeted message ID. Teams uses that entity to render the user's original request above the agent response. This example demonstrates the `entities` array needed to enable prompt preview with `messageId` on a reply activity, so the original message appears in the prompt preview.
 
 ```json
 
