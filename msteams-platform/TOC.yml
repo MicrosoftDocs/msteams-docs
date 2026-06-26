@@ -573,7 +573,7 @@
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
       displayName: bot initialization
-    - name: Create prompt starters
+    - name: Guide agent interactions with prompt starters
       href: bots/how-to/conversations/prompt-starters.md
       displayName: prompt starter
     - name: Create suggested actions

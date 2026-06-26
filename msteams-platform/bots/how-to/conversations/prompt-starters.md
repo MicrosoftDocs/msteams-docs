@@ -1,6 +1,6 @@
 ---
 title: Guide Agent Interactions with Prompt Starters
-description: Learn how to configure prewritten prompt texts that help users discover and use agent functionality, with design guidance and best practices.
+description: Learn how to configure natural-language prompt texts for an agent that help users understand its capabilities and start or continue conversations with it.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 6/26/2026
@@ -8,9 +8,9 @@ ms.date: 6/26/2026
 
 # Guide agent interactions with prompt starters
 
-Prompt starters are prewritten prompt texts that help users discover and use agent functionality.
+Prompt starters are natural-language prompts provided by an agent that help users understand its capabilities and start or continue conversations with it.
 
-When a user selects a prompt starter in chat, Teams inserts the prompt into the compose box, making it easier to start or continue agent conversations.
+When a user selects a prompt starter in chat, Teams inserts its prompt text into the compose box.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
@@ -19,6 +19,10 @@ Prompt starters are available in one-on-one chats, group chats, and channels.
 ## User experience
 
 In one-on-one chats with an agent, prompt starters are always available from the **View Prompts** flyout above the compose box.
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot of the prompt starter flyout open above the compose box." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
+
+For agents that don't proactively start one-on-one conversations with a [welcome message](send-proactive-messages.md), Teams displays their prompt starters as cards in the conversation pane until the user sends their first message.
 
 # [Desktop](#tab/desktop)
 
@@ -29,10 +33,6 @@ In one-on-one chats with an agent, prompt starters are always available from the
 :::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
 
 ---
-
-For agents that don't proactively start a conversation with a [welcome message](send-proactive-messages.md), Teams displays their prompt starters as cards in the conversation pane until the user sends their first message.
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
 In group chats and channels, an agent's prompt starters appear in an autocomplete menu next to a user's compose box after @mentioning the agent.
 
@@ -48,7 +48,7 @@ In group chats and channels, an agent's prompt starters appear in an autocomplet
 
 ## Define prompt starters for an agent
 
-Prompt starters are configured as `commands` of type `prompt` in an agent's app manifest.
+Prompt starters are configured in an agent's app manifest as `commands` of `"type": "prompt"`.
 
 ```json
 {
@@ -95,11 +95,13 @@ Prompt starters are configured as `commands` of type `prompt` in an agent's app 
 }
 ```
 
-Prompt starter commands must have a `type` of `"prompt"` and include a `prompt` value of up to 4,000 characters. Each prompt starter's `title` and `description` are presented to users in Teams chat. When a prompt is selected, the value of `prompt` is inserted into the user's compose box.
+Prompt starter commands must have a `type` of `"prompt"` and must define a `prompt` value of up to 4,000 characters.
 
-Each `commandList` can specify one or more scopes. Agents can present different prompt starters in different scopes by creating multiple `commandList`s. Each `commands` supports up to 10 command objects.
+Each prompt starter's `title` and `description` are presented to users in Teams chat. When a user selects a prompt starter, Teams inserts its `prompt` value into the user's compose box.
 
-`commandLists` and `commands` in the app manifest are also used for configuring [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). For more information about the app manifest structure, see the [app manifest reference](/microsoft-365/extensibility/schema/root-bots-command-lists?view=m365-app-1.29&tabs=syntax).
+Agents can present different prompt starters in different scopes by creating multiple `commandList`s. Each `commandList` can specify one or more scopes, and can specify up to 12 commands in its `commands` list.
+
+`commandLists` and `commands` in the app manifest are also used for configuring [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). For more information about the app manifest structure, see the [app manifest reference](/microsoft-365/extensibility/schema/root-bots-command-lists).
 
 ## Best practices and design guidance
 
@@ -107,11 +109,11 @@ Teams agents should always help users understand their capabilities by "introduc
 
 Prompt starters aren't dynamic or contextual, and you can only change them by republishing an agent's manifest. To provide users with dynamic response options, consider using [suggested actions](suggested-actions.md) and [Adaptive Cards](https://adaptivecards.microsoft.com/).
 
-Use prompt starters with natural-language agent prompts. To enhance discoverability of short text commands that your agent exposes, configure [slash commands](../../../agents-in-teams/agent-slash-commands.md).
+Prompt starters are for surfacing natural-language agent prompts. To enhance discoverability of short text commands that your agent exposes, configure [slash commands](../../../agents-in-teams/agent-slash-commands.md) instead.
 
 ## See also
 
-* [App manifest command structure](/microsoft-365/extensibility/schema/root-bots-command-lists?view=m365-app-1.29&tabs=syntax)
+* [App manifest command structure](/microsoft-365/extensibility/schema/root-bots-command-lists)
 * [Proactive messages](send-proactive-messages.md)
 * [Create suggested actions](suggested-actions.md)
 * [Teams Store validation guidelines](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
