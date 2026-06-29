@@ -36,9 +36,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 April**
+**2026 June**
 
-* ***April 27, 2026***: [Prompt starters are now generally available.](bots/how-to/conversations/prompt-suggestions.md)
+* ***June 22, 2026***: Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
 :::column-end:::
 :::row-end:::
@@ -51,6 +51,7 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 27/04/2026 | Support for Prompt starters are now generally available | [Prompt starters are now generally available.](bots/how-to/conversations/prompt-suggestions.md) |
 | 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 <br/>
