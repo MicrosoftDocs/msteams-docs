@@ -12,7 +12,7 @@ ms.date: 06/16/2026
 
 > [!NOTE]
 > The APIs to fetch meeting transcripts and recordings are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
-> Transcript content returned depends on tenant admin settings. Speaker attribution may be removed based on policy. For more information, see [Admin access for apps to fetch post-meeting transcripts](#admin-access-for-apps-to-fetch-post-meeting-transcripts).
+> Transcript content returned depends on tenant admin settings. Speaker attribution may be removed based on policy. For more information, see [].
 
 You can now configure your app to fetch Microsoft Teams transcripts and recordings after the meeting or call ends. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for the following instances:
 
@@ -33,15 +33,14 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 
 ## Get meeting and call transcripts and recordings
 
-### Admin access for apps to fetch post-meeting transcripts
-
 #### Enable transcript access for your app
 
 To configure your app to access transcripts for online meetings and ad hoc calls:
 
 1. Log into Teams Admin Centre.
 1. Under Teams, navigate to **Meeting Settings** > **Recording & transcription**.
-1. Turn on the toggle for **Allow third-party apps and agents to access meeting transcripts via Graph**. It is turned off by default. Your app will now be able to access meeting transcripts for both online meetings and ad hoc calls.
+1. Turn on the toggle for Allow third-party apps and agents to access meeting transcripts via Graph**. It is turned off by default. Your app will now be able to access meeting transcripts for both online meetings and ad hoc calls.
+1. For online meetings, the transcript is generated when the meeting ends. For ad hoc calls, the transcript is generated when the call ends or transcription is stopped. Your app can fetch the transcript for a meeting or call when it's generated after the meeting or call ends.
 
 #### Enable speaker attribution in transcripts
 
