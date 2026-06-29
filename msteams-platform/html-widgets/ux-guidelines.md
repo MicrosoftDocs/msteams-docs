@@ -190,6 +190,8 @@ The following guidance is strongly recommended to help your widget feel at home 
 
 ### Visual design
 
+
+
 #### Colors and theming
 
 Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrounds, borders, and text. This ensures your widget responds correctly to Teams themes without additional work.
@@ -197,7 +199,47 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
 
+##### Container colors
+
+Use container color tokens to establish hierarchy and communicate status within your widget. Nest containers to group related content or surface contextual meaning inside a neutral outer card.
+
+| Token | Use for |
+|---|---|
+| `colorNeutralBackground1` | Default widget and layout containers |
+| `colorNeutralBackground2` | Grouped or secondary content areas |
+| `colorBrandBackground2` | Brand-accented highlights and callouts |
+| `colorStatusSuccessBackground1` | Confirmations and successful outcomes |
+| `colorStatusWarningBackground1` | Cautions and time-sensitive alerts |
+| `colorStatusDangerBackground1` | Errors, failures, and critical alerts |
+
+<img src="images/containerColors.png" alt="Six container color examples: default, subtle, brand, success, warning, and attention">
+
+<img src="images/containerExamples.png" alt="Three example widgets showing container color nesting: an approved expense card, a room check-in warning, and a high-severity campus alert">
+
+##### Text colors
+
+Use text color tokens to create hierarchy and communicate meaning in widget content. Pair status text colors with a matching container or icon — never rely on color alone.
+
+| Token | Use for |
+|---|---|
+| `colorNeutralForeground1` | Primary text — titles, key values |
+| `colorNeutralForeground2` | Secondary text — supporting details, metadata |
+| `colorNeutralForeground3` | Subtle text — de-emphasized labels, captions |
+| `colorBrandForeground1` | Brand-accented text and inline links |
+| `colorStatusSuccessForeground1` | Success labels and status indicators |
+| `colorStatusWarningForeground1` | Warning labels and status indicators |
+| `colorStatusDangerForeground1` | Error labels and status indicators |
+
+<img src="images/textColors.png" alt="Text color examples showing primary, secondary, subtle, brand, success, warning, and danger foreground tokens">
+
 <img src="images/icon_colorBrush.png" alt="" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
+
+
+
+
+
+
+
 
 
 
