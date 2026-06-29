@@ -668,7 +668,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 The *Invoke Activity* must be forwarded to the dialog if the **OAuthPrompt** is used.
 
-[!code-python[on_token_response_event](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/python/bots/auth_bot.py)]
+[!code-python[on_token_response_event](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/python/bots/auth_bot.py#L38-L45)]
 
 **dialogs/main_dialog.py**
 
