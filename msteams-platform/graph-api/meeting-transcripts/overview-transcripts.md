@@ -33,15 +33,19 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 
 ## Get meeting and call transcripts and recordings
 
-This section describes how your app can fetch transcripts and recordings for online meetings and ad hoc calls using Graph APIs.
-
 ### Admin access for apps to fetch post-meeting transcripts
 
-Admins can now choose to allow or disable third-party apps and agents to access transcripts for online meetings and ad hoc calls. By default, this setting is turned off. The tenant admin needs to turn on the toggle for **Microsoft graph access** under Teams Admin Centre > Settings & policies > Transcript & API access. When this setting is turned on, your app can access meeting transcripts for both online meetings and ad hoc calls. If this setting is turned off, your request to fetch transcripts will fail with a `403 GraphAccessToTranscriptsDisabled` error.
+#### Enable transcript access for your app
 
-Your app admin can also manage speaker attribution in transcripts. By default, speaker attribution is disabled. The tenant admin can turn on the toggle for **Include speaker attribution** under Teams Admin Centre > Settings & policies > Transcript & API access > Configure. When this setting is turned off, your app will receive transcripts without speaker attribution. If you request transcript with speaker attribution when the setting is turned off, your request will fail with a `403 SpeakerAttributionNotAllowed` error.
+To configure your app to access transcripts for online meetings and ad hoc calls:
 
-For more information
+1. Log into Teams Admin Centre.
+1. Under Teams, navigate to **Meeting Settings** > **Recording & transcription**.
+1. Turn on the toggle for **Allow third-party apps and agents to access meeting transcripts via Graph**. It is turned off by default. Your app will now be able to access meeting transcripts for both online meetings and ad hoc calls.
+
+#### Enable speaker attribution in transcripts
+
+Speaker attribution in meeting transcripts is turned off by default. If your app requires speaker attribution in the transcripts, the tenant admin needs to turn on the toggle for **Include speaker attribution in transcripts shared via Graph** under Teams Admin Centre > Meeting Settings > Recording & transcription. When this setting is turned on, the transcript content will have speaker attribution information.
 
 ### Fetch transcripts and recordings using Graph APIs
 
