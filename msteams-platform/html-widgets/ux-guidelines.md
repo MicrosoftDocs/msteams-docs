@@ -18,7 +18,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-conversation-bubble.png" width="32px":::
+    :::image type="icon" source="images/icon-conversation-bubble.png":::
 
     ### Complement the conversation
 
@@ -30,7 +30,7 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column:::
 
   
-    :::image type="icon" source="images/icon-puzzle.png" width="32px":::
+    :::image type="icon" source="images/icon-puzzle.png":::
 
     ### Surface capabilities, not full apps
 
@@ -46,7 +46,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-mouse.png" width="32px":::
+    :::image type="icon" source="images/icon-mouse.png":::
 
     ### Be transparent and predictable
 
@@ -58,7 +58,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
   
   :::column:::
-    :::image type="icon" source="images/icon-arrowUp.png" width="32px":::
+    :::image type="icon" source="images/icon-arrowUp.png":::
 
     ### Scale to the task
 
@@ -74,7 +74,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-shield.png" width="32px":::
+    :::image type="icon" source="images/icon-shield.png":::
 
     ### Preserve human control
 
@@ -122,7 +122,7 @@ Many widgets follow a common pattern that helps users orient quickly — but not
 | **Body content** | The primary information, media, or interactive content | The core of most widgets — may be the only element present |
 | **Actions** | Buttons, links, or other interactive elements that let the user take the next step | Optional. Interactive elements may appear throughout the widget, not only at the bottom — but when a widget includes a dedicated action area, it's typically placed at the bottom |
 
-<img src="images/cardAnatomy.png" alt="">
+<img src="images/cardAnatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
 
 When a widget does follow this common pattern, content typically flows top to bottom:
 
@@ -144,7 +144,7 @@ Widgets must render correctly in both Teams light mode and dark mode.
 - Test your widget in both themes before submission
 - Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes
 
-<img src="images/themes.png" alt="">
+<img src="images/themes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
 
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
@@ -159,9 +159,7 @@ Widgets must adapt to the width of the chat container.
 
 The widths below are representative examples, not fixed breakpoints — your widget's actual layout and behavior at each size is up to you. Use them as a reference point to evaluate how your widget responds as the chat container resizes.
 
-<img src="images/responsive.png" alt="">
-
-
+<img src="images/responsive.png" alt="A widget shown at four different widths, demonstrating how the layout adapts fluidly as the chat container resizes">
 
 ### Horizontal scrolling
 
@@ -190,8 +188,6 @@ The following guidance is strongly recommended to help your widget feel at home 
 
 ### Visual design
 
-
-
 #### Colors and theming
 
 Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrounds, borders, and text. This ensures your widget responds correctly to Teams themes without additional work.
@@ -212,37 +208,37 @@ Use container color tokens to establish hierarchy and communicate status within 
 </tr>
 <tr>
 <td>Default</td>
-<td><img src="images/container_default.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_default.png" width="24" height="24" alt="Default container color swatch — white background with light gray border"></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
 <td>Default widget and layout containers</td>
 </tr>
 <tr>
 <td>Emphasis</td>
-<td><img src="images/container_emphasis.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_emphasis.png" width="24" height="24" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
 <td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
 <td>Accent</td>
-<td><img src="images/container_accent.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_accent.png" width="24" height="24" alt="Accent container color swatch — light blue background with blue border"></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke1</code></td>
 <td>Teams brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
-<td><img src="images/container_good.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_good.png" width="24" height="24" alt="Good container color swatch — light green background with green border"></td>
 <td><code>colorStatusSuccessBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td><img src="images/container_warning.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_warning.png" width="24" height="24" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
 <td><code>colorStatusWarningBackground1</code><br><code>colorStatusWarningBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
 <td>Attention</td>
-<td><img src="images/container_attention.png" width="24" height="24" alt=""></td>
+<td><img src="images/container_attention.png" width="24" height="24" alt="Attention container color swatch — light red background with red border"></td>
 <td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
@@ -250,12 +246,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 
 The following examples show how container colors work together in a widget. A neutral Default or Emphasis container establishes the outer card, while semantic containers — Good, Warning, or Attention — surface status meaning for specific content areas inside it.
 
-<img src="images/container_gallery.png" alt="Three example widgets showing container color nesting: an approved expense card, a room check-in warning, and a high-severity campus alert">
-
-
-
-
-
+<img src="images/container_gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
 
 ##### Text colors
 
@@ -263,51 +254,40 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 
 <table>
 <tr>
-<th></th>
 <th>Token</th>
 <th>Use for</th>
 </tr>
 <tr>
-<td>■</td>
 <td><code>colorNeutralForeground1</code></td>
 <td>Primary text — titles, key values</td>
 </tr>
 <tr>
-<td>■</td>
 <td><code>colorNeutralForeground2</code></td>
 <td>Secondary text — supporting details, metadata</td>
 </tr>
 <tr>
-<td>■</td>
 <td><code>colorNeutralForeground3</code></td>
 <td>Subtle text — de-emphasized labels, captions</td>
 </tr>
 <tr>
-<td><span style="color:#0f6cbd">■</span></td>
 <td><code>colorBrandForeground1</code></td>
 <td>Brand-accented text and inline links</td>
 </tr>
 <tr>
-<td><span style="color:#107c10">■</span></td>
 <td><code>colorStatusSuccessForeground1</code></td>
 <td>Success labels and status indicators</td>
 </tr>
 <tr>
-<td><span style="color:#835b00">■</span></td>
 <td><code>colorStatusWarningForeground1</code></td>
 <td>Warning labels and status indicators</td>
 </tr>
 <tr>
-<td><span style="color:#bc2f32">■</span></td>
 <td><code>colorStatusDangerForeground1</code></td>
 <td>Error labels and status indicators</td>
 </tr>
 </table>
 
-
-<img src="images/icon_colorBrush.png" alt="" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
-
-
+<img src="images/icon_colorBrush.png" alt="Color tokens icon" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
 
 #### Typography
 
@@ -327,14 +307,13 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
-  
- <img src="images/typography.png" alt="">
 
+<img src="images/typography.png" alt="Two example widget cards showing typographic hierarchy using Header, Label, Body, Caption Label, and Caption text styles">
 
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-<img src="images/icon_text.png" alt="" width="20"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="images/icon_text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
 #### Containers and borders
 
@@ -342,13 +321,15 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) for containers and images
 - Avoid deep nesting — limit container and column nesting to a maximum of two levels
 
-<img src="images/icon_shapes.png" alt="" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="images/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
 #### Spacing
 
 The recommended global padding for a widget is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
 
-The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents. 
+The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents.
+
+| Name | Token | Size | Common use |
 |---|---|---|---|
 | Extra Small | `spacingVerticalXS` | 4px | Between an icon and its label, inside a badge |
 | Small | `spacingVerticalS` | 8px | Between buttons or tightly grouped elements |
@@ -358,17 +339,16 @@ The following are commonly used spacing values for widget layouts. These map to 
 | Extra Extra Large | `spacingVerticalXXL` | 24px | Global card padding, generous breathing room |
 
 The following examples show how spacing tokens apply in real widget layouts.
-<img src="images/spacing.png" alt="">
 
-For the full spacing scale, see <img src="images/icon_spacing.png" alt="" width="20">  [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
+<img src="images/spacing.png" alt="Two widget layout examples with spacing annotations showing how Fluent spacing tokens apply to padding and gaps between elements">
 
-| Name | Token | Size | Common use |
+For the full spacing scale, see <img src="images/icon_spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
 
 #### Iconography
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
-<img src="images/icon_icon.png" alt="" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
+<img src="images/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
@@ -382,7 +362,7 @@ Actions allow users to take the next step without leaving the conversation.
 > [!TIP]
 > If you are building with React, [Fluent 2 button components](https://fluent2.microsoft.design/components/web/react/core/button/usage) implement the correct Teams-aligned button styles and states out of the box.
 
-[Fluent 2 > Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
+[Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
 
 ### Content and layout
 
