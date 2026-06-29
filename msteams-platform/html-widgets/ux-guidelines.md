@@ -227,7 +227,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 <tr>
 <td>Good</td>
 <td><img src="images/container_good.png" width="24" height="24" alt="Good container color swatch — light green background with green border"></td>
-<td><code>colorStatusSuccessBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
+<td><code>colorPaletteLightGreenBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
