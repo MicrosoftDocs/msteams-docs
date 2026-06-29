@@ -86,6 +86,8 @@ The agent sends a public resply to the user's request that includes the prompt p
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
+---
+
 Suggested actions, such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context.
 
 Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
