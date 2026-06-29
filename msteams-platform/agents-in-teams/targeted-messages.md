@@ -74,11 +74,15 @@ Prompt Preview helps preserve conversational context in targeted messaging scena
 
 Prompt preview can appear in both private and public agent responses. The difference is only who can see the reply after it is sent:
 
-- **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
+# [Private agent-to-user response](#tab/private)
+
+The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png":::
 
-- **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
+# [Public agent-to-user response](#tab/public)
+
+The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
