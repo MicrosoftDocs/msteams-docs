@@ -221,7 +221,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 <tr>
 <td>Accent</td>
 <td><img src="images/container_accent.png" width="24" height="24" alt="Accent container color swatch — light blue background with blue border"></td>
-<td><code>colorBrandBackground2</code><br><code>colorBrandStroke1</code></td>
+<td><code>colorBrandBackground2</code><br><code>colorBrandStroke2</code></td>
 <td>Teams brand-accented highlights and callouts</td>
 </tr>
 <tr>
