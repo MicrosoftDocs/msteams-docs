@@ -1,6 +1,6 @@
 ---
-title: Teams Specific Context for Bot
-description: Get Teams specific context for your bot, fetch user profile, get single member, team's, list of channels in a team details. Sample on create a new channel thread.
+title: Teams Specific Context for Bots
+description: Learn how to get Teams-specific context in bots by using Teams SDK APIs for roster, member, team, and channel information.
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
@@ -16,7 +16,7 @@ Your bot can query the paged list of members and their basic user profiles, incl
 
 The following sample code uses paged member retrieval:
 
-# [C#](#tab/dotnet)
+The following sample code uses paged member retrieval:
 
 * [API changes](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -27,7 +27,7 @@ app.OnMessage(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
 
 * [API changes](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -40,7 +40,7 @@ app.on('message', async ({ activity, api }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
 
 * [API changes](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -50,58 +50,31 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     members = await TeamsInfo.get_paged_members(ctx)
 ```
 
-# [JSON](#tab/json)
+    all_members = []
+    continuation_token: str | None = None
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/pagedmembers?pageSize={pageSize}&continuationToken={continuationToken}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`. The response payload also indicates if the user is a regular or anonymous user.
+    while True:
+        result = await members_client.get_paged(
+            page_size=50,
+            continuation_token=continuation_token,
+        )
+        all_members.extend(result.members)
 
-```http
-GET /v3/conversations/19:meeting_N2QzYTA3YmItYmMwOC00OTJmLThkYzMtZWMzZGU0NGIyZGI0@thread.v2/pagedmembers?pageSize=100&continuationToken=asdfasdfalkdsjfalksjdf
+        if not result.continuation_token:
+            break
 
-Response body
-{
-   "continuationToken":"asdfqwerueiqpiewr",
-   "members":[
-      {
-         "id":"29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-         "name":"Anon1 (Guest)",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"anonymous"
-      },
-      {
-         "id":"29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk",
-         "objectId":"76b0b09f-d410-48fd-993e-84da521a597b",
-         "givenName":"John",
-         "surname":"Patterson",
-         "email":"johnp@fabrikam.com",
-         "userPrincipalName":"johnp@fabrikam.com",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"user"
-      },
-      {
-         "id":"29:1URzNQM1x1PNMr1D7L5_lFe6qF6gEfAbkdG8_BUxOW2mTKryQqEZtBTqDt10-MghkzjYDuUj4KG6nvg5lFAyjOLiGJ4jzhb99WrnI7XKriCs",
-         "objectId":"6b7b3b2a-2c4b-4175-8582-41c9e685c1b5",
-         "givenName":"Rick",
-         "surname":"Stevens",
-         "email":"Rick.Stevens@fabrikam.com",
-         "userPrincipalName":"rstevens@fabrikam.com",
-         "tenantId":"29:1UX7p8Fkx7p93MZlBFS71swTB9juQOCfnXf2L3wxOUITCcIGpFcRX-JiFjLDVZhxGpEfzSTGNsZeEyTKr1iu3Vw",
-         "userRole":"user"
-      }
-   ]
-}
+        continuation_token = result.continuation_token
 ```
 
-* * *
+::: zone-end
 
 After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more specific members of a chat or team, use the Microsoft Teams bot APIs `context.Api.Conversations.Members.GetByIdAsync(conversationId, memberId)` for C# or `api.conversations.members(conversationId).getById(memberId)` for TypeScript APIs.
 
 ## Get single member details
 
-You can also retrieve the details of a particular user using their Teams user ID, UPN, or Microsoft Entra Object ID.
+You can retrieve details of a specific member using user identifiers from the activity context.
 
-The following sample code is used to get single member details:
-
-# [C#](#tab/dotnet)
+The following sample code uses Teams SDK APIs:
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
 
@@ -116,7 +89,7 @@ app.OnMessage(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
@@ -144,53 +117,30 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     member = await ctx.api.conversations.members.get_by_id(conversation_id, member_id)
 ```
 
-# [JSON](#tab/json)
+::: zone-end
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`. This can be used for regular users and anonymous users.
+::: zone pivot="teams-sdk-python"
 
-The following is the response sample for regular user:
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
-```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc
-
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "objectId": "9d3e08f9-a7ae-43aa-a4d3-de3f319a8a9c",
-    "givenName": "Larry",
-    "surname": "Brown",
-    "email": "Larry.Brown@fabrikam.com",
-    "userPrincipalName": "labrown@fabrikam.com",
-    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
-    "userRole":"user"
-}
+```python
+@app.on_message
+async def get_member(ctx: ActivityContext[MessageActivity]) -> None:
+    member_id = ctx.activity.from_.id
+    member = await ctx.api.conversations.member.get_by_id(ctx.activity.conversation.id, member_id)
 ```
 
-The following is the response sample for anonymous user:
-
-```http
-GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members/<anonymous user id>"
-
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "name": "Anon1 (Guest)",
-    "tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47", 
-    "userRole":"anonymous"
-}
-```
-
-* * *
+::: zone-end
 
 After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `context.Api.Teams.GetByIdAsync(teamId)` for C# or `api.teams.getById(teamId)` for TypeScript.
 
 ## Get team's details
 
-When installed in a team, your bot can query for metadata about that team including the Microsoft Entra group ID.
+When installed in a team, your bot can query metadata such as team ID and Microsoft Entra group ID.
 
-The following sample code is used to get team's details:
+The following sample code uses Teams SDK APIs:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
 
@@ -212,7 +162,7 @@ app.OnMessage(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
@@ -247,22 +197,20 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         await ctx.send("Message did not come from a channel in a team.")
 ```
 
-# [JSON](#tab/json)
+::: zone-end
 
-You can directly issue a GET request on `/v3/teams/{teamId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`.
+::: zone pivot="teams-sdk-python"
 
-```http
-GET /v3/teams/19:ja0cu120i1jod12j@skype.net
+* [Teams SDK API reference](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
-Response body
-{
-    "id": "29:1GcS4EyB_oSI8A88XmWBN7NJFyMqe3QGnJdgLfFGkJnVelzRGos0bPbpsfJjcbAD22bmKc4GMbrY2g4JDrrA8vM06X1-cHHle4zOE6U4ttcc",
-    "name": "The Team Name",
-    "aadGroupId": "02ce3874-dd86-41ba-bddc-013f34019978"
-}
+```python
+@app.on_message
+async def get_team_details(ctx: ActivityContext[MessageActivity]) -> None:
+    team_id = ctx.activity.channel_data.team.id
+    team = await ctx.api.teams.get_by_id(team_id)
 ```
 
-* * *
+::: zone-end
 
 After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `context.Api.Teams.GetConversationsAsync(teamId)` for C# or `api.teams.getConversations(teamId)` for TypeScript APIs.
 
@@ -311,7 +259,9 @@ app.on('message', async ({ activity, api, send }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
 
@@ -326,32 +276,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         await ctx.send(f"Total of {len(channels)} channels are currently in team")
 ```
 
-# [JSON](#tab/json)
+::: zone-end
 
-You can directly issue a GET request on `/v3/teams/{teamId}/conversations`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` is stable but can change. When a new message arrives, your bot must verify its stored value for `serviceUrl`.
-
-```http
-GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
-
-Response body
-{
-    "conversations": [{
-        "id": "19:033451497ea84fcc83d17ed7fb08a1b6@thread.skype",
-        "name": null
-    }, {
-        "id": "19:cc25e4aae50746ecbb11473bba24c70a@thread.skype",
-        "name": "Materials"
-    }, {
-        "id": "19:b7b84cba410c406ba671dbbf5e0a3519@thread.skype",
-        "name": "Design"
-    }, {
-        "id": "19:fc5db2aed489454e8f8c06829ed6c986@thread.skype",
-        "name": "Marketing"
-    }]
-}
-```
-
-* * *
+If you need raw connector REST endpoints, use the Teams SDK API for most bot scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
 ## Next step
 
@@ -366,3 +293,5 @@ Response body
 * [Bot activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
 * [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)
+* [Bot Meetings sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings)
+<!-- markdownlint-enable MD024 -->
