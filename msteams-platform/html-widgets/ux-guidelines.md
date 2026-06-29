@@ -233,7 +233,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 <tr>
 <td>Warning</td>
 <td><img src="images/container_warning.png" width="24" height="24" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
-<td><code>colorStatusWarningBackground1</code><br><code>colorStatusWarningBorder1</code></td>
+<td><code>colorPaletteMarigoldBackground1</code><br><code>colorPaletteMarigoldBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
