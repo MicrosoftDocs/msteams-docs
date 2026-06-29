@@ -203,52 +203,46 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 Use container color tokens to establish hierarchy and communicate status within your widget. Nest containers to group related content or surface contextual meaning inside a neutral outer card.
 
-√<table>
+<table>
 <tr>
 <th>Style</th>
-<th colspan="2">Color</th>
+<th></th>
 <th>Token</th>
 <th>Use for</th>
 </tr>
 <tr>
 <td>Default</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23ffffff' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23d1d1d1'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_default.png" width="24" height="24" alt=""></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
 <td>Default widget and layout containers</td>
 </tr>
 <tr>
 <td>Emphasis</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23f5f5f5' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23c7c7c7'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_emphasis.png" width="24" height="24" alt=""></td>
 <td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
 <td>Accent</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23cfe4fa' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%230f6cbd'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_accent.png" width="24" height="24" alt=""></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke1</code></td>
 <td>Teams brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23dff6dd' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23107c10'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_good.png" width="24" height="24" alt=""></td>
 <td><code>colorStatusSuccessBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23fff4ce' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23835b00'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_warning.png" width="24" height="24" alt=""></td>
 <td><code>colorStatusWarningBackground1</code><br><code>colorStatusWarningBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
 <td>Attention</td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23fde7e9' stroke='%23e0e0e0' stroke-width='1'/%3E%3C/svg%3E"></td>
-<td><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Crect width='16' height='16' rx='3' fill='%23bc2f32'/%3E%3C/svg%3E"></td>
+<td><img src="images/container_attention.png" width="24" height="24" alt=""></td>
 <td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
