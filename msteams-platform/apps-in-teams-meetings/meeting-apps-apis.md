@@ -3,9 +3,9 @@ title: Enhance Meeting Experience with APIs
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.owner: kanchankaur
-ms.date: 03/16/2026
+ms.date: 06/19/2026
 ---
 
 # Meeting apps APIs
@@ -1081,7 +1081,7 @@ The following table lists the query parameter:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
 // Gets the information for the given meeting id.

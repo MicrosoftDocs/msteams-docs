@@ -4,7 +4,7 @@ description: Learn how to send proactive messages with your Teams bot, install y
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 04/23/2026
+ms.date: 06/19/2026
 ---
 # Proactive messages
 
@@ -239,7 +239,7 @@ The following code shows how to send proactive messages:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
 [Route("api/notify")]
