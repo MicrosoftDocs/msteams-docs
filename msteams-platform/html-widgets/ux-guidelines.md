@@ -215,7 +215,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 <tr>
 <td>Emphasis</td>
 <td><img src="images/container_emphasis.png" width="24" height="24" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
-<td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
+<td><code>colorNeutralBackground3</code><br><code>colorNeutralStroke1</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
