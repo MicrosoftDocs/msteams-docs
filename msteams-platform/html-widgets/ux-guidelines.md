@@ -206,49 +206,53 @@ Use container color tokens to establish hierarchy and communicate status within 
 <table>
 <tr>
 <th>Style</th>
-<th></th>
+<th colspan="2">Color</th>
 <th>Token</th>
 <th>Use for</th>
 </tr>
 <tr>
 <td>Default</td>
-<td>■ ■</td>
-<td><code>colorNeutralStroke1</code><br><code>colorNeutralStroke1</code></td>
+<td bgcolor="#ffffff" width="16"></td>
+<td bgcolor="#d1d1d1" width="16"></td>
+<td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
 <td>Default widget and layout containers</td>
 </tr>
 <tr>
 <td>Emphasis</td>
-<td>■ ■</td>
-<td><code>colorNeutralCardBackground</code><br><colorNeutralCardBackground</code></td>
+<td bgcolor="#f5f5f5" width="16"></td>
+<td bgcolor="#c7c7c7" width="16"></td>
+<td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
 <td>Accent</td>
-<td>■ ■</td>
+<td bgcolor="#cfe4fa" width="16"></td>
+<td bgcolor="#0f6cbd" width="16"></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke1</code></td>
 <td>Teams brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
-<td>■ ■</td>
+<td bgcolor="#dff6dd" width="16"></td>
+<td bgcolor="#107c10" width="16"></td>
 <td><code>colorStatusSuccessBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td>■ ■</td>
+<td bgcolor="#fff4ce" width="16"></td>
+<td bgcolor="#835b00" width="16"></td>
 <td><code>colorStatusWarningBackground1</code><br><code>colorStatusWarningBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
 <td>Attention</td>
-<td>■ ■</td>
+<td bgcolor="#fde7e9" width="16"></td>
+<td bgcolor="#bc2f32" width="16"></td>
 <td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
 </table>
-
-
 
 ##### Text colors
 
