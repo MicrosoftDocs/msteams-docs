@@ -68,7 +68,7 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
-## Prompt preview in targeted messages
+### Prompt preview in targeted messages
 
 Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. This is particularly useful when an agent responds to a specific user within a shared conversation. Targeted messages appear inline in the conversation but are visible only to the intended recipient. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews, but Prompt Preview is not shown for normal, non-targeted messages.
 
