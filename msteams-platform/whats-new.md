@@ -38,6 +38,8 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 June**
 
+* ***June 30, 2026***: Access to meeting transcripts through Microsoft Graph is now governed by both Graph permissions and two tenant-level administrator controls. Apps must have the required permissions, and tenant admins must enable transcript access settings before transcript data can be retrieved. For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
 * ***June 22, 2026***: Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
 :::column-end:::
