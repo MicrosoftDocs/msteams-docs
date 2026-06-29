@@ -68,7 +68,7 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
-### Integrate prompt preview in targeted messages
+## Prompt preview in targeted messages
 
 Prompt Preview helps preserve conversational context for targeted messages by showing a compact preview of the user’s original request at the top of the agent’s response, especially when the response is targeted to a specific user. Targeted messages appear inline in a shared conversation but are visible only to the targeted recipient. It keeps targeted agent responses grounded in the user’s original request helping the user understand context without exposing the prompt to everyone else. A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
 
@@ -100,7 +100,7 @@ Suggested actions, such as Approve or Reject, can then provide a lightweight way
 
 Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
 
-### Response visibility modes
+## Response visibility modes
 
 Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and options to share it with the rest of the conversation, and then explicitly approves whether it should be shared publicly.
 
