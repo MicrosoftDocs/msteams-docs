@@ -12,7 +12,7 @@ Prompt starters are ready-to-use natural language prompts included with an agent
 
 Prompt starters are discoverable by users in Teams chat. When a user selects one of an agent's prompt starters, Teams inserts its prompt text into the compose box.
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." border="false" lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
 Prompt starters are available in one-on-one chats, group chats, and channels.
 
@@ -20,17 +20,17 @@ Prompt starters are available in one-on-one chats, group chats, and channels.
 
 In one-on-one chats with an agent, prompt starters are always available from the **View Prompts** flyout above the compose box.
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot of the prompt starter flyout open above the compose box." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot of the prompt starter flyout open above the compose box." border="false" lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
 For agents that don't proactively start one-on-one conversations with a [welcome message](send-proactive-messages.md), Teams displays their prompt starters as cards in the conversation pane until the user sends their first message.
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." border="false" lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." border="false" lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
 
 ---
 
@@ -38,11 +38,11 @@ In group chats and channels, an agent's prompt starters appear in an autocomplet
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." border="false" lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
+:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." border="false" lightbox="~/assets/images/bots/prompt-starter-channel.png":::
 
 ---
 

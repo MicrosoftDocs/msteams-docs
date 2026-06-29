@@ -11,7 +11,7 @@ ms.date: 6/26/2026
 
 Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
