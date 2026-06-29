@@ -16,37 +16,51 @@ TODO explain that this is a 10,000 view of the overall app model. [Teams SDK pro
 
 Teams apps bring new features and experiences to the Teams interface, similar to the way extensions in web browsers and code editors work. Developers publish apps to the Teams Store or to their organizational app catalog, where users find them and install them.
 
-## The Teams app model
+## App capabilities: How apps show up in Teams
 
-In the Teams app model, Teams does not host or run application code. Instead, developers use Teams SDK to build web applications and services that Teams uses to power customized experiences. The web app or service that defines the behavior of a Teams app can be hosted anywhere on the web.
-
-Teams offers three categories of experiences, called *app capabilities*, that developers can implement with Teams apps: bot (agents), tab app, and message extension.
+Teams offers three categories of experiences that developers can create with Teams apps: bot (agents), tab app, and message extension. These categories are called *app capabilities* in the Teams app model, and every Teams app implements one or more of them.
 
 <!-- TODO Do we need "meeting apps"? Anything else? -->
 
 ### Bot (agents)
 
-Create conversational assistants that users interact with in Teams chat. Teams bot apps listen for chat messages and other events triggered by user behavior in Teams, and respond with their own chat messages and other conversational gestures.
+Create conversational assistants that users interact with in Teams chat.
 
-Historically, bot-capability apps have been referred to as *bots*, but newer assistants with more advanced capabilities powered by large language models (LLMs) are referred to as *agents*. Agents are distinguished by their ability to converse naturally, adapt to context, and dynamically perform actions on behalf of users; see [Agents in Teams](../agents-in-teams/overview.md).
+Bot-capability apps are typically referred to as *agents* or *bots*. Both terms are often used interchangeably, but in the modern AI landscape, *agents* are distinguished from *bots* by their advanced capabilities provided by large language models (LLM). Agents use LLMs to converse naturally, adapt to context, and dynamically perform actions on behalf of users.
+
+Agent development is the main focus of Teams SDK and most modern Teams app development.
 
 ### Tab app
 
-Display a web application in a browser frame within the Teams client. Developers use Teams' JavaScript browser libraries to create web applications that integrate closely with Teams and feel like a first-class part of the user interface. Users access tab apps through the Teams sidebar or add them as tabs to their Teams channels, group chats and meetings.
+Display a web application in a browser frame within the Teams client. Developers use Teams' JavaScript browser libraries to create web applications that integrate tightly with Teams and feel like a natural extension of its user interface. Users access tab apps through the Teams sidebar or add them as tabs to their Teams channels, group chats and meetings to associate them with the work happening in those conversations.
 
 ### Message extension
 
-Display custom dialogs in Teams that perform actions or searches. Message extensions are typically used to generate rich, interactive messages that appear in Teams chat.
+Display custom dialogs in Teams that perform actions or searches. Message extensions are usually designed to generate rich, interactive messages that appear in Teams chat.
 
-## App manifest
+## The Teams application model: runtime, registration and manifest
 
-When a user installs an app in Teams, the only elements of the app that are actually deployed to a user's device are its graphic icons and its *manifest*. An app's manifest is a JSON configuration file that describes the app and configures the app capabilities it uses, including the endpoints of the web services or applications that implement its behavior.
+In the Teams application model, apps consist of three connected parts:
 
-Developers typically treat their app's manifest as part of its source code, storing it in source control and updating it as the app takes shape. When development is complete and the developer has ensured that their app's web service or web application is deployed and reachable, they submit the app manifest and icons to the Teams platform for distribution through the Teams Store or their organization's app catalog.
+1. The app's *runtime* is a web service or application created with Teams SDK that implements its behavior. An app's runtime can be hosted anywhere on the web. Hosting is the developer's responsibility: Teams does not host or run application code.
+1. The app's *Entra ID registration* is its identity configuration in Microsoft Entra ID. Teams relies on Entra ID for identity and access management, and uses an app's registration to uniquely identify it on the Teams platform. TODO to allow administrators to manage and authorize it in their organizations. The app's presence in Entra ID enables users to authenticate to the app with Teams single sign-on and OAuth and grant it access to their data.
+1. The app's *manifest* is a JSON configuration file that defines the app. The manifest describes how the app should be presented in Teams, including which app capabilities it uses and the location of the web-hosted runtime that powers them. An app's manifest and its graphic icons are all that are needed to install the app to a Teams client, because Teams depends on the app's runtime to define all of its behavior.
 
-## For agents: bot registration and Entra ID identity
+## For agents: Microsoft Foundry Bot Service
 
-Bots have a few extra resources
+Teams agents have an additional component
+
+From auth article, for reference: "Teams agents communicate with the Teams platform through a cloud service called Microsoft Foundry Bot Services..."
+
+Mention auth and identity in like one sentence.
+
+Info about this goes in your Teams SDK app.
+
+Azure Bot Service is a
+
+Teams developer CLI facilitates this.
+
+Teams agents are not required to be hosted on Azure.
 
 "identity and messaging infrastructure"
 
@@ -58,13 +72,15 @@ You will need an Azure account and billable Azure subscription to create an Azur
 
 Teams platform doesn't communicate directly with bots, it uses botservice as an intermediary
 
-"The web service that defines an agent's behavior can be hosted anywhere, but Teams' identity infrastructure lives in Azure."
+This is why a manifest only has a bot id; much bot config lives in bot service.
 
 ## Teams SDK
 
 TODO link to SDK page.
 
 and dev cli
+
+For here or somewhere else maybe: The runtime of a bot-capability Teams agent is a set of event handlers that respond to events triggered by user behavior in Teams, especially the `message` event that represents a chat message.
 
 ## The development process: TDP and CLI, SDK, dev tunnel, sideload
 
@@ -73,6 +89,10 @@ During development, they can use their app manifest to *sideload* their app, ins
 With [dev tunnels](/azure/developer/dev-tunnels/), developers can host their app's service on the web right from their development environment.
 
 Teams SDK: Teams apps interact with the Teams API, Graph API, need to validate requests, etc. etc.
+
+Developers typically manage their app's manifest alongside their runtime source code, storing it in source control and updating it as the app takes shape. When development is complete and its runtime is up and running on the web, they submit the app manifest and icons to the Teams platform for distribution through the Teams Store or their organization's app catalog.
+
+what goes in the manifest vs app config
 
 ## The Teams agent development process
 
