@@ -248,6 +248,15 @@ Use container color tokens to establish hierarchy and communicate status within 
 </tr>
 </table>
 
+The following examples show how container colors work together in a widget. A neutral Default or Emphasis container establishes the outer card, while semantic containers — Good, Warning, or Attention — surface status meaning for specific content areas inside it.
+
+<img src="images/containerExamples.png" alt="Three example widgets showing container color nesting: an approved expense card, a room check-in warning, and a high-severity campus alert">
+
+
+
+
+
+
 ##### Text colors
 
 Use text color tokens to create hierarchy and communicate meaning in widget content. Pair status text colors with a matching container or icon — never rely on color alone.
