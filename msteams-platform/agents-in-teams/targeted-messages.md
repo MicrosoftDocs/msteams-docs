@@ -70,9 +70,9 @@ For more about slash commands, including how to register extra named slash comma
 
 ## Prompt preview in targeted messages
 
-Prompt Preview helps preserve conversational context for targeted messages by showing a compact preview of the user’s original request at the top of the agent’s response, especially when the response is targeted to a specific user. Targeted messages appear inline in a shared conversation but are visible only to the targeted recipient. It keeps targeted agent responses grounded in the user’s original request helping the user understand context without exposing the prompt to everyone else. A single agent response can include multiple prompt previews. However, it doesn't appear for normal messages.
+Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. This is particularly useful when an agent responds to a specific user within a shared conversation. Targeted messages appear inline in the conversation but are visible only to the intended recipient. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews, but Prompt Preview is not shown for normal, non-targeted messages.
 
-Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent:
+Prompt preview can appear in both private and public agent responses. The difference is only who can see the reply after it is sent:
 
 - **Private agent-to-user response**: The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
@@ -81,20 +81,6 @@ Prompt preview can appear in both private and public agent responses, but the im
 - **Public agent-to-user response**: The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
-
-The implementation mechanism is the same in both cases. The agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
-
-Prompt Preview can be added automatically in _reactive_ scenarios such as when replying with `send()` or `reply()` to a user’s targeted message or slash-command request through the Teams SDK or REST API. These SDK methods typically attach the `targetedMessageInfo` entity automatically, keeping the response associated with the incoming user interaction and tied to the original prompt. In _proactive_ flows, however, the agent sends the response outside the original turn, so it must explicitly add the `targetedMessageInfo` entity and reference the targeted message ID before sending the private or public message, ensuring the preview points to the correct original request.
-
-To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of original targeted message. Teams uses that `messageId` to show the user's original request above the agent response. This example demonstrates the `entities` array needed to add prompt preview with `messageId` on a reply activity, so the original message appears in the prompt preview.
-
-```json
-
-"entities": [{
-  "type": "targetedMessageInfo",
-  "messageId": "xxxxxxxxxxxxx"
-}]
-```
 
 Suggested actions, such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context.
 
@@ -269,6 +255,24 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
 ::: zone-end
+
+### Integrate prompt preview in a targeted message
+
+Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message.
+
+The implementation mechanism is the same in both cases. The agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
+
+Prompt Preview can be added automatically in _reactive_ scenarios such as when replying with `send()` or `reply()` to a user’s targeted message or slash-command request through the Teams SDK or REST API. These SDK methods typically attach the `targetedMessageInfo` entity automatically, keeping the response associated with the incoming user interaction and tied to the original prompt. In _proactive_ flows, however, the agent sends the response outside the original turn, so it must explicitly add the `targetedMessageInfo` entity and reference the targeted message ID before sending the private or public message, ensuring the preview points to the correct original request.
+
+To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of original targeted message. Teams uses that `messageId` to show the user's original request above the agent response. This example demonstrates the `entities` array needed to add prompt preview with `messageId` on a reply activity, so the original message appears in the prompt preview.
+
+```json
+
+"entities": [{
+  "type": "targetedMessageInfo",
+  "messageId": "xxxxxxxxxxxxx"
+}]
+```
 
 ### Update or delete a targeted message
 
