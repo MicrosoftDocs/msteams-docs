@@ -4,7 +4,7 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 06/23/2026
+ms.date: 06/29/2026
 ---
 # Get Teams specific context for your bot
 
@@ -12,48 +12,42 @@ A bot can access additional context data about a team or chat where it's install
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it's unreliable in large teams and must not be used.
+Your bot can query the paged list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through Microsoft Entra credentials is a member of the team. Use the paged members API for all supported languages. The unpaginated members APIs are deprecated and should not be used.
 
-The following sample code is used to fetch the roster:
+The following sample code uses paged member retrieval:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
+* [API changes](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
 app.OnMessage(async context =>
 {
-    var conversationId = context.Activity.Conversation.Id;
-
-    // Gets all members of the conversation.
-    var members = await context.Api.Conversations.Members.Get(context.Conversation.Id);
+    var members = await TeamsInfo.GetPagedMembersAsync(context);
 });
 ```
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
+* [API changes](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
-    const conversationId = activity.conversation.id;
-
-    // Gets all members of the conversation.
-    const members = await api.conversations.members(conversationId).get();
+    const membersClient = api.conversations.members(activity.conversation.id);
+    const page = await membersClient.getPaged({
+        pageSize: 50,
+    });
 });
 ```
 
 # [Python](#tab/python)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=python)
+* [API changes](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    conversation_id = ctx.activity.conversation.id
-
-    # Gets all members of the conversation.
-    members = await ctx.api.conversations.members.get(ctx.activity.conversation.id)
+    members = await TeamsInfo.get_paged_members(ctx)
 ```
 
 # [JSON](#tab/json)
