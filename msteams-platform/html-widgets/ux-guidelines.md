@@ -203,43 +203,97 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 Use container color tokens to establish hierarchy and communicate status within your widget. Nest containers to group related content or surface contextual meaning inside a neutral outer card.
 
-| Token | Use for |
-|---|---|
-| `colorNeutralBackground1` | Default widget and layout containers |
-| `colorNeutralBackground2` | Grouped or secondary content areas |
-| `colorBrandBackground2` | Brand-accented highlights and callouts |
-| `colorStatusSuccessBackground1` | Confirmations and successful outcomes |
-| `colorStatusWarningBackground1` | Cautions and time-sensitive alerts |
-| `colorStatusDangerBackground1` | Errors, failures, and critical alerts |
+<table>
+<tr>
+<th></th>
+<th>Token</th>
+<th>Use for</th>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorNeutralBackground1</code></td>
+<td>Default widget and layout containers</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorNeutralBackground2</code></td>
+<td>Grouped or secondary content areas</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorBrandBackground2</code></td>
+<td>Brand-accented highlights and callouts</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorStatusSuccessBackground1</code></td>
+<td>Confirmations and successful outcomes</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorStatusWarningBackground1</code></td>
+<td>Cautions and time-sensitive alerts</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorStatusDangerBackground1</code></td>
+<td>Errors, failures, and critical alerts</td>
+</tr>
+</table>
 
-<img src="images/containerColors.png" alt="Six container color examples: default, subtle, brand, success, warning, and attention">
 
-<img src="images/containerExamples.png" alt="Three example widgets showing container color nesting: an approved expense card, a room check-in warning, and a high-severity campus alert">
+
+
 
 ##### Text colors
 
 Use text color tokens to create hierarchy and communicate meaning in widget content. Pair status text colors with a matching container or icon — never rely on color alone.
 
-| Token | Use for |
-|---|---|
-| `colorNeutralForeground1` | Primary text — titles, key values |
-| `colorNeutralForeground2` | Secondary text — supporting details, metadata |
-| `colorNeutralForeground3` | Subtle text — de-emphasized labels, captions |
-| `colorBrandForeground1` | Brand-accented text and inline links |
-| `colorStatusSuccessForeground1` | Success labels and status indicators |
-| `colorStatusWarningForeground1` | Warning labels and status indicators |
-| `colorStatusDangerForeground1` | Error labels and status indicators |
+<table>
+<tr>
+<th></th>
+<th>Token</th>
+<th>Use for</th>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorNeutralForeground1</code></td>
+<td>Primary text — titles, key values</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorNeutralForeground2</code></td>
+<td>Secondary text — supporting details, metadata</td>
+</tr>
+<tr>
+<td>■</td>
+<td><code>colorNeutralForeground3</code></td>
+<td>Subtle text — de-emphasized labels, captions</td>
+</tr>
+<tr>
+<td><span style="color:#0f6cbd">■</span></td>
+<td><code>colorBrandForeground1</code></td>
+<td>Brand-accented text and inline links</td>
+</tr>
+<tr>
+<td><span style="color:#107c10">■</span></td>
+<td><code>colorStatusSuccessForeground1</code></td>
+<td>Success labels and status indicators</td>
+</tr>
+<tr>
+<td><span style="color:#835b00">■</span></td>
+<td><code>colorStatusWarningForeground1</code></td>
+<td>Warning labels and status indicators</td>
+</tr>
+<tr>
+<td><span style="color:#bc2f32">■</span></td>
+<td><code>colorStatusDangerForeground1</code></td>
+<td>Error labels and status indicators</td>
+</tr>
+</table>
 
-<img src="images/textColors.png" alt="Text color examples showing primary, secondary, subtle, brand, success, warning, and danger foreground tokens">
 
 <img src="images/icon_colorBrush.png" alt="" width="20"> [Color tokens](https://fluent2.microsoft.design/color)
-
-
-
-
-
-
-
 
 
 
