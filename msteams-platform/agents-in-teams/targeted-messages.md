@@ -86,7 +86,7 @@ Suggested actions, such as Approve or Reject, can then provide a lightweight way
 
 Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
 
-## Response visibility modes
+### Response visibility modes
 
 Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and options to share it with the rest of the conversation, and then explicitly approves whether it should be shared publicly.
 
