@@ -205,43 +205,48 @@ Use container color tokens to establish hierarchy and communicate status within 
 
 <table>
 <tr>
+<th>Style</th>
 <th></th>
 <th>Token</th>
 <th>Use for</th>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorNeutralBackground1</code></td>
+<td>Default</td>
+<td>■ ■</td>
+<td><code>colorNeutralBackground1</code><br><code>colorNeutralStroke1</code></td>
 <td>Default widget and layout containers</td>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorNeutralBackground2</code></td>
+<td>Emphasis</td>
+<td>■ ■</td>
+<td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorBrandBackground2</code></td>
-<td>Brand-accented highlights and callouts</td>
+<td>Accent</td>
+<td>■ ■</td>
+<td><code>colorBrandBackground2</code><br><code>colorBrandStroke1</code></td>
+<td>Teams brand-accented highlights and callouts</td>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorStatusSuccessBackground1</code></td>
+<td>Good</td>
+<td>■ ■</td>
+<td><code>colorStatusSuccessBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorStatusWarningBackground1</code></td>
+<td>Warning</td>
+<td>■ ■</td>
+<td><code>colorStatusWarningBackground1</code><br><code>colorStatusWarningBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
-<td>■</td>
-<td><code>colorStatusDangerBackground1</code></td>
+<td>Attention</td>
+<td>■ ■</td>
+<td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
 </table>
-
-
 
 
 
