@@ -213,13 +213,13 @@ Use container color tokens to establish hierarchy and communicate status within 
 <tr>
 <td>Default</td>
 <td>■ ■</td>
-<td><code>colorNeutralBackground1</code><br><code>colorNeutralStroke1</code></td>
+<td><code>colorNeutralStroke1</code><br><code>colorNeutralStroke1</code></td>
 <td>Default widget and layout containers</td>
 </tr>
 <tr>
 <td>Emphasis</td>
 <td>■ ■</td>
-<td><code>colorNeutralBackground2</code><br><code>colorNeutralStroke2</code></td>
+<td><code>colorNeutralCardBackground</code><br><colorNeutralCardBackground</code></td>
 <td>Grouped or secondary content areas</td>
 </tr>
 <tr>
