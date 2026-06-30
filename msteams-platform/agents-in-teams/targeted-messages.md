@@ -72,7 +72,7 @@ For more about slash commands, including how to register extra named slash comma
 
 Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and options to share it with the rest of the conversation, and then explicitly approves whether it should be shared publicly.
 
-[Suggested actions](../bots/how-to/conversations/suggested-actions.md), such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context.
+[Suggested actions](../bots/how-to/conversations/suggested-actions.md), such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context. See [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Prompt preview in targeted messages
 
@@ -304,8 +304,11 @@ When designing agent interactions for group conversations, choosing between publ
 - A targeted request to an agent should result in a targeted response, unless the user or the situation explicitly calls for a public response.
 - Public messages should be used in situations that are purely informational and don't require user-specific context. They should benefit the entire group and shouldn't contain any private information.
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
+- User approval is an important safeguard in targeted messaging workflows. Because an agent’s initial response may contain user-specific information, the user should explicitly confirm before the content is published to a shared conversation. Prompt Preview supports this decision by allowing users to review the proposed response in the context of their original request before choosing whether to share it.
 
-Consider using [suggested actions](../bots/how-to/conversations/suggested-actions.md) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
+  The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or suggested actions. Recommended actions include Approve, Reject, Share, and Update. These actions give users control over whether the response is published as-is, revised before sharing, or withheld from the public conversation.
+
+  Consider using [suggested actions](../bots/how-to/conversations/suggested-actions.md) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
 
 ## Errors
 
