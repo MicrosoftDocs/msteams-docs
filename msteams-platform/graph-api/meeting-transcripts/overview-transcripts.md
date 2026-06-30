@@ -43,14 +43,15 @@ To fetch the transcript and recording for a particular meeting and call:
 
 ### Configure permissions on Microsoft Entra ID to access transcript and recording
 
-Access to transcripts through this API requires the appropriate Graph permissions and is also
-governed by two independent tenant administrator settings:
+Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
+
+Additionally, access to transcripts and transcript change notifications is governed by two independent tenant administrator settings:
 
 - **Graph API access to transcripts**. When disabled, all transcript requests (metadata, `metadataContent`, and `content`) return `403 Forbidden` with the `GraphAccessToTranscriptsDisabled` inner-error code, regardless of the requested format.
 
-- **Speaker attribution**. When disabled, transcript content can be retrieved only without speaker information.
+- **Speaker attribution**. When disabled, transcript content can be retrieved only without speaker information in the `application/vnd.microsoft.graph.transcript+text` format.
 
-Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
+For more information, see the sections about tenant administrator controls in the documentation about [change notification subscriptions](/graph/teams-changenotifications-callrecording-and-calltranscript#tenant-admin-control-over-transcript-subscriptions) and the [Get callTranscript operation](/graph/api/calltranscript-get#tenant-administrator-controls-for-transcript-access).
 
 > [!NOTE]
 >
