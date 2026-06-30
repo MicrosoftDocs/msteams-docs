@@ -47,6 +47,12 @@ You can add custom activity icons in activity feed notifications to increase use
 
 Users can manage notifications sent from your app in the Teams settings page.
 
+> [!NOTE]
+> Teams activity feed notifications depend on app installation context, but an app that only declares activity feed capabilities does not provide an interactive Teams surface to open.
+> In this configuration, users can have an installed app record that supports notification delivery even though selecting the app in Teams does not launch a tab, bot, or other client experience.
+> Installation visibility, open behavior, and notification eligibility are separate concepts in Teams app architecture.
+> Notification-only manifests can support activity delivery without providing an app experience that opens in the client.
+
 ## Related system notifications
 
 Each activity generates a system notification. What displays depends on what the user configures in their notification settings. Users can also choose a notification style based on their operating system.
