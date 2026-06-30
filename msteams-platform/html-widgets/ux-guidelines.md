@@ -116,6 +116,8 @@ Keep in mind:
 
 Many widgets follow a common pattern that helps users orient quickly — but not every widget needs all of these elements, and some widgets (such as maps, charts, or forms) may not follow this structure at all.
 
+**Common elements**
+
 | Element | Description | Notes |
 |---|---|---|
 | **Title** | Identifies the widget or what it represents | Gives users an immediate sense of what the widget is and what to expect, helping it stand out clearly within the conversation |
