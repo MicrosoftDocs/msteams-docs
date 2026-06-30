@@ -68,6 +68,12 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
+### Response visibility modes
+
+Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and options to share it with the rest of the conversation, and then explicitly approves whether it should be shared publicly.
+
+[Suggested actions](../bots/how-to/conversations/suggested-actions.md), such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context.
+
 ### Prompt preview in targeted messages
 
 Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. This is particularly useful when an agent responds to a specific user within a shared conversation. Targeted messages appear inline in the conversation but are visible only to the intended recipient. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews, but Prompt Preview is not shown for normal, non-targeted messages.
@@ -88,13 +94,7 @@ The agent sends a public resply to the user's request that includes the prompt p
 
 ---
 
-Suggested actions, such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context.
-
 Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
-
-### Response visibility modes
-
-Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and options to share it with the rest of the conversation, and then explicitly approves whether it should be shared publicly.
 
 ::: zone pivot="typescript"
 
