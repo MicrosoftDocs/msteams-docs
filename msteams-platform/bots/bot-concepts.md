@@ -3,19 +3,13 @@ title: Activity Handlers and Bot Logic
 description: Learn about bot events and activity handlers for messages, channels, teams, members, mentions, auth, and card actions.
 ms.topic: article
 ms.localizationpriority: medium
-ms.owner: angovil
+ms.owner: nickwalk
 ms.date: 04/09/2026
 ---
 
 # Understand bot concepts
 
 A bot's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. A bot may request information or enable access to services, and responds to the user.
-
-> **SDK Version**: This article uses the [Teams SDK v2](https://microsoft.github.io/teams-sdk). For installation, run:
-
-> - **TypeScript**: `npm install @microsoft/teams.apps`
-> - **C#**: `dotnet add package Microsoft.Teams.Apps`
-> - **Python**: `pip install microsoft-teams-apps`
 
 ## Bot scopes
 
@@ -521,9 +515,10 @@ An extensive dialog between your bot and the user is a slow and complex way to g
     BOT: On which day?
 
 - **Support six or less frequent commands** As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-- **Optimize size of knowledgebase for quicker interaction** One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+- **Optimize size of knowledge base for quicker interaction** One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
-> **Note**: Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your bot environment accordingly.
+> [!NOTE]
+> Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your bot environment accordingly.
 
 ## Explore other bot features
 
