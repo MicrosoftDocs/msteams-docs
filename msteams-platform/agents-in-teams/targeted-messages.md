@@ -254,7 +254,12 @@ If attempting to send a targeted message results in an error, consider sending a
 
 ### Control response visibility
 
-Response visibility is determined using the `WithRecipient` configuration and the isTargeted property. Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` with `WithRecipient` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message. This distinction supports both addressed replies and normal visibility: Use `isTargeted: true` when privacy is part of the agent or app behavior and the message must be visible only to one user in a shared chat. Use `isTargeted: false` when you are building a normal message flow and don't want private visibility for messages. This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context.
+Response visibility is controlled by the combination of the `WithRecipient` configuration and the `isTargeted` property.
+
+- `isTargeted`: true with WithRecipient delivers the message as a private, user-specific response within a shared conversation.
+- `isTargeted`: false with WithRecipient records the intended recipient but keeps the message visible according to the normal conversation context.
+
+This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
 
 You can implement the following agent-to-user response flows:
 
@@ -262,7 +267,7 @@ You can implement the following agent-to-user response flows:
 - Public response mode lets the user share the response to the wider audience.
 - Private-to-public response flow lets the user approve a private response to be shared publicly.
 
-For targeted messaging, the user approval matters because the agent’s first response is intentionally private. It is an important targeted-messaging safeguard. The private response can be reviewed in context with prompt preview. As the agent’s first response is private, the user should explicitly confirm  before the agent or app publishes that response into the shared conversation. You can build this experience using Adaptive Cards, or suggested actions for offering options to the user such as approving, sharing, or updating the message.
+You can design user approval workflow for re-posting a private targeted message a public message. For targeted messaging, the user approval matters because the agent’s first response is intentionally private. See [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Integrate prompt preview in a targeted message
 
@@ -306,9 +311,13 @@ When designing agent interactions for group conversations, choosing between publ
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
 - User approval is an important safeguard in targeted messaging workflows. Because an agent’s initial response may contain user-specific information, the user should explicitly confirm before the content is published to a shared conversation. Prompt Preview supports this decision by allowing users to review the proposed response in the context of their original request before choosing whether to share it.
 
-  The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or suggested actions. Recommended actions include Approve, Reject, Share, and Update. These actions give users control over whether the response is published as-is, revised before sharing, or withheld from the public conversation.
+  The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
 
-  Consider using [suggested actions](../bots/how-to/conversations/suggested-actions.md) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
+  1. Receive the user’s request as a targeted message
+  1. Send the first agent reply privately
+  1. Add prompt preview to preserve context
+  1. Use Adaptive Cards or suggested actions for user approval
+  1. Repost agent response publicly only after approval
 
 ## Errors
 
