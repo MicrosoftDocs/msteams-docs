@@ -122,6 +122,8 @@ Many widgets follow a common pattern that helps users orient quickly — but not
 | **Body content** | The primary information, media, or interactive content | The core of most widgets — may be the only element present |
 | **Actions** | Buttons, links, or other interactive elements that let the user take the next step | Optional. Interactive elements may appear throughout the widget, not only at the bottom — but when a widget includes a dedicated action area, it's typically placed at the bottom |
 
+<p></p>
+
 <img src="images/cardAnatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
 
 When a widget does follow this common pattern, content typically flows top to bottom:
