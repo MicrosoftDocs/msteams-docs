@@ -1,7 +1,7 @@
 ---
 title: Enhance Meeting Experience with APIs
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: kanchankaur

@@ -2,7 +2,7 @@
 title: One-on-one conversations with bots
 description: Learn about end-to-end scenario of bot conversation in one-on-one chat, design personal bot, and best practices for welcome messages in personal chat.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/02/2023
 ms.owner: angovil
 ---
