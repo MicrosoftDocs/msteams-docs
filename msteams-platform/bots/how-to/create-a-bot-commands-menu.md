@@ -11,7 +11,7 @@ ms.date: 03/11/2025
 # Create a commands menu
 
 > [!NOTE]
-> We’ve enhanced the command menu experience as prompt starters. We recommend you to refer to [prompt starters](~/bots/how-to/conversations/prompt-suggestions.md).
+> We’ve enhanced the command menu experience as prompt starters. We recommend you to refer to [prompt starters](~/bots/how-to/conversations/prompt-starters.md).
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
@@ -228,7 +228,6 @@ Following are the command menu best practices:
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
-
 
 ## Next step
 

@@ -2,9 +2,9 @@
 title: Create an Incoming Webhook
 description: Create an Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#, Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.owner: hantony
-ms.date: 04/01/2026
+ms.date: 05/06/2026
 ---
 
 # Create Incoming Webhooks
@@ -68,21 +68,6 @@ Use the webhook URL in your external application or service to send HTTP POST re
 
 When a request is received, the workflow posts the configured message to the selected channel.
 
-### Create a webhook workflow from scratch
-
-You can also create a webhook workflow manually using the Workflows app.
-
-1. In **Microsoft Teams**, select **Apps**. The app gallery appears.
-
-1. Search for and open the **Workflows** app.
-   :::image type="content" source="../../assets/images/connectors/search-workflows.png" alt-text="Search for workflows.":::
-1. Select **Build from scratch**.
-   :::image type="content" source="../../assets/images/connectors/workflows-build-from-scratch.png" alt-text="Build from scratch.":::
-1. Select the trigger **When a Teams webhook request is received**.
-   :::image type="content" source="../../assets/images/connectors/webhook-trigger.png" alt-text="Select the trigger.":::
-1. Configure the trigger settings.
-1. Save the workflow.
-
 ### Send a request to the webhook
 
 After creating the workflow, send an HTTP POST request to the generated webhook URL.
@@ -103,7 +88,7 @@ When the request is received, the workflow processes the payload and posts the m
 Use Workflows when you need to:
 
 * Receive webhook requests from external services.
-* Post messages or Adaptive Cards to Teams channels or chats.
+* Post Message Cards or Adaptive Cards to Teams channels or chats.
 * Transform or process webhook payloads before posting them to Teams.
 * Integrate webhook events with other services supported by Power Automate.
 
