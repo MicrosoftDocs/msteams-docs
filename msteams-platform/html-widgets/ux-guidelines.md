@@ -292,14 +292,14 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 
 <tr>
 <td>Warning</td>
-<td><img src="images/text_warning.png" width="24" height="24" alt="Warning text color swatch"></td>
+<td><img src="images/textColor_warning.png" width="24" height="24" alt="Warning text color swatch"></td>
 <td><code>colorStatusWarningForeground1</code></td>
 <td>Warning labels and status indicators</td>
 </tr>
 
 <tr>
 <td>Attention</td>
-<td><img src="images/text_attention.png" width="24" height="24" alt="Attention text color swatch"></td>
+<td><img src="images/textColor_attention.png" width="24" height="24" alt="Attention text color swatch"></td>
 <td><code>colorStatusDangerForeground1</code></td>
 <td>Error labels and status indicators</td>
 </tr>
