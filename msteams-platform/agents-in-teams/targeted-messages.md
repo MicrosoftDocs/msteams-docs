@@ -252,6 +252,18 @@ If attempting to send a targeted message results in an error, consider sending a
 
 ::: zone-end
 
+### Control response visibility
+
+Response visibility is determined using the `WithRecipient` configuration and the isTargeted property. Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` with `WithRecipient` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message. This distinction supports both addressed replies and normal visibility: Use `isTargeted: true` when privacy is part of the agent or app behavior and the message must be visible only to one user in a shared chat. Use `isTargeted: false` when you are building a normal message flow and don't want private visibility for messages. This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context.
+
+You can implement the following agent-to-user response flows:
+
+- Private response mode (default) keeps slash command response focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
+- Public response mode lets the user share the response to the wider audience.
+- Private-to-public response flow lets the user approve a private response to be shared publicly.
+
+For targeted messaging, the user approval matters because the agent’s first response is intentionally private. It is an important targeted-messaging safeguard. The private response can be reviewed in context with prompt preview. As the agent’s first response is private, the user should explicitly confirm  before the agent or app publishes that response into the shared conversation. You can build this experience using Adaptive Cards, or suggested actions for offering options to the user such as approving, sharing, or updating the message.
+
 ### Integrate prompt preview in a targeted message
 
 Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message.
@@ -269,16 +281,6 @@ To render prompt preview, include a `targetedMessageInfo` entity in the reply ac
   "messageId": "xxxxxxxxxxxxx"
 }]
 ```
-
-### Control response visibility
-
-Response visibility is determined using the `WithRecipient` configuration and the isTargeted property. Setting `isTargeted: true` with `WithRecipient` delivers this message as a private, user-specific message inside a shared conversation. Setting `isTargeted: false` with `WithRecipient` sets the recipient metadata, but doesn't mark the message as privately targeted. In other words, Teams SDK lets you identify who the logical recipient is without necessarily turning the message into a targeted or ephemeral message. This distinction supports both addressed replies and normal visibility: Use `isTargeted: true` when privacy is part of the agent or app behavior and the message must be visible only to one user in a shared chat. Use `isTargeted: false` when you are building a normal message flow and don't want private visibility for messages. This boolean value avoids having separate APIs for setting a recipient and making a message private in a group context. You can implement the following agent-to-user response flows:
-
-- Private response mode (default) keeps slash command response focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
-- Public response mode lets the user share the response to the wider audience.
-- Private-to-public response flow lets the user approve a private response to be shared publicly.
-
-For targeted messaging, the user approval matters because the agent’s first response is intentionally private. It is an important targeted-messaging safeguard. The private response can be reviewed in context with prompt preview. As the agent’s first response is private, the user should explicitly confirm  before the agent or app publishes that response into the shared conversation. You can buuld this experience using Adaptive Cards, or suggested actions for offering options to the user such as approving, sharing, or updating the message.
 
 For more information on implementing prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
