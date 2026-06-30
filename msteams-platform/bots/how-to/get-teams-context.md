@@ -98,6 +98,8 @@ app.OnMessage(async context =>
 
 ::: zone-end
 
+:::
+
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
 ```typescript
@@ -109,6 +111,8 @@ app.on('message', async ({ activity, api }) => {
     const member = await api.conversations.members(conversationId).getById(memberId);
 });
 ```
+
+::: zone-end
 
 :::
 
@@ -173,6 +177,8 @@ app.OnMessage(async context =>
 
 ::: zone-end
 
+:::
+
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
 ```typescript
@@ -188,6 +194,10 @@ app.on('message', async ({ activity, api, send }) => {
     }
 });
 ```
+
+::: zone-end
+
+:::
 
 # [Python](#tab/python)
 
@@ -233,6 +243,7 @@ Your bot can query the list of channels in a team.
 > * The channel ID for the General channel always matches the team ID.
 
 The following sample code is used to get the list of channels in a team:
+:::
 
 # [C#](#tab/dotnet)
 
@@ -251,6 +262,10 @@ app.OnMessage(async context =>
     }
 });
 ```
+
+::: zone-end
+
+:::
 
 # [TypeScript](#tab/typescript)
 
