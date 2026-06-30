@@ -317,6 +317,14 @@ When designing agent interactions for group conversations, choosing between publ
   1. Use Adaptive Cards or suggested actions for user approval
   1. Repost agent response publicly only after approval
 
+- Use Prompt Preview whenever an agent responds to a targeted user request. Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), this helps users understand the relationship between their original prompt and the agent’s response without requiring them to locate the earlier message.
+
+    | Prompt preview | Quoted replies |
+    | --- | --- |
+    | Preserves private prompt-response context | References an earlier message in a thread |
+    | Supports private-to-public sharing workflows | Focuses on thread navigation |
+    | Maintains approval-based sharing patterns | Does not provide targeted-response context |
+
 ## Errors
 
 Targeted message operations can return `400 Bad argument` when the payload is invalid. On create, this error usually means the recipient is missing. Call `WithRecipient(account, isTargeted: true)` with a valid Account object. The same requirement applies to the `Send TM` API.
