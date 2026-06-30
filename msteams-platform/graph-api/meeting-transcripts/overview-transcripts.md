@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vichug
 ms.author: nickwalk
-ms.date: 06/29/2026
+ms.date: 06/30/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -17,17 +17,6 @@ You can now configure your app to fetch Microsoft Teams transcripts and recordin
 
 - a scheduled online meeting
 - an ad hoc call
-
-## Graph API access to transcripts and recordings
-
-Access to transcripts through this API requires the appropriate Graph permissions and is also
-governed by two independent tenant administrator settings:
-
-- **Graph API access to transcripts.** When disabled, all transcript requests (metadata, `metadataContent`, and `content`) return `403 Forbidden` with the `GraphAccessToTranscriptsDisabled` inner-error code, regardless of the requested format.
-
-- **Speaker attribution.** When disabled, transcript content can be retrieved only without speaker information.
-
-For more information, see [Get change notifications for call recording and call transcript](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
 ## Use cases
 
@@ -53,6 +42,13 @@ To fetch the transcript and recording for a particular meeting and call:
 <a name='configure-permissions-on-azure-ad-to-access-transcript-and-recording'></a>
 
 ### Configure permissions on Microsoft Entra ID to access transcript and recording
+
+Access to transcripts through this API requires the appropriate Graph permissions and is also
+governed by two independent tenant administrator settings:
+
+- **Graph API access to transcripts**. When disabled, all transcript requests (metadata, `metadataContent`, and `content`) return `403 Forbidden` with the `GraphAccessToTranscriptsDisabled` inner-error code, regardless of the requested format.
+
+- **Speaker attribution**. When disabled, transcript content can be retrieved only without speaker information.
 
 Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
 
