@@ -431,6 +431,10 @@ You can send a personal message to each member of the team when the bot is added
 >[!NOTE]
 > Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
 
+### Limitations
+
+Teams bots cannot be installed to a single standard channel only. When a bot is declared with the `team` scope, installation occurs at the team level and the bot is visible across the team’s standard channels. This behavior is by design and cannot be restricted by manifest settings or runtime code. In standard teams, the General channel has special identity behavior, including a channel ID that matches the team ID. Bots are not supported in private or shared channels in the same way as standard channel conversations.
+
 Don't send a message in the following cases:
 
 * When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
