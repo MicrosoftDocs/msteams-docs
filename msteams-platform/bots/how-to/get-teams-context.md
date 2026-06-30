@@ -17,8 +17,6 @@ Your bot can query the paged list of members and their basic user profiles, incl
 
 The following sample code uses paged member retrieval:
 
-:::
-
 * [API changes](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
 ```csharp
@@ -27,10 +25,6 @@ app.OnMessage(async context =>
     var members = await TeamsInfo.GetPagedMembersAsync(context);
 });
 ```
-
-::: zone-end
-
-:::
 
 * [API changes](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -42,10 +36,6 @@ app.on('message', async ({ activity, api }) => {
     });
 });
 ```
-
-::: zone-end
-
-:::
 
 * [API changes](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
@@ -71,8 +61,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         continuation_token = result.continuation_token
 ```
 
-::: zone-end
-
 After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more specific members of a chat or team, use the Microsoft Teams bot APIs `context.Api.Conversations.Members.GetByIdAsync(conversationId, memberId)` for C# or `api.conversations.members(conversationId).getById(memberId)` for TypeScript APIs.
 
 ## Get single member details
@@ -80,8 +68,6 @@ After you fetch the roster or user profile, you can get details of a single memb
 You can retrieve details of a specific member using user identifiers from the activity context.
 
 The following sample code uses Teams SDK APIs:
-
-:::
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
 
@@ -96,10 +82,6 @@ app.OnMessage(async context =>
 });
 ```
 
-::: zone-end
-
-:::
-
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
 ```typescript
@@ -111,10 +93,6 @@ app.on('message', async ({ activity, api }) => {
     const member = await api.conversations.members(conversationId).getById(memberId);
 });
 ```
-
-::: zone-end
-
-:::
 
 # [Python](#tab/python)
 
@@ -129,8 +107,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     # Gets a single member by ID.
     member = await ctx.api.conversations.members.get_by_id(conversation_id, member_id)
 ```
-
-::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
@@ -177,8 +153,6 @@ app.OnMessage(async context =>
 
 ::: zone-end
 
-:::
-
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
 
 ```typescript
@@ -194,8 +168,6 @@ app.on('message', async ({ activity, api, send }) => {
     }
 });
 ```
-
-::: zone-end
 
 :::
 
@@ -215,8 +187,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     else:
         await ctx.send("Message did not come from a channel in a team.")
 ```
-
-::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
@@ -243,7 +213,6 @@ Your bot can query the list of channels in a team.
 > * The channel ID for the General channel always matches the team ID.
 
 The following sample code is used to get the list of channels in a team:
-:::
 
 # [C#](#tab/dotnet)
 
@@ -263,10 +232,6 @@ app.OnMessage(async context =>
 });
 ```
 
-::: zone-end
-
-:::
-
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=typescript)
@@ -282,8 +247,6 @@ app.on('message', async ({ activity, api, send }) => {
     }
 });
 ```
-
-::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
