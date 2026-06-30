@@ -2,7 +2,7 @@
 title: Conversation events
 author: WashingtonKayaker
 description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil

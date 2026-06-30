@@ -1,7 +1,7 @@
 ---
 title: User Specific Views in Adaptive Cards
 description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 12/14/2022
 ---
