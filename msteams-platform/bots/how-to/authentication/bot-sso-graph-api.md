@@ -4,7 +4,7 @@ description: Learn to configure API permissions with Microsoft Graph for Teams b
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 05/01/2026
-ms.owner: ryanbliss
+
 ---
 # Extend your app with Microsoft Graph permissions and scopes
 
