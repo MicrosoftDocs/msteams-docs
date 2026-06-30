@@ -65,7 +65,7 @@ Building a great widget for Teams means delivering a focused experience that sur
     Match the visual footprint of your widget to what the user needs in the moment.
     
      - Widgets always appear inline in the chat.
-     - If your widget contains rich content or a deeper workflow that would benefit from more space, consider building in an expand function to open the widget in a larger view.
+     - Teams provides an expanded surface — a larger view that opens above the chat. If your widget contains rich content or a deeper workflow that would benefit from more space, add an expand icon to your widget's action area to enable this experience.
 
   
   :::column-end:::
