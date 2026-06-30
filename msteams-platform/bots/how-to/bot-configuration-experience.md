@@ -1,7 +1,7 @@
 ---
 title: Configure & Customize Bot Settings
 description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
-ms.topic: conceptual
+ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 04/21/2026
