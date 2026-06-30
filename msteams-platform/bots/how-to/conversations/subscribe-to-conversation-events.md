@@ -1,17 +1,13 @@
 ---
 title: Conversation events
-author: WashingtonKayaker
 description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: anclear
-ms.owner: angovil
+ms.author: nickwalk
 ms.date: 05/05/2026
 ---
 
 # Conversation events in your Teams bot
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
@@ -20,12 +16,6 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a notification when a channel is created, renamed, or deleted.
 * Trigger a notification when a bot message is liked by a user.
 * Identify the default channel for your bot from user input (selection) during installation.
-
-The following video demonstrates how a conversation bot can improve customer engagement through smooth, intelligent interactions:
-
-<br>
-
-> [!VIDEO https://www.youtube.com/embed/HWw99yPsAes]
 
 ## Conversation update events
 
@@ -69,8 +59,6 @@ The `channelCreated` event is sent to your bot whenever a new channel is created
 The following code shows an example of a channel created event:
 
 # [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -148,8 +136,6 @@ The following code shows an example of a channel renamed event:
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
-
 ```csharp
 app.OnChannelRenamed(async context =>
 {
@@ -224,8 +210,6 @@ The following code shows an example of a channel deleted event:
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
-
 ```csharp
 app.OnChannelDeleted(async context =>
 {
@@ -299,8 +283,6 @@ The `channelRestored` event is sent to your bot, whenever a channel that was pre
 The following code shows an example of a channel restored event:
 
 # [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
 app.OnChannelRestored(async context =>
@@ -391,8 +373,6 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 The following code shows an example of a team members added event:
 
 # [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -541,8 +521,6 @@ The following code shows an example of a team members removed event:
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
-
 ```csharp
 app.OnMembersRemoved(async context =>
 {
@@ -633,8 +611,6 @@ Your bot is notified when the team is renamed. It receives a `conversationUpdate
 The following code shows an example of a team renamed event:
 
 # [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
 
 ```csharp
 app.OnTeamRenamed(async context =>
@@ -998,8 +974,6 @@ The following code shows an example of reactions to a bot message:
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L22)
-
 ```csharp
 app.OnReactionsAdded(async context =>
 {
@@ -1012,14 +986,6 @@ app.OnReactionsAdded(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
-
-<!-- Verify -->
 
 ```typescript
 
@@ -1098,8 +1064,6 @@ The following code shows an example of reactions removed from bot message:
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L27)
-
 ```csharp
 app.OnReactionsRemoved(async context =>
 {
@@ -1112,14 +1076,6 @@ app.OnReactionsRemoved(async context =>
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
-
-<!-- Verify -->
 
 ```typescript
 app.on('reactionsRemoved', async ({ activity, send }) => {
@@ -1213,8 +1169,6 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
-
 ```csharp
 app.OnInstall(async context =>
 {
@@ -1240,8 +1194,6 @@ protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallatio
 ```
 
 # [TypeScript](#tab/typescript)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L72-L78)
 
 ```typescript
 app.on('install.add', async ({ send }) => {
@@ -1349,20 +1301,11 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 ## Code sample
 
-| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
-|---------------|--------------|--------|-------------|--------|--------|
-| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-
-## See also
-
-* [Build bots for Teams](../../what-are-bots.md)
-* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-* [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
-* [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
-* [Create Teams conversation bot](channel-and-group-conversations.md)
-* [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
