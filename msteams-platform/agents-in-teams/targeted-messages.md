@@ -259,13 +259,11 @@ Response visibility is controlled by the combination of the `WithRecipient` conf
 - `isTargeted`: true with WithRecipient delivers the message as a private, user-specific response within a shared conversation.
 - `isTargeted`: false with WithRecipient records the intended recipient but keeps the message visible according to the normal conversation context.
 
-This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
+This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience. You can implement the following agent-to-user response flows:
 
-You can implement the following agent-to-user response flows:
-
-- Private response mode (default) keeps slash command response focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
-- Public response mode lets the user share the response to the wider audience.
-- Private-to-public response flow lets the user approve a private response to be shared publicly.
+- _Private response mode_ (default) keeps slash command response focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
+- _Public response_ mode lets the user share the response to the wider audience.
+- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
 
 You can design user approval workflow for re-posting a private targeted message a public message. For targeted messaging, the user approval matters because the agent’s first response is intentionally private. See [best practices and design guidance](#best-practices-and-design-guidance).
 
