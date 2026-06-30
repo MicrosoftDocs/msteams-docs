@@ -197,7 +197,7 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 ##### Container colors
 
-Use container color tokens to establish hierarchy and communicate status within your widget. Nest containers to group related content or surface contextual meaning inside a neutral outer card.
+Use container color tokens to establish hierarchy and communicate status within your widget. Start with Default for your outer card surface, then nest containers inside it to group related content or surface status meaning.
 
 <table>
 <tr>
@@ -210,19 +210,19 @@ Use container color tokens to establish hierarchy and communicate status within 
 <td>Default</td>
 <td><img src="images/container_default.png" width="24" height="24" alt="Default container color swatch — white background with light gray border"></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
-<td>Default widget and layout containers</td>
+<td><strong>Outer card surface</strong> — apply this token to your widget's base container to match the Teams-native card background</td>
 </tr>
 <tr>
 <td>Emphasis</td>
 <td><img src="images/container_emphasis.png" width="24" height="24" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
 <td><code>colorNeutralBackground3</code><br><code>colorNeutralStroke1</code></td>
-<td>Grouped or secondary content areas</td>
+<td>Grouped or secondary content areas — the most common inner container</td>
 </tr>
 <tr>
 <td>Accent</td>
 <td><img src="images/container_accent.png" width="24" height="24" alt="Accent container color swatch — light blue background with blue border"></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke2</code></td>
-<td>Teams brand-accented highlights and callouts</td>
+<td>Brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
@@ -244,7 +244,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 </tr>
 </table>
 
-The following examples show how container colors work together in a widget. A neutral Default or Emphasis container establishes the outer card, while semantic containers — Good, Warning, or Attention — surface status meaning for specific content areas inside it.
+Unlike Adaptive Cards, HTML widgets don't automatically inherit a card background. Apply `colorNeutralCardBackground` to your outer container to match the Teams-native card surface. Inside it, use Emphasis containers to group or separate content, and Good, Warning, or Attention containers when specific content areas carry status meaning.
 
 <img src="images/container_gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
 
