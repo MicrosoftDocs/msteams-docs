@@ -167,7 +167,7 @@ The widths below are representative examples, not fixed breakpoints — your wid
 
 Avoid horizontal scrolling for primary widget content. Layout should adapt to the narrow widths typical of chat containers.
 
-> [!NOTE]
+> [!TIP]
 > Horizontal scrolling may be used intentionally for specific content types such as wide data tables, media carousels, or timelines where horizontal navigation is a meaningful part of the experience. These cases should be intentional, not a result of fixed-width layouts.
 
 ### Feedback and confirmation
