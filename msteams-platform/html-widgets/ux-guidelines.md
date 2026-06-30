@@ -322,13 +322,13 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 <tr>
 <td>Overlay dark</td>
 <td><img src="images/textColor_dark.png" width="24" height="24" alt="Overlay dark text color swatch — near black"></td>
-<td><code>colorNeutralForegroundStaticDark</code></td>
+<td><code>colorNeutralForeground1Static</code></td>
 <td>Text on light or mid-tone images</td>
 </tr>
 <tr>
 <td>Overlay light</td>
 <td><img src="images/textColor_light.png" width="24" height="24" alt="Overlay light text color swatch — white"></td>
-<td><code>colorNeutralForegroundStaticLight</code></td>
+<td><code>colorNeutralForegroundStaticInverted</code></td>
 <td>Text on dark images</td>
 </tr>
 </table>
