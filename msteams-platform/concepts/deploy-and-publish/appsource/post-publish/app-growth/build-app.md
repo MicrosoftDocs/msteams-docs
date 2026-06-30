@@ -2,7 +2,7 @@
 title: Build Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn to build your collaborative app, what you can do during the build stage of your app to grow your app, and where can Microsoft help.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/19/2023
 ---

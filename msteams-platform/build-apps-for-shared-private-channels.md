@@ -4,7 +4,7 @@ author: vikasalmal
 description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
 ms.author: vikasalmal
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.date: 02/27/2026
 ---
 
