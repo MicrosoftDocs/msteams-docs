@@ -254,18 +254,13 @@ If attempting to send a targeted message results in an error, consider sending a
 
 ### Control response visibility
 
-Response visibility is controlled by the combination of the `WithRecipient` configuration and the `isTargeted` property.
+Response visibility is controlled by the `WithRecipient` configuration and the isTargeted property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience. You can implement the following agent-to-user response flows:
 
-- `isTargeted`: true with WithRecipient delivers the message as a private, user-specific response within a shared conversation.
-- `isTargeted`: false with WithRecipient records the intended recipient but keeps the message visible according to the normal conversation context.
-
-This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience. You can implement the following agent-to-user response flows:
-
-- _Private response mode_ (default) keeps slash command response focused between the user and the agent. Use private response flow for drafts, summaries, personal tasks.
+- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
 - _Public response_ mode lets the user share the response to the wider audience.
 - _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
 
-You can design user approval workflow for re-posting a private targeted message a public message. For targeted messaging, the user approval matters because the agent’s first response is intentionally private. See [best practices and design guidance](#best-practices-and-design-guidance).
+You can design a user approval workflow for reposting a private targeted message as a public message. User approval matters in targeted messaging because the agent’s first response is intentionally private. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Integrate prompt preview in a targeted message
 
@@ -298,7 +293,7 @@ For more information on updating or deleting a targeted message, see [Teams SDK]
 
 ## Best practices and design guidance
 
-Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates.
+Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates, unless they approve it for sharing with wider audience.
 
 Agents that can receive targeted messages should **always** check the visibility of messages received in group contexts and use it to inform response generation and conversation context tracking.
 
@@ -311,11 +306,11 @@ When designing agent interactions for group conversations, choosing between publ
 
   The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
 
-  1. Receive the user’s request as a targeted message
-  1. Send the first agent reply privately
-  1. Add prompt preview to preserve context
-  1. Use Adaptive Cards or suggested actions for user approval
-  1. Repost agent response publicly only after approval
+  1. Receive the user’s request as a targeted message.
+  1. Send the first agent reply privately.
+  1. Add prompt preview to preserve context.
+  1. Use Adaptive Cards or suggested actions for user approval.
+  1. Repost the agent response publicly only after the user approves sharing.
 
 - Use Prompt Preview whenever an agent responds to a targeted user request. Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), this helps users understand the relationship between their original prompt and the agent’s response without requiring them to locate the earlier message.
 
