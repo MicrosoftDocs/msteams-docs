@@ -79,10 +79,10 @@ Building a great widget for Teams means delivering a focused experience that sur
     ### Preserve human control
 
     Trust matters, especially when widget actions affect data or trigger external workflows.
-      - Allow users to remain in control of their experience.
-      - Make it clear what the widget is doing.
-      - Confirm important actions before they happen.
-      - Always communicate the expected outcome.
+- Allow users to remain in control of their experience.
+- Provide clear visibility into what the widget is doing and why.
+- Confirm important or sensitive actions before they happen.
+- Communicate the outcome transparently — what was created, changed, or sent.
 
     
   :::column-end:::
