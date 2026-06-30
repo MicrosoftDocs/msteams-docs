@@ -149,6 +149,10 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 <img src="images/themes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
 
+<img src="images/ThemeModes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
+
+
+
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
 
