@@ -18,7 +18,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-conversation-bubble.png":::
+    :::image type="icon" source="images/icon-conversastion-bubble.png":::
 
     ### Complement the conversation
 
