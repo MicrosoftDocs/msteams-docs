@@ -108,7 +108,7 @@ Keep in mind:
 - The widget appears inside a chat thread, alongside the agent's text response and other messages
 - Users are in a conversational mindset — they expect lightweight, focused interactions
 - One or more widgets may appear in the same message, combined with optional body text in any order
-- The same widget may render across multiple platforms — Teams, ChatGPT, Claude, and others
+- While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
 
 ---
 
