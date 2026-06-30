@@ -2,7 +2,7 @@
 title: Plan Instrumentation Using Analytics
 author: heath-hamilton
 description: Learn about planning code instrumentation using an analytics service such as TrackEvent, retention workbook, use flows, and telemetry as an investment.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 11/28/2022
 ---

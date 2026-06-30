@@ -77,12 +77,6 @@ Meeting apps are essentially [personal tabs](#personal-tabs) that are designed t
 
 For more information, see [Apps for meetings and calls](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings) and [Extend a meeting app to Outlook](/microsoftteams/platform/m365-apps/extend-m365-meeting-app).
 
-## Actions in Microsoft 365
-
-Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
-
-For more information, see [Actions in Microsoft 365](actions-in-m365.md).
-
 ## Platform support
 
 The following table shows platforms supporting the various types of apps for Microsoft 365.
