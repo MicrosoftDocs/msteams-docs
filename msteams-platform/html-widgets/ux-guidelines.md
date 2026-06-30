@@ -58,7 +58,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
   
   :::column:::
-    :::image type="icon" source="images/icon-arrowUp.png":::
+    :::image type="icon" source="images/icon-arrow.png":::
 
     ### Scale to the task
 
@@ -261,54 +261,49 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 <th>Token</th>
 <th>Use for</th>
 </tr>
+  
 <tr>
 <td>Default</td>
 <td><img src="images/text_default.png" width="24" height="24" alt="Default text color swatch"></td>
 <td><code>colorNeutralForeground1</code></td>
 <td><strong>Primary text</strong> — titles, key values</td>
 </tr>
+  
 <tr>
 <td>Subtle</td>
 <td><img src="images/text_subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
 <td><code>colorNeutralForeground2</code></td>
 <td>Secondary text — supporting details, metadata</td>
 </tr>
-<tr>
-<td>Disabled</td>
-<td><img src="images/text_disabled.png" width="24" height="24" alt="Disabled text color swatch"></td>
-<td><code>colorNeutralForeground3</code></td>
-<td>De-emphasized text — captions, secondary labels</td>
-</tr>
+
 <tr>
 <td>Accent</td>
 <td><img src="images/text_accent.png" width="24" height="24" alt="Accent text color swatch"></td>
 <td><code>colorBrandForeground1</code></td>
-<td>Brand-accented text and inline links</td>
+<td>Teams brand-accented text and inline links</td>
 </tr>
+
 <tr>
-<td>Good</td>
+  <td>Good</td>
 <td><img src="images/text_good.png" width="24" height="24" alt="Good text color swatch"></td>
 <td><code>colorStatusSuccessForeground1</code></td>
 <td>Success labels and status indicators</td>
 </tr>
+
 <tr>
 <td>Warning</td>
 <td><img src="images/text_warning.png" width="24" height="24" alt="Warning text color swatch"></td>
 <td><code>colorStatusWarningForeground1</code></td>
 <td>Warning labels and status indicators</td>
 </tr>
+
 <tr>
 <td>Attention</td>
 <td><img src="images/text_attention.png" width="24" height="24" alt="Attention text color swatch"></td>
 <td><code>colorStatusDangerForeground1</code></td>
 <td>Error labels and status indicators</td>
 </tr>
-<tr>
-<td>Highlight</td>
-<td><img src="images/text_attention.png" width="24" height="24" alt="Highlight text color swatch"></td>
-<td><code>colorStatusDangerForeground1</code></td>
-<td>Error labels and status indicators</td>
-</tr>  
+
 </table>
 
 
