@@ -6,6 +6,7 @@ ms.localizationpriority: high
 ms.owner: angovil
 ms.date: 06/29/2026
 ---
+
 # Get Teams specific context for your bot
 
 A bot can access additional context data about a team or chat where it's installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
@@ -16,7 +17,7 @@ Your bot can query the paged list of members and their basic user profiles, incl
 
 The following sample code uses paged member retrieval:
 
-The following sample code uses paged member retrieval:
+:::
 
 * [API changes](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
@@ -28,6 +29,8 @@ app.OnMessage(async context =>
 ```
 
 ::: zone-end
+
+:::
 
 * [API changes](https://microsoft.github.io/teams-sdk/typescript/essentials/api/)
 
@@ -42,13 +45,15 @@ app.on('message', async ({ activity, api }) => {
 
 ::: zone-end
 
+:::
+
 * [API changes](https://microsoft.github.io/teams-sdk/python/essentials/api/)
 
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     members = await TeamsInfo.get_paged_members(ctx)
-```
+
 
     all_members = []
     continuation_token: str | None = None
@@ -76,6 +81,8 @@ You can retrieve details of a specific member using user identifiers from the ac
 
 The following sample code uses Teams SDK APIs:
 
+:::
+
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api?pivots=csharp)
 
 ```csharp
@@ -102,6 +109,8 @@ app.on('message', async ({ activity, api }) => {
     const member = await api.conversations.members(conversationId).getById(memberId);
 });
 ```
+
+:::
 
 # [Python](#tab/python)
 
