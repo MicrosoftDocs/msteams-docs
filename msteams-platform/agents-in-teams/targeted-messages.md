@@ -27,19 +27,19 @@ Targeted messaging isn't available in one-on-one chats, where the conversation i
 
 ## What are targeted messages
 
-Targeted messages are private one-to-one messages between a user and an agent in a group conversation. They're presented in the flow of the conversation, but only the sender and their single recipient can see them. Targeted messages disappear from Teams clients after 24 hours to avoid cluttering conversations, but might be retained in secure storage to comply with organizational retention requirements.
+Targeted messages are private one-to-one messages between a user and an agent in a group conversation. They're presented in the flow of the conversation but only the sender and their single recipient can see them. Targeted messages disappear from Teams clients after 24 hours to avoid cluttering conversations, but might be retained in secure storage to comply with organizational retention requirements.
 
 Sending targeted messages to any user in a group conversation is a capability of all Teams agents. To be eligible to _receive_ targeted messages, an agent must opt in via its configuration; see [Receive targeted messages](#receive-targeted-messages).
 
 Targeted messaging enables users to privately interact with agents without distracting other users or exposing interactions and information that aren't meant for the group. Consider the following scenarios:
 
 - A user can ask an agent to generate a summary of the discussion without the other participants seeing the request or the response.
-- A user can privately ask for information from an agent with the intent of sharing it with the group, but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
+- A user can privately ask for information from an agent with the intent of sharing it with the group but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
 - A user can direct and monitor background work with agents, referencing the context of the conversation, without distracting the other participants.
 - An agent can detect a new user entering a large, long-running conversation and proactively send them a private welcome message and a summary.
 
 > [!IMPORTANT]
-> Targeted messaging is a fundamental part of agent design for group conversations, and requires careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> Targeted messaging is a fundamental part of agent design for group conversations and requires careful handling of user privacy expectations. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Key aspects of targeted messages
 
@@ -48,9 +48,9 @@ Targeted messages:
 - Can be used only for one-to-one interactions between an agent and a user in channels, group chats, and meeting chats.
 - Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
 
-    A targeted message can contain normal message content, but Teams doesn't let that targeted message participate in the usual social or threading actions that might expose it more broadly. Targeted messages are private, temporary, and visible to a single-user only in a shared conversation, so features that create secondary visible artifacts, shared thread context, or message redistribution are intentionally disabled. The default agent response to a slash command is targeted message, and then on approval to resend it as a public message rather than trying to reply to, react to, or forward the targeted one.
+    A targeted message can contain normal message content, but Teams doesn't let that targeted message participate in the usual social or threading actions that might expose it more broadly. Targeted messages are private, temporary, and visible to a single user only in a shared conversation, so features that create secondary visible artifacts, shared thread context, or message redistribution are intentionally disabled. The default agent response to a slash command is targeted message, and then on approval to resend it as a public message rather than trying to reply to, react to, or forward the targeted one.
 
-- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [Best practices and design guidance](#best-practices-and-design-guidance).
+- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [best practices and design guidance](#best-practices-and-design-guidance).
 - Expire 24 hours after being sent. When a targeted message expires, Teams deletes it from all clients, although it might be retained in secure storage based on organizational policy.
 - Aren't visible to untargeted users, even if they're using an older version of the Teams client that doesn't support targeted messages.
 
@@ -100,15 +100,15 @@ Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sen
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted.
 
 ### Receive targeted messages
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
-Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
-To opt in to receive targeted messages, an agent's `bots` entry in its app manifest must include a `true` value for the `supportsTargetedMessages` property.
+To opt in to receive targeted messages, the `bots` entry in its app manifest of your agent must include a `true` value for the `supportsTargetedMessages` property.
 
 ```json
 {
@@ -163,7 +163,7 @@ Targeted messages are sent and received using the same operations as [standard s
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
-Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
 To opt in to receive targeted messages, an agent's `bots` entry in its app manifest must include a `true` value for the `supportsTargetedMessages` property.
 
@@ -219,7 +219,7 @@ Targeted messages are sent and received using the same operations as [standard s
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
-Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
 ```python
       
@@ -286,7 +286,7 @@ For more information on implementing prompt preview, see [Teams SDK](/microsoftt
 
 Targeted messages can be updated and deleted in the same way as standard messages, with the following limitations:
 
-- The visibility of a targeted message can't be changed
+- The visibility of a targeted message can't be changed.
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message results in an error.
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
@@ -307,7 +307,7 @@ When designing agent interactions for group conversations, choosing between publ
   The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
 
   1. Receive the user’s request as a targeted message.
-  1. Send the first agent reply privately.
+  1. Send the agent's response privately.
   1. Add prompt preview to preserve context.
   1. Use Adaptive Cards or suggested actions for user approval.
   1. Repost the agent response publicly only after the user approves sharing.
