@@ -210,37 +210,37 @@ Use container color tokens to establish hierarchy and communicate status within 
 </tr>
 <tr>
 <td>Default</td>
-<td><img src="images/container_default.png" width="24" height="24" alt="Default container color swatch — white background with light gray border"></td>
+<td><img src="images/container_default.png" alt="Default container color swatch — white background with light gray border"></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
 <td><strong>Outer card surface</strong> — apply this token to your widget's base container to match the Teams-native card background</td>
 </tr>
 <tr>
 <td>Emphasis</td>
-<td><img src="images/container_emphasis.png" width="24" height="24" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
+<td><img src="images/container_emphasis.png" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
 <td><code>colorNeutralBackground3</code><br><code>colorNeutralStroke1</code></td>
 <td>Grouped or secondary content areas — the most common inner container</td>
 </tr>
 <tr>
 <td>Accent</td>
-<td><img src="images/container_accent.png" width="24" height="24" alt="Accent container color swatch — light blue background with blue border"></td>
+<td><img src="images/container_accent.png" alt="Accent container color swatch — light blue background with blue border"></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke2</code></td>
 <td>Brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
-<td><img src="images/container_good.png" width="24" height="24" alt="Good container color swatch — light green background with green border"></td>
+<td><img src="images/container_good.png" alt="Good container color swatch — light green background with green border"></td>
 <td><code>colorPaletteLightGreenBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td><img src="images/container_warning.png" width="24" height="24" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
+<td><img src="images/container_warning.png" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
 <td><code>colorPaletteMarigoldBackground1</code><br><code>colorPaletteMarigoldBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
 <td>Attention</td>
-<td><img src="images/container_attention.png" width="24" height="24" alt="Attention container color swatch — light red background with red border"></td>
+<td><img src="images/container_attention.png" alt="Attention container color swatch — light red background with red border"></td>
 <td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
@@ -272,7 +272,7 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 <tr>
 <td>Subtle</td>
 <td><img src="images/textColor_subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
-<td><code>colorNeutralForeground2</code></td>
+<td><code>colorNeutralForeground3</code></td>
 <td>Secondary text — supporting details, metadata</td>
 </tr>
 
