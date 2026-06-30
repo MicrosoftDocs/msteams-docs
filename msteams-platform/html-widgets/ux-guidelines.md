@@ -132,8 +132,7 @@ When a widget does follow this common pattern, content typically flows top to bo
 
 1. Title (if applicable)
 2. Primary content — key information, data, or media
-3. Secondary content — supporting details, metadata
-4. Action area (if present) — placed at the bottom
+3. Action area (if present) — placed at the bottom
 
 ---
 
