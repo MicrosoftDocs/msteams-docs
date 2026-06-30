@@ -9,13 +9,13 @@ ms.author: nickwalk
 
 # Teams SDK
 
-Teams SDK is the developer toolkit for building conversational agents and other app experiences in Teams. It's developed alongside the Teams platform and and exposes the full range of platform features, enabling developers to build apps that integrate deeply with Teams. Agents and apps built with Teams SDK can take full advantage of the unique features that make Teams so effective for collaborative work.
+Teams SDK is the developer toolkit for building conversational agents and other app experiences in Teams. It's developed alongside the Teams platform and and exposes the full range of platform features, enabling developers to build apps that integrate deeply with Teams and take advantage of its unique features that make it so effective for collaborative work.
 
-Teams SDK is generally available for TypeScript, C#, and Python, and represents the evolution of the earlier Teams AI library into a more comprehensive and cohesive development model. It addresses the full range of Teams app capabilities, with an emphasis on building conversational AI agents powered by large language models (LLM). The Teams Developer CLI included with the SDK streamlines app development with quickstart project templates and app lifecycle management tools, and credential management.
+Teams SDK is generally available for TypeScript, C#, and Python, and represents the evolution of the earlier Teams AI library into a more comprehensive and cohesive development model. Teams SDK can be used to build apps for all of Teams' app capabilities, but has a strong emphasis on building agents: conversational AI assistants powered by large language models (LLM). The Teams Developer CLI included with the SDK streamlines app development with quickstart project templates and app lifecycle management tools, and credential management.
 
 ## SDK features
 
-* **Idiomatic application model** - Teams apps are web services driven by events. Teams SDK integrates naturally with the standard web frameworks and conventions for each supported language and implements a comprehensive set of event handlers using familiar patterns
+* **Idiomatic application model** - The runtime of a Teams app is a web app or web service driven by events. Teams SDK integrates naturally with the standard web frameworks and conventions for each supported language and implements a comprehensive set of event handlers using familiar patterns
 * **Unified Teams app programming model** - Support for multiple kinds of Teams apps, including conversational agents (bots), presentation of Teams-aware web apps in 1:1 and group environments (tabs), and custom dialog actions (message extensions)
 * **Authentication and security** - Automatic handling of request validation, user authentication, and token management, including enterprise single sign-on
 * **Microsoft Graph integration** - Built-in support for calling Microsoft Graph APIs to access and interact with users' work data on their behalf
