@@ -53,7 +53,7 @@ Ensure you install the following tools for building and deploying your apps.
 
 ### Get a free Azure account
 
-If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
@@ -83,7 +83,7 @@ If the prerequisites are in place, let's begin!
 
 1. In this example, select **Tab** as app capability.
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
