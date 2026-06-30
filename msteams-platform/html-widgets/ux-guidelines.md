@@ -264,28 +264,28 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
   
 <tr>
 <td>Default</td>
-<td><img src="images/text_default.png" width="24" height="24" alt="Default text color swatch"></td>
+<td><img src="images/textColor_default.png" width="24" height="24" alt="Default text color swatch"></td>
 <td><code>colorNeutralForeground1</code></td>
 <td><strong>Primary text</strong> — titles, key values</td>
 </tr>
   
 <tr>
 <td>Subtle</td>
-<td><img src="images/text_subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
+<td><img src="images/textColor_subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
 <td><code>colorNeutralForeground2</code></td>
 <td>Secondary text — supporting details, metadata</td>
 </tr>
 
 <tr>
 <td>Accent</td>
-<td><img src="images/text_accent.png" width="24" height="24" alt="Accent text color swatch"></td>
+<td><img src="images/textColor_accent.png" width="24" height="24" alt="Accent text color swatch"></td>
 <td><code>colorBrandForeground1</code></td>
 <td>Teams brand-accented text and inline links</td>
 </tr>
 
 <tr>
   <td>Good</td>
-<td><img src="images/text_good.png" width="24" height="24" alt="Good text color swatch"></td>
+<td><img src="images/textColor_good.png" width="24" height="24" alt="Good text color swatch"></td>
 <td><code>colorStatusSuccessForeground1</code></td>
 <td>Success labels and status indicators</td>
 </tr>
