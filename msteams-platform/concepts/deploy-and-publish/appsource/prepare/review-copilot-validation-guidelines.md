@@ -16,8 +16,6 @@ These guidelines are applicable for Independent Software Vendors (ISV) who want 
 
 > [!IMPORTANT]
 >
-> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
-> * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
@@ -96,9 +94,11 @@ Agents should be designed to complete enterprise workflows and must deliver diff
 * Achieving workflows that cannot be achieved easily via Copilot. For example, a **Contoso Ticket Management Agent** that allows users to create tickets directly on the Contoso platform.
 * Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
 * Using specialized orchestration or fine-tuned models for domain-specific workflows. For example, a **Contoso Pharma Agent** fine-tuned on pharma data to help identify domain-specific chemicals.
-* Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
-  * Skills — Custom skills can be published using the agentSkills manifest node
-  * Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
+
+Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
+
+* Skills — Custom skills can be published using the agentSkills manifest node
+* Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
   
   All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
 
