@@ -307,16 +307,31 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 </table>
 
 
+
+
 > [!NOTE]
 > **Overlay text** tokens are static colors for text rendered on top of images or background media. Unlike other text tokens, these do not adapt to theme changes — choose dark or light based on the luminosity of the underlying image.
->
-> | Style | Token | Use for |
-> |---|---|---|
-> | Overlay dark | `colorNeutralForegroundStaticDark` | Text on light or mid-tone images |
-> | Overlay light | `colorNeutralForegroundStaticLight` | Text on dark images |
 
-
-
+<table>
+<tr>
+<th>Style</th>
+<th></th>
+<th>Token</th>
+<th>Use for</th>
+</tr>
+<tr>
+<td>Overlay dark</td>
+<td><img src="images/text_overlay_dark.png" width="24" height="24" alt="Overlay dark text color swatch — near black"></td>
+<td><code>colorNeutralForegroundStaticDark</code></td>
+<td>Text on light or mid-tone images</td>
+</tr>
+<tr>
+<td>Overlay light</td>
+<td><img src="images/text_overlay_light.png" width="24" height="24" alt="Overlay light text color swatch — white"></td>
+<td><code>colorNeutralForegroundStaticLight</code></td>
+<td>Text on dark images</td>
+</tr>
+</table>
 
 
 #### Typography
