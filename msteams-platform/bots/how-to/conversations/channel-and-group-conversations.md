@@ -4,18 +4,11 @@ description: Learn how to work with user mentions, send messages, and handle bot
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.owner: angovil
 ms.date: 06/23/2026
 ---
 # Channel and group chat conversations with a bot
 
-<!-- [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)] -->
-
-This article focuses on bot conversations in teams and group chats, not in personal (1:1) chats.
-
-## Install your bot in teams and group chats
-
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
+To enable users to install a bot in a team or group chat, add the `teams` or `groupchat` scope. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
 
 By default, bots in group chats and channels only receive messages when they're directly @mentioned. They don't receive other messages sent to the conversation. For example, your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it. The Teams SDK provides a dedicated `mention` activity route to handle @mention events.
 
@@ -80,8 +73,6 @@ Don't send a message in the following cases:
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
-
-[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 ## Work with mentions
 
