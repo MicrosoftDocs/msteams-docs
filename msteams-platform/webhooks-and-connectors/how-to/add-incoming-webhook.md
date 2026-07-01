@@ -2,7 +2,7 @@
 title: Create an Incoming Webhook
 description: Create an Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#, Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.owner: hantony
 ms.date: 05/06/2026
 ---
