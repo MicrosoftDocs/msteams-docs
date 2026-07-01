@@ -405,7 +405,7 @@ Use containers to group related content and create visual hierarchy within your 
 
 <img src="images/containerStyles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
 
-<img src="images/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="images/borderRadiusStyles.png" alt="Shapes icon" "> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
 
 
