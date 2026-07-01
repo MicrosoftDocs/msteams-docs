@@ -383,13 +383,23 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 <br>
 
+
+
 #### Containers and borders
 
-- Use subtle background fills to group related content
-- Use border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) for containers and images
-- Avoid deep nesting — limit container and column nesting to a maximum of two levels
+Use containers to group related content and create visual hierarchy within your widget.
+
+- Apply border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) to keep containers feeling native to Teams
+- Add a border when you need extra separation or emphasis between content areas — use the border token paired with your container color
+- Use full-width (edge-to-edge) backgrounds sparingly — they work well for hero images or strong section dividers
+- Avoid deep nesting — limit container nesting to a maximum of two levels
+
+<img src="images/containerStyles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
 
 <img src="images/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+
+
+
 
 <br>
 
