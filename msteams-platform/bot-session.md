@@ -243,46 +243,75 @@ Authorization: Bearer {bot-token}
 
 ## Create sessions proactively
 
-Proactive session creation uses the same `CreateConversation` API as [creating a conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation). When sessions are enabled, every call to `CreateConversation` with a message activity creates a **new session**. The bot must be installed for the user in personal scope.
+Sessions are an opt-in feature. Two conditions must be met before a session can be created:
 
-Bots can create new sessions to initiate conversations around specific tasks, updates, or workflows. This helps organize notifications and prevents unrelated messages from appearing in existing conversations.
+1. **The bot must be installed for the user.** If the bot is not installed, session creation is skipped and a regular 1:1 conversation is created instead (no error returned).
+2. **The bot's manifest must declare `supportsSessions: true`.**
+
+Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with one message activity creates a new session.
 
 > [!IMPORTANT]
 > When sessions are enabled, `CreateConversation` always creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
 For more information, see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
 
-<!--### Start a new topic
-
-Use the `CreateConversation` method to create a topic and send an initial message.-->
+# [C#](#tab/csharp)
 
 ```csharp
-var createParameters = new ConversationParameters
+using System.Collections.Generic;
+using Microsoft.Teams.Api.Activities;
+using Microsoft.Teams.Api.Clients;
+
+// Build an authenticated API client targeting the bot's service URL.
+var api = new ApiClient(serviceUrl, app.Client);
+
+// Including exactly one initial message activity is required for creating a session
+// It becomes the first message of the new session.
+var resource = await api.Conversations.CreateAsync(new ConversationClient.CreateRequest
 {
-    Bot = new ChannelAccount(botAppId),
-    Members = new List<ChannelAccount>
+    Members = new List<Microsoft.Teams.Api.Account>
     {
-       new ChannelAccount(userId)
+        new Microsoft.Teams.Api.Account { Id = userId }
     },
     TenantId = tenantId,
-    Activity = new Activity() { Type = ActivityTypes.Message, Text = "Hello from Bot"}, // a message is required for creating a session
-};
+    Activity = new MessageActivity("Hello! Starting a new session."),
+}, cancellationToken);
 
-await adapter.CreateConversationAsync(
-        botId,
-        Channels.Msteams,
-        serviceUrl,
-        audience,
-        conversationParameters,
-        async (turnContext, cancellationToken) =>
-        {
-            await turnContext.SendActivityAsync(
-                MessageFactory.Text("👋 This is a new session."),
-                cancellationToken);
-        },
-        CancellationToken.None);
+// resource.Id is the session conversationId
+string sessionConversationId = resource.Id;
 
+// Send a follow-up into the same session.
+await app.Send(
+    sessionConversationId,
+    "This message is part of the session.",
+    serviceUrl: serviceUrl,
+    cancellationToken: cancellationToken);
 ```
+
+# [TypeScript](#tab/typeScript)
+
+```typescript
+// Including exactly one initial `activity` is required for creating a session
+// It becomes the first message of the new session.
+const resource = await app.api.conversations.create({
+  members: [{ id: userId, role: 'user', name: '' }],
+  tenantId,
+  activity: { type: 'message', text: 'Hello! Starting a new session.' },
+});
+
+// resource.id is the session conversationId
+const sessionConversationId = resource.id;
+
+await app.send(sessionConversationId, 'This message is part of the session.');
+```
+
+---
+
+Key points:
+
+- The Teams SDK calls the same `POST /v3/conversations` endpoint as regular 1:1 creation. No special flag is needed — the server creates a session automatically when the bot is session-enabled and installed.
+- The `activity` field is **required** to have exactly one message activity. It becomes the first message of the new session.
+- The returned id (`resource.Id` in C#, `resource.id` in TypeScript) is the session-specific conversationId. Use it for all follow-up messages in that session (via `app.Send` / `app.send`).
 
 ## Session control
 
