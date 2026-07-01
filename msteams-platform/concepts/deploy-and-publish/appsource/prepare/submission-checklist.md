@@ -4,7 +4,6 @@ description: Learn final steps before you submit your Teams app to be listed on 
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
-ms.author: surbhigupta
 ms.date: 01/23/2025
 ---
 

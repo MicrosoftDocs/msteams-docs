@@ -1,9 +1,8 @@
 ---
 title: Enable Third Party IdP Authentication
-author: surbhigupta
 description: Enable authentication in Teams message extension app using third-party provider with Microsoft Entra configuration and code sample.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.date: 03/11/2025
 ---

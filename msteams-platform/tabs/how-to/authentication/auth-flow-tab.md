@@ -1,10 +1,9 @@
 ---
 title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 03/02/2025
-ms.owner: ryanbliss
 ---
 # Enable authentication using third-party OAuth provider
 

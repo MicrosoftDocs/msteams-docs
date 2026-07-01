@@ -1,8 +1,6 @@
 ---
 title: Configure Tab Capability
-author: surbhigupta
 description: Learn how to configure the tab capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -302,7 +300,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
+> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-in-agents-toolkit)
 
 ## See also
 
