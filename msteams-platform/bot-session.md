@@ -3,7 +3,7 @@ title: Use sessions in bot conversations in Microsoft Teams
 description: Sessions enable bots in Microsoft Teams to organize one-on-one conversations into separate, focused chats, helping maintain context, improve response relevance, and support multi-task workflows.
 ms.author: vikasalmal
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/28/2026
 ---
 
@@ -304,6 +304,10 @@ const sessionConversationId = resource.id;
 
 await app.send(sessionConversationId, 'This message is part of the session.');
 ```
+
+# [Python](#tab/python)
+
+<!-- TODO: Add Python code sample once Teams SDK for Python API is confirmed. -->
 
 ---
 
