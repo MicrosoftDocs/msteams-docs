@@ -1,9 +1,13 @@
 ---
 title: Send and Receive Emoji Reactions on Chat Messages
-description: Learn about how you can use reactions for agents in Teams.
+description: Teams agent reactions are lightweight emoji markers you can attach to any message. Discover how to add, remove, and handle reactions with practical code examples.
+#customer intent: As a Teams agent developer, I want to add emoji reactions to chat messages so that my agent can acknowledge messages without interrupting the conversation.
 ms.localizationpriority: high
 ms.date: 07/01/2026
+author: nickwalkmsft
 ms.author: nickwalk
+ms.reviewer: nickwalk
+ms.topic: feature-guide
 zone_pivot_groups: dev-lang
 ---
 
@@ -109,6 +113,15 @@ To replace a reaction on a message, make separate calls to remove the existing r
 
 Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent: repeated calls to add or remove a specific reaction from a message have no effect, but don't throw an exception.
 
+<!-- 
+
+Underlying representation is REST resource-style, no payload.
+
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
+DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
+
+-->
+
 ### Exception handling
 
 Reaction activity is a common source of exceptions and should always use dedicated exception handling.
@@ -116,46 +129,6 @@ Reaction activity is a common source of exceptions and should always use dedicat
 In particular, rate limiting exceptions (`429 Too Many Requests`) can be more common than developers expect. Reaction adds and removes are rate-limited to two per second across all conversations an agent participates in. Handle rate limiting exceptions by using the value of the response's `Retry-After` header as part of an exponential backoff and retry strategy.
 
 Reaction operations fail if the target message is deleted or the agent is removed from the conversation, and shouldn't be retried.
-
-<!-- 
-
-TODO 
-
-# [REST API](#tab/h1)
-
-```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
-```
-
-Where,
-
-- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
-- `tenantId` is the ID of the tenant agent or app is registered.
-- `conversationId` is the thread or chat identifier.
-- `activityId` represents the message or activity ID.
-- `reactionId` is the ID of the emoji that you want to add.
- -->
-
-<!-- 
-
-TODO
-
-# [API](#tab/h1)
-
-```REST
-DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
-```
-
-Where,
-
-- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
-- `tenantId` is the ID of the tenant agent or app is registered.
-- `conversationId` is the thread or chat identifier.
-- `activityId` represents the message or activity ID.
-- `reactionId` is the ID of the emoji that you want to remove.
-
-No additional payload is required as the reaction is defined in the URL.
- -->
 
 ## Listen for reaction events
 

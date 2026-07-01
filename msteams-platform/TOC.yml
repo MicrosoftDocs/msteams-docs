@@ -19,7 +19,7 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
-  - name: Send and receive emoji reactions on chat messages
+  - name: Send and receive emoji reactions
     href: agents-in-teams/agent-reactions.md
     displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
   - name: Teams emoji reactions reference
