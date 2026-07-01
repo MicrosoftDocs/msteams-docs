@@ -90,7 +90,7 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column-end:::
 :::row-end:::
 
----
+
 
 ## Understanding the chat surface
 
@@ -110,7 +110,8 @@ Keep in mind:
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
 
----
+
+
 
 ## Widget anatomy
 
@@ -134,7 +135,9 @@ When a widget does follow this common pattern, content typically flows top to bo
 2. Primary content — key information, data, or media
 3. Action area (if present) — placed at the bottom
 
----
+
+
+
 
 ## Required
 
@@ -147,8 +150,6 @@ Widgets must render correctly in both Teams light mode and dark mode.
 - Test your widget in both themes before submission
 - Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes
 
-<img src="images/themes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
-
 <img src="images/ThemeModes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
 
 
@@ -156,17 +157,29 @@ Widgets must render correctly in both Teams light mode and dark mode.
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
 
+
+
 ### Responsive scaling
 
-Widgets must adapt to the width of the chat container.
+
+
+### Responsive scaling
+
+
+### Responsive scaling
+
+Widgets must adapt to the width of the chat container. Unlike Adaptive Cards, which support discrete size variants that partners can customize independently, HTML widgets use a single fluid layout that scales continuously across widths. Your design should hold up gracefully at any width rather than targeting specific sizes.
 
 - Use flexible, fluid layouts rather than fixed pixel widths
 - Avoid fixed pixel heights — allow the widget to grow vertically as content requires
-- Test at multiple viewport widths representative of Teams chat on desktop and mobile
+- Test across a range of widths to ensure your layout holds up in common Teams contexts
 
-The widths below are representative examples, not fixed breakpoints — your widget's actual layout and behavior at each size is up to you. Use them as a reference point to evaluate how your widget responds as the chat container resizes.
+The widths shown below represent the most common scenarios to test against: wide, standard desktop, mobile, and meeting chat or side-by-side view. These are not breakpoints or size slots — they are reference points for evaluating how your single fluid layout scales across the range of contexts where your widget may appear.
 
-<img src="images/responsive.png" alt="A widget shown at four different widths, demonstrating how the layout adapts fluidly as the chat container resizes">
+<img src="images/responsive.png" alt="A widget shown at four representative widths: wide, standard desktop, mobile, and meeting chat or side-by-side — demonstrating fluid layout scaling">
+
+
+
 
 ### Horizontal scrolling
 
@@ -311,7 +324,7 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 
 </table>
 
-
+<br>
 
 
 > [!NOTE]
@@ -337,6 +350,8 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 <td>Text on dark images</td>
 </tr>
 </table>
+
+<br>
 
 
 #### Typography
