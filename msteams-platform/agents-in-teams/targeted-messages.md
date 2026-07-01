@@ -94,7 +94,7 @@ Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sen
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted. You can also control response visibility and integrate prompt preview in the agent responses.
 
 ### Receive targeted messages
 
@@ -244,7 +244,7 @@ You can follow Teams SDK samples implementing prompt preview. For more informati
 <details>
 <summary><b>Select to view REST API example</b></summary>
 
-If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
+If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
 
 ```HTTP
 POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
