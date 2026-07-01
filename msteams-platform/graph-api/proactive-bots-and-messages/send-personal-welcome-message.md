@@ -18,33 +18,118 @@ When your app is installed for the user, the bot receives an **install** activit
 
 **Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
-1. You must have your app's `{teamsAppInstallationId}`. If you don't have it, use the following:
+# [JavaScript](#tab/javascript)
 
-    **HTTP GET** request:
+```javascript
+import * as endpoints from '@microsoft/teams.graph-endpoints';
 
-    ```http
-    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
-    ```
+app.on('message', async ({ userGraph }) => {
+  // 1. Get teamsAppInstallationId
+  const installed = await userGraph.call(endpoints.users.teamwork.installedApps.list, {
+    'user-id': userId,
+    $expand: ['teamsApp'],
+    $filter: `teamsApp/id eq '${teamsAppId}'`,
+  });
+  const teamsAppInstallationId = installed.value![0].id!;
 
-    The **id** property of the response is the `teamsAppInstallationId`.
+  // 2. Get chatId via the app installation
+  const chat = await userGraph.call(endpoints.users.teamwork.installedApps.chat.get, {
+    'user-id': userId,
+    'userScopeTeamsAppInstallation-id': teamsAppInstallationId,
+  });
+  const chatId = chat.id;
 
-1. Make the following request to fetch the `chatId`:
+  // 3. Alternative: get chatId via chats filter (needs Chat.Read.All)
+  const chats = await userGraph.call(endpoints.users.chats.list, {
+    'user-id': userId,
+    $filter: `installedApps/any(a:a/teamsApp/id eq '${teamsAppId}')`,
+  });
+  const chatIdAlt = chats.value![0].id;
+});
+```
 
-    **HTTP GET** request (permission—`TeamsAppInstallation.ReadWriteSelfForUser.All`):  
+# [C#](#tab/dotnet)
 
-    ```http
-    GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
-    ```
+```csharp
+using Microsoft.Teams.Extensions.Graph;
 
-    The **id** property of the response is the `chatId`.
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var graph = context.GetUserGraphClient(); // GraphServiceClient
 
-    You can also retrieve the `chatId` with the following request but it requires the broader `Chat.Read.All` permission:
+    // 1. Get teamsAppInstallationId
+    var installed = await graph.Users[userId].Teamwork.InstalledApps
+        .GetAsync(rc =>
+        {
+            rc.QueryParameters.Expand = new[] { "teamsApp" };
+            rc.QueryParameters.Filter = $"teamsApp/id eq '{teamsAppId}'";
+        }, cancellationToken);
+    var teamsAppInstallationId = installed?.Value?.FirstOrDefault()?.Id;
 
-    **HTTP GET** request (permission—`Chat.Read.All`):
+    // 2. Get chatId via the app installation
+    var chat = await graph.Users[userId].Teamwork
+        .InstalledApps[teamsAppInstallationId].Chat
+        .GetAsync(cancellationToken: cancellationToken);
+    var chatId = chat?.Id;
 
-    ```http
-    GET https://graph.microsoft.com/v1.0/users/{user-id}/chats?$filter=installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')
-    ```
+    // 3. Alternative: get chatId via chats filter (needs Chat.Read.All)
+    var chats = await graph.Users[userId].Chats
+        .GetAsync(rc =>
+        {
+            rc.QueryParameters.Filter =
+                $"installedApps/any(a:a/teamsApp/id eq '{teamsAppId}')";
+        }, cancellationToken);
+    var chatIdAlt = chats?.Value?.FirstOrDefault()?.Id;
+});
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.graph import get_graph_client
+from msgraph.generated.users.item.teamwork.installed_apps.installed_apps_request_builder import (
+    InstalledAppsRequestBuilder,
+)
+from msgraph.generated.users.item.chats.chats_request_builder import ChatsRequestBuilder
+
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    if not ctx.is_signed_in:
+        await ctx.sign_in()
+        return
+
+    graph = get_graph_client(ctx.user_token)
+
+    # 1. Get teamsAppInstallationId
+    installed = await graph.users.by_user_id(user_id).teamwork.installed_apps.get(
+        request_configuration=InstalledAppsRequestBuilder.InstalledAppsRequestBuilderGetRequestConfiguration(
+            query_parameters=InstalledAppsRequestBuilder.InstalledAppsRequestBuilderGetQueryParameters(
+                expand=["teamsApp"],
+                filter=f"teamsApp/id eq '{teams_app_id}'",
+            )
+        )
+    )
+    teams_app_installation_id = installed.value[0].id
+
+    # 2. Get chatId via the app installation
+    chat = (
+        await graph.users.by_user_id(user_id)
+        .teamwork.installed_apps.by_user_scope_teams_app_installation_id(teams_app_installation_id)
+        .chat.get()
+    )
+    chat_id = chat.id
+
+    # 3. Alternative: get chatId via chats filter (needs Chat.Read.All)
+    chats = await graph.users.by_user_id(user_id).chats.get(
+        request_configuration=ChatsRequestBuilder.ChatsRequestBuilderGetRequestConfiguration(
+            query_parameters=ChatsRequestBuilder.ChatsRequestBuilderGetQueryParameters(
+                filter=f"installedApps/any(a:a/teamsApp/id eq '{teams_app_id}')",
+            )
+        )
+    )
+    chat_id_alt = chats.value[0].id
+```
 
 ## Send proactive messages
 
