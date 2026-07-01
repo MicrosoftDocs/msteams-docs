@@ -239,9 +239,9 @@ To render prompt preview, include a `targetedMessageInfo` entity in the reply ac
 This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
 
 You can follow Teams SDK samples implementing prompt preview. For more information on implementing prompt preview, see [send a targeted message](#send-a-targeted-message) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
-
+<br>
 <details>
-<summary>Select to view REST API example</summary>
+<summary><b>Select to view REST API example</b></summary>
 
 If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
 
