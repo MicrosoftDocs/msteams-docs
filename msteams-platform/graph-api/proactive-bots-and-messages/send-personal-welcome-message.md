@@ -139,7 +139,7 @@ Your bot can [send proactive messages](../../bots/how-to/conversations/send-proa
 
 The following code provides an example of sending proactive messages:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
@@ -196,7 +196,7 @@ const sendProactiveNotification = async (userId: string) => {
 };
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=python)
 
