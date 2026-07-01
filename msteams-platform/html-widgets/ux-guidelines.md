@@ -403,9 +403,9 @@ Use containers to group related content and create visual hierarchy within your 
 - Use full-width (edge-to-edge) backgrounds sparingly — they work well for hero images or strong section dividers
 - Avoid deep nesting — limit container nesting to a maximum of two levels
 
-<img src="images/containerStyles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
+<img src="images/borderRadiusStyles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
 
-<img src="images/borderRadiusStyles.png" alt="Shapes icon" "> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+
 
 
 
