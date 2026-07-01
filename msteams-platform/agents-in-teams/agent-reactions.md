@@ -1,18 +1,19 @@
 ---
-title: Use Emoji Reactions in Teams Agents
+title: Send and Receive Emoji Reactions on Chat Messages
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
-ms.date: 05/18/2026
+ms.date: 07/01/2026
+ms.author: nickwalk
 zone_pivot_groups: dev-lang
 ---
 
-# Use emoji reactions in Teams agents
+# Send and receive emoji reactions on chat messages
 
 > [!NOTE]
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Reactions in Teams are lightweight emoji markers that participants can attach to chat messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
+Reactions in Teams are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)
 
@@ -32,7 +33,7 @@ Like users, agents can attach one or more different reactions to any message in 
 
 Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, the `ReactionTypes` static class exposes named constants for a few of the most commonly used reaction IDs.
 
-To add and remove reactions from messages, use the `AddAsync` and `DeleteAsync` methods on `ReactionClient`.
+To add and remove reactions from messages, use the `AddAsync` and `DeleteAsync` methods on `ReactionClient`, part of the Teams API Client. The following example illustrates adding a reaction to a received message, then removing it.
 
 ```csharp
 app.OnMessage(async context =>
@@ -60,7 +61,7 @@ app.OnMessage(async context =>
 
 Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, Teams SDK includes named constants for a few of the most commonly used reaction IDs.
 
-To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`.
+To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`, part of the Teams API Client. The following example illustrates adding a reaction to a received message, then removing it.
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
@@ -79,7 +80,7 @@ app.on('message', async ({ activity, api }) => {
 
 Adding a reaction to a message requires a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, Teams SDK includes named constants for a few of the most commonly used reaction IDs.
 
-To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`.
+To add and remove reactions from messages, use the `add` and `delete` methods on `ReactionClient`, part of the Teams API Client. The following example illustrates adding a reaction to a received message, then removing it.
 
 ```python
 import asyncio
@@ -104,9 +105,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-To replace a reaction on a message, remove the existing reaction and add the new one.
+To replace a reaction on a message, make separate calls to remove the existing reaction and add the new one.
 
-Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent. Repeated calls to add or remove a specific reaction from a message have no effect, but don't throw an exception.
+Multiple reactions can be added to a single message, but the add and remove operations for a given reaction ID are idempotent: repeated calls to add or remove a specific reaction from a message have no effect, but don't throw an exception.
 
 ### Exception handling
 
@@ -160,7 +161,7 @@ No additional payload is required as the reaction is defined in the URL.
 
 ::: zone pivot="csharp"
 
-Agents can process reaction activity in conversations they're a part of by listening for the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
+Agents can listen for reaction activity in conversations they're a part of by handling the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
 
 ```csharp
 app.OnMessageReactionAdded(async (context, cancellationToken) =>
@@ -184,7 +185,7 @@ app.OnMessageReactionRemoved(async (context, cancellationToken) =>
 
 ::: zone pivot="typescript"
 
-Agents can process reaction activity in conversations they're a part of by listening for the `messageReaction` event.
+Agents can listen for reaction activity in conversations they're a part of by handling the `messageReaction` event.
 
 ```typescript
 app.on('messageReaction', async ({ activity }) => {
@@ -202,7 +203,7 @@ app.on('messageReaction', async ({ activity }) => {
 
 ::: zone pivot="python"
 
-Agents can process reaction activity in conversations they're a part of by listening for the `on_message_reaction` event.
+Agents can listen for reaction activity in conversations they're a part of by handling for the `on_message_reaction` event.
 
 ```python
 @app.on_message_reaction
@@ -232,5 +233,3 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 ## See also
 
 - [Teams reaction reference](teams-reactions-reference.md)
-
-## Next steps
