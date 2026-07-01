@@ -161,13 +161,6 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 ### Responsive scaling
 
-
-
-### Responsive scaling
-
-
-### Responsive scaling
-
 Widgets must adapt to the width of the chat container. Unlike Adaptive Cards, which support discrete size variants that partners can customize independently, HTML widgets use a single fluid layout that scales continuously across widths. Your design should hold up gracefully at any width rather than targeting specific sizes.
 
 - Use flexible, fluid layouts rather than fixed pixel widths
@@ -188,6 +181,8 @@ Avoid horizontal scrolling for primary widget content. Layout should adapt to th
 > [!TIP]
 > Horizontal scrolling may be used intentionally for specific content types such as wide data tables, media carousels, or timelines where horizontal navigation is a meaningful part of the experience. These cases should be intentional, not a result of fixed-width layouts.
 
+<br>
+
 ### Feedback and confirmation
 
 Widgets must communicate the outcome of user actions clearly.
@@ -200,7 +195,9 @@ Widgets must communicate the outcome of user actions clearly.
 > [!NOTE]
 > Teams handles the widget-level loading and error states. The requirements above apply to state handling within your widget content.
 
----
+<br>
+
+
 
 ## Strongly recommended
 
@@ -214,6 +211,8 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
+
+
 
 ##### Container colors
 
@@ -267,6 +266,8 @@ Use container color tokens to establish hierarchy and communicate status within 
 Unlike Adaptive Cards, HTML widgets don't automatically inherit a card background. Apply `colorNeutralCardBackground` to your outer container to match the Teams-native card surface. Inside it, use Emphasis containers to group or separate content, and Good, Warning, or Attention containers when specific content areas carry status meaning.
 
 <img src="images/container_gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
+
+
 
 ##### Text colors
 
@@ -380,6 +381,8 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 <img src="images/icon_text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
+<br>
+
 #### Containers and borders
 
 - Use subtle background fills to group related content
@@ -387,6 +390,8 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Avoid deep nesting — limit container and column nesting to a maximum of two levels
 
 <img src="images/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+
+<br>
 
 #### Spacing
 
@@ -409,11 +414,15 @@ The following examples show how spacing tokens apply in real widget layouts.
 
 For the full spacing scale, see <img src="images/icon_spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
 
+
 #### Iconography
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
 <img src="images/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
+
+<br>
+
 
 ### Actions
 
@@ -429,6 +438,8 @@ Actions allow users to take the next step without leaving the conversation.
 
 [Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
 
+
+
 ### Content and layout
 
 - **Be concise:** A widget should be glanceable. Users should understand the key information without scrolling within the widget
@@ -436,6 +447,8 @@ Actions allow users to take the next step without leaving the conversation.
 - **Avoid internal scrolling:** If content requires scrolling, consider whether it belongs in the expanded surface instead
 - **Avoid deep navigation:** Tabs, drill-down menus, and multi-level navigation are not appropriate for the inline widget
 - **Don't duplicate content:** Widget content and agent body text should complement each other — do not repeat the same information in both
+
+  
 
 ### Progressive disclosure
 
