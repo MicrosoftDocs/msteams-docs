@@ -434,6 +434,10 @@ For the full spacing scale, see <img src="images/icon_spacing.png" alt="Spacing 
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
 
+<img src="images/icons.png" alt="Fluent 2 iconography examples">
+
+
+
 <img src="images/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 <br>
@@ -556,7 +560,7 @@ Widgets must meet all of the following requirements to be accepted.
 | ✅ Renders correctly in both Teams light mode and dark mode (exceptions apply for content where color is meaningful) |
 | ✅ Scales responsively to the chat container width without horizontal scrolling (exceptions apply for intentional horizontal scroll patterns) |
 | ✅ Provides visible feedback for loading, success, and error states within the widget |
-| ✅ Does not embed a full application experience or replicate Teams chat capabilities |
+| ✅ Delivers a focused, single-purpose experience |
 | ✅ Limits primary actions to two buttons — additional actions placed in overflow |
 | ✅ Content and body text complement each other without duplication |
 | ✅ No placeholder, test, or broken content is visible |
