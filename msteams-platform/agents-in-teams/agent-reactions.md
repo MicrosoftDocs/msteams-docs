@@ -1,6 +1,6 @@
 ---
-title: Send and Receive Emoji Reactions on Chat Messages
-description: Teams agent reactions are lightweight emoji markers you can attach to any message. Discover how to add, remove, and handle reactions with practical code examples.
+title: Build Agents that Use Emoji Reactions in Teams Chat
+description: Reactions are emoji markers on messages in Teams chat. Learn how to make an agent that adds, removes, and listens reactions with practical code examples.
 #customer intent: As a Teams agent developer, I want to add emoji reactions to chat messages so that my agent can acknowledge messages without interrupting the conversation.
 ms.localizationpriority: high
 ms.date: 07/01/2026
@@ -11,13 +11,13 @@ ms.topic: feature-guide
 zone_pivot_groups: dev-lang
 ---
 
-# Send and receive emoji reactions on chat messages
+# Use emoji reactions in Teams chat
 
 > [!NOTE]
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Reactions in Teams are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
+In Teams chat, reactions are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)
 
@@ -193,15 +193,15 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ## Best practices and design guidance
 
-**Exception handling**: Reaction activity is a common source of exceptions and should always have dedicated exception handling, especially for rate limiting. See [Exception handling](#exception-handling).
+**Exception handling**: Reaction activity is a common source of exceptions. Always use dedicated exception handling for reaction operations, especially to handle rate limiting exceptions. For more information, see [Exception handling](#exception-handling).
 
-**Use reactions sparingly**: Reactions can be a source of personality for agents, but productivity-focused agents should use reactions sparingly. Users generally expect productivity agents to use reactions only to communicate acknowledgment or status, not sentiment. Use a small set of unambiguous emoji that doesn't require a guide to understand.
+**Use reactions sparingly**: Reactions can add personality to agents, but productivity-focused agents should use reactions sparingly. Users generally expect productivity-focused agents to use reactions only to communicate acknowledgment or status, not sentiment. Use a small set of unambiguous emoji that doesn't require a guide to understand.
 
-**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgment of commands and requests. Using reactions to immediately acknowledge messages is effective in many scenarios, but might be excessive if the agent responds quickly with a message anyway, especially if the agent uses [message streaming](../bots/streaming-ux.md) and thinking indicators.
+**Acknowledging requests**: Agents should be consistent and predictable in their acknowledgment of commands and requests. Immediately acknowledging messages with reactions is effective in many scenarios, but might be excessive if the agent responds quickly with a message anyway, especially if the agent uses [message streaming](../bots/streaming-ux.md) and thinking indicators.
 
-**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but is easy to miss when used for live status updates. Use messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
+**Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but it's easy to miss when used for live status updates. Use messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
 
-**Interpreting reaction events**: User reactions aren't a reliable or consistent indicator of intent, and shouldn't be used to drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to discourage the use of reactions for feedback, which can be ambiguous and hard to interpret.
+**Interpreting reaction events**: User reactions aren't a reliable or consistent indicator of intent, and shouldn't drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to give users an unambiguous way to provide agent feedback.
 
 ## See also
 
