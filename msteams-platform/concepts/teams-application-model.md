@@ -1,16 +1,14 @@
 ---
-title: TODO The Teams application model
+title: TODO The Teams application model for developers
 author: nickwalkmsft
 description: TODO Learn how the Teams application model packages, identifies, installs, routes, and connects Teams app experiences to application logic.
 ms.topic: conceptual
 ms.date: 05/23/2026
 ---
 
-# The Teams application model and developer workflow
+# The Teams application model for developers
 
-TODO lead-in: explicitly explain what is in this article: app model and its components, dev workflow specifically for agents (consider that for the title)
-
-TODO explain that this explains the quickstart
+TODO lead-in: explicitly explain what is in this article: app model and its components
 
 TODO explain that this is a 10,000 view of the overall app model. [Teams SDK programming model **for agents**](../teams-sdk-programming-model.md) explains how it is reflected in the SDK.
 
@@ -48,7 +46,7 @@ From a developer's perspective, Teams apps consist of three main parts:
 
 ## Microsoft Foundry Bot Service
 
-Was going to leave this out and only do an authn authz section, but BS is worth bringing up architecturally. It's the reason the manifest doesn't have an endpoint for a bot. The identity of an app is heavily intertwined with the identity of the bot it contains.
+Was going to leave this out and only do an authn authz section, but BS is worth bringing up architecturally. It's the reason the manifest has a bot id instead of an endpoint for a bot. The identity of an app is heavily intertwined with the identity of the bot it contains.
 
 ## Authentication and authorization
 
