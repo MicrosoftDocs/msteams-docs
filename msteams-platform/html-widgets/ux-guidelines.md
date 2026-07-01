@@ -358,6 +358,10 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 </table>
 
 <br>
+<img src="images/textColorExamples.png" alt="Example of cards showing different font colors">
+
+
+
 
 
 #### Typography
