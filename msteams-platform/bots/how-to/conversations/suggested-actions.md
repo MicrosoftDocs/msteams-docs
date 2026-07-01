@@ -9,19 +9,17 @@ ms.date: 6/26/2026
 
 # Dynamically guide users with suggested actions
 
-Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
+Suggested actions are buttons that agents can present to users in chat to provide them with quick, context-sensitive options for responding, confirming, or taking action.
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
-For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
+Unlike prompt starters, suggested actions can be dynamically generated for each message an agent sends, enabling it to provide actions that fit the context of the conversation.
 
-## Suggested actions
+Suggested actions can be dynamically generated Suggested actions can be generated and placed dynamically during a conversation, meaning that you can use your bot’s large language model (LLM) to generate them along with a response during a conversation turn.
+
+## User experience
 
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your agent or bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. You can build the following suggested actions in your agent or bot:
-
-- `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
-- `Action.Compose`: Use `Action.Compose` to prefill the compose box with a message (including tags, @mentions, and rich content like emojis, GIFs, and other semantic objects).
-- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](~/agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
 
 > [!IMPORTANT]
 > The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
@@ -48,6 +46,14 @@ When a user selects a button, it remains visible and accessible on the rich card
 > [!NOTE]
 >
 > `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
+
+## Implement suggested actions
+
+Suggested actions are based on [card action types](../../../task-modules-and-cards/cards/cards-actions.md).
+
+- `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
+- `Action.Compose`: Use `Action.Compose` to prefill the compose box with a message (including tags, @mentions, and rich content like emojis, GIFs, and other semantic objects).
+- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](~/agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
 
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
