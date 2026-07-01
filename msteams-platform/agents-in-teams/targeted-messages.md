@@ -238,7 +238,48 @@ To render prompt preview, include a `targetedMessageInfo` entity in the reply ac
 
 This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
 
-For more information on implementing prompt preview, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+You can follow Teams SDK samples implementing prompt preview. For more information on implementing prompt preview, see [send a targeted message](#send-a-targeted-message) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+
+<details>
+<summary>Select to view REST API example</summary>
+
+If you are sending replies through REST APIs, use the same targetedMessageInfo entity in the activity payload.
+
+```HTTP
+POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Content-Type: application/json
+Show more lines
+JSON
+{
+"type": "message",
+"from": {
+"id": "28:c9e...",
+"name": "Contoso"
+},
+"conversation": {
+"id": "x:17I0...",
+"name": "Convo1"
+},
+"recipient": {
+"id": "29:1XJ...",
+"name": "Megan Bowen"
+},
+"text": "My bot's reply",
+"entities": [
+{
+"type": "targetedMessageInfo",
+"messageId": "1772129782775"
+}
+]
+}
+```
+
+Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
+
+</details>
+
+<br>
 
 ### Update or delete a targeted message
 
