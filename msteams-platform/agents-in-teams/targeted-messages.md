@@ -120,14 +120,14 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 ::: zone pivot="typescript"
 
-```typescript
-      
-  app.on('message', async ({ send, activity }) => {
-    if(activity.Recipient.isTargeted) {
-       // Handle message event
-      }
-  });
-```
+    ```typescript
+          
+      app.on('message', async ({ send, activity }) => {
+        if(activity.Recipient.isTargeted) {
+           // Handle message event
+          }
+      });
+    ```
 
 ::: zone-end
 
