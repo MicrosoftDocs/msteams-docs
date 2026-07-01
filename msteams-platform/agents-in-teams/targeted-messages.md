@@ -92,8 +92,6 @@ The agent sends a public resply to the user's request that includes the prompt p
 
 Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
 
-::: zone pivot="typescript"
-
 ## Implement targeted messages
 
 Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted.
