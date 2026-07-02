@@ -1,6 +1,10 @@
 {
   "redirections": [
       {
+        "source_path": "msteams-platform/bots/how-to/conversations/prompt-suggestions.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/prompt-starters"
+      },
+      {
         "source_path": "msteams-platform/m365-apps/actions-in-m365-quick-start-guide.md",
         "redirect_url": "/microsoftteams/platform/overview"
       },
@@ -1547,6 +1551,11 @@
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/create-a-bot-commands-menu.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/agent-slash-commands",
+        "redirect_document_id": false
+      }
     ]
 }
