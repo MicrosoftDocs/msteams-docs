@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 06/15/2026
+ms.date: 05/08/2026
 ---
 # Teams Store validation guidelines
 
@@ -99,9 +99,9 @@ Apps must provide value to the users by enabling them to complete functional wor
 
 Tabs must provide value beyond hosting an existing website. [*Must fix*]
 
-:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.jpg" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-app-provides-workflows-new.jpg" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.jpg" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-website-i-framed-new.jpg" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
 </details>
 <br>
@@ -198,7 +198,7 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.jpg" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-region-app-manifest-new.jpg" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
 
 ### Suitable for workplace consumption
 
@@ -214,7 +214,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 
 Content aggregator apps must have a mechanism for users to report an issue or inappropriate content to the app publisher. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-content-aggregator-app.jpg" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-content-aggregator-app-new.jpg" alt-text="Screenshot shows the passed scenario of content aggregator app to report issues.":::
 
 </details>
 
@@ -541,9 +541,9 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 
 * App's color and outline icon submitted in the app listing must match. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-same.jpg" alt-text="Screenshot shows color icon and outline icon are same.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/color-outline-icon-same-new.jpg" alt-text="Screenshot shows color icon and outline icon are same.":::
 
-   :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.jpg" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/color-outline-icon-not-same-new.jpg" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Must fix*]
 * The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Must fix*]
@@ -572,9 +572,9 @@ If your app package contains custom activity icons for activity feed notificatio
 
 You must have a short and long description for your app. App description helps improve your app discoverability in the Teams Store. The descriptions in your app configuration and Partner Center must be the same.
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequate-information.jpg" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-adequate-information-new.jpg" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequate.jpg" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
+:::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-inadequate-new.jpg" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
 
 <br></br>
 <details><summary>Expand to know more</summary>
@@ -583,13 +583,13 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.jpg" alt-text="Graphic shows an example of comparative marketing information in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-comparitive-marketing-fail-new.jpg" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
 * Hyperlink contact details, get started, help, or sign up in app description. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-details-hyperlinked.jpg" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-contact-details-hyperlinked-new.jpg" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-details-not-hyperlinked.jpg" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-contact-details-not-hyperlinked-new.jpg" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
 
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Must fix*]
 
@@ -606,17 +606,17 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
   * Role based functionality
   * Dependency on native app
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-calledout-pass.jpg" alt-text="Graphic shows an example of limitations called out in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-limitations-calledout-pass-new.jpg" alt-text="Graphic shows an example of limitations called out in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-limitations-not-calledout-fail.jpg" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-limitations-not-calledout-fail-new.jpg" alt-text="Graphic shows an example of limitations not called out in app descriptions.":::
 
 * If your app is supported for specific regions or geographical locations, you must call out that specific region dependency in the app description in app manifest, Partner Center, and AppSource for that offer.
 
 * If you need to reference Teams, write the first reference in the app listing as Microsoft Teams. Later references can be shortened to Teams. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-pass.jpg" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-teams-reference-pass-new.jpg" alt-text="Graphic shows an example of correct reference to Teams in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-teams-reference-fail.jpg" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-teams-reference-fail-new.jpg" alt-text="Graphic shows an example of incorrect reference to Teams in app description.":::
 
 #### Short description
 
@@ -676,15 +676,15 @@ The long description must provide an engaging narrative that highlights your app
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-abbreviated.jpg" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-microsoft-abbreviated-new.jpg" alt-text="Graphic shows an example of abbreviating Microsoft as MS or MSFT  for the first time in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-microsoft-not-abbreviated.jpg" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-microsoft-not-abbreviated-new.jpg" alt-text="Graphic shows an example of not abbreviating Microsoft as MS or MSFT for the first time in app description.":::
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.jpg" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-offering-from-microsoft-new.jpg" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft.jpg" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-no-offering-indication-from-microsoft-new.jpg" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
 
 * Use the following language unless you're a certified Microsoft partner:
   * **... certified for ...**
@@ -692,13 +692,13 @@ The long description must provide an engaging narrative that highlights your app
 * Include typos, grammatical errors.
 * Unnecessarily capitalize the entire app manifest or AppSource long description or app content.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-pass.jpg" alt-text="Graphic shows an example of app long description without errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-pass-new.jpg" alt-text="Graphic shows an example of app long description without errors.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-long-description-typos-fail.jpg" alt-text="Graphic shows an example of app long description with typos and errors.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-long-description-typos-fail-new.jpg" alt-text="Graphic shows an example of app long description with typos and errors.":::
 
 * Include links to AppSource.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.jpg" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-app-description-link-to-appsource-new.jpg" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
@@ -730,9 +730,9 @@ Remember the following:
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
 * At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.jpg" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-pass-app-functionality-mobile-new.jpg" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
-* You can have up to five screenshots per listing. You must have a minimum of three and maximum of five screenshots in your app listing. [*Must fix*]
+* You can have up to five screenshots per listing. You must have a minimum of three and maximum five screenshots in your app listing. [*Must fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-suppliement-screenshot.png" alt-text="Screenshot shows the failed scenario of supplement content used in screenshot.":::
@@ -741,7 +741,7 @@ Remember the following:
 
 * Must depict app functionality or integration with Teams. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.jpg" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-new.jpg" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
@@ -755,17 +755,17 @@ Remember the following:
 
 * If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
 
 * If your Teams app is extensible across Microsoft Copilot, the screenshots provided must depict the app's functionality within Copilot. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/teams-app-in-copilot-new.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
 **Don'ts:**
 
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside Teams.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality-teams.jpg" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-guidelines-fail-app-functionality-teams-new.jpg" alt-text="Screenshot shows the failed scenario of unrelated app functionality in Teams.":::
 
 </details>
 
@@ -921,7 +921,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Tab setup **mustn't dead-end** a new user. Provide a message on how to complete the action or workflow. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-tabs-setup-new-user.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-tabs-setup-new-user-new.png" alt-text="Graphic shows an example of Tab with a dead-end on setup.":::
 
 * The user mustn't leave the tab configuration experience inside Teams to create content outside Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Must fix*]
 
@@ -937,9 +937,9 @@ If your app includes a tab, ensure that it adheres to these guidelines.
   * Provide an appropriate way forward guidance for the user to acquire or generate the URL. [*Must fix*]
   * Check for URL that is relevant or appropriate to the app’s functionality as per the app description. [*Must fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-pass.jpg" alt-text="Screenshot shows an example of tab configuration with a way forward for user to generate a URL.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-configuration-way-forward-url-pass-new.jpg" alt-text="Screenshot shows an example of tab configuration with a way forward for user to generate a URL.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-tab-configuration-way-forward-url-fail.jpg" alt-text="Screenshot shows an example of tab configuration without a way forward for user to generate a URL.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-configuration-way-forward-url-fail-new.jpg" alt-text="Screenshot shows an example of tab configuration without a way forward for user to generate a URL.":::
 
 * Hyperlink the contact us information in the configuration screen instead of plain text to help users to contact you for support requirements. [*Must fix*]
 
@@ -960,7 +960,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
 * Tabs mustn't have a duplicate header. Remove duplicate logos from the I-frame since the tab framework already displays the app icon and name. [*Good-to-fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-views-no-duplicate-header-logo.jpg" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-views-no-duplicate-header-logo-new.jpg" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab with duplicate headers and logos.":::
 
@@ -975,9 +975,9 @@ The following are the navigation guidelines:
 
    Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-    :::image type="content" source="../../../../assets/images/submission/validation-navigation-static-tab.jpg" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-navigation-static-tab-new.jpg" alt-text="Graphic shows an example of navigation in a tab that doesn't conflict with the primary Teams navigation.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-navigation-left-navigation.jpg" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
+    :::image type="content" source="../../../../assets/images/submission/squircle/validation-navigation-left-navigation-new.jpg" alt-text="Graphic shows an example of left navigation rail that conflicts with the primary Teams navigation.":::
 
 * If your tab has a toolbar on the left rail without any navigation component, the toolbar must leave 20 pixels spacing from Teams left navigation. [*Must fix*]
 
@@ -988,7 +988,7 @@ The following are the navigation guidelines:
   * Page headers
   * Hamburger menus
 
-   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-levels.jpg" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-in-meeting-improper-navigation-levels-new.jpg" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
 * Deep links in tabs mustn't link to an external webpage but within Teams. For example, dialogs or other tabs. [*Must fix*]
 
@@ -1007,27 +1007,27 @@ The following are the navigation guidelines:
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-allowed-scenarios.jpg" alt-text="Graphic shows examples of all the scenarios in mobile where horizontal scroll is allowed.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-allowed-scenarios-new.jpg" alt-text="Graphic shows examples of all the scenarios in mobile where horizontal scroll is allowed.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-allowed-kanban.png" alt-text="Graphic shows an example of horizontal scroll in Kanban board.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-list-view-components.png" alt-text="Graphic shows an example of list view with many  components.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-fixed-board.jpg" alt-text="Graphic shows an example of horizontal scroll in a white board with infinite canvas and fixed board.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-fixed-board-new.jpg" alt-text="Graphic shows an example of horizontal scroll in a white board with infinite canvas and fixed board.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-horizontal-scroll-in-list-view.jpg" alt-text="Graphic shows an example of horizontal scroll in list view.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-horizontal-scroll-in-list-view-new.jpg" alt-text="Graphic shows an example of horizontal scroll in list view.":::
 
 * The user must have an option to go to previous work state. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-back-button-available.jpg" alt-text="Screenshot shows back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/back-button-available-new.png" alt-text="Screenshot shows back button option available.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-no-back-button-available.jpg" alt-text="Screenshot shows failed scenario of no back button option available.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/no-back-button-available-new.jpg" alt-text="Screenshot shows failed scenario of no back button option available.":::
 
 * Horizontal scroll in Adaptive Cards mustn't be present in Teams. [*Must fix*]
 
 * Bottom rail used for navigation in tabs mustn't conflict with Teams native mobile app navigation. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-tab-bottom-rail-conflicts-with-teams-mobile.jpg" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-tab-bottom-rail-conflicts-with-teams-mobile-new.jpg" alt-text="Graphic shows an example of a tab that conflicts with Teams native mobile app navigation.":::
 
 </details>
 </br>
@@ -1050,7 +1050,7 @@ The following are the navigation guidelines:
 
 * Tabs must use Teams styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-usability-app-uses-diff-font.jpg" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-usability-app-uses-diff-font-new.jpg" alt-text="Screenshot shows an example of a tab with calibri font instead of native Teams font.":::
 
 * If your app functionality requires changes in settings, include a **Settings** tab. [*Good-to-fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md). [*Good-to-fix*]
@@ -1125,11 +1125,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned. The bot must enable the users to know about the value proposition of the app. Bot must respond with various workflows it supports on asking for help or value it provides. Bot must provide a valid response even when the user hasn’t logged into the apps.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.jpg" alt-text="Graphic shows an example of bot providing a valid response for a command in lowercase or uppercase.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-valid-response-lowercase-new.jpg" alt-text="Graphic shows an example of bot providing a valid response for a command in lowercase or uppercase.":::
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.jpg" alt-text="Graphic shows an example of bot responding to generic commands.":::
+   :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-commands-generic-response-pass-new.jpg" alt-text="Graphic shows an example of bot responding to generic commands.":::
 
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-no-response.png" alt-text="Graphic shows an example of bot with no response to generic commands.":::
 
@@ -1218,7 +1218,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
-      :::image type="content" source="../../../../assets/images/submission/validation-bot-welcome-message.jpg" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
+      :::image type="content" source="../../../../assets/images/submission/squircle/validation-bot-welcome-message-new.jpg" alt-text="Graphic shows an example of bot sending a welcome message when the bot has a complex configuration workflow.":::
 
      :::image type="content" source="../../../../assets/images/submission/validation-bot-no-welcome-message.png" alt-text="Graphic shows an example of bot not sending a welcome message when the bot has a complex configuration workflow.":::
 
