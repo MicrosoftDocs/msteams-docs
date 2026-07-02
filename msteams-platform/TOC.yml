@@ -389,9 +389,12 @@
   - name: Proactive app installation to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
+  - name: Send personal welcome message
+    href: graph-api/proactive-bots-and-messages/send-personal-welcome-message.md
+    displayName: personal welcome message, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
     href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
+    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval 
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
