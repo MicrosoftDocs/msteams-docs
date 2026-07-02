@@ -2,9 +2,14 @@
 title: Create your first agent
 description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 07/02/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ms.topic: reference
 ---
+
+TODO replace with Teams SDK quickstart and move this one to ATK section of TOC
 
 # Build your first agent
 

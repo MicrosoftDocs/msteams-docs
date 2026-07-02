@@ -17,6 +17,25 @@ The focus of the SDK, and of most of this, is agents.
 
 <https://microsoft.github.io/teams-sdk/why>
 
+## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/why>
+
+- Reactive and proactive messaging
+- Bot registration (bot ID and where the endpoint is configured)
+- Request validation
+- Variety of events, varied response types, some expect no response at all. Should define, maybe link to the Activity model.
+- Authenticating calls to Teams API, Graph API
+- OAuth, SSO
+-
+-
+
+## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/teams/core-concepts>
+
+- Basic flowchart, see diagram
+- DevTunnel
+- Provisioning of app and bot has to come even before sideloading
+- Sideloading
+- Explain how the developer CLI supports all of this
+
 Multi languages:
 
 <https://microsoft.github.io/teams-sdk/csharp/getting-started/code-basics>
