@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: nickwalk
 ms.topic: how-to
 ms.owner: vishachadha
-ms.date: 07/01/2026
+ms.date: 06/19/2026
 ---
 
 # Send a personal welcome message
@@ -130,8 +130,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     )
     chat_id_alt = chats.value[0].id
 ```
-
----
 
 ## Send proactive messages
 
