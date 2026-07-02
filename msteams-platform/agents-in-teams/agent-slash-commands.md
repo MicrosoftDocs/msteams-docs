@@ -27,13 +27,7 @@ Slash commands in Teams are text-based shortcuts that let users perform actions 
 
 The slash commands feature enables apps and agents to add their own commands to this list to help users discover and use them.
 
-[WIP: Gif file to be updated with Contoso instead of Copilot.]
-
 :::image type="content" source="../assets/videos/slash-commands.gif" alt-text="This video shows how a slash command works within a Teams agent or app.":::
-
-<!--
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png":::
--->
 
 ## Types of slash commands
 

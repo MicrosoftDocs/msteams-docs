@@ -30,7 +30,7 @@ Sending targeted messages to any user in a group conversation is a capability of
 Targeted messaging enables users to privately interact with agents without distracting other users or exposing interactions and information that aren't meant for the group. Consider the following scenarios:
 
 - A user can ask an agent to generate a summary of the discussion without the other participants seeing the request or the response.
-- A user can privately ask for information from an agent with the intent of sharing it with the group but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
+- A user can privately ask for information from an agent with the intent of sharing it with the group but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 - A user can direct and monitor background work with agents, referencing the context of the conversation, without distracting the other participants.
 - An agent can detect a new user entering a large, long-running conversation and proactively send them a private welcome message and a summary.
 
@@ -68,6 +68,14 @@ For more about slash commands, including how to register extra named slash comma
 
 Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and sharing options, and the user explicitly approves whether the response should be shared publicly.
 
+You can implement the following agent-to-user response flows:
+
+- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
+- _Public response_ mode lets the user share the response to the wider audience.
+- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
+
+You can design a user approval workflow for reposting a private targeted message as a public message. User approval matters in targeted messaging because the agent’s first response is intentionally private. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
+
 [Suggested actions](../bots/how-to/conversations/suggested-actions.md), such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context. See [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Prompt preview in targeted messages
@@ -94,7 +102,7 @@ Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sen
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted. You can also control response visibility and integrate prompt preview in the agent responses.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
 
 ### Receive targeted messages
 
@@ -208,17 +216,10 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
+> [!NOTE]
+> If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
-### Control response visibility
-
-Response visibility is controlled by the `WithRecipient` configuration and the isTargeted property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience. You can implement the following agent-to-user response flows:
-
-- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
-- _Public response_ mode lets the user share the response to the wider audience.
-- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
-
-You can design a user approval workflow for reposting a private targeted message as a public message. User approval matters in targeted messaging because the agent’s first response is intentionally private. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
+Response visibility is controlled by the `WithRecipient` configuration and the `isTargeted` property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
 
 ### Integrate prompt preview in a targeted message
 
