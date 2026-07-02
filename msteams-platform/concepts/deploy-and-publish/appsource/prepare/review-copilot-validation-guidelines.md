@@ -297,7 +297,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* |
+| Manifest version | *App manifest version must be 1.13 or later. Starting July 2026, if your agent operates in channels, all new Teams Store submissions must use manifest schema version 1.25 or later. [*Must fix*] <br>* |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
