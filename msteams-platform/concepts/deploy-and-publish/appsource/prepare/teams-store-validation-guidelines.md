@@ -698,7 +698,7 @@ The long description must provide an engaging narrative that highlights your app
 
 * Include links to AppSource.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.png" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-link-to-appsource.jpg" alt-text="Graphic shows an example of a fail scenario with links to AppSource in app long description.":::
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
