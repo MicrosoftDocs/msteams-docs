@@ -27,7 +27,7 @@ Slash commands in Teams are text-based shortcuts that let users perform actions 
 
 The slash commands feature enables apps and agents to add their own commands to this list to help users discover and use them.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/slash-command-compose-box.png":::
+:::image type="content" source="../assets/videos/slash-commands.gif" alt-text="This video shows how a slash command works within a Teams agent or app.":::
 
 ## Types of slash commands
 
@@ -60,6 +60,27 @@ In channels, group chats, and meeting chats, the slash command autocomplete menu
 
 Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
+- **App-defined slash commands**:
+
+    Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as:
+
+  - `/create-task` to turn the current conversation into a tracked task, prefilled with the channel, requester, and due-date details based on context.
+  - `/list-tasks` to list open tasks or action items in the conversation with task details and its owner name.
+  - `/status-check` to retrieve the latest status for a work item, incident, or customer request without leaving the compose box.
+
+- **Natural-language support for slash commands**:
+
+    In this model, the user enters the slash command and, optionally, a natural-language request. The agent response is delivered privately to the user, which makes the pattern well suited for drafting, lookup, summarization, lightweight workflow initiation, and other personal productivity tasks that benefit from staying in the context of the current conversation. For example:
+
+  - `/contoso incident summarize the last 24 hours and suggest next steps`
+  - `/contoso create-task fix login issue for mobile users`
+  - `/contoso draft a customer update from this thread`
+  - `/contoso find the latest rollout plan and highlight open risks`
+
+  Natural-language support is often preferable to relying only on explicit commands for high-confidence, repeatable actions: agents are most valuable when they can understand intent, parameters, and context expressed in natural language, so slash-command design should combine discoverable commands with flexible phrasing that lets users say what they need instead of learning a long command catalog. From a platform perspective, slash commands should support the experience, not define it end to end; use them to surface common actions in a way that’s easy to find and invoke, then let the agent handle natural-language requests, infer missing details when appropriate, and ask brief follow-up questions when something is unclear. Keep the command set small so users don’t need to memorize syntax or choose between nearly identical options.
+
+  To support natural-language prompts, an agent must explicitly opt in. This keeps the behavior intentional. Agents that are designed to interpret free-form requests can enable natural-language prompting and provide a more conversational experience.
+
 ### Message extension slash commands
 
 Apps that implement action-type [message extensions](../messaging-extensions/what-are-messaging-extensions.md) can surface them as slash commands. When a user activates one from the autocomplete menu, Teams immediately opens the associated task module or dialog. Activating a message extension slash command only opens the task module or dialog, and doesn't send a message. Search-type message extensions can't be exposed as commands.
@@ -78,7 +99,19 @@ See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) 
 
 Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
-Declare commands by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
+#### Triggers: slash and @mention
+
+The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. For agent command lists, use `@mention` when the command should appear in the traditional @mention command menu, use `slash` when the command should appear in the slash command picker, or include both values when the same command should be available from both entry points.
+
+Use `slash` triggers for commands that users should be able to discover and invoke quickly from an empty compose box. Slash commands are well suited for frequent actions, private lookups, lightweight workflow starts, and commands that should be easy to find without first mentioning the agent.Use `@mention` triggers for commands that are closely tied to an explicit interaction with the agent. This pattern is useful when users are already addressing the agent directly, especially in personal scope or in conversations where the user expects the command to be part of a visible agent exchange.
+
+- Use `@mention` when users are intentionally addressing the agent and may expect an agent-visible conversation flow.
+- Use `slash` when users need fast discovery, private command invocation, or a shortcut from the compose box.
+- Use both when the same command should be available through both discovery surfaces without changing the command behavior.
+
+    When a command supports both invocation patterns, declare both trigger values in the same command list. This keeps the command catalog consistent while giving users flexibility to start from either @mention or slash. You can choose to define separate command lists so that each trigger can have its own scope, command set, and user guidance.
+
+Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
 ```json
 {
