@@ -19,8 +19,26 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
+  - name: Use emoji reactions
+    href: agents-in-teams/agent-reactions.md
+    displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+  - name: Teams emoji reactions reference
+    href: agents-in-teams/teams-reactions-reference.md
+    displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+  - name: Highlight agent capabilities with prompt starters
+    href: bots/how-to/conversations/prompt-starters.md
+    displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
+  - name: Dynamically guide users with suggested actions
+    href: bots/how-to/conversations/suggested-actions.md
+    displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+  - name: Send and receive targeted messages
+    href: agents-in-teams/targeted-messages.md
+    displayName: private messages, ephemeral messages, command, notification, response
+  - name: Expose slash commands
+    href: agents-in-teams/agent-slash-commands.md
+    displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
   - name: Extend agents to Microsoft 365 hubs
-    href: /microsoft-365-copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoft-365/copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, Teams SDK, custom agent
 - name: Tools and SDKs
   items:
@@ -45,9 +63,11 @@
       - name: Build apps using Agents Toolkit 
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites to create Teams app
+        - name: Prerequisites to create Teams agent or app
           href: toolkit/tools-prerequisites.md
-          displayName: accounts to build your Teams app 
+          displayName: accounts to build your Teams app
+        - name: Create new Teams agent project
+          href: agents-in-teams/build-first-agent.md  
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC
@@ -168,8 +188,6 @@
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Microsoft 365 Agents Toolkit CLI
       href: toolkit/microsoft-365-agents-toolkit-CLI.md
-    - name: Teams Toolkit CLI
-      href: toolkit/teams-toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -263,7 +281,7 @@
     - name: Manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Developer preview manifest schema
+    - name: Developer preview manifest schema 
       href: resources/dev-preview/developer-preview-intro.md
       displayName: developer preview, preview, public preview
 - name: Add authentication
@@ -371,9 +389,12 @@
   - name: Proactive app installation to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
+  - name: Send personal welcome message
+    href: graph-api/proactive-bots-and-messages/send-personal-welcome-message.md
+    displayName: personal welcome message, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Approvals app APIs
     href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
+    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval 
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
@@ -538,9 +559,6 @@
       - name: Channel and group chat conversations with a bot
         href: bots/how-to/conversations/channel-and-group-conversations.md
         displayName: Teams conversational bots, mention, tag mention, user mention
-      - name: Create a commands menu
-        href: bots/how-to/create-a-bot-commands-menu.md
-        displayName: compose
       - name: Conversation events in your Teams bot
         href: bots/how-to/conversations/subscribe-to-conversation-events.md 
         displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
@@ -564,9 +582,6 @@
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
       displayName: bot initialization
-    - name: Create prompt suggestions
-      href: bots/how-to/conversations/prompt-suggestions.md
-      displayName: prompt starter, suggested actions
     - name: Workflow bot in Teams
       href: bots/how-to/conversations/workflow-bot-in-teams.md
       displayname: Jira, jira
@@ -584,9 +599,6 @@
       displayName: shared channels, private channels
     - name: Explore advanced bot capabilities
       items:
-      - name: Modify Teams bot API to fetch team or chat members
-        href: resources/team-chat-member-api-changes.md
-        displayName: team, chat, member, API, bot, fetch, team or chat members
       - name: Calls and meetings bots
         items:
         - name: Overview
@@ -881,14 +893,12 @@
       displayName: Multitenancy, SharePoint
     - name: Create Virtual Assistant
       href: samples/virtual-assistant.md 
-      displayname: OnMessageActivityAsync, multi-language support
+      displayName: OnMessageActivityAsync, multi-language support
     - name: Power Platform apps
       items:
       - name: Low-code custom apps
         href: samples/teams-low-code-solutions.md
         displayName: Power BI, Power Platform apps, Project Oakdale
-      - name: Add Power Virtual Agents chatbot
-        href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: App templates for Microsoft Teams
       href: samples/app-templates.md
       displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
@@ -950,7 +960,7 @@
         href: concepts/build-and-test/apps-localization.md
         displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
       - name: Localize JSON schema reference
-        href: resources/schema/localization-schema.md
+        href: /microsoft-365/extensibility/schema/loc-schema/root
         displayname: meetingExtensionDefinition
     - name: Cookies and local storage
       href: resources/samesite-cookie-update.md
@@ -1043,17 +1053,6 @@
       - name: Add an Outlook Add-in to a Teams app
         href: m365-apps/combine-office-add-in-and-teams-app.md
         displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
-  - name: Actions in Microsoft 365
-    items:
-      - name: What are Actions?
-        href: m365-apps/actions-in-m365.md
-        displayName: actions design
-      - name: Build Actions in Microsoft 365
-        href: m365-apps/build-actions-in-m365.md
-        displayName: build actions, retrieve action  
-      - name: Actions in Microsoft 365 quick start guide
-        href: m365-apps/actions-in-m365-quick-start-guide.md
-        displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Test your agent or app

@@ -1,15 +1,16 @@
 ---
 title: Custom Together Mode Scenes
-author: surbhigupta
 description: Learn how to work with custom Together Mode scenes in Microsoft Teams, build scene using Scene studio, share scene using Scene studio, and its sample.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.owner: kartikd
-ms.date: 04/07/2022
+ms.date: 06/22/2026
 ---
 
 # Custom Together Mode scenes in Teams
+
+> [!IMPORTANT]
+> Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
 > [!NOTE]
 >

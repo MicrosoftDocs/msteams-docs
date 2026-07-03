@@ -2,9 +2,9 @@
 title: Designing your personal app
 description: Learn how to implement the design guidelines including UI elements to design a personal app using Microsoft Teams UI kit.
 author: heath-hamilton
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.date: 05/04/2023
+ms.date: 03/02/2026
 --- 
 # Designing your personal app for Microsoft Teams
 
@@ -260,7 +260,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 |Sample name | Description | TypeScript|
 |----------------|--------------------------------------------------------|--------------|
-| Nav-bar menu in personal tab | This sample application illustrates the use of a navbar menu in personal tabs within Microsoft Teams, enabling users to access multiple actions seamlessly. Designed for mobile clients, it includes features like an overflow menu for additional actions, enhancing user navigation and experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
+| Nav-bar menu in personal tab | This sample application illustrates the use of a navbar menu in personal tabs within Microsoft Teams, enabling users to access multiple actions seamlessly. Designed for mobile clients, it includes features like an overflow menu for additional actions, enhancing user navigation and experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-navbar-menu/ts) |
 
 ## See also
 

@@ -3,8 +3,7 @@ title: Best practices for building agent in Teams user experience
 description: Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
-ms.date: 09/27/2024
+ms.date: 06/12/2026
 ---
 
 # Agents user experience
@@ -68,10 +67,6 @@ Use the following types of updates while streaming responses:
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
-
->[!NOTE]
->
-> Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the agent response contains citations
 
@@ -169,14 +164,11 @@ To achieve this, the agent must leverage the conversation context and history, e
 
 ### Enable app profile card
 
-> [!NOTE]
-> Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
-
 Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
-To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
+To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [app manifest schema description object](/microsoft-365/extensibility/schema/root-description).
 
 ## See also
 

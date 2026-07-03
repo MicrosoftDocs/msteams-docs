@@ -36,13 +36,26 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 January**
+**2026 June**
 
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
+* ***June 22, 2026***: Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
 :::column-end:::
 :::row-end:::
 <br/>
+
+</br>
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/04/2026 | Support for Prompt starters are now generally available | [Prompt starters are now generally available.](bots/how-to/conversations/prompt-starters.md) |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
+
+<br/>
+</details>
 
 </br>
 
@@ -114,7 +127,7 @@ Teams platform features that are available to all app developers.</br>
 | 28/10/2024 | Enable API key and SSO authentication for your API-based message extension. | Add authentication > Enable authentication for API-based message extensions > [Overview](messaging-extensions/build-api-based-message-extension.md) |
 | 28/10/2024 | Update bot or message extension app to use certificate or MSI for authentication. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Develop your Teams app > [Use certificate or MSI for app authentication](toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md) |
 | 28/10/2024 | Debug apps in Teams desktop client to improve debugging performance and efficiency. | Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug in Teams desktop client](toolkit/debug-apps-in-Teams-desktop-client.md) |
-| 25/10/2024 | Introduced prompt suggestions for bots to create an engaging and insightful bot experience. | Build bots > Bot conversations > [Create prompt suggestions](bots/how-to/conversations/prompt-suggestions.md) |
+| 25/10/2024 | Introduced prompt suggestions for bots to create an engaging and insightful bot experience. | Build bots > Bot conversations > [Create prompt starters](bots/how-to/conversations/prompt-starters.md) |
 | 17/10/2024 | Introducing app manifest v1.19 with copilotAgents, declarativeAgents, and defaultLanguageFile. | App manifest > [App manifest](/microsoftteams/platform/resources/schema/manifest-schema) |
 | 17/10/2024 | Localize your agents. | Microsoft 365 Copilot extensibility > Work with the Copilot ecosystem > Agents are apps for Microsoft 365 > [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) |
 | 17/10/2024 | Build a personal tab with offline functionality. | Build tabs > Create a tab > [Offline tabs](tabs/how-to/create-personal-tab.md#offline-tabs) |
@@ -138,7 +151,7 @@ Teams platform features that are available to all app developers.</br>
 |12/04/2024|Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information|App manifest > [dashboardCards](/microsoft-365/extensibility/schema/dashboard-card)|
 |12/04/2024|Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the CodeBlock element.|Build cards and dialogs > [CodeBlock in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)|
 |12/04/2024|Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.|Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
-|10/04/2024|Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.|Extend your app across Microsoft 365 > [Outlook Add-ins](m365-apps/overview.md#outlook-add-ins)|
+|10/04/2024|Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.|Extend your app across Microsoft 365 > [Outlook Add-ins](m365-apps/overview.md)|
 |04/04/2024|Added support for python in Teams AI library.|Build bots > Teams AI library > [Teams AI library](bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)|
 |04/04/2024|Stageview API with the openmode property allows you to open your app content in different Stageview experience.|Build tabs > [Open content in Stageview](tabs/open-content-in-stageview.md)|
 |03/04/2024|Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.|Publish your app > Publish to the Teams Store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
@@ -485,16 +498,36 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md)
-
-<!--
+<!--                    
 **2025 May**
 
 * ***May 16, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams](/microsoftteams/platform/teams-ai-library/welcome/overview).
 -->
+
+**2026 June**
+
+* ***June 30, 2026***: Access to meeting transcripts through Microsoft Graph is now governed by both Graph permissions and two tenant-level administrator controls. Apps must have the required permissions, and tenant admins must enable transcript access settings before transcript data can be retrieved. For more information, see [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording).
+
+**2026 May**
+
+* ***May 29, 2026***: [Expose slash commands from agents and apps](agents-in-teams/agent-slash-commands.md).
+* ***May 15, 2026***: [Enable agent reactions in Teams](agents-in-teams/agent-reactions.md).
+
 <br/>
+
+<details>
+
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 27/03/2026 | Targeted Messages for agents. | [Enable targeted messages for agents](agents-in-teams/targeted-messages.md) |
+| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
+
+</details>
+</br>
 
 <details>
 
@@ -536,7 +569,6 @@ Developer preview is a public program that provides early access to unreleased T
 | 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
 | 12/02/2024 | Build API-based message extension using Developer Portal for Teams. | Build message extension > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
 | 06/02/2024 | Introduced `systemDefault` reserved activity type for send activity feed notifications| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
-|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
 |12/01/2024| Introduced Teams Toolkit command line interface v3. | Tools and SDKs > Tools > [Teams Toolkit command line interface](toolkit/teams-toolkit-CLI.md)|
 
 </details>

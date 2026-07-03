@@ -4,8 +4,8 @@ author: vikasalmal
 description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
 ms.author: vikasalmal
 ms.localizationpriority: high
-ms.topic: conceptual
-ms.date: 01/20/2026
+ms.topic: article
+ms.date: 02/27/2026
 ---
 
 # Apps for shared and private channels
@@ -50,7 +50,8 @@ Here's an outline of the different channels and their capabilities across variou
 
 > [!IMPORTANT]
 >
-> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph or Agents SDK.
+> * Avoid relying on channel type values for app logic.
+> * Teams channel experiences continue to evolve. To ensure your app remains compatible over time, don't build logic that depends on specific `membershipType` or `channelType` values returned by Microsoft Graph, Agents SDK, or Teams SDK. Instead, rely on the capability‑based APIs and events provided by the platform to determine how your app should behave within a channel.
 
 > [!NOTE]
 >
@@ -105,11 +106,6 @@ There's no dependence on classical and admin access for `supportsChannelFeatures
 ### Apps with dependence on specified parameters
 
 If your app handles advanced scenarios, or depends on the specified parameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't rewrite your code.
-
-> [!NOTE]
->
-> * Tab and bot apps in shared and private channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md), and [Teams operated by 21Vianet](concepts/sovereign-cloud.md) environments.
-> * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
 
 ### Get context for shared and private channels
 
@@ -663,7 +659,7 @@ The message change notification failure happens when the tenant's sharing policy
 | Sample Name                   | Description                                                                                                                                                                                                 | .NET | Node.js | Python |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---------|--------|
 | Bot Shared Channel Events | This sample app displays the Teams bot transitive member add and remove events in shared channels. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-shared-channel-events/csharp) | NA   | NA     |
-| Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/python)   |
+| Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/python)   |
 
 ## See also
 

@@ -1,10 +1,9 @@
 ---
 title: Maintain and support your published app
 description: Learn to maintain your published app such as analyze usage, publish update, promote, check Teams Store marketing guidelines and complete Microsoft 365 Certification.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 author: heath-hamilton
-ms.author: surbhigupta
 ms.date: 02/10/2025
 ---
 # Maintain your published Microsoft Teams app
