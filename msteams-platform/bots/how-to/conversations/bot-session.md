@@ -5,6 +5,7 @@ ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 04/28/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -79,11 +80,11 @@ Clicking on the new session icon starts a new session.​
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/bots/create-new-session-desktop.png" alt-text="Screenshot shows creating a new session button on desktop" lightbox="../../../assets/images/bots/create-new-session.png" border=false:::
+:::image type="content" source="../../../assets/images/bots/create-new-session-desktop.png" alt-text="Screenshot shows creating a new session button on desktop" lightbox="../../../assets/images/bots/create-new-session.png" border="false":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/create-new-session-mobile.png" alt-text="Screenshot shows creating a new session button on mobile" border=false:::
+:::image type="content" source="../../../assets/images/bots/create-new-session-mobile.png" alt-text="Screenshot shows creating a new session button on mobile" border="false":::
 
 ---
 
@@ -91,11 +92,11 @@ After a message is sent, the session is created and saved in the sessions panel.
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/bots/sessions-history-desktop.png" alt-text="Screenshot shows the sessions history on desktop" lightbox="../../../assets/images/bots/sessions-panel.png" border=false:::
+:::image type="content" source="../../../assets/images/bots/sessions-history-desktop.png" alt-text="Screenshot shows the sessions history on desktop" lightbox="../../../assets/images/bots/sessions-panel.png" border="false":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/sessions-history-mobile.png" alt-text="Screenshot shows the sessions history on mobile" border=false:::
+:::image type="content" source="../../../assets/images/bots/sessions-history-mobile.png" alt-text="Screenshot shows the sessions history on mobile" border="false":::
 
 ---
 
@@ -145,28 +146,32 @@ When sessions are enabled, incoming activities include a session-scoped conversa
 
 Use the conversation ID from the incoming activity when responding.
 
-# [C#](#tab/csharp)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 var conversationId = context.Activity.Conversation.Id;
 await app.Send(conversationId, "Hello from Bot");
 ```
 
-# [TypeScript](#tab/typeScript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 const conversationId = activity.conversation.id;
 await app.send(conversationId, "Hello from Bot");
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 conversation_id = ctx.activity.conversation.id
 await app.send(conversation_id, "Hello from Bot")
 ```
 
----
+::: zone-end
 
 Responding inside a session works the same way as responding in a normal one-on-one chat. When your bot replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context.
 
@@ -274,7 +279,7 @@ Both conditions are checked server-side. A bot that declares `supportsSessions: 
 
 For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
-# [C#](#tab/csharp)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 using System.Collections.Generic;
@@ -307,7 +312,9 @@ await app.Send(
     cancellationToken: cancellationToken);
 ```
 
-# [TypeScript](#tab/typeScript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 // Including exactly one initial `activity` is required for creating a session
@@ -324,11 +331,13 @@ const sessionConversationId = resource.id;
 await app.send(sessionConversationId, 'This message is part of the session.');
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 <!-- TODO: Add Python code sample once Teams SDK for Python API is confirmed. -->
 
----
+::: zone-end
 
 > [!NOTE]
 >
