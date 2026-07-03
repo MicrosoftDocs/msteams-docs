@@ -550,6 +550,9 @@
       - name: Send and receive files
         href: bots/how-to/bots-filesv4.md  
         displayName: receive files using bot
+      - name: Use sessions in bot conversations
+        href: bots/how-to/conversations/bot-session.md
+        displayName: sessions, session, conversationId, proactive session, 1:1 chat
     - name: Send notifications
       items:
       - name: Build notification capability

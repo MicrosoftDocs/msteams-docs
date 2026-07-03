@@ -62,7 +62,7 @@ Update your app manifest and set the `supportsSessions` property to `true`.
 }
 ```
 
-After you update the manifest, package and republish your app through the Developer Portal or Teams Admin Center. Users see the sessions experience after they install or upgrade the app.
+After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
 
 > [!IMPORTANT]
 >
@@ -76,10 +76,28 @@ After you update the manifest, package and republish your app through the Develo
 After sessions are enabled, users see new controls in the chat header that allow them to create and switch between sessions.
 
 Clicking on the new session icon starts a new session.​
-:::image type="content" source="assets/images/bots/create-new-session.png" alt-text="Screenshot shows creating a new session button" lightbox="assets/images/bots/create-new-session.png":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../../assets/images/bots/create-new-session-desktop.png" alt-text="Screenshot shows creating a new session button on desktop" lightbox="../../../assets/images/bots/create-new-session.png" border=false:::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../../assets/images/bots/create-new-session-mobile.png" alt-text="Screenshot shows creating a new session button on mobile" border=false:::
+
+---
 
 After a message is sent, the session is created and saved in the sessions panel.
-:::image type="content" source="assets/images/bots/sessions-panel.png" alt-text="Screenshot shows the sessions panel" lightbox="assets/images/bots/sessions-panel.png":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../../assets/images/bots/sessions-history-desktop.png" alt-text="Screenshot shows the sessions history on desktop" lightbox="../../../assets/images/bots/sessions-panel.png" border=false:::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../../assets/images/bots/sessions-history-mobile.png" alt-text="Screenshot shows the sessions history on mobile" border=false:::
+
+---
 
 <!--### Create and navigate topics
 
@@ -119,7 +137,7 @@ All existing one-on-one bot chat capabilities continue to work within sessions.
 The first message in a session becomes the session title, and the latest message appears as the preview in the sessions panel. Sessions created proactively by the bot appear as unread for the user.
 
 > [!NOTE]
-> Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat — not a reply chain under a single message.
+> Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
 
 ## Send and receive messages in sessions
 
@@ -154,18 +172,19 @@ Responding inside a session works the same way as responding in a normal one-on-
 
 ### How conversationId changes with sessions
 
-The `conversationId` in a 1:1 chat is always an opaque, encrypted string. You never need to parse or decode it — just store it and pass it back to the API.
+The `conversationId` in a 1:1 chat is always an opaque, encrypted string. You never need to parse or decode it. Store it and pass it back to the API.
 
-- **Without sessions**: All messages in a 1:1 chat share a single, static `conversationId`.
-- **With sessions**: Each session gets its own unique `conversationId`. When the bot receives any activity, `activity.conversation.id` tells it which session the activity belongs to.
+**Without sessions**, all messages in a 1:1 chat share a single, static `conversationId`.
 
-There is no separate `sessionId` field. The session identity is encoded within the `conversationId` — each session has a unique `conversationId`, and that is the session's identifier. Treat each unique `conversationId` as a unique session. No parsing is needed — use the opaque string as-is for storage and routing.
+**With sessions**, each session gets its own unique `conversationId`. When the bot receives any activity, `activity.conversation.id` tells it which session the activity belongs to.
+
+There is no separate `sessionId` field. The session identity is encoded within the `conversationId`. Each session has a unique `conversationId`, and that is the session's identifier. Treat each unique `conversationId` as a unique session. No parsing is needed. Use the opaque string as-is for storage and routing.
 
 ### Using a cached conversationId after sessions are enabled
 
-If your bot cached a `conversationId` from before the user opted into sessions, that cached ID still works. Messages sent to it land in the **default session** — the very first session created when the 1:1 chat becomes sessions-enabled. The default session acts as a catch-all that contains all pre-existing messages.
+If your bot cached a `conversationId` from before the user opted into sessions, that cached ID still works. Messages sent to it land in the **default session**, which is the very first session created when the 1:1 chat becomes sessions-enabled. The default session acts as a catch-all that contains all pre-existing messages.
 
-This means bots don't break when sessions are enabled — existing cached conversationIds continue to function, routing messages to the default session.
+This means bots don't break when sessions are enabled. Existing cached conversationIds continue to function, routing messages to the default session.
 
 ### HTTP API reference
 
@@ -193,7 +212,7 @@ Content-Type: application/json
 }
 ```
 
-Response (201 Created):
+**Response (201 Created)**:
 
 ```json
 {
@@ -202,7 +221,7 @@ Response (201 Created):
 }
 ```
 
-The `id` is the session's conversationId — an opaque, encrypted string. Store it and use it for all subsequent operations within this session.
+The `id` is the session's conversationId, an opaque, encrypted string. Store it and use it for all subsequent operations within this session.
 
 #### Send a message within an existing session
 
@@ -239,7 +258,7 @@ Authorization: Bearer {bot-token}
 ```
 
 > [!NOTE]
-> Member operations (`GetMembers`, `GetMember`, `GetProfile`) work the same regardless of which session conversationId you use — they always resolve to the underlying 1:1 chat.
+> Member operations (`GetMembers`, `GetMember`, `GetProfile`) work the same regardless of which session conversationId you use. They always resolve to the underlying 1:1 chat.
 
 ## Create sessions proactively
 
@@ -253,7 +272,7 @@ Both conditions are checked server-side. A bot that declares `supportsSessions: 
 > [!IMPORTANT]
 > When sessions are enabled, `CreateConversation` always creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
-For more information, see [proactive messaging](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation).
+For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
 # [C#](#tab/csharp)
 
@@ -311,24 +330,23 @@ await app.send(sessionConversationId, 'This message is part of the session.');
 
 ---
 
-Key points:
-
-- The Teams SDK calls the same `POST /v3/conversations` endpoint as regular 1:1 creation. No special flag is needed — the server creates a session automatically when the bot is session-enabled and installed.
-- The `activity` field is **required** to have exactly one message activity. It becomes the first message of the new session.
-- The returned id (`resource.Id` in C#, `resource.id` in TypeScript) is the session-specific conversationId. Use it for all follow-up messages in that session (via `app.Send` / `app.send`).
+> [!NOTE]
+>
+> The Teams SDK calls the same `POST /v3/conversations` endpoint as regular 1:1 creation. No special flag is needed. The server creates a session automatically when the bot is session-enabled and installed.
+> The `activity` field is **required** to have exactly one message activity, which becomes the first message of the new session.
+> The returned id (`resource.Id` in C#, `resource.id` in TypeScript) is the session-specific conversationId. Use it for all follow-up messages in that session (via `app.Send` / `app.send`).
 
 ## Session control
 
 The following table shows how bot actions map to session behavior:
 
 | Bot action | Result |
-|---|---|
+| --- | --- |
 | Call `POST /v3/conversations` (with activity) | Always creates a new session |
 | Send activity to an existing session's conversationId | Continues that session |
 | Reply to an incoming activity via `turnContext` | Stays in the same session |
 
-- **Create** = `POST /v3/conversations` → always a new session
-- **Continue** = `POST /v3/conversations/{id}/activities` → existing session
+In summary, calling `POST /v3/conversations` always creates a new session, while sending to `POST /v3/conversations/{id}/activities` continues an existing session.
 
 <!--## Notifications and discovery
 
@@ -374,13 +392,13 @@ Deep links that previously opened one-on-one bot chats continue to work after to
 -->
 ## Detect session support through install events
 
-When a user installs or upgrades your bot, Teams sends an `installationUpdate` activity. After the Sessions feature is enabled, Teams includes the app version in the event payload through `channelData.app.version` for all 1:1 thread scopes — regardless of whether the bot opts into sessions.
+When a user installs or upgrades your bot, Teams sends an `installationUpdate` activity. After the Sessions feature is enabled, Teams includes the app version in the event payload through `channelData.app.version` for all 1:1 thread scopes, regardless of whether the bot opts into sessions.
 
-The `channelData.app.version` field is included in **all event types** — messages, invokes, and `installationUpdate` activities. This allows bots to know which version of the app is installed for the user.
+The `channelData.app.version` field is included in **all event types**, including messages, invokes, and `installationUpdate` activities. This allows bots to know which version of the app is installed for the user.
 
 ### conversationId for installationUpdate events
 
-When your bot receives an `installationUpdate` activity in a sessions-enabled thread, the `conversationId` is the **default session ID** — this maps to the very first session in the chat (the "catch-all" session that contains pre-existing messages). If the bot uses this conversationId to send a message back, the message lands in the default session.
+When your bot receives an `installationUpdate` activity in a sessions-enabled thread, the `conversationId` is the **default session ID**. This maps to the very first session in the chat (the catch-all session that contains pre-existing messages). If the bot uses this `conversationId` to send a message back, the message lands in the default session.
 
 ### App version in activities
 
@@ -419,7 +437,7 @@ When a user upgrades the app to a newer version, the bot receives an `installati
 The full set of `installationUpdate` actions:
 
 | Action | When |
-|---|---|
+| --- | --- |
 | `add` | Bot is installed |
 | `remove` | Bot is uninstalled |
 | `upgrade` | App version is upgraded with some property value change |
@@ -434,7 +452,7 @@ The full set of `installationUpdate` actions:
 Error codes that bots may encounter during session operations:
 
 | HTTP Status | Error Code | Description |
-|---|---|---|
+| --- | --- | --- |
 | 400 | `BadArgument` | The 1:1 thread already uses a threading mode that cannot be converted to sessions. |
 | 400 | `BadSyntax` | Missing or empty request body, or null activity. Session creation requires exactly one activity. |
 | 400 | `MissingProperty` | Required fields missing from the request. |
@@ -461,7 +479,7 @@ Create a new session only when it represents a distinct task or workflow that be
 
 ### Use a dedicated session for notifications
 
-If your bot sends updates to users based on activity outside of Teams and unrelated to chat history — such as CI/CD results, service alerts, or external system notifications — route them to a single dedicated notifications session instead of creating a new session for each update. Creating a session per notification floods the sessions panel and makes it difficult for users to find task-specific conversations. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
+If your bot sends updates to users based on activity outside of Teams and unrelated to chat history, such as CI/CD results, service alerts, or external system notifications, route them to a single dedicated notifications session instead of creating a new session for each update. Creating a session per notification floods the sessions panel and makes it difficult for users to find task-specific conversations. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
 
 ### Provide meaningful first messages
 
@@ -476,5 +494,5 @@ Bots should also consider strategies for handling inactive topics and guiding us
 
 ## See also
 
-- [Send proactive messages](bots/how-to/conversations/send-proactive-messages.md)
-- [Bot conversations overview](bots/how-to/conversations/conversation-basics.md)
+- [Send proactive messages](send-proactive-messages.md)
+- [Bot conversations overview](conversation-basics.md)
