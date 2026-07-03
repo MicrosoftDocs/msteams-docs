@@ -205,7 +205,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 > [!NOTE]
 > If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
+<!--
 Response visibility is controlled by the `WithRecipient` configuration and the `isTargeted` property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
+-->
 
 ### Integrate prompt preview in a targeted message
 
@@ -247,9 +249,6 @@ response.add_targeted_message_info(activity.id)
 
 ::: zone-end
 
-<br>
-<details>
-<summary><b>Select to view JSON example</b></summary>
 ```json
 
 "entities": [{
@@ -259,16 +258,9 @@ response.add_targeted_message_info(activity.id)
 
 ```
 
-</details>
-<br>
-
 This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
 
 You can follow Teams SDK samples implementing prompt preview. For more information on implementing prompt preview, see [send a targeted message](#send-a-targeted-message) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
-
-<br>
-<details>
-<summary><b>Select to view REST API example</b></summary>
 
 If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
 
@@ -303,10 +295,6 @@ JSON
 ```
 
 Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
-
-</details>
-
-<br>
 
 ### Update or delete a targeted message
 
