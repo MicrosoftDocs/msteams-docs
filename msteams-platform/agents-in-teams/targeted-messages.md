@@ -62,21 +62,7 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 
 Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
-For more about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
-
-### Response visibility modes
-
-Response visibility is controlled by how the message is addressed and whether it is targeted. Use a targeted private response when the content is user-specific, sensitive, or needs review first; use a normal public response when the message is meant for the whole conversation. A common workflow is private-to-public: the agent sends a private response with Prompt Preview and sharing options, and the user explicitly approves whether the response should be shared publicly.
-
-You can implement the following agent-to-user response flows:
-
-- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
-- _Public response_ mode lets the user share the response to the wider audience.
-- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
-
-You can design a user approval workflow for reposting a private targeted message as a public message. User approval matters in targeted messaging because the agent’s first response is intentionally private. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
-
-[Suggested actions](../bots/how-to/conversations/suggested-actions.md), such as Approve or Reject, can then provide a lightweight way to confirm sharing decisions while preserving the prompt context. See [best practices and design guidance](#best-practices-and-design-guidance).
+For more information about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
 
 ### Prompt preview in targeted messages
 
@@ -129,7 +115,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 ::: zone pivot="typescript"
 
   ```typescript
-          
+
     app.on('message', async ({ send, activity }) => {
       if(activity.Recipient.isTargeted) {
          // Handle message event
@@ -155,7 +141,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 ::: zone pivot="python"
 
 ```python
-      
+
   @app.on_message
   async def handle_message(ctx):
     if getattr(ctx.activity.recipient, "is_targeted", False):

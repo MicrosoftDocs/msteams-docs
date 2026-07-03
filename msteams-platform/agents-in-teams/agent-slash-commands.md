@@ -76,7 +76,7 @@ Targeted messaging and slash commands are configured via the app or agent's [man
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
 
-### Agent slash commands
+### Slash and @mention commands for agents
 
 Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
@@ -141,7 +141,7 @@ Use the following example to configure the app manifest for supporting an agent 
 }
 ```
 
-### Message extension slash commands
+### Slash commands for action-type message extensions
 
 Use the `triggers` property of `composeExtensions[].commands[]` to expose message extensions as slash commands.
 
@@ -180,7 +180,7 @@ Use the `triggers` property of `composeExtensions[].commands[]` to expose messag
 }
 ```
 
-## Implementing agent slash command handling
+## Implementing agent named command handling
 
 Configuring agent slash commands only surfaces them to users in the Teams client, it doesn't assist with their implementation.
 
