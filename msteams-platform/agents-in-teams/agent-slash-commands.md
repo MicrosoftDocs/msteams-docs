@@ -60,7 +60,7 @@ In channels, group chats, and meeting chats, the slash command autocomplete menu
 
 Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
-Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it.
+Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it. To support natural-language prompts, an agent must explicitly opt in. This keeps the behavior intentional.
 
 ### Message extension slash commands
 
@@ -199,6 +199,8 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 Offer slash commands for common actions that users need to access quickly and repeatedly. They're especially useful for actions that should remain private or that provide user-specific results, such as viewing settings, creating follow-up tasks, or checking personal status. Commands work best for actions that users are likely to invoke frequently and benefit from being easy to discover and reuse.
 
 As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
+
+It's recommended to keep the command set small and focused, support natural language prompts to provide a more conversational experience.
 
 Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-starters.md) for longer prompts.
 
