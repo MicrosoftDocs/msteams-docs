@@ -275,7 +275,7 @@ Sessions are an opt-in feature. Two conditions must be met before a session can 
 Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with one message activity creates a new session.
 
 > [!IMPORTANT]
-> When sessions are enabled, `CreateConversation` always creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
+> When sessions are enabled, `Create` always creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
 For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
@@ -353,7 +353,7 @@ The following table shows how bot actions map to session behavior:
 | --- | --- |
 | Call `POST /v3/conversations` (with activity) | Always creates a new session |
 | Send activity to an existing session's conversationId | Continues that session |
-| Reply to an incoming activity via `turnContext` | Stays in the same session |
+| Reply to an incoming activity via `context` | Stays in the same session |
 
 In summary, calling `POST /v3/conversations` always creates a new session, while sending to `POST /v3/conversations/{id}/activities` continues an existing session.
 
