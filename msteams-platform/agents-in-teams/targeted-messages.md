@@ -261,13 +261,20 @@ response.add_targeted_message_info(activity.id)
 
 ::: zone-end
 
+<br>
+<details>
+<summary><b>Select to view JSON example</b></summary>
 ```json
 
 "entities": [{
   "type": "targetedMessageInfo",
   "messageId": "xxxxxxxxxxxxx"
 }]
+
 ```
+
+</details>
+<br>
 
 This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
 
