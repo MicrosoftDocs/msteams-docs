@@ -80,11 +80,11 @@ Clicking on the new session icon starts a new session.​
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/bots/create-new-session-desktop.png" alt-text="Screenshot shows creating a new session button on desktop" lightbox="../../../assets/images/bots/create-new-session.png" border="false":::
+:::image type="content" source="../../../assets/images/bots/create-new-session-desktop.png" alt-text="Screenshot shows creating a new session button on desktop" lightbox="../../../assets/images/bots/create-new-session-desktop.png" border="false":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/create-new-session-mobile.png" alt-text="Screenshot shows creating a new session button on mobile" border="false":::
+:::image type="content" source="../../../assets/images/bots/create-new-session-mobile.png" alt-text="Screenshot shows creating a new session button on mobile" lightbox="../../../assets/images/bots/create-new-session-mobile.png" border="false":::
 
 ---
 
@@ -92,11 +92,11 @@ After a message is sent, the session is created and saved in the sessions panel.
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/bots/sessions-history-desktop.png" alt-text="Screenshot shows the sessions history on desktop" lightbox="../../../assets/images/bots/sessions-panel.png" border="false":::
+:::image type="content" source="../../../assets/images/bots/sessions-history-desktop.png" alt-text="Screenshot shows the sessions history on desktop" lightbox="../../../assets/images/bots/sessions-history-desktop.png" border="false":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/sessions-history-mobile.png" alt-text="Screenshot shows the sessions history on mobile" border="false":::
+:::image type="content" source="../../../assets/images/bots/sessions-history-mobile.png" alt-text="Screenshot shows the sessions history on mobile" lightbox="../../../assets/images/bots/sessions-history-mobile.png" border="false":::
 
 ---
 
