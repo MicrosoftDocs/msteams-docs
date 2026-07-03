@@ -335,7 +335,7 @@ await app.send(sessionConversationId, 'This message is part of the session.');
 
 ::: zone pivot="teams-sdk-python"
 
-<!-- TODO: Add Python code sample once Teams SDK for Python API is confirmed. -->
+[TODO]
 
 ::: zone-end
 
