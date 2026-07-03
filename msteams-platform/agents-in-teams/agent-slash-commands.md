@@ -60,26 +60,7 @@ In channels, group chats, and meeting chats, the slash command autocomplete menu
 
 Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
 
-- **App-defined slash commands**:
-
-    Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as:
-
-  - `/create-task` to turn the current conversation into a tracked task, prefilled with the channel, requester, and due-date details based on context.
-  - `/list-tasks` to list open tasks or action items in the conversation with task details and its owner name.
-  - `/status-check` to retrieve the latest status for a work item, incident, or customer request without leaving the compose box.
-
-- **Natural-language support for slash commands**:
-
-    In this model, the user enters the slash command and, optionally, a natural-language request. The agent response is delivered privately to the user, which makes the pattern well suited for drafting, lookup, summarization, lightweight workflow initiation, and other personal productivity tasks that benefit from staying in the context of the current conversation. For example:
-
-  - `/contoso incident summarize the last 24 hours and suggest next steps`
-  - `/contoso create-task fix login issue for mobile users`
-  - `/contoso draft a customer update from this thread`
-  - `/contoso find the latest rollout plan and highlight open risks`
-
-  Natural-language support is often preferable to relying only on explicit commands for high-confidence, repeatable actions: agents are most valuable when they can understand intent, parameters, and context expressed in natural language, so slash-command design should combine discoverable commands with flexible phrasing that lets users say what they need instead of learning a long command catalog. From a platform perspective, slash commands should support the experience, not define it end to end; use them to surface common actions in a way that’s easy to find and invoke, then let the agent handle natural-language requests, infer missing details when appropriate, and ask brief follow-up questions when something is unclear. Keep the command set small so users don’t need to memorize syntax or choose between nearly identical options.
-
-  To support natural-language prompts, an agent must explicitly opt in. This keeps the behavior intentional. Agents that are designed to interpret free-form requests can enable natural-language prompting and provide a more conversational experience.
+Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it.
 
 ### Message extension slash commands
 
@@ -217,7 +198,7 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 
 Offer slash commands for common actions that users need to access quickly and repeatedly. They're especially useful for actions that should remain private or that provide user-specific results, such as viewing settings, creating follow-up tasks, or checking personal status. Commands work best for actions that users are likely to invoke frequently and benefit from being easy to discover and reuse.
 
-As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [Targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
+As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
 
 Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-starters.md) for longer prompts.
 
