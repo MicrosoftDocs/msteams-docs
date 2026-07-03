@@ -66,7 +66,7 @@ For more information about slash commands, including how to register extra named
 
 ### Prompt preview in targeted messages
 
-Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. Targeted messages appear inline in the conversation but are visible only to the intended recipient. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews.
+Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews.
 
 Prompt preview can appear in both private and public agent responses. The difference is only who can see the reply after it is sent:
 
