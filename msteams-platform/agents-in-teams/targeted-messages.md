@@ -229,6 +229,38 @@ Prompt Preview can be added automatically in _reactive_ scenarios such as when r
 
 To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of the original targeted message, which Teams uses to show the user's original request above the agent response, as shown in this example:
 
+::: zone pivot="typescript"
+
+```typescript
+if (isTargeted) {
+response.addTargetedMessageInfo(targetedMessageId);
+}
+```
+
+::: zone-end
+
+::: zone pivot="csharp"
+
+```csharp
+
+if (isTargeted)
+{
+response.AddTargetedMessageInfo(targetedMessageId);
+}
+```
+
+::: zone-end
+
+::: zone pivot="python"
+
+```python
+
+if is_targeted:
+response.add_targeted_message_info(activity.id)
+```
+
+::: zone-end
+
 ```json
 
 "entities": [{
