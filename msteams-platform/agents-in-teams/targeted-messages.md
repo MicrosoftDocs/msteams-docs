@@ -110,7 +110,7 @@ An agent must opt in via its manifest to be able to receive targeted messages. I
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
-To opt in to receive targeted messages, the `bots` entry in its [app manifest](https://learn.microsoft.com/en-us/microsoft-365/extensibility/schema) of your agent must include a `true` value for the `supportsTargetedMessages` property.
+To opt in to receive targeted messages, the `bots` entry in its [app manifest](/microsoft-365/extensibility/schema/root-bots#supportstargetedmessages) of your agent must include a `true` value for the `supportsTargetedMessages` property.
 
 ```json
 {
