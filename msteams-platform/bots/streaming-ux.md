@@ -85,7 +85,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 3. **Format the final streamed message**:
 
-    Text messages with extended Markdown (using `textFormat: "extendedMarkdown"`) are formatted as they're streamed. Extended Markdown content such as math equations, callouts, fenced blocks, images, and inline Adaptive Cards render progressively at safe boundaries. For standard Adaptive Cards attachments or rich HTML, formatting is applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+    Text messages with extended Markdown (using `textFormat: "extendedmarkdown"`) are formatted as they're streamed. Extended Markdown content such as math equations, callouts, fenced blocks, images, and inline Adaptive Cards render progressively at safe boundaries. For standard Adaptive Cards attachments or rich HTML, formatting is applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
 
     The following example shows the streaming response in an AI-powered bot:
 

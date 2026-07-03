@@ -29,23 +29,23 @@ Microsoft Teams supports the following formatting options:
 | --- | --- |
 | `plain` | The text is treated as raw text with no formatting applied. |
 | `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
-| `extendedMarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
+| `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
 | `xml` | The text is simple XML markup. |
 
-For `markdown`, Teams supports a subset of Markdown formatting. For `extendedMarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
+For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
 
 Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
 ### Enable extended Markdown
 
-To use extended Markdown formatting in bot messages, set the `textFormat` property to `"extendedMarkdown"` in your `Activity` object:
+To use extended Markdown formatting in bot messages, set the `textFormat` property to `"extendedmarkdown"` in your `Activity` object:
 
 # [JSON](#tab/json)
 
 ```json
 {
   "type": "message",
-  "textFormat": "extendedMarkdown",
+  "textFormat": "extendedmarkdown",
   "text": "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending"
 }
 ```
@@ -57,7 +57,7 @@ var activity = new Activity
 {
     Type = ActivityTypes.Message,
     Text = "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
-    TextFormat = "extendedMarkdown"
+    TextFormat = "extendedmarkdown"
 };
 
 await app.SendActivity(conversationId, activity);
@@ -69,7 +69,7 @@ await app.SendActivity(conversationId, activity);
 const activity = {
   type: "message",
   text: "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
-  textFormat: "extendedMarkdown"
+  textFormat: "extendedmarkdown"
 };
 
 await app.sendActivity(conversationId, activity);
@@ -81,7 +81,7 @@ await app.sendActivity(conversationId, activity);
 activity = Activity(
     type=ActivityTypes.message,
     text="### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
-    text_format="extendedMarkdown"
+    text_format="extendedmarkdown"
 )
 
 await app.send_activity(conversation_id, activity)
@@ -93,7 +93,7 @@ The following limitations apply to formatting:
 
 - Text-only messages in `plain` format don't support table formatting.
 - Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- For rich card payload properties, `markdown` and `extendedMarkdown` formatting aren't supported.
+- For rich card payload properties, `markdown` and `extendedmarkdown` formatting aren't supported.
 - Older or unsupported clients can show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
@@ -118,7 +118,7 @@ Some styles aren't supported across all platforms. The following table provides 
 
 ## Extended Markdown features
 
-When using `textFormat: "extendedMarkdown"`, the following features are available in text-only messages:
+When using `textFormat: "extendedmarkdown"`, the following features are available in text-only messages:
 
 | Feature | Syntax | Description |
 | --- | --- | --- |
