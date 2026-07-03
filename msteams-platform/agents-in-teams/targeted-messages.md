@@ -43,9 +43,6 @@ Targeted messages:
 
 - Can be used only for one-to-one interactions between an agent and a user in channels, group chats, and meeting chats.
 - Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
-
-    A targeted message can contain normal message content, but Teams doesn't let that targeted message participate in the usual social or threading actions that might expose it more broadly. Targeted messages are private, temporary, and visible to a single user only in a shared conversation, so features that create secondary visible artifacts, shared thread context, or message redistribution are intentionally disabled. The default agent response to a slash command is targeted message, and then on approval to resend it as a public message rather than trying to reply to, react to, or forward the targeted one.
-
 - Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [best practices and design guidance](#best-practices-and-design-guidance).
 - Expire 24 hours after being sent. When a targeted message expires, Teams deletes it from all clients, although it might be retained in secure storage based on organizational policy.
 - Aren't visible to untargeted users, even if they're using an older version of the Teams client that doesn't support targeted messages.
@@ -63,6 +60,22 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
 For more information about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
+
+You can implement the following agent-to-user response flows:
+
+- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
+- _Public response_ mode lets the user share the response to the wider audience.
+- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
+
+User approval is an important safeguard in targeted messaging workflows. Because an agent’s initial response may contain user-specific information, the user should explicitly confirm before the content is published to a shared conversation. Prompt Preview supports this decision by allowing users to review the proposed response in the context of their original request before choosing whether to share it.
+
+The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
+
+1. Receive the user’s request as a targeted message.
+1. Send the agent's response privately.
+1. Add prompt preview to preserve context.
+1. Use Adaptive Cards or suggested actions for user approval.
+1. Repost the agent response publicly only after the user approves sharing.
 
 ### Prompt preview in targeted messages
 
@@ -83,8 +96,6 @@ The agent sends a public resply to the user's request that includes the prompt p
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
 ---
-
-Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), Prompt Preview is purpose-built for targeted response workflows. Quoted replies point readers back to an earlier message in a thread, while Prompt Preview preserves the private prompt-response context and supports approval-based sharing from private to public.
 
 ## Implement targeted messages
 
@@ -205,6 +216,42 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 > [!NOTE]
 > If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
+#### Send replies using REST APIs
+
+If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
+
+```HTTP
+POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Content-Type: application/json
+Show more lines
+JSON
+{
+"type": "message",
+"from": {
+"id": "28:c9e...",
+"name": "Contoso"
+},
+"conversation": {
+"id": "x:17I0...",
+"name": "Convo1"
+},
+"recipient": {
+"id": "29:1XJ...",
+"name": "Megan Bowen"
+},
+"text": "My bot's reply",
+"entities": [
+{
+"type": "targetedMessageInfo",
+"messageId": "1772129782775"
+}
+]
+}
+```
+
+Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
+
 <!--
 Response visibility is controlled by the `WithRecipient` configuration and the `isTargeted` property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
 -->
@@ -260,42 +307,6 @@ response.add_targeted_message_info(activity.id)
 
 This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
 
-You can follow Teams SDK samples implementing prompt preview. For more information on implementing prompt preview, see [send a targeted message](#send-a-targeted-message) and [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
-
-If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
-
-```HTTP
-POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-Authorization: Bearer eyJhbGciOiJIUzI1Ni...
-Content-Type: application/json
-Show more lines
-JSON
-{
-"type": "message",
-"from": {
-"id": "28:c9e...",
-"name": "Contoso"
-},
-"conversation": {
-"id": "x:17I0...",
-"name": "Convo1"
-},
-"recipient": {
-"id": "29:1XJ...",
-"name": "Megan Bowen"
-},
-"text": "My bot's reply",
-"entities": [
-{
-"type": "targetedMessageInfo",
-"messageId": "1772129782775"
-}
-]
-}
-```
-
-Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
-
 ### Update or delete a targeted message
 
 Targeted messages can be updated and deleted in the same way as standard messages, with the following limitations:
@@ -316,16 +327,6 @@ When designing agent interactions for group conversations, choosing between publ
 - A targeted request to an agent should result in a targeted response, unless the user or the situation explicitly calls for a public response.
 - Public messages should be used in situations that are purely informational and don't require user-specific context. They should benefit the entire group and shouldn't contain any private information.
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
-- User approval is an important safeguard in targeted messaging workflows. Because an agent’s initial response may contain user-specific information, the user should explicitly confirm before the content is published to a shared conversation. Prompt Preview supports this decision by allowing users to review the proposed response in the context of their original request before choosing whether to share it.
-
-  The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
-
-  1. Receive the user’s request as a targeted message.
-  1. Send the agent's response privately.
-  1. Add prompt preview to preserve context.
-  1. Use Adaptive Cards or suggested actions for user approval.
-  1. Repost the agent response publicly only after the user approves sharing.
-
 - Use Prompt Preview whenever an agent responds to a targeted user request. Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), this helps users understand the relationship between their original prompt and the agent’s response without requiring them to locate the earlier message.
 
     | Prompt preview | Quoted replies |
