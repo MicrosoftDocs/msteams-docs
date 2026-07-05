@@ -186,12 +186,12 @@ Offer slash commands for common actions that users need to access quickly and re
 
 As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [Targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
 
-Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) for longer prompts.
+Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-starters.md) for longer prompts.
 
 Provide clear command descriptions to improve discoverability, including any expected input beyond the command name.
 
 ## Related content
 
 - [Send and receive targeted messages in group conversations](targeted-messages.md)
-- [Prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters)
+- [Prompt starters](../bots/how-to/conversations/prompt-starters.md)
 - [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
