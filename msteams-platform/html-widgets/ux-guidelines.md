@@ -522,6 +522,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 </tr>
 <tr>
 <td>
+
 - Keep widgets lightweight and action-oriented
 - Support up to two primary actions
 - Use the expanded surface for deep navigation or multi-step workflows
@@ -529,8 +530,10 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Show loading indicators, success confirmations, and error states with recovery options
 - Allow text to wrap by default
 - Use outcome-oriented action labels such as "Reserve now" or "Approve request"
+
 </td>
 <td>
+
 - Don't embed a full application experience inside a widget
 - Don't recreate Teams chat capabilities such as prompt input or retry controls
 - Don't use multiple tabs or nested navigation — use separate messages or the expanded surface instead
@@ -538,9 +541,13 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Don't make widgets taller than the viewport
 - Don't repeat the same information in both the widget and the agent's body text
 - Don't use generic action labels like "Submit" or "OK"
+
 </td>
 </tr>
 </table>
+
+
+
 
 ---
 
