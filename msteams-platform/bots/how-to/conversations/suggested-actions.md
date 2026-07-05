@@ -9,45 +9,30 @@ ms.date: 6/26/2026
 
 # Dynamically guide users with suggested actions
 
-Suggested actions are buttons that agents can present to users in chat to provide them with quick, context-sensitive options for responding, confirming, or taking action.
+Suggested actions are buttons that agents can present to users in chat to provide them with quick, context-sensitive options for responding, confirming, taking action, or making additional requests. Agents can dynamically generate suggested actions with each message they send, providing users with actions that fit the context of the conversation.
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
-Unlike prompt starters, suggested actions can be dynamically generated for each message an agent sends, enabling it to provide actions that fit the context of the conversation.
-
-Suggested actions can be dynamically generated Suggested actions can be generated and placed dynamically during a conversation, meaning that you can use your bot’s large language model (LLM) to generate them along with a response during a conversation turn.
-
 ## User experience
 
-Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your agent or bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. You can build the following suggested actions in your agent or bot:
-
-> [!IMPORTANT]
-> The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
-
-When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
-
-- `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
-- `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
-
-# [Personal chat](#tab/pc)
+Suggested actions are supported in all conversation types. In one-on-one conversations, suggested action buttons sent with a message are displayed above the compose box, and are removed after the user selects an option.
 
 :::image type="content" source="~/assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-personal-chat.png":::
 
-# [Group chat](#tab/gc)
+:::image type="content" source="../../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a personal chat in a mobile client." lightbox="../../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
+
+In group chats and channels, the buttons are displayed below the bot message and remain available until replaced or removed by the bot.
 
 :::image type="content" source="~/assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-gc.png":::
 
-# [Channel](#tab/channel)
-
 :::image type="content" source="~/assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-channel.png":::
 
----
-
-> [!NOTE]
->
-> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-
 ## Implement suggested actions
+
+TODO limitations:
+
+- Suggested actions aren't supported for chat bots with attachments for any conversation type. (TODO does this mean you can't send them with attachments?)
+- Max 3 per message
 
 Suggested actions are based on [card action types](../../../task-modules-and-cards/cards/cards-actions.md).
 
