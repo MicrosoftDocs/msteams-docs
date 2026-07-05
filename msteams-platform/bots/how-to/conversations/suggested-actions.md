@@ -9,25 +9,27 @@ ms.date: 6/26/2026
 
 # Dynamically guide users with suggested actions
 
-Suggested actions are buttons that agents can present to users in chat to provide them with quick, context-sensitive options for responding, confirming, taking action, or making additional requests. Agents can dynamically generate suggested actions with each message they send, providing users with actions that fit the context of the conversation.
+Suggested actions are buttons that agents can dynamically present in chat to help users quickly respond or take action.
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
+Suggested actions are useful for guiding users through multi-step workflows and surfacing agent functionality in chat. Agents can dynamically generate up to three suggested actions for each chat message they send, providing users with actions that fit the context of the conversation.
+
 ## User experience
 
-Suggested actions are supported in all conversation types. In one-on-one conversations, suggested action buttons sent with a message are displayed above the compose box, and are removed after the user selects an option.
+Suggested actions are supported in all conversation types. In one-on-one conversations, suggested action buttons are displayed above the compose box and persist until the user selects one or the agent replaces them with a new set of suggested actions.
 
 :::image type="content" source="~/assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-personal-chat.png":::
 
-:::image type="content" source="../../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a personal chat in a mobile client." lightbox="../../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
-
-In group chats and channels, the buttons are displayed below the bot message and remain available until replaced or removed by the bot.
+In group chats and channels, suggested action buttons are displayed with they message they are attached to, and remain available until replaced or removed by the bot. TODO what does this mean?
 
 :::image type="content" source="~/assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-gc.png":::
 
 :::image type="content" source="~/assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-channel.png":::
 
 ## Implement suggested actions
+
+EVERYTHING BELOW HERE IS TODO
 
 TODO limitations:
 
