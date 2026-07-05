@@ -19,6 +19,9 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
+  - name: Message streaming and thinking indicators
+    href: bots/streaming-ux.md
+    displayName: Emit, update, stop, smooth, real time, chunk, responsive, 
   - name: Use emoji reactions
     href: agents-in-teams/agent-reactions.md
     displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
@@ -539,10 +542,7 @@
       href: bots/build-a-bot.md
       displayName: Bot samples, Code sample, Teams AI library, Teams SDK, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
     - name: Bot user experience
-      items:   
-      - name: Stream bot messages
-        href: bots/streaming-ux.md
-        displayName: Streaming, response generation, AI library, AI SDK, REST API
+      items:
       - name: Enhance AI-generated bot messages
         href: bots/how-to/bot-messages-ai-generated-content.md
         displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
