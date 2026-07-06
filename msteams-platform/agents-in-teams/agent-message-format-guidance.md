@@ -9,7 +9,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 | Adaptive Card | Actionable content, approvals, forms, structured data | Medium – High |
 | Widget / MCP-UI | Rich, live, stateful experiences with custom UI | High |
 
----
+
 
 ## Key Principles
 
@@ -19,7 +19,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 4. **Match the surface.** Mobile Teams has limited widget support. Adaptive Cards are the safest cross-surface choice for interactive content.
 5. **Avoid format mixing in a single turn.** A markdown block followed by a card in the same message creates visual noise. Pick one.
 
----
+
 
 ## Format Profiles
 
@@ -78,13 +78,10 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 **Avoid when:** The experience fits in a card (use Adaptive Cards instead), or the UI is too rich to belong in a Teams message at all — a full analytics suite, an interactive CAD viewer, or any app-scale UI should live on the web and be linked to, not embedded. Widgets occupy the middle ground: richer than a card, scoped enough to feel native, but they do not replace the rich experience of a full app. Widgets have higher latency, require extra infrastructure, and have limited support on mobile / classic Teams. Default to Adaptive Cards; escalate to Widget only when cards hit a hard ceiling.
 
----
-
-## Decision Tree: Which Format Should I Use?
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-message-format-decision-tree-wide-v2.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
 
----
+
 
 ## Quick-Reference Cheat Sheet
 
