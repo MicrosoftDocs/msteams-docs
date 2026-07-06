@@ -13,9 +13,9 @@
   items:
   - name: Agents in Teams
     href: agents-in-teams/overview.md
-  - name: Build your first agent
-    href: agents-in-teams/build-first-agent.md
-    displayName: create, run, first agent, Teams AI library, Teams SDK, custom engine agent, AI bot, JavaScript, Python, C#, code sample
+  - name: "Quickstart: Create an agent with Teams SDK"
+    href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+    displayName: TODO
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
@@ -55,6 +55,8 @@
       - name: Agents Toolkit overview
         href: toolkit/agents-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
+      - name: Create a Teams agent with Agents Toolkit
+        href: agents-in-teams/build-agent-toolkit.md
       - name: Install Agents Toolkit
         href: toolkit/install-agents-toolkit.md
         displayName: download

@@ -1,10 +1,29 @@
 ---
-title: Create your first agent
+title: "Quickstart: Create an agent with Teams SDK"
 description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
-ms.localizationpriority: high
-ms.date: 12/11/2024
-ms.topic: reference
+ms.date: 07/06/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
+ms.topic: quickstart
+zone_pivot_groups: teams-sdk-languages
 ---
+
+<!--
+
+::: zone pivot="teams-sdk-typescript"
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+::: zone-end
+
+-->
 
 # Build your first agent
 
