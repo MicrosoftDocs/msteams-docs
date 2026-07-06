@@ -82,7 +82,7 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 ## Decision Tree: Which Format Should I Use?
 
-<TBD: to add an image>
+:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-decision-tree-wide-v2.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
 
 ---
 
