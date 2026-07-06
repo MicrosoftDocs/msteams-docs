@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 07/02/2026
+ms.date: 07/06/2026
 ---
 # Teams Store validation guidelines
 
@@ -198,7 +198,7 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.:::
+   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
 
 ### Suitable for workplace consumption
 
@@ -583,7 +583,7 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.jpg" alt-text="Graphic shows an example of comparative marketing information in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparative-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
 * Hyperlink contact details, get started, help, or sign up in app description. [*Good-to-fix*]
 
