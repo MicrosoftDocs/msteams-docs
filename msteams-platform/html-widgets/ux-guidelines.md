@@ -506,6 +506,10 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Detailed data tables or comparison views
 - Iterative workflows with persistent state
 
+<img src="images/expanded_surface.png" alt="Example of expanded card surface">
+
+
+
 ### Interaction guidelines
 
 - **Use expansion intentionally** — not every widget needs an expanded view. Reserve it for content that genuinely benefits from more space
@@ -542,7 +546,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Don't hardcode colors — use Fluent 2 tokens or CSS variables
 - Don't make widgets taller than the viewport
 - Don't repeat the same information in both the widget and the agent's body text
-- Don't use generic action labels like "Submit" or "OK"
+- Avoid vague action labels like "OK" or "Click here" — use outcome-oriented labels where possible
 
 </td>
 </tr>
