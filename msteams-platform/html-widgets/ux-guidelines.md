@@ -518,17 +518,13 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - **Scope to one task** — the expanded surface should support a single coherent workflow
 - **Preserve context** — the chat remains visible when the expanded surface is open. Design the expanded content to work alongside the conversation
 
----
+
+
 
 ## Best practices
 
-<table>
-<tr>
-<th align="left">✅ Do</th>
-<th align="left">❌ Don't</th>
-</tr>
-<tr>
-<td>
+
+### ✅ Do
 
 - Keep widgets lightweight and action-oriented
 - Support up to two primary actions
@@ -538,8 +534,9 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Allow text to wrap by default
 - Use outcome-oriented action labels such as "Reserve now" or "Approve request"
 
-</td>
-<td>
+
+
+### ❌ Don't
 
 - Don't embed a full application experience inside a widget
 - Don't recreate Teams chat capabilities such as prompt input or retry controls
@@ -549,14 +546,8 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Don't repeat the same information in both the widget and the agent's body text
 - Avoid vague action labels like "OK" or "Click here" — use outcome-oriented labels where possible
 
-</td>
-</tr>
-</table>
 
 
-
-
----
 
 ## Nice to have
 
