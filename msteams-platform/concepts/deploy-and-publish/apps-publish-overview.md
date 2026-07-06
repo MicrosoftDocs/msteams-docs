@@ -33,11 +33,7 @@ For more information, see [upload your app in Teams](apps-upload.md).
 
 ## Publish to your org
 
-Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
-
-Teams apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant.
-
-Meeting bots are also subject to the meeting options configured by the organizer, including lobby behavior and participant admission settings. Bot join behavior in meetings follows Teams meeting policy and organizer configuration rather than app manifest settings alone.
+Make your app available to people in your org. This kind of distribution requires your Teams admin's approval. Teams apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant.
 
 For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
