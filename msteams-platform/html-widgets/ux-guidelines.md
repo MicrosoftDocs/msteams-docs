@@ -441,11 +441,8 @@ Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than c
 
 <img src="images/icons.png" alt="Fluent 2 iconography examples">
 
-
-
 <img src="images/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
 
-<br>
 
 
 ### Actions
