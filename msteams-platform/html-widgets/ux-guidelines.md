@@ -491,7 +491,9 @@ If your widget includes a form or input fields:
 - Validate input inline and surface error messages adjacent to the relevant field
 - Keep forms short — if a form requires more than four or five fields, consider moving it to the expanded surface
 
----
+<img src="images/input_examples.png" alt="Examples forms and inputs">
+
+
 
 ## Expanded surface
 
