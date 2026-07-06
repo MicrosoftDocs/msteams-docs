@@ -460,9 +460,8 @@ Actions allow users to take the next step without leaving the conversation.
 > [!TIP]
 > If you are building with React, [Fluent 2 button components](https://fluent2.microsoft.design/components/web/react/core/button/usage) implement the correct Teams-aligned button styles and states out of the box.
 
-[Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
 
-
+<img src="images/icon-button.png" alt="Button icon" width="20"> [Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
 
 ### Content and layout
 
