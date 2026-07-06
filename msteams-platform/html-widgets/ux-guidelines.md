@@ -551,7 +551,29 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Don't repeat the same information in both the widget and the agent's body text
 - Avoid vague action labels like "OK" or "Click here" — use outcome-oriented labels where possible
 
+## Best practices
 
+:::row:::
+  :::column:::
+    ### ✅ Do
+    - Keep widgets lightweight and action-oriented
+    - Support up to two primary actions
+    - Use the expanded surface for deep navigation or multi-step workflows
+    - Use [Fluent 2](https://fluent2.microsoft.design/) components, spacing, typography, and tokens
+    - Show loading indicators, success confirmations, and error states with recovery options
+    - Allow text to wrap by default
+    - Use outcome-oriented action labels such as "Reserve now" or "Approve request"
+  :::column-end:::
+  :::column:::
+    ### ❌ Don't
+    - Don't embed a full application experience inside a widget
+    - Don't recreate Teams chat capabilities such as prompt input or retry controls
+    - Don't hardcode colors — use Fluent 2 tokens or CSS variables
+    - Don't make widgets taller than the viewport
+    - Don't repeat the same information in both the widget and the agent's body text
+    - Avoid vague action labels like "OK" or "Click here" — use outcome-oriented labels where possible
+  :::column-end:::
+:::row-end:::
 
 
 ## Nice to have
