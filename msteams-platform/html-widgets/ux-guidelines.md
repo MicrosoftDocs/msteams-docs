@@ -452,7 +452,7 @@ Actions allow users to take the next step without leaving the conversation.
 
 - **Limit to two primary actions** — use a primary button for the most important action and a secondary button for an alternative
 - **Use overflow for additional actions** — place additional actions in an overflow menu (`•••`) rather than adding more buttons
-- **Label actions clearly** — use outcome-oriented labels such as "Reserve now" rather than "Submit" or "OK"
+- **Label actions clearly** — Use outcome-oriented labels such as "Reserve now" or "Approve" rather than vague labels like "OK"
 - **Disable, don't hide** — if an action is not available in the current state, disable the control rather than hiding it
 
 > [!TIP]
