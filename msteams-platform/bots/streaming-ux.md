@@ -413,7 +413,7 @@ TODO work this into prose, not an error table.
 
 ## Best practices and design guidances
 
-TODO Streaming should be the default behavior; use thinking indicators to give reasoning insight
+TODO Streaming is a basic user expectation of agent interfaces. It should be your default behavior; use thinking indicators to give reasoning insight
 
 ## Code samples
 
