@@ -1,11 +1,5 @@
 # Teams Agent Message Format Design Guidance
 
-*How to choose the right message format for your agent experience*
-
----
-
-## 1 | Overview
-
 Teams agents can respond using four message formats. Choosing the right format optimizes user experience by preventing cognitive overload, missed actions, or broken experiences. This guide helps you pick the right format based on what you're communicating and what the user needs to do.
 
 | Format | Best For | Complexity of Implementation |
@@ -17,7 +11,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 ---
 
-## 2 | Key Principles
+## Key Principles
 
 1. **Default to the simplest format that meets the need.** Plain Text → Markdown → Adaptive Card → Widget. Don't over-engineer.
 2. **Cards are for action, not decoration.** If there's no button, a card is probably overkill.
@@ -27,9 +21,9 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 ---
 
-## 3 | Format Profiles
+## Format Profiles
 
-### 3.1 Plain Text
+### Plain Text
 
 Use when the response is conversational, brief, or a single-sentence fact. Plain text feels like chatting, loads instantly, and requires zero rendering overhead.
 
@@ -42,9 +36,8 @@ Use when the response is conversational, brief, or a single-sentence fact. Plain
 
 **Avoid when:** Content has lists, tables, code, or anything the user needs to scan rather than read linearly.
 
----
 
-### 3.2 Markdown
+### Markdown
 
 Use when you need lightweight structure — headers, bullets, bold, inline code — but no interactivity. Markdown renders natively in Teams chat and channel posts.
 
@@ -57,9 +50,8 @@ Use when you need lightweight structure — headers, bullets, bold, inline code 
 
 **Avoid when:** Content has more than ~3 data columns, or when the user must take an action (click, approve, fill a field).
 
----
 
-### 3.3 Adaptive Card
+### Adaptive Card
 
 Use when structure meets interaction — approvals, form inputs, rich data tables, status dashboards, or any scenario where the user must act on the content.
 
@@ -72,9 +64,8 @@ Use when structure meets interaction — approvals, form inputs, rich data table
 
 **Avoid when:** Content is purely informational (use Markdown); or data is live and needs real-time refresh (use Widget).
 
----
 
-### 3.4 Widget / MCP-UI
+### Widget / MCP-UI
 
 Use for rich, stateful, interactive experiences beyond what a card can offer — embedded charts, live data, multi-step flows, or custom UI. Widgets render as a pane, not inline in chat.
 
@@ -89,35 +80,13 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 ---
 
-## 4 | Decision Tree: Which Format Should I Use?
+## Decision Tree: Which Format Should I Use?
 
-**START — What does your agent need to communicate?**
-
-**Step 1** — Does the user need to **TAKE AN ACTION** (click, approve, fill a form, make a choice)?
-
-- **YES →** Go to Step 2
-- **NO →** Go to Step 3
-
-**Step 2** — Does the action require a **MULTI-STEP FLOW, LIVE DATA, or CUSTOM UI** beyond buttons and forms?
-
-- **YES → USE: Widget / MCP-UI**
-- **NO → USE: Adaptive Card**
-
-**Step 3** — Is the content purely conversational or a single-sentence fact (≤2 lines, no structure)?
-
-- **YES → USE: Plain Text**
-- **NO →** Go to Step 4
-
-**Step 4** — Does the content have structure (headers, bullets, numbered steps, code blocks)?
-
-- **YES →** Does it have **MORE THAN 3 DATA COLUMNS** or require a user action?
-  - **YES → USE: Adaptive Card**
-  - **NO → USE: Markdown**
-- **NO → USE: Plain Text** *(unstructured content, default register)*
+<TBD: to add an image>
 
 ---
 
-## 5 | Quick-Reference Cheat Sheet
+## Quick-Reference Cheat Sheet
 
 | Signal in Your Scenario | Recommended Format |
 |---|---|
