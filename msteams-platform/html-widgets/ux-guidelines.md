@@ -478,9 +478,10 @@ Actions allow users to take the next step without leaving the conversation.
 
 Not all information needs to be visible at once. Use progressive disclosure to keep widgets concise while allowing users to access more detail when needed.
 
-- Use show/hide toggles for secondary or supporting information
+- Use show/hide toggles to reveal secondary or supporting information inline — such as expanding a summary row to show full details, or revealing additional fields on demand
 - Use scrolling within a defined container for longer content lists — ensure the container has a clear label and is keyboard accessible
 - Transition to the expanded surface for content that requires significant vertical space or multi-step interaction
+
 
 <img src="images/progressiveDisclosure.png" alt="Examples of progressive disclosure in widgets">
 
