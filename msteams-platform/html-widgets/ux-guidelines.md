@@ -113,7 +113,10 @@ Keep in mind:
 
 
 > [!TIP]
-> If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](#) for Copilot-specific guidance.
+> If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
+
+
+
 
 
 ## Widget anatomy
