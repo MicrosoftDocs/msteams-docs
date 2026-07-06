@@ -482,6 +482,9 @@ Not all information needs to be visible at once. Use progressive disclosure to k
 - Use scrolling within a defined container for longer content lists — ensure the container has a clear label and is keyboard accessible
 - Transition to the expanded surface for content that requires significant vertical space or multi-step interaction
 
+<img src="images/progressiveDisclosure.png" alt="Examples of progressive disclosure in widgets">
+
+
 ### Input gathering
 
 If your widget includes a form or input fields:
