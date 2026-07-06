@@ -682,7 +682,7 @@ The long description must provide an engaging narrative that highlights your app
 
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.jpg" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-offering-from-microsoft.png" alt-text="Graphic shows an example of how not to indicate Microsoft offering in app description.":::
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-description-no-offering-indication-from-microsoft.jpg" alt-text="Graphic that shows an example of how to write app description without using microsoft slogans and taglines.":::
 
