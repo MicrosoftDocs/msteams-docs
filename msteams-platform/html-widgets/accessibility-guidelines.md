@@ -212,9 +212,9 @@ Don't rely on color alone to convey meaning. Use text, icons, patterns, or other
 
 Widgets must adapt to the chat container and remain usable at different zoom levels and viewport sizes.
 
-- **Zoom support:** Support at least 200% browser zoom without loss of content or functionality
-- **Flexible layout:** Avoid fixed pixel heights — allow the widget to grow vertically as needed so content isn't clipped
-- **No horizontal scrolling:** Layout should adapt to the narrow widths typical of chat containers
+- **Zoom support:** Text and interactive controls must remain readable and operable at 200% browser zoom. Fixed-aspect content — such as data visualizations, embedded media, maps, or canvas-based rendering — is exempt where zoom would inherently distort the experience. In these cases, ensure the content remains accessible through alternative means such as descriptive alt text, data tables, or captions.
+- **Flexible layout:** Avoid fixed pixel heights — allow the widget to grow vertically as needed so content isn't clipped.
+- **No horizontal scrolling:** Layout should adapt to the narrow widths typical of chat containers.
 
   
 
@@ -278,7 +278,7 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 | ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
 | ✅ Remains usable in Windows High Contrast Mode |
 | ✅ Provides accessible error handling and loading states for content inside the widget |
-| ✅ Supports at least 200% zoom without loss of content or functionality |
+| ✅ Text and interactive controls remain readable and operable at 200% browser zoom (exceptions apply for fixed-aspect content such as charts, maps, and media) |
 | ✅ Respects `prefers-reduced-motion` and avoids harmful flashing |
 | ✅ Adapts to the chat container without requiring horizontal scrolling |
 
