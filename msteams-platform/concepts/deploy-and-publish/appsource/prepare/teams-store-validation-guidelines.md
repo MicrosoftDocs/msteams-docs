@@ -1308,7 +1308,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 <!--
   * Don't send multiple messages in quick succession. [*Must fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
   * Send one message with complete information. [*Must fix*]-->
 
