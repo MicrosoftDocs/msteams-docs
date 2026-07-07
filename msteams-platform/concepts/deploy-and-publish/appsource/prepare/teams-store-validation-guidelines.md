@@ -1191,6 +1191,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
 
+* Ensure that bot commands are consistent –
+
+  * Within each scope (personal/ groupChat/ team/ copilot) and make sure that `commandList.type` values are consistent.
+  * The `prompt`, `description`, and `title` for each bot command should be consistent and coherent with one another.
+
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
@@ -1538,7 +1543,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * Your app must offer value beyond providing only custom Together Mode scenes in Teams. [*Must fix*]
 
-* You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the app manifest to enable your app for meetings on Teams mobile. [*Must fix*]
+* Apps targeting in meeting experiences must either declare `meetingSidePanel`,or use APIs to enable meeting-stage sharing and include `groupChat` under `configurableTabs`, `meetingDetailsTab`, and `meetingChatTab`.
 
 * Meeting and calling canvases mustn't dead-end an attendee. Meeting and calling canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
 
