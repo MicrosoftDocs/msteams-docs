@@ -71,7 +71,7 @@ You can implement the following agent-to-user response flows:
 
 Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews.
 
-Prompt preview can appear in both private and public agent responses. The difference is only who can see the reply after it is sent:
+Prompt preview can appear in both private and public agent responses:
 
 # [Private agent-to-user response](#tab/private)
 
@@ -84,6 +84,9 @@ The agent replies privately to the user's targeted message, so only the intended
 The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
+
+> [!NOTE]
+> When an agent re-shares a private response publicly, the prompt preview shows the original targeted message above the agent response.
 
 ---
 
@@ -306,11 +309,11 @@ Targeted messages can be updated and deleted in the same way as standard message
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
-## Approval Workflow Using Suggested Actions
+## Approval Workflow Using suggested actions
 
 User approval is a key safeguard in targeted messaging workflows. Since an agent’s response may contain user-specific information, explicit user consent is required before sharing it in a public conversation.
 
-The agent can respond privately, with a suggested action requesting the user's approval to share its response. When the user approves, the agent resends the message publicly. The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or suggested actions. Here's a recommended user approval workflow:
+The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly. The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or suggested actions. Here's a recommended user approval workflow:
 
 1. Receive the user’s targeted request.
 1. Send the agent’s response privately, including a prompt preview for context.
