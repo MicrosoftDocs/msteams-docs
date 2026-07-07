@@ -62,7 +62,7 @@ Invoking a command from the menu switches the compose box to targeted messaging 
 
 Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it. To support natural-language prompts, an agent must explicitly opt in. This keeps the behavior intentional.
 
-### Message extension slash commands
+### Slash commands for action-type message extensions
 
 Apps that implement action-type [message extensions](../messaging-extensions/what-are-messaging-extensions.md) can surface them as slash commands. When a user activates one from the autocomplete menu, Teams immediately opens the associated task module or dialog. Activating a message extension slash command only opens the task module or dialog, and doesn't send a message. Search-type message extensions can't be exposed as commands.
 
