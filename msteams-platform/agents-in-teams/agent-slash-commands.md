@@ -180,6 +180,8 @@ Use the `triggers` property of `composeExtensions[].commands[]` to expose messag
 }
 ```
 
+This example shows that the `summarizeCommand` command is available only within command box, while `draftCommand` and `reviewCommand` are available both as slash command in the compose box and in the command box.
+
 ## Implementing agent named command handling
 
 Configuring agent slash commands only surfaces them to users in the Teams client, it doesn't assist with their implementation.
