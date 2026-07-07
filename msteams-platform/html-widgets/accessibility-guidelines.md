@@ -178,7 +178,7 @@ Text and essential icons must meet [WCAG 2.2 AA contrast ratios](https://www.w3.
 
 **High contrast mode**
 
-Ensure that interactive elements, focus indicators, and key icons remain visible and understandable when the user enables Windows High Contrast Mode.
+Test your widget in Windows High Contrast Mode and ensure that interactive elements, focus indicators, and key icons remain visible and understandable. While not required at submission, High Contrast support is strongly recommended to ensure your widget is usable by people who rely on this accessibility setting.
 
 **Color independence**
 
