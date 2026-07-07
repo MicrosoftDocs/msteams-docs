@@ -59,23 +59,13 @@ When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an aut
 
 Activating an agent's targeted message command switches the compose box to targeted message mode. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
 
-For more information about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [Expose slash commands from agents and apps](agent-slash-commands.md).
+For more information about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [expose slash commands from agents and apps](agent-slash-commands.md).
 
 You can implement the following agent-to-user response flows:
 
 - _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
 - _Public response_ mode lets the user share the response to the wider audience.
-- _Private-to-public response flow_ lets the user approve a private response to be shared publicly.
-
-User approval is an important safeguard in targeted messaging workflows. Because an agent’s initial response may contain user-specific information, the user should explicitly confirm before the content is published to a shared conversation. Prompt Preview supports this decision by allowing users to review the proposed response in the context of their original request before choosing whether to share it.
-
-The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or [suggested actions](../bots/how-to/conversations/suggested-actions.md). Recommended actions include Approve, Reject, Share, and Update. Here's a recommended user approval workflow:
-
-1. Receive the user’s request as a targeted message.
-1. Send the agent's response privately.
-1. Add prompt preview to preserve context.
-1. Use Adaptive Cards or suggested actions for user approval.
-1. Repost the agent response publicly only after the user approves sharing.
+- _Private-to-public response flow_ enables [user approval for a private response](#approval-workflow-using-suggested-actions) to be shared publicly.
 
 ### Prompt preview in targeted messages
 
@@ -315,6 +305,19 @@ Targeted messages can be updated and deleted in the same way as standard message
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message results in an error.
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+
+## Approval Workflow Using Suggested Actions
+
+User approval is a key safeguard in targeted messaging workflows. Since an agent’s response may contain user-specific information, explicit user consent is required before sharing it in a public conversation.
+
+The agent can respond privately, with a suggested action requesting the user's approval to share its response. When the user approves, the agent resends the message publicly. The approval experience can be implemented through interactive review surfaces such as Adaptive Cards or suggested actions. Here's a recommended user approval workflow:
+
+1. Receive the user’s targeted request.
+1. Send the agent’s response privately, including a prompt preview for context.
+1. Present approval options using Suggested Actions or an Adaptive Card.
+1. Publish the response to the conversation only after the user approves sharing.
+
+Recommended actions can include Approve, Reject, Share, and Update.
 
 ## Best practices and design guidance
 
