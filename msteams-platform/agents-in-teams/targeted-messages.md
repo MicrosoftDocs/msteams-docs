@@ -57,11 +57,11 @@ You can implement the following agent-to-user response flows:
 - _Public response_ mode lets the user share the response to the wider audience.
 - _Private-to-public response flow_ enables [user approval for a private response](#approval-workflow-using-suggested-actions) to be shared publicly.
 
-### Prompt preview in targeted messages
+### Prompt Preview in targeted messages
 
 Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews.
 
-Prompt preview can appear in both private and public agent responses:
+Prompt Preview can appear in both private and public agent responses:
 
 # [Private agent-to-user response](#tab/private)
 
@@ -71,7 +71,7 @@ The agent replies privately to the user's targeted message, so only the intended
 
 # [Public agent-to-user response](#tab/public)
 
-The agent sends a public resply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
+The agent sends a public reply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
   :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
@@ -82,7 +82,7 @@ The agent sends a public resply to the user's request that includes the prompt p
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a Boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
 
 ### Receive targeted messages
 
@@ -90,7 +90,7 @@ An agent must opt in via its manifest to be able to receive targeted messages. I
 
 Agents that opt in to receive targeted messages should always check the visibility of messages they receive and take it into consideration when generating responses and tracking the context of a conversation. For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
-To opt in to receive targeted messages, the `bots` entry in its [app manifest](/microsoft-365/extensibility/schema/root-bots#supportstargetedmessages) of your agent must include a `true` value for the `supportsTargetedMessages` property.
+To opt in to receive targeted messages, set `supportsTargetedMessages` property to `true` in your agent’s `bots` entry in the [app manifest](/microsoft-365/extensibility/schema/root-bots#supportstargetedmessages).
 
 ```json
 {
@@ -207,7 +207,7 @@ If you are sending replies through REST APIs, use the same `targetedMessageInfo`
 POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 Authorization: Bearer eyJhbGciOiJIUzI1Ni...
 Content-Type: application/json
-Show more lines
+
 JSON
 {
 "type": "message",
@@ -241,9 +241,13 @@ Response visibility is controlled by the `WithRecipient` configuration and the `
 
 ### Integrate prompt preview in a targeted message
 
-Prompt preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
+Prompt Preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
 
-Prompt Preview can be added automatically in _reactive_ scenarios such as when replying with `send()` or `reply()` to a user’s targeted message or slash-command request through the Teams SDK or REST API. These SDK methods typically attach the `targetedMessageInfo` entity automatically, keeping the response associated with the incoming user interaction and tied to the original prompt. In _proactive_ flows, however, the agent sends the response outside the original turn, so it must explicitly add the `targetedMessageInfo` entity and reference the targeted message ID before sending the private or public message, ensuring the preview points to the correct original request.
+Prompt Preview is automatically supported in _reactive_ scenarios, such as when an agent replies to a user’s targeted message or slash-command request using `send()` or `reply()` through the Teams SDK or REST API. In these cases, the SDK typically adds the `targetedMessageInfo` entity automatically, linking the response to the original user request.
+
+In _proactive_ scenarios, the response is sent outside the original conversation turn. As a result, the agent must explicitly include the `targetedMessageInfo` entity and provide the targeted message ID before sending the private or public message.
+
+This ensures the response remains associated with the correct original request and enables Prompt Preview to display the appropriate user prompt.
 
 To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of the original targeted message, which Teams uses to show the user's original request above the agent response, as shown in this example:
 
@@ -288,7 +292,7 @@ response.add_targeted_message_info(activity.id)
 
 ```
 
-This example demonstrates the `entities` array needed to add prompt preview with `messageId` of the original message on a reply activity with `type` set to `targetedMessageInfo`, so the original message appears in the prompt preview.
+This example adds a `targetedMessageInfo` entity `type` to the activity’s `entities` array and references the original user message through its `messageId`. This association enables _Prompt Preview_ and enables the original request to appear above the agent response.
 
 ### Update or delete a targeted message
 
@@ -299,7 +303,7 @@ Targeted messages can be updated and deleted in the same way as standard message
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
-## Approval Workflow Using suggested actions
+## Approval workflow Using suggested actions
 
 User approval is a key safeguard in targeted messaging workflows. Since an agent’s response may contain user-specific information, explicit user consent is required before sharing it in a public conversation.
 
