@@ -276,7 +276,6 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 | ✅ Fully operable with a keyboard, with no focus traps inside the widget |
 | ✅ Usable with screen readers, with meaningful roles, names, and states on all interactive elements |
 | ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
-| ✅ Remains usable in Windows High Contrast Mode |
 | ✅ Provides accessible error handling and loading states for content inside the widget |
 | ✅ Text and interactive controls remain readable and operable at 200% browser zoom (exceptions apply for fixed-aspect content such as charts, maps, and media) |
 | ✅ Respects `prefers-reduced-motion` and avoids harmful flashing |
