@@ -303,7 +303,7 @@ Targeted messages can be updated and deleted in the same way as standard message
 
 For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
-## Approval workflow Using suggested actions
+### Approval workflow using suggested actions
 
 User approval is a key safeguard in targeted messaging workflows. Since an agent’s response may contain user-specific information, explicit user consent is required before sharing it in a public conversation.
 
