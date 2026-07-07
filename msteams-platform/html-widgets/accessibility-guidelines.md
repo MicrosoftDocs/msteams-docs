@@ -214,7 +214,7 @@ Widgets must adapt to the chat container and remain usable at different zoom lev
 
 - **Zoom support:** Text and interactive controls must remain readable and operable at 200% browser zoom. Fixed-aspect content — such as data visualizations, embedded media, maps, or canvas-based rendering — is exempt where zoom would inherently distort the experience. In these cases, ensure the content remains accessible through alternative means such as descriptive alt text, data tables, or captions.
 - **Flexible layout:** Avoid fixed pixel heights — allow the widget to grow vertically as needed so content isn't clipped.
-- **No horizontal scrolling:** Avoid horizontal scrolling for primary widget content. Layout should adapt to the narrow widths typical of chat containers. Intentional horizontal scrolling for specific content types such as wide data tables or carousels is acceptable.
+- **Horizontal scrolling:** Avoid horizontal scrolling for primary widget content. Layout should adapt to the narrow widths typical of chat containers. Intentional horizontal scrolling for specific content types such as wide data tables or carousels is acceptable.
 
   
 
