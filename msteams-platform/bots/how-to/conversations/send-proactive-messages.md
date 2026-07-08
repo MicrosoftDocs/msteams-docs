@@ -84,6 +84,9 @@ If you don't have the `conversationId`, you can [proactively install your app us
 
 ## Get the conversation ID
 
+> [!NOTE]
+> If your bot has `supportsSessions: true` in the manifest and is installed for the user, calling the create conversation API creates a new session instead of a regular 1:1 conversation. The returned conversation ID is session-specific. For more information, see [Use sessions in bot conversations](bot-session.md).
+
 Use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any activity sent to you from that context. Store this ID for reference.
 
 After you get the appropriate address information, you can send your message.
@@ -346,3 +349,4 @@ The following table provides code samples that incorporate basic conversation fl
 ## See also
 
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Use sessions in bot conversations](bot-session.md)

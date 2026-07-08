@@ -12,9 +12,9 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use sessions in bot conversations in Microsoft Teams
 
-Sessions allow users to organize conversations with your bot into independent discussion chats within a single one-on-one thread. Each session maintains its own conversation history, helping reduce context length, improve response relevance, and provide a structured way for users to manage multiple tasks or workflows with your bot.
+Sessions allow users to organize conversations with your bot into independent discussion chats within a single one-on-one chat. Each session maintains its own conversation history, helping reduce context length, improve response relevance, and provide a structured way for users to manage multiple tasks or workflows with your bot.
 
-Sessions help bots align with conversation patterns that users already experience in modern AI assistants, where conversations are separated by task or subject instead of grouped into a single continuous thread.
+Sessions help bots align with conversation patterns that users already experience in modern AI assistants, where conversations are separated by task or subject instead of grouped into a single continuous chat.
 
 In this article:
 
@@ -67,7 +67,7 @@ After you update the manifest, package and republish your app through the [Devel
 
 > [!IMPORTANT]
 >
-> Bots that don't enable sessions continue to use the legacy single-thread chat experience.
+> Bots that don't enable sessions continue to use the legacy single chat experience.
 
 > [!NOTE]
 > When sessions are enabled for an existing bot, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
@@ -275,7 +275,7 @@ Sessions are an opt-in feature. Two conditions must be met before a session can 
 Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with one message activity creates a new session.
 
 > [!IMPORTANT]
-> When sessions are enabled, `Create` always creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
+> When sessions are enabled, `Create` always creates a new session. To proactively send a message into an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
 For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
@@ -407,7 +407,7 @@ The `channelData.app.version` field is included in **all event types**, includin
 
 ### conversationId for installationUpdate events
 
-When your bot receives an `installationUpdate` activity in a sessions-enabled thread, the `conversationId` is the **default session ID**. This maps to the very first session in the chat (the catch-all session that contains pre-existing messages). If the bot uses this `conversationId` to send a message back, the message lands in the default session.
+When your bot receives an `installationUpdate` activity in a sessions-enabled chat, the `conversationId` is the **default session ID**. This maps to the very first session in the chat (the catch-all session that contains pre-existing messages). If the bot uses this `conversationId` to send a message back, the message lands in the default session.
 
 ### App version in activities
 
