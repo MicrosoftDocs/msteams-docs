@@ -87,6 +87,8 @@ The `triggers` property defines where a command appears and how users can invoke
 
 Use the `slash` trigger for quick discovery, private command invocation, and fast access from an empty compose box, especially for frequent actions and lightweight workflows. Use the `mention` trigger when users are intentionally addressing the agent as part of a visible interaction. Support both triggers when the same command should be accessible through either entry point without changing its behaviour.
 
+For more information about @mention commands, see [work with mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+
 Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
 ```json
@@ -118,6 +120,10 @@ Declare commands and their triggers by configuring the `bots[].commandLists[]` s
 }
 ```
 
+The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. Use `slash` when the command should appear in the slash command picker, use `mention` when the command should appear in the traditional @mention command menu, or include both values when the same command should be available from both entry points.
+
+Declare commands and their triggers in the `bots[].commandLists[]` section of the manifest, and enable targeted-message handling for agents that should receive slash-command invocations in group conversations. In the app manifest example, the `Summarize` command shows up as an @mention command option, and `Review` is available as a slash command in the agent.
+
 Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
 ```json
@@ -141,6 +147,8 @@ Use the following example to configure the app manifest for supporting an agent 
     ]
 }
 ```
+
+In this example, the commands appear as both @mention and slash command options.
 
 ### Slash commands for action-type message extensions
 
