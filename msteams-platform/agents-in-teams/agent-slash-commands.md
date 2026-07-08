@@ -67,9 +67,7 @@ Message extension slash commands can be configured to appear as autocomplete ent
 
 ## Targeted messaging
 
-Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command.
-
-In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is delivered only to that agent and is not visible to other conversation participants.
+Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is targeted only to that agent and is not visible to other conversation participants.
 
 For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
 
