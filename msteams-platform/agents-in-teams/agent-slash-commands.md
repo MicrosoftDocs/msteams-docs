@@ -33,7 +33,6 @@ The slash commands feature enables apps and agents to add their own commands to 
 
 Apps and agents can expose three types of commands via their configuration:
 
-- **Targeted messaging**: Users send targeted messages to agents by entering an agent's name as a slash command, switching the compose box to targeted message mode
 - **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu
 - **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command
 
@@ -44,11 +43,9 @@ All three types are supported across all client platforms, including mobile.
 
 ### Targeted messaging
 
-Users send [targeted messages](targeted-messages.md) to agents by entering an agent's name as a slash command.
+Users can send [targeted messages](targeted-messages.md) to agents by entering the agent’s name as a slash command.
 
-In channels, group chats, and meeting chats, the slash command autocomplete menu includes commands named after each agent in the conversation eligible to receive targeted messages.
-
-Activating one of these commands switches the compose box to targeted message mode for the agent. After the user composes a message and selects **Send**, the resulting message will be targeted to the agent and can't be seen by other participants in the conversation.
+In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is delivered only to that agent and is not visible to other conversation participants.
 
 For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
 
