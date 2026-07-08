@@ -25,22 +25,173 @@ zone_pivot_groups: teams-sdk-languages
 
 -->
 
-# Build your first agent
+TODO this assumes 2.1 for .NET, because auth skip doesn't work in older versions. If we want to support earlier versions, need to write out playground for it entirely.
 
-Agents utilize AI to automate and execute business processes, functioning alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
+# Quickstart: Create an agent with Teams SDK and Teams developer CLI
 
-## Tools you'll need
+In this quickstart, you'll use the Teams developer CLI to create starter code for a new Teams agent from a template. After testing it locally with Microsoft 365 Agents Playground, you'll get it up and running in Teams, setting the stage for further iteration and development.
 
-To build an agent in Microsoft Teams, ensure you have the following:
+At the end of this quickstart, you'll have an agent implementation that  agent running locally, can debug/modify/experiment. Ideally working in real teams, but in playground if not.
 
-| Install | For using... |
-| --- | --- |
-| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python (in public preview) build environments. Use the latest version. |
-| [Teams SDK](/microsoftteams/platform/teams-ai-library/teams/overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
-| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your agent. Use the latest version. |
-| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through agents and apps for chat, meetings, and calls all in one place. |
-| [Azure OpenAI](https://oai.azure.com/portal) | OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your agent or access resources in Azure, you must create an Azure OpenAI service. |
+Emphasize getting set up with Teams
+
+## Prerequisites
+
+This quickstart is divided into two sections. In the first, you'll create and test your agent locally, and you'll need:
+
+::: zone pivot="teams-sdk-typescript"
+
+- Node.js 20 or later ([installer download](https://nodejs.org))
+- An editor, we suggest VS Code
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+- Node.js 20 or later ([installer download](https://nodejs.org))
+- Python 3.11 or later ([installer download](https://python.org/downloads))
+- An editor, we suggest VS Code
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+- Node.js 20 or later ([installer download](https://nodejs.org))
+- NET 10 or later ([installer download](https://dotnet.microsoft.com/download))
+- An editor, we suggest VS Code
+
+::: zone-end
+
+This is enough to start working on your agent's code, but it's highly recommended to continue through registering and installing your app on Teams at the very beginning of the development process. For that, you'll also need Teams, logged in to a Microsoft 365 work or school account.
+
+To install your app, your account needs permission to install custom Teams apps, also called *sideloading*. The quickstart includes a step to confirm this permission before it's needed, and instructions for requesting it from your administrator if you don't have it.
+
+[asdf](/microsoftteams/#allow-users-to-upload-custom-apps)
+
+## Create an agent and try it in Microsoft 365 Agents Playground
+
+1. Install the Teams developer CLI and Microsoft 365 Agents Playground locally.
+
+    ```bash
+    npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
+    ```
+
+::: zone pivot="teams-sdk-typescript"
+
+2. Use `teams project new` to create the code for a new agent from a template.
+
+    ```bash
+    teams project new typescript echo-bot
+    cd echo-bot
+    ```
+
+3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
+
+    ```bash
+    npm install
+    npm run dev
+    ```
+
+TODO skipauth
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+TODO venv this?
+
+2. Use `teams project new` to create the code for a new agent from a template.
+
+    ```bash
+    teams project new python echo-bot
+    cd echo-bot
+    ```
+
+3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
+
+    ```bash
+    pip install -e .
+    python src/main.py
+    ```
+
+TODO skipauth
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+2. Use `teams project new` to create the code for a new agent from a template.
+
+    ```bash
+    teams project new csharp echo-bot
+    cd Echo.Bot/Echo.Bot
+    ```
+
+3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
+
+    ```bash
+    dotnet run
+    ```
+
+::: zone-end
+
+3. Using a new console, start Microsoft 365 Agents Playground.
+
+    ```bash
+    agentsplayground
+    ```
+
+    This will connect Agents Playground to your agent and open the interface in a new browser tab.
+
+4. Use the compose box to send your agent a message and see it respond in the chat.
+
+5. Use <kbd>Ctrl+C<kbd> in both open console windows to stop Agents Playground and your agent.
+
+## Log in with Teams developer CLI and confirm sideloading status
+
+In this step, you'll log in to your Microsoft 365 work or school account using the Teams developer CLI. Connecting the CLI to your organizational account is needed for the next steps, but this will also confirm whether your account is eligible to  use the Teams developer CLI to create the cloud configuration needed to use your agent from Teams.
+
+1. Login to your Microsoft 365 work or school account using the Teams developer CLI.
+
+    ```bash
+    teams login
+    ```
+
+    After you have logged in, Teams
+
+TODO --service-management-reference
+
+## Install devtunnel
+
+TODO copy instructions from <https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows>
+
+tunnel setup:
+devtunnel user login (and login)
+devtunnel host --allow-anonymous --port-number 3978
+
+```output
+c:\temp\quote-agent>devtunnel host --allow-anonymous --port-number 3978
+Connection to host tunnel relay restored.
+Hosting port: 3978
+Connect via browser: https://4r9dr5xj-3978.usw2.devtunnels.ms
+Inspect network activity: https://4r9dr5xj-3978-inspect.usw2.devtunnels.ms
+
+Ready to accept connections for tunnel: joyful-dog-xgz66vp.usw2
+```
+
+Get the "connect via browser" URL and append /api/messages
+
+Because the hostname is stable across restarts, you can stop and restart your tunnel without re-registering the bot.
+
+Then
+
+```
+teams app create --name xxx --endpoint xxx --env .env
+```
+
+---
+
+---
 
 ## Set up your environment
 
