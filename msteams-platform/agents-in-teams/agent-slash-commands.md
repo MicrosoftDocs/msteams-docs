@@ -87,7 +87,7 @@ The `triggers` property defines where a command appears and how users can invoke
 
 Use the `slash` trigger for quick discovery, private command invocation, and fast access from an empty compose box, especially for frequent actions and lightweight workflows. Use the `mention` trigger when users are intentionally addressing the agent as part of a visible interaction. Support both triggers when the same command should be accessible through either entry point without changing its behaviour.
 
-For more information about @mention commands, see [work with mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+For more information about @mention commands, see [work with @mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
