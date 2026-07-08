@@ -1,6 +1,6 @@
 ---
-title: Expose Slash Commands from Agents and Apps
-description: Expose slash commands for your agents and apps to make frequently used functionality discoverable and quickly usable as named commands.
+title: Expose Named Commands from Agents and Apps
+description: Expose slash and @mention commands for your agents and apps to make frequently used functionality discoverable and quickly usable as named commands.
 ms.localizationpriority: high
 ms.date: 05/27/2026
 ms.topic: article
@@ -11,7 +11,7 @@ ms.topic: article
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Expose slash commands from agents and apps
+# Expose named commands from agents and apps
 
 > [!NOTE]
 >
@@ -65,6 +65,14 @@ Apps that implement action-type [message extensions](../messaging-extensions/wha
 
 Message extension slash commands can be configured to appear as autocomplete entries in both the compose box and the Teams command box.
 
+## Mention commands in agents
+
+Use @mention commands in your agents and apps to directly call or tag a specific agent or bot. The message is delivered to the agent tagged with @mention. The agent or app is notified of the and responds to the original message according to the context of the conversation.
+
+[WIP: Add example]
+
+For more information about @mention commands, see [@Mention](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+
 ## Targeted messaging
 
 Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is targeted only to that agent and is not visible to other conversation participants.
@@ -84,8 +92,6 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
 #### Triggers: slash and @mention
 
 The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. For agent command lists, use `mention` when the command should appear in the traditional @mention command menu, use `slash` when the command should appear in the slash command picker, or include both values when the same command should be available from both entry points.
-
-For more information about @mention commands, see [work with @mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
 
