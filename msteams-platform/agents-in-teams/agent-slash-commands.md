@@ -36,14 +36,14 @@ Apps and agents can expose three types of commands via their configuration:
 - **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu
 - **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command
 
-All three types are supported across all client platforms, including mobile.
+These types of slash commands are supported across all client platforms, including mobile.
 
 > [!IMPORTANT]
 > Targeted messaging and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Targeted messaging
 
-Users can send [targeted messages](targeted-messages.md) to agents by entering the agent’s name as a slash command.
+Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command.
 
 In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is delivered only to that agent and is not visible to other conversation participants.
 
@@ -65,11 +65,17 @@ Apps that implement action-type [message extensions](../messaging-extensions/wha
 
 Message extension slash commands can be configured to appear as autocomplete entries in both the compose box and the Teams command box.
 
+## Targeted messaging
+
+Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command.
+
+In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is delivered only to that agent and is not visible to other conversation participants.
+
+For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
+
 ## Add commands
 
 Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
-
-### Targeted messaging
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
 
