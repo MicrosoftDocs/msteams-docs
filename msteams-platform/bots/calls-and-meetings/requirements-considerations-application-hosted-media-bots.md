@@ -19,7 +19,7 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 
 An application-hosted media bot has the following requirements:
 
-* The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
+* The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. Application-hosted media bots for Teams meetings are supported through the Microsoft Graph real-time media platform for C# and .NET implementations, with .NET Core also supported and SDK support available for .NET 6.0. You can't use C++ or Node.js APIs to access real-time media, and equivalent support for receiving real-time meeting audio is not documented for Python or Node.js SDKs. This limitation applies to bots that require raw audio or video streams during live meetings, including transcription and notetaking scenarios, as meeting participation and post-meeting data access through other APIs do not provide the same application-hosted real-time media capability.
 
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
@@ -30,8 +30,6 @@ An application-hosted media bot has the following requirements:
 * The bot can't be deployed as an Azure web app.
 
 * The bot must be running on a recent version of the `Microsoft.Graph.Communications.Calls.Media` .NET library. The bot must use either the newest available version of the [NuGet package](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), or a version that isn't more than three months old. Older versions of the library are deprecated and don't work after a few months. Keeping the `Microsoft.Graph.Communications.Calls.Media` library up-to-date ensures the best interoperability between the bot and Microsoft Teams.
-
-* Application-hosted media bots for Teams meetings are supported through the Microsoft Graph real-time media platform for C# and .NET implementations. Equivalent support for receiving real-time meeting audio is not documented for Python or Node.js SDKs. This limitation applies to bots that need raw audio or video streams during live meetings, including transcription and notetaking scenarios. Meeting participation and post-meeting data access through other APIs do not provide the same application-hosted real-time media capability.
 
 The next section provides details on where real-time media calls are located.
 
