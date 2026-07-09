@@ -64,7 +64,7 @@ After you update the manifest, package and republish your app through the [Devel
 
 ## User experience after enabling sessions
 
-After sessions are enabled, users see new controls in the chat header that allow them to create and switch between sessions.
+When chatting one-on-one with an agent that supports sessions, controls in the header enable users to create and switch between sessions.
 
 Clicking on the new session icon starts a new session.​
 
