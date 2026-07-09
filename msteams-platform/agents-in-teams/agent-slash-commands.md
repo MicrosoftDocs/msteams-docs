@@ -191,13 +191,13 @@ For more information, see [send and receive targeted messages in group conversat
 
 ## Best practices and design guidance
 
-Offer slash commands for common actions that users need to access quickly and repeatedly. They're especially useful for actions that should remain private or that provide user-specific results, such as viewing settings, creating follow-up tasks, or checking personal status. Commands work best for actions that users are likely to invoke frequently and benefit from being easy to discover and reuse.
+Offer slash commands for common actions that users need to access quickly, repeatedly, and privately. They work best for user-specific actions such as viewing settings, creating follow-up tasks, or checking personal status, especially when users benefit from discovering and reusing the action from the compose box.
 
 As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
 
-It's recommended to keep the command set small and focused, support natural language prompts to provide a more conversational experience.
+Keep the command set small and focused. Support natural-language prompts when users need a more conversational experience, but reserve slash commands for the most repeatable actions.
 
-Keep slash commands short and action-oriented, and consider adding shortnames or aliases for popular commands. Consider using [prompt starters](../bots/how-to/conversations/prompt-starters.md) for longer prompts.
+Keep slash command names short and action-oriented. Use aliases for high-frequency commands when they improve discoverability, and use [prompt starters](../bots/how-to/conversations/prompt-starters.md) for longer or more open-ended prompts.
 
 Provide clear command descriptions to improve discoverability, including any expected input beyond the command name.
 
