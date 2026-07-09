@@ -262,7 +262,7 @@ Teams agents must be reachable from the public Internet for Teams to communicate
 
 1. When the `create` command completes, it will display a menu. Select `Install in Teams` to open Teams and display the app's installer page. TODO "this app cannot be found"
 
-1. Start your agent. TODO can do this afterwards, to reuse the window above?
+1. Start your agent. TODO make sure this can be done afterwards, to reuse the window above?
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -287,146 +287,8 @@ Teams agents must be reachable from the public Internet for Teams to communicate
 
 ::: zone-end
 
-Get the "connect via browser" URL and append /api/messages
+## Next steps
+
+The starter code from this quickstart is the foundation for your first real agent - use it to experiment with agent features and development techniques. With your app installed in Teams Teams installation is a launchpad for your first real agent.
 
 Because the hostname is stable across restarts, you can stop and restart your tunnel without re-registering the bot.
-
-Then
-
-```
-teams app create --name xxx --endpoint xxx --env .env
-```
-
----
-
----
-
-## Set up your environment
-
-1. Install the latest versions of Visual Studio Code, Node.js, and Microsoft 365 Agents Toolkit.
-1. If you want to use Azure OpenAI service to access Large Language Model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and obtain your API key.
-
-> [!NOTE]
-> For more information about setting up Azure OpenAI services, see:
->
-> - [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
-> - [Create an Azure OpenAI Resource and Deploy a Model](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource).
-
-## Create an agent using Microsoft 365 Agents Toolkit
-
-1. Open Visual Studio Code.
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m-365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
-1. Select **Create a New Agent/App**.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the option to create a new agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png":::
-
-1. From the **New Project** menu, select **Teams Agents and Apps**.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png" alt-text="Screenshot shows the option to create a new agent or app project in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png":::
-
-1. Select **General Teams Agent** to create an agent.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
-
-1. Select a service to access Large Language Model (LLM) for your agent.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
-
-    Choose one of the following options:
-
-    - Select **Azure OpenAI** if you've obtained the OpenAI key from Azure. Following this, you must:
-
-        1. Enter Azure OpenAI key in **Azure OpenAI service key**.
-        1. Enter the endpoint in **Azure OpenAI service endpoint**.
-        1. Enter the deployment name in **Azure OpenAI deployment name**.
-
-    - Select **OpenAI Key** and enter the OpenAI key.
-
-1. Select the **Programming Language** for developing your agent.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-language.png" alt-text="Screenshot shows the option to select the programming language for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-language.png":::
-
-1. Select the **Default folder** as the **Workspace Folder** for your agent project.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the project workspace folder for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
-
-1. Enter the agent name and then select **Enter**.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png" alt-text="Screenshot shows the field to add the agent name." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png":::
-
-    The toolkit displays a message that the agent workspace has been successfully created. You can provision the agent at this time or later. If the toolkit displays a message to confirm that you trust the author, select **Yes, I trust the authors**.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshot shows the message for confirming if you trust the authors of the agent.":::
-
-### Take a tour of the agent source code
-
-Microsoft 365 Agents Toolkit creates and scaffolds the agent project workspace. Here's a look at the folder structure:
-
-| Folder | Contents |
-| --- | --- |
-| `.vscode` | Visual Studio Code files for debugging. |
-| `appPackage` | Templates for the Teams manifest. |
-| `env` | Environment files. |
-| `infra` | Templates for provisioning Azure resources. |
-| `src` | The source code for the project. |
-
-## Run and use your agent in Teams
-
-1. Open your agent project in Visual Studio Code.
-1. Select **Run** > **Start Debugging**, or alternatively, select the **F5** key.
-
-    If all prerequisites are installed, Visual Studio Code uploads and opens your agent in Microsoft Teams.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png" alt-text="Screenshot shows the agent opened in Microsoft Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png":::
-
-1. To use your agent, select one of the prompts shown by the agent.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png" alt-text="Screenshot shows how to select a prompt from the agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png":::
-
-    When you select the prompt, it appears in the comment box, and you can select the **Send** icon. The agent responds to the prompt.
-
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
-
-Congratulations! You've created and ran your first agent in Microsoft Teams.
-
-## Choose your programming language
-
-Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Microsoft Teams.
-
-:::row:::
-   :::column:::
-      **Description**
-   :::column-end:::
-   :::column span="3":::
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Choose your build environment**
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      Build with ...
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
-   :::column-end:::
-:::row-end:::
-
-## Code sample
-
-| Sample name | Description | .NET | Node.js | Python |
-|--- |--- | --- | --- | --- |
-| Contoso knowledge hub | An intelligent agent built on the Teams SDK that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/python) |
-
-## See also
-
-[Agents user experience](../bots/how-to/teams-conversational-ai/ai-ux.md)
-
-## Next steps
