@@ -23,7 +23,7 @@ If your agent or app has functionality that users should be able to invoke with 
 
 ## What is a slash command
 
-Slash commands in Teams are text-based shortcuts that let users perform actions from the compose box in conversations. When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) that can be invoked immediately by selecting them.
+Slash commands in Teams are text-based shortcuts that let users perform actions from the compose box in conversations. When a user enters a <kbd>/</kbd> in an empty compose box, Teams displays an autocomplete menu containing [built-in commands for common tasks](https://support.microsoft.com/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b) exposed by agents or apps in the current context.
 
 The slash commands feature enables apps and agents to add their own commands to this list to help users discover and use them.
 
@@ -31,7 +31,7 @@ The slash commands feature enables apps and agents to add their own commands to 
 
 ## Types of slash commands
 
-Apps and agents can expose three types of commands via their configuration:
+Apps and agents can expose slash-command experiences through app or agent configuration in two primary ways:
 
 - **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu
 - **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command
@@ -69,13 +69,11 @@ Message extension slash commands can be configured to appear as autocomplete ent
 
 Use @mention commands in your agents and apps to directly call or tag a specific agent or bot. The message is delivered to the agent tagged with @mention. The agent or app is notified of the and responds to the original message according to the context of the conversation.
 
-[WIP: Add example]
-
 For more information about @mention commands, see [@Mention](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
 ## Add commands
 
-Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
+Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true). To implement slash commands, configure the app or agent manifest, enable any required targeted messaging behavior, and update the agent or app logic to interpret and handle the command after the user sends it.
 
 See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
 
@@ -195,7 +193,7 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 
 ## Targeted messaging
 
-Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is targeted only to that agent and is not visible to other conversation participants. Agents can also respond to user's targeted message with a private agent-to-user message.
+Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, Teams delivers it only to that agent, and other conversation participants do not see it. Agents can also respond to user's targeted message with a private agent-to-user message.
 
 For more information, see [send and receive targeted messages in group conversations](targeted-messages.md).
 
