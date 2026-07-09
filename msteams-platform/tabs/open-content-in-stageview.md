@@ -1,7 +1,7 @@
 ---
 title: Multi-window Experience for App Content
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---

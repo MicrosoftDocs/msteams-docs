@@ -2,7 +2,7 @@
 title: Understand App Structure to Design Apps
 description: Learn what are the customizing options in Microsoft Teams while designing your app structure with app capability and scope and understand the app structure.
 author: heath-hamilton
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/06/2025
 --- 
