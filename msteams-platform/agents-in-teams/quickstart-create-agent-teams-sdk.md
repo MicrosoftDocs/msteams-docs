@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Quickstart: Create an agent and chat with it in Teams
 
-In this quickstart, you'll use command-line developer tools to create a new agent. When you're finished, you'll have code for an agent that you can chat with in Teams while it's running in your local development environment. You'll be able to continue exploring and experimenting with this code, and as you add new features to it, you'll be able to experience them in Teams immediately.
+In this quickstart, you'll use command-line developer tools to create a new agent. When you're finished, you'll have code for an agent that you can chat with in Teams while it's running in your local development environment. This code will be the foundation you need to create a real Teams agent, and as you add new features to it, you'll be able to experience them in Teams immediately.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -79,9 +79,9 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ## Register, install, and chat in Teams
 
-1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
-
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
+
+1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
     ```bash
     teams app create \
@@ -93,6 +93,8 @@ Teams can only communicate with agents that are reachable from the public Intern
 ::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
+
+1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
     ```bash
     teams app create \
@@ -137,6 +139,6 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ## Next steps
 
-The starter code from this quickstart is the foundation for your first real agent - use it to experiment with agent features and development techniques. With your app installed in Teams Teams installation is a launchpad for your first real agent.
+The starter code from this quickstart is the foundation for your first real agent: use it to experiment with agent features and development techniques. With your app installed in Teams Teams installation is a launchpad for your first real agent.
 
 Because the hostname is stable across restarts, you can stop and restart your tunnel without re-registering the bot.

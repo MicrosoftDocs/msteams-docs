@@ -1,13 +1,9 @@
 ## Prerequisites
 
-This quickstart is divided into two sections. In the first, section you'll need:
-
 - Node.js 20 or later ([installer download](https://nodejs.org))
 - .NET 10 or later ([installer download](https://dotnet.microsoft.com/download))
 - An editor, we suggest VS Code
-- Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
-
-If you aren't sure about your account permissions, you will be able to confirm them during the quickstart before they are needed.
+- Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps (you'll confirm these permissions at the very beginning of the quickstart)
 
 If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
 
@@ -40,7 +36,7 @@ Azure CLI: installed, not logged in
     cd Echo.Bot/Echo.Bot
     ```
 
-1. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
+1. Start the agent to confirm it runs. Once it's running, you'll see a confirmation that it's running on port 3978.
 
     ```bash
     dotnet run
