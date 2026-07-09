@@ -10,7 +10,7 @@ zone_pivot_groups: teams-sdk-languages
 
 <!-- markdownlint-disable MD024 -->
 
-# Use sessions in bot conversations in Microsoft Teams
+# Manage multiple user conversations with sessions
 
 Sessions allow users to organize conversations with your bot into independent discussion chats within a single one-on-one chat. Each session maintains its own conversation history, helping reduce context length, improve response relevance, and provide a structured way for users to manage multiple tasks or workflows with your bot.
 
