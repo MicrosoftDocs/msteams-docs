@@ -3,7 +3,7 @@
 This quickstart is divided into two sections. In the first, section you'll need:
 
 - Node.js 20 or later ([installer download](https://nodejs.org))
-- An editor, we suggest VS Code TODO
+- Visual Studio Code ([installer download](https://code.visualstudio.com/download))
 
 In the second part, you'll also need Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
 

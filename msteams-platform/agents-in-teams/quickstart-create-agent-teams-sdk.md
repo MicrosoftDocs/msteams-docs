@@ -137,7 +137,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 4. In Teams, select **Add** in the installer dialog to install the agent. In the **How would you like to use this app today?** dialog, select **Open** to open a one-on-one chat with the agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app." lightbox="../assets/images/agents-in-teams/app-use-dialog.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app." lightbox="../assets/images/agents-in-teams/app-use-dialog-lightbox.png":::
 
 5. Chat with your agent!
 
