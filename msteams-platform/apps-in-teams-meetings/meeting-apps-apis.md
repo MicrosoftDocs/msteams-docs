@@ -649,8 +649,7 @@ app.on('message', async ({ activity, api, send }) => {
 
 # [Python](#tab/python3)
 
-* [SDK reference](python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest
- )
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_message
@@ -1136,7 +1135,7 @@ app.on('message', async ({ activity, api, send }) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_message
@@ -1614,7 +1613,7 @@ app.on('meetingStart', async ({ activity, send }) => {
 
 # [Python](#tab/python4)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_meeting_start
@@ -1781,7 +1780,7 @@ app.on('meetingEnd', async ({ activity, api, send }) => {
 
 # [Python](#tab/python5)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_meeting_end
@@ -2014,7 +2013,7 @@ app.on('meetingParticipantJoin', async ({ activity, send }) => {
 
 # [Python](#tab/python6)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_meeting_participant_join
@@ -2097,7 +2096,7 @@ app.on('meetingParticipantLeave', async ({ activity, send }) => {
 
 # [Python](#tab/python7)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest)
 
 ```python
 @app.on_meeting_participant_leave
