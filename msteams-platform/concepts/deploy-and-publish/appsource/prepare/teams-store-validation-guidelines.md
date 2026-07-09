@@ -4,7 +4,7 @@ description: Learn to increase the chances of your app to pass the Teams Store s
 author: heath-hamilton
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 02/25/2025
+ms.date: 05/08/2026
 ---
 # Teams Store validation guidelines
 
@@ -461,6 +461,8 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for AI functionality.":::
 
+* Apps must implement safeguards to prevent attacks that attempt to manipulate or override system instructions, safety controls, or developer defined behavior.
+
 #### Apps using facial recognition capabilities
 
 > [!NOTE]
@@ -506,6 +508,8 @@ The app manifest defines your app's configuration.
 * If your app uses Single sign-on (SSO), you must declare Microsoft Entra ID in the app manifest for user authentication. [*Must fix*]
 
 * You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Must fix*]
+
+* Starting July 2026, new Teams Store submissions for channel-enabled apps must use app manifest schema version 1.25 or later. To use app manifest schema version 1.25 or later, update your app manifest and add `"supportsChannelFeatures": "tier1"` to declare channel feature support. [*Must fix*]
 
 * When you submit an app update, only increase the app version number. App ID of the updated app must match the App ID of the published app. [*Must fix*]
 
@@ -1121,6 +1125,10 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases for your bot to understand.
 
+* Bots must support functional enterprise workflows. If bot commands are declared in the manifest, both the `Title` and `Description` fields are mandatory and must be clearly defined and consistently aligned. The bot must enable the users to know about the value proposition of the app. Bot must respond with various workflows it supports on asking for help or value it provides. Bot must provide a valid response even when the user hasn’t logged into the apps.
+
+  :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
+
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. [*Must fix*]
   
   :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-generic-response-pass.png" alt-text="Graphic shows an example of bot responding to generic commands.":::
@@ -1131,11 +1139,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-commands-deadend.png" alt-text="validation-bot-commands-dead-end":::
 
-* You must list at least one valid bot command in the `items.commands.title` section of the app manifest and add a suitable description that gives clarity to the user on the bot command and its usage. Bot commands listed in the `commandLists` section of the app manifest surface as prepopulated commands in the bot command menu and provide a way forward for the new user to interact with the bot. [*Good-to-fix*]
-
 * Bot response mustn't contain any official Microsoft product images or avatars. Use your own assets in your app. Use of Microsoft product images in your app isn't allowed. You may only copy, modify, distribute, display, license, or sell Microsoft copyrighted product images if you're granted explicit permission within the End-User License Agreement (EULA), license terms that accompany the content, or in the [Microsoft Trademark and Brand guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). [*Must fix*]
-
-* Bots must respond to user commands without displaying a continuous loading indicator. [*Must fix*]
 
 * Bot help command response mustn't redirect the user outside Teams. Bot help command response can redirect user to a canvas within the Teams app or provide a way forward response in an Adaptive Card. [*Must fix*]
 
@@ -1163,10 +1167,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Must fix*]
 
-* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged on to the app. [*Must fix*]
-
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
-
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
 * Bots must provide a valid response to **help** command.
@@ -1193,6 +1193,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
 
+* Ensure that bot commands are consistent –
+
+  * Within each scope (personal/ groupChat/ team/ copilot) and make sure that `commandList.type` values are consistent.
+  * The `prompt`, `description`, and `title` for each bot command should be consistent and coherent with one another.
+
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
@@ -1207,7 +1212,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * The bot must enable the users to know about the value proposition of the app.
+  * Bot must respond with various workflows it supports on asking for help or value it provides.Bot must provide a valid response even when the user hasn’t logged into the apps. [*Must fix*]
   * Prompt starters or commands must be functional and return responses. [*Must fix*]
   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
@@ -1539,7 +1545,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * Your app must offer value beyond providing only custom Together Mode scenes in Teams. [*Must fix*]
 
-* You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the app manifest to enable your app for meetings on Teams mobile. [*Must fix*]
+* Apps targeting in meeting experiences must either declare `meetingSidePanel`,or use APIs to enable meeting-stage sharing and include `groupChat` under `configurableTabs`, `meetingDetailsTab`, and `meetingChatTab`.
 
 * Meeting and calling canvases mustn't dead-end an attendee. Meeting and calling canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
 
@@ -1795,7 +1801,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * All app capabilities must be functional and must work properly as described in the AppSource or app manifest long description. [*Must fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Must fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Must fix*]
-* Apps and agents using manifest version **v1.25 or higher** must support collaborative or team capabilities across all channel types (Standard, Shared, and Private). For more information, see [Apps for shared and private channels](../../../../build-apps-for-shared-private-channels.md).</br> To ensure a consistent and transparent experience [*Must fix*]:
+* Starting July 2026, new Teams Store submissions for apps and agents that operate in channels must use manifest version **v1.25 or higher**. Apps and agents must validate support for Standard, Shared, and Private channels. Submissions that do not function correctly in supported channel types may not pass Store validation. For more information, see [Apps for shared and private channels](../../../../build-apps-for-shared-private-channels.md). To ensure a consistent and transparent experience [*Must fix*]:
   * Clearly document any functional differences or limitations across channel types (Standard, Shared, and Private) in the app or agent description.
   * Gracefully handle authentication and in-app or in-agent experiences for all channel members, including internal users, guest users, and users from trusted B2B tenants.
   * Ensure seamless storage access for all channel members (app-generated links must honor tenant sharing policies and should prefer **people with existing access** or explicit invites for cross-tenant members).

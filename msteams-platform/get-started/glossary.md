@@ -82,7 +82,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Custom app built for your org (LOB app) | An app created only for Teams by you or your organization. |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) | Custom engine agents are fully customized AI assistants designed for scenarios that require complex workflows, orchestration, or specific language models. <br>For more information, see [Custom engine agent](/microsoft-365-copilot/extensibility/agents-overview#custom-engine-agents)  <br> **See also**: [Agents](#a); [Declarative agent](#d) |
-| [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [Personal tab](#p); [Shared apps](#s) |
 
 ## D
@@ -108,7 +107,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
+| [E5 developer account](../toolkit/tools-prerequisites.md#accounts-to-build-your-teams-agent-or-app) | E5 developer subscription for building apps to extend Microsoft 365. It includes 25 user licenses, including the administrator, for development purposes only.  <br>**See also**: [Microsoft 365 account](#m) |
 | [Endpoint address](../bots/how-to/authentication/bot-sso-manifest.md) | It's used in Developer Portal to configure SSO for a bot app. It's the endpoint where messages are sent to your bot. <br> **See also**: [Bot handle](#b); [Messaging endpoint](#m); [OAuth connection](#o); [SSO](#s) |
 | [Entry point](../concepts/app-fundamentals-overview.md) | An access point, such as team, channel, and chat, for a Teams app where users can use your app. |
 | [Environment](../toolkit/teamsfx-multi-env.md) | A feature in Agents Toolkit that lets you create and use multiple development environments for your app project. There are two dev environments that Agents Toolkit creates by default, local environment and dev environment. <br>**See also**: [Local environment](#l); [Dev environment](#d) |
