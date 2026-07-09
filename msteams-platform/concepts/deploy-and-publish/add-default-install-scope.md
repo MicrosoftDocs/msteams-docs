@@ -113,6 +113,16 @@ If an app is configured with shared scopes along with a default install scope, h
 </details>
 </br>
 
+### Installation context and app experience
+
+App installation context and app open experience are related but not identical:
+
+* Installation determines where the app is available (personal, team, chat, or meeting).
+* Open experience depends on the capabilities declared in the app manifest, such as tab or bot.
+* An app can be installed to enable notification delivery even when it doesn't provide an interactive surface that opens in Teams for that scope.
+
+This separation is expected behavior in Teams app architecture. For activity feed UX guidance, see [Designing activity feed notifications](../design/activity-feed-notifications.md).
+
 ## Configure the default capability for shared scopes
 
 Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
