@@ -56,6 +56,9 @@ Create the conversation, after you have the user or channel information.
 
 ## Create the conversation
 
+> [!NOTE]
+> If your bot has `supportsSessions: true` in the manifest and is installed for the user, calling the create conversation API creates a new session instead of a regular 1:1 conversation. The returned conversation ID is session-specific. For more information, see [Use sessions in bot conversations](bot-session.md).
+
 You can create the conversation if it doesn't exist or if you don't know the `conversationId`. Create the conversation only once, and store the resulting `conversationId` for future proactive messages.
 
 To create the conversation, you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
@@ -83,9 +86,6 @@ The conversation ID is unique for each bot within a specific channel, even in a 
 If you don't have the `conversationId`, you can [proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
-
-> [!NOTE]
-> If your bot has `supportsSessions: true` in the manifest and is installed for the user, calling the create conversation API creates a new session instead of a regular 1:1 conversation. The returned conversation ID is session-specific. For more information, see [Use sessions in bot conversations](bot-session.md).
 
 Use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any activity sent to you from that context. Store this ID for reference.
 
