@@ -77,12 +77,6 @@ Meeting apps are essentially [personal tabs](#personal-tabs) that are designed t
 
 For more information, see [Apps for meetings and calls](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings) and [Extend a meeting app to Outlook](/microsoftteams/platform/m365-apps/extend-m365-meeting-app).
 
-## Actions in Microsoft 365
-
-Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
-
-For more information, see [Actions in Microsoft 365](actions-in-m365.md).
-
 ## Platform support
 
 The following table shows platforms supporting the various types of apps for Microsoft 365.
@@ -107,7 +101,7 @@ To get started with apps extended across Microsoft 365, see [app playbooks](/mic
 
 ## Microsoft commercial marketplace submission
 
-Join the growing number of production Teams apps in the [Microsoft Marketplace](https://marketplace.microsoft.com/) store as apps for Microsoft 365. The app [submission process for Teams apps enabled for Outlook and Microsoft 365](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is to use app manifest [version 1.13 or later](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
+Join the growing number of production Teams apps in the [Microsoft Marketplace](https://marketplace.microsoft.com/) store as apps for Microsoft 365. The app [submission process for Teams apps enabled for Outlook and Microsoft 365](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is to use app manifest [version 1.13 or later](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365. Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
 
 After your Teams app is published as an app for Microsoft 365, your app will be discoverable as an installable app in the Outlook and Microsoft 365 app stores, in addition to the Microsoft Teams Store. And if the app includes an add-in for Excel, PowerPoint, or Word, it will be in their stores too. When running in Outlook and Microsoft 365 app, your app uses the same permissions granted in Teams. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
 

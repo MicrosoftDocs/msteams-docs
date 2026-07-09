@@ -1,22 +1,21 @@
 ---
 title: Guidelines to Validate Agents
 description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
-ms.topic: conceptual
+ms.topic: article
 author: v-preethah
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 07/31/2025
+ms.date: 05/11/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Validation guidelines for agents
+# Agent Store Validation Guidelines
+
+These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent and Copilot Cowork Plugins on the store.
 
 > [!IMPORTANT]
 >
-> * These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent on the store.
-> * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
-> * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
@@ -96,6 +95,13 @@ Agents should be designed to complete enterprise workflows and must deliver diff
 * Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
 * Using specialized orchestration or fine-tuned models for domain-specific workflows. For example, a **Contoso Pharma Agent** fine-tuned on pharma data to help identify domain-specific chemicals.
 
+Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
+
+* Skills — Custom skills can be published using the agentSkills manifest node
+* Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
+  
+  All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
+
 ## Description
 
 A good description offers a clear and concise summary of the agent's features. It enhances user awareness and allows Microsoft 365 Copilot to efficiently discover and execute search operations.
@@ -125,7 +131,7 @@ You must ensure to meet the following guidelines for agents:
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Agent to Agent Communication
 
@@ -138,7 +144,20 @@ For utilising `worker_agents` property in your Declarative agent manifest, ensur
 * Any prompt that depends on a worker agent must fail gracefully if the worker agent has not been acquired.
 * If a parent agent references a worker agent published by a different publisher, the parent agent publisher remains responsible for handling integration issues, user experience gaps, and graceful failure behavior.
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
+
+## Agents extended to Agent 365
+
+* Every agent extended for Agent 365 should generate consistent observability traces across Invoke agent, execute tool & inference call in Sentinel, Defender, Purview. [*Must fix*]. For more information, see [observability](/microsoft-agent-365/developer/observability?tabs=python).
+* Agents using `agenticUserTemplate` node must follow these guidelines [*Must fix*]:
+  1. `agentIdentityBlueprintId` in the `agenticUserTemplate` node of the manifest must be unique.
+  1. The `id` field in the manifest file MUST match the `id` field present in the `agenticUserTemplate` file.
+  1. Agent must generate observability traces for both the Blueprint ID and the Agent ID.
+  1. Such agents must not be bundled with other offer types (apps, plugins, other agents).
+* Agents extended for Agent 365 should highlight the value proposition of Agent 365 in their description. [*Good to fix*]
+* All UX design guidelines applicable to CEAs are also applicable to agents published through `agenticUserTemplate` manifest node.
+
+[Back to top](#agent-store-validation-guidelines)
 
 ## Screenshots
 
@@ -147,7 +166,7 @@ You must ensure to meet the following guidelines for agents:
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
 * Apps with agent functionality must have at least one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Agent name
 
@@ -159,7 +178,7 @@ You must ensure to meet the following guidelines for agents:
   * `name` in the declarative agent json file
   * `name_for_human` in the plugin json files
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Prompts
 
@@ -186,7 +205,7 @@ Prompt starters guide users on how to start using declarative agents and custom 
 * A declarative agent or a custom engine agent must have at least three prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Adaptive Card response
 
@@ -203,7 +222,7 @@ Agent responses provided as an Adaptive Card must meet the following requirement
 * Adaptive Card must be well-formatted to suit the desktop, web, and mobile (iOS and Android) clients. [*Must fix*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.microsoft.com/?topic=CardMetadata), which allows cards to be easily copied from one hub to another. [*Must fix*]
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Compatibility
 
@@ -276,7 +295,7 @@ You must ensure to meet the following guidelines for agents:
 
     For more information, see Teams JS Repository [@microsoft/teams-js - npm (npmjs.com)](https://www.npmjs.com/package/@microsoft/teams-js).
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Technical requirements
 
@@ -284,7 +303,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* |
+| Manifest version | *App manifest version must be 1.13 or later. Starting July 2026, if your agent operates in channels, all new Teams Store submissions must use manifest schema version 1.25 or later. [*Must fix*] <br>* |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
@@ -292,7 +311,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## User disclosure and confirmation for action scenarios
 
@@ -327,7 +346,7 @@ For action scenarios, agents must share user disclosure and seek user confirmati
    | Returns a list of quote recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
    | Returns a list of meditation recommendations based on the user's preferences. | No | false or true |
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Bot requirements for custom engine agents
 
@@ -356,7 +375,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
     1. The domain `api.botframework.com` must be included in the agent’s allowed domains.
     1. The agent must specify exactly one valid domain corresponding to the Microsoft Copilot Studio Dataverse geographic region/environment where the agent is hosted.
 
-[Back to top](#validation-guidelines-for-agents)
+8. The `commandList.type` field in manifest.json file should be blank for the `copilot` scope to ensure consistency with Declarative agents.
+
+[Back to top](#agent-store-validation-guidelines)
 
 ## Action and knowledge source
 <!--
@@ -395,7 +416,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
     :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Duplicate agents
 
@@ -417,7 +438,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
   * Instructions field in manifest
   * Test notes
 
-* All search results in the message extension capability must include a relevant title and subtitle, which will also appear in citations of your agent [*Must fix*].
+* All search results in the message extension capability must include a relevant title, subtitle, and url which will also appear in citations of your agent [*Must fix*].
 
 * A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
 
@@ -442,7 +463,7 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
   :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## Security requirements for server calls (message extension, OpenAPIs, MCP servers)
 
@@ -459,7 +480,7 @@ Agents that use OpenAPI specs must ensure the following security standards:
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
 -->
 
-[Back to top](#validation-guidelines-for-agents)
+[Back to top](#agent-store-validation-guidelines)
 
 ## See also
 
