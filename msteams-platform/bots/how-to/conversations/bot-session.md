@@ -12,9 +12,11 @@ zone_pivot_groups: teams-sdk-languages
 
 # Manage multiple user conversations with sessions
 
-Sessions allow users to organize conversations with your bot into independent discussion chats within a single one-on-one chat. Each session maintains its own conversation history, helping reduce context length, improve response relevance, and provide a structured way for users to manage multiple tasks or workflows with your bot.
+By default, one-on-one chat between a user and an agent takes place in a single long-running conversation. With sessions, an agent can hold multiple independent one-on-one conversations with a user.
 
-Sessions help bots align with conversation patterns that users already experience in modern AI assistants, where conversations are separated by task or subject instead of grouped into a single continuous chat.
+Sessions offer users a structured way to manage multiple tasks or workflows with an agent, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
+
+Sessions is an optional feature that must be enabled for an agent in its manifest configuration.
 
 <!--## How topics improve bot conversations
 
