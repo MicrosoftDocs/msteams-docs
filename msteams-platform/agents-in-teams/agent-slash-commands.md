@@ -59,15 +59,13 @@ Message extension slash commands can be configured to appear as autocomplete ent
 
 ## Mention commands in agents
 
-Use @mention commands in your agents and apps to directly call or tag a specific agent or bot. The message is delivered to the agent tagged with @mention. The agent or app is notified of the and responds to the original message according to the context of the conversation.
+Use @mention commands in your agents and apps when users need to address a specific agent or bot directly. The message is delivered to the mentioned agent, and the agent responds according to the conversation context. For example, a user can @mention a project management agent in a channel and enter assign to create a follow-up task from the conversation context.
 
 For more information about @mention commands, see [@Mention](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
 ## Add commands
 
-Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true). To implement slash commands, configure the app or agent manifest, enable any required targeted messaging behavior, and update the agent or app logic to interpret and handle the command after the user sends it.
-
-See [Receive targeted messages](targeted-messages.md#receive-targeted-messages) for details about enabling an agent to receive targeted messages.
+Slash commands and [targeted messaging](#targeted-messaging) are configured in the app or agent [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true). Declaring commands in the manifest makes commands visible in Teams, while the app or agent [implementation](#implementing-agent-named-command-handling) determines how each command is handled after the user sends it.
 
 ### Slash and @mention commands for agents
 
@@ -132,7 +130,7 @@ In this example:
 
   - The `summarize` command is configured to be a slash command.
   - The `assign` command appears as an @mention command option.
-  - The `review` command is available as a slash command and an @mntion command in the agent.
+  - The `review` command is available as both a slash command and an @mention command in the agent.
 
 ### Slash commands for action-type message extensions
 
