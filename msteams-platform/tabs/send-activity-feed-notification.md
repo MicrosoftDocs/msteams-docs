@@ -3,7 +3,7 @@ title: Send activity feed notifications
 description: Learn how to send and customize activity feed notifications in chat or team, types and use cases of notification cards, and about reversed activity type.
 author: vikasalmal
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.owner: vishachadha
 ms.date: 02/27/2026
 ---
