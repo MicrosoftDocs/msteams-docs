@@ -255,6 +255,12 @@ async def handle_suggested_action_submit(ctx):
 
 ---
 
+## Best practices and design guidance
+
+Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
+
+Keep suggestions short, specific, and task oriented. Limit the experience to the three most useful options, order them by likely user intent, and avoid repeating generic choices across turns unless the context still makes them relevant.
+
 ## See also
 
 - [Create prompt starters](prompt-starters.md)
