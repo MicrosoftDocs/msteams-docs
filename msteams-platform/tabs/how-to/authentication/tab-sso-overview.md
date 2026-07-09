@@ -38,6 +38,10 @@ Here's what your app users get with SSO experience:
 - An app user needs to consent only in a multitenant environment. If the app user and the app reside in the same tenant, the app user doesn't need to give consent for using the app.
 - After consenting to Teams the first time, the app user can use your app with no further need of consent, even on any other device. For this reason, it offers a better user experience.
   - Alternatively, the admin can grant consent on behalf of the app users. In this scenario, when the admin consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
+
+> [!NOTE]
+> A delegated Microsoft Graph permission being user-consentable doesn't guarantee that end users can grant consent in every tenant. Microsoft Entra tenant consent policies can block user consent and require administrator approval, even for permissions that don't generally require administrator consent.
+
 - The access token is prefetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
@@ -65,7 +69,6 @@ For more information, see [Add code to enable SSO in a tab app](tab-sso-code.md)
 > [!IMPORTANT]
 >
 > - The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
-> - A delegated Microsoft Graph permission being user-consentable does not guarantee that end users can grant consent in every tenant. Microsoft Entra tenant consent policies can block user consent and cause an admin approval prompt even for permissions that do not generally require administrator consent.
 > - The `getAuthToken` fails for anonymous users as they aren't Microsoft Entra accounts.
 
 Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
