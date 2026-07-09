@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Quickstart: Create an agent and chat with it in Teams
 
-In this quickstart, you'll use command-line developer tools to create a new agent. When you're finished, you'll have code for an agent that you can chat with in Teams while it's running in your local development environment. This code will be the foundation you need to create a real Teams agent, and as you add new features to it, you'll be able to experience them in Teams immediately.
+In this quickstart, you'll use command-line developer tools to create a new Teams agent. At the end, you'll be chatting with your agent in Teams as its code runs in your local development environment. You'll be able to use the code and agent registration you create in this quickstart as the foundation for a fully-featured agent.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -147,6 +147,4 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 TODO buttons here
 
-The starter code from this quickstart is the foundation for your first real agent: use it to experiment with agent features and development techniques. With your app installed in Teams Teams installation is a launchpad for your first real agent.
-
-Because the hostname is stable across restarts, you can stop and restart your tunnel without re-registering the bot.
+Everything you've created in this quickstart will persist and can be used for further development. As long as your agent code and devtunnel are running in your development environment, your agent will be able to send and receive messages in Teams. All of your agent's behavior is in its code: you can modify and restart it at any time to update its behavior without re-registering or reinstalling it in Teams.

@@ -1,6 +1,6 @@
 ## Prerequisites
 
-This quickstart is divided into two sections. In the first, section you'll need:
+This quickstart is divided into two sections. In the first section, you'll need:
 
 - Node.js 20 or later ([installer download](https://nodejs.org))
 - Visual Studio Code ([installer download](https://code.visualstudio.com/download))
