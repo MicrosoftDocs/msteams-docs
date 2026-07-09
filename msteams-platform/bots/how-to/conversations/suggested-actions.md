@@ -261,6 +261,14 @@ Use suggested actions when the next step is predictable from the agent's or botâ
 
 Keep suggestions short, specific, and task oriented. Limit the experience to the three most useful options, order them by likely user intent, and avoid repeating generic choices across turns unless the context still makes them relevant.
 
+Prefer one-step actions that users can understand without extra explanation.
+
+Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
+
+Avoid duplicating actions already available in the response or in a card unless the action is the primary next step.
+
+Test the experience in personal chat, group chat, and channel scopes because persistence and visibility differ by scope.
+
 ## See also
 
 - [Create prompt starters](prompt-starters.md)
