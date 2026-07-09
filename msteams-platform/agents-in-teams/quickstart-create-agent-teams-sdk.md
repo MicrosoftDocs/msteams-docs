@@ -139,7 +139,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
     :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app." lightbox="../assets/images/agents-in-teams/app-use-dialog-lightbox.png":::
 
-5. Chat with your agent!
+5. Chat with your agent in Teams!
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-chat.png" alt-text="Screenshot of a brief chat interaction with an agent in Teams." lightbox="../assets/images/agents-in-teams/teams-chat.png":::
 

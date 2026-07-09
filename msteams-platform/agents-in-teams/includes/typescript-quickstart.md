@@ -2,7 +2,7 @@
 
 This quickstart is divided into two sections. In the first section, you'll need:
 
-- Node.js 20 or later ([installer download](https://nodejs.org))
+- Node.js 24 or later ([installer download](https://nodejs.org))
 - Visual Studio Code ([installer download](https://code.visualstudio.com/download))
 
 In the second part, you'll also need Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
@@ -11,7 +11,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 ## Create code for an agent and try it in Microsoft 365 Agents Playground
 
-1. Install the Teams developer CLI and Microsoft 365 Agents Playground locally.
+1. Install the Teams developer CLI and Microsoft 365 Agents Playground.
 
     ```console
     npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
@@ -78,4 +78,4 @@ The CLI will confirm your login, your account's permissions to install custom ap
 Azure CLI: installed, not logged in
 ```
 
-**To continue with this quickstart, sideloading must be enabled.** If it is disabled, you will need your organization's Microsoft 365 administrator to enable it for your account. See [Allow users to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) for administrator instructions for enabling this permission. In the meantime, you can proceed [Next steps](#next-steps) to continue working on your agent's code.
+**To continue with this quickstart, sideloading must be enabled.** If it is disabled, you will need your organization's Microsoft 365 administrator to enable it for your account. See [Allow users to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) for administrator instructions for enabling this permission. In the meantime, you can proceed to [Next steps](#next-steps) to continue working on your agent's code.

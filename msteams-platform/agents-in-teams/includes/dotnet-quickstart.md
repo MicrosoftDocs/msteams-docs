@@ -8,7 +8,7 @@ If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Dev
 
 ## Install tools, log in and confirm permissions
 
-Install the Teams developer CLI and Microsoft 365 Agents Playground locally, and log in to the developer CLI.
+Install the Teams developer CLI and Microsoft 365 Agents Playground, then log in to the developer CLI.
 
 ```console
 npm install -g @microsoft/teams.cli
