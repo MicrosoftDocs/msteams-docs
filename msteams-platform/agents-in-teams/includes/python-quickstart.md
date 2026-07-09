@@ -2,7 +2,7 @@
 
 This quickstart is divided into two sections. In the first section, you'll need:
 
-- Node.js 20 or later ([installer download](https://nodejs.org))
+- Node.js 24 or later ([installer download](https://nodejs.org))
 - Python 3.12 or later ([installer download](https://python.org/downloads))
 - Visual Studio Code ([installer download](https://code.visualstudio.com/download))
 
@@ -56,7 +56,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
    ### [Cmd](#tab/cmd)
 
-   ```cmd
+    ```cmd
     python -m venv .venv
     .venv\Scripts\activate.bat
     pip install -e .
