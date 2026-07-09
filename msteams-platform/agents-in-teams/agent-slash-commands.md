@@ -146,8 +146,9 @@ In this example , the agent is registered to operate in `personal`, `team`, and 
 
 The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. Use `slash` when the command should appear in the slash command picker, use `mention` when the command should appear in the traditional @mention command menu, or include both values when the same command should be available from both entry points.
 
-Declare commands and their triggers in the `bots[].commandLists[]` section of the manifest, and enable targeted-message handling for agents that should receive slash-command invocations in group conversations. In the app manifest example, the `Summarize` command shows up as an @mention command option, and `Review` is available as a slash command in the agent.
+Declare commands and their triggers in the `bots[].commandLists[]` section of the manifest, and enable targeted-message handling for agents that should receive slash-command invocations in group conversations. In the app manifest example, the `summarize` command is configured to be a slash command, the assign command appears as an @mention command option, and `review` command is available as a slash command and an @mntion command in the agent.
 
+<!--
 Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
 ```json
@@ -173,6 +174,7 @@ Use the following example to configure the app manifest for supporting an agent 
 ```
 
 In this example, the commands appear as both @mention and slash command options.
+-->
 
 ### Slash commands for action-type message extensions
 
