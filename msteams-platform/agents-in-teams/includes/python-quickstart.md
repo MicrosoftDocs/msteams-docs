@@ -14,13 +14,13 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 1. Install the Teams developer CLI and Microsoft 365 Agents Playground locally.
 
-    ```bash
+    ```console
     npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
     ```
 
 1. Use `teams project new` to create the code for a new agent from a template and open it in Visual Studio Code.
 
-    ```bash
+    ```console
     teams project new python echo-bot
     cd echo-bot
     code .
@@ -56,7 +56,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
    ### [Cmd](#tab/cmd)
 
-   ```bash
+   ```cmd
     python -m venv .venv
     .venv\Scripts\activate.bat
     pip install -e .
@@ -67,7 +67,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 1. In a new console window, start Microsoft 365 Agents Playground.
 
-    ```bash
+    ```console
     agentsplayground
     ```
 
@@ -90,13 +90,13 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 Log in to your Microsoft 365 account from the Teams developer CLI.
 
-```bash
+```console
 teams login
 ```
 
 The CLI will confirm your login, your account's permissions to install custom apps ("sideloading"), and check for the presence of an Azure CLI installation (not required for this quickstart).
 
-```console
+```output
 ✔ Logged in as user@contoso.com
 ✔ Sideloading: enabled
 

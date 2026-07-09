@@ -39,7 +39,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
    ## [Windows](#tab/windows)
 
-    ```powershell
+    ```console
     winget install Microsoft.devtunnel
     ```
 
@@ -59,7 +59,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 1. Log in to `devtunnel` with your Microsoft 365 account and host a new tunnel.
 
-    ```bash
+    ```console
     devtunnel user login
     devtunnel create --allow-anonymous
     devtunnel port create -p 3978
@@ -85,7 +85,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
-    ```bash
+    ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env .env
     ```
 
@@ -95,7 +95,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
-    ```bash
+    ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env appsettings.json
     ```
 
@@ -109,7 +109,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
-    ```bash
+    ```console
     npm run dev
     ```
 
@@ -119,7 +119,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
-    ```bash
+    ```console
     python src/main.py
     ```
 
@@ -129,7 +129,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
-    ```bash
+    ```console
     dotnet run
     ```
 

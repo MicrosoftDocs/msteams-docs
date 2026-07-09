@@ -10,14 +10,14 @@ If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Dev
 
 Install the Teams developer CLI and Microsoft 365 Agents Playground locally, and log in to the developer CLI.
 
-```bash
+```console
 npm install -g @microsoft/teams.cli
 teams login
 ```
 
 The CLI will confirm your login, your account's permissions to install custom apps ("sideloading"), and check for the presence of an Azure CLI installation (not required for this quickstart).
 
-```console
+```output
 ✔ Logged in as user@contoso.com
 ✔ Sideloading: enabled
 
@@ -30,14 +30,14 @@ Azure CLI: installed, not logged in
 
 1. Use `teams project new` to create the code for a new agent from a template.
 
-    ```bash
+    ```console
     teams project new csharp EchoBot
     cd EchoBot/EchoBot
     ```
 
 1. Start the agent to confirm it runs. Once it's running, you'll see a confirmation that it's running on port 3978.
 
-    ```bash
+    ```console
     dotnet run
     ```
 
