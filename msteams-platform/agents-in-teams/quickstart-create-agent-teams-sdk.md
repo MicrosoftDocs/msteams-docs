@@ -29,15 +29,13 @@ TODO this assumes 2.1 for .NET, because auth skip doesn't work in older versions
 
 # Quickstart: Create an agent with Teams SDK and Teams developer CLI
 
-In this quickstart, you'll use the Teams developer CLI to create starter code for a new Teams agent from a template. After testing it locally with Microsoft 365 Agents Playground, you'll get it up and running in Teams, setting the stage for further iteration and development.
-
-At the end of this quickstart, you'll have an agent implementation that  agent running locally, can debug/modify/experiment. Ideally working in real teams, but in playground if not.
-
-Emphasize getting set up with Teams
+In this quickstart, you'll use command-line developer tools to create a new agent. When you're finished, you'll have code for an agent that you can chat with in Teams while it's running in your local development environment. You'll be able to continue exploring and experimenting with this code, and as you add new features to it, you'll be able to experience them in Teams immediately.
 
 ## Prerequisites
 
-This quickstart is divided into two sections. In the first, you'll create and test your agent locally, and you'll need:
+This quickstart is divided into two sections. In the first, you'll create the code for your agent and try it out with Microsoft 365 Agents Playground, a local testing tool. You'll need:
+
+TODO Make editor optional, if they want to look at their code.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -62,11 +60,11 @@ This quickstart is divided into two sections. In the first, you'll create and te
 
 ::: zone-end
 
-This is enough to start working on your agent's code, but it's highly recommended to continue through registering and installing your app on Teams at the very beginning of the development process. For that, you'll also need Teams, logged in to a Microsoft 365 work or school account.
+In the second part, you'll register your agent with the Teams platform, install it, and try it out. For that, you'll also need Teams, logged in to a Microsoft 365 work or school account with permissions to install custom Teams apps ("sideloading").
 
-To install your app, your account needs permission to install custom Teams apps, also called *sideloading*. The quickstart includes a step to confirm this permission before it's needed, and instructions for requesting it from your administrator if you don't have it.
+Getting a new agent running in Teams immediately sets it up for a successful development process and release, but if you don't have a Microsoft 365 work or school account, you can still complete the first part of the quickstart to get started exploring agent development. See [here](/office/developer-program/microsoft-365-developer-program) for information about joining the Microsoft 365 Developer Program and setting up a sandbox subscription.
 
-[asdf](/microsoftteams/#allow-users-to-upload-custom-apps)
+To install your app in Teams, your account needs permissions to install custom Teams apps ("sideloading"). The quickstart includes a step to confirm this permission before it's needed, and instructions for requesting it from your organization's Microsoft 365 administrator if you don't have it.
 
 ## Create an agent and try it in Microsoft 365 Agents Playground
 
@@ -145,19 +143,30 @@ TODO skipauth
 
 4. Use the compose box to send your agent a message and see it respond in the chat.
 
-5. Use <kbd>Ctrl+C<kbd> in both open console windows to stop Agents Playground and your agent.
+Your agent's up and running locally! Use <kbd>Ctrl+C</kbd> in both open console windows to stop Agents Playground and your agent.
 
-## Log in with Teams developer CLI and confirm sideloading status
+## Log in with Teams developer CLI and confirm sideloading permissions
 
-In this step, you'll log in to your Microsoft 365 work or school account using the Teams developer CLI. Connecting the CLI to your organizational account is needed for the next steps, but this will also confirm whether your account is eligible to  use the Teams developer CLI to create the cloud configuration needed to use your agent from Teams.
+The next part of the quickstart requires a Microsoft 365 work or school account, licensed for Teams, with permissions to install custom Teams apps.
 
-1. Login to your Microsoft 365 work or school account using the Teams developer CLI.
+If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your agent's code and complete the rest of this quickstart later. See [here](/office/developer-program/microsoft-365-developer-program) for information about joining the Microsoft 365 Developer Program and setting up a sandbox subscription that you can use to try your app in Teams.
 
-    ```bash
-    teams login
-    ```
+To proceed, use the Teams developer CLI to log in to your account and confirm your permissions.
 
-    After you have logged in, Teams
+```bash
+teams login
+```
+
+Teams will confirm your login, your account's sideloading permissions, and the presence of an Azure CLI installation (not required for this quickstart).
+
+```console
+✔ Logged in as nw_m365_admin@8k4lpb.onmicrosoft.com
+✔ Sideloading: enabled
+
+Azure CLI: installed, not logged in
+```
+
+To continue with installing and running your app in Teams, sideloading must show as enabled for your account. If it is disabled, you will need to
 
 TODO --service-management-reference
 
@@ -320,3 +329,5 @@ Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides
 ## See also
 
 [Agents user experience](../bots/how-to/teams-conversational-ai/ai-ux.md)
+
+## Next steps
