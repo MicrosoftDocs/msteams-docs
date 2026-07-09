@@ -261,7 +261,7 @@ Authorization: Bearer {bot-token}
 
 ## Create sessions proactively
 
-Sessions are an opt-in feature. Two conditions must be met before a session can be created:
+When sessions are enabled, the existing create conversation operation applied to a 1:1 conversation creates a new session. Two conditions must be met:
 
 1. **The bot must be installed for the user.** If the bot is not installed, session creation is skipped and a regular 1:1 conversation is created instead (no error returned).
 2. **The bot's manifest must declare `supportsSessions: true`.**
@@ -269,7 +269,7 @@ Sessions are an opt-in feature. Two conditions must be met before a session can 
 Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with exactly one member and one message activity creates a new session.
 
 > [!IMPORTANT]
-> When sessions are enabled, `Create` always creates a new session. To proactively send a message into an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
+> Each call to the create conversation API creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
 For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
