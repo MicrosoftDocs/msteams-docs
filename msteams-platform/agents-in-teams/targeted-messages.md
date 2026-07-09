@@ -199,46 +199,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 > [!NOTE]
 > If attempting to send a targeted message results in an error, consider sending a 1:1 chat message as a fallback.
 
-#### Send replies using REST APIs
-
-If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
-
-```HTTP
-POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-Authorization: Bearer eyJhbGciOiJIUzI1Ni...
-Content-Type: application/json
-
-JSON
-{
-"type": "message",
-"from": {
-"id": "28:c9e...",
-"name": "Contoso"
-},
-"conversation": {
-"id": "x:17I0...",
-"name": "Convo1"
-},
-"recipient": {
-"id": "29:1XJ...",
-"name": "Megan Bowen"
-},
-"text": "My bot's reply",
-"entities": [
-{
-"type": "targetedMessageInfo",
-"messageId": "1772129782775"
-}
-]
-}
-```
-
-Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
-
-<!--
-Response visibility is controlled by the `WithRecipient` configuration and the `isTargeted` property. Use `isTargeted: true` with `WithRecipient` to deliver a private, user-specific response within a shared conversation. Use `isTargeted: false` with `WithRecipient` only when you need to identify an intended recipient while keeping the message visible according to the normal conversation context. This distinction allows developers to identify an intended recipient without automatically creating a private or ephemeral experience.
--->
-
 ### Integrate prompt preview in a targeted message
 
 Prompt Preview can appear in both private and public agent responses, but the implementation mechanism is the same in both cases: the agent includes `targetedMessageInfo` that references the original targeted message. The difference is only who can see the reply after it is sent.
@@ -282,6 +242,44 @@ response.add_targeted_message_info(activity.id)
 ```
 
 ::: zone-end
+
+#### Send replies using REST APIs
+
+If you are sending replies through REST APIs, use the same `targetedMessageInfo` entity in the activity payload.
+
+```HTTP
+POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Content-Type: application/json
+
+JSON
+{
+"type": "message",
+"from": {
+"id": "28:c9e...",
+"name": "Contoso"
+},
+"conversation": {
+"id": "x:17I0...",
+"name": "Convo1"
+},
+"recipient": {
+"id": "29:1XJ...",
+"name": "Megan Bowen"
+},
+"text": "My bot's reply",
+"entities": [
+{
+"type": "targetedMessageInfo",
+"messageId": "1772129782775"
+}
+]
+}
+```
+
+Use `isTargetedActivity=true` for the private reply. For a public repost, send the message normally but keep the same `targetedMessageInfo` entity.
+
+To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of the original targeted message to show the user's original request above the agent response, as shown in this example:
 
 ```json
 
