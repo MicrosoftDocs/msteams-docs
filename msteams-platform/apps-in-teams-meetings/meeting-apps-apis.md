@@ -1,9 +1,9 @@
 ---
 title: Enhance Meeting Experience with APIs
 description: Learn meeting apps API references available through the Teams SDK and TeamsJS library with examples, code samples, and response codes.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.owner: kanchankaur
 ms.date: 06/17/2026
 ---
@@ -649,7 +649,8 @@ app.on('message', async ({ activity, api, send }) => {
 
 # [Python](#tab/python3)
 
-* [SDK reference](/python/api/microsoft-teams-ai/microsoft.teams.ai?view=msteams-sdk-python-latest&preserve-view=true)
+* [SDK reference](python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest
+ )
 
 ```python
 @app.on_message
