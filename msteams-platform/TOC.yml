@@ -13,9 +13,9 @@
   items:
   - name: Agents in Teams
     href: agents-in-teams/overview.md
-  - name: "Quickstart: Create an agent with Teams SDK"
+  - name: "Quickstart: Create and chat with an agent"
     href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-    displayName: TODO
+    displayName: Get started, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
