@@ -37,6 +37,9 @@
   - name: Expose slash commands
     href: agents-in-teams/agent-slash-commands.md
     displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
+  - name: Structure conversations with sessions
+    href: bots/how-to/conversations/bot-session.md
+    displayName: sessions, session, conversationId, proactive session, 1:1 chat
   - name: Extend agents to Microsoft 365 hubs
     href: /microsoft-365/copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, Teams SDK, custom agent
@@ -568,9 +571,6 @@
       - name: Send and receive files
         href: bots/how-to/bots-filesv4.md  
         displayName: receive files using bot
-      - name: Use sessions in bot conversations
-        href: bots/how-to/conversations/bot-session.md
-        displayName: sessions, session, conversationId, proactive session, 1:1 chat
     - name: Send notifications
       items:
       - name: Build notification capability

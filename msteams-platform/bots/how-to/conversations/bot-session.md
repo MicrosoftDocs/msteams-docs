@@ -18,53 +18,7 @@ Sessions offer users a structured way to manage multiple tasks or workflows with
 
 Sessions is an optional feature that must be enabled for an agent in its manifest configuration.
 
-<!--## How topics improve bot conversations
-
-Traditional one-on-one bot chats maintain a single, continuous message thread. As conversations grow longer and span multiple subjects, it becomes harder for users and bots to maintain context. Topics address this challenge by introducing boundaries between conversations while keeping them accessible within the same chat experience.
-
-When topics are enabled:
-
-- Each topic maintains its own conversation history.
-
-- Users can switch between topics without losing context.
-
-- Bots can initiate new topics to organize workflows or updates.
-
-- Notifications and navigation experiences help users track new activity.
-
-For example, a developer productivity bot might create a separate topic for each pull request. Users can review updates, track failures, and resolve issues without mixing unrelated conversations.
--->
-## Enable sessions for your bot
-
-Sessions are an opt-in capability that you enable through your app manifest.  
-After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
-
-> [!IMPORTANT]
-> After your bot opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
-
-Update your app manifest and set the `supportsSessions` property to `true`.
-
-```json
-{
-  "bots": [
-    {
-      "botId": "{{BOT_ID}}",
-      "supportsSessions": true
-    }
-  ]
-}
-```
-
-After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
-
-> [!IMPORTANT]
->
-> Bots that don't enable sessions continue to use the legacy single chat experience.
-
-> [!NOTE]
-> When sessions are enabled for an existing bot, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
-
-## User experience after enabling sessions
+## User experience
 
 When chatting one-on-one with an agent that supports sessions, controls in the header enable users to create and switch between sessions.
 
@@ -132,7 +86,55 @@ The first message in a session becomes the session title, and the latest message
 > [!NOTE]
 > Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
 
+<!--## How topics improve bot conversations
+
+Traditional one-on-one bot chats maintain a single, continuous message thread. As conversations grow longer and span multiple subjects, it becomes harder for users and bots to maintain context. Topics address this challenge by introducing boundaries between conversations while keeping them accessible within the same chat experience.
+
+When topics are enabled:
+
+- Each topic maintains its own conversation history.
+
+- Users can switch between topics without losing context.
+
+- Bots can initiate new topics to organize workflows or updates.
+
+- Notifications and navigation experiences help users track new activity.
+
+For example, a developer productivity bot might create a separate topic for each pull request. Users can review updates, track failures, and resolve issues without mixing unrelated conversations.
+-->
+## Enable sessions for your bot
+
+Sessions are an opt-in capability that you enable through your app manifest.  
+After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
+
+> [!IMPORTANT]
+> After your bot opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
+
+Update your app manifest and set the `supportsSessions` property to `true`.
+
+```json
+{
+  "bots": [
+    {
+      "botId": "{{BOT_ID}}",
+      "supportsSessions": true
+    }
+  ]
+}
+```
+
+After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
+
+> [!IMPORTANT]
+>
+> Bots that don't enable sessions continue to use the legacy single chat experience.
+
+> [!NOTE]
+> When sessions are enabled for an existing bot, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
+
 ## Send and receive messages in sessions
+
+Session participation is automatic and requires no special implementation. Your existing message-handling code works without changes.
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your bot shouldn't parse or construct the conversation ID manually.
 
@@ -264,7 +266,7 @@ Sessions are an opt-in feature. Two conditions must be met before a session can 
 1. **The bot must be installed for the user.** If the bot is not installed, session creation is skipped and a regular 1:1 conversation is created instead (no error returned).
 2. **The bot's manifest must declare `supportsSessions: true`.**
 
-Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with one message activity creates a new session.
+Both conditions are checked server-side. A bot that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with exactly one member and one message activity creates a new session.
 
 > [!IMPORTANT]
 > When sessions are enabled, `Create` always creates a new session. To proactively send a message into an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
@@ -484,7 +486,7 @@ If your bot sends updates to users based on activity outside of Teams and unrela
 
 ### Provide meaningful first messages
 
-The first message becomes the session title. Use clear and descriptive messages so users understand the purpose of the session.
+The first message becomes the session title. Use clear, concise messages so users can quickly identify the session in the panel. Long messages are truncated in the title display.
 
 <!--## Considerations and limitations
 
