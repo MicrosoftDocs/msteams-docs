@@ -145,6 +145,8 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ## Next steps
 
+TODO buttons here
+
 The starter code from this quickstart is the foundation for your first real agent: use it to experiment with agent features and development techniques. With your app installed in Teams Teams installation is a launchpad for your first real agent.
 
 Because the hostname is stable across restarts, you can stop and restart your tunnel without re-registering the bot.

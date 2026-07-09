@@ -94,7 +94,7 @@ Log in to your Microsoft 365 account from the Teams developer CLI.
 teams login
 ```
 
-The CLI will confirm your login, your account's sideloading permissions, and check for the presence of an Azure CLI installation (not required for this quickstart).
+The CLI will confirm your login, your account's permissions to install custom apps ("sideloading"), and check for the presence of an Azure CLI installation (not required for this quickstart).
 
 ```console
 ✔ Logged in as nw_m365_admin@8k4lpb.onmicrosoft.com TODO
