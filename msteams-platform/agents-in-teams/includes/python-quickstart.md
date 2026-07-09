@@ -8,7 +8,7 @@ This quickstart is divided into two sections. In the first, section you'll need:
 
 In the second part, you'll also need Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
 
-If you don't have an account, or you aren't sure about your permissions, you can still begin - the quickstarts will address those requirements when they're needed.
+If you don't have an account, or you aren't sure about your permissions, you can still begin. The quickstart will address those requirements when they're needed.
 
 ## Create code for an agent and try it in Microsoft 365 Agents Playground
 
@@ -52,7 +52,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 1. Use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
 
-1. In your editor, undo the modification you made in step 3. This change will ensure a secure connection with Teams in the next steps.
+1. In your editor, undo the modification you made in step 3. This will ensure a secure connection with Teams in the next steps.
 
 ## Log in and confirm permissions
 
