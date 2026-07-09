@@ -50,7 +50,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 4. Use the compose box to send your agent a message and see it respond in the chat. Your agent's up and running locally!
 
-    :::image type="content" source="../../assets/images/agents-in-teams/agents-playground-interaction.png" alt-text="Screenshot of a short agent interaction in Microsoft 365 Agents Playground.":::
+    :::image type="content" source="../../assets/images/agents-in-teams/agents-playground-interaction.png" alt-text="Screenshot of a short agent interaction in Microsoft 365 Agents Playground." lightbox="../../assets/images/agents-in-teams/agents-playground-interaction.png":::
 
 5. Close the Agents Playground tab in your browser, and use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
 

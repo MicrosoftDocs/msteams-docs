@@ -103,11 +103,11 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 2. When the `create` command completes, it will display a menu. Select **Install in Teams** to open Teams and display the agent installer dialog.
 
-    :::image type="content" source="../assets/images/agents-in-teams/app-installer-dialog.png" alt-text="Screenshot of the app installation dialog in Teams.":::
+    :::image type="content" source="../assets/images/agents-in-teams/app-installer-dialog.png" alt-text="Screenshot of the app installation dialog in Teams." lightbox="../assets/images/agents-in-teams/app-installer-dialog.png":::
 
 ::: zone pivot="teams-sdk-typescript"
 
-3. Before proceeding in Teams, start your agent from the command line again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```bash
     npm run dev
@@ -117,7 +117,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-python"
 
-3. Before proceeding in Teams, start your agent from the command line again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```bash
     python src/main.py
@@ -127,7 +127,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-3. Before proceeding in Teams, start your agent from the command line again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```bash
     dotnet run
@@ -137,9 +137,11 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 4. In Teams, select **Add** in the installer dialog to install the agent. In the **How would you like to use this app today?** dialog, select **Open** to open a one-on-one chat with the agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app.":::
+    :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app." lightbox="../assets/images/agents-in-teams/app-use-dialog.png":::
 
 5. Chat with your agent!
+
+    :::image type="content" source="../assets/images/agents-in-teams/teams-chat.png" alt-text="Screenshot of a brief chat interaction with an agent in Teams." lightbox="../assets/images/agents-in-teams/teams-chat.png":::
 
 ## Next steps
 

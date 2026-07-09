@@ -3,7 +3,7 @@
 This quickstart is divided into two sections. In the first, section you'll need:
 
 - Node.js 20 or later ([installer download](https://nodejs.org))
-- Python 3.11 or later ([installer download](https://python.org/downloads))
+- Python 3.12 or later ([installer download](https://python.org/downloads))
 - An editor, we suggest VS Code
 
 In the second part, you'll also need Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
@@ -18,11 +18,12 @@ If you don't have an account, or you aren't sure about your permissions, you can
     npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
     ```
 
-1. Use `teams project new` to create the code for a new agent from a template. TODO venv this?
+1. Use `teams project new` to create the code for a new agent from a template and open it in Visual Studio Code.
 
     ```bash
     teams project new python echo-bot
     cd echo-bot
+    code .
     ```
 
 1. Open `src/main.py`. Find the line that reads `app = App()` and modify it to read:
@@ -35,10 +36,34 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 1. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
 
+   ### [Bash](#tab/bash)
+
     ```bash
+    python -m venv .venv
+    source .venv/bin/activate
     pip install -e .
     python src/main.py
     ```
+
+   ### [PowerShell](#tab/powershell)
+
+    ```powershell
+    python -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+    pip install -e .
+    python src/main.py
+    ```
+
+   ### [Cmd](#tab/cmd)
+
+   ```bash
+    python -m venv .venv
+    .venv\Scripts\activate.bat
+    pip install -e .
+    python src/main.py
+    ```
+
+    ---
 
 1. In a new console window, start Microsoft 365 Agents Playground.
 
@@ -50,7 +75,9 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 1. Use the compose box to send your agent a message and see it respond in the chat. Your agent's up and running locally!
 
-1. Use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
+    :::image type="content" source="../../assets/images/agents-in-teams/agents-playground-interaction.png" alt-text="Screenshot of a short agent interaction in Microsoft 365 Agents Playground." lightbox="../../assets/images/agents-in-teams/agents-playground-interaction.png":::
+
+1. Close the Agents Playground tab in your browser, and use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
 
 1. In your editor, undo the modification you made in step 3. This will ensure a secure connection with Teams in the next steps.
 
