@@ -16,16 +16,6 @@ Sessions allow users to organize conversations with your bot into independent di
 
 Sessions help bots align with conversation patterns that users already experience in modern AI assistants, where conversations are separated by task or subject instead of grouped into a single continuous chat.
 
-In this article:
-
-- [Enable sessions for your bot](#enable-sessions-for-your-bot)
-- [Send and receive messages in sessions](#send-and-receive-messages-in-sessions)
-- [Create sessions proactively](#create-sessions-proactively)
-- [Session control](#session-control)
-- [Detect session support through install events](#detect-session-support-through-install-events)
-- [Error codes](#error-codes)
-- [Best practices](#best-practices)
-
 <!--## How topics improve bot conversations
 
 Traditional one-on-one bot chats maintain a single, continuous message thread. As conversations grow longer and span multiple subjects, it becomes harder for users and bots to maintain context. Topics address this challenge by introducing boundaries between conversations while keeping them accessible within the same chat experience.
