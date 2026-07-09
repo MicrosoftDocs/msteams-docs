@@ -37,7 +37,7 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
 > [!NOTE]
-> Microsoft Teams does not provide a bot event that notifies an app when a user blocks the bot or blocks the conversation. This behavior is a platform limitation and no dedicated activity is sent to the bot for that user action. It applies to standard Teams bot conversation event handling, including personal app messaging scenarios. Supported bot lifecycle events include installation and conversation updates, but blocking is not exposed as a subscribable event.
+> Microsoft Teams doesn't provide an event to notify a bot when a user blocks the bot or a conversation. Blocking actions aren't exposed to bots through the Teams platform.
 
 The following table shows a list of Teams conversation update events with more details:
 
