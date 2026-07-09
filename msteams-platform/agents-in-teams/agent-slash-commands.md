@@ -1,5 +1,5 @@
 ---
-title: Expose Named Commands from Agents and Apps
+title: Expose Slash Commands from Agents and Apps
 description: Expose slash and @mention commands for your agents and apps to make frequently used functionality discoverable and quickly usable as named commands.
 ms.localizationpriority: high
 ms.date: 05/27/2026
@@ -11,7 +11,7 @@ ms.topic: article
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
-# Expose named commands from agents and apps
+# Expose slash commands from agents and apps
 
 > [!NOTE]
 >
