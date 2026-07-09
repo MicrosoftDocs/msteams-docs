@@ -2,7 +2,6 @@
 
 - Node.js 20 or later ([installer download](https://nodejs.org))
 - .NET 10 or later ([installer download](https://dotnet.microsoft.com/download))
-- An editor, we suggest VS Code
 - Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps (you'll confirm these permissions at the very beginning of the quickstart)
 
 If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
@@ -12,7 +11,7 @@ If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Dev
 Install the Teams developer CLI and Microsoft 365 Agents Playground locally, and log in to the developer CLI.
 
 ```bash
-npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
+npm install -g @microsoft/teams.cli
 teams login
 ```
 
@@ -32,8 +31,8 @@ Azure CLI: installed, not logged in
 1. Use `teams project new` to create the code for a new agent from a template.
 
     ```bash
-    teams project new csharp echo-bot
-    cd Echo.Bot/Echo.Bot
+    teams project new csharp EchoBot
+    cd EchoBot/EchoBot
     ```
 
 1. Start the agent to confirm it runs. Once it's running, you'll see a confirmation that it's running on port 3978.

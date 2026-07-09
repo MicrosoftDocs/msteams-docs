@@ -84,10 +84,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
     ```bash
-    teams app create \
-      --name echo-bot \
-      --endpoint <tunnel-host>/api/messages \
-      --env .env
+    teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env .env
     ```
 
 ::: zone-end
@@ -97,19 +94,16 @@ Teams can only communicate with agents that are reachable from the public Intern
 1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
 
     ```bash
-    teams app create \
-      --name echo-bot \
-      --endpoint <tunnel-host>/api/messages \
-      --env appsettings.json
+    teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env appsettings.json
     ```
 
 ::: zone-end
 
-1. When the `create` command completes, it will display a menu. Select `Install in Teams` to open Teams and display the app's installer page.
+2. When the `create` command completes, it will display a menu. Select `Install in Teams` to open Teams and display the app's installer page.
 
 ::: zone pivot="teams-sdk-typescript"
 
-1. Start your agent.
+3. Start your agent again.
 
     ```bash
     npm run dev
@@ -119,7 +113,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-python"
 
-1. Start your agent.
+3. Start your agent again.
 
     ```bash
     python src/main.py
@@ -129,7 +123,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-1. Start your agent.
+3. Start your agent again.
 
     ```bash
     dotnet run

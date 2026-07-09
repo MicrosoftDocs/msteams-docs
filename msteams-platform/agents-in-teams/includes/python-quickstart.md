@@ -18,9 +18,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
     npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
     ```
 
-TODO venv this?
-
-1. Use `teams project new` to create the code for a new agent from a template.
+1. Use `teams project new` to create the code for a new agent from a template. TODO venv this?
 
     ```bash
     teams project new python echo-bot
