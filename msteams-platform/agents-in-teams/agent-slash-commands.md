@@ -41,14 +41,6 @@ These types of slash commands are supported across all client platforms, includi
 > [!IMPORTANT]
 > Targeted messaging and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
-### Targeted messaging
-
-Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command.
-
-In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is delivered only to that agent and is not visible to other conversation participants.
-
-For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
-
 ### Agent slash commands
 
 Agent slash commands enable agents to surface named commands that users can privately invoke in channels, group chats, and meeting chats. Slash commands are useful for functionality that users need to access quickly and privately in group conversations.
@@ -61,7 +53,7 @@ Agents or apps can explicitly declare the commands your agent supports, and Team
 
 ### Slash commands for action-type message extensions
 
-Apps that implement action-type [message extensions](../messaging-extensions/what-are-messaging-extensions.md) can surface them as slash commands. When a user activates one from the autocomplete menu, Teams immediately opens the associated task module or dialog. Activating a message extension slash command only opens the task module or dialog, and doesn't send a message. Search-type message extensions can't be exposed as commands.
+Apps that implement action-type [message extensions](../messaging-extensions/what-are-messaging-extensions.md) can expose those actions as slash commands. When a user selects one from the autocomplete menu, Teams opens the associated task module or dialog. Activating a message extension slash command opens the module or dialog only; it does not send a message. Search-type message extensions cannot be exposed as slash commands.
 
 Message extension slash commands can be configured to appear as autocomplete entries in both the compose box and the Teams command box.
 
@@ -85,7 +77,7 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
 
 The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. For agent command lists, use `mention` when the command should appear in the traditional @mention command menu, use `slash` when the command should appear in the slash command picker, or include both values when the same command should be available from both entry points.
 
-Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example:
+Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest. The following manifest example shows an agent that supports targeted messages and exposes three commands through slash, mention, and combined triggers:
 
 ```json
 {
@@ -181,7 +173,7 @@ Use the `triggers` property of `composeExtensions[].commands[]` to expose messag
 }
 ```
 
-This example shows that the `summarizeCommand` command is available only within command box, while `draftCommand` and `reviewCommand` are available both as slash command in the compose box and in the command box.
+In this example, `summarizeCommand` is available in the configured compose and command box contexts but is not exposed as a slash command. The `draftCommand` and `reviewCommand` actions declare the slash trigger, so they appear as slash commands in supported entry points.
 
 ## Implementing agent named command handling
 
@@ -193,7 +185,7 @@ See [Best practices and design guidance](#best-practices-and-design-guidance) fo
 
 ## Targeted messaging
 
-Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, Teams delivers it only to that agent, and other conversation participants do not see it. Agents can also respond to user's targeted message with a private agent-to-user message.
+Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
 
 For more information, see [send and receive targeted messages in group conversations](targeted-messages.md).
 
