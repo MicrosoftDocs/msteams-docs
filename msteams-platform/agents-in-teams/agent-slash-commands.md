@@ -73,12 +73,6 @@ Use @mention commands in your agents and apps to directly call or tag a specific
 
 For more information about @mention commands, see [@Mention](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
 
-## Targeted messaging
-
-Agents can receive [targeted messages](targeted-messages.md) sent by users by entering the agent’s name as a slash command. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is targeted only to that agent and is not visible to other conversation participants.
-
-For more information, see [Send and receive targeted messages in group conversations](targeted-messages.md).
-
 ## Add commands
 
 Targeted messaging and slash commands are configured via the app or agent's [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true).
@@ -198,6 +192,12 @@ Configuring agent slash commands only surfaces them to users in the Teams client
 When a user activates an agent slash command, Teams switches the compose box to targeted message mode and inserts the command name, then returns control to the user to allow them to enter more text and send the message. The agent's message handler is responsible for using the contents of the message to determine whether it should be interpreted as a command invocation and handling it appropriately.
 
 See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
+
+## Targeted messaging
+
+Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. When the user sends the message, it is targeted only to that agent and is not visible to other conversation participants. Agents can also respond to user's targeted message with a private agent-to-user message.
+
+For more information, see [send and receive targeted messages in group conversations](targeted-messages.md).
 
 ## Best practices and design guidance
 
