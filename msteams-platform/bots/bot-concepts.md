@@ -1,10 +1,10 @@
 ---
 title: Activity Handlers and Bot Logic
 description: Learn about bot events and activity handlers for messages, channels, teams, members, mentions, auth, and card actions.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.owner: angovil
-ms.date: 10/03/2024
+ms.owner: nickwalk
+ms.date: 04/09/2026
 ---
 
 # Understand bot concepts
@@ -23,14 +23,14 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people, even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
-* Notifications, where you provide an interactive card for users to take additional information.
-* Feedback scenarios, such as polls and surveys.
-* Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
-* Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
+- Notifications, where you provide an interactive card for users to take additional information.
+- Feedback scenarios, such as polls and surveys.
+- Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
+- Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
 ### In a group chat
 
@@ -42,325 +42,318 @@ Bots that work better in a channel also work better in a group chat.
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
-* Q&A bots
-* bots that initiate workflows in other systems.
-* bots that tell jokes.
-* bots that take notes.
+- Q&A bots
+- bots that initiate workflows in other systems.
+- bots that tell jokes.
+- bots that take notes.
 Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
 ## Activity handler and bot logic
 
 To create a bot app that meets your needs, understanding Microsoft Teams activity handler and bot logic is essential. These two key components work together to organize conversational logic.
 
-* [Teams activity handler](#teams-activity-handler):
-  Teams activity handlers extend the functionality of standard bots by adding support for Teams-specific events and interactions. These events can include channel creation, team member additions, and other actions unique to the Teams environment. By utilizing Teams activity handlers, bots can provide a more integrated and seamless user experience within the Teams platform.
+- [Teams activity handler](#teams-activity-handler):
+  Processes Teams-specific events and interactions such as channel creation, team member additions, and other actions unique to the Teams environment. In the Teams SDK v2, handlers are registered directly on an `App` instance rather than via class inheritance.
 
-* [Bot logic](#bot-logic):
-  The bot object, which houses the bot’s conversational logic, is responsible for making decisions based on user input. It exposes a turn handler, which is the method that accepts incoming activities from the bot adapter. The bot logic ensures that each turn of the conversation is handled appropriately, contributing to the bot's overall coherence and effectiveness.
-
-These two components work together to create an engaging conversational experience. The activity handler processes what the user says, while the bot logic figures out the best response. Together, they enable:
-
-* Understanding the context of the conversation
-* Personalizing interactions
-* Retrieving information efficiently
-* Maintaining an adaptive conversational flow
-
-By understanding the activity handler and bot logic, you can design and implement smart, user-friendly conversational AI and conventional bot solutions.
+- [Bot logic](#bot-logic):
+  The `App` object houses the bot's conversational logic and is responsible for making decisions based on user input. Incoming activities are routed to the appropriate handler based on activity type and optional pattern matching.
 
 ### Teams activity handler
 
-The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the Microsoft Bot Framework's activity handler and routes all Teams activities before handling any non-Teams specific ones. It acts as an intermediary between the user's input and the bot's response:
+The activity handler is the core of a bot's functionality, managing and processing user interactions. In the Teams SDK v2:
 
-* Receives incoming messages.
-* Retrieves key data from user input.
-* Identifies user intent using Natural Language Processing (NLP).
-* Maintains conversation context and state.
-* Generates responses based on user input and intent.
+- You instantiate an `App` object and register handlers on it.
+- Handlers receive a typed context object (`IActivityContext` in TypeScript, `IContext<TActivity>` in C#, `ActivityContext[TActivity]` in Python).
+- Replies and proactive messages are sent via `ctx.reply()` or `ctx.send()`.
 
-The activity handler improves user experience, efficiency, accuracy, scalability, and flexibility.
-
-When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the appropriate activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the Bot Framework's `ActivityHandler` class.
+When a Teams bot receives an activity, the SDK routes it through the registered handler. Teams-specific events (channel lifecycle, member changes, etc.) are surfaced as distinct named events, so you do not need to inspect `channelData.eventType` manually.
 
 > [!NOTE]
 > If a bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
 
+#### Activity handler code snippets
+
+The following snippets show Teams activity handlers for channel and team lifecycle events.
+
+# [TypeScript](#tab/typescript)
+
+Bots are built using the `@microsoft/teams.apps` package. You instantiate an `App` and register handlers with `app.on(eventName, handler)`. The SDK routes activities to the correct handler based on the event name string.
+
+`channelCreated`
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+const app = new App();
+
+app.on('channelCreated', async ({ activity }) => {
+  const channel = activity.channelData.channel; // { id, name }
+  const team    = activity.channelData.team;    // { id, name }
+  // Code logic here
+});
+```
+
+`channelDeleted`
+
+```typescript
+app.on('channelDeleted', async ({ activity }) => {
+  // Code logic here
+});
+```
+
+`channelRenamed`
+
+```typescript
+app.on('channelRenamed', async ({ activity }) => {
+  // Code logic here
+});
+```
+
+`teamRenamed`
+
+```typescript
+app.on('teamRenamed', async ({ activity }) => {
+  // Code logic here
+});
+```
+
+`membersAdded` / `membersRemoved`
+
+```typescript
+app.on('membersAdded', async ({ activity, send }) => {
+  for (const member of activity.membersAdded) {
+    await send(`Welcome, ${member.name}!`);
+  }
+});
+
+app.on('membersRemoved', async ({ activity }) => {
+  // Code logic here
+});
+```
+
+`messageUpdate` / `messageDelete`
+
+Message edits are surfaced as `messageUpdate`. Soft deletes are surfaced as `messageDelete` — the `activity.channelData.eventType` will be `'softDeleteMessage'`.
+
+```typescript
+app.on('messageUpdate', async ({ activity }) => {
+  // Code logic here
+});
+
+app.on('messageDelete', async ({ activity }) => {
+  // activity.channelData.eventType === 'softDeleteMessage' for soft deletes
+  // Code logic here
+});
+```
+
 # [C#](#tab/csharp)
 
-Bots are built using the Bot Framework. When a bot gets a message, the turn handler is notified and sends it to the `OnMessageActivityAsync` handler. This works the same way in Teams. If the bot gets a conversation update, the turn handler sends it to `OnConversationUpdateActivityAsync`. The Teams activity handler first looks for any Teams-specific events. If there aren't any, it passes them to the Bot Framework's activity handler.
+Bots are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
 
-In the Teams activity handler class, there are two primary Teams activity handlers:
-
-* `OnConversationUpdateActivityAsync` routes all conversation update activities.
-* `OnInvokeActivityAsync` routes all Teams invoke activities.
-
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
-
-To set up your logic for Teams-specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no default implementation for these handlers, so just add the logic you want in your override.
-
-The code snippets for Teams activity handlers:
-
-`OnTeamsChannelCreatedAsync`
+`OnChannelCreated`
 
 ```csharp
+using Microsoft.Teams.Apps;
 
-protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+var app = new App();
+
+app.OnChannelCreated(async context => {
+    var channel = context.Activity.ChannelData.Channel;
+    var team    = context.Activity.ChannelData.Team;
+    // Code logic here
+});
 ```
 
-`OnTeamsChannelDeletedAsync`
+`OnChannelDeleted`
 
 ```csharp
-
-protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            // Code logic here
-        }
+app.OnChannelDeleted(async context => {
+    // Code logic here
+});
 ```
 
-`OnTeamsChannelRenamedAsync`
+`OnChannelRenamed`
 
 ```csharp
-
-protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-  {
-   // Code logic here
-  }
+app.OnChannelRenamed(async context => {
+    // Code logic here
+});
 ```
 
-`OnTeamsTeamRenamedAsync`
+`OnTeamRenamed`
 
 ```csharp
-
-protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-  {
-   // Code logic here
-  }
+app.OnTeamRenamed(async context => {
+    // Code logic here
+});
 ```
 
-`OnTeamsMembersAddedAsync`
+`OnMembersAdded`
 
 ```csharp
-
-protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-  {
-   // Code logic here
-  }
+app.OnMembersAdded(async context => {
+    foreach (var member in context.Activity.MembersAdded) {
+        // Code logic here
+    }
+});
 ```
 
-`OnTeamsMembersRemovedAsync`
+`OnMembersRemoved`
 
 ```csharp
-
-protected override Task OnTeamsMembersRemovedAsync(IList<TeamsChannelAccount> teamsMembersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken);
-  {
-   // Code logic here
-  }
+app.OnMembersRemoved(async context => {
+    foreach (var member in context.Activity.MembersRemoved) {
+        // Code logic here
+    }
+});
 ```
 
-`OnTeamsMessageEditAsync`
+`OnMessageUpdate` / `OnMessageDelete`
+
+Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
 
 ```csharp
-protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-  { 
-   // Code logic here 
-  } 
-```
+app.OnMessageUpdate(async context => {
+    // Code logic here
+});
 
-`OnTeamsMessageUndeleteAsync`
-
-```csharp
-protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-  { 
-   // Code logic here 
-  } 
-```
-
-`OnTeamsMessageSoftDeleteAsync`
-
-```csharp
- protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken)
-  { 
-   // Code logic here 
-  } 
-```
-
-# [JavaScript](#tab/javascript)
-
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
-
-In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
-
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. Define your bot logic for these handlers, then be sure to call `next()` at the end. By calling `next()`, you ensure that the next handler runs.
-
-The code snippets for Teams activity handlers:
-
-`onTeamsChannelCreated`
-
-```javascript
-
-onTeamsChannelCreated(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-        await next()
-    });
-```
-
-`onTeamsChannelDeleted`
-
-```javascript
-
-onTeamsChannelDeleted(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
-`onTeamsChannelRenamed`
-
-```javascript
-
-onTeamsChannelRenamed(async (channelInfo, teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
-`onTeamsTeamRenamed`
-
-```javascript
-
-onTeamsTeamRenamedAsync(async (teamInfo, context, next) => {
-       // code for handling
-       await next()
-    });
-```
-
-`onTeamsMembersAdded`
-
-```javascript
-
-onTeamsMembersAdded(async (membersAdded, teamInfo, context, next) => {
-       // code for handling
-    await next();
-    });
-```
-
-`onTeamsMembersRemoved`
-
-```javascript
-
-onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
-       // code for handling
-    await next();
-    });
+app.OnMessageDelete(async context => {
+    // Code logic here
+});
 ```
 
 # [Python](#tab/python)
 
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
+Bots are built using the `microsoft-teams-apps` package. Handlers are registered using decorators on an `App` instance. Each handler is an `async` function that receives an `ActivityContext[TActivity]` object.
 
-In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
+`on_channel_created`
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+```python
+from microsoft_teams.apps import App, ActivityContext
+from microsoft_teams.api.activities import ConversationUpdateActivity
+
+app = App()
+
+@app.on_channel_created
+async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel = ctx.activity.channel_data.channel
+    team    = ctx.activity.channel_data.team
+    # Code logic here
+```
+
+`on_channel_deleted`
+
+```python
+@app.on_channel_deleted
+async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
+    # Code logic here
+```
+
+`on_channel_renamed`
+
+```python
+@app.on_channel_renamed
+async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    # Code logic here
+```
+
+`on_team_renamed`
+
+```python
+@app.on_team_renamed
+async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    # Code logic here
+```
+
+`on_conversation_update` (members added / removed)
+
+Members added and removed events are handled via `on_conversation_update`. Inspect `ctx.activity.members_added` and `ctx.activity.members_removed`:
+
+```python
+@app.on_conversation_update
+async def handle_conversation_update(ctx: ActivityContext[ConversationUpdateActivity]):
+    if ctx.activity.members_added:
+        for member in ctx.activity.members_added:
+            await ctx.send(f"Welcome, {member.name}!")
+    if ctx.activity.members_removed:
+        # Code logic here
+```
+
+`on_edit_message` / `on_soft_delete_message` / `on_undelete_message`
+
+```python
+@app.on_edit_message
+async def handle_edit_message(ctx: ActivityContext):
+    # Code logic here
+
+@app.on_soft_delete_message
+async def handle_soft_delete_message(ctx: ActivityContext):
+    # Code logic here
+
+@app.on_undelete_message
+async def handle_undelete_message(ctx: ActivityContext):
+    # Code logic here
+```
 
 ---
 
 #### Example of bot activity handler
 
-The following code provides an example of a bot activity for a channel team scope:
+The following code provides an example of a bot activity:
 
-# [C#](#tab/dotnet)
+# [TypeScript](#tab/typescript)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+```typescript
+import { App } from '@microsoft/teams.apps';
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/csharp/Localization/Bots/LocalizerBot.cs#L20)
+const app = new App();
 
-```csharp
-
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
-{
-    var mention = new Mention
-    {
-        Mentioned = turnContext.Activity.From,
-        // EncodeName: Converts the name to a valid XML name.
-        Text = $"<at>{XmlConvert.EncodeName(turnContext.Activity.From.Name)}</at>",
-    };
-    
-    // MessageFactory.Text(): Specifies the type of text data in a message attachment.
-    var replyActivity = MessageFactory.Text($"Hello {mention.Text}.");
-    replyActivity.Entities = new List<Entity> { mention };
-
-    // Sends a message activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-}
-
-```
-
-# [Node.js](#tab/nodejs)
-
-* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-activityhandler-onmessage)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
-
-```javascript
-
-this.onMessage(async (turnContext, next) => {
-    const mention = {
-        mentioned: turnContext.activity.from,
-
-        // TextEncoder().encode(): Encodes the supplied characters.
-        text: `<at>${ new TextEncoder().encode(turnContext.activity.from.name) }</at>`,
-    } as Mention;
-
-    // MessageFactory.text(): Specifies the type of text data in a message attachment.
-    const replyActivity = MessageFactory.text(`Hello ${mention.text}`);
-    replyActivity.entities = [mention];
-
-    await turnContext.sendActivity(replyActivity);
-
-    // By calling next() you ensure that the next BotHandler is run.
-    await next();
+app.on('message', async ({ activity, reply }) => {
+  const senderName = activity.from.name;
+  await send(`Hello <at>${senderName}</at>.`);
 });
 
+app.start().catch(console.error);
 ```
 
----
-
-The following code provides an example of bot activity for a one-to-one chat:
-
-# [C#](#tab/dotnet)
-
-* [SDK reference](/dotnet/api/microsoft.bot.schema.activityextensions.removerecipientmention?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
+# [C#](#tab/csharp)
 
 ```csharp
+using Microsoft.Teams.Apps.Activities;
+using Microsoft.Teams.Apps.Extensions;
+using Microsoft.Teams.Plugins.AspNetCore.DevTools.Extensions;
+using Microsoft.Teams.Plugins.AspNetCore.Extensions;
 
-// Handle message activity
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+var builder = WebApplication.CreateBuilder(args);
+builder.AddTeams().AddTeamsDevTools();
+var app = builder.Build();
+var teams = app.UseTeams();
+
+teams.OnMessage(async (context, cancellationToken) =>
 {
-    // Remove recipient mention text from Text property.
-    // Use with caution because this function is altering the text on the Activity.
-    turnContext.Activity.RemoveRecipientMention();
-    var text = turnContext.Activity.Text.Trim().ToLower();
+    var senderName = context.Activity.From.Name;
+    await context.Send($"Hello <at>{senderName}</at>.", cancellationToken);
+});
 
-    // Sends a message activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(MessageFactory.Text($"Your message is {text}."), cancellationToken);
-}
+app.Run();
 ```
 
-# [Node.js](#tab/nodejs)
+# [Python](#tab/python)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/nodejs/server/bot/botActivityHandler.js#L20)
+```python
+import asyncio
+from microsoft_teams.apps import App, ActivityContext
+from microsoft_teams.api import MessageActivity
 
-```javascript
-this.onMessage(async (context, next) => {
-    // MessageFactory.text(): Specifies the type of text data in a message attachment.
-    await context.sendActivity(MessageFactory.text("Your message is: " + context.activity.text));
-    await next();
-});
+app = App()
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    sender_name = ctx.activity.from_property.name
+    await ctx.send(f"Hello <at>{sender_name}</at>.")
+
+if __name__ == "__main__":
+    asyncio.run(app.start())
 ```
 
 ---
@@ -369,179 +362,135 @@ this.onMessage(async (context, next) => {
 
 Bot logic incorporates the fundamental rules and decision-making frameworks that dictate a bot's actions and interactions. It outlines how the bot interprets user input, formulates responses, and participates in conversations.
 
-In Teams, the bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+In Teams SDK v2, the bot logic processes incoming activities from one or more bot channels and generates outgoing activities. All activity routing is handled by the `App` instance — you register the handlers, and the SDK dispatches activities to them automatically.
+
+# [TypeScript](#tab/typescript)
+
+#### Core activity handlers
+
+The list of event names supported by `app.on()` includes the following:
+
+| Event | Event name string | Description |
+| --- | --- | --- |
+| Any activity type received | `'activity'` | Catch-all handler called for every activity. |
+| Message activity received | `'message'` | Handle incoming text messages. Use `app.message(pattern, handler)` for regex matching. |
+| Conversation update received | `'conversationUpdate'` | Raw conversation update activity. |
+| Installation added | `'install.add'` | Bot was installed. |
+| Installation removed | `'install.remove'` | Bot was uninstalled. |
+| Members added | `'membersAdded'` | One or more members joined the conversation. |
+| Members removed | `'membersRemoved'` | One or more members left the conversation. |
+| Message edited | `'messageUpdate'` | A message in the conversation was edited. |
+| Message soft deleted | `'messageDelete'` | A message was soft-deleted (`activity.channelData.eventType === 'softDeleteMessage'`). |
+| Read receipt received | `'readReceipt'` | A read receipt was received. |
+
+#### Teams-specific event handlers
+
+`app.on()` supports the following Teams-specific event name strings:
+
+| Event | Event name string | Description |
+| --- | --- | --- |
+| `channelCreated` | `'channelCreated'` | A Teams channel was created. |
+| `channelDeleted` | `'channelDeleted'` | A Teams channel was deleted. |
+| `channelRenamed` | `'channelRenamed'` | A Teams channel was renamed. |
+| `channelRestored` | `'channelRestored'` | A Teams channel was restored. |
+| `channelMemberAdded` | `'channelMemberAdded'` | A member was added to a channel. |
+| `channelMemberRemoved` | `'channelMemberRemoved'` | A member was removed from a channel. |
+| `teamRenamed` | `'teamRenamed'` | The team was renamed. |
+| `teamArchived` | `'teamArchived'` | The team was archived. |
+| `teamDeleted` | `'teamDeleted'` | The team was deleted. |
+| `teamRestored` | `'teamRestored'` | The team was restored. |
+| Meeting started | `'meetingStart'` | A meeting has started. |
+| Meeting ended | `'meetingEnd'` | A meeting has ended. |
+| Participant joined | `'meetingParticipantJoin'` | A participant joined a meeting. |
+| Participant left | `'meetingParticipantLeave'` | A participant left a meeting. |
+
+#### Teams invoke activities
+
+The following table lists invoke activity handlers available via `app.on()`:
+
+| Invoke type | Event name string | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `'card.action'` | A card action invoke activity was received (`adaptiveCard/action`). |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
+| `task/fetch` | `'dialog.open'` | A dialog (task module) was fetched. |
+| `task/submit` | `'dialog.submit'` | A dialog (task module) was submitted. |
 
 # [C#](#tab/csharp)
 
-#### Core Bot Framework handlers
+#### Core activity handlers
 
->[!NOTE]
->
->* Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
->* `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
+The `App` class exposes extension methods for registering handlers. Methods return `App` for fluent chaining.
 
-Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
+| Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
+| Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
+| Non-bot members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
+| Non-bot members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
+| Installation added | `OnInstall(handler)` | Bot was installed. |
 
-The list of handlers defined in `ActivityHandler` includes the following events:
+#### Teams-specific activity handlers
 
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| Any activity type received | `OnTurnAsync()` | This method calls one of the other handlers, based on the type of activity received. |
-| Message activity received | `OnMessageActivityAsync()` | You can override this method to handle a `Message` activity. |
-| Message update activity received | `OnMessageUpdateActivityAsync()` | You can override this method to handle a message update activity. |
-| Message delete activity received | `OnMessageDeleteActivityAsync()` | You can override this method to handle a message delete activity. |
-| Conversation update activity received | `OnConversationUpdateActivityAsync()` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
-| Non-bot members joined the conversation | `OnMembersAddedAsync()` | This method can be overridden to handle members joining a conversation. |
-| Non-bot members left the conversation | `OnMembersRemovedAsync()` | This method can be overridden to handle members leaving a conversation. |
-| Event activity received | `OnEventActivityAsync()` | This method calls a handler specific to the event type, on an `Event` activity. |
-| Token-response event activity received | `OnTokenResponseEventAsync()` | This method can be overridden to handle token response events. |
-| Non-token-response event activity received | `OnEventAsync()` | This method can be overridden to handle other types of events. |
-| Other activity type received | `OnUnrecognizedActivityTypeAsync()` | This method can be overridden to handle any activity type otherwise unhandled. |
-
-#### Teams specific activity handlers
-
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
-
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| `channelCreated` | `OnTeamsChannelCreatedAsync()` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](how-to/conversations/subscribe-to-conversation-events.md#channel-created) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| `channelDeleted` | `OnTeamsChannelDeletedAsync()` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](how-to/conversations/subscribe-to-conversation-events.md#channel-deleted) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| `channelRenamed` | `OnTeamsChannelRenamedAsync()` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](how-to/conversations/subscribe-to-conversation-events.md#channel-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| `teamRenamed` | `OnTeamsTeamRenamedAsync()` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](how-to/conversations/subscribe-to-conversation-events.md#team-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| `MembersAdded` | `OnTeamsMembersAddedAsync()` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](how-to/conversations/subscribe-to-conversation-events.md#members-added) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| `MembersRemoved` | `OnTeamsMembersRemovedAsync()` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](how-to/conversations/subscribe-to-conversation-events.md#members-removed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| `messageEdit` | `OnTeamsMessageEditAsync()` | You can override this method to handle a Teams message edit event. |
-| `messageUndelete` | `OnTeamsMessageUndeleteAsync()` | You can override this method to handle a Teams message undelete event. |
-| `messageSoftDelete` | `OnTeamsMessageSoftDeleteAsync()` | You can override this method to handle a Teams message soft delete event. |
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Channel created | `OnChannelCreated(handler)` | A Teams channel was created. |
+| Channel deleted | `OnChannelDeleted(handler)` | A Teams channel was deleted. |
+| Channel renamed | `OnChannelRenamed(handler)` | A Teams channel was renamed. |
+| Team renamed | `OnTeamRenamed(handler)` | The team was renamed. |
+| Message edited | `OnMessageUpdate(handler)` | A message was edited. |
+| Message soft deleted | `OnMessageDelete(handler)` | A message was soft-deleted. |
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
-
-| Invoke types | Handler or SDK method | Description |
-| :--- | :--- | :--- |
-| `CardAction.Invoke` | `OnTeamsCardActionInvokeAsync()` | When the connector receives a card action invoke activity, this method is invoked. |
-| fileConsent/invoke | `OnTeamsFileConsentAcceptAsync()` | When a user accepts a file consent card, this method is invoked. |
-| fileConsent/invoke | `OnTeamsFileConsentAsync()` | When the connector receives a file consent card activity, this method is invoked. |
-| fileConsent/invoke | `OnTeamsFileConsentDeclineAsync()` | When a user declines a file consent card, this method is invoked. |
-| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync()` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
-| signin/verifyState | `OnTeamsSigninVerifyStateAsync()` | When the connector receives a `signIn` verify state activity, this method is invoked. |
-| task/fetch | `OnTeamsTaskModuleFetchAsync()` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
-| task/submit | `OnTeamsTaskModuleSubmitAsync()` | You can override this method in a derived class to provide logic when a dialog is submitted. |
-
-The Invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-
-# [JavaScript](#tab/javascript)
-
-#### Core Bot Framework handlers
-
->[!NOTE]
-> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
-
-Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
-
-The list of handlers defined in `ActivityHandler` includes the following events:
-
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| Any activity type received | `onTurn()` | This method calls one of the other handlers, based on the type of activity received. |
-| Message activity received | `onMessage()` | This method helps to handle a `Message` activity. |
-| Message update activity received  | `onMessageUpdate()` | This method calls a handler if a message is updated. |
-| Message delete activity received | `onMessageDelete()` | This method calls a handler if a message is deleted. |
-| Conversation update activity received | `onConversationUpdate()` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
-| Non-bot members joined the conversation | `onMembersAdded()` | This method helps to handle members joining a conversation. |
-| Non-bot members left the conversation | `onMembersRemoved()` | This method helps to handle members leaving a conversation. |
-| Event activity received | `onEvent()` | This method calls a handler specific to the event type, on an `Event` activity. |
-| Token-response event activity received | `onTokenResponseEvent()` | This method helps to handle token response events. |
-| Other activity type received | `onUnrecognizedActivityType()` | This method helps to handle any activity type otherwise unhandled. |
-| message edit | `onTeamsMessageEditEvent()` | You can override this method to handle when a message in a conversation is edited. |
-| message undelete | `onTeamsMessageUndeleteEvent()` | You can override this method to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
-| message soft delete | `onTeamsMessageSoftDeleteEvent()` | You can override this method to handle when a message in a conversation is soft deleted. |
-
-#### Teams specific activity handlers
-
-The `TeamsActivityHandler` extends the list of handlers in the core Bot Framework handlers section to include the following events:
-
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| channelCreated | `onTeamsChannelCreated()` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](how-to/conversations/subscribe-to-conversation-events.md#channel-created) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| channelDeleted | `onTeamsChannelDeleted()` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](how-to/conversations/subscribe-to-conversation-events.md#channel-deleted) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| channelRenamed | `onTeamsChannelRenamed()` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](how-to/conversations/subscribe-to-conversation-events.md#channel-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| teamRenamed | `onTeamsTeamRenamed()` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](how-to/conversations/subscribe-to-conversation-events.md#team-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| MembersAdded | `onTeamsMembersAdded()` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](how-to/conversations/subscribe-to-conversation-events.md#members-added) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| MembersRemoved | `onTeamsMembersRemoved()` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](how-to/conversations/subscribe-to-conversation-events.md#members-removed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-
-#### Teams invoke activities
-
-The following table provides the list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler:
-
-| Invoke types | Handler | Description |
-| :--- | :--- | --- |
-| `CardAction.Invoke` | `handleTeamsCardActionInvoke()` | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke | `handleTeamsFileConsentAccept()` | This method is invoked when the user accepts a file consent card. |
-| fileConsent/invoke | `handleTeamsFileConsent()` | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke | `handleTeamsFileConsentDecline()` | This method is invoked when the user declines a file consent card. |
-| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction()` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState | `handleTeamsSigninVerifyState()` | This method is invoked when a `signIn` verify state activity is received from the connector. |
-| task/fetch | `handleTeamsTaskModuleFetch()` | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
-| task/submit | `handleTeamsTaskModuleSubmit()` | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
-
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+| Invoke type | Extension method | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `OnExecuteAction(handler)` | A card action invoke activity was received. |
+| `task/fetch` | `OnTaskFetch(handler)` | A dialog (task module) was fetched. |
+| `task/submit` | `OnTaskSubmit(handler)` | A dialog (task module) was submitted. |
+| `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
 
 # [Python](#tab/python)
 
-#### Core Bot Framework handlers
+#### Core activity handlers
 
->[!NOTE]
-> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+The `App` class exposes decorator-style handler registration.
 
-Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
+| Event | Decorator | Description |
+| --- | --- | --- |
+| Any activity received | `@app.on_activity` | Catch-all handler for every activity. |
+| Message received | `@app.on_message` | Handle incoming text messages. |
+| Message with pattern | `@app.on_message_pattern(re.compile(...))` | Handle messages matching a regex pattern. |
+| Conversation update | `@app.on_conversation_update` | Raw conversation update; check `members_added` / `members_removed`. |
+| Installation added | `@app.on_install_add` | Bot was installed. |
+| Installation removed | `@app.on_install_remove` | Bot was uninstalled. |
 
-The list of handlers defined in `ActivityHandler` includes the following events:
+#### Teams-specific activity handlers
 
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| Any activity type received | `on_turn()` | This method calls one of the other handlers, based on the type of activity received. |
-| Message activity received | `on_message_activity()` | This method can be overridden to handle a `Message` activity. |
-| Conversation update activity received | `on_conversation_update_activity()` | This method calls a handler if members other than the bot join or leave the conversation. |
-| Non-bot members joined the conversation | `on_members_added_activity()` | This method can be overridden to handle members joining a conversation. |
-| Non-bot members left the conversation | `on_members_removed_activity()` | This method can be overridden to handle members leaving a conversation. |
-| Event activity received | `on_event_activity()` | This method calls a handler specific to the type of event. |
-| Token-response event activity received | `on_token_response_event()` | This method can be overridden to handle token response events. |
-| Non-token-response event activity received | `on_event()` | This method can be overridden to handle other types of events. |
-| Other activity types received | `on_unrecognized_activity_type()` | This method can be overridden to handle any type of activity that isn't handled. |
-
-#### Teams specific activity handlers
-
-The `TeamsActivityHandler` extends the list of handlers from the core Bot Framework handlers section to include the following events:
-
-| Event | Handler or SDK method | Description |
-| :-- | :-- | :-- |
-| channelCreated | `on_teams_channel_created()` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](how-to/conversations/subscribe-to-conversation-events.md#channel-created) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
-| channelDeleted | `on_teams_channel_deleted()` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](how-to/conversations/subscribe-to-conversation-events.md#channel-deleted) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| channelRenamed | `on_teams_channel_renamed()` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](how-to/conversations/subscribe-to-conversation-events.md#channel-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| teamRenamed | `on_teams_team_renamed()` | This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](how-to/conversations/subscribe-to-conversation-events.md#team-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| MembersAdded | `on_teams_members_added()` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](how-to/conversations/subscribe-to-conversation-events.md#members-added) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
-| MembersRemoved | `on_teams_members_removed()` | This method calls the `OnMembersRemovedAsync` method in `ActivityHandler`. The method can be overridden to handle members leaving a team. For more information, see [team members removed](how-to/conversations/subscribe-to-conversation-events.md#members-removed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
+| Event | Decorator | Description |
+| --- | --- | --- |
+| Channel created | `@app.on_channel_created` | A Teams channel was created. |
+| Channel deleted | `@app.on_channel_deleted` | A Teams channel was deleted. |
+| Channel renamed | `@app.on_channel_renamed` | A Teams channel was renamed. |
+| Team renamed | `@app.on_team_renamed` | The team was renamed. |
+| Message edited | `@app.on_edit_message` | A message was edited. |
+| Message soft deleted | `@app.on_soft_delete_message` | A message was soft-deleted. |
+| Message undeleted | `@app.on_undelete_message` | A deleted message was restored. |
+| Meeting started | `@app.on_meeting_start` | A meeting has started. |
+| Meeting ended | `@app.on_meeting_end` | A meeting has ended. |
+| Participant joined | `@app.on_meeting_participant_join` | A participant joined a meeting. |
+| Participant left | `@app.on_meeting_participant_leave` | A participant left a meeting. |
 
 #### Teams invoke activities
 
-The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
-
-| Invoke types | Handler or SDK method | Description |
-| :--- | :--- | :--- |
-| `CardAction.Invoke` | `on_teams_card_action_invoke()` | This method is invoked when a card action invoke activity is received from the connector. |
-| fileConsent/invoke | `on_teams_file_consent_accept()` | This method is invoked when the user accepts a file consent card. |
-| fileConsent/invoke | `on_teams_file_consent()` | This method is invoked when a file consent card activity is received from the connector. |
-| fileConsent/invoke | `on_teams_file_consent_decline()` | This method is invoked when the user declines a file consent card. |
-| actionableMessage/executeAction | `on_teams_o365_connector_card_action()` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
-| signin/verifyState | `on_teams_signin_verify_state()` | This method is invoked when a `signIn` verify state activity is received from the connector. |
-| task/fetch | `on_teams_task_module_fetch()`| This method can be overridden in a derived class to provide logic when a dialog is fetched. |
-| task/submit | `on_teams_task_module_submit()` | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
-
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-
----
+| Invoke type | Decorator | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `@app.on_card_action` | A card action invoke activity was received. |
+| `task/fetch` | `@app.on_dialog_open` | A dialog (task module) was fetched. |
+| `task/submit` | `@app.on_dialog_submit` | A dialog (task module) was submitted. |
+| `fileConsent/invoke` | `@app.on_file_consent` | A file consent card activity was received. |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
 
 ---
 
@@ -551,12 +500,11 @@ Now that you've familiarized yourself with bot activity handlers, let us see how
 
 An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
 
-* **Avoid multi-turn experiences in chat**
-  An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+- **Avoid multi-turn experiences in chat** An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
     USER: Schedule a meeting with Megan.
 
-    BOT: I’ve found 200 results, include a first and last name.
+    BOT: I've found 200 results, include a first and last name.
 
     USER: Schedule a meeting with Megan Bowen.
 
@@ -566,11 +514,8 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
     BOT: On which day?
 
-* **Support six or less frequent commands**
-  As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-
-* **Optimize size of knowledgebase for quicker interaction**
-  One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+- **Support six or less frequent commands** As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
+- **Optimize size of knowledge base for quicker interaction** One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 > [!NOTE]
 > Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your bot environment accordingly.
@@ -579,13 +524,12 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 In addition to conventional bot features, you can also explore advanced features available in a Teams bot app:
 
-* [Teams bot API changes to fetch team or chat members](../resources/team-chat-member-api-changes.md).
-* [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
-* [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
+- [Get Teams specific context for your bot](how-to/get-teams-context.md).
+- [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
+- [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
 
 ## Code sample
 
-| Sample name | Description | .NET | Node.js | Python |
-|--- |--- | --- | --- | --- |
-| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
-| Bot samples | Set of Bot Framework v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Sample name | Description | TypeScript | C# | Python |
+| --- | --- | --- | --- | --- |
+| Teams conversation bot | This app demonstrates basic bot events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
