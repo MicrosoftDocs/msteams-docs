@@ -35,8 +35,6 @@ In this quickstart, you'll use command-line developer tools to create a new agen
 
 This quickstart is divided into two sections. In the first, you'll create the code for your agent and try it out with Microsoft 365 Agents Playground, a local testing tool. You'll need:
 
-TODO Make editor optional, if they want to look at their code.
-
 ::: zone pivot="teams-sdk-typescript"
 
 - Node.js 20 or later ([installer download](https://nodejs.org))
@@ -62,9 +60,9 @@ TODO Make editor optional, if they want to look at their code.
 
 In the second part, you'll register your agent with the Teams platform, install it, and try it out. For that, you'll also need Teams, logged in to a Microsoft 365 work or school account with permissions to install custom Teams apps ("sideloading").
 
-Getting a new agent running in Teams immediately sets it up for a successful development process and release, but if you don't have a Microsoft 365 work or school account, you can still complete the first part of the quickstart to get started exploring agent development. See [here](/office/developer-program/microsoft-365-developer-program) for information about joining the Microsoft 365 Developer Program and setting up a sandbox subscription.
+Getting a new agent running in Teams immediately sets it up for a successful development process and release, but if you don't have a Microsoft 365 work or school account, you can still complete the first part of the quickstart to get started exploring agent development. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription.
 
-To install your app in Teams, your account needs permissions to install custom Teams apps ("sideloading"). The quickstart includes a step to confirm this permission before it's needed, and instructions for requesting it from your organization's Microsoft 365 administrator if you don't have it.
+To use your app in Teams, your account needs permissions to install custom Teams apps ("sideloading"). The quickstart includes a step to confirm this permission before it's needed, and instructions for requesting it from your organization's Microsoft 365 administrator if you don't have it.
 
 ## Create an agent and try it in Microsoft 365 Agents Playground
 
@@ -76,12 +74,21 @@ To install your app in Teams, your account needs permissions to install custom T
 
 ::: zone pivot="teams-sdk-typescript"
 
-2. Use `teams project new` to create the code for a new agent from a template.
+2. Use `teams project new` to create the code for a new agent from a template and open it in Visual Studio Code.
 
     ```bash
     teams project new typescript echo-bot
     cd echo-bot
+    code .
     ```
+
+3. Open `src/index.ts` and find the line that reads `const app = new App();` and modify it to read:
+
+    ```typescript
+    const app = new App({ skipAuth: true });
+    ```
+
+    This is a temporary modification to enable using the app from Microsoft 365 Agents Playground.
 
 3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
 
@@ -105,7 +112,15 @@ TODO venv this?
     cd echo-bot
     ```
 
-3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
+3. Open `src/main.py`. Find the line that reads `app = App()` and modify it to read:
+
+    ```python
+    app = App(skip_auth=True)
+    ```
+
+    This is a temporary modification to enable using the app from Microsoft 365 Agents Playground.
+
+4. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
 
     ```bash
     pip install -e .
@@ -147,11 +162,12 @@ Your agent's up and running locally! Use <kbd>Ctrl+C</kbd> in both open console 
 
 ## Log in with Teams developer CLI and confirm sideloading permissions
 
-The next part of the quickstart requires a Microsoft 365 work or school account, licensed for Teams, with permissions to install custom Teams apps.
+> [!NOTE]
+> The next part of the quickstart requires a Microsoft 365 work or school account, licensed for Teams, with permissions to install custom Teams apps.
+>
+>If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your agent's code and complete the rest of this quickstart later. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
 
-If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your agent's code and complete the rest of this quickstart later. See [here](/office/developer-program/microsoft-365-developer-program) for information about joining the Microsoft 365 Developer Program and setting up a sandbox subscription that you can use to try your app in Teams.
-
-To proceed, use the Teams developer CLI to log in to your account and confirm your permissions.
+Use the Teams developer CLI to log in to your account.
 
 ```bash
 teams login
@@ -166,11 +182,41 @@ Teams will confirm your login, your account's sideloading permissions, and the p
 Azure CLI: installed, not logged in
 ```
 
-To continue with installing and running your app in Teams, sideloading must show as enabled for your account. If it is disabled, you will need to
+To continue with installing and running your app in Teams, sideloading must show as enabled. If it is disabled, you will need to work with your Microsoft 365 administrator to enable it for your account. See [Allow users to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings) for administrator instructions for enabling this permission.
 
-TODO --service-management-reference
+## Create a dev tunnel
 
-## Install devtunnel
+Teams agents must be reachable from the public Internet for Teams to communicate with them. In this step, you use the `devtunnel` tool to expose your running agent to the Internet.
+
+1. Install `devtunnel`.
+
+   ## [Windows](#tab/windows)
+
+   ## Windows Package Manager (winget)
+
+    ```powershell
+    winget install Microsoft.devtunnel
+    ```
+
+   ## [macOS](#tab/macos)
+
+   ## Homebrew
+
+    ```bash
+    brew install --cask devtunnel
+    ```
+
+    ```bash
+    curl -sL https://aka.ms/DevTunnelCliInstall | bash
+    ```
+
+   ## [Linux](#tab/linux)
+
+    ```bash
+    curl -sL https://aka.ms/DevTunnelCliInstall | bash
+    ```
+
+    ---
 
 TODO copy instructions from <https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows>
 
