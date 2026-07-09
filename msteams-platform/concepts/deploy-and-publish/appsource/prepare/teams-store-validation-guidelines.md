@@ -509,6 +509,8 @@ The app manifest defines your app's configuration.
 
 * You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Must fix*]
 
+* Starting July 2026, new Teams Store submissions for channel-enabled apps must use app manifest schema version 1.25 or later. To use app manifest schema version 1.25 or later, update your app manifest and add `"supportsChannelFeatures": "tier1"` to declare channel feature support. [*Must fix*]
+
 * When you submit an app update, only increase the app version number. App ID of the updated app must match the App ID of the published app. [*Must fix*]
 
 * The presence of additional files within the app package isn't acceptable. [*Must fix*]
@@ -1191,6 +1193,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
 
+* Ensure that bot commands are consistent –
+
+  * Within each scope (personal/ groupChat/ team/ copilot) and make sure that `commandList.type` values are consistent.
+  * The `prompt`, `description`, and `title` for each bot command should be consistent and coherent with one another.
+
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
@@ -1538,7 +1545,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * Your app must offer value beyond providing only custom Together Mode scenes in Teams. [*Must fix*]
 
-* You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the app manifest to enable your app for meetings on Teams mobile. [*Must fix*]
+* Apps targeting in meeting experiences must either declare `meetingSidePanel`,or use APIs to enable meeting-stage sharing and include `groupChat` under `configurableTabs`, `meetingDetailsTab`, and `meetingChatTab`.
 
 * Meeting and calling canvases mustn't dead-end an attendee. Meeting and calling canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
 
@@ -1794,7 +1801,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * All app capabilities must be functional and must work properly as described in the AppSource or app manifest long description. [*Must fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Must fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Must fix*]
-* Apps and agents using manifest version **v1.25 or higher** must support collaborative or team capabilities across all channel types (Standard, Shared, and Private). For more information, see [Apps for shared and private channels](../../../../build-apps-for-shared-private-channels.md).</br> To ensure a consistent and transparent experience [*Must fix*]:
+* Starting July 2026, new Teams Store submissions for apps and agents that operate in channels must use manifest version **v1.25 or higher**. Apps and agents must validate support for Standard, Shared, and Private channels. Submissions that do not function correctly in supported channel types may not pass Store validation. For more information, see [Apps for shared and private channels](../../../../build-apps-for-shared-private-channels.md). To ensure a consistent and transparent experience [*Must fix*]:
   * Clearly document any functional differences or limitations across channel types (Standard, Shared, and Private) in the app or agent description.
   * Gracefully handle authentication and in-app or in-agent experiences for all channel members, including internal users, guest users, and users from trusted B2B tenants.
   * Ensure seamless storage access for all channel members (app-generated links must honor tenant sharing policies and should prefer **people with existing access** or explicit invites for cross-tenant members).
