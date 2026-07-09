@@ -88,7 +88,7 @@ To use your app in Teams, your account needs permissions to install custom Teams
     const app = new App({ skipAuth: true });
     ```
 
-    This is a temporary modification to enable using the app from Microsoft 365 Agents Playground.
+    This is a temporary modification to enable Microsoft 365 Agents Playground to communicate with the agent.
 
 3. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
 
@@ -96,8 +96,6 @@ To use your app in Teams, your account needs permissions to install custom Teams
     npm install
     npm run dev
     ```
-
-TODO skipauth
 
 ::: zone-end
 
@@ -118,7 +116,7 @@ TODO venv this?
     app = App(skip_auth=True)
     ```
 
-    This is a temporary modification to enable using the app from Microsoft 365 Agents Playground.
+    This is a temporary modification to enable Microsoft 365 Agents Playground to communicate with the agent.
 
 4. Start the agent. Once it's running, you'll see a confirmation that it's running on port 3978.
 
@@ -126,8 +124,6 @@ TODO venv this?
     pip install -e .
     python src/main.py
     ```
-
-TODO skipauth
 
 ::: zone-end
 
@@ -148,7 +144,7 @@ TODO skipauth
 
 ::: zone-end
 
-3. Using a new console, start Microsoft 365 Agents Playground.
+3. In a new console window, start Microsoft 365 Agents Playground.
 
     ```bash
     agentsplayground
@@ -156,9 +152,11 @@ TODO skipauth
 
     This will connect Agents Playground to your agent and open the interface in a new browser tab.
 
-4. Use the compose box to send your agent a message and see it respond in the chat.
+4. Use the compose box to send your agent a message and see it respond in the chat. Your agent's up and running locally!
 
-Your agent's up and running locally! Use <kbd>Ctrl+C</kbd> in both open console windows to stop Agents Playground and your agent.
+5. Use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
+
+6. In your editor, undo the modification you made in step 3 to ensure a secure connection with Teams in the next steps.
 
 ## Log in with Teams developer CLI and confirm sideloading permissions
 
@@ -167,7 +165,7 @@ Your agent's up and running locally! Use <kbd>Ctrl+C</kbd> in both open console 
 >
 >If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your agent's code and complete the rest of this quickstart later. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
 
-Use the Teams developer CLI to log in to your account.
+Use the Teams developer CLI to log in to your Microsoft 365 account.
 
 ```bash
 teams login
@@ -188,11 +186,9 @@ To continue with installing and running your app in Teams, sideloading must show
 
 Teams agents must be reachable from the public Internet for Teams to communicate with them. In this step, you use the `devtunnel` tool to expose your running agent to the Internet.
 
-1. Install `devtunnel`.
+1. In a new console window, install `devtunnel`.
 
    ## [Windows](#tab/windows)
-
-   ## Windows Package Manager (winget)
 
     ```powershell
     winget install Microsoft.devtunnel
@@ -218,21 +214,78 @@ Teams agents must be reachable from the public Internet for Teams to communicate
 
     ---
 
-TODO copy instructions from <https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows>
+1. Log in to `devtunnel` with your Microsoft 365 account and host a new tunnel.
 
-tunnel setup:
-devtunnel user login (and login)
-devtunnel host --allow-anonymous --port-number 3978
+    ```bash
+    devtunnel user login
+    devtunnel host --allow-anonymous --port-number 3978
+    ```
 
-```output
-c:\temp\quote-agent>devtunnel host --allow-anonymous --port-number 3978
-Connection to host tunnel relay restored.
-Hosting port: 3978
-Connect via browser: https://4r9dr5xj-3978.usw2.devtunnels.ms
-Inspect network activity: https://4r9dr5xj-3978-inspect.usw2.devtunnels.ms
+    You'll see output like the following:
 
-Ready to accept connections for tunnel: joyful-dog-xgz66vp.usw2
-```
+    ```output
+    Connection to host tunnel relay restored.
+    Hosting port: 3978
+    Connect via browser: https://4r9dd5xj-3978.usw2.devtunnels.ms
+    Inspect network activity: https://4r9dd5xj-3978-inspect.usw2.devtunnels.ms
+    
+    Ready to accept connections for tunnel: joyful-dog-xgz66vp.usw2
+    ```
+
+1. Leave the tunnel running. Record the `Connect via browser` URL for the next step.
+
+## Register, install, and chat in Teams
+
+1. In the console window you used to create your agent, use `teams app create` to register your agent with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
+
+::: zone pivot="teams-sdk-typescript,teams-sdk-python"
+
+    ```bash
+    teams app create \
+      --name echo-bot \
+      --endpoint <tunnel-host>/api/messages \
+      --env .env
+    ```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+    ```bash
+    teams app create \
+      --name echo-bot \
+      --endpoint //<tunnel-host>/api/messages \
+      --env appsettings.json
+    ```
+
+::: zone-end
+
+1. When the `create` command completes, it will display a menu. Select `Install in Teams` to open Teams and display the app's installer page. TODO "this app cannot be found"
+
+1. Start your agent. TODO can do this afterwards, to reuse the window above?
+
+::: zone pivot="teams-sdk-typescript"
+
+    ```bash
+    npm run dev
+    ```
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+    ```bash
+    python src/main.py
+    ```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+    ```bash
+    dotnet run
+    ```
+
+::: zone-end
 
 Get the "connect via browser" URL and append /api/messages
 
