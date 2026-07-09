@@ -1,7 +1,3 @@
-# Quickstart: Create an agent and chat with it in Teams
-
-In this quickstart, you'll use command-line developer tools to create a new agent. When you're finished, you'll have code for an agent that you can chat with in Teams while it's running in your local development environment. You'll be able to continue exploring and experimenting with this code, and as you add new features to it, you'll be able to experience them in Teams immediately.
-
 ## Prerequisites
 
 This quickstart is divided into two sections. In the first, section you'll need:
