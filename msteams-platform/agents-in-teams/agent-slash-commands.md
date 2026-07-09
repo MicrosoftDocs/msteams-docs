@@ -93,36 +93,53 @@ Agent slash commands require an agent to opt in to receive targeted messages; se
 
 The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. For agent command lists, use `mention` when the command should appear in the traditional @mention command menu, use `slash` when the command should appear in the slash command picker, or include both values when the same command should be available from both entry points.
 
-Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example.
+Declare commands and their triggers by configuring the `bots[].commandLists[]` section of the manifest as shown in the following example:
 
 ```json
 {
-    "bots": [
+  "bots": [
+    {
+      "botId": "{{BOT_ID}}",
+      "scopes": ["personal", "team", "groupChat"],
+      "supportsTargetedMessages": true,
+      "commandLists": [
         {
-            "botId": "{{BOT_ID}}",
-            "scopes": ["personal", "team", "groupChat"],
-            "supportsTargetedMessages": true,
-            "commandLists": [
-                {
-                    "scopes": ["personal", "team", "groupChat"],
-                    "triggers": ["mention"],
-                    "commands": [
-                        { "title": "Summarize", "description": "Summarize a document" },
-                        { "title": "Draft", "description": "Draft a document" }
-                    ]
-                },
-                {
-                    "scopes": ["team", "groupChat"],
-                    "triggers": ["slash"],
-                    "commands": [
-                        { "title": "Review", "description": "Review a document" }
-                    ]
-                }
-            ]
+          "scopes": ["personal", "team", "groupChat"],
+          "triggers": ["slash"],
+          "commands": [
+            {
+              "title": "summarize",
+              "description": "Summarize the conversation"
+            }
+          ]
+        },
+        {
+          "scopes": ["personal", "team", "groupChat"],
+          "triggers": ["mention"],
+          "commands": [
+            {
+              "title": "assign",
+              "description": "Assign a follow-up task"
+            }
+          ]
+        },
+        {
+          "scopes": ["personal", "team", "groupChat"],
+          "triggers": ["slash", "mention"],
+          "commands": [
+            {
+              "title": "review",
+              "description": "Review a document"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
+
+[WIP: update description of example]
 
 The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. Use `slash` when the command should appear in the slash command picker, use `mention` when the command should appear in the traditional @mention command menu, or include both values when the same command should be available from both entry points.
 
