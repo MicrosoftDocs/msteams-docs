@@ -13,10 +13,6 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use emoji reactions in Teams chat
 
-> [!NOTE]
->
-> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 In Teams chat, reactions are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)

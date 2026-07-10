@@ -8,10 +8,6 @@ ms.localizationpriority: high
 
 # Teams Reactions Reference
 
-> [!NOTE]
->
-> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 This article provides a complete list of emoji reactions available in Teams and their corresponding reaction IDs, used to [add reactions to messages](agent-reactions.md).
 
 ## Skin tones
