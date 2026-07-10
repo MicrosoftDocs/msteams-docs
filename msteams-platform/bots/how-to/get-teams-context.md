@@ -433,8 +433,6 @@ Response body
 
 * * *
 
-[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
-
 ## Next step
 
 > [!div class="nextstepaction"]
