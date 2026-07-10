@@ -68,11 +68,11 @@ The following example illustrates adding a reaction to a received message, then 
 ```typescript
 app.on('message', async ({ activity, api }) => {
 // First, add a reaction
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
+  await api.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 
   // Wait a bit, then remove it
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
+  await api.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
 ```
 
@@ -92,7 +92,7 @@ import asyncio
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     # First, add a reaction
-    await ctx.api.conversations.reactions.add(
+    await ctx.api.reactions.add(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'
@@ -100,7 +100,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
     # Wait a bit, then remove it
     await asyncio.sleep(2)
-    await ctx.api.conversations.reactions.delete(
+    await ctx.api.reactions.delete(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'
