@@ -5,7 +5,6 @@ ms.topic: article
 ms.owner: nickwalk
 ms.localizationpriority: high
 ms.date: 06/30/2026
-ms.date: 06/19/2026
 ---
 # Proactive messages
 

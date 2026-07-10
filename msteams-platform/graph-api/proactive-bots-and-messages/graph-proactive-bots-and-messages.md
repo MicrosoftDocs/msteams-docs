@@ -6,7 +6,7 @@ author: nickwalk
 ms.topic: how-to
 ms.owner: vishachadha
 ms.date: 06/19/2026
-ms.date: 06/19/2026
+
 ---
 
 # Proactively install your bot for users using Microsoft Graph
