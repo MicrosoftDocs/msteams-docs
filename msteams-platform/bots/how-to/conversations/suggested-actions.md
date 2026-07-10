@@ -7,6 +7,8 @@ zone_pivot_groups: teams-sdk-languages
 ms.date: 6/26/2026
 ---
 
+<!-- markdownlint-disable MD001 -->
+
 # Dynamically guide users with suggested actions
 
 Suggested actions help users continue conversations with your agent by presenting context-specific next steps in the chat.
@@ -181,7 +183,7 @@ case "suggestedAction/submit":
 
 The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
-## Teams SDK implementation
+### Teams SDK implementation
 
 Use the page pivot to view Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
 
