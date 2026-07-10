@@ -298,31 +298,39 @@ For invalid fields:
 
 ## Testing guidance
 
-Partners should validate accessibility using a combination of automated and manual testing before submission. Because widgets run inside a sandboxed iframe, some automated tools may not scan iframe content by default — open your widget content directly in a browser tab to get accurate results from automated tools.
+Partners should validate accessibility before submission using the three-step workflow below. Because widgets run inside a sandboxed iframe, open your widget content directly in a browser tab before running any automated tools — most tools cannot scan iframe content by default.
 
+### Step 1 — Run an automated scan
 
-### Automated testing tools
+Start with an automated scan to catch the most common issues quickly. Automated tools typically identify 30–40% of accessibility issues, so manual testing is required in addition.
 
 | Tool | Type | Notes |
 |---|---|---|
-| [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching common issues. No install required. |
-| [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed accessibility analysis than Lighthouse. Free version available. |
-| [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Good for quick visual checks. |
-| [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Desktop tool | Checks contrast ratios for text and UI elements against WCAG standards. |
-| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Web-based | Quick browser-based contrast ratio checker. No install required. |
+| [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching missing labels, contrast failures, and structural issues. No install required. Run first. |
+| [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed than Lighthouse. Free version covers a broader range of WCAG violations with clearer remediation guidance. |
+| [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Useful for quickly spotting missing alt text, form labels, and heading structure. |
 
+### Step 2 — Verify contrast manually
 
-### Manual testing tools
+Automated tools don't always catch contrast failures reliably. After your automated scan, verify color contrast manually using either of these tools:
+
+| Tool | Type | Notes |
+|---|---|---|
+| [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Desktop tool | Sample any two colors directly on screen and check against WCAG AA ratios. |
+| [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Web-based | Enter hex values to verify text and background combinations. No install required. |
+
+### Step 3 — Manual testing
+
+Manual testing is required to verify keyboard behavior, screen reader output, and visual adaptability. Work through each test in order:
 
 | Test type | What to verify |
 |---|---|
-| Keyboard-only | Navigate the entire widget using only the keyboard. Verify no focus traps and a logical tab order throughout. |
+| Keyboard-only | Navigate the entire widget using only Tab, Shift+Tab, arrow keys, Enter, and Space. Verify no focus traps and a logical tab order throughout. |
 | Screen reader | Test with at least one screen reader — Narrator or NVDA on Windows, VoiceOver on Mac. Verify all elements are announced meaningfully. |
-| High contrast | Enable Windows High Contrast Mode and verify that content, controls, and focus indicators remain visible. |
-| Zoom | Increase browser zoom to 200% and confirm content and functionality are fully preserved. |
+| Zoom | Increase browser zoom to 200% and confirm text and interactive controls remain fully usable. |
 | Reduced motion | Enable reduced motion in OS settings and verify animations are minimized or disabled. |
-| Responsive | Test in narrow viewports representative of Teams chat container widths. |
-
+| Responsive | Test at narrow viewport widths representative of Teams chat container widths. |
+| High contrast | Enable Windows High Contrast Mode and verify content, controls, and focus indicators remain visible. |
 
 ## Related content
 
