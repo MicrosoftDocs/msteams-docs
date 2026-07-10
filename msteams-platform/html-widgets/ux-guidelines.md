@@ -165,6 +165,7 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 
 
+
 ### Responsive scaling
 
 Widgets must adapt to the width of the chat container. Unlike Adaptive Cards, which support discrete size variants that partners can customize independently, HTML widgets use a single fluid layout that scales continuously across widths. Your design should hold up gracefully at any width rather than targeting specific sizes.
@@ -203,7 +204,24 @@ Widgets must communicate the outcome of user actions clearly.
 
 <br>
 
+## Minimum UX bar for submission
 
+Widgets must meet all of the following requirements to be accepted.
+
+| Requirement |
+|:---|
+| ✅ Renders correctly in both Teams light mode and dark mode (exceptions apply for content where color is meaningful) |
+| ✅ Scales responsively to the chat container width without horizontal scrolling (exceptions apply for intentional horizontal scroll patterns) |
+| ✅ Provides visible feedback for loading, success, and error states within the widget |
+| ✅ Delivers a focused, single-purpose experience |
+| ✅ Limits primary actions to two buttons — additional actions placed in overflow |
+| ✅ Content and body text complement each other without duplication |
+| ✅ No placeholder, test, or broken content is visible |
+
+> [!WARNING]
+> Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
+
+<br>
 
 ## Strongly recommended
 
@@ -560,26 +578,7 @@ The following items are optional but contribute to a higher-quality widget exper
 - **Media elements**: For inline video or rich media, provide a clear play control and a static thumbnail. Autoplay is not recommended.
 - **Illustrations**: Use illustrations sparingly and purposefully. Avoid decorative illustrations that add height without adding value.
 
----
 
-## Minimum UX bar for submission
-
-Widgets must meet all of the following requirements to be accepted.
-
-| Requirement |
-|:---|
-| ✅ Renders correctly in both Teams light mode and dark mode (exceptions apply for content where color is meaningful) |
-| ✅ Scales responsively to the chat container width without horizontal scrolling (exceptions apply for intentional horizontal scroll patterns) |
-| ✅ Provides visible feedback for loading, success, and error states within the widget |
-| ✅ Delivers a focused, single-purpose experience |
-| ✅ Limits primary actions to two buttons — additional actions placed in overflow |
-| ✅ Content and body text complement each other without duplication |
-| ✅ No placeholder, test, or broken content is visible |
-
-> [!WARNING]
-> Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
-
----
 
 ## Related content
 
