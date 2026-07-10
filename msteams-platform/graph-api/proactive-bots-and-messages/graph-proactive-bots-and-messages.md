@@ -1,27 +1,19 @@
 ---
-title: Authorize Proactive Bot Installation
-description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
+title: Proactively Install Your Bot for Users Using Microsoft Graph
+description: Use Microsoft Graph APIs to install your Teams bot for users who haven't installed or interacted with your app, and check installation status.
 ms.localizationpriority: medium
-author: akjo
-ms.topic: overview
+author: nickwalk
+ms.topic: how-to
 ms.owner: vishachadha
+ms.date: 06/19/2026
 ms.date: 06/19/2026
 ---
 
-# Send proactive installation messages
+# Proactively install your bot for users using Microsoft Graph
 
-## Proactive messaging in Teams
+If you need to send messages to users who haven't installed or previously interacted with your app—for example, to broadcast important information to everyone in your organization—you can use the Microsoft Graph API to proactively install your bot for those users. Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member.
 
-Proactive messages are initiated by bots to start conversations with a user. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications. Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:
-
-|Message type | Description |
-|----------------|-------------- |
-|Ad-hoc proactive message| The bot interjects a message without interrupting the conversation flow.|
-|Dialog-based proactive message | The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.|
-
-## Proactive app installation in Teams
-
-Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that haven't installed or previously interacted with your app. For example, If you need to message important information to everyone in your organization, then you can use the Microsoft Graph API to proactively install your bot for your users.
+This article covers how to use Microsoft Graph to check installation status and install your bot programmatically. After installation, see [Send a personal welcome message](send-personal-welcome-message.md) to learn how to retrieve the conversation ID and send a 1:1 message to the user.
 
 ## Permissions
 
@@ -193,7 +185,7 @@ The following code provides an example of sending proactive messages:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.cloudadapterbase.continueconversationasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-cloudadapterbase-continueconversationasync(system-string-microsoft-bot-schema-activity-microsoft-bot-builder-botcallbackhandler-system-threading-cancellationtoken))
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
 public async Task<int> SendNotificationToAllUsersAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -254,7 +246,7 @@ server.get('/api/notify', async (req, res) => {
 ## See also
 
 * [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Proactive messaging with Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging)
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
