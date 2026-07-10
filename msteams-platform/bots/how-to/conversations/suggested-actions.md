@@ -175,10 +175,7 @@ case "suggestedAction/submit":
   return { status: 200 };
 ```
 
-[WIP: Check for Teams SDK code snippets:
-
-- <https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/ai-integrations/teams-enhancements?pivots=typescript#suggested-prompts-1>
-- <https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions?pivots=python#action-types>]
+[WIP: Check for Teams SDK code snippets.]
 
 The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
