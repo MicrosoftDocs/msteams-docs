@@ -3,7 +3,7 @@ title: Build Agents that Use Emoji Reactions in Teams Chat
 description: Reactions are emoji markers on messages in Teams chat. Learn how to make an agent that adds, removes, and listens reactions with practical code examples.
 #customer intent: As a Teams agent developer, I want to add emoji reactions to chat messages so that my agent can acknowledge messages without interrupting the conversation.
 ms.localizationpriority: high
-ms.date: 07/01/2026
+ms.date: 07/10/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
