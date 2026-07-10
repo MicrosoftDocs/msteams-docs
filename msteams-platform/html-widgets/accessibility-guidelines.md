@@ -91,8 +91,6 @@ If you do implement a modal inside your widget, if you are using Fluent UI React
 
 
 
-
-
 **Focus restoration**: When an element is removed from the DOM after a user action (for example, after submitting a form or closing a panel), focus must be restored to a logical element rather than dropping to the document body. Use Fluent V9's [useRestoreFocusSource and useRestoreFocusTarget](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-userestorefocussource--docs) hooks to handle this automatically.
 
 
@@ -260,7 +258,7 @@ Motion and animation must not cause discomfort or interfere with usability.
 ## Error handling inside the widget
 
 > [!NOTE]
-> Teams handles widget-level loading and error states. Partners are responsible for accessible error handling within their own widget content.
+> Teams handles renderer-level loading and error states — the outer states shown when the widget itself fails to load or render. Partners are responsible for accessible error handling within their own widget content.
 
 
 **Announcements**
