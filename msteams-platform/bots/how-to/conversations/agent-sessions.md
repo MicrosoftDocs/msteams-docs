@@ -4,7 +4,7 @@ description: Sessions enable agents in Microsoft Teams to organize one-on-one co
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 04/28/2026
+ms.date: 07/10/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
