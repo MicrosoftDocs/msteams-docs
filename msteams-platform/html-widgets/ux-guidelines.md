@@ -145,7 +145,7 @@ When a widget does follow this common pattern, content typically flows top to bo
 
 
 
-## Required
+## Widget requirements
 
 The following requirements apply to all HTML widgets submitted to Teams. Widgets that don't meet these requirements may be rejected or require remediation before publishing.
 
