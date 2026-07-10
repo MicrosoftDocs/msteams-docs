@@ -36,12 +36,6 @@ Use `Action.Compose` when the app should prefill the compose box so the user can
 
 Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
 
-<!--
-- `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
-- `Action.Compose`: Use `Action.Compose` to prefill the compose box with a message (including tags, @mentions, and rich content like emojis, GIFs, and other semantic objects).
-- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](~/agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
--->
-
 > [!IMPORTANT]
 > The agent or app can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
 
