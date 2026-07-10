@@ -216,7 +216,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ---
 
 > [!NOTE]
-> If your bot supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Use sessions in bot conversations](how-to/conversations/bot-session.md).
+> If your bot supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
 
 ### Receive a read receipt
 
@@ -1130,4 +1130,4 @@ If you want your bot to receive all messages, then you don't need to filter the 
 ## See also
 
 - [Conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md)
-- [Use sessions in bot conversations](how-to/conversations/bot-session.md)
+- [Structure conversations with sessions](how-to/conversations/agent-sessions.md)
