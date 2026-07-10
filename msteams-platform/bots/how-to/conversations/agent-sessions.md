@@ -401,6 +401,12 @@ Error codes that bots may encounter during session operations:
 
 ## Best practices
 
+### When to enable sessions
+
+Enable sessions when your agent handles multiple distinct tasks or topics with the same user, such as managing separate support tickets, pull requests, or project workflows. Sessions are also a good fit for AI-powered agents, where shorter, focused conversation contexts improve the quality of generated responses. If your agent sends proactive notifications alongside interactive conversations, sessions help keep updates separate from ongoing tasks.
+
+Agents that serve a single, continuous purpose with no need for task separation can continue without sessions.
+
 ### Organize sessions around user tasks
 
 Create sessions that represent clear goals or workflows. For example, you might create separate sessions for individual tickets, pull requests, or customer requests.
