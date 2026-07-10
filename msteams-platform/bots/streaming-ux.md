@@ -48,13 +48,6 @@ Streaming bot messages has two types of updates:
 
     For more information about the error, see [error codes](#error-codes).
 
-You can implement streaming bot messages in your app in one of the following ways:
-
-- [Stream using Teams SDK](#stream-message-through-teams-sdk).
-- [Stream using REST API](#stream-message-through-rest-api).
-
-In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
-
 ## Implement streaming with Teams SDK
 
 ::: zone pivot="teams-sdk-csharp"
