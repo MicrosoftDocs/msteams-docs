@@ -168,7 +168,7 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 ### Responsive scaling
 
-Widgets must adapt to the width of the chat container. Unlike Adaptive Cards, which support discrete size variants that partners can customize independently, HTML widgets use a single fluid layout that scales continuously across widths. Your design should hold up gracefully at any width rather than targeting specific sizes.
+Widgets must adapt to the width of the chat container. Teams chat containers vary in width depending on context — for example, mobile screens, a meeting chat pane, or a thread view open alongside the main chat. Unlike Adaptive Cards, which support discrete size variants that partners can customize independently, HTML widgets use a single fluid layout that scales continuously across widths. Your design should hold up gracefully at any width rather than targeting specific sizes.
 
 - Use flexible, fluid layouts rather than fixed pixel widths
 - Avoid fixed pixel heights — allow the widget to grow vertically as content requires
