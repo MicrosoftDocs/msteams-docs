@@ -438,8 +438,6 @@ Don't send a message in the following cases:
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
-[!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
-
 ## Next step
 
 > [!div class="nextstepaction"]
