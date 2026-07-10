@@ -20,22 +20,6 @@ These guidelines apply to all partner-built HTML widgets (MCP apps) that are ren
 > [!TIP]
 > If you are building your widget with React, we recommend using [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components and tokens. They implement accessible, Teams-compatible patterns out of the box and reduce the amount of custom accessibility work required. Fluent UI React v9 is not required — partners may use any framework or library as long as the accessibility requirements in this article are met.
 
-## Minimum accessibility bar for submission
-
-Widgets must meet all of the following requirements to be accepted. Widgets that don't meet this bar may be rejected or require remediation before publishing.
-
-| Requirements |
-|:---|
-| ✅ Fully operable with a keyboard, with no focus traps inside the widget |
-| ✅ Usable with screen readers, with meaningful roles, names, and states on all interactive elements |
-| ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
-| ✅ Provides accessible error handling and loading states for content inside the widget |
-| ✅ Text and interactive controls remain readable and operable at 200% browser zoom (exceptions apply for fixed-aspect content such as charts, maps, and media) |
-| ✅ Respects `prefers-reduced-motion` and avoids harmful flashing |
-| ✅ Avoids horizontal scrolling for primary content — intentional horizontal scroll patterns such as wide tables or carousels are acceptable |
-
-> [!WARNING]
-> Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
 
 
 
@@ -51,7 +35,7 @@ The following practices aren't required but are strongly recommended to improve 
 - **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
 
 
-- ## Responsibility model
+## Responsibility model
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
 
@@ -69,6 +53,22 @@ Teams and partners share responsibility for accessibility. The following table c
 | High contrast support inside widget |   | ✅ |
 | Error handling for content inside widget |   | ✅ |
 
+## Minimum accessibility bar for submission
+
+Widgets must meet all of the following requirements to be accepted. Widgets that don't meet this bar may be rejected or require remediation before publishing.
+
+| Requirements |
+|:---|
+| ✅ Fully operable with a keyboard, with no focus traps inside the widget |
+| ✅ Usable with screen readers, with meaningful roles, names, and states on all interactive elements |
+| ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
+| ✅ Provides accessible error handling and loading states for content inside the widget |
+| ✅ Text and interactive controls remain readable and operable at 200% browser zoom (exceptions apply for fixed-aspect content such as charts, maps, and media) |
+| ✅ Respects `prefers-reduced-motion` and avoids harmful flashing |
+| ✅ Avoids horizontal scrolling for primary content — intentional horizontal scroll patterns such as wide tables or carousels are acceptable |
+
+> [!WARNING]
+> Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
 
 
 
