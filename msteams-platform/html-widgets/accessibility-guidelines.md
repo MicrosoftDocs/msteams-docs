@@ -35,7 +35,7 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 | ✅ Avoids horizontal scrolling for primary content — intentional horizontal scroll patterns such as wide tables or carousels are acceptable |
 
 > [!WARNING]
-> Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
+> Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
 
 
 
