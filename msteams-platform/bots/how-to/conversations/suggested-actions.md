@@ -261,11 +261,13 @@ Use suggested actions when the next step is predictable from the agent's or botâ
 
 Keep suggestions short, specific, and task oriented. Limit the experience to the three most useful options, order them by likely user intent, and avoid repeating generic choices across turns unless the context still makes them relevant.
 
+Use `imBack` when the userâ€™s choice should become part of the conversation. Use `Action.Compose` when the user should review or personalize content before sending it. Use `Action.Submit` when the action should be handled privately by the agent or app.
+
 Prefer one-step actions that users can understand without extra explanation.
 
 Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
 
-Avoid duplicating actions already available in the response or in a card unless the action is the primary next step.
+Avoid duplicating actions already available in the response or in a card unless the action is the primary next step. For example, if a card already includes an **Approve** button, don't add Approve again as a suggested action unless it is the most important action for the user to take next.
 
 Test the experience in personal chat, group chat, and channel scopes because persistence and visibility differ by scope.
 
