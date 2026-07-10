@@ -32,6 +32,10 @@ Bots work better in a channel in the following cases:
 - Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 - Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
+### Limitations
+
+- Teams bots cannot be installed to a single standard channel only. When a bot is declared with the `team` scope, installation occurs at the team level and the bot is visible across the team’s standard channels. This behavior is by design and cannot be restricted by manifest settings or runtime code. In standard teams, the General channel has special identity behavior, including a channel ID that matches the team ID. Bots are not supported in private or shared channels in the same way as standard channel conversations.
+
 ### In a group chat
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
