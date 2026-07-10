@@ -1,6 +1,6 @@
 ---
 title: Dynamically Guide Users with Suggested Actions
-description: Learn how to create and handle suggested actions for your Microsoft Teams bot to help users continue conversations.
+description: Learn how to create and handle suggested actions for your Microsoft Teams agents and apps to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
 zone_pivot_groups: teams-sdk-languages
@@ -26,7 +26,7 @@ You can build the following suggested actions in your agent or app:
 
 ### imBack
 
-Use `imBack` when the selected option should be sent back to the bot as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
+Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
 
 ### Action.Compose
 
@@ -143,7 +143,7 @@ Use `Action.Submit` to add suggested action buttons to [agent responses to slash
 
 This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
 
-Bot payload (outgoing from bot):
+Bot payload (outgoing from agent or bot):
 
 ```json
 
@@ -163,7 +163,7 @@ Bot payload (outgoing from bot):
 > [!NOTE]
 > The `value` is an object (not a string) that carries the data.
 
-Bot handler (incoming to bot):
+Bot handler (incoming to agent or bot):
 
 The agent or bot receives a standard Bot invoke activity:
 
@@ -174,6 +174,11 @@ case "suggestedAction/submit":
   // Process the action...
   return { status: 200 };
 ```
+
+[WIP: Check for Teams SDK code snippets:
+
+- <https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/ai-integrations/teams-enhancements?pivots=typescript#suggested-prompts-1>
+- <https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions?pivots=python#action-types>]
 
 The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
