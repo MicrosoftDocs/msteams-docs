@@ -70,7 +70,7 @@ Your agent or app should offer context-specific suggestions to the user, rather 
 
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
-### Add imBack action
+### Add `imBack` action
 
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
@@ -111,7 +111,7 @@ The following is an example to implement suggested actions using `imBack`:
 }
 ```
 
-### Add Action.Compose action
+### Add `Action.Compose` action
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
@@ -135,7 +135,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
 
-### Add Action.Submit` action
+### Add `Action.Submit` action
 
 Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
 
