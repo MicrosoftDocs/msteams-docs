@@ -206,7 +206,7 @@ Widgets must communicate the outcome of user actions clearly.
 
 ## Minimum UX bar for submission
 
-Widgets must meet all of the following requirements to be accepted.
+Widgets must meet all of the following requirements to be accepted by the Teams Store.
 
 | Requirement |
 |:---|
