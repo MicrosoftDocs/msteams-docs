@@ -63,6 +63,8 @@ Use `Action.Submit` when the selected option should trigger server-side logic wi
 > [!IMPORTANT]
 > The agent or app can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
 
+## Implement suggested actions
+
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
 # [`imBack`](#tab/iamback)
