@@ -15,6 +15,8 @@ Suggested actions help users continue conversations with your bot by presenting 
 
 For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
+## User experience
+
 When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
 
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
