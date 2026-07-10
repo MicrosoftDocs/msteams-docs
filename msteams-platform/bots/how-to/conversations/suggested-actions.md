@@ -111,7 +111,7 @@ The following is an example to implement suggested actions using `imBack`:
 }
 ```
 
-# [`Action.Compose`](#tab/actioncompose)
+### Add Action.Compose action
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
@@ -135,7 +135,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
 
-# [`Action.Submit`](#tab/actionsubmit)
+### Add Action.Submit` action
 
 Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
 
