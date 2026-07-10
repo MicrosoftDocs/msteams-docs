@@ -108,7 +108,7 @@ A container with many elements might lead to a long, unreadable card. Use the `m
 
 ### Compound button
 
-Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../bots/how-to/conversations/prompt-starters.md) in an Adaptive Card.  For more information, see [Compound button in Adaptive Cards](cards/cards-format.md#compound-button-in-adaptive-cards).
+Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.  For more information, see [Compound button in Adaptive Cards](cards/cards-format.md#compound-button-in-adaptive-cards).
 
 ### Fluent icons
 

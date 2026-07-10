@@ -37,7 +37,7 @@ You can create an app and configure the app manifest through one of the followin
 
 You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md#build-your-first-teams-app).
 
-When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](/microsoft-365/extensibility/schema/).
+When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](/microsoft-365/extensibility/schema/). For sample app manifest, see [Hello world sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
 ## App icons
 

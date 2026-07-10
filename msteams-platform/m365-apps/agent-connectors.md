@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 06/19/2026
+ms.date: 04/24/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -91,7 +91,6 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client registration
-- **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance
 
 ### Use OAuth authentication
 
@@ -124,49 +123,6 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
 
 The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
 
-### Use dynamic client registration
-
-Dynamic client registration enables Microsoft 365 to register as an OAuth client with your MCP server at runtime using the [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) protocol. This approach is useful when your server supports dynamic OAuth flows and you don't want to pre-register client credentials.
-
-Configure the authorization type as `DynamicClientRegistration` with a `referenceId`:
-
-````json
-"authorization": {
-  "type": "DynamicClientRegistration",
-  "referenceId": "my-dcr-config"
-}
-````
-
-The `referenceId` points to a dynamic client registration configuration that you register in [Developer Portal](https://dev.teams.microsoft.com). This configuration provides the necessary authorization values that Microsoft 365 uses when negotiating client credentials with your MCP server's OAuth registration endpoint.
-
-Your server must:
-
-- Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) compliant client registration endpoint.
-- Return a `client_id` and `client_secret` that Microsoft 365 can use to obtain access tokens.
-- Support token refresh for long-lived sessions.
-
-### Use Azure Key Vault authentication
-
-Azure Key Vault authentication allows you to store and manage your MCP server credentials in your own [Azure Key Vault](/azure/key-vault/general/overview) instance. This gives you full control over secret lifecycle management, including rotation, access policies, and audit logging.
-
-Configure the authorization type as `AzureKeyVault`:
-
-````json
-"authorization": {
-  "type": "AzureKeyVault",
-  "referenceId": "my-keyvault-secret"
-}
-````
-
-The `referenceId` points to a secret identifier registered in Developer Portal that maps to your Azure Key Vault secret.
-
-To set up Azure Key Vault authentication:
-
-1. Store your MCP server credentials (API key or client secret) as a secret in your [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
-1. Grant the Microsoft 365 service principal access to read the secret by configuring an [access policy](/azure/key-vault/general/assign-access-policy) or [Azure RBAC role](/azure/key-vault/general/rbac-guide) on your vault.
-1. Register the secret reference in [Developer Portal](https://dev.teams.microsoft.com) and note the registration ID.
-1. Use the registration ID as the `referenceId` in your manifest.
-
 ### Use no authentication
 
 If your server doesn't require authentication (not recommended for production), set the authorization type to `None` or omit the `authorization` object entirely.
@@ -175,9 +131,16 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Configure how Microsoft 365 agents discover the tools your MCP server provides. Use static inline tool definitions when your toolset is stable, or enable dynamic tool discovery when your toolset changes frequently.
+Configure how Microsoft 365 agents discover the tools your MCP server provides. <!--Currently only inline tool definitions are supported. Use inline definitions if your toolset is static. or dynamic discovery if your toolset changes frequently.-->
+<!--
+### Enable dynamic tool discovery
 
-### Use static tool definitions
+Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
+
+You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
+
+When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
+-->
 
 For static toolsets that don't change frequently, add an `mcpToolDescription` object with your tool definitions:
 
@@ -197,30 +160,6 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 ````
 
 The `description` object must match the schema returned by your MCP server's `tools/list` response.
-
-### Use dynamic tool discovery
-
-Dynamic tool discovery allows Microsoft 365 agents to fetch your tool list at runtime by calling your server's `tools/list` method. This approach is recommended when your toolset changes frequently, as it eliminates the need to republish your app each time tools are added, updated, or removed.
-
-To enable dynamic tool discovery, omit the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration:
-
-````json
-"remoteMcpServer": {
-  "mcpServerUrl": "https://mcp.example.com",
-  "authorization": {
-    "type": "OAuthPluginVault",
-    "referenceId": "my-oauth-config"
-  }
-}
-````
-
-When `mcpToolDescription` is omitted, Microsoft 365 agents:
-
-- Connect to your MCP server endpoint.
-- Call the `tools/list` method to retrieve the available tools at runtime.
-- Update the available tool list without requiring a manifest republish.
-
-Your MCP server must return a valid `tools/list` response that includes each tool's name, description, and input schema.
 
 <!--## Example schema
 
@@ -342,8 +281,7 @@ If your MCP server isn't working as expected, check these common issues:
 
 - Verify `tools/list` returns valid tool definitions
 - Check that tool descriptions are clear and complete
-- For static definitions, validate the JSON schema of your inline tool definitions
-- For dynamic discovery, confirm `mcpToolDescription` is omitted and your server correctly responds to `tools/list` at runtime
+- Validate the JSON schema of inline tool definitions
 
 ### Authentication failures
 

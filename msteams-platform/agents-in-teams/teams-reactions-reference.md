@@ -1,5 +1,5 @@
 ---
-title: Teams Emoji Reactions Reference
+title: Teams Reactions Reference
 description: Use the emojis available for Teams agents reactions.
 ms.topic: reference
 ms.date: 01/23/2026
@@ -12,17 +12,19 @@ ms.localizationpriority: high
 >
 > Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-This article provides a complete list of emoji reactions available in Teams and their corresponding reaction IDs, used to [add reactions to messages](agent-reactions.md).
+This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work. To use a Teams Reaction:
 
-## Skin tones
+1. Search the reaction by name or filter by category.
+1. Copy the ID to clipboard.
+1. Use these reactions for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
-Most of the reaction emoji in the [hand gestures](#hand-gestures) and [people](#people) categories support five skin tones in addition to the default tone. Skin tones are applied by appending a tone suffix, `-tone1` through `-tone5`, to the base reaction ID. All skin tone options and their full reaction IDs are included in this reference.
+> [!TIP]
+>
+> The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the reaction ID.
+>
+>:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
-
----
-
-**Select a category**:
+**Search by emoji category**:
 > [!div class="op_single_selector"]
 >
 > - [All categories](#teams-reactions-reference)

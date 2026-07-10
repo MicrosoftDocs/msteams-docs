@@ -3,12 +3,14 @@ title: Respond to Search Command in Teams
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: article
 ms.author: anclear
-ms.date: 04/23/2026
+ms.date: 03/06/2025
 ms.localizationpriority: medium
 ---
 # Respond to search command
 
 [!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:
 
@@ -27,47 +29,26 @@ The request parameters are found in the `value` object in the request, which inc
 
 # [C#/.NET](#tab/dotnet1)
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
 
 ```csharp
-teams.OnQuery(async (ctx) => 
-{ 
-    var commandId = ctx.Activity.Value.CommandId; 
-    var parameters = ctx.Activity.Value.Parameters; 
-    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
-    // Code to handle the query. 
-});
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+{
+  // Code to handle the query.
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L16)
 
 ```typescript
-const app = new App() 
- 
-app.on('message.ext.query', async ({ activity }) => { 
-  const commandId = activity.value?.commandId 
-  const params = activity.value?.parameters || [] 
-  const query = params[0]?.value || '' 
-  // Code to handle the query. 
-})
-```
-
-# [Python](#tab/python)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
-
-```python
-app = App() 
- 
-@app.on_message_ext_query 
-async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
-    command_id = ctx.activity.value.command_id 
-    params = ctx.activity.value.parameters or [] 
-    query = params[0].value if params else "" 
-    # Code to handle the query. 
+class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
+  // Code to handle the query.
+    }
+}
 ```
 
 # [JSON](#tab/json)
@@ -180,14 +161,16 @@ A `message` response is used when your extension needs to display a plain text m
 The following code snippet is an example of a `message` response returned by the app:
 
 ```csharp
-return new MsgExt.Response
-{
-    ComposeExtension = new MsgExt.Result
+
+return new MessagingExtensionResponse
     {
-        Type = MsgExt.ResultType.Message,
-        Text = "Here is the message you want to show!"
-    }
-};
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "message",
+                Text = "Here is the message you want to show!"
+            }
+    };
+
 ```
 
 :::image type="content" source="../../../assets/images/messaging-extension/message-response-type.png" alt-text="Screenshot shows the message response type.":::
@@ -219,93 +202,65 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 
 # [.NET](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
 ```csharp
-teams.OnQuery(async (ctx) => 
-{ 
-    var commandId = ctx.Activity.Value.CommandId; 
-    var parameters = ctx.Activity.Value.Parameters; 
-    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
- 
-    var attachments = new List<MsgExt.Attachment>(); 
- 
-    // Route to appropriate search 
-    if (commandId == "wikipediaSearch") 
-    { 
-        var results = await SearchWikipedia(query); 
-        attachments = results.Select(r => 
-        { 
-            var title = r["title"]?.ToString() ?? "No Title"; 
-            var snippet = Regex.Replace(r["snippet"]?.ToString() ?? "", "<[^>]+>", ""); 
-            return CreateAttachment(CreateWikipediaCard(r), title, snippet); 
-        }).ToList(); 
-    } 
- 
-    if (attachments.Count == 0) 
-    { 
-        return new MsgExt.Response 
-        { 
-            ComposeExtension = new MsgExt.Result 
-            { 
-                Type = MsgExt.ResultType.Message, 
-                Text = $"No results found for '{query}'" 
-            } 
-        }; 
-    } 
- 
-    return new MsgExt.Response 
-    { 
-        ComposeExtension = new MsgExt.Result 
-        { 
-            Type = MsgExt.ResultType.Result, 
-            AttachmentLayout = Attachment.Layout.List, 
-            Attachments = attachments 
-        } 
-    }; 
-});
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
+{
+  var text = query?.Parameters?[0]?.Value as string ?? string.Empty;
+
+  // Searches NuGet for a package.
+  var obj = JObject.Parse(await (new HttpClient()).GetStringAsync($"https://azuresearch-usnc.nuget.org/query?q=id:{text}&prerelease=true"));
+  var packages = obj["data"].Select(item => (item["id"].ToString(), item["version"].ToString(), item["description"].ToString()));
+
+  // We take every row of the results and wrap them in cards wrapped in in MessagingExtensionAttachment objects.
+  // The Preview is optional, if it includes a Tap, that will trigger the OnTeamsMessagingExtensionSelectItemAsync event back on this bot.
+  var attachments = packages.Select(package => new MessagingExtensionAttachment
+      {
+          ContentType = HeroCard.ContentType,
+          Content = new HeroCard { Title = package.Item1 },
+          Preview = new HeroCard { Title = package.Item1, Tap = new CardAction { Type = "invoke", Value = package } }.ToAttachment()
+      })
+      .ToList();
+
+  // The list of MessagingExtensionAttachments must we wrapped in a MessagingExtensionResult wrapped in a MessagingExtensionResponse.
+  return new MessagingExtensionResponse
+  {
+      ComposeExtension = new MessagingExtensionResult
+      {
+          Type = "result",
+          AttachmentLayout = "list",
+          Attachments = attachments
+      }
+  };
+}
 ```
 
 # [TypeScript/Node.js](#tab/typescript2)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
 ```typescript
-app.on('message.ext.query', async ({ activity }) => { 
-  const commandId = activity.value?.commandId 
-  const params = activity.value?.parameters || [] 
-  const query = params[0]?.value || '' 
-  let attachments: MessagingExtensionAttachment[] = [] 
- 
-  if (commandId === 'wikipediaSearch') { 
-    const results = await searchWikipedia(query) 
-    attachments = results.map((r: any) => 
-      createAttachment( 
-        createWikipediaCard(r), 
-        r.title, 
-        (r.snippet || '').replace(/<[^>]+>/g, '') 
-      ) 
-    ) 
-  } 
- 
-  if (!attachments.length) { 
-    return { 
-      composeExtension: { 
-        type: 'message', 
-        text: `No results found for '${query}'`, 
-      }, 
-    } 
-  } 
- 
-  return { 
-    composeExtension: { 
-      type: 'result', 
-      attachmentLayout: 'list', 
-      attachments, 
-    }, 
-  } 
-})
+class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
+    async handleTeamsMessagingExtensionQuery(context, query) {
+        const searchQuery = query.parameters[0].value;
+        const response = await axios.get(`http://registry.npmjs.com/-/v1/search?${ querystring.stringify({ text: searchQuery, size: 8 }) }`);
+
+        const attachments = [];
+        response.data.objects.forEach(obj => {
+            const heroCard = CardFactory.heroCard(obj.package.name);
+            const preview = CardFactory.heroCard(obj.package.name);
+            const attachment = { ...heroCard, preview };
+            attachments.push(attachment);
+        });
+
+        return {
+            composeExtension: {
+                type: 'result',
+                attachmentLayout: 'list',
+                attachments: attachments
+            }
+        };
+    }
+}
 ```
 
 # [JSON](#tab/json2)
@@ -442,35 +397,75 @@ app.on('message.ext.query', async ({ activity }) => {
 
 # [Python](#tab/python1)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
-
 ```python
-@app.on_message_ext_query 
-async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
-    command_id = ctx.activity.value.command_id 
-    params = ctx.activity.value.parameters or [] 
-    query = params[0].value if params else "" 
+async def on_teams_messaging_extension_query(self, context, query):
+   """
+   Handles a Messaging Extension query for searching NPM packages.
  
-    if command_id == "wikipediaSearch": 
-        results = await search_wikipedia(query) 
-        attachments = [create_attachment(create_wikipedia_card(r), r['title'], 
-                       re.sub(r'<[^>]+>', '', r.get('snippet', ''))) 
-                      for r in results] 
- 
-    if not attachments: 
-        return MessagingExtensionInvokeResponse( 
-            compose_extension=MessagingExtensionResult( 
-                type=MessagingExtensionResultType.MESSAGE, 
-                text=f"No results found for '{query}'" 
-            ) 
-        ) 
- 
-    return MessagingExtensionInvokeResponse( 
-        compose_extension=MessagingExtensionResult( 
-            type=MessagingExtensionResultType.RESULT, 
-            attachment_layout=AttachmentLayout.LIST, 
-            attachments=attachments 
-        ) 
+    This method takes a search query from Teams, fetches matching NPM packages using 
+    the NPM registry API, and returns a list of thumbnail cards displaying package 
+    details with action buttons.
+    """
+    search_query = query.parameters[0].value
+
+    response = requests.get(
+        "http://registry.npmjs.com/-/v1/search",
+        params={"text": search_query, "size": 8},  # Limit results to top 8
+    )
+    response.raise_for_status()  # Raise an error if the API call fails
+    data = response.json()  # Parse the JSON response from the API
+
+    attachments = []
+    for obj in data["objects"][:8]:  # Iterate through the first 5 search results
+        package = obj.get("package", {})
+        package_name = package.get("name", "Unknown Package")  # Fallback if name is missing
+        description = package.get("description", "No description available")  # Fallback for missing description
+        homepage = package.get("links", {}).get("homepage", "https://www.npmjs.com")  # Default link
+
+        thumbnail_card = ThumbnailCard(
+            title = package_name,  # Package name as card title
+            text = description,  # Package description
+            buttons=[
+                # Button to view the package on NPM
+                CardAction(
+                    type="openUrl",
+                    title="View on NPM",
+                    value=f"https://www.npmjs.com/package/{package_name}",
+                ),
+                # Button to visit the package's homepage
+                CardAction(
+                    type="openUrl",
+                    title="Homepage",
+                    value=homepage,
+                ),
+            ],
+        )
+
+        preview_card = ThumbnailCard(
+            title=package_name,
+            text = description,
+        )
+        preview_attachment = CardFactory.thumbnail_card(preview_card)
+
+        preview_attachment.content.tap = CardAction(
+            type="invoke",  # Invoke action triggers a bot command
+            value={"title": package_name, "description": description},
+        )
+
+        attachment = MessagingExtensionAttachment(
+            content=thumbnail_card,
+            content_type=CardFactory.content_types.thumbnail_card,
+            preview=preview_attachment,
+        )
+
+        attachments.append(attachment)
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",  # Indicates this is a list of results
+            attachment_layout="list",  # Layout style for results
+            attachments=attachments,
+        )
     )
 ```
 
@@ -604,10 +599,10 @@ The default query has the same structure as any regular user query, except it ha
 
 ## Code sample
 
-| Sample name | Description | .NET | Node.js | Python | Manifest |
-|:---------------------|:--------------|:---------|:--------|:--------|:--------|
-| Bot Message Extensions | This sample demonstrates a search-based messaging extension in Microsoft Teams that allows users to search for Wikipedia articles. The extension supports search commands, item selection, and link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions)| NA |
-|Teams message extension auth and config | This sample demonstrates how to implement authentication in a message extension for Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
+| Sample name | Description | .NET | Node.js | Manifest |
+|:---------------------|:--------------|:---------|:--------|:--------|
+| Teams message extension search | This sample demonstrates how to create a message extension in Teams that allows users searches for NuGet packages and retrieve the results as a card. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension auth and config | This sample demonstrates how to implement authentication in a message extension for Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
 

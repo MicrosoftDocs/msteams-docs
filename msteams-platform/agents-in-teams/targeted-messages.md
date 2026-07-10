@@ -33,7 +33,7 @@ Sending targeted messages to any user in a group conversation is a capability of
 Targeted messaging enables users to privately interact with agents without distracting other users or exposing interactions and information that aren't meant for the group. Consider the following scenarios:
 
 - A user can ask an agent to generate a summary of the discussion without the other participants seeing the request or the response.
-- A user can privately ask for information from an agent with the intent of sharing it with the group, but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/suggested-actions.md) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
+- A user can privately ask for information from an agent with the intent of sharing it with the group, but wants to confirm the contents of the message first. The agent can respond privately, with a [suggested action](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) requesting the user's approval to share its response. When the user approves, the agent resends the message publicly.
 - A user can direct and monitor background work with agents, referencing the context of the conversation, without distracting the other participants.
 - An agent can detect a new user entering a large, long-running conversation and proactively send them a private welcome message and a summary.
 
@@ -298,7 +298,7 @@ When designing agent interactions for group conversations, choosing between publ
 - Public messages should be used in situations that are purely informational and don't require user-specific context. They should benefit the entire group and shouldn't contain any private information.
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
 
-Consider using [suggested actions](../bots/how-to/conversations/suggested-actions.md) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
+Consider using [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) to ask a user if they'd like to share a targeted message publicly. If the user approves, delete the original message and resend it as public. If the message includes the user's original request in a quoted reply, consider providing the option to approve without including it in the public message.
 
 ## Errors
 
@@ -316,4 +316,4 @@ More details on other messaging error codes can be found [here](../bots/build-co
 - [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
 - [Send and receive messages](../bots/build-conversational-capability.md)
 - [Expose slash commands from agents and apps](agent-slash-commands.md)
-- [Suggested actions](../bots/how-to/conversations/suggested-actions.md)
+- [Suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1)

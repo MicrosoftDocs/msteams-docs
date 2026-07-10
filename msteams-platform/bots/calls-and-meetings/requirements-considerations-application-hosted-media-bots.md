@@ -92,4 +92,4 @@ Application-hosted media bots samples are as follows:
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 * [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 * [Integrate media capabilities](../../concepts/device-capabilities/media-capabilities.md)
-* [Get Teams specific context for your bot](../how-to/get-teams-context.md)
+* [Teams bot API changes to fetch team or chat members](../../resources/team-chat-member-api-changes.md)

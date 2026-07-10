@@ -82,8 +82,6 @@ If your app is production ready, you can begin the process of getting it listed 
 
   Review the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to Teams Store policies.
 
-  Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
-
 * **Prior to app submission**
 
   1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
@@ -129,8 +127,6 @@ If your app is production ready, you can begin the process of getting it listed 
 * **During design phase**
 
   Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers). If you build your app in line with these guidelines, then it prevents any rework due to nonadherence to Teams Store policies.
-
-  Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
 
 * **Prior to app submission**
 

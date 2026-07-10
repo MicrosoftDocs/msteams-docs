@@ -12,7 +12,8 @@ ms.date: 02/27/2026
 
 > [!NOTE]
 >
-> * Support for apps in **Shared channels** and **Private channels** is now generally available.
+> * Support for apps in **Shared channels** is now generally available.  
+> * Support for apps in **Private channels** is available in [public developer preview](resources/dev-preview/developer-preview-intro.md).
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. By using this update, you can experience multiple benefits:
 
@@ -564,12 +565,18 @@ Perform the following steps to validate the private channel support:
 
 1. Add the app to Team A, and then add it to the private channel.
 1. Verify that your tab loads correctly in the private channel.
+1. Test bot responses for different user types:
+   * In-tenant member
+   * Guest user or external user
 1. If your app lists members or assigns tasks, confirm it only uses channel members and not the complete team.
-1. Add a new member to the private channel and check:
+5. Add a new member to the private channel and check:
    * Whether your app receives a membership change event
    * Whether your membership API reflects the new member
 
 Testing across these scenarios helps you spot any problems with functionality, permissions, and user experience.
+
+> [!NOTE]  
+> Support for apps in **Private channel** is available in public developer preview.
 
 ## Best practices for supporting all channels
 

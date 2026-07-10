@@ -1335,7 +1335,7 @@ The following card payload shows a container with a scroll bar:
 
 ## Compound button in Adaptive Cards
 
-Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../../bots/how-to/conversations/prompt-starters.md) in an Adaptive Card.
+Compound button is a special type of button with an icon, title, and description. You can add a Compound button using the `CompoundButton` element. This element enables you to replicate the appearance of [prompt starters](../../bots/how-to/conversations/prompt-suggestions.md#prompt-starters) in an Adaptive Card.
 
 Here are the properties of the `CompoundButton` element:
 
