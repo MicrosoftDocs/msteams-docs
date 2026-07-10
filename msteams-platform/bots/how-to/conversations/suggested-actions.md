@@ -9,7 +9,7 @@ ms.date: 6/26/2026
 
 # Dynamically guide users with suggested actions
 
-Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
+Suggested actions help users continue conversations with your agent by presenting context-specific next steps in the chat.
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
@@ -17,7 +17,10 @@ For guidance on commands that help users start a conversation, see [Create promp
 
 ## Supported suggested actions
 
-Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your agent or bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. You can build the following suggested actions in your agent or bot:
+Suggested actions help users with ideas of what to ask next, based on the previous response or conversation.
+Use suggested actions when the agent or app has the conversational context to recommend the next few intents after a response, such as refining a search, creating a task, choosing a status, or continuing a guided workflow.
+
+You can build the following suggested actions in your agent or app:
 
 ### imBack
 
@@ -66,6 +69,8 @@ When a user selects a button, it remains visible and accessible on the rich card
 > `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
 ## Implement suggested actions
+
+Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
 
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
