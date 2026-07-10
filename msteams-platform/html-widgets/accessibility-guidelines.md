@@ -37,7 +37,21 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 > [!WARNING]
 > Widgets that don't meet these requirements may be rejected or require remediation before they can be published.
 
-## Responsibility model
+
+
+## Recommended best practices
+
+The following practices aren't required but are strongly recommended to improve the overall experience.
+
+- **Skip links:** Provide a "Skip to main content" link at the top of the widget to let keyboard and screen reader users bypass repeated navigation
+- **Headings:** Use headings (`<h1>`–`<h3>`) to structure content and make navigation easier for screen reader users
+- **Simple interaction models:** Prefer simple, predictable interaction patterns over highly custom or novel controls
+- **Scrolling:** Avoid complex nested scroll regions. If a scrollable region is necessary, ensure it has a clear label and is keyboard accessible
+- **Tooltips:** Implement accessible tooltips using `aria-describedby` and ensure they're available on focus as well as hover
+- **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
+
+
+- ## Responsibility model
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
 
@@ -282,17 +296,6 @@ For invalid fields:
 
 
 
-
-## Recommended best practices
-
-The following practices aren't required but are strongly recommended to improve the overall experience.
-
-- **Skip links:** Provide a "Skip to main content" link at the top of the widget to let keyboard and screen reader users bypass repeated navigation
-- **Headings:** Use headings (`<h1>`–`<h3>`) to structure content and make navigation easier for screen reader users
-- **Simple interaction models:** Prefer simple, predictable interaction patterns over highly custom or novel controls
-- **Scrolling:** Avoid complex nested scroll regions. If a scrollable region is necessary, ensure it has a clear label and is keyboard accessible
-- **Tooltips:** Implement accessible tooltips using `aria-describedby` and ensure they're available on focus as well as hover
-- **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
 
 
 ## Testing guidance
