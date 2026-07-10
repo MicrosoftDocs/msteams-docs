@@ -5,6 +5,7 @@ ms.date: 02/19/2025
 ms.topic: article
 ms.author: vikasalmal
 ms.localizationpriority: high
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Stream bot messages
@@ -54,80 +55,68 @@ You can implement streaming bot messages in your app in one of the following way
 
 In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
 
-## Stream message through Teams SDK
+## Implement streaming with Teams SDK
 
-[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
+::: zone pivot="teams-sdk-csharp"
 
-Teams SDK provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
+Use `Stream.Update` to write informative updates before beginning the message stream. `Stream.Update` can be called multiple times with different update text.
 
-> [!NOTE]
-> Streaming bot messages is not available with function calling.
+Use `Stream.Emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `Stream.Emit`, informative updates will no longer be shown and `Stream.Update` will have no effect.
 
-Through streaming, your AI-powered bot can offer an experience that is engaging and responsive for the user. Configure the following features for streaming messages for your AI-powered app:
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{   
+   context.Stream.Update("Testing");
+   await Task.Delay(1000);
+   context.Stream.Emit("hello");
+   context.Stream.Emit(", ");
+   context.Stream.Emit("world!");
+});
+```
 
-1. **Enable streaming for AI-powered bot**:
+::: zone-end
 
-    Bot messages can be streamed through Teams SDK. The AI-powered bot sends chunks to the user as the model generates the response. Streaming messages support text. However, attachment, AI-label, feedback loop, and sensitivity labels are available only for the final streaming message.
+::: zone pivot="teams-sdk-typescript"
 
-2. **Set informative message**:
+Use `stream.update` to write informative updates before beginning the message stream. `stream.update` can be called multiple times with different update text.
 
-    You can define an informative message for your AI-powered bot. This message appears for the user every time the bot sends an update. Here are some examples for informative messages that you can set in your app:
+Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
-    - **Scanning through documents**
-    - **Summarizing content**
-    - **Finding relevant work items**
+```typescript
+app.on('message', async ({ activity, stream }) => {
+  stream.update("Thinking...");
+  await new Promise(resolve => setTimeout(resolve, 1000))  
+  stream.emit('hello');
+  stream.emit(', ');
+  stream.emit('world!');
 
-    The following example shows the information updates in an AI-powered bot:
+  // result message: "hello, world!"
+});
+```
 
-    :::image type="content" source="../assets/images/bots/streaming-ai-info-update.png" alt-text="Image shows information updates streaming in an AI-powered bot." border="false":::
+::: zone-end
 
-3. **Format the final streamed message**:
+::: zone pivot="teams-sdk-python"
 
-    Using AI SDK, text messages and simple markdown can be formatted while they're being streamed. However, for Adaptive Cards, images, or rich HTML, the formatting can be applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+Use `stream.update` to write informative updates before beginning the message stream. `stream.update` can be called multiple times with different update text.
 
-    The following example shows the streaming response in an AI-powered bot:
+Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
-    :::image type="content" source="../assets/images/bots/ai-response-streaming.png" alt-text="Image shows streaming responses in an AI-powered bot." border="false":::
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    ctx.stream.update("Stream starting...")
+    await asyncio.sleep(1)
 
-    The following example shows the AI-powered bot formatting the streamed response:
+    # Stream messages with delays using ctx.stream.emit
+    for message in STREAM_MESSAGES:
+        # Add some randomness to timing
+        await asyncio.sleep(random())
 
-    :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Image shows the AI-powered bot applying formatting on the streamed response." border="false":::
+        ctx.stream.emit(message)
+```
 
-    The following example shows the final streamed response in an AI-powered bot after the formatting is completed:
-
-    :::image type="content" source="../assets/images/bots/ai-final-stream-message.png" alt-text="Image shows the final streamed response in an AI-powered bot." border="false":::
-
-4. **Enable AI-powered features for final message**:
-
-    You can enable the following AI-powered features for the final message sent by the bot:
-<br>
-
-    - **Citations**: Teams SDK automatically includes citations in the bot's responses. It provides references for the sources that the bot used to generate the response. It allows users to refer to the source through in-text citations and references.
-    - **Sensitivity Label**: Use sensitivity label to help users understand the confidentiality of a message.
-    - **Feedback loop**: This allows users to provide positive or negative feedback on the bot messages.
-    - **Generated by AI**: Teams SDK automatically includes a **Generated by AI** label in the bot's responses. This label helps users identify that a message was generated using AI.
-
-    For more information about formatting AI-powered bot messages, see [bot messages with AI-generated content](how-to/bot-messages-ai-generated-content.md).
-
-### Configure streaming bot messages
-
-Follow these steps to configure streaming bot messages:
-
-1. **Enable streaming for AI-powered bot**:
-
-    a. Use the `DefaultAugmentation` class in the `config.json` file, and in one of the following main application classes of your bot app:
-      - For a C# bot app: Update `Program.cs`.
-      - For a JavaScript app: Update `index.ts`.
-      - For a Python app: Update `bot.py`.
-
-    b. Set `stream` to true in the `OpenAIModel` declaration.
-1. **Set informative message**: Specify the informative message in the `ActionPlanner` declaration using the `StartStreamingMessage` configuration.
-1. **Format the final streamed message**:
-    - Set the feedback loop toggle in the `AIOptions` object within the app declaration and specify a handler.
-      - For a bot app built using Python, set the feedback loop toggle in the `ActionPlannerOptions` object in addition to the `AIOptions` object.
-    - Set attachments in the final chunk using the `EndStreamHandler` within the `ActionPlanner` declaration.
-
-The following code snippet shows an example of streaming bot messages:
+::: zone-end
 
 # [C#](#tab/csharp)
 
@@ -250,44 +239,6 @@ planner=ActionPlanner(
 ```
 
 ---
-
-### Custom Planner and Model Development
-
-The `StreamingResponse` class is the helper class for streaming responses to the client. It allows you to send a series of updates in a single response, making the interaction smoother. If you're using your own custom model, you can easily use this class to stream responses seamlessly. It's a great way to keep the user engaged.
-
-Streaming bot messages must use the following sequence:
-
-- `queueInformativeUpdate()`
-- `queueTextChunk()`
-- `endStream()`
-
-After your model calls `endStream()`, the stream ends and the bot can't send any further updates.
-
-Here's a list of other methods that you can use to customize the app experience:
-
-- `setAttachments`
-- `setSensitivityLabel`
-- `setFeedbackLoop`
-- `setGeneratedByAILabel`
-
-#### Limitations for Azure OpenAI or OpenAI
-
-- When your bot calls the streaming API too fast, it can cause issues and interrupt the streaming experience. To avoid this, stream one message at a time at a consistent pace. If you don't, the request might be throttled. Buffer the tokens from the model for 1.5 to 2 seconds to ensure smooth streaming.
-- AI-powered features like citations, sensitivity label, feedback loop, and **Generated by AI** label are supported only in the final chunk. Citations are set per each text chunk queued.
-- Only rich text can be streamed.
-- You can set only one informative message. Your bot reuses this message for each update. Examples include:
-  - **Scanning through documents**
-  - **Summarizing content**
-  - **Finding relevant work items**
-- The model renders the informative message only at the beginning of each message returned from the LLM.
-- Attachments can be sent only in the final chunk.
-- Streaming isn't available with AI SDK's function calls and AOAI or OAI's `o1` model yet.
-- Here are the requirements to use `streamSequence` for AI SDK:
-  - The sequence must start with number '1'.
-  - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
-  - For the final message, `streamSequence` mustn't be set.
-
-[Back to top](#stream-messages-user-experience)
 
 ## Stream message through REST API
 
@@ -544,8 +495,6 @@ The following image is an example of the bot's final response:
 
 :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/ai-stream-message-formatting.png" border="false":::
 
-[Back to top](#stream-messages-user-experience)
-
 ## Stop streaming bot response
 
 The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
@@ -587,8 +536,6 @@ The following are the success and error codes:
 | `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
 | `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
-
-[Back to top](#stream-messages-user-experience)
 
 ## Code sample
 
