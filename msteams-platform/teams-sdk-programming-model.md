@@ -15,6 +15,10 @@ That article is overall arch model and workflow, this is Temas SDK app model
 
 The focus of the SDK, and of most of this, is agents.
 
+most events are activities, so the SDK exposes activity-specific handlers.
+
+api client -> bot connector
+
 <https://microsoft.github.io/teams-sdk/why>
 
 ## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/why>
