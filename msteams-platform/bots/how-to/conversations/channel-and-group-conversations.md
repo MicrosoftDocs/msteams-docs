@@ -74,8 +74,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `Send()` to send a message in the same thread without quoting, or `Reply()` to send with a visual quote of the inbound message.
-
 For sending messages into a thread proactively, see [Proactive messages](send-proactive-messages.md).
 
 ## Send a message on installation
@@ -202,6 +200,46 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
+```json
+{
+    "type": "message",
+    "text": "Hey <at>Pranav Smith</at> check out this message",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:9e52142b-5e5e-4d7b-bb3e-e82dcf620000",
+        "name": "Jane Smith"
+    },
+    "conversation": {
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
+    },
+    "recipient": {
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+        "name": "stlrgload100"
+    },
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
+                "id":"29:08q2j2o3jc09au90eucae",
+                "name":"Pranav Smith"
+            },
+            "text": "<at>@Pranav Smith</at>"
+        }
+    ],
+    "replyToId": "3UP4UTkzUk1zzeyW"
+}
+```
+
 ### Add mentions to your messages
 
 Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
@@ -242,6 +280,46 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ```
 
 ::: zone-end
+
+```json
+{
+    "type": "message",
+    "text": "Hey <at>Pranav Smith</at> check out this message",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:9e52142b-5e5e-4d7b-bb3e-e82dcf620000",
+        "name": "Jane Smith"
+    },
+    "conversation": {
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
+    },
+    "recipient": {
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+        "name": "stlrgload100"
+    },
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
+                "id":"29:08q2j2o3jc09au90eucae",
+                "name":"Pranav Smith"
+            },
+            "text": "<at>@Pranav Smith</at>"
+        }
+    ],
+    "replyToId": "3UP4UTkzUk1zzeyW"
+}
+```
 
 You can also mention users by their Microsoft Entra Object ID or User Principal Name (UPN), and mention tags in channel messages.
 
@@ -289,6 +367,17 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ```
 
 ::: zone-end
+
+```json
+{
+    "type": "mention",
+    "text": "<at>Adele</at>",
+    "mentioned": {
+            "id": "Adele@microsoft.com",
+            "name": "Adele"
+    }
+}
+```
 
 #### Tag mention
 

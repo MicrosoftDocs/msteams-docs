@@ -82,18 +82,7 @@ The following code shows an example of sending a simple Adaptive Card:
 
 ## Send and receive messages
 
-Sending and receiving messages is the core functionality of a bot. It enables a bot to:
-
-- Send and receive messages.
-  - [Receive a message activity](#receive-a-message-activity).
-  - [Receive a read receipt](#receive-a-read-receipt).
-  - [Receive edit message activity](#receive-edit-message-activity).
-  - [Send a message](#send-a-message).
-  - [Receive undelete message activity](#receive-undelete-message-activity).
-  - [Receive soft delete message activity](#receive-soft-delete-message-activity).
-- [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
-- [Send suggested actions](#send-suggested-actions).
-- [Send messages in Teams channel data](#send-messages-in-teams-channel-data).
+Sending and receiving messages is the core functionality of a bot.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
@@ -934,42 +923,222 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-## Send suggested actions
+## Quoted replies
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
+Quoted replies let your agent reference a previous message in the conversation. When a user sends a message that quotes another message, your agent receives structured metadata about the quoted content. Your agent can also send messages that quote previous messages.
 
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
+### Receive quoted replies
 
-The following is an example for implementation and experience of suggested actions:
+# [C#](#tab/csharp1)
 
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the GetQuotedMessages() method to access all quoted reply entities.
+
+```csharp
+app.OnMessage(async context =>
+{
+    var quotes = context.Activity.GetQuotedMessages();
+
+    if (quotes.Count > 0)
+    {
+        var quote = quotes[0].QuotedReply;
+        await context.Reply(
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
+    }
+});
 ```
 
-The following illustrates an example of suggested actions:
+# [TypeScript](#tab/ts1)
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the getQuotedMessages() method to access all quoted reply entities.
 
-> [!NOTE]
->
-> - `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> - `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> - `imBack` is the only supported action type and Teams display up to six suggested actions.
+```typescript
+app.on('message', async ({ activity, reply }) => {
+  const quotes = activity.getQuotedMessages();
+
+  if (quotes.length > 0) {
+    const quote = quotes[0].quotedReply;
+    await reply(
+      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`
+    );
+  }
+});
+```
+
+# [Python](#tab/py1)
+
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the get_quoted_messages() method to access all quoted reply entities.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    quotes = ctx.activity.get_quoted_messages()
+
+    if quotes:
+        quote = quotes[0].quoted_reply
+        await ctx.reply(
+            f"You quoted message {quote.message_id} from {quote.sender_name}: \"{quote.preview}\""
+        )
+```
+
+---
+
+### Send quoted replies
+
+# [C#](#tab/csharp1)
+
+When your agent calls `Reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Reply() automatically quotes the inbound message
+    await context.Reply("Got it!");
+});
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `Quote()` method with the message ID you want to quote.
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Quote a specific message by its ID
+    var parentMessageId = "1772050244572";
+    await context.Quote(parentMessageId, "Referencing an earlier message");
+});
+```
+
+# [TypeScript](#tab/ts1)
+
+When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```typescript
+app.on('message', async ({ reply }) => {
+  // reply() automatically quotes the inbound message
+  await reply('Got it!');
+});
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
+
+```typescript
+app.on('message', async ({ quote }) => {
+  // Quote a specific message by its ID
+  const parentMessageId = '1772050244572';
+  await quote(parentMessageId, 'Referencing an earlier message');
+});
+```
+
+# [Python](#tab/py1)
+
+When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # reply() automatically quotes the inbound message
+    await ctx.reply("Got it!")
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Quote a specific message by its ID
+    parent_message_id = "1772050244572"
+    await ctx.quote(parent_message_id, "Referencing an earlier message")
+```
+
+---
+
+### Build quoted replies for proactively sending messages
+
+# [C#](#tab/csharp1)
+
+For proactive scenarios (using `app.Send()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
+
+```csharp
+var parentMessageId = "1772050244572";
+var firstMessageId = "1772050244573";
+var secondMessageId = "1772050244574";
+
+// Single quote with response below it
+var msg = new MessageActivity()
+    .AddQuote(parentMessageId, "Here is my response");
+await app.Send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+    .AddQuote(firstMessageId, "response to first")
+    .AddQuote(secondMessageId, "response to second");
+await app.Send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity("see below for previous messages")
+    .AddQuote(firstMessageId)
+    .AddQuote(secondMessageId, "response to both");
+await app.Send(conversationId, msg);
+```
+
+# [TypeScript](#tab/ts1)
+
+For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `addQuote()` method on a message activity. Pass the message ID and an optional response text.
+
+```typescript
+import { MessageActivity } from '@microsoft/teams.api';
+
+const parentMessageId = '1772050244572';
+const firstMessageId = '1772050244573';
+const secondMessageId = '1772050244574';
+
+// Single quote with response below it
+let msg = new MessageActivity()
+  .addQuote(parentMessageId, 'Here is my response');
+await app.send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+  .addQuote(firstMessageId, 'response to first')
+  .addQuote(secondMessageId, 'response to second');
+await app.send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity('see below for previous messages')
+  .addQuote(firstMessageId)
+  .addQuote(secondMessageId, 'response to both');
+await app.send(conversationId, msg);
+```
+
+# [Python](#tab/py1)
+
+For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `add_quote()` method on a message activity. Pass the message ID and an optional response text.
+
+```python
+from microsoft_teams.api.activities.message import MessageActivityInput
+
+parent_message_id = "1772050244572"
+first_message_id = "1772050244573"
+second_message_id = "1772050244574"
+
+# Single quote with response below it
+msg = (MessageActivityInput()
+    .add_quote(parent_message_id, "Here is my response"))
+await app.send(conversation_id, msg)
+
+# Multiple quotes with interleaved responses
+msg = (MessageActivityInput()
+    .add_quote(first_message_id, "response to first")
+    .add_quote(second_message_id, "response to second"))
+await app.send(conversation_id, msg)
+
+# Grouped quotes — omit response to group quotes together
+msg = (MessageActivityInput(text="see below for previous messages")
+    .add_quote(first_message_id)
+    .add_quote(second_message_id, "response to both"))
+await app.send(conversation_id, msg)
+```
+
+---
 
 ## Send messages in Teams channel data
 
