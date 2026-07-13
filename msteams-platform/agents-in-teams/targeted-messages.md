@@ -12,10 +12,6 @@ ms.topic: article
 
 # Send and receive targeted messages in group conversations
 
-> [!NOTE]
->
-> Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 _Targeted messaging_ enables users and agents to privately communicate with each other in channels, group chats, and meeting chats.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
@@ -69,6 +65,10 @@ For more about slash commands, including how to register extra named slash comma
 Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted.
 
 ### Receive targeted messages
+
+> [!NOTE]
+>
+> Support for agents to receive targeted messages from users is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 An agent must opt in via its manifest to be able to receive targeted messages. If not opted in, Teams won't give users the option to send a targeted message to the agent.
 
