@@ -2,8 +2,12 @@
 title: Agent Reactions in Teams - Overview
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
-ms.date: 01/28/2026
-ms.topic: reference
+ms.date: 07/10/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
+ms.topic: feature-guide
+zone_pivot_groups: teams-sdk-languages
 ---
 
 <!-- markdownlint-disable MD051 -->
@@ -12,11 +16,7 @@ ms.topic: reference
 
 # Enable agent reactions in Teams
 
-> [!NOTE]
->
-> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
-You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
+In Teams chat, reactions are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)
 
@@ -156,12 +156,12 @@ See [Teams SDK](/microsoftteams/platform/teams-sdk/in-depth-guides/message-react
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
-  // First, add a reaction
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
+// First, add a reaction
+  await api.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 
   // Wait a bit, then remove it
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
+  await api.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
 ```
 
@@ -175,7 +175,7 @@ import asyncio
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     # First, add a reaction
-    await ctx.api.conversations.reactions.add(
+    await ctx.api.reactions.add(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'
@@ -183,7 +183,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
     # Wait a bit, then remove it
     await asyncio.sleep(2)
-    await ctx.api.conversations.reactions.delete(
+    await ctx.api.reactions.delete(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'

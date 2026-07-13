@@ -2,8 +2,9 @@
 title: Authorize Proactive Bot Installation
 description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
-author: akjo
-ms.topic: overview
+author: nickwalk
+ms.topic: how-to
+ms.author: nickwalk
 ms.owner: vishachadha
 ms.date: 12/15/2022
 ---
@@ -244,7 +245,7 @@ server.get('/api/notify', async (req, res) => {
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-proactive-installation/nodejs) |
 
 ## Additional code samples
 >
