@@ -914,7 +914,7 @@ Quoted replies let your agent reference a previous message in the conversation. 
 
 ::: zone pivot="teams-sdk-csharp"
 
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the GetQuotedMessages() method to access all quoted reply entities.
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `GetQuotedMessages` method to access all quoted reply entities.
 
 ```csharp
 app.OnMessage(async context =>
@@ -934,7 +934,7 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the getQuotedMessages() method to access all quoted reply entities.
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `getQuotedMessages` method to access all quoted reply entities.
 
 ```typescript
 app.on('message', async ({ activity, reply }) => {
@@ -953,7 +953,7 @@ app.on('message', async ({ activity, reply }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the get_quoted_messages() method to access all quoted reply entities.
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `get_quoted_messages` method to access all quoted reply entities.
 
 ```python
 @app.on_message
