@@ -74,6 +74,8 @@ Here are some examples that show how to implement and experience suggested actio
 
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
+Attach a `suggestedActions` object to the agent's message, and ensure that `inputHint` is set to `expectingInput`. This tells the agent or app that a user response is expected. The `actions` array defines one or more choices shown to the user. Each suggested action includes `imBack` as the `type`, which defines the action behavior; a`title`, which is the label displayed on the button; and a`value`, which is sent back to the bot when the user selects the option. The option selected by the user is sent back to the agent or app with `imBack` as the user response. The agent or app can then use the returned value to continue the conversation by routing the response to the correct intent or operation.
+
 The following is an example to implement suggested actions using `imBack`:
 
 ``` json
@@ -111,7 +113,20 @@ The following is an example to implement suggested actions using `imBack`:
 }
 ```
 
-In this example, `imBack` is used to offer two suggested actions to the user - *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. These actions are offered in response for the conversation context of tasks planned for the current day.
+In this example, `imBack` is used to offer two suggested actions to the user - *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. These actions are offered in response for the conversation context of tasks planned for the current day. The agent or app would then receive user's input and continue the conversation according to the option they selected such as creating a new query to identify overdue tasks or creating a new work item for a feature.
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+finalMarker.withSuggestedActions({
+  to: [recipientId],
+  actions: followUps.map((prompt) => ({ type: 'imBack', title: prompt, value: prompt })),
+});
+```
+
+In this example, the `finalMarker.withSuggestedActions()` method adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` property specifies user for whom the actions are intended. The `followUps.map()` function loops through the `followUps` array and creates one suggested action for each prompt, where prompt represents each individual follow-up suggestion from the list. Each action uses `type: 'imBack'` to define the button behavior when the user selects it, the `value` is sent back to the agent or app bot as if the user typed it. The `title: prompt` property sets the visible button label to the prompt text.
+
+::: zone-end
 
 ### Add `Action.Compose` action
 
