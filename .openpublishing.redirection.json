@@ -1551,6 +1551,10 @@
       {
         "source_path": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message.md",
         "redirect_url": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/suggested-actions.md",
+        "redirect_url": "msteams-platform/bots/how-to/conversations/suggested-actions"
+      }
     ]
 }

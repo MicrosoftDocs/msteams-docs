@@ -572,9 +572,9 @@ If your app package contains custom activity icons for activity feed notificatio
 
 You must have a short and long description for your app. App description helps improve your app discoverability in the Teams Store. The descriptions in your app configuration and Partner Center must be the same.
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-adequate-information.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 
-:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequete.png" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
+:::image type="content" source="../../../../assets/images/submission/validation-app-description-inadequate.png" alt-text="Graphic shows a failed scenario for an inadequate app description.":::
 
 <br></br>
 <details><summary>Expand to know more</summary>
@@ -583,13 +583,13 @@ Descriptions mustn't directly or through suggestion derogate another brand (Micr
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Must fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparitive-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-comparative-marketing-fail.png" alt-text="Graphic shows an example of comparative marketing information in app description.":::
 
 * Hyperlink contact details, get started, help, or sign up in app description. [*Good-to-fix*]
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-details-hyperlinked.png" alt-text="Graphic shows an example of contact details hyperlinked in the app descriptions.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-deatils-not-hyperlinked.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-app-description-contact-details-not-hyperlinked.png" alt-text="Graphic shows an example of contact details not hyperlinked in the app descriptions.":::
 
 * App description must identify the intended audience, briefly and clearly explain its unique and distinct value, identify supported Microsoft products and other software, and include any prerequisites or requirements for its use. You must clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables as described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer. [*Must fix*]
 
@@ -988,7 +988,7 @@ The following are the navigation guidelines:
   * Page headers
   * Hamburger menus
 
-    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-levels.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
 * Deep links in tabs mustn't link to an external webpage but within Teams. For example, dialogs or other tabs. [*Must fix*]
 
