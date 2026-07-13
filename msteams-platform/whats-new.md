@@ -39,7 +39,7 @@ Teams platform features that are available to all app developers.</br>
 **2026 July**
 
 * ***July 10, 2026***: [Support for agents for using reactions to acknowledge messages, display workflow status, and present other information.](agents-in-teams/agent-reactions.md).
-* ***July 07, 2026***: Support for apps in Private channels is now generally available. For more information, see [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md).
+* ***July 07, 2026***: [Support for apps in Private channels is now generally available.](build-apps-for-shared-private-channels.md).
 
 :::column-end:::
 :::row-end:::
@@ -52,8 +52,8 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
-| 27/04/2026 | Support for Prompt starters are now generally available | [Prompt starters are now generally available.](bots/how-to/conversations/prompt-starters.md) |
-| 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
+| 27/04/2026 | Support for Prompt starters are now generally available | Build agents using Teams SDK > [Prompt starters are now generally available.](bots/how-to/conversations/prompt-starters.md) |
+| 27/01/2026 | Support for apps in Private channels. | Add Teams app capabilities > Build bots >  [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 <br/>
 </details>
