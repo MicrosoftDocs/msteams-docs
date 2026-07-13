@@ -111,6 +111,8 @@ The following is an example to implement suggested actions using `imBack`:
 }
 ```
 
+In this example, `imBack` is used to offer two suggested actions to the user - *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. These actions are offered in response for the conversation context of tasks planned for the current day.
+
 ### Add `Action.Compose` action
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
