@@ -14,7 +14,7 @@ ms.topic: article
 
 > [!NOTE]
 >
-> Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Support for agents to receive targeted messages from users is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 _Targeted messaging_ enables users and agents to privately communicate with each other in channels, group chats, and meeting chats.
 
