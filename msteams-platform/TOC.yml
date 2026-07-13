@@ -55,8 +55,6 @@
       - name: Agents Toolkit overview
         href: toolkit/agents-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
-      - name: Create a Teams agent with Agents Toolkit
-        href: agents-in-teams/build-agent-toolkit.md
       - name: Install Agents Toolkit
         href: toolkit/install-agents-toolkit.md
         displayName: download
@@ -69,7 +67,7 @@
           href: toolkit/tools-prerequisites.md
           displayName: accounts to build your Teams app
         - name: Create new Teams agent project
-          href: agents-in-teams/build-first-agent.md  
+          href: agents-in-teams/build-agent-toolkit.md
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC

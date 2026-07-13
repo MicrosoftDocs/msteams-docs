@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create an agent with Teams SDK"
-description: Create a Microsoft Teams agent using command-line tools and the Teams SDK. Follow this quickstart to build, run, and chat with your agent locally.
+description: Create a Microsoft Teams agent using command-line tools and Teams SDK. Follow this quickstart to build, run, and chat with your agent locally.
 ms.date: 07/09/2026
 author: nickwalkmsft
 ms.author: nickwalk
