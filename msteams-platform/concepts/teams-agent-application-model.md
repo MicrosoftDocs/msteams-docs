@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 TODO lead-in: explicitly explain what is in this article: app model and its components
 
-TODO explain that this is a 10,000 view of the overall app model and only focuses on agents. [Teams SDK programming model **for agents**](../teams-sdk-programming-model.md) explains how it is reflected in the SDK.
+TODO explain that this is a 10,000 view of the overall app model that gives special attention to agents. [Teams SDK programming model **for agents**](../teams-sdk-programming-model.md) explains how it is reflected in the SDK.
 
 TODO this also serves to explain the quickstart, in which you build an agent.
 
@@ -21,7 +21,7 @@ Teams apps bring new features and experiences to the Teams interface, similar to
 
 Teams offers multiple surfaces and integration points developers can use to offer custom experiences. These surfaces and integration points are called *app capabilities*, and an implementation that builds on top of one or more of them is a *Teams app*.
 
-The *bot* capability in Teams is used to create conversational assistants that participate in chat. A bot-capability application, and its presence in chat, is generally referred to as a bot or agent. Both terms are often used interchangeably, but in the modern AI landscape, agents are distinguished from bots by their advanced capabilities provided by large language models (LLM). Agents use LLMs to converse naturally, adapt to context, and dynamically perform actions on behalf of users.
+The *bot* app capability enables creation of conversational assistants that participate in Teams chat. A bot-capability application, and its presence in chat, is generally referred to as a bot or agent. Both terms are often used interchangeably, but in the modern AI landscape, agents are distinguished from bots by their advanced capabilities provided by large language models (LLM). Agents use LLMs to converse naturally, adapt to context, and dynamically perform actions on behalf of users.
 
 Agent development is the main focus of Teams SDK and most modern Teams app development.
 
@@ -30,16 +30,16 @@ Agent development is the main focus of Teams SDK and most modern Teams app devel
 From a developer's perspective, Teams apps consist of three main components:
 
 - An app's *runtime* is a custom web service or application that implements the app's behavior.
-- An app's *manifest* is a JSON configuration file defines everything else about the app.
+- An app's *manifest* is a JSON configuration file that defines everything else about the app.
 - All Teams agents, and most Teams apps generally, have a unique *identity* registered in Microsoft Entra ID.
 
 ### Runtime
 
-An app's runtime is a web-hosted application containing its code. App developers are responsible for hosting their app's runtime on the web: Teams does not host or run app code.
+An app's runtime is a web-hosted application containing the app's code. App developers are responsible for hosting and maintaining their app's runtime on the web: Teams does not host or run app code.
 
-For an agent, the runtime is constructed as a set of event handlers triggered by user activity on Teams. For example, when a user in a one-on-one chat with the agent sends a message, the Teams platform will call the runtime's `activity` handler with a `message` payload.
+For an agent, the runtime is a web service that implements event handlers triggered by user activity on Teams. For example, when a user in a one-on-one chat with the agent sends a message, the Teams platform will call the runtime's `activity` handler with a `message` payload.
 
-In the quickstart, the agent you create with Teams SDK implements a minimal handler for chat messages that sends a chat message in response, echoing what the user said:
+In the quickstart, the agent you create with Teams SDK features a minimal chat message handler that sends a chat message in response, echoing what the user said:
 
 TODO align the code snippets with the quickstart.
 
@@ -74,27 +74,27 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-This basic implementation illustrates how event handlers work, but a real-world agent's runtime will depend on an LLM for understanding and generating natural-language chat.
+This basic implementation illustrates how event handlers work, but a real-world agent's runtime will depend on an LLM for understanding and generating natural-language chat, and likely other functionality.
 
-Teams agents interact with users through chat, but are not limited to request-response chat workflows. An agent's runtime can listen for and act on a wide variety of Teams events, and agent functionality is limited only by the services and data they have access to. As a baseline, many productivity-focused agents access Microsoft 365 organizational data and services through the Microsoft Graph API to provide workplace productivity and collaboration features.
+Teams agents interact with users through chat, but are not limited to request-response chat workflows. An agent's runtime can listen for and act on a wide variety of Teams events, and its functionality is limited only by the services and data it has access to. As a baseline, many productivity-focused agents access Microsoft 365 organizational data and services through the Microsoft Graph API to provide workplace productivity and collaboration features.
+
+An agent's runtime is registered with Teams as a single global endpoint URL that handles events for all instances of the agent. Agents distributed to multiple organizations must securely manage requests from different tenants.
 
 ### Manifest
 
-An app's manifest defines everything about the app that isn't expressed through its code. In addition to basic configuration like the app's name and description, the manifest declares which capabilities the app implements and the endpoint URL of the runtime that powers them. The manifest also specifies resource permissions that users and administrators must consent to granting when they install the app.
+An app's manifest defines everything about the app that isn't expressed through its runtime. In addition to basic configuration like the app's name and description, the manifest declares which capabilities the app implements and the endpoint URL of the runtime that powers them. The manifest also specifies in-Teams permissions needed by the app, which users and administrators grant when they install it.
 
-Unlike the app's runtime, developers deploy the manifest (along with the app's graphical icons) to the Teams platform using the Teams Developer Portal or the Teams developer CLI. When development is complete and the runtime is hosted in production, they use the portal to publish their app to the Teams Store or to their organizational app catalog. When a user installs the app, the manifest and icons are all that are needed by the Teams client on their device to present the app to them, because Teams depends on the web-hosted runtime to drive the app's behavior.
+Unlike the app's runtime, developers deploy the manifest to the Teams platform using the Teams Developer Portal or the Teams developer CLI. When development is complete and the runtime is running in production, they use the portal to publish the app to the Teams Store or to their organizational app catalog. When a user installs the app, the manifest is all that is needed by the Teams client on their device to present the app to them, because Teams depends on the web-hosted runtime to drive the app's behavior.
 
 In the quickstart, you don't see or interact with your agent's app manifest. `teams app create` creates a starter manifest and deploys it to the Teams Developer Portal, which creates a private installer link that you use to install the app.
 
 ### Identity
 
-Microsoft Entra ID is the Microsoft identity and access management service used by Teams and M365.
+Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. Most Teams apps have an Entra ID *app registration* that allows the app to participate in identity and authorization flows within the Microsoft 365 ecosystem.
 
-An app's Entra ID identity enables administrators to grant the app access to Microsoft 365 data and services within their organizations. It also provides the infrastructure needed for the app to perform enterprise single sign-on and OAuth authentication, allowing it to associated resources with user identities and access data and services on behalf of consenting users.
+An app's registration enables administrators to grant it access to Microsoft 365 data and services within their organizations. It also provides the infrastructure needed for the app to perform enterprise single sign-on and OAuth authentication, allowing it to access data and services on behalf of consenting users.
 
-***should mention somewhere, maybe in runtime that activity payloads include tenant id; this is a fundamental idea for multi-tenant apps. maybe put the "developers are responsible for" concept at the bottom of the runtime section and say that runtimes are web apps that devs are responsible for hoting and scaling. The runtime implements the agent across all tenants and users.
-
-TODO don't have a separate auth section, talk about it hwere.
+Creating an app registration requires the developer to have access to an Entra tenant, which is why the second part of the quickstart requires a Microsoft work or school account. In the quickstart, `teams app create` creates an Entra ID app registration in your tenant to represent your agent.
 
 ## Microsoft Foundry Bot Service
 
@@ -106,7 +106,7 @@ Some functionality in APX, some in Graph.
 
 Dont' have to host on Azure, it's not a billable Azure resource, for dev dont' even need an azure sub.
 
-## Authentication and authorization
+## Graph?
 
 ---
 
