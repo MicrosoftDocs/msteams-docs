@@ -118,6 +118,36 @@ In this example, `imBack` is used to offer two suggested actions to the user - *
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
+const FOLLOW_UPS_PROMPT =
+  'Produce 2 specific prompts the user might want to ask next, based on the conversation so far. ' +
+  'Each must be phrased in the first person and stay under 8 words.';
+
+const FOLLOW_UPS_SCHEMA = {
+  type: 'object',
+  properties: { prompt1: { type: 'string' }, prompt2: { type: 'string' } },
+  required: ['prompt1', 'prompt2'],
+  additionalProperties: false,
+} as const;
+
+async function generateFollowUps(history: ChatCompletionMessageParam[]): Promise<string[]> {
+  try {
+    const completion = await client.chat.completions.create({
+      model: deployment,
+      messages: [...history, { role: 'system', content: FOLLOW_UPS_PROMPT }],
+      response_format: {
+        type: 'json_schema',
+        json_schema: { name: 'follow_ups', strict: true, schema: FOLLOW_UPS_SCHEMA },
+      },
+    });
+    const parsed = JSON.parse(completion.choices[0]?.message?.content ?? '{}');
+    return [parsed.prompt1, parsed.prompt2].filter((s): s is string => typeof s === 'string' && s.length > 0);
+  } catch {
+    return []; // degrade silently — the main reply still ships
+  }
+}
+```
+
+```typescript
 finalMarker.withSuggestedActions({
   to: [recipientId],
   actions: followUps.map((prompt) => ({ type: 'imBack', title: prompt, value: prompt })),
