@@ -36,7 +36,7 @@ From a developer's perspective, Teams apps consist of three main components:
 
 An app's runtime is a web service or web application containing the app's code. App developers are responsible for hosting and maintaining their app's runtime on the web: Teams does not host or run app code, it calls the app's runtime remotely.
 
-For an agent, the runtime is a web service that listens for events triggered by Teams user activity and performs actions in Teams, usually with an emphasis on chat. For example, when a user sends the agent a message in one-on-one chat, the Teams platform will call the runtime's `activity` handler with a `message` payload. The main purpose of Teams SDK is to simplify development of agent runtimes.
+For an agent, the runtime is a web service that listens for events triggered by Teams user activity and performs actions in Teams, usually with an emphasis on chat. For example, when a user sends the agent a message in one-on-one chat, the Teams platform will call the runtime's `activity` handler with a `message` payload.
 
 In the quickstart, the agent runtime you create from a template is built with Teams SDK and features a minimal chat message handler that sends a chat message in response, echoing what the user said:
 
@@ -91,11 +91,13 @@ An app's registration enables administrators to grant it access to Microsoft 365
 
 Creating an app registration requires the developer to have access to an Entra tenant, which is why the second part of the quickstart requires a Microsoft work or school account. In the quickstart, `teams app create` creates an Entra ID app registration in your tenant to represent your agent.
 
-## Bot Services and the Bot Connector service
+## Azure Bot Services and the Bot Connector service
 
-The Bot Connector service is the service interface between the Teams platform and an agent's runtime. It is the service that is responsible for calling an agent's runtime when events are triggered in Teams, and that an agent runtime calls for most Teams-related operations.
+The Bot Connector service is the interface between the Teams platform and an agent's runtime. It is the service that calls an agent's runtime when events are triggered in Teams, and that an agent runtime calls for most Teams-related operations. The main purpose of Teams SDK is to accelerate the development of agents by simplifying and structuring interactions with the Bot Connector service.
 
-Some of an agent's configuration, including its endpoint, is registered with the the Bot Connector service and not stored in the app manifest.
+Some of a Teams agent's configuration, including its endpoint, is registered with the the Bot Connector service and not included in its manifest.
+
+Auth
 
 *Some* operations are in Graph.
 
