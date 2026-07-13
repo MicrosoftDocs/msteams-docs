@@ -161,7 +161,8 @@ reply.with_suggested_actions(
 )
 ```
 
-This code attaches suggested actions to an existing reply message in a conversation.
+This example demonstrates how to attach suggested actions to an existing reply message in a conversation. It
+adds follow-up suggestion buttons to the reply message. It sends those buttons to the current user using their activity ID, and the follow_ups list provides the actions that will appear as clickable options.
 
 ::: zone-end
 
