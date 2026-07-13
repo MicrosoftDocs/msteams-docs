@@ -31,6 +31,8 @@ api client -> bot connector
 - OAuth, SSO
 -
 -
+- Also get config, and the way it authenticates
+-
 
 ## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/teams/core-concepts>
 
