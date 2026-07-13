@@ -1543,6 +1543,14 @@
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/prompt-starters.md",
+        "redirect_url": "msteams-platform/bots/how-to/conversations/prompt-starters"
+      },
+      {
+        "source_path": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message.md",
+        "redirect_url": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message"
       }      
     ]
 }
