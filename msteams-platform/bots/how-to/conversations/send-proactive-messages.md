@@ -432,7 +432,7 @@ The following table provides a simple code sample that incorporates basic conver
 | Teams Conversation Bot | This sample shows how to incorporate basic conversational flow into a Teams application. You can also use this sample to learn how to get `serviceURL` from the incoming request. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs) | NA | NA | NA |
 
 > [!div class="nextstepaction"]
-> [More code sample of proactive messaging](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [More code sample of proactive messaging](https://github.com/MicrosoftDocs/samples/tree/main/OfficeDev/msteams-samples-proactive-messaging)
 
 ## Next step
 
