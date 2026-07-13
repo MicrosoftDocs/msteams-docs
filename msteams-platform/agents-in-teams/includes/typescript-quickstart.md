@@ -56,6 +56,10 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 6. In Visual Studio Code, undo the modification you made in step 3. This will ensure a secure connection with Teams in the next steps.
 
+    ```typescript
+    const app = new App();
+    ```
+
 ## Log in and confirm permissions
 
 > [!NOTE]
