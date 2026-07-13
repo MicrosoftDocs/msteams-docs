@@ -38,6 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 July**
 
+* ***July 13, 2026***: [Enable targeted messages for agents in Teams](agents-in-teams/targeted-messages.md). |
 * ***July 07, 2026***: Support for apps in Private channels is now generally available. For more information, see [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md).
 
 :::column-end:::
