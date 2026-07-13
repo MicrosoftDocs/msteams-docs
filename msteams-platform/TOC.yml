@@ -6,14 +6,11 @@
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, welcome, new word, meaning
+- name: "Quickstart: Create and chat with an agent"
+  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
 - name: Build agents using Teams SDK
   items:
-  - name: "Quickstart: Create an agent"
-    href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-    displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
   - name: Agents in Teams
     href: agents-in-teams/overview.md
   - name: Agents user experience
@@ -1191,6 +1188,9 @@
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Frequently asked questions
   href: teams-faq.md 
+- name: Glossary
+  href: get-started/glossary.md
+  displayName: App tray, terminologies, definitions, new word, meaning
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues

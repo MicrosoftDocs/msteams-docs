@@ -145,7 +145,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ## Next steps
 
-Everything you've created in this quickstart will persist and can be used as the foundation for building an agent. As long as your agent code and devtunnel are running in your development environment, your agent will be able to send and receive messages in Teams.
+Everything you've created in this quickstart will persist and can be used as the foundation for building an agent. As long as your agent code and dev tunnel are running in your development environment, your agent will be able to send and receive messages in Teams.
 
 All of your agent's behavior is in its code: you can modify and restart it at any time to update its behavior without re-registering or reinstalling it in Teams.
 
