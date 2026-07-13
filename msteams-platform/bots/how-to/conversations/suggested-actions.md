@@ -128,6 +128,43 @@ In this example, the `finalMarker.withSuggestedActions()` method adds suggested 
 
 ::: zone-end
 
+::: zone pivot="teams-sdk-python"
+
+```python
+
+import json
+
+from microsoft_teams.api import CardAction, CardActionType, SuggestedActions
+
+_FOLLOW_UPS_PROMPT = (
+    "Based on the conversation so far, suggest exactly 2 short follow-up questions the user might want to ask next. "
+    'Respond with JSON: {"followUps": ["question 1", "question 2"]}. Keep each question under 60 characters.'
+)
+
+async def _generate_follow_ups(last_user_text: str, last_ai_text: str) -> list[CardAction]:
+    completion = await openai_client.chat.completions.create(
+        model=getenv("AZURE_OPENAI_MODEL", ""),
+        messages=[
+            {"role": "user", "content": last_user_text},
+            {"role": "assistant", "content": last_ai_text},
+            {"role": "system", "content": _FOLLOW_UPS_PROMPT},
+        ],
+        response_format=_FOLLOW_UPS_SCHEMA,  # strict json_schema
+    )
+    data = json.loads(completion.choices[0].message.content or "{}")
+    return [CardAction(type=CardActionType.IM_BACK, title=q, value=q) for q in data.get["followUps", []](:2)]
+```
+
+```python
+reply.with_suggested_actions(
+    SuggestedActions(to=[ctx.activity.from_.id], actions=follow_ups)
+)
+```
+
+This code attaches suggested actions to an existing reply message in a conversation.
+
+::: zone-end
+
 ### Add `Action.Compose` action
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
