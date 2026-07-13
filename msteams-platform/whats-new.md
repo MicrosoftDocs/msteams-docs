@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 July**
 
-* ***July 10, 2026***: [Support for agents for using reactions to acknowledge messages, display workflow status, and present other information.](agents-in-teams/agent-reactions.md).
+* ***July 10, 2026***: [Enable agents for using reactions to acknowledge messages, display workflow status, and present other information](agents-in-teams/agent-reactions.md).
 * ***July 07, 2026***: [Support for apps in Private channels is now generally available](build-apps-for-shared-private-channels.md).
 
 :::column-end:::
