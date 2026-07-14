@@ -411,7 +411,9 @@ Clear session separation helps users quickly locate and resume conversations.
 
 ### Limit creating too many sessions
 
-Create a new session only when it represents a distinct task or workflow that benefits from its own conversation context. Avoid creating sessions for transient updates or single-message interactions. Too many sessions make it harder for users to find relevant conversations in the sessions panel. If your agent sends updates based on activity outside of Teams, such as CI/CD results, service alerts, or external system notifications, route them to a single dedicated notifications session instead of creating a new session for each update. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
+Create a new session only when it represents a distinct task or workflow that benefits from its own conversation context. Avoid creating sessions for transient updates or single-message interactions. Too many sessions make it harder for users to find relevant conversations in the sessions panel.
+
+If your agent sends updates based on activity outside of Teams, such as CI/CD results, service alerts, or external system notifications, route them to a single dedicated notifications session instead of creating a new session for each update. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
 
 ### Provide meaningful first messages
 
