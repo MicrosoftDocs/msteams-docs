@@ -1,6 +1,10 @@
 {
   "redirections": [
       {
+        "source_path": "msteams-platform/apps-in-teams-meetings/teams-together-mode.md",
+        "redirect_url": "/microsoftteams/platform/mstdd-landing"
+      },
+      {
         "source_path": "msteams-platform/bots/how-to/conversations/prompt-suggestions.md",
         "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/prompt-starters"
       },

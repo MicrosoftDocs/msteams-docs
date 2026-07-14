@@ -799,9 +799,6 @@
           displayName: access token
       - name: Live Share FAQ
         href: apps-in-teams-meetings/teams-live-share-faq.md
-    - name: Custom Together Mode scenes in Teams
-      href: apps-in-teams-meetings/teams-together-mode.md
-      displayName: Single virtual scene, scene studio
     - name: Integrate meetings and calls in external apps
       href: get-started/b2c-apps.md
       displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
