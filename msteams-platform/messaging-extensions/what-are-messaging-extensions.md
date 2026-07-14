@@ -4,7 +4,7 @@ author: vikasalmal
 description: Learn how to build message extensions and the scenarios where they are used. Explore samples on action and search based message extensions.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: anclear
+ms.author: nickwalk
 ms.owner: slamba
 ms.date: 05/01/2026
 ---

@@ -240,8 +240,8 @@ The following table provides the sample name and its description:
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Connector TODO notification |This sample shows a connector for Microsoft 365 Groups, which generates and sends notifications for Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/nodejs)|
-| Generic connectors sample |This sample shows a generic connector that is easy to customize for any system that supports webhooks.| NA| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
+| Connector TODO notification |This sample shows a connector for Microsoft 365 Groups, which generates and sends notifications for Teams channel.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/connector-todo-notification/nodejs)|
+| Generic connectors sample |This sample shows a generic connector that is easy to customize for any system that supports webhooks.| NA| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/connector-generic/nodejs)|
 
 ## See also
 

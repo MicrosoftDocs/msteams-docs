@@ -3,6 +3,7 @@ title: Send proactive messages
 description: Learn how to send proactive messages with your Teams bot using the Teams SDK (Teams AI Library)
 ms.topic: article
 ms.owner: nickwalk
+ms.author: nickwalk
 ms.localizationpriority: high
 ms.date: 06/30/2026
 ---
