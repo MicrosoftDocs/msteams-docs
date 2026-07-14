@@ -83,7 +83,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
-1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
+1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent project needs to communicate with Teams, so it's important to run it from your agent's project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env .env
@@ -93,7 +93,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step.
+1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent project needs to communicate with Teams, so it's important to run it from your agent's project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env appsettings.json
@@ -107,7 +107,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-typescript"
 
-3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     npm run dev
@@ -117,7 +117,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-python"
 
-3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     python src/main.py
@@ -127,7 +127,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-3. Before proceeding in Teams, select **Done** in the Teams developer CLI menu to close it, and use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     dotnet run
@@ -135,7 +135,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone-end
 
-4. In Teams, select **Add** in the installer dialog to install the agent. In the **How would you like to use this app today?** dialog, select **Open** to open a one-on-one chat with the agent.
+4. Switch back to Teams and select **Add** in the installer dialog from step 2 to install the agent. In the **How would you like to use this app today?** dialog that appears, select **Open** to open a one-on-one chat with the agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/app-use-dialog.png" alt-text="Screenshot of Teams dialog asking how the user would like to use a newly-installed app." lightbox="../assets/images/agents-in-teams/app-use-dialog-lightbox.png":::
 

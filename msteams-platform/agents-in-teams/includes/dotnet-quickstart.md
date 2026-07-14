@@ -4,7 +4,7 @@
 - .NET 10 or later ([installer download](https://dotnet.microsoft.com/download))
 - Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps (you'll confirm these permissions at the very beginning of the quickstart)
 
-If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
+If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your agent in Teams.
 
 ## Install tools, log in and confirm permissions
 
