@@ -154,7 +154,7 @@ finalMarker.withSuggestedActions({
 });
 ```
 
-In this example, the `finalMarker.withSuggestedActions()` method adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` property specifies user for whom the actions are intended. The `followUps.map()` function loops through the `followUps` array and creates one suggested action for each prompt, where prompt represents each individual follow-up suggestion from the list. Each action uses `type: 'imBack'` to define the button behavior when the user selects it, the `value` is sent back to the agent or app bot as if the user typed it. The `title: prompt` property sets the visible button label to the prompt text.
+The `finalMarker.withSuggestedActions()` method adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` property specifies the user who should see these actions. The `followUps.map()` function goes through each item in the `followUps` list and creates a suggested action button for it. Each button uses `type: 'imBack'`, which sends the button’s value back to the agent or bot as though the user typed it. The `value` property contains the text that is sent, while `title: prompt` defines the label displayed on the button.
 
 ::: zone-end
 
