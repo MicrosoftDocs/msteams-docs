@@ -162,7 +162,7 @@ await app.send(conversation_id, "Hello from Bot")
 
 ::: zone-end
 
-Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context.
+Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context. To proactively send a message into an existing session, store the session's conversation ID and use the standard proactive messaging pattern.
 
 Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
@@ -248,9 +248,6 @@ When sessions are enabled, the existing create conversation operation applied to
 2. **The agent's manifest must declare `supportsSessions: true`.**
 
 Both conditions are checked server-side. An agent that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with exactly one member and one message activity creates a new session.
-
-> [!IMPORTANT]
-> Each call to the create conversation API creates a new session. There is no API to send a proactive message into an existing session. To send follow-up messages to an existing session, store the conversation ID returned from the initial creation and use it for subsequent replies.
 
 For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
