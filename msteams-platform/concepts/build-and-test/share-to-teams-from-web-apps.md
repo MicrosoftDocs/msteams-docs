@@ -3,7 +3,7 @@ title: Embed Share to Teams on Web Apps
 description: Learn to add the Share to Teams embedded button on third-party websites, with a website preview, using launcher script and code samples.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 10/29/2024
+ms.date: 06/23/2026
 ---
 
 # Share to Teams from web apps
@@ -350,7 +350,7 @@ The following are the launcher.js definitions:
 
 | **Sample name** | **Description** | **Node.js** |
 |-----------------|-----------------|----------------|
-| Share to Teams | This Teams sample application illustrates how to use deeplinks for initiating calls, video chats, and navigating within various app tabs. It includes detailed setup instructions and supports interactions with bots and tabs to enhance user experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
+| Share to Teams | This Teams sample application illustrates how to use deeplinks for initiating calls, video chats, and navigating within various app tabs. It includes detailed setup instructions and supports interactions with bots and tabs to enhance user experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-deeplink/nodejs) |
 
 ## See also
 

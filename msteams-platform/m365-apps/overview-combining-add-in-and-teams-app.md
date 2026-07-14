@@ -1,7 +1,7 @@
 ---
 title: General Guidance for Combining an Office add-in and a Teams App
 description: Get high-level general guidance about combining an existing Office Add-in with an existing Teams app.
-ms.date: 11/08/2024
+ms.date: 06/23/2026
 author: rickki
 ms.topic: article
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.subservice: m365apps
 
 # General guidance for combining an Office add-in and a Teams app
 
-When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and admins to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+When you have an existing Teams app and Office add-in that have closely related or overlapping functionality and workloads, we recommend that you combine them into a single app. This enables users and admins to acquire and approve both the add-in and the Teams app as a unit. For an example of an app that combines an add-in and a Teams app, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-add-in-combined/nodejs).
 
 > [!NOTE]
 > Outlook add-ins are the only kind of Office add-in that can be combined with a Teams app. We're working hard to support this feature for Excel, PowerPoint, and Word add-ins too.
