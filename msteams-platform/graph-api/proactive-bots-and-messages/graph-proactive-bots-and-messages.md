@@ -2,10 +2,11 @@
 title: Authorize Proactive Bot Installation
 description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
 ms.localizationpriority: medium
-author: akjo
-ms.topic: overview
-ms.owner: vikasalmal
-ms.date: 06/10/2026
+author: nickwalk
+ms.topic: how-to
+ms.author: nickwalk
+ms.owner: vishachadha
+ms.date: 06/19/2026
 ---
 
 # Send proactive installation messages
