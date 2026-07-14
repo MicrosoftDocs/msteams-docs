@@ -163,7 +163,7 @@ await app.send(conversation_id, "Hello from Bot")
 
 Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context. To proactively send a message into an existing session, store the session's conversation ID and use the standard proactive messaging pattern.
 
-Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
+If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
 ### HTTP API reference
 
