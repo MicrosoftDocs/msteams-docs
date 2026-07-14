@@ -124,7 +124,7 @@ Update your app manifest and set the `supportsSessions` property to `true`.
 
 After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
 
-Agents that don't enable sessions continue to use the legacy single chat experience. When sessions are enabled for an existing agent, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
+Agents that don't enable sessions continue to use the single chat experience. When sessions are enabled for an existing agent, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
 
 ## Send and receive messages in sessions
 
