@@ -241,12 +241,7 @@ Authorization: Bearer {bot-token}
 
 ## Create sessions proactively
 
-When sessions are enabled, the existing create conversation operation applied to a 1:1 conversation creates a new session. Two conditions must be met:
-
-1. **The agent must be installed for the user.** If the agent is not installed, session creation is skipped and a regular 1:1 conversation is created instead (no error returned).
-2. **The agent's manifest must declare `supportsSessions: true`.**
-
-Both conditions are checked server-side. An agent that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with exactly one member and one message activity creates a new session.
+To create a new session with a user from a session-enabled agent, use the create conversation operator with a single message activity, specifying the user as the sole member.
 
 ::: zone pivot="teams-sdk-csharp"
 
