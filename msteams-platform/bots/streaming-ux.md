@@ -2,7 +2,7 @@
 title: Stream bot messages
 description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams SDK and configure streaming bot messages. 
 ms.date: 02/19/2025
-ms.topic: conceptual
+ms.topic: article
 ms.author: vikasalmal
 ms.localizationpriority: high
 ---
@@ -594,7 +594,7 @@ The following are the success and error codes:
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams streaming bot sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-streaming/csharp) | NA |
+| Teams streaming bot sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
 | Conversational streaming bot | This is a conversational streaming bot with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot)| [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also

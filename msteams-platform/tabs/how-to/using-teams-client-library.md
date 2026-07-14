@@ -3,7 +3,7 @@ title: Teams JavaScript client library SDK
 description: Learn Microsoft Teams JavaScript client library (TeamsJS SDK), which helps you build app experiences hosted in an <iframe> in Teams, Microsoft 365, and Outlook.
 ms.localizationpriority: high
 ms.subservice: m365apps
-ms.topic: conceptual
+ms.topic: article
 keywords: SDK TeamsJS Teams client JavaScript library
 ms.date: 12/19/2024
 ---
@@ -306,7 +306,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 ##### *dialog* namespace
 
 > [!NOTE]
-> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](~/tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](~/tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`. For a complete list of unsupported features, see [new Teams client limitations](~/resources/teams-updates.md#limitations).
 
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 

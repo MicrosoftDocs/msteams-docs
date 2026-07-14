@@ -1,7 +1,7 @@
 ---
 title: Assistants API quick start guide
 description: In this module, learn how to quickly try the Assistants API with Teams SDK in Math tutor assistant sample using OpenAI Code Interpreter tool.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: assistant-ai-library-quick-start
 ms.owner: angovil
