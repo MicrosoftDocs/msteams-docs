@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: nickwalk
 ms.owner: ginobuzz
-ms.date: 06/19/2026
+ms.date: 06/18/2026
 ---
 # Create and send dialogs
 
