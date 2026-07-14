@@ -1,7 +1,7 @@
 ---
 title: SSO for Adaptive Card Universal Actions
 description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/06/2023
 ---
@@ -124,7 +124,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest** |
 | --- | --- | --- | --- | --- |
-| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sso-adaptivecard/csharp/demo-manifest) | 
+| SSO for your Adaptive Cards Universal Actions | This sample code demonstrates how to enable SSO authentication for your Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sso-adaptivecard/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sso-adaptivecard/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sso-adaptivecard/csharp/demo-manifest) |
 
 ## See also
 
