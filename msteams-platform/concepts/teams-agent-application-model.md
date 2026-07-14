@@ -12,7 +12,7 @@ TODO lead-in: explicitly explain what is in this article: app model and its comp
 
 TODO explain that this is a 10,000 view of the overall app model that gives special attention to agents. [Teams SDK programming model **for agents**](../teams-sdk-programming-model.md) explains how it is reflected in the SDK.
 
-TODO this connects iwth quickstart (so does dev workflow)
+TODO this connects with quickstart (so does dev workflow)
 
 Summarize the concept of runtime and the three registrations.
 
@@ -28,7 +28,7 @@ Agent development is the main focus of Teams SDK and most modern Teams app devel
 
 ## App runtime: an app's web-hosted code
 
-An app's runtime is its code, implemented as a web service or web application. App developers are responsible for hosting their app's runtime on the web for the lifetime of the app: Teams does not host or run app code, it calls the app's runtime remotely.
+An app's runtime is its code: a web service or web application that implements its behavior. App developers are responsible for hosting their app's runtime on the web for the lifetime of the app: Teams does not host or run app code, it calls the app's runtime remotely.
 
 For an agent, the runtime is a web service that listens for events triggered by Teams user activity and performs actions in Teams. For example, when a user sends a chat message to an agent, the Teams platform will call its runtime's `activity` event handler with a `message` payload. In most Teams agents, receiving a chat message event is the main trigger for taking action, but agents are not limited to request-response chat workflows. They can listen for and act on a wide variety of Teams events, and can also act proactively, without being triggered by user activity.
 
@@ -67,15 +67,15 @@ This minimal implementation illustrates how event handlers work. A real-world ag
 
 Creating and hosting a runtime is not enough to make an app available in Teams. While requirements for different kinds of apps can vary, agents need registration and configuration across three different surfaces:
 
-- All Teams apps, including agents, are registered on the Teams platform with a *manifest*, a JSON configuration file
+- All Teams apps, including agents, need a *manifest* JSON configuration file to register with the Teams platform
 - Agents require a *bot registration* to interact with the Bot Connector API, the service that agents use to interface with Teams
-- An Entra ID *app registration* enables an agent to authenticate with the Bot Connector API and with Microsoft Graph to accessing organizational data
+- An Entra ID *app registration* enables an agent to authenticate and get access to services and data, using its own identity or on behalf of users
 
-All of these surfaces require the developer to have access to a Microsoft Entra tenant, which is why the second part of the quickstart requires a Microsoft 365 work or school account.
+All of these surfaces require the developer to have access to a Microsoft Entra tenant.
 
 ### Manifest: app definition and configuration
 
-An app's manifest contains all the configuration needed by the Teams platform to distribute the app and present it in Teams. For example, it includes:
+An app's manifest is a JSON configuration file that contains everything needed by the Teams platform to distribute the app and present it in Teams. For example, it includes:
 
 - The app's name and description
 - Information about the app's developer
@@ -87,61 +87,28 @@ The manifest is the part of the app that its developer deploys to the Teams plat
 
 ### Bot registration: an agent's key to using Teams
 
-The Bot Connector API is the service that agents use to execute most of their Teams-related operations, like sending chat messages. Bot Connector is what calls an agent's runtime when events are triggered in Teams, and is the API that an agent runtime calls to interact with the Teams platform. Simplifying and structuring interactions with the Bot Connector API is the main purpose of Teams SDK.
+The Bot Connector API is the service that agents use to interact with Teams, for operations like sending chat messages. Bot Connector is what calls an agent's runtime when events are triggered in Teams. Simplifying and structuring interactions with the Bot Connector API is the main purpose of Teams SDK.
 
-For an agent to interface with Teams, its developers must register it with the Bot Connector service. Some aspects of an agent's definition, including its endpoint URL, lives with this registration and not in the agent's manifest. The manifest references an agent's bot registration using its unique Bot Connector ID.
+For an agent to interface with Teams, its developer must register it with the Bot Connector service. Some aspects of an agent's definition, including its endpoint URL, lives with this registration and not in the agent's manifest. The manifest references an agent's bot registration using its unique Bot Connector ID.
 
 Bot Connector supports two kinds of bot registration:
 
-- **In Teams Developer Portal**: TODO
-- **In Microsoft Azure**: TODO
+- **Teams Developer Portal**: Developers can create bot registrations in the Teams Developer Portal by using the portal website.
+- **Azure AI Bot Services**: Bot registrations are represented in Microsoft Azure by Azure AI Bot Services resources, which can be created with Azure management tools like the Azure portal, CLI, and ARM and Bicep templates.
+
+Both kinds of bot registration can also be created using the Teams developer CLI. Agents that enable users to grant access to resources on their behalf with single sign-on or OAuth must have an Azure AI Bot Services registration.
 
 ### Entra ID app registration: identity and authentication
 
-Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app's registration in Entra ID is its globally-unique identity that enables it to participate in identity and authorization flows within the Microsoft 365 ecosystem.
+Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app's registration in Entra ID is its globally-unique identity that enables it to participate in authentication and authorization flows within the Microsoft 365 ecosystem.
 
-To power their collaboration features, many agents need access to organizational data in Microsoft 365 and privileged operations in Teams. An app registration is what allows administrators to grant the app the access it needs. It also provides the infrastructure needed for users to consent to the app accessing data and taking actions on their behalf, using their permissions, with single sign-on and OAuth authentication.
-
-For agents, the Bot Connector API requires the use of Entra ID to identify and authenticate an agent's runtime. Most agents built with Teams SDK use a single Entra ID app registration for Bot Connector authentication and for agent identity and authentication flows.
+Many agents need access to organizational data in Microsoft 365 and to privileged operations in Teams to power their collaboration features. An app registration is what allows administrators and users to grant it the access it needs. Entra ID is also used to authenticate the communications between an agent's runtime and the Bot Connector API.
 
 ## Teams developer CLI
 
-The Teams developer CLI addresses all of these aspects of Teams agent development. In the quickstart, `teams project new` creates the code for an agent runtime from a template. When you run `teams app create`, the CLI:
+The Teams developer CLI addresses all of these aspects of Teams agent development. In the quickstart, `teams project new` creates the code for an agent runtime from a template. When you run `teams app create`, the CLI uses your Microsoft 365 account to create:
 
-1. Creates an Entra ID app registration
-1. Generates a client secret for authenticating with the app registration
-1. Creates a bot registration using the Teams Developer Portal
-1. Creates a starter app manifest, associates it with the bot registration, and deploys it to the Teams platform
-1. Adds configuration to the agent's runtime that Teams SDK uses to authenticate with the Bot Connector API
-
-gent communication with Bot Connector is authenticated with Entra ID, and the bot registration associates the agent's runtime with an Entra ID identity.
-
-The registration is how Teams platform associates an agent's runtime with the installable app that makes the agent available in Teams.
-
-In addition to registering an app manifest with the Teams platform, developers must also register their agents with the Bot Connector service.  of an Azure AI Bot Service resource, a configuration object registered with Microsoft Azure.
-
-usu. same app reg
-
-Some of an agent's configuration, including its endpoint, resides with the the Bot Connector service instead of placed in its manifest. This
-
-The Bot Connector service is part of Microsoft Azure AI Bot Service, but Teams agents are not required to be hosted in Microsoft Azure.
-
-Creating a
-
-Auth
-
-*Some* operations are in Graph.
-
-You don't need an Azure sub for most dev, TDP can create one for you.
-
-Need a resource and auth, talk about config
-
-In the quickstart, `teams app create` creates a Bot Services resource for your agent,
-
----
-
-It's the reason the manifest has a bot id instead of an endpoint for a bot. The identity of an app is heavily intertwined with the identity of the bot it contains.
-
-Dont' have to host on Azure, it's not a billable Azure resource, for dev dont' even need an azure sub.
-
-TODO: Where can I put the concept of every agent instance being serviced by teh same runtime endpoint? Maybe it could go in Bot Services. Every Teams agent is a single global endpoint URL that services across all organizations that install it. The runtime is responsible for isolating data and activities across different contexts and organizations.
+1. An Entra ID app registration in your tenant
+1. A bot registration in Teams Developer Portal, configured to use the app registration for authentication
+1. A starter app manifest, which references the bot registration and is deployed to the Teams platform
+1. A client secret, associated with the Entra ID app registration and written to your agent's runtime configuration, for authenticating to the Bot Connector API

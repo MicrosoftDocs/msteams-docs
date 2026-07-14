@@ -15,6 +15,12 @@ That article is overall arch model and workflow, this is Temas SDK app model
 
 The focus of the SDK, and of most of this, is agents.
 
+Can think of a Teams SDK app as the bridge between an existing agent and Teams
+
+ Most agents built with Teams SDK use a single Entra ID app registration for Bot Connector authentication and for agent identity and authentication flows.
+
+TODO: Where can I put the concept of every agent instance being serviced by teh same runtime endpoint? Maybe it could go in Bot Services. Every Teams agent is a single global endpoint URL that services across all organizations that install it. The runtime is responsible for isolating data and activities across different contexts and organizations.
+
 most events are activities, so the SDK exposes activity-specific handlers.
 
 api client -> bot connector
