@@ -39,7 +39,7 @@ Teams platform features that are available to all app developers.</br>
 **2026 July**
 
 * ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
-* ***July 07, 2026***: [Support for apps in Private channels is now generally available](build-apps-for-shared-private-channels.md).
+* ***July 07, 2026***: [Support for apps in Private channels](build-apps-for-shared-private-channels.md) is now generally available.
 
 :::column-end:::
 :::row-end:::
