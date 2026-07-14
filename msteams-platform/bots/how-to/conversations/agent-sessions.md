@@ -128,7 +128,7 @@ Agents that don't enable sessions continue to use the single chat experience. Wh
 
 ## Send and receive messages in sessions
 
-Session participation is automatic and requires no special implementation. Your existing message-handling code works without changes.
+For agents that support sessions, participation is automatic and requires no special implementation in code. Your existing message-handling code works without changes.
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your agent shouldn't parse or construct the conversation ID manually.
 
