@@ -359,6 +359,10 @@ async def handle_suggested_action_submit(ctx):
 
 ::: zone-end
 
+### Approval workflow using `Action.Submit`
+
+Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. If responses should remain private until approved for sharing, save the original targeted message ID, as it is required later to attach prompt preview metadata to the private or public reply.
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
