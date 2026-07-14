@@ -89,7 +89,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
     [!INCLUDE [streaming-with-extended-markdown](how-to/includes/streaming-with-extended-markdown.md)]
 
-    For more information about supported features and syntax, see [Format your bot messages — Extended Markdown features](how-to/format-your-bot-messages.md#enable-extended-markdown).
+    For more information about supported features and syntax, see [Format your bot messages using Extended Markdown features](how-to/format-your-bot-messages.md#enable-extended-markdown).
 
     The following example shows the streaming response in an AI-powered bot:
 
