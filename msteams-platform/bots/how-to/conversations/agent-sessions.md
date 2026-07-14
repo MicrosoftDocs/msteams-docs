@@ -104,8 +104,7 @@ For example, a developer productivity bot might create a separate topic for each
 -->
 ## Enable sessions for your agent
 
-Sessions are an opt-in capability that you enable through your app manifest.  
-After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
+Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
 > [!IMPORTANT]
 > After your agent opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
@@ -125,11 +124,11 @@ Update your app manifest and set the `supportsSessions` property to `true`.
 
 After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
 
-Agents that don't enable sessions continue to use the legacy single chat experience. When sessions are enabled for an existing agent, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
+Agents that don't enable sessions continue to use the single chat experience. When sessions are enabled for an existing agent, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
 
 ## Send and receive messages in sessions
 
-Session participation is automatic and requires no special implementation. Your existing message-handling code works without changes.
+For agents that support sessions, participation is automatic and requires no special implementation in code. Your existing message-handling code works without changes.
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your agent shouldn't parse or construct the conversation ID manually.
 
@@ -163,6 +162,8 @@ await app.send(conversation_id, "Hello from Bot")
 ::: zone-end
 
 Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context. To proactively send a message into an existing session, store the session's conversation ID and use the standard proactive messaging pattern.
+
+If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
 ### HTTP API reference
 
@@ -388,7 +389,7 @@ Error codes that bots may encounter during session operations:
 | 500 | `ServiceError` | Unexpected server error. |
 | 502 | — | Upstream service timed out while verifying bot session support. |
 
-## Best practices
+## Best practices and design guidance
 
 ### When to enable sessions
 
@@ -404,7 +405,9 @@ Clear session separation helps users quickly locate and resume conversations.
 
 ### Limit creating too many sessions
 
-Create a new session only when it represents a distinct task or workflow that benefits from its own conversation context. Avoid creating sessions for transient updates or single-message interactions. Too many sessions make it harder for users to find relevant conversations in the sessions panel. If your agent sends updates based on activity outside of Teams, such as CI/CD results, service alerts, or external system notifications, route them to a single dedicated notifications session instead of creating a new session for each update. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
+Create a new session only when it represents a distinct task or workflow that benefits from its own conversation context. Avoid creating sessions for transient updates or single-message interactions. Too many sessions make it harder for users to find relevant conversations in the sessions panel.
+
+If your agent sends updates based on activity outside of Teams, such as CI/CD results, service alerts, or external system notifications, route them to a single dedicated notifications session instead of creating a new session for each update. Store the conversation ID of the notifications session after you create it, and reuse that ID for subsequent messages.
 
 ### Provide meaningful first messages
 
