@@ -54,6 +54,8 @@ You can implement streaming bot messages in your app in one of the following way
 
 In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
 
+For guidance on formatting bot messages during streaming, including code examples for different text formats, see [Format your bot messages](how-to/format-your-bot-messages.md).
+
 ## Stream message through Teams SDK
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
@@ -83,7 +85,11 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 3. **Format the final streamed message**:
 
-    Using AI SDK, text messages and simple markdown can be formatted while they're being streamed. However, for Adaptive Cards, images, or rich HTML, the formatting can be applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+    Text messages with extended Markdown (using `textFormat: "extendedmarkdown"`) are formatted as they're streamed. Extended Markdown content such as fenced code blocks, math equations, images, tables, at-mentions, citations, and task lists render progressively at safe boundaries. For standard Adaptive Cards attachments or rich HTML, formatting is applied once the final message is complete. The bot can send attachments only in the final streamed chunk.
+
+    [!INCLUDE [streaming-with-extended-markdown](how-to/includes/streaming-with-extended-markdown.md)]
+
+    For more information about supported features and syntax, see [Format your bot messages using Extended Markdown features](how-to/format-your-bot-messages.md#enable-extended-markdown).
 
     The following example shows the streaming response in an AI-powered bot:
 

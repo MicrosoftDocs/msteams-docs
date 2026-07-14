@@ -66,7 +66,11 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+For detailed streaming implementation guidance, see [Stream agent messages](../../streaming-ux.md).
+
+### Format agent messages with extended Markdown
+
+You can format agent messages using extended Markdown (`textFormat: "extendedmarkdown"`) for rich formatting. Extended Markdown supports features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
 
 ### Ensure the agent response contains citations
 
@@ -74,7 +78,7 @@ Users must know the sources an agent uses to generate its final response. Identi
 
 :::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+For more information, see [Bot messages with AI-generated content](../bot-messages-ai-generated-content.md#citations).
 
 > [!NOTE]
 >
@@ -94,7 +98,7 @@ Examples of AI label:
 
     :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
-Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+For more information, see [AI label](../bot-messages-ai-generated-content.md#ai-label).
 
 ### Ensure that the agent maintains intelligent conversation
 
@@ -173,5 +177,5 @@ To enable the app profile card for your agents or bots, add the `features` field
 ## See also
 
 - [Teams SDK](teams-conversation-ai-overview.md)
-- [Stream bot messages](../../streaming-ux.md)
+- [Stream agent messages](../../streaming-ux.md)
 - [Enhance AI-generated bot messages](../bot-messages-ai-generated-content.md)
