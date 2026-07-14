@@ -2,7 +2,7 @@
 title: The Teams agent application model for developers
 author: nickwalkmsft
 description: TODO Learn how the Teams application model packages, identifies, installs, routes, and connects Teams app experiences to application logic.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 05/23/2026
 ---
 
@@ -102,11 +102,11 @@ Microsoft Entra ID is the identity and access management service used by Teams a
 
 To power their collaboration features, many agents need access to organizational data in Microsoft 365 and privileged operations in Teams. An app registration is what allows administrators to grant the app the access it needs. It also provides the infrastructure needed for users to consent to the app accessing data and taking actions on their behalf, using their permissions, with single sign-on and OAuth authentication.
 
-Agents have a unique authentication requirement in the form of the Bot Connector API. Bot Connector uses Entra ID to identify and authenticate an agent's runtime. Most agents built with Teams SDK use a single Entra ID app registration for Bot Connector authentication and for agent identity and authentication flows.
+For agents, the Bot Connector API requires the use of Entra ID to identify and authenticate an agent's runtime. Most agents built with Teams SDK use a single Entra ID app registration for Bot Connector authentication and for agent identity and authentication flows.
 
 ## Teams developer CLI
 
-The Teams developer CLI connects all of these aspects of Teams agent development. In the quickstart, `teams project new` creates the code for an agent runtime from a template. When you run `teams app create`, the CLI:
+The Teams developer CLI addresses all of these aspects of Teams agent development. In the quickstart, `teams project new` creates the code for an agent runtime from a template. When you run `teams app create`, the CLI:
 
 1. Creates an Entra ID app registration
 1. Generates a client secret for authenticating with the app registration
