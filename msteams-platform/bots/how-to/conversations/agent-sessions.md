@@ -133,7 +133,7 @@ Session participation is automatic and requires no special implementation. Your 
 
 When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your agent shouldn't parse or construct the conversation ID manually.
 
-Use the conversation ID from the incoming activity when responding.
+Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -163,8 +163,6 @@ await app.send(conversation_id, "Hello from Bot")
 ::: zone-end
 
 Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context. To proactively send a message into an existing session, store the session's conversation ID and use the standard proactive messaging pattern.
-
-Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
 ### HTTP API reference
 
@@ -249,8 +247,6 @@ When sessions are enabled, the existing create conversation operation applied to
 
 Both conditions are checked server-side. An agent that declares `supportsSessions: true` but is not installed for the target user will silently fall back to a regular 1:1 conversation. If both conditions are met, calling the create conversation API with exactly one member and one message activity creates a new session.
 
-For more information, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
-
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
@@ -311,11 +307,7 @@ await app.send(sessionConversationId, 'This message is part of the session.');
 
 ::: zone-end
 
-> [!NOTE]
->
-> The Teams SDK calls the same `POST /v3/conversations` endpoint as regular 1:1 creation. No special flag is needed. The server creates a session automatically when the bot is session-enabled and installed.
-> The `activity` field is **required** to have exactly one message activity, which becomes the first message of the new session.
-> The returned id (`resource.Id` in C#, `resource.id` in TypeScript) is the session-specific conversationId. Use it for all follow-up messages in that session (via `app.Send` / `app.send`).
+For more information about proactive messaging, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
 <!--## Notifications and discovery
 
