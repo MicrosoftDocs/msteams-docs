@@ -66,7 +66,11 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-For detailed streaming implementation guidance, see [Stream agent messages](../../streaming-ux.md). You can also format streamed content using extended Markdown (`textFormat: "extendedmarkdown"`) for rich formatting. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
+For detailed streaming implementation guidance, see [Stream agent messages](../../streaming-ux.md).
+
+### Format agent messages with extended Markdown
+
+You can format agent messages using extended Markdown (`textFormat: "extendedmarkdown"`) for rich formatting. Extended Markdown supports features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
 
 ### Ensure the agent response contains citations
 

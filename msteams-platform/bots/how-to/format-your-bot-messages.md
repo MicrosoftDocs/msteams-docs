@@ -29,10 +29,10 @@ Microsoft Teams supports the following formatting options:
 | --- | --- |
 | `plain` | The text is treated as raw text with no formatting applied. |
 | `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
-| `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, images, at-mentions, and citations. |
+| `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, math equations, images, at-mentions, and citations. |
 | `xml` | The text is simple XML markup. |
 
-For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
+For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
 
 Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
@@ -123,6 +123,7 @@ When using `textFormat: "extendedmarkdown"`, the following features are availabl
 | Feature | Syntax | Description |
 | --- | --- | --- |
 | **Fenced code blocks** | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences |
+| **Math equations** | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$` | LaTeX/KaTeX math notation rendered inline or as a block |
 | **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
 | **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
 | **Citations** | `[#]` in message text + `entities` array in Activity | Inline citation markers with reference details. For more information, see [citations](bot-messages-ai-generated-content.md#citations). |
@@ -138,6 +139,44 @@ Hello <at>Jane Smith</at>, please review this.
 
 Notifying team: <at>Engineering Team</at>
 ```
+
+### Fenced code blocks
+
+Use triple backticks with a language identifier to display syntax-highlighted code in your bot messages.
+
+````markdown
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+````
+
+### Math equations
+
+Use LaTeX/KaTeX syntax to render mathematical notation. Use single dollar signs for inline equations and double dollar signs for block equations.
+
+```markdown
+Inline math: $E = mc^2$
+
+Block math:
+$$
+\int_0^\infty f(x)dx
+$$
+```
+
+### Images
+
+Use standard Markdown image syntax to render images in your bot messages.
+
+```markdown
+![Build status](https://example.com/build-status.png)
+```
+
+### Citations
+
+Cite sources in your bot messages using `[#]` notation in the message text and providing citation details in the Activity `entities` array. For more information on how to add citations, see [citations](bot-messages-ai-generated-content.md#citations).
 
 ### Tables
 
