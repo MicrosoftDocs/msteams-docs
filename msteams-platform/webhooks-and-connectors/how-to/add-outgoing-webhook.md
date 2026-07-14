@@ -4,7 +4,7 @@ description: Learn how to create Outgoing Webhook in Microsoft Teams, its key fe
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: hantony
-ms.date: 02/27/2023
+ms.date: 06/23/2026
 ---
 
 # Create Outgoing Webhooks
@@ -94,12 +94,12 @@ To ensure that your service is receiving calls only from actual Teams clients, T
 
 Your code must always validate the HMAC signature included in the request as follows:
 
-* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
 * Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
 
 ```csharp
 public static AuthResponse Validate(AuthenticationHeaderValue authenticationHeaderValue, string messageContent, string claimedSenderId)
@@ -167,7 +167,7 @@ The following codes are examples of an Adaptive Card response:
 
 # [C#/.NET](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/outgoing-webhook/csharp/Controllers/SampleController.cs#L20)
 
 ```csharp
 
@@ -204,7 +204,7 @@ return sampleResponseActivity;
 
 # [JavaScript/Node.js](#tab/javascript)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/nodejs/app.js#L30)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/outgoing-webhook/nodejs/app.js#L30)
 
 ```javascript
 var receivedMsg = JSON.parse(payload);
@@ -311,7 +311,7 @@ response_msg = json.dumps({
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook/nodejs)|
 
 ## See also
 

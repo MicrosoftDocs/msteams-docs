@@ -2,8 +2,8 @@
 title: Create Search Commands for App
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
-ms.author: anclear
-ms.date: 09/16/2024
+ms.author: nickwalk
+ms.date: 06/23/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -171,7 +171,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
 async handleTeamsMessagingExtensionQuery(context, query) {
