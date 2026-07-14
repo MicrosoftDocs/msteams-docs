@@ -395,7 +395,7 @@ Error codes that bots may encounter during session operations:
 | 500 | `ServiceError` | Unexpected server error. |
 | 502 | — | Upstream service timed out while verifying bot session support. |
 
-## Best practices
+## Best practices and design guidance
 
 ### When to enable sessions
 
