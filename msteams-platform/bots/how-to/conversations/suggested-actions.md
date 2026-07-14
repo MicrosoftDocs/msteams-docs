@@ -76,7 +76,7 @@ To add the `imBack` suggested action to a message, specify a list of [card actio
 
 Attach a `suggestedActions` object to the agent's message, and ensure that `inputHint` is set to `expectingInput`. This tells the agent or app that a user response is expected. The `actions` array defines one or more choices shown to the user. Each suggested action includes `imBack` as the `type`, which defines the action behavior; a`title`, which is the label displayed on the button; and a`value`, which is sent back to the bot when the user selects the option. The option selected by the user is sent back to the agent or app with `imBack` as the user response. The agent or app can then use the returned value to continue the conversation by routing the response to the correct intent or operation.
 
-The following is an example to implement suggested actions using `imBack`:
+The following is a JSON example to implement suggested actions using `imBack`:
 
 ``` json
 {
