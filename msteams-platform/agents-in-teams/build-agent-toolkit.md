@@ -1,17 +1,14 @@
 ---
-title: Create your first agent
-description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
-ms.localizationpriority: high
-ms.date: 07/02/2026
+title: Build a Teams Agent with Microsoft 365 Agents Toolkit
+description: Build a Teams agent using Microsoft 365 Agents Toolkit. Follow a step-by-step guide to create, run, and deploy your AI agent in Teams.
+ms.date: 07/06/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.topic: reference
+ms.topic: quickstart
 ---
 
-TODO replace with Teams SDK quickstart and move this one to ATK section of TOC
-
-# Build your first agent
+# Build a Teams agent with Microsoft 365 Agents Toolkit
 
 Agents utilize AI to automate and execute business processes, functioning alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
 
@@ -115,36 +112,6 @@ Microsoft 365 Agents Toolkit creates and scaffolds the agent project workspace. 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
 
 Congratulations! You've created and ran your first agent in Microsoft Teams.
-
-## Choose your programming language
-
-Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Microsoft Teams.
-
-:::row:::
-   :::column:::
-      **Description**
-   :::column-end:::
-   :::column span="3":::
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Choose your build environment**
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      Build with ...
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
-   :::column-end:::
-:::row-end:::
 
 ## Code sample
 
