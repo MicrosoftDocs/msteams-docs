@@ -104,8 +104,7 @@ For example, a developer productivity bot might create a separate topic for each
 -->
 ## Enable sessions for your agent
 
-Sessions are an opt-in capability that you enable through your app manifest.  
-After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
+Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
 > [!IMPORTANT]
 > After your agent opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
