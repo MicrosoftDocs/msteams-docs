@@ -3,8 +3,8 @@ title: Dynamically Guide Users with Suggested Actions
 description: Learn how to create and handle suggested actions for your Microsoft Teams agents and apps to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-zone_pivot_groups: teams-sdk-languages
-ms.date: 6/26/2026
+zone_pivot_groups: select-language
+ms.date: 07/15/2026
 ---
 
 <!-- markdownlint-disable MD001 -->
@@ -127,7 +127,7 @@ The following is a JSON example to implement suggested actions using `imBack`:
 
 In this example, `imBack` is used to offer two suggested actions to the user - *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. These actions are offered in response for the conversation context of tasks planned for the current day. The agent or app would then receive user's input and continue the conversation according to the option they selected such as creating a new query to identify overdue tasks or creating a new work item for a feature.
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="typescript"
 
 ```typescript
 const FOLLOW_UPS_PROMPT =
@@ -170,7 +170,7 @@ The `finalMarker.withSuggestedActions()` method adds suggested action buttons to
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-python"
+::: zone pivot="python"
 
 ```python
 
@@ -283,7 +283,7 @@ Use the page pivot to view Teams SDK snippets for creating and handling `Action.
 > [!NOTE]
 > The `Action.Submit` APIs are currently marked as experimental in Teams SDK.
 
-::: zone pivot="teams-sdk-csharp"
+::: zone pivot="csharp"
 
 ```csharp
 #pragma warning disable ExperimentalTeamsSuggestedAction
@@ -318,7 +318,7 @@ teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="typescript"
 
 ```typescript
 import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
@@ -342,7 +342,7 @@ app.on("suggested-action.submit", async ({ send, activity }) => {
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-python"
+::: zone pivot="python"
 
 ```python
 import json
@@ -382,8 +382,6 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 1. **Store the original targeted message ID**: Store the original targeted message ID as soon as the request arrives. You need it to attach the preview later. The reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
 
 1.**Send the first reply privately**: Send the first response only to the requesting user.
-
-  **C# example**
 
   ```C#
     app.OnMessage(async (context, cancellationToken) =>
