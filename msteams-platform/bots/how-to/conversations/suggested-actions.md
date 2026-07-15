@@ -431,6 +431,18 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
       :::zone-end
 
+1. **Attach prompt preview metadata**: Include include a `targetedMessageInfo` entity in the reply and point it to the original message ID. Teams then displays the original prompt above the response.
+
+    ```JSON
+    "entities": [{
+    "type": "targetedMessageInfo",
+    "messageId": "xxxxxxxxxxxxx"
+    }]
+    ```
+
+1.
+1.
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
