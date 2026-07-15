@@ -6,16 +6,13 @@
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, welcome, new word, meaning
+- name: "Quickstart: Create and chat with an agent"
+  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
 - name: Build agents using Teams SDK
   items:
   - name: Agents in Teams
     href: agents-in-teams/overview.md
-  - name: Build your first agent
-    href: agents-in-teams/build-first-agent.md
-    displayName: create, run, first agent, Teams AI library, Teams SDK, custom engine agent, AI bot, JavaScript, Python, C#, code sample
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
@@ -70,7 +67,7 @@
           href: toolkit/tools-prerequisites.md
           displayName: accounts to build your Teams app
         - name: Create new Teams agent project
-          href: agents-in-teams/build-first-agent.md  
+          href: agents-in-teams/build-agent-toolkit.md
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC
@@ -1194,6 +1191,9 @@
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Frequently asked questions
   href: teams-faq.md 
+- name: Glossary
+  href: get-started/glossary.md
+  displayName: App tray, terminologies, definitions, new word, meaning
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
