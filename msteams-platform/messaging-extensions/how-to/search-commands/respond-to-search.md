@@ -516,7 +516,7 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 
 # [TypeScript/Node.js](#tab/typescript3)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
 ```typescript
 async handleTeamsMessagingExtensionSelectItem(context, obj) {
