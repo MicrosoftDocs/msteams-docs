@@ -5,7 +5,8 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.owner: angovil
-ms.date: 06/25/2026
+ms.date: 05/11/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Send and receive messages
@@ -82,18 +83,7 @@ The following code shows an example of sending a simple Adaptive Card:
 
 ## Send and receive messages
 
-Sending and receiving messages is the core functionality of a bot. It enables a bot to:
-
-- Send and receive messages.
-  - [Receive a message activity](#receive-a-message-activity).
-  - [Receive a read receipt](#receive-a-read-receipt).
-  - [Receive edit message activity](#receive-edit-message-activity).
-  - [Send a message](#send-a-message).
-  - [Receive undelete message activity](#receive-undelete-message-activity).
-  - [Receive soft delete message activity](#receive-soft-delete-message-activity).
-- [Update and delete bot messages](#update-and-delete-messages-sent-from-bot).
-- [Send suggested actions](#send-suggested-actions).
-- [Send messages in Teams channel data](#send-messages-in-teams-channel-data).
+Sending and receiving messages is the core functionality of a bot.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
@@ -122,7 +112,7 @@ To receive a text message, use the `Text` property of an `Activity` object. In t
 
 The following code shows an example of receiving a message activity:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
@@ -132,46 +122,39 @@ The following code shows an example of receiving a message activity:
 
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  // Sends an activity to the sender of the incoming activity.
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
-}
-
+    await context.Send($"Echo: {context.Activity.Text}");
+});
 ```
 
-# [TypeScript](#tab/typescript1)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 - [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
-            // Sends a message activity to the sender of the incoming activity.
-            await context.sendActivity(`Echo: '${context.activity.text}'`);
-            await next();
-        });
-    }
-}
-
+app.on('message', async ({ activity, send }) => {
+    await send(`Echo: '${activity.text}'`);
+});
 ```
 
-# [Python](#tab/python1)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L103)
 
 ```python
 
-async def on_message_activity(self, turn_context: TurnContext):
-    // Sends a message activity to the sender of the incoming activity.
-    return await turn_context.send_activity(MessageFactory.text(f"Echo: {turn_context.activity.text}"))
-
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.send(f"Echo: {ctx.activity.text}")
 ```
 
-# [JSON](#tab/json1)
+::: zone-end
 
 ```json
 
@@ -221,8 +204,6 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 
 ```
-
----
 
 ### Receive a read receipt
 
@@ -289,15 +270,12 @@ To receive read receipts events for your bot, ensure the following:
   The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
 
     ```csharp
-    
-    protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceiptInfo, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken) 
+    app.OnReadReceipt(async context =>
+
     {
-        var lastReadMessageId = readReceiptInfo.LastReadMessageId;
-       if (IsMessageRead("{id of the message that you care}", LastReadMessageId))
-       {
-            await turnContext.SendActivityAsync(MessageFactory.Text("User read the bot's message"), cancellationToken);    
-        }
-    }
+        var lastReadMessageId = context.Activity.Value.LastReadMessageId;
+        await context.Send("User read the bot's message");
+    });
     ```
 
     The following example shows a read receipts event request that a bot receives:
@@ -347,22 +325,29 @@ To get an edit message activity notification in a bot, you can override `OnTeams
 
 The following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
-# [C#](#tab/dotnet2)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken) 
-{ 
-var replyActivity = MessageFactory.Text("message is updated"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} 
-
+app.OnMessageEdit(async context =>
+{
+    await context.Send("message is updated");
+}); 
 ```
 
-# [JSON](#tab/json3)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('messageEdit', async ({ activity, send }) => {
+    const editedMessage = activity.text;
+    await send(`The edited message is ${editedMessage}`);
+});
+```
+
+::: zone-end
 
 ```json
-
 {
 "type":"messageUpdate",
 "timestamp":"2022-10-28T17:19:39.4615413Z",
@@ -399,37 +384,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 "locale":"en-US",
 "localTimezone":"America/Los_Angeles"
 }  
-
 ```
-
-# [JavaScript](#tab/javascript3)
-
-You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
-
-**​Event function registration**:
-
-```javascript
-
-this.onTeamsMessageEditEvent(async (context, next) => {
-  let editedMessage = context.activity.text;
-  await context.sendActivity(`The edited message is ${editedMessage}"`);
-  next();
-})
-
-```
-
-**​Method override**:
-
-```javascript
-
-async onTeamsMessageEdit(context) {
-    let editedMessage = context.activity.text;
-    await context.sendActivity(`The edited message is ${editedMessage}"`);
-}
-
-```
-
-# [HTTP](#tab/http1)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -442,74 +397,66 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 }
 ```
 
----
-
 ### Send a message
 
 To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#](#tab/dotnet3)
+::: zone pivot="teams-sdk-csharp"
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
 ```csharp
-
-protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+app.OnMembersAdded(async context =>
 {
-  // Sends an activity to the sender of the incoming activity.
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
-}
-
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id != context.Activity.Recipient.Id)
+        {
+            await context.Send("Hello and welcome!");
+        }
+    }
+});
 ```
 
-# [TypeScript](#tab/typescript2)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
-
-    this.onMembersAddedActivity(async (context, next) => {
-        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
-            if (member.id !== context.activity.recipient.id) {
-              
-                // Sends an activity to the sender of the incoming activity.
-                await context.sendActivity(
-                    `Welcome to the team ${member.givenName} ${member.surname}`
-                );
-            }
-        }));
-
-        await next();
-    });
-
+   app.on('membersAdded', async ({ activity, send }) => {
+    for (const member of activity.membersAdded ?? []) {
+        if (member.id !== activity.recipient.id) {
+            await send(`Welcome to the team ${member.name}`);
+        }
+    }
+});
 ```
 
-# [Python](#tab/python2)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-send-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
 
 ```python
-
-async def on_members_added_activity(
-    self, members_added: [ChannelAccount], turn_context: TurnContext
-):
-    for member in teams_members_added:
-        // Sends a message activity to the sender of the incoming activity.
-        await turn_context.send_activity(f"Welcome your new team member {member.id}")
-    return
-
+@app.on_members_added
+async def handle_members_added(ctx: ActivityContext):
+    for member in ctx.activity.members_added:
+        if member.id != ctx.activity.recipient.id:
+            await ctx.send(f"Welcome your new team member {member.id}")
 ```
 
-# [JSON](#tab/json2)
+::: zone-end
 
 ```json
-
 {
     "type": "message",
     "from": {
@@ -527,10 +474,7 @@ async def on_members_added_activity(
     "text": "My bot's reply",
     "replyToId": "1632474074231"
 }
-
 ```
-
-# [HTTP](#tab/http)
 
 ```http
 HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activities
@@ -555,8 +499,6 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
 }
 ```
 
----
-
 > [!NOTE]
 >
 >- Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
@@ -572,22 +514,29 @@ To get an undelete message activity notification in a bot, you can override `OnT
 
 The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
-# [C#](#tab/dotnet4)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-{ 
-var replyActivity = MessageFactory.Text("message is undeleted"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} 
-
+app.OnMessageUndelete(async context =>
+{
+    await context.Send("message is undeleted");
+});
 ```
 
-# [JSON](#tab/json4)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('messageUndelete', async ({ activity, send }) => {
+    const undeletedMessage = activity.text;
+    await send(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+});
+```
+
+::: zone-end
 
 ```json
-
 {
 "type":"messageUpdate",
 "timestamp":"2022-10-28T17:19:39.4615413Z",
@@ -624,39 +573,7 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 "locale":"en-US",
 "localTimezone":"America/Los_Angeles"
 }  
-
 ```
-
-# [JavaScript](#tab/javascript4)
-
-You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
-
-**​Event function registration**:
-
-```javascript
-
-this.onTeamsMessageUndeleteEvent(async (context, next) => {
-    let undeletedMessage = context.activity.text;
-    let messageId = context.activity.id;
-    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
-next();
-})
-
-```
-
-**​Method override**:
-
-```javascript
-
-async onTeamsMessageUndelete(context) {
-    let undeletedMessage = context.activity.text;
-    let messageId = context.activity.id;
-    await context.sendActivity(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
-}
-
-```
-
-# [HTTP](#tab/http2)
 
 ```http
 PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
@@ -669,8 +586,6 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 }
 ```
 
----
-
 ### Receive soft delete message activity
 
 When you soft delete a message, the bot gets a notification of the soft delete message activity.
@@ -679,19 +594,27 @@ To get a soft delete message activity notification in a bot, you can override `O
 
 The following example shows a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
-# [C#](#tab/dotnet5)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken) 
-{ 
-var replyActivity = MessageFactory.Text("message is soft deleted"); 
-await turnContext.SendActivityAsync(replyActivity, cancellationToken); 
-} 
-
+app.OnMessageSoftDelete(async context =>
+{
+    await context.Send("message is soft deleted");
+}); 
 ```
 
-# [JSON](#tab/json5)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('messageSoftDelete', async ({ activity, send }) => {
+    const messageId = activity.id;
+    await send(`The deleted message id is ${messageId}`);
+});
+```
+
+::: zone-end
 
 ```json
 
@@ -734,35 +657,6 @@ await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 
 ```
 
-# [JavaScript](#tab/javascript5)
-
-You can either use **​event function registration** or **​method override** method to get activity notifications to handle the message updates using the Bot SDK:
-
-**​Event function registration**:
-
-```javascript
-
-this.onTeamsMessageSoftDeleteEvent(async (context, next) => {
-    let messageId = context.activity.id;
-      await context.sendActivity(`The deleted message id is ${messageId}`);
-    next();
-})
-
-```
-
-**​Method override**:
-
-```javascript
-
-async onTeamsMessageSoftDelete(context) {
-    let messageId = context.activity.id;
-    await context.sendActivity(`The deleted message id is ${messageId}`);
-}
-
-```
-
----
-
 ### Update and delete messages sent from bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
@@ -778,7 +672,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
-# [C#](#tab/csharp2)
+::: zone pivot="teams-sdk-csharp"
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -790,15 +684,15 @@ To update an existing message, pass a new `Activity` object with the existing ac
 var response = await turnContext.SendActivityAsync(MessageFactory.Attachment(card.ToAttachment()), cancellationToken);
 var activityId = response.Id; // Fetch activity id.
 
-// MessageFactory.Text(): Specifies the type of text data in a message attachment.
-var newActivity = MessageFactory.Text("The new text for the activity");
-newActivity.Id = activityId;
+    var updatedActivity = new MessageActivity("The new text for the activity");
 
-// UpdateActivityAsync(): A method that can participate in update activity events for the current turn.
-await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
+    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity);
+});
 ```
 
-# [TypeScript](#tab/ts)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -818,7 +712,9 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -838,7 +734,7 @@ new_activity.id = activity_id
 update_result = await context.update_activity(new_activity)
 ```
 
-# [REST API](#tab/rest)
+::: zone-end
 
 > [!NOTE]
 > You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
@@ -853,15 +749,13 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 |----|----|
 | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
----
-
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
 #### Update cards
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/dotnet6)
+::: zone pivot="teams-sdk-csharp"
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -877,7 +771,9 @@ activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# [TypeScript](#tab/typescript4)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -893,7 +789,9 @@ message.id = context.activity.replyToId;
 await context.updateActivity(message);
 ```
 
-# [Python](#tab/python4)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -909,7 +807,7 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 ```
 
-# [REST API](#tab/restapi4)
+::: zone-end
 
 > [!NOTE]
 > You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
@@ -932,7 +830,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C#](#tab/csharp1)
+::: zone pivot="teams-sdk-csharp"
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
@@ -947,7 +845,9 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript](#tab/ts1)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 - [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-deleteactivity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
@@ -961,7 +861,9 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# [Python](#tab/py1)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 - [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-delete-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L227)
@@ -974,7 +876,7 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
-# [REST API](#tab/rst1)
+::: zone-end
 
 To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
 
@@ -986,44 +888,234 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 |----|----|
 | N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
----
+## Quoted replies
 
-## Send suggested actions
+Quoted replies let your agent reference a previous message in the conversation. When a user sends a message that quotes another message, your agent receives structured metadata about the quoted content. Your agent can also send messages that quote previous messages.
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
+### Receive quoted replies
 
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
+::: zone pivot="teams-sdk-csharp"
 
-The following is an example for implementation and experience of suggested actions:
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `GetQuotedMessages` method to access all quoted reply entities.
 
-``` json
-"suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
-      },
-      {
-        "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
+```csharp
+app.OnMessage(async context =>
+{
+    var quotes = context.Activity.GetQuotedMessages();
+
+    if (quotes.Count > 0)
+    {
+        var quote = quotes[0].QuotedReply;
+        await context.Reply(
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
+    }
+});
 ```
 
-The following illustrates an example of suggested actions:
+::: zone-end
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+::: zone pivot="teams-sdk-typescript"
 
-> [!NOTE]
->
-> - `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> - `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> - `imBack` is the only supported action type and Teams display up to six suggested actions.
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `getQuotedMessages` method to access all quoted reply entities.
+
+```typescript
+app.on('message', async ({ activity, reply }) => {
+  const quotes = activity.getQuotedMessages();
+
+  if (quotes.length > 0) {
+    const quote = quotes[0].quotedReply;
+    await reply(
+      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`
+    );
+  }
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `get_quoted_messages` method to access all quoted reply entities.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    quotes = ctx.activity.get_quoted_messages()
+
+    if quotes:
+        quote = quotes[0].quoted_reply
+        await ctx.reply(
+            f"You quoted message {quote.message_id} from {quote.sender_name}: \"{quote.preview}\""
+        )
+```
+
+::: zone-end
+
+### Send quoted replies
+
+::: zone pivot="teams-sdk-csharp"
+
+When your agent calls `Reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Reply() automatically quotes the inbound message
+    await context.Reply("Got it!");
+});
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `Quote()` method with the message ID you want to quote.
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Quote a specific message by its ID
+    var parentMessageId = "1772050244572";
+    await context.Quote(parentMessageId, "Referencing an earlier message");
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```typescript
+app.on('message', async ({ reply }) => {
+  // reply() automatically quotes the inbound message
+  await reply('Got it!');
+});
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
+
+```typescript
+app.on('message', async ({ quote }) => {
+  // Quote a specific message by its ID
+  const parentMessageId = '1772050244572';
+  await quote(parentMessageId, 'Referencing an earlier message');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # reply() automatically quotes the inbound message
+    await ctx.reply("Got it!")
+```
+
+To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Quote a specific message by its ID
+    parent_message_id = "1772050244572"
+    await ctx.quote(parent_message_id, "Referencing an earlier message")
+```
+
+::: zone-end
+
+### Build quoted replies for proactively sending messages
+
+::: zone pivot="teams-sdk-csharp"
+
+For proactive scenarios (using `app.Send()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
+
+```csharp
+var parentMessageId = "1772050244572";
+var firstMessageId = "1772050244573";
+var secondMessageId = "1772050244574";
+
+// Single quote with response below it
+var msg = new MessageActivity()
+    .AddQuote(parentMessageId, "Here is my response");
+await app.Send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+    .AddQuote(firstMessageId, "response to first")
+    .AddQuote(secondMessageId, "response to second");
+await app.Send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity("see below for previous messages")
+    .AddQuote(firstMessageId)
+    .AddQuote(secondMessageId, "response to both");
+await app.Send(conversationId, msg);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `addQuote()` method on a message activity. Pass the message ID and an optional response text.
+
+```typescript
+import { MessageActivity } from '@microsoft/teams.api';
+
+const parentMessageId = '1772050244572';
+const firstMessageId = '1772050244573';
+const secondMessageId = '1772050244574';
+
+// Single quote with response below it
+let msg = new MessageActivity()
+  .addQuote(parentMessageId, 'Here is my response');
+await app.send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+  .addQuote(firstMessageId, 'response to first')
+  .addQuote(secondMessageId, 'response to second');
+await app.send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity('see below for previous messages')
+  .addQuote(firstMessageId)
+  .addQuote(secondMessageId, 'response to both');
+await app.send(conversationId, msg);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `add_quote()` method on a message activity. Pass the message ID and an optional response text.
+
+```python
+from microsoft_teams.api.activities.message import MessageActivityInput
+
+parent_message_id = "1772050244572"
+first_message_id = "1772050244573"
+second_message_id = "1772050244574"
+
+# Single quote with response below it
+msg = (MessageActivityInput()
+    .add_quote(parent_message_id, "Here is my response"))
+await app.send(conversation_id, msg)
+
+# Multiple quotes with interleaved responses
+msg = (MessageActivityInput()
+    .add_quote(first_message_id, "response to first")
+    .add_quote(second_message_id, "response to second"))
+await app.send(conversation_id, msg)
+
+# Grouped quotes — omit response to group quotes together
+msg = (MessageActivityInput(text="see below for previous messages")
+    .add_quote(first_message_id)
+    .add_quote(second_message_id, "response to both"))
+await app.send(conversation_id, msg)
+```
+
+::: zone-end
 
 ## Send messages in Teams channel data
 
