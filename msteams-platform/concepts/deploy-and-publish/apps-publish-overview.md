@@ -32,7 +32,7 @@ In GCC Teams environments, compliant Microsoft agent or apps are enabled by defa
 
 For more information, see [publish to the Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-### Enable customization for your Microsoft Teams agent or app
+### [Enable customization for your Microsoft Teams agent or app](concepts/design/enable-app-customization.md)
 
 You can allow customers to customize some aspects of your Microsoft Teams agent or app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store.
 
@@ -40,15 +40,15 @@ You can allow customers to customize some aspects of your Microsoft Teams agent 
 
 Before you publish your agent or app, complete the following steps to ensure your agent or app is ready for distribution.
 
-### Configure default install options
+### [Configure default install options](concepts/deploy-and-publish/add-default-install-scope.md)
 
 You can configure default install options. For example, if your agent or app's primary capability is a bot, you can make the bot the default capability when a user installs your agent or app to a team.
 
-### Create Teams agent or app package
+### [Create Teams agent or app package](concepts/build-and-test/apps-package.md)
 
 To publish your Teams agent or app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
 
-### Upload your agent or app in Teams
+### [Upload your agent or app in Teams](concepts/deploy-and-publish/apps-upload.md)
 
 Upload a custom agent or app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
