@@ -103,6 +103,8 @@ After you get the appropriate address information, you can send your message.
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
+To proactively send a message as a reply to a thread in a channel, use `app.Reply()` with both the conversation ID and the ID of the thread's root message.
+
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
 
@@ -243,15 +245,18 @@ The following code shows how to send proactive messages:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
-[Route("api/notify")]
-[ApiController]
-public class NotifyController : ControllerBase
+// Save the conversation ID and schedule a proactive reminder on install
+teams.OnInstall(async (context, cancellationToken) =>
 {
-    private readonly IBotFrameworkHttpAdapter _adapter;
-    private readonly string _appId;
-    private readonly ConcurrentDictionary<string, ConversationReference> _conversationReferences;
-
-    public NotifyController(IBotFrameworkHttpAdapter adapter, IConfiguration configuration, ConcurrentDictionary<string, ConversationReference> conversationReferences)
+    context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    await context.Send("Hi! I am going to remind you to say something to me soon!", cancellationToken);
+    notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
+});
+ 
+// Send proactive message using stored conversation ID
+public static class Notifications
+{
+    public static async Task SendProactive(string userId)
     {
         _adapter = adapter;
         _conversationReferences = conversationReferences;
@@ -298,46 +303,29 @@ public class NotifyController : ControllerBase
 }
 ```
 
-Example of a code snippet to demonstrate creating conversation reference.
+# [TypeScript](#tab/typescript)
 
-```csharp
- var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
-            {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
-```
+```typescript
 
-# [JavaScript](#tab/javascript)
-
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-getconversationreference)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L59)
-
-```javascript
-
-async SendNotificationToAllUsersAsync(context) {
-     const TeamMembers = await TeamsInfo.getPagedMembers(context);
-     let Sent_msg_Cout = TeamMembers.members.length;
-     TeamMembers.members.map(async member => {
-         const ref = TurnContext.getConversationReference(context.activity);
-         ref.user = member;
-         await context.adapter.createConversation(ref, async (context) => {
-             const ref = TurnContext.getConversationReference(context.activity);
-             await context.adapter.continueConversation(ref, async (context) => {
-                 await context.sendActivity("Proactive hello.");
-             });
-         });
-     });
-    await context.sendActivity(MessageFactory.text("Message sent:" + Sent_msg_Cout));
-}
-
+// This would be some persistent storage
+const myConversationIdStorage = new Map<string, string>();
+ 
+// Save the conversation ID on app install
+app.on('install.add', async ({ activity, send }) => {
+  myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
+  await send('Hi! I am going to remind you to say something to me soon!');
+  notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
+});
+ 
+// Send proactive message using stored conversation ID
+const sendProactiveNotification = async (userId: string) => {
+  const conversationId = myConversationIdStorage.get(userId);
+  if (!conversationId) {
+    return;
+  }
+  const activity = new MessageActivity('Hey! It\'s been a while. How are you?');
+  await app.send(conversationId, activity);
+};
 ```
 
 # [Python](#tab/python)

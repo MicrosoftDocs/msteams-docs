@@ -448,3 +448,5 @@ Response body
 * [Bot activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
 * [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)
+* [Bot Meetings sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings)
+<!-- markdownlint-enable MD024 -->
