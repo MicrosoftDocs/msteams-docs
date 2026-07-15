@@ -383,17 +383,22 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
 1.**Send the first reply privately**: Send the first response only to the requesting user.
 
+  :::zone pivot="csharp"
+
   ```C#
-    app.OnMessage(async (context, cancellationToken) =>
-    {
-    await context.Send(
-    new MessageActivity("This message is only visible to you!")
-    .WithRecipient(context.Activity.From, isTargeted: true),
-    cancellationToken
-    );
-    });
+  app.OnMessage(async (context, cancellationToken) =>
+  {
+  await context.Send(
+  new MessageActivity("This message is only visible to you!")
+  .WithRecipient(context.Activity.From, isTargeted: true),
+  cancellationToken
+  );
+  });
+
   ```
-  
+
+  :::zone-end
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
