@@ -381,7 +381,7 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
 1. **Store the original targeted message ID**: Store the original targeted message ID as soon as the request arrives. You need it to attach the preview later. The reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
 
-1.**Send the first reply privately**: Send the first response only to the requesting user.
+1. **Send the first reply privately**: Send the first response only to the requesting user.
 
   :::zone pivot="csharp"
 
