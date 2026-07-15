@@ -383,21 +383,21 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
 1. **Send the first reply privately**: Send the first response only to the requesting user.
 
-  :::zone pivot="csharp"
+      :::zone pivot="csharp"
 
-  ```C#
-  app.OnMessage(async (context, cancellationToken) =>
-  {
-  await context.Send(
-  new MessageActivity("This message is only visible to you!")
-  .WithRecipient(context.Activity.From, isTargeted: true),
-  cancellationToken
-  );
-  });
+      ```C#
+      app.OnMessage(async (context, cancellationToken) =>
+      {
+      await context.Send(
+      new MessageActivity("This message is only visible to you!")
+      .WithRecipient(context.Activity.From, isTargeted: true),
+      cancellationToken
+      );
+      });
+    
+      ```
 
-  ```
-
-  :::zone-end
+      :::zone-end
 
 ## Best practices and design guidance
 
