@@ -442,8 +442,9 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
     Teams uses this entity to display the user’s original request above the agent’s response.
 
-1. **Handle reactive and proactive replies correctly**: For direct reactive replies, Teams SDK adds the preview automatically. For proactive replies, add the `targetedMessageInfo` entity in the reply manually. Implement prompt preview in proactive targeted replies using Teams SDK or REST API. For more information, see [Send a targeted message](../../../agents-in-teams/targeted-messages.md#send-a-targeted-message).
-1.
+1. **Handle reactive and proactive replies correctly**: For direct reactive replies, Teams SDK adds the preview automatically. For proactive replies, add the `targetedMessageInfo` entity in the reply manually. Implement prompt preview in proactive targeted replies using Teams SDK or REST API. For more information, see [send a targeted message](../../../agents-in-teams/targeted-messages.md#send-a-targeted-message).
+1. **Ask before sharing**: Add actions such as Allow, Share to channel, Edit prompt, or Dismiss.
+1. **Publish only with approval**: Repost the response publicly only after explicit user approval. If the user does not approve, keep the entire exchange private and do not publish the content to the shared conversation.
 
 ## Best practices and design guidance
 
