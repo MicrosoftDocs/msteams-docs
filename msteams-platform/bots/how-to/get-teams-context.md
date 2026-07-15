@@ -5,6 +5,8 @@ ms.topic: article
 ms.localizationpriority: high
 ms.owner: angovil
 ms.date: 06/05/2026
+zone_pivot_groups: teams-sdk-languages
+
 ---
 # Get Teams specific context for your bot
 
