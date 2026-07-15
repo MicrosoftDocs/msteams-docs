@@ -1553,13 +1553,7 @@
         "source_path": "msteams-platform/agents-in-teams/build-first-agent.md",
         "redirect_url": "quickstart-create-agent-teams-sdk",
         "redirect_document_id": false
-      },
-      {
-        "source_path": "bots/how-to/conversations/prompt-starters.md",
-        "redirect_url": "bots/how-to/conversations/prompt-suggestions.md",
-        "redirect_document_id": false
       }
-
       
     ]
 }
