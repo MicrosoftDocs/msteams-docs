@@ -1,63 +1,61 @@
 ---
-title: Overview - Publish your app
-description: Learn to publish app to Teams Store or to your organization. Understand how app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
+title: Overview - Publish your agent or app
+description: Learn to publish agent or app to Teams Store or to your organization. Understand how agent or app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
 ms.topic: article
 ms.localizationpriority: high
 ms.date: 07/14/2026
 ---
 
-# Publish your Microsoft Teams app
+# Publish your Microsoft Teams agent or app
 
-There are two main ways to distribute your Microsoft Teams app:
+There are two ways to distribute your Microsoft Teams agent or app:
 
-- **Publish to your organization**: Make your app available to people within your organization. Requires your Teams admin's approval.
-- **Publish to the Teams Store**: Make your app available to everyone on the Teams Store. Requires Microsoft approval.
+- **#publish-to-your-organization**: Make your agent or app available to people within your organization. Requires your Teams admin's approval.
+- **#publish-your-agent-or-app-to-the-teams-store**: Make your agent or app available to everyone on the Teams Store. Requires Microsoft approval.
 
-How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the app.
+How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the agent or app.
 
 ## Publish to your organization
 
-Make your app available to people in your organization. This kind of distribution requires your Teams admin's approval. Teams apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant.
+Teams agent or apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant.
 
 For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
-In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing an app, however, make sure that all the app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../cloud-overview.md#teams-app-capabilities).
+In GCC Teams environments, compliant Microsoft agent or apps are enabled by default. Before publishing an agent or app, however, make sure that all the agent or app's endpoints comply with your GCC organization's requirements. For more information, see [Government Community Cloud](../cloud-overview.md#teams-app-capabilities).
 
 > [!IMPORTANT]
-> If your app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
+> If your agent or app includes a bot or message extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0&preserve-view=true).
 
-## Publish your app to the Teams Store
-
-Make your app available to everyone. This kind of distribution requires Microsoft approval.
+## Publish your agent or app to the Teams Store
 
 For more information, see [publish to the Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
 
+### Enable customization for your Microsoft Teams agent or app
+
+You can allow customers to customize some aspects of your Microsoft Teams agent or app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store.
+
 ## Before you publish
 
-Before you publish your app, complete the following steps to ensure your app is ready for distribution.
-
-### Create Teams app package
-
-To publish your Teams app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
-
-### Upload your app in Teams
-
-Upload a custom app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
-
-> [!IMPORTANT]
-> Uploading custom apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
-
-For more information, see [upload your app in Teams](apps-upload.md).
+Before you publish your agent or app, complete the following steps to ensure your agent or app is ready for distribution.
 
 ### Configure default install options
 
-You can configure default install options. For example, if your app's primary capability is a bot, you can make the bot the default capability when a user installs your app to a team.
+You can configure default install options. For example, if your agent or app's primary capability is a bot, you can make the bot the default capability when a user installs your agent or app to a team.
 
-### Enable customization for your Microsoft Teams app
+### Create Teams agent or app package
 
-You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store.
+To publish your Teams agent or app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+
+### Upload your agent or app in Teams
+
+Upload a custom agent or app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
+
+> [!IMPORTANT]
+> Uploading custom agent or apps are available in Government Community Cloud (GCC) but aren't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+
+For more information, see [upload your app in Teams](apps-upload.md).
 
 ## Next step
 
