@@ -375,6 +375,13 @@ async def handle_suggested_action_submit(ctx):
 
 Use this workflow when your agent should reply privately first, keep the original user prompt visible with the response, and allow the user to decide whether to share the response publicly.
 
+Use this workflow when your agent should reply privately first. Use prompt preview to show the user’s original request above the agent’s response in a targeted message. This keeps the prompt and answer connected while the exchange remains private.
+
+1. **Capture the request**: Start when the user invokes the agent with a slash command or @mention in a channel, group chat, or meeting chat. Treat the request as a private targeted interaction by using `IsTargeted == true` in the message event.
+
+1. **Save the message ID**:
+1.
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
