@@ -60,15 +60,15 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 # [Personal chat](#tab/pc)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/imback-personal.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-personal.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-personal.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-personal.png":::
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/imback-group.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-group.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-group.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-group.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/imback-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-channel.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/imback-channel.png":::
 
 ---
 
