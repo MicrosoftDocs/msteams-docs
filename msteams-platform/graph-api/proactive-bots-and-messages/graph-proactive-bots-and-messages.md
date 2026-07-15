@@ -1,6 +1,6 @@
 ---
-title: Authorize Proactive Bot Installation
-description: Install app proactively using Graph APIs. Check if your bot is currently installed, retrieve the conversation chatId to send proactive message.
+title: Proactively Install Your Bot for Users Using Microsoft Graph
+description: Use Microsoft Graph APIs to install your Teams bot for users who haven't installed or interacted with your app, and check installation status.
 ms.localizationpriority: medium
 author: nickwalk
 ms.topic: how-to
@@ -9,9 +9,7 @@ ms.owner: vishachadha
 ms.date: 06/19/2026
 ---
 
-# Send proactive installation messages
-
-## Proactive messaging in Teams
+# Proactively install your bot for users using Microsoft Graph
 
 If you need to send messages to users who haven't installed or previously interacted with your app—for example, to broadcast important information to everyone in your organization—you can use the Microsoft Graph API to proactively install your bot for those users. Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member.
 
