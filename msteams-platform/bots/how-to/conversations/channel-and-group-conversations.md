@@ -509,22 +509,6 @@ The following table lists the throttling limits for tag mentions in a bot:
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in a bot.
 
-## Send a message on installation
-
-When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
-
-You can send a personal message to each member of the team when the bot is added. To do this, [fetch the team roster](../../../resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md).
-
->[!NOTE]
-> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
-
-Don't send a message in the following cases:
-
-* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel instead of being first added to a team.
-* A group or channel is renamed.
-* A team member is added to a group or channel.
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -532,6 +516,9 @@ Don't send a message in the following cases:
 
 ## See also
 
-* [Get Teams context](~/bots/how-to/get-teams-context.md)
+* [Teams SDK - API Client](/microsoftteams/platform/teams-sdk/essentials/api)
+* [Teams SDK - Microsoft Graph Integration](/microsoftteams/platform/teams-sdk/essentials/graph)
+* [Send and receive targeted messages in group conversations](~/agents-in-teams/targeted-messages.md)
+* [Expose slash commands from agents and apps](~/agents-in-teams/agent-slash-commands.md)
 * [Create private channel on behalf of user](/graph/api/channel-post#example-2-create-private-channel-on-behalf-of-user)
-* [Connect a bot to Web Chat channel](/azure/bot-service/bot-service-channel-connect-webchat)
+* [Teams SDK - Teams Integration Overview](/microsoftteams/platform/teams-sdk/teams/overview)
