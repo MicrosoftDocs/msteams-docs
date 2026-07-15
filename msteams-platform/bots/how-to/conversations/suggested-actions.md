@@ -68,7 +68,7 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="~/assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-channel.png":::
+:::image type="content" :::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/imback-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox=:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/imback-channel.png" alt-text="aa":::
 
 ---
 
