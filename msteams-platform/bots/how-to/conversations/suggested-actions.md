@@ -363,6 +363,14 @@ async def handle_suggested_action_submit(ctx):
 
 Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. If responses should remain private until approved for sharing, save the original targeted message ID, as it is required later to attach prompt preview metadata to the private or public reply.
 
+This workflow progresses as follows:
+
+1. Capture the request privately. When a user invokes the agent with a slash command or @mention, treat it as a targeted message visible only to the user and the agent.
+1. Reply privately first. Send the initial agent response only to the requesting user.
+1. Include the prompt preview. Show the original request above the response so the prompt and answer stay together. Attach it automatically for reactive replies, or manually for proactive replies using the original targeted message ID.
+1. Ask for approval. Add suggested actions such as Allow, Share to channel, Edit prompt, or Dismiss so the user can choose the next step.
+1. Share publicly only if approved. If the user approves, repost the response in the conversation with the prompt preview. If not, keep the exchange private.
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
