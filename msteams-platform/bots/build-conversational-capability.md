@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: angovil
-ms.date: 05/11/2026
+ms.date: 06/19/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -406,7 +406,7 @@ The following code shows an example of sending a message when a user is added to
 
 - [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
 ```csharp
 app.OnMembersAdded(async context =>
