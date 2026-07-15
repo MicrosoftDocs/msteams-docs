@@ -399,6 +399,38 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
       :::zone-end
 
+      :::zone pivot="typescript"
+
+      ```typescript
+      import { MessageActivity } from '@microsoft/teams.api';
+
+      app.on('message', async ({ send, activity }) => {
+        // Using withRecipient with isTargeted=true explicitly targets the specified recipient
+        await send(
+          new MessageActivity('This message is only visible to you!')
+            .withRecipient(activity.from, true)
+        );
+      });
+
+      :::zone-end
+
+      :::zone pivot="python"
+      
+      ```python
+      from microsoft_teams.api import MessageActivity, MessageActivityInput
+      from microsoft_teams.apps import ActivityContext
+      
+      @app.on_message
+      async def handle_message(ctx: ActivityContext[MessageActivity]):
+          # Using with_recipient with is_targeted=True explicitly targets the specified recipient
+          await ctx.send(
+              MessageActivityInput(text="This message is only visible to you!")
+                  .with_recipient(ctx.activity.from_, is_targeted=True)
+          )
+      ```
+
+      :::zone-end
+
 ## Best practices and design guidance
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
