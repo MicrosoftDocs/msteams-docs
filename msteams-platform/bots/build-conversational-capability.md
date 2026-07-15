@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: angovil
 ms.date: 06/19/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Send and receive messages
