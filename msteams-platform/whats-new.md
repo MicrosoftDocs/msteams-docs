@@ -36,7 +36,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 April**
+**2026 July**
 
 * ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
 * ***July 07, 2026***: [Support for apps in Private channels](build-apps-for-shared-private-channels.md) is now generally available.
@@ -52,7 +52,7 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
-| 27/04/2026 | Support for Prompt starters are now generally available | Build agents using Teams SDK > [Prompt starters are now generally available.](bots/how-to/conversations/prompt-starters.md) |
+| 27/04/2026 | Support for Prompt starters are now generally available | Build agents using Teams SDK > [Prompt starters are now generally available.](bots\how-to\conversations\prompt-suggestions.md) |
 | 27/01/2026 | Support for apps in Private channels. | Add Teams app capabilities > Build bots >  [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
 <br/>

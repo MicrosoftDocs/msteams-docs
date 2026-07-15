@@ -1,166 +1,263 @@
 ---
-title: Add Prompt Suggestions
-author: surbhigupta
-description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
+title: Dynamically Guide Users with Suggested Actions
+description: Learn how to create and handle suggested actions for your Microsoft Teams bot to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: vikasalmal
-ms.date: 4/7/2026
+zone_pivot_groups: teams-sdk-languages
+ms.date: 6/26/2026
 ---
 
-# Create prompt suggestions
+# Dynamically guide users with suggested actions
 
-Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat.
+Suggested actions help users continue conversations with your bot by presenting context-specific next steps in the chat.
 
-Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
-There are two types of prompt suggestions that you can use:
+For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
-:::row:::
-:::column span="2":::
+## Suggested actions
 
-##### [Prompt starters](#prompt-starters)
+Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your agent or bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. You can build the following suggested actions in your agent or bot:
 
-Prompt starters help users start a conversation with your bot.
+- `imBack`: Use `imBack` to add suggested actions, set `activity.suggestedActions` to a list of card actions (buttons) to show the user.
+- `Action.Compose`: Use `Action.Compose` to prefill the compose box with a message (including tags, @mentions, and rich content like emojis, GIFs, and other semantic objects).
+- `Action.Submit`: Use `Action.Submit` for suggested action buttons in agent responses for [slash commands](~/agents-in-teams/agent-slash-commands.md) that trigger server-side logic via an invoke activity (no user-visible chat message).
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+> [!IMPORTANT]
+> The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
 
-:::column-end:::
+When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
 
-:::column span="2":::
+- `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
+- `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
-##### [Suggested actions](#suggested-actions-1)
+# [Personal chat](#tab/pc)
 
-Suggested actions help users continue conversations with your bot.
+:::image type="content" source="~/assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-personal-chat.png":::
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." lightbox="~/assets/images/Cards/suggested-actions.png":::
+# [Group chat](#tab/gc)
 
-:::column-end:::
+:::image type="content" source="~/assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-gc.png":::
 
-:::row-end:::
+# [Channel](#tab/channel)
 
-## Prompt starters
-
->[!NOTE]
->
-> Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn't send a welcome message.
-
-Prompt starters are supported in one-on-one chats, group chats, and channels. To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields: `title`, `description`, `type`, and `prompt`.
-
-* The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
-* The `description` field describes what the users accomplish.
-* The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
-* The `prompt` field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
-
->[!NOTE]
->
->If you're building an agent, you must set `type` to **prompt** and provide a valid prompt value. If the `prompt` field is empty, the app manifest fails validation during submission.
-
-## Define `commands` in app manifest
-
- To create a prompt starter, add it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
-
-* The `command` property supports up to 10 commands.
-* You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
-
-#### Manifest example for prompt starters
-
-The manifest example code for prompt starters is as follows:
-
-```json
-{
-  ⋮
-  "bots":[
-    {
-      "botId":"[Microsoft App ID for your bot]",
-      "scopes": [
-        "personal"
-      ],
-      "commandLists":[
-        {
-          "scopes":[
-            "personal"
-          ],
-          "commands":[
-            {
-              "title":"Help",
-              "description":"Displays this help message",
-            },
-            {
-              "title":"Search Flights",
-              "description":"Search flights from Seattle to Phoenix May 2-5 departing after 3pm",
-              "type": "prompt",
-              "prompt": "Search flights from Seattle to Phoenix May 2-5 departing after 3pm. Please show me the best options."
-            },
-            {
-              "title":"Search Hotels",
-              "description":"Search hotels in Portland tonight",
-              "type": "prompt",
-              "prompt": "Search hotels in Portland for tonight. Please show me available options with good ratings."
-            },
-            {
-              "title":"Best Time to Fly",
-              "description":"Best time to fly to London for a 5 day trip this summer",
-              "type": "prompt",
-              "prompt": "What is the best time to fly to London for a 5 day trip? I'm looking for good weather and reasonable prices."
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  ...
-}
-```
+:::image type="content" source="~/assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="~/assets/images/bots/suggested-action-channel.png":::
 
 ---
 
 > [!NOTE]
-> If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+>
+> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
-The following image illustrates an example of prompt suggestions:
+Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
-# [Desktop](#tab/desktop)
+# [`imBack`](#tab/iamback)
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop." lightbox="~/assets/images/bots/prompt-starter-desktop.png":::
+To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
-# [Mobile](#tab/mobile)
+The following is an example to implement suggested actions using `imBack`:
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter in mobile." lightbox="~/assets/images/bots/prompt-starter-mobile.png":::
+``` json
+{
+  "type": "message",
+  "from": {
+    "id": "12345678",
+    "name": "sender's name"
+  },
+  "conversation": {
+    "id": "abcd1234",
+    "name": "conversation's name"
+  },
+  "recipient": {
+    "id": "1234abcd",
+    "name": "recipient's name"
+  },
+  "text": "What are the tasks for the day.",
+  "inputHint": "expectingInput",
+  "suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Create a new query identifying overdue tasks",
+        "value": "Create a new query identifying overdue tasks"
+      },
+      {
+        "type": "imBack",
+        "title": "Create a new work item for this feature",
+        "value": "Create a new work item for this feature"
+      }
+    ]
+  },
+  "replyToId": "5d5cdc723"
+}
+```
+
+# [`Action.Compose`](#tab/actioncompose)
+
+You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
+
+The following code snippet shows an example of implementing `Action.Compose`:
+
+```json
+{ 
+  Type: “Action.Compose”, 
+  Title: “button title”, 
+  Value: { 
+      type: “Teams.chatMessage”, 
+      data: <GraphAPI Chat Message Object> 
+  } 
+}
+```
+
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
+
+For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
+
+> [!NOTE]
+> If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+
+# [`Action.Submit`](#tab/actionsubmit)
+
+Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
+
+Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](~/agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
+
+This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
+
+Bot payload (outgoing from bot):
+
+```json
+
+{
+  "suggestedActions": {
+    "actions": [{
+      "type": "Action.Submit",
+      "title": "Approve",
+      "value": {
+        "vote": "approve"
+      }
+    }]
+  }
+}
+```
+
+> [!NOTE]
+> The `value` is an object (not a string) that carries the data.
+
+Bot handler (incoming to bot):
+
+The agent or bot receives a standard Bot invoke activity:
+
+```json
+
+case "suggestedAction/submit":
+  const vote = context.activity.value;  // { vote: "approve" }
+  // Process the action...
+  return { status: 200 };
+```
+
+The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
+
+## Teams SDK implementation
+
+Use the page pivot to view Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
+
+> [!NOTE]
+> The `Action.Submit` APIs are currently marked as experimental in Teams SDK.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+#pragma warning disable ExperimentalTeamsSuggestedAction
+using System.Text.Json;
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Activities;
+using CardAction = Microsoft.Teams.Api.Cards.Action;
+using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
+
+var reply = new MessageActivity("Approve or reject the request:")
+{
+    SuggestedActions = new SuggestedActions
+    {
+        Actions =
+        {
+            new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
+            new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
+        }
+    }
+};
+
+await context.Send(reply);
+
+teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
+{
+    var payload = ctx.Activity.Value is JsonElement value
+        ? value.GetRawText()
+        : "<none>";
+    await ctx.Send($"Got vote: {payload}", cancellationToken);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
+
+const reply = new MessageActivity("Approve or reject the request:");
+reply.suggestedActions = {
+  to: [],
+  actions: [
+    { type: "Action.Submit", title: "Approve", value: { vote: "approve" } },
+    { type: "Action.Submit", title: "Reject", value: { vote: "reject" } }
+  ]
+} satisfies SuggestedActions;
+
+await send(reply);
+
+app.on("suggested-action.submit", async ({ send, activity }) => {
+  const payload = activity.value != null ? JSON.stringify(activity.value) : "<none>";
+  await send(`Got vote: ${payload}`);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+import json
+from microsoft_teams.api import MessageActivityInput
+from microsoft_teams.api.models.card.card_action import CardAction
+from microsoft_teams.api.models.card.card_action_type import CardActionType
+from microsoft_teams.api.models.suggested_actions import SuggestedActions
+
+reply = MessageActivityInput(text="Approve or reject the request:").with_suggested_actions(
+    SuggestedActions(
+        to=[],
+        actions=[
+            CardAction(type=CardActionType.SUBMIT, title="Approve", value={"vote": "approve"}),
+            CardAction(type=CardActionType.SUBMIT, title="Reject", value={"vote": "reject"}),
+        ],
+    )
+)
+
+await ctx.send(reply)
+
+@app.on_suggested_action_submit
+async def handle_suggested_action_submit(ctx):
+    payload = json.dumps(ctx.activity.value)
+    await ctx.send(f"Got vote: {payload}")
+```
+
+::: zone-end
 
 ---
-
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. They enable users to review the prompts while interacting with your bot.
-
-# [Personal chat](#tab/pc)
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
-
-# [Group chat](#tab/gc)
-
-You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-group-chat.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a group chat." lightbox="~/assets/images/bots/prompt-starter-group-chat.png":::
-
-# [Channel](#tab/channel)
-
-:::image type="content" source="~/assets/images/bots/prompt-starter-channel.png" alt-text="Screenshot that shows the Prompt Starter during the conversation in a channel." lightbox="~/assets/images/bots/prompt-starter-channel.png":::
-
----
-
-## Suggested actions
-
-[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
-
-## Code sample
-
-| **Sample name** | **Description** |**.NET** |**Node.js** |
-|-----------------|-----------------|----------------|----------------|
-| Prompt starters bot | Microsoft Teams Create Commands Menu to implement prompt starters in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
 
 ## See also
 
-* [Build bots for Teams](~/bots/what-are-bots.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
-* [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
-* [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
+- [Create prompt starters](prompt-starters.md)
+- [Build bots for Teams](~/bots/what-are-bots.md)
+- [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+- [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
