@@ -10,8 +10,8 @@ ms.date: 07/14/2026
 
 There are two ways to distribute your Microsoft Teams agent or app:
 
-- **#publish-to-your-organization**: Make your agent or app available to people within your organization. Requires your Teams admin's approval.
-- **#publish-your-agent-or-app-to-the-teams-store**: Make your agent or app available to everyone on the Teams Store. Requires Microsoft approval.
+- **[Publish to your organization](#publish-to-your-organization)**: Make your agent or app available to people within your organization. Requires your Teams admin's approval.
+- **[Publish your agent or app to the Teams Store](#publish-your-agent-or-app-to-the-teams-store)**: Make your agent or app available to everyone on the Teams Store. Requires Microsoft approval.
 
 How you publish depends on several factors including users' needs, business, technical requirements, and your goals for the agent or app.
 
