@@ -1,4 +1,4 @@
-- - name: Microsoft Teams Platform documentation
+- name: Microsoft Teams Platform documentation
   href: mstdd-landing.yml
 - name: Overview
   href: overview.md
