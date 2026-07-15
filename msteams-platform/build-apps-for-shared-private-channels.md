@@ -5,7 +5,7 @@ description: Learn about apps for shared and private channels to securely collab
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 02/27/2026
+ms.date: 07/15/2026
 ---
 
 # Apps for shared and private channels
@@ -51,7 +51,6 @@ Here's an outline of the different channels and their capabilities across variou
 > [!NOTE]
 >
 > * Check your app’s capabilities such as membership boundaries, storage location, and external access before enabling support for Shared and Private channels.
-> * Message extension–only apps that operate exclusively in personal scope do not require updates to be available for users in Shared and Private channels.
 
 ### Understand how different channels determine app functionality
 
