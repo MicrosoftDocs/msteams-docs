@@ -182,7 +182,7 @@ adds follow-up suggestion buttons to the reply message. It sends those buttons t
 
 The following is a JSON example to implement suggested actions using `imBack`:
 
-Attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to indicate that the user should respond. The actions array defines the choices shown to the user. Each action uses `imBack`, with a `title` for the button label and a `value` returned to the agent or app when selected. The selected value is sent back as the user response, allowing the agent or app to route it to the appropriate intent or operation.
+In this example, `imBack` offers two context-specific next steps for the day’s planned tasks: *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. Selecting either option sends its value back to the agent or app, which then continues with the corresponding action.
 
 ``` json
 {
@@ -219,7 +219,7 @@ Attach `suggestedActions` to the agent message and set `inputHint` to `expecting
 }
 ```
 
-In this example, `imBack` presents two suggested actions based on the day’s planned tasks: *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. When the user selects an option, its value is sent back to the agent or app, which uses it to continue the conversation with the appropriate action.
+The example shows how to attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to prompt a user response. The `actions` array defines the available choices, each using `imBack` with a button `title` and a returned `value`. When selected, the value is sent back to the agent or app as the user response, enabling it to route the conversation to the appropriate intent or operation.
 
 ### Add `Action.Compose` action
 
