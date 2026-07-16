@@ -17,9 +17,7 @@ How you publish depends on several factors including users' needs, business, tec
 
 ## Publish to your organization
 
-Teams agent or apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant.
-
-For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+Teams agent or apps can be distributed privately within an organization and do not need to be published to the Teams Store for tenant-internal use. Availability to users can be controlled through Teams admin policies and app setup controls in the customer tenant. For more information, see [manage your apps in the Teams admin center](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
@@ -30,25 +28,25 @@ In GCC Teams environments, compliant Microsoft agent or apps are enabled by defa
 
 ## Publish your agent or app to the Teams Store
 
-For more information, see [publish to the Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
+You can publish your agent or app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. For more information, see [publish to the Teams Store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-### [Enable customization for your Microsoft Teams agent or app](concepts/design/enable-app-customization.md)
+### Enable customization for your Microsoft Teams agent or app
 
-You can allow customers to customize some aspects of your Microsoft Teams agent or app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store.
+You can allow customers to customize some aspects of your Microsoft Teams agent or app in the Teams admin center. This feature is supported only for apps published to the Microsoft Teams Store. For more information, see [Enable customization for your Microsoft Teams app](../design/enable-app-customization.md)
 
 ## Before you publish
 
 Before you publish your agent or app, complete the following steps to ensure your agent or app is ready for distribution.
 
-### [Configure default install options](concepts/deploy-and-publish/add-default-install-scope.md)
+### Configure default install options
 
-You can configure default install options. For example, if your agent or app's primary capability is a bot, you can make the bot the default capability when a user installs your agent or app to a team.
+You can configure default install options. For example, if your agent or app's primary capability is a bot, you can make the bot the default capability when a user installs your agent or app to a team. For more information, see [Configure default options for Teams app](add-default-install-scope.md)
 
-### [Create Teams agent or app package](concepts/build-and-test/apps-package.md)
+### Create Teams agent or app package
 
-To publish your Teams agent or app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**.
+To publish your Teams agent or app, you must have a valid app package.  An app package is a zip file that contains an **app manifest** and **app icons**. For more information, see [Teams app package](../build-and-test/apps-package.md)
 
-### [Upload your agent or app in Teams](concepts/deploy-and-publish/apps-upload.md)
+### Upload your agent or app in Teams
 
 Upload a custom agent or app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
@@ -64,8 +62,8 @@ For more information, see [upload your app in Teams](apps-upload.md).
 
 ## See also
 
-* [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
-* [Create Teams app package](../build-and-test/apps-package.md)
-* [Publish to organization](/microsoftteams/upload-custom-apps)
-* [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
-* [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
+- [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+- [Create Teams app package](../build-and-test/apps-package.md)
+- [Publish to organization](/microsoftteams/upload-custom-apps)
+- [Modify your app's registration in the Azure portal](/azure/active-directory/develop/howto-modify-supported-accounts)
+- [Growth lifecycle for your app](appsource/post-publish/app-growth/app-growth-lifecycle.md)
