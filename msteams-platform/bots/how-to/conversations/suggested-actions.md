@@ -86,47 +86,6 @@ Here are some examples that show how to implement and experience suggested actio
 
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
-Attach a `suggestedActions` object to the agent's message, and ensure that `inputHint` is set to `expectingInput`. This tells the agent or app that a user response is expected. The `actions` array defines one or more choices shown to the user. Each suggested action includes `imBack` as the `type`, which defines the action behavior; a`title`, which is the label displayed on the button; and a`value`, which is sent back to the bot when the user selects the option. The option selected by the user is sent back to the agent or app with `imBack` as the user response. The agent or app can then use the returned value to continue the conversation by routing the response to the correct intent or operation.
-
-The following is a JSON example to implement suggested actions using `imBack`:
-
-``` json
-{
-  "type": "message",
-  "from": {
-    "id": "12345678",
-    "name": "sender's name"
-  },
-  "conversation": {
-    "id": "abcd1234",
-    "name": "conversation's name"
-  },
-  "recipient": {
-    "id": "1234abcd",
-    "name": "recipient's name"
-  },
-  "text": "What are the tasks for the day.",
-  "inputHint": "expectingInput",
-  "suggestedActions": {
-    "actions": [
-      {
-        "type": "imBack",
-        "title": "Create a new query identifying overdue tasks",
-        "value": "Create a new query identifying overdue tasks"
-      },
-      {
-        "type": "imBack",
-        "title": "Create a new work item for this feature",
-        "value": "Create a new work item for this feature"
-      }
-    ]
-  },
-  "replyToId": "5d5cdc723"
-}
-```
-
-In this example, `imBack` is used to offer two suggested actions to the user - *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. These actions are offered in response for the conversation context of tasks planned for the current day. The agent or app would then receive user's input and continue the conversation according to the option they selected such as creating a new query to identify overdue tasks or creating a new work item for a feature.
-
 ::: zone pivot="typescript"
 
 ```typescript
@@ -220,6 +179,47 @@ This example demonstrates how to attach suggested actions to an existing reply m
 adds follow-up suggestion buttons to the reply message. It sends those buttons to the current user using their activity ID, and the follow_ups list provides the actions that will appear as clickable options.
 
 ::: zone-end
+
+The following is a JSON example to implement suggested actions using `imBack`:
+
+Attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to indicate that the user should respond. The actions array defines the choices shown to the user. Each action uses `imBack`, with a `title` for the button label and a `value` returned to the agent or app when selected. The selected value is sent back as the user response, allowing the agent or app to route it to the appropriate intent or operation.
+
+``` json
+{
+  "type": "message",
+  "from": {
+    "id": "12345678",
+    "name": "sender's name"
+  },
+  "conversation": {
+    "id": "abcd1234",
+    "name": "conversation's name"
+  },
+  "recipient": {
+    "id": "1234abcd",
+    "name": "recipient's name"
+  },
+  "text": "What are the tasks for the day.",
+  "inputHint": "expectingInput",
+  "suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Create a new query identifying overdue tasks",
+        "value": "Create a new query identifying overdue tasks"
+      },
+      {
+        "type": "imBack",
+        "title": "Create a new work item for this feature",
+        "value": "Create a new work item for this feature"
+      }
+    ]
+  },
+  "replyToId": "5d5cdc723"
+}
+```
+
+In this example, `imBack` presents two suggested actions based on the day’s planned tasks: *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. When the user selects an option, its value is sent back to the agent or app, which uses it to continue the conversation with the appropriate action.
 
 ### Add `Action.Compose` action
 
