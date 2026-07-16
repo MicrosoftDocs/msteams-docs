@@ -35,9 +35,9 @@ Because these capabilities often appear together in AI-generated responses, this
 
 ## When to use these features
 
-Use citations when your response is based on retrievable sources such as files, messages, and emails.
+* Use citations when your response is based on retrievable sources such as files, messages, and emails.
 
-Use sensitivity labels when your response contains sensitive content and you need a consistent confidentiality signal.
+* Use sensitivity labels when your response contains sensitive content and you need a consistent confidentiality signal.
 
 If your response includes citations from sensitive sources, add citation-level labels and a message-level label.
 
