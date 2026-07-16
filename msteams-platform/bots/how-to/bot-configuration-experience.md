@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 06/10/2026
 ---
 
 # Bot configuration experience
