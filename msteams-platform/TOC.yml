@@ -31,6 +31,9 @@
   - name: Dynamically guide users with suggested actions
     href: bots/how-to/conversations/suggested-actions.md
     displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+  - name: Add citations and sensitivity labels to agent messages
+    href: bots/how-to/agent-message-sensitivity-labels.md
+    displayName: citations, source attribution, reference, sensitivity label, Purview, data classification, confidentiality, compliance
   - name: Send and receive targeted messages
     href: agents-in-teams/targeted-messages.md
     displayName: private messages, ephemeral messages, command, notification, response
