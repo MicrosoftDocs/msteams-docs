@@ -3,6 +3,7 @@ title: Send proactive messages
 description: Learn how to send proactive messages with your Teams bot using the Teams SDK (Teams AI Library)
 ms.topic: article
 ms.owner: nickwalk
+ms.author: nickwalk
 ms.localizationpriority: high
 ms.date: 06/30/2026
 ---
@@ -91,6 +92,8 @@ After you get the appropriate address information, you can send your message.
 ## Send the message
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.Send()` method, and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
+
+To proactively send a message as a reply to a thread in a channel, use `app.Reply()` with both the conversation ID and the ID of the thread's root message.
 
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
@@ -213,10 +216,10 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 
 ```csharp
 // Save the conversation ID and schedule a proactive reminder on install
-teams.OnInstall(async context =>
+teams.OnInstall(async (context, cancellationToken) =>
 {
     context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
-    await context.Send("Hi! I am going to remind you to say something to me soon!");
+    await context.Send("Hi! I am going to remind you to say something to me soon!", cancellationToken);
     notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
 });
  
@@ -231,23 +234,6 @@ public static class Notifications
     }
 }
 
-```
-
-Example of a code snippet to demonstrate creating conversation reference.
-
-```csharp
- var newReference = new ConversationReference()
-        {
-            Bot = new ChannelAccount()
-            {
-                Id = conversationReference.Bot.Id
-            },
-            Conversation = new ConversationAccount()
-            {
-                Id = conversationReference.Conversation.Id
-            },
-            ServiceUrl = conversationReference.ServiceUrl,
-        };
 ```
 
 # [TypeScript](#tab/typescript)
