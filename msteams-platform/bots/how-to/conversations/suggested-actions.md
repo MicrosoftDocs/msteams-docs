@@ -39,11 +39,11 @@ Use `Action.Submit` when the selected option should trigger server-side logic wi
 > [!IMPORTANT]
 > The agent or app can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
 
-#### Approval workflow using `Action.Submit`
+#### Guidance for approval workflow using `Action.Submit`
 
 Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. If responses should remain private until approved for sharing, save the original targeted message ID, as it is required later to attach prompt preview metadata to the private or public reply.
 
-This workflow progresses as follows:
+The workflow has the following steps:
 
 1. Capture the request privately. When a user invokes the agent with a slash command or @mention, treat it as a targeted message visible only to the user and the agent.
 1. Reply privately first. Send the initial agent response only to the requesting user.
@@ -235,7 +235,7 @@ The example shows how to attach `suggestedActions` to the agent message and set 
 
 ### Add `Action.Compose` action
 
-You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
+Use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
 The following code snippet shows an example of implementing `Action.Compose`:
 
@@ -255,7 +255,7 @@ The value object must follow the [`chatMessage`](/graph/api/resources/chatmessag
 For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
 
 > [!NOTE]
-> If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+> If the message is received in a hub that doesn't support it, the app shows an error message. Agent and apps can identify the channel where they post.
 
 ### Add `Action.Submit` action
 
@@ -398,8 +398,6 @@ async def handle_suggested_action_submit(ctx):
 
 ### Implement approval workflow using `Action.Submit`
 
-Use this workflow when your agent should reply privately first, keep the original user prompt visible with the response, and allow the user to decide whether to share the response publicly.
-
 Use this workflow when your agent should reply privately first. Use prompt preview to show the user’s original request above the agent’s response in a targeted message. This keeps the prompt and answer connected while the exchange remains private.
 
 1. **Capture the request**: Start when the user invokes the agent with a slash command or @mention in a channel, group chat, or meeting chat. Treat the request as a private targeted interaction by using `IsTargeted == true` in the message event.
@@ -456,7 +454,7 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
       :::zone-end
 
-1. **Attach prompt preview metadata**: Include include a `targetedMessageInfo` entity in the reply and point it to the original message ID. Teams then displays the original prompt above the response.
+1. **Attach prompt preview metadata**: Include a `targetedMessageInfo` entity in the reply and point it to the original message ID. Teams then displays the original prompt above the response.
 
     ```JSON
     "entities": [{
