@@ -4,7 +4,7 @@ description: Learn about sending notifications using a bot app
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: angovil
-ms.date: 06/05/2026
+ms.date: 06/10/2026
 ---
 
 # Send notifications
@@ -540,7 +540,7 @@ The following code shows an example of adding notifications to your message:
 # [C#](#tab/dotnet)
 
 - [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
