@@ -190,6 +190,8 @@ This code snippet example adds the suggested actions as buttons to the Teams rep
 
 ::: zone-end
 
+#### `imBack` JSON exmaple
+
 The following is a JSON example to implement suggested actions using `imBack`:
 
 In this example, `imBack` offers two context-specific next steps for the day’s planned tasks: *Create a new query identifying overdue tasks* and *Create a new work item for this feature*. Selecting either option sends its value back to the agent or app, which then continues with the corresponding action.
