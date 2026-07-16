@@ -113,6 +113,16 @@ If an app is configured with shared scopes along with a default install scope, h
 </details>
 </br>
 
+### Installation context and app experience
+
+App installation context and app open experience are related but not identical:
+
+* Installation determines where the app is available (personal, team, chat, or meeting).
+* Open experience depends on the capabilities declared in the app manifest, such as tab or bot.
+* An app can be installed to enable notification delivery even when it doesn't provide an interactive surface that opens in Teams for that scope.
+
+This separation is expected behavior in Teams app architecture. For activity feed UX guidance, see [Designing activity feed notifications](../design/activity-feed-notifications.md).
+
 ## Configure the default capability for shared scopes
 
 Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
@@ -336,9 +346,9 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 
 ## Code sample
 
-|**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
+|**Sample name** | **Description** | **.NET** | **Node.js** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
+| Bot Quickstart | This sample demonstrates how to handle various bot conversation events in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Next step
 
