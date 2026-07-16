@@ -35,6 +35,9 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
 
+> [!NOTE]
+> Using a preview SDK does not automatically restrict marketplace publication, provided the app meets supported platform, compliance, and validation requirements.
+
 | SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Based on **Azure OpenAI**. |

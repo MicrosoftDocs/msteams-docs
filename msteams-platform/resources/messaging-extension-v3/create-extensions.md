@@ -497,7 +497,7 @@ When responding to the `edit` request, you must respond with a `task` response w
 
 # [TypeScript/Node.js](#tab/typescript)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
 ```typescript
 
