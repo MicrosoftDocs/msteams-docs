@@ -159,12 +159,25 @@ async function generateFollowUps(history: ChatCompletionMessageParam[]): Promise
 }
 ```
 
+This code snippet example generates two follow-up suggested actions from conversation context. It uses the `followUps` array from `generateFollowUps(...)` and creates each prompt into a clickable suggested action for the user:
+
+- It defines `FOLLOW_UPS_PROMPT`, which instructs the model to create two short prompts.
+- It defines `FOLLOW_UPS_SCHEMA`, which forces the model response to contain `prompt1` and `prompt2`.
+- It uses `generateFollowUps(history)` to return those prompts as a `string[]`.
+
 ```typescript
 finalMarker.withSuggestedActions({
   to: [recipientId],
   actions: followUps.map((prompt) => ({ type: 'imBack', title: prompt, value: prompt })),
 });
 ```
+
+This code snippet displays for the follow-up prompts as suggested action buttons for the user. For each prompt, it creates a suggested action object.
+
+- `title`: prompt controls what the user sees as the clickable option.
+- `value`: prompt controls what gets sent back when the user clicks it.
+- `type`: 'imBack' means the clicked suggestion is sent back to the bot as a user message.
+- `to: [recipientId]` targets the suggested actions to the intended recipient.
 
 The `finalMarker.withSuggestedActions()` method adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` property specifies the user who should see these actions. The `followUps.map()` function goes through each item in the `followUps` list and creates a suggested action button for it. Each button uses `type: 'imBack'`, which sends the button’s value back to the agent or bot as though the user typed it. The `value` property contains the text that is sent, while `title: prompt` defines the label displayed on the button.
 
