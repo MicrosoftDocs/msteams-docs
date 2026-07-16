@@ -138,7 +138,7 @@ This code snippet displays for the follow-up prompts as suggested action buttons
 - `type`: 'imBack' means the clicked suggestion is sent back to the bot as a user message.
 - `to: [recipientId]` targets the suggested actions to the intended recipient.
 
-The `finalMarker.withSuggestedActions()` method adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` property specifies the user who should see these actions. The `followUps.map()` function goes through each item in the `followUps` list and creates a suggested action button for it. Each button uses `type: 'imBack'`, which sends the button’s value back to the agent or bot as though the user typed it. The `value` property contains the text that is sent, while `title: prompt` defines the label displayed on the button.
+`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated follow-up prompt into an `imBack` action. Each button displays the prompt as its `title` and sends the same prompt back as its `value`, allowing the agent or bot to continue the conversation from the selected option.
 
 ::: zone-end
 
