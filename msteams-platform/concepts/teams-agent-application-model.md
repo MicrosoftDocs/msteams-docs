@@ -8,22 +8,23 @@ ms.topic: concept-article
 ms.date: 07/14/2026
 ---
 
-# Components of apps and agents on the Teams platform (TODO for TOC: Teams agent platform components)
+# Technical components of a Teams agent (TODO for TOC: Teams agent components)
 
 This article explains the technical artifacts that make up an app on the Teams platform. Many of the concepts described here apply to all Teams apps, but this article focuses on agents: conversational assistants that participate in Teams chat.
 
 It's meant to accompany the quickstart, the application model and dev workflow articles
 
-Summarize the concept of runtime and the three registrations.
+for building conversational agents that participate in Teams chat, and other kinds of extensions to the Teams experience.
 
-## The bot (agent) app capability
+Teams apps, including agents, consist of a *runtime* containing the agent's code, and a set of *registrations* that configure different aspects of the agent and identify them to the Teams platform.
 
-TODO
-Developers create Teams apps to bring new features and experiences to the Teams interface. Teams apps extend the Teams client similar to the way extensions in web browsers and code editors work. TODO What do teams apps *do*? They are in the collaborative surface, access organizational data, etc. etc.
+## Teams agents are conversational apps
 
-Teams offers multiple surfaces and integration points that developers can use to build new collaborative experiences. These surfaces and integration points are called *app capabilities*, and an implementation that builds on top of one or more of them is a *Teams app*.
+Teams apps extend Teams with new experiences and features. Developers create them by building web services and web applications that interface with extensible surfaces in Teams called *app capabilities*. Each of Teams' app capabilities enables a different kind of interactivity or experience.
 
-Developers build on the *bot* app capability to create conversational assistants that participate in Teams chat, called bots or agents. The Terms "bot" and "agent" are often used interchangeably, but in the modern AI landscape, agents are distinguished from bots by their use of large language models (LLMs). Agents use LLMs to understand and generate natural language, adapt to context, and dynamically perform actions on behalf of users.
+Apps that implement Teams' *bot* capability interact with users in Teams chat. These conversational assistant apps are called agents or bots. The terms "bot" and "agent" are often used interchangeably, but agents are distinguished from bots by their use of large language models (LLMs). Agents use LLMs to understand and generate natural language, adapt to context, and dynamically perform actions on behalf of users.
+
+User chat messages are the primary driver of most agent activity, but agents are not limited to request-response chat workflows. Agents can take action and send messages proactively, at any time, and can listen for a wide variety of Teams-based triggers. The API that agents use to interface with Teams enables them to perform many kinds of actions beyond chat.
 
 Agent development is the main focus of Teams SDK and most modern Teams app development.
 
@@ -63,8 +64,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ---
 
 This minimal implementation illustrates how event handlers work. A real-world agent's runtime will use an LLM to understand a user's request, take action on it, and generate a response.
-
-In most Teams agents, receiving a chat message event is the main trigger for taking action, but agents are not limited to request-response chat workflows. They can listen for and act on a wide variety of Teams events, and can also act proactively, without being triggered by user activity.
 
 ## Manifest, Bot Connector registration, and Entra ID identity
 
