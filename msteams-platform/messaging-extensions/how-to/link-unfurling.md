@@ -364,7 +364,7 @@ To get your app ready for zero install link unfurling, follow these steps:
          }
       },
       "value":{
-         "url":"https://test.test.com/test"
+         "url":"{server_url}/test"
       },
       "locale":"en-US",
       "localTimezone":"America/Los_Angeles"
