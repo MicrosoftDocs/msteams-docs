@@ -32,9 +32,7 @@ You can build the following suggested actions in your agent or app:
 
 ### Guidance for approval workflow using `Action.Submit`
 
-Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. If responses should remain private until approved for sharing, save the original targeted message ID, as it is required later to attach prompt preview metadata to the private or public reply.
-
-The workflow has the following steps:
+Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. The workflow has the following steps:
 
 1. Capture the request privately. When a user invokes the agent with a slash command or @mention, treat it as a targeted message visible only to the user and the agent.
 1. Reply privately first. Send the initial agent response only to the requesting user.
@@ -385,9 +383,7 @@ async def handle_suggested_action_submit(ctx):
 
 Use this workflow when your agent should reply privately first. Use prompt preview to show the user’s original request above the agent’s response in a targeted message. This keeps the prompt and answer connected while the exchange remains private.
 
-1. **Capture the request**: Start when the user invokes the agent with a slash command or @mention in a channel, group chat, or meeting chat. Treat the request as a private targeted interaction by using `IsTargeted == true` in the message event.
-
-1. **Store the original targeted message ID**: Store the original targeted message ID as soon as the request arrives. You need it to attach the preview later. The reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
+1. **Capture the targeted request and message ID**: When a user invokes the agent with a slash command or @mention in a channel, group chat, or meeting chat, verify `IsTargeted == true` and store the original message ID. To attach the prompt preview, include a `targetedMessageInfo` entity in the reply with `messageId` set to that ID.
 
 1. **Send the first reply privately**: Send the first response only to the requesting user.
 
@@ -450,8 +446,7 @@ Use this workflow when your agent should reply privately first. Use prompt previ
     Teams uses this entity to display the user’s original request above the agent’s response.
 
 1. **Handle reactive and proactive replies correctly**: For direct reactive replies, Teams SDK adds the preview automatically. For proactive replies, add the `targetedMessageInfo` entity in the reply manually. Implement prompt preview in proactive targeted replies using Teams SDK or REST API. For more information, see [send a targeted message](../../../agents-in-teams/targeted-messages.md#send-a-targeted-message).
-1. **Ask before sharing**: Add actions such as Allow, Share to channel, Edit prompt, or Dismiss.
-1. **Publish only with approval**: Repost the response publicly only after explicit user approval. If the user does not approve, keep the entire exchange private and do not publish the content to the shared conversation.
+1. **Share only after user approval**: Offer actions such as *Allow*, *Share to channel*, *Edit prompt*, or *Dismiss*. Publish the response to the shared conversation only after explicit approval; otherwise, keep the exchange private.
 
 ## Best practices and design guidance
 
