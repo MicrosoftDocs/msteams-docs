@@ -13,13 +13,13 @@ ms.date: 07/15/2026
 
 Suggested actions present context-specific next steps after an agent or app response, so users can refine a request, continue a workflow, or make a choice with one selection. Use suggested actions when the next step depends on the current conversation.
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below a agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 To help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
 ## Understand suggested actions
 
-Suggested actions help users with ideas of what to ask next, based on the previous response or conversation.
+Suggested actions give users ideas for what to ask next, based on the previous response or conversation.
 Use suggested actions when the agent or app has the conversational context to recommend the next few intents after a response, such as refining a search, creating a task, choosing a status, or continuing a guided workflow.
 
 You can build the following suggested actions in your agent or app:
@@ -30,7 +30,7 @@ You can build the following suggested actions in your agent or app:
 
 - `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
 
-#### Guidance for approval workflow using `Action.Submit`
+### Guidance for approval workflow using `Action.Submit`
 
 Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. If responses should remain private until approved for sharing, save the original targeted message ID, as it is required later to attach prompt preview metadata to the private or public reply.
 
@@ -44,22 +44,22 @@ The workflow has the following steps:
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in all scopes:
 
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
 - `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
 # [Personal chat](#tab/pc)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-personal.png" alt-text="Image shows suggested actions in a personal chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-personal.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-personal.png" alt-text="Suggested actions displayed in a personal chat on a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-personal.png":::
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-group.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-group.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-group.png" alt-text="Suggested actions displayed in a group chat on a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-group.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png" alt-text="Suggested actions displayed in a channel on a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png":::
 
 ---
 
@@ -170,7 +170,7 @@ reply.with_suggested_actions(
 
 This code snippet example adds the suggested actions as buttons to the Teams reply so the user can click them.
 
-- `reply.with_suggested_actions()` adds suggested action buttons to the agents response.
+- `reply.with_suggested_actions()` adds suggested action buttons to the agent's response.
 - `SuggestedActions()` wraps the list of follow-up buttons in the format expected by Microsoft Teams.
 - `to=[ctx.activity.from_.id]` targets the suggested actions to the user who sent the original message.
 - `actions=follow_ups` uses the two `CardAction` objects generated by the first code snippet example.
@@ -228,11 +228,11 @@ The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
 {
-  Type: “Action.Compose”,
-  Title: “button title”,
-  Value: {
-      type: “Teams.chatMessage”,
-      data: <GraphAPI Chat Message Object>
+  "type": "Action.Compose",
+  "title": "button title",
+  "value": {
+      "type": "Teams.chatMessage",
+      "data": "<GraphAPI Chat Message Object>"
   }
 }
 ```
@@ -418,10 +418,12 @@ Use this workflow when your agent should reply privately first. Use prompt previ
             .withRecipient(activity.from, true)
         );
       });
+      ```
 
       :::zone-end
 
-      :::zone pivot="python"      
+      :::zone pivot="python"
+
       ```python
       from microsoft_teams.api import MessageActivity, MessageActivityInput
       from microsoft_teams.apps import ActivityContext
@@ -468,8 +470,6 @@ Prefer one-step actions that users can understand without extra explanation.
 Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
 
 Avoid duplicating actions already available in the response or in a card unless the action is the primary next step. For example, if a card already includes an **Approve** button, don't add Approve again as a suggested action unless it is the most important action for the user to take next.
-
-Test the experience in personal chat, group chat, and channel scopes because persistence and visibility differ by scope.
 
 ## See also
 
