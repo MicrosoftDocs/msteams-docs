@@ -17,24 +17,20 @@ Suggested actions help users continue conversations with your agent by presentin
 
 For guidance on commands that help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
-## Supported suggested actions
+## Understand suggested actions
 
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation.
 Use suggested actions when the agent or app has the conversational context to recommend the next few intents after a response, such as refining a search, creating a task, choosing a status, or continuing a guided workflow.
 
 You can build the following suggested actions in your agent or app:
 
-### imBack
+### Choose an action type
 
-Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
+- `imBack`: Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
 
-### Action.Compose
+- `Action.Compose`: Use `Action.Compose` when the app should prefill the compose box so the user can review, edit, and send the message. Return an `Action.Compose` action with a Teams `chatMessage` payload that can include formatted text, @mentions, tags, emojis, GIFs, or other supported rich content. For example, a scheduling assistant can draft a follow-up message with an @mention and proposed next steps, giving the user a chance to adjust it before posting.
 
-Use `Action.Compose` when the app should prefill the compose box so the user can review, edit, and send the message. Return an `Action.Compose` action with a Teams `chatMessage` payload that can include formatted text, @mentions, tags, emojis, GIFs, or other supported rich content. For example, a scheduling assistant can draft a follow-up message with an @mention and proposed next steps, giving the user a chance to adjust it before posting.
-
-### Action.Submit
-
-Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
+- `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
 
 > [!IMPORTANT]
 > The agent or app can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
