@@ -467,6 +467,10 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
 ## Best practices and design guidance
 
+Suggested actions behave differently depending on the conversation scope. In personal chats, they appear as smart replies, and only the actions from the most recent message are available. In group chats and channels, suggested actions are saved with the message and remain available on the rich card.
+
+Teams displays and processes a maximum of three suggested actions, even if the agent or app sends more. Suggested actions aren't supported for messages that include attachments in any conversation type. Test the experience in each supported scope because action visibility and persistence vary.
+
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
 
 Keep suggestions short, specific, and task oriented. Limit the experience to the three most useful options, order them by likely user intent, and avoid repeating generic choices across turns unless the context still makes them relevant.
