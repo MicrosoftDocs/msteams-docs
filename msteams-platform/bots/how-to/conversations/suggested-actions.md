@@ -42,10 +42,7 @@ Before implementing approval workflow using `Action.Submit`, ensure your agent o
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in all scopes:
-
-- `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
-- `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
 
 # [Personal chat](#tab/pc)
 
@@ -63,9 +60,7 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ## Implement suggested actions
 
-Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
-
-Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
+Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
 ### Add `imBack` action
 
@@ -151,12 +146,12 @@ async def _generate_follow_ups(last_user_text: str, last_ai_text: str) -> list[C
         response_format=_FOLLOW_UPS_SCHEMA,  # strict json_schema
     )
     data = json.loads(completion.choices[0].message.content or "{}")
-    return [CardAction(type=CardActionType.IM_BACK, title=q, value=q) for q in data.get["followUps", []](:2)]
+    return [CardAction(type=CardActionType.IM_BACK, title=q, value=q) for q in data.get("followUps", [])[:2]]
 ```
 
 This code snippet example generates two follow-up suggested actions from conversation context. It creates the follow-up question buttons for those actions:
 
-- `_FOLLOW_UPS_PROMPT` instructs the model to suggest exactly two concise follow-up questions.
+- `_FOLLOW_UPS_PROMPT` instructs the model to suggest two concise follow-up questions.
 - `_generate_follow_ups` accepts the last user message and last assistant message.
 - `CardActionType.IM_BACK` is used to convert each suggestion into a `CardAction` that lets the user send the selected question back into the chat.
 
@@ -220,7 +215,7 @@ The example shows how to attach `suggestedActions` to the agent message and set 
 
 ### Add `Action.Compose` action
 
-Use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
+Use `Action.Compose` to prefill the compose box with a message that the user can review, edit, and send. The chatMessage payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
 The following code snippet shows an example of implementing `Action.Compose`:
 
@@ -238,9 +233,6 @@ The following code snippet shows an example of implementing `Action.Compose`:
 The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
 
 For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
-
-> [!NOTE]
-> If the message is received in a hub that doesn't support it, the app shows an error message. Agent and apps can identify the channel where they post.
 
 ### Add `Action.Submit` action
 
@@ -286,7 +278,7 @@ The agent or app can dispatch on `activity.name` and read the structured payload
 
 ### Teams SDK implementation
 
-Use the page pivot to view Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
+Use the following Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
 
 > [!NOTE]
 > The `Action.Submit` APIs are currently marked as experimental in Teams SDK.
@@ -383,17 +375,15 @@ async def handle_suggested_action_submit(ctx):
 
 Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
 
-Keep suggestions short, specific, and task oriented. Limit the experience to the three most useful options, order them by likely user intent, and avoid repeating generic choices across turns unless the context still makes them relevant.
+Keep suggestions short, specific, and task oriented. Avoid repeating generic choices across turns unless the context still makes them relevant. Prefer one-step actions that users can understand without extra explanation. Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
 
-Suggested actions behave differently depending on the conversation scope. In personal chats, they appear as smart replies, and only the actions from the most recent message are available. In group chats and channels, suggested actions are saved with the message and remain available on the rich card.
+Suggested actions behave differently depending on the conversation scope. When a user selects an action on a rich card, the action remains visible in group chats and channels. In personal chats, however, only the suggested actions from the most recent message are available as smart replies.
 
 Teams displays and processes a maximum of three suggested actions, even if the agent or app sends more. Suggested actions aren't supported for messages that include attachments in any conversation type. Test the experience in each supported scope because action visibility and persistence vary.
 
 Use `imBack` when the user’s choice should become part of the conversation. Use `Action.Compose` when the user should review or personalize content before sending it. Use `Action.Submit` when the action should be handled privately by the agent or app.
 
-Prefer one-step actions that users can understand without extra explanation.
-
-Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
+If a client or host doesn't support `Action.Compose`, the agent or app displays an error message. Before returning the action, identify the conversation channel and verify that the host supports the action type.
 
 Avoid duplicating actions already available in the response or in a card unless the action is the primary next step. For example, if a card already includes an **Approve** button, don't add Approve again as a suggested action unless it is the most important action for the user to take next.
 
