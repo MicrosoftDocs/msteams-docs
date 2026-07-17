@@ -63,10 +63,6 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 ---
 
-> [!NOTE]
->
-> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-
 ## Implement suggested actions
 
 Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your agent's or bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
@@ -113,7 +109,7 @@ This code snippet example generates two follow-up suggested actions from convers
 
 - It defines `FOLLOW_UPS_PROMPT`, which instructs the model to create two short prompts.
 - It defines `FOLLOW_UPS_SCHEMA`, which forces the model response to contain `prompt1` and `prompt2`.
-- It uses `generateFollowUps(history)` to return those prompts as a `string[]`.
+- It uses `generateFollowUps(history)` to return prompts as a `string[]`.
 
 ```typescript
 finalMarker.withSuggestedActions({
@@ -126,10 +122,10 @@ This code snippet displays for the follow-up prompts as suggested action buttons
 
 - `title`: prompt controls what the user sees as the clickable option.
 - `value`: prompt controls what gets sent back when the user clicks it.
-- `type`: 'imBack' means the clicked suggestion is sent back to the agent as a user message.
-- `to: [recipientId]` targets the suggested actions to the intended recipient.
+- `type`: determines the action type. `imBack` means the clicked suggestion is sent back to the agent as a user message.
+- `to: [recipientId]`: targets the suggested actions to the intended recipient.
 
-`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated follow-up prompt into an `imBack` action. Each button displays the prompt as its `title` and sends the same prompt back as its `value`, allowing the agent or app to continue the conversation from the selected option.
+`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated prompt into an `imBack` action. Each button displays the prompt as its title and sends the same prompt back as its `value`, allowing the agent or app to continue the conversation from the selected option.
 
 ::: zone-end
 
@@ -181,7 +177,7 @@ This code snippet example adds the suggested actions as buttons to the Teams rep
 
 ::: zone-end
 
-#### `imBack` JSON exmaple
+#### `imBack` JSON example
 
 The following is a JSON example to implement suggested actions using `imBack`:
 
@@ -288,9 +284,7 @@ case "suggestedAction/submit":
   return { status: 200 };
 ```
 
-[WIP: Check for Teams SDK code snippets.]
-
-The agent or app can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
+The agent or app can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and apps handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
 ### Teams SDK implementation
 
@@ -417,7 +411,6 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
       ```typescript
       import { MessageActivity } from '@microsoft/teams.api';
-
       app.on('message', async ({ send, activity }) => {
         // Using withRecipient with isTargeted=true explicitly targets the specified recipient
         await send(
@@ -428,12 +421,10 @@ Use this workflow when your agent should reply privately first. Use prompt previ
 
       :::zone-end
 
-      :::zone pivot="python"
-      
+      :::zone pivot="python"      
       ```python
       from microsoft_teams.api import MessageActivity, MessageActivityInput
       from microsoft_teams.apps import ActivityContext
-      
       @app.on_message
       async def handle_message(ctx: ActivityContext[MessageActivity]):
           # Using with_recipient with is_targeted=True explicitly targets the specified recipient
