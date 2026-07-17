@@ -1565,6 +1565,11 @@
         "source_path": "msteams-platform/agents-in-teams/build-first-agent.md",
         "redirect_url": "quickstart-create-agent-teams-sdk",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/teams-updates.md",
+        "redirect_url": "/microsoftteams/platform/overview",
+        "redirect_document_id": false
       }
     ]
 }
