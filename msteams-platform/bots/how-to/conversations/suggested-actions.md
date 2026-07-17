@@ -24,16 +24,11 @@ Use suggested actions when the agent or app has the conversational context to re
 
 You can build the following suggested actions in your agent or app:
 
-### Choose an action type
-
 - `imBack`: Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
 
 - `Action.Compose`: Use `Action.Compose` when the app should prefill the compose box so the user can review, edit, and send the message. Return an `Action.Compose` action with a Teams `chatMessage` payload that can include formatted text, @mentions, tags, emojis, GIFs, or other supported rich content. For example, a scheduling assistant can draft a follow-up message with an @mention and proposed next steps, giving the user a chance to adjust it before posting.
 
 - `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
-
-> [!IMPORTANT]
-> The agent or app can parse up to three actions. Even if you include more than three actions, Teams displays only the first three.
 
 #### Guidance for approval workflow using `Action.Submit`
 
