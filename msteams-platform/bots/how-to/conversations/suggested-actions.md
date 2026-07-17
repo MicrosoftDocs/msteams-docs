@@ -131,10 +131,10 @@ This code snippet displays for the follow-up prompts as suggested action buttons
 
 - `title`: prompt controls what the user sees as the clickable option.
 - `value`: prompt controls what gets sent back when the user clicks it.
-- `type`: 'imBack' means the clicked suggestion is sent back to the bot as a user message.
+- `type`: 'imBack' means the clicked suggestion is sent back to the agent as a user message.
 - `to: [recipientId]` targets the suggested actions to the intended recipient.
 
-`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated follow-up prompt into an `imBack` action. Each button displays the prompt as its `title` and sends the same prompt back as its `value`, allowing the agent or bot to continue the conversation from the selected option.
+`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated follow-up prompt into an `imBack` action. Each button displays the prompt as its `title` and sends the same prompt back as its `value`, allowing the agent or app to continue the conversation from the selected option.
 
 ::: zone-end
 
@@ -255,13 +255,13 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 ### Add `Action.Submit` action
 
-Use `Action.Submit` for suggested action buttons that run server-side agent or bot logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
+Use `Action.Submit` for suggested action buttons that run the agent's server-side logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
 
 Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](~/agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
 
 This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
 
-Bot payload (outgoing from agent or bot):
+Payload (outgoing from agent or app):
 
 ```json
 
@@ -281,9 +281,9 @@ Bot payload (outgoing from agent or bot):
 > [!NOTE]
 > The `value` is an object (not a string) that carries the data.
 
-Bot handler (incoming to agent or bot):
+Handler (incoming to agent or app):
 
-The agent or bot receives a standard Bot invoke activity:
+The agent or app receives a standard invoke activity:
 
 ```json
 
@@ -295,7 +295,7 @@ case "suggestedAction/submit":
 
 [WIP: Check for Teams SDK code snippets.]
 
-The agent or bot can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
+The agent or app can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and bots handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
 ### Teams SDK implementation
 
