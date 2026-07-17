@@ -34,11 +34,11 @@ You can build the following suggested actions in your agent or app:
 
 Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. The workflow has the following steps:
 
-1. Capture the request privately. When a user invokes the agent with a slash command or @mention, treat it as a targeted message visible only to the user and the agent.
-1. Reply privately first. Send the initial agent response only to the requesting user.
-1. Include the prompt preview. Show the original request above the response so the prompt and answer stay together. Attach it automatically for reactive replies, or manually for proactive replies using the original targeted message ID.
-1. Ask for approval. Add suggested actions such as Allow, Share to channel, Edit prompt, or Dismiss so the user can choose the next step.
-1. Share publicly only if approved. If the user approves, repost the response in the conversation with the prompt preview. If not, keep the exchange private.
+1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent.
+1. **Reply privately**. Send the initial response only to the requesting user.
+1. **Include the prompt preview**. Display the original request above the response. Teams adds it to reactive replies; for proactive replies, attach it using the original targeted message ID.
+1. **Request approval**. Offer actions such as Allow, Share to channel, Edit prompt, or Dismiss.
+1. **Publish** only if approved.
 
 ## User experience
 
