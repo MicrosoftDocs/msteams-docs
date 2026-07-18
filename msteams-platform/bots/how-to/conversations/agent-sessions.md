@@ -299,7 +299,25 @@ await app.send(sessionConversationId, 'This message is part of the session.');
 
 ::: zone pivot="teams-sdk-python"
 
-[TODO]
+```python
+from microsoft_teams.api import Account, CreateConversationParams, MessageActivityInput
+
+# Exactly one initial message activity is required for creating a session
+# It becomes the first message of the new session.
+resource = await app.api.conversations.create(
+    CreateConversationParams(
+        members=[Account(id=user_id, type="person", name="")],
+        tenant_id=tenant_id,
+        activity=MessageActivityInput(text="Hello! Starting a new session."),
+    )
+)
+
+# resource.id is the session conversation_id
+session_conversation_id = resource.id
+
+# Send a follow-up into the same session.
+await app.send(session_conversation_id, "This message is part of the session.")
+```
 
 ::: zone-end
 
