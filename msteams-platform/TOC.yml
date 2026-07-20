@@ -64,6 +64,13 @@
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md  
     displayName: receive files using bot
+  - name: Send proactive messages
+    href: bots/how-to/conversations/send-proactive-messages.md
+  - name: Get Teams-specific context
+    href: bots/how-to/get-teams-context.md
+    displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
+  - name: Create a configuration experience
+    href: bots/how-to/bot-configuration-experience.md
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -556,29 +563,9 @@
   - name: Build bots
     expand: true
     items:
-    - name: Send and receive messages
-      items:
 
 
-    - name: Send notifications
-      items:
-      - name: Build notification capability
-        href: bots/build-notification-capability.md
-        displayName: Adapter, notifications
-      - name: Send proactive messages
-        href: bots/how-to/conversations/send-proactive-messages.md
-        displayName: conversationId, send message, bot framework, notification,
-    - name: Command bot in Teams
-      href: bots/how-to/conversations/command-bot-in-teams.md
-      displayName: bot initialization
-    - name: Workflow bot in Teams
-      href: bots/how-to/conversations/workflow-bot-in-teams.md
-      displayname: Jira, jira
-    - name: Get Teams-specific context
-      href: bots/how-to/get-teams-context.md
-      displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
-    - name: Configure bot scope
-      href: bots/how-to/bot-configuration-experience.md
+
       displayName: configuration settings, fetchTask, config/fetch, config/submit
     - name: Optimize bots with rate limits
       href: bots/how-to/rate-limit.md
