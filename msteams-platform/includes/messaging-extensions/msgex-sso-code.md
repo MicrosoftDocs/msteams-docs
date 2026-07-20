@@ -1,12 +1,13 @@
-The Teams SDK handles the SSO token exchange and OAuth flow automatically. You configure an OAuth connection name on the `App` object, then call `signin()` inside your message extension handlers. The SDK manages the underlying `signin/verifyState` and `signin/tokenExchange` invoke activities for you.
+> [!NOTE]
+> `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file are the only SSO handlers that are supported. Other SSO handlers aren't supported.
 
 This section covers:
 
 1. [Update development environment variables](#update-development-environment-variables)
-1. [Configure the OAuth connection](#configure-the-oauth-connection)
-1. [Implement message extension handlers with authentication](#implement-message-extension-handlers-with-authentication)
-1. [Handle sign-in events and failures](#handle-sign-in-events-and-failures)
-1. [Handle sign out](#handle-sign-out)
+1. [Add code to request a token](#add-code-to-request-a-token)
+1. [Add code to receive the token](#add-code-to-receive-the-token)
+1. [Add token to Bot Framework Token Store](#add-token-to-bot-framework-token-store)
+1. [Handle app user log out](#handle-app-user-log-out)
 
 ## Update development environment variables
 
@@ -15,46 +16,60 @@ You've configured client secret and OAuth connection setting for the app in Micr
 To update the development environment variables:
 
 1. Open the app project.
-1. Open the configuration file for your project.
-1. Update the environment variables as shown in the following tabs.
+1. Open the `./env` file for your project.
+1. Update the following variables:
+
+    - For `MicrosoftAppId`, update the Bot registration ID from Microsoft Entra ID.
+    - For `MicrosoftAppPassword`, update the Bot registration client secret.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
+    - For `MicrosoftAppTenantId`, update the tenant ID.
+
 1. Save the file.
 
-# [C#](#tab/cs1)
+You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling tokens.
 
-Update `appsettings.json` (or use environment variables in `launchSettings.json`):
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+development+environment+variables&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-- `Teams:ClientID` &ndash; The Application (client) ID from your Microsoft Entra app registration.
-- `Teams:ClientSecret` &ndash; The client secret you created.
-- `Teams:TenantId` &ndash; Your Directory (tenant) ID.
-- `Teams:ConnectionName` &ndash; The name of the OAuth connection you configured in Azure Bot Service.
+## Add code to request a token
 
-# [TypeScript](#tab/ts1)
+The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
-Update the `.env` file:
+>[!NOTE]
+> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
-- `CLIENT_ID` &ndash; The Application (client) ID from your Microsoft Entra app registration.
-- `CLIENT_SECRET` &ndash; The client secret you created.
-- `TENANT_ID` &ndash; Your Directory (tenant) ID.
-- `CONNECTION_NAME` &ndash; The name of the OAuth connection you configured in Azure Bot Service.
+To update your app's code:
 
-# [Python](#tab/py1)
+1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-Update the `.env` file:
+   # [C#](#tab/cs1)
 
-- `CLIENT_ID` &ndash; The Application (client) ID from your Microsoft Entra app registration.
-- `CLIENT_SECRET` &ndash; The client secret you created.
-- `TENANT_ID` &ndash; Your Directory (tenant) ID.
-- `CONNECTION_NAME` &ndash; The name of the OAuth connection you configured in Azure Bot Service.
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
----
+    ```csharp
+    base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
+    ```
 
-You've now configured the required environment variables for your message extension app and SSO. Next, configure the OAuth connection in your app code.
+   # [JavaScript](#tab/js1)
 
-## Configure the OAuth connection
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-The Teams SDK provides built-in OAuth support. You configure the OAuth connection name when creating the `App` object, and the SDK automatically handles token exchange and SSO for all handler routes.
+    ```JavaScript
+       const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
+       const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+       adapter.use(tokenExchangeMiddleware);
+    ```
 
-# [C#](#tab/cs2)
+    ---
+
+    >[!NOTE]
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest&preserve-view=true#remarks).
+
+1. Use the following code snippet for requesting a token.
+
+   # [C#](#tab/cs2)
+
+   After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
    ```csharp
        public class AdapterWithErrorHandler : CloudAdapter
@@ -107,7 +122,7 @@ The Teams SDK provides built-in OAuth support. You configure the OAuth connectio
        }
    ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
     After you add the code to `index.js`, the following code must appear:
 
@@ -225,141 +240,116 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/tabs/how-to/authentication/tab-sso-troubleshooting.md).
 
-## Implement message extension handlers with authentication
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Consent+dialog+for+getting+access+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23consent-dialog-for-getting-access-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-With the Teams SDK, you implement message extension handlers using event-driven patterns. The SDK provides the auth context (such as `signin`, `isSignedIn`, and `userGraph`) directly in the handler, so there's no need for manual token exchange or middleware.
+## Add code to receive the token
 
-### Search command handler
+The response with the token is sent through an invoke activity with the same schema as other invoke activities that the bots receive today. The only difference is the invoke name,
+sign in/tokenExchange, and the **value** field. The **value** field contains the **Id**, a string of the initial request to get the token and the **token** field, a string value including the token.
 
-The following code shows how to handle a search query in a message extension, with SSO authentication to access Microsoft Graph on behalf of the user:
+Use the following code snippet example to invoke response:
 
 # [C#](#tab/cs3)
 
-In C#, register an inline handler on the `teams` pipeline using `teams.OnQuery(...)`. The context provides the activity and cancellation token:
-
 ```csharp
-using Microsoft.Teams.Api.MessageExtensions;
-using Microsoft.Teams.Cards;
-using Microsoft.Teams.Api.Cards;
-
-// ...
-
-teams.OnQuery(async (ctx) =>
-{
-    var commandId = ctx.Activity.Value.CommandId;
-    var query = ctx.Activity.Value.Parameters?
-        .FirstOrDefault()?.Value?.ToString() ?? "";
-
-    Console.WriteLine($"Query: command={commandId}, query={query}");
-
-    if (commandId == "searchQuery")
-    {
-        return CreateSearchResults(query);
-    }
-
-    return new Response
-    {
-        ComposeExtension = new Result
+public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
+            : base(nameof(MainDialog), configuration["ConnectionName"])
         {
-            Type = ResultType.Result,
-            AttachmentLayout = Microsoft.Teams.Api.Attachment.Layout.List,
-            Attachments = new List<Microsoft.Teams.Api.MessageExtensions.Attachment>()
+            AddDialog(new OAuthPrompt(
+                nameof(OAuthPrompt),
+                new OAuthPromptSettings
+                {
+                    ConnectionName = ConnectionName,
+                    Text = "Please Sign In",
+                    Title = "Sign In",
+                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                    EndOnInvalidMessage = true
+                }));
+
+            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
+
+            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
+            {
+                PromptStepAsync,
+                LoginStepAsync,
+            }));
+
+            // The initial child Dialog to run.
+            InitialDialogId = nameof(WaterfallDialog);
         }
-    };
-});
+
+
+private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
+        }
+
+private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            
+            var tokenResponse = (TokenResponse)stepContext.Result;
+            if (tokenResponse?.Token != null)
+            {
+                var token = tokenResponse.Token;
+
+                // On successful login, the token contains sign in token.
+            }
+            else 
+            {
+                await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
+            }            
+
+            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
+        }
 ```
 
-# [TypeScript](#tab/ts3)
+# [JavaScript](#tab/js3)
 
-```typescript
-import { cardAttachment } from '@microsoft/teams.api';
-import { App } from '@microsoft/teams.apps';
-import { AdaptiveCard, TextBlock } from '@microsoft/teams.cards';
+   ```JavaScript
+    class MainDialog {
+      
+            this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
+                        connectionName: process.env.connectionName,
+                        text: 'Please Sign In',
+                        title: 'Sign In',
+                        timeout: 300000
+                    }));
+    
+            this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
+    
+            this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
+                        this.promptStep.bind(this),
+                        this.loginStep.bind(this),
+                    ]));
+    
+            this.initialDialogId = MAIN_WATERFALL_DIALOG;
+    
+        }
+    
+    async promptStep(stepContext) {
+            try {
+                return await stepContext.beginDialog(OAUTH_PROMPT);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+    
+    async loginStep(stepContext) {
+            // Get the token from the previous step. Note that we could also have gotten the
+            // token directly from the prompt itself. There is an example of this in the next method.
+            const tokenResponse = stepContext.result;
+            if (!tokenResponse || !tokenResponse.token) {
+                await stepContext.context.sendActivity('Login was not successful please try again.');
+            } else {
+                const token = tokenResponse.token;
+                // On successful login, the token contains sign in token.
+            }
+            return await stepContext.endDialog();
+        }
+   ```
 
-app.on('message.ext.query', async ({ activity, signin, isSignedIn }) => {
-  // Trigger sign-in if user is not authenticated
-  if (!isSignedIn) {
-    await signin();
-    return { status: 200 };
-  }
-
-  const { commandId } = activity.value;
-  const searchQuery = activity.value.parameters?.[0]?.value ?? '';
-
-  if (commandId === 'searchQuery') {
-    const cards = await createSearchResults(searchQuery);
-    const attachments = cards.map(({ card, thumbnail }) => ({
-      ...cardAttachment('adaptive', card),
-      preview: cardAttachment('thumbnail', thumbnail),
-    }));
-
-    return {
-      composeExtension: {
-        type: 'result',
-        attachmentLayout: 'list',
-        attachments,
-      },
-    };
-  }
-
-  return { status: 400 };
-});
-```
-
-# [Python](#tab/py3)
-
-```python
-from microsoft_teams.api import (
-    AdaptiveCardAttachment,
-    MessageExtensionQueryInvokeActivity,
-    ThumbnailCardAttachment,
-    card_attachment,
-    AttachmentLayout,
-    MessagingExtensionAttachment,
-    MessagingExtensionInvokeResponse,
-    MessagingExtensionResult,
-    MessagingExtensionResultType,
-    InvokeResponse,
-)
-from microsoft_teams.apps import ActivityContext
-
-@app.on_message_ext_query
-async def handle_message_ext_query(
-    ctx: ActivityContext[MessageExtensionQueryInvokeActivity],
-):
-    # Trigger sign-in if user is not authenticated
-    if not ctx.is_signed_in:
-        await ctx.sign_in()
-        return InvokeResponse[MessagingExtensionInvokeResponse](status=200)
-
-    command_id = ctx.activity.value.command_id
-    search_query = ""
-    if ctx.activity.value.parameters and len(ctx.activity.value.parameters) > 0:
-        search_query = ctx.activity.value.parameters[0].value or ""
-
-    if command_id == "searchQuery":
-        cards = await create_search_results(search_query)
-        attachments = []
-        for card_data in cards:
-            main = card_attachment(AdaptiveCardAttachment(content=card_data["card"]))
-            preview = card_attachment(ThumbnailCardAttachment(content=card_data["thumbnail"]))
-            attachments.append(
-                MessagingExtensionAttachment(
-                    content_type=main.content_type, content=main.content, preview=preview
-                )
-            )
-
-        result = MessagingExtensionResult(
-            type=MessagingExtensionResultType.RESULT,
-            attachment_layout=AttachmentLayout.LIST,
-            attachments=attachments,
-        )
-        return MessagingExtensionInvokeResponse(compose_extension=result)
-
-    return InvokeResponse[MessagingExtensionInvokeResponse](status=400)
-```
-
----
+   ---
 
 > [!NOTE]
 > The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
@@ -435,86 +425,172 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 # [C#](#tab/cs4)
 
 ```csharp
-teams.OnSignInFailure(async (_, @event) =>
-{
-    Console.WriteLine($"Sign-in failed: {@event.Error.Code} - {@event.Error.Message}");
-    await @event.Context.Send("Sign-in failed.");
-});
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+     {
+         JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+         if (valueObject["authentication"] != null)
+         {
+             JObject authenticationObject = JObject.FromObject(valueObject["authentication"]);
+             if (authenticationObject["token"] != null)
+             {
+                 //If the token is NOT exchangeable, then return 412 to require user consent.
+                 if (await TokenIsExchangeable(turnContext, cancellationToken))
+                 {
+                     return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+                 }
+                 else
+                 {
+                     var response = new InvokeResponse();
+                     response.Status = 412;
+                     return response;
+                 }
+             }
+         }
+         return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+     }
+     private async Task<bool> TokenIsExchangeable(ITurnContext turnContext, CancellationToken cancellationToken)
+     {
+         TokenResponse tokenExchangeResponse = null;
+         try
+         {
+             JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+             var tokenExchangeRequest =
+             ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
+             var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+             tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                             turnContext.Activity.From.Id,
+                              _connectionName,
+                              turnContext.Activity.ChannelId,
+                              new TokenExchangeRequest
+              {
+                  Token = tokenExchangeRequest.Token,
+              },
+               cancellationToken).ConfigureAwait(false);
+         }
+ #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
+         catch
+ #pragma warning restore CA1031 //Do not catch general exception types
+         {
+             //ignore exceptions.
+             //if token exchange failed for any reason, tokenExchangeResponse above remains null, and a failure invoke response is sent to the caller.
+             //This ensures the caller knows that the invoke has failed.
+         }
+         if (tokenExchangeResponse == null || string.IsNullOrEmpty(tokenExchangeResponse.Token))
+         {
+             return false;
+         }
+         return true;
+     }
 ```
 
-# [TypeScript](#tab/ts6)
+# [JavaScript](#tab/js4)
 
-```typescript
-app.on('signin.failure', async ({ activity, send }) => {
-  const { code, message } = activity.value;
-  console.log(`Sign-in failed: ${code} - ${message}`);
-  await send('Sign-in failed.');
-});
-```
+```JavaScript
 
-# [Python](#tab/py6)
+async onInvokeActivity(context) {
+    console.log('onInvoke, ' + context.activity.name);
+    const valueObj = context.activity.value;
+    if (valueObj.authentication) {
+        const authObj = valueObj.authentication;
+        if (authObj.token) {
+            // If the token is NOT exchangeable, then do NOT deduplicate requests.
+            if (await this.tokenIsExchangeable(context)) {
+                return await super.onInvokeActivity(context);
+            } else {
+                const response = {
+                    status: 412
+                };
+                return response;
+            }
+        }
+    }
+    return await super.onInvokeActivity(context);
+}
 
-```python
-@app.on_signin_failure()
-async def handle_signin_failure(ctx):
-    failure = ctx.activity.value
-    print(f"Sign-in failed: {failure.code} - {failure.message}")
-    await ctx.send("Sign-in failed.")
+async tokenIsExchangeable(context) {
+    let tokenExchangeResponse = null;
+    try {
+        const valueObj = context.activity.value;
+        const tokenExchangeRequest = valueObj.authentication;
+        tokenExchangeResponse = await context.adapter.exchangeToken(context,
+        process.env.connectionName,
+        context.activity.from.id,
+            { token: tokenExchangeRequest.token });
+    } catch (err) {
+        console.log('tokenExchange error: ' + err);
+        // Ignore Exceptions
+        // If token exchange failed for any reason, tokenExchangeResponse above stays null , and hence we send back a failure invoke response to the caller.
+    }
+    if (!tokenExchangeResponse || !tokenExchangeResponse.token) {
+        return false;
+    }
+    return true;
+}
 ```
 
 ---
 
-## Handle sign out
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+token+to+Bot+Framework+Token+Store&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-Use the following code to sign out the user and clear the token from the User Token Service cache:
+## Handle app user log out
 
-# [C#](#tab/cs7)
+Use the following code snippet to handle the access token in case the app user logs out:
+
+# [C#](#tab/cs5)
 
 ```csharp
-teams.OnMessage("signout", async context =>
-{
-    if (!context.IsSignedIn)
-    {
-        await context.Send("You are not signed in.");
-        return;
+    private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
+    CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (innerDc.Context.Activity.Type == ActivityTypes.Message)
+            {
+                var text = innerDc.Context.Activity.Text.ToLowerInvariant();
+
+                // Allow logout anywhere in the command.
+                if (text.IndexOf("logout") >= 0)
+                {
+                    // The UserTokenClient encapsulates the authentication processes.
+                    var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
+                    await userTokenClient.SignOutUserAsync(
+    innerDc.Context.Activity.From.Id, 
+    ConnectionName, 
+    innerDc.Context.Activity.ChannelId, 
+    cancellationToken
+    ).ConfigureAwait(false);
+
+                    await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
+                    return await innerDc.CancelAllDialogsAsync(cancellationToken);
+                }
+            }
+
+            return null;
+        }
+```
+
+# [JavaScript](#tab/js5)
+
+```JavaScript
+    async interrupt(innerDc) {
+        if (innerDc.context.activity.type === ActivityTypes.Message) {
+            const text = innerDc.context.activity.text.toLowerCase();
+            if (text === 'logout') {
+                const userTokenClient = innerDc.context.turnState.get(innerDc.context.adapter.UserTokenClientKey);
+
+                const { activity } = innerDc.context;
+                await userTokenClient.signOutUser(activity.from.id, this.connectionName, activity.channelId);
+
+                await innerDc.context.sendActivity('You have been signed out.');
+                return await innerDc.cancelAllDialogs();
+            }
+        }
     }
-
-    await context.SignOut();
-    await context.Send("You have been signed out.");
-});
-```
-
-# [TypeScript](#tab/ts7)
-
-```typescript
-app.message('/signout', async ({ send, signout, isSignedIn }) => {
-  if (!isSignedIn) {
-    await send('You are not signed in.');
-    return;
-  }
-
-  await signout();
-  await send('You have been signed out.');
-});
-```
-
-# [Python](#tab/py7)
-
-```python
-from microsoft_teams.api import MessageActivity
-from microsoft_teams.apps import ActivityContext
-
-@app.on_message_pattern("signout")
-async def handle_signout(ctx: ActivityContext[MessageActivity]):
-    if not ctx.is_signed_in:
-        await ctx.send("You are not signed in.")
-        return
-
-    await ctx.sign_out()
-    await ctx.send("You have been signed out.")
 ```
 
 ---
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+app+user+log+out&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23handle-app-user-log-out&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Code sample
 
