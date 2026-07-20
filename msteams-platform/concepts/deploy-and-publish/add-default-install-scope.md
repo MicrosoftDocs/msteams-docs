@@ -113,6 +113,16 @@ If an app is configured with shared scopes along with a default install scope, h
 </details>
 </br>
 
+### Installation context and app experience
+
+App installation context and app open experience are related but not identical:
+
+* Installation determines where the app is available (personal, team, chat, or meeting).
+* Open experience depends on the capabilities declared in the app manifest, such as tab or bot.
+* An app can be installed to enable notification delivery even when it doesn't provide an interactive surface that opens in Teams for that scope.
+
+This separation is expected behavior in Teams app architecture. For activity feed UX guidance, see [Designing activity feed notifications](../design/activity-feed-notifications.md).
+
 ## Configure the default capability for shared scopes
 
 Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
@@ -325,7 +335,7 @@ To ensure that IT admins perform the relevant tasks, developers can block an app
 
 :::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="Screenshot shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
 
-The admins can do their due diligence about your app and they can read the [app documentation that you provide]() before they allow their users to use your app. For example, the admins can purchase the required licenses and distribute the licenses before allowing users to use the app. To allow the app with **Blocked by publisher** status, an admin can select **Allow** in the **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in Teams admin center.
+The admins can do their due diligence about your app and they can read the [app documentation that you provide](/microsoftteams/manage-apps#developer-provided-agent-and-app-information-support-and-documentation) before they allow their users to use your app. For example, the admins can purchase the required licenses and distribute the licenses before allowing users to use the app. To allow the app with **Blocked by publisher** status, an admin can select **Allow** in the **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in Teams admin center.
 
 :::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="Screenshot shows the Allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 

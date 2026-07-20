@@ -4,7 +4,7 @@ author: nickwalk
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
 ms.author: nickwalk
-ms.date: 06/26/2026
+ms.date: 06/23/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -76,8 +76,8 @@ The following code provides an example of search-based for message extensions:
 
 # [.NET](#tab/dotnet)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=csharp)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
@@ -128,8 +128,7 @@ teams.OnQuery(async (ctx) =>
 
 # [TypeScript](#tab/typescript)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/in-depth-guides/message-extensions/search-commands?pivots=typescript)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```TypeScript
 app.on('message.ext.query', async ({ activity }) => { 
