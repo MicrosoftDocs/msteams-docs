@@ -5,7 +5,9 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.date: 06/23/2026
+zone_pivot_groups: teams-sdk-languages
 ---
+
 # Channel and group chat conversations with a bot
 
 To enable users to install a bot in a team or group chat, add the `teams` or `groupchat` scope. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
@@ -21,6 +23,59 @@ By default, bots in group chats and channels only receive messages when they're 
 
 In group chats and channels, design your bot for collaborative conversations with clear value, concise responses, and minimal noise. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
+## Threaded conversations
+
+::: zone pivot="teams-sdk-csharp"
+
+In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `Send()` to send a message in the same thread without quoting, or `Reply()` to send with a visual quote of the inbound message.
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    // Send in the same thread, no quote
+    await context.Send("Acknowledged", cancellationToken);
+
+    // Send in the same thread with a visual quote of the inbound message
+    await context.Reply("Got it!", cancellationToken);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
+
+```typescript
+app.on('message', async ({ send, reply }) => {
+  // Send in the same thread, no quote
+  await send('Acknowledged');
+
+  // Send in the same thread with a visual quote of the inbound message
+  await reply('Got it!');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Send in the same thread, no quote
+    await ctx.send("Acknowledged")
+
+    # Send in the same thread with a visual quote of the inbound message
+    await ctx.reply("Got it!")
+```
+
+::: zone-end
+
+For sending messages into a thread proactively, see [Proactive messages](send-proactive-messages.md).
+
 ## Send a message on installation
 
 When your bot is first added to a group or team, you can send an introduction message by using the `install.add` lifecycle route. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
@@ -31,36 +86,37 @@ You can also store the `conversationId` during installation to enable [proactive
 
 The following code shows an example of sending welcome messages on installation:
 
-# [C#](#tab/dotnet2)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnInstall(async context => 
 { 
     await context.Send("Hello! I'm your bot. Here's what I can do..."); 
 }); 
-
 ```
 
-# [TypeScript](#tab/typescript2)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('install.add', async ({ send }) => 
 { 
     await send('Hello! I\'m your bot. Here\'s what I can do...'); 
 }); 
-
 ```
 
-# [Python](#tab/python2)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_install_add 
 async def handle_install_add(ctx: ActivityContext[InstalledActivity]): 
     await ctx.send("Hello! I'm your bot. Here's what I can do...") 
-
 ```
 
-* * *
+::: zone-end
 
 Don't send proactive welcome messages to users individually when the bot is installed in a team or group chat. If you send a welcome message, post it in the installed conversation and mention the person who added the bot.
 
@@ -88,7 +144,7 @@ You can retrieve all mentions in the message by filtering the `entities` array i
 
 The following code shows an example of retrieving mentions:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnMessage(async context =>
@@ -107,10 +163,11 @@ app.OnMessage(async context =>
         await context.Send("Aw, no one was mentioned.");
     }
 });
-
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ activity, send }) => {
@@ -123,52 +180,11 @@ app.on('message', async ({ activity, send }) => {
         await send('Aw, no one was mentioned.');
     }
 });
-
 ```
 
-# [JSON](#tab/json)
+::: zone-end
 
-```json
-{
-    "type": "message",
-    "text": "Hey <at>Pranav Smith</at> check out this message",
-    "timestamp": "2017-10-29T00:51:05.9908157Z",
-    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
-    "serviceUrl": "https://skype.botframework.com",
-    "channelId": "msteams",
-    "from": {
-        "id": "29:9e52142b-5e5e-4d7b-bb3e-e82dcf620000",
-        "name": "Jane Smith"
-    },
-    "conversation": {
-        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
-    },
-    "recipient": {
-        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
-        "name": "stlrgload100"
-    },
-    "attachments": [
-        {
-            "contentType": "image/png",
-            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
-            "name": "Bender_Rodriguez.png"
-        }
-    ],
-    "entities": [
-        {
-            "type":"mention",
-            "mentioned":{
-                "id":"29:08q2j2o3jc09au90eucae",
-                "name":"Pranav Smith"
-            },
-            "text": "<at>@Pranav Smith</at>"
-        }
-    ],
-    "replyToId": "3UP4UTkzUk1zzeyW"
-}
-```
-
-# [Python](#tab/python)
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_message
@@ -180,43 +196,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         await ctx.send(f"Hello {first_mention.name}")
     else:
         await ctx.send("Aw, no one was mentioned.")
-
 ```
 
-* * *
-
-### Add mentions to your messages
-
-Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
-
-The following code shows an example of adding mentions to your messages:
-
-# [C#](#tab/dotnet1)
-
-```csharp
-app.OnMessage(async context =>
-{
-    var user = context.Activity.From;
-    var message = new MessageActivity($"Hello <at>{user.Name}</at>!").AddMention(user);
-    await context.Send(message);
-});
-
-```
-
-# [TypeScript](#tab/typescript1)
-
-```typescript
-app.on('message', async ({ send, activity }) => {
-    const user = activity.from;
-    const message = new MessageActivity(`Hello <at>${user.name}</at>!`).addMention(user);
-    await send(message);
-});
-
-```
-
-# [JSON](#tab/json1)
-
-The `text` field in the mention entity must match exactly the mention markup in the message `text` field. If it doesn't match, the mention is ignored.
+::: zone-end
 
 ```json
 {
@@ -258,16 +240,86 @@ The `text` field in the mention entity must match exactly the mention markup in 
 }
 ```
 
-# [Python](#tab/python1)
+### Add mentions to your messages
+
+Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
+
+The following code shows an example of adding mentions to your messages:
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+app.OnMessage(async context =>
+{
+    var user = context.Activity.From;
+    var message = new MessageActivity($"Hello <at>{user.Name}</at>!").AddMention(user);
+    await context.Send(message);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('message', async ({ send, activity }) => {
+    const user = activity.from;
+    const message = new MessageActivity(`Hello <at>${user.name}</at>!`).addMention(user);
+    await send(message);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_message 
 async def handle_message(ctx: ActivityContext[MessageActivity]): 
     await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=ctx.activity.from_))
-
 ```
 
-* * *
+::: zone-end
+
+```json
+{
+    "type": "message",
+    "text": "Hey <at>Pranav Smith</at> check out this message",
+    "timestamp": "2017-10-29T00:51:05.9908157Z",
+    "localTimestamp": "2017-10-28T17:51:05.9908157-07:00",
+    "serviceUrl": "https://skype.botframework.com",
+    "channelId": "msteams",
+    "from": {
+        "id": "29:9e52142b-5e5e-4d7b-bb3e-e82dcf620000",
+        "name": "Jane Smith"
+    },
+    "conversation": {
+        "id": "19:aebd0ad4d6ab42c8b9ed19c251c2fc37@thread.skype;messageid=1481567603816"
+    },
+    "recipient": {
+        "id": "8:orgid:6aebbad0-e5a5-424a-834a-20fb051f3c1a",
+        "name": "stlrgload100"
+    },
+    "attachments": [
+        {
+            "contentType": "image/png",
+            "contentUrl": "https://upload.wikimedia.org/wikipedia/en/a/a6/Bender_Rodriguez.png",
+            "name": "Bender_Rodriguez.png"
+        }
+    ],
+    "entities": [
+        {
+            "type":"mention",
+            "mentioned":{
+                "id":"29:08q2j2o3jc09au90eucae",
+                "name":"Pranav Smith"
+            },
+            "text": "<at>@Pranav Smith</at>"
+        }
+    ],
+    "replyToId": "3UP4UTkzUk1zzeyW"
+}
+```
 
 You can also mention users by their Microsoft Entra Object ID or User Principal Name (UPN), and mention tags in channel messages.
 
@@ -277,7 +329,7 @@ You can also mention users by their Microsoft Entra Object ID or User Principal 
 
 The following code snippet shows an example of mentioning users with Entra Object ID and UPN using the Teams SDK:
 
-# [C#](#tab/dotnet3)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnMessage(async context =>
@@ -286,10 +338,11 @@ app.OnMessage(async context =>
     var user = new Account { Id = "Adele@microsoft.com", Name = "Adele" };
     await context.Send(new MessageActivity("Hello!").AddMention(user));
 });
-
 ```
 
-# [TypeScript](#tab/typescript3)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ send }) => {
@@ -297,10 +350,23 @@ app.on('message', async ({ send }) => {
     const user = { id: 'Adele@microsoft.com', name: 'Adele' };
     await send(new MessageActivity('Hello!').addMention(user));
 });
-
 ```
 
-# [JSON](#tab/json3)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+from microsoft_teams.api import Account, MessageActivityInput
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Mention a user by their User Principal Name (UPN)
+    user = Account(id="Adele@microsoft.com", name="Adele")
+    await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=user))
+```
+
+::: zone-end
 
 ```json
 {
@@ -313,21 +379,6 @@ app.on('message', async ({ send }) => {
 }
 ```
 
-# [Python](#tab/python3)
-
-```python
-from microsoft_teams.api import Account, MessageActivityInput
-
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # Mention a user by their User Principal Name (UPN)
-    user = Account(id="Adele@microsoft.com", name="Adele")
-    await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=user))
-
-```
-
-* * *
-
 #### Tag mention
 
 Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
@@ -339,7 +390,7 @@ Your bot can mention tags in text messages and Adaptive Cards posted in channels
 
 To mention a tag, include a mention entity with `"type": "tag"` in your message. The `id` field must be the base64-encoded tag ID from the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
 
-# [C#](#tab/dotnet4)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnMessage(async context =>
@@ -348,10 +399,11 @@ app.OnMessage(async context =>
     var tag = new Account { Id = "<base64-encoded-tag-id>", Name = "Test Tag" };
     await context.Send(new MessageActivity("Hello!").AddMention(tag));
 });
-
 ```
 
-# [TypeScript](#tab/typescript4)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ send }) => {
@@ -359,10 +411,11 @@ app.on('message', async ({ send }) => {
     const tag = { id: '<base64-encoded-tag-id>', name: 'Test Tag' };
     await send(new MessageActivity('Hello!').addMention(tag));
 });
-
 ```
 
-# [Python](#tab/python4)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_message
@@ -370,10 +423,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     # Mention a tag using the tag's Graph API ID
     tag = Account(id="<base64-encoded-tag-id>", name="Test Tag")
     await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=tag))
-
 ```
 
-* * *
+::: zone-end
 
 > [!NOTE]
 > When mentioning tags, the underlying wire format requires the `"type": "tag"` property in the `mentioned` object of the entity. If the `"type": "tag"` property isn't included, the bot treats the mention as a user mention.

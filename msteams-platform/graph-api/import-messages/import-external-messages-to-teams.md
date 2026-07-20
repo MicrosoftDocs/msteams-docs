@@ -2,10 +2,10 @@
 title: Import third-party platform messages to Teams using Microsoft Graph
 description: Learn how to use Microsoft Graph to import messages such as message history and data from any third-party platform to Teams.
 ms.localizationpriority: high
-author: "vikasalmal"
+ms.author: nickwalk
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 06/03/2026
+ms.date: 06/18/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -434,7 +434,7 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Graph chat migration | This sample app can be used to migrate historical messages from external platforms to Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-chat-migration/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-chat-migration/csharp) | NA |
+| Graph chat migration | This sample app can be used to migrate historical messages from external platforms to Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-chat-migration/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/graph-chat-migration/csharp) | NA |
 
 ## See also
 
