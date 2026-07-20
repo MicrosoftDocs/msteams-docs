@@ -965,8 +965,8 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-bot-message).           | All   |
-| messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-bot-message). | All |
+| messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-agent-message).           | All   |
+| messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-agent-message). | All |
 
 ### Reactions added to agent message
 

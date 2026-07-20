@@ -88,7 +88,7 @@ The following table provides a list of styles, which are supported on desktop, i
 AI labels, citations, feedback buttons, and sensitivity labels in your agent’s messages improve user engagement and foster transparency and trust.
 
 - [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
-- [Citations](format-ai-agent-messages.md#citations) enables users to refer to the source of the agent's message through in-text citations and references.
+- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the agent's message through in-text citations and references.
 - [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the agent's messages.
 - [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the agent's message.
 

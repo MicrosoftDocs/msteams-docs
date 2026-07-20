@@ -6,12 +6,13 @@
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
-- name: "Quickstart: Create and chat with an agent"
-  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+
 - name: Build conversational agents for Teams
   expanded: true
   items:
+  - name: "Quickstart: Create and chat with an agent"
+    href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+    displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
   - name: Agents in Teams
     href: agents-in-teams/overview.md
   - name: Agent basics
@@ -19,53 +20,54 @@
     displayName: scopes, handler, activity, 
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
-    displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
-  - name: Use emoji reactions
-    href: agents-in-teams/agent-reactions.md
-    displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-  - name: Teams emoji reactions reference
-    href: agents-in-teams/teams-reactions-reference.md
-    displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-  - name: Highlight agent capabilities with prompt starters
-    href: bots/how-to/conversations/prompt-starters.md
-    displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
-  - name: Dynamically guide users with suggested actions
-    href: bots/how-to/conversations/suggested-actions.md
-    displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
-  - name: Send and receive targeted messages
-    href: agents-in-teams/targeted-messages.md
-    displayName: private messages, ephemeral messages, command, notification, response
-  - name: Expose slash commands
-    href: agents-in-teams/agent-slash-commands.md
-    displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
-  - name: Extend agents to Microsoft 365 hubs
-    href: /microsoft-365/copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: AI bot, Teams AI library, Teams SDK, custom agent
-  - name: Stream messages
-    href: bots/streaming-ux.md
-    displayName: Thinking, informative
-  - name: Enhance AI-generated agent messages
-    href: bots/how-to/bot-messages-ai-generated-content.md
-    displayName: AI label, citations, feedback buttons, sensitivity label
-  - name: Build conversational capability
-    href: bots/build-conversational-capability.md
-    displayName: chat, message
-  - name: Receive all chat messages
-    href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
-  - name: Channel and group chat conversations
-    href: bots/how-to/conversations/channel-and-group-conversations.md
-    displayName: Teams conversational bots, mention, tag mention, user mention
+    displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+  - name: Chat messaging
+    items:
+    - name: Build conversational capability
+      href: bots/build-conversational-capability.md
+      displayName: chat, message
+    - name: Send proactive messages
+      href: bots/how-to/conversations/send-proactive-messages.md
+    - name: Stream messages
+      href: bots/streaming-ux.md
+      displayName: Thinking, informative
+    - name: Receive all chat messages
+      href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
+    - name: Channel and group chat conversations
+      href: bots/how-to/conversations/channel-and-group-conversations.md
+      displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Format agent messages
+      href: bots/how-to/format-your-bot-messages.md
+      displayName: cross-platform support 
+  - name: Rich conversational features
+    items:
+    - name: Use emoji reactions
+      href: agents-in-teams/agent-reactions.md
+      displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Teams emoji reactions reference
+      href: agents-in-teams/teams-reactions-reference.md
+      displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Enhance AI-generated agent messages
+      href: bots/how-to/bot-messages-ai-generated-content.md
+      displayName: AI label, citations, feedback buttons, sensitivity label
+    - name: Prompt starters
+      href: bots/how-to/conversations/prompt-starters.md
+      displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
+    - name: Suggested actions
+      href: bots/how-to/conversations/suggested-actions.md
+      displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+    - name: Targeted messages
+      href: agents-in-teams/targeted-messages.md
+      displayName: private messages, ephemeral messages, command, notification, response
+    - name: Agent slash commands
+      href: agents-in-teams/agent-slash-commands.md
+      displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
   - name: Conversation events
     href: bots/how-to/conversations/subscribe-to-conversation-events.md 
     displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-  - name: Format agent messages
-    href: bots/how-to/format-your-bot-messages.md
-    displayName: cross-platform support 
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md  
     displayName: receive files using bot
-  - name: Send proactive messages
-    href: bots/how-to/conversations/send-proactive-messages.md
   - name: Get Teams-specific context
     href: bots/how-to/get-teams-context.md
     displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat

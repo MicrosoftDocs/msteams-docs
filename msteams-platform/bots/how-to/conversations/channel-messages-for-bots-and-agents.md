@@ -66,7 +66,7 @@ Developers can create more efficient and user-friendly conversational interfaces
 
 Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
 
-For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-bots-or-agents).
+For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-agents).
 
 ## Use RSC permissions to enhance AI agents in Teams
 

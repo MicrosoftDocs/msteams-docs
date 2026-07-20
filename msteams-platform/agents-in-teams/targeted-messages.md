@@ -309,7 +309,7 @@ Targeted message operations can return `400 Bad argument` when the payload is in
 
 In prompt preview scenarios, `400 INVALID_TARGETED_MESSAGE_ID` means the targeted message ID is invalid. Verify that the ID is correct. `404 TARGETED_MESSAGE_EXPIRED_OR_DELETED` means the referenced message was deleted or expired after 24 hours. In that case, send a new targeted message or wait for user input, based on business logic.
 
-More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
+More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-agent-conversational-apis).
 
 ## Related content
 

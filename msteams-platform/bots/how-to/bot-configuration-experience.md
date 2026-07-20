@@ -41,7 +41,7 @@ To build the agent configuration experience, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
 
-1. [Configure your bot](#configure-your-bot)
+1. [Configure your bot](#configure-your-agent)
 
 ### Update app manifest
 
