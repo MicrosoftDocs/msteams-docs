@@ -10,17 +10,19 @@
 - name: Build conversational agents for Teams
   expanded: true
   items:
-  - name: "Quickstart: Create and chat with an agent"
+  - name: "Quickstart: Create an agent"
     href: agents-in-teams/quickstart-create-agent-teams-sdk.md
     displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
-  - name: Agents in Teams
-    href: agents-in-teams/overview.md
-  - name: Agent basics
-    href: bots/bot-concepts.md
-    displayName: scopes, handler, activity, 
-  - name: Agents user experience
-    href: bots/how-to/teams-conversational-ai/ai-ux.md
-    displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+  - name: Teams agents concepts
+    items:
+    - name: Agents in Teams
+      href: agents-in-teams/overview.md
+    - name: Agent basics
+      href: bots/bot-concepts.md
+      displayName: scopes, handler, activity, 
+    - name: Agents user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
   - name: Chat messaging
     items:
     - name: Build conversational capability
@@ -41,7 +43,7 @@
       displayName: cross-platform support 
   - name: Rich conversational features
     items:
-    - name: Use emoji reactions
+    - name: Emoji reactions
       href: agents-in-teams/agent-reactions.md
       displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
     - name: Teams emoji reactions reference

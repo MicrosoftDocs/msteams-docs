@@ -73,8 +73,6 @@ Ensure that you understand how different channels determine app functionality, m
 
     Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps shouldn't include private channel data in team-wide reports unless permissions are clearly defined.
 
-[Back to Top](#apps-for-shared-and-private-channels)
-
 ## Enable apps for shared and private channels
 
 Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, decide the approach:
@@ -159,8 +157,6 @@ You can manage indirect membership in channels by using the following Microsoft 
 
     >[!NOTE]
     >The `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
-
-[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Get app notifications for Microsoft Graph membership changes
 
@@ -319,8 +315,6 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
 
 1. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
 
-[Back to Top](#apps-for-shared-and-private-channels)
-
 ## Understand app permissions in shared channels
 
 You can collaborate with external members outside of your organization by using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
@@ -445,8 +439,6 @@ Use the Microsoft Graph invite API to access the document library of the SharePo
 > [!NOTE]
 > For any requirements on Mailbox or Calendar scenarios, see [Feature request and general help](feedback.md).
 
-[Back to Top](#apps-for-shared-and-private-channels)
-
 ### Access SharePoint storage for channel files by using Graph API
 
 To access a channel’s SharePoint files root, use the following API:
@@ -509,8 +501,6 @@ Use `getContext()` to retrieve channel context. Compare `user.tenant.id` with `c
 
 1. Request token from home tenant
 Call [getAuthToken()](tabs\how-to\authentication\tab-sso-code.md) with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
-
-[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Test your app across channels
 
@@ -640,8 +630,6 @@ The message change notification failure happens when the tenant's sharing policy
 <br>
 &nbsp;
 </details>
-
-[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Code samples
 
