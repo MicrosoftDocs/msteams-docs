@@ -680,22 +680,22 @@
       - name: Micro-capabilities for website links
         href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
         displayName: App less link unfurling
-- name: Calls and meetings bots
-  items:
-  - name: Overview
-    href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-  - name: Real-time media calls and meetings
-    href: bots/calls-and-meetings/real-time-media-concepts.md
-    displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
-  - name: Register calls and meetings bot
-    href: bots/calls-and-meetings/registering-calling-bot.md
-    displayName: How Bot can create call, join meeting and transfer call
-  - name: Incoming call notifications
-    href: bots/calls-and-meetings/call-notifications.md
-    displayName: Redirects for region affinity, GeoDNS resolution 
-  - name: Application-hosted media bots
-    href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-    displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+  - name: Calls and meetings bots
+    items:
+    - name: Overview
+      href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+    - name: Real-time media calls and meetings
+      href: bots/calls-and-meetings/real-time-media-concepts.md
+      displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+    - name: Register calls and meetings bot
+      href: bots/calls-and-meetings/registering-calling-bot.md
+      displayName: How Bot can create call, join meeting and transfer call
+    - name: Incoming call notifications
+      href: bots/calls-and-meetings/call-notifications.md
+      displayName: Redirects for region affinity, GeoDNS resolution 
+    - name: Application-hosted media bots
+      href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+      displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
   - name: Build apps for Teams meetings and calls
     items:
     - name: Apps for meetings and calls
