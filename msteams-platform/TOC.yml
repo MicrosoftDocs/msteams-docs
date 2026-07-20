@@ -13,6 +13,9 @@
   - name: "Quickstart: Create an agent"
     href: agents-in-teams/quickstart-create-agent-teams-sdk.md
     displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+  - name: Agents user experience
+    href: bots/how-to/teams-conversational-ai/ai-ux.md
+    displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
   - name: Teams agents concepts
     items:
     - name: Agents in Teams
@@ -20,9 +23,9 @@
     - name: Agent basics
       href: bots/bot-concepts.md
       displayName: scopes, handler, activity, 
-    - name: Agents user experience
-      href: bots/how-to/teams-conversational-ai/ai-ux.md
-      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+    - name: Shared and private channels
+      href: build-apps-for-shared-private-channels.md
+      displayName: shared channels, private channels
   - name: Chat messaging
     items:
     - name: Build conversational capability
@@ -64,23 +67,22 @@
     - name: Agent slash commands
       href: agents-in-teams/agent-slash-commands.md
       displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
-  - name: Conversation events
-    href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-    displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-  - name: Send and receive files
-    href: bots/how-to/bots-filesv4.md  
-    displayName: receive files using bot
-  - name: Get Teams-specific context
-    href: bots/how-to/get-teams-context.md
-    displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
-  - name: Create a configuration experience
-    href: bots/how-to/bot-configuration-experience.md
-  - name: Rate limits for agents
-    href: bots/how-to/rate-limit.md
-    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
-  - name: Shared and private channels
-    href: build-apps-for-shared-private-channels.md
-    displayName: shared channels, private channels
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md  
+      displayName: receive files using bot
+  - name: How-tos
+    items:
+    - name: Subscribe to conversation events
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+    - name: Get Teams-specific context
+      href: bots/how-to/get-teams-context.md
+      displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
+    - name: Create a configuration experience
+      href: bots/how-to/bot-configuration-experience.md
+    - name: Handle rate limits
+      href: bots/how-to/rate-limit.md
+      displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
 - name: Tools and SDKs
   items:
   - name: Overview
