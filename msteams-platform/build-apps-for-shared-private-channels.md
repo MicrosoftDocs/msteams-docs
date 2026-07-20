@@ -1,6 +1,6 @@
 ---
 title: Teams connects shared and private channels
-author: vikasalmal
+author: nickwalkmsft
 description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
 ms.author: nickwalk
 ms.localizationpriority: high
@@ -8,9 +8,9 @@ ms.topic: article
 ms.date: 06/18/2026
 ---
 
-# Apps for shared and private channels
+# Agents and tab apps for shared and private channels
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. By using this update, you can experience multiple benefits:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, agent and tab apps are supported in shared and private channels. By using this update, you can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
@@ -22,8 +22,8 @@ Shared and private channels in Microsoft Teams enable flexible collaboration wit
 
 | Channels | Access                          | Collaboration                                                                 | File storage location               |
 |----------|----------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
-| Standard | All team members by default     | Ideal for team-wide collaboration where bots or tabs must be available to everyone | Team’s SharePoint site              |
-| Private  | Only to selected team members   | Suitable for scenarios requiring restricted access to bots, connectors, or files     | Private channel’s SharePoint site   |
+| Standard | All team members by default     | Ideal for team-wide collaboration where agents or tabs must be available to everyone | Team’s SharePoint site              |
+| Private  | Only to selected team members   | Suitable for scenarios requiring restricted access to agents, connectors, or files     | Private channel’s SharePoint site   |
 | Shared   | Cross-team and cross-organization | Enables interaction with users outside the host team without requiring them to join the team | Shared channel’s SharePoint site    |
 
 ### Capabilities across channels
@@ -179,9 +179,9 @@ To receive both direct and indirect member update notifications, you must includ
 
 By using this subscription, apps can monitor membership changes in channels and their associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
-## Get app notifications for bot membership changes
+## Get app notifications for agent membership changes
 
-Your bot receives the `conversationUpdate` event when it gets notifications about membership updates for teams where it's added. To get both direct and indirect member update notifications, set up your bot with the following prerequisites:
+Your agent receives the `conversationUpdate` event when it gets notifications about membership updates for teams where it's added. To get both direct and indirect member update notifications, set up your agent with the following prerequisites:
 
 1. Update the app manifest to v1.25. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
 
@@ -204,29 +204,29 @@ Your bot receives the `conversationUpdate` event when it gets notifications abou
     }
     ```
 
-1. Add the bot in the shared channel
+1. Add the agent in the shared channel
 
-    To get member event notifications, install the bot at the Teams level and manually allow it in the shared channel.
+    To get member event notifications, install the agent at the Teams level and manually allow it in the shared channel.
 
-    This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
+    This process ensures the agent is active and authorized to receive notifications for both direct and indirect members.
 
 ### Manage member added and removed events
 
-A member added event is sent to your bot in the following scenarios:
+A member added event is sent to your agent in the following scenarios:
 
-1. When you install the bot and add it to a conversation.
-1. When you add a user to a conversation where the bot is installed.
+1. When you install the agent and add it to a conversation.
+1. When you add a user to a conversation where the agent is installed.
 
-Your bot receives a member removed event in the following scenarios:
+Your agent receives a member removed event in the following scenarios:
 
-1. When you uninstall the bot and remove it from a conversation.
-1. When you remove a user from a conversation where the bot is installed.
+1. When you uninstall the agent and remove it from a conversation.
+1. When you remove a user from a conversation where the agent is installed.
 
 For more information, see [Conversation events](/graph/teams-changenotifications-teammembership).
 
-If you install the bot in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method when you add a shared channel to another team.
+If you install the agent in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method when you add a shared channel to another team.
 
-When you add a new member to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, so the bot can respond accordingly.
+When you add a new member to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, so the agent can respond accordingly.
 
 The following Agents SDK examples apply to both direct and indirect member add and remove events.
 
@@ -328,9 +328,9 @@ You can collaborate with external members outside of your organization by using 
 > [!NOTE]
 > The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
 
-## Verify bot installation in a channel
+## Verify agent installation in a channel
 
-When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, only if the bot is installed in the team. There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
+When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, only if the agent is installed in the team. There’s no dedicated API to check if your app is part of a channel. Agents can detect when your app is added to a channel indirectly.
 
 Use this `channelMemberAdded` event to trigger app-specific logic such as:
 
@@ -414,9 +414,9 @@ Complete this step when your app stores content in the SharePoint site of the te
 1. Save host tenant ID of shared channel where tab is configured.
 1. Retrieve the host tenant ID by using `channel.ownerTenantId` in JSv2 or from the `getContext` call in JSv1.
 
-### [Bots](#tab/bots1)
+### [Agents](#tab/bots1)
 
-To retrieve the host tenant ID for any event or action payload received by a bot, use `turnContext.activity.conversation.tenantId`.
+To retrieve the host tenant ID for any event or action payload received by an agent, use `turnContext.activity.conversation.tenantId`.
 
 ---
 
@@ -531,10 +531,10 @@ Perform the following steps to validate the private channel support:
 1. Add the app to Team A (host team), and then to Channel X.
 1. Validate that the members from Team B:
 
-* Can see the tab and receive bot responses.
+* Can see the tab and receive agent responses.
 
 1. Unshare the channel from Team B and confirm:
-   * Your bot receives a `channelUnshared` event.
+   * Your agent receives a `channelUnshared` event.
    * Membership updates are handled correctly.
 
 ### [Shared channel (external tenant)](#tab/sharedchannel-externaltenant)
@@ -543,10 +543,10 @@ Use two tenants or collaborate with a colleague from another organization via Te
 
 Perform the following steps to validate the private channel support:
 
-1. Have an external user send a message to your bot and confirm that it responds. The bot must receive the message, provided it's added to the appropriate scope (personal chat, group chat, or channel).
+1. Have an external user send a message to your agent and confirm that it responds. The agent must receive the message, provided it's added to the appropriate scope (personal chat, group chat, or channel).
 1. Have the external user trigger a task module or tab interaction and verify that the authentication succeeds.
    * If using single sign-on authentication (SSO), ensure `getAuthToken` handles the user's home tenant ID correctly.
-1. Attempt to send a direct message from your bot to the external user:
+1. Attempt to send a direct message from your agent to the external user:
    * This functionality fails if the user is outside your tenant.
    * Confirm that in-channel communication still works.
 
@@ -594,7 +594,7 @@ The app might not appear if the manifest is missing required support, such as `s
 <details>
 <summary>Why am I getting a 403 error stating 'app not enabled in this channel' when calling channel APIs?</summary>
 
-This error occurs if the app is installed at the team level but isn't added to the channel. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls you're making, for example, `ChannelMember.Read.Group` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the `channelMemberAdded` event to verify successful addition to the channel.
+This error occurs if the app is installed at the team level but isn't added to the channel. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls you're making, for example, `ChannelMember.Read.Group` for reading channel membership. After adding the app, retry the operation. For agents, initiate channel-specific logic when the agent receives the `channelMemberAdded` event to verify successful addition to the channel.
 <br>
 &nbsp;
 </details>
@@ -622,7 +622,7 @@ Authentication issues often occur when the app requests a token for the host ten
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the app expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level `installedApps` list available. Instead, bots must listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
+This issue might occur if the app expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level `installedApps` list available. Instead, agents must listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the agent to the channel and manages the error.
 <br>
 &nbsp;
 </details>
@@ -647,7 +647,7 @@ The message change notification failure happens when the tenant's sharing policy
 
 | Sample Name                   | Description                                                                                                                                                                                                 | .NET | Node.js | Python |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---------|--------|
-| Bot Shared Channel Events | This sample app displays the Teams bot transitive member add and remove events in shared channels. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-shared-channel-events/csharp) | NA   | NA     |
+| Agent Shared Channel Events | This sample app displays the Teams agent transitive member add and remove events in shared channels. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-shared-channel-events/csharp) | NA   | NA     |
 | Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/python)   |
 
 ## See also

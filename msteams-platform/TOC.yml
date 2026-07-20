@@ -71,6 +71,12 @@
     displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
   - name: Create a configuration experience
     href: bots/how-to/bot-configuration-experience.md
+  - name: Rate limits for agents
+    href: bots/how-to/rate-limit.md
+    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: Shared and private channels
+    href: build-apps-for-shared-private-channels.md
+    displayName: shared channels, private channels
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -560,37 +566,6 @@
       - name: Activity feed notifications
         href: concepts/design/activity-feed-notifications.md
         displayName: notify, notification
-  - name: Build bots
-    expand: true
-    items:
-
-
-
-      displayName: configuration settings, fetchTask, config/fetch, config/submit
-    - name: Optimize bots with rate limits
-      href: bots/how-to/rate-limit.md
-      displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
-    - name: Apps for shared and private channels
-      href: build-apps-for-shared-private-channels.md
-      displayName: shared channels, private channels
-    - name: Explore advanced bot capabilities
-      items:
-      - name: Calls and meetings bots
-        items:
-        - name: Overview
-          href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-        - name: Real-time media calls and meetings
-          href: bots/calls-and-meetings/real-time-media-concepts.md
-          displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
-        - name: Register calls and meetings bot
-          href: bots/calls-and-meetings/registering-calling-bot.md
-          displayName: How Bot can create call, join meeting and transfer call
-        - name: Incoming call notifications
-          href: bots/calls-and-meetings/call-notifications.md
-          displayName: Redirects for region affinity, GeoDNS resolution 
-        - name: Application-hosted media bots
-          href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-          displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
   - name: Build tabs
     items:
     - name: Tabs overview
@@ -698,7 +673,23 @@
         displayName: domain listing, wildcards, cache
       - name: Micro-capabilities for website links
         href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-        displayName: App less link unfurling  
+        displayName: App less link unfurling
+- name: Calls and meetings bots
+  items:
+  - name: Overview
+    href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+  - name: Real-time media calls and meetings
+    href: bots/calls-and-meetings/real-time-media-concepts.md
+    displayName: active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+  - name: Register calls and meetings bot
+    href: bots/calls-and-meetings/registering-calling-bot.md
+    displayName: How Bot can create call, join meeting and transfer call
+  - name: Incoming call notifications
+    href: bots/calls-and-meetings/call-notifications.md
+    displayName: Redirects for region affinity, GeoDNS resolution 
+  - name: Application-hosted media bots
+    href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+    displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
   - name: Build apps for Teams meetings and calls
     items:
     - name: Apps for meetings and calls
