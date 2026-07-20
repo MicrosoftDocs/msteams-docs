@@ -56,43 +56,155 @@ The Teams SDK provides built-in OAuth support. You configure the OAuth connectio
 
 # [C#](#tab/cs2)
 
-```csharp
-var builder = WebApplication.CreateBuilder(args);
+   ```csharp
+       public class AdapterWithErrorHandler : CloudAdapter
+       {
+           public AdapterWithErrorHandler(
+               IConfiguration configuration,
+               IHttpClientFactory httpClientFactory,
+               ILogger<IBotFrameworkHttpAdapter> logger,
+               IStorage storage,
+               ConversationState conversationState)
+               : base(configuration, httpClientFactory, logger)
+           {
+               base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
 
-var connectionName = builder.Configuration["Teams:ConnectionName"];
+               OnTurnError = async (turnContext, exception) =>
+               {
+                   // Log any leaked exception from the application.
+                   // NOTE: In production environment, you must consider logging this to
+                   // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
+                   // to add telemetry capture to your bot.
+                   logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
 
-builder.AddTeams(App.Builder().AddOAuth(connectionName));
+                   // Send a message to the user.
+                   await turnContext.SendActivityAsync("The bot encountered an error or bug.");
+                   await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
 
-var app = builder.Build();
-var teams = app.UseTeams();
-```
+                   if (conversationState != null)
+                   {
+                       try
+                       {
+                           // Delete the conversationState for the current conversation to prevent the
+                           // bot from getting stuck in an error-loop caused by being in a bad state.
+                           // ConversationState must be thought of as similar to "cookie-state" in a Web pages.
+                           await conversationState.DeleteAsync(turnContext);
+                       }
+                       catch (Exception e)
+                       {
+                           logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
+                       }
+                   }
 
-# [TypeScript](#tab/ts2)
+                   // Send a trace activity, which will be displayed in the Bot Framework Emulator.
+                   await turnContext.TraceActivityAsync(
+                       "OnTurnError Trace",
+                       exception.Message,
+                       "https://www.botframework.com/schemas/error",
+                       "TurnError");
+               };
+           }
+       }
+   ```
 
-```typescript
-import { App } from '@microsoft/teams.apps';
+# [JavaScript](#tab/js2)
 
-const app = new App({
-  oauth: {
-    defaultConnectionName: process.env.CONNECTION_NAME || 'graph', // Use the same name as your Azure Bot OAuth connection
-  },
-});
-```
+    After you add the code to `index.js`, the following code must appear:
 
-# [Python](#tab/py2)
+   ```JavaScript
+       // index.js is used to setup and configure your bot.
 
-```python
-import os
-from microsoft_teams.apps import App, AppOptions
+       // Import required packages.
+       const path = require('path');
+    
+       // Read botFilePath and botFileSecret from .env file.
+       const ENV_FILE = path.join(__dirname, '.env');
+       require('dotenv').config({ path: ENV_FILE });
+    
+       const express = require("express");
+    
+       // Import required bot services.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
+       const {
+           CloudAdapter,
+           ConversationState,
+           MemoryStorage,
+           UserState,
+           ConfigurationBotFrameworkAuthentication,
+           TeamsSSOTokenExchangeMiddleware
+       } = require('botbuilder');
+    
+       const { TeamsBot } = require('./bots/teamsBot');
+       const { MainDialog } = require('./dialogs/mainDialog');
+       const { env } = require('process');
+    
+       const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(process.env);
+    
+       var conname = env.connectionName;
+    
+       console.log(`\n${ conname } is the con name`);
+    
+       // Create adapter.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about how bots work.
+       const adapter = new CloudAdapter(botFrameworkAuthentication);
+       const memoryStorage = new MemoryStorage();
+       const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
+    
+       adapter.use(tokenExchangeMiddleware);
+       adapter.onTurnError = async (context, error) => {
+           // This check writes out errors to console log .vs. app insights.
+           // NOTE: In production environment, you must consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
+           console.error(`\n [onTurnError] unhandled error: ${ error }`);
+    
+           // Send a trace activity, which will be displayed in Bot Framework Emulator.
+           await context.sendTraceActivity(
+               'OnTurnError Trace',
+               `${ error }`,
+               'https://www.botframework.com/schemas/error',
+               'TurnError'
+           );
+    
+           // Send a message to the user.
+           await context.sendActivity('The bot encountered an error or bug.');
+           await context.sendActivity('To continue to run this bot, please fix the bot source code.');
+           // Clear out state.
+           await conversationState.delete(context);
+       };
+    
+       // Define the state store for your bot.
+       // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&branch=live&tabs=csharp to learn more about using MemoryStorage.
+       // A bot requires a state storage system to persist the dialog and user state between messages.
+    //const memoryStorage = new MemoryStorage();
+    
+       // Create conversation and user state with in-memory storage provider.
+       const conversationState = new ConversationState(memoryStorage);
+       const userState = new UserState(memoryStorage);
+    
+       // Create the main dialog.
+       const dialog = new MainDialog();
+       // Create the bot that will handle incoming messages.
+       const bot = new TeamsBot(conversationState, userState, dialog);
+    
+       // Create express application.
+       const expressApp = express();
+       expressApp.use(express.json());
 
-app = App(
-    **AppOptions(
-        default_connection_name=os.getenv("CONNECTION_NAME", "graph"), # Use the same name as your Azure Bot OAuth connection
-    )
-)
-```
+       const server = expressApp.listen(process.env.port || process.env.PORT || 3978, () => {
+           console.log(`\n${ expressApp.name } listening to`, server.address());
+           console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
+           console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
+       });
+    
+       // Listen for incoming requests.
+       expressApp.post('/api/messages', async (req, res) => {
+           // Route received a request to adapter for processing.
+           await adapter.process(req, res, (context) => bot.run(context));
+       });
 
----
+   ```
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+request+a+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Consent dialog for getting access token
 
@@ -249,48 +361,78 @@ async def handle_message_ext_query(
 
 ---
 
-## Handle sign-in events and failures
+> [!NOTE]
+> The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
-The Teams SDK lets you subscribe to sign-in events that fire when the OAuth flow completes successfully, as well as sign-in failures when the SSO token exchange fails.
+You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for.
 
-### Subscribe to the sign-in event
+```json
+JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
+if(valueObject["authentication"] !=null)
+ {
+    JObject authenticationObject=JObject.FromObject(valueObject["authentication"]);
+    if(authenticationObject["token"] !=null)
+ }
+```
 
-# [C#](#tab/cs5)
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+receive+the+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23add-code-to-receive-the-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+>
+### Validate the access token
 
-```csharp
-teams.OnSignIn(async (_, @event) =>
+Web APIs on your server must decode the access token and verify if it's sent from the client.
+
+> [!NOTE]
+> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines in this section.
+
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+
+There are a number of libraries available that can handle JWT validation. Basic validation includes:
+
+- Checking that the token is well-formed.
+- Checking that the token was issued by the intended authority.
+- Checking that the token is targeted to the web API.
+
+Keep in mind the following guidelines when validating the token:
+
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+- The token's `scp` parameter is set to `access_as_user`.
+
+#### Example access token
+
+The following code snippet is a typical decoded payload of an access token:
+
+```javascript
 {
-    var context = @event.Context;
-    await context.Send(
-        "Successfully signed in!");
-});
+    aud: "2c3caa80-93f9-425e-8b85-0745f50c0d24",
+    iss: "https://login.microsoftonline.com/fec4f964-8bc9-4fac-b972-1c1da35adbcd/v2.0",
+    iat: 1521143967,
+    nbf: 1521143967,
+    exp: 1521147867,
+    aio: "ATQAy/8GAAAA0agfnU4DTJUlEqGLisMtBk5q6z+6DB+sgiRjB/Ni73q83y0B86yBHU/WFJnlMQJ8",
+    azp: "e4590ed6-62b3-5102-beff-bad2292ab01c",
+    azpacr: "0",
+    e_exp: 262800,
+    name: "Mila Nikolova",
+    oid: "6467882c-fdfd-4354-a1ed-4e13f064be25",
+    preferred_username: "milan@contoso.com",
+    scp: "access_as_user",
+    sub: "XkjgWjdmaZ-_xDmhgN1BMP2vL2YOfeVxfPT_o8GRWaw",
+    tid: "fec4f964-8bc9-4fac-b972-1c1da35adbcd",
+    uti: "MICAQyhrH02ov54bCtIDAA",
+    ver: "2.0"
+}
 ```
 
-# [TypeScript](#tab/ts5)
+## Add token to Bot Framework Token Store
 
-```typescript
-app.event('signin', async ({ send }) => {
-  await send('Successfully signed in!');
-});
-```
+If you're using the OAuth connection, you must update or add the token in the Bot Framework Token store. Add the following code snippet example to `TeamsMessagingExtensionsSearchAuthConfigBot.cs` (or the equivalent file in your app's code) for updating or adding the token in the store:
 
-# [Python](#tab/py5)
+> [!NOTE]
+> You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-```python
-from microsoft_teams.apps import SignInEvent
-
-@app.event("sign_in")
-async def handle_sign_in(event: SignInEvent):
-    await event.activity_ctx.send("Successfully signed in!")
-```
-
----
-
-### Handle sign-in failures
-
-When using SSO, if the token exchange fails, Teams sends a `signin/failure` invoke activity to your app. The SDK includes a built-in default handler that logs a warning. You can optionally register your own handler to customize the behavior:
-
-# [C#](#tab/cs6)
+# [C#](#tab/cs4)
 
 ```csharp
 teams.OnSignInFailure(async (_, @event) =>
@@ -376,7 +518,10 @@ async def handle_signout(ctx: ActivityContext[MessageActivity]):
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---|---|---|---|---|
-| Bot auth quickstart | Demonstrates SSO authentication for Teams bots using the Teams SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) |
-| Bot message extensions | Demonstrates search-based messaging extensions with the Teams SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions) |
+This section provides bot authentication v3 SDK sample.
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
+|---------------|------------|------------|-------------|---------------|---------------|
+| Bot authentication | This sample app demonstrate how an Bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
+| Tab, bot, and Message extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip)|
+|Tab, bot, and Message extension | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|

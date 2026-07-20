@@ -332,9 +332,9 @@ async def handle_signout(ctx: ActivityContext[MessageActivity]):
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** | **Node.js** | **Python** |
-| --- | --- | --- | --- | --- |
-| Bot auth quickstart | Demonstrates SSO authentication for Teams bots using the Teams SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) |
+| **Sample name** | **Description** | **C#** | **Node.js** |
+| --- | --- | --- | --- |
+| Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 

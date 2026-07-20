@@ -3,7 +3,7 @@ title: Format Text in Cards
 description: Learn about card text formatting with Markdown and HTML, how to design responsive Adaptive Cards, and other elements to create actionable Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 11/07/2024
+ms.date: 06/10/2026
 ---
 
 # Format cards in Teams
@@ -1685,7 +1685,7 @@ You can test formatting in your own cards by modifying this code, where the text
 
 | S.No. | Description |.NET | Node.js | Manifest |
 |:--|:--|:--|---|---|
-| 1 | This sample demonstrates how to use various formatting styles in Adaptive Cards such as mentions, persona icons, and responsive layout. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
+| 1 | This sample demonstrates how to use various formatting styles in Adaptive Cards such as mentions, persona icons, and responsive layout. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
 
 ## See also
 

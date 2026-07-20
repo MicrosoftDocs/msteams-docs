@@ -4,7 +4,7 @@ description: Learn how to configure API permissions and authentication for diffe
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
-ms.date: 03/16/2026
+ms.date: 06/25/2026
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -167,7 +167,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```javascript
 // Exchange client Id side token with server token
@@ -260,7 +260,7 @@ This approach helps reduce the possibility of user being prompted for consent mo
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
+| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-sso/nodejs)|
 
 ## See also
 
