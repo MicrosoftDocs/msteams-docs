@@ -1,75 +1,75 @@
 ---
-title: Activity Handlers and Bot Logic
-description: Learn about bot events and activity handlers for messages, channels, teams, members, mentions, auth, and card actions.
+title: Activity Handlers and Agent Logic
+description: Learn about agent events and activity handlers for messages, channels, teams, members, mentions, auth, and card actions.
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: nickwalk
 ms.date: 04/09/2026
 ---
 
-# Understand bot concepts
+# Understand agent concepts
 
-A bot's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. A bot may request information or enable access to services, and responds to the user.
+An agent's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. An agent may request information or enable access to services, and responds to the user.
 
-## Bot scopes
+## Agent scopes
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+Agents in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational agent.
 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
-| Concise individual interactions | @mention to bot | Q&A bots |
-| @mention to bot | Similar to channel | Bots that tell jokes and take notes |
+| Concise individual interactions | @mention to agent | Q&A agents |
+| @mention to agent | Similar to channel | Agents that tell jokes and take notes |
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people, even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people, even up to 2000. This potentially gives your agent massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your agent only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
-Bots work better in a channel in the following cases:
+Agents work better in a channel in the following cases:
 
 - Notifications, where you provide an interactive card for users to take additional information.
 - Feedback scenarios, such as polls and surveys.
 - Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
-- Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
+- Social or fun agents, where you get an awesome cat image, randomly pick a winner, and so on.
 
 ### In a group chat
 
-Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
+Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your agent only has access to messages where it's `@mentioned` directly.
 
-Bots that work better in a channel also work better in a group chat.
+Agents that work better in a channel also work better in a group chat.
 
 ### In a one-to-one chat
 
-One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
+One-to-one chat is a traditional way for a conversational agent to interact with a user. A few examples of one-to-one conversational agents are:
 
-- Q&A bots
-- bots that initiate workflows in other systems.
-- bots that tell jokes.
-- bots that take notes.
-Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+- Q&A agents
+- agents that initiate workflows in other systems.
+- agents that tell jokes.
+- agents that take notes.
+Before creating one-to-one agents, consider whether a conversation-based interface is the best way to present your functionality.
 
-## Activity handler and bot logic
+## Activity handler and agent logic
 
-To create a bot app that meets your needs, understanding Microsoft Teams activity handler and bot logic is essential. These two key components work together to organize conversational logic.
+To create an agent app that meets your needs, understanding Microsoft Teams activity handler and agent logic is essential. These two key components work together to organize conversational logic.
 
 - [Teams activity handler](#teams-activity-handler):
   Processes Teams-specific events and interactions such as channel creation, team member additions, and other actions unique to the Teams environment. In the Teams SDK v2, handlers are registered directly on an `App` instance rather than via class inheritance.
 
-- [Bot logic](#bot-logic):
-  The `App` object houses the bot's conversational logic and is responsible for making decisions based on user input. Incoming activities are routed to the appropriate handler based on activity type and optional pattern matching.
+- [Agent logic](#agent-logic):
+  The `App` object houses the agent's conversational logic and is responsible for making decisions based on user input. Incoming activities are routed to the appropriate handler based on activity type and optional pattern matching.
 
 ### Teams activity handler
 
-The activity handler is the core of a bot's functionality, managing and processing user interactions. In the Teams SDK v2:
+The activity handler is the core of an agent's functionality, managing and processing user interactions. In the Teams SDK v2:
 
 - You instantiate an `App` object and register handlers on it.
 - Handlers receive a typed context object (`IActivityContext` in TypeScript, `IContext<TActivity>` in C#, `ActivityContext[TActivity]` in Python).
 - Replies and proactive messages are sent via `ctx.reply()` or `ctx.send()`.
 
-When a Teams bot receives an activity, the SDK routes it through the registered handler. Teams-specific events (channel lifecycle, member changes, etc.) are surfaced as distinct named events, so you do not need to inspect `channelData.eventType` manually.
+When a Teams agent receives an activity, the SDK routes it through the registered handler. Teams-specific events (channel lifecycle, member changes, etc.) are surfaced as distinct named events, so you do not need to inspect `channelData.eventType` manually.
 
 > [!NOTE]
-> If a bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
+> If an agent activity takes more than 15 seconds to process, Teams sends a retry request to the agent endpoint, so you might see duplicate requests.
 
 #### Activity handler code snippets
 
@@ -77,7 +77,7 @@ The following snippets show Teams activity handlers for channel and team lifecyc
 
 # [TypeScript](#tab/typescript)
 
-Bots are built using the `@microsoft/teams.apps` package. You instantiate an `App` and register handlers with `app.on(eventName, handler)`. The SDK routes activities to the correct handler based on the event name string.
+Agents are built using the `@microsoft/teams.apps` package. You instantiate an `App` and register handlers with `app.on(eventName, handler)`. The SDK routes activities to the correct handler based on the event name string.
 
 `channelCreated`
 
@@ -148,7 +148,7 @@ app.on('messageDelete', async ({ activity }) => {
 
 # [C#](#tab/csharp)
 
-Bots are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
+Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
 
 `OnChannelCreated`
 
@@ -224,7 +224,7 @@ app.OnMessageDelete(async context => {
 
 # [Python](#tab/python)
 
-Bots are built using the `microsoft-teams-apps` package. Handlers are registered using decorators on an `App` instance. Each handler is an `async` function that receives an `ActivityContext[TActivity]` object.
+Agents are built using the `microsoft-teams-apps` package. Handlers are registered using decorators on an `App` instance. Each handler is an `async` function that receives an `ActivityContext[TActivity]` object.
 
 `on_channel_created`
 
@@ -297,9 +297,9 @@ async def handle_undelete_message(ctx: ActivityContext):
 
 ---
 
-#### Example of bot activity handler
+#### Example of agent activity handler
 
-The following code provides an example of a bot activity:
+The following code provides an example of an agent activity:
 
 # [TypeScript](#tab/typescript)
 
@@ -358,11 +358,11 @@ if __name__ == "__main__":
 
 ---
 
-### Bot logic
+### Agent logic
 
-Bot logic incorporates the fundamental rules and decision-making frameworks that dictate a bot's actions and interactions. It outlines how the bot interprets user input, formulates responses, and participates in conversations.
+Agent logic incorporates the fundamental rules and decision-making frameworks that dictate an agent's actions and interactions. It outlines how the agent interprets user input, formulates responses, and participates in conversations.
 
-In Teams SDK v2, the bot logic processes incoming activities from one or more bot channels and generates outgoing activities. All activity routing is handled by the `App` instance — you register the handlers, and the SDK dispatches activities to them automatically.
+In Teams SDK v2, the agent logic processes incoming activities from one or more agent channels and generates outgoing activities. All activity routing is handled by the `App` instance — you register the handlers, and the SDK dispatches activities to them automatically.
 
 # [TypeScript](#tab/typescript)
 
@@ -375,8 +375,8 @@ The list of event names supported by `app.on()` includes the following:
 | Any activity type received | `'activity'` | Catch-all handler called for every activity. |
 | Message activity received | `'message'` | Handle incoming text messages. Use `app.message(pattern, handler)` for regex matching. |
 | Conversation update received | `'conversationUpdate'` | Raw conversation update activity. |
-| Installation added | `'install.add'` | Bot was installed. |
-| Installation removed | `'install.remove'` | Bot was uninstalled. |
+| Installation added | `'install.add'` | Agent was installed. |
+| Installation removed | `'install.remove'` | Agent was uninstalled. |
 | Members added | `'membersAdded'` | One or more members joined the conversation. |
 | Members removed | `'membersRemoved'` | One or more members left the conversation. |
 | Message edited | `'messageUpdate'` | A message in the conversation was edited. |
@@ -426,9 +426,9 @@ The `App` class exposes extension methods for registering handlers. Methods retu
 | Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
 | Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
 | Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
-| Non-bot members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
-| Non-bot members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
-| Installation added | `OnInstall(handler)` | Bot was installed. |
+| Non-agent members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
+| Non-agent members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
+| Installation added | `OnInstall(handler)` | Agent was installed. |
 
 #### Teams-specific activity handlers
 
@@ -463,8 +463,8 @@ The `App` class exposes decorator-style handler registration.
 | Message received | `@app.on_message` | Handle incoming text messages. |
 | Message with pattern | `@app.on_message_pattern(re.compile(...))` | Handle messages matching a regex pattern. |
 | Conversation update | `@app.on_conversation_update` | Raw conversation update; check `members_added` / `members_removed`. |
-| Installation added | `@app.on_install_add` | Bot was installed. |
-| Installation removed | `@app.on_install_remove` | Bot was uninstalled. |
+| Installation added | `@app.on_install_add` | Agent was installed. |
+| Installation removed | `@app.on_install_remove` | Agent was uninstalled. |
 
 #### Teams-specific activity handlers
 
@@ -494,42 +494,42 @@ The `App` class exposes decorator-style handler registration.
 
 ---
 
-Now that you've familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
+Now that you've familiarized yourself with agent activity handlers, let us see how agents behave differently depending on the conversation and the messages it receives or sends.
 
 ## Recommendations
 
-An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
+An extensive dialog between your agent and the user is a slow and complex way to get a task completed. An agent that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
 
 - **Avoid multi-turn experiences in chat** An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
     USER: Schedule a meeting with Megan.
 
-    BOT: I've found 200 results, include a first and last name.
+    AGENT: I've found 200 results, include a first and last name.
 
     USER: Schedule a meeting with Megan Bowen.
 
-    BOT: OK, what time would you like to meet with Megan Bowen?
+    AGENT: OK, what time would you like to meet with Megan Bowen?
 
     USER: 1:00 pm.
 
-    BOT: On which day?
+    AGENT: On which day?
 
-- **Support six or less frequent commands** As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-- **Optimize size of knowledge base for quicker interaction** One of the disadvantages of bots is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+- **Support six or less frequent commands** As there are only six visible commands in the current agent menu, anything more is unlikely to be used with any frequency. Agents that go deep into a specific area rather than trying to be a broad assistant work and fare better.
+- **Optimize size of knowledge base for quicker interaction** One of the disadvantages of agents is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Agents are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 > [!NOTE]
-> Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your bot environment accordingly.
+> Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your agent environment accordingly.
 
-## Explore other bot features
+## Explore other agent features
 
-In addition to conventional bot features, you can also explore advanced features available in a Teams bot app:
+In addition to conventional agent features, you can also explore advanced features available in a Teams agent app:
 
-- [Get Teams specific context for your bot](how-to/get-teams-context.md).
-- [Calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md).
+- [Get Teams specific context for your agent](how-to/get-teams-context.md).
+- [Calls and online meetings agents](calls-and-meetings/calls-meetings-bots-overview.md).
 - [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
 
 ## Code sample
 
 | Sample name | Description | TypeScript | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams conversation bot | This app demonstrates basic bot events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+| Teams conversation agent | This app demonstrates basic agent events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |

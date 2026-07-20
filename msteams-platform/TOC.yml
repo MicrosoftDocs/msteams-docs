@@ -14,6 +14,9 @@
   items:
   - name: Agents in Teams
     href: agents-in-teams/overview.md
+  - name: Agent basics
+    href: bots/bot-concepts.md
+    displayName: scopes, handler, activity, 
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
@@ -44,6 +47,23 @@
   - name: Enhance AI-generated agent messages
     href: bots/how-to/bot-messages-ai-generated-content.md
     displayName: AI label, citations, feedback buttons, sensitivity label
+  - name: Build conversational capability
+    href: bots/build-conversational-capability.md
+    displayName: chat, message
+  - name: Receive all chat messages
+    href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
+  - name: Channel and group chat conversations
+    href: bots/how-to/conversations/channel-and-group-conversations.md
+    displayName: Teams conversational bots, mention, tag mention, user mention
+  - name: Conversation events
+    href: bots/how-to/conversations/subscribe-to-conversation-events.md 
+    displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+  - name: Format agent messages
+    href: bots/how-to/format-your-bot-messages.md
+    displayName: cross-platform support 
+  - name: Send and receive files
+    href: bots/how-to/bots-filesv4.md  
+    displayName: receive files using bot
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -536,28 +556,10 @@
   - name: Build bots
     expand: true
     items:
-    - name: Understand bot concepts
-      href: bots/bot-concepts.md
-      displayName: Microsoft Bot Framework SDK, Activity handler, Bot logic, Teams handler
     - name: Send and receive messages
       items:
-      - name: Build conversational capability
-        href: bots/build-conversational-capability.md
-        displayName: chat, Messages sent between your Microsoft Teams bot and one or more user, Teams channel data, RSC, conversation with RSC
-      - name: Receive all messages for bots and agents
-        href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md  
-      - name: Channel and group chat conversations with a bot
-        href: bots/how-to/conversations/channel-and-group-conversations.md
-        displayName: Teams conversational bots, mention, tag mention, user mention
-      - name: Conversation events in your Teams bot
-        href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-        displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-      - name: Format the bot messages
-        href: bots/how-to/format-your-bot-messages.md
-        displayName: cross-platform support
-      - name: Send and receive files
-        href: bots/how-to/bots-filesv4.md  
-        displayName: receive files using bot
+
+
     - name: Send notifications
       items:
       - name: Build notification capability

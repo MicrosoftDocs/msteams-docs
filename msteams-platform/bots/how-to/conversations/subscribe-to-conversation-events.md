@@ -1,40 +1,40 @@
 ---
 title: Conversation events
-description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams bots.
+description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams agents.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.date: 05/05/2026
 ---
 
-# Conversation events in your Teams bot
+# Conversation events for agents
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
+When building your conversational agents for Microsoft Teams, you can work with conversation events. Teams sends notifications to your agent for conversation events that happen in scopes where your agent is active. You can capture these events in your code and take the following actions:
 
-* Trigger a welcome message when your bot is added to a team.
+* Trigger a welcome message when your agent is added to a team.
 * Trigger a welcome message when a new team member is added or removed.
 * Trigger a notification when a channel is created, renamed, or deleted.
-* Trigger a notification when a bot message is liked by a user.
-* Identify the default channel for your bot from user input (selection) during installation.
+* Trigger a notification when an agent message is liked by a user.
+* Identify the default channel for your agent from user input (selection) during installation.
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions.
+You can use conversation update events to provide better notifications and effective agent actions.
 
 > [!IMPORTANT]
 >
-> * You can add new events anytime and your bot begins to receive them.
-> * Design your bot to receive unexpected events.
-> * If you are using the Teams SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * You can add new events anytime and your agent begins to receive them.
+> * Design your agent to receive unexpected events.
+> * If you are using the Teams SDK, your agent automatically responds with a `200 - OK` to any events you choose not to handle.
 > * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
-A bot receives a `conversationUpdate` event in either of the following cases:
+An agent receives a `conversationUpdate` event in either of the following cases:
 
-* When the bot is added to a conversation.
+* When the agent is added to a conversation.
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
-The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
+The `conversationUpdate` event is sent to your agent when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
 The following table shows a list of Teams conversation update events with more details:
 
@@ -54,7 +54,7 @@ The following table shows a list of Teams conversation update events with more d
 
 ### Channel created
 
-The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+The `channelCreated` event is sent to your agent whenever a new channel is created in a team where your agent is installed.
 
 The following code shows an example of a channel created event:
 
@@ -130,7 +130,7 @@ async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity
 
 ### Channel renamed
 
-The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
+The `channelRenamed` event is sent to your agent whenever a channel is renamed in a team where your agent is installed.
 
 The following code shows an example of a channel renamed event:
 
@@ -204,7 +204,7 @@ async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity
 
 ### Channel deleted
 
-The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+The `channelDeleted` event is sent to your agent, whenever a channel is deleted in a team where your agent is installed.
 
 The following code shows an example of a channel deleted event:
 
@@ -278,7 +278,7 @@ async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity
 
 ### Channel restored
 
-The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The `channelRestored` event is sent to your agent, whenever a channel that was previously deleted is restored in a team where your agent is already installed.
 
 The following code shows an example of a channel restored event:
 
@@ -355,20 +355,20 @@ async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivit
 
 ### Members added
 
-A member added event is sent to your bot in the following scenarios:
+A member added event is sent to your agent in the following scenarios:
 
-1. When the bot, itself, is installed and added to a conversation
+1. When the agent, itself, is installed and added to a conversation
 
-   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
+   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the agent was installed.
 
-2. When a user is added to a conversation where the bot is installed
+2. When a user is added to a conversation where the agent is installed
 
-   > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
+   > User ids received in the event payload are unique to the agent and can be cached for future use, such as directly messaging a user.
 
-The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `Context object`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
+The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the agent itself or a user, check the `Activity` object of the `Context object`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the agent, else it's a user. The agent's `id` is formatted as `28:<MicrosoftAppId>`.
 
 > [!TIP]
-> Use the [`InstallationUpdate` event](#installation-update-event) to determine when your bot is added or removed from a conversation.
+> Use the [`InstallationUpdate` event](#installation-update-event) to determine when your agent is added or removed from a conversation.
 
 The following code shows an example of a team members added event:
 
@@ -382,7 +382,7 @@ app.OnMembersAdded(async context =>
         if (member.Id == context.Activity.Recipient.Id)
         {
             // Send a message to introduce the bot to the team.
-            await context.Send($"The {member.Name} bot has joined {context.Activity.ChannelData.Team.Name}");
+            await context.Send($"The {member.Name} agent has joined {context.Activity.ChannelData.Team.Name}");
         }
         else
         {
@@ -405,7 +405,7 @@ app.on('membersAdded', async ({ activity, send }) => {
 
 # [JSON](#tab/json)
 
-The message your bot receives when the bot is added to a team.
+The message your agent receives when the agent is added to a team.
 
 > [!NOTE]
 > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` are the IDs of the channel that the user selected during app installation or from which the installation was triggered.
@@ -435,7 +435,7 @@ The message your bot receives when the bot is added to a team.
     },
     "recipient": {
         "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-        "name": "Test Bot"
+        "name": "Test Agent"
     },
     "channelData": {
         "settings": {
@@ -456,7 +456,7 @@ The message your bot receives when the bot is added to a team.
 }
 ```
 
-The message your bot receives when the bot is added to a one-to-one chat.
+The message your agent receives when the agent is added to a one-to-one chat.
 
 ```json
 {
@@ -507,12 +507,12 @@ async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity])
 
 ### Members removed
 
-A member removed event is sent to your bot in the following scenarios:
+A member removed event is sent to your agent in the following scenarios:
 
-1. When the bot, itself, is uninstalled and removed from a conversation.
-2. When a user is removed from a conversation where the bot is installed.
+1. When the agent, itself, is uninstalled and removed from a conversation.
+2. When a user is removed from a conversation where the agent is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `Context object`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the agent itself or a user, check the `Activity` object of the `Context object`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the agent, else it's a user. The agent's id is formatted as `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -528,7 +528,7 @@ app.OnMembersRemoved(async context =>
     {
         if (member.Id == context.Activity.Recipient.Id)
         {
-            // The bot was removed.
+            // The agent was removed.
             // You should clear any cached data you have for this team.
         }
         else
@@ -578,7 +578,7 @@ The `channelData` object in the following payload example is based on adding a m
     "recipient":
     {
         "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
+        "name": "SongsuggesterAgent"
     },
     "channelData": {
         "team": {
@@ -606,7 +606,7 @@ async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity
 
 ### Team renamed
 
-Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
+Your agent is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
 
 The following code shows an example of a team renamed event:
 
@@ -677,7 +677,7 @@ async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
 
 ### Team deleted
 
-The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
+The agent receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
 
 The following code shows an example of a team deleted event:
 
@@ -746,7 +746,7 @@ async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
 
 ### Team restored
 
-The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
+The agent receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
 
 The following code shows an example of a team restored event:
 
@@ -817,7 +817,7 @@ async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity])
 
 ### Team archived
 
-The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
+The agent receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
 
 The following code shows an example of team archived event:
 
@@ -888,7 +888,7 @@ async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity])
 
 ### Team unarchived
 
-The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.
+The agent receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.
 
 The following code shows an example of a team unarchived event:
 
@@ -961,16 +961,16 @@ Now that you've worked with the conversation update events, you can understand t
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your agent. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your agent, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reactions added to bot message](#reactions-added-to-bot-message).           | All   |
-| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All |
+| messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-bot-message).           | All   |
+| messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-bot-message). | All |
 
-### Reactions added to bot message
+### Reactions added to agent message
 
-The following code shows an example of reactions to a bot message:
+The following code shows an example of reactions to an agent message:
 
 # [C#](#tab/dotnet)
 
@@ -1058,9 +1058,9 @@ async def handle_reactions_added(ctx: ActivityContext):
 
 ---
 
-### Reactions removed from bot message
+### Reactions removed from agent message
 
-The following code shows an example of reactions removed from bot message:
+The following code shows an example of reactions removed from agent message:
 
 # [C#](#tab/dotnet)
 
@@ -1149,16 +1149,16 @@ async def handle_reactions_removed(ctx: ActivityContext):
 
 ## Installation update event
 
-The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+The agent receives an `installationUpdate` event when you install an agent to a conversation thread. Uninstallation of the agent from the thread also triggers the event. On installing an agent, the **action** field in the event is set to *add*, and when the agent is uninstalled the **action** field is set to *remove*.
 
 > [!NOTE]
-> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+> When you upgrade an application, the agent receives the `installationUpdate` event only to add or remove an agent from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add an agent or *remove-upgrade* if you remove an agent.
 
 ### Install update event
 
-Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+Use the `installationUpdate` event to send an introductory message from your agent on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the agent is uninstalled.
 
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
+Similar to the `conversationUpdate` event that's sent when agent is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the agent to operate and must be used by the agent when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
 In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities is set to the ID of the Response channel in the Daves Demo team.
 
@@ -1221,7 +1221,7 @@ app.on('install.remove', async ({ send }) => {
     },
     "recipient": {
         "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-        "name": "Test Bot"
+        "name": "Test Agent"
     },
     "locale": "en-US",
     "entities": [
@@ -1276,26 +1276,26 @@ async def handle_install_remove(ctx: ActivityContext):
 
 ---
 
-## Uninstall behavior for personal app with bot
+## Uninstall behavior for personal app with agent
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the agent is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your agent receives a 403 response code for new messages posted by your agent. The post uninstall behavior for agents in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
 
 ## Event handling for install and uninstall events
 
-When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+When you use the install and uninstall events, there are some instances where agents give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-* You build your bot without Teams SDK, and as a result the bot gives an exception on receiving an unexpected event.
-* You build your bot with Teams SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your agent without Teams SDK, and as a result the agent gives an exception on receiving an unexpected event.
+* You build your agent with Teams SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using Teams SDK, your bot automatically responds with a `200 - OK` to any events you don't choose to handle.
+It's important to know that new events can be added anytime in the future and your agent begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using Teams SDK, your agent automatically responds with a `200 - OK` to any events you don't choose to handle.
 
 ## Handling errors in conversation events
 
-When a bot encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
+When an agent encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
 
-:::image type="content" source="../../../assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
+:::image type="content" source="../../../assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in agent conversation.":::
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 

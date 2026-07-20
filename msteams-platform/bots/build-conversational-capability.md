@@ -1,6 +1,6 @@
 ---
-title: Conversations with a Bot
-description: Learn about sending and receiving messages using a bot app
+title: Conversations with an Agent
+description: Learn about sending and receiving messages using an agent app
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
@@ -11,15 +11,13 @@ zone_pivot_groups: teams-sdk-languages
 
 # Send and receive messages
 
-Conversational bots communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that bot conversations are interactive, dynamic, adaptive, and user friendly.
-
-You can also send [targeted messages](../agents-in-teams/targeted-messages.md) using your agent or bot app.
+Conversational agents communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that agent conversations are interactive, dynamic, adaptive, and user friendly.
 
 ## Message content
 
-Messages interaction between your bot and user can include different types of message content that:
+Messages interaction between your agent and user can include different types of message content that:
 
-| Content type | From user to bot | From bot to user |
+| Content type | From user to agent | From agent to user |
 | --- |:---:|:---:|
 | [Rich text and emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
@@ -27,11 +25,11 @@ Messages interaction between your bot and user can include different types of me
 
 ### Use rich text message and emojis
 
-Your Teams bot can send rich text and emojis. Teams supports emojis through UTF-16, like U+1F600 for a grinning face.
+Your Teams agent can send rich text and emojis. Teams supports emojis through UTF-16, like U+1F600 for a grinning face.
 
 ### Use picture messages
 
-To make bot message pop, the user can add pictures as attachments:
+To make agent messages pop, the user can add pictures as attachments:
 
 - Pictures can be up to 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIFs aren't supported.
 - You can specify the height and width of each image using XML. In Markdown, the image size defaults to 256×256. For example:
@@ -43,7 +41,7 @@ For more information on attachments, see [add media attachments to messages](/az
 
 ### Use Adaptive Cards
 
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. You can author Adaptive Cards in a bot and shown in multiple apps such as Teams, your website, and so on.
+A conversational agent can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. You can author Adaptive Cards in an agent and shown in multiple apps such as Teams, your website, and so on.
 
 For more information, see:
 
@@ -83,21 +81,21 @@ The following code shows an example of sending a simple Adaptive Card:
 
 ## Send and receive messages
 
-Sending and receiving messages is the core functionality of a bot.
+Sending and receiving messages is the core functionality of an agent.
 
-In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
+In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
-Basic conversations are managed through the Teams SDK Framework connector, which is a single REST API. This API enables your bot talk to Teams and other channels. The Bot Builder SDK offers the following features:
+Basic conversations are managed through the Teams SDK Framework connector, which is a single REST API. This API enables your agent talk to Teams and other channels. The Bot Builder SDK offers the following features:
 
 - Easy access to the Teams SDK Framework connector.
 - Tools to manage conversation flow and state.
 - Simple ways to add cognitive services, like natural language processing (NLP).
 
-Your bot gets messages from Teams using the `Text` property and can send back single or multiple responses to users.
+Your agent gets messages from Teams using the `Text` property and can send back single or multiple responses to users.
 
-For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
+For more information, see [user attribution for agent messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
-The following table lists the activity that your bot can receive and take action on:
+The following table lists the activity that your agent can receive and take action on:
 
 | Message type | Payload object | Scope |
 | --- | --- | --- |
@@ -108,7 +106,7 @@ The following table lists the activity that your bot can receive and take action
 
 ### Receive a message activity
 
-To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
+To receive a text message, use the `Text` property of an `Activity` object. In the agent's activity handler, use the turn context object's `Activity` to read a single message request.
 
 The following code shows an example of receiving a message activity:
 
@@ -175,14 +173,14 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     },
     "recipient": {
         "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
+        "name": "Teams TestAgent"
     },
     "textFormat": "plain",
-    "text": "Hello Teams TestBot.Sending bold-italic rich text",
+    "text": "Hello Teams TestAgent.Sending bold-italic rich text",
     "attachments": [
       {
             "contentType": "text/html",
-            "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+            "content": "<div><div>Hello Teams TestAgent. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
       } 
     ],
     "entities": [
@@ -206,19 +204,19 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ### Receive a read receipt
 
-The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your agent to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
 
-- You can configure your bot to send a follow-up message if your app user hasn't read the message in the personal chat.
+- You can configure your agent to send a follow-up message if your app user hasn't read the message in the personal chat.
 
-- You can create a feedback loop using read receipts to tune your bot’s experience.
+- You can create a feedback loop using read receipts to tune your agent’s experience.
 
 > [!NOTE]
 >
-> - Read receipts are supported only in user to bot chat scenarios.
-> - Read receipts for bots doesn’t support team, channel, and group chat scopes.
-> - If an admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
+> - Read receipts are supported only in user to agent chat scenarios.
+> - Read receipts for agents doesn’t support team, channel, and group chat scopes.
+> - If an admin or user disables the **Read receipts** setting, the agent doesn't receive the read receipt event.
 
-To receive read receipts events for your bot, ensure the following:
+To receive read receipts events for your agent, ensure the following:
 
 - Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific#rsc-delegated-permissionsd), as follows:
 
@@ -273,11 +271,11 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
     {
         var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-        await context.Send("User read the bot's message");
+        await context.Send("User read the agent's message");
     });
     ```
 
-The following example shows a read receipts event request that a bot receives:
+The following example shows a read receipts event request that an agent receives:
 
 ```json
     {
@@ -298,7 +296,7 @@ The following example shows a read receipts event request that a bot receives:
         },
         "recipient": {
             "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
-            "name": "Test Bot"
+            "name": "Test Agent"
         },
         "channelData": {
             "tenant": {
@@ -312,15 +310,15 @@ The following example shows a read receipts event request that a bot receives:
     
 ```
 
-- Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
+- Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the agent to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
 
-After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
+After the agent is enabled in a user to agent chat scenario, the agent promptly receives a read receipt event when the user reads the agent's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
 ### Receive edit message activity
 
-When you edit a message, the bot gets a notification of the edit message activity.
+When you edit a message, the agent gets a notification of the edit message activity.
 
-To get an edit message activity notification in a bot, you can override `OnMessageEdit` handler.
+To get an edit message activity notification in an agent, you can override `OnMessageEdit` handler.
 
 The following is an example of an edit message activity notification using `OnMessageEdit` when a sent message is edited:
 
@@ -365,7 +363,7 @@ app.on('messageEdit', async ({ activity, send }) => {
 },
 "recipient":{
     "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
-    "name":"TestBot"
+    "name":"TestAgent"
 },
 "entities":[
     {
@@ -386,7 +384,7 @@ app.on('messageEdit', async ({ activity, send }) => {
 ```
 
 ```http
-PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
 ```
 
 ```json
@@ -398,7 +396,7 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ### Send a message
 
-To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `context.Send(...)` method to send a single message response. Use the object's `multiple context.Send(...) calls` method to send multiple responses.
+To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.Send(...)` method to send a single message response. Use the object's `multiple context.Send(...) calls` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
@@ -460,7 +458,7 @@ async def handle_members_added(ctx: ActivityContext):
     "type": "message",
     "from": {
         "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
+        "name": "Teams TestAgent"
     },
     "conversation": {
         "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
@@ -470,13 +468,13 @@ async def handle_members_added(ctx: ActivityContext):
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
         "name": "Megan Bowen"
     },
-    "text": "My bot's reply",
+    "text": "My agent's reply",
     "replyToId": "1632474074231"
 }
 ```
 
 ```http
-HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activities
+HTTP Request: {Service URL of your agent}/v3/conversations/{conversationId}/activities
 ```
 
 ```json
@@ -484,7 +482,7 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
     "type": "message",
     "from": {
         "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
+        "name": "Teams TestAgent"
     },
     "conversation": {
         "id":"a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
@@ -494,7 +492,7 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
         "name": "Megan Bowen"
     },
-    "text": "My bot's reply"
+    "text": "My agent's reply"
 }
 ```
 
@@ -503,13 +501,13 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
 >- Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 >- Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
 
-Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
 ### Receive undelete message activity
 
-When you undelete a message, the bot gets a notification of the undelete message activity.
+When you undelete a message, the agent gets a notification of the undelete message activity.
 
-To get an undelete message activity notification in a bot, you can override `OnMessageUndelete` handler.
+To get an undelete message activity notification in an agent, you can override `OnMessageUndelete` handler.
 
 The following is an example of an undelete message activity notification using `OnMessageUndelete` when a deleted message is restored:
 
@@ -575,7 +573,7 @@ app.on('messageUndelete', async ({ activity, send }) => {
 ```
 
 ```http
-PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
 ```
 
 ```json
@@ -587,9 +585,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ### Receive soft delete message activity
 
-When you soft delete a message, the bot gets a notification of the soft delete message activity.
+When you soft delete a message, the agent gets a notification of the soft delete message activity.
 
-To get a soft delete message activity notification in a bot, you can override `OnMessageSoftDelete` handler.
+To get a soft delete message activity notification in an agent, you can override `OnMessageSoftDelete` handler.
 
 The following example shows a soft delete message activity notification using `OnMessageSoftDelete` when a message is soft deleted:
 
@@ -635,7 +633,7 @@ app.on('messageSoftDelete', async ({ activity, send }) => {
 },
 "recipient":{
     "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
-    "name":"Testbot"
+    "name":"Testagent"
 },
 "entities":[
     {
@@ -656,14 +654,14 @@ app.on('messageSoftDelete', async ({ activity, send }) => {
 
 ```
 
-### Update and delete messages sent from bot
+### Update and delete messages sent from agent
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
+Your agent can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
 > [!NOTE]
-> A bot can't update or delete messages sent by the user in Microsoft Teams.
+> An agent can't update or delete messages sent by the user in Microsoft Teams.
 
 #### Update messages
 
@@ -1141,14 +1139,14 @@ The `channelData` object contains Teams-specific information and is a definitive
 
 The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
-A typical `channelData` object in an activity sent to your bot contains the following information:
+A typical `channelData` object in an activity sent to your agent contains the following information:
 
-- `eventType`: Teams event type passed only in cases of [conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md).
+- `eventType`: Teams event type passed only in cases of [conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
   - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
-- `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
+- `channel`: Passed only in channel contexts, when the agent is mentioned or for events in channels in teams, where the agent is added.
   - `id`: GUID for the channel.
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
@@ -1178,14 +1176,14 @@ The `channelData` object contains Teams-specific information and is a definitive
 
 The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
-A typical `channelData` object in an activity sent to your bot contains the following information:
+A typical `channelData` object in an activity sent to your agent contains the following information:
 
 - `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
   - `name`: Name of the team passed only in cases of (how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
-- `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
+- `channel`: Passed only in channel contexts, when the agent is mentioned or for events in channels in teams, where the agent is added.
   - `id`: GUID for the channel.
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
@@ -1211,25 +1209,25 @@ The following code shows an example of channelData object (channelCreated event)
 }
 ```
 
-## Status codes from bot conversational APIs
+## Status codes from agent conversational APIs
 
 Ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
 
 | Status code | Error code and message values | Description | Retry request | Developer action |
 |----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the bot. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this bot. | The registration for this bot wasn't found. | No | Verify the bot ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Admin blocked interactions between user and the bot app. Admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot is added again.|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
-| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot isn't installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
-| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
-| 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
+| 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the agent. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this agent. | The registration for this agent wasn't found. | No | Verify the agent ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this agent | Admin blocked interactions between user and the agent app. Admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with agent is explicitly initiated by a user in the conversation indicating that the agent is no longer blocked. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The agent isn't part of the conversation roster. | The agent isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the agent is added again.|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the agent. | User blocked the agent in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with agent is explicitly initiated by a user in the conversation, indicating that the agent is no longer blocked. |
+| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Agent isn't installed in user's personal scope | Proactive message is sent by an agent, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
+| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid agent api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`.|The agent called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
+| 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Agent doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it is deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or is deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
-| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your bot messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
-| 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the bot. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your agent messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
+| 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the agent. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
 | 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](../feedback.md#report-issues). |
 [developer community forums](../feedback.md#developer-community-forums). |
 | 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums).. |
@@ -1238,7 +1236,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 ### Status codes retry guidance
 
-The general retry guidance for each status code is listed in the following table, bot must avoid retrying status codes that aren't specified:
+The general retry guidance for each status code is listed in the following table, agent must avoid retrying status codes that aren't specified:
 
 |Status code | Retry strategy |
 |----------------|-----------------|
@@ -1249,13 +1247,13 @@ The general retry guidance for each status code is listed in the following table
 | 503 | Retry using exponential backoff. |
 | 504 | Retry using exponential backoff. |
 
-## Request headers of the bot
+## Request headers of the agent
 
-The current outgoing requests to the bot don't contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
+The current outgoing requests to the agent don't contain in the header or URL any information that helps agents route the traffic without unpacking the entire payload. The activities are sent to the agent through a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
 
 ### Request header fields
 
-Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
+Two non-standard request header fields are added to all the requests sent to agents, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
 
 | Field key | Value |
 |----------------|-----------------|
@@ -1268,7 +1266,7 @@ If the tenant or conversation ID isn't present in the activity or wasn't validat
 
 ### Receive only at-mentioned messages
 
-To enable your bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those messages where it's @mentioned:
+To enable your agents to get only those channel or chat messages where your agent is @mentioned, you must filter the messages. Use the following code snippet to enable your agent to receive only those messages where it's @mentioned:
 
 ```csharp
   app.OnMessage(async context =>
@@ -1278,16 +1276,16 @@ To enable your bots to get only those channel or chat messages where your bot is
         return;
     }
 
-    await context.Send("Using RSC the bot can receive messages across channels or chats in team without being @mentioned.");
+    await context.Send("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
 });
 ```
 
-If you want your bot to receive all messages, then you don't need to filter the @mention messages.
+If you want your agent to receive all messages, then you don't need to filter the @mention messages.
 
 ## Next step
 
-[Channel and group chat conversations with a bot](how-to/conversations/channel-and-group-conversations.md)
+[Channel and group chat conversations with an agent](how-to/conversations/channel-and-group-conversations.md)
 
 ## See also
 
-[Conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md)
+[Conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md)
