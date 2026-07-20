@@ -1199,15 +1199,15 @@
   displayName: Developer community help, questions, suggestions, contact, issues
 - name: SDK Reference
   items:
-  - name: Teams SDK for .NET (TODO)
-    href: /dotnet/api/microsoft.teams.ai.annotations
+  - name: Teams SDK for .NET
+    href: /dotnet/teams-sdk-dotnet
     displayName: Reference
   - name: Teams SDK for TypeScript
     href: /javascript/api/teams-sdk-typescript
     displayName: Reference
   - name: Teams SDK for Python
-    href: /python/api/msteams-sdk-python/overview
+    href: /python/api/msteams-sdk-python
     displayName: Reference
-  - name: Teams client-side TypeScript libraries
+  - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
