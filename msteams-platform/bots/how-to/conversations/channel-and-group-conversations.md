@@ -1,6 +1,6 @@
 ---
-title: Channel/Group Conversation Chat Bot
-description: Learn how to work with user mentions, send messages, and handle bot installation in channel and group chats using the Teams SDK.
+title: Channel and Group Conversation Chat for Agents
+description: Learn how to work with user mentions, send messages, and handle agent installation in channel and group chats using the Teams SDK.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
@@ -8,20 +8,20 @@ ms.date: 06/23/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Channel and group chat conversations with a bot
+# Channel and group chat conversations for agents
 
-To enable users to install a bot in a team or group chat, add the `teams` or `groupchat` scope. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the bot has access to details about that team and the full list of channels.
+To enable users to install an agent in a team or group chat, add the `teams` or `groupchat` scope. This allows all members of the conversation to interact with your agent. After the agent is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it's installed in a team, the agent has access to details about that team and the full list of channels.
 
-By default, bots in group chats and channels only receive messages when they're directly @mentioned. They don't receive other messages sent to the conversation. For example, your bot doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it. The Teams SDK provides a dedicated `mention` activity route to handle @mention events.
+By default, agents in group chats and channels only receive messages when they're directly @mentioned. They don't receive other messages sent to the conversation. For example, your agent doesn't receive a message when the team or channel is mentioned, or when someone replies to a message from your agent without @mentioning it. The Teams SDK provides a dedicated `mention` activity route to handle @mention events.
 
 > [!NOTE]
 >
-> * Using resource-specific consent (RSC), a bot can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [receive all messages for bots and agents](channel-messages-for-bots-and-agents.md).
-> * Private channel support for bot apps is limited. You can add bot-enabled apps in private channels where private channel app support is enabled, but bots can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
+> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [receive all messages for agents](channel-messages-for-bots-and-agents.md).
+> * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
 ## Design guidelines
 
-In group chats and channels, design your bot for collaborative conversations with clear value, concise responses, and minimal noise. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+In group chats and channels, design your agent for collaborative conversations with clear value, concise responses, and minimal noise.
 
 ## Threaded conversations
 
@@ -78,9 +78,9 @@ For sending messages into a thread proactively, see [Proactive messages](send-pr
 
 ## Send a message on installation
 
-When your bot is first added to a group or team, you can send an introduction message by using the `install.add` lifecycle route. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
+When your agent is first added to a group or team, you can send an introduction message by using the `install.add` lifecycle route. For more information, see [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging).
 
-If you send an introduction message, include a brief description of the bot's features and how to use them.
+If you send an introduction message, include a brief description of the agent's features and how to use them.
 
 You can also store the `conversationId` during installation to enable [proactive messaging](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) later.
 
@@ -91,7 +91,7 @@ The following code shows an example of sending welcome messages on installation:
 ```csharp
 app.OnInstall(async context => 
 { 
-    await context.Send("Hello! I'm your bot. Here's what I can do..."); 
+    await context.Send("Hello! I'm your agent. Here's what I can do..."); 
 }); 
 ```
 
@@ -102,7 +102,7 @@ app.OnInstall(async context =>
 ```typescript
 app.on('install.add', async ({ send }) => 
 { 
-    await send('Hello! I\'m your bot. Here\'s what I can do...'); 
+    await send('Hello! I\'m your agent. Here\'s what I can do...'); 
 }); 
 ```
 
@@ -113,28 +113,28 @@ app.on('install.add', async ({ send }) =>
 ```python
 @app.on_install_add 
 async def handle_install_add(ctx: ActivityContext[InstalledActivity]): 
-    await ctx.send("Hello! I'm your bot. Here's what I can do...") 
+    await ctx.send("Hello! I'm your agent. Here's what I can do...") 
 ```
 
 ::: zone-end
 
-Don't send proactive welcome messages to users individually when the bot is installed in a team or group chat. If you send a welcome message, post it in the installed conversation and mention the person who added the bot.
+Don't send proactive welcome messages to users individually when the agent is installed in a team or group chat. If you send a welcome message, post it in the installed conversation and mention the person who added the agent.
 
 >[!NOTE]
-> Ensure that the message sent by the bot is relevant and adds value to the initial message and doesn't spam the users.
+> Ensure that the message sent by the agent is relevant and adds value to the initial message and doesn't spam the users.
 
 Don't send a message in the following cases:
 
-* When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel instead of being first added to a team.
+* When the team is large, for example, larger than 100 members. Your agent can be seen as spam and the person who added it can get complaints. You must clearly communicate your agent's value proposition to everyone who sees the welcome message.
+* Your agent is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
 ## Work with mentions
 
-In group chats and channels, messages that @mention your bot include a mention entity in the message text. If your bot is configured to receive all messages, such as with RSC, some incoming messages might not include an @mention. Your bot can retrieve other users mentioned in a message and add mentions to messages it sends. Bots in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
+In group chats and channels, messages that @mention your agent include a mention entity in the message text. If your agent is configured to receive all messages, such as with RSC, some incoming messages might not include an @mention. Your agent can retrieve other users mentioned in a message and add mentions to messages it sends. Agents in group chats enable user mentions using `@mention`; however, they don’t support `@everyone` for mentions.
 
-For messages that include @mentions, the message text contains mention markup such as `<at>@botname</at>`.
+For messages that include @mentions, the message text contains mention markup such as `<at>@agentname</at>`.
 
 ### Retrieve mentions
 
@@ -242,7 +242,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ### Add mentions to your messages
 
-Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
+Your agent can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
 
 The following code shows an example of adding mentions to your messages:
 
@@ -381,7 +381,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 #### Tag mention
 
-Your bot can mention tags in text messages and Adaptive Cards posted in channels. When the bot @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
+Your agent can mention tags in text messages and Adaptive Cards posted in channels. When the agent @mentions the tag in a channel, the tag is highlighted and the people associated with the tag get notified. When a user hovers over the tag, a pop-up appears with the tag details.
 
 > [!NOTE]
 > Tag mentions aren't supported in [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md).
@@ -428,11 +428,11 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ::: zone-end
 
 > [!NOTE]
-> When mentioning tags, the underlying wire format requires the `"type": "tag"` property in the `mentioned` object of the entity. If the `"type": "tag"` property isn't included, the bot treats the mention as a user mention.
+> When mentioning tags, the underlying wire format requires the `"type": "tag"` property in the `mentioned` object of the entity. If the `"type": "tag"` property isn't included, the agent treats the mention as a user mention.
 
 ##### Mention tags in an Adaptive Card
 
-In the Adaptive Card schema, under the `mentioned` object, add the `"type": "tag"` property. If the `"type": "tag"` property isn't added, the bot treats the mention as a user mention.
+In the Adaptive Card schema, under the `mentioned` object, add the `"type": "tag"` property. If the `"type": "tag"` property isn't added, the agent treats the mention as a user mention.
 
 You can get the list of the tags available in the channel using the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
 
@@ -468,23 +468,23 @@ Example:
 
 Any request can be evaluated against multiple limits, depending on the scope, the window type (short and long), number of tags per message, and other factors. The first limit to be reached triggers throttling behavior.
 
-Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, a bot can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
+Ensure that you don't exceed the throttling limits to avoid failed message delivery. For example, an agent can send only two messages with tag mention in a five-second window and each message can have only up to 10 tags.
 
-The following table lists the throttling limits for tag mentions in a bot:
+The following table lists the throttling limits for tag mentions in an agent:
 
 | Scope   | Window Type  | Number of tags per message  | Time windows (sec)  | Maximum number of messages per time window  |
 |------------------------|------------|-----------|----------|----------|
-|Per bot per thread     |   Short     |    10     |     5    |     2    |
+|Per agent per thread     |   Short     |    10     |     5    |     2    |
 | &nbsp;                |   Long      |    10     |     60   |     5    |
-|All bots per thread    |   Short     |    10     |     5    |     4    |
+|All agents per thread    |   Short     |    10     |     5    |     4    |
 | &nbsp;                |   Long      |    10     |     60   |     5    |
 
 ##### Limitations
 
-* Tag mentions are supported only in bot to client message flow with text and Adaptive Card.
+* Tag mentions are supported only in agent to client message flow with text and Adaptive Card.
 * Tag mentions aren't supported in shared and private channels.
 * Tag mentions aren't supported in connectors.
-* Tag mentions don't support the invoke flow in a bot.
+* Tag mentions don't support the invoke flow in an agent.
 
 ## Next step
 

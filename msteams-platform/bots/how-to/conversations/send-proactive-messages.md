@@ -1,6 +1,6 @@
 ---
 title: Send proactive messages
-description: Learn how to send proactive messages with your Teams bot using the Teams SDK (Teams AI Library)
+description: Learn how to send proactive messages with your Teams agent using the Teams SDK (Teams AI Library)
 ms.topic: article
 ms.owner: nickwalk
 ms.author: nickwalk
@@ -9,13 +9,13 @@ ms.date: 06/30/2026
 ---
 # Proactive messages
 
-A proactive message is any message sent by a bot that isn't in response to a request from a user. This message can include content, such as:
+A proactive message is any message sent by an agent that isn't in response to a request from a user. This message can include content, such as:
 
 * Welcome messages
 * Notifications
 * Scheduled messages
 
-To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
+To send a proactive message to a user, a group chat, or a team, your agent must have the requisite access to send the message. For a group chat or team, the app that contains your agent must be first installed in that location.
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must proactively install your app using Graph. For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
@@ -38,15 +38,15 @@ You can create a new conversation with a user or a conversation thread in a chan
 
 * When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * When a new user is added to a context where your app is installed, you receive an `onMembersAdded` activity.
-* Every event that the bot receives contains the required information, which you can get from the bot context (activity context).
+* Every event that the agent receives contains the required information, which you can get from the agent context (activity context).
 * You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 
-Regardless of how you get the information, store the `tenantId` and then store either the `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the bot is installed in the team before you can send a proactive message to a channel.
+Regardless of how you get the information, store the `tenantId` and then store either the `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the agent is installed in the team before you can send a proactive message to a channel.
 
-* The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list) to create a new conversation in personal chat. Ensure that the bot is installed in the personal scope before you can send a proactive message. If the bot isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the bot returns a `403` error with `ForbiddenOperationException` message.
+* The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list) to create a new conversation in personal chat. Ensure that the agent is installed in the personal scope before you can send a proactive message. If the agent isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the agent returns a `403` error with `ForbiddenOperationException` message.
 
-* The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots.
+* The `userId` is unique to your agent ID and a particular user. You can't reuse the `userId` between agents.
 
 * The `channelId` is global.
 
@@ -79,7 +79,7 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
-The conversation ID is unique for each bot within a specific channel, even in a multitenant environment. This ID ensures that the bot's messages are directed to the appropriate channel and doesn't interrupt with other bots or channels within the same or across different organizations.
+The conversation ID is unique for each agent within a specific channel, even in a multitenant environment. This ID ensures that the agent's messages are directed to the appropriate channel and doesn't interrupt with other agents or channels within the same or across different organizations.
 
 If you don't have the `conversationId`, you can [proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
@@ -98,15 +98,15 @@ To proactively send a message as a reply to a thread in a channel, use `app.Repl
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
 
-Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
+Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the agent.
 
-### Understand who blocked, muted, or uninstalled a bot
+### Understand who blocked, muted, or uninstalled an agent
 
-As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
+As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled an agent. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
 
-Using Teams, you can send a proactive message to the bot to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the bot isn't delivered to the user.
+Using Teams, you can send a proactive message to the agent to verify if a user has blocked or uninstalled an agent. If the agent is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the agent isn't delivered to the user.
 
-The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the bot.
+The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the agent.
 
 The following code sample is an example of a 403 response code:
 
@@ -135,7 +135,7 @@ When proactive messaging is used to send a welcome message to a user, there's no
 
 A good welcome message can include the following information:
 
-* Reason for the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
+* Reason for the message - It must be clear to the user why they're receiving the message. If your agent was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
 * Your offer - Users must be able to identify what they can do with your app and what value can you bring to them.
 
@@ -143,7 +143,7 @@ A good welcome message can include the following information:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of an agent. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 
@@ -157,7 +157,7 @@ To send notifications using proactive messaging, ensure your users have a clear 
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
-To update or delete a proactive message sent by a notification only bot:
+To update or delete a proactive message sent by a notification only agent:
 
 1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
 
@@ -177,7 +177,7 @@ You can use the Graph API to proactively install your app for your users. Cache 
 
 You can only install apps that are in your organizational app catalog or the Microsoft Teams Store.
 
-See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).
+See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive agent installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).
 
 ### Examples
 
@@ -188,7 +188,7 @@ Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-a
 * REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
     ```http
-    PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{activityId}
+    PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
     ```
 
     ```json
@@ -322,13 +322,13 @@ The following table provides code samples that incorporate basic conversation fl
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
 |---------------|--------------|--------|-------------|--------|--------|
-| Teams Conversation Basics  | This sample app shows how to use different bot conversation events available in Teams SDK v2 for personal and teams scope.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Teams Conversation Basics  | This sample app shows how to use different agent conversation events available in Teams SDK v2 for personal and teams scope.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
+> [Format agent messages](~/bots/how-to/format-your-bot-messages.md)
 
 ## See also
 
-* [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Channel and group chat conversations with an agent](~/bots/how-to/conversations/channel-and-group-conversations.md)

@@ -1,27 +1,27 @@
 ---
-title: Customize Bot Messages
-description: Learn how to format and style your bot messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
+title: Customize Agent Messages
+description: Learn how to format and style your agent messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
 ms.date: 03/11/2025
 ---
-# Format your bot messages
+# Format your agent messages
 
-Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
+Message formatting enables you to bring out the best in agent messages. You can format your agent messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
 
 > [!NOTE]
-> Regarding bot message size limit:
+> Regarding agent message size limit:
 >
-> - The bot message size limit is 100 KB:
+> - The agent message size limit is 100 KB:
 >   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
 >   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
-> - If the bot message exceeds the size limit, the bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
+> - If the agent message exceeds the size limit, the agent receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
 
 ## Format text content
 
-To format your bot messages, you can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your bot message's text content is rendered.
+To format your agent messages, you can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your agent message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
@@ -31,7 +31,7 @@ Microsoft Teams supports the following formatting options:
 | `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
 | `xml` | The text is simple XML markup. |
 
-Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your agent can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
 The following limitations apply to formatting:
 
@@ -85,23 +85,22 @@ The following table provides a list of styles, which are supported on desktop, i
 
 ## AI-generated content messages
 
-AI labels, citations, feedback buttons, and sensitivity labels in your bot’s messages improve user engagement and foster transparency and trust.
+AI labels, citations, feedback buttons, and sensitivity labels in your agent’s messages improve user engagement and foster transparency and trust.
 
 - [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
-- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the bot's message through in-text citations and references.
-- [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the bot's messages.
-- [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the bot's message.
+- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the agent's message through in-text citations and references.
+- [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the agent's messages.
+- [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the agent's message.
 
-For more information, see [bot messages with AI-generated content](format-ai-bot-messages.md).
+For more information, see [agent messages with AI-generated content](format-ai-bot-messages.md).
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
+> [Update and delete messages sent from agent](update-and-delete-bot-messages.md)
 
 ## See also
 
-- [Build bots for Teams](../what-are-bots.md)
-- [Designing your Microsoft Teams bot](../design/bots.md)
+- [Build agents for Teams](../what-are-bots.md)
 - [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 - [Format cards in Teams](../../task-modules-and-cards/cards/cards-format.md)

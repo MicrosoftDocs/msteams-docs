@@ -1,19 +1,19 @@
 ---
-title: Send and receive files from a bot
-description: Learn send and receive files from bot using Graph APIs for personal, channel, groupchat scopes. Use Teams bot APIs using code samples based on v3 Bot Framework SDK.
-keywords: teams bots files send receive
+title: Send and receive files from a agent
+description: Learn send and receive files from an agent using Graph APIs for personal, channel, groupchat scopes. Use Teams agent APIs using code samples based on v3 Bot Framework SDK.
+keywords: teams agents files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
 ms.owner: angovil
 ---
-# Send and receive files using bots
+# Send and receive files using agents
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-There are two ways to send files to and from a bot:
+There are two ways to send files to and from a agent:
 
-* Using the Microsoft Graph APIs. This method works for bots in all scopes in Teams:
+* Using the Microsoft Graph APIs. This method works for agents in all scopes in Teams:
   * `personal`
   * `channel`
   * `groupchat`
@@ -29,19 +29,19 @@ You can post messages with card attachments referencing existing SharePoint file
 > [!NOTE]
 > This method works only in the `personal` context. It does not work in the `channel` or `groupchat` context.
 
-Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
+Your agent can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
 
 The following sections describe how to do this to send file content as a result of direct user interaction, like sending a message. This API is provided as part of the Microsoft Teams Bot Platform.
 
-### Configure your bot to support files
+### Configure your agent to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots]/microsoft-365/extensibility/schema/root-bots#supportsfiles) section of the Manifest reference.
+In order to send and receive files in your agent, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots]/microsoft-365/extensibility/schema/root-bots#supportsfiles) section of the Manifest reference.
 
-The definition will look like this: `"supportsFiles": true`. If your bot doesn't enable `supportsFiles`, the following features won't work.
+The definition will look like this: `"supportsFiles": true`. If your agent doesn't enable `supportsFiles`, the following features won't work.
 
 ### Receiving files in personal chat
 
-When a user sends a file to your bot, the file is first uploaded to the user's OneDrive for Business storage. Your bot will then receive a message activity notifying you of the user upload. The activity contains file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
+When a user sends a file to your agent, the file is first uploaded to the user's OneDrive for Business storage. Your agent will then receive a message activity notifying you of the user upload. The activity contains file metadata, such as its name and the content URL. You can directly read from this URL to fetch its binary content.
 
 #### Message activity with file attachment example
 
@@ -66,7 +66,7 @@ The following table describes the content properties of the attachment:
 | Property | Purpose |
 | --- | --- |
 | `downloadUrl` | OneDrive URL for fetching the content of the file. You can issue an `HTTP GET` directly from this URL. |
-| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your bot. |
+| `uniqueId` | Unique file ID. This will be the OneDrive drive item ID, in the case of the user sending a file to your agent. |
 | `fileType` | File extension type, such as pdf or docx. |
 
 As a best practice, you should acknowledge the file upload by sending back a message to the user.
@@ -76,8 +76,8 @@ As a best practice, you should acknowledge the file upload by sending back a mes
 Uploading a file to a user involves the following steps:
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
-2. If the user accepts the file download, your bot receives an *Invoke* activity with a location URL.
-3. To transfer the file, your bot performs an `HTTP POST` directly into the provided location URL.
+2. If the user accepts the file download, your agent receives an *Invoke* activity with a location URL.
+3. To transfer the file, your agent performs an `HTTP POST` directly into the provided location URL.
 4. Optionally, you can remove the original consent card if you don't want to allow the user to accept further uploads of the same file.
 
 #### Message requesting permission to upload
@@ -113,14 +113,14 @@ The following table describes the content properties of the attachment:
 | --- | --- |
 | `description` | Description of the file. May be shown to the user to describe its purpose or to summarize its content. |
 | `sizeInBytes` | Provides the user an estimate of the file size and the amount of space it takes in OneDrive. |
-| `acceptContext` | Additional context that will be silently transmitted to your bot when the user accepts the file. |
-| `declineContext` | Additional context that will be silently transmitted to your bot when the user declines the file. |
+| `acceptContext` | Additional context that will be silently transmitted to your agent when the user accepts the file. |
+| `declineContext` | Additional context that will be silently transmitted to your agent when the user declines the file. |
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to your bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your bot can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to your agent if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that your agent can then issue a `PUT` into to transfer the file contents. For information on uploading to the OneDrive URL read this article: [Upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
-The following example shows an abridged version of the invoke activity that your bot receives:
+The following example shows an abridged version of the invoke activity that your agent receives:
 
 ```json
 {
@@ -144,7 +144,7 @@ The following example shows an abridged version of the invoke activity that your
 }
 ```
 
-Similarly, if the user declines the file, your bot receives the following event, with the same overall activity name:
+Similarly, if the user declines the file, your agent receives the following event, with the same overall activity name:
 
 ```json
 {
@@ -185,7 +185,7 @@ The following table describes the content properties of the attachment:
 
 ### Basic example in C #
 
-The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog:
+The following sample shows how you can handle file uploads and send file consent requests in your agent's dialog:
 
 ```csharp
 
@@ -200,7 +200,7 @@ private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<objec
 
     var message = await result as Activity;
 
-    // Check to see if the user is sending the bot a file.
+    // Check to see if the user is sending the agent a file.
     if (message.Attachments != null && message.Attachments.Any())
     {
         var attachment = message.Attachments.First();
