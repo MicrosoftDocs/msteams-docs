@@ -2,8 +2,8 @@
 title: Create Search Commands for App
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
 ms.topic: article
-ms.author: anclear
-ms.date: 09/16/2024
+ms.author: nickwalk
+ms.date: 06/23/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
@@ -125,7 +125,7 @@ The following code provides an example of search-based for message extensions:
 # [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
@@ -171,7 +171,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-quickstart/js/botActivityHandler.js#L30-L53)
 
 ```javascript
 async handleTeamsMessagingExtensionQuery(context, query) {
