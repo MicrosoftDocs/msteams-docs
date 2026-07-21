@@ -1265,7 +1265,6 @@ app.on('install.remove', async ({ send }) => {
     }
 ```
 
-
 # [Python](#tab/python)
 
 ```python
