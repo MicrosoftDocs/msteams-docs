@@ -3,7 +3,7 @@ title: Build Agents that Use Emoji Reactions in Teams Chat
 description: Reactions are emoji markers on messages in Teams chat. Learn how to make an agent that adds, removes, and listens reactions with practical code examples.
 #customer intent: As a Teams agent developer, I want to add emoji reactions to chat messages so that my agent can acknowledge messages without interrupting the conversation.
 ms.localizationpriority: high
-ms.date: 07/01/2026
+ms.date: 07/17/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -13,10 +13,6 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use emoji reactions in Teams chat
 
-> [!NOTE]
->
-> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
 In Teams chat, reactions are lightweight emoji markers that participants can attach to anyone's messages. Agents can use reactions to acknowledge messages, display workflow status, and present other information without interrupting the flow of the conversation. Agents can also listen for and respond to reactions.
 
 # [Desktop](#tab/desktop)
@@ -25,7 +21,7 @@ In Teams chat, reactions are lightweight emoji markers that participants can att
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile-mini.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png"
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png"
 
 ---
 
@@ -72,11 +68,11 @@ The following example illustrates adding a reaction to a received message, then 
 ```typescript
 app.on('message', async ({ activity, api }) => {
 // First, add a reaction
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
+  await api.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 
   // Wait a bit, then remove it
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
+  await api.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
 ```
 
@@ -96,7 +92,7 @@ import asyncio
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     # First, add a reaction
-    await ctx.api.conversations.reactions.add(
+    await ctx.api.reactions.add(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'
@@ -104,7 +100,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
     # Wait a bit, then remove it
     await asyncio.sleep(2)
-    await ctx.api.conversations.reactions.delete(
+    await ctx.api.reactions.delete(
         ctx.activity.conversation.id,
         ctx.activity.id,
         '1f44b_wavinghand'
