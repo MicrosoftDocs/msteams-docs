@@ -4,7 +4,7 @@ description: Learn about bot events and activity handlers for messages, channels
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: nickwalk
-ms.date: 04/09/2026
+ms.date: 07/21/2026
 ---
 
 # Understand bot concepts
@@ -13,15 +13,28 @@ A bot's interactions can be using text, speech, images, or video. It processes t
 
 ## Bot scopes
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team depending on the **scopes** you configure in the app manifest. Bot scope assignment is an explicit configuration choice, and each scope provides unique opportunities and challenges for your conversational bot.
 
-| In a channel | In a group chat | In a one-to-one chat |
+The supported bot scopes are:
+
+- `personal` for one-to-one chat with a user.
+- `groupChat` for group chat conversations.
+- `team` for teams and standard channel conversations.
+
+A bot can't be scoped directly to a single standard channel. To participate in channel conversations, the bot must be configured with the `team` scope and installed in the team. When installed at the team level, the bot is available across the team's standard channels.
+
+> [!NOTE]
+> Scope configuration determines where users can install and interact with your bot. If a scope isn't declared in the app manifest, the bot isn't available in that conversation context.
+
+| In a team or standard channel (`team` scope) | In a group chat (`groupChat` scope) | In a one-to-one chat (`personal` scope) |
 | :-- | :-- | :-- |
 | Massive reach | Fewer members | Traditional way |
 | Concise individual interactions | @mention to bot | Q&A bots |
 | @mention to bot | Similar to channel | Bots that tell jokes and take notes |
 
-### In a channel
+### In a team or standard channel
+
+To enable a bot in channels, configure the bot with the `team` scope. Teams and channels aren't separate bot scopes: the `team` scope is the scope that allows the bot to participate in standard channel conversations.
 
 Channels contain threaded conversations between multiple people, even up to 2000. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions don't work. Instead, you must look to use interactive cards or dialogs (referred as task modules in TeamsJS v1.x), or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
@@ -34,15 +47,22 @@ Bots work better in a channel in the following cases:
 
 ### Limitations
 
-- Teams bots cannot be installed to a single standard channel only. When a bot is declared with the `team` scope, installation occurs at the team level and the bot is visible across the team’s standard channels. This behavior is by design and cannot be restricted by manifest settings or runtime code. In standard teams, the General channel has special identity behavior, including a channel ID that matches the team ID. Bots are not supported in private or shared channels in the same way as standard channel conversations.
+- A bot can't be installed to only one standard channel. Installation happens at the team level when the bot uses the `team` scope.
+- After installation, the bot is available across the team's standard channels.
+- The General channel has special identity behavior, including a channel ID that matches the team ID.
+- Private and shared channels don't support bots in the same way as standard channel conversations, so validate your design carefully if your app must work across channel types.
 
 ### In a group chat
+
+To enable a bot in group chats, configure the bot with the `groupChat` scope.
 
 Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
 
 Bots that work better in a channel also work better in a group chat.
 
 ### In a one-to-one chat
+
+To enable a bot in one-to-one chat, configure the bot with the `personal` scope.
 
 One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
 
