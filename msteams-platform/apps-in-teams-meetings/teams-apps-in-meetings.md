@@ -4,7 +4,7 @@ description: In this article, learn how apps works in Microsoft Teams meeting ba
 ms.topic: overview
 ms.localizationpriority: medium
 ms.owner: kanchankaur
-ms.date: 01/23/2025
+ms.date: 05/27/2026
 ---
 
 # Build apps for Teams meetings and calls
@@ -104,7 +104,7 @@ You can configure your tab app to enable app caching to reduce the reload time o
 
 ### Default theme for meeting apps
 
-By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](meeting-apps-apis.md#get-user-context-api). Earlier versions of Teams clients only support dark and contrast theme for apps in Teams meetings.
+By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for Teams meetings. Your app can update the app UI based on the user's theme by using the [getContext API](../tabs/how-to/access-teams-context.md#handle-theme-change). Earlier versions of Teams clients only support dark and contrast theme for apps in Teams meetings.
 
 ## User types in Teams
 

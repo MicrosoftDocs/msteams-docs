@@ -1,12 +1,14 @@
 ---
-title: Create your first agent
-description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
-ms.localizationpriority: high
-ms.date: 12/11/2024
-ms.topic: reference
+title: Build a Teams Agent with Microsoft 365 Agents Toolkit
+description: Build a Teams agent using Microsoft 365 Agents Toolkit. Follow a step-by-step guide to create, run, and deploy your AI agent in Teams.
+ms.date: 07/06/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
+ms.topic: quickstart
 ---
 
-# Build your first agent
+# Build a Teams agent with Microsoft 365 Agents Toolkit
 
 Agents utilize AI to automate and execute business processes, functioning alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
 
@@ -111,41 +113,11 @@ Microsoft 365 Agents Toolkit creates and scaffolds the agent project workspace. 
 
 Congratulations! You've created and ran your first agent in Microsoft Teams.
 
-## Choose your programming language
-
-Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Microsoft Teams.
-
-:::row:::
-   :::column:::
-      **Description**
-   :::column-end:::
-   :::column span="3":::
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Choose your build environment**
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      Build with ...
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
-   :::column-end:::
-   :::column:::
-      > [!div class="nextstepaction"]
-      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
-   :::column-end:::
-:::row-end:::
-
 ## Code sample
 
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
-| Contoso knowledge hub | An intelligent agent built on the Teams SDK that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/agent-knowledge-hub/python) |
+| Contoso knowledge hub | An intelligent agent built on the Teams SDK that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/agent-knowledge-hub/python) |
 
 ## See also
 
