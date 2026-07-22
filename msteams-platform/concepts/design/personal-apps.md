@@ -1,10 +1,10 @@
 ---
 title: Designing your personal app
 description: Learn how to implement the design guidelines including UI elements to design a personal app using Microsoft Teams UI kit.
-author: heath-hamilton
+author: nickwalkmsft
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/02/2026
+ms.date: 07/22/2026
 --- 
 # Designing your personal app for Microsoft Teams
 
@@ -212,7 +212,7 @@ There should be at least a welcome screen the first time you use a personal app.
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Example shows what to do during a personal app first-run experience.":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Another example shows what to do during a personal app first-run experience.":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-first-run-do.png" alt-text="Another example shows what to do during a personal app first-run experience.":::
 
 ##### Don't: Start with a blank screen
 
