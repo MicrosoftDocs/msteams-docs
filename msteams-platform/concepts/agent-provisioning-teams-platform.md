@@ -1,16 +1,16 @@
 ---
-title: TODO
+title: Provisioning an Agent on the Teams Platform
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
-description: TODO
+description: "Provisioning an agent in Teams requires registration across three surfaces: Entra ID, Bot Connector, and app manifest. Learn how to configure each and get started."
 ms.topic: concept-article
-ms.date: 07/14/2026
+ms.date: 07/21/2026
 ---
 
-## Onboarding an agent to Teams
+## Provisioning an agent on the Teams platform
 
-Creating and hosting an agent runtime is not enough to make an agent available in Teams. Onboarding an agent to Teams requires registration and configuration across three surfaces:
+Creating and hosting an agent runtime is not enough to make an agent available in Teams. Provisioning an agent on the Teams platform requires registration and configuration across three surfaces:
 
 - *Entra ID app registration*: Identity configuration that enables an agent to authenticate and get access to services and data
 - *Bot Connector API registration*: Service configuration that enables an agent to interact with Teams via the Bot Connector API
@@ -18,7 +18,7 @@ Creating and hosting an agent runtime is not enough to make an agent available i
 
 All of these components require a Microsoft Entra tenant associated with the agent's developer.
 
-The developer workflow enabled by the Teams developer CLI encourages onboarding an agent right at the beginning of its development. Registering early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
+The developer workflow enabled by the Teams developer CLI encourages provisioning an agent right at the beginning of its development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
 
 ### Entra ID app registration: identity and authentication
 
@@ -59,23 +59,13 @@ An agent's app manifest is a JSON configuration file that contains everything ne
 - Platform-level configuration required for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
 
-Developers deploy an agent's app manifest to the Teams platform using the Teams Developer Portal or the Teams developer CLI. When development is complete and the runtime is running in production, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
+Developers deploy an agent's app manifest to the Teams platform using the Teams Developer Portal or the Teams developer CLI. During development, they can access a private installation link from the portal or the CLI to install the agent to their Teams client, even though it has not yet been published. When development is complete, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
 
 ## Teams developer CLI
 
-The Teams developer CLI is designed to create all of these onboarding artifacts at the beginning of development. Running `teams app create` creates:
+The Teams developer CLI is designed to create all of these provisioning artifacts at the beginning of development. Running `teams app create` creates:
 
 1. An Entra ID app registration in your tenant, configured with a client secret used for authentication
 1. A bot registration in Teams Developer Portal, configured to use the app registration as the agent's identity
 1. A starter app manifest, which references the bot registration and is deployed to the Teams platform
 1. A configuration file for the agent's runtime containing the client secret, used by Teams SDK to authenticate to the Bot Connector API
-
-## Next steps
-
-TODO
-
-Try the quickstart
-
-Learn more about creating an agent runtime with Teams SDK
-
-Learn more about the developer workflow

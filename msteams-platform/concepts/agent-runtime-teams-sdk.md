@@ -1,10 +1,139 @@
 ---
-title: Microsoft Teams SDK Programming Model
-description: TODO
-ms.topic: overview
-ms.date: 05/19/2026
+title: Agent runtime and Teams SDK
 author: nickwalkmsft
 ms.author: nickwalk
+ms.reviewer: nickwalk
+description: TODO
+ms.topic: concept-article
+ms.date: 07/14/2026
+---
+
+# Agent runtime and Teams SDK
+
+An agent's runtime is its code: a web service that implements its behavior.
+
+TODO App developers are responsible for hosting their app's runtime on the web for the lifetime of the app, because Teams does not host or run app code, it calls the app's runtime remotely.
+
+TODO documentation and other dev-audience places will often just say "agent" when referring specifically to an agent's runtime; this article is explicit about it to emphasize its focus on the code. "For developers, the agent's runtime *is* is the agent".
+
+The defining characteristic of a Teams agent runtime is its connection to the Bot Connector API. Agents use the Bot Connector API to listen for activities occurring in Teams and to perform actions in Teams.
+
+Agent development is the main focus of Teams SDK and most modern Teams app development. Simplifying and structuring interactions with the Bot Connector API is the main purpose of Teams SDK.
+
+---
+
+## What Teams SDK does (for agents, not talking about other apps)
+
+- Offers ergonomic activity handlers that you opt into by implementing, implemented idiomatically in the language you're using
+- Integrates with the ecosystem's common app server so you can apply custom configuration, expose additional services from the same implementation etc.
+- Offers a simpler and more developer-friendly interface to the Bot Connector service for performing activites in Teams, particularly when it comes to chat flows and features
+- Authentication: Handles authentication for calls to and from Teams and Graph, simplifies SSO and OAuth token handling
+- Offers a Graph API
+- Adaptive card builder
+
+(can also mention that it covers other app experiences as well)
+
+---
+
+## Dev workflow
+
+(move this further down the page, or maybe a separate small article if this gets long)
+
+provision first
+can have this be a dedicated section talking about dev tunnels, playground, sideloading
+
+talk about how the manifest can evolve and be redeployed and the app reinstalled
+
+---
+
+## Handling activities
+
+(this is mostly about activities; events are less foundational, TODO cover them later, maybe only very briefly here. Good candidate for "conceptual ref" content.)
+
+*Activity objects* are JSON objects that describe interactions in Teams, like a user sending a chat message or adding another user to a conversation. When actions visible to an agent occur in Teams, Bot Connector generates activity objects and delivers them to the agent's runtime endpoint.
+
+Teams SDK provides an event-driven framework for handling activities, with methods to register strongly-typed event handlers. For example, to
+
+# [C#](#tab/csharp)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    await context.Send($"You said: {context.activity.Text}", cancellationToken);
+});
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+app.on('message', async ({ activity, send }) => {
+  await send(`You said: ${activity.text}`);
+});
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.send(f"You said '{ctx.activity.text}'")
+```
+
+In many Teams agent designs, `message` activities are a primary driver of action, but agents are not limited to request-response chat workflows. Agents can subscribe to many different kinds of Teams events and are free to take action based on other inputs, such as additional service interfaces or timers. They can perform actions in Teams [proactively](../bots/how-to/conversations/send-proactive-messages.md), at any time, not just in the context of handling a Teams activity event.
+
+middleware pattern
+
+An agent's visibility to different actions is determined by where the agent is installed and its permissions.
+
+---
+
+## Doing things in Teams
+
+# [C#](#tab/csharp)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    await context.Send($"You said: {context.activity.Text}", cancellationToken);
+});
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+app.on('message', async ({ activity, send }) => {
+  await send(`You said: ${activity.text}`);
+});
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.send(f"You said '{ctx.activity.text}'")
+```
+
+runtime will also access other services, esp. graph (separate section for graph? maybe a subsection here?)
+
+---
+
+## Integrating AI
+
+TODO reuse the snippets from above but include an LLM call. "This minimal implementation illustrates a common agent workflow: receiving a `message` payload via the `activity` event handler and responding with a chat message. A real-world agent's runtime would use an LLM to understand the user's request, take action on it, and generate a response."
+
+This is where we talk about the possibilities of "bringing an agent vs. building one new". You might look at "Teams agent development" as creating a bridge between an existing agent (via something like the OpenAI API) and Teams conversational features. Or, you might be starting from scratch and also building up a new, bespoke LLM-based agent as you go.
+
+---
+
+## Auth
+
+---
+
+## Greenfield vs existing hosted app
+
+---
+
 ---
 
 # Teams SDK programming model **for agents**
@@ -27,26 +156,7 @@ api client -> bot connector
 
 <https://microsoft.github.io/teams-sdk/why>
 
-## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/why>
-
-- Reactive and proactive messaging
-- Bot registration (bot ID and where the endpoint is configured)
-- Request validation
-- Variety of events, varied response types, some expect no response at all. Should define, maybe link to the Activity model.
-- Authenticating calls to Teams API, Graph API
-- OAuth, SSO
--
--
-- Also get config, and the way it authenticates
--
-
-## Remaining Concepts to carry over from <https://microsoft.github.io/teams-sdk/teams/core-concepts>
-
-- Basic flowchart, see diagram
-- DevTunnel
-- Provisioning of app and bot has to come even before sideloading
-- Sideloading
-- Explain how the developer CLI supports all of this
+--
 
 Multi languages:
 
@@ -92,20 +202,6 @@ The app object can be responsible for:
 - Sending proactive messages
 - Accessing Teams APIs
 - Managing plugins and lifecycle events
-
-## Activity routing
-
-In the platform model, Teams sends different types of activity to your app. In the SDK, those activities are routed to handlers that you register in application code.
-
-For example, a message handler can process user messages and send a response to the conversation. The SDK docs show handlers that receive a message activity, inspect its text, and send a reply. [\[microsoft.github.io\]](https://microsoft.github.io/teams-sdk/csharp/getting-started/code-basics/), [\[microsoft.github.io\]](https://microsoft.github.io/teams-sdk/csharp/essentials/on-activity/)
-
-The SDK can also use a middleware-style routing pattern, where multiple handlers can process an activity in order. A handler can perform work and then pass control to the next handler, or stop the chain when it has fully handled the activity. Handler registration order affects how activities flow through the handler chain. [\[microsoft.github.io\]](https://microsoft.github.io/teams-sdk/csharp/essentials/on-activity/)
-
-## Events and lifecycle hooks
-
-Teams apps need to react not only to user messages, but also to application and platform events. The SDK provides event hooks for scenarios such as application startup, sign-in, errors, incoming activity, activity responses, and sent activity. [\[microsoft.github.io\]](https://microsoft.github.io/teams-sdk/csharp/essentials/on-event/)
-
-These hooks help developers connect app behavior to the broader lifecycle of a Teams application. For example, an app can log errors, inspect incoming activity, track outgoing responses, or run setup logic when the app starts.
 
 ## Authentication and platform plumbing
 
