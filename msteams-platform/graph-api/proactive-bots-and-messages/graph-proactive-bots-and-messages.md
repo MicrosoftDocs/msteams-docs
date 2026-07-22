@@ -150,7 +150,7 @@ For next steps, see [Send a personal welcome message](send-personal-welcome-mess
 ## Additional code samples
 >
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp)
 
 ## See also
 
