@@ -269,6 +269,8 @@ string StripMentions(MessageActivity msg)
 }
 ```
 
+:::zone-end
+
 ### Add mentions to your messages
 
 Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
