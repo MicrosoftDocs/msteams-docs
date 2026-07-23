@@ -123,14 +123,11 @@ Declare commands and their triggers by configuring the `bots[].commandLists[]` s
 
 In this example:
 
-- The agent is registered to operate in `personal`, `team`, and `groupChat` scopes. The
-`supportsTargetedMessages` is set to `true` to allow the agent to receive targeted messages in group conversations.
+- As is required for slash commands, `supportsTargetedMessages` is set to `true` to allow the agent to receive targeted messages in group conversations.
 
-- The `triggers` property defines where a command appears and how users can invoke it from the Teams compose experience. Use `slash` when the command should appear in the slash command picker, use `mention` when the command should appear in the traditional @mention command menu, or include both values when the same command should be available from both entry points.
-
-  - The `summarize` command is configured to be a slash command.
-  - The `assign` command appears as an @mention command option.
-  - The `review` command is available as both a slash command and an @mention command in the agent.
+- `summarize` is configured as a slash command.
+- `assign` is configured as an @mention command.
+- `review` is configured as both a slash command an and @mention command.
 
 ### Slash commands for action-type message extensions
 
