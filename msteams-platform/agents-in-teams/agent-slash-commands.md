@@ -69,7 +69,7 @@ Slash commands and [targeted messaging](#targeted-messaging) are configured in t
 
 ### Slash and @mention commands for agents
 
-Agent slash commands require an agent to opt in to receive targeted messages; see [Receive targeted messages](targeted-messages.md#receive-targeted-messages).
+Slash and @mention commands require an agent to opt in to receive targeted messages, For more information, see [receive targeted messages](targeted-messages.md#receive-targeted-messages).
 
 #### Triggers: slash and @mention
 
