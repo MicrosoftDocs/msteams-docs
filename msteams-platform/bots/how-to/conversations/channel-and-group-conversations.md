@@ -240,7 +240,14 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 }
 ```
 
-#### Check for and strip @mention: .NET code example
+#### Check for and strip @mention
+
+In channels and group chats, users typically address an agent or app with an @mention. Before interpreting the message, check that the mention targets your agent or app, then remove the mention text and trim whitespace. This leaves only the user’s command or prompt for processing.
+
+Removing the mention prevents the agent or app name from interfering with command matching, intent recognition, search, or natural-language processing. It also lets the same handler process messages consistently across personal chats, group chats, and channels. Preserve other mentions when they are part of the user’s request.
+
+> [!NOTE]
+> The TypeScript and Python versions for Teams SDK includes built-in functions to remove mention text.
 
 ::: zone pivot="teams-sdk-csharp"
 
