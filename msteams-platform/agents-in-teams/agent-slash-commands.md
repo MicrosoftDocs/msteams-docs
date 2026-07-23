@@ -65,7 +65,7 @@ For more information about @mention commands, see [@Mention](/microsoftteams/pla
 
 ## Add commands
 
-Slash commands and [targeted messaging](#targeted-messaging) are configured in the app or agent [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true). Declaring commands in the manifest makes commands visible in Teams, while the app or agent [implementation](#implementing-agent-named-command-handling) determines how each command is handled after the user sends it.
+Slash commands and [targeted messaging](targeted-messages.md) are configured in the app or agent [manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands?view=m365-app-prev&tabs=syntax&preserve-view=true). Declaring commands in the manifest makes commands visible in Teams, while the app or agent [implementation](#implementing-agent-named-command-handling) determines how each command is handled after the user sends it.
 
 ### Slash and @mention commands for agents
 
