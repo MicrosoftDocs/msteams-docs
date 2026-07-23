@@ -172,13 +172,13 @@ Use the `triggers` property of `composeExtensions[].commands[]` to expose messag
 
 In this example, `summarizeCommand` is available in the configured compose and command box contexts but is not exposed as a slash command. The `draftCommand` and `reviewCommand` actions declare the slash trigger, so they appear as slash commands in supported entry points.
 
-## Implementing agent named command handling
+## Implement agent named command handling
 
 Configuring agent slash commands only surfaces them to users in the Teams client, it doesn't assist with their implementation.
 
 When a user activates an agent slash command, Teams switches the compose box to targeted message mode and inserts the command name, then returns control to the user to allow them to enter more text and send the message. The agent's message handler is responsible for using the contents of the message to determine whether it should be interpreted as a command invocation and handling it appropriately.
 
-See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
+See [best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
 
 ## Best practices and design guidance
 
