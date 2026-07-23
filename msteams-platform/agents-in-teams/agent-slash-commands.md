@@ -39,7 +39,9 @@ Apps and agents can expose slash-command experiences through app or agent config
 These types of slash commands are supported across all client platforms, including mobile.
 
 > [!IMPORTANT]
-> [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
+>
+> For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Agent slash commands
 
