@@ -39,7 +39,7 @@ Apps and agents can expose slash-command experiences through app or agent config
 These types of slash commands are supported across all client platforms, including mobile.
 
 > [!IMPORTANT]
-> Targeted messaging and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Agent slash commands
 
@@ -178,11 +178,13 @@ When a user activates an agent slash command, Teams switches the compose box to 
 
 See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
 
+<!--
 ## Targeted messaging
 
 Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
 
 For more information, see [send and receive targeted messages in group conversations](targeted-messages.md).
+-->
 
 ## Best practices and design guidance
 
