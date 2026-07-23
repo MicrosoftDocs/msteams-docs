@@ -3,7 +3,6 @@
     {
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
       },
       "docset_name": "msteams-platform",
@@ -73,12 +72,6 @@
       "Pdf"
     ]
   },
-  "JoinTOCPlugin": [
-    {
-      "ConceptualTOC": "msteams-platform/TOC.yml",
-      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
-    }
-  ],
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/CommonPlugins",

@@ -2,7 +2,7 @@
 title: Send and Receive Targeted Messages
 description: Use targeted messages to enable agents to privately interact with users in group conversations without distracting other users or revealing private information.
 ms.localizationpriority: high
-ms.date: 06/16/2026
+ms.date: 07/17/2026
 ms.topic: article
 zone_pivot_groups: select-language
 ---
@@ -15,7 +15,7 @@ zone_pivot_groups: select-language
 
 _Targeted messaging_ enables users and agents to send each other messages in the context of a group conversation that can only be seen by the sender and the targeted recipient.
 
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
 With targeted messaging, users and agents can privately interact without distracting other users or exposing information that isn't meant for the group. Consider the following scenarios:
 
