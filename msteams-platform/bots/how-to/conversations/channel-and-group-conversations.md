@@ -247,7 +247,7 @@ In channels and group chats, users typically address an agent or app with an @me
 Removing the mention prevents the agent or app name from interfering with command matching, intent recognition, search, or natural-language processing. It also lets the same handler process messages consistently across personal chats, group chats, and channels. Preserve other mentions when they are part of the user’s request.
 
 > [!NOTE]
-> The TypeScript and Python versions for Teams SDK includes built-in functions to remove mention text.
+> The TypeScript and Python versions for Teams SDK include built-in functions to remove @mention.
 
 ::: zone pivot="teams-sdk-csharp"
 
