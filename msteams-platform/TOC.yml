@@ -1090,20 +1090,9 @@
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
     displayName: configure default install options, GCC, Customize your app
-  - name: Enable customization for your app
-    href: concepts/design/enable-app-customization.md
-    displayName: Customize your app, update app name, branding, hide and unhide app, accent
-  - name: Configure default options for Teams app
-    href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options, open as tab, open as bot, default landing 
-  - name: Create Teams app package
-    href: concepts/build-and-test/apps-package.md
-    displayName: Host your app, HTTPS, cloud server, bot icon, app icons
-  - name: Upload your app in Teams
-    href: concepts/deploy-and-publish/apps-upload.md
-  - name: Publish to your org
+  - name: Publish to your organization
     href: /microsoftteams/teams-custom-app-policies-and-settings?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store
+    displayName: upload custom apps to organization, Org-wide app settings, Remove a custom app from your organization's store  
   - name: Publish to the Teams Store
     items:
     - name: Overview
@@ -1138,6 +1127,17 @@
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
        displayName: App description, Partner Center, app manifest, Microsoft trademark and brand guidelines, external domains, testability, bot functionality, AI-generated content, mobile experience, app functionality
+  - name: Enable customization for your agent or app
+    href: concepts/design/enable-app-customization.md
+    displayName: Customize your app, update app name, branding, hide and unhide app, accent
+  - name: Configure default options for Teams agent or app
+    href: concepts/deploy-and-publish/add-default-install-scope.md
+    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options, open as tab, open as bot, default landing 
+  - name: Create Teams app package
+    href: concepts/build-and-test/apps-package.md
+    displayName: Host your app, HTTPS, cloud server, bot icon, app icons
+  - name: Upload your agent or app in Teams
+    href: concepts/deploy-and-publish/apps-upload.md
   - name: Drive customer adoption of your app
     href: promote-app-adoption.md
     displayName: app promotion, awareness, adoption, rollout, admin approval, change management
@@ -1194,3 +1194,17 @@
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
+- name: SDK Reference
+  items:
+  - name: Teams SDK for .NET
+    href: /dotnet/teams-sdk-dotnet
+    displayName: Reference
+  - name: Teams SDK for TypeScript
+    href: /javascript/api/teams-sdk-typescript
+    displayName: Reference
+  - name: Teams SDK for Python
+    href: /python/api/msteams-sdk-python
+    displayName: Reference
+  - name: Live Share SDK and TeamsJS
+    href: /javascript/api/overview/msteams-client
+    displayName: Reference, TeamsJS, client

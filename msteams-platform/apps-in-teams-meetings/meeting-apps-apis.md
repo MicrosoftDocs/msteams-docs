@@ -1,6 +1,6 @@
 ---
 title: Enhance Meeting Experience with APIs
-description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
+description: Learn meeting apps API references available through the Teams SDK and TeamsJS library with examples, code samples, and response codes.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
@@ -19,19 +19,16 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 > [!NOTE]
 > Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in meeting side panel.
 
-The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
+The following table provides a list of APIs available across the Teams SDK and the TeamsJS library:
 
 | Method | Description | Source |
 | --- | --- | --- |
-| [**Get user context**](#get-user-context-api) | Get contextual information to display relevant content in a Microsoft Teams tab. | [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
-|[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
-|[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-|[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
-| [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
-| [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
+| [**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+| [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Teams SDK](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest&preserve-view=true) |
 
 ## Get user context API
 
@@ -583,7 +580,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 ## Get participant API
 
-The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
+The Get Participant API enables your app to fetch participant information by meeting ID and participant ID. The API is available through the Teams SDK.
 
 > [!NOTE]
 >
@@ -596,7 +593,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 > [!TIP]
 > Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) library and bot activity.
+The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as parameters. The parameters are available as part of the Teams SDK activity context and the TeamsJS library.
 
 The following table includes the query parameters:
 
@@ -610,50 +607,63 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet3)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
+* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
 ```csharp
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+app.OnMessage(async (context, cancellationToken) =>
 {
-  // Gets the details for the given meeting participant. 
-  // This only works in Teams meeting scoped conversations.
-  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
-  TeamsChannelAccount member = participant.User;
-  MeetingParticipantInfo meetingInfo = participant.Meeting;
-  ConversationAccount conversation = participant.Conversation;
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+    var tenantId = context.Activity.ChannelData?.Tenant?.Id;
+    var userId = context.Activity.From?.AadObjectId;
 
-  // Sends a message activity to the sender of the incoming activity. 
-  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
-}
+    if (meetingId != null && tenantId != null && userId != null)
+    {
+        // Gets the details for the given meeting participant.
+        var participant = await context.Api.Meetings.GetParticipantAsync(meetingId, userId, tenantId);
+
+        // Sends a message activity to the sender of the incoming activity.
+        await context.Send($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
+    }
+});
 ```
 
-# [JavaScript](#tab/javascript3)
+# [TypeScript](#tab/javascript3)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest&preserve-view=true)
 
 ```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onMessage(async (context, next) => {
+app.on('message', async ({ activity, api, send }) => {
+  const meetingId = activity.channelData?.meeting?.id;
+  const tenantId = activity.channelData?.tenant?.id;
+  const userId = activity.from?.aadObjectId;
 
-            // getMeetingParticipant : Gets the details for the given meeting participant. 
-            // This only works in Teams meeting scoped conversations.
-            TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
-            let member = participant.user;
-            let meetingInfo = participant.meeting;
-            let conversation = participant.conversation;
+  if (meetingId && tenantId && userId) {
+    // Gets the details for the given meeting participant.
+    const participant = await api.meetings.getParticipant(meetingId, userId, tenantId);
 
-            // Sends a message activity to the sender of the incoming activity. 
-            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+    // Sends a message activity to the sender of the incoming activity.
+    await send(`The participant role is: '${participant.meeting?.role}'`);
+  }
+});
+```
 
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
-    }
-}
+# [Python](#tab/python3)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    meeting_id = ctx.activity.channel_data.meeting.id
+    tenant_id = ctx.activity.channel_data.tenant.id
+    user_id = ctx.activity.from_.aad_object_id
+
+    if meeting_id and tenant_id and user_id:
+        # Gets the details for the given meeting participant.
+        participant = await ctx.api.meetings.get_participant(meeting_id, user_id, tenant_id)
+
+        # Sends a message activity to the sender of the incoming activity.
+        await ctx.send(f"The participant role is: {participant.meeting.role}")
 ```
 
 # [JSON](#tab/json3)
@@ -718,7 +728,7 @@ The following table provides the response codes:
 
 ## Send an in-meeting notification
 
-All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through Bot Services.
+All users in a meeting receive the notifications sent through in-meeting notification payload. In-meeting notification payload triggers an in-meeting notification and enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. You can send an in-meeting notification based on user action. The payload is available through the Teams SDK.
 
 You can also send targeted in-meeting notification to a specific participant in a meeting. For more information, see [Targeted in-meeting notification](in-meeting-notification-for-meeting.md#targeted-in-meeting-notification).
 
@@ -752,33 +762,44 @@ The following table includes the query parameter:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
-// Specifies the type of text data in a message attachment.
-Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-// Configures the current activity to generate a notification within Teams.
-activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
-
-// Sends a message activity to the sender of the incoming activity. 
-await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
+app.OnMessage(async (context, cancellationToken) =>
+{
+    // Send an in-meeting notification with an external resource URL.
+    await context.Send(new Activity
+    {
+        Type = "message",
+        Text = "This is a meeting signal test",
+        ChannelData = new
+        {
+            notification = new
+            {
+                alertInMeeting = true,
+                externalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        }
+    }, cancellationToken);
+});
 ```
 
-# [JavaScript](#tab/javascript2)
+# [TypeScript](#tab/javascript2)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
-```javascript
-// MessageFactory.text(): Specifies the type of text data in a message attachment.
-const replyActivity = MessageFactory.text('Hi'); // this could be an Adaptive Card instead
-replyActivity.channelData = {
-    notification: {
+```typescript
+app.on('message', async ({ send }) => {
+  // Send an in-meeting notification with an external resource URL.
+  await send({
+    type: 'message',
+    text: 'This is a meeting signal test',
+    channelData: {
+      notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID'
+      }
     }
-};
-
-// Sends a message activity to the sender of the incoming activity.
-await context.sendActivity(replyActivity);
+  });
+});
 ```
 
 # [JSON](#tab/json2)
@@ -960,9 +981,9 @@ POST /v1/meetings/{meetingId}/notification
 
 ## Get meeting details API
 
-The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through the Teams SDK. Both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
-The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+The meeting details API must have a bot registration and bot ID. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
 **Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
 
@@ -1081,27 +1102,53 @@ The following table lists the query parameter:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
-// Gets the information for the given meeting id.
-MeetingInfo result = await TeamsInfo.GetMeetingInfoAsync(turnContext);
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
 
-// Sends a message activity to the sender of the incoming activity. 
-await turnContext.SendActivityAsync(JsonConvert.SerializeObject(result));
+    if (meetingId != null)
+    {
+        // Gets the information for the given meeting id.
+        var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+
+        // Sends a message activity to the sender of the incoming activity.
+        await context.Send(JsonConvert.SerializeObject(meetingInfo), cancellationToken);
+    }
+});
 ```
 
-# [JavaScript](#tab/javascript)
+# [TypeScript](#tab/javascript)
 
-```javascript
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api?view=msteams-sdk-ts-latest&preserve-view=true)
 
-this.onMessage(async(context, next) =>{
-  TurnContext.removeRecipientMention(context.activity);
- 
-  const details=await TeamsInfo.getMeetingInfo(context);
-  await context.sendActivity(JSON.stringify(details, null, 2));
+```typescript
+app.on('message', async ({ activity, api, send }) => {
+  const meetingId = activity.channelData?.meeting?.id;
+
+  if (meetingId) {
+    // Gets the information for the given meeting id.
+    const details = await api.meetings.getById(meetingId);
+    await send(JSON.stringify(details, null, 2));
+  }
 });
+```
 
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    meeting_id = ctx.activity.channel_data.meeting.id
+
+    if meeting_id:
+        # Gets the information for the given meeting id.
+        meeting_info = await ctx.api.meetings.get_by_id(meeting_id)
+        await ctx.send(str(meeting_info))
 ```
 
 **Calling extensibility**:
@@ -1402,7 +1449,7 @@ POST /cartcaption?meetingid=04751eac-30e6-47d9-9c3f-0b4ebe8e30d9&token=04751eac&
 Host: api.captions.office.microsoft.com
 Content-Type: text/plain
 Content-Length: 22
-Hello I’m Cortana, welcome to my meeting. 
+Hello I'm Cortana, welcome to my meeting.
 ```
 
 > [!NOTE]  
@@ -1446,14 +1493,14 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 "webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
-    },
+    }
 "authorization": {
     "permissions": {
         "resourceSpecific": [
             {
                 "name": "OnlineMeeting.ReadBasic.Chat",
                 "type": "Application"
-            }
+            },
             {
                 "name": "ChannelMeeting.ReadBasic.Group",
                 "type": "Application"
@@ -1490,13 +1537,13 @@ Your app manifest must have the `webApplicationInfo` property to receive the mee
 
 ### Example of getting meeting start or end events
 
-The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
+The bot receives the meeting start and meeting end events through the `OnTeamsMeetingStartAsync` and `OnTeamsMeetingEndAsync` handlers. The information related to the meeting event is part of the `MeetingStartEventDetails` object, which includes the metadata fields such as, `meetingType`, `title`, `id`, `joinUrl`, `startTime`, and `EndTime`.
 
 > [!NOTE]
 >
-> * Get meeting ID from `turnContext.ChannelData`.
+> * Get meeting ID from `context.Activity.ChannelData`.
 > * Do not use conversation ID as meeting ID.
-> * Do not use meeting ID from meeting events payload `turncontext.activity.value`.
+> * Do not use meeting ID from meeting events payload `activity.value`.
 
 The following examples show how to capture the meeting start and end events:
 
@@ -1506,12 +1553,84 @@ The following examples show how to capture the meeting start and end events:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
-// Invoked when a Teams Meeting Start event activity is received from the connector.
-protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting start handler
+teamsApp.OnMeetingStart(async (context, cancellationToken) =>
 {
-    // Sends a message activity to the sender of the incoming activity. 
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
+    var activity = context.Activity.Value;
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock("The meeting has started.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new TextBlock($"**Title:** {activity.Title}")
+            {
+                Wrap = true
+            },
+            new TextBlock($"**Start Time:** {activity.StartTime}")
+            {
+                Wrap = true
+            }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new OpenUrlAction(activity.JoinUrl)
+            {
+                Title = "Join Meeting"
+            }
+        }
+    };
+
+    await context.Send(card, cancellationToken);
+});
+
+```
+
+# [TypeScript](#tab/typescript4)
+
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingstarteventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
+
+```typescript
+app.on('meetingStart', async ({ activity, send }) => {
+  const value = activity.value;
+
+  const card = new AdaptiveCard(
+    new TextBlock('The meeting has started.', { weight: 'Bolder', size: 'Large', wrap: true }),
+    new TextBlock(`**Title:** ${value.title || 'N/A'}`, { wrap: true }),
+    new TextBlock(`**Start Time:** ${value.startTime || 'N/A'}`, { wrap: true })
+  ).withActions(
+    new OpenUrlAction(value.joinUrl, { title: 'Join Meeting' })
+  );
+  
+  await send(card);
+});
+
+```
+
+# [Python](#tab/python4)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_meeting_start
+async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) -> None:
+    value = ctx.activity.value
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="The meeting has started.", weight="Bolder", size="Large", wrap=True),
+            TextBlock(text=f"**Title:** {value.title}", wrap=True),
+            TextBlock(text=f"**Start Time:** {value.start_time}", wrap=True)
+        ],
+        actions=[OpenUrlAction(url=value.join_url, title="Join Meeting")],
+    )
+    await ctx.send(card)
+
 ```
 
 **Meeting End Event**
@@ -1520,12 +1639,185 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
-// Invoked when a Teams Meeting End event activity is received from the connector.
-protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting end handler with transcript support
+teamsApp.OnMeetingEnd(async context =>
 {
-    // Sends a message activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
-}
+    var activity = context.Activity.Value;
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+    
+    // Get meeting info from API
+    var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+
+    // Retrieve the user ID of the organizer for the transcript API
+    var userId = "";
+    if (meetingInfo?.Organizer != null)
+    {
+        userId = meetingInfo.Organizer.AadObjectId ?? "";
+    }
+
+    // Get MS Graph Resource ID from meeting details
+    var msGraphResourceId = meetingInfo?.Details?.MSGraphResourceId;
+
+    // Wait 30 seconds for the transcript to become available
+    await Task.Delay(30000);
+    
+    // Retrieve transcript
+    var transcript = "";
+    if (!string.IsNullOrEmpty(msGraphResourceId) && !string.IsNullOrEmpty(userId))
+    {
+        var vttTranscript = await GetMeetingTranscriptAsync(msGraphResourceId, userId);
+        if (!string.IsNullOrEmpty(vttTranscript))
+        {
+            transcript = ParseVtt(vttTranscript);
+        }
+    }
+
+    // Build card body with transcript
+    var cardBody = new List<CardElement>
+    {
+        new TextBlock("The meeting has ended.")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
+        },
+        new TextBlock($"**End Time:** {activity.EndTime}")
+        {
+            Wrap = true
+        },
+        new TextBlock("**Transcript:**")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder
+        }
+    };
+
+    // Add transcript lines or fallback message
+    if (!string.IsNullOrEmpty(transcript))
+    {
+        var transcriptLines = transcript.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+        foreach (var line in transcriptLines)
+        {
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                cardBody.Add(new TextBlock(line) { Wrap = true });
+            }
+        }
+    }
+    else
+    {
+        cardBody.Add(new TextBlock("Transcript not available for this meeting.") { Wrap = true });
+    }
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = cardBody
+    };
+
+    await context.Send(card);
+});
+
+```
+
+# [TypeScript](#tab/typescript5)
+
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingendeventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
+
+```typescript
+app.on('meetingEnd', async ({ activity, api, send }) => {
+  const value = activity.value;
+  const meetingId = activity.channelData?.meeting?.id ?? '';
+  if (!meetingId) {
+    console.error('meetingEnd event received without a valid meeting id');
+    return;
+  }
+  let msGraphResourceId = activity.channelData?.meeting?.details?.msGraphResourceId;
+  const meetingInfo = await api.meetings.getById(meetingId);
+
+  let userId = '';
+  if (meetingInfo && meetingInfo.organizer) {
+    userId = meetingInfo.organizer.aadObjectId || '';
+  }
+
+  if (!msGraphResourceId && meetingInfo && meetingInfo.details) {
+    msGraphResourceId = meetingInfo.details.msGraphResourceId;
+  }
+
+  await new Promise(resolve => setTimeout(resolve, 30000));
+
+  let transcript = '';
+  if (msGraphResourceId) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const vttTranscript = await getMeetingTranscript(msGraphResourceId, userId);
+      if (vttTranscript) {
+        transcript = parseVtt(vttTranscript);
+        break;
+      }
+      if (attempt < 3) {
+        console.log(`Transcript not ready, retrying in 10s (attempt ${attempt}/3)...`);
+        await new Promise(resolve => setTimeout(resolve, 10000));
+      }
+    }
+  }
+
+  const transcriptBlocks = transcript
+    ? transcript.split('\n').filter(line => line).map(line => new TextBlock(line, { wrap: true }))
+    : [new TextBlock('Transcript not available for this meeting.', { wrap: true })];
+
+  const card = new AdaptiveCard(
+    new TextBlock('The meeting has ended.', { weight: 'Bolder', size: 'Large', wrap: true }),
+    new TextBlock(`**End Time:** ${value.endTime}`, { wrap: true }),
+    new TextBlock('**Transcript:**', { weight: 'Bolder', wrap: true }),
+    ...transcriptBlocks
+  );
+
+  await send(card);
+});
+
+```
+
+# [Python](#tab/python5)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_meeting_end
+async def handle_meeting_end(ctx: ActivityContext[MeetingEndEventActivity]) -> None:
+    value = ctx.activity.value
+    meeting_id = ctx.activity.channel_data.meeting.id
+    ms_graph_resource_id = getattr(ctx.activity.channel_data.meeting.details, 'ms_graph_resource_id', None)
+    meeting_info = await ctx.api.meetings.get_by_id(meeting_id)
+
+    # Retrieve the user ID of the organizer for the transcript API
+    user_id = ""
+    if meeting_info and meeting_info.organizer:
+        user_id = getattr(meeting_info.organizer, 'aadObjectId', None) or ""
+
+    if not ms_graph_resource_id and meeting_info and meeting_info.details:
+        ms_graph_resource_id = meeting_info.details.ms_graph_resource_id
+
+    transcript = ''
+    if ms_graph_resource_id:
+        vtt_transcript = await get_meeting_transcript(ms_graph_resource_id, user_id)
+        if vtt_transcript:
+            transcript = parse_vtt(vtt_transcript)
+
+    transcript_blocks = (
+        [TextBlock(text=line, wrap=True) for line in transcript.splitlines() if line]
+        if transcript
+        else [TextBlock(text="Transcript not available for this meeting.", wrap=True)]
+    )
+    card = AdaptiveCard(
+        body=[
+            TextBlock(text="The meeting has ended.", weight="Bolder", size="Large", wrap=True),
+            TextBlock(text=f"**End Time:** {value.end_time}", wrap=True),
+            TextBlock(text="**Transcript:**", weight="Bolder", wrap=True),
+            *transcript_blocks,
+        ],
+    )
+    await ctx.send(card)
+
 ```
 
 ### Example of meeting start event payload
@@ -1594,7 +1886,7 @@ The following code provides an example of meeting end event payload:
     "joinUrl": "join_url",
     "title": "Example meeting",
     "meetingType": "Scheduled",
-    "EndTime": "2023-02-23T20:30:07.478Z"
+    "endTime": "2023-02-23T20:30:07.478Z"
   },
   "channelData": {
     "tenant": {
@@ -1630,7 +1922,7 @@ The following code provides an example of meeting end event payload:
 | **value.Id** | The default ID associated with the meeting. |
 | **value.JoinUrl** | The join URL of the meeting. |
 | **value.StartTime** | The meeting start time in UTC. |
-| **value.EndTime** | The meeting end time in UTC. |
+| **value.endTime** | The meeting end time in UTC. |
 | **locale**| The locale of the message set by the client. |
 
 ### Receive meeting participant events
@@ -1657,34 +1949,119 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-# [Participant join event](#tab/participant-join-event)
+**Participant join event**
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+# [C#](#tab/dotnet6)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
-//Invoked on participant join a meeting
-protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting participant join handler
+teamsApp.OnMeetingJoin(async context =>
 {
-  await turnContext.SendActivityAsync("Member has joined the meeting.");
-  return;
-}
+    var activity = context.Activity.Value;
+    if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
+
+    var member = activity.Members[0].User.Name;
+    var role = activity.Members[0].Meeting?.Role ?? "a participant";
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has joined the meeting as {role}.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
 ```
 
-# [Participant leave event](#tab/participant-leave-event)
+# [TypeScript](#tab/typescript6)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
-//Invoked on participant leave a meeting
-protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingParticipantsEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+// Register meeting participant leave handler
+teamsApp.OnMeetingLeave(async context =>
 {
-  await turnContext.SendActivityAsync("Member left the meeting.");
-  return;
-}
+    var activity = context.Activity.Value;
+    var member = activity.Members[0].User.Name;
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has left the meeting.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
+```
+
+# [TypeScript](#tab/typescript7)
+
+* [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantleaveeventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
+
+```typescript
+app.on('meetingParticipantLeave', async ({ activity, send }) => {
+  const meetingData = activity.value;
+  const participant = meetingData.members[0];
+
+  // Skip bot's own leave event (no aadObjectId)
+  if (!participant.user?.aadObjectId) return;
+
+  const member = participant.user.name || 'A participant';
+
+  const card = new AdaptiveCard(
+    new TextBlock(`${member} has left the meeting.`, {
+      wrap: true,
+      weight: 'Bolder'
+    })
+  );
+
+  await send(card);
+});
+
+```
+
+# [Python](#tab/python7)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_meeting_participant_leave
+async def handle_meeting_participant_leave(ctx: ActivityContext[MeetingParticipantLeaveEventActivity]):
+    meeting_data = ctx.activity.value
+    member = meeting_data.members[0].user.name
+
+    card = AdaptiveCard(
+        body=[
+            TextBlock(
+                text=f"{member} has left the meeting.",
+                wrap=True,
+                weight="Bolder",
+            )
+        ]
+    )
+
+    await ctx.send(card)
+
 ```
 
 ---
@@ -1792,125 +2169,6 @@ The following is an example of the participant leave event payload:
 
 ---
 
-## Get incoming audio state
-
-The `getIncomingClientAudioState` API allows an app to get the incoming audio state setting for the meeting user. The API is available through the TeamsJS library.
-
-> [!NOTE]
->
-> * The `getIncomingClientAudioState` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
-> * The `toggleIncomingClientAudio` API is available in the new Teams client.
-> * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
-
-### Manifest
-
-```JSON
-"authorization": {
-    "permissions": {
-      "resourceSpecific": [
-        {
-          "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-          "type": "Delegated"
-        }
-      ]
-    }
-  }
-```
-  
-### Example
-
-```javascript
-callback = (errcode, result) => {
-        if (errcode) {
-            // Handle error code
-        }
-        else {
-            // Handle success code
-        }
-    }
-// The getIncomingClientAudioState API shows the current audio state.
-microsoftTeams.meeting.getIncomingClientAudioState(this.callback)
-```
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the audio fetch is successful. The *result* can either contain true or false value when the audio fetch is successful or null when the audio fetch fails. The incoming audio is muted if the result is true and unmuted if the result is false. |
-  
-### Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Toggle incoming audio
-
-The `toggleIncomingClientAudio` API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
-
-> [!NOTE]
->
-> * The `toggleIncomingClientAudio` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
-> * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
-
-### Manifest
-
-```JSON
-"authorization": {
- "permissions": {
-  "resourceSpecific": [
-   {
-    "name": "OnlineMeetingParticipant.ToggleIncomingAudio.Chat",
-    "type": "Delegated"
-   }
-  ]
- }
-}
-```
-
-### Example
-
-```javascript
-callback = (error, result) => {
-        if (error) {
-            // Handle error code
-        }
-        else {
-            // Handle success code
-        }
-    }
-// The toggleIncomingClientAudio API allows an app to toggle the incoming audio state.
-microsoftTeams.meeting.toggleIncomingClientAudio(this.callback)
-```
-  
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters `error` and `result`. The *error* can either contain an error type `SdkError` or `null` when the toggle is successful. The *result* can either contain true or false value, when the toggle is successful or null when the toggle fails. The incoming audio is muted if the result is true and unmuted if the result is false.
-  
-### Response code
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
-## Toggle Incoming Audio
-
-The toggleIncomingClientAudio API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
-
 ## Code sample
 
 |Sample name | Description | .NET | Node.js | Manifest|
@@ -1924,6 +2182,9 @@ The toggleIncomingClientAudio API allows an app to toggle the incoming audio sta
 
 ## See also
 
+* [Teams SDK overview](/microsoftteams/platform/teams-sdk/teams/overview)
+* [Teams SDK Meeting Events](/microsoftteams/platform/teams-sdk/in-depth-guides/meeting-events)
+* [Teams SDK API Client](/microsoftteams/platform/teams-sdk/essentials/api)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Live Share SDK](teams-live-share-overview.md)
