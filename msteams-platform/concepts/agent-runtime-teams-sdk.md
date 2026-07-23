@@ -24,6 +24,8 @@ Agent development is the main focus of Teams SDK and most modern Teams app devel
 
 ## What Teams SDK does (for agents, not talking about other apps)
 
+Not sure if this should all be listed out or just woven in
+
 - Offers ergonomic activity handlers that you opt into by implementing, implemented idiomatically in the language you're using
 - Integrates with the ecosystem's common app server so you can apply custom configuration, expose additional services from the same implementation etc.
 - Offers a simpler and more developer-friendly interface to the Bot Connector service for performing activites in Teams, particularly when it comes to chat flows and features
@@ -32,6 +34,12 @@ Agent development is the main focus of Teams SDK and most modern Teams app devel
 - Adaptive card builder
 
 (can also mention that it covers other app experiences as well)
+
+---
+
+## App class
+
+This is a *very* short intro based on <https://microsoft.github.io/teams-sdk/typescript/essentials/app-basics> and <https://microsoft.github.io/teams-sdk/typescript/getting-started/code-basics> but shorter, and pivoted as appropriate.
 
 ---
 
@@ -44,42 +52,58 @@ can have this be a dedicated section talking about dev tunnels, playground, side
 
 talk about how the manifest can evolve and be redeployed and the app reinstalled
 
+Moved from provisioning article; this is not specifically about runtime but very relevant to "dev workflow":
+
+Developers use the Teams Developer Portal or the Teams developer CLI to create and submit an initial app manifest to the Teams platform at the beginning of agent development. Once submitted, they can access a private install link to install the agent in Teams while it's being developed. As the agent evolves during development, they can use the portal and CLI to edit and validate the manifest as needed.
+
+They can use the portal and CLI to edit and validate the manifest,
+
+ used to install the agent to  while it's under development.
+
+When development is complete, publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams. As users interact with it, Teams
+
 ---
 
 ## Handling activities
 
 (this is mostly about activities; events are less foundational, TODO cover them later, maybe only very briefly here. Good candidate for "conceptual ref" content.)
 
-*Activity objects* are JSON objects that describe interactions in Teams, like a user sending a chat message or adding another user to a conversation. When actions visible to an agent occur in Teams, Bot Connector generates activity objects and delivers them to the agent's runtime endpoint.
-
-Teams SDK provides an event-driven framework for handling activities, with methods to register strongly-typed event handlers. For example, to
+In the Teams platform agent model, an *activity* is the payload sent from Teams to an agent's runtime that describes an interaction in Teams. Examples of activities include a chat message being sent, a user being added to a conversation, or the agent being installed to a team or chat.
 
 # [C#](#tab/csharp)
+
+Teams SDK provides a strongly-typed, event-driven framework for receiving and handling activities. Register activity handlers during  For example, to register a handler for chat messages, call `App.OnMessage`:
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {
-    await context.Send($"You said: {context.activity.Text}", cancellationToken);
+    // Implementation here
 });
 ```
 
+The `context` object received by the handler contains information about the activity, along with contextualized helper methods like `send` for common actions.
+
 # [TypeScript](#tab/typescript)
+
+Teams SDK provides a strongly-typed, event-driven framework for receiving and handling activities. To register a handler for an activity, during app startup, call the `App.on` method with activity type corresponding to the activity type. For example, to register a handler for chat messages, call `App.OnMessage`:
 
 ```typescript
 app.on('message', async ({ activity, send }) => {
-  await send(`You said: ${activity.text}`);
+    // Implementation here
 });
 ```
 
 # [Python](#tab/python)
 
+Teams SDK provides an event-driven framework for receiving and handling activities with strongly-typed event handlers. For example, to define the agent's behavior in response to receiving a chat message,
+
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    await ctx.send(f"You said '{ctx.activity.text}'")
+    # Implementation here
 ```
 
-In many Teams agent designs, `message` activities are a primary driver of action, but agents are not limited to request-response chat workflows. Agents can subscribe to many different kinds of Teams events and are free to take action based on other inputs, such as additional service interfaces or timers. They can perform actions in Teams [proactively](../bots/how-to/conversations/send-proactive-messages.md), at any time, not just in the context of handling a Teams activity event.
+In many Teams agent designs, the handler for `message` activities is considered the main entrypoint and driver of action, but agents are not limited to request-response chat workflows. Agents can subscribe to many different kinds of Teams activities. They are also free to take action based on other inputs, such as additional service interfaces and timers.
 
 middleware pattern
 
@@ -115,6 +139,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ```
 
 runtime will also access other services, esp. graph (separate section for graph? maybe a subsection here?)
+
+can perform actions in Teams [proactively](../bots/how-to/conversations/send-proactive-messages.md), at any time, not just in the context of handling a Teams activity event.
 
 ---
 
