@@ -240,6 +240,28 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 }
 ```
 
+#### Check for and strip @mention: .NET code example
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+string StripMentions(MessageActivity msg)
+{
+    var text = msg.Text ?? "";
+    if (msg.Entities == null) return text;
+
+    foreach (var entity in msg.Entities)
+    {
+        if (entity is MentionEntity mention && mention.Text != null)
+        {
+            text = text.Replace(mention.Text, "");
+        }
+    }
+
+    return text.Trim();
+}
+```
+
 ### Add mentions to your messages
 
 Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
