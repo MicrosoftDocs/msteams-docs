@@ -29,7 +29,7 @@ The slash commands feature enables apps and agents to add their own commands to 
 
 :::image type="content" source="../assets/videos/slash-commands.gif" alt-text="This video shows how a slash command works within a Teams agent or app.":::
 
-## Types of slash commands
+## Slash commands
 
 Apps and agents can expose slash-command experiences through app or agent configuration in two primary ways:
 
@@ -178,17 +178,9 @@ When a user activates an agent slash command, Teams switches the compose box to 
 
 See [Best practices and design guidance](#best-practices-and-design-guidance) for other message handling guidance.
 
-<!--
-## Targeted messaging
-
-Agents and users can interact using [targeted messages](targeted-messages.md) by using slash commands. In channels, group chats, and meeting chats, the slash command autocomplete menu shows the agents in the conversation that can receive targeted messages. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
-
-For more information, see [send and receive targeted messages in group conversations](targeted-messages.md).
--->
-
 ## Best practices and design guidance
 
-Offer slash commands for common actions that users need to access quickly, repeatedly, and privately. They work best for user-specific actions such as viewing settings, creating follow-up tasks, or checking personal status, especially when users benefit from discovering and reusing the action from the compose box.
+Choose the trigger that matches how users will invoke the command. Offer *slash commands* for common actions that users need to access quickly, repeatedly, and privately. They work best for user-specific actions such as viewing settings, creating follow-up tasks, or checking personal status, especially when users benefit from discovering and reusing the action from the compose box. Use an *@mention command* when users must address a specific agent or rely on conversation context. Offer both only when each is a natural entry point to the same behavior.
 
 As with all message-based activity, the design of slash command behaviors should carefully consider whether the user expects a public or private message as a response in group conversations. For general guidance about agent response visibility, see [targeted messaging best practices and design guidance](targeted-messages.md#best-practices-and-design-guidance).
 
