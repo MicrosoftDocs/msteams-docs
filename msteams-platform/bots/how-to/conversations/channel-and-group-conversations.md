@@ -269,6 +269,16 @@ string StripMentions(MessageActivity msg)
 }
 ```
 
+This code snippet demonstrates how to clean a Teams message before command parsing:
+
+* `msg.Entities` contains structured metadata such as mentions.
+* `Replace(mention.Text, "")` removes the visible mention such as `@contoso` from the message.
+* `Trim()` removes leftover spaces.
+
+For example, `@contoso summarize this thread` becomes `summarize this thread`.
+
+The function removes **all mentions**, not only the agent's or bot’s mention. If other mentions are meaningful input, verify that a mention refers to the current bot before removing it.
+
 :::zone-end
 
 ### Add mentions to your messages
