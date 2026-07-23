@@ -9,7 +9,7 @@ In the second part, you'll also need Teams, with a Microsoft 365 work or school 
 
 If you don't have an account, or you aren't sure about your permissions, you can still begin. The quickstart will address those requirements when they're needed.
 
-## Create code for an agent and try it in Microsoft 365 Agents Playground
+## Create code for an agent runtime and try it in Microsoft 365 Agents Playground
 
 1. Install the Teams developer CLI and Microsoft 365 Agents Playground.
 
@@ -17,7 +17,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
     npm install -g @microsoft/teams.cli @microsoft/m365agentsplayground
     ```
 
-1. Use `teams project new` to create the code for a new agent from a template and open it in Visual Studio Code.
+1. Use `teams project new` to create the code for a new agent runtime from a template, then open it in Visual Studio Code.
 
     ```console
     teams project new typescript echo-bot
@@ -31,9 +31,9 @@ If you don't have an account, or you aren't sure about your permissions, you can
     const app = new App({ skipAuth: true });
     ```
 
-    This is a temporary modification to enable Microsoft 365 Agents Playground to communicate with the agent.
+    This is a temporary modification to enable it to communicate with Microsoft 365 Agents Playground.
 
-1. Start the agent. Once it's running, you'll see a confirmation that it's available on port 3978.
+1. Start the agent runtime. Once it's running, you'll see a confirmation that it's available on port 3978.
 
     ```console
     npm install
@@ -46,13 +46,13 @@ If you don't have an account, or you aren't sure about your permissions, you can
     agentsplayground
     ```
 
-    This will connect Agents Playground to your agent and open the interface in a new browser tab.
+    This will connect Agents Playground to your agent's runtime and open the interface in a new browser tab.
 
 4. Use the compose box to send your agent a message and see it respond in the chat. Your agent's up and running locally!
 
     :::image type="content" source="../../assets/images/agents-in-teams/agents-playground-interaction.png" alt-text="Screenshot of a short agent interaction in Microsoft 365 Agents Playground." lightbox="../../assets/images/agents-in-teams/agents-playground-interaction.png":::
 
-5. Close the Agents Playground tab in your browser, and use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent. Leave open the console window you used to create your agent, you'll need it again soon.
+5. Close the Agents Playground tab in your browser, and use <kbd>Ctrl+C</kbd> in both console windows to stop Agents Playground and your agent runtime. Leave open the console window you used to create your agent runtime code, you'll need it again soon.
 
 6. In Visual Studio Code, undo the modification you made in step 3. This will ensure a secure connection with Teams in the next steps.
 
@@ -65,9 +65,9 @@ If you don't have an account, or you aren't sure about your permissions, you can
 > [!NOTE]
 > The next part of this quickstart requires Teams, logged in to a Microsoft 365 work or school account with permissions to install custom Teams apps. This step will check for that permission.
 >
->If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your agent's code and complete the rest of this quickstart later. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
+>If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your code and complete the rest of this quickstart later. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.
 
-Log in to your Microsoft 365 account from the Teams developer CLI.
+Log in to your Microsoft 365 work or school account from the Teams developer CLI.
 
 ```console
 teams login
