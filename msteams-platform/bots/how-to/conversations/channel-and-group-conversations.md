@@ -240,6 +240,85 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 }
 ```
 
+#### Check for and strip @mention
+
+In channels and group chats, users typically address an agent or app with an @mention. Before interpreting the message, check that the mention targets your agent or app, then remove the mention text and trim whitespace. This leaves only the user’s command or prompt for processing.
+
+Removing the mention prevents the agent or app name from interfering with command matching, intent recognition, search, or natural-language processing. It also lets the same handler process messages consistently across personal chats, group chats, and channels. Preserve other mentions when they are part of the user’s request.
+
+> [!NOTE]
+> The TypeScript and Python versions for Teams SDK include built-in functions to remove @mention.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+string StripMentions(MessageActivity msg)
+{
+    var text = msg.Text ?? "";
+    if (msg.Entities == null) return text;
+
+    foreach (var entity in msg.Entities)
+    {
+        if (entity is MentionEntity mention && mention.Text != null)
+        {
+            text = text.Replace(mention.Text, "");
+        }
+    }
+
+    return text.Trim();
+}
+```
+
+This code snippet demonstrates how to clean a Teams message before command parsing:
+
+* `msg.Entities` contains structured metadata such as mentions.
+* `Replace(mention.Text, "")` removes the visible mention such as `@contoso` from the message.
+* `Trim()` removes leftover spaces.
+
+For example, `@contoso summarize this thread` becomes `summarize this thread`.
+
+The function removes **all mentions**, not only the agent's or bot’s mention. If other mentions are meaningful input, verify that a mention refers to the current bot before removing it.
+
+:::zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('message', async ({ activity, send }) => {
+  const clean = activity.stripMentionsText().text;
+  await send(`You said: ${clean}`);
+});
+```
+
+This code snippet demonstrates listening for incoming message activities and removing the @mention text before processing the user’s message.
+
+* `activity.stripMentionsText()` removes mention text such as @contoso from the activity.
+* `.text` retrieves the cleaned message content.
+* `send()` echoes the cleaned text back to the user.
+
+For example, `@contoso summarize this chat` becomes `summarize this chat`, so the agent can parse the command.
+
+:::zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    clean = ctx.activity.strip_mentions_text().text
+    await ctx.send(f"You said: {clean}")
+```
+
+This code snippets shows how to listen for incoming messages and remove @mention text before processing them.
+
+* `ctx.activity.strip_mentions_text()` removes mention text such as @contoso.
+* `.text` returns the cleaned message.
+* `ctx.send()` replies with the cleaned text.
+
+For example, `@contoso summarize this chat` becomes `summarize this chat`, making the message easier to parse as a command or prompt.
+
+:::zone-end
+
 ### Add mentions to your messages
 
 Your bot can mention other users in messages posted in channels. To include a mention inline in your message, place the mention in the message text and add the mention details to the entities array. The `text` field in the mention entity must match the exact text in the message body.
