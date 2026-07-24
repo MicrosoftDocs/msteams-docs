@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn how to design activity feed notifications for your Teams app and get the Teams UI Kit. Develop notifications from Teams channel in Visual Studio C#
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 06/28/2022
+ms.date: 07/24/2026
 ---
 # Designing activity feed notifications for your Microsoft Teams app
 
