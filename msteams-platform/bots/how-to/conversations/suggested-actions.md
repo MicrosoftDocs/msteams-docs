@@ -389,6 +389,6 @@ Avoid duplicating actions already available in the response or in a card unless 
 ## See also
 
 - [Create prompt starters](prompt-starters.md)
-- [Build bots for Teams](~/bots/what-are-bots.md)
-- [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
+- [Build bots for Teams](../../overview.md)
+- [Messages in bot conversations](../../build-conversational-capability.md)(~/bots/how-to/conversations/conversation-messages.md)
 - [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
