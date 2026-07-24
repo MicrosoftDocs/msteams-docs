@@ -290,7 +290,7 @@ app.on('message', async ({ activity, send }) => {
 });
 ```
 
-This code snippet demonstrates listening for incoming message activities and removing @mention text before processing the user’s message.
+This code snippet demonstrates listening for incoming message activities and removing the @mention text before processing the user’s message.
 
 * `activity.stripMentionsText()` removes mention text such as @contoso from the activity.
 * `.text` retrieves the cleaned message content.
