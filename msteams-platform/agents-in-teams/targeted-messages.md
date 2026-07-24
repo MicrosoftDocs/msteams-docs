@@ -67,13 +67,13 @@ Prompt Preview can appear in both private and public agent responses:
 
 The agent replies privately to the user's targeted message, so only the intended user can see the reply and the prompt preview.
 
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png":::
+  :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/private-prompt-preview.png" alt-text="Image shows the prompt preview for private agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/private-prompt-preview.png":::
 
 # [Public agent-to-user response](#tab/public)
 
 The agent sends a public reply to the user's request that includes the prompt preview. It's visible to everyone in the chat.
 
-  :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
+  :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/public-prompt-preview.png" alt-text="Image shows the prompt preview for public agent-to-user response." lightbox="../assets/images/agents-in-teams/agent-slash-commands/public-prompt-preview.png":::
 
 > [!NOTE]
 > When an agent re-shares a private response publicly, the prompt preview shows the original targeted message above the agent response.
