@@ -266,9 +266,11 @@ Handler (incoming to agent or app):
 
 The agent or app receives a standard invoke activity:
 
-```json
+```typescript
 
-case "suggestedAction/submit":
+
+
+case "suggestedActions/submit":
   const vote = context.activity.value;  // { vote: "approve" }
   // Process the action...
   return { status: 200 };
