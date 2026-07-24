@@ -1,5 +1,5 @@
 ---
-title: Dynamically Guide Users with Suggested Actions
+title: Guide Users with Suggested Actions
 description: Learn how to create and handle suggested actions for your Microsoft Teams agents and apps to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.date: 07/15/2026
 
 Suggested actions present context-specific next steps after an agent or app response, so users can refine a request, continue a workflow, or make a choice with one selection. Use suggested actions when the next step depends on the current conversation.
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below a agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below an agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 To help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
@@ -98,7 +98,7 @@ async function generateFollowUps(history: ChatCompletionMessageParam[]): Promise
 }
 ```
 
-This code snippet example generates two follow-up suggested actions from conversation context. It uses the `followUps` array from `generateFollowUps(...)` and creates each prompt into a clickable suggested action for the user:
+This code snippet example generates two follow-up suggested actions from conversation context.
 
 - It defines `FOLLOW_UPS_PROMPT`, which instructs the model to create two short prompts.
 - It defines `FOLLOW_UPS_SCHEMA`, which forces the model response to contain `prompt1` and `prompt2`.
@@ -111,7 +111,7 @@ finalMarker.withSuggestedActions({
 });
 ```
 
-This code snippet displays for the follow-up prompts as suggested action buttons for the user. For each prompt, it creates a suggested action object.
+This snippet displays follow-up prompts as suggested action buttons. For each prompt, it creates a suggested action object.
 
 - `title`: prompt controls what the user sees as the clickable option.
 - `value`: prompt controls what gets sent back when the user clicks it.
@@ -161,7 +161,7 @@ reply.with_suggested_actions(
 )
 ```
 
-This code snippet example adds the suggested actions as buttons to the Teams reply so the user can click them.
+This code snippet example adds the suggested actions as buttons to the Teams reply so the user can select them.
 
 - `reply.with_suggested_actions()` adds suggested action buttons to the agent's response.
 - `SuggestedActions()` wraps the list of follow-up buttons in the format expected by Microsoft Teams.
