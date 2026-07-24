@@ -57,6 +57,9 @@ Create the conversation, after you have the user or channel information.
 
 ## Create the conversation
 
+> [!NOTE]
+> If your bot has `supportsSessions: true` in the manifest and is installed for the user, calling the create conversation API creates a new session instead of a regular 1:1 conversation. The returned conversation ID is session-specific. For more information, see [Structure conversations with sessions](agent-sessions.md).
+
 You can create the conversation if it doesn't exist or if you don't know the `conversationId`. Create the conversation only once, and store the resulting `conversationId` for future proactive messages.
 
 To create the conversation, you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
@@ -332,3 +335,4 @@ The following table provides code samples that incorporate basic conversation fl
 ## See also
 
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Structure conversations with sessions](agent-sessions.md)

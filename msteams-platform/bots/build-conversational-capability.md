@@ -204,6 +204,11 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ```
 
+---
+
+> [!NOTE]
+> If your bot supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
+
 ### Receive a read receipt
 
 The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
@@ -1290,4 +1295,5 @@ If you want your bot to receive all messages, then you don't need to filter the 
 
 ## See also
 
-[Conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md)
+- [Conversation events in your Teams bot](how-to/conversations/subscribe-to-conversation-events.md)
+- [Structure conversations with sessions](how-to/conversations/agent-sessions.md)
