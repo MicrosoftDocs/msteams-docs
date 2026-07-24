@@ -299,7 +299,7 @@ Targeted messages can be updated and deleted in the same way as standard message
 - The visibility of a targeted message can't be changed.
 - Targeted messages expire after 24 hours and are automatically deleted from clients. Attempting to modify or delete an expired message results in an error.
 
-For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+For more information on updating or deleting a targeted message, see [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp#targeted-messages).
 
 ### Approval workflow using suggested actions
 
