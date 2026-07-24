@@ -964,9 +964,6 @@
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName:  DevTools, Cache-Control, authentication issues, app uploading error
-    - name: Know about New Microsoft Teams client
-      href: resources/teams-updates.md
-      displayName: Classic Teams, new Teams client, Teams 2.1
     - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
     displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
