@@ -28,6 +28,9 @@
   - name: Dynamically guide users with suggested actions
     href: bots/how-to/conversations/suggested-actions.md
     displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+  - name: Expose slash commands
+    href: agents-in-teams/agent-slash-commands.md
+    displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
   - name: Send and receive targeted messages
     href: agents-in-teams/targeted-messages.md
     displayName: private messages, ephemeral messages, command, notification, response
