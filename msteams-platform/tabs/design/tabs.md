@@ -4,7 +4,7 @@ description: Learn how to design a tab for desktop, web, and mobile, and get Mic
 author: nickwalkmsft
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 07/23/2026
+ms.date: 07/24/2026
 ---
 # Design your tab for Microsoft Teams
 
