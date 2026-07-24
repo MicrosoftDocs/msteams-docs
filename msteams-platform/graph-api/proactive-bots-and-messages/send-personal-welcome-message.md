@@ -86,7 +86,7 @@ public static async Task SendProactiveNotification(string userId)
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
 ```typescript
 import { MessageActivity } from '@microsoft/teams.api'; 
