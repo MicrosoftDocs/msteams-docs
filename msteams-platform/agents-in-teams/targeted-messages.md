@@ -227,7 +227,7 @@ response.addTargetedMessageInfo(targetedMessageId);
 
 if (isTargeted)
 {
-response.AddTargetedMessageInfo(targetedMessageId);
+    response.AddTargetedMessageInfo(targetedMessageId);
 }
 ```
 
@@ -254,26 +254,26 @@ Content-Type: application/json
 
 JSON
 {
-"type": "message",
-"from": {
-"id": "28:c9e...",
-"name": "Contoso"
-},
-"conversation": {
-"id": "x:17I0...",
-"name": "Convo1"
-},
-"recipient": {
-"id": "29:1XJ...",
-"name": "Megan Bowen"
-},
-"text": "My bot's reply",
-"entities": [
-{
-"type": "targetedMessageInfo",
-"messageId": "1772129782775"
-}
-]
+  "type": "message",
+  "from": {
+    "id": "28:c9e...",
+    "name": "Contoso"
+  },
+  "conversation": {
+    "id": "x:17I0...",
+    "name": "Convo1"
+  },
+  "recipient": {
+    "id": "29:1XJ...",
+    "name": "Megan Bowen"
+  },
+  "text": "My bot's reply",
+  "entities": [
+    {
+      "type": "targetedMessageInfo",
+      "messageId": "1772129782775"
+    }
+  ]
 }
 ```
 
