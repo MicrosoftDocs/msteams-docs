@@ -6,7 +6,20 @@ ms.reviewer: nickwalk
 description: TODO
 ms.topic: concept-article
 ms.date: 07/14/2026
+zone_pivot_groups: teams-sdk-languages
 ---
+
+::: zone pivot="teams-sdk-csharp"
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+::: zone-end
 
 # Agent runtime and Teams SDK
 
@@ -19,6 +32,8 @@ TODO documentation and other dev-audience places will often just say "agent" whe
 The defining characteristic of a Teams agent runtime is its connection to the Bot Connector API. Agents use the Bot Connector API to listen for activities occurring in Teams and to perform actions in Teams.
 
 Agent development is the main focus of Teams SDK and most modern Teams app development. Simplifying and structuring interactions with the Bot Connector API is the main purpose of Teams SDK.
+
+TODO this is written specifically in terms of Teams SDK.
 
 ---
 
@@ -37,7 +52,32 @@ Not sure if this should all be listed out or just woven in
 
 ---
 
-## App class
+## Runtime startup and the App class
+
+::: zone pivot="teams-sdk-csharp"
+
+NOTE: This basically covers "Self-managing your server" for .NET because of the way the SDK integrates with ASP.NET Core; Py and TS work differently and need their own "self-managing" subsection
+
+An agent runtime built with Teams SDK is an ASP.NET Core application. The SDK implements the Add/Use pattern to register its endpoint and configure its authentication requirements:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+builder.AddTeams();
+var app = builder.Build();
+var teams = app.UseTeams();
+```
+
+`UseTeams` returns an instance of the SDK's `App` class, used to access most Teams-related functionality.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+::: zone-end
 
 This is a *very* short intro based on <https://microsoft.github.io/teams-sdk/typescript/essentials/app-basics> and <https://microsoft.github.io/teams-sdk/typescript/getting-started/code-basics> but shorter, and pivoted as appropriate.
 
@@ -68,11 +108,11 @@ When development is complete, publish the agent to the Teams Store or to their o
 
 (this is mostly about activities; events are less foundational, TODO cover them later, maybe only very briefly here. Good candidate for "conceptual ref" content.)
 
-In the Teams platform agent model, an *activity* is the payload sent from Teams to an agent's runtime that describes an interaction in Teams. Examples of activities include a chat message being sent, a user being added to a conversation, or the agent being installed to a team or chat.
+In the Teams platform model, an *activity* is a message payload exchanged between Teams and an agent's runtime that describes an interaction in Teams. Examples of activities include a chat message being sent, a user being added to a conversation, or the agent being installed to a team or chat. Agents interact with Teams by sending and receiving activities.
 
-# [C#](#tab/csharp)
+::: zone pivot="teams-sdk-csharp"
 
-Teams SDK provides a strongly-typed, event-driven framework for receiving and handling activities. Register activity handlers during  For example, to register a handler for chat messages, call `App.OnMessage`:
+Teams SDK provides a strongly-typed, event-driven framework for receiving and handling activities.  For example, to register a handler for chat messages, call `App.OnMessage`:
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -83,7 +123,9 @@ app.OnMessage(async (context, cancellationToken) =>
 
 The `context` object received by the handler contains information about the activity, along with contextualized helper methods like `send` for common actions.
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 Teams SDK provides a strongly-typed, event-driven framework for receiving and handling activities. To register a handler for an activity, during app startup, call the `App.on` method with activity type corresponding to the activity type. For example, to register a handler for chat messages, call `App.OnMessage`:
 
@@ -93,7 +135,9 @@ app.on('message', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 Teams SDK provides an event-driven framework for receiving and handling activities with strongly-typed event handlers. For example, to define the agent's behavior in response to receiving a chat message,
 
@@ -103,7 +147,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     # Implementation here
 ```
 
-In many Teams agent designs, the handler for `message` activities is considered the main entrypoint and driver of action, but agents are not limited to request-response chat workflows. Agents can subscribe to many different kinds of Teams activities. They are also free to take action based on other inputs, such as additional service interfaces and timers.
+::: zone-end
+
+In most Teams agent designs, the activity handlers - particularly the `message` handler - are the agent's main entrypoints and drivers of action. However, agents are not limited to request-response workflows based on Teams activities. They are free to take action in response to other inputs, such as additional service interfaces and timers. Agents can perform actions in Teams [proactively](../bots/how-to/conversations/send-proactive-messages.md), at any time, not just in the context of handling a Teams activity event.
 
 middleware pattern
 
@@ -138,9 +184,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.send(f"You said '{ctx.activity.text}'")
 ```
 
-runtime will also access other services, esp. graph (separate section for graph? maybe a subsection here?)
+---
 
-can perform actions in Teams [proactively](../bots/how-to/conversations/send-proactive-messages.md), at any time, not just in the context of handling a Teams activity event.
+runtime will also access other services, esp. graph (separate section for graph? maybe a subsection here?)
 
 ---
 
@@ -154,11 +200,7 @@ This is where we talk about the possibilities of "bringing an agent vs. building
 
 ## Auth
 
----
-
-## Greenfield vs existing hosted app
-
----
+Bot Connector auth
 
 ---
 

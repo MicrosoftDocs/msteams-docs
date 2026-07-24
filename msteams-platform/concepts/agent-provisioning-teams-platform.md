@@ -50,13 +50,15 @@ The Bot Connector registration also references an Entra ID identity, which the a
 
 ## App manifest: agent definition and configuration
 
-An agent's app manifest is a JSON configuration file needed by Teams to provision the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, complementing the runtime that implements the agent's behavior. An app manifest includes, for example:
+An agent's app manifest is a JSON configuration file needed by Teams to provision the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, in contrast with the runtime that implements the agent's behavior.
+
+An app manifest includes, for example:
 
 - The agent's name and description
 - Information about the agent's developer
 - The ID of the agent's Entra ID app registration
 - The ID of the agent's Bot Connector registration
-- Platform-level configuration required for certain agent features
+- Platform-level configuration needed for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
 
 Developers submit an agent's app manifest to the Teams platform using the Teams Developer Portal or the Teams developer CLI. When development is complete, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
@@ -72,8 +74,6 @@ The Teams developer CLI is used to create all of these provisioning artifacts at
 
 ## Next steps
 
-TODO
-
-link to quickstart
+- Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), in which you'll provision an agent using `teams app create`.
 
 link to runtime article
