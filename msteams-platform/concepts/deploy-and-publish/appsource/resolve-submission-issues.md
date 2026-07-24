@@ -40,7 +40,7 @@ The process for resolving issues and resubmitting an app typically goes like thi
    * If your app is free of issues, resubmit your app on Partner Center.
    * If issues aren't resolved or Microsoft finds new issues, you receive another report on what to fix. Resolve those issues and send an updated version of the app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
-After the Microsoft concierge validation team confirms that your app is free of validation issues,resubmit your app through Partner Center. Your app is typically published to the Teams Store within 1–2 business days.
+After the Microsoft concierge validation team confirms that your app is free of validation issues, resubmit your app through Partner Center. Your app is typically published to the Teams Store within 1–2 business days.
 
 > [!CAUTION]
 > To avoid multiple submission failures, do not resubmit your app on Partner Center until the Microsoft concierge validation team approves your app.
