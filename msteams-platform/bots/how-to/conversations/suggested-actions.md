@@ -285,33 +285,20 @@ Use the following Teams SDK snippets for creating and handling `Action.Submit` s
 ::: zone pivot="csharp"
 
 ```csharp
-#pragma warning disable ExperimentalTeamsSuggestedAction
-using System.Text.Json;
-using Microsoft.Teams.Api;
-using Microsoft.Teams.Api.Activities;
-using CardAction = Microsoft.Teams.Api.Cards.Action;
-using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
-
-var reply = new MessageActivity("Approve or reject the request:")
+teamsApp.OnSuggestedActionSubmit(async (context, cancellationToken) =>
 {
-    SuggestedActions = new SuggestedActions
+    var command = context.Activity.Value is JsonElement value && value.TryGetProperty("command", out var cmd)
+        ? cmd.GetString()
+        : null;
+
+    if (command == "greet")
     {
-        Actions =
-        {
-            new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
-            new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
-        }
+        await context.Send("Hello! 👋");
     }
-};
-
-await context.Send(reply);
-
-teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
-{
-    var payload = ctx.Activity.Value is JsonElement value
-        ? value.GetRawText()
-        : "<none>";
-    await ctx.Send($"Got vote: {payload}", cancellationToken);
+    else
+    {
+        await context.Send("Unknown command.");
+    }
 });
 ```
 
@@ -320,22 +307,14 @@ teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 ::: zone pivot="typescript"
 
 ```typescript
-import { MessageActivity, type SuggestedActions } from "@microsoft/teams.api";
+app.on('suggested-action.submit', async ({ activity, send }) => {
+    const command = activity.value?.command;
 
-const reply = new MessageActivity("Approve or reject the request:");
-reply.suggestedActions = {
-  to: [],
-  actions: [
-    { type: "Action.Submit", title: "Approve", value: { vote: "approve" } },
-    { type: "Action.Submit", title: "Reject", value: { vote: "reject" } }
-  ]
-} satisfies SuggestedActions;
-
-await send(reply);
-
-app.on("suggested-action.submit", async ({ send, activity }) => {
-  const payload = activity.value != null ? JSON.stringify(activity.value) : "<none>";
-  await send(`Got vote: ${payload}`);
+    if (command === 'greet') {
+        await send('Hello! 👋');
+    } else {
+        await send('Unknown command.');
+    }
 });
 ```
 
@@ -344,28 +323,14 @@ app.on("suggested-action.submit", async ({ send, activity }) => {
 ::: zone pivot="python"
 
 ```python
-import json
-from microsoft_teams.api import MessageActivityInput
-from microsoft_teams.api.models.card.card_action import CardAction
-from microsoft_teams.api.models.card.card_action_type import CardActionType
-from microsoft_teams.api.models.suggested_actions import SuggestedActions
-
-reply = MessageActivityInput(text="Approve or reject the request:").with_suggested_actions(
-    SuggestedActions(
-        to=[],
-        actions=[
-            CardAction(type=CardActionType.SUBMIT, title="Approve", value={"vote": "approve"}),
-            CardAction(type=CardActionType.SUBMIT, title="Reject", value={"vote": "reject"}),
-        ],
-    )
-)
-
-await ctx.send(reply)
-
 @app.on_suggested_action_submit
-async def handle_suggested_action_submit(ctx):
-    payload = json.dumps(ctx.activity.value)
-    await ctx.send(f"Got vote: {payload}")
+async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSubmitInvokeActivity]) -> None:
+    command = ctx.activity.value.get("command") if isinstance(ctx.activity.value, dict) else None
+
+    if command == "greet":
+        await ctx.send("Hello! 👋")
+    else:
+        await ctx.send("Unknown command.")
 ```
 
 ::: zone-end
