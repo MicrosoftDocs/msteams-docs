@@ -309,6 +309,14 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.send(f"You said: {clean}")
 ```
 
+This code snippets shows how to listen for incoming messages and remove @mention text before processing them.
+
+* `ctx.activity.strip_mentions_text()` removes mention text such as @contoso.
+* `.text` returns the cleaned message.
+* `ctx.send()` replies with the cleaned text.
+
+For example, `@contoso summarize this chat` becomes `summarize this chat`, making the message easier to parse as a command or prompt.
+
 :::zone-end
 
 ### Add mentions to your messages
