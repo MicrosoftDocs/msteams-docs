@@ -284,13 +284,19 @@ The function removes **all mentions**, not only the agent's or bot’s mention. 
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-
-
 app.on('message', async ({ activity, send }) => {
   const clean = activity.stripMentionsText().text;
   await send(`You said: ${clean}`);
 });
 ```
+
+This code snippet demonstrates listening for incoming message activities and removing @mention text before processing the user’s message.
+
+* `activity.stripMentionsText()` removes mention text such as @contoso from the activity.
+* `.text` retrieves the cleaned message content.
+* `send()` echoes the cleaned text back to the user.
+
+For example, `@contoso summarize this chat` becomes `summarize this chat`, so the agent can parse the command.
 
 :::zone-end
 
