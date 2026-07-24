@@ -267,9 +267,6 @@ Handler (incoming to agent or app):
 The agent or app receives a standard invoke activity:
 
 ```typescript
-
-
-
 case "suggestedActions/submit":
   const vote = context.activity.value;  // { vote: "approve" }
   // Process the action...
