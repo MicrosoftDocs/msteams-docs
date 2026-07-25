@@ -1,16 +1,19 @@
 ---
-title: Customize app manifest in Agents Toolkit
-description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
+title: Customize Microsoft 365 App Manifest in Agents Toolkit
+description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update agent or app.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/13/2022
+ms.date: 04/30/2026
 ---
 
-# Customize app manifest
+<!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
 
-App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
+# Customize the Microsoft 365 app manifest
 
-To preview app manifest with actual content, Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
+The Microsoft 365 app manifest (previously called Teams app manifest) describes how your agent or app integrates into Microsoft Teams. After scaffolding, the default manifest file is available at `appPackage/manifest.json`. The manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with environment files such as `env/.env.dev` and `env/.env.local`.
+
+When you preview the resolved manifest, Agents Toolkit creates files in the `appPackage/build` folder similar to the following structure:
 
 ```text
 └───appPackage
@@ -21,32 +24,48 @@ To preview app manifest with actual content, Agents Toolkit generates the previe
         └───manifest.local.json  - Previewed manifest of local Teams app
 ```
 
-You can preview the app manifest file in local and remote environments.
+You can preview the manifest file in local and remote environments.
 
-## Preview the app manifest file in local environment
+## Preview the manifest file in local environment
 
-To preview the app manifest file in local environment, select the F5 key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
+To preview the manifest file in local environment, press the **F5** key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
+
+You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview manifest file and app package.
+
+# [Teams agent](#tab/agent)
+
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
+
+# [Teams app](#tab/app)
+
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the option of Zip Teams App Package.":::
+
+---
+
+## Preview manifest file in remote environment
+
+To preview the manifest file in remote environment, you can trigger **Provision** from tree view or **Teams: Provision** from command palette. It generates environment variables for remote Teams app, build app package and the preview app manifest under `appPackage/build` folder.
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
-:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
+# [Teams agent](#tab/agent)
 
-## Preview the app manifest file in remote environment
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
 
-To preview the app manifest file in remote environment, you can trigger **Provision** from tree view or **Teams: Provision** from command palette. It generates environment variables for remote Teams app, build app package and the preview app manifest under `appPackage/build` folder.
+# [Teams app](#tab/app)
 
-You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the option of Zip Teams App Package.":::
 
-:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the option to zip the Teams app package.":::
+---
 
-## Customize app manifest in Visual Studio Code
+## Customize manifest in Visual Studio Code
 
-During local debug or provision, Agents Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+During local debugging or provisioning, Agents Toolkit reads the manifest from `appPackage/manifest.json`, resolves the values by using environment variables defined in `env/.env.xx`, and then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-1. You can define your own manifest.json file in `m365agents.yml` and `m365agents.local.yml`.
-For example, you can put your manifest.json file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
+1. You can define your own `manifest.json` file in `m365agents.yml` and `m365agents.local.yml`.
+For example, you can put your `manifest.json` file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
 
-    ```text
+    ```yaml
     - uses: teamsApp/zipAppPackage # Build Teams app package with latest env value
       with:
       manifestPath: ./test/test.json # Path to manifest template
@@ -54,12 +73,12 @@ For example, you can put your manifest.json file in `test/test.json`, and update
       outputJsonPath: ./appPackage/build/manifest.${{TEAMSFX_ENV}}.json
     ```
 
-1. You can define your own environment variables. The default manifest.json contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in the manifest.json file.
-For example, you can customize app description by defining a new environment variable in env/.env.xx file, and update manifest.json with corresponding placeholder.
+1. You can define your own environment variables. The default `manifest.json` contains some placeholders with format of ${{xx_xx}}. You can define your own environment variables and add placeholders in the `manifest.json` file.
+For example, you can customize app description by defining a new environment variable in `env/.env.xx` file, and update `manifest.json` with corresponding placeholder.
 
    `.env.dev`
 
-   ```text
+   ```json
    TEAMS_APP_DESCRIPTION=This is an amazing app
    ```
 
@@ -76,7 +95,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-1. Starting with Agents Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Agents Toolkit reads the content from the text file and uses it as full description when building an app package.
+1. Starting with Agents Toolkit 5.10, you can use the `file` function to store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Agents Toolkit reads the content from the text file and uses it as full description when building an app package.
 
    `description.txt`
 
@@ -118,13 +137,26 @@ For example, you can customize app description by defining a new environment var
     }
     ```
 
-## Validate your app
+## Validate your agent or app
 
-After customization, you might want to validate your app manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
+After customization, you might want to validate the manifest or app package. You can trigger **Validate Application** from tree view, or **Microsoft 365 Agents: Validate Application** from command palette.
 
-:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
+# [Tree view](#tab/tree)
 
-### Validate using the app manifest schema
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the selection of validate application under utility.":::
+
+# [Command palette](#tab/command)
+
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/validate-app.png" alt-text="Screenshot shows the option of validate application under utility.":::
+
+---
+
+Validate your agent or app by using one of the following options:
+
+- [Validate using manifest schema](#validate-using-the-manifest-schema)
+- [Validate app package using validation rules](#validate-app-package-using-validation-rules)
+
+### Validate using the manifest schema
 
 This option renders `appPackage/manifest.json` with environment variables, and then validates your app manifest with its schema.
 
@@ -136,7 +168,7 @@ Alternatively, use the following Microsoft 365 Agents Toolkit command line inter
 atk validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Agents Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+The `MissingEnvironmentVariablesError` error indicates that Agents Toolkit couldn't locate the required environment variables specified in `manifest.json`. You might need to run **Provision** or press **F5** to generate the environment variables. Alternatively, you can manually update the `.env.xx` file to set the required values.
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
@@ -152,11 +184,12 @@ Alternatively, use the following Agents Toolkit CLI command:
 atk validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 ```
 
-It has other validation rules than the app manifest schema. For example, if static tab section has entityId `conversations` and name, the following error appears:
+Validation rules can also catch packaging issues that aren't covered by the manifest schema. For example, if a static tab includes `entityId` set to conversations together with a name value that violates the rules, validation returns an error.
 
 :::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/toolkit-v2/customize app manifest/validation-output.png":::
 
-## Update Teams app
+<!--
+## Update Teams agent or app
 
 After you've previewed and validated the app manifest file, you can sync your local changes to Teams Developer Portal by triggering **Teams: Update Teams App** command from command palette.
 
@@ -173,11 +206,12 @@ atk update teams-app
 > * The change is reflected in Developer Portal. Any manual updates in Developer Portal are overwritten.
 > * To change the name of the published app, you must modify both the `local.manifest` and `manifest.json` files.
 
-If the app manifest file is outdated due to configuration file change or template change, select any one of the following actions:
+If the manifest file is outdated due to configuration file change or template change, select any one of the following actions:
 
-* Preview only: Local app manifest file is overwritten according to current configuration.
-* Preview and update: Local app manifest file is overwritten according to current configuration and also updated to Teams platform.
-* Cancel: No action is taken.
+* **Preview only**: Local app manifest file is overwritten according to current configuration.
+* **Preview and update**: Local app manifest file is overwritten according to current configuration and also updated to Teams platform.
+* **Cancel**: No action is taken.
+-->
 
 ## To preview values for local and dev environment
 
@@ -198,9 +232,9 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [App manifest schema](/microsoft-365/extensibility/schema)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
-* [Manage multiple environments](TeamsFx-multi-env.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
-* [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+- [Microsoft 365 app manifest schema](/microsoft-365/extensibility/schema)
+- [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+- [Manage multiple environments](TeamsFx-multi-env.md)
+- [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
+- [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)
