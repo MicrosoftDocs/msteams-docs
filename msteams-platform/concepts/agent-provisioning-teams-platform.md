@@ -10,15 +10,15 @@ ms.date: 07/21/2026
 
 # Provisioning an agent on the Teams platform
 
-Creating and hosting an agent runtime is not enough to make an agent available in Teams. Provisioning an agent on the Teams platform requires registration and configuration across three surfaces:
+Creating and hosting an agent runtime is not enough to make an agent available in Teams. Developers must also *provision* their agent by registering and configuring it across three surfaces:
 
-- **Entra ID app registration**: Identity configuration that enables an agent to authenticate and get access to services and data
-- **Bot Connector API registration**: Service configuration that enables an agent to interact with Teams via the Bot Connector API
-- **App manifest**: Configuration used to register the agent with the Teams Platform as an installable Teams app
+- **Microsoft Entra ID**: An Entra ID app registration enables the agent to authenticate and get access to services and data
+- **Bot Connector service**: Configuration in the Bot Connector service enables an agent to interact with Teams via the Bot Connector API
+- **Teams platform**: An app manifest submitted to the Teams platform registers the agent as a distributable, installable Teams app
 
 All of these components require a Microsoft Entra tenant associated with the agent's developer.
 
-The developer workflow enabled by the Teams developer CLI encourages provisioning an agent right at the beginning of its development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
+The developer workflow enabled by the Teams developer CLI provisions an agent with a single command. Developers are encouraged to use this workflow to provision an agent right at the beginning of its development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
 
 ## Entra ID app registration: identity and authentication
 
@@ -28,14 +28,14 @@ An Entra ID app registration is not strictly required for all Teams agents. Howe
 
 - **Authenticating to organizational resources**: Many agents access organizational data and services, including the Microsoft Graph API, to power collaboration features.
 - **On-behalf-of flows with single sign-on and OAuth**: Users can grant consent for the agent to access data and services on their behalf, using their permissions.
-- **Requesting consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
-- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector with an Entra ID identity. An app registration is the recommended and most flexible choice, and the only choice for agent runtimes not hosted on Azure.
+- **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
+- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector with an Entra ID identity. An app registration is the recommended and most flexible choice, and is the only choice for agent runtimes not hosted on Microsoft Azure.
 
 Agents can use a single app registration to enable all of these capabilities.
 
 ## Bot Connector registration: an agent's key to using Teams
 
-The Bot Connector API is the service that agents use to interact with Teams. Developers must register their agents with Bot Connector for them to use the API.
+Bot Connector is the service that agents use to interact with Teams. Developers must register their agents with Bot Connector for them to access the API.
 
 Bot Connector supports two kinds of registration:
 
@@ -48,9 +48,9 @@ A Bot Connector registration contains a small amount of configuration, most nota
 
 The Bot Connector registration also references an Entra ID identity, which the agent's runtime must use to authenticate to Bot Connector. In most cases, this identity is an Entra ID app registration. Developers with agents hosted on Microsoft Azure have the option of using an Azure user-assigned managed identity instead.
 
-## App manifest: agent definition and configuration
+## App manifest: app definition and configuration
 
-An agent's app manifest is a JSON configuration file needed by Teams to provision the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, in contrast with the runtime that implements the agent's behavior.
+An agent's app manifest is a JSON configuration file used to provision the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, in contrast with the runtime that implements the agent's behavior.
 
 An app manifest includes, for example:
 
@@ -61,19 +61,18 @@ An app manifest includes, for example:
 - Platform-level configuration needed for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
 
-Developers submit an agent's app manifest to the Teams platform using the Teams Developer Portal or the Teams developer CLI. When development is complete, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
+Developers register an agent with the Teams platform by submitting its app manifest using the Teams Developer Portal or the Teams developer CLI. When development is complete, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
 
 ## Teams developer CLI
 
-The Teams developer CLI is used to create all of these provisioning artifacts at the beginning of development. Running `teams app create` creates:
+`teams app create` fully provisions an agent. It creates:
 
 1. An Entra ID app registration in your tenant, configured with a client secret used for authentication
-1. A Bot Connector registration in Teams Developer Portal, configured to use the app registration as the agent's identity
-1. An app manifest, also in Teams Developer Portal, which references the Bot Connector registration
-1. A configuration file for the agent's runtime that contains the client secret, used by Teams SDK to authenticate to the Bot Connector API
+1. A Bot Connector registration in Teams Developer Portal
+1. An app manifest that defines the agent, submitted to the Teams platform to register the agent as an installable Teams app
+1. A local configuration file for the agent's runtime that contains the client secret, used by Teams SDK to authenticate to the Bot Connector API
 
 ## Next steps
 
-- Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), in which you'll provision an agent using `teams app create`.
-
-link to runtime article
+- Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), where you'll create an agent, including provisioning using `teams app create`.
+- Learn about how an [agent runtime](agent-runtime-teams-sdk.md) built with Teams SDK works.
