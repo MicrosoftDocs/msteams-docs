@@ -21,9 +21,9 @@ zone_pivot_groups: teams-sdk-languages
 
 # Get started with agent development
 
-This article covers the fundamentals of building a Teams agent runtime using Teams SDK.
+This article outlines the fundamentals of building a Teams agent runtime using Teams SDK.
 
-A Teams agent's runtime is its code: a web service that interacts with Teams using the Bot Connector service. It receives chat messages and other Teams activity information on its `/api/messages` endpoint and performs actions in Teams by calling the Bot Connector API.
+A Teams agent's runtime is its code: a web service that interacts with Teams using the Bot Connector service. It receives chat messages and information about other Teams activities on its `/api/messages` endpoint and performs actions in Teams by calling the Bot Connector API.
 
 An agent's runtime can be hosted anywhere on the web, but its developer is responsible for hosting it. Teams does not host or run an agent's code.
 
@@ -46,9 +46,9 @@ An agent's runtime can be hosted anywhere on the web, but its developer is respo
 
 ::: zone pivot="teams-sdk-csharp"
 
-Teams SDK provides agent runtime functionality as an ASP.NET Core extension. Developers can use the SDK as the foundation of a new ASP.NET Core app or extend an existing one to operate as a Teams agent runtime.
+Teams SDK provides agent runtime functionality as an ASP.NET Core extension. Developers can use the SDK as the foundation of a new ASP.NET Core app or extend an existing app to interact with Teams as an agent.
 
-Call `AddTeams` and `UseTeams` to register the `/api/messages` endpoint and integrate the SDK's event handling system.
+Use `AddTeams` and `UseTeams` to register the `/api/messages` endpoint and integrate the SDK's event handling system.
 
 ```csharp
 using Microsoft.Teams.Plugins.AspNetCore.Extensions;
@@ -65,11 +65,7 @@ app.Run();
 
 `UseTeams` returns an instance of the SDK's `App` class, the main provider of Teams-related functionality. The convention used by Teams SDK and this documentation is to store this instance in a variable named `teams`.
 
-### Runtime authentication with Bot Connector
-
-App initialization uses settings in `appsettings.json` to configure the runtime's inbound and outbound authentication with the Bot Connector service.
-
-By default, all inbound requests to `/api/messages` are authenticated.
+App initialization uses settings in `appsettings.json` to configure the runtime's inbound and outbound authentication with the Bot Connector service. TODO for more information, see (app auth/trust model page in SDK section)
 
 ::: zone-end
 
@@ -121,7 +117,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-The `context` object passed to the handler contains information about the message and two helper methods that simplify replying in the same conversation. `context.Send` and `context.Reply` both send a message into the conversation; `context.Reply` also includes a quoted reference to the original message.
+The `context` object passed to the handler contains information about the message, along with two helper methods that simplify replying in the same conversation. `context.Send` and `context.Reply` both send a message into the conversation; `context.Reply` also includes a quoted reference to the original message.
 
 ::: zone-end
 
@@ -139,7 +135,7 @@ app.on('message', async context => {
 
 ::: zone pivot="teams-sdk-python"
 
-Register the message event handler at module scope, before starting the application, with @app.on_message.
+In an agent runtime built with Teams SDK, chat messages are handled as events. Use the `@app.on_message` decorator to register a message event handler.
 
 ```python
 @app.on_message
@@ -148,7 +144,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.reply("This message is a quoted reply. Select the quote to jump to your original message.")
 ```
 
-`ctx` contains information about the message and two helper methods that simplify replying in the same conversation. `ctx.send` and `ctx.reply` both send a message into the conversation; `ctx.reply` also includes a quoted reference to the original message.
+`ctx` contains information about the message, along with two helper methods that simplify replying in the same conversation. `ctx.send` and `ctx.reply` both send a message into the conversation; `ctx.reply` also includes a quoted reference to the original message.
 
 ::: zone-end
 
