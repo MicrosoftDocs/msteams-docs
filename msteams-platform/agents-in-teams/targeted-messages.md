@@ -348,6 +348,13 @@ The following table lists error codes, error descriptions, and developer actions
 
 The following table lists error codes, error descriptions, and developer actions for REST APIs:
 
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. | Ensure that recipient is included in the payload of the `Send TM` API when the agent sends the message as it's mandatory. |
+| 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API in an update or delete operation, where it is not allowed. | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 404 | `ActivityNotFoundInConversation` | The message ID was not found. The message might have been deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
+
 ---
 
 More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
