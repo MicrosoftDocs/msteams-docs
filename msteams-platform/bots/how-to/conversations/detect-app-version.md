@@ -56,19 +56,19 @@ If your agent has both session-enabled and non-session versions in use, checking
 
 ::: zone pivot="teams-sdk-csharp"
 
-<!-- TODO: Add C# code sample for reading channelData.app.version once SDK 2.1.0 is GA. -->
+TODO
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-<!-- TODO: Add TypeScript code sample for reading channelData.app.version once SDK 2.1.0 is GA. -->
+TODO
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-<!-- TODO: Add Python code sample for reading channelData.app.version once SDK 2.1.0 is GA. -->
+TODO
 
 ::: zone-end
 
