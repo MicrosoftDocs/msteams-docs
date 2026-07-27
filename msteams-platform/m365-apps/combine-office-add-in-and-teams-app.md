@@ -23,7 +23,7 @@ ms.subservice: m365apps
 - Integrate with external services including CRM and project management tools.
 - Add custom ribbon buttons or menu items to perform specific tasks.
 
-Integrating an Outlook Add-in with a Teams application enables scenarios that neither of them could achieve independently. Consider a scenario where a salesperson can insert a customized discount in an email to a customer and record the offer in a backend database. The sales manager can also view data about all the discounts that have been offered in a Teams tab. For more information, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+Integrating an Outlook Add-in with a Teams application enables scenarios that neither of them could achieve independently. Consider a scenario where a salesperson can insert a customized discount in an email to a customer and record the offer in a backend database. The sales manager can also view data about all the discounts that have been offered in a Teams tab. For more information, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-add-in-combined/nodejs).
 
 [Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview) provides information about the capabilities of Outlook Add-ins, how they are structured, how they improve on older ways of extending Outlook, what platforms the add-in can run on (Windows, Mac, mobile, and the web), and how to get started creating one.
 

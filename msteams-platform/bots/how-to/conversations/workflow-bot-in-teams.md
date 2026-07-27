@@ -1,7 +1,7 @@
 ---
 title: Build and Customize Workflow Bot
 description: Learn how to send a response to card action in Teams workflow bot, add more card actions, customize action responses, and Adaptive Card contents.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ---

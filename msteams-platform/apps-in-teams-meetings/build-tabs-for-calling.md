@@ -1,7 +1,7 @@
 ---
 title: Create Tab Apps for Calling
 description: Learn to build a tab for initiating one-to-one calls from within Teams
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 12/02/2024
 ---

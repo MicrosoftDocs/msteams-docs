@@ -2,8 +2,8 @@
 title: Adaptive Card actions in Teams SDK
 description: Learn about Adaptive Card action types such as Action.Execute, Action.OpenUrl, Action.ShowCard, and Action.ToggleVisibility, and how to handle card actions using the Teams SDK.
 ms.localizationpriority: medium
-ms.topic: conceptual
-ms.date: 04/28/2026
+ms.topic: article
+ms.date: 06/10/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
@@ -1188,8 +1188,10 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 |S.No.|Card| Description|.NET|Node.js|Python|Java|Manifest|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|------|
-|1|Bot Cards|This sample shows how to use the Teams SDK to send and handle various card types, including Adaptive Cards with interactive actions, in Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/python/bot-cards)|NA|NA|
-|2|Card Formatting|This sample demonstrates how to use the `conditionallyEnabled` property with `Action.Execute` to disable action buttons until required inputs are filled.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet/bot-cards)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs/bot-cards)|NA|NA|NA|
+|1|Adaptive Card actions|This sample shows how to send Adaptive Cards with multiple action types using a Teams bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
+|2|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|NA|NA|
+|3|Adaptive Cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|NA|NA|
+|4|Card Formatting|This sample demonstrates a conditionally enabled button.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/nodejs)|NA|NA|NA|
 
 ## Next step
 

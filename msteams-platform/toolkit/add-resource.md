@@ -5,75 +5,78 @@ description: Learn how to add cloud resources such as Azure Functions, Azure API
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2024
+ms.date: 04/10/2026
 ---
 
 # Add cloud resources and API connection
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your app, tailored to your development needs. By adding more cloud resources in TeamsFx, you can autogenerate all configuration files and seamlessly connect to the Teams app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams apps.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your agent or app, tailored to your development needs. Adding cloud resources lets you automatically generate configuration files and easily connect to the Teams agent or app with Agents Toolkit. Agents Toolkit also enables you to use existing APIs from your organization or third parties to build Teams agents or apps.
 
 > [!NOTE]
-> If you've created SharePoint Framework (SPFx) based tab project, you can't add Azure cloud resources.
+> Agents Toolkit doesn't support adding Azure cloud resources for SharePoint Framework (SPFx) based tabs.
 
 ## Add cloud resources
 
 You can add cloud resources in the following ways:
 
+- [Add cloud resources using Agents Toolkit](#to-add-cloud-resources-using-agents-toolkit)
+- [Add cloud resources using command palette](#to-add-cloud-resources-using-command-palette)
+
 ### To add cloud resources using Agents Toolkit
 
-   1. Open your Teams app project in **Visual Studio Code**.
+   1. Open your Teams agent or app project workspace in **Visual Studio Code**.
    1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select a how-to guide from the Development section.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the cloud service you want to integrate with your agent or app. You're redirected to the selected how-to guide.
 
-        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the cloud service integration options from the how-to guides list.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
-      |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
-      |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
+      |Integrate with Azure SQL database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
+      |Integrate with Azure API management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
-### To add cloud resources using Command Palette
+### To add cloud resources using command palette
 
-   1. Open your Teams app project in Visual Studio Code.
+   1. Open your Teams agent or app project in Visual Studio Code.
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
+      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the command palette option under **View**.":::
 
    1. Enter **How-to Guides** and select **Microsoft 365 Agents: View How-to Guides** from the list.
 
-        :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the cloud service you want to integrate with your agent or app. You're redirected to the how-to guide for the selected cloud service.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
-      |**Cloud service integration** | **How-to Guide** |
+      | **Cloud service integration** | **How-to Guide** |
       |----------|----------|
-      |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
-      |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
+      |Integrate with Azure SQL database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
+      |Integrate with Azure API management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
 ## Add API connection
 
-Add a connection to an existing API, developed by your organization or a third party, using the following steps:
+To connect your agent or app to an existing API developed by your organization or a third party:
 
-1. Open your Teams app project in **Microsoft Visual Studio Code**.
+1. Open your Teams agent or app project in **Microsoft Visual Studio Code**.
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
     :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the respective How-to Guide.
+1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the how-to guide.
 
-    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the selection of Connect to an API option in the View How-to Guides list.":::
+    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the option for the how-to guide for connecting to an API in the view how-to guides list.":::
 
       |**Development** | **How-to Guide** |
       |----------|----------|
@@ -81,8 +84,7 @@ Add a connection to an existing API, developed by your organization or a third p
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Provision cloud resources](provision.md)
-* [Create a new Teams app](create-new-project.md)
-* [Deploy to the cloud](deploy.md)
-* [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+- [Provision cloud resources](provision.md)
+- [Deploy to the cloud](deploy.md)
+- [Publish Teams agents and apps using Microsoft 365 Agents Toolkit](publish.md)
