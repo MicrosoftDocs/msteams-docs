@@ -327,7 +327,7 @@ When designing agent interactions for group conversations, choosing between publ
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
 - Use Prompt Preview whenever an agent responds to a targeted user request. Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), this helps users understand the relationship between their original prompt and the agent’s response without requiring them to locate the earlier message.
 
-## Errors
+## Handle errors
 
 Ensure to handle these errors appropriately in your agent or app.
 
@@ -337,10 +337,12 @@ The following table lists error codes, error descriptions, and developer actions
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. <br> In prompt preview scenarios, the targeted message ID is invalid. | Call `WithRecipient(account, isTargeted: true)` with a valid Account object. <br> In prompt preview scenario, verify that the targeted message ID is correct. |
+| 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. | Call `WithRecipient(account, isTargeted: true)` with a valid Account object. |
 | 400 | `Bad argument` | Recipient data was included in an update or delete operation, where it is not allowed. | Do not pass a recipient on update or delete. |
+| 400 | `INVALID_TARGETED_MESSAGE_ID` | In prompt preview scenarios, the targeted message ID is invalid. | In prompt preview scenario, verify that the targeted message ID is correct. |
 | 403 | `BotNotInConversationRoster` | The agent or bot app is not a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 | 404 | `ActivityNotFoundInConversation` | The message ID was not found. The message might have been deleted or expired after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
+| 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | In prompt preview scenarios, the referenced message was deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
 
 # [HTTP](#tab/api)
 
