@@ -15,7 +15,7 @@ Teams supports the following sovereign cloud environments:
 
 - **US Government (GCC-High)**: For US government agencies and contractors handling controlled unclassified information.
 - **US Government (DoD)**: For the US Department of Defense.
-- **China (21Vianet)**: For the China market, operated and managed by 21Vianet, the largest service provider in the country.
+- **China (21Vianet)**: For the China market, operated and managed by 21Vianet, the largest service provider in the country/region.
 
 > [!NOTE]
 > If your app runs in the standard commercial (public) cloud, no additional sovereign cloud configuration is needed.
