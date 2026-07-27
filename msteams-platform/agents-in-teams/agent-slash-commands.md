@@ -33,13 +33,13 @@ The slash commands feature enables apps and agents to add their own commands to 
 
 Apps and agents can expose slash-command experiences through app or agent configuration in two primary ways:
 
-- **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu
-- **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command
+- **Agent slash commands**: Surface named commands to users in the slash command autocomplete menu.
+- **Message extension slash commands**: Enable users to activate your app or agent's message extensions with a slash command.
 
 These types of slash commands are supported across all client platforms, including mobile.
 
 > [!IMPORTANT]
-> [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations, and require careful handling of user privacy expectations. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
+> [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations and require careful handling of user privacy expectations. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
 >
 > For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
 
@@ -123,13 +123,12 @@ Declare commands and their triggers by configuring the `bots[].commandLists[]` s
 }
 ```
 
-In this example:
+• As is required for slash commands, this example code snippet:
 
-- As is required for slash commands, `supportsTargetedMessages` is set to `true` to allow the agent to receive targeted messages in group conversations.
-
+- `supportsTargetedMessages` is set to `true` to allow the agent to receive targeted messages in group conversations.
 - `summarize` is configured as a slash command.
 - `assign` is configured as an @mention command.
-- `review` is configured as both a slash command an and @mention command.
+- `review` is configured as both a slash command and an @mention command.
 
 ### Slash commands for action-type message extensions
 
