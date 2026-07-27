@@ -339,6 +339,7 @@ The following table lists error codes, error descriptions, and developer actions
 | --- | --- | --- | --- | --- |
 | 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. | Call `WithRecipient(account, isTargeted: true)` with a valid Account object. |
 | 400 | `Bad argument` | Recipient data was included in an update or delete operation, where it is not allowed. | Do not pass a recipient on update or delete. |
+| 403 | `BotNotInConversationRoster` | The agent or bot app is not a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 
 # [HTTP](#tab/api)
 
