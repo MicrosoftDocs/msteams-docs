@@ -357,8 +357,6 @@ The following table lists error codes, error descriptions, and developer actions
 | 404 | `ActivityNotFoundInConversation` | The message ID was not found. The message might have been deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
 | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | In prompt preview scenarios, the referenced message was deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
 
----
-
 More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
 ## Code sample
