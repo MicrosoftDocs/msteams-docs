@@ -1113,6 +1113,9 @@
     - name: Update Apple Developer Program Team ID
       href: concepts/deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md
       displayName: Enable users to install your app on Teams iOS platform, app acquisition on mobile
+    - name: Common reasons for app validation failure
+      href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+      displayName: App description, Partner Center, app manifest, Microsoft trademark and brand guidelines, external domains, testability, bot functionality, AI-generated content, mobile experience, app functionality
     - name: Submit your app
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if your Teams Store submission fails
@@ -1124,9 +1127,6 @@
     - name: Teams Store ranking parameters
       href: concepts/deploy-and-publish/appsource/post-publish/teams-store-ranking-parameters.md
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
-    -  name: Common reasons for app validation failure
-       href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: App description, Partner Center, app manifest, Microsoft trademark and brand guidelines, external domains, testability, bot functionality, AI-generated content, mobile experience, app functionality
   - name: Enable customization for your agent or app
     href: concepts/design/enable-app-customization.md
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
