@@ -276,4 +276,5 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
+* [Common reasons for app validation failure](../common-reasons-for-app-validation-failure.md)
+* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
