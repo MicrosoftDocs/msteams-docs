@@ -12,11 +12,11 @@ The activity feed is a surface for users to access their notifications in Micros
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile.":::
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displayed in the Teams activity feed on mobile.":::
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displayed in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
 
 ---
 
