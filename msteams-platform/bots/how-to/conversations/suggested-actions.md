@@ -19,26 +19,13 @@ To help users start a conversation, see [Create prompt starters](prompt-starters
 
 ## Understand suggested actions
 
-Suggested actions give users ideas for what to ask next, based on the previous response or conversation.
-Use suggested actions when the agent or app has the conversational context to recommend the next few intents after a response, such as refining a search, creating a task, choosing a status, or continuing a guided workflow.
-
 You can build the following suggested actions in your agent or app:
 
 - `imBack`: Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
 
 - `Action.Compose`: Use `Action.Compose` when the app should prefill the compose box so the user can review, edit, and send the message. Return an `Action.Compose` action with a Teams `chatMessage` payload that can include formatted text, @mentions, tags, emojis, GIFs, or other supported rich content. For example, a scheduling assistant can draft a follow-up message with an @mention and proposed next steps, giving the user a chance to adjust it before posting.
 
-- `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. Return an `Action.Submit` action with a structured value object, then handle the `suggestedAction/submit` invoke activity in the agent or app. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
-
-### Guidance for approval workflow using `Action.Submit`
-
-Before implementing approval workflow using `Action.Submit`, ensure your agent or app supports [targeted messaging](../../../agents-in-teams/targeted-messages.md) in Teams and runs in a channel, group chat, or meeting chat. The workflow has the following steps:
-
-1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent.
-1. **Reply privately**. Send the initial response only to the requesting user.
-1. **Include the prompt preview**. Display the original request above the response. Teams adds it to reactive replies; for proactive replies, attach it using the original targeted message ID.
-1. **Request approval**. Offer actions such as Allow, Share to channel, Edit prompt, or Dismiss.
-1. **Publish** only if approved.
+- `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
 
 ## User experience
 
@@ -243,11 +230,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 ### Add `Action.Submit` action
 
-Use `Action.Submit` for suggested action buttons that run the agent's server-side logic without posting a user-visible message. When a user selects the button, Teams sends an invoke activity instead of a regular message activity. Include a structured payload in `value` so your app can route and process the action consistently through existing invoke handlers.
-
-Use `Action.Submit` to add suggested action buttons to [agent responses to slash commands](~/agents-in-teams/agent-slash-commands.md), so users can choose a next step without disrupting the conversation.
-
-This pattern is particularly useful for the targeted messages workflow where an agent asks whether a targeted message should be resent as public. For more information, see [Targeted messages in Teams](~/agents-in-teams/targeted-messages.md).
+Use `Action.Submit` this action for suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
 
 Payload (outgoing from agent or app):
 
@@ -342,17 +325,23 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 
 ::: zone-end
 
-## Best practices and design guidance
+### Guidance for approval workflow using `Action.Submit`
 
-Use suggested actions when the next step is predictable and choosing is easier than typing.
+Use Action.Submit in [slash command](~/agents-in-teams/agent-slash-commands.md) responses to offer private next-step actions, such as choosing whether to resend a [targeted message](../../../agents-in-teams/targeted-messages.md) publicly. Before implementing this approval flow, ensure the agent or app supports targeted messaging and runs in a channel, group chat, or meeting chat. The workflow is:
+
+1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent.
+1. **Reply privately**. Send the initial response only to the requesting user.
+1. **Include the prompt preview**. Display the original request above the response. Teams adds it to reactive replies; for proactive replies, attach it using the original targeted message ID.
+1. **Request approval**. Offer actions such as Allow, Share to channel, Edit prompt, or Dismiss.
+1. **Publish** only if approved.
+
+## Best practices and design guidance
 
 Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
 
 Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
 
 Teams displays and processes up to three suggested actions. They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
-
-Use `imBack` to add the choice to the conversation, `Action.Compose` to let users review or edit content before sending, and `Action.Submit` to handle the action privately.
 
 Before returning `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
 
