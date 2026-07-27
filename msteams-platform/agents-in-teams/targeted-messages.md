@@ -335,6 +335,11 @@ Ensure to handle these errors appropriately in your agent or app.
 
 The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. | Call `WithRecipient(account, isTargeted: true)` with a valid Account object. |
+| 400 | `Bad argument` | Recipient data was included in an update or delete operation, where it is not allowed. | Do not pass a recipient on update or delete. |
+
 # [HTTP](#tab/api)
 
 The following table lists error codes, error descriptions, and developer actions for REST APIs:
