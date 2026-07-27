@@ -1,13 +1,13 @@
 ---
-title: Rate limiting for bots
-description: Learn how to optimize bot with rate limiting, detect transient exceptions, perform an exponential backoff, and know about add per bot thread limit for all bots.
+title: Rate limiting for agents
+description: Learn how to optimize agent with rate limiting, detect transient exceptions, perform an exponential backoff, and know about add per agent thread limit for all agents.
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: angovil
 ms.date: 02/06/2025
 ---
 
-# Optimize your bot with rate limiting in Teams
+# Rate limiting for agents
 
 Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages don't appear as spam to your users.
 
@@ -24,7 +24,7 @@ The following code shows an example of handling rate limits:
 ```csharp
 try
 {
-    // Perform Bot Framework operation
+    // Perform Agent Framework operation
     // for example, await connector.Conversations.UpdateActivityAsync(reply);
 }
 catch (HttpOperationException ex)
@@ -36,7 +36,7 @@ catch (HttpOperationException ex)
 }
 ```
 
-After you handle rate limits for bots, you can handle `HTTP 429` responses using an exponential backoff.
+After you handle rate limits for agents, you can handle `HTTP 429` responses using an exponential backoff.
 
 ## Handle `HTTP 429` responses
 
@@ -113,19 +113,19 @@ Store the value and strategy in a configuration file to fine-tune and tweak valu
 
 For more information, see [retry patterns](/azure/architecture/patterns/retry).
 
-You can also handle rate limit using the per bot per thread limit.
+You can also handle rate limit using the per agent per thread limit.
 
-## Per bot per thread limit
+## Per agent per thread limit
 
-The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, the thread limit doesn't throttle.
+The per agent per thread limit controls the traffic that a agent is allowed to generate in a single conversation. A conversation is 1:1 between agent and user, a group chat, or a channel in a team. So, if the application sends one agent message to each user, the thread limit doesn't throttle.
 
 >[!NOTE]
 >
-> * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user.
-> * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
+> * The thread limit of 3600 seconds and 1800 operations applies only if multiple agent messages are sent to a single user.
+> * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of agent messages per second must not cross the thread limit.
 > * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
-The following table provides the per bot per thread limits:
+The following table provides the per agent per thread limits:
 
 | Scenario | Time period in seconds | Maximum allowed operations |
 | --- | --- | --- |
@@ -147,15 +147,15 @@ The following table provides the per bot per thread limits:
 | Get conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They are throttled to five requests per minute and return a maximum of 10K members per team. To update your implementation to use paginated member retrieval, see [Get Teams specific context for your bot](get-teams-context.md).
+> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They are throttled to five requests per minute and return a maximum of 10K members per team. To update your implementation to use paginated member retrieval, see [Get Teams specific context for your agent](get-teams-context.md).
 
-You can also handle rate limit using the per thread limit for all bots.
+You can also handle rate limit using the per thread limit for all agents.
 
-## Per thread limit for all bots
+## Per thread limit for all agents
 
-The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here's 1:1 between bot and user, a group chat, or a channel in a team.
+The per thread limit for all agents controls the traffic that all agents are allowed to generate across a single conversation. A conversation here's 1:1 between agent and user, a group chat, or a channel in a team.
 
-The following table provides the per thread limit for all bots:
+The following table provides the per thread limit for all agents:
 
 | Scenario | Time period in seconds | Maximum allowed operations |
 | --- | --- | --- |
@@ -173,9 +173,9 @@ The following table provides the per thread limit for all bots:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Calls and online meetings bots](../calls-and-meetings/calls-meetings-bots-overview.md)
+> [Calls and online meetings agents](../calls-and-meetings/calls-meetings-bots-overview.md)
 
 ## See also
 
-* [Build bots for Teams](../what-are-bots.md)
+* [Build agents for Teams](../what-are-bots.md)
 * [Manage a long-running operation](/azure/bot-service/bot-builder-howto-long-operations-guidance?view=azure-bot-service-4.0&preserve-view=true)
