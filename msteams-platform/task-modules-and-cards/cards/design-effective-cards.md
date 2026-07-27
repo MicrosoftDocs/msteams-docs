@@ -2,7 +2,7 @@
 title: Designing Adaptive Cards for your app
 description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card Designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.date: 11/07/2024
 ---
 # Designing Adaptive Cards for your Microsoft Teams app

@@ -1,7 +1,7 @@
 ---
 title: Get Context for Teams Bot
 description: In this module, learn how to get context for bots in Microsoft Teams, fetch the team roster and user profile or roster in personal or group chat
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/02/2023
 ms.owner: angovil

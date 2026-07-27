@@ -1,10 +1,11 @@
 ---
 title: Send Notifications to Users in Meetings
 description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples and its feature compatibility by user types.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
+ms.author: nickwalk
 ms.owner: kanchankaur
-ms.date: 02/02/2023
+ms.date: 06/18/2026
 ---
 
 # Build in-meeting notification for Teams meeting
@@ -167,13 +168,7 @@ After you've built in-meeting notification for your app, you can use the `target
 
 Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
-
-<!--
-## Step-by-step guide
-
-Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
--->
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
 
 ## See also
 

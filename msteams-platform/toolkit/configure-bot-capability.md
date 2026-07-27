@@ -544,7 +544,7 @@ The following code snippet is an example:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
+> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-in-agents-toolkit)
 
 ## See also
 

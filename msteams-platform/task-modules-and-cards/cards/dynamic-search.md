@@ -1,7 +1,7 @@
 ---
 title: Search Types & Usage in Adaptive Cards
 description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent inputs in Adaptive Cards.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 01/23/2025
 ---
@@ -579,7 +579,7 @@ The following code snippet shows an example of a bot invoke request for the card
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Typeahead search control on Adaptive Cards |Demonstrating the feature of typeahead search (static, dynamic and dependant) control in Adaptive Cards using sent bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp/demo-manifest/Typeahead-search-adaptive-cards.zip)
+| Typeahead search control on Adaptive Cards |Demonstrating the feature of typeahead search (static, dynamic and dependant) control in Adaptive Cards using sent bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-type-ahead-search-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-type-ahead-search-adaptive-cards/csharp/demo-manifest/Typeahead-search-adaptive-cards.zip)
 
 ## See also
 

@@ -2,10 +2,10 @@
 title: Fetch Meeting Transcripts & Recordings
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.owner: vichug
-ms.author: vikasalmal
-ms.date: 03/02/2026
+ms.author: nickwalk
+ms.date: 06/30/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -23,7 +23,7 @@ You can now configure your app to fetch Microsoft Teams transcripts and recordin
 Here are some use cases for fetching meeting transcripts and recordings using Graph API.
 
 |    Use case    |    Description    |     How the APIs help  |
-| --- | --- |--- |
+|    ---         |    ---            |     ---                |
 | Fetch meeting transcripts and recordings automatically for **scheduled instances** like online meetings | As a sales manager, you need to obtain transcripts and recordings for capturing meaningful insights from multiple meetings across the Sales vertical. Keeping a tab on all meetings, and retrieving meeting transcripts and recordings manually from them to obtain useful information is time-consuming and inefficient. | Use Graph APIs in your app to fetch meeting transcripts and recordings automatically from all meetings relevant for your purpose. Your app receives meeting notifications, and gets the transcript and recording when it is generated after the meeting ends. <br> This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
 | Fetch transcripts and recordings post-meeting for **scheduled instances** like online meetings | As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. After it ends, you'd need to analyze the discussion to gather data points for planning improvements. Having to continually take notes to provide a post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. | Using Graph APIs in your app to fetch transcripts and recordings post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript and recording is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
 | Create a personalized app for **scheduled instances** like online meetings | As a salesperson at a leading tech company, you must connect with clients and close deals. With numerous meetings scheduled through Teams and Outlook calendar, it's crucial to attend all calls and stay updated on discussions and latest updates. | Create an app with the following capabilities:<br> • Notify you when a meeting is scheduled using Teams or Outlook calendar. <br> • Enable your app to set `AutoRecording=true` for these meetings. <br> • Add a bot as a meeting participant to display a banner indicating that the meeting is being recorded and that the content is used by your app for analysis.<br> • Allow your app to access meeting recordings and transcripts.<br> • Allow your app without requiring admin approval for the `OnlineMeetingRecording.Read.All` permissions, as obtaining admin approval for these permissions can be time consuming. <br> Here's a [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) that showcases this use case scenario. |
@@ -44,6 +44,14 @@ To fetch the transcript and recording for a particular meeting and call:
 ### Configure permissions on Microsoft Entra ID to access transcript and recording
 
 Your app must have the required permissions for fetching transcripts and recordings. It can access and fetch transcripts and recordings for a Teams meeting using organization-wide application permissions or resource-specific consent (RSC) application permissions for a particular meeting.
+
+Additionally, access to transcripts and transcript change notifications is governed by two independent tenant administrator settings:
+
+- **Graph API access to transcripts**. When disabled, all transcript requests (metadata, `metadataContent`, and `content`) return `403 Forbidden` with the `GraphAccessToTranscriptsDisabled` inner-error code, regardless of the requested format.
+
+- **Speaker attribution**. When disabled, transcript content can be retrieved only without speaker information in the `application/vnd.microsoft.graph.transcript+text` format.
+
+For more information, see the sections about tenant administrator controls in the documentation about [change notification subscriptions](/graph/teams-changenotifications-callrecording-and-calltranscript#tenant-admin-control-over-transcript-subscriptions) and the [Get callTranscript operation](/graph/api/calltranscript-get#tenant-administrator-controls-for-transcript-access).
 
 > [!NOTE]
 >
@@ -104,11 +112,11 @@ Your app can directly fetch AI-generated meeting summaries, including conversati
 
 ## Code samples
 
-| Sample name | Description | Node.js | C# |
-| --- | --- | --- | --- |
-| Online meeting transcript bot | This sample app retrieves meeting transcripts using Microsoft Graph API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) |
-| Online meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/csharp) |
-| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-adhoccalls-transcript-recording/nodejs) |  |
+| Sample name | Description | Node.js | C# | Python |
+| --- | --- | --- | --- | --- |
+| Bot meetings | This sample demonstrates how to handle real-time meeting events and retrieve meeting transcripts in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/nodejs/bot-meetings) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/dotnet/bot-meetings) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/python/bot-meetings) |
+| Online meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-meeting-transcript-recording/csharp) | NA |
+| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-adhoccalls-transcript-recording/nodejs) | NA | NA |
 
 ## Next step
 

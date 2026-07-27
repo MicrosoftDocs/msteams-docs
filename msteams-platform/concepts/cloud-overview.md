@@ -2,7 +2,7 @@
 title: Teams for Government Clouds
 author: v-preethah
 description: Learn about the Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and Department of Defense (DoD) environments. Get an overview on how to deploy Teams in government clouds.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 04/23/2026
 ---

@@ -2,7 +2,7 @@
 title: Enable SSO with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, and SSO in Teams at runtime.
 ms.topic: article
-ms.date: 11/12/2024
+ms.date: 05/22/2026
 ms.localizationpriority: high
 ---
 # Enable SSO for your app
@@ -85,6 +85,9 @@ The bot and message extension apps use Bot Framework to handle communication wit
 This section describes the tasks involved in implementing SSO for a Teams bot or message extension app. To enable SSO for a Teams bot or message extension app:
 
 1. **Configure app with Microsoft Entra ID**: Create a Microsoft Entra app to generate an app ID and application ID URI. For generating an access token, you configure scopes and authorize trusted client applications. The configuration required in Microsoft Entra ID for enabling SSO in a bot and message extension apps is the same. Create a bot resource and configure its client secret, messaging endpoint, and OAuth connection to enable SSO.
+
+    > [!IMPORTANT]
+    > If your bot is created using **User-Assigned Managed Identity**, an App Registration isn't automatically created. You must create a separate App Registration in Microsoft Entra ID, assign the required permissions, and use its Application (client) ID in the `webApplicationInfo` section of the app manifest. For more information, see [webApplicationInfo property](bot-sso-manifest.md#webapplicationinfo-property).
 1. **Add code**: Add the code to handle access token to send this token to your app's server code in the Authorization header, and to validate the access token when it's received. The code required to enable SSO in a bot app is different from code required for a message extension app.
 
     > [!NOTE]
