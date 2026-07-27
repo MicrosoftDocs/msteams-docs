@@ -2,7 +2,7 @@
 title: Channel/Group Chat Bot Conversations
 description: Learn about end-to-end scenario and @ mentions in bot conversation for channel or group chat within Microsoft Teams and design bots for channels or groups.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/02/2023
 ms.owner: angovil
 ---

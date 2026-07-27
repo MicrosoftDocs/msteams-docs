@@ -2,7 +2,7 @@
 title: A Guide for App Growth Lifecycle
 author: heath-hamilton
 description: Learn to plan growth lifecycle for your Teams app, review the Teams partners GTM guide, and best practices for app growth and adoption.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/21/2023
 ---

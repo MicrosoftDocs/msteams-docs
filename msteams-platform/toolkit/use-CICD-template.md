@@ -32,7 +32,7 @@ To build the project, you need to compile the source code and create the require
 > [!NOTE]
 > Use Agents Toolkit version 5.6.0 or later.
 
-You can use the [Agents Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up a CI/CD pipeline for your Teams app.
+You can use the [Microsoft 365 Agents Toolkit command line interface](Microsoft-365-Agents-Toolkit-cli.md) to set up a CI/CD pipeline for your Teams app.
 
 ### Prerequisites
 
@@ -55,7 +55,9 @@ To set up the pipeline with GitHub, follow these steps:
 1. Open Visual Studio Code.
 
 1. Create a `cd.yml` file in your project under the `.github/workflows` folder and add the following code in the file:
+
    # [Certificate-based authentication](#tab/certificate)
+
     ```yaml
     on:
       push:
@@ -110,7 +112,9 @@ To set up the pipeline with GitHub, follow these steps:
               name: artifact
               path: appPackage/build/appPackage.zip
     ```
+
    # [Password-based authentication](#tab/secret)
+
     ```yaml
     on:
       push:
@@ -159,7 +163,7 @@ To set up the pipeline with GitHub, follow these steps:
               name: artifact
               path: appPackage/build/appPackage.zip
     ```
-    
+
     > [!NOTE]
     > The default pipeline triggers when push events occur on the main branch. You have the option to modify it to suit your specific requirements.
 
@@ -167,7 +171,8 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Update the following variables and secrets you created during the prerequisites:
 
-    * # [Certificate-based authentication](#tab/certificate)
+   * # [Certificate-based authentication](#tab/certificate)
+
       `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64`. `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64` is the Base64 string encoded content of the certificate that you've generated.
 
       :::image type="content" source="../assets/images/toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
@@ -177,6 +182,7 @@ To set up the pipeline with GitHub, follow these steps:
       > Use the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) for different variable sets.
 
       # [Password-based authentication](#tab/secret)
+
       `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
       :::image type="content" source="../assets/images/toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
@@ -237,7 +243,8 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 1. Create a `cd.yml` file in your project and add the following code in the file:
 
-    # [Certificate-based authentication](#tab/certificate)
+   # [Certificate-based authentication](#tab/certificate)
+
     ```yaml
     trigger:
       - main
@@ -282,7 +289,8 @@ To set up the pipeline with Azure DevOps, follow these steps:
         artifact: artifact
     ```
 
-    # [Password-based authentication](#tab/secret)
+   # [Password-based authentication](#tab/secret)
+
     ```yaml
     trigger:
       - main
@@ -331,6 +339,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
     After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
 1. # [Certificate-based authentication](#tab/certificate)
+
    Update the following variables and set the certificate that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`
 
@@ -358,6 +367,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
     In your Azure DevOps project, navigate to **Pipelines** > **Library** and add a new secure file. Upload the certificate (.pem) file and name the file as `azure_sp_cert.pem`.
 
    # [Password-based authentication](#tab/secret)
+
    Update the following variables and secrets that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
@@ -401,6 +411,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20pipeline%20with%20Azure%20DevOps&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-cicd-template%3Ftabs%3Dcertificate%23set-up-pipeline-with-azure-devops&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-CICD-template.md&documentVersionIndependentId=d56615f7-9333-d20c-8c83-0effb602995a&author=muyangamigo&platformId=396c4625-cebb-e1bc-08b1-86720a7b0620&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+>
 ## Set up CI/CD pipelines using your own workflow
 
 If Agents Toolkit CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.

@@ -1,7 +1,7 @@
 ---
 title: Build Application-hosted Media Bots
 description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for remote and local media scenarios. Supported media formats for bots
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 11/27/2018
 ---
@@ -19,7 +19,7 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 
 An application-hosted media bot has the following requirements:
 
-* The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
+* The bot must be developed using C# and deployed on Microsoft Azure. Application-hosted media bots for Teams meetings are supported through the Microsoft Graph real-time media platform for C# and .NET implementations, including .NET Core and SDK support for .NET 6.0. C++ and Node.js APIs don't support access to real-time media.
 
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
@@ -92,4 +92,4 @@ Application-hosted media bots samples are as follows:
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 * [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 * [Integrate media capabilities](../../concepts/device-capabilities/media-capabilities.md)
-* [Teams bot API changes to fetch team or chat members](../../resources/team-chat-member-api-changes.md)
+* [Get Teams specific context for your bot](../how-to/get-teams-context.md)

@@ -1,7 +1,7 @@
 ---
 title: Integrate People Picker in Teams Apps
 description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.author: vikasalmal
 ms.date: 03/02/2026

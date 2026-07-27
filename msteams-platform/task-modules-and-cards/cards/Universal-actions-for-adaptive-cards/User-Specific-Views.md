@@ -1,7 +1,7 @@
 ---
 title: User Specific Views in Adaptive Cards
 description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 12/14/2022
 ---
@@ -235,7 +235,7 @@ return result
 
 ---
 
-The following list provides card design guidelines for User Specific Views: 
+The following list provides card design guidelines for User Specific Views:
 
 * Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
@@ -253,18 +253,18 @@ The following list provides card design guidelines for User Specific Views:
 
 * For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** to get the latest result.
 
-* Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions. 
+* Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions.
 
 > [!NOTE]
-> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card. 
+> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
 
 ## Code sample
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
-| Sequential Workflows Adaptive Cards | This sample demonstrates how to implement sequential workflows, user-specific view, and up-to-date Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
+| Sequential Workflows Adaptive Cards | This sample demonstrates how to implement sequential workflows, user-specific view, and up-to-date Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
 
-## See also:
+## See also
 
 * [Cards and dialogs](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)

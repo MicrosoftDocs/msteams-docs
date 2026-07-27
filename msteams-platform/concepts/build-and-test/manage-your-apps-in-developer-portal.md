@@ -241,7 +241,6 @@ The Developer Portal provides options for testing and debugging your app:
 
 The Developer Portal includes tools to help you build key features of Teams apps. The following are the tools:
 
-* **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend using the latest app validation tool in your app under [**Publish**](#publish) section.

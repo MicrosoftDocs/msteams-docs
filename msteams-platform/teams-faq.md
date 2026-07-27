@@ -2,7 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 05/01/2026
 ms.localizationpriority: high
 ms.owner: angovil
 ---
@@ -1008,7 +1008,7 @@ The following resources can also assist:
 
 You can open the authentication page in the dialog (referred as task module in TeamsJS v1.x) when the user selects the button.
 
-You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
 
 <br>
 &nbsp;
@@ -1049,7 +1049,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 
 If you use Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
-For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
+For more information about Node js code sample, see [Bot auth quickstart](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart).
 <br>
 &nbsp;
 </details>

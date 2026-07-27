@@ -41,6 +41,9 @@ Here's what your app users get with SSO experience:
 - The access token is prefetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
 
+> [!NOTE]
+> A delegated Microsoft Graph permission being user-consentable doesn't guarantee that end users can grant consent in every tenant. Microsoft Entra tenant consent policies can block user consent and require administrator approval, even for permissions that don't generally require administrator consent.
+
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
 
 ## SSO in Teams at runtime

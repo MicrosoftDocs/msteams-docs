@@ -1,7 +1,7 @@
 ---
-title: Invoke and dismiss dialogs in the Teams SDK
-description: Learn how to invoke and dismiss dialogs using Adaptive Card actions in the Teams SDK (Teams AI Library), including the TaskInfo object, dialog sizing, and code samples.
-ms.topic: conceptual
+title: Invoke Dialogs from Tab, Bot, or Link
+description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 04/28/2026
 ---
