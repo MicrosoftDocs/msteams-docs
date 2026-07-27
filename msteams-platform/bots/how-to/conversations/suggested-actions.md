@@ -337,19 +337,19 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 
 ## Best practices and design guidance
 
-Use suggested actions when the next step is predictable from the agent's or bot’s latest response and the user benefits from choosing an action instead of typing.
+Use suggested actions when the next step is predictable and choosing is easier than typing.
 
-Keep suggestions short, specific, and task oriented. Avoid repeating generic choices across turns unless the context still makes them relevant. Prefer one-step actions that users can understand without extra explanation. Use action labels that describe the result, not the implementation, such as *Create task* instead of *Submit*.
+Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
 
-Suggested actions behave differently depending on the conversation scope. When a user selects an action on a rich card, the action remains visible in group chats and channels. In personal chats, however, only the suggested actions from the most recent message are available as smart replies.
+Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
 
-Teams displays and processes a maximum of three suggested actions, even if the agent or app sends more. Suggested actions aren't supported for messages that include attachments in any conversation type. Test the experience in each supported scope because action visibility and persistence vary.
+Teams displays and processes up to three suggested actions. They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
 
-Use `imBack` when the user’s choice should become part of the conversation. Use `Action.Compose` when the user should review or personalize content before sending it. Use `Action.Submit` when the action should be handled privately by the agent or app.
+Use `imBack` to add the choice to the conversation, `Action.Compose` to let users review or edit content before sending, and `Action.Submit` to handle the action privately.
 
-If a client or host doesn't support `Action.Compose`, the agent or app displays an error message. Before returning the action, identify the conversation channel and verify that the host supports the action type.
+Before returning `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
 
-Avoid duplicating actions already available in the response or in a card unless the action is the primary next step. For example, if a card already includes an **Approve** button, don't add Approve again as a suggested action unless it is the most important action for the user to take next.
+Avoid repeating actions that are already available in the response or card unless it is the primary next step for the user.
 
 ## Code sample
 
