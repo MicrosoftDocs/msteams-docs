@@ -13,7 +13,7 @@ zone_pivot_groups: select-language
 
 # Send and receive targeted messages in group conversations
 
-_Targeted messaging_ enables users and agents to send each other messages in the context of a group conversation that can only be seen by the sender and the targeted recipient.
+_Targeted messaging_ enables users and agents to send each other messages in the context of group conversation that can only be seen by the sender and the targeted recipient.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
@@ -33,7 +33,7 @@ Targeted messages:
 
 - Can be used only for one-to-one interactions between an agent and a user in channels, group chats, and meeting chats.
 - Support all the [capabilities of standard messages](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, but don't support reactions, replies, or forwarding.
-- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them, but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [best practices and design guidance](#best-practices-and-design-guidance).
+- Generally operate the same way as standard messages, with the same API operations. Users and agents can modify or delete targeted messages after sending them but can't change their visibility. If a scenario calls for a private message to be made public, the sender should delete it and resend it as a standard message; see [best practices and design guidance](#best-practices-and-design-guidance).
 - Expire 24 hours after being sent. When a targeted message expires, Teams deletes it from all clients, although it might be retained in secure storage based on organizational policy.
 - Aren't visible to untargeted users, even if they're using an older version of the Teams client that doesn't support targeted messages.
 
@@ -82,7 +82,7 @@ The agent sends a public reply to the user's request that includes the prompt pr
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK, but have a boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK but have a Boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
 
 ### Receive targeted messages
 
@@ -267,7 +267,7 @@ JSON
     "id": "29:1XJ...",
     "name": "Megan Bowen"
   },
-  "text": "My bot's reply",
+  "text": "My agent's reply",
   "entities": [
     {
       "type": "targetedMessageInfo",
@@ -316,13 +316,13 @@ Recommended actions can include Approve, Reject, Share, and Update.
 
 ## Best practices and design guidance
 
-Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates, unless they approve it for sharing with wider audience.
+Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates unless they approve it for sharing with wider audience.
 
 Agents that can receive targeted messages should **always** check the visibility of messages received in group contexts and use it to inform response generation and conversation context tracking.
 
 When designing agent interactions for group conversations, choosing between public and targeted messages in different situations requires careful judgment:
 
-- A targeted request to an agent should result in a targeted response, unless the user or the situation explicitly calls for a public response.
+- A targeted request to an agent should result in a targeted response unless the user or the situation explicitly calls for a public response.
 - Public messages should be used in situations that are purely informational and don't require user-specific context. They should benefit the entire group and shouldn't contain any private information.
 - Take care when using Adaptive Cards in targeted messages. Although the message itself is targeted, interactions with a card can still generate public activity that users might not expect.
 - Use Prompt Preview whenever an agent responds to a targeted user request. Compared with [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp), this helps users understand the relationship between their original prompt and the agent’s response without requiring them to locate the earlier message.
@@ -333,7 +333,7 @@ Ensure to handle these errors appropriately in your agent or app.
 
 # [Teams SDK](#tab/tsdk)
 
-The following table lists error codes, error descriptions, and developer actions for Teams SDK:
+Here's a list of error codes, error descriptions, and developer actions for Teams SDK:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- |
@@ -353,7 +353,7 @@ The following table lists error codes, error descriptions, and developer actions
 | 400 | `Bad argument` | On create, the payload is invalid because the recipient is missing. | Ensure that recipient is included in the payload of the `Send TM` API when the agent sends the message as it's mandatory. |
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API in an update or delete operation, where it is not allowed. | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 | 400 | `INVALID_TARGETED_MESSAGE_ID` | In prompt preview scenarios, the targeted message ID is invalid. | In prompt preview scenario, verify that the targeted message ID is correct. |
-| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure the agent or bot app is installed in the conversation before sending targeted messages. |
 | 404 | `ActivityNotFoundInConversation` | The message ID was not found. The message might have been deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
 | 404 | `TARGETED_MESSAGE_EXPIRED_OR_DELETED` | In prompt preview scenarios, the referenced message was deleted or expired after 24 hours. | Send a new targeted message or wait for user input, based on business logic. |
 
