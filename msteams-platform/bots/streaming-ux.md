@@ -1,41 +1,41 @@
 ---
-title: Stream bot messages
-description: Learn how to enhance the user experience in bots using streaming techniques and to stream message through Teams SDK and configure streaming bot messages. 
+title: Stream agent messages
+description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
 ms.date: 02/19/2025
 ms.topic: article
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Stream bot messages
+# Stream agent messages
 
 > [!NOTE]
 >
-> - Streaming bot messages are supported only in one-on-one chats.
+> - Streaming agent messages are supported only in one-on-one chats.
 > - Teams supports only one concurrent streaming response per chat at a time.
 > - Streaming is generally available on web, desktop, and mobile.
 
-You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
+You can stream agent messages to deliver an agent's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, agents take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
-When users observe the bot processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the bot.
+When users observe the agent processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the agent.
 
 ## Stream messages user experience
 
-Streaming bot messages has two types of updates:
+Streaming agent messages has two types of updates:
 
-- **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat. It informs the user about the bot's ongoing actions while a response is being generated.
+- **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat. It informs the user about the agent's ongoing actions while a response is being generated.
 
-  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
+  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the agents informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
     Informative messages must not be more than 1 kb or 1000 characters.
 
-- **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
+- **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the agent's response to the user as small updates while the complete response is being generated.
 
-  :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
+  :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
   - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
-  - Streaming content: While streaming, the bot messages must contain the previous streamed content.
+  - Streaming content: While streaming, the agent messages must contain the previous streamed content.
 
       **For example**: This is an example of acceptable streaming response.<br>
         *A brown*<br>
@@ -113,13 +113,13 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ## Stream message through REST API
 
-Bot messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
+Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
 
-When your bot invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your bot uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
+When your agent invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your agent uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
-When your bot calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your bot streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
+When your agent calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your agent streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
-The following are the properties for streaming bot messages:
+The following are the properties for streaming agent messages:
 
 | Property | Required | Description |
 | --- | --- | --- |
@@ -137,7 +137,7 @@ The following are the properties for streaming bot messages:
 > - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
 > - For the final message, `streamSequence` must not be set.
 
-To enable streaming in bots, follow these steps:
+To enable streaming in agents, follow these steps:
 
 1. [Start streaming](#start-streaming)
 1. [Continue streaming](#continue-streaming)
@@ -145,13 +145,13 @@ To enable streaming in bots, follow these steps:
 
 ### Start streaming
 
-The bot can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls.
+The agent can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls.
 
-Your bot can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your bot generates its final response to the user.
+Your agent can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your agent generates its final response to the user.
 
 ```json
 
-//Ex: A bot sends the first request with content & the content is informative loading message.
+//Ex: An agent sends the first request with content & the content is informative loading message.
 
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
@@ -196,11 +196,11 @@ Use the `streamId` that you've received from the initial request to send either 
 
 #### Start with informative updates
 
-As your bot generates a response send informative updates to the user such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. Ensure that you make subsequent calls only after the bot receives successful response from the previous calls.
+As your agent generates a response send informative updates to the user such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. Ensure that you make subsequent calls only after the agent receives successful response from the previous calls.
 
 ```json
 
-// Ex: A bot sends the second request with content & the content is informative loading message.
+// Ex: An agent sends the second request with content & the content is informative loading message.
 
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
@@ -235,19 +235,19 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 ```
 
-The following image is an example of a bot providing informative updates:
+The following image is an example of an agent providing informative updates:
 
 :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
 #### Switch to response streaming
 
-After your bot is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your bot should incorporate any new tokens generated by the Large Language Models (LLMs). Append these tokens to the previous message version and then send it to the user.
+After your agent is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your agent should incorporate any new tokens generated by the Large Language Models (LLMs). Append these tokens to the previous message version and then send it to the user.
 
-The throttling limit is 1 request per second. You must ensure that the bot sends the request  within this limit. The bot may send requests at a slower rate, as needed.
+The throttling limit is 1 request per second. You must ensure that the agent sends the request  within this limit. The agent may send requests at a slower rate, as needed.
 
 ```json
 
-// Ex: A bot sends the third request with content & the content is actual streaming content.
+// Ex: An agent sends the third request with content & the content is actual streaming content.
 
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
@@ -284,7 +284,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 ```json
 
-// Ex: A bot sends the fourth request with content & the content is actual streaming content.
+// Ex: An agent sends the fourth request with content & the content is actual streaming content.
 
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
@@ -318,17 +318,17 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 202 0K{ }
 ```
 
-The following image is an example of a bot providing updates in chunks:
+The following image is an example of an agent providing updates in chunks:
 
 :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
 ### Final Streaming
 
-After your bot completes generating its message, send the end streaming signal along with the final message. For the final message, the `type` of activity is `message`. Here, the bot sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
+After your agent completes generating its message, send the end streaming signal along with the final message. For the final message, the `type` of activity is `message`. Here, the agent sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
 
 ```json
 
-// Ex: A bot sends the second request with content && the content is informative loading message.
+// Ex: An agent sends the second request with content && the content is informative loading message.
 
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
@@ -362,19 +362,19 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 ```
 
-The following image is an example of the bot's final response:
+The following image is an example of the agent's final response:
 
 :::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/ai-stream-message-formatting.png" border="false":::
 
-## Stop streaming bot response
+## Stop streaming agent response
 
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with bots for better user experience.
+The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with agents for better user experience.
 
 After a user stops message generation:
 
-- Bots treat stopped responses as incomplete or discarded in the conversation.
-- Bots can't change the content already streamed.
-- The following error is generated if a bot continues streaming on a message that is stopped by a user:
+- Agents treat stopped responses as incomplete or discarded in the conversation.
+- Agents can't change the content already streamed.
+- The following error is generated if an agent continues streaming on a message that is stopped by a user:
 
     | Error detail | Description |
     | --- | --- |
@@ -391,7 +391,7 @@ The following are the success and error codes:
 
 | Http status code | Return value | Description |
 | --- | --- | --- |
-| `201` | `streamId`, this is the same as `activityId` such as `{"id":"1728640934763"}` | The bot returns this value after sending the initial streaming request. </br> For any subsequent streaming requests, the `streamId` is required. |
+| `201` | `streamId`, this is the same as `activityId` such as `{"id":"1728640934763"}` | The agent returns this value after sending the initial streaming request. </br> For any subsequent streaming requests, the `streamId` is required. |
 | `202` | `{}`| Success code for any subsequent streaming requests. |
 
 ### Error codes
@@ -400,23 +400,23 @@ The following are the success and error codes:
 |--- |--- |--- |--- |
 | `202`|`ContentStreamSequenceOrderPreConditionFailed`| `PreCondition failed exception when processing streaming activity.` | Few streaming requests might arrive out of sequence and get dropped. The most recent streaming request, determined by `streamSequence`, is used when requests are received in a disordered manner. Ensure to send each request in a sequential manner.|
 | `400`| `BadRequest`| Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
-| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed`| The streaming API feature isn't allowed for the user or bot.|
-| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
-| `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
-| `403`| `ContentStreamNotAllowed` | `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
+| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed`| The streaming API feature isn't allowed for the user or agent.|
+| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| An agent can't continuously stream on a message that has already streamed and completed.|
+| `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The agent failed to complete the streaming process within the strict time limit of two minutes. |
+| `403`| `ContentStreamNotAllowed` | `Message size too large`| The agent sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
 | `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
-| `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
+| `429`| NA | `API calls quota exceeded`| The number of messages streamed by the agent has exceeded quota. |
 
 ## Code sample
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams streaming bot sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
-| Conversational streaming bot | This is a conversational streaming bot with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot)| [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
+| Teams streaming agent sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
+| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot)| [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
-- [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
+- [Agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
 - [Teams SDK](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 - [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)

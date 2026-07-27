@@ -1,72 +1,72 @@
 ---
-title: Get All Channel and Chat Messages for Bot and Agents
-description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
+title: Get All Channel and Chat Messages
+description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 03/16/2026
 ---
 
-# Receive all messages for bots and agents
+# Enable agents to receive all chat messages
 
 > [!NOTE]
 >
->While RSC permissions are supported for existing bot apps, we recommend [migrating to agents](../teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library). For new apps, build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience.
+>While RSC permissions are supported for existing agent apps, we recommend [migrating to agents](../teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library). For new apps, build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience.
 
-Receiving all messages, even without @mentions, enhances bots and agents by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The Resource-specific Consent (RSC) permissions model of Microsoft Teams Graph APIs improves performance and ensures timely responses.
+Receiving all messages, even without @mentions, enhances agents by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The Resource-specific Consent (RSC) permissions model of Microsoft Teams Graph APIs improves performance and ensures timely responses.
 
-Developers can customize bot behavior to fit specific needs by specifying permissions in the app manifest. Conversation owners can consent for a bot to receive all messages in channels and chats without @mentions. Consent can be granted during the app installation or upgrade process. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
+Developers can customize agent behavior to fit specific needs by specifying permissions in the app manifest. Conversation owners can consent for an agent to receive all messages in channels and chats without @mentions. Consent can be granted during the app installation or upgrade process. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
 
-**Note**: Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
+**Note**: Agents that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
 
-## Enable bots to receive all channel or chat messages
+## Enable agents to receive all channel or chat messages
 
-The RSC permissions are extended to bots and agents, and with user consent and app installation, these permissions:
+The RSC permissions are extended to agents, and with user consent and app installation, these permissions:
 
 - Allow a specified graph application to get all messages in channels and chats, respectively.
-- Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts, where the following permissions apply:
+- Enable an agent defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts, where the following permissions apply:
 
   - `ChannelMessage.Read.Group`
   - `ChatMessage.Read.Chat`
 
-To enable bots or agents to receive all messages:
+To enable agents or agents to receive all messages:
 
 - [Filter at mention messages](#filter-at-mention-messages)
 - [Use Graph REST APIs to access all messages](#use-graph-rest-apis-to-access-all-messages)
 
 ### Filter at mention messages
 
-You can enable the developer to filter bot messages and process only the messages that @mention the bots or the agent. This can be useful for several reasons:
+You can enable the developer to filter agent messages and process only the messages that @mention the agents or the agent. This can be useful for several reasons:
 
-- **Ensure contextual relevance**: Messages that are directed to the bot are likely to have higher relevance for the users of the bot or the agent. It helps the app to respond accurately and to engage in meaningful responses.
-- **Better bot performance**: Filtering messages can reduce the need for unnecessary processing for the bot or the agent. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
-- **Enhance user experience**: Users are more likely to engage with the bot if it responds only when it's addressed. The developer can create a seamless and intuitive user experience.
-- **Efficient message handling**: Filtering relevant message enables the bot or the agent to handle larger volume of conversations and make it more useful and relatable.
+- **Ensure contextual relevance**: Messages that are directed to the agent are likely to have higher relevance for the users of the agent. It helps the app to respond accurately and to engage in meaningful responses.
+- **Better agent performance**: Filtering messages can reduce the need for unnecessary processing for the agent. Processing contextually irrelevant messages can be avoided to improve the agent performance. It can also keep the agent or the user from responding to irrelevant messages or triggering unnecessary actions.
+- **Enhance user experience**: Users are more likely to engage with the agent if it responds only when it's addressed. The developer can create a seamless and intuitive user experience.
+- **Efficient message handling**: Filtering relevant message enables the agent to handle larger volume of conversations and make it more useful and relatable.
 
 Here's an example of using RSC permissions to filter @mention messages:
 
 ```csharp
-// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
-// This code snippet allows the bot to ignore all messages that do not @mention the bot.
+// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
+// This code snippet allows the agent to ignore all messages that do not @mention the agent.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        // Ignore the message if bot was not mentioned. 
-        // Remove this if block to process all messages received by the bot.
+        // Ignore the message if agent was not mentioned. 
+        // Remove this if block to process all messages received by the agent.
         if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
         {
             return;
         }
         // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the agent can receive messages across channels or chats in team without being @mentioned."));
 }
 ```
 
-Developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
+Developers can create more efficient and user-friendly conversational interfaces in the agents.
 
 ### Use Graph REST APIs to access all messages
 
-Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The bot or the agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
+Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
 
-For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-bots-or-agents).
+For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-agents).
 
 ## Use RSC permissions to enhance AI agents in Teams
 
@@ -84,7 +84,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 ## Update app manifest
 
-For your bot or agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
+For your agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
 Here's an app manifest example followed by a sample code snippet:
 
@@ -187,7 +187,7 @@ After you've updated the app manifest with the required RSC permissions, follow 
 
 # [Channel messages](#tab/channel)
 
-The following steps guide you to upload and validate a bot that receives all channel messages in a Team without being @mentioned:
+The following steps guide you to upload and validate an agent that receives all channel messages in a Team without being @mentioned:
 
 1. Select or create a team.
 1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
@@ -211,13 +211,13 @@ The following steps guide you to upload and validate a bot that receives all cha
 
 1. Select a channel and enter a message in the channel for your app.
 
-    The bot or agent receives the message without being @mentioned.
+    The agent receives the message without being @mentioned.
 
-      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
+      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows an agent receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
 
 # [Chat messages](#tab/chat)
 
-The following steps guide you to upload and validate a bot that receives all chat messages in a chat without being @mentioned:
+The following steps guide you to upload and validate an agent that receives all chat messages in a chat without being @mentioned:
 
 1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
@@ -234,30 +234,30 @@ The following steps guide you to upload and validate a bot that receives all cha
 
    :::image type="content" source="../../../assets/images/bots/Chats_Upload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
 
-1. Select **Add** from the app details pop-up to add the bot to your selected group chat.
+1. Select **Add** from the app details pop-up to add the agent to your selected group chat.
 
-   :::image type="content" source="../../../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the bot to the group chat.":::
+   :::image type="content" source="../../../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the agent to the group chat.":::
 
-1. Enter a message in the group chat for your bot.
+1. Enter a message in the group chat for your agent.
 
-   :::image type="content" source="../../../assets/images/bots/Bot_ReceiveMessage.png" alt-text="Screenshot shows the bot replying to a message.":::
+   :::image type="content" source="../../../assets/images/bots/Bot_ReceiveMessage.png" alt-text="Screenshot shows the agent replying to a message.":::
 
-   The bot receives the message without being @mentioned.
+   The agent receives the message without being @mentioned.
 
-   :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the bot replying to a message without @mention.":::
+   :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the agent replying to a message without @mention.":::
 
 ---
 
-## Update app description for bots or agents
+## Update app description for agents
 
-To pass the Microsoft Teams Store approval, the app description must include how the bot or the agent app uses the data it reads:
+To pass the Microsoft Teams Store approval, the app description must include how the agent app uses the data it reads:
 
-- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` need not be used by bots to extract large amounts of customer data.
-- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
+- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` need not be used by agents to extract large amounts of customer data.
+- The ability for agents to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
 
   - If you have an app that's using the `ChatMessage.Read.Chat` for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
   - If you don't want your app to receive all chat messages, use the [code snippet](#filter-at-mention-messages) for filtering the @mention messages only.
-  - If no action is taken, your bot receives all the messages after the new installation.
+  - If no action is taken, your agent receives all the messages after the new installation.
 
 - Note that `ChatMessage.Read.Chat` allows the app to read chat messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
 - The app reads only the information that's necessary for its core functions.
@@ -276,12 +276,12 @@ The following code provides an example of the RSC permissions:
 
 ```csharp
 
-// Handle when a message is addressed to the bot.
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+// Handle when a message is addressed to the agent.
+// When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
         // Sends an activity to the sender of the incoming activity.
-         await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in a team without being @mentioned."));
+         await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the agent can receive messages across channels or chats in a team without being @mentioned."));
 }
 
 ```
@@ -293,12 +293,12 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```javascript
 
-// Handle when a message is addressed to the bot.
-// When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+// Handle when a message is addressed to the agent.
+// When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
 
 this.onMessage(async (context, next) => {
     // Sends a message activity to the sender of the incoming activity.
-   await context.sendActivity(MessageFactory.text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."))
+   await context.sendActivity(MessageFactory.text("Using RSC the agent can receive messages across channels or chats in team without being @mentioned."))
    await next();
 });
 
@@ -319,10 +319,10 @@ this.onMessage(async (context, next) => {
         turn_context: TurnContext,  # Context for the current turn
     ):
         # Welcome message for new members
-        welcome_text = "Hello and welcome! With this sample, your bot can receive user messages across standard channels in a team without being @mentioned."
+        welcome_text = "Hello and welcome! With this sample, your agent can receive user messages across standard channels in a team without being @mentioned."
         
         for member in teams_members_added:
-            # Ensure the bot does not send a welcome message to itself
+            # Ensure the agent does not send a welcome message to itself
             if member.id != turn_context.activity.recipient.id:
                 await turn_context.send_activity(MessageFactory.text(welcome_text))
 
@@ -334,7 +334,7 @@ this.onMessage(async (context, next) => {
 
 | Sample name | Description | .NET | Node.js | Python | App manifest |
 | --- | --- | --- | --- | --- |
-|Channel messages with RSC permissions| This sample app shows how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
+|Channel messages with RSC permissions| This sample app shows how an agent can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 
 ## See also
 
