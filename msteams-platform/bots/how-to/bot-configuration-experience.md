@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 04/21/2026
+ms.date: 06/10/2026
 ---
 
 # Bot configuration experience
@@ -340,8 +340,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
 |----------------|-----------------|--------------|--------------|--------------|
-| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## See also
 

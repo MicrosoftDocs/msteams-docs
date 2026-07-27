@@ -36,6 +36,9 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
+> [!NOTE]
+> Microsoft Teams doesn't provide an event to notify a bot when a user blocks the bot or a conversation. Blocking actions aren't exposed to bots through the Teams platform. For more information, see [Understand who blocked, muted, or uninstalled a bot](send-proactive-messages.md#understand-who-blocked-muted-or-uninstalled-a-bot).
+
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
@@ -966,7 +969,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reactions added to bot message](#reactions-added-to-bot-message).           | All   |
-| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All |
+| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All   |
 
 ### Reactions added to bot message
 

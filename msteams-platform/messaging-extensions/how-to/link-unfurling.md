@@ -364,7 +364,7 @@ To get your app ready for zero install link unfurling, follow these steps:
          }
       },
       "value":{
-         "url":"https://test.test.com/test"
+         "url":"{server_url}/test"
       },
       "locale":"en-US",
       "localTimezone":"America/Los_Angeles"
@@ -528,7 +528,7 @@ The following JSON payload example for `suggestedActions` property:
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

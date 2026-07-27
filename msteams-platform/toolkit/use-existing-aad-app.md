@@ -173,5 +173,5 @@ If you see this message, update Microsoft Entra app permission and follow the in
 
 ## See also
 
-- [Build your first agent](../agents-in-teams/build-first-agent.md)
+- [Build a Teams agent with Microsoft 365 Agents Toolkit](../agents-in-teams/build-agent-toolkit.md)
 - [Create a new Teams app](create-new-project.md)

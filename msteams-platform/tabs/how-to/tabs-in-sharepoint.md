@@ -34,7 +34,7 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 ## Test the sample app
 
-1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
+1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
 
 1. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 

@@ -3,7 +3,7 @@ title: Highlight Agent Capabilities with Prompt Starters
 description: Learn how to configure ready-to-use natural language prompts included with an agent that highlight the agent's purpose and capabilities.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 6/26/2026
+ms.date: 07/17/2026
 ---
 
 # Highlight agent capabilities with prompt starters

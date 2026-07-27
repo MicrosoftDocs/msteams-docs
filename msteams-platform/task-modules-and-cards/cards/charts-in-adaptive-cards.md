@@ -2,7 +2,7 @@
 title: Charts in Adaptive Cards
 description: Learn how to create charts in Adaptive Cards including donut, gauge, vertical bar, horizontal bar, line, and pie charts.
 ms.topic: article
-ms.date: 11/07/2024
+ms.date: 06/10/2026
 ---
 
 # Charts in Adaptive Cards
@@ -1332,7 +1332,7 @@ Here are the properties of the `data` array:
 
 | Name | Description |.Node.js | .NET |
 |---|---|---|---|
-| Cards Formatting | Sample which demonstrates different formatting supported in cards using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) |
+| Cards Formatting | Sample which demonstrates different formatting supported in cards using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp) |
 
 ## See also
 

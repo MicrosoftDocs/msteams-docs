@@ -5,14 +5,11 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.author: nickwalk
 ms.owner: ginobuzz
-ms.date: 06/18/2026
+ms.date: 06/23/2026
 ---
 # Create and send dialogs
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
-
-You can create a modal dialog (referred as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
-the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
+You can create a modal dialog (referred to as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
 > If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
 
@@ -459,26 +456,59 @@ The payload activity properties when a dialog is invoked from a command box are 
 
 The following code section is an example of `fetchTask` request:
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet1)
+
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+using Microsoft.Teams.Api.MessageExtensions;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
 {
-  //handle fetch task
-}
+    // Handle fetch task
+    var commandId = ctx.Activity.Value?.CommandId;
+
+    return new ActionResponse();
+});
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript1)
 
-```javascript
-class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionFetchTask(context, action) {
-    //hand fetch task
-  }
-}
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+// ...
+
+app.on('message.ext.open', async ({ activity }) => {
+  // Handle fetch task
+  const commandId: string | undefined = activity.value?.commandId;
+});
 ```
 
-# [JSON](#tab/json)
+# [Python](#tab/python1)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+from microsoft_teams.api import MessageExtensionFetchTaskInvokeActivity
+from microsoft_teams.apps import ActivityContext, App
+
+# ...
+
+@app.on_message_ext_open
+async def handle_fetch_task(
+    ctx: ActivityContext[MessageExtensionFetchTaskInvokeActivity]
+):
+    # Handle fetch task
+    command_id = ctx.activity.value.command_id
+```
+
+# [JSON](#tab/json1)
 
 ```json
 {
@@ -544,31 +574,54 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your message extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
 The following section is an example of the `value` object:
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet2)
+
+* [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+teams.OnFetchTask(async (ctx) =>
 {
-  var messageText = action.MessagePayload.Body.Content;
-  var fromId = action.MessagePayload.From.User.Id;
+    var messageText =
+        ctx.Activity.Value?.MessagePayload?.Body?.Content;
 
-  //finish handling the fetchTask
-}
+    var fromId =
+        ctx.Activity.Value?.MessagePayload?.From?.User?.Id;
+
+    // Finish handling the fetchTask
+    return new ActionResponse();
+});
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript2)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionFetchTask(context, action) {
-    const messageText = action.messagePayload.body.content;
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
 
-    //finish handling the fetchTask
-  }
-}
+```typescript
+app.on('message.ext.open', async ({ activity }) => {
+    const messageText: string | undefined =
+        activity.value?.messagePayload?.body?.content;
+
+    // Finish handling the fetchTask
+});
 ```
 
-# [JSON](#tab/json)
+# [Python](#tab/python2)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+@app.on_message_ext_open
+async def handle_fetch_task(
+    ctx: ActivityContext[MessageExtensionFetchTaskInvokeActivity]
+):
+    message_text = ctx.activity.value.message_payload.body.content
+    from_id = ctx.activity.value.message_payload.from_property.user.id
+
+    # Finish handling the fetchTask
+```
+
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -668,108 +721,208 @@ When using an Adaptive Card, you must respond with a `task` object with the `val
 
 The following code section is an example to `fetchTask` response with an Adaptive Card:
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet3)
 
-This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
+This sample uses the [Microsoft.Teams.Cards](https://www.nuget.org/packages/Microsoft.Teams.Cards) package, which is included with the Teams SDK.
+
+* [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.MessageExtensions;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Cards;
+using Microsoft.Teams.Common;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
 {
-  string placeholder = "Not invoked from message";
+    string placeholder = "Not invoked from message";
 
-  if (action.MessagePayload != null)
-  {
-      var messageText = action.MessagePayload.Body.Content;
-      var fromId = action.MessagePayload.From.User.Id;
-      placeholder = "Invoked from message";
-  }
-
-  var response = new MessagingExtensionActionResponse()
-  {
-    Task = new TaskModuleContinueResponse()
+    if (ctx.Activity.Value?.MessagePayload != null)
     {
-      Value = new TaskModuleTaskInfo()
-      {
-        Height = "small",
-        Width = "small",
-        Title = "Example dialog",
-        Card = new Attachment()
+        var messageText = ctx.Activity.Value.MessagePayload.Body?.Content;
+        var fromId = ctx.Activity.Value.MessagePayload.From?.User?.Id;
+        placeholder = "Invoked from message";
+    }
+
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
         {
-          ContentType = AdaptiveCard.ContentType,
-          Content = new AdaptiveCard("1.0")
-          {
-            Body = new List<AdaptiveElement>()
-            {
-              new AdaptiveTextInput() { Id = "FormField1", Placeholder = placeholder},
-              new AdaptiveTextInput() { Id = "FormField2", Placeholder = "FormField2"},
-              new AdaptiveTextInput() { Id = "FormField3", Placeholder = "FormField3"},
-            },
-            Actions = new List<AdaptiveAction>()
-            {
-              new AdaptiveSubmitAction()
-              {
-                Type = AdaptiveSubmitAction.TypeName,
-                Title = "Submit",
-              },
-            },
-          },
+            new TextInput { Id = "FormField1", Placeholder = placeholder },
+            new TextInput { Id = "FormField2", Placeholder = "FormField2" },
+            new TextInput { Id = "FormField3", Placeholder = "FormField3" }
         },
+        Actions = new List<Cards.Action>
+        {
+            new SubmitAction { Title = "Submit" }
+        }
+    };
+
+    return new ActionResponse
+    {
+        Task = new ContinueTask(
+            new TaskInfo
+            {
+                Title = "Example dialog",
+                Height = new Union<int, Size>(Size.Small),
+                Width  = new Union<int, Size>(Size.Small),
+                Card   = new Attachment(card)
+            })
+    };
+});
+```
+
+# [TypeScript/Node.js](#tab/typescript3)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions/index.ts)
+
+```typescript
+import { cardAttachment } from '@microsoft/teams.api';
+import { App } from '@microsoft/teams.apps';
+import { AdaptiveCard } from '@microsoft/teams.cards';
+
+// ...
+
+app.on('message.ext.open', async ({ activity }) => {
+  const userText: string =
+    activity.value?.messagePayload?.body?.content || '';
+
+  const card: AdaptiveCard = AdaptiveCard.from({
+    type: 'AdaptiveCard',
+    version: '1.0',
+    body: [
+      {
+        type: 'TextBlock',
+        text: 'Task Module',
+        weight: 'bolder',
+      },
+      {
+        type: 'TextBlock',
+        text: 'Enter text for Question:',
+      },
+      {
+        type: 'Input.Text',
+        id: 'Question',
+        placeholder: 'Question text here',
+        value: userText,
+      },
+      {
+        type: 'TextBlock',
+        text: 'Options for Question:',
+      },
+      {
+        type: 'Input.Text',
+        id: 'Option1',
+        placeholder: 'Option 1 here',
+      },
+      {
+        type: 'Input.Text',
+        id: 'Option2',
+        placeholder: 'Option 2 here',
+      },
+    ],
+    actions: [
+      {
+        type: 'Action.Submit',
+        title: 'Submit',
+        data: {
+          submitLocation: 'messagingExtensionFetchTask',
+        },
+      },
+    ],
+  });
+
+  return {
+    task: {
+      type: 'continue' as const,
+      value: {
+        card: cardAttachment('adaptive', card),
+        height: 450,
+        width: 500,
+        title: 'Task Module Fetch Example',
       },
     },
   };
-  return response;
-}
+});
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [Python](#tab/python3)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-    handleTeamsMessagingExtensionFetchTask(context, action) {
-      const adaptiveCard = CardFactory.adaptiveCard({
-        actions: [{
-          data: { submitLocation: 'messagingExtensionFetchTask'},
-          title: 'Submit',
-          type: 'Action.Submit'
-        }],
-        body: [
-          { text: 'Task Module', type: 'TextBlock', weight: 'bolder'},
-          { type: 'TextBlock', text: 'Enter text for Question:' },
-          { id: 'Question', placeholder: 'Question text here', type: 'Input.Text', value: userText },
-          { type: 'TextBlock', text: 'Options for Question:' },
-          { type: 'TextBlock', text: 'Is Multi-Select:' },
-          {
-            choices: [{ title: 'True', value: 'true' }, { title: 'False', value: 'false' }],
-            id: 'MultiSelect',
-            isMultiSelect: false,
-            style: 'expanded',
-            type: 'Input.ChoiceSet',
-            value: isMultiSelect ? 'true' : 'false'
-          },
-          { id: 'Option1', placeholder: 'Option 1 here', type: 'Input.Text', value: option1 },
-          { id: 'Option2', placeholder: 'Option 2 here', type: 'Input.Text', value: option2 }
-        ],
-        type: 'AdaptiveCard',
-        version: '1.0'
-      });
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
 
-      return {
-        task: {
-          type: 'continue',
-          value: {
-            card: adaptiveCard,
-            height: 450,
-            title: 'Task Module Fetch Example',
-            url: null,
-            width: 500
-          }
+```python
+from microsoft_teams.api import (
+    AdaptiveCardAttachment,
+    MessageExtensionFetchTaskInvokeActivity,
+    card_attachment,
+)
+from microsoft_teams.api.models import (
+    CardTaskModuleTaskInfo,
+    MessagingExtensionActionInvokeResponse,
+    TaskModuleContinueResponse,
+)
+from microsoft_teams.apps import ActivityContext, App
+from microsoft_teams.cards import AdaptiveCard
+
+
+# ...
+
+
+@app.on_message_ext_open
+async def handle_fetch_task(
+    ctx: ActivityContext[MessageExtensionFetchTaskInvokeActivity],
+):
+    placeholder = "Not invoked from message"
+
+    if ctx.activity.value.message_payload:
+        message_text = ctx.activity.value.message_payload.body.content
+        placeholder = "Invoked from message"
+
+    card = AdaptiveCard.model_validate(
+        {
+            "type": "AdaptiveCard",
+            "version": "1.0",
+            "body": [
+                {
+                    "type": "Input.Text",
+                    "id": "FormField1",
+                    "placeholder": placeholder,
+                },
+                {
+                    "type": "Input.Text",
+                    "id": "FormField2",
+                    "placeholder": "FormField2",
+                },
+                {
+                    "type": "Input.Text",
+                    "id": "FormField3",
+                    "placeholder": "FormField3",
+                },
+            ],
+            "actions": [
+                {"type": "Action.Submit", "title": "Submit"},
+            ],
         }
-      };
-    }
-}
+    )
+
+    card_info = CardTaskModuleTaskInfo(
+        title="Example dialog",
+        height="small",
+        width="small",
+        card=card_attachment(
+            AdaptiveCardAttachment(content=card)
+        ),
+    )
+
+    task = TaskModuleContinueResponse(value=card_info)
+    return MessagingExtensionActionInvokeResponse(task=task)
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
  {​
@@ -822,60 +975,69 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [dialog documentation](~/task-modules-and-cards/what-are-task-modules.md).
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet4)
 
 ```csharp
-protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+using Microsoft.Teams.Api.MessageExtensions;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Common;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
 {
-  string placeholder = "Not invoked from message";
-
-  if (action.MessagePayload != null)
-  {
-      var messageText = action.MessagePayload.Body.Content;
-      var fromId = action.MessagePayload.From.User.Id;
-      placeholder = "Invoked from message";
-  }
-
-  var response = new MessagingExtensionActionResponse()
-  {
-    Task = new TaskModuleContinueResponse()
+    return new ActionResponse
     {
-      Value = new TaskModuleTaskInfo()
-      {
-        Height = "small",
-        Width = "small",
-        Title = "Example dialog",
-        Url = "https://contoso.com/msteams/taskmodules/newcustomer",
-        },
+        Task = new ContinueTask(
+            new TaskInfo
+            {
+                Title = "Example dialog",
+                Height = new Union<int, Size>(Size.Small),
+                Width = new Union<int, Size>(Size.Small),
+                Url = "https://contoso.com/msteams/taskmodules/newcustomer"
+            })
+    };
+});
+```
+
+# [TypeScript/Node.js](#tab/typescript4)
+
+```typescript
+app.on('message.ext.open', async ({ activity }) => {
+  return {
+    task: {
+      type: 'continue' as const,
+      value: {
+        width: 500,
+        height: 450,
+        title: 'Task Module Fetch Example',
+        url: 'https://contoso.com/msteams/taskmodules/newcustomer',
+        fallbackUrl: 'https://contoso.com/msteams/taskmodules/newcustomer',
       },
     },
   };
-  return response;
-}
+});
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [Python](#tab/python4)
 
-```javascript
-class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
-  handleTeamsMessagingExtensionFetchTask(context, action) {
-    return {
-      task: {
-        type: 'continue',
-        value: {
-          width: 500,
-          height: 450,
-          title: 'Task Module Fetch Example',
-          url: 'https://contoso.com/msteams/taskmodules/newcustomer',
-          fallbackUrl: 'https://contoso.com/msteams/taskmodules/newcustomer'
-        }
-      }
-    };
-  }
-}
+```python
+@app.on_message_ext_open
+async def handle_fetch_task(
+    ctx: ActivityContext[MessageExtensionFetchTaskInvokeActivity]
+):
+    card_info = CardTaskModuleTaskInfo(
+        title="Example dialog",
+        height="small",
+        width="small",
+        url="https://contoso.com/msteams/taskmodules/newcustomer",
+    )
+
+    task = TaskModuleContinueResponse(value=card_info)
+    return MessagingExtensionActionInvokeResponse(task=task)
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 ```json
 {
@@ -963,18 +1125,31 @@ The task response to the invoke must be similar to that of the installed bot.
 The following code section is an example of just-in time installation of app with Adaptive Card:
 
 ```csharp
-private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
-  {
-      //Read the card json and create attachment.
-         string[] paths = { ".", "Resources", fileName };
-         var adaptiveCardJson = File.ReadAllText(Path.Combine(paths));
-         var adaptiveCardAttachment = new Attachment()
+using Microsoft.Teams.Cards;
+
+// ...
+
+var installCard = new AdaptiveCard
+{
+    Body = new List<CardElement>
+    {
+        new TextBlock("Looks like you haven't used Disco in this team/chat")
+    },
+    Actions = new List<Cards.Action>
+    {
+        new SubmitAction
+        {
+            Title = "Continue",
+            Data = new Dictionary<string, object>
             {
-                ContentType = "application/vnd.microsoft.card.adaptive",
-                Content = JsonConvert.DeserializeObject(adaptiveCardJson),
-            };
-            return adaptiveCardAttachment;
+                ["msteams"] = new Dictionary<string, object>
+                {
+                    ["justInTimeInstall"] = true
+                }
+            }
         }
+    }
+};
 ```
 
 * * *
@@ -983,9 +1158,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Sample name           | Description | .NET    | Node.js   | Python | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|:--------|
-|Teams message extension action| This sample demonstrates how to create Action-Based Messaging Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Teams message extension action| This sample demonstrates how to create Action-Based Messaging Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/csharp/demo-manifest/msgext-action.zip)
 |Message extension action preview| This sample app illustrates how to utilize action previews in Teams Messaging Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next step
 

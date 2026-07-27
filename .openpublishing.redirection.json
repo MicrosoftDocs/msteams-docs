@@ -1560,6 +1560,11 @@
         "source_path": "msteams-platform/bots/how-to/create-a-bot-commands-menu.md",
         "redirect_url": "/microsoftteams/platform/agents-in-teams/agent-slash-commands",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/agents-in-teams/build-first-agent.md",
+        "redirect_url": "quickstart-create-agent-teams-sdk",
+        "redirect_document_id": false
       }
     ]
 }
