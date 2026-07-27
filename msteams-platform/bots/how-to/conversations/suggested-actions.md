@@ -66,6 +66,13 @@ Your agent or app should offer context-specific suggestions to the user, rather 
 
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
+#### Teams SDK implementation
+
+Use the following Teams SDK snippets for creating and handling `imBack` suggested actions.
+
+> [!NOTE]
+> Microsoft Teams SDK for C# does not currently support `imBack` suggested actions.
+
 ::: zone pivot="typescript"
 
 ```typescript
