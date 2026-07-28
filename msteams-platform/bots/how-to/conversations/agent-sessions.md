@@ -165,44 +165,7 @@ Responding inside a session works the same way as responding in a normal one-on-
 
 If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
-### HTTP API reference
-
-The following HTTP snippets show the direct API calls for session operations.
-
-#### Create a new session
-
-```http
-POST {serviceUrl}/v3/conversations
-Authorization: Bearer {bot-token}
-Content-Type: application/json
-
-{
-  "isGroup": false,
-  "members": [
-    { "id": "29:user-aad-object-id" }
-  ],
-  "channelData": {
-    "tenant": { "id": "tenant-guid" }
-  },
-  "activity": {
-    "type": "message",
-    "text": "Starting a new session"
-  }
-}
-```
-
-**Response (201 Created)**:
-
-```json
-{
-  "id": "<session-conversationId>",
-  "activityId": "1749012345678"
-}
-```
-
-The `id` is the session's conversationId, an opaque, encrypted string. Store it and use it for all subsequent operations within this session.
-
-#### Send a message within an existing session
+### HTTP
 
 ```http
 POST {serviceUrl}/v3/conversations/{sessionConversationId}/activities
@@ -215,7 +178,7 @@ Content-Type: application/json
 }
 ```
 
-#### Reply to a specific activity
+To reply to a specific activity, include `replyToId`:
 
 ```http
 POST {serviceUrl}/v3/conversations/{sessionConversationId}/activities
@@ -229,15 +192,14 @@ Content-Type: application/json
 }
 ```
 
-#### Get members
+To get members:
 
 ```http
 GET {serviceUrl}/v3/conversations/{sessionConversationId}/members
 Authorization: Bearer {bot-token}
 ```
 
-> [!NOTE]
-> Member operations (`GetMembers`, `GetMember`, `GetProfile`) work the same regardless of which session conversationId you use. They always resolve to the underlying 1:1 chat.
+Member operations (`GetMembers`, `GetMember`, `GetProfile`) work the same regardless of which session conversationId you use. They always resolve to the underlying 1:1 chat.
 
 ## Create sessions proactively
 
@@ -320,6 +282,39 @@ await app.send(session_conversation_id, "This message is part of the session.")
 ```
 
 ::: zone-end
+
+### HTTP
+
+```http
+POST {serviceUrl}/v3/conversations
+Authorization: Bearer {bot-token}
+Content-Type: application/json
+
+{
+  "isGroup": false,
+  "members": [
+    { "id": "29:user-aad-object-id" }
+  ],
+  "channelData": {
+    "tenant": { "id": "tenant-guid" }
+  },
+  "activity": {
+    "type": "message",
+    "text": "Starting a new session"
+  }
+}
+```
+
+**Response (201 Created)**:
+
+```json
+{
+  "id": "<session-conversationId>",
+  "activityId": "1749012345678"
+}
+```
+
+The `id` is the session's conversationId, an opaque, encrypted string. Store it and use it for all subsequent operations within this session.
 
 For more information about proactive messaging, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
