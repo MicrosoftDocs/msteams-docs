@@ -30,7 +30,7 @@ Every activity delivered to your agent in a 1:1 chat includes a `channelData.app
 }
 ```
 
-The `version` value corresponds to the version declared in your app manifest. Compare this value against known version numbers to determine what features or permissions are available.
+The `version` value is the manifest version (`version` property in the app manifest), not a runtime or SDK version. Since different users may have different versions of your app installed, your agent can branch its logic based on this value to determine what features or permissions are available in each user's context.
 
 ## When to use version detection
 
