@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 July**
 
-* ***July 27, 2026***: [Enable sending targeted messages for agents in Teams](agents-in-teams/targeted-messages.md).
+* ***July 30, 2026***: [Enable receiving targeted messages in group conversations](agents-in-teams/targeted-messages.md).
 * ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
 * ***July 07, 2026***: [Support for apps in private channels](build-apps-for-shared-private-channels.md) is now generally available.
 
