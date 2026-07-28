@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create an agent with Teams SDK"
-description: Create a Microsoft Teams agent using command-line tools and Teams SDK. Follow this quickstart to build, run, register, and chat with an agent in Teams.
+description: Create a Microsoft Teams agent using command-line tools and Teams SDK. Follow this quickstart to build, run, provision, and chat with an agent in Teams.
 ms.date: 07/13/2026
 author: nickwalkmsft
 ms.author: nickwalk
@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Quickstart: Create an agent and chat with it in Teams
 
-In this quickstart, you'll use command-line developer tools to create a new Teams agent. At the end, you'll be chatting with your agent in Teams as its code runs in your local development environment. You'll be able to use the code and agent registration you create in this quickstart as the foundation for a fully-featured agent.
+In this quickstart, you'll use command-line developer tools to create a new Teams agent. At the end, you'll be chatting with your agent in Teams as its code runs in your local development environment. You'll be able to use the code and agent registration that you create in this quickstart as the foundation for a fully-featured Teams agent.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -33,7 +33,7 @@ In this quickstart, you'll use command-line developer tools to create a new Team
 
 ## Host a dev tunnel
 
-Teams can only communicate with agents that are reachable from the public Internet. In this step, you use the Microsoft dev tunnel utility to create a tunnel that will expose your agent to the Internet.
+Teams can only communicate with an agent runtime that's reachable from the public Internet. In this step, you use the Microsoft dev tunnel utility to create a tunnel that will expose your agent runtime to the Internet while it's running in your development environment.
 
 1. In a new console window, install dev tunnel.
 
@@ -79,11 +79,11 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 1. Leave the tunnel running. Make a note of the `Connect via browser` URL for the next step.
 
-## Register, install, and chat in Teams
+## Provision, install, and chat in Teams
 
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
-1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent project needs to communicate with Teams, so it's important to run it from your agent's project directory.
+1. In the console window you used to create your agent runtime project, use `teams app create` to provision and register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env .env
@@ -93,7 +93,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-1. In the console window you used to create your agent project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent project needs to communicate with Teams, so it's important to run it from your agent's project directory.
+1. In the console window you used to create your agent runtime project, use `teams app create` to provision and register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env appsettings.json
@@ -107,7 +107,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-typescript"
 
-3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent runtime again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     npm run dev
@@ -117,7 +117,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-python"
 
-3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent runtime again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     python src/main.py
@@ -127,7 +127,7 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ::: zone pivot="teams-sdk-csharp"
 
-3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent again. Ensure that it is listening on port 3978 before continuing.
+3. Before proceeding in Teams, return to the console window and select **Done** in the Teams developer CLI menu to close it. Then, use the command line to start your agent runtime again. Ensure that it is listening on port 3978 before continuing.
 
     ```console
     dotnet run
@@ -145,8 +145,11 @@ Teams can only communicate with agents that are reachable from the public Intern
 
 ## Next steps
 
-Everything you've created in this quickstart will persist and can be used as the foundation for building an agent. As long as your agent code and dev tunnel are running in your development environment, your agent will be able to send and receive messages in Teams.
+Everything you've created in this quickstart will persist and can be used as the foundation for building an agent. As long as your code and dev tunnel are running in your development environment, your agent will be able to send and receive messages in Teams.
 
-All of your agent's behavior is in its code: you can modify and restart it at any time to update its behavior without re-registering or reinstalling it in Teams.
+All of your agent's behavior is in its runtime code: you can modify and restart the runtime to change its behavior without re-registering or reinstalling it in Teams.
 
 Explore the documentation to learn more about features and best practices for agents in Teams.
+
+- [Agents user experience](../bots/how-to/teams-conversational-ai/ai-ux.md)
+- [Send and receive messages](../bots/build-conversational-capability.md)

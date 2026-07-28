@@ -42,7 +42,7 @@ To use these permissions, you must add a [webApplicationInfo](/microsoft-365/ext
 
 ### Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-organization) or the [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-agent-or-app-to-the-teams-store).
 
 > [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
@@ -150,7 +150,7 @@ For next steps, see [Send a personal welcome message](send-personal-welcome-mess
 ## Additional code samples
 >
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp)
 
 ## See also
 

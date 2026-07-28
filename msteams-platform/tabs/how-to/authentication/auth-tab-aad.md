@@ -14,7 +14,7 @@ Your Microsoft Teams app might need to interact with various services, such as F
 
 Microsoft Entra ID and numerous other service providers use OAuth 2.0, an open standard for authentication. It's essential to understand OAuth 2.0 when dealing with authentication in Teams and Microsoft Entra ID. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Microsoft Entra ID and Microsoft Graph.
 
-The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Microsoft Entra ID.
+The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Microsoft Entra ID.
 
 For overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
