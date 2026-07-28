@@ -21,9 +21,9 @@ zone_pivot_groups: teams-sdk-languages
 
 # Get started with agent development
 
-This article outlines the fundamentals of building a Teams agent runtime using Teams SDK.
+This article covers the fundamental programming concepts of building a Teams agent runtime using Teams SDK. It provides the context and guidance needed to understand and build on the foundation provided by the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md).
 
-A Teams agent's runtime is its code: a web service that interacts with Teams using the Bot Connector service. It receives chat messages and information about other Teams activities on its `/api/messages` endpoint and performs actions in Teams by calling the Bot Connector API.
+A Teams agent runtime is a web service that interacts with Teams using the Bot Connector service. It receives chat messages and information about other Teams activities on its `/api/messages` endpoint and performs actions in Teams by calling the Bot Connector API.
 
 An agent's runtime can be hosted anywhere on the web, but its developer is responsible for hosting it. Teams does not host or run an agent's code.
 
