@@ -41,7 +41,7 @@ These types of slash commands are supported across all client platforms, includi
 > [!IMPORTANT]
 > [Targeted messaging](targeted-messages.md) and agent slash commands are fundamental to agent design for group conversations and require careful handling of user privacy expectations. Selecting an agent command switches the compose box to targeted message mode. A user-initiated targeted message is delivered only to the selected agent, and the agent can respond privately to the user.
 >
-> For more information, see [Best practices and design guidance](#best-practices-and-design-guidance).
+> For more information, see [best practices and design guidance](#best-practices-and-design-guidance).
 
 ### Agent slash commands
 
@@ -49,9 +49,7 @@ Agent slash commands enable agents to surface named commands that users can priv
 
 In channels, group chats, and meeting chats, the slash command autocomplete menu includes all commands registered by agents in the current conversation. Each command is displayed with its description and its agent's name and icon, making them discoverable and distinguishing between commands with the same name.
 
-Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent.
-
-Agents or apps can explicitly declare the commands your agent supports, and Teams shows them in the slash command picker when a user types `/`.  For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it.
+Invoking a command from the menu switches the compose box to targeted messaging mode for the agent and inserts the name of the command as the message text. Selecting **Send** sends the targeted message to the agent. For example, a project management agent or bot app might expose commands such as `/create-task` to turn the current conversation into a tracked task based on context, or `/status-check` command that can be given a work item number and returns information about it.
 
 ### Slash commands for action-type message extensions
 
