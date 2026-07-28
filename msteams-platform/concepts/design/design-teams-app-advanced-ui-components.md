@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn about the Teams UI components, such as breadcrumbs, left nav, notification bar, Stageview, and Toolbar along with relevant use cases. 
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 05/17/2023
+ms.date: 07/28/2026
 ---
 # Designing your Microsoft Teams app with advanced UI components
 
