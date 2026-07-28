@@ -3,14 +3,17 @@ title: Use dialogs in Microsoft Teams bots
 description: Learn how to use dialogs with Microsoft Teams bots using the Teams SDK, invoke and submit dialogs with Adaptive Cards, and respond to dialog events.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 04/29/2026
+ms.date: 04/10/2026
 ---
 
 # Use dialogs with bots
 
 Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using `TaskFetchAction` buttons on Adaptive Cards. Dialogs provide a focused interaction by opening a pop-up window for the user, making them ideal for complex forms or multi-step workflows.
 
-When a user selects a `TaskFetchAction` button on an Adaptive Card, Teams sends a dialog open event to your app. Your app handles this event and returns dialog content, either an Adaptive Card or a URL to a webpage, which Teams displays in a pop-up dialog window. For more information, see [Creating Dialogs](/microsoftteams/platform/teams-sdk/in-depth-guides/dialogs/creating-dialogs?pivots=csharp).
+There are two ways of invoking dialogs:
+
+* A new invoke message `task/fetch`: Using the [`Action.Execute`](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) card action for Adaptive Cards with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
+* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the [`Action.OpenUrl`](~/task-modules-and-cards/cards/cards-actions.md#actionopenurl) card action for Adaptive Cards. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
@@ -28,9 +31,9 @@ To invoke a dialog from a bot, send an Adaptive Card with `TaskFetchAction` butt
 
 The following steps provide instructions on how to invoke a dialog (referred as task module in TeamsJS v1.x) using `task/fetch`:
 
-1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
-1. The bot receives the `invoke` HTTP POST message.
-1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see [handle dialog submit events](#handle-dialog-submit-events). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata) embedded in a wrapper object:
+1. This image shows an Adaptive Card with a **Buy** [`Action.Execute`](~/task-modules-and-cards/cards/cards-actions.md#actionexecute) card action. The value of the `type` property is `task/fetch` and the rest of the `data` object can be of your choice.
+1. The bot receives a `card.action` activity. In the Teams SDK, you handle this using the `OnAdaptiveCardAction` handler. For more information, see [Executing Actions](/microsoftteams/platform/teams-sdk/in-depth-guides/adaptive-cards/executing-actions).
+1. The bot creates an `ActionResponse` object and returns it. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of the response body that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
 
     ```json
     {
