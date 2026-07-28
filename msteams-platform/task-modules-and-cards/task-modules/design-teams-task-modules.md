@@ -4,7 +4,7 @@ author: heath-hamilton
 description: Learn how to design dialogs (task modules) such as list, form, media, poll for Teams apps using UI templates and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 05/25/2023
+ms.date: 07/28/2026
 ---
 # Designing dialogs for your Microsoft Teams app
 
