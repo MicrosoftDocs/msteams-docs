@@ -359,7 +359,7 @@ The following table lists error codes, error descriptions, and developer actions
 
 ---
 
-More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
+More details on other messaging error codes can be found [here](../bots/build-conversational-capability.md#status-codes-from-agent-conversational-apis).
 
 ## Code sample
 
