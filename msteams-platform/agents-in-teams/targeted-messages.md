@@ -51,12 +51,6 @@ Activating an agent's targeted message command switches the compose box to targe
 
 For more information about slash commands, including how to register extra named slash commands that can be dispatched to your agent, see [expose slash commands from agents and apps](agent-slash-commands.md).
 
-You can implement the following agent-to-user response flows:
-
-- _Private response mode_ is the default for slash-command responses and keeps the interaction focused between the user and the agent. Use it for drafts, summaries, and personal tasks.
-- _Public response_ mode lets the user share the response to the wider audience.
-- _Private-to-public response flow_ enables [user approval for a private response](#approval-workflow-using-suggested-actions) to be shared publicly.
-
 ### Prompt Preview in targeted messages
 
 Prompt Preview helps preserve conversational context in targeted messaging scenarios by displaying a compact preview of the user's original request above the agent's response. Prompt Preview helps users understand the context of a response without exposing the original prompt to other participants. A single agent response can contain multiple prompt previews.
@@ -82,7 +76,7 @@ The agent sends a public reply to the user's request that includes the prompt pr
 
 ## Implement targeted messages
 
-Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK but have a Boolean property indicating whether they're targeted. You can also control response visibility and add prompt preview in the agent responses.
+Targeted messages are sent and received using the same operations as [standard single-recipient messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=typescript) in the Teams SDK but have a Boolean property indicating whether they're targeted.
 
 ### Receive targeted messages
 
@@ -316,9 +310,7 @@ Recommended actions can include Approve, Reject, Share, and Update.
 
 ## Best practices and design guidance
 
-Targeted messaging is a fundamental part of group conversations that include agents. Users expect agents to respect the privacy boundaries it creates unless they approve it for sharing with wider audience.
-
-Agents that can receive targeted messages should **always** check the visibility of messages received in group contexts and use it to inform response generation and conversation context tracking.
+The ability for users and agents to communicate privately with targeted messaging is a fundamental consideration in group conversations. Agents should **always** consider the visibility of messages they receive and use it to inform response generation, response visibility, and whether the original request should be tracked as part of the conversation's context.
 
 When designing agent interactions for group conversations, choosing between public and targeted messages in different situations requires careful judgment:
 
