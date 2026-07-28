@@ -205,7 +205,7 @@ In this example, `imBack` offers two context-specific next steps for the day’s
 }
 ```
 
-The example shows how to attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to prompt a user response. The `actions` array defines the available choices, each using `imBack` with a button `title` and a returned `value`. When selected, the value is sent back to the agent or app as the user response, enabling it to route the conversation to the appropriate intent or operation.
+This example shows how to attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to prompt a user response. The `actions` array defines the available choices, each using `imBack` with a button `title` and a returned `value`. When selected, the value is sent back to the agent or app as the user response, enabling it to route the conversation to the appropriate intent or operation.
 
 ### Add `Action.Compose` action
 
@@ -329,11 +329,15 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 
 Use Action.Submit in [slash command](~/agents-in-teams/agent-slash-commands.md) responses to offer private next-step actions, such as choosing whether to resend a [targeted message](../../../agents-in-teams/targeted-messages.md) publicly. Before implementing this approval flow, ensure the agent or app supports targeted messaging and runs in a channel, group chat, or meeting chat. The workflow is:
 
-1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent.
+1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent. Capture that request as a targeted message so the interaction begins privately between the user and the agent by using `IsTargeted == true` in the message event.
+
+1. **Store the original targeted message ID**. Save the original targeted message ID as soon as the request is received. You need this ID later to enable prompt preview, because the reply must include a `targetedMessageInfo` entity whose `messageId` points to the original targeted message.
+
 1. **Reply privately**. Send the initial response only to the requesting user.
-1. **Include the prompt preview**. Display the original request above the response. Teams adds it to reactive replies; for proactive replies, attach it using the original targeted message ID.
-1. **Request approval**. Offer actions such as Allow, Share to channel, Edit prompt, or Dismiss.
-1. **Publish** only if approved.
+
+1. **Include the prompt preview**. Display the original request above the response. Teams adds it to reactive replies; for proactive replies, attach it using a `targetedMessageInfo` entity in the outgoing reply and set its `messageId` to the original targeted message ID.
+
+1. **Request approval**. After the private response is sent, provide suggested actions so the user can decide what happens next. Offer actions such as Allow, Share to channel, Edit prompt, or Dismiss. You can use `Action.Submit` for quick actions that trigger server-side logic without posting a visible user message. **Publish** only if approved.
 
 ## Best practices and design guidance
 
