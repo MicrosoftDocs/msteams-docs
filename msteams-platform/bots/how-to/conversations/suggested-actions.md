@@ -230,7 +230,7 @@ For more information, see [code sample](https://github.com/OfficeDev/Microsoft-T
 
 ### Add `Action.Submit` action
 
-Use `Action.Submit` this action for suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
+Use `Action.Submit` for adding suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
 
 Payload (outgoing from agent or app):
 
@@ -357,5 +357,5 @@ Avoid repeating actions that are already available in the response or card unles
 
 - [Create prompt starters](prompt-starters.md)
 - [Build bots for Teams](../../overview.md)
-- [Messages in bot conversations](../../build-conversational-capability.md)(~/bots/how-to/conversations/conversation-messages.md)
+- [Messages in bot conversations](../../build-conversational-capability.md)
 - [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
