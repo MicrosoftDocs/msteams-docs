@@ -1,10 +1,11 @@
 ---
 title: Add Link Unfurling to App Manifest
+author: vikasalmal
 description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: slamba
-ms.date: 11/06/2024
+ms.date: 04/23/2026
 ---
 # Link unfurling
 
@@ -121,7 +122,7 @@ The following card types are supported:
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Connector card for Microsoft 365 Groups](../../task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 
-For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
+For more information, see [Action.Execute](~/task-modules-and-cards/cards/cards-actions.md#actionexecute).
 
 The following code is an example of the `invoke` request:
 
@@ -364,7 +365,7 @@ To get your app ready for zero install link unfurling, follow these steps:
          }
       },
       "value":{
-         "url":"https://test.test.com/test"
+         "url":"{server_url}/test"
       },
       "locale":"en-US",
       "localTimezone":"America/Los_Angeles"
@@ -528,7 +529,7 @@ The following JSON payload example for `suggestedActions` property:
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

@@ -196,7 +196,7 @@ For Teams desktop clients, Adaptive Card supports inline and full screen playbac
 
 |Sample name| Description|.NET|Node.js|
 |-------|------------------|-----|-----|
-| Media elements in Adaptive Card | This sample demonstrates using a bot to send multiple card types in Microsoft Teams, including Adaptive, Hero, Thumbnail, and OAuth cards. It covers setup, deployment, and app installation instructions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|NA|
+| Media elements in Adaptive Card | This sample demonstrates using a bot to send multiple card types in Microsoft Teams, including Adaptive, Hero, Thumbnail, and OAuth cards. It covers setup, deployment, and app installation instructions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/csharp)|NA|
 |Bot Formatting|Sample which demonstrates different formatting supported in cards using bot.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-formatting-cards/nodejs) |
 
 ## See also

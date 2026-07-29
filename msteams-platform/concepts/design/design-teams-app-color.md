@@ -1,11 +1,11 @@
 ---
 title: Design your app - Colors
 description: Learn about the basics of colors and color schemes in your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
-author: heath-hamilton
+author: nickwalkmsft
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.date: 05/23/2023
+ms.date: 07/22/2026
 ---
 # Colors for your Microsoft Teams app
 
@@ -48,7 +48,7 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
 Learn how to [use color tokens in your Teams app project](https://react.fluentui.dev/?path=/docs/theme-colors--page).
 
-##### Example for design with tokens
+#### Example for design with tokens
 
 :::image type="content" source="../../assets/images/design-guidelines/colors-design-token-example.png" alt-text="Example shows the light theme color tokens." lightbox="../../assets/images/design-guidelines/colors-design-token-example.png":::
 
@@ -64,7 +64,7 @@ The following token values are for the default (light) theme:
 
 ### Integrate your apps color palette with Teams
 
-##### Primary color
+#### Primary color
 
 :::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-usage.png" alt-text="Example shows an app screen with primary color usage." lightbox="../../assets/images/design-guidelines/colors-primary-color-usage.png":::
 
@@ -77,7 +77,7 @@ The following token values are for the default (light) theme:
 
 :::image type="content" source="../../assets/images/design-guidelines/colors-primary-color-apply.png" alt-text="Example shows the benefits of applying primary colors." lightbox="../../assets/images/design-guidelines/colors-primary-color-apply.png":::
 
-##### Secondary colors
+#### Secondary colors
 
 :::image type="content" source="../../assets/images/design-guidelines/secondary-color.png" alt-text="Example shows the application of secondary colors.":::
 
