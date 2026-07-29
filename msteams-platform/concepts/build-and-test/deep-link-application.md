@@ -252,9 +252,6 @@ else {/*Handle situation where capability isn't supported*/}
 
 ---
 
-> [!NOTE]
-> The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
-
 #### Configure back button navigation
 
 When an app has multiple tabs, a user can use the Microsoft 365 host app's back button to go backwards through the navigational history. However, the history doesn't include the actions a user performs within a tab. If you want to enhance the back button experience, you can maintain your own internal navigation stack and configure a custom handler for back button selections. This can be accomplished through the `registerBackButtonHandler()` function in the [`pages.backStack`](/javascript/api/@microsoft/teams-js/pages.backstack) namespace.
