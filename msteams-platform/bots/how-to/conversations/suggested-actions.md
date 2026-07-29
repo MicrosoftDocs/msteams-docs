@@ -47,7 +47,9 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ## Implement suggested actions
 
-Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
+Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
+
+Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
 ### Add `imBack` action
 
