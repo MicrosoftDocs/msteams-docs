@@ -228,8 +228,6 @@ The following code snippet shows an example of implementing `Action.Compose`:
 
 The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
 
-For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
-
 ### Add `Action.Submit` action
 
 Use `Action.Submit` for adding suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
