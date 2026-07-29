@@ -4,11 +4,11 @@ author: heath-hamilton
 description: Learn how to design dialogs (task modules) such as list, form, media, poll for Teams apps using UI templates and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 05/25/2023
+ms.date: 07/28/2026
 ---
 # Designing dialogs for your Microsoft Teams app
 
-You can create modal pop-up experiences in your Teams app with dialogs (referred as task modules in TeamsJS v1.x). Use this capability to display rich media and information or complete a complex task.
+You can create modal pop-up experiences in your Teams app with dialogs (referred to as task modules in TeamsJS v1.x). Use this capability to display rich media and information or complete a complex task.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a dialog." lightbox="../../assets/images/task-module/task-module-overview.png":::
 
@@ -96,15 +96,15 @@ Dialogs are a great place to surface forms with sequential user inputs and inlin
 
 ### Sign in
 
-Create a focused sign in or sign up flow with a series of dialogs, letting users move easily through sequential steps.
+Create a focused sign-in or sign-up flow with a series of dialogs, letting users move easily through sequential steps.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign in experience in a dialog on mobile.":::
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign-in experience in a dialog on mobile.":::
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a dialog." lightbox="../../assets/images/task-module/sign-in.png":::
+:::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign-in experience in a dialog." lightbox="../../assets/images/task-module/sign-in.png":::
 
 ### Media
 
