@@ -4,7 +4,7 @@ description: Use targeted messages to enable agents to privately interact with u
 ms.localizationpriority: high
 ms.date: 07/17/2026
 ms.topic: article
-zone_pivot_groups: select-language
+zone_pivot_groups: teams-sdk-languages
 ---
 
 <!-- markdownlint-disable MD023 -->
@@ -104,7 +104,7 @@ To opt in to receive targeted messages, set `supportsTargetedMessages` property 
 
 Agents receive messages via standard message events. Targeted messages can be distinguished from public messages as shown in the following snippet:
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
   ```typescript
 
@@ -117,7 +117,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 
@@ -130,7 +130,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 
@@ -146,7 +146,7 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 All agents in Teams are automatically eligible to send targeted messages. To send a targeted message, use `withRecipient` to specify a single recipient by their ID, and provide a value of `true` for the `isTargeted` argument. The recipient must be a member of the chat or channel.
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 import { MessageActivity } from '@microsoft/teams.api';
@@ -162,7 +162,7 @@ app.on('message', async ({ send, activity }) => {
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnMessage(async context =>
@@ -177,7 +177,7 @@ await context.Send(
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 from microsoft_teams.api import MessageActivity, MessageActivityInput
@@ -209,7 +209,7 @@ This ensures the response remains associated with the correct original request a
 
 To render prompt preview, include a `targetedMessageInfo` entity in the reply activity and set its `messageId` value to the message ID of the original targeted message, which Teams uses to show the user's original request above the agent response, as shown in this example:
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 if (isTargeted) {
@@ -219,7 +219,7 @@ if (isTargeted) {
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 
@@ -231,7 +231,7 @@ if (isTargeted)
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 

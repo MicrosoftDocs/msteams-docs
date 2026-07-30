@@ -106,13 +106,3 @@ groups:
     title: TypeScript
   - id: teams-sdk-python
     title: Python
-- id: select-language
-  title: Select language
-  prompt: Before you begin, select the language in which you want to build.
-  pivots:
-  - id: csharp
-    title: C#
-  - id: typescript
-    title: TypeScript  
-  - id: python
-    title: Python       
