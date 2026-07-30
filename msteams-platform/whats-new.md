@@ -38,6 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 July**
 
+* ***July 30, 2026***: Access to [meeting transcripts governed by both Microsoft Graph permissions and tenant-level administrator controls](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording) is now generally available.
 * ***July 30, 2026***: [Sending targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
 * ***July 29, 2026***: [Receiving targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
 * ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
