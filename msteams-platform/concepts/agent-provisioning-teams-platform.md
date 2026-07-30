@@ -18,7 +18,7 @@ Creating and hosting an agent runtime is not enough to make an agent available i
 
 All of these components require a Microsoft Entra tenant associated with the agent's developer.
 
-The developer workflow enabled by the Teams developer CLI provisions an agent with a single command. Developers are encouraged to use this workflow to provision an agent right at the beginning of its development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
+Developers are encouraged to use the Teams developer CLI to create these resources at the beginning of agent development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
 
 ## Entra ID app registration: identity and authentication
 
@@ -65,11 +65,11 @@ Developers register an agent with the Teams platform by submitting its app manif
 
 ## Teams developer CLI
 
-`teams app create` fully provisions an agent. It creates:
+`teams app create` fully provisions an agent at the beginning of development. It creates:
 
 1. An Entra ID app registration in your tenant, configured with a client secret used for authentication
 1. A Bot Connector registration in Teams Developer Portal
-1. An app manifest that defines the agent, submitted to the Teams platform to register the agent as an installable Teams app
+1. A Teams Platform registration with a starter app manifest
 1. A local configuration file for the agent's runtime that contains the client secret, used by Teams SDK to authenticate to the Bot Connector API
 
 ## Next steps
