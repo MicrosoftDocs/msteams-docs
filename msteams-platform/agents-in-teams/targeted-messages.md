@@ -13,7 +13,11 @@ zone_pivot_groups: select-language
 
 # Send and receive targeted messages in group conversations
 
-_Targeted messaging_ enables users and agents to send each other messages in the context of group conversation that can only be seen by the sender and the targeted recipient.
+> [!NOTE]
+>
+> Support for agents to receive targeted messages from users is generally available now.
+
+_Targeted messaging_ enables users and agents to privately communicate with each other in channels, group chats, and meeting chats.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
