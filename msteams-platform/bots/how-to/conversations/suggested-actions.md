@@ -326,20 +326,6 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 
 ::: zone-end
 
-### Guidance for approval workflow using `Action.Submit`
-
-Use Action.Submit in [slash command](~/agents-in-teams/agent-slash-commands.md) responses to offer private next-step actions, such as choosing whether to resend a [targeted message](../../../agents-in-teams/targeted-messages.md) publicly. Before implementing this approval flow, ensure the agent or app supports targeted messaging and runs in a channel, group chat, or meeting chat. The workflow is:
-
-1. **Capture the request privately**. Treat a slash command or @mention as a targeted message visible only to the user and the agent. Set `IsTargeted == true` in the message event.
-
-1. **Store the original targeted message ID** when the request is received. For prompt preview, include a `targetedMessageInfo` entity whose `messageId` references this ID.
-
-1. **Reply privately**. Send the initial response only to the requesting user.
-
-1. **Integrate prompt preview**. Include the original request above the response. Teams adds this preview to reactive replies; for proactive replies, attach a `targetedMessageInfo` entity whose `messageId` references the original targeted message.
-
-1. **Request approval**. After sending the private response, offer actions such as Allow, Share to channel, Edit prompt, or Dismiss. Use `Action.Submit` for quick actions that trigger server-side logic without posting a visible user message. Publish only after approval.
-
 ## Best practices and design guidance
 
 Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
@@ -349,6 +335,8 @@ Suggested actions behavior varies by conversation scope. Selected actions on ric
 Teams displays and processes up to three suggested actions. They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
 
 Before returning `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
+
+Use suggested actions when an agent needs explicit user approval before taking a consequential or visibility-changing step, such as reposting a private targeted message to a public channel. Present clear choices (such as Allow, Share, Edit, or Dismiss) and proceed only after the user confirms, keeping the approval interaction private until then.
 
 Avoid repeating actions that are already available in the response or card unless it is the primary next step for the user.
 
