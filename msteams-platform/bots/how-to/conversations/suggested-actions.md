@@ -27,6 +27,8 @@ You can build the following suggested actions in your agent or app:
 
 - `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
 
+Suggested actions are supported in all conversation scopes: personal chats, group chats, and channels. In a personal one-on-one chat, they appear as smart replies beneath the latest agent or bot message, and only the actions from the most recent message are shown. In group chats and channels, they appear beneath the agent or bot message that provides them and are saved with that message, so participants can return to the actions later in the conversation history.
+
 ## User experience
 
 When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
