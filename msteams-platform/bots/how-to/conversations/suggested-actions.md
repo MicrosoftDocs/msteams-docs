@@ -11,7 +11,7 @@ ms.date: 07/15/2026
 
 # Dynamically guide users with suggested actions
 
-Suggested actions present context-specific next steps after an agent or app response, so users can refine a request, continue a workflow, or make a choice with one selection. Use suggested actions when the next step depends on the current conversation.
+Suggested actions are buttons that agents can dynamically present in chat to help users quickly respond or take action.
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below an agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
@@ -47,7 +47,7 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ## Implement suggested actions
 
-Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
+Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
 
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
@@ -341,7 +341,7 @@ Use Action.Submit in [slash command](~/agents-in-teams/agent-slash-commands.md) 
 
 ## Best practices and design guidance
 
-Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
+Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
 
 Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
 
