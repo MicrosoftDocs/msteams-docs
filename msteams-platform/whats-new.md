@@ -38,8 +38,11 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 July**
 
+* ***July 30, 2026***: Access to [meeting transcripts governed by both Microsoft Graph permissions and tenant-level administrator controls](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording) is now generally available.
+* ***July 30, 2026***: [Sending targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
+* ***July 29, 2026***: [Receiving targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
 * ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
-* ***July 07, 2026***: [Support for apps in Private channels](build-apps-for-shared-private-channels.md) is now generally available.
+* ***July 07, 2026***: [Support for apps in private channels](build-apps-for-shared-private-channels.md) is now generally available.
 
 :::column-end:::
 :::row-end:::
@@ -274,14 +277,14 @@ Teams platform features that are available to all app developers.</br>
 | 07/21/2022 | Introduced step by step guide to send activity feed notifications | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |
 | 07/08/2022| Updates to send channel ID selected by user during app installation to bots via conversation and installation update events |  Build bots > Bot conversations > Conversation events in your Teams bot > [Conversation events in your Teams bot](bots/how-to/conversations/subscribe-to-conversation-events.md) |
 | 06/16/2022 | Updated media capabilities to support desktop and mobile| Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
-| 06/08/2022 | Optional card feedback for success message| Build cards and task modules > Build cards > [Form completion feedback](task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)|
+| 06/08/2022 | Server handlers for card actions| Build cards and task modules > Build cards > [Server handlers](task-modules-and-cards/cards/cards-actions.md#server-handlers)|
 | 06/03/2022 | Updated Add authentication module for enabling SSO for tab app with new structure and procedures | Add authentication > Tabs > [Enable single sign-on in a tab app](tabs/how-to/authentication/tab-sso-overview.md) |
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams Store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams Store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/cloud-overview.md#teams-app-capabilities) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
-|04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-agent)|
 | 04/22/2022 | Test preview for monetized apps | Monetize your app > [Test preview for monetized apps](concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md)
 | 04/22/2022 | In-app purchase flow for monetization of apps | Monetize your app > [In-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md)
 | 04/28/2022 | Common reasons for app validation failure | Publish your app > Publish to the Teams Store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
@@ -310,7 +313,7 @@ Teams platform features that are available to all app developers.</br>
 | 02/08/2022 | Introduced step-by-step guide to create Calling and Meeting bot| Build bots > Calls and meetings bots > Register calls and meetings bot > [Step-by-step guide to create Calling and Meeting bot](sbs-calling-and-meeting.yml) |
 | 02/02/2022 | Introduced app manifest version 1.12 | App manifest > [App manifest schema](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 01/25/2022 | Send real-time captions API | Build apps for Teams meetings > Meeting apps API references> [Advanced meeting APIs](apps-in-teams-meetings/meeting-apps-apis.md)|
-| 01/19/2022 | Adaptive Cards form completion feedback |  Build cards and task modules > Build cards > [Form completion feedback](task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)|
+| 01/19/2022 | Server handlers for Adaptive Cards form completion |  Build cards and task modules > Build cards > [Server handlers](task-modules-and-cards/cards/cards-actions.md#server-handlers)|
 | 01/17/2022 | People Picker in Adaptive Cards for desktop | Build cards and task modules > Build cards > [People Picker in Adaptive Cards](task-modules-and-cards/cards/people-picker.md)|
 
 </details>
