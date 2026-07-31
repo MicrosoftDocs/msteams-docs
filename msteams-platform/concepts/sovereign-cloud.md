@@ -177,6 +177,10 @@ The following table details the apps and its capabilities supported for Teams op
 
 **Fix:** Confirm the environment variable is exported into the process environment, and check whether your code passes `Cloud` explicitly. The value passed in code wins over the environment variable.
 
+### Next steps
+
+After configuring your cloud environment, your bot will authenticate and communicate using the correct sovereign cloud endpoints. No other code changes are needed; OAuth flows and all other SDK features work identically across clouds.
+
 ## See also
 
 - [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet)
