@@ -40,7 +40,7 @@ To deploy an app in a sovereign cloud, you need:
 
 ## Configure your app for a sovereign cloud
 
-For SDK configuration steps, code samples, and troubleshooting, see [Sovereign cloud configuration](https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/essentials/app-configuration/sovereign-cloud).
+For SDK configuration steps, code samples, and troubleshooting, see [Sovereign cloud configuration](/microsoftteams/platform/teams-sdk/essentials/app-configuration/sovereign-cloud?pivots=csharp)
 
 ## Teams operated by 21Vianet
 
