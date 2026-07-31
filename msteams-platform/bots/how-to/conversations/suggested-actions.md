@@ -21,20 +21,6 @@ Agents can dynamically provide up to three suggested action buttons with each ch
 
 To help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
-<!--
-## Understand suggested actions
-
-You can build the following suggested actions in your agent or app:
-
-- `imBack`: Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the `activity.suggestedActions` collection, and set each action type to `imBack` with a title and value. For example, an agent can present options such as *Show overdue tasks* or *Create a new work item*, and the selected option appears in the conversation.
-
-- `Action.Compose`: Use `Action.Compose` when the app should prefill the compose box so the user can review, edit, and send the message. Return an `Action.Compose` action with a Teams `chatMessage` payload that can include formatted text, @mentions, tags, emojis, GIFs, or other supported rich content. For example, a scheduling assistant can draft a follow-up message with an @mention and proposed next steps, giving the user a chance to adjust it before posting.
-
-- `Action.Submit`: Use `Action.Submit` when the selected option should trigger server-side logic without posting a user-visible chat message. For example, an approval agent can offer Approve and Reject buttons for a slash-command response and process the decision silently on the server.
-
-Suggested actions are supported in all conversation scopes: personal chats, group chats, and channels. In a personal one-on-one chat, they appear as smart replies beneath the latest agent or bot message, and only the actions from the most recent message are shown. In group chats and channels, they appear beneath the agent or bot message that provides them and are saved with that message, so participants can return to the actions later in the conversation history.
--->
-
 ## User experience
 
 When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
@@ -55,7 +41,7 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ## Implement suggested actions
 
-Suggested action types define how a user’s selection is handled: You can use suggested actions buttons to present context-specific next steps to post a message to chat, to use prefilled response to draft a message, and to trigger a user action. You can build the following suggested actions in your agent or app:
+Suggested action types define how a user’s selection is handled. You can use suggested actions buttons to present context-specific next steps to post a message to chat, to use prefilled response to draft a message, and to trigger a user action. You can build the following suggested actions in your agent or app:
 
 **Send predefined message**: Use `imBack` when the selected option should be sent back to the agent or app as a visible user message. Add card actions to the activity.suggestedActions collection, and set each action type to imBack with a title and value. For example, an agent can present options such as Show overdue tasks or Create a new work item, and the selected option appears in the conversation.
 
@@ -66,7 +52,7 @@ Suggested action types define how a user’s selection is handled: You can use s
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
 
-### Add `imBack` action
+### Send predefined message
 
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
@@ -224,7 +210,7 @@ In this example, `imBack` offers two context-specific next steps for the day’s
 
 This example shows how to attach `suggestedActions` to the agent message and set `inputHint` to `expectingInput` to prompt a user response. The `actions` array defines the available choices, each using `imBack` with a button `title` and a returned `value`. When selected, the value is sent back to the agent or app as the user response, enabling it to route the conversation to the appropriate intent or operation.
 
-### Add `Action.Compose` action
+### Send prefilled response
 
 Use `Action.Compose` to prefill the compose box with a message that the user can review, edit, and send. The chatMessage payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
@@ -243,7 +229,7 @@ The following code snippet shows an example of implementing `Action.Compose`:
 
 The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
 
-### Add `Action.Submit` action
+### Trigger user action
 
 Use `Action.Submit` for adding suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
 
