@@ -152,7 +152,6 @@ The following example shows how users can manage licenses for third-party apps f
 
     1. To find a specific subscription, type the name of the app in the search box.
 
-        :::image type="content" source="../../../../assets/images/saas-offer/find subscription.png" alt-text="Screenshot shows you to find a specific subscription.":::
     &nbsp;
 
     </details>
