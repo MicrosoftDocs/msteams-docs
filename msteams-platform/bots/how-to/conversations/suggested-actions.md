@@ -15,6 +15,10 @@ Suggested actions are buttons that agents can dynamically present in chat to hel
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below an agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
+Suggested actions are useful for requesting user approval or input, guiding users through multi-step workflows, and surfacing agent functionality in the flow of a conversation. The buttons can be configured to send a predetermined chat response on the user's behalf or trigger server-side logic without posting a chat message.
+
+Agents can dynamically provide up to three suggested action buttons with each chat message they send.
+
 To help users start a conversation, see [Create prompt starters](prompt-starters.md).
 
 <!--
