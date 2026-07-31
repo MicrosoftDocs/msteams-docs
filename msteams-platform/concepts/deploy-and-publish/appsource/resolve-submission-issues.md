@@ -84,3 +84,4 @@ If your app isn't published after 1-2 business days, contact <a href="mailto:tea
 ## See also
 
 [Publish your Microsoft Teams app](../apps-publish-overview.md)
+[Common reasons for app validation failure](../common-reasons-for-app-validation-failure.md)
