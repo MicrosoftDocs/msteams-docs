@@ -1,5 +1,30 @@
 {
   "redirections": [
+    {
+      "source_path": "msteams-platform/bots/overview.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/build-a-bot.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/build-a-bot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/build-notification-capability.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/build-notification-capability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/command-bot-in-teams.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/how-to/conversations/command-bot-in-teams",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/workflow-bot-in-teams.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/how-to/conversations/workflow-bot-in-teams",
+      "redirect_document_id": false
+    },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/teams-together-mode.md",
         "redirect_url": "/microsoftteams/platform/mstdd-landing"
@@ -1559,6 +1584,16 @@
       {
         "source_path": "msteams-platform/bots/how-to/create-a-bot-commands-menu.md",
         "redirect_url": "/microsoftteams/platform/agents-in-teams/agent-slash-commands",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/agents-in-teams/build-first-agent.md",
+        "redirect_url": "quickstart-create-agent-teams-sdk",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/teams-updates.md",
+        "redirect_url": "/microsoftteams/platform/overview",
         "redirect_document_id": false
       }
     ]

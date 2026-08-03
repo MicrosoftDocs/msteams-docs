@@ -239,7 +239,7 @@ To implement SSO authentication in a personal tab, follow these steps:
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs. For more information, see
-[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
+[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
 sample code.
 
 ## Race condition when making an OBO call after invalid grant exception

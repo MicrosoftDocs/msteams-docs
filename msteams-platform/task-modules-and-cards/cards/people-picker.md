@@ -3,7 +3,7 @@ title: Search Users with People Picker Control
 description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 02/26/2025
+ms.date: 06/10/2026
 ---
 
 # People Picker in Adaptive Cards
@@ -307,7 +307,7 @@ You can implement People Picker for efficient task management in different scena
 
 | Sample Name           | Description | .NET    | Node.js   | Manifest
 |:---------------------|:--------------|:---------|:--------|:--------|
-|People picker control in Adaptive Cards| This bot showcases how to use the people picker control within Adaptive Cards on Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
+|People picker control in Adaptive Cards| This bot showcases how to use the people picker control within Adaptive Cards on Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
 
 ## See also
 

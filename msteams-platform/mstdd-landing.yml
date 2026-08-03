@@ -42,8 +42,6 @@ landingContent:
       links:
       - text: Build your first agent
         url: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-#      - text: Build agents and apps for Teams
-#        url: ../msteams-platform/bots/build-a-bot.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
       - text: Glossary

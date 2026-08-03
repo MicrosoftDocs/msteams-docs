@@ -88,5 +88,5 @@ Apart from capabilities, Agents Toolkit also provides how-to guides for:
 
 ## See also
 
-- [Build your first Teams agent](../agents-in-teams/build-first-agent.md)
+- [Build a Teams agent with Agents Toolkit](../agents-in-teams/build-agent-toolkit.md)
 - [Create a new Teams app](create-new-project.md)
