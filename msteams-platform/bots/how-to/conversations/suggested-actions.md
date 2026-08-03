@@ -104,7 +104,7 @@ This code snippet example generates two follow-up suggested actions from convers
 ```typescript
 finalMarker.withSuggestedActions({
   to: [recipientId],
-  actions: followUps.map((prompt) => ({ type: 'imBack', title: prompt, value: prompt })),
+  actions: followUps.map((prompt) => ({ type: 'imBack', title: 'See more information', value: 'See more information' })),
 });
 ```
 
