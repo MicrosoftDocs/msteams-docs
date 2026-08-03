@@ -66,42 +66,6 @@ Use the following Teams SDK snippets for creating and handling `imBack` suggeste
 ::: zone pivot="typescript"
 
 ```typescript
-const FOLLOW_UPS_PROMPT =
-  'Produce 2 specific prompts the user might want to ask next, based on the conversation so far. ' +
-  'Each must be phrased in the first person and stay under 8 words.';
-
-const FOLLOW_UPS_SCHEMA = {
-  type: 'object',
-  properties: { prompt1: { type: 'string' }, prompt2: { type: 'string' } },
-  required: ['prompt1', 'prompt2'],
-  additionalProperties: false,
-} as const;
-
-async function generateFollowUps(history: ChatCompletionMessageParam[]): Promise<string[]> {
-  try {
-    const completion = await client.chat.completions.create({
-      model: deployment,
-      messages: [...history, { role: 'system', content: FOLLOW_UPS_PROMPT }],
-      response_format: {
-        type: 'json_schema',
-        json_schema: { name: 'follow_ups', strict: true, schema: FOLLOW_UPS_SCHEMA },
-      },
-    });
-    const parsed = JSON.parse(completion.choices[0]?.message?.content ?? '{}');
-    return [parsed.prompt1, parsed.prompt2].filter((s): s is string => typeof s === 'string' && s.length > 0);
-  } catch {
-    return []; // degrade silently — the main reply still ships
-  }
-}
-```
-
-This code snippet example generates two follow-up suggested actions from conversation context.
-
-- It defines `FOLLOW_UPS_PROMPT`, which instructs the model to create two short prompts.
-- It defines `FOLLOW_UPS_SCHEMA`, which forces the model response to contain `prompt1` and `prompt2`.
-- It uses `generateFollowUps(history)` to return prompts as a `string[]`.
-
-```typescript
 finalMarker.withSuggestedActions({
   to: [recipientId],
   actions: followUps.map((prompt) => ({ type: 'imBack', title: 'See more information', value: 'See more information' })),
@@ -120,37 +84,6 @@ This snippet displays follow-up prompts as suggested action buttons. For each pr
 ::: zone-end
 
 ::: zone pivot="python"
-
-```python
-
-import json
-
-from microsoft_teams.api import CardAction, CardActionType, SuggestedActions
-
-_FOLLOW_UPS_PROMPT = (
-    "Based on the conversation so far, suggest exactly 2 short follow-up questions the user might want to ask next. "
-    'Respond with JSON: {"followUps": ["question 1", "question 2"]}. Keep each question under 60 characters.'
-)
-
-async def _generate_follow_ups(last_user_text: str, last_ai_text: str) -> list[CardAction]:
-    completion = await openai_client.chat.completions.create(
-        model=getenv("AZURE_OPENAI_MODEL", ""),
-        messages=[
-            {"role": "user", "content": last_user_text},
-            {"role": "assistant", "content": last_ai_text},
-            {"role": "system", "content": _FOLLOW_UPS_PROMPT},
-        ],
-        response_format=_FOLLOW_UPS_SCHEMA,  # strict json_schema
-    )
-    data = json.loads(completion.choices[0].message.content or "{}")
-    return [CardAction(type=CardActionType.IM_BACK, title=q, value=q) for q in data.get("followUps", [])[:2]]
-```
-
-This code snippet example generates two follow-up suggested actions from conversation context. It creates the follow-up question buttons for those actions:
-
-- `_FOLLOW_UPS_PROMPT` instructs the model to suggest two concise follow-up questions.
-- `_generate_follow_ups` accepts the last user message and last assistant message.
-- `CardActionType.IM_BACK` is used to convert each suggestion into a `CardAction` that lets the user send the selected question back into the chat.
 
 ```python
 reply.with_suggested_actions(
