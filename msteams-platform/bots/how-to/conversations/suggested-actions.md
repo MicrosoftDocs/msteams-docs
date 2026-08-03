@@ -174,9 +174,55 @@ teams.OnMessage(async (context, cancellationToken) =>
 
 ::: zone pivot="typescript"
 
+```typescript
+app.on("message", async ({ send }) => {
+  // The SDK's CardActionType union does not model Action.Compose, hence the cast.
+  const action = {
+    type: "Action.Compose",
+    title: "Notify me now",
+    value: {
+      type: "Teams.chatMessage",
+      data: { body: { contentType: "text", content: "notify" } },
+    },
+  } as unknown as CardAction;
+
+  await send(
+    new MessageActivityInput("Pick a suggestion:").withSuggestedActions({
+      to: [],
+      actions: [action],
+    })
+  );
+});
+```
+
 ::: zone-end
 
 ::: zone pivot="python"
+
+```python
+if "Action.Compose" not in CardActionType._value2member_map_:
+    _compose = str.__new__(CardActionType, "Action.Compose")
+    _compose._name_, _compose._value_ = "COMPOSE", "Action.Compose"
+    CardActionType._value2member_map_["Action.Compose"] = _compose
+
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
+    action = CardAction(
+        type=CardActionType("Action.Compose"),
+        title="Notify me now",
+        value={
+            "type": "Teams.chatMessage",
+            "data": {"body": {"contentType": "text", "content": "notify"}},
+        },
+    )
+
+    await ctx.send(
+        MessageActivityInput(text="Pick a suggestion:").with_suggested_actions(
+            SuggestedActions(to=[], actions=[action])
+        )
+    )
+```
 
 ::: zone-end
 
