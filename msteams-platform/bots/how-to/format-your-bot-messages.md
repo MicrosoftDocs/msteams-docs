@@ -38,7 +38,7 @@ Your agent can also mention other users and tags in text messages posted in chan
 
 ### Enable extended Markdown
 
-To use extended Markdown formatting in bot messages, set the `textFormat` property to `"extendedmarkdown"` in your `Activity` object:
+To use extended Markdown formatting in agent messages, set the `textFormat` property to `"extendedmarkdown"` in your `Activity` object:
 
 # [JSON](#tab/json)
 
@@ -132,7 +132,7 @@ When using `textFormat: "extendedmarkdown"`, the following features are availabl
 
 ### At-mention support
 
-Mention users and groups in your bot messages. At-mentions work with both standard Markdown and extended Markdown:
+Mention users and groups in your agent messages. At-mentions work with both standard Markdown and extended Markdown:
 
 ```markdown
 Hello <at>Jane Smith</at>, please review this.
@@ -142,7 +142,7 @@ Notifying team: <at>Engineering Team</at>
 
 ### Fenced code blocks
 
-Use triple backticks with a language identifier to display syntax-highlighted code in your bot messages.
+Use triple backticks with a language identifier to display syntax-highlighted code in your agent messages.
 
 ````markdown
 ```python
@@ -168,7 +168,7 @@ $$
 
 ### Images
 
-Use standard Markdown image syntax to render images in your bot messages.
+Use standard Markdown image syntax to render images in your agent messages.
 
 ```markdown
 ![Build status](https://example.com/build-status.png)
@@ -176,7 +176,7 @@ Use standard Markdown image syntax to render images in your bot messages.
 
 ### Citations
 
-Cite sources in your bot messages using `[#]` notation in the message text and providing citation details in the Activity `entities` array. For more information on how to add citations, see [citations](bot-messages-ai-generated-content.md#citations).
+Cite sources in your agent messages using `[#]` notation in the message text and providing citation details in the Activity `entities` array. For more information on how to add citations, see [citations](bot-messages-ai-generated-content.md#citations).
 
 ### Tables
 
@@ -193,7 +193,7 @@ In this example, the first column is left-aligned, the second is centered, and t
 
 ### Task lists
 
-Use task list syntax to display completed and pending items in your bot messages.
+Use task list syntax to display completed and pending items in your agent messages.
 
 ```markdown
 - [x] Checkout code
@@ -209,7 +209,7 @@ Use task list syntax to display completed and pending items in your bot messages
 
 [!INCLUDE [streaming-with-extended-markdown](includes/streaming-with-extended-markdown.md)]
 
-For detailed information about streaming implementation, see [Stream bot messages](../streaming-ux.md).
+For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
