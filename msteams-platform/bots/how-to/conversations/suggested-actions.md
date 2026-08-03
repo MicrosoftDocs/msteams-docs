@@ -170,6 +170,16 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
+This example show how when each time a message is received, the handler builds a custom card action and sends it back to the user as a suggested action.
+
+- `teams.OnMessage` registers a callback that runs whenever the app receives a message. The callback is asynchronous because it sends a response using await.
+- `CardActionType("Action.Compose")` supplies the raw action type string, allowing the code to use an action type that may not have a dedicated SDK constant.
+- `Title` sets the visible label to “Notify me now.” `Value` defines the data submitted when the user selects it, including a text chat message whose content is “notify.”
+- `MessageActivity` creates the prompt “Pick a suggestion:”, and `WithSuggestedActions` attaches the action so it appears as a selectable option.
+- The supplied `cancellationToken` lets the send operation stop cleanly if the request is cancelled.
+
+The user sees a prompt with a “Notify me now” option. Selecting it submits the configured Teams chat-message payload for the app to process.
+
 ::: zone-end
 
 ::: zone pivot="typescript"
