@@ -111,7 +111,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-For guidance on formatting streamed messages with extended Markdown, including supported features and syntax, see [Format your agent messages](how-to/format-your-bot-messages.md#extended-markdown-features).
+For guidance on formatting streamed messages with extended Markdown, including supported features and syntax, see [Format your bot messages](how-to/format-your-bot-messages.md#streaming-with-extended-markdown).
 
 ## Stream message through REST API
 
