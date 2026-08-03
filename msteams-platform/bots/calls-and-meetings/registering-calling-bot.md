@@ -106,7 +106,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 | **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
 | Calling and meeting bot | This sample demonstrates how a bot can create, join, and transfer calls or meetings within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-calling-meeting/csharp) |
-| Realtime meeting events |This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/csharp)|
+| Realtime meeting events |This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/dotnet/bot-meetings)|
 
 ## Next step
 
