@@ -205,6 +205,14 @@ app.on("message", async ({ send }) => {
 });
 ```
 
+This example demonstrates that when a message arrives, it creates a custom suggested action and sends a prompt containing that action back to the user.
+
+- `app.on("message", ...)` registers a callback that runs whenever the app receives a message. The callback is asynchronous because it waits for the response to be sent.
+- The action object defines an `Action.Compose` button titled “Notify me now.”
+- The `value` property describes a Teams chat message with plain-text content set to “notify.” This payload is submitted when the user selects the action.
+- `MessageActivityInput` creates the prompt “Pick a suggestion:”, while `withSuggestedActions` attaches the action. The empty to array leaves recipient targeting unspecified for this response.
+- `await send(...)` sends the completed activity and waits for the operation to finish.
+
 ::: zone-end
 
 ::: zone pivot="python"
