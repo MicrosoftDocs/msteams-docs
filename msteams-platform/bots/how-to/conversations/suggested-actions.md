@@ -147,6 +147,39 @@ This example shows how to attach `suggestedActions` to the agent message and set
 
 Use `Action.Compose` to prefill the compose box with a message that the user can review, edit, and send. The chatMessage payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
+::: zone pivot="csharp"
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // ActionType takes any raw type string, so Action.Compose needs no workaround.
+    var action = new CardAction(new CardActionType("Action.Compose"))
+    {
+        Title = "Notify me now",
+        Value = new
+        {
+            type = "Teams.chatMessage",
+            data = new { body = new { contentType = "text", content = "notify" } }
+        }
+    };
+
+    await context.Send(
+        new MessageActivity("Pick a suggestion:")
+            .WithSuggestedActions(new SuggestedActions { Actions = { action } }),
+        cancellationToken);
+});
+```
+
+::: zone-end
+
+::: zone pivot="typescript"
+
+::: zone-end
+
+::: zone pivot="python"
+
+::: zone-end
+
 The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
