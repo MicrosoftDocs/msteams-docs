@@ -5,7 +5,7 @@ description: Learn to implement the design guidelines, use UI templates to desig
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: vichug
-ms.date: 04/07/2022
+ms.date: 07/31/2026
 ---
 # Designing your Microsoft Teams meeting extension
 
