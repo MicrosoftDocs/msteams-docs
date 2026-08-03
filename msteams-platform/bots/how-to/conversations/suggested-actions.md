@@ -154,7 +154,7 @@ This code snippet example generates two follow-up suggested actions from convers
 
 ```python
 reply.with_suggested_actions(
-    SuggestedActions(to=[ctx.activity.from_.id], actions=follow_ups)
+    SuggestedActions(to=[ctx.activity.from_.id], actions=[CardAction(type=CardActionType.IM_BACK, title="Tell me more", value="Tell me more")]))
 )
 ```
 
