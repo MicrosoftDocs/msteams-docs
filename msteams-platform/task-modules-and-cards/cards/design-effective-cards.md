@@ -3,7 +3,7 @@ title: Designing Adaptive Cards for your app
 description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card Designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 07/31/2026
+ms.date: 08/04/2026
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 
@@ -122,7 +122,7 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile.":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile." lightbox="../../assets/images/adaptive-cards/mobile-request-ticket-card.png":::
 
 #### Desktop
 
