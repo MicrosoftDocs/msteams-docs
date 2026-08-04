@@ -58,10 +58,12 @@ To add the `imBack` suggested action to a message, specify a list of [card actio
 
 #### Teams SDK implementation
 
-Use the following Teams SDK snippets for creating and handling `imBack` suggested actions.
+::: zone pivot="csharp"
 
 > [!NOTE]
 > Microsoft Teams SDK for C# does not currently support `imBack` suggested actions.
+
+::: zone-end
 
 ::: zone pivot="typescript"
 
