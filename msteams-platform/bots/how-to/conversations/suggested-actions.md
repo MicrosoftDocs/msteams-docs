@@ -44,7 +44,7 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 Suggested action types define how a user’s selection is handled. You can use suggested action buttons to present context-specific next steps to post a message to a chat. You can build the following suggested actions in your agent or app:
 
 - [**Send a predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action. For example, options such as Show overdue tasks or Create a new work item let users send common responses without typing them.
-- [**Send prefilled response**](#send-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action.
+- [**Send prefilled response**](#send-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
 - [**Trigger user action**](#trigger-user-action): Lets users choose an option that starts an action without posting a message using `Action.Submit` action.
 
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
@@ -145,7 +145,7 @@ This example shows how to attach `suggestedActions` to the agent message and set
 
 ### Send prefilled response
 
-Use `Action.Compose` to prefill the compose box with a message that the user can review, edit, and send. The chatMessage payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
+A prefilled message places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
 ::: zone pivot="csharp"
 
