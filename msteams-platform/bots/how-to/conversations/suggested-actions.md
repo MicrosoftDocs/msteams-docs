@@ -23,7 +23,9 @@ To help users start a conversation, see [Create prompt starters](prompt-starters
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how `imBack` suggested action shows up in Teams desktop and mobile clients in Teams.
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
+
+Here are some examples of how `imBack` suggested action shows up in Teams desktop and mobile clients in Teams.
 
 # [Personal chat](#tab/pc)
 
@@ -38,6 +40,12 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 :::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png" alt-text="Suggested actions displayed in a channel on a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png":::
 
 ---
+
+For `imBack` action, the suggested action button appears with the agent message. In a personal chat, smart replies are shown only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a visible user message in that conversation.
+
+For `Action.Compose`, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
+
+For `Action.Submit`, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without placing content in the compose box and without posting a user-visible message in the conversation.
 
 ## Implement suggested actions
 
