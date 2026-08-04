@@ -9,8 +9,6 @@ Teams agents can respond using four message formats. Choosing the right format o
 | Adaptive Card | Actionable content, approvals, forms, structured data | Medium – High |
 | Widget / MCP-UI | Rich, live, stateful experiences with custom UI | High |
 
-
-
 ## Key Principles
 
 1. **Default to the simplest format that meets the need.** Plain Text → Markdown → Adaptive Card → Widget. Don't over-engineer.
@@ -22,6 +20,8 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 
 ## Format Profiles
+
+:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-genui-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
 
 ### Plain Text
 
