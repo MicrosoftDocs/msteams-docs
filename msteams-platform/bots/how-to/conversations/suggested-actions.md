@@ -39,11 +39,11 @@ Here are some examples of how a **predefined message** suggested action shows up
 
 ---
 
-For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies are shown only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a visible user message in that conversation.
+Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message:
 
-For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
-
-For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without placing content in the compose box and without posting a user-visible message in the conversation.
+- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies are shown only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a visible user message in that conversation.
+- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
+- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without placing content in the compose box and without posting a user-visible message in the conversation.
 
 ## Implement suggested actions
 
@@ -55,6 +55,9 @@ Suggested action types define how a user’s selection is handled. You can use s
 
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
+
+> [!NOTE]
+> They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
 
 ### Send predefined message
 
@@ -157,6 +160,8 @@ This example shows how to attach `suggestedActions` to the agent message and set
 ### Share prefilled response
 
 This suggested action places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
+
+Before using `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
 
 ::: zone pivot="csharp"
 
@@ -379,12 +384,6 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 ## Best practices and design guidance
 
 Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
-
-Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
-
-Teams displays and processes up to three suggested actions. They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
-
-Before returning `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
 
 Use suggested actions when an agent needs explicit user approval before taking a consequential or visibility-changing step, such as reposting a private targeted message to a public channel. Present clear choices (such as Allow, Share, Edit, or Dismiss) and proceed only after the user confirms, keeping the approval interaction private until then.
 
