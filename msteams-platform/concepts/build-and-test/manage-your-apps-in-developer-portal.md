@@ -125,6 +125,13 @@ In the **Advanced** section, you can view the following components to manage you
 
 * **Environments**
 
+    > [!IMPORTANT]
+    > The **Environment Variables** feature in Developer Portal is being deprecated. Starting August 31, 2026, you'll no longer be able to create, manage, or access environment variables for your apps in the portal.
+    >
+    > In its place, create a **separate app for each environment** rather than using a single app with multiple environment variables. If you have an app that currently relies on environment variables, migrate it before the deprecation date by splitting it into per-environment apps.
+    >
+    > Impact is limited to apps that use environment variables today; all other Developer Portal workflows are unaffected. If this change blocks your migration, use the in-portal feedback option to let us know.
+
     You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
     To set up an environment, follow these steps:

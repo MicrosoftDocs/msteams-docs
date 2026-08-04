@@ -644,10 +644,17 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-***June 22, 2026***: Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
+***August 04, 2026***: Environment Variables feature in Developer Portal is being deprecated as of August 31, 2026. Create a separate app for each environment instead. For more information, see [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#advanced).
 
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 22/06/2026 | Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312). |
 
 <details>
 <summary><b>2025</b></summary>
