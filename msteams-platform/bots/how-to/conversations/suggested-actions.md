@@ -41,14 +41,14 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ## Implement suggested actions
 
-Suggested action types define how a user’s selection is handled. You can use suggested actions buttons to present context-specific next steps to post a message to chat, to use prefilled response to draft a message, and to trigger a user action. You can build the following suggested actions in your agent or app:
+Suggested action types define how a user’s selection is handled. You can use suggested action buttons to present context-specific next steps to post a message to a chat. You can build the following suggested actions in your agent or app:
 
 • [**Send a predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action.
 • [**Send prefilled response**](#send-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action.
 • [**Trigger user action**](#trigger-user-action): Lets users choose an option that starts an action without posting a message using `Action.Submit` action.
 
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
-Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
+Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
 
 ### Send predefined message
 
