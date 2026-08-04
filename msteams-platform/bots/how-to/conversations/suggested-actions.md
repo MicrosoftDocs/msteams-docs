@@ -45,7 +45,7 @@ Suggested action types define how a user’s selection is handled. You can use s
 
 - [**Send a predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action. For example, options such as Show overdue tasks or Create a new work item let users send common responses without typing them.
 - [**Send prefilled response**](#send-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
-- [**Trigger user action**](#trigger-user-action): Lets users choose an option that starts an action without posting a message using `Action.Submit` action.
+- [**Trigger user action**](#trigger-user-action): Offers a user options that can start an action without posting a message using `Action.Submit` action. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
 
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
@@ -145,7 +145,7 @@ This example shows how to attach `suggestedActions` to the agent message and set
 
 ### Send prefilled response
 
-A prefilled message places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
+This suggested action places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
 ::: zone pivot="csharp"
 
@@ -270,7 +270,7 @@ The value object must follow the [`chatMessage`](/graph/api/resources/chatmessag
 
 ### Trigger user action
 
-Use `Action.Submit` for adding suggested action buttons that trigger server-side logic without posting a user-visible chat message. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
+This action lets a user select an option to trigger an action without posting a user-visible chat message. Use `Action.Submit` for adding suggested action buttons that trigger server-side logic. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
 
 Payload (outgoing from agent or app):
 
