@@ -21,7 +21,7 @@ Agents can dynamically provide up to three suggested action buttons with each ch
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how a **predefined message** suggested action shows up in Teams desktop and mobile clients in Teams.
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how a **predefined message** suggested action shows up for desktop and mobile clients in Teams.
 
 # [Personal chat](#tab/pc)
 
