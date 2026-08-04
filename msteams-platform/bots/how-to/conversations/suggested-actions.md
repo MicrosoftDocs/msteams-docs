@@ -244,6 +244,13 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     )
 ```
 
+This examples show how to register a message handler that sends a custom suggested action to the user:
+
+- `CardAction` creates an `Action.Compose` option titled *Notify me now*.
+- The `value` dictionary defines a Teams chat message with plain-text content set to “notify.” This data is submitted when the user selects the action.
+- `MessageActivityInput` creates the prompt `Pick a suggestion:`, and `with_suggested_actions` attaches the custom action. The empty to list leaves recipient targeting unspecified for the response.
+- `await ctx.send(...)` sends the completed activity and waits for the operation to finish.
+
 ::: zone-end
 
 The following code snippet shows an example of implementing `Action.Compose`:
