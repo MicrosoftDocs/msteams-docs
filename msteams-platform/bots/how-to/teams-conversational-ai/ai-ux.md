@@ -70,7 +70,7 @@ For detailed streaming implementation guidance, see [Stream agent messages](../.
 
 ### Format agent messages with extended Markdown
 
-You can format agent messages using extended Markdown (`textFormat: "extendedmarkdown"`) for rich formatting. Extended Markdown supports features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. For more information, see [Format your bot messages](../format-your-bot-messages.md#enable-extended-markdown).
+You can format agent messages using extended Markdown (`textFormat: "extendedmarkdown"`) for rich formatting. Extended Markdown supports features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. For more information, see [Format your bot messages](../format-your-bot-messages.md#set-message-text-format).
 
 ### Ensure the agent response contains citations
 
