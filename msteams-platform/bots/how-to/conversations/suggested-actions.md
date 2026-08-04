@@ -43,11 +43,9 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 Suggested action types define how a user’s selection is handled. You can use suggested actions buttons to present context-specific next steps to post a message to chat, to use prefilled response to draft a message, and to trigger a user action. You can build the following suggested actions in your agent or app:
 
-- [**Send a predefined message**](#send-predefined-message): A predefined message gives users a ready-to-send response that they can select to continue a conversation. You can enable this behavior with the `imBack` action by adding suggested actions to a`ctivity.suggestedActions`. Each action includes a title displayed to the user and a predefined value. When the user selects an action, its value is posted to the conversation as a visible user message and can be processed like other user input. For example, options such as *Show overdue task*s or *Create a new work item* let users send common responses without typing them.
-
-- [**Send prefilled response**](#send-prefilled-response): A prefilled message places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
-
-- [**Trigger user action**](#trigger-user-action): Triggering a user action lets a user select an option that initiates server-side processing without posting a visible message in the conversation. You can enable this behavior with `Action.Submit`, which sends the selected action and its structured payload to the agent or bot through an `invoke` activity. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
+• [**Send a predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action.
+• [**Send prefilled response**](#send-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action.
+• [**Trigger user action**](#trigger-user-action): Lets users choose an option that starts an action without posting a message using `Action.Submit` action.
 
 Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`:
