@@ -19,8 +19,6 @@ Suggested actions are useful for requesting user approval or input, guiding user
 
 Agents can dynamically provide up to three suggested action buttons with each chat message they send.
 
-To help users start a conversation, see [Create prompt starters](prompt-starters.md).
-
 ## User experience
 
 When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
