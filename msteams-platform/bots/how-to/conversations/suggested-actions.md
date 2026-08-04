@@ -23,7 +23,7 @@ To help users start a conversation, see [Create prompt starters](prompt-starters
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how suggested actions show up in Teams desktop and mobile clients in personal chat, group chat, and on channel.
 
 # [Personal chat](#tab/pc)
 
