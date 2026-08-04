@@ -4,13 +4,14 @@ description: Publish your app to Microsoft Teams Store or AppSource. What to exp
 ms.topic: overview
 author: heath-hamilton
 ms.localizationpriority: high
-ms.date: 12/15/2022
+ms.date: 08/04/2026
 ---
 # Publish your app to the Teams Store
 
-You can publish your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
+Publish your app to the Microsoft Teams Store to make it available to Teams users.
+Apps published to the Teams Store are automatically listed on [the Microsoft commercial marketplace](https://appsource.microsoft.com).
 
-Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
+This article explains how to submit your app, track the certification process, and monitor your submission status.
 
 <!--The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
 
