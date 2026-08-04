@@ -15,15 +15,13 @@ Suggested actions are buttons that agents can dynamically present in chat to hel
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Suggested action buttons displayed below an agent response in a Teams chat." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
-Suggested actions are useful for requesting user approval or input, guiding users through multi-step workflows, and surfacing agent functionality in the flow of a conversation. The buttons can be configured to send a predetermined chat response on the user's behalf or trigger server-side logic without posting a chat message.
+Suggested actions are useful for requesting user approval or input, guiding users through multi-step workflows, and surfacing agent functionality in the flow of a conversation. The buttons can be configured to send a **predefined message** on the user's behalf, offer a **prefilled response** in the compose box, or **trigger a user action** without posting a chat message.
 
 Agents can dynamically provide up to three suggested action buttons with each chat message they send.
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels.
-
-Here are some examples of how a **predefined message** suggested action shows up in Teams desktop and mobile clients in Teams.
+When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how a **predefined message** suggested action shows up in Teams desktop and mobile clients in Teams.
 
 # [Personal chat](#tab/pc)
 
@@ -41,15 +39,15 @@ Here are some examples of how a **predefined message** suggested action shows up
 
 Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message:
 
-- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies are shown only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a visible user message in that conversation.
+- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a user message in that chat.
 - For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
-- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without placing content in the compose box and without posting a user-visible message in the conversation.
+- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
 
 ## Implement suggested actions
 
 Suggested action types define how a user’s selection is handled. You can use suggested action buttons to present context-specific next steps to post a message to a chat. You can build the following suggested actions in your agent or app:
 
-- [**Send predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action. For example, options such as Show overdue tasks or Create a new work item let users send common responses without typing them.
+- [**Send predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action. For example, options such as *Show overdue tasks* or *Create a new work item* let users send common responses without typing them.
 - [**Share prefilled response**](#share-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
 - [**Trigger user action**](#trigger-user-action): Offers a user options that can start an action without posting a message using `Action.Submit` action. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
 
@@ -57,7 +55,7 @@ Implement each suggested action by first confirming the intended user outcome, t
 Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
 
 > [!NOTE]
-> They are not supported in messages with attachments. Test each supported scope for visibility and persistence.
+> Suggested actions aren't supported in messages with attachments. Test each supported scope for visibility and persistence.
 
 ### Send predefined message
 
