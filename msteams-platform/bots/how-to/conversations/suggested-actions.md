@@ -54,7 +54,10 @@ Here are some examples that show how to implement and experience suggested actio
 
 A predefined message gives users a ready-to-send response that they can select to continue a conversation. You can enable this behavior with the `imBack` action by adding suggested actions to activity.`suggestedActions`. Each action includes a title displayed to the user and a predefined value. When the user selects an action, its value is posted to the conversation as a visible user message and can be processed like other user input.
 
+<!--
+Bot FW reference
 To add the `imBack` suggested action to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+-->
 
 #### Teams SDK implementation
 
