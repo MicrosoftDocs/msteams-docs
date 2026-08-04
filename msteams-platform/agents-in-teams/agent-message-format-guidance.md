@@ -21,7 +21,9 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 ## Format Profiles
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-genui-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
+
+:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
+
 
 ### Plain Text
 
