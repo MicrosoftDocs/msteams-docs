@@ -213,6 +213,8 @@ This example demonstrates that when a message arrives, it creates a custom sugge
 - `MessageActivityInput` creates the prompt “Pick a suggestion:”, while `withSuggestedActions` attaches the action. The empty to array leaves recipient targeting unspecified for this response.
 - `await send(...)` sends the completed activity and waits for the operation to finish.
 
+The user receives a prompt with a *Notify me now* option. Selecting it submits the configured Teams chat-message payload for the app to process.
+
 ::: zone-end
 
 ::: zone pivot="python"
