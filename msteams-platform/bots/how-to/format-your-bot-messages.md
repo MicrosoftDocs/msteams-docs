@@ -30,15 +30,22 @@ Microsoft Teams supports the following formatting options:
 | `plain` | The text is treated as raw text with no formatting applied. |
 | `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
 | `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, math equations, images, at-mentions, and citations. |
-| `xml` | The text is simple XML markup. |
+| `xml` | The text uses a subset of HTML tags for formatting in rich cards. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
 
-For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag. For `xml`, Teams supports a subset of XML formatting tags.
+For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
-Your agent can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+The following limitations apply to formatting:
 
-### Enable extended Markdown
+- Text-only messages in `plain` format don't support table formatting.
+- Rich cards support formatting in the text property only, not in the title or subtitle properties.
+- For rich card payload properties, `markdown` and `extendedmarkdown` formatting aren't supported.
+- Older or unsupported clients can show unsupported constructs as plain text.
 
-To use extended Markdown formatting in agent messages, set the `textFormat` property to `"extendedmarkdown"` in your `Activity` object:
+After you format text content, ensure that your formatting works across all platforms supported by Teams.
+
+### Set message text format
+
+To set the text format, specify the `textFormat` property in your `Activity` object. The following example shows how to send a message with `extendedmarkdown` formatting:
 
 # [JSON](#tab/json)
 
@@ -60,7 +67,7 @@ var activity = new Activity
     TextFormat = "extendedmarkdown"
 };
 
-await app.SendActivity(conversationId, activity);
+await app.Send(conversationId, activity);
 ```
 
 # [TypeScript](#tab/typescript)
@@ -72,7 +79,7 @@ const activity = {
   textFormat: "extendedmarkdown"
 };
 
-await app.sendActivity(conversationId, activity);
+await app.send(conversationId, activity);
 ```
 
 # [Python](#tab/python)
@@ -84,19 +91,10 @@ activity = Activity(
     text_format="extendedmarkdown"
 )
 
-await app.send_activity(conversation_id, activity)
+await app.send(conversation_id, activity)
 ```
 
 ---
-
-The following limitations apply to formatting:
-
-- Text-only messages in `plain` format don't support table formatting.
-- Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- For rich card payload properties, `markdown` and `extendedmarkdown` formatting aren't supported.
-- Older or unsupported clients can show unsupported constructs as plain text.
-
-After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
 ## Standard Markdown support
 
@@ -207,11 +205,17 @@ Use task list syntax to display completed and pending items in your agent messag
 
 ## Streaming with extended Markdown
 
-[!INCLUDE [streaming-with-extended-markdown](includes/streaming-with-extended-markdown.md)]
+Extended Markdown content will render as it streams:
+
+- **Fenced code blocks**: Render only after the closing ` ``` ` fence is received on its own line
+- **Math equations**: Render after the closing `$` or `$$` delimiter is received
+- **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
+- **At-mentions**: Render when `<at>...</at>` tags are complete and valid
+- **Citations**: Render when `[#]` markers and corresponding `entities` are present in the Activity
+- **Tables**: Render when enough rows are received to form a valid table structure
+- **Task lists**: Render when list items and checkbox markers (`- [ ]`, `- [x]`) are complete
 
 For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
-
-After checking cross-platform support, ensure that support by individual platforms is also available.
 
 ## Support by individual platform
 
