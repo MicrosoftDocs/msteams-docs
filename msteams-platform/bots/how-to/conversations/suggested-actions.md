@@ -319,7 +319,7 @@ case "suggestedActions/submit":
 
 The agent or app can dispatch on `activity.name` and read the structured payload from `activity.value`. This matches how agents and apps handle other named invokes, such as `adaptiveCard/action` and `handoff/action`.
 
-### Teams SDK implementation
+#### Teams SDK implementation
 
 Use the following Teams SDK snippets for creating and handling `Action.Submit` suggested actions.
 
