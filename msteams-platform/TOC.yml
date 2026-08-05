@@ -885,8 +885,6 @@
       - name: Microsoft 365 plugins
         href: resources/m365-plugins/m365-plugins-overview.md
         displayName: OpenID Connect, Microsoft 365 Repository, Microsoft 365 integration, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
-      - name: Install Moodle LMS
-        href: resources/moodleInstructions.md
       - name: Moodle FAQ
         href: resources/faqs.md
     - name: Share to Teams

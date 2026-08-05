@@ -583,7 +583,7 @@
       },
       {
         "source_path": "msteams-platform/moodleinstructions.md",
-        "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
+        "redirect_url": "msteams-platform/resources/moodleInstructions.md"
       },
       {
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-controls.md",
