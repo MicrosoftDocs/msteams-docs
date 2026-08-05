@@ -106,7 +106,7 @@ If an app is configured with shared scopes along with a default install scope, h
 
 1. Select either from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
 
     The app opens in the scope that you selected.
 
