@@ -21,7 +21,13 @@ Agents can dynamically provide up to three suggested action buttons with each ch
 
 ## User experience
 
-When a user selects a button, it remains visible and accessible on rich cards. Suggested actions are supported in personal chats, group chats, and channels. Here are some examples of how a **predefined message** suggested action shows up for desktop and mobile clients in Teams.
+Suggested actions behavior varies by conversation scope:
+
+- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message; in a group chat or channel, the action remains associated with the original message. Selecting the button posts the configured value as a visible user message in that conversation.
+- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured content in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
+- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
+
+Here are some examples of how a **predefined message** suggested action shows up for desktop and mobile clients in Teams.
 
 # [Personal chat](#tab/pc)
 
@@ -37,23 +43,17 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ---
 
-Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
-
-- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a user message in that chat.
-- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
-- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
-
 ## Implement suggested actions
 
-Suggested action types define how a user’s selection is handled. You can use suggested action buttons to present context-specific next steps to post a message to a chat. You can build the following suggested actions in your agent or app:
+Suggested action types determine how Teams handles a user’s selection. Choose one of the following options based on whether the selection should:
 
 - [**Send predefined message**](#send-predefined-message): Lets users quickly send a ready-made response in the conversation using the `imBack` action. For example, options such as *Show overdue tasks* or *Create a new work item* let users send common responses without typing them.
 - [**Share prefilled response**](#share-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
-- [**Trigger user action**](#trigger-user-action): Offers a user options that can start an action without posting a message using `Action.Submit` action. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
+- [**Trigger user action**](#trigger-user-action): Offers users options that can start an action without posting a message by using `Action.Submit`. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
 
 Before you begin, confirm the target conversation scope and client support for the selected action type. Suggested actions support up to three buttons per agent message and are not supported in messages with attachments. The sections that follow explain the implementation options and payload handling for each action type.
 
-Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
+The following examples demonstrate `imBack`, `Action.Compose`, and `Action.Submit`.
 
 ### Send predefined message
 
@@ -89,7 +89,7 @@ This snippet displays follow-up prompts as suggested action buttons. For each pr
 - `type`: determines the action type. `imBack` means the clicked suggestion is sent back to the agent as a user message.
 - `to: [recipientId]`: targets the suggested actions to the intended recipient.
 
-`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated prompt into an `imBack` action. Each button displays the prompt as its title and sends the same prompt back as its `value`, allowing the agent or app to continue the conversation from the selected option.
+`finalMarker.withSuggestedActions()` adds suggested action buttons to the `finalMarker` message. The `to: [recipientId]` value targets the actions to a specific user, while `followUps.map()` converts each generated prompt into an `imBack` action.
 
 ::: zone-end
 
@@ -106,7 +106,7 @@ This code snippet example adds the suggested actions as buttons to the Teams rep
 - `reply.with_suggested_actions()` adds suggested action buttons to the agent's response.
 - `SuggestedActions()` wraps the list of follow-up buttons in the format expected by Microsoft Teams.
 - `to=[ctx.activity.from_.id]` targets the suggested actions to the user who sent the original message.
-- `actions=follow_ups` uses the two `CardAction` objects generated by the first code snippet example.
+- `actions=[CardAction(...)]` creates the list of `imBack` actions supplied to `SuggestedActions`.
 
 ::: zone-end
 
@@ -157,7 +157,7 @@ This example shows how to attach `suggestedActions` to the agent message and set
 
 This suggested action places prewritten content in the compose box for the user to review, edit, and send. You can enable this experience with `Action.Compose` by returning an action that contains a Teams `chatMessage` payload. The payload can include formatted text, @mentions, tags, emojis, GIFs, and other supported rich content.
 
-Before using `Action.Compose`, verify that the conversation channel and host support it; unsupported hosts display an error.
+Before using `Action.Compose`, verify that the target conversation scope, client, and host support it; unsupported environments display an error.
 
 ::: zone pivot="csharp"
 
@@ -182,15 +182,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-This example show how when each time a message is received, the handler builds a custom card action and sends it back to the user as a suggested action.
-
-- `teams.OnMessage` registers a callback that runs whenever the app receives a message. The callback is asynchronous because it sends a response using `await`.
-- `CardActionType("Action.Compose")` supplies the raw action type string.
-- `Title` sets the visible label to *Notify me now*. `Value` defines the data submitted when the user selects it, including a text chat message whose content is *notify*.
-- `MessageActivity` creates the prompt *Pick a suggestion:*, and `WithSuggestedActions` attaches the action so it appears as a selectable option.
-- The supplied `cancellationToken` lets the send operation stop cleanly if the request is cancelled.
-
-The user sees a prompt with a *Notify me now* option. Selecting it submits the configured Teams chat-message payload for the app to process.
+The asynchronous `teams.OnMessage` handler creates an `Action.Compose` button labeled *Notify me now* and attaches it to the *Pick a suggestion* prompt. Its Teams chat-message payload contains the plain-text value notify, which is submitted when the user selects the button. The raw action-type string is supported directly, and the cancellation token allows the send operation to stop cleanly if the request is canceled.
 
 ::: zone-end
 
@@ -217,15 +209,7 @@ app.on("message", async ({ send }) => {
 });
 ```
 
-This example demonstrates that when a message arrives, it creates a custom suggested action and sends a prompt containing that action back to the user.
-
-- `app.on("message", ...)` registers a callback that runs whenever the app receives a message. The callback is asynchronous because it waits for the response to be sent.
-- The action object defines an `Action.Compose` button titled “Notify me now.”
-- The `value` property describes a Teams chat message with plain-text content set to “notify.” This payload is submitted when the user selects the action.
-- `MessageActivityInput` creates the prompt “Pick a suggestion:”, while `withSuggestedActions` attaches the action. The empty to array leaves recipient targeting unspecified for this response.
-- `await send(...)` sends the completed activity and waits for the operation to finish.
-
-The user receives a prompt with a *Notify me now* option. Selecting it submits the configured Teams chat-message payload for the app to process.
+The handler creates an `Action.Compose` button labeled *Notify me now* and attaches it to the *Pick a suggestion* prompt. The button carries a Teams chat-message payload with plain-text content set to notify; selecting it submits that payload for the app to process.
 
 ::: zone-end
 
@@ -256,12 +240,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     )
 ```
 
-This examples show how to register a message handler that sends a custom suggested action to the user:
-
-- `CardAction` creates an `Action.Compose` option titled *Notify me now*.
-- The `value` dictionary defines a Teams chat message with plain-text content set to “notify.” This data is submitted when the user selects the action.
-- `MessageActivityInput` creates the prompt `Pick a suggestion:`, and `with_suggested_actions` attaches the custom action. The empty to list leaves recipient targeting unspecified for the response.
-- `await ctx.send(...)` sends the completed activity and waits for the operation to finish.
+The message handler creates an `Action.Compose` button labeled *Notify me now* and attaches it to the *Pick a suggestion* prompt. Its Teams chat-message payload contains the plain-text value notify, which is submitted when the user selects the button. The empty to list leaves recipient targeting unspecified.
 
 ::: zone-end
 
@@ -379,11 +358,9 @@ async def handle_suggested_action_submit(ctx: ActivityContext[SuggestedActionSub
 
 ## Best practices and design guidance
 
-Your agent or app should offer context-specific suggestions to the user, rather than generic or fixed ones. Keep actions short, specific, and task-oriented. Prefer clear, one-step labels that describe the outcome, such as *Create task* instead of *Submit*. Repeat an action only when it remains relevant.
+Offer context-specific, task-oriented actions that describe a clear outcome, such as *Create task* instead of *Submit*. Show an action only while it remains relevant, and do not duplicate actions already available in the response or card unless one is the primary next step.
 
 Use suggested actions when an agent needs explicit user approval before taking a consequential or visibility-changing step, such as reposting a private targeted message to a public channel. Present clear choices (such as Allow, Share, Edit, or Dismiss) and proceed only after the user confirms, keeping the approval interaction private until then.
-
-Avoid repeating actions that are already available in the response or card unless it is the primary next step for the user.
 
 ## Code sample
 
