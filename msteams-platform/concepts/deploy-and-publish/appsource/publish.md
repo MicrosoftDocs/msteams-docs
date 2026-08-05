@@ -62,7 +62,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
   * Recommendations to fix the reported issues with links to guidance docs.
 
- After addressing the reported issues, submit an updated app package for revalidation. The validation process continues until all required issues are resolved and the app meets Teams Store requirements.Allow at least one business day for the app to be available in the Teams Store.
+     After addressing the reported issues, submit an updated app package for revalidation. The validation process continues until all required issues are resolved and the app meets Teams Store requirements.Allow at least one business day for the app to be available in the Teams Store.
 
 * **Analyze app usage**
 
