@@ -7,7 +7,14 @@
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
-
+	<entry>
+		<title type="html"><![CDATA[Announcement: Bring private, contextual interactions with agents into group conversations with Targeted messaging ]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14528</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed"/>
+		<updated>2025-12-17T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Transcription Graph API Controls is now GA!]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14522</id>
