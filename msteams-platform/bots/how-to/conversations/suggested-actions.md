@@ -37,7 +37,7 @@ When a user selects a button, it remains visible and accessible on rich cards. S
 
 ---
 
-Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message:
+Suggested actions behavior varies by conversation scope. Selected actions on rich cards remain visible in group chats and channels, while personal chats show smart replies only from the latest message.
 
 - For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message. In a group chat or channel, the action remains saved with the message. Selecting it posts the configured value as a user message in that chat.
 - For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured chat message in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
@@ -51,11 +51,9 @@ Suggested action types define how a user’s selection is handled. You can use s
 - [**Share prefilled response**](#share-prefilled-response): Prepares a rich, prewritten content in the compose box for users to review, edit, and send using the `Action.Compose` action. For example, a scheduling assistant can prepare a follow-up message with an @mention and proposed next steps, allowing the user to adjust the content before posting it.
 - [**Trigger user action**](#trigger-user-action): Offers a user options that can start an action without posting a message using `Action.Submit` action. For example, an approval agent can present *Approve* and *Reject* options and process the selected decision on the server.
 
-Implement each suggested action by first confirming the intended user outcome, then validating its behavior in the supported conversation scopes, and finally adding the corresponding payload and handler.
-Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
+Before you begin, confirm the target conversation scope and client support for the selected action type. Suggested actions support up to three buttons per agent message and are not supported in messages with attachments. The sections that follow explain the implementation options and payload handling for each action type.
 
-> [!NOTE]
-> Suggested actions aren't supported in messages with attachments. Test each supported scope for visibility and persistence.
+Here are some examples that show how to implement and experience suggested actions using `imBack`, `Action.Compose`, and `Action.Submit`.
 
 ### Send predefined message
 
