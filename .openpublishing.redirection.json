@@ -582,10 +582,6 @@
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/design/designing-apps-in-meetings"
       },
       {
-        "source_path": "msteams-platform/moodleinstructions.md",
-        "redirect_url": "msteams-platform/resources/moodleInstructions.md"
-      },
-      {
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-controls.md",
         "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-ui-templates"
       },
@@ -1594,6 +1590,11 @@
       {
         "source_path": "msteams-platform/resources/teams-updates.md",
         "redirect_url": "/microsoftteams/platform/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/moodleinstructions.md",
+        "redirect_url": "/microsoftteams/platform/resources/moodleInstructions",
         "redirect_document_id": false
       }
     ]
