@@ -7,6 +7,23 @@
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+
+	<entry>
+		<title type="html"><![CDATA[Transcription Graph API Controls is now GA!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14522</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed"/>
+		<updated>2025-12-17T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Announcing the launch of smart agent reactions for clearer collaboration!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14486</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed"/>
+		<updated>2025-12-17T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Copilot AI Insights (meeting recap) API is now generally available]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13751</id>
