@@ -261,7 +261,7 @@ The value object must follow the [`chatMessage`](/graph/api/resources/chatmessag
 
 ### Trigger user action
 
-This action lets a user select an option to trigger an action without posting a user-visible chat message. Use `Action.Submit` for adding suggested action buttons that trigger server-side logic. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`. Handle that invoke in the agent or app, validate the payload, run the action, and return the expected invoke response.
+This action lets a user select an option to trigger an action without posting a user-visible chat message. Use `Action.Submit` for adding suggested action buttons that trigger server-side logic. Set `value` to a structured payload that identifies the action and provides any required data. When the user selects the button, Teams sends an invoke activity named `suggestedActions/submit`, with the payload in `activity.value`.
 
 Payload (outgoing from agent or app):
 
