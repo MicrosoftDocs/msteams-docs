@@ -8,6 +8,9 @@ ms.date: 06/29/2022
 
 # Moodle FAQ
 
+>[!NOTE]
+>Moodle documentation is intended for administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
+
 Get answers to some of your queries when using Moodle LMS.
 
 <br>

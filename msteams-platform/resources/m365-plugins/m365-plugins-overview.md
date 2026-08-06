@@ -10,6 +10,9 @@ ms.date: 12/21/2022
 
 Microsoft 365 plugins provide integration between Moodle website and Teams. These plugins make it easy for user to schedule, deliver, and collaborate the course content. The plugins can be used independently, or in partnership as per the requirement.
 
+>[!NOTE]
+>Moodle documentation is intended for administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
+
 ## Plugin list and labels
 
 The following table lists the plugins and GitHub labels to be used based on the requirements.
@@ -25,16 +28,16 @@ The following table lists the plugins and GitHub labels to be used based on the 
 |[**Teams Meeting**](#teams-meetings) | Enable Atto editor in Moodle to create Teams meeting links |atto_teamsmeeting |
 |[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle | Filter_oembed| -->
 
-|Plugins to install |Description |GitHub label(s)|
+|Plugins to install|Description|GitHub label(s)|
 |-----|-----|----|
 |[**OpenID Connect**](#openid-connect)|Enables SSO for users who work using both Moodle and Teams.|auth_oidc|
 |[**Microsoft 365 integration**](#microsoft-365-integration)|Create Teams instances for each course in Moodle, and sync faculty as owners, and students as team members.|local_o365|
-|[**Microsoft 365 Repository**](#microsoft-365-repository) |Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.| repository_office 365|
-|[**Teams Meeting**](#teams-meetings) |Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting |
-|[**Teams Theme**](#microsoft-365-teams-theme)| Remove Moodle blocks and extra chrome within the Moodle iFrames for Teams, which applies while mapping courses to Teams instances.| themeboost_o365teams |
-|[**OneNote**](#onenote-integration)| Enable OneNote to be used for assignment, submission, and feedback.|local_onenote, assignsubmission_onenote, and assignfeedback_onenote </br>|  
-|[**Microsoft Block**](#microsoft-block) | Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|block_microsoft |
-|[**oEmbed Filter**](#oembed-filter) | Enable video links in Moodle.|Filter_oembed|
+|[**Microsoft 365 Repository**](#microsoft-365-repository)|Supports Microsoft 365 OneDrive content for file repositories to reduce storage needs in Moodle.|repository_office 365|
+|[**Teams Meeting**](#teams-meetings)|Enables Atto editor in Moodle to create Teams meeting links.|atto_teamsmeeting|
+|[**Teams Theme**](#microsoft-365-teams-theme)|Remove Moodle blocks and extra chrome within the Moodle iFrames for Teams, which applies while mapping courses to Teams instances.|themeboost_o365teams|
+|[**OneNote**](#onenote-integration)|Enable OneNote to be used for assignment, submission, and feedback.|local_onenote, assignsubmission_onenote, and assignfeedback_onenote </br>|  
+|[**Microsoft Block**](#microsoft-block)|Enables Microsoft 365 quick access blocks within Moodle with links to Microsoft 365 collaboration services and install links for Microsoft Office.|block_microsoft|
+|[**oEmbed Filter**](#oembed-filter)|Enable video links in Moodle.|Filter_oembed|
 
 Moodle LMS supports the following plugins:
 

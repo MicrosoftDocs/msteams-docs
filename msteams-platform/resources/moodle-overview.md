@@ -25,7 +25,7 @@ This content is modified as per the requirement.-->
 :::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart":::-->
 
 >[!NOTE]
->This documentation is intended for Moodle administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
+>Moodle documentation is intended for administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
 
 ## Moodle LMS accessibility
 
