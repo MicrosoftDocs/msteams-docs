@@ -4,7 +4,7 @@ description: Learn final steps before you submit your Teams app to be listed on 
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
-ms.date: 07/31/2026
+ms.date: 08/05/2026
 ---
 
 # Prepare your Teams Store submission
