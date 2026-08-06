@@ -3,7 +3,7 @@ title: Moodle Frequently asked questions
 description: In this article, check FAQS and answers on Moodle LMS with Microsoft Teams, including synchronization issues, SSO, user sync, and troubleshoot sign-in issues.
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 06/29/2022
+ms.date: 08/06/2026
 ---
 
 # Moodle FAQ
