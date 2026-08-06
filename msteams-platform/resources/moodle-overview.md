@@ -3,7 +3,7 @@ title: Introduction to Moodle LMS
 description: Learn how to integrate Moodle LMS with Teams for audio or video calls, chats, course management, insights, and ensure accessibility with mConnect.
 ms.topic: overview
 ms.localizationpriority: high
-ms.date: 11/26/2024
+ms.date: 07/08/2026
 ---
 
 # Moodle learning management system
@@ -23,6 +23,9 @@ This content is modified as per the requirement.-->
   Query on this image about what is meant by section
 
 :::image type="content" source="../assets/images/MoodleInstructions/flow-chart.png" alt-text="Flow chart":::-->
+
+>[!NOTE]
+>This documentation is intended for Moodle administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
 
 ## Moodle LMS accessibility
 
@@ -54,10 +57,10 @@ Microsoft Store provides all the certified partner apps for Moodle, which valida
 
 The following table shows the advantages of using partner apps:
 
-|Advantages| Description|
+|Advantages|Description|
 |----------|------------|
-|Extend Teams to fit your needs| Install and engage with apps designed by experts for improved student engagement and collaboration.|
-|Enable single sign-on (SSO)| Enable SSO for users of Teams and Moodle to access Moodle courses, data, and activities within Teams.|
+|Extend Teams to fit your needs|Install and engage with apps designed by experts for improved student engagement and collaboration.|
+|Enable single sign-on (SSO)|Enable SSO for users of Teams and Moodle to access Moodle courses, data, and activities within Teams.|
 
 ## mConnect
 
