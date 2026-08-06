@@ -3,10 +3,13 @@ title: Moodle Frequently asked questions
 description: In this article, check FAQS and answers on Moodle LMS with Microsoft Teams, including synchronization issues, SSO, user sync, and troubleshoot sign-in issues.
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 06/29/2022
+ms.date: 08/06/2026
 ---
 
 # Moodle FAQ
+
+>[!NOTE]
+>Moodle documentation is intended for administrators. For detailed setup, configuration, and management guidance, see the [Installing the Moodle integration with Microsoft Teams](/microsoftteams/install-moodle-integration) guide.
 
 Get answers to some of your queries when using Moodle LMS.
 
