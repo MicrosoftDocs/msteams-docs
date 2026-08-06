@@ -1594,7 +1594,7 @@
       },
       {
         "source_path": "msteams-platform/moodleinstructions.md",
-        "redirect_url": "/microsoftteams/platform/resources/moodleInstructions",
+        "redirect_url": "/microsoftteams/install-moodle-integration",
         "redirect_document_id": false
       }
     ]
