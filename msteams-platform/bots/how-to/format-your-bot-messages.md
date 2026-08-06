@@ -27,23 +27,78 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| `plain` | The text must be treated as raw text with no formatting applied.|
-| `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
-| `xml` | The text is simple XML markup. |
+| `plain` | The text is treated as raw text with no formatting applied. |
+| `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
+| `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, math equations, images, at-mentions, and citations. |
+| `xml` | The text uses a subset of HTML tags for formatting in rich cards. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
 
-Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your agent can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
 The following limitations apply to formatting:
 
-- Text-only messages don't support table formatting.
+- Text-only messages in `plain` format don't support table formatting.
 - Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- Rich cards don't support Markdown or table formatting.
+- For rich card payload properties, `markdown` and `extendedmarkdown` formatting aren't supported.
+- Older or unsupported clients can show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
-## Cross-platform support
+### Set message text format
 
-Some styles aren't supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
+To set the text format, specify the `textFormat` property in your `Activity` object. The following example shows how to send a message with `extendedmarkdown` formatting:
+
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "textFormat": "extendedmarkdown",
+  "text": "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending"
+}
+```
+
+# [C#](#tab/csharp)
+
+```csharp
+var activity = new Activity
+{
+    Type = ActivityTypes.Message,
+    Text = "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+    TextFormat = "extendedmarkdown"
+};
+
+await app.Send(conversationId, activity);
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+const activity = {
+  type: "message",
+  text: "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+  textFormat: "extendedmarkdown"
+};
+
+await app.send(conversationId, activity);
+```
+
+# [Python](#tab/python)
+
+```python
+activity = Activity(
+    type=ActivityTypes.message,
+    text="### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+    text_format="extendedmarkdown"
+)
+
+await app.send(conversation_id, activity)
+```
+
+---
+
+## Standard Markdown support
+
+Some styles aren't supported across all platforms. The following table provides a list of standard Markdown styles and which of these styles are supported in text-only messages and rich cards:
 
 | Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |
@@ -59,7 +114,108 @@ Some styles aren't supported across all platforms. The following table provides 
 | Hyperlink                 | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ |
 
-After checking cross-platform support, ensure that support by individual platforms is also available.
+## Extended Markdown features
+
+When using `textFormat: "extendedmarkdown"`, the following features are available in text-only messages:
+
+| Feature | Syntax | Description |
+| --- | --- | --- |
+| **Fenced code blocks** | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences |
+| **Math equations** | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$` | LaTeX/KaTeX math notation rendered inline or as a block |
+| **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
+| **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
+| **Citations** | `[#]` in message text + `entities` array in Activity | Inline citation markers with reference details. For more information, see [citations](bot-messages-ai-generated-content.md#citations). |
+| **Tables** | Pipe-delimited rows with separator line | Structured tabular data with optional column alignment |
+| **Task lists** | `- [ ] item` / `- [x] item` | Checklist-style items; checkboxes are read-only |
+
+### At-mention support
+
+Mention users and groups in your agent messages. At-mentions work with both standard Markdown and extended Markdown:
+
+```markdown
+Hello <at>Jane Smith</at>, please review this.
+
+Notifying team: <at>Engineering Team</at>
+```
+
+### Fenced code blocks
+
+Use triple backticks with a language identifier to display syntax-highlighted code in your agent messages.
+
+````markdown
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+````
+
+### Math equations
+
+Use LaTeX/KaTeX syntax to render mathematical notation. Use single dollar signs for inline equations and double dollar signs for block equations.
+
+```markdown
+Inline math: $E = mc^2$
+
+Block math:
+$$
+\int_0^\infty f(x)dx
+$$
+```
+
+### Images
+
+Use standard Markdown image syntax to render images in your agent messages.
+
+```markdown
+![Build status](https://example.com/build-status.png)
+```
+
+### Citations
+
+Cite sources in your agent messages using `[#]` notation in the message text and providing citation details in the Activity `entities` array. For more information on how to add citations, see [citations](bot-messages-ai-generated-content.md#citations).
+
+### Tables
+
+Use GitHub Flavored Markdown (GFM) table syntax to present structured data. Tables support column alignment using colons in the separator row.
+
+```markdown
+| Feature | Status | Priority |
+|:--------|:------:|----------:|
+| Tables  | Done   | High      |
+| Math    | Done   | High      |
+```
+
+In this example, the first column is left-aligned, the second is centered, and the third is right-aligned.
+
+### Task lists
+
+Use task list syntax to display completed and pending items in your agent messages.
+
+```markdown
+- [x] Checkout code
+- [x] Install dependencies
+- [x] Run unit tests
+- [ ] Deploy to production
+```
+
+> [!NOTE]
+> Task list checkboxes are read-only. Users can't interact with them to change their state.
+
+## Streaming with extended Markdown
+
+Extended Markdown content will render as it streams:
+
+- **Fenced code blocks**: Render only after the closing ` ``` ` fence is received on its own line
+- **Math equations**: Render after the closing `$` or `$$` delimiter is received
+- **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
+- **At-mentions**: Render when `<at>...</at>` tags are complete and valid
+- **Citations**: Render when `[#]` markers and corresponding `entities` are present in the Activity
+- **Tables**: Render when enough rows are received to form a valid table structure
+- **Task lists**: Render when list items and checkbox markers (`- [ ]`, `- [x]`) are complete
+
+For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
 
 ## Support by individual platform
 
