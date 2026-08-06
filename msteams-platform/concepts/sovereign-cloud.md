@@ -40,7 +40,61 @@ To deploy an app in a sovereign cloud, you need:
 
 ## Configure your app for a sovereign cloud
 
-For SDK configuration steps, code samples, and troubleshooting, see [Sovereign cloud configuration](/microsoftteams/platform/teams-sdk/essentials/app-configuration/sovereign-cloud?pivots=csharp)
+The Teams SDK handles sovereign cloud configuration automatically when you specify your cloud environment. Add the `CLOUD` environment variable to your existing app authentication configuration.
+
+Valid values: `Public`, `USGov`, `USGovDoD`, `China`
+
+### Configuration using appsettings.json
+
+```json
+{
+  "Teams": {
+    "ClientId": "your-client-id",
+    "ClientSecret": "your-client-secret",
+    "TenantId": "your-tenant-id",
+    "Cloud": "USGov"
+  }
+}
+```
+
+### Programmatic configuration
+
+```csharp
+var app = new App(new AppOptions
+{
+    Cloud = CloudEnvironment.USGov,
+    Credentials = new ClientCredentials("client-id", "client-secret")
+});
+```
+
+Available cloud presets: `CloudEnvironment.Public`, `CloudEnvironment.USGov`, `CloudEnvironment.USGovDoD`, `CloudEnvironment.China`
+
+### Per-endpoint overrides
+
+For scenarios that require customization of individual endpoints, such as China single-tenant bots that need a tenant-specific login URL, you can override specific properties.
+
+```json
+{
+  "Teams": {
+    "Cloud": "China",
+    "LoginTenant": "your-tenant-id"
+  }
+}
+```
+
+Available override properties: `LoginEndpoint`, `LoginTenant`, `BotScope`, `TokenServiceUrl`, `OpenIdMetadataUrl`, `TokenIssuer`, `GraphScope`
+
+### What the SDK configures automatically
+
+When you set a cloud environment, the SDK automatically uses the correct endpoints for:
+
+- **Login authority**: Where tokens are acquired (for example, `login.microsoftonline.us` for GCC-High).
+- **Bot token scope**: The OAuth scope for bot-to-service communication.
+- **Token service URL**: Where user OAuth tokens are managed.
+- **JWT validation**: The signing keys and issuers used to verify inbound activity tokens.
+- **OpenID metadata**: The discovery endpoint for token validation configuration.
+
+You don't need to configure these endpoints individually.
 
 ## Teams operated by 21Vianet
 
@@ -51,11 +105,11 @@ Microsoft 365 operated by 21Vianet is tailored specifically for China and hosts 
 The following table details the apps and its capabilities supported for Teams operated by 21Vianet:
 
 | &nbsp; | Teams operated by 21Vianet |
-|-------------|---|
+| ------------- | --- |
 | **Apps** | &nbsp; |
 | Apps built by Microsoft | ✔️ |
 | Third-party apps | ❌ |
-| Custom apps built for your org (LOB apps) distributed and used in specific organization| ✔️ |
+| Custom apps built for your org (LOB apps) distributed and used in specific organization | ✔️ |
 | Upload a custom app | ❌ |
 | **App capabilities** | &nbsp; |
 | Tabs | ✔️ |
