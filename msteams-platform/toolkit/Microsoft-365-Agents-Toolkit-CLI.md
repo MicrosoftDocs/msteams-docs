@@ -5,7 +5,7 @@ description: Learn about Microsoft 365 Agents Toolkit Command Line Interface for
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/16/2025
+ms.date: 08/05/2026
 ---
 
 # Microsoft 365 Agents Toolkit command line interface
@@ -22,6 +22,9 @@ Whether you prefer keyboard-centric developer operations, or you are automating 
 - **Resource Provisioning and Deployment**: Provision necessary cloud resources and deploy your application to Azure.
 - **Validation, Packaging, and Publishing**: Validate, package, and publish your agent or application using CLI commands.
 - **Environment Management**: Manage multiple environments, Microsoft Entra apps, and Teams app registration.
+
+> [!NOTE]
+> [Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is in preview and provides a workflow focused on Microsoft 365 Copilot declarative agents, built on Microsoft 365 Agents Toolkit capabilities. It brings creation, validation, packaging, provisioning, and sharing into one CLI lifecycle, including publishing to the organization catalog.
 
 ## Get started
 

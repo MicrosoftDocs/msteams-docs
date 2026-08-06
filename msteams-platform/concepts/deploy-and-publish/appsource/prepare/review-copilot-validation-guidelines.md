@@ -6,7 +6,7 @@ author: v-preethah
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 05/11/2026
+ms.date: 08/05/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -23,6 +23,9 @@ These guidelines are applicable for Independent Software Vendors (ISV) who want 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
 Apps must be consistent with responsible [AI checks](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
+
+> [!TIP]
+> [Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is in preview and provides fast schema validation for a Microsoft 365 Copilot declarative agent, with optional deep semantic checks for manifest issues, external references, and API plugin schemas. Use it to identify issues early; it complements rather than replaces these policy and experience requirements.
 
 :::row:::
    :::column span="":::
