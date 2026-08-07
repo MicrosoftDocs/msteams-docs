@@ -164,7 +164,6 @@ Before using `Action.Compose`, verify that the target conversation scope, client
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
-    // ActionType takes any raw type string, so Action.Compose needs no workaround.
     var action = new CardAction(new CardActionType("Action.Compose"))
     {
         Title = "Notify me now",
@@ -190,7 +189,7 @@ The asynchronous `teams.OnMessage` handler creates an `Action.Compose` button la
 
 ```typescript
 app.on("message", async ({ send }) => {
-  // The SDK's CardActionType union does not model Action.Compose, hence the cast.
+
   const action = {
     type: "Action.Compose",
     title: "Notify me now",
