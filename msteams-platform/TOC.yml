@@ -264,7 +264,7 @@
         - name: Bots with tabs
           href: resources/bot-v3/bots-with-tabs.md
         - name: Format bot messages
-          href: resources/bot-v3/bots-text-formats.md  
+          href: resources/bot-v3/bots-text-formats.md
         - name: Test a bot
           href: resources/bot-v3/bots-test.md
       - name: Message extensions SDK (v3)
@@ -565,6 +565,9 @@
       - name: Format the bot messages
         href: bots/how-to/format-your-bot-messages.md
         displayName: cross-platform support
+      - name: Format the bot messages
+        href: agents-in-teams/agent-message-format-guidance.md
+        displayName: markdown, text, widget, mcp-ui, adaptive, card, choose, best practice
       - name: Send and receive files
         href: bots/how-to/bots-filesv4.md  
         displayName: receive files using bot
