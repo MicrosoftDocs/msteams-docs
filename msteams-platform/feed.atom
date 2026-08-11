@@ -12,7 +12,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14528</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed"/>
 		<updated>2026-08-03T06:37:01+05:30</updated>
-		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here
+		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -20,7 +20,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14522</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed"/>
 		<updated>2026-07-31T04:31:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here
+		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -28,7 +28,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14486</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed"/>
 		<updated>2026-07-20T09:32:01+05:30</updated>
-		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here
+		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
