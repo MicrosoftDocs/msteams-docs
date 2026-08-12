@@ -42,9 +42,11 @@ Here are some examples of how a **predefined message** suggested action shows up
 
 ---
 
-- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message; in a group chat or channel, the action remains associated with the original message. Selecting the button posts the configured value as a visible user message in that conversation.
-- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured content in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
-- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
+Suggested action button behaviors: The selected button behavior determines what happens when a user chooses an action. It does not affect where the button is placed or how it is rendered.
+
+- **Predefined message**: Selecting the button posts the configured value as a visible user message in the conversation.
+- **Prefilled response**: Selecting the button places the configured content in the conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
+- **Trigger a user action**: Selecting the button sends a structured invoke payload to the agent or app without posting a user-visible message.
 
 ## Implement suggested actions
 
