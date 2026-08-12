@@ -1,15 +1,15 @@
 ---
 title: Register MCP Servers as Agent Connectors for Microsoft 365
-description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
+description: Register a remote MCP server as an agent connector by using Work IQ Dev Tools or editing the Microsoft 365 App Manifest.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 06/19/2026
+ms.date: 08/12/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
 
 # Register MCP servers as agent connectors for Microsoft 365
 
-Agents in Microsoft 365<!--, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams,--> can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
+Agents in Microsoft 365<!--, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams,--> can connect to external systems through *agent connectors* declared in the App Manifest. This article shows you how to register your remote Model Context Protocol (MCP) server as an agent connector, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 <!--
 > [!NOTE]
 >
@@ -32,12 +32,54 @@ Before you begin, ensure you have:
 - A test tenant to validate your MCP integration
 - A working MCP server with a secure public endpoint
 - Authentication credentials ([OAuth configuration](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal) or [API key](../messaging-extensions/api-based-secret-service-auth.md#api-key-authentication))
+- [Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) installed if you use the recommended preview workflow
 
-## Add the agent connector to your manifest
+## Choose an authoring method
 
-First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors) array at the root level of your app manifest.
+You can register the connector by using either of these methods:
 
-1. Open your Microsoft 365 app manifest (`manifest.json`) file.
+- **Work IQ Dev Tools (recommended preview workflow)**: Use WIQD for a guided command-line workflow that creates and manages the standalone plugin project containing your agent connector. WIQD is in preview.
+- **Manual App Manifest configuration**: Edit the App Manifest directly by using the detailed schema instructions in this article. Use this path for advanced configuration, reference, and troubleshooting during preview.
+
+Both methods register an existing remote MCP server. WIQD doesn't create or host the MCP server.
+
+## Create the agent connector with WIQD
+
+Use WIQD to create a standalone plugin project and add the remote MCP agent connector:
+
+1. Create an empty standalone plugin project:
+
+   ```console
+   wiqd plugin create
+   ```
+
+1. From the plugin project, add a remote MCP agent connector:
+
+   ```console
+   wiqd plugin add connector
+   ```
+
+1. Review the generated App Manifest. Use [Configure the remote MCP server endpoint](#configure-the-remote-mcp-server-endpoint), [Configure authentication](#configure-authentication), and [Define tool discovery](#define-tool-discovery) to review or complete the connector configuration.
+
+1. Check the plugin manifest for schema errors before you build the package:
+
+   ```console
+   wiqd plugin validate
+   ```
+
+1. Validate the built package with [Microsoft 365 Agents Toolkit validation rules](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-app-package-using-validation-rules) before provisioning:
+
+   ```console
+   wiqd plugin validate --mode deep
+   ```
+
+WIQD guides the command-line workflow and uses Microsoft 365 Agents Toolkit for lifecycle operations. Continue to the manual configuration sections for the schema details that WIQD validation reports or that your connector requires.
+
+## Configure the agent connector in the App Manifest manually
+
+For the manual path, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors) array at the root level of your App Manifest. These schema details also help you review and troubleshoot a manifest generated through WIQD.
+
+1. Open your Microsoft 365 App Manifest (`manifest.json`) file.
 
 2. Locate or create the root-level `agentConnectors` array.
 
@@ -283,33 +325,49 @@ This configuration is sufficient for Microsoft 365 agents<!--, including the Cha
 
 ## Validate your configuration
 
-Before deploying your agent or app, verify that your manifest and MCP server are correctly configured.
+Before deploying your plugin, validate both its App Manifest and its live MCP integration.
 
-1. Use the [Microsoft 365 app package validation](https://dev.teams.microsoft.com/tools/store-validation) tool in Developer Portal to check your manifest for errors.
+### Validate the plugin and App Manifest
 
-2. Verify if your MCP server responds correctly to handshake messages by testing the connection manually.
+If you use WIQD, run `wiqd plugin validate` for fast offline static validation. Run `wiqd plugin validate --mode deep` to build the package and delegate semantic validation to Microsoft 365 Agents Toolkit.
 
-3. Confirm that your `tools/list` endpoint returns schema-compliant tool definitions:
+For the manual path, use the [Microsoft 365 app package validation](https://dev.teams.microsoft.com/tools/store-validation) tool in Developer Portal to check your manifest for errors.
+
+Static validation checks the manifests in the plugin project against the shipping schema. Deep validation builds the package and applies [Microsoft 365 Agents Toolkit validation rules](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-app-package-using-validation-rules). Neither mode validates the live MCP server, credentials, protocol behavior, or tool execution.
+
+### Validate the MCP server at runtime
+
+Complete these checks regardless of which authoring method you use:
+
+1. Verify if your MCP server responds correctly to handshake messages by testing the connection manually.
+
+1. Confirm that your `tools/list` endpoint returns schema-compliant tool definitions:
 
    - Each tool has a unique name and description
    - Input schemas are valid JSON Schema
    - Required and optional parameters are clearly defined
 
-4. Test your authorization configuration:
+1. Test your authorization configuration:
 
    - Verify the `referenceId` points to a valid secret
    - Confirm tokens or keys are correctly retrieved
    - Test token refresh if using OAuth
 
-5. Ensure your endpoint supports TLS 1.2 or higher.
+1. Ensure your endpoint supports TLS 1.2 or higher.
 
-6. Verify error messages and retry semantics for failed tool calls.
+1. Verify error messages and retry semantics for failed tool calls.
 
 ## Test with Microsoft 365 agents
 
 Validate your integration by testing with actual Microsoft 365 agents.
 
-1. Deploy your agent or app to a test environment.
+1. Provision or deploy your plugin to a test environment. If you use WIQD, sign in with `wiqd auth login` if needed, and then run:
+
+   ```console
+   wiqd plugin provision
+   ```
+
+   Provisioning doesn't replace the runtime checks in the preceding section.
 
 2. Open a <!--[Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another -->Microsoft 365 agent that supports MCP.
 
@@ -361,4 +419,6 @@ If your MCP server isn't working as expected, check these common issues:
 
 ## Next steps
 
-When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
+When the plugin is ready, you can use `wiqd plugin package` to create a deployable `.zip` package and `wiqd plugin share` to share the plugin with users or your tenant.
+
+Partner certification and public marketplace publishing are a separate process. When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
