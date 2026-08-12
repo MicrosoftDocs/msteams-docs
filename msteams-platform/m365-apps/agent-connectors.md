@@ -38,14 +38,26 @@ Before you begin, ensure you have:
 
 You can register the connector by using either of these methods:
 
-- **Work IQ Dev Tools (recommended preview workflow)**: Use WIQD for a guided command-line workflow that creates and manages the standalone plugin project containing your agent connector. WIQD is in preview.
+- **Work IQ Dev Tools (recommended preview workflow)**: Use the WIQD agentic interface in GitHub Copilot CLI to create and manage the standalone plugin project containing your agent connector. WIQD is in preview.
 - **Manual App Manifest configuration**: Edit the App Manifest directly by using the detailed schema instructions in this article. Use this path for advanced configuration, reference, and troubleshooting during preview.
 
 Both methods register an existing remote MCP server. WIQD doesn't create or host the MCP server.
 
 ## Create the agent connector with WIQD
 
-Use WIQD to create a standalone plugin project and add the remote MCP agent connector:
+WIQD includes an agentic interface for GitHub Copilot CLI. Describe the plugin and remote MCP connector that you want to create, and the WIQD orchestrator guides you through project creation, configuration, validation, provisioning, and sharing.
+
+For example, start the workflow with a natural-language request:
+
+```console
+copilot -i "Create a standalone plugin and add my remote MCP server as an agent connector." --agent wiqd:wiqd
+```
+
+Always include `--agent wiqd:wiqd` so that GitHub Copilot CLI routes the request to the WIQD orchestrator.
+
+### Use the equivalent CLI workflow
+
+The following commands show the underlying workflow for automation, troubleshooting, and reference:
 
 1. Create an empty standalone plugin project:
 
@@ -73,7 +85,7 @@ Use WIQD to create a standalone plugin project and add the remote MCP agent conn
    wiqd plugin validate --mode deep
    ```
 
-WIQD guides the command-line workflow and uses Microsoft 365 Agents Toolkit for lifecycle operations. Continue to the manual configuration sections for the schema details that WIQD validation reports or that your connector requires.
+WIQD uses Microsoft 365 Agents Toolkit for lifecycle operations. Continue to the manual configuration sections for the schema details that WIQD validation reports or that your connector requires.
 
 ## Configure the agent connector in the App Manifest manually
 
@@ -419,6 +431,10 @@ If your MCP server isn't working as expected, check these common issues:
 
 ## Next steps
 
-When the plugin is ready, you can use `wiqd plugin package` to create a deployable `.zip` package and `wiqd plugin share` to share the plugin with users or your tenant.
+When the plugin is ready, ask the WIQD orchestrator to share it with users in your tenant. For automation or reference, use:
+
+```console
+wiqd plugin share --scope users --email <email-address>
+```
 
 Partner certification and public marketplace publishing are a separate process. When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
