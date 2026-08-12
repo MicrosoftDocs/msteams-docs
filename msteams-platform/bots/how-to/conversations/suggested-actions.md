@@ -21,11 +21,10 @@ Agents can dynamically provide up to three suggested action buttons with each ch
 
 ## User experience
 
-Suggested actions behavior varies by conversation scope:
+Suggested action buttons are displayed with the agent message that created them. Their placement and availability vary by conversation scope:
 
-- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message; in a group chat or channel, the action remains associated with the original message. Selecting the button posts the configured value as a visible user message in that conversation.
-- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured content in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
-- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
+- **Personal chat**: Smart replies appear only for the latest agent message.
+- **Group chat or channel**: The buttons remain associated with the original agent message.
 
 Here are some examples of how a **predefined message** suggested action shows up for desktop and mobile clients in Teams.
 
@@ -42,6 +41,10 @@ Here are some examples of how a **predefined message** suggested action shows up
 :::image type="content" source="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png" alt-text="Suggested actions displayed in a channel on a desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/suggested-actions/im-back-channel.png":::
 
 ---
+
+- For **predefined message**, the suggested action button appears with the agent message. In a personal chat, smart replies appear only for the latest agent message; in a group chat or channel, the action remains associated with the original message. Selecting the button posts the configured value as a visible user message in that conversation.
+- For **prefilled response**, the suggested action button appears with the agent message. Selecting it places the configured content in that conversation's compose box, where the user can review, edit, and send it. The action does not post or invoke agent logic until the user sends the composed message.
+- For **triggering a user action**, the suggested action button appears with the agent message. Selecting it sends a structured invoke payload to the agent or app without posting a user-visible message.
 
 ## Implement suggested actions
 
