@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2026-08-05T04:15:01+05:30</updated>
+	<updated>2026-08-12T11:41:07Z</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
@@ -11,7 +11,7 @@
 		<title type="html"><![CDATA[Announcement: Bring private, contextual interactions with agents into group conversations with Targeted messaging]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14528</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed"/>
-		<updated>2026-08-03T06:37:01+05:30</updated>
+		<updated>2026-08-03T13:07:43Z</updated>
 		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -75,7 +75,7 @@
 		<title type="html"><![CDATA[Platform update: Introducing Custom Activity Icons in Microsoft Teams]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12874</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed"/>
-		<updated>2025-05-016T11:04:01+05:30</updated>
+		<updated>2025-05-16T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Introducing Custom Activity Icons in Microsoft Teams. This is in developer preview. You can now use custom icons for user-triggered notifications in the activity feed in Microsoft Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -83,7 +83,7 @@
 		<title type="html"><![CDATA[Platform update: Introducing agents usage analytics for third-party apps in Developer Portal]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12858</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed"/>
-		<updated>2025-05-015T11:04:01+05:30</updated>
+		<updated>2025-05-15T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[You can now view the Analytics of Microsoft 365 Copilot agent usage for your third-party apps. Explore new Microsoft 365 dimensions in host product and capabilities within Developer Portal for Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -103,7 +103,7 @@
 		<summary type="html"><![CDATA[We are excited to introduce a new feature that will significantly enhance your interaction with our bots. You can now stream bot messages, delivering responses to users as small updates while the complete response is being generated. This improvement aims to enhance the user experience by providing real-time updates.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12771?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
-		<entry>
+	<entry>
 		<title type="html"><![CDATA[Platform update: Enable OAuth authentication for API based message extension]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12772</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12772?referrer=whats.new.rssfeed"/>
