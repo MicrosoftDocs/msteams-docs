@@ -96,16 +96,6 @@ groups:
     title: C#
   - id: qs-python
     title: Python
-- id: select-language
-  title: Select language
-  prompt: Select your Teams SDK language.
-  pivots:
-  - id: csharp
-    title: C#
-  - id: typescript
-    title: TypeScript
-  - id: python
-    title: Python
 - id: teams-sdk-languages
   title: Teams SDK language
   prompt: Select your Teams SDK language.

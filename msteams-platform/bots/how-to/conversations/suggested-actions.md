@@ -3,7 +3,7 @@ title: Guide Users with Suggested Actions
 description: Learn how to create and handle suggested actions for your Microsoft Teams agents and apps to help users continue conversations.
 ms.topic: how-to
 ms.localizationpriority: medium
-zone_pivot_groups: select-language
+zone_pivot_groups: teams-sdk-languages
 ms.date: 07/15/2026
 ---
 
@@ -66,14 +66,14 @@ To add the `imBack` suggested action to a message, specify a list of [card actio
 
 #### Teams SDK implementation
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 > [!NOTE]
 > Microsoft Teams SDK for C# does not currently support `imBack` suggested actions.
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 finalMarker.withSuggestedActions({
@@ -93,7 +93,7 @@ This snippet displays follow-up prompts as suggested action buttons. For each pr
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 reply.with_suggested_actions(
@@ -159,7 +159,7 @@ This suggested action places prewritten content in the compose box for the user 
 
 Before using `Action.Compose`, verify that the target conversation scope, client, and host support it; unsupported environments display an error.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -185,7 +185,7 @@ The asynchronous `teams.OnMessage` handler creates an `Action.Compose` button la
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on("message", async ({ send }) => {
@@ -212,7 +212,7 @@ The handler creates an `Action.Compose` button labeled *Notify me now* and attac
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 if "Action.Compose" not in CardActionType._value2member_map_:
@@ -302,7 +302,7 @@ Use the following Teams SDK snippets for creating and handling `Action.Submit` s
 > [!NOTE]
 > The `Action.Submit` APIs are currently marked as experimental in Teams SDK.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teamsApp.OnSuggestedActionSubmit(async (context, cancellationToken) =>
@@ -324,7 +324,7 @@ teamsApp.OnSuggestedActionSubmit(async (context, cancellationToken) =>
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('suggested-action.submit', async ({ activity, send }) => {
@@ -340,7 +340,7 @@ app.on('suggested-action.submit', async ({ activity, send }) => {
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_suggested_action_submit
