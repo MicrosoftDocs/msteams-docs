@@ -47,13 +47,25 @@ Both methods register an existing remote MCP server. WIQD doesn't create or host
 
 WIQD includes an agentic interface for GitHub Copilot CLI. Describe the plugin and remote MCP connector that you want to create, and the WIQD orchestrator guides you through project creation, configuration, validation, provisioning, and sharing.
 
-For example, start the workflow with a natural-language request:
+To verify that the WIQD agent is installed and ready to use:
+
+1. Start GitHub Copilot CLI:
+
+   ```console
+   copilot
+   ```
+
+1. Enter `/agent`.
+
+1. Confirm that `wiqd:wiqd` appears in the list, and then select it. The WIQD agent handles the requests that you enter during the session.
+
+   :::image type="content" source="images/wiqd-copilot.png" alt-text="Screenshot of GitHub Copilot CLI showing the agent selector with the wiqd:wiqd orchestrator available." lightbox="images/wiqd-copilot.png":::
+
+You can also select the WIQD agent when you start GitHub Copilot CLI and provide the first natural-language request:
 
 ```console
 copilot -i "Create a standalone plugin and add my remote MCP server as an agent connector." --agent wiqd:wiqd
 ```
-
-Always include `--agent wiqd:wiqd` so that GitHub Copilot CLI routes the request to the WIQD orchestrator.
 
 ### Use the equivalent CLI workflow
 
