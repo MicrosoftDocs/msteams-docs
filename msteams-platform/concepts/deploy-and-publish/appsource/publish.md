@@ -72,6 +72,10 @@ If your app is production ready, you can begin the process of getting it listed 
 
 ## Tips for rapid approval to publish your app
 
+The following flowchart summarizes the recommended activities during the design, submission preparation, and post-submission phases to help reduce validation issues and streamline the Teams Store approval process.
+
+:::image type="content" source="../../../assets/images/submission/tips-publish-apps-workflow.png" alt-text="Diagram shows the Teams Store tips for publishing your Teams apps." lightbox="../../../assets/images/submission/tips-publish-apps-workflow.png":::
+
 * **During design phase**
 
   Review the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements. If you build your app in line with these guidelines, then it prevents any rework due to non-adherence to Teams Store policies.
