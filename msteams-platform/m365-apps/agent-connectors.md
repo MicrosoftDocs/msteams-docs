@@ -209,7 +209,16 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **DynamicClientRegistration**: Dynamic OAuth client registration
 - **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance (manifest version 1.29 and later)
 
-Every type except `None` requires a `referenceId`. The `referenceId` value points to a configuration that you register separately, so that no secret values are stored in your app manifest.
+Every type except `None` requires a `referenceId`, which can be up to 128 characters. A `referenceId` is an opaque identifier for an authentication configuration that you register separately. It isn't a secret and doesn't contain credential material. Microsoft 365 uses the identifier at runtime to locate the associated configuration, so that no secret values are stored in your app manifest.
+
+| Authorization type | What `referenceId` contains |
+| --- | --- |
+| `OAuthPluginVault` | Identifier of a registered OAuth configuration |
+| `ApiKeyPluginVault` | Identifier of a registered API key configuration |
+| `DynamicClientRegistration` | Identifier of a registered dynamic client registration configuration |
+| `AzureKeyVault` | Identifier of a registered Key Vault secret configuration, not the secret value, the secret name, or the vault URI |
+
+Register OAuth and API key configurations in Developer Portal, as described in the following sections. Public documentation for the `DynamicClientRegistration` and `AzureKeyVault` registration records is currently limited. Register those configurations by using the tooling available in your authoring path, and set `referenceId` to the identifier that it returns.
 
 > [!NOTE]
 > Authorization for an app-manifest `agentConnectors` entry is a different surface from the authentication that a [declarative agent plugin](/microsoft-365-copilot/extensibility/plugin-authentication) configures in its own plugin manifest. The two constructs support different schemes. For example, API key authentication is supported for API plugins but not for MCP plugins, whereas an agent connector supports `ApiKeyPluginVault`. Configure authorization for the manifest you're authoring, and don't assume that a scheme available in one is available in the other.
@@ -231,6 +240,8 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 The `referenceId` points to a secure [OAuth configuration that you register in Developer Portal](https://dev.teams.microsoft.com/tools/oauth-configuration). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal).
 
 When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
+
+At runtime, Microsoft 365 starts an OAuth authorization code flow for the signed-in user, so each user completes their own sign-in and consents when a prompt is required. Depending on your identity provider and the scopes that your server requests, a tenant administrator might also need to grant consent before users can finish signing in.
 
 ### Use API key authentication
 
