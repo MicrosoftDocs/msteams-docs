@@ -260,9 +260,6 @@ Configure the authorization type as `DynamicClientRegistration` with a `referenc
 
 The `referenceId` identifies the dynamic client registration configuration that Microsoft 365 uses when it negotiates client credentials with your MCP server's OAuth registration endpoint. The configuration supplies the authorization values for that exchange, so that no client secret is stored in your manifest.
 
-> [!IMPORTANT]
-> Human review needed: No published procedure documents a Developer Portal (or other) flow for registering a dynamic client registration configuration for `agentConnectors` (escalation E5). Confirm the registration surface and the exact value that `referenceId` must contain before publishing.
-
 Your server must:
 
 - Expose a [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) compliant client registration endpoint.
@@ -289,9 +286,6 @@ To set up Azure Key Vault authentication:
 1. Store your MCP server credentials (API key or client secret) as a secret in your [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
 1. Grant the Microsoft 365 service principal access to read the secret by configuring an [access policy](/azure/key-vault/general/assign-access-policy) or [Azure RBAC role](/azure/key-vault/general/rbac-guide) on your vault.
 1. Set the `referenceId` in your manifest to the identifier for that secret configuration.
-
-> [!IMPORTANT]
-> Human review needed: No published procedure documents where a developer registers the Azure Key Vault secret reference used by `agentConnectors` (escalation E5). Confirm the registration surface and the exact value that `referenceId` must contain before publishing.
 
 ### Use no authentication
 
