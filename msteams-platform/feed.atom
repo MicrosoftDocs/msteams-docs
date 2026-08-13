@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
+	<id>https://learn.microsoft.com/microsoftteams/platform/feed.atom</id>
 	<updated>2026-08-12T11:41:07Z</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
@@ -12,7 +13,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14528</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed"/>
 		<updated>2026-08-03T13:07:43Z</updated>
-		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -20,7 +21,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14522</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed"/>
 		<updated>2026-07-31T04:31:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -28,7 +29,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14486</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed"/>
 		<updated>2026-07-20T09:32:01+05:30</updated>
-		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -36,7 +37,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13751</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13751?referrer=whats.new.rssfeed"/>
 		<updated>2025-12-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We’re thrilled to announce that the Copilot AI Insights (meeting recap) API has officially reached general availability (GA)! This marks a major milestone after an exciting journey through beta, and we’re excited to announce the fully supported v1.0 release to all developers and partners.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13751?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We’re thrilled to announce that the Copilot AI Insights (meeting recap) API has officially reached general availability (GA)! This marks a major milestone after an exciting journey through beta, and we’re excited to announce the fully supported v1.0 release to all developers and partners.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13751?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -44,7 +45,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13752</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13752?referrer=whats.new.rssfeed"/>
 		<updated>2025-12-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We’re excited to share that new Graph API capabilities for accessing recordings and transcriptions of adhoc calls have now been released on the Microsoft Teams Platform. These updates, first introduced in beta and now available in v1.0, give you access to recordings and transcripts for Teams VoIP, PSTN, and Graph API–created calls.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13752?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We’re excited to share that new Graph API capabilities for accessing recordings and transcriptions of adhoc calls have now been released on the Microsoft Teams Platform. These updates, first introduced in beta and now available in v1.0, give you access to recordings and transcripts for Teams VoIP, PSTN, and Graph API–created calls.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13752?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -68,7 +69,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12914</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12914?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We're thrilled to announce the launch of the Meeting AI Insights API in Microsoft Graph, now available in beta! This powerful API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12914?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We're thrilled to announce the launch of the Meeting AI Insights API in Microsoft Graph, now available in beta! This powerful API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12914?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -76,7 +77,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12874</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-16T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Introducing Custom Activity Icons in Microsoft Teams. This is in developer preview. You can now use custom icons for user-triggered notifications in the activity feed in Microsoft Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[Introducing Custom Activity Icons in Microsoft Teams. This is in developer preview. You can now use custom icons for user-triggered notifications in the activity feed in Microsoft Teams.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -84,7 +85,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12858</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-15T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[You can now view the Analytics of Microsoft 365 Copilot agent usage for your third-party apps. Explore new Microsoft 365 dimensions in host product and capabilities within Developer Portal for Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[You can now view the Analytics of Microsoft 365 Copilot agent usage for your third-party apps. Explore new Microsoft 365 dimensions in host product and capabilities within Developer Portal for Teams.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -92,7 +93,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12799</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12799?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-07T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12799?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12799?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -100,7 +101,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12771</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12771?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-02T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to introduce a new feature that will significantly enhance your interaction with our bots. You can now stream bot messages, delivering responses to users as small updates while the complete response is being generated. This improvement aims to enhance the user experience by providing real-time updates.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12771?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We are excited to introduce a new feature that will significantly enhance your interaction with our bots. You can now stream bot messages, delivering responses to users as small updates while the complete response is being generated. This improvement aims to enhance the user experience by providing real-time updates.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12771?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -108,7 +109,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12772</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12772?referrer=whats.new.rssfeed"/>
 		<updated>2025-05-02T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to announce the integration of Open Authorization (OAuth) 2.0 into your Teams API-based message extension app. This integration ensures a secure method for accessing user data from third-party apps without exposing user credentials.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12772?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[We are excited to announce the integration of Open Authorization (OAuth) 2.0 into your Teams API-based message extension app. This integration ensures a secure method for accessing user data from third-party apps without exposing user credentials.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12772?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -116,7 +117,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12630</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12630?referrer=whats.new.rssfeed"/>
 		<updated>2025-04-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Say goodbye to slow load times and hello to instant app loading! We're thrilled to announce that you can now precache your app in Microsoft Teams! This exciting update empowers you to opt-in your tab app to be precached in Teams, so that it loads lightning quick from the very first launch! With such blazing fast load times, users spend less time waiting and more time doing what they love.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12630?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[Say goodbye to slow load times and hello to instant app loading! We're thrilled to announce that you can now precache your app in Microsoft Teams! This exciting update empowers you to opt-in your tab app to be precached in Teams, so that it loads lightning quick from the very first launch! With such blazing fast load times, users spend less time waiting and more time doing what they love.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12630?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -124,7 +125,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12668</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12668?referrer=whats.new.rssfeed"/>
 		<updated>2025-04-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[If you're an ISV developer and if you already have a bot on Teams, you can upgrade your existing bots to custom engine agent and add support for custom engine agents in Microsoft 365 Copilot Chat. </br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12668?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[If you're an ISV developer and if you already have a bot on Teams, you can upgrade your existing bots to custom engine agent and add support for custom engine agents in Microsoft 365 Copilot Chat. <br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12668?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -132,7 +133,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12669</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12669?referrer=whats.new.rssfeed"/>
 		<updated>2025-04-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[You can now create personal scope apps that integrate seamlessly with PSTN and Teams-to-Teams calls. By using the right scope and context, you can build apps that effectively utilize tab type, static scope, personal context, and meeting side panels. This integration is super simple and user-friendly. You can either create a new personal tab app or update an existing one with personal scope and the right context. This makes the app more useful and gives users a richer experience during calls. </br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12669?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[You can now create personal scope apps that integrate seamlessly with PSTN and Teams-to-Teams calls. By using the right scope and context, you can build apps that effectively utilize tab type, static scope, personal context, and meeting side panels. This integration is super simple and user-friendly. You can either create a new personal tab app or update an existing one with personal scope and the right context. This makes the app more useful and gives users a richer experience during calls. <br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12669?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -140,7 +141,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12605</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12605?referrer=whats.new.rssfeed"/>
 		<updated>2025-04-07T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[If you're an ISV developer, you can create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package. </br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12605?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[If you're an ISV developer, you can create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package. <br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12605?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -148,7 +149,7 @@
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12602</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12602?referrer=whats.new.rssfeed"/>
 		<updated>2025-03-20T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[To ensure compliance with GCC (Government Community Cloud) requirements for US-based traffic processing, we’re sharing important guidance on bot endpoint usage.For bot developers, we recommend using the following full qualified domain names for each environment:Public traffic: https://smba.trafficmanager.net/teams/ and GCC traffic: https://smba.infra.gcc.teams.microsoft.com/ </br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12602?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<summary type="html"><![CDATA[To ensure compliance with GCC (Government Community Cloud) requirements for US-based traffic processing, we’re sharing important guidance on bot endpoint usage.For bot developers, we recommend using the following full qualified domain names for each environment:Public traffic: https://smba.trafficmanager.net/teams/ and GCC traffic: https://smba.infra.gcc.teams.microsoft.com/ <br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12602?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	
