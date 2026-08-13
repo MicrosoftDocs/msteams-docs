@@ -486,7 +486,13 @@ Validate your integration by testing with actual Microsoft 365 agents.
 
 An agent connector isn't deployed on its own. It ships inside the app package that contains it, and it's governed with that app.
 
-- **Where it's installed**: Upload the app package to your test tenant, or publish it to your organization's app catalog or the Microsoft commercial marketplace. The connector becomes available when the containing app is installed.
+- **How you distribute it for testing**: Use `wiqd plugin share` to share the plugin directly with users in your tenant. Sharing is the recommended way to get your connector in front of testers and early users: it avoids passing around a packaged *.zip* file, and recipients always get the current version. For automation or reference, use:
+
+  ```console
+  wiqd plugin share --scope users --email <email-address>
+  ```
+
+- **Where it's installed**: Shared plugins become available to the recipients you specify. You can also upload the app package to your test tenant directly, or publish it to your organization's app catalog or the Microsoft commercial marketplace. The connector becomes available when the containing app is installed.
 - **Where admins manage it**: Admins manage the containing app or agent alongside their other agents and apps in the [Microsoft 365 admin center](/microsoft-365/admin/manage/manage-copilot-agents-integrated-apps) and in the Teams admin center under **Teams apps** > **Manage apps**. Availability changes made in either admin center are [synchronized between them](/microsoftteams/uam-tac-mac).
 - **Which settings apply**: Tenant-wide [agent settings](/microsoft-365/admin/manage/agent-settings), such as allowed agent types and which users can access agents, apply to the app that contains your connector. Test with an account that's in scope for those settings.
 - **Where it doesn't appear**: Agent connectors don't appear under **Copilot** > **Connectors** in the Microsoft 365 admin center. That experience manages [synced and federated Copilot connectors](/microsoft-365/copilot/connectors/overview), which use a separate submission and approval process.
