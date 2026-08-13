@@ -279,7 +279,7 @@ Teams platform features that are available to all app developers.</br>
 | 06/16/2022 | Updated media capabilities to support desktop and mobile | Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md) |
 | 06/08/2022 | Server handlers for card actions | Build cards and task modules > Build cards > [Server handlers](task-modules-and-cards/cards/cards-actions.md#server-handlers) |
 | 06/03/2022 | Updated Add authentication module for enabling SSO for tab app with new structure and procedures | Add authentication > Tabs > [Enable single sign-on in a tab app](tabs/how-to/authentication/tab-sso-overview.md) |
-| 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams Store > Overview > [Tips for rapid approval to publish your app](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app) |
+| 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams Store > Overview > [Tips for rapid approval to publish your app](~/concepts/deploy-and-publish/appsource/publish.md#tips-for-rapid-approval-to-publish-your-app) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams Store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0 | Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md) |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
