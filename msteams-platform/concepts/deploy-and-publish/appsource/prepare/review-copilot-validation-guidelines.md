@@ -438,9 +438,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * All search results in the message extension capability must include a relevant title, subtitle, and url which will also appear in citations of your agent [*Must fix*].
 
-* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
+* All agents and plugins must provide rich responses that clearly describe the action performed and include citations that allow users to identify the source of the response [*Must fix*].
 
-  * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
+  * For more information, see [citations](/microsoft-365/copilot/extensibility/plugin-citations).
 
 * An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 
