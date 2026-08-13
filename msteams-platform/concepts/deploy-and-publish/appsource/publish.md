@@ -74,7 +74,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 Use the following workflow to prepare, submit, and publish your app to the Teams Store. Following these steps can help reduce validation issues and expedite the approval process. For apps linked to a SaaS offer, ensure that purchase, subscription, and license-management experiences are validated before submission.
 
-:::image type="content" source="../../../assets/images/submission/tips-publish-apps-workflow.png" alt-text="Diagram shows the Teams Store publishing process for Teams apps." lightbox="../../../assets/images/submission/tips-publish-apps-workflow.png":::
+:::image type="content" source="../../../assets/images/submission/tips-publish-apps-workflow.png" alt-text="Diagram shows the Teams Store tips for publishing your Teams apps." lightbox="../../../assets/images/submission/tips-publish-apps-workflow.png":::
 
 ## Teams Store search experience
 
