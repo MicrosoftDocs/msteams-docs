@@ -72,69 +72,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
 ## Tips for rapid approval to publish your app
 
-* **During design phase**
+Use the following workflow to prepare, submit, and publish your app to the Teams Store. Following these steps can help reduce validation issues and expedite the approval process. For apps linked to a SaaS offer, ensure that purchase, subscription, and license-management experiences are validated before submission.
 
-  Review the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) early in your app's life cycle (design phase) to ensure compliance with Teams Store requirements and reduce rework during validation.
-
-  Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
-
-* **Prior to app submission**
-
-  1. [Create your Partner Center account](prepare/create-partner-center-dev-account.md) well in advance. If you run into any challenges with your [Partner Center account](prepare/create-partner-center-dev-account.md), create a [support ticket](/azure/marketplace/partner-center-portal/support).
-
-  1. Test and retest your app:
-
-     1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
-
-        :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams Store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
-
-     1. Self-test your app thoroughly prior to app submission to ensure it adheres to Teams Store policies. Upload a custom app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
-
-     1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
-  
-  1. Complete [publisher verification](/azure/active-directory/develop/publisher-verification-overview) before you submit your app. If you run into any issues, you can create a [support ticket](/azure/marketplace/partner-center-portal/support) for resolution.
-
-  1. Follow the [Teams Store submission checklist](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist) and provide all required validation assets, including test credentials, setup instructions, and supporting documentation.
-
-* **Post app submission**
-
-  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report, or if you need any extra support to resolve the reported issues.
-
-  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing. It helps reduce the number of iterations required to validate your app and so, the time taken to approve your app.
-  
-  * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
-
-## Additional tips for rapid approval to publish your app linked to a SaaS offer
-
-* **During design phase**
-
-  Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) early in your app's life cycle (design phase) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers).
-
-  Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
-
-* **Prior to app submission**
-
-  1. As you prepare for app submission, ensure the following details:
-
-      1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
-
-      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
-
-      1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
-
-      1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
-
-  1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows before you submit your app linked to a SaaS offer for validation, ensure the following details:
-
-     1. Both admin and non-admin users can successfully purchase and activate a subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center.
-
-     1. Subscription and license information is accurately reflected in both the SaaS application and Microsoft Admin Center.
-
-     1. Supported subscription lifecycle scenarios, such as subscription changes, upgrades, downgrades, cancellations, and repurchases, work as expected.
-
-     1. Your SaaS application provides license-management capabilities that allow purchasers to manage user access and license assignments.
-  
-  1. Validate supported purchase scenarios, including minimum and bulk license purchases, and ensure users receive the entitlements associated with their purchased plan.
+:::image type="content" source="../../../assets/images/submission/tips-publish-apps-workflow.png" alt-text="Diagram shows the Teams Store publishing process for Teams apps." lightbox="../../../assets/images/submission/tips-publish-apps-workflow.png":::
 
 ## Teams Store search experience
 
@@ -145,7 +85,7 @@ Teams provides intelligent search experience by matching the user input to the f
 ## Training module
 
 | **Training name** | **Description** |
-|--- | --- |
+| --- | --- |
 | [Publish Teams apps in Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) | This training module is about publishing your app to Teams Store. It focuses primarily on app validation process. |
 
 ## See also
