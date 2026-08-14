@@ -7,6 +7,9 @@ ms.owner: nickwalk
 ms.date: 04/09/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
+
 # Understand agent concepts
 
 An agent's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. An agent may request information or enable access to services, and responds to the user.
