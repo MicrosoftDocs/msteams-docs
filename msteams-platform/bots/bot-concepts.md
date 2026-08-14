@@ -318,6 +318,28 @@ app.start().catch(console.error);
 
 # [C#](#tab/csharp)
 
+## [.NET SDK v2.1](#tab/dotnet-v21)
+
+```csharp
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddTeamsBotApplication();
+var app = builder.Build();
+var teams = app.UseTeamsBotApplication();
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var senderName = context.Activity.From.Name;
+    await context.SendAsync($"Hello <at>{senderName}</at>.", cancellationToken);
+});
+
+app.Run();
+```
+
+## [.NET SDK <v2.1 (legacy)](#tab/dotnet-pre-v21)
+
 ```csharp
 using Microsoft.Teams.Apps.Activities;
 using Microsoft.Teams.Apps.Extensions;
@@ -337,6 +359,8 @@ teams.OnMessage(async (context, cancellationToken) =>
 
 app.Run();
 ```
+
+---
 
 # [Python](#tab/python)
 
