@@ -316,9 +316,11 @@ app.on('message', async ({ activity, reply }) => {
 app.start().catch(console.error);
 ```
 
+---
+
 # [C#](#tab/csharp)
 
-## [.NET SDK v2.1](#tab/dotnet-v21)
+`.NET SDK v2.1`
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -338,7 +340,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-## [.NET SDK <v2.1 (legacy)](#tab/dotnet-pre-v21)
+`.NET SDK <v2.1 (legacy)`
 
 ```csharp
 using Microsoft.Teams.Apps.Activities;
