@@ -15,17 +15,15 @@ zone_pivot_groups: teams-sdk-languages
 
 *TODO would LOVE to structure this as a tutorial, starting from the quickstart output. For now I'm trying to structure it using active verbs, so that this isn't purely a "conceptual" article.*
 
-*TODO should this be part of a "getting started", or "concepts?"*
+*this should be a part of "getting started"
 
 -->
 
 # Get started with agent development
 
-This article covers the fundamental programming concepts of building a Teams agent runtime using Teams SDK. It provides the context and guidance needed to understand and build on the foundation provided by the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md).
+This article covers the fundamental concepts of developing a Teams agent runtime using Teams SDK. It provides the guidance needed to understand and continue building on the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md).
 
-A Teams agent runtime is a web service that interacts with Teams using the Bot Connector service. It receives chat messages and information about other Teams activities on its `/api/messages` endpoint and performs actions in Teams by calling the Bot Connector API.
-
-An agent's runtime can be hosted anywhere on the web, but its developer is responsible for hosting it. Teams does not host or run an agent's code.
+A Teams agent runtime is a web service that uses the Bot Connector API to interact with users in Teams, mainly in chat. An agent's runtime can be hosted anywhere on the web, but its developer is responsible for hosting it: Teams does not host or run an agent's code.
 
 <!--
 
@@ -46,24 +44,29 @@ An agent's runtime can be hosted anywhere on the web, but its developer is respo
 
 ::: zone pivot="teams-sdk-csharp"
 
-Teams SDK provides agent runtime functionality as an ASP.NET Core extension. Developers can use the SDK as the foundation of a new ASP.NET Core app or extend an existing app to interact with Teams as an agent.
+Teams SDK provides agent runtime functionality as an ASP.NET Core component via the Add/Use pattern. Developers can use the SDK as the foundation of a dedicated Teams agent runtime, or integrate agent functionality with an existing ASP.NET Core app.
 
-Use `AddTeams` and `UseTeams` to register the `/api/messages` endpoint and integrate the SDK's event handling system.
+Use `AddTeamsBotApplication` and `UseTeamsBotApplication` to set up an application to function as a Teams agent.
 
 ```csharp
-using Microsoft.Teams.Plugins.AspNetCore.Extensions;
+using Microsoft.Teams.Apps;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.AddTeams();
-var app = builder.Build();
-var teams = app.UseTeams();
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
+WebApplication app = builder.Build();
+
+TeamsBotApplication teams = app.UseTeamsBotApplication();
 
 // Register activity handlers, event handlers, and potentially other routes
+
+// Use "teams" throughout the app for Teams-related operations
 
 app.Run();
 ```
 
-`UseTeams` returns an instance of the SDK's `App` class, the main provider of Teams-related functionality. The convention used by Teams SDK and this documentation is to store this instance in a variable named `teams`.
+`UseTeamsBotApplication` returns an instance of the `TeamsBotApplication` class, the main provider of Teams-related functionality. The convention used by Teams SDK and this documentation is to store this instance in a variable named `teams`.
+
+*TODO config here*
 
 App initialization uses settings in `appsettings.json` to configure the runtime's inbound and outbound authentication with the Bot Connector service. TODO for more information, see (app auth/trust model page in SDK section)
 
@@ -89,7 +92,7 @@ if __name__ == "__main__":
 
 (For information about using Teams SDK to integrate a Teams agent runtime into an existing web application, see [Self managing your server](#self-managing-your-server)).
 
-<!-- TODO app auth -->
+*TODO app auth config here*
 
 ::: zone-end
 
@@ -97,13 +100,17 @@ if __name__ == "__main__":
 
 The `App` class is the heart of an agent runtime. The typical structure of a  
 
+*TODO*
+
 (For information about using Teams SDK to integrate a Teams agent runtime into an existing web application, see [Self managing your server](#self-managing-your-server)).
+
+*TODO app auth config here*
 
 ::: zone-end
 
 ## Receive and reply to chat messages
 
-Request-response chat interactions with users are the foundation of many agent scenarios.
+Request-response chat interactions with users are the foundation of many agent scenarios. The Bot Connector service sends realtime information about chat messages and other Teams activities to an agent runtime's `/api/messages` endpoint. The runtime sends chat messages by calling the Bot Connector API.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -112,24 +119,27 @@ In an agent runtime built with Teams SDK, chat messages are handled as events. D
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
-    await context.Send($"You said: '{context.Activity.Text}'");
-    await context.Reply("This message is a quoted reply. Select the quote to jump to your original message.");
+    await context.SendAsync($"You said: '{context.Activity.Text}'");
+    await context.ReplyAsync("This reply quotes the received message. Users can select the quote in Teams to jump to its message.");
 });
 ```
 
-The `context` object passed to the handler contains information about the message, along with two helper methods that simplify replying in the same conversation. `context.Send` and `context.Reply` both send a message into the conversation; `context.Reply` also includes a quoted reference to the original message.
+The `context` object passed to the handler contains information about the message, along with two helper methods that simplify replying in the same conversation or thread. `context.SendAsync` and `context.ReplyAsync` both send a message into the conversation; using `context.ReplyAsync` includes a quoted reference to the original message.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-Teams SDK provides a strongly-typed event router for handling activities. Prior to  call the `App.on` method with activity type corresponding to the activity type. For example, to register a handler for chat messages, call `App.OnMessage`:
+In an agent runtime built with Teams SDK, chat messages are handled as events. During application startup, call `app.on` specifying the `message` activity type to register a message event handler.
 
 ```typescript
 app.on('message', async context => {
-    // Implementation here
+    await context.send(`You said: "${context.activity.text}"`);
+    await context.reply("This message is a quoted reply. Select the quote to jump to your original message.");
 });
 ```
+
+The `context` object passed to the handler contains information about the message, along with two helper methods that simplify replying in the same conversation or thread. `context.send` and `context.reply` both send a message into the conversation; using `context.reply` includes a quoted reference to the original message.
 
 ::: zone-end
 
@@ -144,7 +154,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.reply("This message is a quoted reply. Select the quote to jump to your original message.")
 ```
 
-`ctx` contains information about the message, along with two helper methods that simplify replying in the same conversation. `ctx.send` and `ctx.reply` both send a message into the conversation; `ctx.reply` also includes a quoted reference to the original message.
+The `ctx` object passed to the handler contains information about the message, along with two helper methods that simplify replying in the same conversation or thread. `ctx.send` and `ctx.reply` both send a message into the conversation; using `ctx.reply` includes a quoted reference to the original message.
 
 ::: zone-end
 
@@ -160,15 +170,59 @@ TODO reuse the snippets from above but include an LLM call. "This minimal implem
 
 This is where we talk about the possibilities of "bringing an agent vs. building one new". You might look at "Teams agent development" as creating a bridge between an existing agent (via something like the OpenAI API) and Teams conversational features. Or, you might be starting from scratch and also building up a new, bespoke LLM-based agent as you go.
 
+## Handle other activities in Teams
+
+Chat messages are only one category of Teams interaction, or *activity*, that Bot Connector sends to a runtime's `/api/messages` endpoint. Examples of other activities include a channel being created in a team, the agent being installed into a group chat, or a user selecting a button in an interactive Adaptive Card chat message.
+
+::: zone pivot="teams-sdk-csharp"
+
+During application startup, use the `teams.OnXxx` methods to register event handlers for different kinds of activities. For example, a handler registered with `OnMemberAdded` runs when a new participant is added to a conversation that the agent is participating in:
+
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+    foreach (var member in context.Activity.MembersAdded ?? [])
+    {
+        Console.WriteLine($"Member added: {member.Name}");
+    }
+
+    await Task.CompletedTask;
+});
+```
+
+Teams SDK supports registering multiple handlers for any activity event. For each activity that reaches the runtime, each matching handler will be called in order of its registration.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Teams SDK provides a strongly-typed event router for handling activities. Prior to starting the application, call `app.on` method with activity type corresponding to the activity type. For example, to register a handler for chat messages, call `App.OnMessage`:
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Register activity handlers at module scope using the @app.on_* decorators.
+
+::: zone-end
+
+TODO maybe show a handler for a different event too?
+TODO link to handler/activity list; "`message` is generally the activity of greatest interest, but agents receive activities for many kinds of actions"
+
+The `context` object received by a handler contains all of the activity's information.
+
+Activities without registered handlers are silently ignored
+
+All activity handlers, including message handlers, support multiple chained implementations in a middleware pattern.
+
+*TODO this should go somewhere else*:
+An agent's visibility to different actions is determined by where the agent is installed and its permissions.
+
 ## Send messages proactively
 
-<!-- *TODO Is proactivity in any other kind of Teams action of any concern, or relevant, or is it pretty much just about chat?* -->
+Activity handler contexts simplify sending chat messages into the right conversations, but sometimes agents need to send messages without having a context available. For example, an agent might send unsolicited chat messages about scheduled notifications or events triggered by systems outside of Teams. Some scenarios might call for sending a message to a different conversation than the one referenced by the handler's context.
 
-Chat interactions in Teams are not limited to request-response workflows. For example, an agent could send unsolicited chat messages about scheduled notifications or events received from systems other than Teams. Some scenarios might call for sending a message to a different conversation than the one referenced by the handler's context.
-
-<!-- *TODO is "long running workflow" a scenario? Any reason not to just do even long-running workflows within the handler context? If so, make the above a short bullet list including that scenario*. -->
-
-Sending chat messages outside of the context of an activity handler is called *proactive messaging*. Sending a proactive message requires capturing a conversations's unique ID ahead of time, from a context where it is available, and supplying it to a call to `teams.Send` or `teams.Reply`.
+Sending chat messages without using an activity handler context is called *proactive messaging*. Sending a proactive message requires capturing a conversations's unique ID ahead of time, from a context where it is available, and supplying it to a call to `teams.Send` or `teams.Reply`.
 
 TODO app.send snippets
 
@@ -191,40 +245,6 @@ Later in this article, you'll learn about other opportunities for capturing conv
 API client <https://microsoft.github.io/teams-sdk/csharp/essentials/api>
 
 Note the need for contexts here too; same concept as proactive messaging
-
-## Handle other activities in Teams
-
-Chat messages are only one category of Teams interaction, or *activity*, that Bot Connector sends to the `/api/messages` endpoint. Examples of other activities include creating a channel in a team, installing an agent into a group chat, and a user selecting a button in an interactive Adaptive Card chat message.
-
-::: zone pivot="teams-sdk-csharp"
-
-During application startup, use the `teams.OnXxx` methods to register event handlers for different kinds of activities.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Call `app.on` with an activity type name to register a handler for it.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Register activity handlers at module scope using the @app.on_* decorators.
-
-::: zone-end
-
-TODO maybe show a handler for a different event too?
-TODO link to handler/activity list; "`message` is generally the activity of greatest interest, but agents receive activities for many kinds of actions"
-
-The `context` object received by a handler contains all of the activity's information.
-
-Activities without registered handlers are silently ignored
-
-All activity handlers, including message handlers, support multiple chained implementations in a middleware pattern.
-
-*TODO this should go somewhere else*:
-An agent's visibility to different actions is determined by where the agent is installed and its permissions.
 
 ## Create rich messages
 

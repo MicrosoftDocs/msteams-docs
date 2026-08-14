@@ -1,16 +1,18 @@
 ---
-title: Provisioning an Agent on the Teams Platform
+title: Registering an Agent on the Teams Platform
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
-description: "Provisioning an agent in Teams requires registration across three surfaces: Entra ID, Bot Connector, and app manifest. Learn how to configure each and get started."
+description: "Registering an agent in Teams requires configuring it across three services: Entra ID, Bot Connector, and the Teams platform. Learn how to configure each and get started."
 ms.topic: concept-article
 ms.date: 07/21/2026
 ---
 
-# Provisioning an agent on the Teams platform
+# Registering an agent on the Teams platform
 
-Creating and hosting an agent runtime is not enough to make an agent available in Teams. Developers must also *provision* their agent by registering and configuring it across three surfaces:
+*TODO was originally going to refer to this as "provisioning" but I don't want to confuse the concept with provisioning of hosting resources; need to fix in the quickstart too*
+
+Creating and hosting an agent runtime is not enough to make an agent available in Teams. Developers must also *register* their agent by creating configuration for it across three services:
 
 - **Microsoft Entra ID**: An Entra ID app registration enables the agent to authenticate and get access to services and data
 - **Bot Connector service**: Configuration in the Bot Connector service enables an agent to interact with Teams via the Bot Connector API
@@ -18,7 +20,7 @@ Creating and hosting an agent runtime is not enough to make an agent available i
 
 All of these components require a Microsoft Entra tenant associated with the agent's developer.
 
-Developers are encouraged to use the Teams developer CLI to create these resources at the beginning of agent development. Provisioning early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
+Developers are encouraged to use the Teams developer CLI to register an agent at the beginning of its development. Registering early enables developers to use their agents from Teams as they take shape, experiencing them exactly as users will.
 
 ## Entra ID app registration: identity and authentication
 
@@ -50,7 +52,7 @@ The Bot Connector registration also references an Entra ID identity, which the a
 
 ## App manifest: app definition and configuration
 
-An agent's app manifest is a JSON configuration file used to provision the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, in contrast with the runtime that implements the agent's behavior.
+An agent's app manifest is a JSON configuration file used to register the agent as a distributable Teams app. It describes how Teams recognizes, installs, and integrates the agent, in contrast with the runtime that implements the agent's behavior.
 
 An app manifest includes, for example:
 
@@ -63,9 +65,9 @@ An app manifest includes, for example:
 
 Developers register an agent with the Teams platform by submitting its app manifest using the Teams Developer Portal or the Teams developer CLI. When development is complete, they use the portal to publish the agent to the Teams Store or to their organizational app catalog. When a user installs the agent, its app manifest is loaded to their device and used to present the agent in Teams.
 
-## Teams developer CLI
+## Register an agent with Teams developer CLI
 
-`teams app create` fully provisions an agent at the beginning of development. It creates:
+`teams app create` fully registers an agent. It creates:
 
 1. An Entra ID app registration in your tenant, configured with a client secret used for authentication
 1. A Bot Connector registration in Teams Developer Portal
@@ -74,5 +76,5 @@ Developers register an agent with the Teams platform by submitting its app manif
 
 ## Next steps
 
-- Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), where you'll create an agent, including provisioning using `teams app create`.
+- Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), where you'll create an agent, including registration using `teams app create`.
 - Learn about how an [agent runtime](agent-runtime-teams-sdk.md) built with Teams SDK works.
