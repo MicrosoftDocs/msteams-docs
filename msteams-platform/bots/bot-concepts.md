@@ -319,8 +319,6 @@ app.on('message', async ({ activity, reply }) => {
 app.start().catch(console.error);
 ```
 
----
-
 # [C#](#tab/csharp)
 
 `.NET SDK v2.1`
@@ -364,8 +362,6 @@ teams.OnMessage(async (context, cancellationToken) =>
 
 app.Run();
 ```
-
----
 
 # [Python](#tab/python)
 
