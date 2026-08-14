@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
-ms.date: 03/11/2025
+ms.date: 08/17/2026
 ---
 # Format your agent messages
 
@@ -31,6 +31,9 @@ Microsoft Teams supports the following formatting options:
 | `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
 | `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, math equations, images, at-mentions, and citations. |
 | `xml` | The text uses a subset of HTML tags for formatting in rich cards. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
+
+> [!NOTE]
+> Support for **extended markdown** is available in [public developer preview](resources/dev-preview/developer-preview-intro.md).
 
 For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
@@ -100,19 +103,19 @@ await app.send(conversation_id, activity)
 
 Some styles aren't supported across all platforms. The following table provides a list of standard Markdown styles and which of these styles are supported in text-only messages and rich cards:
 
-| Style                     | Text-only messages | Rich cards - XML only |
-| ---                       | :---: | :---: |
-| Bold                      | ✔️️ | ❌ |
-| Italic                    | ✔️ | ✔️ |
+| Style | Text-only messages | Rich cards - XML only |
+| --- | :---: | :---: |
+| Bold | ✔️️ | ❌ |
+| Italic | ✔️ | ✔️ |
 | Header (levels 1&ndash;3) | ❌ | ✔️ |
-| Strikethrough             | ❌ | ✔️ |
-| Horizontal rule           | ❌ | ❌ |
-| Unordered list            | ❌ | ✔️ |
-| Ordered list              | ❌ | ✔️ |
-| Preformatted text         | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ |
+| Strikethrough | ❌ | ✔️ |
+| Horizontal rule | ❌ | ❌ |
+| Unordered list | ❌ | ✔️ |
+| Ordered list | ❌ | ✔️ |
+| Preformatted text | ✔️ | ✔️ |
+| Blockquote | ✔️ | ✔️ |
+| Hyperlink | ✔️ | ✔️ |
+| Image link | ❌ | ❌ |
 
 ## Extended Markdown features
 
@@ -225,19 +228,19 @@ Support for text formatting varies by type of message and platform.
 
 The following table provides a list of styles, which are supported on desktop, iOS, and Android:
 
-| Style                     | Desktop | iOS | Android |
-| ---                       | :---: | :---: | :---: |
-| Bold                      | ✔️ | ✔️ | ✔️ |
-| Italic                    | ✔️ | ✔️ | ✔️ |
+| Style | Desktop | iOS | Android |
+| --- | :---: | :---: | :---: |
+| Bold | ✔️ | ✔️ | ✔️ |
+| Italic | ✔️ | ✔️ | ✔️ |
 | Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
-| Strikethrough             | ✔️ | ✔️ | ❌ |
-| Horizontal rule           | ❌ | ❌ | ❌ |
-| Unordered list            | ✔️ | ❌ | ❌ |
-| Ordered list              | ✔️ | ❌ | ❌ |
-| Preformatted text         | ✔️ | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ | ❌ |
+| Strikethrough | ✔️ | ✔️ | ❌ |
+| Horizontal rule | ❌ | ❌ | ❌ |
+| Unordered list | ✔️ | ❌ | ❌ |
+| Ordered list | ✔️ | ❌ | ❌ |
+| Preformatted text | ✔️ | ✔️ | ✔️ |
+| Blockquote | ✔️ | ✔️ | ✔️ |
+| Hyperlink | ✔️ | ✔️ | ✔️ |
+| Image link | ❌ | ❌ | ❌ |
 
 ## AI-generated content messages
 
