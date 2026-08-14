@@ -36,13 +36,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 July**
+**2026 August**
 
-* ***July 30, 2026***: Access to [meeting transcripts governed by both Microsoft Graph permissions and tenant-level administrator controls](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording) is now generally available.
-* ***July 30, 2026***: [Sending targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
-* ***July 29, 2026***: [Receiving targeted messages in group conversations](agents-in-teams/targeted-messages.md) is generally available.
-* ***July 10, 2026***: [Emoji chat reactions for agents](agents-in-teams/agent-reactions.md) is now generally available.
-* ***July 07, 2026***: [Support for apps in private channels](build-apps-for-shared-private-channels.md) is now generally available.
+* ***August 04, 2026***: Teams SDK for .NET 2.1.0 is now generally available. It replaces the plugin-oriented model of 2.0 with a plain ASP.NET Core app and adds agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility. For more information, see [Teams SDK for .NET v2.1.0 release notes](https://github.com/microsoft/teams.net/releases/tag/v2.1.0).
 
 :::column-end:::
 :::row-end:::
@@ -55,6 +51,11 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 30/07/2026 | Access to meeting transcripts governed by both Microsoft Graph permissions and tenant-level administrator controls is now generally available. | [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording) |
+| 30/07/2026 | Sending targeted messages in group conversations is generally available. | Build conversational agents for Teams > Rich conversational features > [Targeted messages](agents-in-teams/targeted-messages.md) |
+| 29/07/2026 | Receiving targeted messages in group conversations is generally available. | Build conversational agents for Teams > Rich conversational features > [Targeted messages](agents-in-teams/targeted-messages.md) |
+| 10/07/2026 | Emoji chat reactions for agents is now generally available. | Build conversational agents for Teams > Rich conversational features > [Emoji reactions](agents-in-teams/agent-reactions.md) |
+| 07/07/2026 | Support for apps in private channels is now generally available. | Build conversational agents for Teams > How-tos> [Shared and private channels](build-apps-for-shared-private-channels.md) |
 | 27/04/2026 | Support for Prompt starters are now generally available | Build agents using Teams SDK > [Prompt starters are now generally available.](bots/how-to/conversations/prompt-starters.md) |
 | 27/01/2026 | Support for apps in Private channels. | Add Teams app capabilities > Build bots >  [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
@@ -513,6 +514,8 @@ Developer preview is a public program that provides early access to unreleased T
 **2026 August**
 
 * ***August 17, 2026***: [Extended Markdown formatting](bots/how-to/format-your-bot-messages.md#set-message-text-format) for agent messages is available in developer preview. Use `textFormat: "extendedmarkdown"` to render tables, task lists, code fences, math equations, images, at-mentions, and citations in text-only messages.
+* ***August 04, 2026***: Teams SDK for TypeScript 2.1.0-preview.3 is available in preview, and version 2.0.15 provides maintenance updates for the stable 2.0 API line. For more information, see the [v2.1.0-preview.3 release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.1.0-preview.3) and [v2.0.15 release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.0.15).
+* ***August 04, 2026***: Teams SDK for Python 2.1.0a1 is available as an alpha preview, and version 2.0.15 provides maintenance updates for the stable 2.0 API line. For more information, see the [v2.1.0a1 release notes](https://github.com/microsoft/teams.py/releases/tag/v2.1.0a1) and [v2.0.15 release notes](https://github.com/microsoft/teams.py/releases/tag/v2.0.15).
 
 <br/>
 
@@ -523,8 +526,8 @@ Developer preview is a public program that provides early access to unreleased T
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
 | 30/06/2026 | Access to meeting transcripts through Microsoft Graph is now governed by both Graph permissions and two tenant-level administrator controls. Apps must have the required permissions, and tenant admins must enable transcript access settings before transcript data can be retrieved. | [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording) |
-| 29/05/2026 | Expose slash commands from agents and apps. | [Expose slash commands from agents and apps](agents-in-teams/agent-slash-commands.md) |
-| 15/05/2026 | Enable agent reactions in Teams. | [Enable agent reactions in Teams](agents-in-teams/agent-reactions.md) |
+| 29/05/2026 | Expose slash commands from agents and apps | [Expose slash commands from agents and apps](agents-in-teams/agent-slash-commands.md) |
+| 15/05/2026 | Agent reactions in Teams | [Enable agent reactions in Teams](agents-in-teams/agent-reactions.md) |
 | 27/03/2026 | Targeted Messages for agents. | [Enable targeted messages for agents](agents-in-teams/targeted-messages.md) |
 | 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md) |
 
@@ -642,10 +645,19 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-***June 22, 2026***: Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
+***August 04, 2026***: Environment Variables feature in Developer Portal is being deprecated as of August 31, 2026. Create a separate app for each environment instead. For more information, see [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#advanced).
 
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 22/06/2026 | Together Mode, including Custom Together Mode and Scene Studio in the Teams Developer Portal, is being deprecated as of June 30, 2026. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312). |
+
+</details>
 
 <details>
 <summary><b>2025</b></summary>

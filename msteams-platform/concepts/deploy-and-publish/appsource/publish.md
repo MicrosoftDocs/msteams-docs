@@ -185,3 +185,4 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#publish-to-teams-store)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
 * [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)
+* [Common reasons for app validation failure](common-reasons-for-app-validation-failure.md)
