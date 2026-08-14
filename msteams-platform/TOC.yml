@@ -1,5 +1,5 @@
 - name: Teams Platform documentation
-  href: mstdd-landing.yml
+  href: index.yml
 - name: Overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
