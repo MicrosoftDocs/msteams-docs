@@ -33,7 +33,7 @@ Microsoft Teams supports the following formatting options:
 | `xml` | The text uses a subset of HTML tags for formatting in rich cards. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
 
 > [!NOTE]
-> Support for **extended markdown** is available in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+> Support for **extended markdown** is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
