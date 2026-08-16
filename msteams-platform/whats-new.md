@@ -26,9 +26,10 @@ Teams SDK for TypeScript and for Python both have new stable maintenance release
 
 - TypeScript stable: 2.0.15 ([release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.0.15))
 - TypeScript preview: 2.1.0-preview.3 ([release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.1.0-preview.3))
-
 - Python stable: 2.0.15 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.0.15))
 - Python preview: 2.1.0a1 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.1.0a1))
+
+---
 
 ## Retiring: App manifest environment variables
 
@@ -37,6 +38,8 @@ Teams SDK for TypeScript and for Python both have new stable maintenance release
 On **August 31, 2026**, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.
 
 If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the deprecation date.
+
+---
 
 ## Released: New admin controls for meeting transcripts
 
@@ -47,9 +50,13 @@ New controls governing access to meeting transcripts are now generally available
 - Deny all transcript access via Graph API
 - Enable access only to transcripts that do not include speaker attribution
 
+Developers should ensure their agents and apps clearly communicate expectations and requirements about transcript access, gracefully handle lack of access, and ensure their implementations can handle the non-attributed transcript format.
+
 For more information, see [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording).
 
-## Generally available: Targeted messages and agent slash commands
+---
+
+## Released: Targeted messages and agent slash commands
 
 *July 30, 2026*
 
@@ -61,7 +68,9 @@ Developers can use agent slash commands to surface agent functionality as named 
 
 All agents that operate in group conversations are eligible to implement targeted message sends to individual users. App manifest updates are required to register agent slash commands and to enable user to send targeted messages to an agent. See the [targeted messages](agents-in-teams/targeted-messages.md) and [agent slash commands](agents-in-teams/agent-slash-commands.md) documentation to start building these new features into your agent.
 
-## Generally available: Emoji chat reactions for agents
+---
+
+## Released: Emoji chat reactions for agents
 
 *July 10, 2026*
 
@@ -69,11 +78,15 @@ All agents that operate in group conversations are eligible to implement targete
 
 See the [reactions documentation](agents-in-teams/agent-reactions.md) to learn how to add reaction behaviors and event handling to your agent.
 
-## Generally available: Apps in private channels
+---
+
+## Released: Apps in private channels
 
 *July 7, 2026*
 
-Agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see [Shared and private channels](build-apps-for-shared-private-channels.md).
+Support for agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see [Shared and private channels](build-apps-for-shared-private-channels.md).
+
+---
 
 ## Coming soon: New admin controls for meeting transcripts
 
@@ -86,35 +99,49 @@ New controls governing access to meeting transcripts have entered public preview
 
 For more information, see [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording).
 
+---
+
 ## Retiring: Teams Together Mode
 
 *June 22, 2026*
 
 On **June 30, 2026**, Teams Together Mode will be retired. Custom Together Mode and Scene Studio in the Teams Developer Portal will no longer be available. For more information, see the [announcement](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312).
 
-## Developer preview: Slash commands for agents and apps
+---
+
+## Preview: Slash commands for agents and apps
 
 *May 29, 2026*
 
 Expose slash commands from agents and apps, available in developer preview. For more information, see [Expose slash commands from agents and apps](agents-in-teams/agent-slash-commands.md).
 
-## Developer preview: Emoji chat reactions for agents
+---
+
+## Preview: Emoji chat reactions for agents
 
 *May 15, 2026*
 
 Emoji reactions for agents are now available in developer preview. See the [reactions documentation](agents-in-teams/agent-reactions.md) to learn how to add reaction behaviors and event handling to your agent.
 
-## Generally available: Prompt starters for agents
+---
+
+## Released: Agent prompt starters
 
 *April 27, 2026*
 
-Support for prompt starters is now generally available. For more information, see [Prompt starters](bots/how-to/conversations/prompt-starters.md).
+Agent prompt starters are now generally available! With prompt starters, agents can offer predefined prompts in chat that help users understand the its capabilities and start getting value from it immediately. When a user selects a prompt starter, Teams inserts it into the chat compose box.
 
-## Developer preview: Targeted messages for agents
+Defining prompt starters requires no code: they are specified entirely in an agent's app manifest configuration. See the [documentation](bots/how-to/conversations/prompt-starters.md) to learn how to configure prompt starters for an agent.
+
+---
+
+## Preview: Targeted messages for agents
 
 *March 27, 2026*
 
 Targeted messages for agents are now available in developer preview. For more information, see [Enable targeted messages for agents](agents-in-teams/targeted-messages.md).
+
+---
 
 ## Older posts
 
@@ -122,9 +149,9 @@ Targeted messages for agents are now available in developer preview. For more in
 
 <summary><b>2026</b></summary>
 
-### Developer preview: apps in private channels
+### Preview: apps in private channels
 
-**January 27, 2026**
+*January 27, 2026*
 
 Support for apps in private channels is available in developer preview. For more information, see [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md).
 
