@@ -1187,7 +1187,7 @@
       },
       {
         "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       { 
         "source_path": "msteams-platform/messaging-extensions/build-bot-based-plugin.md",
@@ -1335,7 +1335,7 @@
       },
       {
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/includes/get-started/prepare-teams-toolkit.md",
@@ -1447,7 +1447,7 @@
       },
       {
         "source_path": "msteams-platform/sbs-gs-spfx.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-api-based-message-extensions.yml",
@@ -1463,39 +1463,39 @@
       },
       {
         "source_path": "msteams-platform/sbs-gs-blazorupdate.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-bot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-commandbot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
      {
         "source_path": "msteams-platform/sbs-gs-csharp.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-javascript.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-msgext.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-nodejs.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-notificationbot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-workflow-bot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-meetingextension-action.yml",
@@ -1614,6 +1614,11 @@
       {
         "source_path": "msteams-platform/resources/faqs.md",
         "redirect_url": "microsoftteams/moodle-faqs",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/get-started/tool-options-and-code-samples.md",
+        "redirect_url": "code-samples",
         "redirect_document_id": false
       }
     ]
