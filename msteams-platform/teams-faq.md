@@ -607,6 +607,7 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 
 </details>
 
+<!--
 ## Moodle
 
 <details>
@@ -757,6 +758,7 @@ However, you can access the invite and manually add participant names to the **R
 For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
 </details>
+-->
 
 ## Notifications
 
@@ -867,8 +869,8 @@ You can create a Partner Center account one of the following ways:
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
 | Menu | Option |
-| ---   | --- |
-| Category | Commercial Marketplace|
+| --- | --- |
+| Category | Commercial Marketplace |
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic | Office add-in |
 

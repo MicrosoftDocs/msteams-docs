@@ -1595,6 +1595,26 @@
         "source_path": "msteams-platform/resources/teams-updates.md",
         "redirect_url": "/microsoftteams/platform/overview",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodleInstructions.md",
+        "redirect_url": "/microsoftteams/install-moodle-integration",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodle-overview.md",
+        "redirect_url": "/microsoftteams/moodle-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/m365-plugins/m365-plugins-overview.md",
+        "redirect_url": "/microsoftteams/m365-plugins-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/faqs.md",
+        "redirect_url": "microsoftteams/moodle-faqs",
+        "redirect_document_id": false
       }
     ]
 }
