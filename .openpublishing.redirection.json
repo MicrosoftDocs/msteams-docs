@@ -1620,6 +1620,11 @@
         "source_path": "msteams-platform/whats-new.md",
         "redirect_url": "developer-announcements",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/ai-ux.md",
+        "redirect_url": "agents-best-practices-features-checklist",
+        "redirect_document_id": false
       }
     ]
 }
