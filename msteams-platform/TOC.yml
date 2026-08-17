@@ -23,7 +23,7 @@
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
-    - name: Agent best practicecs and features checklist
+    - name: Agent best practices and features checklist
       href: bots/how-to/teams-conversational-ai/ai-ux.md
       displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
   - name: Integrate AI
