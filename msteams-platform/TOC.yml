@@ -941,7 +941,7 @@
     href: get-started/tutorials.md
     displayName: Build a Teams app, Build a Teams bot, Build a Teams tab, Build a message extension, Build apps for Teams meetings and calls
   - name: Code samples
-    href: get-started/tool-options-and-code-samples.md
+    href: get-started/code-samples.md
     displayName: Teams app samples, Teams bot samples, Teams tab samples, Message extension samples, Apps for Teams meetings and calls samples
 - name: Integrate device capabilities
   items:
