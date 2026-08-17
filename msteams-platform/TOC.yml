@@ -24,7 +24,7 @@
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
     - name: Best practices and features checklist
-      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
   - name: Integrate AI
     items:
     - name: Stream messages
