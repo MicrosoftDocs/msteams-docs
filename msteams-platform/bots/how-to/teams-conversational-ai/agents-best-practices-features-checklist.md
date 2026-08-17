@@ -33,11 +33,11 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
 
 ---
 
@@ -91,6 +91,6 @@ Agents can attach standardized [feedback controls](../bot-messages-ai-generated-
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../assets/images/bots/feedback-buttons-mobile.png":::
+:::image type="content" source="../../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-buttons-mobile.png":::
 
-:::image type="content" source="../../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams mobile client." lightbox="../../assets/images/bots/feedback-form-mobile.png":::
+:::image type="content" source="../../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-form-mobile.png":::
