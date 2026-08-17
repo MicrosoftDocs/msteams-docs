@@ -4,7 +4,7 @@
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
 - name: Developer announcements
-  href: whats-new.md
+  href: developer-announcements.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
   expanded: true

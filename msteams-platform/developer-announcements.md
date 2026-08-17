@@ -8,21 +8,21 @@ ms.localizationpriority: high
 
 # Teams Platform developer announcements
 
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these developer updates about Teams Platform delivered to your feed reader.
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
 
 ## Released: Teams SDK (stable and preview, multiple languages)
 
 *August 4, 2026*
 
-New versions of Teams SDK have been released across TypeScript, .NET and Python!
+New versions of Teams SDK are now available across TypeScript, .NET, and Python!
 
 ### .NET
 
-Teams SDK for .NET 2.1.0 is a significant release that replaces the plugin-oriented model of 2.0 with a plain ASP.NET Core app. 2.1.0 also  adds agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility. For more information, see the detailed [release notes](https://github.com/microsoft/teams.net/releases/tag/v2.1.0).
+Teams SDK for .NET 2.1.0 is a significant release that replaces the plugin-oriented model of 2.0 with a plain ASP.NET Core app. 2.1.0 also adds agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility. For more information, see the detailed [release notes](https://github.com/microsoft/teams.net/releases/tag/v2.1.0).
 
 ### TypeScript and Python
 
-Teams SDK for TypeScript and for Python both have new stable maintenance releases, as well as new preview releases that include preview support for Agent 365 scenarios.
+Teams SDK for TypeScript and Python both have new stable maintenance releases, as well as new preview releases that include preview support for Agent 365 scenarios.
 
 - TypeScript stable: 2.0.15 ([release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.0.15))
 - TypeScript preview: 2.1.0-preview.3 ([release notes](https://github.com/microsoft/teams.ts/releases/tag/v2.1.0-preview.3))
@@ -37,7 +37,7 @@ Teams SDK for TypeScript and for Python both have new stable maintenance release
 
 On **August 31, 2026**, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.
 
-If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the deprecation date.
+If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the retirement date.
 
 ---
 
@@ -50,7 +50,7 @@ New controls governing access to meeting transcripts are now generally available
 - Deny all transcript access via Graph API
 - Enable access only to transcripts that do not include speaker attribution
 
-Developers should ensure their agents and apps clearly communicate expectations and requirements about transcript access, gracefully handle lack of access, and ensure their implementations can handle the non-attributed transcript format.
+Developers should ensure their agents and apps clearly communicate expectations and requirements about transcript access, gracefully handle denied access, and correctly handle the non-attributed transcript format.
 
 For more information, see [Graph API access to transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording).
 
@@ -66,7 +66,7 @@ Targeted messages are private messages between a user and an agent in a group co
 
 Developers can use agent slash commands to surface agent functionality as named commands that users can activate from chat. Activating a command from the menu will send it as a chat message that the agent can detect and act on.
 
-All agents that operate in group conversations are eligible to implement targeted message sends to individual users. App manifest updates are required to register agent slash commands and to enable user to send targeted messages to an agent. See the [targeted messages](agents-in-teams/targeted-messages.md) and [agent slash commands](agents-in-teams/agent-slash-commands.md) documentation to start building these new features into your agent.
+All agents that operate in group conversations are eligible to implement targeted message sends to individual users. App manifest updates are required to register agent slash commands and to enable users to send targeted messages to an agent. See the [targeted messages](agents-in-teams/targeted-messages.md) and [agent slash commands](agents-in-teams/agent-slash-commands.md) documentation to start building these new features into your agent.
 
 ---
 
@@ -129,7 +129,7 @@ Emoji reactions for agents are now available in developer preview. See the [reac
 
 *April 27, 2026*
 
-Agent prompt starters are now generally available! With prompt starters, agents can offer predefined prompts in chat that help users understand the its capabilities and start getting value from it immediately. When a user selects a prompt starter, Teams inserts it into the chat compose box.
+Agent prompt starters are now generally available! With prompt starters, agents can offer predefined prompts in chat that help users understand their capabilities and start getting value from them immediately. When a user selects a prompt starter, Teams inserts it into the chat compose box.
 
 Defining prompt starters requires no code: they are specified entirely in an agent's app manifest configuration. See the [documentation](bots/how-to/conversations/prompt-starters.md) to learn how to configure prompt starters for an agent.
 
@@ -154,6 +154,8 @@ Targeted messages for agents are now available in developer preview. For more in
 *January 27, 2026*
 
 Support for apps in private channels is available in developer preview. For more information, see [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md).
+
+---
 
 </details>
 
