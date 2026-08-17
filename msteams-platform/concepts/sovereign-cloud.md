@@ -29,14 +29,14 @@ The following table lists the supported cloud environments and their associated 
 | Public (default) | `Public` | portal.azure.com | teams.microsoft.com |
 | US Gov (GCC-High) | `USGov` | portal.azure.us | gov.teams.microsoft.us |
 | US Gov (DoD) | `USGovDoD` | portal.azure.us | dod.teams.microsoft.us |
-| China (21Vianet) | `China` | portal.azure.cn | n/a |
+| China (21Vianet) | `China` | portal.azure.cn | teams.microsoftonline.cn |
 
 ### Prerequisites
 
-To deploy an app in a sovereign cloud, you need:
+To deploy a bot or agent in a sovereign cloud, you need:
 
 - A Teams tenant in the corresponding cloud environment.
-- An Azure Bot resource and app registration in the sovereign cloud portal.
+- An Azure Bot resource and app registration created in the matching sovereign cloud portal.
 
 ## Configure your app for a sovereign cloud
 
@@ -152,22 +152,9 @@ The following table details the apps and its capabilities supported for Teams op
 
 **Fix:** Confirm the `Cloud` setting matches the cloud your Azure Bot resource was created in.
 
-### China bots fail user OAuth flows
+### Bots in China (21Vianet)
 
-**Symptom:** OAuth or user-token flows fail in China with login redirects that don't resolve.
-
-**Cause:** China sovereign cloud doesn't have a stable multitenant login alias. Single-tenant bots must point to their specific tenant explicitly.
-
-**Fix:** Override `LoginTenant` on the China preset to your tenant ID:
-
-```json
-{
-  "Teams": {
-    "Cloud": "China",
-    "LoginTenant": "your-tenant-id"
-  }
-}
-```
+Teams operated by 21Vianet doesn't support bots or user OAuth flows. For China tenants, build using the supported capabilities listed later in this article (for example, tabs)
 
 ### CLOUD environment variable seems ignored
 
