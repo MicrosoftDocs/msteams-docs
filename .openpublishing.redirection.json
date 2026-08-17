@@ -650,10 +650,6 @@
         "redirect_url": "/microsoftteams/platform/get-started/first-message-extension"
       },
       {
-        "source_path": "msteams-platform/get-started/code-samples.md",
-        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
-      },
-      {
         "source_path": "msteams-platform/get-started/prerequisites.md",
         "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
       },
