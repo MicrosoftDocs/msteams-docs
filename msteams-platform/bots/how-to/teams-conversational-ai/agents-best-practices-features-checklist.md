@@ -17,7 +17,7 @@ These practices and features represent standard user expectations for agents in 
 
 ## Message streaming and thinking indicators
 
-Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) in one-on-one conversations to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updatable *thinking indicator* to indicate liveness and provide insight into how the message is being generated. Streaming and thinking indicators are supported in one-on-one chats.
+Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) in one-on-one conversations to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updatable *thinking indicator* to indicate liveness and provide insight into how the message is being generated.
 
 :::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated":::
 
@@ -33,11 +33,11 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
 
 ---
 
@@ -55,7 +55,7 @@ Agents distributed through the Teams Store and enabled for personal scope (one-o
 
 ## Agent slash commands
 
-Agents that provide command-style functionality can make it discoverable with [named commands](../../../agents-in-teams/agent-slash-commands.md). An agent's named commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
+Agents that provide command-style functionality can make it discoverable and easily usable with [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). An agent's commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
 
 ## Suggested actions
 
@@ -79,7 +79,7 @@ Teams' [indicator for AI-generated messages](../bot-messages-ai-generated-conten
 
 :::image type="content" source="../../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
 
-## User feedback
+## User feedback controls
 
 Agents can attach standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
 
