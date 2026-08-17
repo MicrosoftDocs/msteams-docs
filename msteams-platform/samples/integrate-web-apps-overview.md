@@ -93,7 +93,6 @@ You can also integrate Microsoft 365 identity to build external applications tha
 * [Create virtual assistant](~/samples/virtual-assistant.md)
 * [App templates for Microsoft Teams](~/samples/app-templates.md)
 * [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
-* [Install Moodle LMS](~/resources/moodleinstructions.md)
 * [Share to Teams from web apps](~/concepts/build-and-test/share-to-teams-from-web-apps.md)
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
