@@ -3,8 +3,8 @@
 - name: Overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: What's new?
-  href: whats-new.md
+- name: Developer announcements
+  href: developer-announcements.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
   expanded: true
@@ -877,18 +877,6 @@
     - name: Production-ready Shifts Connectors
       href: samples/shifts-wfm-connectors.md
       displayName: Teams Shifts Workforce management (WFM)
-    - name: Moodle LMS
-      items:
-      - name: What is Moodle LMS?
-        href: resources/moodle-overview.md
-        displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
-      - name: Microsoft 365 plugins
-        href: resources/m365-plugins/m365-plugins-overview.md
-        displayName: OpenID Connect, Microsoft 365 Repository, Microsoft 365 integration, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
-      - name: Install Moodle LMS
-        href: resources/moodleInstructions.md
-      - name: Moodle FAQ
-        href: resources/faqs.md
     - name: Share to Teams
       items:
       - name: Share to Teams from web apps

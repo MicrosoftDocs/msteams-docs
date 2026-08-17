@@ -1139,47 +1139,47 @@
       },
       {
         "source_path": "msteams-platform/samples/collaboration-control.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/install-collaboration-control.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/app-with-collaboration-controls.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/deploy-collaboration-control-in-teams.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-control-power-automate.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/configure-tasks.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-tables-for-tasks.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-tables-api.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-table-entity-references.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-api-reference.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-controls-limitations.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
@@ -1594,6 +1594,31 @@
       {
         "source_path": "msteams-platform/resources/teams-updates.md",
         "redirect_url": "/microsoftteams/platform/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodleInstructions.md",
+        "redirect_url": "/microsoftteams/install-moodle-integration",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodle-overview.md",
+        "redirect_url": "/microsoftteams/moodle-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/m365-plugins/m365-plugins-overview.md",
+        "redirect_url": "/microsoftteams/m365-plugins-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/faqs.md",
+        "redirect_url": "microsoftteams/moodle-faqs",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/whats-new.md",
+        "redirect_url": "developer-announcements",
         "redirect_document_id": false
       }
     ]
