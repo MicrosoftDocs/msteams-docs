@@ -65,7 +65,7 @@ App can also pass the `tabEntityId`, if there are multiple instances of the app 
 
 # [C#](#tab/csharp)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-app-icon-badging/csharp/AppIconBadgingInMeetings/Bots/AppIconBadgingInMeeting.cs#L108)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-app-icon-badging/csharp/AppIconBadgingInMeetings/Bots/AppIconBadgingInMeeting.cs#L108)
 
 ```csharp
 TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
@@ -73,7 +73,7 @@ TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
 
 # [JavaScript](#tab/javascript)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-app-icon-badging/nodejs/bots/teamsBot.js#L83)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-app-icon-badging/nodejs/bots/teamsBot.js#L83)
 
 ```javascript
 TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
@@ -113,7 +113,7 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
 
 |Sample name | Description | Node.js | .NET |
 |----------------|-----------------|--------------|
-| App icon badging for your Teams app | This sample app showcases how to implement app icon badging for notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
+| App icon badging for your Teams app | This sample app showcases how to implement app icon badging for notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-app-icon-badging/csharp) |
 
 ## See also
 

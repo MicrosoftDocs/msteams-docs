@@ -3,7 +3,7 @@ title: Agent best practices and features checklist
 description: TODO Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 06/12/2026
+ms.date: 07/13/2026
 ---
 
 # Agent best practices and features checklist

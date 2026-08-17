@@ -3,7 +3,7 @@ title: Teams Developer Documentation Glossary
 description: Learn about the glossary such as common terms, meanings, and definitions used in Microsoft Teams developer documentation.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 04/17/2026
 ---
 # Glossary
 
@@ -82,7 +82,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Custom app built for your org (LOB app) | An app created only for Teams by you or your organization. |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) | Custom engine agents are fully customized AI assistants designed for scenarios that require complex workflows, orchestration, or specific language models. <br>For more information, see [Custom engine agent](/microsoft-365-copilot/extensibility/agents-overview#custom-engine-agents)  <br> **See also**: [Agents](#a); [Declarative agent](#d) |
-| [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [Personal tab](#p); [Shared apps](#s) |
 
 ## D
@@ -260,7 +259,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Tab](../tabs/what-are-tabs.md) | Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365 that point to domains declared in app manifest. You can add it as part of a channel inside a team, group chat, or personal app for an individual user. |
 | [Tab chat](../tabs/how-to/conversational-tabs.md) | A type of tab that lets a user have a focused conversation experience in dynamic tabs. |
 | [Task modules](../task-modules-and-cards/what-are-task-modules.md) (referred as dialogs in TeamsJS v2.x)| A feature of Teams app to create modal pop-up for completing tasks, displaying videos, or dashboard. <br> **See also**: [Adaptive Card](#a), [Dialogs](#d) |
-| [Task info](../task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) | The `TaskInfo` object contains the metadata for a dialogs (referred as task modules in TeamsJS v.1.0).|
+| [Task info](../task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-metadata) | The `TaskInfo` object contains the metadata for a dialog (referred as task modules in TeamsJS v.1.0).|
 | [Thread discussion](../tabs/design/tabs.md#thread-discussion) | A conversation posted on a channel or chat between users. <br>**See also** [Conversation](#c); [Channel](#c) |
 | [Teams](../overview.md) | Microsoft Teams is the ultimate message app for your organization. It's a workspace for real-time collaboration and communication, meetings, file and app sharing. |
 | [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome) (formerly known as Teams AI library) | It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams. <br> **See also**: [Custom engine agent](#c) |

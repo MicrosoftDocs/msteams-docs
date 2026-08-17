@@ -2,15 +2,11 @@
 title: Teams Emoji Reactions Reference
 description: Use the emojis available for Teams agents reactions.
 ms.topic: reference
-ms.date: 01/23/2026
+ms.date: 07/10/2026
 ms.localizationpriority: high
 ---
 
 # Teams Reactions Reference
-
-> [!NOTE]
->
-> Support for agent reactions in Teams is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 This article provides a complete list of emoji reactions available in Teams and their corresponding reaction IDs, used to [add reactions to messages](agent-reactions.md).
 
