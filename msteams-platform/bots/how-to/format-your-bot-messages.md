@@ -18,6 +18,8 @@ Message formatting enables you to bring out the best in agent messages. You can 
 >   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
 >   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
 > - If the agent message exceeds the size limit, the agent receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
+>
+> For bot messages in GCC High and DoD environments, embed images as base64-encoded content rather than relying on external image links, which may not render reliably. For more information about images in bot messages, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
 
 ## Format text content
 
@@ -27,7 +29,7 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| `plain` | The text must be treated as raw text with no formatting applied.|
+| `plain` | The text must be treated as raw text with no formatting applied. |
 | `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
 | `xml` | The text is simple XML markup. |
 
@@ -45,19 +47,19 @@ After you format text content, ensure that your formatting works across all plat
 
 Some styles aren't supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
 
-| Style                     | Text-only messages | Rich cards - XML only |
-| ---                       | :---: | :---: |
-| Bold                      | ✔️️ | ❌ |
-| Italic                    | ✔️ | ✔️ |
+| Style | Text-only messages | Rich cards - XML only |
+| --- | :---: | :---: |
+| Bold | ✔️️ | ❌ |
+| Italic | ✔️ | ✔️ |
 | Header (levels 1&ndash;3) | ❌ | ✔️ |
-| Strikethrough             | ❌ | ✔️ |
-| Horizontal rule           | ❌ | ❌ |
-| Unordered list            | ❌ | ✔️ |
-| Ordered list              | ❌ | ✔️ |
-| Preformatted text         | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ |
+| Strikethrough | ❌ | ✔️ |
+| Horizontal rule | ❌ | ❌ |
+| Unordered list | ❌ | ✔️ |
+| Ordered list | ❌ | ✔️ |
+| Preformatted text | ✔️ | ✔️ |
+| Blockquote | ✔️ | ✔️ |
+| Hyperlink | ✔️ | ✔️ |
+| Image link | ❌ | ❌ |
 
 After checking cross-platform support, ensure that support by individual platforms is also available.
 
@@ -69,19 +71,19 @@ Support for text formatting varies by type of message and platform.
 
 The following table provides a list of styles, which are supported on desktop, iOS, and Android:
 
-| Style                     | Desktop | iOS | Android |
-| ---                       | :---: | :---: | :---: |
-| Bold                      | ✔️ | ✔️ | ✔️ |
-| Italic                    | ✔️ | ✔️ | ✔️ |
+| Style | Desktop | iOS | Android |
+| --- | :---: | :---: | :---: |
+| Bold | ✔️ | ✔️ | ✔️ |
+| Italic | ✔️ | ✔️ | ✔️ |
 | Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
-| Strikethrough             | ✔️ | ✔️ | ❌ |
-| Horizontal rule           | ❌ | ❌ | ❌ |
-| Unordered list            | ✔️ | ❌ | ❌ |
-| Ordered list              | ✔️ | ❌ | ❌ |
-| Preformatted text         | ✔️ | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ | ❌ |
+| Strikethrough | ✔️ | ✔️ | ❌ |
+| Horizontal rule | ❌ | ❌ | ❌ |
+| Unordered list | ✔️ | ❌ | ❌ |
+| Ordered list | ✔️ | ❌ | ❌ |
+| Preformatted text | ✔️ | ✔️ | ✔️ |
+| Blockquote | ✔️ | ✔️ | ✔️ |
+| Hyperlink | ✔️ | ✔️ | ✔️ |
+| Image link | ❌ | ❌ | ❌ |
 
 ## AI-generated content messages
 
