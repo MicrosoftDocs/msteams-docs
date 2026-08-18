@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Teams Platform developer documentation # < 60 chars
-summary: Welcome to the Microsoft Teams Platform developer documentation. Build Teams agents and apps to deliver key information, tools, and workflows right where people connect and work. # < 160 chars
+summary: Build Teams agents and apps to deliver key information, tools, and workflows right where people connect and work. # < 160 chars
 
 metadata:
   title: Microsoft Teams Platform Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -33,26 +33,46 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
       - text: Agents in Teams
         url: /microsoftteams/platform/agents-in-teams/overview
+      - text: Agent basics
+        url: /microsoftteams/platform/bots/bot-concepts
+    - linkListType: whats-new
+      links:
+      - text: Developer announcements
+        url: /microsoftteams/platform/developer-announcements
     - linkListType: sample
       links:
         - text: Code samples
           url: /microsoftteams/platform/get-started/code-samples
 
-- title: Conversational agent features
+- title: Add conversational agent features
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Message streaming
+      url: /microsoftteams/platform/bots/streaming-ux
+    - text: Targeted messages
+      url: /microsoftteams/platform/agents-in-teams/targeted-messages
+    - text: Suggested actions
+      url: /microsoftteams/platform/bots/how-to/conversations/suggested-actions
+    - text: Agent slash commands
+      url: /microsoftteams/platform/agents-in-teams/agent-slash-commands
+    - text: Emoji reactions
+      url: /microsoftteams/platform/agents-in-teams/agent-reactions
+    - text: Prompt starters
+      url: /microsoftteams/platform/bots/how-to/conversations/prompt-starters
+
+- title: Teams app capabilities
   linkLists:
   - linkListType: concept
     links:
-    - text: Build bots
-      url: ~/bots/what-are-bots.md
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
-    - text: Build message extensions
-      url: ~/messaging-extensions/what-are-messaging-extensions.md
-    - text: Build apps for Teams meetings
-      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-#
+    - text: Tab apps
+      url: /microsoftteams/platform/tabs/what-are-tabs
+    - text: Message extensions
+      url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+    - text: Apps for Teams meetings
+      url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
 
-- title: Publish Teams agents
+- title: Publish Teams agents and apps
   linkLists:
   - linkListType: concept
     links:
@@ -60,16 +80,10 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
     - text: Microsoft Teams Store validation guidelines
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-#    - text: Publish Teams apps in Microsoft Teams Store
-#      url: /training/modules/microsoft-teams-publish-app-to-store
     - text: Publish your agents or apps in Teams
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-#    - text: Upload your app in Microsoft Teams
-#      url: ~/concepts/deploy-and-publish/apps-upload.md
     - text: Common reasons for app validation failure
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-#    - text: Maintain your published app
-#      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
 - title: Tutorials
   linkLists:
@@ -82,16 +96,17 @@ landingContent:
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml 
 
-- title: References
+- title: Developer reference
   linkLists:
   - linkListType: reference
     links:
-    - text: App manifest
+    - text: Teams SDK for TypeScript
+      url: /javascript/api/teams-sdk-typescript
+    - text: Teams SDK for Python
+      url: /python/api/msteams-sdk-python
+    - text: Teams SDK for .NET
+      url: /dotnet/teams-sdk-dotnet
+    - text: App manifest schema
       url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Public developer preview manifest schema
-      url: ~/resources/schema/manifest-schema-dev-preview.md
-    - text: Grow your agent
-      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-    - text: Monitize your agent
-      url: ~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
-
+    - text: TeamsJS and Live Share SDK
+      url: /javascript/api/overview/msteams-client
