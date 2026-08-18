@@ -84,6 +84,8 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Configure Azure Bot Service authentication
+      href: bots/how-to/authentication/configure-azure-bot-service-authentication.md
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -275,7 +277,7 @@
   - name: Developer preview manifest schema
     href: resources/dev-preview/developer-preview-intro.md
     displayName: developer preview, preview, public preview
-- name: Add authentication
+- name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
