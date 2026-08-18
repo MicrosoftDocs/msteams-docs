@@ -101,7 +101,7 @@ If you want to build basic tab app, select the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Tool options and code samples](tool-options-and-code-samples.md)
+> [Code samples](code-samples.md)
 
 ## See also
 

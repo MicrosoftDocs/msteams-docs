@@ -29,8 +29,8 @@ landingContent:
         url: /microsoftteams/platform/teams-ai-library
       - text: Agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Agents user experience
-        url: bots/how-to/teams-conversational-ai/ai-ux.md
+      - text: Best practices and features checklist
+        url: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
       - text: Enhance AI-generated bot Messages
         url: bots/how-to/bot-messages-ai-generated-content.md
 #      - text: Custom engine agents support for Microsoft 365 Copilot Chat
@@ -114,8 +114,6 @@ landingContent:
   linkLists:
     - linkListType: tutorial
       links:
-        - text: Debug your AI chat bot using Agents Playground
-          url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/bots/how-to/bot-configuration-experience.md
 #        - text: Create Teams conversation bot

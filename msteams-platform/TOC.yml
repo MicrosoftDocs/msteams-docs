@@ -3,8 +3,8 @@
 - name: Overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: What's new?
-  href: whats-new.md
+- name: Developer announcements
+  href: developer-announcements.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
   expanded: true
@@ -23,9 +23,8 @@
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
-    - name: Agents user experience
-      href: bots/how-to/teams-conversational-ai/ai-ux.md
-      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop
+    - name: Best practices and features checklist
+      href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
   - name: Integrate AI
     items:
     - name: Stream messages
@@ -877,18 +876,6 @@
     - name: Production-ready Shifts Connectors
       href: samples/shifts-wfm-connectors.md
       displayName: Teams Shifts Workforce management (WFM)
-    - name: Moodle LMS
-      items:
-      - name: What is Moodle LMS?
-        href: resources/moodle-overview.md
-        displayName: Facilitate hybrid remote meetings, Personalize meeting panels, Automate facility, Build Citizen developer apps, moodle lms, mconnect, skooler
-      - name: Microsoft 365 plugins
-        href: resources/m365-plugins/m365-plugins-overview.md
-        displayName: OpenID Connect, Microsoft 365 Repository, Microsoft 365 integration, Teams Meeting, Teams Theme, OneNOte, Microsoft Block, oEmbed Filter
-      - name: Install Moodle LMS
-        href: resources/moodleInstructions.md
-      - name: Moodle FAQ
-        href: resources/faqs.md
     - name: Share to Teams
       items:
       - name: Share to Teams from web apps
@@ -948,14 +935,8 @@
     - name: Extend Microsoft 365 Copilot
       href: messaging-extensions/how-to-extend-copilot.md
       displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
-- name: Tutorials and code samples
-  items:
-  - name: Tutorials
-    href: get-started/tutorials.md
-    displayName: Build a Teams app, Build a Teams bot, Build a Teams tab, Build a message extension, Build apps for Teams meetings and calls
-  - name: Code samples
-    href: get-started/tool-options-and-code-samples.md
-    displayName: Teams app samples, Teams bot samples, Teams tab samples, Message extension samples, Apps for Teams meetings and calls samples
+- name: Code samples
+  href: get-started/code-samples.md
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
