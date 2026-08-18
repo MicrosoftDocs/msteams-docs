@@ -114,8 +114,6 @@ landingContent:
   linkLists:
     - linkListType: tutorial
       links:
-        - text: Debug your AI chat bot using Agents Playground
-          url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/bots/how-to/bot-configuration-experience.md
 #        - text: Create Teams conversation bot
