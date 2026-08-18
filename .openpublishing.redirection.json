@@ -32,7 +32,7 @@
     },
       {
         "source_path": "msteams-platform/apps-in-teams-meetings/teams-together-mode.md",
-        "redirect_url": "/microsoftteams/platform/mstdd-landing"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/bots/how-to/conversations/prompt-suggestions.md",
@@ -1510,10 +1510,6 @@
         "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
       },
-      {
-        "source_path": "msteams-platform/index.yml",
-        "redirect_url": "https://developer.microsoft.com/en-us/microsoft-teams"
-      },
       { 
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md",
         "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
@@ -1630,6 +1626,11 @@
       {
         "source_path": "msteams-platform/get-started/tool-options-and-code-samples.md",
         "redirect_url": "code-samples",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/mstdd-landing.yml",
+        "redirect_url": "/microsoftteams/platform",
         "redirect_document_id": false
       }
     ]
