@@ -101,8 +101,3 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 > [!div class="nextstepaction"]
 > [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md)
-
-## See also
-
-- [Enable SSO for your bot - Tutorial](../../../get-started/tutorials.md#build-a-bot-with-sso-authentication)
-- [Glossary](../../../get-started/glossary.md)

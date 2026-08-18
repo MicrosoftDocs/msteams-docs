@@ -1,0 +1,112 @@
+### YamlMime:Landing
+
+title: Microsoft Teams Platform developer documentation # < 60 chars
+summary: Build Teams agents and apps to deliver key information, tools, and workflows right where people connect and work. # < 160 chars
+
+metadata:
+  title: Microsoft Teams Platform Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about developing for the Microsoft Teams Platform. Build agents and apps for Teams, creating collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: msteams
+  ms.subservice: teams-apps # Optional; Remove if no subservice is used.
+  ms.topic: landing-page # Required
+  ms.collection: collection # Optional; Remove if no collection is used.
+  author: nickwalkmsft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: nickwalk #Required; microsoft alias of author; optional team alias.
+  ms.date: 08/17/2026 #Required; mm/dd/yyyy format.
+  ms.localizationpriority: high
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+- title: Build Teams agents
+  linkLists:
+    - linkListType: quickstart
+      links:
+        - text: "Quickstart: Create an agent and chat with it in Teams"
+          url: /microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk
+    - linkListType: concept
+      links:
+      - text: Best practices and features checklist
+        url: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+      - text: Agents in Teams
+        url: /microsoftteams/platform/agents-in-teams/overview
+      - text: Agent basics
+        url: /microsoftteams/platform/bots/bot-concepts
+    - linkListType: whats-new
+      links:
+      - text: Developer announcements
+        url: /microsoftteams/platform/developer-announcements
+    - linkListType: sample
+      links:
+        - text: Code samples
+          url: /microsoftteams/platform/get-started/code-samples
+
+- title: Add conversational agent features
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Message streaming
+      url: /microsoftteams/platform/bots/streaming-ux
+    - text: Targeted messages
+      url: /microsoftteams/platform/agents-in-teams/targeted-messages
+    - text: Suggested actions
+      url: /microsoftteams/platform/bots/how-to/conversations/suggested-actions
+    - text: Agent slash commands
+      url: /microsoftteams/platform/agents-in-teams/agent-slash-commands
+    - text: Emoji reactions
+      url: /microsoftteams/platform/agents-in-teams/agent-reactions
+    - text: Prompt starters
+      url: /microsoftteams/platform/bots/how-to/conversations/prompt-starters
+
+- title: Teams app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Tab apps
+      url: /microsoftteams/platform/tabs/what-are-tabs
+    - text: Message extensions
+      url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+    - text: Apps for Teams meetings
+      url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+
+- title: Publish Teams agents and apps
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Validation guidelines for agents
+      url: ~/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
+    - text: Microsoft Teams Store validation guidelines
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: Publish your agents or apps in Teams
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+    - text: Common reasons for app validation failure
+      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+
+- title: Tutorials
+  linkLists:
+    - linkListType: tutorial
+      links:
+        - text: Bot configuration experience
+          url: ~/bots/how-to/bot-configuration-experience.md
+        - text: Build a bot with SSO authentication
+          url: ~/sbs-bots-with-sso.yml
+        - text: Configure SSO for tabs and message extensions
+          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml 
+
+- title: Developer reference
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Teams SDK for TypeScript
+      url: /javascript/api/teams-sdk-typescript
+    - text: Teams SDK for Python
+      url: /python/api/msteams-sdk-python
+    - text: Teams SDK for .NET
+      url: /dotnet/teams-sdk-dotnet
+    - text: App manifest schema
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: TeamsJS and Live Share SDK
+      url: /javascript/api/overview/msteams-client
