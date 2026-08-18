@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/get-started/tutorials.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/get-started/tutorials",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "msteams-platform/bots/overview.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/bots/overview",
       "redirect_document_id": false
