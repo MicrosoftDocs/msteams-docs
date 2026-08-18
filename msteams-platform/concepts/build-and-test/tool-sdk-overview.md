@@ -13,11 +13,11 @@ ms.date: 08/18/2026
 
 [Teams SDK and developer CLI](/microsoftteams/platform/teams-sdk/welcome) form the main developer toolkit for building conversational agents and other app experiences in Teams. The SDK is developed alongside the Teams platform, enabling developers to build apps that integrate deeply with Teams and take advantage of its unique features that make it so effective for collaborative work. The developer CLI provides tools for creating, configuring, and managing Teams agents and apps.
 
-[Teams Developer Portal](teams-developer-portal.md) is the primary tool for configuring and distributing Teams agents and apps. Use it to create and manage an agent or app's app manifest and publish it Teams store or an organizational app catalog.
-
 The [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview?tabs=csharp) is an alternative that enables creation of extensible, multichannel agents that can operate across Microsoft 365 experiences and are compatible with Microsoft Teams. It provides a unified development model for agent orchestration, lifecycle management, and integration with AI services of your choice.
 
-The [Microsoft 365 Agents Toolkit](../../toolkit/overview-agents-toolkit.md) is a suite of developer tools for building agents and apps with the Microsoft 365 Agents SDK and Teams SDK.
+[Teams Developer Portal](teams-developer-portal.md) is the primary tool for configuring and distributing Teams agents and apps. Use it to create and manage an agent or app's app manifest and publish it Teams store or an organizational app catalog.
+
+The [Microsoft 365 Agents Toolkit](../../toolkit/overview-agents-toolkit.md) is a suite of developer tools for building agents and apps with the Microsoft 365 Agents SDK and Teams SDK. Agents Toolkit is available as extensions for Visual Studio and Visual Studio Code, and includes a CLI for scaffolding, validating and deploying agents and apps.
 
 > [!NOTE]
 > Using a preview SDK does not automatically restrict marketplace publication, provided the app meets supported platform, compliance, and validation requirements.
