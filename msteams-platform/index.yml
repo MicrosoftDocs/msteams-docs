@@ -1,18 +1,18 @@
 ### YamlMime:Landing
 
-title: Microsoft Teams developer documentation # < 60 chars
-summary: Welcome to Microsoft Teams developer documentation. Teams agents and apps deliver key information, tools, and workflows right where people connect and work. # < 160 chars
+title: Microsoft Teams Platform developer documentation # < 60 chars
+summary: Welcome to the Microsoft Teams Platform developer documentation. Build Teams agents and apps to deliver key information, tools, and workflows right where people connect and work. # < 160 chars
 
 metadata:
-  title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Learn about Microsoft Teams developer documentation, how to build apps for Teams, and create collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Teams Platform Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about developing for the Microsoft Teams Platform. Build agents and apps for Teams, creating collaborative workspaces for effective communication. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.subservice: teams-apps # Optional; Remove if no subservice is used.
   ms.topic: landing-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
   author: nickwalkmsft #Required; your GitHub user alias, with correct capitalization.
   ms.author: nickwalk #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/11/2024 #Required; mm/dd/yyyy format.
+  ms.date: 08/17/2026 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -21,37 +21,24 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: Build agents
+- title: Build Teams agents
   linkLists:
+    - linkListType: quickstart
+      links:
+        - text: "Quickstart: Create an agent and chat with it in Teams"
+          url: /microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk
     - linkListType: concept
       links:
-      - text: Teams SDK (formerly known as Teams AI library)
-        url: /microsoftteams/platform/teams-ai-library
-      - text: Agents overview
-        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       - text: Best practices and features checklist
         url: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
-      - text: Enhance AI-generated bot Messages
-        url: bots/how-to/bot-messages-ai-generated-content.md
-#      - text: Custom engine agents support for Microsoft 365 Copilot Chat
-#        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
-
-- title: Get started
-  linkLists:
-    - linkListType: get-started
+      - text: Agents in Teams
+        url: /microsoftteams/platform/agents-in-teams/overview
+    - linkListType: sample
       links:
-      - text: Build your first agent
-        url: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Get started with GitHub
-        url: /contribute/additional-resources
-      - text: Glossary
-        url: ~/get-started/glossary.md
-#      - text: Overview
-#        url: ~/overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples        
+        - text: Code samples
+          url: /microsoftteams/platform/get-started/code-samples
 
-- title: Add Teams app capabilities
+- title: Conversational agent features
   linkLists:
   - linkListType: concept
     links:
@@ -63,33 +50,7 @@ landingContent:
       url: ~/messaging-extensions/what-are-messaging-extensions.md
     - text: Build apps for Teams meetings
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-#    - text: Build webhooks and connectors
-#      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-#    - text: Build cards and dialogs
-#      url: ~/task-modules-and-cards/cards-and-task-modules.md
-
-
-
-        
-
-#    - linkListType: tutorial
-#      links:
-#      - text: Build app with JavaScript
-#        url: sbs-gs-javascript.yml
-#      - text: Build your first app using Blazor
-#        url:  sbs-gs-blazorupdate.yml
-#      - text: Build app with SPFx
-#         url: sbs-gs-spfx.yml
-#      - text: Build app with C# or .NET
-#        url: sbs-gs-csharp.yml
-#      - text: Build app with Node.js
-#        url: sbs-gs-nodejs.yml
-#      - text: Build command bot with JavaScript
-#        url: sbs-gs-commandbot.yml
-#      - text: Build notification bot with JavaScript
-#        url: sbs-gs-notificationbot.yml
-#      - text: Build workflow bot
-#        url: sbs-gs-workflow-bot.yml   
+#
 
 - title: Publish Teams agents
   linkLists:
@@ -116,88 +77,10 @@ landingContent:
       links:
         - text: Bot configuration experience
           url: ~/bots/how-to/bot-configuration-experience.md
-#        - text: Create Teams conversation bot
-#          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
-#        - text: Build notification bot with JavaScript
-#          url: sbs-gs-notificationbot.yml          
-#       - text: Build a bot to send Proactive messages
-#         url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
         - text: Configure SSO for tabs and message extensions
           url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml 
-#       - text: Create Calling and meeting bot
-#         url: ~/sbs-calling-and-meeting.yml
-#       - text: Build tabs with Adaptive Card
-#         url: ~/sbs-tab-with-adaptive-cards.yml
-#       - text: Generate meeting token
-#         url: ~/sbs-meeting-token-generator.yml
-#    - linkListType: tutorial
-#      links:
-#        - text: Generate meeting side panel
-#          url: ~/sbs-meetings-sidepanel.yml
-#        - text: Build an in-meeting document signing app
-#          url:  ~/sbs-inmeeting-document-signing.yml
-#        - text: Build command bot with JavaScript
-#          url: sbs-gs-commandbot.yml
-#        - text: Build notification bot with JavaScript
-#          url: sbs-gs-notificationbot.yml
-#        - text: Upload files to Teams from a bot
-#          url: ~/sbs-file-handling-in-bot.yml
-#        - text: Generate meeting content bubble
-#          url: ~/sbs-meeting-content-bubble.yml
-#        - text: Invoke dialogs from Microsoft Teams
-#          url: ~/sbs-botbuilder-taskmodule.yml
-#        - text: Build search based message extension
-#          url: ~/sbs-messagingextension-searchcommand.yml
-#        - text: Build action based message extension
-#          url: ~/sbs-meetingextension-action.yml
-#        - text: Build Outgoing Webhooks
-#          url: ~/sbs-outgoing-webhooks.yml
-#    - linkListType: tutorial
-#      links:
-#        - text: Unfurl links in Teams using bot
-#          url: ~/sbs-botbuilder-linkunfurling.yml
-#        - text: Build Teams connectors
-#          url: ~/sbs-teams-connectors.yml
-#        - text: Send activity feed notification 
-#          url:  ~/sbs-graphactivity-feedbroadcast.yml          
-# - title: Build apps for Teams
-#  linkLists:
-#    - linkListType: overview
-#      links:
-#      - text: Build apps for Microsoft Teams
-#        url: ../msteams-platform/overview.md
-#      - text: App fundamentals
-#        url: ~/concepts/app-fundamentals-overview.md
-#      - text: Design your app
-#        url: ~/concepts/design/design-teams-app-overview.md
-#      - text: Code samples
-#        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-#      - text: Build apps for Teams meeting stage
-#        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-#    - linkListType: whats-new
-#      links:
-#      - text: What's new
-#        url: ../msteams-platform/whats-new.md  
-
-
-
-
-#- title: Monetize your agent or app
-#  linkLists:
-#    - linkListType: concept
-#      links:
-#      - text: Guidelines for apps linked to SaaS offers
-#        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-#      - text: Monetize your Teams app with a transactable SaaS offer
-#        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-#      - text: In-app purchases
-#        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-#      - text: Test preview for monetized apps
-#        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
-#      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-#        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
 
 - title: References
   linkLists:
@@ -212,5 +95,3 @@ landingContent:
     - text: Monitize your agent
       url: ~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
 
-#    - text: Explore low-code apps for Teams
-#      url:  ~/samples/teams-low-code-solutions.md
