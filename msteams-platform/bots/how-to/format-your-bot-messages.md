@@ -12,14 +12,14 @@ ms.date: 03/11/2025
 Message formatting enables you to bring out the best in agent messages. You can format your agent messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
 
 > [!NOTE]
-> Regarding agent message size limit:
+> Regarding agent or bot message size limit:
 >
 > - The agent message size limit is 100 KB:
 >   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
 >   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
 > - If the agent message exceeds the size limit, the agent receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
 >
-> For bot messages in GCC High and DoD environments, embed images as base64-encoded content rather than relying on external image links, which may not render reliably. For more information about images in bot messages, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
+> In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links may not render reliably. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
 
 ## Format text content
 
