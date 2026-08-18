@@ -35,7 +35,7 @@ The Microsoft Entra admin center provides a central platform for you to register
 > You mustn't share your Microsoft Entra app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and a Microsoft Entra app. Installing multiple Teams apps associated with the same Microsoft Entra app ID will cause installation or runtime failures.
 
 > [!NOTE]
-> Register your app in the same tenant where you upload and test your app. If the app registration is in a different tenant, only a tenant administrator can upload the app. For more information, see upload your custom app in Teams.
+> Register your app in the same tenant where you upload and test your app. If the app registration is in a different tenant, only a tenant administrator can upload the app. For more information, see [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Update your app manifest
 
