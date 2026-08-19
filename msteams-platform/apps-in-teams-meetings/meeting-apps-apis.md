@@ -607,8 +607,6 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet3)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
-
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {
