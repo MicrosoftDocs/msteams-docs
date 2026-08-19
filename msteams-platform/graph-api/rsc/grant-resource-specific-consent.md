@@ -444,16 +444,16 @@ The default value of the `isUserPersonalScopeResourceSpecificConsentEnabled` pro
 If your Teams admin allows custom app uploads, you can [upload your custom app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
 > [!IMPORTANT]
-> To upload a custom app that requests RSC permissions, one of the following conditions must be met:
 >
-> * The Microsoft Entra app registration specified in the `webApplicationInfo.id` property of the app manifest was created in the same tenant where you upload the app.
-> * You're a tenant administrator, such as a user with the Global Administrator role.
 >
-> If neither condition is met, app installation fails and the network trace returns the following error:
->
+> If you encounter the following error while sideloading a Teams app that requires Resource-Specific Consent (RSC) permissions:
 > `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`
+> Ensure that one of the following conditions is met:
 >
-> This error occurs because the Microsoft Entra app registration referenced in `webApplicationInfo.id` belongs to a different tenant. To resolve the error, register the app in the tenant where you want to upload it. Then, update the `webApplicationInfo.id` property in the app manifest with the application (client) ID of the new Microsoft Entra app registration.
+> * The user installing the app is a tenant administrator.
+> * The app registration associated with the Teams app was created in the same tenant as the user.
+>
+> To resolve the error, create the app registration in the tenant where you want to sideload the app. Then, in the Teams app manifest, update the `webApplicationInfo.id` property with the application (client) ID of the new Microsoft Entra app registration.
 
 ## Verify app RSC permission granted to your app
 
