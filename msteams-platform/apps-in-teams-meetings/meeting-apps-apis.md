@@ -23,12 +23,12 @@ The following table provides a list of APIs available across the Teams SDK and t
 
 | Method | Description | Source |
 | --- | --- | --- |
-| [**Get participant**](#get-participant-api) | Fetch participant information by meeting ID and participant ID. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
-| [**Send in-meeting notification**](#send-an-in-meeting-notification) | Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest&preserve-view=true) |
-| [**Get meeting details**](#get-meeting-details-api) | Get a meeting's static metadata. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Get participant**](#get-participant-api) | Fetch participant information by meeting ID and participant ID. | Teams SDK |
+| [**Send in-meeting notification**](#send-an-in-meeting-notification) | Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | Teams SDK |
+| [**Get meeting details**](#get-meeting-details-api) | Get a meeting's static metadata. | Teams SDK |
 | [**Send real-time captions**](#send-real-time-captions-api) | Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
 | [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage) | Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events) | Receive real-time meeting events, such as meeting start and end or participant join and leave. | [Teams SDK](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events) | Receive real-time meeting events, such as meeting start and end or participant join and leave. | Teams SDK |
 
 ## Get user context API
 
