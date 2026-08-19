@@ -39,7 +39,8 @@ To make agent messages pop, the user can add pictures as attachments:
 
 For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links may not render reliably. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
+> [!NOTE]
+>In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links may not render reliably. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
 
 ### Use Adaptive Cards
 
