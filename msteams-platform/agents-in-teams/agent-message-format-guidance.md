@@ -22,7 +22,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 ## Format Profiles
 
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
 
 
 ### Plain Text
@@ -38,6 +38,12 @@ Use when the response is conversational, brief, or a single-sentence fact. Plain
 
 **Avoid when:** Content has lists, tables, code, or anything the user needs to scan rather than read linearly.
 
+**Example:**
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-plain-text.png" alt-text="Image shows a sample of Plain Text message format." border="false":::
+
+
 
 ### Markdown
 
@@ -51,6 +57,12 @@ Use when you need lightweight structure — headers, bullets, bold, inline code 
 - Research summaries with sections and sub-bullets
 
 **Avoid when:** Content has more than ~3 data columns, or when the user must take an action (click, approve, fill a field).
+
+**Example:**
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-markdown.png" alt-text="Image shows a sample of markdown message format." border="false":::
+
 
 
 ### Adaptive Card
@@ -66,6 +78,18 @@ Use when structure meets interaction — approvals, form inputs, rich data table
 
 **Avoid when:** Content is purely informational (use Markdown); or data is live and needs real-time refresh (use Widget).
 
+**Example:**
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card.png" alt-text="Image shows a sample of adaptive card message format." border="false":::
+
+
+**Design samples:**
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of adaptive card." border="false":::
+
+
 
 ### Widget / MCP-UI
 
@@ -80,8 +104,20 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 **Avoid when:** The experience fits in a card (use Adaptive Cards instead), or the UI is too rich to belong in a Teams message at all — a full analytics suite, an interactive CAD viewer, or any app-scale UI should live on the web and be linked to, not embedded. Widgets occupy the middle ground: richer than a card, scoped enough to feel native, but they do not replace the rich experience of a full app. Widgets have higher latency, require extra infrastructure, and have limited support on mobile / classic Teams. Default to Adaptive Cards; escalate to Widget only when cards hit a hard ceiling.
 
+**Example:**
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-decision-tree.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget.png" alt-text="Image shows a sample of html widget message format." border="false":::
+
+
+**Design samples:**
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of adaptive card." border="false":::
+
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-decision-tree.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
 
 
 
