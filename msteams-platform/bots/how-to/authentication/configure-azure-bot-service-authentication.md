@@ -14,10 +14,9 @@ This configuration authenticates the agent application, not the person using the
 
 ## Prerequisites
 
-Before you begin, ensure that you have:
+Before you begin, ensure that you have an Azure subscription, with permissions to create Entra ID app registrations and Azure Bot resources.
 
-- An Azure subscription.
-- Permission to create app registrations and Azure Bot resources.
+-
 - Permission to manage identities if you use a managed identity or federated identity credential.
 - An Azure compute resource that hosts your agent, such as Azure App Service, Azure Container Apps, or an Azure virtual machine, if you use a managed identity or federated identity credential.
 

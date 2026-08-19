@@ -9,12 +9,12 @@
 - name: Build conversational agents for Teams
   expanded: true
   items:
-  - name: Get started
+  - name: "Quickstart: Create and chat with an agent"
+    href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+    displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+  - name: Concepts
     expanded: true
     items:
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
     - name: Agent basics
