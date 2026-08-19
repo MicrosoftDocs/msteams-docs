@@ -448,12 +448,11 @@ If your Teams admin allows custom app uploads, you can [upload your custom app](
 >
 > If you encounter the following error while sideloading a Teams app that requires Resource-Specific Consent (RSC) permissions:
 > `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`
+>
 > Ensure that one of the following conditions is met:
 >
-> * The user installing the app is a tenant administrator.
+> * The user attempting to install the app is a tenant administrator.
 > * The app registration associated with the Teams app was created in the same tenant as the user.
->
-> To resolve the error, create the app registration in the tenant where you want to sideload the app. Then, in the Teams app manifest, update the `webApplicationInfo.id` property with the application (client) ID of the new Microsoft Entra app registration.
 
 ## Verify app RSC permission granted to your app
 
