@@ -81,7 +81,7 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 **Avoid when:** The experience fits in a card (use Adaptive Cards instead), or the UI is too rich to belong in a Teams message at all — a full analytics suite, an interactive CAD viewer, or any app-scale UI should live on the web and be linked to, not embedded. Widgets occupy the middle ground: richer than a card, scoped enough to feel native, but they do not replace the rich experience of a full app. Widgets have higher latency, require extra infrastructure, and have limited support on mobile / classic Teams. Default to Adaptive Cards; escalate to Widget only when cards hit a hard ceiling.
 
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-decision-tree-wide-v2.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-message-format-decision-tree.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
 
 
 
