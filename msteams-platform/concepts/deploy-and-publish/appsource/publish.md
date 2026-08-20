@@ -25,7 +25,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
 :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram shows the Teams Store publishing process for Teams apps." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
 
-1. [Review the Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and Teams Store standards.Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
+1. [Review the Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to ensure your app meets Teams app and Teams Store standards.
 
 1. [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 
@@ -44,11 +44,11 @@ If your app is production ready, you can begin the process of getting it listed 
 
 * **Guided app publish through concierge service**
 
-After submission, Microsoft validates your app. If issues are identified, you receive a validation report with details about the issues and recommended remediation steps. To help you successfully publish your app to the Teams Store and guide you through this process, the validation team sends you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
+    After submission, Microsoft validates your app. If issues are identified, you receive a validation report with details about the issues and recommended remediation steps. To help you successfully publish your app to the Teams Store and guide you through this process, the validation team sends you a personalized email from our concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) that includes the following information:
 
-* Summary of all issues
+  * Summary of all issues
 
-* The validation report categorizes issues as:
+  * The validation report categorizes issues as:
 
   * Must fix: Issues must be fixed prior to app approval.
 
@@ -58,9 +58,9 @@ After submission, Microsoft validates your app. If issues are identified, you re
 
   * Query: Queries can be shared to get answers to specific questions related to your app.
 
-* Steps to recreate issues through written instructions or video format.
+  * Steps to recreate issues through written instructions or video format.
 
-* Recommendations to fix the reported issues with links to guidance docs.
+  * Recommendations to fix the reported issues with links to guidance docs.
 
    After addressing the reported issues, submit an updated app package for revalidation. The validation process continues until all required issues are resolved and the app meets Teams Store requirements.Allow at least one business day for the app to be available in the Teams Store.
 
@@ -76,11 +76,72 @@ The following flowchart summarizes the recommended activities during the design,
 
 :::image type="content" source="../../../assets/images/submission/tips-publish-apps-workflow.png" alt-text="Diagram shows the Teams Store tips for publishing your Teams apps." lightbox="../../../assets/images/submission/tips-publish-apps-workflow.png":::
 
+* **During design phase**
+
+Review the Teams Store validation guidelines early in the design phase to ensure that you build your app in alignment with the Teams Store requirements.
+ Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
+
+* **Prior to app submission**
+
+ 1. Create your Partner Center account well in advance. If you run into any challenges with your account, create a [support ticket](/azure/marketplace/partner-center-portal/support).
+
+ 1. Complete [publisher verification](/azure/active-directory/develop/publisher-verification-overview) before you submit your app.
+
+ 1. Test and retest your app:
+ 1. Validate your app package using the Teams [Developer Portal](https://dev.teams.microsoft.com/home) to identify and fix any package errors.
+ 1. Self-test your app thoroughly prior to app submission to ensure it adheres to Teams Store policies.
+ 1. Test your app across desktop, web, and mobile clients.
+ 1. Set up instructions if your app requires more configuration to access app functionality.
+  
+* **Post app submission**
+
+  * After you’ve reviewed the validation report, reply to the email thread with any queries related to the validation report, or if you need any extra support to resolve the reported issues.
+
+  * Ensure that you've adequate developer bandwidth to resolve any reported issues until the app is approved.
+
+  * Ensure that you've [resolved all issues](/microsoftteams/platform/concepts/deploy-and-publish/appsource/resolve-submission-issues) reported to you by the concierge service [teamsubm@microsoft.com](mailto:teamsubm@microsoft.com) before sharing your app package for further testing.
+  
+  * Avoid changing app functionality during the validation process that might lead to discovery of new issues and increase the time it takes to approve your app.
+
 ## Additional tips for rapid approval to publish your app linked to a SaaS offer
 
 Use the following flowchart to help streamline the validation process for apps linked to a SaaS offer. Reviewing compliance requirements early, preparing your offer configuration correctly, and validating end-to-end subscription workflows before submission can help reduce validation issues and avoid unnecessary resubmissions.
 
 :::image type="content" source="../../../assets/images/submission/additional-tips-to-publish-apps.png" alt-text="Diagram shows the additional tips for publishing your Teams apps." lightbox="../../../assets/images/submission/additional-tips-to-publish-apps.png":::
+
+* **During design phase**
+
+Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers).
+
+* **Prior to app submission**
+
+  As you prepare for app submission, ensure the following details:
+
+   1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
+
+   1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer) in the format `publisherId.offerId`.
+
+   1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
+
+   1. Include test instructions or setup instructions or link to a demo video detailing app functionality and supported scenarios and any additional information to enable our testers to easily understand your SaaS portal workflows.
+
+   1. You must thoroughly [self-test](~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md) the end to end purchase and license management workflows.
+
+    Before you submit your app linked to a SaaS offer for validation, ensure the following details:
+
+    1. Both admin and non-admin users can place an order and confirm the purchase of your subscription. Purchasers can navigate to the SaaS application landing page by selecting  **Setup Now** in the Microsoft Admin Center.
+
+    1. The **Manage Subscriptions** section in Microsoft Admin Center shows the correct details of the subscriptions brought by your test users. Subscription status, number of licenses, and other details must be accurate.
+
+    1. Buying and removal of license workflows are working as expected.
+
+    1. Ensure purchasers can increase the number of licenses from Microsoft Admin Center.
+
+    1. Subscription cancellation is working as expected. Purchasers can cancel a subscription. Check if the correct subscription status is reflected in the Microsoft Admin Center and your SaaS application post cancellation. Verify that the purchaser has lost access to the subscription after successful cancellation.
+
+    1. Repurchasing a subscription is seamless. After cancellation of an active subscription, thoroughly test to ensure purchasers can repurchase the subscription.
+
+    1. Purchasers can change their subscribed plan. After the plan is modified, users can access the upgraded or downgraded plan features.
 
 ## Teams Store search experience
 
