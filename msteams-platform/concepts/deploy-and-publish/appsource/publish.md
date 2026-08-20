@@ -78,7 +78,7 @@ The following flowchart summarizes the recommended activities during the design,
 
 * **During design phase**
 
-Review the Teams Store validation guidelines early in the design phase to ensure that you build your app in alignment with the Teams Store requirements.
+   Review the Teams Store validation guidelines early in the design phase to ensure that you build your app in alignment with the Teams Store requirements.
  Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
 
 * **Prior to app submission**
@@ -111,7 +111,7 @@ Use the following flowchart to help streamline the validation process for apps l
 
 * **During design phase**
 
-Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers).
+   Review the [Teams Store validation guidelines specific to apps published with linked SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer) to ensure that you build your app in alignment with the Teams Store requirements and [Microsoft Commercial Marketplace policies applicable to Teams apps linked to SaaS offers](/legal/marketplace/certification-policies#11405-teams-app-linked-to-software-as-a-service-saas-offers).
 
 * **Prior to app submission**
 
