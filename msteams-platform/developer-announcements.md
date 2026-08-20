@@ -10,6 +10,18 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
 
+## Preview: Extended Markdown formatting for agent messages
+
+*August 20, 2026*
+
+Agents can now send richer, better-formatted responses. Set `textFormat: "extendedmarkdown"` to add tables, task lists, code blocks, equations, images, at-mentions, and citations to your agent's messages. This feature is currently in preview.
+
+Extended Markdown content also renders progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
+
+For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#set-message-text-format).
+
+---
+
 ## Released: Teams SDK for Python hotfix
 
 *August 20, 2026*
