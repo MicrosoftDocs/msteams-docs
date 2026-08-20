@@ -10,6 +10,17 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
 
+## Released: Teams SDK for Python hotfix
+
+*August 20, 2026*
+
+Hotfix releases for both the stable and preview tracks of Teams SDK for Python are now available on PyPI.
+
+- Stable: 2.0.16 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.0.16))
+- Preview: 2.1.0a2 ([release notes](https://github.com/microsoft/teams.py/releases/tag/v2.1.0a2))
+
+---
+
 ## Released: Teams SDK (stable and preview, multiple languages)
 
 *August 4, 2026*
