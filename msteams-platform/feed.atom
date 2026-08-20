@@ -9,29 +9,19 @@
 	<category term="new"/>
 	<category term="updated"/>
 	<entry>
-		<title type="html"><![CDATA[Announcement: Bring private, contextual interactions with agents into group conversations with Targeted messaging]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14528</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed"/>
-		<updated>2026-08-03T13:07:43Z</updated>
-		<summary type="html"><![CDATA[Targeted messaging introduces a more focused way for users and agents to interact within channels, group chats, and meeting chats. By enabling private, context-aware exchanges alongside the group conversation, it helps users seek help and complete tasks without disrupting others or exposing information that is not meant for the wider audience.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14528?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<title type="html"><![CDATA[Retiring: App manifest environment variables]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#retiring-app-manifest-environment-variables</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables"/>
+		<updated>2026-08-04T00:00:00Z</updated>
+		<summary type="html"><![CDATA[The Teams Developer Portal's environment variables feature for app manifests will be retired on August 31, 2026, after which manifests that use environment variables will become invalid and the variables will no longer be available for creation, management, or access. Apps that rely on this feature should be split into per-environment apps before the retirement date.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
-		<title type="html"><![CDATA[Transcription Graph API Controls is now GA!]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14522</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed"/>
-		<updated>2026-07-31T04:31:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to share a major milestone: Tenant administrators can now manage third-party access to post-meeting transcript data through two new tenant-level controls. Previously, admins could govern access only through Microsoft Entra permission scopes, with no Teams admin center setting to control transcript access across all third-party apps and agents. To provide greater oversight and security, two new tenant-level controls, both disabled by default, have been introduced. These controls allow admins to enable or disable access to meeting transcripts and speaker attribution data through Microsoft Graph APIs.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14522?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<title type="html"><![CDATA[Released: Teams SDK (stable and preview, multiple languages)]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-teams-sdk-stable-and-preview-multiple-languages</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-teams-sdk-stable-and-preview-multiple-languages"/>
+		<updated>2026-08-04T00:00:00Z</updated>
+		<summary type="html"><![CDATA[New versions of Teams SDK are now available across TypeScript, .NET, and Python, including stable maintenance releases and preview support for Agent 365 scenarios. Teams SDK for .NET 2.1.0 also introduces an ASP.NET Core application model, agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-teams-sdk-stable-and-preview-multiple-languages">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Announcing the launch of smart agent reactions for clearer collaboration!]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/14486</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed"/>
-		<updated>2026-07-20T09:32:01+05:30</updated>
-		<summary type="html"><![CDATA[Introducing agent reactions in Microsoft Teams to make digital collaboration more efficient and less disruptive. Agents can now acknowledge messages, indicate progress, and signal completion using familiar reaction cues, helping teams stay aligned without adding unnecessary replies to busy conversations.<br /><br />Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/14486?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-
-	
 </feed>
