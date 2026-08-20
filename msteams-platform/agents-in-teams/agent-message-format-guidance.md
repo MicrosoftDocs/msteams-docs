@@ -69,6 +69,11 @@ Use when you need lightweight structure — headers, bullets, bold, inline code 
 
 Use when you need a structured, visually rich layout with actionability. Cards may include both informational and interactive elements. Adaptive Cards support components such as badges, progress indicators, tables, charts, and forms, and automatically adapt to Teams’ design language, accessibility modes, and themes (light, dark, high contrast).
 
+
+> [!TIP]
+> Adaptive Cards support up to four distinct responsive size variants — wide, standard, narrow, and very narrow — letting you define unique layouts, content, and imagery per size.
+
+
 **Use for:**
 - Approval workflow: "Please approve this PR" with [Approve] / [Reject] buttons
 - Incident alert with severity badge, owner field, and [Acknowledge] CTA
@@ -95,8 +100,10 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 
 Use for rich, stateful, interactive experiences beyond what a card can offer — embedded charts, live data, multi-step flows, or custom UI. Widgets render as a pane, not inline in chat. Widgets render as an iframe inline in chat.
 
+
 > [!NOTE]
 > Unlike Adaptive Cards, HTML widgets use a single fluid layout that scales continuously across widths. If your content requires significantly different layouts at different sizes, consider Adaptive Cards instead.
+
 
 **Use for:**
 - Interactive data explorer: filter a table, drill into a row, export CSV
