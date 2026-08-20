@@ -3,7 +3,7 @@ title: Get All Channel and Chat Messages
 description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 03/16/2026
+ms.date: 08/19/2026
 ---
 
 # Enable agents to receive all chat messages

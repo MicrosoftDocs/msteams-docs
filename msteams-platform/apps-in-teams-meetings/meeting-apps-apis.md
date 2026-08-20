@@ -23,12 +23,12 @@ The following table provides a list of APIs available across the Teams SDK and t
 
 | Method | Description | Source |
 | --- | --- | --- |
-| [**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
-| [**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Teams SDK](/dotnet/api/microsoft.teams.api.notification?view=msteams-sdk-dotnet-latest&preserve-view=true) |
-| [**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Teams SDK](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true) |
-| [**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-| [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Teams SDK](/dotnet/api/microsoft.teams.api.activities.events.meetingstartactivity?view=msteams-sdk-dotnet-latest&preserve-view=true) |
+| [**Get participant**](#get-participant-api) | Fetch participant information by meeting ID and participant ID. | Teams SDK |
+| [**Send in-meeting notification**](#send-an-in-meeting-notification) | Provides meeting signals using the conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | Teams SDK |
+| [**Get meeting details**](#get-meeting-details-api) | Get a meeting's static metadata. | Teams SDK |
+| [**Send real-time captions**](#send-real-time-captions-api) | Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
+| [**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage) | Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| [**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events) | Receive real-time meeting events, such as meeting start and end or participant join and leave. | Teams SDK |
 
 ## Get user context API
 
@@ -607,8 +607,6 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet3)
 
-* [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
-
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {
@@ -700,11 +698,11 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ---
 
 | Property name | Description |
-|---|---|
+| --- | --- |
 | **user.id** | ID of the user. |
 | **user.aadObjectId** | Microsoft Entra object ID of the user. |
 | **user.name** | Name of the user. |
-| **user.givenName** | First Name of the user.|
+| **user.givenName** | First Name of the user. |
 | **user.surname** | Last Name of the user. |
 | **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
@@ -744,7 +742,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**conversationId**| String | Yes | The conversation identifier is available as part of Bot Invoke. |
+|**conversationId**|String|Yes|The conversation identifier is available as part of Bot Invoke.|
 
 ### Examples
 
@@ -827,12 +825,12 @@ POST /v3/conversations/{conversationId}/activities
 ---
 
 | Property name | Description |
-|---|---|
+| --- | --- |
 | **type** | Type of activity. |
 | **text** | The text content of the message. |
 | **summary** | The summary text of the message. |
 | **channelData.notification.alertInMeeting** | Boolean indicating if a notification is to be shown to the user while in a meeting. |
-| **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL.|
+| **channelData.notification.externalResourceUrl** | The value of the notification's external resource URL. |
 | **replyToId** | The ID of the parent or root message of the thread. |
 | **APP_ID** | App ID declared in manifest. |
 | **completionBotId** | Bot app ID. |
@@ -841,8 +839,8 @@ POST /v3/conversations/{conversationId}/activities
 
 The following table includes the response codes:
 
-|Response code|Description|
-|---|---|
+| Response code | Description |
+| --- | --- |
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
@@ -956,21 +954,21 @@ POST /v1/meetings/{meetingId}/notification
 ```
 
 | Property name | Description |
-|---|---|
+| --- | --- |
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
-| `type` |`targetedMeetingNotification` |
-| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). An empty or null recipients list returns 400.|
+| `type` | `targetedMeetingNotification` |
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). An empty or null recipients list returns 400. |
 | `surface` | A type of surface. The supported surface types are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
 | `content` | [TaskModuleContinueResponse](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&preserve-view=true) |
 | `content.value.height` | **Optional**; requested height of the notification. |
-|`content.value.width` | **Optional**; requested width of the notification. |
+| `content.value.width` | **Optional**; requested width of the notification. |
 | `content.value.title` | **Optional**; title of the notification. |
 | `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If an empty string or no URL is provided, nothing is rendered on a meeting notification. |
 | `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
 | `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
-| `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |
+| `onBehalfOf.mentionType` | `person` keyword. Describes the mention of a person. |
 | `onBehalfOf.mri` | User MRI shown as sender. |
 | `onBehalfOf.displayName` | **Optional**; name of the `person`. Used as fallback in case the name resolution is unavailable. |
 
@@ -1102,7 +1100,6 @@ The following table lists the query parameter:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -1386,7 +1383,7 @@ The JSON response body for meeting details API is as follows:
 ---
 
 | Property name | Description |
-|---|---|
+| --- | --- |
 | **details.id** | The meeting's ID, encoded as a BASE64 string. |
 | **details.msGraphResourceId** | The MsGraphResourceId, used specifically for MS Graph API calls. |
 | **details.scheduledStartTime** | The meeting's scheduled start time, in UTC. |
@@ -1424,8 +1421,8 @@ The CART URL includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|----|
-|**meetingId**| String | Yes |The meeting identifier is available through Bot Invoke and the TeamsJS library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
-|**token**| String | Yes |Authorization token.<br/> For example, token=04751eac |
+|**meetingId**|String|Yes|The meeting identifier is available through Bot Invoke and the TeamsJS library. <br/>For example, meetingid=%7b%22tId%22%3a%2272f234bf-86f1-41af-91ab-2d7cd0321b47%22%2c%22oId%22%3a%22e071f268-4241-47f8-8cf3-fc6b84437f23%22%2c%22thId%22%3a%2219%3ameeting_NzJiMjNkMGQtYzk3NS00ZDI1LWJjN2QtMDgyODVhZmI3NzJj%40thread.v2%22%2c%22mId%22%3a%220%22%7d|
+|**token**|String|Yes|Authorization token.<br/> For example, token=04751eac|
 
 #### Example
 
@@ -1897,8 +1894,8 @@ The following code provides an example of meeting end event payload:
 ```
 
 | Property name | Description |
-|---|---|
-| **name** | Name of the user.|
+| --- | --- |
+| **name** | Name of the user. |
 | **type** | Activity type. |
 | **timestamp** | Local date and time of the message, expressed in ISO-8601 format. |
 | **id** | ID for the activity. |
@@ -1923,7 +1920,7 @@ The following code provides an example of meeting end event payload:
 | **value.JoinUrl** | The join URL of the meeting. |
 | **value.StartTime** | The meeting start time in UTC. |
 | **value.endTime** | The meeting end time in UTC. |
-| **locale**| The locale of the message set by the client. |
+| **locale** | The locale of the message set by the client. |
 
 ### Receive meeting participant events
 
@@ -2171,14 +2168,14 @@ The following is an example of the participant leave event payload:
 
 ## Code sample
 
-|Sample name | Description | .NET | Node.js | Manifest|
-|----------------|-----------------|--------------|--------------|------|
-| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
-| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
-| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/nodejs)||
-| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip)|
-| Meeting Events Sample | This sample shows real-time Teams meeting events using bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
-| Meeting Recruitment Sample |This sample app shows a meeting experience for recruitment scenario using Apps In Meetings.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip)|
+| Sample name | Description | .NET | Node.js | Manifest |
+| ---------------- | ----------------- | -------------- | -------------- | ------ |
+| Meetings extensibility | Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip) |
+| In-meeting notification | Demonstrates how to implement in-meeting notification using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/meetings-notification/csharp/demo-manifest/meetings-notification.zip) |
+| Meeting side panel | Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/nodejs) | |
+| Details Tab in Meeting | This sample app shows Teams meeting extensibility feature where user can create a poll, and members can answer the poll in meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-details-tab/csharp/demo-manifest/meetings-details-tab.zip) |
+| Meeting Events Sample | This sample shows real-time Teams meeting events using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/dotnet/bot-meetings) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/nodejs/bot-meetings) | NA |
+| Meeting Recruitment Sample | This sample app shows a meeting experience for recruitment scenario using Apps In Meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-recruitment-app/csharp/demo-manifest/Meeting-Recruitment-App.zip) |
 
 ## See also
 

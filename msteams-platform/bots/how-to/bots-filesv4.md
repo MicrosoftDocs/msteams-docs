@@ -1,7 +1,7 @@
 ---
 title: Send and Receive Files
 description: Learn how to create agents that send and receive files using Microsoft Graph APIs and Teams SDK for personal, channel, and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 07/27/2026
+ms.date: 08/19/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -466,7 +466,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
-| File upload | This agent sample for Teams demonstrates file upload capabilities using Bot Framework v4, enabling users to upload files and view inline images within chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-file-upload/python) |
+| File upload | This agent sample for Teams demonstrates file upload capabilities using Teams SDK Framework , enabling users to upload files and view inline images within chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet/bot-cards) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs/bot-cards) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/python/bot-cards) |
 
 ## See also
 

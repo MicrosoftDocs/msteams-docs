@@ -607,6 +607,7 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 
 </details>
 
+<!--
 ## Moodle
 
 <details>
@@ -757,6 +758,7 @@ However, you can access the invite and manually add participant names to the **R
 For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
 </details>
+-->
 
 ## Notifications
 
@@ -867,8 +869,8 @@ You can create a Partner Center account one of the following ways:
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
 | Menu | Option |
-| ---   | --- |
-| Category | Commercial Marketplace|
+| --- | --- |
+| Category | Commercial Marketplace |
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic | Office add-in |
 
@@ -1008,7 +1010,7 @@ The following resources can also assist:
 
 You can open the authentication page in the dialog (referred as task module in TeamsJS v1.x) when the user selects the button.
 
-You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
 
 <br>
 &nbsp;

@@ -1,10 +1,10 @@
 ---
-title: Design Tabs for Desktop, Web & Mobile
-description: Learn how to design a tab for desktop, web, and mobile, and get Microsoft Teams UI Kit. Learn tab, build user authentication, tab notifications, and deep linking.
+title: Design Tabs for Desktop, Web, and Mobile
+description: Learn how to design a tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit. Learn about tabs, user authentication, tab notifications, and deep linking.
 author: nickwalkmsft
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 07/23/2026
+ms.date: 07/27/2026
 ---
 # Design your tab for Microsoft Teams
 
@@ -84,7 +84,7 @@ Use one of the following Teams UI templates to help design your tab setup experi
 
 ## View a tab
 
-Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.
+Tabs provide a full-screen web experience in Teams where you can display collaborative content—such as task boards and dashboards—and important information.
 
 ### Mobile
 
@@ -104,11 +104,11 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 |----------|-----------|
 |1|**Tab name**: Navigation label for your tab.|
 |2|**Tab chat**: Opens a chat that allows users to have a conversation next to the content.|
-|3|**webview**: Displays your app content.|
+|3|**Webview**: Displays your app content.|
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="This Illustration shows the UI anatomy of a tab." lightbox="../../assets/images/tabs/design-view-tab-anatomy.png":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration shows the UI anatomy of a tab." lightbox="../../assets/images/tabs/design-view-tab-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -190,7 +190,7 @@ You can include options to rename, remove, or modify a tab.
 
 ## Tab notifications and deep linking
 
-You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (i.e., activity without noise). You also can @mention specific users if needed.
+You can send a message with a deep link to your tab. For example, a card shows a summary of bug data a user can select to see the entire bug in a tab. Sending messages about tab activity increases awareness without explicitly notifying everyone (that is, activity without noise). You also can @mention specific users if needed.
 
 Notify users of tab activity one of the following ways:
 

@@ -4,7 +4,7 @@ description: Learn final steps before you submit your Teams app to be listed on 
 ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
-ms.date: 01/23/2025
+ms.date: 08/05/2026
 ---
 
 # Prepare your Teams Store submission
@@ -276,4 +276,5 @@ Partner Center supports [localized Teams Store listings](/office/dev/store/prepa
 
 ## See also
 
-[Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
+* [Common reasons for app validation failure](../common-reasons-for-app-validation-failure.md)
+* [Prepare your Microsoft 365 tenant](../../../build-and-test/prepare-your-o365-tenant.md)
