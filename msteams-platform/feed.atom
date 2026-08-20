@@ -24,4 +24,36 @@
 		<summary type="html"><![CDATA[New versions of Teams SDK are now available across TypeScript, .NET, and Python, including stable maintenance releases and preview support for Agent 365 scenarios. Teams SDK for .NET 2.1.0 also introduces an ASP.NET Core application model, agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-teams-sdk-stable-and-preview-multiple-languages">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: Targeted messages and agent slash commands]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-targeted-messages-and-agent-slash-commands</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands"/>
+		<updated>2026-07-30T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Targeted messaging and agent slash commands are now generally available, enabling private user-to-agent messages in group conversations and named commands that users can activate from chat. App manifest updates are required to register agent slash commands and enable targeted messages for an agent.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: New admin controls for meeting transcripts]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-new-admin-controls-for-meeting-transcripts</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-new-admin-controls-for-meeting-transcripts"/>
+		<updated>2026-07-30T00:00:00Z</updated>
+		<summary type="html"><![CDATA[New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center, including options to deny all transcript access through the Graph API or allow access only to transcripts without speaker attribution. Developers should clearly communicate transcript access requirements, handle denied access, and support non-attributed transcript formats.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-new-admin-controls-for-meeting-transcripts">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: Emoji chat reactions for agents]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-emoji-chat-reactions-for-agents</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-emoji-chat-reactions-for-agents"/>
+		<updated>2026-07-10T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Emoji chat reactions for agents are now generally available, allowing agents to add and remove reactions to messages in a chat to communicate acknowledgement, status, and other information in a lightweight way.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-emoji-chat-reactions-for-agents">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: Apps in private channels]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-apps-in-private-channels</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-apps-in-private-channels"/>
+		<updated>2026-07-07T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Support for agent and app participation in private channels is now generally available. Implementing this capability requires consideration of the agent implementation and app manifest configuration for private channel operation.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-apps-in-private-channels">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 </feed>
