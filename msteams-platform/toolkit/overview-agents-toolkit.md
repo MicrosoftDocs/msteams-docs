@@ -2,7 +2,7 @@
 title: Microsoft 365 Agents Toolkit
 description: Microsoft 365 Agents Toolkit is a suite of tools for building enterprise-ready agents that work across Microsoft 365 Copilot, Teams, web, and other third-party messaging channels.
 ms.topic: overview
-ms.date: 01/26/2026
+ms.date: 08/05/2026
 ---
 # Microsoft 365 Agents Toolkit
 
@@ -23,6 +23,9 @@ Microsoft 365 Agents Toolkit is available in the following formats:
 | :::image type="content" source="../assets/images/agents-toolkit-landing/vscode.png" alt-text="Visual Studio Code logo":::| Visual Studio Code | Agents Toolkit extension optimized for TypeScript and JavaScript development. | [Install Agents Toolkit for VS Code](install-teams-toolkit.md) |
 | :::image type="content" source="../assets/images/agents-toolkit-landing/visual-studio.png" alt-text="Visual Studio logo"::: | Visual Studio | Agents Toolkit workload optimized for .NET development. | [Install Agents Toolkit for Visual Studio](toolkit-v4/install-teams-toolkit-vs.md) |
 | :::image type="content" source="../assets/images/agents-toolkit-landing/terminal.png" alt-text="Icon of text-bsaed terminal"::: | CLI | Text-based interface to Agents Toolkit for the terminal or CI/CD processes.| [Agents Toolkit command line interface](teams-toolkit-cli.md) |
+
+> [!NOTE]
+> [Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is in preview and provides a command-line experience for Microsoft 365 Copilot declarative agents, built on Microsoft 365 Agents Toolkit capabilities. It brings creation, validation, packaging, provisioning, and sharing into one workflow, including publishing to the organization catalog. Use Agents Toolkit for the broader range of agent and app types.
 
 ## Deploy to multiple channels with Microsoft 365 Agents SDK
 

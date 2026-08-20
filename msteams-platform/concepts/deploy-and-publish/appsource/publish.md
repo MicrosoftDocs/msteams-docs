@@ -4,7 +4,7 @@ description: Publish your app to Microsoft Teams Store or AppSource. What to exp
 ms.topic: overview
 author: heath-hamilton
 ms.localizationpriority: high
-ms.date: 12/15/2022
+ms.date: 08/05/2026
 ---
 # Publish your app to the Teams Store
 
@@ -24,6 +24,9 @@ If your app is production ready, you can begin the process of getting it listed 
 
 > [!TIP]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
+
+> [!NOTE]
+> [Work IQ Dev Tools (WIQD)](https://aka.ms/wiqd/docs) is in preview and can simplify validation and packaging for a Microsoft 365 Copilot declarative agent before you follow the Teams Store and Partner Center submission process. WIQD doesn't submit an agent to the public Teams Store or Partner Center.
 
 :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram shows the Teams Store publishing process for Teams apps." lightbox="../../../assets/images/submission/teams-app-store-publish-process.png":::
 
