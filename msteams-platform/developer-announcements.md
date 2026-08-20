@@ -12,9 +12,9 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## Preview: Extended Markdown formatting for agent messages
 
-_August 17, 2026_
+_August 21, 2026_
 
-Agents can now use extended Markdown (`textFormat: "extendedmarkdown"`) to send richly formatted text-only messages. Extended Markdown supports tables, task lists, fenced code blocks with syntax highlighting, math equations, images, at-mentions, and citations.
+Agents can now send richer, better-formatted responses. Set `textFormat: "extendedmarkdown"` to add tables, task lists, code blocks, equations, images, at-mentions, and citations to your agent's messages. This feature is currently in preview.
 
 Extended Markdown content also renders progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
 
