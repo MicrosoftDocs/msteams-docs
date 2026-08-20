@@ -364,6 +364,9 @@ Deep links that previously opened one-on-one bot chats continue to work after to
 
 In one-on-one (personal-app) conversations, Teams includes the installed app version in activity payloads delivered to your agent through the `channelData.app.version` field. This field appears in messages, invokes, and `installationUpdate` activities within the 1:1 scope. It is not currently available in group chats, channels, or meetings.
 
+> [!NOTE]
+> In some scenarios, `channelData.app` may not be provided. For example, when a proactive message reaches an agent that isn't installed for the user, or when multiple apps map to a single bot ID. Your agent must handle the case where app ID or version is absent.
+
 Use the version to determine whether the user has a sessions-capable version of your app installed. Your agent should implement logic that evaluates the version identifier it receives and uses that to decide whether to create sessions proactively or adjust behavior accordingly.
 
 ```json
