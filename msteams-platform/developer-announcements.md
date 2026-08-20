@@ -20,6 +20,8 @@ Extended Markdown content also renders progressively during [streaming](bots/str
 
 For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#set-message-text-format).
 
+---
+
 ## Released: Teams SDK for Python hotfix
 
 *August 20, 2026*
