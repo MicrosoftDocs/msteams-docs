@@ -10,6 +10,18 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
 
+## TLS 1.3 support for agent connections
+
+*August 21, 2026*
+
+In **September 2026**, Microsoft will enable TLS 1.3 support for connections between Teams agent implementations and the Bot Connector service (the `https://smba.*` family of service endpoints). TLS 1.3 provides improved security and performance compared to earlier versions. Bot Connector will continue to support TLS 1.2.
+
+In most cases, no developer action is required. However, **developers hosting agents behind security controls that perform JA3/JA4 TLS fingerprint matching or similar kinds of connection handshake validation should review those controls.**
+
+Clients and servers automatically negotiate to the highest mutually-supported TLS version, and TLS version support is generally determined by an implementation's hosting environment. Agent implementations in supporting environments will negotiate to TLS 1.3 once service-side support is enabled, which might trigger network security rules that assume a consistent handshake fingerprint. Developers might need to relax such rules during the change window, then update them based on the new handshake fingerprint.
+
+---
+
 ## Preview: Extended Markdown formatting for agent messages
 
 *August 20, 2026*
