@@ -6,7 +6,7 @@ author: v-preethah
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 05/11/2026
+ms.date: 08/12/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -98,7 +98,7 @@ Agents should be designed to complete enterprise workflows and must deliver diff
 Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
 
 * Skills — Custom skills can be published using the agentSkills manifest node
-* Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
+* Connectors — MCP server tools can be published using the agentConnectors manifest node. On Copilot Cowork, dynamic tool discovery isn't available: Cowork uses app manifest version 1.28 and requires an `mcpToolDescription` (a tool-description file) for every connector, and it rejects a package with HTTP 400 if `mcpToolDescription` is omitted. For more information, see [Build plugins for Copilot Cowork](/microsoft-365/copilot/cowork/cowork-plugin-development).
   
   All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
 
