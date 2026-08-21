@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
 	<id>https://learn.microsoft.com/microsoftteams/platform/feed.atom</id>
-	<updated>2026-08-12T11:41:07Z</updated>
+	<updated>2026-08-20T00:00:00Z</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Preview: Extended Markdown formatting for agent messages]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#preview-extended-markdown-formatting-for-agent-messages</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#preview-extended-markdown-formatting-for-agent-messages"/>
+		<updated>2026-08-20T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Agents can now send richer, better-formatted responses using extended Markdown formatting (currently in preview), supporting tables, task lists, code blocks, equations, images, at-mentions, and citations. Extended Markdown content renders progressively during streaming.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#preview-extended-markdown-formatting-for-agent-messages">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: Teams SDK for Python hotfix]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-teams-sdk-for-python-hotfix</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-teams-sdk-for-python-hotfix"/>
+		<updated>2026-08-20T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Hotfix releases for both the stable (2.0.16) and preview (2.1.0a2) tracks of Teams SDK for Python are now available on PyPI.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-teams-sdk-for-python-hotfix">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Released: Teams SDK (stable and preview, multiple languages)]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-teams-sdk-stable-and-preview-multiple-languages</id>
