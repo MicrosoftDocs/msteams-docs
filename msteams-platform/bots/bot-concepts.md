@@ -7,6 +7,9 @@ ms.owner: nickwalk
 ms.date: 04/09/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
+
 # Understand agent concepts
 
 An agent's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. An agent may request information or enable access to services, and responds to the user.
@@ -317,6 +320,28 @@ app.start().catch(console.error);
 ```
 
 # [C#](#tab/csharp)
+
+`.NET SDK v2.1`
+
+```csharp
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Activities;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddTeamsBotApplication();
+var app = builder.Build();
+var teams = app.UseTeamsBotApplication();
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var senderName = context.Activity.From.Name;
+    await context.SendAsync($"Hello <at>{senderName}</at>.", cancellationToken);
+});
+
+app.Run();
+```
+
+`.NET SDK <v2.1 (legacy)`
 
 ```csharp
 using Microsoft.Teams.Apps.Activities;
