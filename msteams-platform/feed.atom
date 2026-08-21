@@ -9,14 +9,6 @@
 	<category term="new"/>
 	<category term="updated"/>
 	<entry>
-		<title type="html"><![CDATA[Retiring: App manifest environment variables]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#retiring-app-manifest-environment-variables</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables"/>
-		<updated>2026-08-04T00:00:00Z</updated>
-		<summary type="html"><![CDATA[The Teams Developer Portal's environment variables feature for app manifests will be retired on August 31, 2026, after which manifests that use environment variables will become invalid and the variables will no longer be available for creation, management, or access. Apps that rely on this feature should be split into per-environment apps before the retirement date.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables">the announcement</a>.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
 		<title type="html"><![CDATA[Released: Teams SDK (stable and preview, multiple languages)]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-teams-sdk-stable-and-preview-multiple-languages</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-teams-sdk-stable-and-preview-multiple-languages"/>
@@ -25,11 +17,11 @@
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
-		<title type="html"><![CDATA[Released: Targeted messages and agent slash commands]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-targeted-messages-and-agent-slash-commands</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands"/>
-		<updated>2026-07-30T00:00:00Z</updated>
-		<summary type="html"><![CDATA[Targeted messaging and agent slash commands are now generally available, enabling private user-to-agent messages in group conversations and named commands that users can activate from chat. App manifest updates are required to register agent slash commands and enable targeted messages for an agent.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands">the announcement</a>.]]></summary>
+		<title type="html"><![CDATA[Retiring: App manifest environment variables]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#retiring-app-manifest-environment-variables</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables"/>
+		<updated>2026-08-04T00:00:00Z</updated>
+		<summary type="html"><![CDATA[The Teams Developer Portal's environment variables feature for app manifests will be retired on August 31, 2026, after which manifests that use environment variables will become invalid and the variables will no longer be available for creation, management, or access. Apps that rely on this feature should be split into per-environment apps before the retirement date.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#retiring-app-manifest-environment-variables">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -38,6 +30,14 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-new-admin-controls-for-meeting-transcripts"/>
 		<updated>2026-07-30T00:00:00Z</updated>
 		<summary type="html"><![CDATA[New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center, including options to deny all transcript access through the Graph API or allow access only to transcripts without speaker attribution. Developers should clearly communicate transcript access requirements, handle denied access, and support non-attributed transcript formats.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-new-admin-controls-for-meeting-transcripts">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Released: Targeted messages and agent slash commands]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#released-targeted-messages-and-agent-slash-commands</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands"/>
+		<updated>2026-07-30T00:00:00Z</updated>
+		<summary type="html"><![CDATA[Targeted messaging and agent slash commands are now generally available, enabling private user-to-agent messages in group conversations and named commands that users can activate from chat. App manifest updates are required to register agent slash commands and enable targeted messages for an agent.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-targeted-messages-and-agent-slash-commands">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 	<entry>
@@ -54,6 +54,14 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#released-apps-in-private-channels"/>
 		<updated>2026-07-07T00:00:00Z</updated>
 		<summary type="html"><![CDATA[Support for agent and app participation in private channels is now generally available. Implementing this capability requires consideration of the agent implementation and app manifest configuration for private channel operation.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#released-apps-in-private-channels">the announcement</a>.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Coming soon: New admin controls for meeting transcripts]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature#coming-soon-new-admin-controls-for-meeting-transcripts</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&amp;referrer=whats.new.rssfeed#coming-soon-new-admin-controls-for-meeting-transcripts"/>
+		<updated>2026-06-30T00:00:00Z</updated>
+		<summary type="html"><![CDATA[New controls governing access to meeting transcripts have entered public preview, allowing administrators to deny all transcript access through the Graph API or restrict access to transcripts without speaker attribution.<br/><br/>For more information, see <a href="https://learn.microsoft.com/en-us/microsoftteams/platform/developer-announcements?pivots=ga-feature&referrer=whats.new.rssfeed#coming-soon-new-admin-controls-for-meeting-transcripts">the announcement</a>.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
