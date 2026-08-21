@@ -27,7 +27,7 @@ Ensure that you check the following when you're publishing updates:
 * In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 > [!TIP]
-> You can add new AI-based features to your agents and app. For more information, see [best practices for agents in Teams](../../../../bots/how-to/teams-conversational-ai/ai-ux.md#best-practices-for-agents-in-teams). It's recommended that you must include skills and a short description of each skill in your agent or app's description, to educate users about the new features.
+> You can add new AI-based features to your agents and app. For more information, see [best practices for agents in Teams](../../../../bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md). It's recommended that you must include skills and a short description of each skill in your agent or app's description, to educate users about the new features.
 
 ### App updates requiring user consent
 
@@ -88,10 +88,10 @@ You can remove an app from the [Microsoft commercial marketplace](/azure/marketp
 
 | App details | Description |
 | --- | --- |
-| Your app's listing must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing.|
-| You must regularly update your app to ensure that it remains compliant with the commercial marketplace policies.| Stay up to date with policy changes by subscribing to the changelog.|
-| Your contact details must be kept up to date in your Partner Center account. |Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft.|
-| Maintain your app's functionality and user experience. | Your app's functionality and user experience must match or exceed the quality of experience at submission. You must maintain your app's performance.|
+| Your app's listing must be kept updated. | Any changes to functionality, pricing, visual appearance, or any other updates must be accurately reflected in your app's listing. |
+| You must regularly update your app to ensure that it remains compliant with the commercial marketplace policies. | Stay up to date with policy changes by subscribing to the changelog. |
+| Your contact details must be kept up to date in your Partner Center account. | Microsoft will contact you occasionally to resolve any bugs or commercial marketplace policy violations in your app. If your contact details aren't updated, you might miss important notices or updates from Microsoft. |
+| Maintain your app's functionality and user experience. | Your app's functionality and user experience must match or exceed the quality of experience at submission. You must maintain your app's performance. |
 
 ## Fix issues with your published app
 

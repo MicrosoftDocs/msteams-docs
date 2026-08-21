@@ -151,5 +151,5 @@ All of your agent's behavior is in its runtime code: you can modify and restart 
 
 Explore the documentation to learn more about features and best practices for agents in Teams.
 
-- [Agents user experience](../bots/how-to/teams-conversational-ai/ai-ux.md)
+- [Best practices and features checklist for Teams agents](../bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md)
 - [Send and receive messages](../bots/build-conversational-capability.md)
