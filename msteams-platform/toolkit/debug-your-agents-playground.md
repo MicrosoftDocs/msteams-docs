@@ -3,7 +3,7 @@ title: Debug bot using Agents Playground
 description: Learn about Microsoft 365 Agents Playground in Microsoft 365 Agents Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 11/16/2023
+ms.date: 08/24/2026
 ---
 
 # Microsoft 365 Agents Playground
