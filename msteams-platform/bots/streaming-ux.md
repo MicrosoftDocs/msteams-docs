@@ -111,6 +111,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
+For guidance on formatting streamed messages with extended Markdown, including supported features and syntax, see [Format your agent messages](how-to/format-your-bot-messages.md#streaming-with-extended-markdown).
+
 ## Stream message through REST API
 
 Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
@@ -417,6 +419,7 @@ The following are the success and error codes:
 
 ## See also
 
+- [Format your bot messages](how-to/format-your-bot-messages.md)
 - [Agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
 - [Teams SDK](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 - [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)
