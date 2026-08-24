@@ -13,7 +13,7 @@ ms.date: 07/21/2026
 Creating and hosting an agent runtime is not enough to make an agent available in Teams. Developers must also *register* their agent by creating configuration for it across three services:
 
 - **Microsoft Entra ID**: An Entra ID app registration enables the agent to authenticate and get access to services and data
-- **Bot Connector service**: Configuration in the Bot Connector service enables an agent to interact with Teams via the Bot Connector API
+- **Bot Connector service**: Configuration in the Bot Connector service enables an agent to authenticate and interact with Teams via the Bot Connector API
 - **Teams platform**: An app manifest submitted to the Teams platform registers the agent as a distributable, installable Teams app
 
 All of these components require a Microsoft Entra tenant associated with the agent's developer.
@@ -22,31 +22,27 @@ Developers are encouraged to use the Teams developer CLI to register an agent at
 
 ## Entra ID app registration: identity and authentication
 
-Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in Entra ID is a globally unique identity that enables an agent to participate in authentication and authorization flows within the Microsoft ecosystem.
+Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in Entra ID is a globally unique identity that represents an agent and enables it to participate in authentication and authorization flows within the Microsoft ecosystem.
 
 An Entra ID app registration is not strictly required for all Teams agents. However, most agents have one, as it enables multiple important capabilities:
 
 - **Authenticating to organizational resources**: Many agents access organizational data and services, including the Microsoft Graph API, to power collaboration features.
 - **On-behalf-of flows with single sign-on and OAuth**: Users can grant consent for the agent to access data and services on their behalf, using their permissions.
 - **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
-- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector with an Entra ID identity. An app registration is the recommended and most flexible choice, and is the only choice for agent runtimes not hosted on Microsoft Azure.
+- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector with an Entra ID identity (see the following section). An app registration is the recommended and most flexible choice, and is the only choice for agent runtimes not hosted on Microsoft Azure.
 
 Agents can use a single app registration to enable all of these capabilities.
 
-## Bot Connector registration: an agent's key to using Teams
+## Bot Connector registration: an agent's interface to Teams
 
-Bot Connector is the service that agents use to interact with Teams. Developers must register their agents with Bot Connector for them to access the API.
+Bot Connector is the service that agents use to interact with Teams. Agent runtimes must authenticate to Bot Connector to perform actions in Teams, which requires registration and runtime configuration.
 
-Bot Connector supports two kinds of registration:
+A Bot Connector registration contains a small amount of configuration, most notably:
 
-- **Teams Developer Portal**: Developers can create registrations in the Teams Developer Portal using the portal website or the Teams developer CLI. Registrations created in the Teams Developer Portal can be managed using the Microsoft 365 account used to create them.
-- **Azure AI Bot Services**: An instance of a Bot Services resource in Microsoft Azure serves as a Bot Connector registration. A Bot Services resource is a configuration object that can be created in an Azure subscription using the Teams developer CLI or Azure management tools like the Azure portal, CLI, and ARM and Bicep templates.
+- The endpoint URL of the agent's runtime, stored by the Bot Connector service on behalf of the Teams platform. This URL will receive activity events with information about user activity in Teams.
+- A reference to an Entra ID identity that the agent's runtime uses to authenticate to Bot Connector. In most cases, this identity is an Entra ID app registration. Developers with agents hosted on Microsoft Azure have the option of using an Azure user-assigned managed identity instead.
 
-Both kinds of registration are suitable for testing and production, but agents that implement single sign-on or OAuth must use an Azure AI Bot Services registration. The recommended approach to agent development is to begin with a Teams Developer Portal registration and migrate to an Azure AI Bot Services registration later if needed.
-
-A Bot Connector registration contains a small amount of configuration, most notably the endpoint URL of the agent's runtime. Bot Connector uses this URL to call the agent's runtime with information about user activity in Teams.
-
-The Bot Connector registration also references an Entra ID identity, which the agent's runtime must use to authenticate to Bot Connector. In most cases, this identity is an Entra ID app registration. Developers with agents hosted on Microsoft Azure have the option of using an Azure user-assigned managed identity instead.
+Bot Connector supports two different kinds of registration: Teams Developer Portal and Azure AI Bot Service resource. See [Choose an agent registration type](../agents-in-teams/agent-registration-types.md) for more information.
 
 ## App manifest: app definition and configuration
 
@@ -75,4 +71,3 @@ Developers register an agent with the Teams platform by submitting its app manif
 ## Next steps
 
 - Try the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md), where you'll create an agent, including registration using `teams app create`.
-- Learn about how an [agent runtime](agent-runtime-teams-sdk.md) built with Teams SDK works.
