@@ -87,7 +87,7 @@ If you don't have an account, or you aren't sure about your permissions, you can
 
 ## Log in and confirm permissions
 
-> [!NOTE]
+> [!IMPORTANT]
 > The next part of this quickstart requires Teams, logged in to a Microsoft 365 work or school account with permissions to install custom Teams apps. This step will check for that permission.
 >
 >If you don't have a Microsoft 365 account, you can proceed to [Next steps](#next-steps) to continue working on your code and complete the rest of this quickstart later. See [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your app in Teams.

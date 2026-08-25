@@ -77,7 +77,9 @@ Teams can only communicate with an agent runtime that's reachable from the publi
     Ready to accept connections for tunnel: joyful-dog-xgz66vp.usw2
     ```
 
-1. Leave the tunnel running. Make a note of the `Connect via browser` URL for the next step.
+1. Make a note of the `Connect via browser` URL for the next step.
+
+Leave the tunnel running in the terminal. The tunnel must be actively running for Teams to communicate with your agent's runtime: if you lose your terminal session and need to restart it, run `devtunnel host` again.
 
 ## Provision, install, and chat in Teams
 
