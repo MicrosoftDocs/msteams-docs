@@ -5,8 +5,9 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
-ms.date: 08/20/2026
+ms.date: 08/25/2026
 ---
+
 # Format your agent messages
 
 Modern large language model (LLM)-backed agents naturally generate Markdown. Extended Markdown (`extendedmarkdown`) is the recommended format for new agent text responses — your agent can send CommonMark and GitHub Flavored Markdown (GFM) directly, and Teams renders it as rich, responsive content while preserving Teams capabilities such as at-mentions and citations.
@@ -26,15 +27,12 @@ To format your agent messages, you can set the optional [`TextFormat`](/bot-fram
 
 Microsoft Teams supports the following formatting options:
 
-| `TextFormat` value | When to use |
-| --- | --- |
-| `extendedmarkdown` | **Recommended for new agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming. |
-| `markdown` | Use for existing agents that depend on the legacy Teams Markdown subset. |
-| `plain` | Use when the message must be displayed as raw text without formatting. |
-| `xml` | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
-
-> [!NOTE]
-> Support for **extended markdown** is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+| `TextFormat` value | When to use                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `extendedmarkdown` | **Recommended for new agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming.                                              |
+| `markdown`         | Use for existing agents that depend on the legacy Teams Markdown subset.                                                                                                  |
+| `plain`            | Use when the message must be displayed as raw text without formatting.                                                                                                    |
+| `xml`              | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
 
 For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
@@ -80,7 +78,7 @@ await app.Send(conversationId, activity);
 const activity = {
   type: "message",
   text: "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
-  textFormat: "extendedmarkdown"
+  textFormat: "extendedmarkdown",
 };
 
 await app.send(conversationId, activity);
@@ -104,33 +102,33 @@ await app.send(conversation_id, activity)
 
 Some styles aren't supported across all platforms. The following table provides a list of standard Markdown styles and which of these styles are supported in text-only messages and rich cards:
 
-| Style | Text-only messages | Rich cards - XML only |
-| --- | :---: | :---: |
-| Bold | ✔️️ | ❌ |
-| Italic | ✔️ | ✔️ |
-| Header (levels 1&ndash;3) | ❌ | ✔️ |
-| Strikethrough | ❌ | ✔️ |
-| Horizontal rule | ❌ | ❌ |
-| Unordered list | ❌ | ✔️ |
-| Ordered list | ❌ | ✔️ |
-| Preformatted text | ✔️ | ✔️ |
-| Blockquote | ✔️ | ✔️ |
-| Hyperlink | ✔️ | ✔️ |
-| Image link | ❌ | ❌ |
+| Style                     | Text-only messages | Rich cards - XML only |
+| ------------------------- | :----------------: | :-------------------: |
+| Bold                      |         ✔️️         |          ❌           |
+| Italic                    |         ✔️         |          ✔️           |
+| Header (levels 1&ndash;3) |         ❌         |          ✔️           |
+| Strikethrough             |         ❌         |          ✔️           |
+| Horizontal rule           |         ❌         |          ❌           |
+| Unordered list            |         ❌         |          ✔️           |
+| Ordered list              |         ❌         |          ✔️           |
+| Preformatted text         |         ✔️         |          ✔️           |
+| Blockquote                |         ✔️         |          ✔️           |
+| Hyperlink                 |         ✔️         |          ✔️           |
+| Image link                |         ❌         |          ❌           |
 
 ## Extended Markdown features
 
 When using `textFormat: "extendedmarkdown"`, the following features are available in text-only messages:
 
-| Feature | Syntax | Description |
-| --- | --- | --- |
-| **Fenced code blocks** | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences |
-| **Math equations** | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$` | LaTeX/KaTeX math notation rendered inline or as a block |
-| **Images and image URLs** | `![alt text](https://example.com/image.png)` | Render image content from Markdown |
-| **At-mentions** | `<at>User Name</at>` or `<at>GroupName</at>` | Reference users or groups |
-| **Citations** | `[#]` in message text + `entities` array in Activity | Inline citation markers with reference details. For more information, see [citations](bot-messages-ai-generated-content.md#citations). |
-| **Tables** | Pipe-delimited rows with separator line | Structured tabular data with optional column alignment |
-| **Task lists** | `- [ ] item` / `- [x] item` | Checklist-style items; checkboxes are read-only |
+| Feature                   | Syntax                                                                     | Description                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fenced code blocks**    | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences                                                                                                         |
+| **Math equations**        | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$`                     | LaTeX/KaTeX math notation rendered inline or as a block                                                                                |
+| **Images and image URLs** | `![alt text](https://example.com/image.png)`                               | Render image content from Markdown                                                                                                     |
+| **At-mentions**           | `<at>User Name</at>` or `<at>GroupName</at>`                               | Reference users or groups                                                                                                              |
+| **Citations**             | `[#]` in message text + `entities` array in Activity                       | Inline citation markers with reference details. For more information, see [citations](bot-messages-ai-generated-content.md#citations). |
+| **Tables**                | Pipe-delimited rows with separator line                                    | Structured tabular data with optional column alignment                                                                                 |
+| **Task lists**            | `- [ ] item` / `- [x] item`                                                | Checklist-style items; checkboxes are read-only                                                                                        |
 
 ### At-mention support
 
@@ -163,6 +161,7 @@ Use LaTeX/KaTeX syntax to render mathematical notation. Use single dollar signs 
 Inline math: $E = mc^2$
 
 Block math:
+
 $$
 \int_0^\infty f(x)dx
 $$
@@ -186,9 +185,9 @@ Use GitHub Flavored Markdown (GFM) table syntax to present structured data. Tabl
 
 ```markdown
 | Feature | Status | Priority |
-|:--------|:------:|----------:|
-| Tables  | Done   | High      |
-| Math    | Done   | High      |
+| :------ | :----: | -------: |
+| Tables  |  Done  |     High |
+| Math    |  Done  |     High |
 ```
 
 In this example, the first column is left-aligned, the second is centered, and the third is right-aligned.
@@ -225,19 +224,19 @@ For detailed information about streaming implementation, see [Stream agent messa
 
 The following table applies to the legacy `markdown` format, not `extendedmarkdown`. Legacy Markdown supports a smaller subset that varies by platform:
 
-| Style | Desktop | iOS | Android |
-| --- | :---: | :---: | :---: |
-| Bold | ✔️ | ✔️ | ✔️ |
-| Italic | ✔️ | ✔️ | ✔️ |
-| Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
-| Strikethrough | ✔️ | ✔️ | ❌ |
-| Horizontal rule | ❌ | ❌ | ❌ |
-| Unordered list | ✔️ | ❌ | ❌ |
-| Ordered list | ✔️ | ❌ | ❌ |
-| Preformatted text | ✔️ | ✔️ | ✔️ |
-| Blockquote | ✔️ | ✔️ | ✔️ |
-| Hyperlink | ✔️ | ✔️ | ✔️ |
-| Image link | ❌ | ❌ | ❌ |
+| Style                     | Desktop | iOS | Android |
+| ------------------------- | :-----: | :-: | :-----: |
+| Bold                      |   ✔️    | ✔️  |   ✔️    |
+| Italic                    |   ✔️    | ✔️  |   ✔️    |
+| Header (levels 1&ndash;3) |   ❌    | ❌  |   ❌    |
+| Strikethrough             |   ✔️    | ✔️  |   ❌    |
+| Horizontal rule           |   ❌    | ❌  |   ❌    |
+| Unordered list            |   ✔️    | ❌  |   ❌    |
+| Ordered list              |   ✔️    | ❌  |   ❌    |
+| Preformatted text         |   ✔️    | ✔️  |   ✔️    |
+| Blockquote                |   ✔️    | ✔️  |   ✔️    |
+| Hyperlink                 |   ✔️    | ✔️  |   ✔️    |
+| Image link                |   ❌    | ❌  |   ❌    |
 
 ## AI-generated content messages
 
