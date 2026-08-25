@@ -71,7 +71,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-existing.png" alt-text="Screenshot shows the subscription order placement.":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-new.png" alt-text="Screenshot shows the subscription order placement.":::
 
     ---
 
