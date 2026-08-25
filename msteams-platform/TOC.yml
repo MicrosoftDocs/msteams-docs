@@ -31,8 +31,6 @@
       href: concepts/registering-agent-teams-platform.md
     - name: Choose an agent registration type
       href: agents-in-teams/agent-registration-types.md
-    - name: Configure Azure AI Bot Service
-      href: bots/how-to/authentication/configure-azure-bot-service-authentication.md
   - name: Integrate AI
     items:
     - name: Stream messages
