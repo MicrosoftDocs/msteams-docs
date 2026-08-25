@@ -1,23 +1,24 @@
 ---
-title: Customize Agent Messages
-description: Learn how to format and style your agent messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
+title: Format Agent Messages with Markdown
+description: Learn when to use extended Markdown for agent messages and how to add CommonMark, GFM, images, mentions, citations, math, and code.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
 ms.owner: angovil
-ms.date: 08/17/2026
+ms.date: 08/20/2026
 ---
 # Format your agent messages
 
-Message formatting enables you to bring out the best in agent messages. You can format your agent messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
+Modern large language model (LLM)-backed agents naturally generate Markdown. Extended Markdown (`extendedmarkdown`) is the recommended format for new agent text responses — your agent can send CommonMark and GitHub Flavored Markdown (GFM) directly, and Teams renders it as rich, responsive content while preserving Teams capabilities such as at-mentions and citations.
 
-> [!NOTE]
-> Regarding agent message size limit:
->
-> - The agent message size limit is 100 KB:
->   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
->   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
-> - If the agent message exceeds the size limit, the agent receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
+Choose the message format based on what the user needs:
+
+- Use **extended Markdown** for generated or structured text that users read, scan, copy, or stream.
+- Use an [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) for interactive controls, such as buttons and input fields, or when you require a fixed card layout.
+- Use legacy `markdown` only when maintaining an existing agent that depends on the smaller Teams Markdown subset.
+
+> [!IMPORTANT]
+> Extended Markdown is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). Test your agent with the latest Teams desktop, web, iOS, and Android clients before distributing it.
 
 ## Format text content
 
@@ -25,23 +26,23 @@ To format your agent messages, you can set the optional [`TextFormat`](/bot-fram
 
 Microsoft Teams supports the following formatting options:
 
-| `TextFormat` value | Description |
+| `TextFormat` value | When to use |
 | --- | --- |
-| `plain` | The text is treated as raw text with no formatting applied. |
-| `markdown` | The text is treated as Markdown formatting and rendered on the channel as appropriate. |
-| `extendedmarkdown` | The text is treated as extended Markdown, supporting richer rendering for text-only messages such as tables, task lists, code fences, math equations, images, at-mentions, and citations. |
-| `xml` | The text uses a subset of HTML tags for formatting in rich cards. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
+| `extendedmarkdown` | **Recommended for new agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming. |
+| `markdown` | Use for existing agents that depend on the legacy Teams Markdown subset. |
+| `plain` | Use when the message must be displayed as raw text without formatting. |
+| `xml` | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
 
 > [!NOTE]
 > Support for **extended markdown** is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-For `markdown`, Teams supports a subset of Markdown formatting. For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
+For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
 
 The following limitations apply to formatting:
 
-- Text-only messages in `plain` format don't support table formatting.
-- Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- For rich card payload properties, `markdown` and `extendedmarkdown` formatting aren't supported.
+- `textFormat` applies to the Activity `text` property. It doesn't enable extended Markdown in Adaptive Card or other rich-card payload properties.
+- In extended Markdown content, don't include arbitrary HTML. Use `<at>` only as part of a valid mention entity.
+- Task-list checkboxes are read-only.
 - Older or unsupported clients can show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
@@ -220,13 +221,9 @@ Extended Markdown content will render as it streams:
 
 For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
 
-## Support by individual platform
+## Legacy Markdown platform support
 
-Support for text formatting varies by type of message and platform.
-
-### Text-only messages
-
-The following table provides a list of styles, which are supported on desktop, iOS, and Android:
+The following table applies to the legacy `markdown` format, not `extendedmarkdown`. Legacy Markdown supports a smaller subset that varies by platform:
 
 | Style | Desktop | iOS | Android |
 | --- | :---: | :---: | :---: |
@@ -252,6 +249,10 @@ AI labels, citations, feedback buttons, and sensitivity labels in your agent’s
 - [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the agent's message.
 
 For more information, see [agent messages with AI-generated content](format-ai-bot-messages.md).
+
+## Message size limits
+
+[!INCLUDE [agent-message-size-limit](includes/agent-message-size-limit.md)]
 
 ## Next step
 

@@ -83,6 +83,10 @@ The following code shows an example of sending a simple Adaptive Card:
 
 Sending and receiving messages is the core functionality of an agent.
 
+### Message size limits
+
+[!INCLUDE [agent-message-size-limit](how-to/includes/agent-message-size-limit.md)]
+
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
 Basic conversations are managed through the Teams SDK Framework connector, which is a single REST API. This API enables your agent talk to Teams and other channels. The Bot Builder SDK offers the following features:
