@@ -30,7 +30,7 @@ Streaming agent messages has two types of updates:
 
   Informative messages must not be more than 1 kb or 1000 characters.
 
-- **Response streaming**: Response streaming replaces the informative update and displays the agent's response in the message bubble as it's generated.
+- **Response streaming**: Response streaming replaces the informative update and displays the agent's response in the message bubble as it is generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
