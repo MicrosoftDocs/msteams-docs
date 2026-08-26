@@ -8,46 +8,20 @@ ms.owner: angovil
 ms.date: 08/25/2026
 ---
 
-# Format your agent messages
+# Format agent messages with Markdown
 
-Modern large language model (LLM)-backed agents naturally generate Markdown. Extended Markdown (`extendedmarkdown`) is the recommended format for new agent text responses — your agent can send CommonMark and GitHub Flavored Markdown (GFM) directly, and Teams renders it as rich, responsive content while preserving Teams capabilities such as at-mentions and citations.
+Agents can respond with Markdown-formatted text, and Teams renders it as rich content. Teams supports multiple text format options, including extended Markdown, which provides the fullest set of formatting capabilities.
 
-Choose the message format based on what the user needs:
-
-- Use **extended Markdown** for generated or structured text that users read, scan, copy, or stream.
-- Use an [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards) for interactive controls, such as buttons and input fields, or when you require a fixed card layout.
-- Use legacy `markdown` only when maintaining an existing agent that depends on the smaller Teams Markdown subset.
+Use `extendedmarkdown` for all text responses unless your agent is already dependent on the legacy Teams Markdown subset or specifically needs raw text.
 
 > [!IMPORTANT]
 > Extended Markdown is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). Test your agent with the latest Teams desktop, web, iOS, and Android clients before distributing it.
 
 ## Format text content
 
-To format your agent messages, you can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your agent message's text content is rendered.
+Set the [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how Teams renders the `text` property of your Activity.
 
-Microsoft Teams supports the following formatting options:
-
-| `TextFormat` value | When to use                                                                                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extendedmarkdown` | **Recommended for new agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming.                                              |
-| `markdown`         | Use for existing agents that depend on the legacy Teams Markdown subset.                                                                                                  |
-| `plain`            | Use when the message must be displayed as raw text without formatting.                                                                                                    |
-| `xml`              | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
-
-For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
-
-The following limitations apply to formatting:
-
-- `textFormat` applies to the Activity `text` property. It doesn't enable extended Markdown in Adaptive Card or other rich-card payload properties.
-- In extended Markdown content, don't include arbitrary HTML. Use `<at>` only as part of a valid mention entity.
-- Task-list checkboxes are read-only.
-- Older or unsupported clients can show unsupported constructs as plain text.
-
-After you format text content, ensure that your formatting works across all platforms supported by Teams.
-
-### Set message text format
-
-To set the text format, specify the `textFormat` property in your `Activity` object. The following example shows how to send a message with `extendedmarkdown` formatting:
+The following example shows how to send a message with `extendedmarkdown` formatting:
 
 # [JSON](#tab/json)
 
@@ -55,7 +29,7 @@ To set the text format, specify the `textFormat` property in your `Activity` obj
 {
   "type": "message",
   "textFormat": "extendedmarkdown",
-  "text": "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending"
+  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
 }
 ```
 
@@ -65,7 +39,7 @@ To set the text format, specify the `textFormat` property in your `Activity` obj
 var activity = new Activity
 {
     Type = ActivityTypes.Message,
-    Text = "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+    Text = "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
     TextFormat = "extendedmarkdown"
 };
 
@@ -77,7 +51,7 @@ await app.Send(conversationId, activity);
 ```typescript
 const activity = {
   type: "message",
-  text: "### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+  text: "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
   textFormat: "extendedmarkdown",
 };
 
@@ -89,7 +63,7 @@ await app.send(conversationId, activity);
 ```python
 activity = Activity(
     type=ActivityTypes.message,
-    text="### Sprint update\n\n- [x] Build completed\n- [1] Deploy pending",
+    text="### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
     text_format="extendedmarkdown"
 )
 
@@ -97,6 +71,26 @@ await app.send(conversation_id, activity)
 ```
 
 ---
+
+Microsoft Teams supports the following formatting options:
+
+| `TextFormat` value | When to use                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `extendedmarkdown` | **Recommended for most agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming.                                              |
+| `markdown`         | Use for existing agents that depend on the legacy Teams Markdown subset.                                                                                                  |
+| `plain`            | Use when the message must be displayed as raw text without formatting.                                                                                                    |
+| `xml`              | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
+
+For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
+
+The following limitations apply to formatting:
+
+- `textFormat` applies to the Activity `text` property. It doesn't enable extended Markdown in Adaptive Card or other rich-card payload properties.
+- In extended Markdown content, don't include arbitrary HTML. Use `<at>` only as part of a valid mention entity.
+- Task-list checkboxes are read-only.
+- Older or unsupported clients might show unsupported constructs as plain text.
+
+After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
 ## Standard Markdown support
 
@@ -240,14 +234,7 @@ The following table applies to the legacy `markdown` format, not `extendedmarkdo
 
 ## AI-generated content messages
 
-AI labels, citations, feedback buttons, and sensitivity labels in your agent’s messages improve user engagement and foster transparency and trust.
-
-- [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
-- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the agent's message through in-text citations and references.
-- [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the agent's messages.
-- [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the agent's message.
-
-For more information, see [agent messages with AI-generated content](format-ai-bot-messages.md).
+For AI labels, citations, feedback buttons, and sensitivity labels in your agent's messages, see [agent messages with AI-generated content](format-ai-bot-messages.md).
 
 ## Message size limits
 
