@@ -462,16 +462,17 @@ The following code section is an example of `fetchTask` request:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-using Microsoft.Teams.Api.MessageExtensions;
+using Microsoft.Teams.Apps.MessageExtensions;
 
 // ...
 
-teams.OnFetchTask(async (ctx) =>
+teams.OnFetchTask(async (context, cancellationToken) =>
 {
     // Handle fetch task
-    var commandId = ctx.Activity.Value?.CommandId;
+  MessageExtensionAction? action = context.Activity.Value;
+  string? commandId = action?.CommandId;
 
-    return new ActionResponse();
+  return MessageExtensionActionResponse.CreateBuilder().Build();
 });
 ```
 
@@ -580,16 +581,18 @@ The following section is an example of the `value` object:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-teams.OnFetchTask(async (ctx) =>
+using Microsoft.Teams.Apps.MessageExtensions;
+
+// ...
+
+teams.OnFetchTask(async (context, cancellationToken) =>
 {
-    var messageText =
-        ctx.Activity.Value?.MessagePayload?.Body?.Content;
+  MessageExtensionAction? action = context.Activity.Value;
 
-    var fromId =
-        ctx.Activity.Value?.MessagePayload?.From?.User?.Id;
+  var messageText = action?.MessagePayload?.Body?.Content;
+  var fromId = action?.MessagePayload?.From?.User?.Id;
 
-    // Finish handling the fetchTask
-    return new ActionResponse();
+  return MessageExtensionActionResponse.CreateBuilder().Build();
 });
 ```
 
@@ -729,27 +732,30 @@ This sample uses the [Microsoft.Teams.Cards](https://www.nuget.org/packages/Micr
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-using Microsoft.Teams.Api;
-using Microsoft.Teams.Api.MessageExtensions;
-using Microsoft.Teams.Api.TaskModules;
+using System.Text.Json;
+using Microsoft.Teams.Apps.MessageExtensions;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Apps.TaskModules;
 using Microsoft.Teams.Cards;
-using Microsoft.Teams.Common;
 
 // ...
 
-teams.OnFetchTask(async (ctx) =>
+teams.OnFetchTask(async (context, cancellationToken) =>
 {
     string placeholder = "Not invoked from message";
 
-    if (ctx.Activity.Value?.MessagePayload != null)
+  MessageExtensionAction? action = context.Activity.Value;
+
+  if (action?.MessagePayload != null)
     {
-        var messageText = ctx.Activity.Value.MessagePayload.Body?.Content;
-        var fromId = ctx.Activity.Value.MessagePayload.From?.User?.Id;
+    var messageText = action.MessagePayload.Body?.Content;
+    var fromId = action.MessagePayload.From?.User?.Id;
         placeholder = "Invoked from message";
     }
 
     var card = new AdaptiveCard
     {
+        Version = "1.5",
         Body = new List<CardElement>
         {
             new TextInput { Id = "FormField1", Placeholder = placeholder },
@@ -762,17 +768,18 @@ teams.OnFetchTask(async (ctx) =>
         }
     };
 
-    return new ActionResponse
-    {
-        Task = new ContinueTask(
-            new TaskInfo
-            {
-                Title = "Example dialog",
-                Height = new Union<int, Size>(Size.Small),
-                Width  = new Union<int, Size>(Size.Small),
-                Card   = new Attachment(card)
-            })
-    };
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+      .Build();
+
+    return MessageExtensionActionResponse.CreateBuilder()
+      .WithTask(TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("Example dialog")
+        .WithHeight(TaskModuleSizes.Small)
+        .WithWidth(TaskModuleSizes.Small)
+        .WithCard(attachment))
+      .Build();
 });
 ```
 
@@ -978,25 +985,27 @@ When using an embedded web view, you must respond with a `task` object with the 
 # [C#/.NET](#tab/dotnet4)
 
 ```csharp
-using Microsoft.Teams.Api.MessageExtensions;
-using Microsoft.Teams.Api.TaskModules;
-using Microsoft.Teams.Common;
+using Microsoft.Teams.Apps.MessageExtensions;
+using Microsoft.Teams.Apps.TaskModules;
 
 // ...
 
-teams.OnFetchTask(async (ctx) =>
+teams.OnFetchTask(async (context, cancellationToken) =>
 {
-    return new ActionResponse
+  return new InvokeResponse<MessageExtensionActionResponse>(200, new MessageExtensionActionResponse
+  {
+    Task = new Microsoft.Teams.Apps.TaskModules.Response
     {
-        Task = new ContinueTask(
-            new TaskInfo
-            {
-                Title = "Example dialog",
-                Height = new Union<int, Size>(Size.Small),
-                Width = new Union<int, Size>(Size.Small),
-                Url = "https://contoso.com/msteams/taskmodules/newcustomer"
-            })
-    };
+      Type = TaskModuleResponseTypes.Continue,
+      Value = new
+      {
+        title = "Example dialog",
+        height = "small",
+        width = "small",
+        url = "https://contoso.com/msteams/taskmodules/newcustomer"
+      }
+    }
+  });
 });
 ```
 

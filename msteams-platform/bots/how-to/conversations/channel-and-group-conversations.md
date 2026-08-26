@@ -30,13 +30,13 @@ In group chats and channels, design your agent for collaborative conversations w
 In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `Send()` to send a message in the same thread without quoting, or `Reply()` to send with a visual quote of the inbound message.
 
 ```csharp
-app.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     // Send in the same thread, no quote
-    await context.Send("Acknowledged", cancellationToken);
+    await context.SendAsync("Acknowledged", cancellationToken);
 
     // Send in the same thread with a visual quote of the inbound message
-    await context.Reply("Got it!", cancellationToken);
+    await context.ReplyAsync("Got it!", cancellationToken);
 });
 ```
 
@@ -89,9 +89,9 @@ The following code shows an example of sending welcome messages on installation:
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-app.OnInstall(async context => 
-{ 
-    await context.Send("Hello! I'm your agent. Here's what I can do..."); 
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    await context.SendAsync("Hello! I'm your agent. Here's what I can do...", cancellationToken);
 }); 
 ```
 
@@ -147,7 +147,7 @@ The following code shows an example of retrieving mentions:
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     var mentions = context.Activity.Entities?
         .Where(e => e.Type == "mention")
@@ -156,11 +156,11 @@ app.OnMessage(async context =>
     if (mentions != null && mentions.Any())
     {
         var firstMention = mentions[0].Properties["mentioned"]?["name"]?.ToString();
-        await context.Send($"Hello {firstMention}");
+        await context.SendAsync($"Hello {firstMention}", cancellationToken);
     }
     else
     {
-        await context.Send("Aw, no one was mentioned.");
+        await context.SendAsync("Aw, no one was mentioned.", cancellationToken);
     }
 });
 ```
@@ -328,11 +328,11 @@ The following code shows an example of adding mentions to your messages:
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     var user = context.Activity.From;
     var message = new MessageActivity($"Hello <at>{user.Name}</at>!").AddMention(user);
-    await context.Send(message);
+    await context.SendAsync(message, cancellationToken);
 });
 ```
 
@@ -411,11 +411,11 @@ The following code snippet shows an example of mentioning users with Entra Objec
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     // Mention a user by their User Principal Name (UPN)
     var user = new Account { Id = "Adele@microsoft.com", Name = "Adele" };
-    await context.Send(new MessageActivity("Hello!").AddMention(user));
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(user), cancellationToken);
 });
 ```
 
@@ -472,11 +472,11 @@ To mention a tag, include a mention entity with `"type": "tag"` in your message.
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     // Mention a tag using the tag's Graph API ID
     var tag = new Account { Id = "<base64-encoded-tag-id>", Name = "Test Tag" };
-    await context.Send(new MessageActivity("Hello!").AddMention(tag));
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(tag), cancellationToken);
 });
 ```
 

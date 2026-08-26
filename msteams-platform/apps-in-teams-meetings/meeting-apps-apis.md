@@ -610,9 +610,12 @@ The following table includes the query parameters:
 * [SDK reference](/dotnet/api/microsoft.teams.api.clients.meetingclient?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
 ```csharp
-app.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
-    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+  var meeting = context.Activity.ChannelData?.Properties.Get<JsonElement>("meeting");
+  var meetingId = meeting is JsonElement m && m.TryGetProperty("id", out var idProp)
+    ? idProp.GetString()
+    : null;
     var tenantId = context.Activity.ChannelData?.Tenant?.Id;
     var userId = context.Activity.From?.AadObjectId;
 
@@ -622,7 +625,7 @@ app.OnMessage(async (context, cancellationToken) =>
         var participant = await context.Api.Meetings.GetParticipantAsync(meetingId, userId, tenantId);
 
         // Sends a message activity to the sender of the incoming activity.
-        await context.Send($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
+        await context.SendAsync($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
     }
 });
 ```
@@ -762,22 +765,10 @@ The following table includes the query parameter:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
-app.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     // Send an in-meeting notification with an external resource URL.
-    await context.Send(new Activity
-    {
-        Type = "message",
-        Text = "This is a meeting signal test",
-        ChannelData = new
-        {
-            notification = new
-            {
-                alertInMeeting = true,
-                externalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-            }
-        }
-    }, cancellationToken);
+  // Not supported by the typed 2.1 outbound activity; use the Bot Connector REST API.
 });
 ```
 
@@ -1105,9 +1096,12 @@ The following table lists the query parameter:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
-app.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
-    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+  var meeting = context.Activity.ChannelData?.Properties.Get<JsonElement>("meeting");
+  var meetingId = meeting is JsonElement m && m.TryGetProperty("id", out var idProp)
+    ? idProp.GetString()
+    : null;
 
     if (meetingId != null)
     {
@@ -1115,7 +1109,7 @@ app.OnMessage(async (context, cancellationToken) =>
         var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
 
         // Sends a message activity to the sender of the incoming activity.
-        await context.Send(JsonConvert.SerializeObject(meetingInfo), cancellationToken);
+        await context.SendAsync(JsonSerializer.Serialize(meetingInfo), cancellationToken);
     }
 });
 ```
@@ -1554,7 +1548,7 @@ The following examples show how to capture the meeting start and end events:
 
 ```csharp
 // Register meeting start handler
-teamsApp.OnMeetingStart(async (context, cancellationToken) =>
+teams.OnMeetingStart(async (context, cancellationToken) =>
 {
     var activity = context.Activity.Value;
     var card = new AdaptiveCard
@@ -1586,7 +1580,11 @@ teamsApp.OnMeetingStart(async (context, cancellationToken) =>
         }
     };
 
-    await context.Send(card, cancellationToken);
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+      .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```
@@ -1640,7 +1638,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 ```csharp
 // Register meeting end handler with transcript support
-teamsApp.OnMeetingEnd(async context =>
+teams.OnMeetingEnd(async (context, cancellationToken) =>
 {
     var activity = context.Activity.Value;
     var meetingId = context.Activity.ChannelData?.Meeting?.Id;
@@ -1715,7 +1713,11 @@ teamsApp.OnMeetingEnd(async context =>
         Body = cardBody
     };
 
-    await context.Send(card);
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+      .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```
@@ -1957,7 +1959,7 @@ The following examples show how to capture the participant join and leave events
 
 ```csharp
 // Register meeting participant join handler
-teamsApp.OnMeetingJoin(async context =>
+teams.OnMeetingJoin(async (context, cancellationToken) =>
 {
     var activity = context.Activity.Value;
     if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
@@ -1978,7 +1980,11 @@ teamsApp.OnMeetingJoin(async context =>
         }
     };
 
-    await context.Send(card);
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+      .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```
@@ -1991,7 +1997,7 @@ teamsApp.OnMeetingJoin(async context =>
 
 ```csharp
 // Register meeting participant leave handler
-teamsApp.OnMeetingLeave(async context =>
+teams.OnMeetingLeave(async (context, cancellationToken) =>
 {
     var activity = context.Activity.Value;
     var member = activity.Members[0].User.Name;
@@ -2009,7 +2015,11 @@ teamsApp.OnMeetingLeave(async context =>
         }
     };
 
-    await context.Send(card);
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+      .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```

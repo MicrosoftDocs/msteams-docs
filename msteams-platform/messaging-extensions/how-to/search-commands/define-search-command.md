@@ -80,10 +80,11 @@ The following code provides an example of search-based for message extensions:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
 
 ```csharp
-teams.OnQuery(async (ctx) => 
+teams.OnQuery(async (context, cancellationToken) =>
 { 
-    var commandId = ctx.Activity.Value.CommandId; 
-    var parameters = ctx.Activity.Value.Parameters; 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
  
     Console.WriteLine($"Query: command={commandId}, query={query}"); 

@@ -170,31 +170,34 @@ Use the page pivot to view Teams SDK snippets for creating and handling `Action.
 ```csharp
 #pragma warning disable ExperimentalTeamsSuggestedAction
 using System.Text.Json;
-using Microsoft.Teams.Api;
-using Microsoft.Teams.Api.Activities;
-using CardAction = Microsoft.Teams.Api.Cards.Action;
-using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
+using System.Text.Json.Nodes;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
 
-var reply = new MessageActivity("Approve or reject the request:")
-{
-    SuggestedActions = new SuggestedActions
+var reply = new MessageActivityInput()
+  .WithText("Approve or reject the request:")
+  .WithSuggestedActions(new SuggestedActions().AddActions(
+    new SuggestedAction
     {
-        Actions =
-        {
-            new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
-            new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
-        }
-    }
-};
+      Type = ActionTypes.Submit,
+      Title = "Approve",
+      Value = JsonNode.Parse("""{"vote":"approve"}""")
+    },
+    new SuggestedAction
+    {
+      Type = ActionTypes.Submit,
+      Title = "Reject",
+      Value = JsonNode.Parse("""{"vote":"reject"}""")
+    }));
 
-await context.Send(reply);
+await context.SendAsync(reply, cancellationToken);
 
 teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
 {
     var payload = ctx.Activity.Value is JsonElement value
         ? value.GetRawText()
         : "<none>";
-    await ctx.Send($"Got vote: {payload}", cancellationToken);
+    await ctx.SendAsync($"Got vote: {payload}", cancellationToken);
 });
 ```
 

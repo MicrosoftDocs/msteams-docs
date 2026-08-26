@@ -158,9 +158,14 @@ Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `A
 ```csharp
 using Microsoft.Teams.Apps;
 
-var app = new App();
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
 
-app.OnChannelCreated(async context => {
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
+
+teams.OnChannelCreated(async (context, cancellationToken) =>
+{
     var channel = context.Activity.ChannelData.Channel;
     var team    = context.Activity.ChannelData.Team;
     // Code logic here
@@ -170,7 +175,8 @@ app.OnChannelCreated(async context => {
 `OnChannelDeleted`
 
 ```csharp
-app.OnChannelDeleted(async context => {
+teams.OnChannelDeleted(async (context, cancellationToken) =>
+{
     // Code logic here
 });
 ```
@@ -178,7 +184,8 @@ app.OnChannelDeleted(async context => {
 `OnChannelRenamed`
 
 ```csharp
-app.OnChannelRenamed(async context => {
+teams.OnChannelRenamed(async (context, cancellationToken) =>
+{
     // Code logic here
 });
 ```
@@ -186,7 +193,8 @@ app.OnChannelRenamed(async context => {
 `OnTeamRenamed`
 
 ```csharp
-app.OnTeamRenamed(async context => {
+teams.OnTeamRenamed(async (context, cancellationToken) =>
+{
     // Code logic here
 });
 ```
@@ -194,8 +202,10 @@ app.OnTeamRenamed(async context => {
 `OnMembersAdded`
 
 ```csharp
-app.OnMembersAdded(async context => {
-    foreach (var member in context.Activity.MembersAdded) {
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersAdded)
+  {
         // Code logic here
     }
 });
@@ -204,8 +214,10 @@ app.OnMembersAdded(async context => {
 `OnMembersRemoved`
 
 ```csharp
-app.OnMembersRemoved(async context => {
-    foreach (var member in context.Activity.MembersRemoved) {
+teams.OnMembersRemoved(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersRemoved)
+  {
         // Code logic here
     }
 });
@@ -216,11 +228,13 @@ app.OnMembersRemoved(async context => {
 Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
 
 ```csharp
-app.OnMessageUpdate(async context => {
+teams.OnMessageUpdate(async (context, cancellationToken) =>
+{
     // Code logic here
 });
 
-app.OnMessageDelete(async context => {
+teams.OnMessageDelete(async (context, cancellationToken) =>
+{
     // Code logic here
 });
 ```
@@ -325,12 +339,12 @@ app.start().catch(console.error);
 
 ```csharp
 using Microsoft.Teams.Apps;
-using Microsoft.Teams.Apps.Activities;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
 builder.Services.AddTeamsBotApplication();
-var app = builder.Build();
-var teams = app.UseTeamsBotApplication();
+
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
 
 teams.OnMessage(async (context, cancellationToken) =>
 {

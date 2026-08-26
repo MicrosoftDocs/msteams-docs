@@ -751,36 +751,25 @@ Use the `OnAdaptiveCardAction` handler to process card actions:
 
 ```csharp
 using System.Text.Json;
-using Microsoft.Teams.Api.Activities.Invokes.AdaptiveCards;
 using Microsoft.Teams.Apps;
-using Microsoft.Teams.Apps.Annotations;
-using Microsoft.Teams.Common.Logging;
 
 //...
 
-teams.OnAdaptiveCardAction(async context =>
+teams.OnAdaptiveCardAction(async (context, cancellationToken) =>
 {
-    var activity = context.Activity;
-    context.Log.Info("[CARD_ACTION] Card action received");
-
-    var data = activity.Value?.Action?.Data;
-
-    context.Log.Info($"[CARD_ACTION] Raw data: {JsonSerializer.Serialize(data)}");
+  var data = context.Activity.Value?.Action?.Data;
 
     if (data == null)
     {
-        context.Log.Error("[CARD_ACTION] No data in card action");
-        return new ActionResponse.Message("No data specified") { StatusCode = 400 };
+        return AdaptiveCardResponse.CreateMessageResponse("No data specified", 400);
     }
 
     string? action = data.TryGetValue("action", out var actionObj) ? actionObj?.ToString() : null;
 
     if (string.IsNullOrEmpty(action))
     {
-        context.Log.Error("[CARD_ACTION] No action specified in card data");
-        return new ActionResponse.Message("No action specified") { StatusCode = 400 };
+        return AdaptiveCardResponse.CreateMessageResponse("No action specified", 400);
     }
-    context.Log.Info($"[CARD_ACTION] Processing action: {action}");
 
     string? GetFormValue(string key)
     {
@@ -797,29 +786,28 @@ teams.OnAdaptiveCardAction(async context =>
     {
         case "submit_feedback":
             var feedbackText = GetFormValue("feedback") ?? "No feedback provided";
-            await context.Send($"Feedback received: {feedbackText}");
+            await context.SendAsync($"Feedback received: {feedbackText}", cancellationToken);
             break;
 
         case "create_task":
             var title = GetFormValue("title") ?? "Untitled";
             var priority = GetFormValue("priority") ?? "medium";
             var dueDate = GetFormValue("due_date") ?? "No date";
-            await context.Send($"Task created!\nTitle: {title}\nPriority: {priority}\nDue: {dueDate}");
+            await context.SendAsync($"Task created!\nTitle: {title}\nPriority: {priority}\nDue: {dueDate}", cancellationToken);
             break;
 
         case "save_profile":
             var name = GetFormValue("name") ?? "Unknown";
             var email = GetFormValue("email") ?? "No email";
             var subscribe = GetFormValue("subscribe") ?? "false";
-            await context.Send($"Profile saved!\nName: {name}\nEmail: {email}\nSubscribed: {subscribe}");
+            await context.SendAsync($"Profile saved!\nName: {name}\nEmail: {email}\nSubscribed: {subscribe}", cancellationToken);
             break;
 
         default:
-            context.Log.Error($"[CARD_ACTION] Unknown action: {action}");
-            return new ActionResponse.Message("Unknown action") { StatusCode = 400 };
+            return AdaptiveCardResponse.CreateMessageResponse("Unknown action", 400);
     }
 
-    return new ActionResponse.Message("Action processed successfully") { StatusCode = 200 };
+    return AdaptiveCardResponse.CreateMessageResponse("Action processed successfully");
 });
 ```
 
@@ -1137,15 +1125,23 @@ def create_task_form_card():
 # [C#](#tab/csharp9)
 
 ```csharp
-teams.OnMessage(async context =>
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+
+teams.OnMessage(async (context, cancellationToken) =>
 {
     var text = context.Activity.Text?.ToLowerInvariant() ?? "";
 
     if (text.Contains("form"))
     {
-        await context.Typing();
+        await context.TypingAsync(cancellationToken);
         var card = CreateTaskFormCard();
-        await context.Send(card);
+        JsonElement cardElement = JsonSerializer.SerializeToElement(card);
+        TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+          .WithAdaptiveCard(cardElement)
+          .Build();
+        await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
     }
 });
 ```

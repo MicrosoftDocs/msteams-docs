@@ -76,10 +76,12 @@ To open a dialog, send an Adaptive Card with a `TaskFetchAction` button. When th
 # [C#](#tab/csharp)
 
 ```csharp
-using Microsoft.Teams.Api.Activities;
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
 using Microsoft.Teams.Cards;
 
-teamsApp.OnMessage(async (context) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     var card = new AdaptiveCard
     {
@@ -102,17 +104,11 @@ teamsApp.OnMessage(async (context) =>
         }
     };
 
-    await context.Send(new MessageActivity
-    {
-        Attachments = new List<Attachment>
-        {
-            new Attachment
-            {
-                ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-                Content = card
-            }
-        }
-    });
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+        .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+        .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 ```
 
@@ -179,28 +175,34 @@ When Teams sends a task fetch invoke, your app returns the dialog content. The c
 
 ```csharp
 using System.Text.Json;
-using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Apps.TaskModules;
 using Microsoft.Teams.Cards;
-using Microsoft.Teams.Common;
 
-teamsApp.OnTaskFetch(async (context) =>
+teams.OnTaskFetch(async (context, cancellationToken) =>
 {
     var activity = context.Activity;
     var json = JsonSerializer.Deserialize<JsonElement>(JsonSerializer.Serialize(activity));
     var data = json.GetProperty("value").GetProperty("data").GetProperty("data").GetString();
 
-    TaskInfo taskInfo;
-
     if (data == "CustomForm")
     {
-        taskInfo = new TaskInfo
+        return new InvokeResponse<TaskModuleResponse>(200, new TaskModuleResponse
         {
-            Title = "Custom Form",
-            Width = new Union<int, Size>(510),
-            Height = new Union<int, Size>(450),
-            Url = $"{botEndpoint}/customform",
-            FallbackUrl = $"{botEndpoint}/customform"
-        };
+            Task = new Microsoft.Teams.Apps.TaskModules.Response
+            {
+                Type = TaskModuleResponseTypes.Continue,
+                Value = new
+                {
+                    title = "Custom Form",
+                    width = 510,
+                    height = 450,
+                    url = $"{botEndpoint}/customform",
+                    fallbackUrl = $"{botEndpoint}/customform"
+                }
+            }
+        });
     }
     else if (data == "MultiStep")
     {
@@ -221,17 +223,17 @@ teamsApp.OnTaskFetch(async (context) =>
             }
         };
 
-        taskInfo = new TaskInfo
-        {
-            Title = "Multi-step Form",
-            Width = new Union<int, Size>(400),
-            Height = new Union<int, Size>(300),
-            Card = new Attachment
-            {
-                ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-                Content = step1Card
-            }
-        };
+        TeamsAttachment step1Attachment = TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(step1Card))
+            .Build();
+
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Multi-step Form")
+            .WithWidth(400)
+            .WithHeight(300)
+            .WithCard(step1Attachment)
+            .Build();
     }
     else
     {
@@ -245,20 +247,18 @@ teamsApp.OnTaskFetch(async (context) =>
             Actions = new List<Action> { new SubmitAction { Title = "Submit" } }
         };
 
-        taskInfo = new TaskInfo
-        {
-            Title = "Adaptive Card: Inputs",
-            Width = new Union<int, Size>(400),
-            Height = new Union<int, Size>(200),
-            Card = new Attachment
-            {
-                ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-                Content = dialogCard
-            }
-        };
-    }
+        TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(dialogCard))
+            .Build();
 
-    return new Response(new ContinueTask(taskInfo));
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Adaptive Card: Inputs")
+            .WithWidth(400)
+            .WithHeight(200)
+            .WithCard(attachment)
+            .Build();
+    }
 });
 ```
 
@@ -421,11 +421,10 @@ When a user presses `Action.Submit` in a dialog, Teams sends a task submit invok
 
 ```csharp
 using System.Text.Json;
-using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Apps.TaskModules;
 using Microsoft.Teams.Cards;
-using Microsoft.Teams.Common;
 
-teamsApp.OnTaskSubmit(async (context) =>
+teams.OnTaskSubmit(async (context, cancellationToken) =>
 {
     var activity = context.Activity;
     var json = JsonSerializer.Deserialize<JsonElement>(JsonSerializer.Serialize(activity));
@@ -457,30 +456,34 @@ teamsApp.OnTaskSubmit(async (context) =>
             }
         };
 
-        var taskInfo = new TaskInfo
-        {
-            Title = "Multi-step Form: Step 2",
-            Width = new Union<int, Size>(400),
-            Height = new Union<int, Size>(300),
-            Card = new Attachment
-            {
-                ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-                Content = step2Card
-            }
-        };
+        TeamsAttachment step2Attachment = TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(step2Card))
+            .Build();
 
-        return new Response(new ContinueTask(taskInfo));
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Multi-step Form: Step 2")
+            .WithWidth(400)
+            .WithHeight(300)
+            .WithCard(step2Attachment)
+            .Build();
     }
 
     if (submissionType == "multi_step_2")
     {
-        await context.Send($"Hi {submitData["name"]}, thanks for submitting! Your email is {submitData["email"]}");
-        return new Response(new MessageTask("Multi-step form completed!"));
+        await context.SendAsync($"Hi {submitData["name"]}, thanks for submitting! Your email is {submitData["email"]}", cancellationToken);
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Message)
+            .WithMessage("Multi-step form completed!")
+            .Build();
     }
 
     var usertext = submitData?.GetValueOrDefault("usertext")?.ToString();
-    await context.Send($"You submitted: {usertext}");
-    return new Response(new MessageTask("Thanks for submitting!"));
+    await context.SendAsync($"You submitted: {usertext}", cancellationToken);
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Message)
+        .WithMessage("Thanks for submitting!")
+        .Build();
 });
 ```
 

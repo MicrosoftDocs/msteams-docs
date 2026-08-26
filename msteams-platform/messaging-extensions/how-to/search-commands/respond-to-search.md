@@ -31,10 +31,11 @@ The request parameters are found in the `value` object in the request, which inc
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-teams.OnQuery(async (ctx) => 
+teams.OnQuery(async (context, cancellationToken) =>
 { 
-    var commandId = ctx.Activity.Value.CommandId; 
-    var parameters = ctx.Activity.Value.Parameters; 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
     // Code to handle the query. 
 });
@@ -223,10 +224,11 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-teams.OnQuery(async (ctx) => 
+teams.OnQuery(async (context, cancellationToken) =>
 { 
-    var commandId = ctx.Activity.Value.CommandId; 
-    var parameters = ctx.Activity.Value.Parameters; 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
  
     var attachments = new List<MsgExt.Attachment>(); 

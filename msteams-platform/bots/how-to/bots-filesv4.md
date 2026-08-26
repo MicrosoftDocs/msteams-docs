@@ -203,12 +203,12 @@ The following code shows an example of fetching inline images from a message:
 ```csharp
 using Microsoft.Teams.Api;
 using Microsoft.Teams.Apps;
-using Microsoft.Teams.Plugins.AspNetCore.Extensions;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.AddTeams();
-var app = builder.Build();
-var teams = app.UseTeams();
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
+
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
 
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -228,7 +228,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
         // Create reply with the received image.
         var imageData = Convert.ToBase64String(File.ReadAllBytes(filePath));
-        var reply = new MessageActivity(
+        var reply = new MessageActivityInput(
             $"Attachment of {attachment.ContentType} type and size of {responseMessage.Content.Headers.ContentLength} bytes received.");
         reply.AddAttachment(new Attachment
         {
@@ -308,8 +308,7 @@ The following code sends a file consent card to the user, requesting permission 
 #### [C#](#tab/csharp2)
 
 ```csharp
-async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string fileId, int fileSize)
-    where T : IActivity
+async Task SendFileConsentCard(string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
 {
     var consentContext = new { filename = fileName, file_id = fileId };
 
@@ -321,7 +320,7 @@ async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string f
         DeclineContext = consentContext
     };
 
-    var message = new MessageActivity
+    var message = new MessageActivityInput
     {
         Attachments =
         [
@@ -333,7 +332,7 @@ async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string f
             }
         ]
     };
-    await context.Send(message);
+    await context.SendAsync(message, cancellationToken);
 }
 ```
 

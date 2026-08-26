@@ -219,7 +219,7 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 teams.OnInstall(async (context, cancellationToken) =>
 {
     context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
-    await context.Send("Hi! I am going to remind you to say something to me soon!", cancellationToken);
+    await context.SendAsync("Hi! I am going to remind you to say something to me soon!", cancellationToken);
     notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
 });
  

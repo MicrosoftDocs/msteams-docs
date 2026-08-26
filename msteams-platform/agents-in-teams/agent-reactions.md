@@ -36,21 +36,23 @@ To add and remove reactions from messages, use the `AddAsync` and `DeleteAsync` 
 The following example illustrates adding a reaction to a received message, then removing it.
 
 ```csharp
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     // First, add a reaction
     await context.Api.Conversations.Reactions.AddAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        new ReactionType("1f44b_wavinghand")
+        new ReactionType("1f44b_wavinghand"),
+        cancellationToken
     );
 
     // Wait a bit, then remove it
-    await Task.Delay(2000);
+    await Task.Delay(2000, cancellationToken);
     await context.Api.Conversations.Reactions.DeleteAsync(
         context.Activity.Conversation.Id,
         context.Activity.Id,
-        new ReactionType("1f44b_wavinghand")
+        new ReactionType("1f44b_wavinghand"),
+        cancellationToken
     );
 });
 ```
@@ -139,7 +141,7 @@ Reaction operations fail if the target message is deleted or the agent is remove
 Agents can listen for reaction activity in conversations they're a part of by handling the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
 
 ```csharp
-app.OnMessageReactionAdded(async (context, cancellationToken) =>
+teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsAdded ?? [])
     {
@@ -147,7 +149,7 @@ app.OnMessageReactionAdded(async (context, cancellationToken) =>
     }
 });
 
-app.OnMessageReactionRemoved(async (context, cancellationToken) =>
+teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
     {

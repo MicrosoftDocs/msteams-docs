@@ -66,20 +66,20 @@ using Microsoft.Teams.Apps;
 
 // Store conversation IDs (e.g., during install event) 
 var conversationStorage = new Dictionary<string, string>(); 
-app.OnInstall(async context => 
-{ 
-    var userId = context.Activity.From.AadObjectId; 
-    var conversationId = context.Activity.Conversation.Id; 
-    conversationStorage[userId] = conversationId; 
-    await context.Send("Hi! I will send you proactive notifications."); 
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    var userId = context.Activity.From.AadObjectId;
+    var conversationId = context.Activity.Conversation.Id;
+    conversationStorage[userId] = conversationId;
+    await context.SendAsync("Hi! I will send you proactive notifications.", cancellationToken);
 }); 
 
 // Send proactive message from anywhere 
-public static async Task SendProactiveNotification(string userId) 
+public static async Task SendProactiveNotification(string userId, CancellationToken cancellationToken)
 { 
     var conversationId = conversationStorage.GetValueOrDefault(userId); 
     if (conversationId is null) return; 
-    await app.Send(conversationId, "Proactive hello."); 
+    await teams.SendAsync(conversationId, "Proactive hello.", cancellationToken: cancellationToken);
 } 
 ```
 

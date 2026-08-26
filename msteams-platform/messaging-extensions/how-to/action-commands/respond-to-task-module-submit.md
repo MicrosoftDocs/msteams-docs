@@ -57,12 +57,14 @@ Examples of receiving the invoke message are as follows:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-var teams = app.UseTeams();
+using Microsoft.Teams.Apps.MessageExtensions;
+
+var teams = app.UseTeamsBotApplication();
  
-teams.OnSubmitAction(async (ctx) =>
+teams.OnSubmitAction(async (context, cancellationToken) =>
 {
-    var action = ctx.Activity.Value;
-    // handle the submit action and return MsgExt.ActionResponse
+  MessageExtensionAction? action = context.Activity.Value;
+  // handle the submit action and return MessageExtensionActionResponse
 });
 ```
 
@@ -137,12 +139,10 @@ The most common way to respond to the `composeExtensions/submitAction` request i
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
 ```csharp
-using Microsoft.Teams.Api;
-using Microsoft.Teams.Api.Cards;
+using System.Text.Json;
+using Microsoft.Teams.Apps.MessageExtensions;
+using Microsoft.Teams.Apps.Schema;
 using Microsoft.Teams.Cards;
-
-using MsgExt = Microsoft.Teams.Api.MessageExtensions;
-using AdaptiveCard = Microsoft.Teams.Cards.AdaptiveCard;
 
 // Inside the action handler:
 
@@ -167,30 +167,22 @@ var card = new AdaptiveCard
     ]
 };
 
-var attachments = new List<MsgExt.Attachment>
-{
-    new MsgExt.Attachment(ContentType.AdaptiveCard)
-    {
-        Content = card,
-        Preview = new Attachment(
-            new ThumbnailCard
-            {
-                Title = title,
-                Text = text
-            }
-        )
-    }
-};
+TeamsAttachment previewAttachment = TeamsAttachment.CreateBuilder()
+  .WithContent(new ThumbnailCard { Title = title, Text = text })
+  .WithContentType(AttachmentContentTypes.ThumbnailCard)
+  .Build();
 
-return new MsgExt.Response
-{
-    ComposeExtension = new MsgExt.Result
-    {
-        Type = MsgExt.ResultType.Result,
-        AttachmentLayout = Attachment.Layout.List,
-        Attachments = attachments
-    }
-};
+TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+  .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+  .WithProperty("preview", previewAttachment)
+  .Build();
+
+return MessageExtensionActionResponse.CreateBuilder()
+  .WithComposeExtension(MessageExtensionResponse.CreateBuilder()
+    .WithType(MessageExtensionResponseTypes.Result)
+    .WithAttachmentLayout(TeamsAttachmentLayouts.List)
+    .WithAttachments(attachment))
+  .Build();
 ```
 
 # [TypeScript/Node.js](#tab/typescript2)
