@@ -18,7 +18,7 @@ Agents can now send richer, better-formatted responses. Set `textFormat: "extend
 
 Extended Markdown content also renders progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
 
-For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#set-message-text-format).
+For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#format-text-content).
 
 ---
 
