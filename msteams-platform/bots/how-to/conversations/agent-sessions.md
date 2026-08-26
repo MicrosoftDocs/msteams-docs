@@ -22,7 +22,7 @@ Sessions is an optional feature that must be enabled for an agent in its manifes
 
 When chatting one-on-one with an agent that supports sessions, controls in the header enable users to create and switch between sessions.
 
-Clicking on the new session icon starts a new session.​
+Clicking on the new session icon starts a new session. The first message in a session becomes the session title.
 
 # [Desktop](#tab/desktop)
 
@@ -34,7 +34,7 @@ Clicking on the new session icon starts a new session.​
 
 ---
 
-After a message is sent, the session is created and saved in the sessions panel.
+After a message is sent, the session is created and saved in the sessions panel. The latest message in the session appears as the preview.
 
 # [Desktop](#tab/desktop)
 
@@ -81,7 +81,7 @@ With sessions enabled, users get the following capabilities within the one-on-on
 
 All existing one-on-one agent chat capabilities continue to work within sessions.
 
-The first message in a session becomes the session title, and the latest message appears as the preview in the sessions panel. Sessions created proactively by the agent appear as unread for the user. Agents can also proactively create new sessions with users to organize notifications, updates, or task-specific conversations.
+Agents can proactively create new sessions with users to organize notifications, updates, or task-specific conversations. Sessions created proactively by an agent appear as unread for the user.
 
 > [!NOTE]
 > Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
@@ -109,7 +109,7 @@ Sessions are an opt-in capability that you enable through your app manifest. Aft
 > [!IMPORTANT]
 > After your agent opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
 
-Update your app manifest and set the `supportsSessions` property to `true`.
+To enable sessions for an agent, set the `supportsSessions` property in its app manifest to `true`.
 
 ```json
 {
@@ -128,9 +128,7 @@ Agents that don't enable sessions continue to use the single chat experience. Wh
 
 ## Send and receive messages in sessions
 
-For agents that support sessions, participation is automatic and requires no special implementation in code. Your existing message-handling code works without changes.
-
-When sessions are enabled, incoming activities include a session-scoped conversation ID. The conversation ID represents the current session and must be treated as an opaque value. Your agent shouldn't parse or construct the conversation ID manually.
+For agents with sessions enabled, the conversation ID of every received one-on-one chat message activity includes an embedded session identifier. Sending a message using that activity's conversation ID automatically routes the message to the correct session. Your existing message-handling code works without changes.
 
 Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
 
@@ -406,9 +404,9 @@ Error codes that bots may encounter during session operations:
 
 ### When to enable sessions
 
-Enable sessions when your agent handles multiple distinct tasks or topics with the same user, such as managing separate support tickets, pull requests, or project workflows. Sessions are also a good fit for AI-powered agents, where shorter, focused conversation contexts improve the quality of generated responses. If your agent sends proactive notifications alongside interactive conversations, sessions help keep updates separate from ongoing tasks.
+Most agents should enable sessions. Sessions improve the user experience for any agent that handles multiple tasks, topics, or workflows with the same user. AI-powered agents benefit from shorter, focused conversation contexts that improve the quality of generated responses. Agents that send proactive notifications alongside interactive conversations can use sessions to keep updates separate from ongoing tasks.
 
-Agents that serve a single, continuous purpose with no need for task separation can continue without sessions.
+Agents that serve a single, continuous purpose with no need for task separation may not need sessions.
 
 ### Organize sessions around user tasks
 

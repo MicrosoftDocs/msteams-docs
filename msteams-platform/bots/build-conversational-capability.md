@@ -1193,6 +1193,9 @@ A typical `channelData` object in an activity sent to your agent contains the fo
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+- `app`: Available in one-on-one (personal-app) conversations. Contains the app ID and the installed manifest version of the app associated with the activity. In some scenarios, `channelData.app` may not be provided, such as when the agent isn't installed for the user or when multiple apps map to a single bot ID. Your agent must handle the case where this field is absent.
+  - `id`: The app ID.
+  - `version`: The manifest version of the installed app.
 
 ### Example channelData object
 
