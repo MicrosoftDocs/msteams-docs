@@ -29,7 +29,7 @@
     items:
     - name: Stream messages
       href: bots/streaming-ux.md
-      displayName: Thinking, informative
+      displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
     - name: Prompt starters
       href: bots/how-to/conversations/prompt-starters.md
       displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
