@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Create an agent with Teams SDK"
-description: Create a Microsoft Teams agent using command-line tools and Teams SDK. Follow this quickstart to build, run, provision, and chat with an agent in Teams.
+description: Create a Microsoft Teams agent using command-line tools and Teams SDK. Follow this quickstart to build, run, register, and chat with an agent in Teams.
 ms.date: 07/13/2026
 author: nickwalkmsft
 ms.author: nickwalk
@@ -77,15 +77,16 @@ Teams can only communicate with an agent runtime that's reachable from the publi
     Ready to accept connections for tunnel: joyful-dog-xgz66vp.usw2
     ```
 
-1. Make a note of the `Connect via browser` URL for the next step.
+1. Leave the tunnel running. Make a note of the `Connect via browser` URL for the next step.
 
-Leave the tunnel running in the terminal. The tunnel must be actively running for Teams to communicate with your agent's runtime: if you lose your terminal session and need to restart it, run `devtunnel host` again.
+> [!NOTE]
+> The dev tunnel needs to be restarted if your device's network connection changes. If you create a new tunnel, its URL will differ from the one you registered — update your agent's messaging endpoint to match, or the agent will stop receiving messages from Teams.
 
-## Provision, install, and chat in Teams
+## Register, install, and chat in Teams
 
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
-1. In the console window you used to create your agent runtime project, use `teams app create` to provision and register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
+1. In the console window you used to create your agent runtime project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env .env
@@ -95,7 +96,7 @@ Leave the tunnel running in the terminal. The tunnel must be actively running fo
 
 ::: zone pivot="teams-sdk-csharp"
 
-1. In the console window you used to create your agent runtime project, use `teams app create` to provision and register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
+1. In the console window you used to create your agent runtime project, use `teams app create` to register it with the Teams platform. Replace `<tunnel-host>` with the full `Connect via browser` URL from the previous step. This command creates a configuration file that your agent runtime needs to communicate with Teams, so it's important to run it from the project directory.
 
     ```console
     teams app create --endpoint <tunnel-host>/api/messages --name echo-bot --env appsettings.json

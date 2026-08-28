@@ -1,12 +1,14 @@
 ## Prerequisites
 
-This quickstart is divided into two sections. In the first section, you'll need:
+This quickstart is divided into two sections. In the first, you run an agent in Microsoft 365 Agents Playground for local testing. For this section you'll need:
 
 - Node.js 24 or later ([installer download](https://nodejs.org))
 - Python 3.12 or later ([installer download](https://python.org/downloads))
 - Visual Studio Code ([installer download](https://code.visualstudio.com/download))
 
-In the second part, you'll also need Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps.
+In the second section, where you install and test your agent in Teams, you'll also need:
+
+- A Teams tenant where custom app uploads are allowed, and an account in it with permissions to install custom apps (an admin may need to enable this)
 
 If you don't have an account, or you aren't sure about your permissions, you can still begin. The quickstart will address those requirements when they're needed.
 
