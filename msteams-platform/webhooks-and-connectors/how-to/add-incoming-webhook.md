@@ -7,20 +7,50 @@ ms.owner: hantony
 ms.date: 05/06/2026
 ---
 
-# Create Incoming Webhooks
+# Send messages in Teams using incoming webhooks
 
 [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
-An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
+Incoming webhooks enable applications and scripts to send messages into Teams conversations using HTTP requests.
 
-* Bots
-* Message extensions
-* Connectors
+Must send a card
+
+## Create an incoming webhook
+
+Authentication
+
+Governance?
+
+Body size limitation
+
+What does the post look like?
+
+No actionable cards
+
+Create incoming webhook by using the
+
+- Webhooks are a way to quickly achieve custom integration
+- Not fully featured like building an agent, do you want that instead
+- Accessible to both end users and developers
+- Briefly explain that they use a Workflow from the workflows app to establish the URL and route to Teams, and you can do other things with them. But don't give any more detail.
+- auth is a thing
+
+You can build a notification bot Teams app using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see Build notification bot with JavaScript or Incoming Webhook notification sample.
+
+- open developer-y questions*
+
+- What's the lifecycle and governance story around the workflow that owns the webhook?
+
+Developers can use incoming webhooks to send share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
+
+- Bots
+- Message extensions
+- Connectors
 
 > [!NOTE]
 >
-> * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
-> * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential backoff](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
+> - The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
+> - If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential backoff](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
 
 ## Key features of Incoming Webhooks
 
@@ -40,8 +70,8 @@ The following table provides the features and description of an Incoming Webhook
 
 > [!NOTE]
 >
-> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
-> * For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
+> - Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> - For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create Webhooks using Workflows
 
@@ -87,10 +117,10 @@ When the request is received, the workflow processes the payload and posts the m
 
 Use Workflows when you need to:
 
-* Receive webhook requests from external services.
-* Post Message Cards or Adaptive Cards to Teams channels or chats.
-* Transform or process webhook payloads before posting them to Teams.
-* Integrate webhook events with other services supported by Power Automate.
+- Receive webhook requests from external services.
+- Post Message Cards or Adaptive Cards to Teams channels or chats.
+- Transform or process webhook payloads before posting them to Teams.
+- Integrate webhook events with other services supported by Power Automate.
 
 > [!IMPORTANT]
 > You can build a notification bot Teams app using [Microsoft 365 Agents Toolkit](../../toolkit/agents-toolkit-fundamentals.md) (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).
@@ -215,8 +245,8 @@ Remove a workflow from your list at any time.
 
 ## See also
 
-* [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Build bots for Teams](../../bots/what-are-bots.md)
-* [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
-* [Share to Teams from web apps](../../concepts/build-and-test/share-to-teams-from-web-apps.md)
+- [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+- [Build bots for Teams](../../bots/what-are-bots.md)
+- [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
+- [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+- [Share to Teams from web apps](../../concepts/build-and-test/share-to-teams-from-web-apps.md)
