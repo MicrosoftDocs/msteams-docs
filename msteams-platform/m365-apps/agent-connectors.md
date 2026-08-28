@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 06/19/2026
+ms.date: 08/28/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -91,7 +91,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client registration
-- **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance
+- **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance. Available only in the `devPreview` manifest schema and not valid in a numbered schema version.
 
 ### Use OAuth authentication
 
@@ -126,6 +126,9 @@ The `referenceId` points to an [API key that you register in Developer Portal](h
 
 ### Use dynamic client registration
 
+> [!WARNING]
+> Dynamic client registration isn't available for an MCP server that's protected by Microsoft Entra ID. Microsoft Entra ID doesn't publish an [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) registration endpoint, so there's nothing for Microsoft 365 to register a client against. For a server that's protected by Microsoft Entra ID, register the OAuth client statically instead. For more information, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal) and [Configure OAuth 2.0 authentication](/microsoft-365-copilot/extensibility/plugin-authentication-oauth).
+
 Dynamic client registration enables Microsoft 365 to register as an OAuth client with your MCP server at runtime using the [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591) protocol. This approach is useful when your server supports dynamic OAuth flows and you don't want to pre-register client credentials.
 
 Configure the authorization type as `DynamicClientRegistration` with a `referenceId`:
@@ -146,6 +149,9 @@ Your server must:
 - Support token refresh for long-lived sessions.
 
 ### Use Azure Key Vault authentication
+
+> [!WARNING]
+> `AzureKeyVault` is available only in the `devPreview` manifest schema. A package that targets a numbered schema version, such as `1.27`, fails validation if it sets `"type": "AzureKeyVault"`. For production, use `OAuthPluginVault` or `DynamicClientRegistration` instead.
 
 Azure Key Vault authentication allows you to store and manage your MCP server credentials in your own [Azure Key Vault](/azure/key-vault/general/overview) instance. This gives you full control over secret lifecycle management, including rotation, access policies, and audit logging.
 
@@ -175,7 +181,9 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Configure how Microsoft 365 agents discover the tools your MCP server provides. Use static inline tool definitions when your toolset is stable, or enable dynamic tool discovery when your toolset changes frequently.
+Configure how Microsoft 365 agents discover the tools your MCP server provides. Define your tools explicitly with static inline definitions whenever you can, and reserve dynamic tool discovery for a server you don't control.
+
+We recommend static tool definitions for most apps, and especially for apps that you publish or submit for certification. Because the tool names, descriptions, and input schemas are declared in your app package, they're reviewable at validation time and can't change after you publish. With dynamic discovery, the tool list isn't visible until runtime, and a server that later changes its `tools/list` response changes what your published app exposes. If a coding toolkit or harness already regenerates and republishes your package when tools change, the "no republish" benefit of dynamic discovery mostly disappears - so the main reason to use it is a server owned by another team or organization whose toolset changes outside your release process, where coordinating a republish isn't practical.
 
 ### Use static tool definitions
 
@@ -198,9 +206,11 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 
 The `description` object must match the schema returned by your MCP server's `tools/list` response.
 
+The `file` value must be a plain relative path from the app package root, such as `toolDescription.json` or `tools/toolDescription.json`. Don't use a `./` prefix, an absolute path, or a traversing path (`../`), because the packaging step derives the archive entry directly from the raw string.
+
 ### Use dynamic tool discovery
 
-Dynamic tool discovery allows Microsoft 365 agents to fetch your tool list at runtime by calling your server's `tools/list` method. This approach is recommended when your toolset changes frequently, as it eliminates the need to republish your app each time tools are added, updated, or removed.
+Dynamic tool discovery allows Microsoft 365 agents to fetch your tool list at runtime by calling your server's `tools/list` method. Use it when you don't own the MCP server and its toolset changes outside your release process, so republishing your app for every change isn't practical. For a server you control, prefer [static tool definitions](#use-static-tool-definitions) so the tools are reviewable at publish time and can't change after certification.
 
 To enable dynamic tool discovery, omit the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration:
 

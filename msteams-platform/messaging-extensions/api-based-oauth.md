@@ -2,8 +2,8 @@
 title: OAuth for API based Message Extension
 description: Learn about the requirements for implementing OAuth for an API based message extension and its limitation and best practices.
 ms.localizationpriority: medium
-ms.topic: overview
-ms.date: 04/03/2025
+ms.topic: how-to
+ms.date: 08/28/2026
 ---
 
 # Enable OAuth authentication for API based message extension
@@ -53,8 +53,8 @@ To enable OAuth for your API based message extension:
 Before you start, you must have:
 
 * A Microsoft Teams app with API Message Extensions or Plugins.
-* An OAuth 2.0 client ID and client secret from the third-party authorization server.
-* When setting up your OAuth app with a third-party authentication provider, ensure that you add <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the list of allowed redirect endpoints. These providers maintain a list of such endpoints to call for their app, making it crucial to include this URL to ensure seamless functionality.
+* An OAuth 2.0 client ID and, for a confidential client, a client secret from the third-party authorization server. A public client that uses PKCE (a single-page application platform) doesn't require a client secret.
+* When setting up your OAuth app with a third-party authentication provider, ensure that you add <https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect> to the list of allowed redirect endpoints. This redirect URI is fixed: it's the same for every app and every provider, and you can't customize it for your app. If you don't add it to the provider's list of allowed redirect endpoints, sign-in fails.
 
 ### Configure OAuth in Developer Portal
 
@@ -96,6 +96,9 @@ To register OAuth for your API based message extensions, follow these steps:
           | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your organization. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your organization have IDs generated after app upload. |
           |**Existing Teams app ID** | After you've completed testing your app within your tenant as a custom app or custom app built for your organization. <br> Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
+      > [!IMPORTANT]
+      > If you use this OAuth client registration for a Model Context Protocol (MCP) server that's registered as an agent connector, select **Any Teams app**. Microsoft 365 Copilot doesn't resolve a Teams app ID for an agent connector, so a registration that's bound to **Existing Teams app ID** provisions successfully and then returns a `404` error on every tool call. If you provision the registration with Microsoft 365 Agents Toolkit, the equivalent setting in the `oauth/register` action in `m365agents.yml` is `applicableToApps: AnyApp`. Keep the `appId` field in that action even though `AnyApp` makes it inert, because the provisioning driver validates `appId` unconditionally.
+
 1. Under **OAuth settings**, update the following:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-oauthsettings.png" alt-text="Screenshots shows the OAuth settings required for oauth configuration ID in Developer Portal for Teams":::
@@ -112,11 +115,16 @@ To register OAuth for your API based message extensions, follow these steps:
 
    1. **Scope**: *[Optional]* The scope defines the permissions your app requests from the user.
 
+   Proof Key for Code Exchange (PKCE) is enabled by default, because many organizations block client secrets. Turn PKCE off only if your authorization server doesn't support it. To avoid client secrets entirely, register a public client with your provider, a single-page application platform rather than a Web platform, and let PKCE secure the code exchange.
+
 1. Select **Save**.
 
    An **OAuth client registration ID** is generated.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
+
+   > [!NOTE]
+   > Developer Portal is the only place where you can delete an OAuth client registration. If you create registrations by provisioning with Microsoft 365 Agents Toolkit, the `oauth/register` action only creates a registration or skips it: when `configurationId` already has a value, the action does nothing, and when it points to a registration that was deleted, the action warns you and does nothing. Use the `oauth/update` action to change the values in an existing registration.
 
 ### Add OAuth client registration ID in API based message extension
 
