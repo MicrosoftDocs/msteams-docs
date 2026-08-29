@@ -7,35 +7,74 @@ ms.owner: hantony
 ms.date: 05/06/2026
 ---
 
-# Send messages in Teams using incoming webhooks
+# Send chat messages using incoming webhooks
 
-[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+Incoming webhooks enable apps and automations to post messages in Teams conversations by making HTTP requests. Developers can use incoming webhooks to create custom integrations that surface real-time information from other systems in Teams chats and channels. They're powered by [workflows](https://support.microsoft.com/teams/apps-service/overview-of-workflows-in-microsoft-teams) and do not require onboarding or distribution of a Teams app.
 
-Incoming webhooks enable applications and scripts to send messages into Teams conversations using HTTP requests.
+Incoming webhooks are for posting notifications, updates and similar kinds of information in Teams chat in your own organization. They're not meant to be used to implement conversational agents that chat with users and perform tasks. For information about creating fully-featured Teams agents, for use in your own organization or for distribution via the Teams app store, see [Agents in Teams](../../agents-in-teams/overview.md).
 
-Must send a card
+To create incoming webhooks, see the [end-user Teams documentation](https://support.microsoft.com/en-US/Workflows/send-messages-in-teams-using-incoming-webhooks). For general information about Power Automate workflows in Teams,
+
+<https://learn.microsoft.com/en-us/connectors/teams>
+
+---
+
+*! Everything below here is a loose draft with some notes to help visualize the potential for developer-specific docs that do not rely on the end-user docs, for consideration!*
 
 ## Create an incoming webhook
 
-Authentication
+To quickly create an incoming webhook that routes messages to a specific chat or channel, use the Workflows app in Teams to create a workflow using one of the following templates:
 
-Governance?
+- Send webhook alerts to a chat
+- Send webhook alerts to a channel
+- Send webhook alerts from specific people to a chat
+- Send webhook alerts from specific people to a channel
+- Send webhook alerts from people in an org to a chat
+- Send webhook alerts from people in an org to a channel
 
-Body size limitation
+The *from specific people* and *from people in an org* templates create webhooks that require requests to include an authentication token.
 
-What does the post look like?
+After creating the workflow, Teams will display the workflow details, including the webhook URL.
 
-No actionable cards
+*TODO screenshot*
 
-Create incoming webhook by using the
+Incoming webhooks are implemented with Power Automate workflows that use the **When a Teams webhook request is received** trigger. When a workflow using this trigger is first saved, it is assigned a unique webhook URL.
 
-- Webhooks are a way to quickly achieve custom integration
-- Not fully featured like building an agent, do you want that instead
-- Accessible to both end users and developers
-- Briefly explain that they use a Workflow from the workflows app to establish the URL and route to Teams, and you can do other things with them. But don't give any more detail.
-- auth is a thing
+<!-- 
+Other info for developers
 
-You can build a notification bot Teams app using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see Build notification bot with JavaScript or Incoming Webhook notification sample.
+Identity and permissions model: is this running as the developer who created the workflow?
+
+Authentication: How to get a token, clarify secuity concerns around unauthed webhook urls
+
+Scenarios: events, notifications, logs, warnings; LOB systems, CI/CD, reports
+
+Lifecycle and governance of the workflow - this is a big one, when a developer hears they're basing this this unfamiliar piece of infra that lives somewhere in their tenant it's cause for concern
+
+Specifics of user experience
+
+Limitations: request rate, body size etc.
+
+Format
+
+A good chunk of this persona will know what webhooks are but have no idea about workflows or Power Automate. We should give them the broad strokes without requiring them to go to a separate docset.(but we will link those docs, esp troubleshooting)
+
+No "actionable cards", what exactly does that mean
+
+Better links to information about creating cards
+
+This page is also an opportunity to promote the possibilities of other kinds of Teams-targeted integrations developers can create using workflows
+
+How to edit a workflow and what some of the other capabilities are, like permissions, who the sending user is, etc.; use this page to provide awareness both about other possibilities for webhook-initiated workflows as well as for workflows triggered in other ways that can post to Teams.
+
+-->
+
+<!--
+
+For the PMs: here's the state of Slack: incoming webhooks are "legacy". Developers dislike this, they often just want a URL, not an "app". What's our stance on this? If we don't consider it "legacy" it's an opportunity for us.
+-->
+
+## Send a message to a webhook
 
 - open developer-y questions*
 

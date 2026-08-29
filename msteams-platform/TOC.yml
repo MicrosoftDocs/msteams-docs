@@ -731,9 +731,9 @@
     - name: Create Outgoing Webhooks
       href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
       displayName: HMAC security token, message in channel, Teams message
-    - name: Create Incoming Webhooks (Deprecated)
+    - name: Send messages using incoming webhooks
       href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-      displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
+      displayName: incoming, application, external, script, integration, HTTP, message, log, notification, build, deployment, release, PR, pull request, scan, CI, continuous integration, report, update, event
     - name: Create connectors for Microsoft 365 Groups (Deprecated)
       href: webhooks-and-connectors/how-to/connectors-creating.md
     - name: Create and send messages (Deprecated)
