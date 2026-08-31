@@ -59,6 +59,10 @@
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
+  - name: User authentication
+    items:
+    - name: Overview
+      href: agents-in-teams/user-authentication/overview.md
   - name: How-tos
     items:
     - name: Receive all chat messages
