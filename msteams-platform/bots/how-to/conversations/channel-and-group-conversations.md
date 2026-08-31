@@ -331,7 +331,9 @@ The following code shows an example of adding mentions to your messages:
 teams.OnMessage(async (context, cancellationToken) =>
 {
     var user = context.Activity.From;
-    var message = new MessageActivity($"Hello <at>{user.Name}</at>!").AddMention(user);
+    var message = new MessageActivityInput()
+        .WithText($"Hello <at>{user.Name}</at>!")
+        .AddMention(user);
     await context.SendAsync(message, cancellationToken);
 });
 ```

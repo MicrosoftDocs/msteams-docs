@@ -13,7 +13,7 @@ This article covers how to invoke and dismiss dialogs (formerly known as task mo
 The event registration varies by language:
 
 * **TypeScript**: `app.on('dialog.open', ...)` and `app.on('dialog.submit', ...)`
-* **C#**: `teamsApp.OnTaskFetch(...)` and `teamsApp.OnTaskSubmit(...)`
+* **C#**: `teams.OnTaskFetch(...)` and `teams.OnTaskSubmit(...)`
 * **Python**: `@app.on_dialog_open` and `@app.on_dialog_submit`
 
  The dialog content can be an Adaptive Card or a URL-based webpage.

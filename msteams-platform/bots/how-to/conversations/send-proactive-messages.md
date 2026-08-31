@@ -7,19 +7,20 @@ ms.author: nickwalk
 ms.localizationpriority: high
 ms.date: 06/30/2026
 ---
+
 # Proactive messages
 
 A proactive message is any message sent by an agent that isn't in response to a request from a user. This message can include content, such as:
 
-* Welcome messages
-* Notifications
-* Scheduled messages
+- Welcome messages
+- Notifications
+- Scheduled messages
 
 To send a proactive message to a user, a group chat, or a team, your agent must have the requisite access to send the message. For a group chat or team, the app that contains your agent must be first installed in that location.
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must proactively install your app using Graph. For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
-Sending a proactive message is different from sending a regular message. Proactive messages are sent via app.Send() outside an activity handler. The SDK creates the conversation automatically when you call app.Send(). You need a `conversationId`, the SDK resolves the service URL automatically. For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. Proactive messages are sent via `app.SendAsync()` outside an activity handler. The SDK creates the conversation automatically when you call `app.SendAsync()`. You need a `conversationId`; the SDK resolves the service URL automatically. For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
 To send a proactive message, follow these steps:
 
@@ -36,19 +37,19 @@ The code snippets in the [samples](#samples) section are to create a one-on-one 
 
 You can create a new conversation with a user or a conversation thread in a channel and you must have the correct ID. You can receive or retrieve this ID using any of the following ways:
 
-* When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* When a new user is added to a context where your app is installed, you receive an `onMembersAdded` activity.
-* Every event that the agent receives contains the required information, which you can get from the agent context (activity context).
-* You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
-* You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
+- When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- When a new user is added to a context where your app is installed, you receive an `onMembersAdded` activity.
+- Every event that the agent receives contains the required information, which you can get from the agent context (activity context).
+- You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
+- You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 
 Regardless of how you get the information, store the `tenantId` and then store either the `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the agent is installed in the team before you can send a proactive message to a channel.
 
-* The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list) to create a new conversation in personal chat. Ensure that the agent is installed in the personal scope before you can send a proactive message. If the agent isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the agent returns a `403` error with `ForbiddenOperationException` message.
+- The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list) to create a new conversation in personal chat. Ensure that the agent is installed in the personal scope before you can send a proactive message. If the agent isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the agent returns a `403` error with `ForbiddenOperationException` message.
 
-* The `userId` is unique to your agent ID and a particular user. You can't reuse the `userId` between agents.
+- The `userId` is unique to your agent ID and a particular user. You can't reuse the `userId` between agents.
 
-* The `channelId` is global.
+- The `channelId` is global.
 
 Create the conversation, after you have the user or channel information.
 
@@ -61,21 +62,20 @@ You can create the conversation if it doesn't exist or if you don't know the `co
 
 To create the conversation, you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
->[!NOTE]
+> [!NOTE]
 > To create the conversation, pass the `aadObjetId` value in the `Id` parameter.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
-* Public: `https://smba.trafficmanager.net/teams/`
-* GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`
-* GCC High: `https://smba.infra.gov.teams.microsoft.us/teams`
-* DoD: `https://smba.infra.dod.teams.microsoft.us/teams`
+- Public: `https://smba.trafficmanager.net/teams/`
+- GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`
+- GCC High: `https://smba.infra.gov.teams.microsoft.us/teams`
+- DoD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 > [!WARNING]
 >
-> * These URLs are for proactive messages only. Avoid hardcoding them. Instead, use `serviceUrl` from the incoming activity or conversation reference. If it's unavailable, use global URLs based on region and cloud.
->
-> * For any reply to messages, use `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true) property.
+> - These URLs are for proactive messages only. Avoid hardcoding them. Instead, use `serviceUrl` from the incoming activity or conversation reference. If it's unavailable, use global URLs based on region and cloud.
+> - For any reply to messages, use `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true) property.
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
@@ -91,9 +91,9 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.Send()` method, and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.SendAsync()` method and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
-To proactively send a message as a reply to a thread in a channel, use `app.Reply()` with both the conversation ID and the ID of the thread's root message.
+To proactively send a message as a reply to a thread in a channel, use `app.ReplyAsync()` with both the conversation ID and the ID of the thread's root message.
 
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
@@ -135,25 +135,25 @@ When proactive messaging is used to send a welcome message to a user, there's no
 
 A good welcome message can include the following information:
 
-* Reason for the message - It must be clear to the user why they're receiving the message. If your agent was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
+- Reason for the message - It must be clear to the user why they're receiving the message. If your agent was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
-* Your offer - Users must be able to identify what they can do with your app and what value can you bring to them.
+- Your offer - Users must be able to identify what they can do with your app and what value can you bring to them.
 
-* Next steps - Users should understand the next steps. For example, invite users to try out a command or interact with your app.
+- Next steps - Users should understand the next steps. For example, invite users to try out a command or interact with your app.
 
 ### Notification messages
 
 To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of an agent. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
 
-* What happened? A clear indication of what happened to cause the notification.
+- What happened? A clear indication of what happened to cause the notification.
 
-* What was the result? It must be clear, what item is updated to get the notification.
+- What was the result? It must be clear, what item is updated to get the notification.
 
-* Who or what triggered it? Who or what took action which caused the notification to be sent.
+- Who or what triggered it? Who or what took action which caused the notification to be sent.
 
-* What can users do in response? Make it easy for your users to take actions based on your notifications.
+- What can users do in response? Make it easy for your users to take actions based on your notifications.
 
-* How can users opt-out? You must provide a path for users to opt-out of more notifications.
+- How can users opt-out? You must provide a path for users to opt-out of more notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
@@ -167,9 +167,9 @@ To update or delete a proactive message sent by a notification only agent:
 
 When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages include:
 
-* Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
+- Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
 
-* What can user do next? Users can take the required action based on the message content.
+- What can user do next? Users can take the required action based on the message content.
 
 ## Proactively install your app using Graph
 
@@ -183,30 +183,29 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true&tabs=multitenant) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
 
-* [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
-* [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
-* REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+- [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
+- [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
+- REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
-    ```http
-    PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
-    ```
+  ```http
+  PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
+  ```
 
-    ```json
-    
-    {
-        "type": "message",
-        "text": "This message has been updated"
-    }
-    ```
+  ```json
+  {
+    "type": "message",
+    "text": "This message has been updated"
+  }
+  ```
 
-    To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
-    If the call succeeds, the API returns with the following response object.
+  To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
+  If the call succeeds, the API returns with the following response object.
 
-    ```json
-    {
-        "id": "{{activityID}}"
-    }
-    ```
+  ```json
+  {
+    "id": "{{activityID}}"
+  }
+  ```
 
 ## Samples
 
@@ -222,7 +221,7 @@ teams.OnInstall(async (context, cancellationToken) =>
     await context.SendAsync("Hi! I am going to remind you to say something to me soon!", cancellationToken);
     notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
 });
- 
+
 // Send proactive message using stored conversation ID
 public static class Notifications
 {
@@ -230,7 +229,7 @@ public static class Notifications
     {
         var conversationId = (string?)storage.Get(userId);
         if (conversationId is null) return;
-        await app.Send(conversationId, "Hey! It's been a while. How are you?");
+        await app.SendAsync(conversationId, "Hey! It's been a while. How are you?");
     }
 }
 
@@ -239,24 +238,30 @@ public static class Notifications
 # [TypeScript](#tab/typescript)
 
 ```typescript
-
 // This would be some persistent storage
 const myConversationIdStorage = new Map<string, string>();
- 
+
 // Save the conversation ID on app install
-app.on('install.add', async ({ activity, send }) => {
-  myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
-  await send('Hi! I am going to remind you to say something to me soon!');
-  notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
+app.on("install.add", async ({ activity, send }) => {
+  myConversationIdStorage.set(
+    activity.from.aadObjectId!,
+    activity.conversation.id,
+  );
+  await send("Hi! I am going to remind you to say something to me soon!");
+  notificationQueue.addReminder(
+    activity.from.aadObjectId!,
+    sendProactiveNotification,
+    10_000,
+  );
 });
- 
+
 // Send proactive message using stored conversation ID
 const sendProactiveNotification = async (userId: string) => {
   const conversationId = myConversationIdStorage.get(userId);
   if (!conversationId) {
     return;
   }
-  const activity = new MessageActivity('Hey! It\'s been a while. How are you?');
+  const activity = new MessageActivity("Hey! It's been a while. How are you?");
   await app.send(conversationId, activity);
 };
 ```
@@ -310,7 +315,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ```json
 {
-  "id":"a:1qhNLqpUtmuI6U35gzjsJn7uRnCkW8NiZALHfN8AMxdbprS1uta2aT-jytfIlsZR3UZeg3TsIONNInBHsdjzj3PtfHuhkxxvS1jZZ61UAbw8fIdXcNSJyTJm7YvHFOgxo"
+  "id": "a:1qhNLqpUtmuI6U35gzjsJn7uRnCkW8NiZALHfN8AMxdbprS1uta2aT-jytfIlsZR3UZeg3TsIONNInBHsdjzj3PtfHuhkxxvS1jZZ61UAbw8fIdXcNSJyTJm7YvHFOgxo"
 }
 ```
 
@@ -320,9 +325,9 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 The following table provides code samples that incorporate basic conversation flow and proactive messaging into a Teams application using the Teams SDK:
 
-| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
-|---------------|--------------|--------|-------------|--------|--------|
-| Teams Conversation Basics  | This sample app shows how to use different agent conversation events available in Teams SDK v2 for personal and teams scope.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| **Sample Name**           | **Description**                                                                                                              | **.NET**                                                                                                                     | **Node.js**                                                                                                                  | **Python**                                                                                                                   | **Manifest**                                                                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Teams Conversation Basics | This sample app shows how to use different agent conversation events available in Teams SDK v2 for personal and teams scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
 
 ## Next steps
 
@@ -331,4 +336,4 @@ The following table provides code samples that incorporate basic conversation fl
 
 ## See also
 
-* [Channel and group chat conversations with an agent](~/bots/how-to/conversations/channel-and-group-conversations.md)
+- [Channel and group chat conversations with an agent](~/bots/how-to/conversations/channel-and-group-conversations.md)

@@ -267,11 +267,10 @@ You can also add RSC permissions through Graph API. For more information, see [`
   The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
 
     ```csharp
-    app.OnReadReceipt(async context =>
-
+    teams.OnReadReceipt(async (context, cancellationToken) =>
     {
         var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-        await context.Send("User read the agent's message");
+        await context.SendAsync("User read the agent's message", cancellationToken);
     });
     ```
 
@@ -396,7 +395,7 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 
 ### Send a message
 
-To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.Send(...)` method to send a single message response. Use the object's `multiple context.Send(...) calls` method to send multiple responses.
+To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.SendAsync(...)` method to send a single message response. Use the object's `multiple context.SendAsync(...) calls` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
@@ -1046,7 +1045,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone pivot="teams-sdk-csharp"
 
-For proactive scenarios (using `app.Send()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
+For proactive scenarios (using `app.SendAsync()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
 
 ```csharp
 var parentMessageId = "1772050244572";
@@ -1054,21 +1053,24 @@ var firstMessageId = "1772050244573";
 var secondMessageId = "1772050244574";
 
 // Single quote with response below it
-var msg = new MessageActivity()
-    .AddQuote(parentMessageId, "Here is my response");
-await app.Send(conversationId, msg);
+var msg = new MessageActivityInput()
+    .WithText("Here is my response")
+    .AddQuote(parentMessageId);
+await app.SendAsync(conversationId, msg);
 
 // Multiple quotes with interleaved responses
-msg = new MessageActivity()
-    .AddQuote(firstMessageId, "response to first")
+msg = new MessageActivityInput()
+    .WithText("response to first")
+    .AddQuote(firstMessageId)
     .AddQuote(secondMessageId, "response to second");
-await app.Send(conversationId, msg);
+await app.SendAsync(conversationId, msg);
 
 // Grouped quotes — omit response to group quotes together
-msg = new MessageActivity("see below for previous messages")
+msg = new MessageActivityInput()
+    .WithText("see below for previous messages")
     .AddQuote(firstMessageId)
     .AddQuote(secondMessageId, "response to both");
-await app.Send(conversationId, msg);
+await app.SendAsync(conversationId, msg);
 ```
 
 ::: zone-end

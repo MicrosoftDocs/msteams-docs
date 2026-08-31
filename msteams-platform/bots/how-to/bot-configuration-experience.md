@@ -99,8 +99,7 @@ The following table lists the response type associated with the invoke requests:
 # [C#](#tab/teams-bot-sdk1)
 
    ```csharp
-
-app.OnConfigFetch(async (context) =>
+teams.OnTaskFetch(async (context, cancellationToken) =>
 {
     var card = new AdaptiveCard
     {
@@ -119,20 +118,16 @@ app.OnConfigFetch(async (context) =>
             }
         }
     };
-    var taskInfo = new TaskInfo
-    {
-        Title = "test card",
-        Width = new Union<int, Size>(600),
-        Height = new Union<int, Size>(500),
-        Card = new Attachment
-        {
-            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-            Content = card
-        }
-    };
-    return new ConfigTaskResponse(
-        new ContinueTask(taskInfo)
-    );
+
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("test card")
+        .WithHeight("medium")
+        .WithWidth("medium")
+        .WithCard(TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+            .Build())
+        .Build();
 });
    ```
 
@@ -201,26 +196,13 @@ async def handle_config_open(
 # [C#](#tab/teams-bot-sdk2)
 
    ```csharp
-
-app.OnConfigFetch(async (context) =>
+teams.OnTaskFetch(async (context, cancellationToken) =>
 {
-    return new ConfigAuthResponse(
-        new ConfigAuth
-        {
-            SuggestedActions = new SuggestedActions
-            {
-                Actions = new List<CardAction>
-                {
-                    new CardAction
-                    {
-                        Type = "openUrl",
-                        Value = "https://example.com/auth",
-                        Title = "Sign in to this app"
-                    }
-                }
-            }
-        }
-    );
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("Sign in to this app")
+        .WithUrl("https://example.com/auth")
+        .Build();
 });
 
    ```
@@ -276,12 +258,12 @@ async def handle_config_open(
 # [C#](#tab/teams-bot-sdk3)
 
    ```csharp
-
-app.OnConfigSubmit(async (context) =>
+teams.OnTaskSubmit(async (context, cancellationToken) =>
 {
-    return new ConfigTaskResponse(
-        new MessageTask("You have chosen to finish setting up agent")
-    );
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Message)
+        .WithMessage("You have chosen to finish setting up agent")
+        .Build();
 });
 
    ```

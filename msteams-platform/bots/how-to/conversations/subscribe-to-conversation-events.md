@@ -448,11 +448,14 @@ The message your agent receives when the agent is added to a team.
             "name": "TestTeam2022",
             "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
-        "eventType": "teamMemberAdded",
         "tenant": {
             "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
         }
-    }
+    },
+    "action": "add"
 }
 ```
 
@@ -975,7 +978,7 @@ The following code shows an example of reactions to an agent message:
 # [C#](#tab/dotnet)
 
 ```csharp
-app.OnReactionsAdded(async context =>
+app.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsAdded)
     {
@@ -1065,7 +1068,7 @@ The following code shows an example of reactions removed from agent message:
 # [C#](#tab/dotnet)
 
 ```csharp
-app.OnReactionsRemoved(async context =>
+app.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsRemoved)
     {

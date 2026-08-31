@@ -555,11 +555,8 @@ if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
     var cardAttachment = action.BotActivityPreview?.FirstOrDefault()?.Attachments?.FirstOrDefault();
     if (cardAttachment != null)
     {
-        await ctx.Send(new Activity
-        {
-            Type = "message",
-            Attachments = [cardAttachment]
-        });
+        await ctx.SendAsync(new MessageActivityInput()
+            .AddAttachment(cardAttachment));
     }
     return new MsgExt.ActionResponse();
 }
