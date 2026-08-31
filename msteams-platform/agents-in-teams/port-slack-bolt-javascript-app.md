@@ -1,6 +1,6 @@
 ---
-title: Migrate a Slack Bolt for JavaScript App to Teams
-description: Migrate a Slack Bolt for JavaScript app to Teams with this step-by-step guide. Compare Slack and Teams concepts, then port handlers, cards, and auth code.
+title: Port a Slack Bolt for JavaScript App to Teams
+description: Port a Slack Bolt for JavaScript app to Teams with this step-by-step guide. Compare Slack and Teams concepts, then port handlers, cards, and auth code.
 ms.topic: how-to
 ms.date: 08/31/2026
 author: nickwalkmsft
@@ -10,7 +10,7 @@ ms.reviewer: nickwalk
 
 # Migrate a Slack Bolt for JavaScript app to Teams
 
-This guide will help you use Teams SDK to migrate an existing JavaScript Slack Bolt application to Teams.
+This guide will help you use Teams SDK to port an existing JavaScript Slack Bolt application to Teams.
 
 ## Introduction
 
@@ -135,7 +135,7 @@ const app = new App({
 
 ---
 
-## Migrate message handlers
+## Add message handlers
 
 In Slack, there are message handlers for events with different subtypes (e.g., undefined subtype is a regular message, `event.subtype == 'file_share'` is a file share message, etc.). In Teams, there are different `Activity` handlers for different types of events that are enumerated via the `ActivityTypes` enum (e.g., `app.activity(ActivityTypes.Message)`), with some `Activity` types having tailored APIs within the SDK (e.g., `app.message`). These concepts are roughly similar, though the naming conventions and syntax differ.
 
@@ -173,7 +173,7 @@ app.message(async ({ message, say }) => {
 
 ---
 
-## Migrate Block Kit to Adaptive Cards
+## Convert Block Kit usage to Adaptive Cards
 
 To include rich UI in messages sent by your agent, Teams's Adaptive Cards are equivalent to Slack's Block Kit.
 
