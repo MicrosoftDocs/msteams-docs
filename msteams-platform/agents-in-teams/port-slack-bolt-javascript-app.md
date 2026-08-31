@@ -134,7 +134,7 @@ const app = new App({
 
 ## Migrate message handlers
 
-In Slack, there are message handlers for events with different subtypes (e.g., undefined subtype is a regular message, `event.subtype == 'file_share'` is a file share message, etc.). In Teams, there are different `Activity` handers for different types of events that are enumerated via the `ActivityTypes` enum (e.g., `app.activity(ActivityTypes.Message)`), with some `Activity` types having tailored APIs within the SDK (e.g., `app.message`). These concepts are roughly similar, though the naming conventions and syntax differ.
+In Slack, there are message handlers for events with different subtypes (e.g., undefined subtype is a regular message, `event.subtype == 'file_share'` is a file share message, etc.). In Teams, there are different `Activity` handlers for different types of events that are enumerated via the `ActivityTypes` enum (e.g., `app.activity(ActivityTypes.Message)`), with some `Activity` types having tailored APIs within the SDK (e.g., `app.message`). These concepts are roughly similar, though the naming conventions and syntax differ.
 
 # [Teams SDK](#tab/teams)
 
@@ -217,7 +217,7 @@ There are two primary types of user authentication for Teams and Slack: authenti
 
 In Slack, if you want to use Slack REST APIs that require user-delegated scopes, you need to implement an OAuth 2.0 installation flow in your application to obtain and store Slack user tokens, even if the app was already installed by another user. In Teams, you can leverage Teams SSO to obtain user Entra tokens for calling Graph REST APIs. The Teams SDK integrates with Teams SSO and Azure Bot Token Service to handle token acquisition, storage, and refresh automatically for you.
 
-First, follow the instructions in the [Teams SSO guide](../teams/user-authentication/sso-setup.md). Then, configure authentication in your code.
+First, follow the instructions in the [Teams SSO guide](/microsoftteams/platform/teams-sdk/teams/user-authentication/sso-setup). Then, configure authentication in your code.
 
 # [Slack Bolt](#tab/slack)
 
