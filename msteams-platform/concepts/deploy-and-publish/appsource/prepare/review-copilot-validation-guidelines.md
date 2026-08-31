@@ -6,7 +6,7 @@ author: v-preethah
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 05/11/2026
+ms.date: 08/13/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -246,7 +246,7 @@ You must ensure to meet the following guidelines for agents:
     1. From the **Manage** section, select **Expose an API**.
     1. In the **Authorized client applications** section, ensure that the following client ID values are listed:
 
-        | Microsoft 365 client application  | Client ID |
+        | Microsoft 365 client application | Client ID |
         | --- | --- |
         | Word, PowerPoint, Excel (web, desktop) | 3068386c-7a16-4f6a-a664-043b6b232816 |
         | Teams desktop, mobile | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
@@ -302,12 +302,12 @@ You must ensure to meet the following guidelines for agents:
 For an agent to be validated, invoked, and to work seamlessly, ensure that it meets the following criteria: [*Must fix*]
 
 | Criteria | Fulfillment |
-|---|---|
+| --- | --- |
 | Manifest version | *App manifest version must be 1.13 or later. Starting July 2026, if your agent operates in channels, all new Teams Store submissions must use manifest schema version 1.25 or later. [*Must fix*] <br>* |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
-| Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
+| Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
@@ -438,9 +438,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * All search results in the message extension capability must include a relevant title, subtitle, and url which will also appear in citations of your agent [*Must fix*].
 
-* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
-
-  * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
+* All agents and plugins must provide rich responses that clearly describe the action performed and include citations that allow users to identify the source of the response [*Must fix*]. For more information, see [citations](/microsoft-365/copilot/extensibility/plugin-citations).
 
 * An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 

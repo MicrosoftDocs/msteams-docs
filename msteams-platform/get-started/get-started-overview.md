@@ -82,12 +82,11 @@ In this section, learn how to build a Teams app with different capabilities, suc
 - [Build a Teams tab app](build-basic-tab-app.md)
 - [Build a Teams message extension app](build-message-extension.md)
 
-After you build the basic app capabilities, explore [tutorials](tutorials.md) and [code samples](tool-options-and-code-samples.md).
+After you build the basic app capabilities, explore [tutorials](tutorials.md) and [code samples](code-samples.md).
 
 Get started with building apps for Microsoft Teams and beyond!
 
 ## See also
 
-- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
 - [Git and GitHub resources](/contribute/additional-resources)
-- [Teams app tutorials and code samples](tool-options-and-code-samples.md)
+- [Code samples](code-samples.md)

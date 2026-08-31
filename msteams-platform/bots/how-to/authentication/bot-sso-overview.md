@@ -2,7 +2,7 @@
 title: Enable SSO with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, and SSO in Teams at runtime.
 ms.topic: article
-ms.date: 05/22/2026
+ms.date: 08/27/2026
 ms.localizationpriority: high
 ---
 # Enable SSO for your app
@@ -101,8 +101,3 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 
 > [!div class="nextstepaction"]
 > [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md)
-
-## See also
-
-- [Enable SSO for your bot - Tutorial](../../../get-started/tutorials.md#build-a-bot-with-sso-authentication)
-- [Glossary](../../../get-started/glossary.md)

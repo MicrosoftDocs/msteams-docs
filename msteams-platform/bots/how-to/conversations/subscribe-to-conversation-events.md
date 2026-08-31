@@ -4,7 +4,7 @@ description: Learn about conversation update, message reaction, app installation
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 05/05/2026
+ms.date: 08/19/2026
 ---
 
 # Conversation events for agents
@@ -38,19 +38,19 @@ The `conversationUpdate` event is sent to your agent when it receives informatio
 
 The following table shows a list of Teams conversation update events with more details:
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
+| Action taken | EventType | Method called | Description | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| Channel created     | channelCreated    | OnTeamsChannelCreatedAsync | [A channel is created](#channel-created). | Team |
-| Channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | [A channel is renamed](#channel-renamed). | Team |
-| Channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
-| Channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | [A channel is restored](#channel-deleted). | Team |
-| Members added   | membersAdded   | OnTeamsMembersAddedAsync   | [A member is added](#members-added). | All |
+| Channel created | channelCreated | OnTeamsChannelCreatedAsync | [A channel is created](#channel-created). | Team |
+| Channel renamed | channelRenamed | OnTeamsChannelRenamedAsync | [A channel is renamed](#channel-renamed). | Team |
+| Channel deleted | channelDeleted | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
+| Channel restored | channelRestored | OnTeamsChannelRestoredAsync | [A channel is restored](#channel-deleted). | Team |
+| Members added | membersAdded | OnTeamsMembersAddedAsync | [A member is added](#members-added). | All |
 | Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#members-removed). | All |
-| Team renamed        | teamRenamed       | OnTeamsTeamRenamedAsync    | [A team is renamed](#team-renamed).       | Team |
-| Team deleted        | teamDeleted       | OnTeamsTeamDeletedAsync    | [A team is deleted](#team-deleted).       | Team |
-| Team archived        | teamArchived       | OnTeamsTeamArchivedAsync    | [A team is archived](#team-archived).       | Team |
-| Team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | [A team is unarchived](#team-unarchived).       | Team |
-| Team restored        | teamRestored      | OnTeamsTeamRestoredAsync    | [A team is restored](#team-restored)       | Team |
+| Team renamed | teamRenamed | OnTeamsTeamRenamedAsync | [A team is renamed](#team-renamed). | Team |
+| Team deleted | teamDeleted | OnTeamsTeamDeletedAsync | [A team is deleted](#team-deleted). | Team |
+| Team archived | teamArchived | OnTeamsTeamArchivedAsync | [A team is archived](#team-archived). | Team |
+| Team unarchived | teamUnarchived | OnTeamsTeamUnarchivedAsync | [A team is unarchived](#team-unarchived). | Team |
+| Team restored | teamRestored | OnTeamsTeamRestoredAsync | [A team is restored](#team-restored) | Team |
 
 ### Channel created
 

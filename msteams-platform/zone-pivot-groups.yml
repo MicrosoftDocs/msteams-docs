@@ -34,16 +34,6 @@ groups:
     title: ASP.NET Core MVC
   - id: blazor-app
     title: Blazor
-- id: What-new-features
-  title: Teams feature updates
-  prompt: Select the feature availability type to explore the features
-  pivots:
-  - id: ga-feature
-    title: Generally available
-  - id: dev-preview
-    title: Developer preview
-  - id: dep-feature
-    title: Deprecated
 - id: teams-app-platform
   title: Teams app platform
   prompt: Before you begin, select your development environment.

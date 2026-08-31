@@ -1,7 +1,7 @@
 ---
 title: Send and Receive Files
 description: Learn how to create agents that send and receive files using Microsoft Graph APIs and Teams SDK for personal, channel, and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 07/27/2026
+ms.date: 08/19/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
