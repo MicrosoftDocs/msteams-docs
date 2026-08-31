@@ -7,27 +7,32 @@ ms.date: 07/27/2026
 
 # User Authentication
 
-At times, agents must access secured online resources on behalf of the user, such as checking email, checking flight status, or placing an order. To enable this, the user must authenticate their identity and grant consent for the application to access these resources. This process results in the application receiving a token, which the application can then use to access the permitted resources on the user's behalf.
+At times, agents must access secured online resources on behalf of a user, such as checking email, checking flight status, or placing an order. To enable this, the user must authenticate and grant consent for the application to use their identity. This process results in the application receiving a token, which it can then use to access the permitted resources on the user's behalf.
 
-## How Auth Works
+## Single sign-on (SSO) and OAuth
 
-When building Teams applications, choosing the right authentication method is crucial for both security and user experience. Teams supports two primary authentication approaches: OAuth and Single Sign-On (SSO). While both methods serve the same fundamental purpose of validating user identity, they differ significantly in their implementation, supported identity providers, and user experience. Understanding these differences is essential for making the right choice for your application.
+Teams supports two kinds of user authentication:
 
-The following table provides a clear comparison between OAuth and SSO authentication methods, highlighting their key differences in terms of identity providers, authentication flows, and user experience.
+- **Single sign-on (SSO)**: The agent acts on behalf of a user by using their Teams identity - their work or school account in Entra ID that they use to sign in to Teams. In SSO flows, users only need to provide consent and don't need to sign in, because they already authenticated by signing in to Teams. Users only need to grant consent once, and consent applies across all devices they use to access Teams.
+- **OAuth**: The agent acts on behalf of a user by sending them a link to sign in using an OAuth identity provider (IdP) like Google, Facebook or GitHub. OAuth supports Entra ID, but scenarios that call for Entra ID identities should generally use SSO.
 
-### Single Sign-On (SSO)
+| Feature                                                | OAuth                                                                              | SSO                                                                                                                                                                      |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Identity Provider                                      | Works with any OAuth provider (Microsoft Entra ID, Google, Facebook, GitHub, etc.) | Only works with Microsoft Entra ID                                                                                                                                       |
+| Authentication Flow                                    | User is sent a card with a sign-in link                                            | If the user has already consented to the requested scopes in the past they will "silently" login through the token exchange flow. Otherwise user is shown a consent form |
+| User Experience                                        | Requires explicit signin, and consent to scopes                                    | Re-use existing Teams credential. Only requires consent to scopes                                                                                                        |
+| Conversation scopes (`personal`, `groupChat`, `teams`) | `personal` scope only                                                              | `personal` scope only                                                                                                                                                    |
+| Azure Configuration differences                        | Same configuration except `Token Exchange URL` is blank                            | Same configuration except `Token Exchange URL` is set                                                                                                                    |
 
-Single Sign-On (SSO) in Teams provides a seamless authentication experience by leveraging a user's existing Teams identity. Once a user is logged into Teams, they can access your app without needing to sign in again. The only requirement is a one-time consent from the user, after which your app can securely retrieve their access details from Microsoft Entra ID. This consent is device-agnostic - once granted, users can access your app from any device without additional authentication steps.
+### SSO
+
+SSO in Teams enables an agent to authenticate and authorize users with the work or school account they use to sign in to Teams. With SSO, users don't need to sign in again when an agent presents an authentication flow, they only need to provide a one-time consent that applies across devices.
 
 When an access token expires, the app automatically initiates a token exchange flow. In this process:
 
 1. The Teams client sends an OAuth ID token containing the user's information
 2. Your app exchanges this ID token for a new access token with the previously consented scopes
 3. This exchange happens silently without requiring user interaction
-
-> [!TIP]
->
-> Always use SSO if you're authenticating the user with Microsoft Entra ID.
 
 #### The SSO Signin Flow
 
@@ -67,16 +72,4 @@ When an access token expires, the user will need to go through the sign-in proce
 
 This is what the OAuth card looks like in Teams:
 
-:::image type="content" source="../../assets/screenshots/auth-explicit-signin.png" alt-text="OAuthCard" lightbox="../../assets/screenshots/auth-explicit-signin.png" :::
-
-## OAuth vs SSO - Head-to-Head Comparison
-
-The following table provides a clear comparison between OAuth and SSO authentication methods, highlighting their key differences in terms of identity providers, authentication flows, and user experience.
-
-| Feature                                                | OAuth                                                                              | SSO                                                                                                                                                                      |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Identity Provider                                      | Works with any OAuth provider (Microsoft Entra ID, Google, Facebook, GitHub, etc.) | Only works with Microsoft Entra ID                                                                                                                                       |
-| Authentication Flow                                    | User is sent a card with a sign-in link                                            | If the user has already consented to the requested scopes in the past they will "silently" login through the token exchange flow. Otherwise user is shown a consent form |
-| User Experience                                        | Requires explicit signin, and consent to scopes                                    | Re-use existing Teams credential. Only requires consent to scopes                                                                                                        |
-| Conversation scopes (`personal`, `groupChat`, `teams`) | `personal` scope only                                                              | `personal` scope only                                                                                                                                                    |
-| Azure Configuration differences                        | Same configuration except `Token Exchange URL` is blank                            | Same configuration except `Token Exchange URL` is set                                                                                                                    |
+:::image type="content" source="../../assets/images/auth-explicit-signin.png" alt-text="OAuthCard" lightbox="../../assets/images/auth-explicit-signin.png" :::

@@ -59,7 +59,7 @@
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
-  - name: User authentication
+  - name: Single sign-on and OAuth
     items:
     - name: Overview
       href: agents-in-teams/user-authentication/overview.md
