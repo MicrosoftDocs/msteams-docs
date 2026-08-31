@@ -1,0 +1,114 @@
+---
+title: SSO Troubleshooting
+description: Common SSO errors and how to resolve them
+ms.topic: how-to
+ms.date: 07/27/2026
+---
+
+
+
+# SSO Troubleshooting
+
+When SSO fails, Teams sends a `signin/failure` invoke activity to your bot with a `code` and `message` describing the error. The SDK's default handler logs a warning with these details.
+
+## Failure codes
+
+| Code | Silent | Description |
+| ------ | -------- | ------------- |
+| `installappfailed` | No | Failed to install the app in the user's personal scope (group chat SSO flow). |
+| `authrequestfailed` | No | The SSO auth request failed after app installation. |
+| `installedappnotfound` | Yes | The bot app is not installed for the user or group chat. *(most common)* |
+| `invokeerror` | Yes | A generic error occurred during the SSO invoke flow. |
+| `resourcematchfailed` | Yes | The token exchange resource URI on the OAuthCard does not match the Application ID URI in the Entra app registration's "Expose an API" section. *(common)* |
+| `oauthcardnotvalid` | Yes | The bot's OAuthCard could not be parsed. |
+| `tokenmissing` | Yes | AAD token acquisition failed. |
+
+"Silent" failures produce no user-facing feedback in the Teams client a the user sees nothing and sign-in simply doesn't complete. "Non-silent" failures occur during the group chat SSO flow where the user is shown an install/auth card.
+
+> [!NOTE]
+>
+> The `userconsentrequired` and `interactionrequired` codes are handled by the Teams client via the OAuth card fallback flow and do not typically reach the bot.
+
+## `authrequestfailed`
+
+If you see:
+
+> Sign-in failed for user "..." in conversation "...": authrequestfailed -- Failed to handle SSO auth request
+
+This can occur in **cross-tenant** scenarios where the Teams app is installed in one tenant but the Entra auth app lives in another. Common causes:
+
+1. **No admin consent in the Teams app's tenant.** Even if the auth app is multi-tenant (`AzureADMultipleOrgs`), admin consent must be granted in the tenant where the Teams app is sideloaded/installed.
+2. **User identity mismatch.** The user signed into Teams is in a different tenant than expected by the auth app. For example, the Teams user is in a dev tenant but the auth app expects users from a production tenant.
+
+To resolve this, either:
+
+- Grant admin consent for the multi-tenant auth app in the tenant where the Teams app is installed
+- Install the Teams app in the same tenant as the auth app registration
+
+When `authrequestfailed` occurs, Teams falls back to the OAuth card sign-in flow (sign-in button). See [OAuth card fallback and magic code](#oauth-card-fallback-and-magic-code) below.
+
+## OAuth card fallback and magic code
+
+When SSO fails, Teams falls back to the OAuth card flow: the user clicks a sign-in button, authenticates in a popup, and the popup closes automatically once complete. In this normal fallback, no magic code is shown.
+
+However, if the **identity that authenticates in the popup differs from the Teams conversation user** (for example, signing in with a production tenant account while the Teams client is logged in as a dev tenant user), the Token Service cannot match the redirect state. In this case, the popup displays a **6-digit magic code**.
+
+**The magic code flow is expected behavior, not a bug.** To complete it, the user copies the code and pastes it into the chat compose box. The Teams client intercepts the code and routes it as a `signin/verifyState` invoke activity (not a regular message), so your `message` handler is not triggered. The flow is:
+
+1. User pastes the magic code into the compose box and presses Send
+2. Teams sends a `signin/verifyState` invoke activity to your bot with the code
+3. The SDK's built-in handler exchanges the code for a token
+4. The SDK emits a `signin` event
+
+> [!CAUTION]
+>
+> In cross-tenant scenarios where the authenticating identity differs from the Teams session user (for example, signing in with a production tenant account while Teams is logged in as a dev tenant user), the Teams client may not be able to correlate the magic code back to the pending OAuthCard session. In this case, the code arrives as a regular `message` activity instead of a `signin/verifyState` invoke, and the SDK cannot process it. To avoid this, ensure the authenticating identity matches the Teams session, or use one of the options in [Cross-Tenant Considerations](#cross-tenant-considerations) to enable SSO directly.
+
+**Important:** the `signin()` method in your message handler sends the OAuthCard and returns `undefined` when no cached token exists. It does not wait for the user to complete authentication. To handle the post-sign-in logic, use the `signin` event:
+
+```typescript
+
+app.on('message', async ({ signin, send }) => {
+  if (!(await signin())) {
+    return; // OAuthCard sent; waiting for auth to complete
+  }
+  await send('You are already signed in!');
+});
+
+// Fires after SSO (tokenExchange) or magic code (verifyState) completes
+app.event('signin', async ({ send }) => {
+  await send('Sign-in complete!');
+});
+```
+
+## Cross-Tenant Considerations
+
+SSO requires the Teams client to silently acquire a token for the resource URI configured in `webApplicationInfo.resource`. This token acquisition happens in the context of the **tenant where the Teams app is installed** (sideloaded or published).
+
+If your Entra auth app lives in a different tenant than where the Teams app is installed:
+
+1. The auth app's `signInAudience` must be set to `AzureADMultipleOrgs` (multi-tenant).
+2. Admin consent for the app must be granted **in the tenant where the Teams app is installed**, not just in the tenant where the app registration lives.
+3. The user signed into Teams must be in a tenant that can reach the auth app.
+
+If these conditions are not met, SSO will silently fail and Teams will fall back to the OAuth card sign-in button. See [OAuth card fallback and magic code](#oauth-card-fallback-and-magic-code) above for details on the fallback behavior.
+
+## `resourcematchfailed`
+
+If you see a warning in your app logs like:
+
+> Sign-in failed for user "..." in conversation "...": resourcematchfailed -- Resource match failed
+
+This means Teams attempted the SSO token exchange but failed because the token exchange resource URI does not match your Entra app registration. To fix this:
+
+1. **Verify "Expose an API"** in your Entra app registration: the Application ID URI must be set (typically `api://<Your-Application-Id>`)
+2. **Verify the `access_as_user` scope** is defined under "Expose an API"
+3. **Verify pre-authorized client applications** include the Teams Desktop (`1fec8e78-bce4-4aaf-ab1b-5451cc387264`) and Teams Web (`5e3ce6c0-2b1f-4285-8d4b-75ee78787346`) client IDs
+4. **Verify the Token Exchange URL** in your Azure Bot OAuth connection matches the Application ID URI exactly
+5. **Verify the `webApplicationInfo.resource`** in your Teams app manifest matches the Application ID URI
+
+> [!TIP]
+>
+> If you don't need SSO and only want standard OAuth (sign-in button), leave the **Token Exchange URL** blank in your OAuth connection settings.
+
+To handle `signin/failure` programmatically in your app, see [Handling Sign-In Failures](../../in-depth-guides/user-authentication.md#handling-sign-in-failures) in the User Authentication guide.

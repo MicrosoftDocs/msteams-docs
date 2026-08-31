@@ -63,6 +63,16 @@
     items:
     - name: Overview
       href: agents-in-teams/user-authentication/overview.md
+    - name: Set up SSO
+      href: agents-in-teams/user-authentication/set-up-sso.md
+    - name: SSO Troubleshooting
+      href: agents-in-teams/user-authentication/sso-troubleshooting.md
+    - name: Advanced user authentication
+      href: agents-in-teams/user-authentication/advanced-user-authentication.md
+    - name: SSO architecture
+      href: agents-in-teams/user-authentication/sso-architecture.md
+    - name: User Authentication Setup Guide
+      href: agents-in-teams/user-authentication/user-authentication-setup-guide.md
   - name: How-tos
     items:
     - name: Receive all chat messages
