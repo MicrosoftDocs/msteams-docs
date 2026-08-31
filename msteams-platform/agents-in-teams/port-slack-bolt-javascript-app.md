@@ -1,11 +1,14 @@
 ---
-title: Migrate a Slack Bolt for JavaScript App to Teams with Teams SDK
-description: Migration & port guide from Slack Bolt to Teams SDK, highlighting the key changes and upgrade steps.
+title: Migrate a Slack Bolt for JavaScript App to Teams
+description: Migrate a Slack Bolt for JavaScript app to Teams with this step-by-step guide. Compare Slack and Teams concepts, then port handlers, cards, and auth code.
 ms.topic: how-to
-ms.date: 07/27/2026
+ms.date: 08/31/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ---
 
-# Migrate a Slack Bolt for JavaScript app to Teams with Teams SDK
+# Migrate a Slack Bolt for JavaScript app to Teams
 
 This guide will help you use Teams SDK to migrate an existing JavaScript Slack Bolt application to Teams.
 
