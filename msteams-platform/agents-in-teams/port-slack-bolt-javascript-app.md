@@ -10,7 +10,11 @@ ms.reviewer: nickwalk
 
 # Port a Slack Bolt for JavaScript app to Teams
 
-Similar to Slack Bolt, Teams SDK is designed to interface with the Teams backend APIs for building conversational applications. Both SDKs provide abstractions for handling incoming events, messages, and interactions, as well as sending responses back to users. If you already have a Slack bot, the concepts should feel familiar.
+This guide will help you port an existing Slack Bolt for JavaScript application to Teams.
+
+## Introduction
+
+Similar to Slack Bolt, the Teams SDK is designed to interface with the Teams backend APIs for building conversational applications. Both SDKs provide abstractions for handling incoming events, messages, and interactions, as well as sending responses back to users. If you already have a Slack bot, the concepts should feel familiar.
 
 However, there are some key differences, such as app installation. In Slack, apps are installed to workspaces via OAuth, whereas in Teams they are installed via the Teams App Store. Additionally, Teams apps can be installed personally by individual users, or to collaborative scopes like group chats, channels, and meetings.
 
