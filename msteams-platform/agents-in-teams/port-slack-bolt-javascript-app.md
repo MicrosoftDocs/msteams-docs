@@ -32,7 +32,7 @@ Let's take a look at some similarities and differences between Slack and Teams c
 | **Account linking** | `Activity` events include `Activity.from.id`, which is the user's AAD object ID. If you authenticate your external service with OAuth 2.0, these accounts are implicitly bound via the Azure Token Service, but you can also follow a similar flow as what Slack recommends. | Slack recommends following their [Binding accounts across services](https://docs.slack.dev/authentication/binding-accounts-across-services) guide. |
 | **Cards** | Rich UI elements in messages using Adaptive Cards. | Rich UI elements in messages using Block Kit. |
 | **Files** | Files can be attached or downloaded using SharePoint / OneDrive Graph APIs. | Files can be attached or downloaded via Slack's files APIs. |
-| **Private messages in group conversations** | t[Targeted messages](targeted-messages.md) | Ephemeral messages. |
+| **Private messages in group conversations** | [Targeted messages](targeted-messages.md) | Ephemeral messages. |
 | **Slash commands** | [Slash commands](agent-slash-commands.md), declared in the app manifest and made discoverable via an autocomplete menu. Commands can be sent as private targeted messages, or visible to all users in a conversation via @mention. Commands are sent as messages: listen for commands with an `app.message` handler, either via `app.message('/command')` or `app.message(regexp)`. | Slack Bolt has a dedicated `app.command` handler for commands in the Slack app manifest. Slash commands are not displayed to other users in collaborative contexts. |
 | **Workflows** | Teams integrates with Power Automate for workflows. Workflows are not a component of Teams SDK. | Slack Workflows are integrated with Slack Bolt. |
 | **UI dialogs** | Adaptive Cards can include actions that open UI dialogs with an embedded website or another adaptive card. Dialogs must be opened via an adaptive card action and thus cannot be opened directly via a slash command. | Block Kit UI modals can be opened via slash commands (using `client.views.open`) or Block Kit actions. |
@@ -41,11 +41,11 @@ Let's take a look at some similarities and differences between Slack and Teams c
 
 ## Register a Teams agent
 
-First, complete the [quickstart](quickstart-create-agent-teams-sdk.md) to register a new Teams agent, so you can use it from Teams as soon as you have added the Teams SDK implementation to your code.
+First, complete the [quickstart](quickstart-create-agent-teams-sdk.md) to register a new Teams agent, so you can use it from Teams as soon as you have added the Teams SDK implementation to your existing app.
 
 ## Install Teams SDK
 
-Install the Teams SDK into your Slack Bolt project alongside any existing packages:
+Install the Teams SDK into your Slack Bolt project:
 
 ```console
 npm install @microsoft/teams.apps
@@ -69,9 +69,9 @@ const app = new App();
 app.start(process.env.PORT || 3978).catch(console.error);
 ```
 
-# [Slack Bolt equivalent](#tab/slack)
+# [Slack Bolt](#tab/slack)
 
-```ts
+```typescript
 const app = new App({
     signingSecret: process.env.SLACK_SIGNING_SECRET,
     clientId: process.env.SLACK_CLIENT_ID,
@@ -141,7 +141,7 @@ In Slack, there are message handlers for events with different subtypes (e.g., u
 
 # [Teams SDK](#tab/teams)
 
-```ts
+```typescript
 // triggers when user sends "hi" or "@bot hi"
 app.message("hi", async ({ send, activity }) => {
     await send(`Hello, ${activity.from.name}!`);
@@ -153,9 +153,9 @@ app.on('message', async ({ send, activity }) => {
 });
 ```
 
-# [Slack Bolt equivalent](#tab/slack)
+# [Slack Bolt](#tab/slack)
 
-```ts
+```typescript
 // triggers when user sends a message containing "hi"
 app.message("hi", async ({ message, say }) => {
     // Handle only newly posted messages here
@@ -192,7 +192,7 @@ app.message('/card', async ({ send }) => {
 });
 ```
 
-# [Slack Bolt equivalent](#tab/slack)
+# [Slack Bolt](#tab/slack)
 
 ```typescript
 app.message('card', async (client) => {
@@ -222,20 +222,9 @@ In Slack, if you want to use Slack REST APIs that require user-delegated scopes,
 
 First, follow the instructions in the [Teams SSO guide](/microsoftteams/platform/teams-sdk/teams/user-authentication/sso-setup). Then, configure authentication in your code.
 
-# [Slack Bolt](#tab/slack)
-
-```typescript
-// TODO: Configure App class with user OAuth permissions and install app for user
-
-app.message('me', async ({ client, message }) => {
-    const me = await client.users.info({ user: message.user });
-    await client.send(JSON.stringify(me));
-});
-```
-
 # [Teams SDK](#tab/teams)
 
-```ts
+```typescript
 const app = new App({
     // ... rest of App config
     oauth: {
@@ -254,6 +243,17 @@ app.message('me', async ({ signin, userGraph, send }) => {
 });
 ```
 
+# [Slack Bolt](#tab/slack)
+
+```typescript
+// TODO: Configure App class with user OAuth permissions and install app for user
+
+app.message('me', async ({ client, message }) => {
+    const me = await client.users.info({ user: message.user });
+    await client.send(JSON.stringify(me));
+});
+```
+
 ---
 
 ### User authentication for external services
@@ -266,7 +266,7 @@ First, setup your OAuth 2.0 connection settings in the [Azure Portal](https://po
 
 Then, add the authentication code to your application to get the relevant user token and call your external service.
 
-```ts
+```typescript
 import
 { App } from '@microsoft/teams.apps';
 
