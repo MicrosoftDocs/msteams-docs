@@ -1,13 +1,13 @@
 ---
-title: Port a Slack Bolt for JavaScript app to Teams with Teams SDK (JavaScript)
+title: Migrate a Slack Bolt for JavaScript App to Teams with Teams SDK
 description: Migration & port guide from Slack Bolt to Teams SDK, highlighting the key changes and upgrade steps.
 ms.topic: how-to
 ms.date: 07/27/2026
 ---
 
-# Port a Slack Bolt for JavaScript app to Teams with Teams SDK
+# Migrate a Slack Bolt for JavaScript app to Teams with Teams SDK
 
-This guide will help you migrate or port an existing Slack Bolt application written in to Teams using Teams SDK.
+This guide will help you use Teams SDK to migrate an existing JavaScript Slack Bolt application to Teams.
 
 ## Introduction
 
@@ -38,7 +38,7 @@ Let's take a look at some similarities and differences between Slack and Teams c
 
 ## Register a Teams agent
 
-First, use the [quickstart](quickstart-create-agent-teams-sdk.md) to register a new Teams agent, so you can use it from Teams as soon as you have added the Teams SDK implementation to your code.
+First, complete the [quickstart](quickstart-create-agent-teams-sdk.md) to register a new Teams agent, so you can use it from Teams as soon as you have added the Teams SDK implementation to your code.
 
 ## Install Teams SDK
 
@@ -56,7 +56,7 @@ Copy the settings from the `.env` file that the Teams developer CLI created in t
 
 Add or replace code in your implementation to start up the Teams SDK application runtime using the `App` class. This is equivalent to Slack Bolt's `App` class.
 
-# [Teams SDK](#tab/teams-sdk)
+# [Teams SDK](#tab/teams)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -136,154 +136,80 @@ const app = new App({
 
 In Slack, there are message handlers for events with different subtypes (e.g., undefined subtype is a regular message, `event.subtype == 'file_share'` is a file share message, etc.). In Teams, there are different `Activity` handers for different types of events that are enumerated via the `ActivityTypes` enum (e.g., `app.activity(ActivityTypes.Message)`), with some `Activity` types having tailored APIs within the SDK (e.g., `app.message`). These concepts are roughly similar, though the naming conventions and syntax differ.
 
-### Message handlers
-
-# [Diff](#tab/diff)
-
-```ts
-/ triggers user sends "hi" or "@bot hi"
-    // highlight-error-start
-    app.message("hi", async ({ message, say }) => {
-        // Handle only newly posted messages here
-        if (message.subtype) return;
-        await say(`Hello, <@${message.user}>`);
-    });
-    // highlight-error-end
-    // highlight-success-start
-    app.message("hi", async ({ send, activity }) => {
-      await send(`Hello, ${activity.from.name}!`);
-    });
-    // highlight-success-end
-    // listen for ANY message to be received
-    // highlight-error-start
-    app.message(async ({ message, say }) => {
-        // Handle only newly posted messages here
-        if (message.subtype) return;
-        // echo back users request
-        await say(`you said: ${message.text}`);
-    });
-    // highlight-error-end
-    // highlight-success-start
-    app.on('message', async ({ send, activity }) => {
-        // echo back users request
-        await send(`you said: ${activity.text}`);
-    });
-    // highlight-success-end
-    ```
-
----
-
-# [Slack Bolt](#tab/slack)
-
-```ts
-/ triggers when user sends a message containing "hi"
-    app.message("hi", async ({ message, say }) => {
-        // Handle only newly posted messages here
-        if (message.subtype) return;
-        await say(`Hello, <@${message.user}>`);
-    });
-    // listen for ANY message
-    app.message(async ({ message, say }) => {
-        // Handle only newly posted messages here
-        if (message.subtype) return;
-        // echo back users request
-        await say(`you said: ${message.text}`);
-    });
-    ```
-
----
-
 # [Teams SDK](#tab/teams)
 
 ```ts
-/ triggers when user sends "hi" or "@bot hi"
-    app.message("hi", async ({ send, activity }) => {
-      await send(`Hello, ${activity.from.name}!`);
-    });
-    // listen for ANY message to be received
-    app.on('message', async ({ send, activity }) => {
-        // echo back users request
-        await send(`you said: ${activity.text}`);
-    });
-    `
+// triggers when user sends "hi" or "@bot hi"
+app.message("hi", async ({ send, activity }) => {
+    await send(`Hello, ${activity.from.name}!`);
+});
+// listen for ANY message to be received
+app.on('message', async ({ send, activity }) => {
+    // echo back users request
+    await send(`you said: ${activity.text}`);
+});
+```
 
-## BlockKit -> Adaptive Cards
-
-To include Rich UI in messages sent by your bot, Slack's Block Kit is equivalent to Teams's Adaptive Cards.
-
-# [Diff](#tab/diff)
+# [Slack Bolt equivalent](#tab/slack)
 
 ```ts
-/ highlight-error-start
-    app.message('card', async (client) => {
-        await say({
-            blocks: [
-                {
-                    type: 'section',
-                    text: {
-                        type: 'plain_text',
-                        text: 'Hello, world!',
-                    },
-                },
-            ],
-        });
-    });
-    // highlight-error-end
-    // highlight-success-start
-    import { Card, TextBlock } from '@microsoft/teams.cards';
-
-    app.message('/card', async ({ send }) => {
-        await send(
-            new Card(new TextBlock('Hello, world!', { wrap: true, isSubtle: false }))
-                .withOptions({
-                    width: 'Full',
-                })
-        );
-    });
-    // highlight-success-end
-    ```
+// triggers when user sends a message containing "hi"
+app.message("hi", async ({ message, say }) => {
+    // Handle only newly posted messages here
+    if (message.subtype) return;
+    await say(`Hello, <@${message.user}>`);
+});
+// listen for ANY message
+app.message(async ({ message, say }) => {
+    // Handle only newly posted messages here
+    if (message.subtype) return;
+    // echo back users request
+    await say(`you said: ${message.text}`);
+});
+```
 
 ---
 
-# [Slack Bolt](#tab/slack)
-For existing cards like this, the simplest way to convert that to Teams SDK is this:
+## Migrate Block Kit to Adaptive Cards
 
-    `tsapp
-message('card', async (client) => {
-        await say({
-            blocks: [
-                {
-                    type: 'section',
-                    text: {
-                        type: 'plain_text',
-                        text: 'Hello, world!',
-                    },
-                },
-            ],
-        });
-    });
-    ```
-
----
+To include rich UI in messages sent by your agent, Teams's Adaptive Cards are equivalent to Slack's Block Kit.
 
 # [Teams SDK](#tab/teams)
-For a more thorough port, you could also do the following:
 
-    `tsimport
-{ Card, TextBlock } from '@microsoft/teams.cards';
+```typescript
+import { Card, TextBlock } from '@microsoft/teams.cards';
 
-    app.message('/card', async ({ send }) => {
-      await send(
-        new Card(new TextBlock('Hello, world!', { wrap: true, isSubtle: false })).withOptions({
-          width: 'Full',
-        })
-      );
+app.message('/card', async ({ send }) => {
+    await send(
+        new Card(new TextBlock('Hello, world!', { wrap: true, isSubtle: false }))
+            .withOptions({
+                width: 'Full',
+            })
+    );
+});
+```
+
+# [Slack Bolt equivalent](#tab/slack)
+
+```typescript
+app.message('card', async (client) => {
+    await say({
+        blocks: [
+            {
+                type: 'section',
+                text: {
+                    type: 'plain_text',
+                    text: 'Hello, world!',
+                },
+            },
+        ],
     });
-    `
+});
+```
 
-Learn more in the [Adaptive Cards guide](../in-depth-guides/adaptive-cards/overview.md).
+---
 
-## User authentication
+## Implement user authentication
 
 There are two primary types of user authentication for Teams and Slack: authentication for Slack & Graph REST APIs, and authentication for external services. Let's take a look at each of these in turn.
 
@@ -291,78 +217,41 @@ There are two primary types of user authentication for Teams and Slack: authenti
 
 In Slack, if you want to use Slack REST APIs that require user-delegated scopes, you need to implement an OAuth 2.0 installation flow in your application to obtain and store Slack user tokens, even if the app was already installed by another user. In Teams, you can leverage Teams SSO to obtain user Entra tokens for calling Graph REST APIs. The Teams SDK integrates with Teams SSO and Azure Bot Token Service to handle token acquisition, storage, and refresh automatically for you.
 
-First, follow the instructions in the [Teams SSO guide](../teams/user-authentication/sso-setup.md).
-
-Then, configure the authentication in your code.
-
-# [Diff](#tab/diff)
-
-```ts
-/ highlight-error-start
-    // TODO: Configure App class with user OAuth permissions and install app for user
-
-    app.message('me', async ({ client, message }) => {
-        const me = await client.users.info({ user: message.user });
-        await client.send(JSON.stringify(me));
-    });
-    // highlight-error-end
-    // highlight-success-start
-
-    const app = new App({
-        // ... rest of App config
-        oauth: {
-            // The key here should match the OAuth Connection setting
-            // defined in your Azure Bot resource.
-            defaultConnectionName: 'graph',
-        },
-    });
-
-    app.message('me', async ({ signin, userGraph, send }) => {
-        if (!await signin()) {
-            return;
-        }
-        const me = await userGraph.call(endpoints.me.get);
-        await send(JSON.stringify(me));
-    });
-    // highlight-success-end
-    ```
-
----
+First, follow the instructions in the [Teams SSO guide](../teams/user-authentication/sso-setup.md). Then, configure authentication in your code.
 
 # [Slack Bolt](#tab/slack)
 
-```ts
-/ TODO: Configure App class with user OAuth permissions and install app for user
+```typescript
+// TODO: Configure App class with user OAuth permissions and install app for user
 
-    app.message('me', async ({ client, message }) => {
-        const me = await client.users.info({ user: message.user });
-        await client.send(JSON.stringify(me));
-    });
-    ```
-
----
+app.message('me', async ({ client, message }) => {
+    const me = await client.users.info({ user: message.user });
+    await client.send(JSON.stringify(me));
+});
+```
 
 # [Teams SDK](#tab/teams)
 
 ```ts
-const
-app = new App({
-        // ... rest of App config
-        oauth: {
-            // The key here should match the OAuth Connection setting
-            // defined in your Azure Bot resource.
-            defaultConnectionName: 'graph',
-        },
-    });
+const app = new App({
+    // ... rest of App config
+    oauth: {
+        // The key here should match the OAuth Connection setting
+        // defined in your Azure Bot resource.
+        defaultConnectionName: 'graph',
+    },
+});
 
-    app.message('me', async ({ signin, userGraph, send }) => {
-        if (!await signin()) {
-            return;
-        }
-        const me = await userGraph.call(endpoints.me.get);
-        await send(JSON.stringify(me));
-    });
-    `
+app.message('me', async ({ signin, userGraph, send }) => {
+    if (!await signin()) {
+        return;
+    }
+    const me = await userGraph.call(endpoints.me.get);
+    await send(JSON.stringify(me));
+});
+```
+
+---
 
 ### User authentication for external services
 
@@ -370,7 +259,7 @@ In Slack, you can access external services by implementing an account binding fl
 
 First, setup your OAuth 2.0 connection settings in the [Azure Portal](https://portal.azure.com/) for your Azure Bot resource.
 
-:::image type="content" source="~/assets/screenshots/abs-custom-oauth-connection.png" alt-text="Screenshot showing Azure Bot custom OAuth connection settings." lightbox="~/assets/screenshots/abs-custom-oauth-connection.png" :::
+:::image type="content" source="../assets/images/abs-custom-oauth-connection.png" alt-text="Screenshot showing Azure Bot custom OAuth connection settings." lightbox="../assets/images/abs-custom-oauth-connection.png" :::
 
 Then, add the authentication code to your application to get the relevant user token and call your external service.
 
