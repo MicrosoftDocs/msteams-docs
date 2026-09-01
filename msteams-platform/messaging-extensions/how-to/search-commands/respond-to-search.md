@@ -231,7 +231,7 @@ teams.OnQuery(async (context, cancellationToken) =>
   var parameters = value?.Parameters;
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
  
-    var attachments = new List<MsgExt.Attachment>(); 
+    var attachments = new List<TeamsAttachment>(); 
  
     // Route to appropriate search 
     if (commandId == "wikipediaSearch") 

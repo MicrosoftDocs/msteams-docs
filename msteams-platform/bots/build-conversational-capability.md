@@ -329,8 +329,12 @@ The following is an example of an edit message activity notification using `OnMe
 ```csharp
 teams.OnMessageUpdate(async (context, cancellationToken) =>
 {
-    await context.SendAsync("message is updated", cancellationToken);
-}); 
+    var eventType = context.Activity.ChannelData?.EventType;
+    if (eventType == "editMessage")
+        await context.SendAsync("message is updated", cancellationToken);
+    else if (eventType == "undeleteMessage")
+        await context.SendAsync("message is undeleted", cancellationToken);
+});
 ```
 
 ::: zone-end
@@ -516,10 +520,8 @@ The following is an example of an undelete message activity notification when a 
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-teams.OnMessageUpdate(async (context, cancellationToken) =>
-{
-    await context.SendAsync("message is undeleted", cancellationToken);
-});
+// Undelete events are handled in the merged OnMessageUpdate handler above,
+// which checks context.Activity.ChannelData?.EventType == "undeleteMessage".
 ```
 
 ::: zone-end
@@ -598,8 +600,10 @@ The following example shows a soft delete message activity notification when a m
 ```csharp
 teams.OnMessageDelete(async (context, cancellationToken) =>
 {
-    await context.SendAsync("message is soft deleted", cancellationToken);
-}); 
+    var eventType = context.Activity.ChannelData?.EventType;
+    if (eventType == "softDeleteMessage")
+        await context.SendAsync("message is soft deleted", cancellationToken);
+});
 ```
 
 ::: zone-end
@@ -927,7 +931,7 @@ teams.OnMessage(async (context, cancellationToken) =>
     {
         var quote = quotes[0].QuotedReply;
         await context.ReplyAsync(
-            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"", cancellationToken);
     }
 });
 ```
@@ -1048,7 +1052,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone pivot="teams-sdk-csharp"
 
-For proactive scenarios (using `app.SendAsync()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
+For proactive scenarios (using `teams.SendAsync()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
 
 ```csharp
 var parentMessageId = "1772050244572";
@@ -1059,21 +1063,21 @@ var secondMessageId = "1772050244574";
 var msg = new MessageActivityInput()
     .WithText("Here is my response")
     .AddQuote(parentMessageId);
-await app.SendAsync(conversationId, msg);
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
 
 // Multiple quotes with interleaved responses
 msg = new MessageActivityInput()
     .WithText("response to first")
     .AddQuote(firstMessageId)
     .AddQuote(secondMessageId, "response to second");
-await app.SendAsync(conversationId, msg);
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
 
 // Grouped quotes — omit response to group quotes together
 msg = new MessageActivityInput()
     .WithText("see below for previous messages")
     .AddQuote(firstMessageId)
     .AddQuote(secondMessageId, "response to both");
-await app.SendAsync(conversationId, msg);
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
 ```
 
 ::: zone-end

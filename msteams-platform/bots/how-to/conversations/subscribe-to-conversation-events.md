@@ -978,7 +978,7 @@ The following code shows an example of reactions to an agent message:
 # [C#](#tab/dotnet)
 
 ```csharp
-app.OnMessageReactionAdded(async (context, cancellationToken) =>
+teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsAdded)
     {
@@ -1068,7 +1068,7 @@ The following code shows an example of reactions removed from agent message:
 # [C#](#tab/dotnet)
 
 ```csharp
-app.OnMessageReactionRemoved(async (context, cancellationToken) =>
+teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsRemoved)
     {
@@ -1193,7 +1193,7 @@ You can also use a dedicated handler for *add* or *remove* scenarios as an alter
 teams.OnInstallUpdate(async (context, cancellationToken) =>
 {
     // TO:DO Installation workflow return;
-}
+});
 ```
 
 # [TypeScript](#tab/typescript)

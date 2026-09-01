@@ -177,49 +177,47 @@ When Teams sends a task fetch invoke, your app returns the dialog content. The c
 using System.Text.Json;
 using Microsoft.Teams.Apps;
 using Microsoft.Teams.Apps.Schema;
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
 using Microsoft.Teams.Apps.TaskModules;
 using Microsoft.Teams.Cards;
 
 teams.OnTaskFetch(async (context, cancellationToken) =>
 {
-    var activity = context.Activity;
-    var json = JsonSerializer.Deserialize<JsonElement>(JsonSerializer.Serialize(activity));
-    var data = json.GetProperty("value").GetProperty("data").GetProperty("data").GetString();
+    await Task.CompletedTask;
+
+    // The button's Action.Submit payload arrives on the invoke value, nested under "data".
+    string? data = context.Activity.Value?.Data is JsonElement value
+        && value.TryGetProperty("data", out JsonElement dataProp)
+            ? dataProp.GetString()
+            : null;
 
     if (data == "CustomForm")
     {
-        return new InvokeResponse<TaskModuleResponse>(200, new TaskModuleResponse
-        {
-            Task = new Microsoft.Teams.Apps.TaskModules.Response
-            {
-                Type = TaskModuleResponseTypes.Continue,
-                Value = new
-                {
-                    title = "Custom Form",
-                    width = 510,
-                    height = 450,
-                    url = $"{botEndpoint}/customform",
-                    fallbackUrl = $"{botEndpoint}/customform"
-                }
-            }
-        });
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Custom Form")
+            .WithWidth(510)
+            .WithHeight(450)
+            .WithUrl($"{botEndpoint}/customform")
+            .WithFallbackUrl($"{botEndpoint}/customform")
+            .Build();
     }
-    else if (data == "MultiStep")
+
+    if (data == "MultiStep")
     {
         var step1Card = new AdaptiveCard
         {
+            Version = "1.5",
             Body = new List<CardElement>
             {
-                new TextBlock("Step 1 of 2 - Your Name") { Size = TextSize.Large, Weight = TextWeight.Bolder },
-                new TextInput { Id = "name", Label = "Name", Placeholder = "Enter your name", IsRequired = true }
+                new TextBlock("Multi-step Form: Step 1") { Wrap = true },
+                new TextInput { Id = "name", Label = "Name" }
             },
-            Actions = new List<Action>
+            Actions = new List<Microsoft.Teams.Cards.Action>
             {
-                new SubmitAction().WithTitle("Next").WithData(
-                    new Union<string, SubmitActionData>(new SubmitActionData
-                    {
-                        NonSchemaProperties = new Dictionary<string, object?> { { "submissiontype", "multi_step_1" } }
-                    }))
+                new SubmitAction { Title = "Next" }
             }
         };
 
@@ -235,30 +233,31 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
             .WithCard(step1Attachment)
             .Build();
     }
-    else
+
+    var dialogCard = new AdaptiveCard
     {
-        var dialogCard = new AdaptiveCard
+        Version = "1.5",
+        Body = new List<CardElement>
         {
-            Body = new List<CardElement>
-            {
-                new TextBlock("Enter Text Here") { Weight = TextWeight.Bolder },
-                new TextInput { Id = "usertext", Placeholder = "add some text and submit", IsMultiline = true }
-            },
-            Actions = new List<Action> { new SubmitAction { Title = "Submit" } }
-        };
+            new TextInput { Id = "usertext", Label = "Enter text" }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new SubmitAction { Title = "Submit" }
+        }
+    };
 
-        TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
-            .WithAdaptiveCard(JsonSerializer.SerializeToElement(dialogCard))
-            .Build();
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+        .WithAdaptiveCard(JsonSerializer.SerializeToElement(dialogCard))
+        .Build();
 
-        return TaskModuleResponse.CreateBuilder()
-            .WithType(TaskModuleResponseTypes.Continue)
-            .WithTitle("Adaptive Card: Inputs")
-            .WithWidth(400)
-            .WithHeight(200)
-            .WithCard(attachment)
-            .Build();
-    }
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("Adaptive Card: Inputs")
+        .WithWidth(400)
+        .WithHeight(200)
+        .WithCard(attachment)
+        .Build();
 });
 ```
 

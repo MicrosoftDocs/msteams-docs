@@ -555,10 +555,15 @@ if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
     var cardAttachment = action.BotActivityPreview?.FirstOrDefault()?.Attachments?.FirstOrDefault();
     if (cardAttachment != null)
     {
-        await ctx.SendAsync(new MessageActivityInput()
-            .AddAttachment(cardAttachment));
+        await context.SendAsync(
+            new MessageActivityInput().AddAttachment(
+                TeamsAttachment.CreateBuilder()
+                    .WithContentType(cardAttachment.ContentType)
+                    .WithContent(cardAttachment.Content)
+                    .Build()),
+            cancellationToken);
     }
-    return new MsgExt.ActionResponse();
+    return MessageExtensionActionResponse.CreateBuilder().Build();
 }
 ```
 

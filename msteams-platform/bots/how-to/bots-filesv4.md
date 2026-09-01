@@ -228,14 +228,13 @@ teams.OnMessage(async (context, cancellationToken) =>
 
         // Create reply with the received image.
         var imageData = Convert.ToBase64String(File.ReadAllBytes(filePath));
-        var reply = new MessageActivityInput(
+        var reply = new MessageActivityInput().WithText(
             $"Attachment of {attachment.ContentType} type and size of {responseMessage.Content.Headers.ContentLength} bytes received.");
-        reply.AddAttachment(new Attachment
-        {
-            Name = "ImageFromUser.png",
-            ContentType = "image/png",
-            ContentUrl = $"data:image/png;base64,{imageData}",
-        });
+        reply.AddAttachment(TeamsAttachment.CreateBuilder()
+            .WithContentType("image/png")
+            .WithName("ImageFromUser.png")
+            .WithContentUrl($"data:image/png;base64,{imageData}")
+            .Build());
         await context.SendAsync(reply, cancellationToken);
     }
 });
@@ -308,7 +307,7 @@ The following code sends a file consent card to the user, requesting permission 
 #### [C#](#tab/csharp2)
 
 ```csharp
-async Task SendFileConsentCard(string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
+async Task SendFileConsentCard(Context<MessageActivity> context, string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
 {
     var consentContext = new { filename = fileName, file_id = fileId };
 
@@ -320,18 +319,12 @@ async Task SendFileConsentCard(string fileName, string fileId, int fileSize, Can
         DeclineContext = consentContext
     };
 
-    var message = new MessageActivityInput
-    {
-        Attachments =
-        [
-            new Attachment
-            {
-                Content = fileCard,
-                ContentType = new ContentType(ContentTypeFileConsent),
-                Name = fileName
-            }
-        ]
-    };
+    var message = new MessageActivityInput()
+        .AddAttachment(TeamsAttachment.CreateBuilder()
+            .WithContentType(ContentTypeFileConsent)
+            .WithName(fileName)
+            .WithContent(fileCard)
+            .Build());
     await context.SendAsync(message, cancellationToken);
 }
 ```

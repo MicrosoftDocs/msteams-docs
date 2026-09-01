@@ -620,7 +620,7 @@ teams.OnMessage(async (context, cancellationToken) =>
     if (meetingId != null && tenantId != null && userId != null)
     {
         // Gets the details for the given meeting participant.
-        var participant = await context.Api.Meetings.GetParticipantAsync(meetingId, userId, tenantId);
+        var participant = await context.Api.Meetings.GetParticipantAsync(meetingId, userId, tenantId, cancellationToken);
 
         // Sends a message activity to the sender of the incoming activity.
         await context.SendAsync($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
@@ -1103,7 +1103,7 @@ teams.OnMessage(async (context, cancellationToken) =>
     if (meetingId != null)
     {
         // Gets the information for the given meeting id.
-        var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+        var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId, cancellationToken);
 
         // Sends a message activity to the sender of the incoming activity.
         await context.SendAsync(JsonSerializer.Serialize(meetingInfo), cancellationToken);

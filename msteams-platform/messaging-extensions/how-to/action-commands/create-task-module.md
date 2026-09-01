@@ -992,20 +992,16 @@ using Microsoft.Teams.Apps.TaskModules;
 
 teams.OnFetchTask(async (context, cancellationToken) =>
 {
-  return new InvokeResponse<MessageExtensionActionResponse>(200, new MessageExtensionActionResponse
-  {
-    Task = new Microsoft.Teams.Apps.TaskModules.Response
-    {
-      Type = TaskModuleResponseTypes.Continue,
-      Value = new
-      {
-        title = "Example dialog",
-        height = "small",
-        width = "small",
-        url = "https://contoso.com/msteams/taskmodules/newcustomer"
-      }
-    }
-  });
+    await Task.CompletedTask;
+
+    return MessageExtensionActionResponse.CreateBuilder()
+        .WithTask(TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Example dialog")
+            .WithHeight(TaskModuleSizes.Small)
+            .WithWidth(TaskModuleSizes.Small)
+            .WithUrl("https://contoso.com/msteams/taskmodules/newcustomer"))
+        .Build();
 });
 ```
 

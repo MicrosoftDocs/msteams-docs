@@ -174,30 +174,34 @@ using System.Text.Json.Nodes;
 using Microsoft.Teams.Apps;
 using Microsoft.Teams.Apps.Schema;
 
-var reply = new MessageActivityInput()
-  .WithText("Approve or reject the request:")
-  .WithSuggestedActions(new SuggestedActions().AddActions(
-    new SuggestedAction
-    {
-      Type = ActionTypes.Submit,
-      Title = "Approve",
-      Value = JsonNode.Parse("""{"vote":"approve"}""")
-    },
-    new SuggestedAction
-    {
-      Type = ActionTypes.Submit,
-      Title = "Reject",
-      Value = JsonNode.Parse("""{"vote":"reject"}""")
-    }));
-
-await context.SendAsync(reply, cancellationToken);
-
-teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
-    var payload = ctx.Activity.Value is JsonElement value
+    var reply = new MessageActivityInput()
+        .WithText("Approve or reject the request:")
+        .WithSuggestedActions(new SuggestedActions().AddActions(
+            new SuggestedAction
+            {
+                Type = ActionTypes.Submit,
+                Title = "Approve",
+                Value = JsonNode.Parse("""{"vote":"approve"}""")
+            },
+            new SuggestedAction
+            {
+                Type = ActionTypes.Submit,
+                Title = "Reject",
+                Value = JsonNode.Parse("""{"vote":"reject"}""")
+            }));
+
+    await context.SendAsync(reply, cancellationToken);
+});
+
+teams.OnSuggestedActionSubmit(async (context, cancellationToken) =>
+{
+    var payload = context.Activity.Value is JsonElement value
         ? value.GetRawText()
         : "<none>";
-    await ctx.SendAsync($"Got vote: {payload}", cancellationToken);
+
+    await context.SendAsync($"Got vote: {payload}", cancellationToken);
 });
 ```
 

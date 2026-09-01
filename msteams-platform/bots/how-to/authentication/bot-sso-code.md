@@ -255,11 +255,10 @@ When using SSO, if the token exchange fails, Teams sends a `signin/failure` invo
 # [C#](#tab/cs5)
 
 ```csharp
-teams.OnSignInFailure(async (context, cancellationToken) =>
+auth.OnSignInFailure(async (context, failure, cancellationToken) =>
 {
-  var failure = context.Activity.Value;
     Console.WriteLine($"Sign-in failed: {failure?.Code} - {failure?.Message}");
-  await context.SendAsync("Sign-in failed. Please try again.", cancellationToken);
+    await context.SendAsync("Sign-in failed. Please try again.", cancellationToken);
 });
 ```
 
