@@ -1,20 +1,62 @@
 ---
-title: User Authentication
+title: Accessing User Data and Services with Single Sign-On and OAuth 2.0
 description: Overview of user authentication in Teams SDK applications, including OAuth, SSO, and secure resource access.
 ms.topic: how-to
 ms.date: 07/27/2026
 ---
 
-# User Authentication
+# Accessing user data and services with OAuth and single sign-on
 
-At times, agents must access secured online resources by using a user's identity on their behalf, such as checking email, checking flight status, or placing an order. To enable this, the user must authenticate and grant consent for the application to use their identity. This process results in the application receiving a token, which it can then use to access the permitted resources on the user's behalf.
+Many agent scenarios require an agent to interact with a service on a user's behalf, with their permission, to access their private data or accomplish tasks. Ideally, the user should be able to grant access without providing their personal login information or full access to their service account.
 
-## Single sign-on (SSO) and OAuth
+This is called *delegation*, and Teams agents can support it through an industry standard protocol called OAuth 2.0.
 
-Teams supports two kinds of user authentication:
+two different kinds:
 
-- **Single sign-on (SSO)**: The agent acts on behalf of a user by using their Teams identity - their work or school account in Entra ID that they use to sign in to Teams. In SSO flows, users only need to provide consent and don't need to sign in, because they already authenticated by signing in to Teams. Users only need to grant consent once, and consent applies across all devices they use to access Teams.
-- **OAuth**: The agent acts on behalf of a user by sending them a link to sign in using an OAuth identity provider (IdP) like Google, Facebook or GitHub. OAuth supports Entra ID, but scenarios that call for Entra ID identities should generally use SSO.
+general oauth: With OAuth, the agent directs the user to sign in a user signs in to an account using an OAuth identity provider (IdP) and confirms a
+
+sso:
+Teams agents can perform two kinds of OAuth delegation:
+
+-
+
+OAuth 2.0 is an industry-standard protocol for enabling users to grant access to their data without sharing their login information. With OAuth, the user logs in
+
+- **OAuth 2.0**: Access functionality and user data in third-party services via external . The agent sends a link to the user, directing them to sign in to an OAuth identity provider (IdP), which is often a major
+- - **Teams single sign-on (SSO)**:
+-
+- Enables  The user consents to the agent  Teams identity - the user's work or school account signed in to Teams - to access data and services in the Microsoft ecosystem, such as Graph, OneDrive and SharePoint. Usres
+
+, users want agents to be able to access secure online resources on their behalf, such as their Microsoft 365 email or documents, or features of an account on an external service.
+
+Agents can implement OAuth 2.0 and Teams single sign-on to access data and services on users' behalf, using their permissions.
+
+**OAuth 2.0** enables a user to grant an agent access to data and operations in a third-party service on their behalf. The agent sends the user a link to sign in to the service using a supported identity provider. Af
+
+**Single sign-on (SSO)** enables an agent to access data and perform actions within the Microsoft ecosystem using a user's Teams identity - the Entra ID user associated with their work or school account they use to log in to Teams. Unlike OAuth, the user doesn't need to sign in
+
+Single sign-on enables users to delegate
+
+ need to access users' data and services on their behalf can implement OAuth and Teams single sign-on to enable users to delegate access.
+
+Teams agents can implement OAuth and Teams single-sign on to authenticate users and enable them to delegate access to secure resources.
+
+Delegation enables agents to act on behalf of users by to grant Teams agents can enable users to grant them delegate access to secure resources
+
+OAuth and Teams single-sign on enable agents to access secure resources on behalf of consenting users.
+
+Teams agents can enable users to delegate access to secure resources, allowing the agent to access them on their behalf. If a scenario calls for an agent to access a user's
+
+In some scenarios, users want agents to be able to access secure online resources on their behalf, such as their Microsoft 365 email or documents, or features of an account on an external service.
+
+Teams agents can implement two kinds of user delegation:
+
+- **OAuth delegation**: The agent sends the user a link to sign in to a service using an OAuth identity provider (IdP) that it supports, like Google, Facebook or GitHub. After the user signs in, the service confirms the user's consent for the agent to access data or perform certain operations.
+- **Single sign-on (SSO)**: The user grants consent for the agent to  - their work or school account in Entra ID that they use to sign in to Teams. In SSO flows, users only need to provide consent and don't need to sign in, because they already authenticated by signing in to Teams. Users only need to grant consent once, and consent applies across all devices they use to access Teams.
+
+With single sign-on, an agent can both authenticate a user and
+
+OAuth supports Entra ID, but scenarios that call for Entra ID identities should generally use SSO.
 
 | Feature                                                | OAuth                                                                              | SSO                                                                                                                                                                      |
 | ------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
