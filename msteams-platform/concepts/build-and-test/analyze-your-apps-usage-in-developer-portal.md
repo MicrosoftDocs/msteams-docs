@@ -4,7 +4,7 @@ description: Learn how to analyze your app and agent usage metrics for your cust
 ms.localizationpriority: medium
 ms.topic: overview
 ms.owner: luywang
-ms.date: 05/08/2025
+ms.date: 08/25/2026
 ---
 
 # Analyze app and agent usage in Developer Portal
