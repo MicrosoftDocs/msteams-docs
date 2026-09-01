@@ -54,7 +54,7 @@ You've now configured the required environment variables for your bot app and SS
 
 The Teams SDK simplifies app initialization with a single `App` class that handles server lifecycle, authentication, and token exchange internally.
 
-# [C#](#tab/cs1)
+# [C#](#tab/cs)
 
 ```csharp
 using Microsoft.Teams.Apps.Extensions;
@@ -73,7 +73,7 @@ var app = builder.Build();
 var teams = app.UseTeams();
 ```
 
-# [TypeScript](#tab/ts1)
+# [TypeScript](#tab/ts)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -87,7 +87,7 @@ const app = new App({
 });
 ```
 
-# [Python](#tab/py1)
+# [Python](#tab/py)
 
 ```python
 import os
@@ -183,7 +183,7 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 
 The Teams SDK uses simple event-driven handlers for authentication. Use `IsSignedIn` to check authentication status, `SignIn()` to trigger the SSO flow, and subscribe to the `signin` event to handle successful authentication.
 
-# [C#](#tab/cs3)
+# [C#](#tab/cs)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -205,7 +205,7 @@ teams.OnSignIn(async (_, teamsEvent, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/ts3)
+# [TypeScript](#tab/ts)
 
 ```typescript
 app.on('message', async ({ isSignedIn, signin, userToken, send }) => {
@@ -222,7 +222,7 @@ app.event('signin', async ({ send, token }) => {
 });
 ```
 
-# [Python](#tab/py3)
+# [Python](#tab/py)
 
 ```python
 from teams.api import MessageActivity, SignInEvent
@@ -251,7 +251,7 @@ async def handle_sign_in(event: SignInEvent):
 
 When using SSO, if the token exchange fails, Teams sends a `signin/failure` invoke activity to your app. The SDK includes a built-in default handler that logs a warning with actionable troubleshooting guidance. You can optionally register your own handler to customize the behavior:
 
-# [C#](#tab/cs5)
+# [C#](#tab/cs)
 
 ```csharp
 teams.OnSignInFailure(async (context, cancellationToken) =>
@@ -260,9 +260,9 @@ teams.OnSignInFailure(async (context, cancellationToken) =>
     Console.WriteLine($"Sign-in failed: {failure?.Code} - {failure?.Message}");
     await context.Send("Sign-in failed. Please try again.", cancellationToken);
 });
-```
+````
 
-# [TypeScript](#tab/ts5)
+# [TypeScript](#tab/ts)
 
 ```typescript
 app.on('signin.failure', async ({ activity, send }) => {
@@ -272,7 +272,7 @@ app.on('signin.failure', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/py5)
+# [Python](#tab/py)
 
 ```python
 @app.on_signin_failure()
@@ -288,7 +288,7 @@ async def handle_signin_failure(ctx):
 
 Call the `signout` method to remove the user's authentication token from the User Token service cache, effectively signing them out. The Teams SDK replaces the previous pattern of using `DialogContext`, `UserTokenClient`, and `CancelAllDialogsAsync` with a simple method call.
 
-# [C#](#tab/cs4)
+# [C#](#tab/cs)
 
 ```csharp
 teams.OnMessage("/signout", async (context, cancellationToken) =>
@@ -304,7 +304,7 @@ teams.OnMessage("/signout", async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/ts4)
+# [TypeScript](#tab/ts)
 
 ```typescript
 app.message('/signout', async ({ signout, send, isSignedIn }) => {
@@ -314,7 +314,7 @@ app.message('/signout', async ({ signout, send, isSignedIn }) => {
 });
 ```
 
-# [Python](#tab/py4)
+# [Python](#tab/py)
 
 ```python
 @app.on_message
