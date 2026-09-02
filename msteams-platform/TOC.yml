@@ -30,7 +30,7 @@
     - name: Agent registration overview
       href: concepts/registering-agent-teams-platform.md
     - name: Choose an agent registration type
-      href: agents-in-teams/agent-registration-types.md
+      href: agents-in-teams/choose-agent-registration-type.md
   - name: Integrate AI
     items:
     - name: Stream messages
