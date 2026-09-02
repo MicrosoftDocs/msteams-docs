@@ -205,6 +205,11 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ```
 
+---
+
+> [!NOTE]
+> If your bot supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
+
 ### Receive a read receipt
 
 The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your agent to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
@@ -1191,6 +1196,9 @@ A typical `channelData` object in an activity sent to your agent contains the fo
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+- `app`: Available in one-on-one (personal-app) conversations. Contains the app ID and the installed manifest version of the app associated with the activity. In some scenarios, `channelData.app` may not be provided, such as when the agent isn't installed for the user or when multiple apps map to a single bot ID. Your agent must handle the case where this field is absent.
+  - `id`: The app ID.
+  - `version`: The manifest version of the installed app.
 
 ### Example channelData object
 
@@ -1291,4 +1299,5 @@ If you want your agent to receive all messages, then you don't need to filter th
 
 ## See also
 
-[Conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md)
+- [Conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md)
+- [Structure conversations with sessions](how-to/conversations/agent-sessions.md)

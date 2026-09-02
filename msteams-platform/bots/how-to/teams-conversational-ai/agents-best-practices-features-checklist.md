@@ -94,3 +94,9 @@ Agents can attach standardized [feedback controls](../bot-messages-ai-generated-
 :::image type="content" source="../../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-buttons-mobile.png":::
 
 :::image type="content" source="../../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-form-mobile.png":::
+
+---
+
+## Sessions
+
+Most agents should enable [sessions](../conversations/agent-sessions.md) to give users a structured way to organize multiple tasks or conversations. Sessions let users and agents create independent one-on-one conversations within the same chat, similar to the conversation model in modern AI assistants. Shorter, focused conversation contexts also improve the quality of LLM-generated responses. To enable sessions, set `supportsSessions: true` in the app manifest.
