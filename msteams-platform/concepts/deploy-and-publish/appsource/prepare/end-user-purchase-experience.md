@@ -4,7 +4,7 @@ description: Learn how to purchase, assign, and manage app subscriptions and lic
 author: heath-hamilton
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 07/31/2026
+ms.date: 08/25/2026
 ---
 
 # Purchase and manage app subscriptions and licenses
@@ -49,7 +49,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Verify your address**, select the address and select **Next**.
 
-        :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows the verification of billing address."  lightbox="../../../../assets/images/saas-offer/verify-address-lightbox.png":::
+        :::image type="content" source="~/assets/images/saas-offer/verify-address.png" alt-text="Screenshot shows the verification of billing address."  lightbox="../../../../assets/images/saas-offer/verify-address.png":::
 
     1. Under **Add a credit or debit card**, add the required details and select **Next**.
 
@@ -71,7 +71,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     1. Under **Review**, verify the details and select **Place order**.
 
-        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-existing.png" alt-text="Screenshot shows the subscription order placement.":::
+        :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder-new.png" alt-text="Screenshot shows the subscription order placement.":::
 
     ---
 
