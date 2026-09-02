@@ -4,7 +4,7 @@ description: Learn how to purchase, assign, and manage app subscriptions and lic
 author: heath-hamilton
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 08/25/2026
+ms.date: 09/02/2026
 ---
 
 # Purchase and manage app subscriptions and licenses
@@ -24,7 +24,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In the app details dialog, select **Buy a subscription**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app." lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app." lightbox="../../../../assets/images/saas-offer/buysubscriptionplan.png":::
 
 1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
@@ -33,7 +33,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
     > [!NOTE]
     > Private plans are only visible to users within the organization that the offer is intended for and are indicated with a **Private offer** :::image type="icon" source="~/assets/icons/special-icon.png"::: icon.
 
-    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows the selection of appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan-lightbox.png":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Screenshot shows the selection of appropriate subscription plan." lightbox="../../../../assets/images/saas-offer/choosingsubscriptionplan.png":::
 
 1. The checkout experience partially differs for a new and an existing user. In the **Checkout** dialog, perform the following actions:
 

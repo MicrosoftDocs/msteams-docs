@@ -3,7 +3,7 @@ title: Debug bot using Agents Playground
 description: Learn about Microsoft 365 Agents Playground in Microsoft 365 Agents Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 08/24/2026
+ms.date: 09/02/2026
 ---
 
 # Microsoft 365 Agents Playground
@@ -251,7 +251,7 @@ Agents Playground provides predefined activity triggers to test the functionalit
 
 | Category | Activity | Handler |
 | --- | --- | --- |
-| Trigger Installation Update Activity | Install application <br><br><br> Uninstall application | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
+| Trigger Installation Update Activity | Install application <br><br><br> Uninstall application | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove` |
 | Trigger Conversation Update Activity | Add user <br><br> Add application <br><br> Add channel | `onMembersAdded`<br><br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelRenamedEvent` |
 | | Remove user <br><br><br> Remove application <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
 | | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
@@ -511,8 +511,8 @@ It's important to understand that updating the configuration file has three majo
    | Features | Debug in Agents Playground | [Debug your app locally](debug-local.md) |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
-   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
-   | Sending Teams events | Available (mock activity) |Available |
+   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) | Available (respond with mocked data) | Available |
+   | Sending Teams events | Available (mock activity) | Available |
    | Typing indicator | Not Available | Available |
    | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
