@@ -1638,10 +1638,18 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 teams.OnMeetingEnd(async (context, cancellationToken) =>
 {
     var activity = context.Activity.Value;
-    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
-    
+    var meetingId = context.Activity.ChannelData?.Properties.Get("meeting") is JsonElement meeting
+        && meeting.TryGetProperty("id", out var idProp)
+            ? idProp.GetString()
+            : null;
+
+    if (meetingId == null)
+    {
+        return;
+    }
+
     // Get meeting info from API
-    var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+    var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId, cancellationToken);
 
     // Retrieve the user ID of the organizer for the transcript API
     var userId = "";

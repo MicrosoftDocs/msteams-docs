@@ -89,7 +89,7 @@ teams.OnQuery(async (context, cancellationToken) =>
  
     Console.WriteLine($"Query: command={commandId}, query={query}"); 
  
-    var attachments = new List<MsgExt.Attachment>(); 
+    var attachments = new List<TeamsAttachment>(); 
  
     // Route to appropriate search 
     if (commandId == "wikipediaSearch") 

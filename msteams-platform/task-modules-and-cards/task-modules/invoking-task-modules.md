@@ -177,9 +177,6 @@ When Teams sends a task fetch invoke, your app returns the dialog content. The c
 using System.Text.Json;
 using Microsoft.Teams.Apps;
 using Microsoft.Teams.Apps.Schema;
-using System.Text.Json;
-using Microsoft.Teams.Apps;
-using Microsoft.Teams.Apps.Schema;
 using Microsoft.Teams.Apps.TaskModules;
 using Microsoft.Teams.Cards;
 

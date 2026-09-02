@@ -1192,7 +1192,10 @@ You can also use a dedicated handler for *add* or *remove* scenarios as an alter
 ```csharp
 teams.OnInstallUpdate(async (context, cancellationToken) =>
 {
-    // TO:DO Installation workflow return;
+    if (string.Equals(context.Activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        await context.SendAsync("Added", cancellationToken);
+    }
 });
 ```
 
