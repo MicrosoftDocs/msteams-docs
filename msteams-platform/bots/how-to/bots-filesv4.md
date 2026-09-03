@@ -200,6 +200,8 @@ The following code shows an example of fetching inline images from a message:
 
 # [C#](#tab/csharp1)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Api;
 using Microsoft.Teams.Apps;
@@ -235,6 +237,51 @@ teams.OnMessage(async (context, cancellationToken) =>
             .WithName("ImageFromUser.png")
             .WithContentUrl($"data:image/png;base64,{imageData}")
             .Build());
+        await context.SendAsync(reply, cancellationToken);
+    }
+});
+
+app.Run();
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Plugins.AspNetCore.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.AddTeams();
+var app = builder.Build();
+var teams = app.UseTeams();
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var attachment = context.Activity.Attachments?[0];
+    if (attachment != null && attachment.ContentType.Contains("image"))
+    {
+        // Download the inline image from the content URL.
+        var client = new HttpClient();
+        var responseMessage = await client.GetAsync(attachment.ContentUrl);
+
+        // Save the inline image to Files directory.
+        var filePath = Path.Combine("Files", "ImageFromUser.png");
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+        {
+            await responseMessage.Content.CopyToAsync(fileStream);
+        }
+
+        // Create reply with the received image.
+        var imageData = Convert.ToBase64String(File.ReadAllBytes(filePath));
+        var reply = new MessageActivity(
+            $"Attachment of {attachment.ContentType} type and size of {responseMessage.Content.Headers.ContentLength} bytes received.");
+        reply.AddAttachment(new Attachment
+        {
+            Name = "ImageFromUser.png",
+            ContentType = "image/png",
+            ContentUrl = $"data:image/png;base64,{imageData}",
+        });
         await context.SendAsync(reply, cancellationToken);
     }
 });
@@ -306,6 +353,8 @@ The following code sends a file consent card to the user, requesting permission 
 
 #### [C#](#tab/csharp2)
 
+##### [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 async Task SendFileConsentCard(Context<MessageActivity> context, string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
 {
@@ -326,6 +375,38 @@ async Task SendFileConsentCard(Context<MessageActivity> context, string fileName
             .WithContent(fileCard)
             .Build());
     await context.SendAsync(message, cancellationToken);
+}
+```
+
+##### [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string fileId, int fileSize)
+    where T : IActivity
+{
+    var consentContext = new { filename = fileName, file_id = fileId };
+
+    var fileCard = new FileConsentCard
+    {
+        Description = "This is the file I want to send you",
+        SizeInBytes = fileSize,
+        AcceptContext = consentContext,
+        DeclineContext = consentContext
+    };
+
+    var message = new MessageActivity
+    {
+        Attachments =
+        [
+            new Attachment
+            {
+                Content = fileCard,
+                ContentType = new ContentType(ContentTypeFileConsent),
+                Name = fileName
+            }
+        ]
+    };
+    await context.Send(message);
 }
 ```
 

@@ -213,6 +213,8 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 // Save the conversation ID and schedule a proactive reminder on install
 teams.OnInstall(async (context, cancellationToken) =>
@@ -230,6 +232,30 @@ public static class Notifications
         var conversationId = (string?)storage.Get(userId);
         if (conversationId is null) return;
         await app.SendAsync(conversationId, "Hey! It's been a while. How are you?");
+    }
+}
+
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+// Save the conversation ID and schedule a proactive reminder on install
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    await context.Send("Hi! I am going to remind you to say something to me soon!", cancellationToken);
+    notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
+});
+ 
+// Send proactive message using stored conversation ID
+public static class Notifications
+{
+    public static async Task SendProactive(string userId)
+    {
+        var conversationId = (string?)storage.Get(userId);
+        if (conversationId is null) return;
+        await app.Send(conversationId, "Hey! It's been a while. How are you?");
     }
 }
 

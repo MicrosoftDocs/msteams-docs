@@ -56,6 +56,8 @@ Examples of receiving the invoke message are as follows:
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
 
@@ -65,6 +67,18 @@ teams.OnSubmitAction(async (context, cancellationToken) =>
 {
   MessageExtensionAction? action = context.Activity.Value;
   // handle the submit action and return MessageExtensionActionResponse
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+var teams = app.UseTeams();
+ 
+teams.OnSubmitAction(async (ctx) =>
+{
+    var action = ctx.Activity.Value;
+    // handle the submit action and return MsgExt.ActionResponse
 });
 ```
 
@@ -138,6 +152,8 @@ The most common way to respond to the `composeExtensions/submitAction` request i
 * [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using System.Text.Json;
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -183,6 +199,65 @@ return MessageExtensionActionResponse.CreateBuilder()
     .WithAttachmentLayout(TeamsAttachmentLayouts.List)
     .WithAttachments(attachment))
   .Build();
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Cards;
+using Microsoft.Teams.Cards;
+
+using MsgExt = Microsoft.Teams.Api.MessageExtensions;
+using AdaptiveCard = Microsoft.Teams.Cards.AdaptiveCard;
+
+// Inside the action handler:
+
+var card = new AdaptiveCard
+{
+    Version = Microsoft.Teams.Cards.Version.Version1_4,
+    Body =
+    [
+        new TextBlock(title)
+        {
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
+        },
+        new TextBlock(subtitle)
+        {
+            IsSubtle = true
+        },
+        new TextBlock(text)
+        {
+            Wrap = true
+        }
+    ]
+};
+
+var attachments = new List<MsgExt.Attachment>
+{
+    new MsgExt.Attachment(ContentType.AdaptiveCard)
+    {
+        Content = card,
+        Preview = new Attachment(
+            new ThumbnailCard
+            {
+                Title = title,
+                Text = text
+            }
+        )
+    }
+};
+
+return new MsgExt.Response
+{
+    ComposeExtension = new MsgExt.Result
+    {
+        Type = MsgExt.ResultType.Result,
+        AttachmentLayout = Attachment.Layout.List,
+        Attachments = attachments
+    }
+};
 ```
 
 # [TypeScript/Node.js](#tab/typescript2)
@@ -548,6 +623,8 @@ After the user selects the **Send**, you receive a `composeExtensions/submitActi
 
 # [C#/.NET](#tab/dotnet5)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
 {
@@ -564,6 +641,25 @@ if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
             cancellationToken);
     }
     return MessageExtensionActionResponse.CreateBuilder().Build();
+}
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
+{
+    // Extract the card from the bot activity preview
+    var cardAttachment = action.BotActivityPreview?.FirstOrDefault()?.Attachments?.FirstOrDefault();
+    if (cardAttachment != null)
+    {
+        await ctx.Send(new Activity
+        {
+            Type = "message",
+            Attachments = [cardAttachment]
+        });
+    }
+    return new MsgExt.ActionResponse();
 }
 ```
 

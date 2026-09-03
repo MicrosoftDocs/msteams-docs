@@ -607,6 +607,8 @@ The following table includes the query parameters:
 
 # [C#](#tab/dotnet3)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -624,6 +626,26 @@ teams.OnMessage(async (context, cancellationToken) =>
 
         // Sends a message activity to the sender of the incoming activity.
         await context.SendAsync($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+    var tenantId = context.Activity.ChannelData?.Tenant?.Id;
+    var userId = context.Activity.From?.AadObjectId;
+
+    if (meetingId != null && tenantId != null && userId != null)
+    {
+        // Gets the details for the given meeting participant.
+        var participant = await context.Api.Meetings.GetParticipantAsync(meetingId, userId, tenantId);
+
+        // Sends a message activity to the sender of the incoming activity.
+        await context.Send($"The participant role is: {participant.Meeting?.Role}", cancellationToken);
     }
 });
 ```
@@ -762,11 +784,35 @@ The following table includes the query parameter:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
     // Send an in-meeting notification with an external resource URL.
   // Not supported by the typed 2.1 outbound activity; use the Bot Connector REST API.
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    // Send an in-meeting notification with an external resource URL.
+    await context.Send(new Activity
+    {
+        Type = "message",
+        Text = "This is a meeting signal test",
+        ChannelData = new
+        {
+            notification = new
+            {
+                alertInMeeting = true,
+                externalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+            }
+        }
+    }, cancellationToken);
 });
 ```
 
@@ -1092,6 +1138,8 @@ The following table lists the query parameter:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -1107,6 +1155,24 @@ teams.OnMessage(async (context, cancellationToken) =>
 
         // Sends a message activity to the sender of the incoming activity.
         await context.SendAsync(JsonSerializer.Serialize(meetingInfo), cancellationToken);
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+
+    if (meetingId != null)
+    {
+        // Gets the information for the given meeting id.
+        var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+
+        // Sends a message activity to the sender of the incoming activity.
+        await context.Send(JsonConvert.SerializeObject(meetingInfo), cancellationToken);
     }
 });
 ```
@@ -1543,6 +1609,8 @@ The following examples show how to capture the meeting start and end events:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 // Register meeting start handler
 teams.OnMeetingStart(async (context, cancellationToken) =>
@@ -1582,6 +1650,47 @@ teams.OnMeetingStart(async (context, cancellationToken) =>
       .Build();
 
     await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+});
+
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+// Register meeting start handler
+teamsApp.OnMeetingStart(async (context, cancellationToken) =>
+{
+    var activity = context.Activity.Value;
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock("The meeting has started.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            },
+            new TextBlock($"**Title:** {activity.Title}")
+            {
+                Wrap = true
+            },
+            new TextBlock($"**Start Time:** {activity.StartTime}")
+            {
+                Wrap = true
+            }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new OpenUrlAction(activity.JoinUrl)
+            {
+                Title = "Join Meeting"
+            }
+        }
+    };
+
+    await context.Send(card, cancellationToken);
 });
 
 ```
@@ -1632,6 +1741,8 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 // Register meeting end handler with transcript support
@@ -1723,6 +1834,90 @@ teams.OnMeetingEnd(async (context, cancellationToken) =>
       .Build();
 
     await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+});
+
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+// Register meeting end handler with transcript support
+teamsApp.OnMeetingEnd(async context =>
+{
+    var activity = context.Activity.Value;
+    var meetingId = context.Activity.ChannelData?.Meeting?.Id;
+    
+    // Get meeting info from API
+    var meetingInfo = await context.Api.Meetings.GetByIdAsync(meetingId);
+
+    // Retrieve the user ID of the organizer for the transcript API
+    var userId = "";
+    if (meetingInfo?.Organizer != null)
+    {
+        userId = meetingInfo.Organizer.AadObjectId ?? "";
+    }
+
+    // Get MS Graph Resource ID from meeting details
+    var msGraphResourceId = meetingInfo?.Details?.MSGraphResourceId;
+
+    // Wait 30 seconds for the transcript to become available
+    await Task.Delay(30000);
+    
+    // Retrieve transcript
+    var transcript = "";
+    if (!string.IsNullOrEmpty(msGraphResourceId) && !string.IsNullOrEmpty(userId))
+    {
+        var vttTranscript = await GetMeetingTranscriptAsync(msGraphResourceId, userId);
+        if (!string.IsNullOrEmpty(vttTranscript))
+        {
+            transcript = ParseVtt(vttTranscript);
+        }
+    }
+
+    // Build card body with transcript
+    var cardBody = new List<CardElement>
+    {
+        new TextBlock("The meeting has ended.")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
+        },
+        new TextBlock($"**End Time:** {activity.EndTime}")
+        {
+            Wrap = true
+        },
+        new TextBlock("**Transcript:**")
+        {
+            Wrap = true,
+            Weight = TextWeight.Bolder
+        }
+    };
+
+    // Add transcript lines or fallback message
+    if (!string.IsNullOrEmpty(transcript))
+    {
+        var transcriptLines = transcript.Split('\n', StringSplitOptions.RemoveEmptyEntries);
+        foreach (var line in transcriptLines)
+        {
+            if (!string.IsNullOrWhiteSpace(line))
+            {
+                cardBody.Add(new TextBlock(line) { Wrap = true });
+            }
+        }
+    }
+    else
+    {
+        cardBody.Add(new TextBlock("Transcript not available for this meeting.") { Wrap = true });
+    }
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = cardBody
+    };
+
+    await context.Send(card);
 });
 
 ```
@@ -1962,6 +2157,8 @@ The following examples show how to capture the participant join and leave events
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 // Register meeting participant join handler
 teams.OnMeetingJoin(async (context, cancellationToken) =>
@@ -1994,11 +2191,43 @@ teams.OnMeetingJoin(async (context, cancellationToken) =>
 
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+// Register meeting participant join handler
+teamsApp.OnMeetingJoin(async context =>
+{
+    var activity = context.Activity.Value;
+    if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
+
+    var member = activity.Members[0].User.Name;
+    var role = activity.Members[0].Meeting?.Role ?? "a participant";
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has joined the meeting as {role}.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
+});
+
+```
+
 # [TypeScript](#tab/typescript6)
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 // Register meeting participant leave handler
@@ -2025,6 +2254,33 @@ teams.OnMeetingLeave(async (context, cancellationToken) =>
       .Build();
 
     await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+});
+
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+// Register meeting participant leave handler
+teamsApp.OnMeetingLeave(async context =>
+{
+    var activity = context.Activity.Value;
+    var member = activity.Members[0].User.Name;
+
+    var card = new AdaptiveCard
+    {
+        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+        Body = new List<CardElement>
+        {
+            new TextBlock($"{member} has left the meeting.")
+            {
+                Wrap = true,
+                Weight = TextWeight.Bolder
+            }
+        }
+    };
+
+    await context.Send(card);
 });
 
 ```

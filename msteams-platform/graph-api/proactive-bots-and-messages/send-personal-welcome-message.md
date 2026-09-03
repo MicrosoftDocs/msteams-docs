@@ -58,6 +58,8 @@ The following code provides an example of sending proactive messages:
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Api; 
 using Microsoft.Teams.Apps; 
@@ -79,6 +81,32 @@ public static async Task SendProactiveNotification(string userId, CancellationTo
     var conversationId = conversationStorage.GetValueOrDefault(userId); 
     if (conversationId is null) return; 
     await teams.SendAsync(conversationId, "Proactive hello.", cancellationToken: cancellationToken);
+} 
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api; 
+using Microsoft.Teams.Apps; 
+// ...
+
+// Store conversation IDs (e.g., during install event) 
+var conversationStorage = new Dictionary<string, string>(); 
+app.OnInstall(async context => 
+{ 
+    var userId = context.Activity.From.AadObjectId; 
+    var conversationId = context.Activity.Conversation.Id; 
+    conversationStorage[userId] = conversationId; 
+    await context.Send("Hi! I will send you proactive notifications."); 
+}); 
+
+// Send proactive message from anywhere 
+public static async Task SendProactiveNotification(string userId) 
+{ 
+    var conversationId = conversationStorage.GetValueOrDefault(userId); 
+    if (conversationId is null) return; 
+    await app.Send(conversationId, "Proactive hello."); 
 } 
 ```
 

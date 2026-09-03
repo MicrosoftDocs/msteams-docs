@@ -98,7 +98,9 @@ The following table lists the response type associated with the invoke requests:
 
 # [C#](#tab/teams-bot-sdk1)
 
-   ```csharp
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
 teams.OnTaskFetch(async (context, cancellationToken) =>
 {
     var card = new AdaptiveCard
@@ -128,6 +130,46 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
             .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
             .Build())
         .Build();
+});
+   ```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+
+app.OnConfigFetch(async (context) =>
+{
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
+        {
+            new TextBlock("Configure your agent")
+            {
+                Weight = TextWeight.Bolder
+            }
+        },
+        Actions = new List<Action>
+        {
+            new SubmitAction
+            {
+                Title = "Submit"
+            }
+        }
+    };
+    var taskInfo = new TaskInfo
+    {
+        Title = "test card",
+        Width = new Union<int, Size>(600),
+        Height = new Union<int, Size>(500),
+        Card = new Attachment
+        {
+            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
+            Content = card
+        }
+    };
+    return new ConfigTaskResponse(
+        new ContinueTask(taskInfo)
+    );
 });
    ```
 
@@ -195,7 +237,9 @@ async def handle_config_open(
 
 # [C#](#tab/teams-bot-sdk2)
 
-   ```csharp
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
 teams.OnTaskFetch(async (context, cancellationToken) =>
 {
     return TaskModuleResponse.CreateBuilder()
@@ -203,6 +247,33 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
         .WithTitle("Sign in to this app")
         .WithUrl("https://example.com/auth")
         .Build();
+});
+
+   ```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+
+app.OnConfigFetch(async (context) =>
+{
+    return new ConfigAuthResponse(
+        new ConfigAuth
+        {
+            SuggestedActions = new SuggestedActions
+            {
+                Actions = new List<CardAction>
+                {
+                    new CardAction
+                    {
+                        Type = "openUrl",
+                        Value = "https://example.com/auth",
+                        Title = "Sign in to this app"
+                    }
+                }
+            }
+        }
+    );
 });
 
    ```
@@ -257,13 +328,28 @@ async def handle_config_open(
 
 # [C#](#tab/teams-bot-sdk3)
 
-   ```csharp
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
 teams.OnTaskSubmit(async (context, cancellationToken) =>
 {
     return TaskModuleResponse.CreateBuilder()
         .WithType(TaskModuleResponseTypes.Message)
         .WithMessage("You have chosen to finish setting up agent")
         .Build();
+});
+
+   ```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+
+app.OnConfigSubmit(async (context) =>
+{
+    return new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up agent")
+    );
 });
 
    ```

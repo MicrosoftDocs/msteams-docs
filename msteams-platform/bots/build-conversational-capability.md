@@ -119,10 +119,21 @@ The following code shows an example of receiving a message activity:
 
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
     await context.SendAsync($"Echo: {context.Activity.Text}", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    await context.Send($"Echo: {context.Activity.Text}");
 });
 ```
 
@@ -269,11 +280,24 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
   The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
 
-    ```csharp
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
     teams.OnReadReceipt(async (context, cancellationToken) =>
     {
         var lastReadMessageId = context.Activity.Value.LastReadMessageId;
         await context.SendAsync("User read the agent's message", cancellationToken);
+    });
+    ```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+    app.OnReadReceipt(async context =>
+
+    {
+        var lastReadMessageId = context.Activity.Value.LastReadMessageId;
+        await context.Send("User read the agent's message");
     });
     ```
 
@@ -326,6 +350,8 @@ The following is an example of an edit message activity notification using `OnMe
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessageUpdate(async (context, cancellationToken) =>
 {
@@ -335,6 +361,15 @@ teams.OnMessageUpdate(async (context, cancellationToken) =>
     else if (eventType == "undeleteMessage")
         await context.SendAsync("message is undeleted", cancellationToken);
 });
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessageEdit(async context =>
+{
+    await context.Send("message is updated");
+}); 
 ```
 
 ::: zone-end
@@ -412,6 +447,8 @@ The following code shows an example of sending a message when a user is added to
 
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMembersAdded(async (context, cancellationToken) =>
 {
@@ -420,6 +457,21 @@ teams.OnMembersAdded(async (context, cancellationToken) =>
         if (member.Id != context.Activity.Recipient.Id)
         {
             await context.SendAsync("Hello and welcome!", cancellationToken);
+        }
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersAdded(async context =>
+{
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id != context.Activity.Recipient.Id)
+        {
+            await context.Send("Hello and welcome!");
         }
     }
 });
@@ -519,9 +571,20 @@ The following is an example of an undelete message activity notification when a 
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 // Undelete events are handled in the merged OnMessageUpdate handler above,
 // which checks context.Activity.ChannelData?.EventType == "undeleteMessage".
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessageUndelete(async context =>
+{
+    await context.Send("message is undeleted");
+});
 ```
 
 ::: zone-end
@@ -597,6 +660,8 @@ The following example shows a soft delete message activity notification when a m
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessageDelete(async (context, cancellationToken) =>
 {
@@ -604,6 +669,15 @@ teams.OnMessageDelete(async (context, cancellationToken) =>
     if (eventType == "softDeleteMessage")
         await context.SendAsync("message is soft deleted", cancellationToken);
 });
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessageSoftDelete(async context =>
+{
+    await context.Send("message is soft deleted");
+}); 
 ```
 
 ::: zone-end
@@ -681,6 +755,8 @@ It is not necessary for the new message to match the original in type. For examp
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -692,6 +768,22 @@ teams.OnMessage(async (context, cancellationToken) =>
     var updatedActivity = new MessageActivityInput().WithText("The new text for the activity");
 
     await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Send initial message
+    var response = await context.Send("Your Message");
+    var conversationId = context.Activity.Conversation.Id;
+    var activityId = response.Id;
+
+    var updatedActivity = new MessageActivity("The new text for the activity");
+
+    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity);
 });
 ```
 
@@ -767,6 +859,8 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -779,6 +873,21 @@ teams.OnMessage(async (context, cancellationToken) =>
     var updatedActivity = new MessageActivityInput().AddAttachment(attachment);
 
     await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    var conversationId = context.Activity.Conversation.Id;
+    var activityId = context.Activity.ReplyToId;
+
+    var updatedActivity = new MessageActivity();
+    updatedActivity.Attachments.Add(card.ToAttachment());
+
+    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity);
 });
 ```
 
@@ -852,6 +961,8 @@ In Teams SDK Framework, every message has its unique activity identifier. Messag
 
 To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` class.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -860,6 +971,20 @@ teams.OnMessage(async (context, cancellationToken) =>
     foreach (var activityId in _list)
     {
         await context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId, cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    var conversationId = context.Activity.Conversation.Id;
+
+    foreach (var activityId in _list)
+    {
+        await context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId);
     }
 });
 ```
@@ -922,6 +1047,8 @@ Quoted replies let your agent reference a previous message in the conversation. 
 
 When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `GetQuotedMessages` method to access all quoted reply entities.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -932,6 +1059,22 @@ teams.OnMessage(async (context, cancellationToken) =>
         var quote = quotes[0].QuotedReply;
         await context.ReplyAsync(
             $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"", cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    var quotes = context.Activity.GetQuotedMessages();
+
+    if (quotes.Count > 0)
+    {
+        var quote = quotes[0].QuotedReply;
+        await context.Reply(
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
     }
 });
 ```
@@ -981,6 +1124,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 When your agent calls `Reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -989,7 +1134,19 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Reply() automatically quotes the inbound message
+    await context.Reply("Got it!");
+});
+```
+
 To quote a different message in the same conversation (not the inbound message), use the `Quote()` method with the message ID you want to quote.
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -997,6 +1154,17 @@ teams.OnMessage(async (context, cancellationToken) =>
     // Quote a specific message by its ID
     var parentMessageId = "1772050244572";
     await context.QuoteAsync(parentMessageId, "Referencing an earlier message", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Quote a specific message by its ID
+    var parentMessageId = "1772050244572";
+    await context.Quote(parentMessageId, "Referencing an earlier message");
 });
 ```
 
@@ -1054,6 +1222,8 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 For proactive scenarios (using `teams.SendAsync()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 var parentMessageId = "1772050244572";
 var firstMessageId = "1772050244573";
@@ -1078,6 +1248,31 @@ msg = new MessageActivityInput()
     .AddQuote(firstMessageId)
     .AddQuote(secondMessageId, "response to both");
 await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+var parentMessageId = "1772050244572";
+var firstMessageId = "1772050244573";
+var secondMessageId = "1772050244574";
+
+// Single quote with response below it
+var msg = new MessageActivity()
+    .AddQuote(parentMessageId, "Here is my response");
+await app.Send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+    .AddQuote(firstMessageId, "response to first")
+    .AddQuote(secondMessageId, "response to second");
+await app.Send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity("see below for previous messages")
+    .AddQuote(firstMessageId)
+    .AddQuote(secondMessageId, "response to both");
+await app.Send(conversationId, msg);
 ```
 
 ::: zone-end
@@ -1279,6 +1474,8 @@ If the tenant or conversation ID isn't present in the activity or wasn't validat
 
 To enable your agents to get only those channel or chat messages where your agent is @mentioned, you must filter the messages. Use the following code snippet to enable your agent to receive only those messages where it's @mentioned:
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
     teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -1288,6 +1485,20 @@ To enable your agents to get only those channel or chat messages where your agen
     }
 
     await context.SendAsync("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+  app.OnMessage(async context =>
+{
+    if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+    {
+        return;
+    }
+
+    await context.Send("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
 });
 ```
 

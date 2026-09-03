@@ -167,6 +167,8 @@ Use the page pivot to view Teams SDK snippets for creating and handling `Action.
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 #pragma warning disable ExperimentalTeamsSuggestedAction
 using System.Text.Json;
@@ -202,6 +204,39 @@ teams.OnSuggestedActionSubmit(async (context, cancellationToken) =>
         : "<none>";
 
     await context.SendAsync($"Got vote: {payload}", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+#pragma warning disable ExperimentalTeamsSuggestedAction
+using System.Text.Json;
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.Activities;
+using CardAction = Microsoft.Teams.Api.Cards.Action;
+using CardActionType = Microsoft.Teams.Api.Cards.ActionType;
+
+var reply = new MessageActivity("Approve or reject the request:")
+{
+    SuggestedActions = new SuggestedActions
+    {
+        Actions =
+        {
+            new CardAction(CardActionType.Submit) { Title = "Approve", Value = new { vote = "approve" } },
+            new CardAction(CardActionType.Submit) { Title = "Reject", Value = new { vote = "reject" } }
+        }
+    }
+};
+
+await context.Send(reply);
+
+teams.OnSuggestedActionSubmit(async (ctx, cancellationToken) =>
+{
+    var payload = ctx.Activity.Value is JsonElement value
+        ? value.GetRawText()
+        : "<none>";
+    await ctx.Send($"Got vote: {payload}", cancellationToken);
 });
 ```
 

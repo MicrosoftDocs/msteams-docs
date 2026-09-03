@@ -56,6 +56,8 @@ The Teams SDK simplifies app initialization with a single `App` class that handl
 
 # [C#](#tab/cs1)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps;
 using Microsoft.Teams.Apps.OAuth;
@@ -74,6 +76,25 @@ var app = builder.Build();
 var teams = app.UseTeamsBotApplication();
 
 OAuthFlow auth = teams.GetOAuthFlow(connectionName);
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Apps.Extensions;
+using Microsoft.Teams.Plugins.AspNetCore.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
+
+var connectionName = builder.Configuration["CONNECTION_NAME"]
+    ?? throw new InvalidOperationException("Missing required configuration value: CONNECTION_NAME");
+
+var appBuilder = App.Builder()
+    .AddOAuth(connectionName);
+
+builder.AddTeams(appBuilder);
+var app = builder.Build();
+var teams = app.UseTeams();
 ```
 
 # [TypeScript](#tab/ts1)
@@ -188,6 +209,8 @@ The Teams SDK uses simple event-driven handlers for authentication. Use `IsSigne
 
 # [C#](#tab/cs3)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -203,6 +226,28 @@ teams.OnMessage(async (context, cancellationToken) =>
 auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
 {
   await context.SendAsync("Successfully signed in! You can now use the bot.", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    if (!context.IsSignedIn)
+    {
+        await context.SignIn(cancellationToken);
+        return;
+    }
+
+    var token = context.UserToken;
+    await context.Send($"You are signed in. Token length: {token?.Length}", cancellationToken);
+});
+
+teams.OnSignIn(async (_, teamsEvent, cancellationToken) =>
+{
+    var context = teamsEvent.Context;
+    await context.Send("Successfully signed in! You can now use the bot.", cancellationToken);
 });
 ```
 
@@ -254,11 +299,24 @@ When using SSO, if the token exchange fails, Teams sends a `signin/failure` invo
 
 # [C#](#tab/cs5)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 auth.OnSignInFailure(async (context, failure, cancellationToken) =>
 {
     Console.WriteLine($"Sign-in failed: {failure?.Code} - {failure?.Message}");
     await context.SendAsync("Sign-in failed. Please try again.", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnSignInFailure(async (context, cancellationToken) =>
+{
+    var failure = context.Activity.Value;
+    Console.WriteLine($"Sign-in failed: {failure?.Code} - {failure?.Message}");
+    await context.Send("Sign-in failed. Please try again.", cancellationToken);
 });
 ```
 
@@ -290,11 +348,29 @@ Call the `signout` method to remove the user's authentication token from the Use
 
 # [C#](#tab/cs4)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage("/signout", async (context, cancellationToken) =>
 {
   await auth.SignOutAsync(context, cancellationToken);
   await context.SendAsync("You have been signed out.", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnMessage("/signout", async (context, cancellationToken) =>
+{
+    if (!context.IsSignedIn)
+    {
+        await context.Send("You are not signed in.", cancellationToken);
+        return;
+    }
+
+    await context.SignOut(cancellationToken);
+    await context.Send("You have been signed out.", cancellationToken);
 });
 ```
 

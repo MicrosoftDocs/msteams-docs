@@ -60,11 +60,23 @@ The following code shows an example of a channel created event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnChannelCreated(async (context, cancellationToken) =>
 {
     var channelName = context.Activity.ChannelData.Channel.Name;
     await context.SendAsync($"{channelName} is the Channel created", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelCreated(async context =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.Send($"{channelName} is the Channel created");
 });
 ```
 
@@ -136,11 +148,23 @@ The following code shows an example of a channel renamed event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnChannelRenamed(async (context, cancellationToken) =>
 {
     var channelName = context.Activity.ChannelData.Channel.Name;
     await context.SendAsync($"{channelName} is the new Channel name", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelRenamed(async context =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.Send($"{channelName} is the new Channel name");
 });
 ```
 
@@ -210,11 +234,23 @@ The following code shows an example of a channel deleted event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnChannelDeleted(async (context, cancellationToken) =>
 {
     var channelName = context.Activity.ChannelData.Channel.Name;
     await context.SendAsync($"{channelName} is the Channel deleted", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelDeleted(async context =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.Send($"{channelName} is the Channel deleted");
 });
 ```
 
@@ -284,11 +320,23 @@ The following code shows an example of a channel restored event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnChannelRestored(async (context, cancellationToken) =>
 {
     var channelName = context.Activity.ChannelData.Channel.Name;
     await context.SendAsync($"{channelName} is the Channel restored.", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelRestored(async context =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.Send($"{channelName} is the Channel restored.");
 });
 ```
 
@@ -374,6 +422,8 @@ The following code shows an example of a team members added event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMembersAdded(async (context, cancellationToken) =>
 {
@@ -387,6 +437,26 @@ teams.OnMembersAdded(async (context, cancellationToken) =>
         else
         {
             await context.SendAsync($"{member.Name} joined {context.Activity.ChannelData.Team.Name}", cancellationToken);
+        }
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersAdded(async context =>
+{
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id == context.Activity.Recipient.Id)
+        {
+            // Send a message to introduce the bot to the team.
+            await context.Send($"The {member.Name} agent has joined {context.Activity.ChannelData.Team.Name}");
+        }
+        else
+        {
+            await context.Send($"{member.Name} joined {context.Activity.ChannelData.Team.Name}");
         }
     }
 });
@@ -524,6 +594,8 @@ The following code shows an example of a team members removed event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMembersRemoved(async (context, cancellationToken) =>
 {
@@ -537,6 +609,26 @@ teams.OnMembersRemoved(async (context, cancellationToken) =>
         else
         {
             await context.SendAsync($"{member.Name} was removed from {context.Activity.ChannelData.Team.Name}", cancellationToken);
+        }
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersRemoved(async context =>
+{
+    foreach (var member in context.Activity.MembersRemoved)
+    {
+        if (member.Id == context.Activity.Recipient.Id)
+        {
+            // The agent was removed.
+            // You should clear any cached data you have for this team.
+        }
+        else
+        {
+            await context.Send($"{member.Name} was removed from {context.Activity.ChannelData.Team.Name}");
         }
     }
 });
@@ -615,11 +707,23 @@ The following code shows an example of a team renamed event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnTeamRenamed(async (context, cancellationToken) =>
 {
     var teamName = context.Activity.ChannelData.Team.Name;
     await context.SendAsync($"{teamName} is the new Team name", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamRenamed(async context =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.Send($"{teamName} is the new Team name");
 });
 ```
 
@@ -686,8 +790,19 @@ The following code shows an example of a team deleted event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnTeamDeleted(async (context, cancellationToken) =>
+{
+    // Handle delete event.
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamDeleted(async context =>
 {
     // Handle delete event.
 });
@@ -755,11 +870,23 @@ The following code shows an example of a team restored event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnTeamRestored(async (context, cancellationToken) =>
 {
     var teamName = context.Activity.ChannelData.Team.Name;
     await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamRestored(async context =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.Send($"{teamName} is the team name");
 });
 ```
 
@@ -826,11 +953,23 @@ The following code shows an example of team archived event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnTeamArchived(async (context, cancellationToken) =>
 {
     var teamName = context.Activity.ChannelData.Team.Name;
     await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamArchived(async context =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.Send($"{teamName} is the team name");
 });
 ```
 
@@ -897,11 +1036,23 @@ The following code shows an example of a team unarchived event:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnTeamUnarchived(async (context, cancellationToken) =>
 {
     var teamName = context.Activity.ChannelData.Team.Name;
     await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamUnarchived(async context =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.Send($"{teamName} is the team name");
 });
 ```
 
@@ -977,6 +1128,8 @@ The following code shows an example of reactions to an agent message:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
@@ -984,6 +1137,19 @@ teams.OnMessageReactionAdded(async (context, cancellationToken) =>
     {
         var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{context.Activity.ReplyToId}'";
         await context.SendAsync(newReaction, cancellationToken);
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnReactionsAdded(async context =>
+{
+    foreach (var reaction in context.Activity.ReactionsAdded)
+    {
+        var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{context.Activity.ReplyToId}'";
+        await context.Send(newReaction);
     }
 });
 ```
@@ -1067,6 +1233,8 @@ The following code shows an example of reactions removed from agent message:
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
@@ -1074,6 +1242,19 @@ teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
     {
         var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{context.Activity.ReplyToId}'";
         await context.SendAsync(newReaction, cancellationToken);
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnReactionsRemoved(async context =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved)
+    {
+        var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{context.Activity.ReplyToId}'";
+        await context.Send(newReaction);
     }
 });
 ```
@@ -1172,6 +1353,8 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
 # [C#](#tab/dotnet)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnInstall(async (context, cancellationToken) =>
 {
@@ -1187,7 +1370,26 @@ teams.OnInstall(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnInstall(async context =>
+{
+    var action = context.Activity.Action;
+    if (string.Equals(action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        await context.Send("Added");
+    }
+    else
+    {
+        await context.Send("Uninstalled");
+    }
+});
+```
+
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnInstallUpdate(async (context, cancellationToken) =>
@@ -1197,6 +1399,15 @@ teams.OnInstallUpdate(async (context, cancellationToken) =>
         await context.SendAsync("Added", cancellationToken);
     }
 });
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> Context object, CancellationToken cancellationToken)
+{
+    // TO:DO Installation workflow return;
+}
 ```
 
 # [TypeScript](#tab/typescript)

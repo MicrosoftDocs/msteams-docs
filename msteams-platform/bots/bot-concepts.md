@@ -155,6 +155,8 @@ Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `A
 
 `OnChannelCreated`
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps;
 
@@ -172,7 +174,23 @@ teams.OnChannelCreated(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Apps;
+
+var app = new App();
+
+app.OnChannelCreated(async context => {
+    var channel = context.Activity.ChannelData.Channel;
+    var team    = context.Activity.ChannelData.Team;
+    // Code logic here
+});
+```
+
 `OnChannelDeleted`
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnChannelDeleted(async (context, cancellationToken) =>
@@ -181,7 +199,17 @@ teams.OnChannelDeleted(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelDeleted(async context => {
+    // Code logic here
+});
+```
+
 `OnChannelRenamed`
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnChannelRenamed(async (context, cancellationToken) =>
@@ -190,7 +218,17 @@ teams.OnChannelRenamed(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnChannelRenamed(async context => {
+    // Code logic here
+});
+```
+
 `OnTeamRenamed`
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnTeamRenamed(async (context, cancellationToken) =>
@@ -199,7 +237,17 @@ teams.OnTeamRenamed(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnTeamRenamed(async context => {
+    // Code logic here
+});
+```
+
 `OnMembersAdded`
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMembersAdded(async (context, cancellationToken) =>
@@ -211,7 +259,19 @@ teams.OnMembersAdded(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersAdded(async context => {
+    foreach (var member in context.Activity.MembersAdded) {
+        // Code logic here
+    }
+});
+```
+
 `OnMembersRemoved`
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMembersRemoved(async (context, cancellationToken) =>
@@ -223,9 +283,21 @@ teams.OnMembersRemoved(async (context, cancellationToken) =>
 });
 ```
 
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersRemoved(async context => {
+    foreach (var member in context.Activity.MembersRemoved) {
+        // Code logic here
+    }
+});
+```
+
 `OnMessageUpdate` / `OnMessageDelete`
 
 Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
+
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMessageUpdate(async (context, cancellationToken) =>
@@ -235,6 +307,18 @@ teams.OnMessageUpdate(async (context, cancellationToken) =>
 
 teams.OnMessageDelete(async (context, cancellationToken) =>
 {
+    // Code logic here
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessageUpdate(async context => {
+    // Code logic here
+});
+
+app.OnMessageDelete(async context => {
     // Code logic here
 });
 ```
@@ -335,7 +419,7 @@ app.start().catch(console.error);
 
 # [C#](#tab/csharp)
 
-`.NET SDK v2.1`
+## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -355,7 +439,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-`.NET SDK <v2.1 (legacy)`
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 using Microsoft.Teams.Apps.Activities;

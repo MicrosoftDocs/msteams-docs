@@ -461,6 +461,8 @@ The following code section is an example of `fetchTask` request:
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
 
@@ -473,6 +475,22 @@ teams.OnFetchTask(async (context, cancellationToken) =>
   string? commandId = action?.CommandId;
 
   return MessageExtensionActionResponse.CreateBuilder().Build();
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api.MessageExtensions;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
+{
+    // Handle fetch task
+    var commandId = ctx.Activity.Value?.CommandId;
+
+    return new ActionResponse();
 });
 ```
 
@@ -580,6 +598,8 @@ The following section is an example of the `value` object:
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
 
@@ -593,6 +613,22 @@ teams.OnFetchTask(async (context, cancellationToken) =>
   var fromId = action?.MessagePayload?.From?.User?.Id;
 
   return MessageExtensionActionResponse.CreateBuilder().Build();
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnFetchTask(async (ctx) =>
+{
+    var messageText =
+        ctx.Activity.Value?.MessagePayload?.Body?.Content;
+
+    var fromId =
+        ctx.Activity.Value?.MessagePayload?.From?.User?.Id;
+
+    // Finish handling the fetchTask
+    return new ActionResponse();
 });
 ```
 
@@ -731,6 +767,8 @@ This sample uses the [Microsoft.Teams.Cards](https://www.nuget.org/packages/Micr
 * [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using System.Text.Json;
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -780,6 +818,56 @@ teams.OnFetchTask(async (context, cancellationToken) =>
         .WithWidth(TaskModuleSizes.Small)
         .WithCard(attachment))
       .Build();
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Api.MessageExtensions;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Cards;
+using Microsoft.Teams.Common;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
+{
+    string placeholder = "Not invoked from message";
+
+    if (ctx.Activity.Value?.MessagePayload != null)
+    {
+        var messageText = ctx.Activity.Value.MessagePayload.Body?.Content;
+        var fromId = ctx.Activity.Value.MessagePayload.From?.User?.Id;
+        placeholder = "Invoked from message";
+    }
+
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
+        {
+            new TextInput { Id = "FormField1", Placeholder = placeholder },
+            new TextInput { Id = "FormField2", Placeholder = "FormField2" },
+            new TextInput { Id = "FormField3", Placeholder = "FormField3" }
+        },
+        Actions = new List<Cards.Action>
+        {
+            new SubmitAction { Title = "Submit" }
+        }
+    };
+
+    return new ActionResponse
+    {
+        Task = new ContinueTask(
+            new TaskInfo
+            {
+                Title = "Example dialog",
+                Height = new Union<int, Size>(Size.Small),
+                Width  = new Union<int, Size>(Size.Small),
+                Card   = new Attachment(card)
+            })
+    };
 });
 ```
 
@@ -984,6 +1072,8 @@ When using an embedded web view, you must respond with a `task` object with the 
 
 # [C#/.NET](#tab/dotnet4)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
 using Microsoft.Teams.Apps.TaskModules;
@@ -1002,6 +1092,31 @@ teams.OnFetchTask(async (context, cancellationToken) =>
             .WithWidth(TaskModuleSizes.Small)
             .WithUrl("https://contoso.com/msteams/taskmodules/newcustomer"))
         .Build();
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using Microsoft.Teams.Api.MessageExtensions;
+using Microsoft.Teams.Api.TaskModules;
+using Microsoft.Teams.Common;
+
+// ...
+
+teams.OnFetchTask(async (ctx) =>
+{
+    return new ActionResponse
+    {
+        Task = new ContinueTask(
+            new TaskInfo
+            {
+                Title = "Example dialog",
+                Height = new Union<int, Size>(Size.Small),
+                Width = new Union<int, Size>(Size.Small),
+                Url = "https://contoso.com/msteams/taskmodules/newcustomer"
+            })
+    };
 });
 ```
 

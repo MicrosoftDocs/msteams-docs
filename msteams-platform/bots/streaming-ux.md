@@ -54,6 +54,8 @@ Streaming agent messages has two types of updates:
 
 Use `TeamsStreamingWriter` to write informative updates and stream response content. Finalize the writer after appending all response chunks.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -65,6 +67,19 @@ teams.OnMessage(async (context, cancellationToken) =>
   await writer.AppendResponseAsync(", ", cancellationToken);
   await writer.AppendResponseAsync("world!", cancellationToken);
   await writer.FinalizeResponseAsync(cancellationToken: cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async (context, cancellationToken) =>
+{   
+   context.Stream.Update("Testing");
+   await Task.Delay(1000);
+   context.Stream.Emit("hello");
+   context.Stream.Emit(", ");
+   context.Stream.Emit("world!");
 });
 ```
 

@@ -30,12 +30,26 @@ The request parameters are found in the `value` object in the request, which inc
 * [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnQuery(async (context, cancellationToken) =>
 { 
   MessageExtensionQuery? value = context.Activity.Value;
   var commandId = value?.CommandId;
   var parameters = value?.Parameters;
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+    // Code to handle the query. 
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    var parameters = ctx.Activity.Value.Parameters; 
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
     // Code to handle the query. 
 });
@@ -223,6 +237,8 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 * [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnQuery(async (context, cancellationToken) =>
 { 
@@ -232,6 +248,53 @@ teams.OnQuery(async (context, cancellationToken) =>
     var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
  
     var attachments = new List<TeamsAttachment>(); 
+ 
+    // Route to appropriate search 
+    if (commandId == "wikipediaSearch") 
+    { 
+        var results = await SearchWikipedia(query); 
+        attachments = results.Select(r => 
+        { 
+            var title = r["title"]?.ToString() ?? "No Title"; 
+            var snippet = Regex.Replace(r["snippet"]?.ToString() ?? "", "<[^>]+>", ""); 
+            return CreateAttachment(CreateWikipediaCard(r), title, snippet); 
+        }).ToList(); 
+    } 
+ 
+    if (attachments.Count == 0) 
+    { 
+        return new MsgExt.Response 
+        { 
+            ComposeExtension = new MsgExt.Result 
+            { 
+                Type = MsgExt.ResultType.Message, 
+                Text = $"No results found for '{query}'" 
+            } 
+        }; 
+    } 
+ 
+    return new MsgExt.Response 
+    { 
+        ComposeExtension = new MsgExt.Result 
+        { 
+            Type = MsgExt.ResultType.Result, 
+            AttachmentLayout = Attachment.Layout.List, 
+            Attachments = attachments 
+        } 
+    }; 
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnQuery(async (ctx) => 
+{ 
+    var commandId = ctx.Activity.Value.CommandId; 
+    var parameters = ctx.Activity.Value.Parameters; 
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+ 
+    var attachments = new List<MsgExt.Attachment>(); 
  
     // Route to appropriate search 
     if (commandId == "wikipediaSearch") 

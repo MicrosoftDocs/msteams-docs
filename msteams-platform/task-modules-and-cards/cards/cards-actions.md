@@ -749,6 +749,8 @@ Use the `OnAdaptiveCardAction` handler to process card actions:
 
 # [C#](#tab/csharp7)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using System.Text.Json;
 using Microsoft.Teams.Apps;
@@ -808,6 +810,82 @@ teams.OnAdaptiveCardAction(async (context, cancellationToken) =>
     }
 
     return AdaptiveCardResponse.CreateMessageResponse("Action processed successfully");
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Api.Activities.Invokes.AdaptiveCards;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Annotations;
+using Microsoft.Teams.Common.Logging;
+
+//...
+
+teams.OnAdaptiveCardAction(async context =>
+{
+    var activity = context.Activity;
+    context.Log.Info("[CARD_ACTION] Card action received");
+
+    var data = activity.Value?.Action?.Data;
+
+    context.Log.Info($"[CARD_ACTION] Raw data: {JsonSerializer.Serialize(data)}");
+
+    if (data == null)
+    {
+        context.Log.Error("[CARD_ACTION] No data in card action");
+        return new ActionResponse.Message("No data specified") { StatusCode = 400 };
+    }
+
+    string? action = data.TryGetValue("action", out var actionObj) ? actionObj?.ToString() : null;
+
+    if (string.IsNullOrEmpty(action))
+    {
+        context.Log.Error("[CARD_ACTION] No action specified in card data");
+        return new ActionResponse.Message("No action specified") { StatusCode = 400 };
+    }
+    context.Log.Info($"[CARD_ACTION] Processing action: {action}");
+
+    string? GetFormValue(string key)
+    {
+        if (data.TryGetValue(key, out var val))
+        {
+            if (val is JsonElement element)
+                return element.GetString();
+            return val?.ToString();
+        }
+        return null;
+    }
+
+    switch (action)
+    {
+        case "submit_feedback":
+            var feedbackText = GetFormValue("feedback") ?? "No feedback provided";
+            await context.Send($"Feedback received: {feedbackText}");
+            break;
+
+        case "create_task":
+            var title = GetFormValue("title") ?? "Untitled";
+            var priority = GetFormValue("priority") ?? "medium";
+            var dueDate = GetFormValue("due_date") ?? "No date";
+            await context.Send($"Task created!\nTitle: {title}\nPriority: {priority}\nDue: {dueDate}");
+            break;
+
+        case "save_profile":
+            var name = GetFormValue("name") ?? "Unknown";
+            var email = GetFormValue("email") ?? "No email";
+            var subscribe = GetFormValue("subscribe") ?? "false";
+            await context.Send($"Profile saved!\nName: {name}\nEmail: {email}\nSubscribed: {subscribe}");
+            break;
+
+        default:
+            context.Log.Error($"[CARD_ACTION] Unknown action: {action}");
+            return new ActionResponse.Message("Unknown action") { StatusCode = 400 };
+    }
+
+    return new ActionResponse.Message("Action processed successfully") { StatusCode = 200 };
 });
 ```
 
@@ -1124,6 +1202,8 @@ def create_task_form_card():
 
 # [C#](#tab/csharp9)
 
+## [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 using System.Text.Json;
 using Microsoft.Teams.Apps;
@@ -1142,6 +1222,22 @@ teams.OnMessage(async (context, cancellationToken) =>
           .WithAdaptiveCard(cardElement)
           .Build();
         await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+    }
+});
+```
+
+## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+teams.OnMessage(async context =>
+{
+    var text = context.Activity.Text?.ToLowerInvariant() ?? "";
+
+    if (text.Contains("form"))
+    {
+        await context.Typing();
+        var card = CreateTaskFormCard();
+        await context.Send(card);
     }
 });
 ```

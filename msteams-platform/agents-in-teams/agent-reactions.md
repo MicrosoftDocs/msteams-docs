@@ -35,6 +35,8 @@ To add and remove reactions from messages, use the `AddAsync` and `DeleteAsync` 
 
 The following example illustrates adding a reaction to a received message, then removing it.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
@@ -56,6 +58,29 @@ teams.OnMessage(async (context, cancellationToken) =>
     );
 });
 ```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // First, add a reaction
+    await context.Api.Conversations.Reactions.AddAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        new ReactionType("1f44b_wavinghand")
+    );
+
+    // Wait a bit, then remove it
+    await Task.Delay(2000);
+    await context.Api.Conversations.Reactions.DeleteAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        new ReactionType("1f44b_wavinghand")
+    );
+});
+```
+
 
 Adding or removing a reaction requires a reference to a message and a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, the `ReactionTypes` static class exposes named constants for a few of the most commonly used reaction IDs.
 
@@ -140,6 +165,8 @@ Reaction operations fail if the target message is deleted or the agent is remove
 
 Agents can listen for reaction activity in conversations they're a part of by handling the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
 ```csharp
 teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
@@ -150,6 +177,26 @@ teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 });
 
 teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
+    {
+        Console.WriteLine($"User removed reaction: {reaction.Type}");
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessageReactionAdded(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
+    {
+        Console.WriteLine($"User added reaction: {reaction.Type}");
+    }
+});
+
+app.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
     foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
     {
