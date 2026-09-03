@@ -96,9 +96,7 @@ The following table lists the response type associated with the invoke requests:
 
    When the user submits the configuration, the `config.submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the agent configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
-# [C#](#tab/teams-bot-sdk1)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/teams-bot-sdk1)
 
 ```csharp
 teams.OnTaskFetch(async (context, cancellationToken) =>
@@ -133,7 +131,7 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
 });
    ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk1-legacy)
 
 ```csharp
 
@@ -235,9 +233,7 @@ async def handle_config_open(
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-# [C#](#tab/teams-bot-sdk2)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/teams-bot-sdk2)
 
 ```csharp
 teams.OnTaskFetch(async (context, cancellationToken) =>
@@ -251,7 +247,7 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
 
    ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk2-legacy)
 
 ```csharp
 
@@ -326,9 +322,7 @@ async def handle_config_open(
 
 * `type="message"`: When the type is set to message, it indicates that the agent is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-# [C#](#tab/teams-bot-sdk3)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/teams-bot-sdk3)
 
 ```csharp
 teams.OnTaskSubmit(async (context, cancellationToken) =>
@@ -341,7 +335,7 @@ teams.OnTaskSubmit(async (context, cancellationToken) =>
 
    ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk3-legacy)
 
 ```csharp
 

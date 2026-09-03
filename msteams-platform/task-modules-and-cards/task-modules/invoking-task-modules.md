@@ -73,9 +73,7 @@ The next section provides examples of triggering and handling dialogs using the 
 
 To open a dialog, send an Adaptive Card with a `TaskFetchAction` button. When the user selects the button, Teams sends a task fetch invoke to your app. Each button's `value` data specifies the type of dialog to open (for example, `{ "data": "AdaptiveCard" }`).
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using System.Text.Json;
@@ -114,7 +112,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using Microsoft.Teams.Api.Activities;
@@ -216,9 +214,7 @@ async def handle_message(context: ActivityContext[MessageActivity]) -> None:
 
 When Teams sends a task fetch invoke, your app returns the dialog content. The content can be an Adaptive Card or a webpage URL. In C#, wrap the dialog metadata in a `ContinueTask` response. In TypeScript, return a `TaskModuleResponse` with `type: 'continue'`. In Python, return an `InvokeResponse` containing a `TaskModuleContinueResponse`.
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using System.Text.Json;
@@ -305,7 +301,7 @@ teams.OnTaskFetch(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -547,9 +543,7 @@ async def handle_dialog_open(context: ActivityContext[TaskFetchInvokeActivity]):
 
 When a user presses `Action.Submit` in a dialog, Teams sends a task submit invoke to your app. You can respond by completing the task, showing a message, or opening another dialog (for example, to chain multi-step forms).
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using System.Text.Json;
@@ -619,7 +613,7 @@ teams.OnTaskSubmit(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;

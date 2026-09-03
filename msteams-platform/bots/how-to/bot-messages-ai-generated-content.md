@@ -94,9 +94,7 @@ app.message(/label/i, async ({ send }) => {
 });
 ```
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 async Task SendAILabel(Context<MessageActivity> context, CancellationToken cancellationToken)
@@ -109,7 +107,7 @@ async Task SendAILabel(Context<MessageActivity> context, CancellationToken cance
 }
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 async Task SendAILabel(IContext context)
@@ -212,9 +210,7 @@ app.message(/citation/i, async ({ send }) => {
 });
 ```
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 
@@ -236,7 +232,7 @@ message.AddCitation(1, new CitationAppearance
 }
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 
@@ -355,9 +351,7 @@ app.message(/feedback/i, async ({ send }) => {
 }); 
 ```
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```Csharp
 async Task SendFeedbackButtons(Context<MessageActivity> context, CancellationToken cancellationToken)
@@ -370,7 +364,7 @@ await context.SendAsync(
 }
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```Csharp
 async Task SendFeedbackButtons(IContext context)

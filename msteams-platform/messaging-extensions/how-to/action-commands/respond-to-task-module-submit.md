@@ -51,12 +51,10 @@ If the app contains a conversational bot, install the bot in the conversation, a
 
 Examples of receiving the invoke message are as follows:
 
-# [C#/.NET](#tab/dotnet1)
+# [C# SDK v2.1](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -70,7 +68,7 @@ teams.OnSubmitAction(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet1-legacy)
 
 ```csharp
 var teams = app.UseTeams();
@@ -147,12 +145,10 @@ The following example is a JSON object that you receive. The `commandContext` pa
 
 The most common way to respond to the `composeExtensions/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-# [C#/.NET](#tab/dotnet2)
+# [C# SDK v2.1](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using System.Text.Json;
@@ -201,7 +197,7 @@ return MessageExtensionActionResponse.CreateBuilder()
   .Build();
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet2-legacy)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -621,9 +617,7 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a message with the Adaptive Card to the conversation, and also reply to the invoke.
 
-# [C#/.NET](#tab/dotnet5)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet5)
 
 ```csharp
 if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
@@ -644,7 +638,7 @@ if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
 }
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet5-legacy)
 
 ```csharp
 if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)

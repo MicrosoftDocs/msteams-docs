@@ -198,9 +198,7 @@ Fetch inline images that are part of the message using the `OnMessage` handler. 
 
 The following code shows an example of fetching inline images from a message:
 
-# [C#](#tab/csharp1)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp1)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -244,7 +242,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp1-legacy)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -351,9 +349,7 @@ The following example shows how to handle the complete file consent workflow, in
 
 The following code sends a file consent card to the user, requesting permission to upload the received file to their OneDrive:
 
-#### [C#](#tab/csharp2)
-
-##### [C# SDK v2.1](#tab/dotnet-v2-1)
+#### [C# SDK v2.1](#tab/csharp2)
 
 ```csharp
 async Task SendFileConsentCard(Context<MessageActivity> context, string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
@@ -378,7 +374,7 @@ async Task SendFileConsentCard(Context<MessageActivity> context, string fileName
 }
 ```
 
-##### [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+#### [C# SDK<2.1(legacy)](#tab/csharp2-legacy)
 
 ```csharp
 async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string fileId, int fileSize)

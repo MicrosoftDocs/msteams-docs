@@ -211,9 +211,7 @@ Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-a
 
 The following code shows how to send proactive messages using the Teams SDK (Teams AI Library):
 
-# [C#](#tab/dotnet)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet)
 
 ```csharp
 // Save the conversation ID and schedule a proactive reminder on install
@@ -237,7 +235,7 @@ public static class Notifications
 
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 // Save the conversation ID and schedule a proactive reminder on install

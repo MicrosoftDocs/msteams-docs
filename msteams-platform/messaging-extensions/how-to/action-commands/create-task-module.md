@@ -456,12 +456,10 @@ The payload activity properties when a dialog is invoked from a command box are 
 
 The following code section is an example of `fetchTask` request:
 
-# [C#/.NET](#tab/dotnet1)
+# [C# SDK v2.1](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -478,7 +476,7 @@ teams.OnFetchTask(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet1-legacy)
 
 ```csharp
 using Microsoft.Teams.Api.MessageExtensions;
@@ -593,12 +591,10 @@ async def handle_fetch_task(
 When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your message extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
 The following section is an example of the `value` object:
 
-# [C#/.NET](#tab/dotnet2)
+# [C# SDK v2.1](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -616,7 +612,7 @@ teams.OnFetchTask(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet2-legacy)
 
 ```csharp
 teams.OnFetchTask(async (ctx) =>
@@ -760,14 +756,12 @@ When using an Adaptive Card, you must respond with a `task` object with the `val
 
 The following code section is an example to `fetchTask` response with an Adaptive Card:
 
-# [C#/.NET](#tab/dotnet3)
+# [C# SDK v2.1](#tab/dotnet3)
 
 This sample uses the [Microsoft.Teams.Cards](https://www.nuget.org/packages/Microsoft.Teams.Cards) package, which is included with the Teams SDK.
 
 * [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using System.Text.Json;
@@ -821,7 +815,7 @@ teams.OnFetchTask(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet3-legacy)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -1070,9 +1064,7 @@ async def handle_fetch_task(
 
 When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [dialog documentation](~/task-modules-and-cards/what-are-task-modules.md).
 
-# [C#/.NET](#tab/dotnet4)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet4)
 
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -1095,7 +1087,7 @@ teams.OnFetchTask(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet4-legacy)
 
 ```csharp
 using Microsoft.Teams.Api.MessageExtensions;

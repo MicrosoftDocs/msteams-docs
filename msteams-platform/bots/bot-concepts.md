@@ -149,13 +149,11 @@ app.on('messageDelete', async ({ activity }) => {
 });
 ```
 
-# [C#](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
 
 Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
 
 `OnChannelCreated`
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -174,7 +172,78 @@ teams.OnChannelCreated(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+`OnChannelDeleted`
+
+```csharp
+teams.OnChannelDeleted(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+```
+
+`OnChannelRenamed`
+
+```csharp
+teams.OnChannelRenamed(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+```
+
+`OnTeamRenamed`
+
+```csharp
+teams.OnTeamRenamed(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+```
+
+`OnMembersAdded`
+
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersAdded)
+  {
+        // Code logic here
+    }
+});
+```
+
+`OnMembersRemoved`
+
+```csharp
+teams.OnMembersRemoved(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersRemoved)
+  {
+        // Code logic here
+    }
+});
+```
+
+`OnMessageUpdate` / `OnMessageDelete`
+
+Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
+
+```csharp
+teams.OnMessageUpdate(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+
+teams.OnMessageDelete(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
+
+Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
+
+`OnChannelCreated`
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -190,17 +259,6 @@ app.OnChannelCreated(async context => {
 
 `OnChannelDeleted`
 
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnChannelDeleted(async (context, cancellationToken) =>
-{
-    // Code logic here
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
 ```csharp
 app.OnChannelDeleted(async context => {
     // Code logic here
@@ -208,17 +266,6 @@ app.OnChannelDeleted(async context => {
 ```
 
 `OnChannelRenamed`
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnChannelRenamed(async (context, cancellationToken) =>
-{
-    // Code logic here
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnChannelRenamed(async context => {
@@ -228,17 +275,6 @@ app.OnChannelRenamed(async context => {
 
 `OnTeamRenamed`
 
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnTeamRenamed(async (context, cancellationToken) =>
-{
-    // Code logic here
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
 ```csharp
 app.OnTeamRenamed(async context => {
     // Code logic here
@@ -246,20 +282,6 @@ app.OnTeamRenamed(async context => {
 ```
 
 `OnMembersAdded`
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMembersAdded(async (context, cancellationToken) =>
-{
-  foreach (var member in context.Activity.MembersAdded)
-  {
-        // Code logic here
-    }
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMembersAdded(async context => {
@@ -270,20 +292,6 @@ app.OnMembersAdded(async context => {
 ```
 
 `OnMembersRemoved`
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMembersRemoved(async (context, cancellationToken) =>
-{
-  foreach (var member in context.Activity.MembersRemoved)
-  {
-        // Code logic here
-    }
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMembersRemoved(async context => {
@@ -296,22 +304,6 @@ app.OnMembersRemoved(async context => {
 `OnMessageUpdate` / `OnMessageDelete`
 
 Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessageUpdate(async (context, cancellationToken) =>
-{
-    // Code logic here
-});
-
-teams.OnMessageDelete(async (context, cancellationToken) =>
-{
-    // Code logic here
-});
-```
-
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessageUpdate(async context => {
@@ -417,9 +409,7 @@ app.on('message', async ({ activity, reply }) => {
 app.start().catch(console.error);
 ```
 
-# [C#](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -439,7 +429,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using Microsoft.Teams.Apps.Activities;
@@ -487,7 +477,7 @@ Agent logic incorporates the fundamental rules and decision-making frameworks th
 
 In Teams SDK v2, the agent logic processes incoming activities from one or more agent channels and generates outgoing activities. All activity routing is handled by the `App` instance — you register the handlers, and the SDK dispatches activities to them automatically.
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript-reference)
 
 #### Core activity handlers
 
@@ -538,7 +528,7 @@ The following table lists invoke activity handlers available via `app.on()`:
 | `task/fetch` | `'dialog.open'` | A dialog (task module) was fetched. |
 | `task/submit` | `'dialog.submit'` | A dialog (task module) was submitted. |
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp-reference)
 
 #### Core activity handlers
 
@@ -574,7 +564,7 @@ The `App` class exposes extension methods for registering handlers. Methods retu
 | `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
 | `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
 
-# [Python](#tab/python)
+# [Python](#tab/python-reference)
 
 #### Core activity handlers
 

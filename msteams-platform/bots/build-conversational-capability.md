@@ -283,23 +283,24 @@ You can also add RSC permissions through Graph API. For more information, see [`
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
-    teams.OnReadReceipt(async (context, cancellationToken) =>
-    {
-        var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-        await context.SendAsync("User read the agent's message", cancellationToken);
-    });
-    ```
+teams.OnReadReceipt(async (context, cancellationToken) =>
+{
+    var lastReadMessageId = context.Activity.Value.LastReadMessageId;
+    await context.SendAsync("User read the agent's message", cancellationToken);
+});
+```
 
 # [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
-    app.OnReadReceipt(async context =>
+app.OnReadReceipt(async context =>
+{
+    var lastReadMessageId = context.Activity.Value.LastReadMessageId;
+    await context.Send("User read the agent's message");
+});
+```
 
-    {
-        var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-        await context.Send("User read the agent's message");
-    });
-    ```
+---
 
 The following example shows a read receipts event request that an agent receives:
 
@@ -1143,6 +1144,8 @@ app.OnMessage(async context =>
     await context.Reply("Got it!");
 });
 ```
+
+---
 
 To quote a different message in the same conversation (not the inbound message), use the `Quote()` method with the message ID you want to quote.
 

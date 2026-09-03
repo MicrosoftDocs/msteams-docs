@@ -605,9 +605,7 @@ The following table includes the query parameters:
 
 ### Example
 
-# [C#](#tab/dotnet3)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet3)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -630,7 +628,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet3-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -779,12 +777,10 @@ The following table includes the query parameter:
 > * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
-# [C#](#tab/dotnet2)
+# [C# SDK v2.1](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -794,7 +790,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet2-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -1134,11 +1130,9 @@ The following table lists the query parameter:
 
 ### Example
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -1159,7 +1153,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -1609,7 +1603,7 @@ The following examples show how to capture the meeting start and end events:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
-# [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet4)
 
 ```csharp
 // Register meeting start handler
@@ -1654,7 +1648,7 @@ teams.OnMeetingStart(async (context, cancellationToken) =>
 
 ```
 
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet4-legacy)
 
 ```csharp
 // Register meeting start handler
@@ -1737,12 +1731,14 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 ```
 
+---
+
 **Meeting End Event**
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet5)
 
 ```csharp
 // Register meeting end handler with transcript support
@@ -1838,7 +1834,7 @@ teams.OnMeetingEnd(async (context, cancellationToken) =>
 
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet5-legacy)
 
 ```csharp
 // Register meeting end handler with transcript support
@@ -2153,11 +2149,9 @@ The following examples show how to capture the participant join and leave events
 
 **Participant join event**
 
-# [C#](#tab/dotnet6)
+# [C# SDK v2.1](#tab/dotnet6)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 // Register meeting participant join handler
@@ -2191,7 +2185,7 @@ teams.OnMeetingJoin(async (context, cancellationToken) =>
 
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet6-legacy)
 
 ```csharp
 // Register meeting participant join handler
@@ -2225,9 +2219,13 @@ teamsApp.OnMeetingJoin(async context =>
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
+---
+
+**Participant leave event**
+
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/dotnet7)
 
 ```csharp
 // Register meeting participant leave handler
@@ -2258,7 +2256,7 @@ teams.OnMeetingLeave(async (context, cancellationToken) =>
 
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet7-legacy)
 
 ```csharp
 // Register meeting participant leave handler

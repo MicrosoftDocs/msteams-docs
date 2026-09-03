@@ -54,11 +54,9 @@ Your bot can [send proactive messages](../../bots/how-to/conversations/send-proa
 
 The following code provides an example of sending proactive messages:
 
-# [C#](#tab/dotnet1)
+# [C# SDK v2.1](#tab/dotnet1)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 using Microsoft.Teams.Api; 
@@ -84,7 +82,7 @@ public static async Task SendProactiveNotification(string userId, CancellationTo
 } 
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet1-legacy)
 
 ```csharp
 using Microsoft.Teams.Api; 

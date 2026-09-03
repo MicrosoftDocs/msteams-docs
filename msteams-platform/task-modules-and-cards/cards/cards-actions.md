@@ -747,9 +747,7 @@ Universal Action submissions are delivered to your bot as `invoke` activities na
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 
-# [C#](#tab/csharp7)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp7)
 
 ```csharp
 using System.Text.Json;
@@ -813,7 +811,7 @@ teams.OnAdaptiveCardAction(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp7-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -1200,9 +1198,7 @@ def create_task_form_card():
 
 ### Send the card
 
-# [C#](#tab/csharp9)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp9)
 
 ```csharp
 using System.Text.Json;
@@ -1226,7 +1222,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp9-legacy)
 
 ```csharp
 teams.OnMessage(async context =>

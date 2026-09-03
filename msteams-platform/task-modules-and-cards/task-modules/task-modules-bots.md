@@ -75,9 +75,7 @@ When the user submits a dialog, the bot receives a `task/submit` invoke message.
 
 The following tabs show how to handle dialog submit events in .NET, TypeScript, and Python:
 
-# [.NET](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using System.Text.Json;
@@ -128,7 +126,7 @@ teams.OnTaskSubmit(async (context, cancellationToken) =>
       });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -236,9 +234,7 @@ async def handle_dialog_submit(ctx: ActivityContext[TaskSubmitInvokeActivity]):
 
 You can chain Adaptive Cards into a multi-step wizard by returning a `ContinueTask` response from the submit handler. Each step returns a new card, and the final step returns a `MessageTask` to close the dialog.
 
-# [.NET](#tab/csharp)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
+# [C# SDK v2.1](#tab/csharp)
 
 ```csharp
 using System.Text.Json;
@@ -302,7 +298,7 @@ case "webpage_dialog_step_2":
       .Build();
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;

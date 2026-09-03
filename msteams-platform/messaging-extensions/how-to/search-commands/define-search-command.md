@@ -74,12 +74,10 @@ Microsoft 365 agents provide integration with various Microsoft 365 products, su
 
 The following code provides an example of search-based for message extensions:
 
-# [.NET](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
-
-## [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
 teams.OnQuery(async (context, cancellationToken) =>
@@ -129,7 +127,7 @@ teams.OnQuery(async (context, cancellationToken) =>
 });
 ```
 
-## [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
