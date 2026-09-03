@@ -1,15 +1,15 @@
 ---
 title: Teams SDK Incoming Request Authentication
-description: TODO
+description: Teams SDK incoming request authentication validates every inbound JWT at the HTTP boundary. Learn what the SDK checks automatically and how to protect custom routes.
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
 ms.date: 09/02/2026
-ms.topic: article
+ms.topic: concept-article
 zone_pivot_groups: teams-sdk-languages
 ---
 
-## Teams SDK incoming request authentication
+# Teams SDK incoming request authentication
 
 Teams SDK enforces a layered authentication model. Inbound JSON Web Tokens are validated once, at the HTTP boundary, before any handler in your application sees them. Everything downstream — your activity handlers, the parsed token accessor on the context, and any custom routes that opt into the same policy — operates on tokens that have already passed signature, issuer, audience, and expiry checks.
 

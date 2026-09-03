@@ -15,7 +15,7 @@ All communications between an agent runtime and Bot Connector are authenticated.
 
 - **Client secret**: The runtime authenticates using a client secret (password) stored in its configuration. New agents created using the Teams developer CLI or the Teams Developer Portal are configured for client secret authentication by default.
 - **Managed identity via federated identity credentials** (for Azure-hosted runtimes): The runtime authenticates using a [managed identity for Azure resources](/entra/identity/managed-identities-azure-resources/overview). Available only to agent runtimes hosted in Azure, this option eliminates the need to handle and configure a sensitive client secret.
-- **User assigned managed identity bot type**: This option is specifically for Azure-hosted agents using an Azure AI Bot Service resource with the "User-Assigned Managed Identity" bot type. See [Azure AI Bot Service resource bot type](choose-agent-registration-type.md#azure-ai-bot-service-resource-bot-type) for more information.
+- **User assigned managed identity bot type**: This option is specifically for Azure-hosted agents using an Azure AI Bot Service resource with the "User-Assigned Managed Identity" bot type.
 
 This guide explains how to manually configure and verify each of these options.
 
