@@ -29,7 +29,7 @@ Both kinds of registration can be created using the Teams developer CLI, which a
 
 ## Azure AI Bot Service resource bot type
 
- maybe a bit about "Single Tenant" vs "UAMI", the latter requires Azure hosting and is less flexible, I think we consider it legacy?
+ TODO a bit about "Single Tenant" vs "UAMI", the latter requires Azure hosting and is less flexible, I think we consider it legacy?
 
 ## See also
 
