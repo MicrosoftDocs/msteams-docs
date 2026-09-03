@@ -20,14 +20,16 @@ By registering an agent at the beginning of development, you can use it in Teams
 
 ## Entra ID app registration: identity and authentication
 
-Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that an agent uses to authenticate to secured resources and participate in user delegation flows (single sign-on and OAuth) within the Microsoft ecosystem.
+Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that enables multiple important agent capabilities:
 
-An Entra ID app registration is not strictly required for all Teams agents. However, most agents have one, as it enables multiple important capabilities:
+ that an agent uses to authenticate to secured resources in the Microsoft ecosystem and participate in user delegation flows (single sign-on and OAuth).
 
-- **Authenticating to organizational resources**: Many agents access organizational data and services, including the Microsoft Graph API, to power collaboration features.
-- **On-behalf-of flows with single sign-on and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
+An Entra ID app registration :
+
+- **Authentication to organizational resources**: Many agents directly access organizational data and services, such as Microsoft Graph, to power collaboration features.
+- **On-behalf-of flows with single sign-on (SSO) and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
 - **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
-- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector using an Entra ID identity. An app registration is the recommended and most flexible choice, and is the only choice for agent runtimes not hosted on Microsoft Azure.
+- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector using an Entra ID app registration.
 
 Some scenarios call for an agent to be associated with multiple Entra ID app registrations, but most require only a single app registration to enable all of these capabilities.
 

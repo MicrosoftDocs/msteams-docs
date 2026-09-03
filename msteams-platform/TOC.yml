@@ -32,7 +32,9 @@
     - name: Choose an agent registration type
       href: agents-in-teams/choose-agent-registration-type.md
     - name: Configure runtime authentication
-      href: agents-in-teams/agent-runtime-authentication-configuration.md
+      href: agents-in-teams/configure-agent-runtime-authentication.md
+    - name: Incoming request authentication
+      href: agents-in-teams/incoming-request-authentication.md
   - name: Integrate AI
     items:
     - name: Stream messages
