@@ -10,15 +10,15 @@ ms.topic: how-to
 
 # Choose a Bot Connector registration type for an agent
 
-Bot Connector is the service that agents use to interact with Teams. Before an agent runtime can interact with Bot Connector, its developer must register it with the service.
+Bot Connector is the service that agents use to interact with Teams. Before your agent runtime can interact with Bot Connector, you must register it with the service.
 
 Bot Connector supports two different kinds of agent registration: standalone and Azure AI Bot Service resource. **The recommended approach to agent development is to begin with a standalone registration and migrate to an Azure AI Bot Service registration later if needed.**
 
 Both kinds of registration are equally appropriate for development, testing, and production scenarios, but **agents that participate in single sign-on (SSO) or OAuth flows must use an Azure AI Bot Service resource to register with Bot Connector**. An Azure AI Bot Service resource requires an active Azure subscription and exists within the [Azure resource management ecosystem](/azure/azure-resource-manager/management/overview) for purposes of administration, governance, access control and lifecycle management.
 
-Creating a standalone registration does not require an Azure subscription, but standalone registrations do not support the configuration needed to enable agent SSO and OAuth. Management and governance of a standalone registration must be performed by the single Microsoft 365 account that created it.
+Creating a standalone registration does not require an Azure subscription, but standalone registrations do not support the configuration needed to enable agent SSO and OAuth. Use the Teams Developer Portal to configure and manage a standalone registration using the Microsoft 365 account that created it.
 
-Developers can use the Teams developer CLI to create both kinds of registration and migrate from one to the other.
+Both kinds of registration can be created using the Teams developer CLI, which also supports migrating from one kind of registration to the other.
 
 |                                              | Standalone registration                                                                                       | Azure AI Bot Services resource                                                                                                                                                                 |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,6 +26,10 @@ Developers can use the Teams developer CLI to create both kinds of registration 
 | Governance                                   | Owned by the creating user                                                                                    | An Azure AI Bot Services registration is an Azure resource within the Azure resource management ecosystem, enabling shared administration, governance, access control and lifecycle management |
 | Dependencies                                 | None                                                                                                          | Active Azure subscription; management via Teams developer CLI requires a logged-in Azure CLI                                                                                                   |
 | SSO and OAuth                                | Does not support SSO or OAuth flows                                                                           | Full support for SSO and OAuth                                                                                                                                                                 |
+
+## Azure AI Bot Service resource bot type
+
+ maybe a bit about "Single Tenant" vs "UAMI", the latter requires Azure hosting and is less flexible, I think we consider it legacy?
 
 ## See also
 

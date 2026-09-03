@@ -72,4 +72,4 @@ App manifests conform to the [app manifest schema](/microsoft-365/extensibility/
 
 ## See also
 
-- [App manifest schema reference](/microsoft-365/extensibility/schema]
+- [App manifest schema reference](/microsoft-365/extensibility/schema)

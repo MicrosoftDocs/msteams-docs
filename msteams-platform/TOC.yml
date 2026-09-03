@@ -25,12 +25,14 @@
     - name: "Quickstart: Create and chat with an agent"
       href: agents-in-teams/quickstart-create-agent-teams-sdk.md
       displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
-  - name: Configure and register
+  - name: Register and authenticate
     items:
     - name: Agent registration overview
       href: concepts/registering-agent-teams-platform.md
     - name: Choose an agent registration type
       href: agents-in-teams/choose-agent-registration-type.md
+    - name: Configure runtime authentication
+      href: agents-in-teams/agent-runtime-authentication-configuration.md
   - name: Integrate AI
     items:
     - name: Stream messages
