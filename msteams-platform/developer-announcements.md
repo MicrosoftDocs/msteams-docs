@@ -15,9 +15,9 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## TLS 1.3 support for agent runtime connections
 
-*August 21, 2026*
+*September 4, 2026*
 
-In **September 2026**, Microsoft will enable TLS 1.3 support for connections between Teams agent runtimes and the Bot Connector service (the `https://smba.*` family of service endpoints). TLS 1.3 provides improved security and performance compared to earlier versions. Bot Connector will continue to support TLS 1.2.
+At the **end of October 2026**, Microsoft will enable TLS 1.3 support for connections between Teams agent runtimes and Agent Communications Service (the `https://smba.*` family of service endpoints). TLS 1.3 provides improved security and performance compared to earlier versions. Agent Communications Service will continue to support TLS 1.2.
 
 In most cases, no developer action is required. However, **developers hosting agent runtimes behind security controls that perform JA3/JA4 TLS fingerprint matching or similar kinds of connection handshake validation should review those controls.**
 
