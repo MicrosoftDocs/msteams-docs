@@ -10,19 +10,19 @@ ms.date: 07/21/2026
 
 # Registering an agent on the Teams platform
 
+This article explains the underlying concepts of registering an agent on the Teams platform, but a deep understanding of these concepts is not needed to begin Teams agent development. You can use the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to quickly create and register a new agent and refer to this guide as needed to build a more complete understanding.
+
 Creating and hosting an agent runtime is not enough to make an agent available in Teams. You must also *register* your agent at the beginning of the development process by creating configuration for it across three services:
 
-- **Microsoft Entra ID**: An Entra ID app registration is the identity used by the agent to authenticate and get access to services and data
-- **Bot Connector service**: Registering the agent with the Bot Connector service enables it to interact with users in Teams chat
-- **Teams platform**: An app manifest registered in Teams Developer Portal establishes an agent as a distributable, installable Teams app
+- **Microsoft Entra ID**: An Entra ID app registration is the identity used by the agent to authenticate and get access to services and data.
+- **Bot Connector service**: Registering the agent with the Bot Connector service enables it to interact with users in Teams chat.
+- **Teams platform**: An app manifest registered in Teams Developer Portal establishes an agent as a distributable, installable Teams app.
 
 By registering an agent at the beginning of development, you can use it in Teams as it takes shape, verifying its behavior and experiencing it exactly as users will.
 
-This article explains the underlying concepts and purpose behind agent registration, but a deep understanding of these concepts is not needed to begin Teams agent development. You can use the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to quickly create and register a new agent and refer to this guide as needed to build a more complete understanding.
-
 ## Entra ID app registration: identity and authentication
 
-Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that enables multiple important agent capabilities:
+Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that enables multiple agent capabilities:
 
 - **Authentication to organizational resources**: Many agents directly access organizational data and services, such as Microsoft Graph, to power collaboration features.
 - **On-behalf-of flows with single sign-on (SSO) and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
@@ -53,7 +53,7 @@ An agent's app manifest is a JSON configuration file that contains everything ne
 - Platform-level configuration needed for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
 
-Registering an agent's app manifest in Teams Developer Portal is what establishes it as a Teams app that can be distributed in the Teams store or your organization's app catalog. When you create and register a starter app manifest at the beginning of agent development, you can use the web interface of Teams Developer Portal to update it as you add features that need manifest configuration.
+Registering an agent's app manifest in Teams Developer Portal is what establishes it as a Teams app that can be distributed in the Teams store or your organization's app catalog. Certain agent features require app manifest configuration, and as you add them during development, you can use the web interface of Teams Developer Portal to update the manifest.
 
 App manifests conform to the [app manifest schema](/microsoft-365/extensibility/schema), which evolves as Microsoft releases new Teams platform features.
 
