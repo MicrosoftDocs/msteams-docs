@@ -5,6 +5,8 @@ The configuration model that determines whether a Teams agent can be used in mul
 
 A *multi-tenant agent* is a Teams agent that can be installed and used in Entra tenants other than the one where its Entra ID app registration resides. Agents that need to be installed in other tenants, including all agents distributed publicly via the Teams app store, must be configured as multi-tenant. Most workflows for creating and registering an agent result in multi-tenant configuration by default.
 
+## Verify and configure agent tenancy
+
 The configuration property that determines whether an agent is eligible for multi-tenant use is the `signInAudience` property of the Entra ID app registration linked to the agent's Bot Connector registration. This property is displayed in some contexts as its **Supported account types**.
 
 To be eligible for multi-tenant usage, the app registration's `signInAudience` must be set to `AzureADMultipleOrgs` (**Supported account types** displays as **Multiple Entra ID tenants** or **Multiple organizations** depending on the context). A value of `AzureADMyOrg` indicates that the app registration can only be used in the tenant where it resides.
