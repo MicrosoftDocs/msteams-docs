@@ -54,7 +54,29 @@ You've now configured the required environment variables for your bot app and SS
 
 The Teams SDK simplifies app initialization with a single `App` class that handles server lifecycle, authentication, and token exchange internally.
 
-# [C#](#tab/cs1)
+# [C# SDK v2.1](#tab/cs1)
+
+```csharp
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.OAuth;
+
+var builder = WebApplication.CreateBuilder(args);
+
+var connectionName = builder.Configuration["CONNECTION_NAME"]
+    ?? throw new InvalidOperationException("Missing required configuration value: CONNECTION_NAME");
+
+builder.Services.AddTeamsBotApplication(options =>
+{
+  options.AddOAuthFlow(connectionName);
+});
+
+var app = builder.Build();
+var teams = app.UseTeamsBotApplication();
+
+OAuthFlow auth = teams.GetOAuthFlow(connectionName);
+```
+
+# [C# SDK<2.1(legacy)](#tab/cs1-legacy)
 
 ```csharp
 using Microsoft.Teams.Apps.Extensions;
@@ -183,7 +205,27 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 
 The Teams SDK uses simple event-driven handlers for authentication. Use `IsSignedIn` to check authentication status, `SignIn()` to trigger the SSO flow, and subscribe to the `signin` event to handle successful authentication.
 
-# [C#](#tab/cs3)
+# [C# SDK v2.1](#tab/cs3)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+  string? token = await auth.SignInAsync(context, cancellationToken);
+  if (token is null)
+    {
+        return;
+    }
+
+  await context.SendAsync($"You are signed in. Token length: {token.Length}", cancellationToken);
+});
+
+auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
+{
+  await context.SendAsync("Successfully signed in! You can now use the bot.", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/cs3-legacy)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -251,7 +293,17 @@ async def handle_sign_in(event: SignInEvent):
 
 When using SSO, if the token exchange fails, Teams sends a `signin/failure` invoke activity to your app. The SDK includes a built-in default handler that logs a warning with actionable troubleshooting guidance. You can optionally register your own handler to customize the behavior:
 
-# [C#](#tab/cs5)
+# [C# SDK v2.1](#tab/cs5)
+
+```csharp
+auth.OnSignInFailure(async (context, failure, cancellationToken) =>
+{
+    Console.WriteLine($"Sign-in failed: {failure?.Code} - {failure?.Message}");
+    await context.SendAsync("Sign-in failed. Please try again.", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/cs5-legacy)
 
 ```csharp
 teams.OnSignInFailure(async (context, cancellationToken) =>
@@ -288,7 +340,17 @@ async def handle_signin_failure(ctx):
 
 Call the `signout` method to remove the user's authentication token from the User Token service cache, effectively signing them out. The Teams SDK replaces the previous pattern of using `DialogContext`, `UserTokenClient`, and `CancelAllDialogsAsync` with a simple method call.
 
-# [C#](#tab/cs4)
+# [C# SDK v2.1](#tab/cs4)
+
+```csharp
+teams.OnMessage("/signout", async (context, cancellationToken) =>
+{
+  await auth.SignOutAsync(context, cancellationToken);
+  await context.SendAsync("You have been signed out.", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/cs4-legacy)
 
 ```csharp
 teams.OnMessage("/signout", async (context, cancellationToken) =>

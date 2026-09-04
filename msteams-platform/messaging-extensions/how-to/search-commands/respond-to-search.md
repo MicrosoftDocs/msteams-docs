@@ -25,10 +25,23 @@ The request parameters are found in the `value` object in the request, which inc
 | `parameters` | Array of parameters. Each parameter object contains the parameter name along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
-# [C#/.NET](#tab/dotnet1)
+# [C# SDK v2.1](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
+```csharp
+teams.OnQuery(async (context, cancellationToken) =>
+{ 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+    // Code to handle the query. 
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet1-legacy)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
@@ -217,10 +230,58 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 
 ### Response example
 
-# [.NET](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
+```csharp
+teams.OnQuery(async (context, cancellationToken) =>
+{ 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+ 
+    var attachments = new List<TeamsAttachment>(); 
+ 
+    // Route to appropriate search 
+    if (commandId == "wikipediaSearch") 
+    { 
+        var results = await SearchWikipedia(query); 
+        attachments = results.Select(r => 
+        { 
+            var title = r["title"]?.ToString() ?? "No Title"; 
+            var snippet = Regex.Replace(r["snippet"]?.ToString() ?? "", "<[^>]+>", ""); 
+            return CreateAttachment(CreateWikipediaCard(r), title, snippet); 
+        }).ToList(); 
+    } 
+ 
+    if (attachments.Count == 0) 
+    { 
+        return new MsgExt.Response 
+        { 
+            ComposeExtension = new MsgExt.Result 
+            { 
+                Type = MsgExt.ResultType.Message, 
+                Text = $"No results found for '{query}'" 
+            } 
+        }; 
+    } 
+ 
+    return new MsgExt.Response 
+    { 
+        ComposeExtension = new MsgExt.Result 
+        { 
+            Type = MsgExt.ResultType.Result, 
+            AttachmentLayout = Attachment.Layout.List, 
+            Attachments = attachments 
+        } 
+    }; 
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
