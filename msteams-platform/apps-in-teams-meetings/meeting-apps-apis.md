@@ -1598,7 +1598,7 @@ The bot receives the meeting start and meeting end events through the `OnTeamsMe
 
 The following examples show how to capture the meeting start and end events:
 
-**Meeting Start Event**
+#### Meeting start event
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
@@ -1733,7 +1733,7 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 ---
 
-**Meeting End Event**
+#### Meeting end event
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
@@ -2018,6 +2018,8 @@ async def handle_meeting_end(ctx: ActivityContext[MeetingEndEventActivity]) -> N
 
 ```
 
+---
+
 ### Example of meeting start event payload
 
 The following code provides an example of meeting start event payload:
@@ -2147,40 +2149,40 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-**Participant join event**
-
-# [C# SDK v2.1](#tab/dotnet6)
+#### Participant join event
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+
+# [C# SDK v2.1](#tab/dotnet6)
 
 ```csharp
 // Register meeting participant join handler
 teams.OnMeetingJoin(async (context, cancellationToken) =>
 {
-    var activity = context.Activity.Value;
-    if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
+  var activity = context.Activity.Value;
+  if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
 
-    var member = activity.Members[0].User.Name;
-    var role = activity.Members[0].Meeting?.Role ?? "a participant";
+  var member = activity.Members[0].User.Name;
+  var role = activity.Members[0].Meeting?.Role ?? "a participant";
 
-    var card = new AdaptiveCard
+  var card = new AdaptiveCard
+  {
+    Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+    Body = new List<CardElement>
     {
-        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
-        Body = new List<CardElement>
-        {
-            new TextBlock($"{member} has joined the meeting as {role}.")
-            {
-                Wrap = true,
-                Weight = TextWeight.Bolder
-            }
-        }
-    };
+      new TextBlock($"{member} has joined the meeting as {role}.")
+      {
+        Wrap = true,
+        Weight = TextWeight.Bolder
+      }
+    }
+  };
 
-    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
-      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
-      .Build();
+  TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+    .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+    .Build();
 
-    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+  await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```
@@ -2191,26 +2193,26 @@ teams.OnMeetingJoin(async (context, cancellationToken) =>
 // Register meeting participant join handler
 teamsApp.OnMeetingJoin(async context =>
 {
-    var activity = context.Activity.Value;
-    if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
+  var activity = context.Activity.Value;
+  if (string.IsNullOrEmpty(activity.Members[0].User?.AadObjectId)) return;
 
-    var member = activity.Members[0].User.Name;
-    var role = activity.Members[0].Meeting?.Role ?? "a participant";
+  var member = activity.Members[0].User.Name;
+  var role = activity.Members[0].Meeting?.Role ?? "a participant";
 
-    var card = new AdaptiveCard
+  var card = new AdaptiveCard
+  {
+    Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+    Body = new List<CardElement>
     {
-        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
-        Body = new List<CardElement>
-        {
-            new TextBlock($"{member} has joined the meeting as {role}.")
-            {
-                Wrap = true,
-                Weight = TextWeight.Bolder
-            }
-        }
-    };
+      new TextBlock($"{member} has joined the meeting as {role}.")
+      {
+        Wrap = true,
+        Weight = TextWeight.Bolder
+      }
+    }
+  };
 
-    await context.Send(card);
+  await context.Send(card);
 });
 
 ```
@@ -2219,9 +2221,63 @@ teamsApp.OnMeetingJoin(async context =>
 
 * [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.api/imeetingparticipantjoineventactivity?view=msteams-sdk-ts-latest&preserve-view=true)
 
+```typescript
+app.on('meetingParticipantJoin', async ({ activity, send }) => {
+  const meetingData = activity.value;
+  const participant = meetingData.members[0];
+
+  // Skip bot's own join event (no aadObjectId)
+  if (!participant.user?.aadObjectId) return;
+
+  const member = participant.user.name || 'A participant';
+  const role = participant.meeting?.role || 'a participant';
+
+  const card = new AdaptiveCard(
+  new TextBlock(`${member} has joined the meeting as ${role}.`, {
+    wrap: true,
+    weight: 'Bolder'
+  })
+  );
+
+  await send(card);
+});
+
+```
+
+# [Python](#tab/python6)
+
+* [SDK reference](/python/api/microsoft-teams-api/microsoft_teams.api?view=msteams-sdk-python-latest&preserve-view=true)
+
+```python
+@app.on_meeting_participant_join
+async def handle_meeting_participant_join(ctx: ActivityContext[MeetingParticipantJoinEventActivity]):
+  meeting_data = ctx.activity.value
+  participant = meeting_data.members[0]
+
+  # Skip bot's own join event if no aadObjectId is present.
+  if not getattr(participant.user, "aad_object_id", None):
+    return
+
+  member = participant.user.name or "A participant"
+  role = participant.meeting.role if participant.meeting else "a participant"
+
+  card = AdaptiveCard(
+    body=[
+      TextBlock(
+        text=f"{member} has joined the meeting as {role}.",
+        wrap=True,
+        weight="Bolder",
+      )
+    ]
+  )
+
+  await ctx.send(card)
+
+```
+
 ---
 
-**Participant leave event**
+#### Participant leave event
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
@@ -2231,27 +2287,27 @@ teamsApp.OnMeetingJoin(async context =>
 // Register meeting participant leave handler
 teams.OnMeetingLeave(async (context, cancellationToken) =>
 {
-    var activity = context.Activity.Value;
-    var member = activity.Members[0].User.Name;
+  var activity = context.Activity.Value;
+  var member = activity.Members[0].User.Name;
 
-    var card = new AdaptiveCard
+  var card = new AdaptiveCard
+  {
+    Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+    Body = new List<CardElement>
     {
-        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
-        Body = new List<CardElement>
-        {
-            new TextBlock($"{member} has left the meeting.")
-            {
-                Wrap = true,
-                Weight = TextWeight.Bolder
-            }
-        }
-    };
+      new TextBlock($"{member} has left the meeting.")
+      {
+        Wrap = true,
+        Weight = TextWeight.Bolder
+      }
+    }
+  };
 
-    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
-      .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
-      .Build();
+  TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+    .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+    .Build();
 
-    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+  await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
 });
 
 ```
@@ -2262,23 +2318,23 @@ teams.OnMeetingLeave(async (context, cancellationToken) =>
 // Register meeting participant leave handler
 teamsApp.OnMeetingLeave(async context =>
 {
-    var activity = context.Activity.Value;
-    var member = activity.Members[0].User.Name;
+  var activity = context.Activity.Value;
+  var member = activity.Members[0].User.Name;
 
-    var card = new AdaptiveCard
+  var card = new AdaptiveCard
+  {
+    Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
+    Body = new List<CardElement>
     {
-        Schema = "http://adaptivecards.io/schemas/adaptive-card.json",
-        Body = new List<CardElement>
-        {
-            new TextBlock($"{member} has left the meeting.")
-            {
-                Wrap = true,
-                Weight = TextWeight.Bolder
-            }
-        }
-    };
+      new TextBlock($"{member} has left the meeting.")
+      {
+        Wrap = true,
+        Weight = TextWeight.Bolder
+      }
+    }
+  };
 
-    await context.Send(card);
+  await context.Send(card);
 });
 
 ```
@@ -2298,10 +2354,10 @@ app.on('meetingParticipantLeave', async ({ activity, send }) => {
   const member = participant.user.name || 'A participant';
 
   const card = new AdaptiveCard(
-    new TextBlock(`${member} has left the meeting.`, {
-      wrap: true,
-      weight: 'Bolder'
-    })
+  new TextBlock(`${member} has left the meeting.`, {
+    wrap: true,
+    weight: 'Bolder'
+  })
   );
 
   await send(card);
@@ -2316,20 +2372,20 @@ app.on('meetingParticipantLeave', async ({ activity, send }) => {
 ```python
 @app.on_meeting_participant_leave
 async def handle_meeting_participant_leave(ctx: ActivityContext[MeetingParticipantLeaveEventActivity]):
-    meeting_data = ctx.activity.value
-    member = meeting_data.members[0].user.name
+  meeting_data = ctx.activity.value
+  member = meeting_data.members[0].user.name
 
-    card = AdaptiveCard(
-        body=[
-            TextBlock(
-                text=f"{member} has left the meeting.",
-                wrap=True,
-                weight="Bolder",
-            )
-        ]
-    )
+  card = AdaptiveCard(
+    body=[
+      TextBlock(
+        text=f"{member} has left the meeting.",
+        wrap=True,
+        weight="Bolder",
+      )
+    ]
+  )
 
-    await ctx.send(card)
+  await ctx.send(card)
 
 ```
 

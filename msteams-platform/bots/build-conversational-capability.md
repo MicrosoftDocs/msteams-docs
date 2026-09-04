@@ -1505,6 +1505,8 @@ To enable your agents to get only those channel or chat messages where your agen
 });
 ```
 
+---
+
 If you want your agent to receive all messages, then you don't need to filter the @mention messages.
 
 ## Next step

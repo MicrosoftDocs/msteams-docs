@@ -81,6 +81,7 @@ app.OnMessage(async context =>
 });
 ```
 
+---
 
 Adding or removing a reaction requires a reference to a message and a reaction ID string that uniquely identifies the emoji to use. See the [Teams Reactions Reference](teams-reactions-reference.md) for a complete list of available emoji, including skin tone variants. Additionally, the `ReactionTypes` static class exposes named constants for a few of the most commonly used reaction IDs.
 
