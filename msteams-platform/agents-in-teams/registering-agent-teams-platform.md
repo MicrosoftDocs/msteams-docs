@@ -10,12 +10,12 @@ ms.date: 07/21/2026
 
 # Registering an agent on the Teams platform
 
-This article explains the underlying concepts of registering an agent on the Teams platform, but a deep understanding of these concepts is not needed to begin Teams agent development. You can use the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to quickly create and register a new agent and refer to this guide as needed to build a more complete understanding.
+This article explains the underlying concepts of registering a Teams agent, but a deep understanding of them is not needed to begin Teams agent development. You can use the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to quickly create and register a new agent and refer to this guide as needed to build a more complete understanding.
 
-Creating and hosting an agent runtime is not enough to make an agent available in Teams. You must also *register* your agent at the beginning of the development process by creating configuration for it across three services:
+Creating and hosting an agent runtime is not enough to make a Teams agent available to users. You must also *register* your agent at the beginning of the development process by creating configuration for it across three services:
 
-- **Microsoft Entra ID**: An Entra ID app registration is the identity used by the agent to authenticate and get access to services and data.
-- **Bot Connector service**: Registering the agent with the Bot Connector service enables it to interact with users in Teams chat.
+- **Microsoft Entra ID**: An Entra ID app registration is the agent's unique identity within the Microsoft 365 ecosystem, used for service authentication and consented access to user services and data.
+- **Bot Connector service**: Registering the agent with the Bot Connector service enables it to participate in Teams chat and receive realtime information about user activities in Teams.
 - **Teams platform**: An app manifest registered in Teams Developer Portal establishes an agent as a distributable, installable Teams app.
 
 By registering an agent at the beginning of development, you can use it in Teams as it takes shape, verifying its behavior and experiencing it exactly as users will.
@@ -27,18 +27,17 @@ Microsoft Entra ID is the identity and access management service used by Teams a
 - **Authentication to organizational resources**: Many agents directly access organizational data and services, such as Microsoft Graph, to power collaboration features.
 - **On-behalf-of flows with single sign-on (SSO) and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
 - **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
-- **Authentication with Bot Connector**: An agent's runtime must authenticate to Bot Connector using an Entra ID app registration.
+- **Authentication with Bot Connector**: An agent's Bot Connector registration must be uniquely associated with an app registration.
 
-Some scenarios call for an agent to be associated with multiple Entra ID app registrations, but most require only a single app registration to enable all of these capabilities.
+In some cases, agents might be configured and implemented to use multiple app registrations to support different identity scenarios. Every agent will have at least one app registration: the one linked to its Bot Connector registration.
 
 ## Bot Connector registration: an agent's interface to Teams
 
-Bot Connector is the service that agents use to interact with most Teams functionality, especially chat. Before your agent can authenticate to Bot Connector and perform actions in Teams, you need to register it with the service.
+Bot Connector is the service that agents use to access most Teams functionality, especially chat. Before your agent can interact with Teams, you need to register it with the service.
 
-A Bot Connector registration contains a small amount of configuration, most importantly:
+Every Bot Connector registration has a permanent 1:1 association with an Entra ID app registration. The agent's runtime uses credentials attached to the app registration - a client secret or Azure managed identity - to authenticate with Bot Connector. The app registration's application ID is used as the agent's unique identifier anywhere one is needed, such as the app manifest and the agent's runtime configuration.
 
-- The endpoint URL of the agent's runtime. Bot Connector will send realtime activity data about user actions in Teams to this endpoint.
-- A reference to an Entra ID identity used for agent runtime authentication. The agent's runtime must authenticate to Bot Connector using credentials associated with this identity. In most cases, this identity is an Entra ID app registration.
+A Bot Connector registration is also where you configure an agent's runtime endpoint URL. Bot Connector will send realtime activity data about user actions in Teams to this endpoint.
 
 Bot Connector supports two different kinds of registration: *standalone* and *Azure AI Bot Service resource*. See [Choose a Bot Connector registration type for an agent](../agents-in-teams/choose-agent-registration-type.md) for more information.
 
@@ -48,7 +47,6 @@ An agent's app manifest is a JSON configuration file that contains everything ne
 
 - The agent's name and description
 - Information about the agent's developer
-- The ID of the agent's Entra ID app registration
 - The ID of the agent's Bot Connector registration
 - Platform-level configuration needed for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
