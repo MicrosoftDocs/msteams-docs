@@ -12,19 +12,31 @@
   - name: Get started
     expanded: true
     items:
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
     - name: Agent basics
       href: bots/bot-concepts.md
-      displayName: scopes, handler, activity
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
     - name: Best practices and features checklist
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+      displayName: scopes, handler, activity
+    - name: "Quickstart: Create and chat with an agent"
+      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+  - name: Register and authenticate
+    items:
+    - name: Agent registration concepts
+      href: agents-in-teams/registering-agent-teams-platform.md
+    - name: Choose an agent registration type
+      href: agents-in-teams/choose-agent-registration-type.md
+    - name: Configure runtime authentication
+      href: agents-in-teams/configure-agent-runtime-authentication.md
+    - name: Incoming request authentication
+      href: agents-in-teams/incoming-request-authentication.md
+    - name: Single- and multi-tenant agents
+      href: agents-in-teams/agent-tenancy.md
   - name: Integrate AI
     items:
     - name: Stream messages
@@ -278,7 +290,7 @@
   - name: Developer preview manifest schema
     href: resources/dev-preview/developer-preview-intro.md
     displayName: developer preview, preview, public preview
-- name: Add authentication
+- name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
