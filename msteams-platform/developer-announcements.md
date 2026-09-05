@@ -13,15 +13,17 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
-## TLS 1.3 support for agent runtime connections
+## Review needed: TLS 1.3 support and TLS fingerprinting
 
 *September 4, 2026*
 
-At the **end of October 2026**, Microsoft will enable TLS 1.3 support for connections between Teams agent runtimes and Agent Communications Service (the `https://smba.*` family of service endpoints). TLS 1.3 provides improved security and performance compared to earlier versions. Agent Communications Service will continue to support TLS 1.2.
+At the **end of October 2026**, Microsoft will add TLS 1.3 support to Agent Communications Service, the `https://smba.*` family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, **developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.**
 
-In most cases, no developer action is required. However, **developers hosting agent runtimes behind security controls that perform JA3/JA4 TLS fingerprint matching or similar kinds of connection handshake validation should review those controls.**
+Agent developers should review the network security controls of their hosting environments and consider temporarily relaxing or disabling rules that perform TLS fingerprint validation on client connections to agent runtime endpoints. Once TLS 1.3 support is enabled, they can capture an updated fingerprint and reenable any security rules that depend on it.
 
-Clients and servers automatically negotiate to the highest mutually-supported TLS version, and TLS version support is generally determined by a runtime's hosting environment. Agent runtimes in supporting environments will negotiate to TLS 1.3 once service-side support is enabled, which might trigger network security rules that assume a consistent handshake fingerprint. Developers might need to relax such rules during the change window, then update them based on the new handshake fingerprint.
+TLS fingerprint validation detects changes in properties of network connections that are typically stable over time. In some hosting environments, it's used to enhance client authentication and flag potential security risks. The addition of TLS 1.3 support to Agent Communications Service might invalidate its established client fingerprint in environments that perform validation, potentially triggering rules that generate warnings or block connectivity.
+
+TLS 1.3 provides improved security and performance compared to earlier versions. Agent runtimes hosted in environments that support TLS 1.3 will begin taking advantage of it automatically. Agent Communications Service will continue to support TLS 1.2, ensuring compatibility with all existing agent runtimes.
 
 ---
 
