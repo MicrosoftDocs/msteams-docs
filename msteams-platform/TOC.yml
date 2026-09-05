@@ -36,7 +36,7 @@
     - name: Incoming request authentication
       href: agents-in-teams/incoming-request-authentication.md
     - name: Single- and multi-tenant agents
-      href: agents-in-teams/bot-tenancy.md
+      href: agents-in-teams/agent-tenancy.md
   - name: Integrate AI
     items:
     - name: Stream messages
