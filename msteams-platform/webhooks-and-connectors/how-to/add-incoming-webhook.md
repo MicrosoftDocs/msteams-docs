@@ -7,216 +7,67 @@ ms.owner: hantony
 ms.date: 05/06/2026
 ---
 
-# Create Incoming Webhooks
+# Send chat messages using incoming webhooks
 
-[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+Incoming webhooks enable apps and automations to post messages in Teams conversations by making HTTP requests. Developers can use incoming webhooks to create integrations with other systems that surface real-time notifications and other information in Teams. They're implemented with Power Automate workflows and do not require onboarding or distribution of a Teams app.
 
-An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
+Incoming webhooks are for creating lightweight, one-way integrations within your own organization. They're not for creating conversational agents that interact with users in chat and perform tasks. For information about creating conversational agents in Teams, for use in your own organization or for distribution via the Teams app store, see [Agents in Teams](../../agents-in-teams/overview.md).
 
-* Bots
-* Message extensions
-* Connectors
-
-> [!NOTE]
->
-> * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
-> * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential backoff](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
-
-## Key features of Incoming Webhooks
-
-The following table provides the features and description of an Incoming Webhook:
-
-| Features | Description |
-| -------- | ----------- |
-|Adaptive Cards using an Incoming Webhook | Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Actionable messaging support | Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://amdesigner.azurewebsites.net/).|
-|Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
-|Markdown support|All text fields in actionable messaging cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
-|Scoped configuration|An Incoming Webhook is scoped and configured at the channel level.|
-|Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the insertion of malicious code.|
-
-<!--- TBD: A note should be short and eye-catching. No need to put a list item inside a Note or any admonition for that matter. Re-write the below list item.
---->
-
-> [!NOTE]
->
-> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
-> * For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
-
-## Create Webhooks using Workflows
-
-The **Workflows** app in Microsoft Teams enables you to create automated workflows that can receive HTTP requests through a webhook URL. When the webhook triggers, the workflow can post a message or an Adaptive Card to a Teams channel or chat.
-
-Workflows are powered by Microsoft Power Automate and provide a flexible way to process webhook payloads before posting them to Teams.
-
-### Create an incoming webhook from a template
-
-You can create a webhook workflow directly from a channel using a template.
-
-1. In **Microsoft Teams**, go to the team and channel where you want to receive webhook messages.
-1. Select **More options (...)** next to the channel.
-1. Select **Workflows**.
-   :::image type="content" source="../../assets/images/connectors/add-workflows.png" alt-text="Workflows option selected in the channel menu.":::
-1. Search for and select a template such as **Send webhook alerts to a channel**.
-   :::image type="content" source="../../assets/images/connectors/workflows-template-selection.png" alt-text="Select the Send webhook alerts to a channel template.":::
-1. Configure the workflow parameters.
-   :::image type="content" source="../../assets/images/connectors/workflows-parameters.png" alt-text="Add the parameters.":::
-1. Select **Save**.
-1. After the workflow is created, copy the webhook link.
-   :::image type="content" source="../../assets/images/connectors/workflows-url-copy.png" alt-text="Copy the webhook URL generated by the workflow.":::
-Use the webhook URL in your external application or service to send HTTP POST requests.
-
-When a request is received, the workflow posts the configured message to the selected channel.
-
-### Send a request to the webhook
-
-After creating the workflow, send an HTTP POST request to the generated webhook URL.
-
-```http
-POST <WEBHOOK_URL>
-Content-Type: application/json
-
-{
-    "text": "Hello from a webhook workflow!"
-}
-```
-
-When the request is received, the workflow processes the payload and posts the message to the configured Teams channel or chat.
-
-### When to use Workflows for webhooks
-
-Use Workflows when you need to:
-
-* Receive webhook requests from external services.
-* Post Message Cards or Adaptive Cards to Teams channels or chats.
-* Transform or process webhook payloads before posting them to Teams.
-* Integrate webhook events with other services supported by Power Automate.
-
-> [!IMPORTANT]
-> You can build a notification bot Teams app using [Microsoft 365 Agents Toolkit](../../toolkit/agents-toolkit-fundamentals.md) (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).
-
-You can create and send actionable messages through an Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
-
-> [!NOTE]
-> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
-
-### Example
-
-# [C#](#tab/dotnet)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
-
-```csharp
-var adaptiveCardJson = @"{
-  ""type"": ""message"",
-  ""attachments"": [
-    {
-      ""contentType"": ""application/vnd.microsoft.card.adaptive"",
-      ""content"": {
-        ""type"": ""AdaptiveCard"",
-        ""body"": [
-          {
-            ""type"": ""TextBlock"",
-            ""text"": ""Message Text""
-          }
-        ],
-        ""$schema"": ""http://adaptivecards.io/schemas/adaptive-card.json"",
-        ""version"": ""1.0""
-      }
-    }
-  ]
-}";
-
-var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
-
-var client = new HttpClient();
-client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-var content = new StringContent(adaptiveCardJson, System.Text.Encoding.UTF8, "application/json");
-var response = await client.PostAsync(webhookUrl, content);
-```
-
-# [JavaScript](#tab/javascript)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/incoming-webhook/nodejs/api/server/index.js#L28)
-
-```javascript
-var formatted_Card_Payload = {
-        "type": "message",
-        "attachments": [
-            {
-                "contentType": "application/vnd.microsoft.card.adaptive",
-                "contentUrl": null,
-                "content": {
-                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-                    "type": "AdaptiveCard",
-                    "version": "1.2",
-                    "body": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Submitted response:"+ response
-                        }
-                    ]
-                }
-            }
-        ]
-    }
-
-var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
-
-axios.post(webhookUrl , formatted_Card_Payload )
-    .then(res => {
-        console.log(`statusCode: ${res.status}`)
-        console.log(res)
-    })
-    .catch(error => {
-        console.error(error)
-    })
-```
+See the [end-user Teams documentation](https://support.microsoft.com/en-US/Workflows/send-messages-in-teams-using-incoming-webhooks) for information about how to create and call incoming webhooks. Additional developer information can be found in the [reference documentation for the Power Platform connectors for Teams](/connectors/teams).
 
 ---
 
-## Manage your workflows
+*!!Everything below here is a loose draft with some notes to help visualize the potential for developer-specific docs that do not rely on the end-user docs, for consideration!!*
 
-You can manage your workflows by turning them on or off, or by deleting them when no longer needed.
+## Create an incoming webhook
 
-### Turn on or turn off your workflow
+To create an incoming webhook that sends messages to a specific chat or channel, use the Workflows app in Teams to create a workflow using one of the following templates:
 
-Turn on or turn off a workflow at any time from the Workflows app.
+- Send webhook alerts to a chat
+- Send webhook alerts to a channel
+- Send webhook alerts from specific people to a chat
+- Send webhook alerts from specific people to a channel
+- Send webhook alerts from people in an org to a chat
+- Send webhook alerts from people in an org to a channel
 
-1. Open the **Workflows** app.
-1. Scroll down the **Home** page to find the **Your workflows** section.
-1. Next to the workflow you want to turn on or turn off, select **More actions (…)**.
-1. From the menu, select **Turn on** or **Turn off**.
+The *from specific people* and *from people in an org* templates restrict who can call the webhook. See [here](/power-automate/oauth-authentication) for more information about this setting. *TODO would also like to link something that explains how to get a token*. Webhooks without one of these restrictions can be used by anyone, and their URLs should be treated as secrets. *TODO do we want to make a blanket recommendation here to prefer the auth'ed ones?*.
 
-   :::image type="content" source="../../assets/images/connectors/workflows-turn-on-off.png" alt-text="Workflows-turnon-off.":::
+After creating the workflow, Teams will display the workflow details, including a copyable webhook URL.
 
-### Delete your workflow
+*TODO screenshot*
 
-Remove a workflow from your list at any time.
+## Call an incoming webhook
 
-1. Open the **Workflows** app.
-1. Scroll down the **Home** page to find the **Your workflows** section.
-1. Next to the workflow you want to delete, select **More actions (…)**.
-1. Select **Delete**.
-   :::image type="content" source="../../assets/images/connectors/workflow-delete.png" alt-text="Workflow-delete.":::
+- *Examples that specifically document the out-of-box templates - use of cards and not plain text, multiple card attachments supported, etc.*
+- *A couple basic card examples, with Link to adaptive and message card guidance*
+- *Explain with example how to authenticate for webhooks that require it, including how to get a token*
+- *Limitations and other details: rate limit, size limit etc. Private channels?  Maybe call out the biggest ones here and link to the ref docs, which have them listed*
 
-1. In the confirmation window, select **Delete** to permanently remove the workflow.
+## User experience
 
-   :::image type="content" source="../../assets/images/connectors/workflow-delete-pop-up.png" alt-text="Workflow-delete-popup.":::
+- *Couple screenshots of the experience provided by the out-of-box templates for chats and channels*
+- *Showcase a couple cards, with code examples*
+- *Explain how they post as the Workflows app, link to the "Customize" section*
 
----
+## Customize incoming webhook workflows
 
-## Code sample
+Incoming webhooks are implemented with Power Automate workflows that use the **When a Teams webhook request is received** trigger. When you create a webhook using a template in Teams, or save a new Power Automate workflow that uses this trigger for the first time, Power Automate assigns it a unique, durable webhook URL.
 
-| Sample name | Description | .NET | Node.js |
-|---------------------|--------------|---------|--------|
-| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/nodejs)|
+- *Explain how to get to a templated workflow's implementation in Power Automate*
+- *Explain how, once you're there, you have a lot of options - this is kind of an "in" for people to implement something interesting in a workflow who would otherwise not be familiar with them. <https://learn.microsoft.com/en-us/power-automate/teams/overview>*
+- *Do we need to explain the "Do Not Remove FlowIL" thing?*
+
+## Incoming webhook workflow lifecycle and governance
+
+*We'll link to the Power Automate docs here, but devs are surprised and get hesitant when they learn that creating a webhook results in a new infrastructure component that they're now responsible for, in a different platform that they might not be familiar with, that likely has its own best practices and gotchas around lifecycle, governance, etc. Any critical bits of information we can give here to ease those concerns would be helpful. <https://learn.microsoft.com/en-us/power-automate/overview-manage-cloud-flows>*
+
+## Scenarios and best practices
+
+- *Ramble off a couple example scenarios. events, notifications, logs, warnings; LOB systems, CI/CD, reports*s
+- *Reiterate on not trying to use this to build deep integrations*
 
 ## See also
 
-* [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Build bots for Teams](../../bots/what-are-bots.md)
-* [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
-* [Share to Teams from web apps](../../concepts/build-and-test/share-to-teams-from-web-apps.md)
+- [Power Automate flows in Microsoft Teams](/power-automate/teams/overview)
+- [Power Platform connector reference for Teams](/connectors/teams)
+- [Adaptive cards](https://adaptivecards.microsoft.com/)
