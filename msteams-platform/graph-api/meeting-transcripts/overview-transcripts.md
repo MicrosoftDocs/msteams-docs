@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vichug
 ms.author: nickwalk
-ms.date: 06/30/2026
+ms.date: 09/07/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
