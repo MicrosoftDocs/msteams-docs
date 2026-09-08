@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.author: nickwalk
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 06/18/2026
+ms.date: 07/30/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -73,7 +73,7 @@ The following table provides the content scope for existing channels and chats.
 |----------|--------------------------|
 |Team (general)|Videos|
 |Created time of the original message|Cross posts between channels|
-|Inline images as part of the message||
+|Inline images as part of the message|SharePoint generated links|
 |Links to existing files in Microsoft 365, SharePoint Online (SPO) or OneDrive (OD)||
 |Messages with rich text||
 |Message reply chain||

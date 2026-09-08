@@ -265,4 +265,4 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 * [Cards and dialogs](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Form completion feedback](../cards-actions.md#form-completion-feedback)
+* [Server handlers](../cards-actions.md#server-handlers)

@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: ginobuzz
-ms.date: 05/17/2022
+ms.date: 08/06/2026
 ---
 # Designing your Microsoft Teams message extension
 

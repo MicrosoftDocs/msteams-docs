@@ -3,7 +3,7 @@ title: Teams Connect Shared Channels
 description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 04/09/2025
+ms.date: 06/10/2026
 ---
 
 # Microsoft Teams Connect shared channels
@@ -122,7 +122,7 @@ If you're developing an app for use in federated group chats with external users
 
 | Sample name | Description | Node.js |
 |-------------|-------------|------|----|
-| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-feed-members/nodejs/)|
 
 ## See also
 

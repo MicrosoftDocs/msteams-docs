@@ -4,7 +4,7 @@ description: Learn how to create and handle suggested actions for your Microsoft
 ms.topic: how-to
 ms.localizationpriority: medium
 zone_pivot_groups: teams-sdk-languages
-ms.date: 6/26/2026
+ms.date: 08/19/2026
 ---
 
 # Dynamically guide users with suggested actions

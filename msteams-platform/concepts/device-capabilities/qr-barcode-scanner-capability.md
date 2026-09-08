@@ -3,8 +3,8 @@ title: Enable QR/Barcode Scanner Capability
 description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
 ms.topic: article
-ms.author: vikasalmal
-ms.date: 03/02/2026
+ms.author: nickwalk
+ms.date: 06/18/2026
 ---
 
 # Integrate QR or barcode scanner capability
@@ -105,7 +105,7 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 | Sample name           | Description | .NET |Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|:---------|
-|Bot join team by QR |  This bot allows users to join Microsoft Teams by scanning a team-specific QR code. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
+|Bot join team by QR |  This bot allows users to join Microsoft Teams by scanning a team-specific QR code. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-join-team-using-qr-code/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-join-team-using-qr-code/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-join-team-using-qr-code/csharp/demo-manifest/Bot-Join-Team-By-QR.zip)
 |Tab product inspection | This application demonstrates how to scan products directly within Microsoft Teams, capturing images and allowing users to approve or reject items. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-product-inspection/csharp/demo-manifest/Tab-Product-Inspection.zip)
 
 ## See also

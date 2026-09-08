@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.topic: reference
 ms.owner: vishachadha
-ms.date: 02/27/2026
+ms.date: 08/18/2026
 ---
 
 # Grant RSC permissions to your app
@@ -33,6 +33,9 @@ The Microsoft Entra admin center provides a central platform for you to register
 
 > [!WARNING]
 > You mustn't share your Microsoft Entra app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and a Microsoft Entra app. Installing multiple Teams apps associated with the same Microsoft Entra app ID will cause installation or runtime failures.
+
+> [!NOTE]
+> Register your app in the same tenant where you upload and test your app. If the app registration is in a different tenant, only a tenant administrator can upload the app. For more information, see [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Update your app manifest
 
@@ -439,6 +442,17 @@ The default value of the `isUserPersonalScopeResourceSpecificConsentEnabled` pro
 ### Upload your custom app in Teams
 
 If your Teams admin allows custom app uploads, you can [upload your custom app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
+
+> [!IMPORTANT]
+>
+>
+> If you encounter the following error while sideloading a Teams app that requires Resource-Specific Consent (RSC) permissions:
+> `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`
+>
+> Ensure that one of the following conditions is met:
+>
+> * The user attempting to install the app is a tenant administrator.
+> * The app registration associated with the Teams app was created in the same tenant as the user.
 
 ## Verify app RSC permission granted to your app
 

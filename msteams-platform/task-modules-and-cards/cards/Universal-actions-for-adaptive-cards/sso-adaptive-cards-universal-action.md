@@ -3,7 +3,7 @@ title: SSO for Adaptive Card Universal Actions
 description: Learn how to enable SSO for Adaptive Cards Universal Actions, add code to handle access token and receive token, and consent dialog to get access token.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 02/06/2023
+ms.date: 05/25/2026
 ---
 
 # Add code to enable SSO for Adaptive Cards Universal Actions
@@ -118,7 +118,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 1. The bot returns a non-error response to the Teams client using either a card or message.
 
 > [!NOTE]
-> To handle the access token in case the app user logs out, see [handle app user log out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-log-out).
+> To handle the access token in case the app user signs out, see [handle app user sign out](../../../bots/how-to/authentication/bot-sso-code.md#handle-app-user-sign-out).
 
 ## Code sample
 

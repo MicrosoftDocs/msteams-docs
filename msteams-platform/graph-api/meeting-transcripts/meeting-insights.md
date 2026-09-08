@@ -4,8 +4,8 @@ description: Learn how to use the Meeting AI Insights API to fetch Teams meeting
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
-ms.author: vikasalmal
-ms.date: 03/30/2026
+ms.author: nickwalk
+ms.date: 06/18/2026
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
@@ -178,7 +178,7 @@ Content-Type: application/json
 
 | Sample name | Description | Node.js | Python |
 | --- | --- | --- | --- |
-| Meeting AI insights bot | This sample app retrieves meeting summaries, action items, and mentions by using the Meeting AI Insights API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-meeting-ai-insights/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-meeting-ai-insights/python) |
+| Meeting AI insights bot | This sample app retrieves meeting summaries, action items, and mentions by using the Meeting AI Insights API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-meeting-ai-insights/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-meeting-ai-insights/python) |
 
 ## See also
 

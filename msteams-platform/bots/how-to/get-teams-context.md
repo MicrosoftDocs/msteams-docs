@@ -1,18 +1,18 @@
 ---
-title: Teams Specific Context for Bots
-description: Learn how to get Teams-specific context in bots by using Teams SDK APIs for roster, member, team, and channel information.
+title: Teams Specific Context for Agents
+description: Learn how to get Teams-specific context in agents by using Teams SDK APIs for roster, member, team, and channel information.
 ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
 ms.date: 06/19/2026
 ---
-# Get Teams specific context for your bot
+# Get Teams specific context for your agent
 
-A bot can access additional context data about the team or chat where it's installed. This information can be used to personalize responses and build richer workflows.
+An agent can access additional context data about the team or chat where it's installed. This information can be used to personalize responses and build richer workflows.
 
 ## Fetch the roster or user profile
 
-Your bot can query the list of members in the current team or chat and use that data to personalize responses or target follow-up actions.
+Your agent can query the list of members in the current team or chat and use that data to personalize responses or target follow-up actions.
 
 Use the Teams SDK conversations members API to retrieve roster information.
 
@@ -177,7 +177,7 @@ After you get details for a member, you can retrieve team details.
 
 ## Get team's details
 
-When installed in a team, your bot can query metadata such as team ID and Microsoft Entra group ID.
+When installed in a team, your agent can query metadata such as team ID and Microsoft Entra group ID.
 
 The following sample code uses Teams SDK APIs:
 
@@ -237,7 +237,7 @@ After you get team details, you can get the list of channels in that team.
 
 ## Get the list of channels in a team
 
-Your bot can query the list of channels in a team.
+Your agent can query the list of channels in a team.
 
 > [!NOTE]
 >
@@ -298,22 +298,20 @@ async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
 
 ::: zone-end
 
-If you need raw connector REST endpoints, use the Teams SDK API for most bot scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
+If you need raw connector REST endpoints, use the Teams SDK API for most agent scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
 <!-- [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)] -->
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Send and receive files using bot](bots-filesv4.md)
+> [Send and receive files using agent](bots-filesv4.md)
 
 ## See also
 
-* [Build bots for Teams](../what-are-bots.md)
+* [Build agents for Teams](../what-are-bots.md)
 * [Dialogs](../../task-modules-and-cards/what-are-task-modules.md)
 * [Authenticate users in Microsoft Teams](../../concepts/authentication/authentication.md)
-* [Bot activity handlers](../bot-basics.md)
+* [Agent activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
 * [Get the profile photo of a user, a group, a team, or an Outlook contact](/graph/api/profilephoto-get)
-* [Bot Meetings sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings)
-<!-- markdownlint-enable MD024 -->

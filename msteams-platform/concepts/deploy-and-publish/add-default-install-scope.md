@@ -3,7 +3,7 @@ title: Configure default options for your app
 description: Learn how to specify your Teams app's default install options, default capability for shared scopes, default landing capability for personal tab and bot apps, and block apps by default.
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 04/13/2026
+ms.date: 08/05/2026
 ---
 # Configure default options for Teams app
 
@@ -106,7 +106,7 @@ If an app is configured with shared scopes along with a default install scope, h
 
 1. Select either from the recommended scope or search and select the required shared scope, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../../assets/images/compose-extensions/other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
+    :::image type="content" source="../../assets/images/compose-extensions/personal-other-scope.png" alt-text="Screenshot of the scope selection dialog with the search option to select from the list of shared scopes.":::
 
     The app opens in the scope that you selected.
 

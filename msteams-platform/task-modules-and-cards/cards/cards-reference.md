@@ -127,13 +127,13 @@ The following table provides the features that support Adaptive Cards:
 
 > [!NOTE]
 >
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), and dialogs.
+> * Teams platform supports v1.6 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
+> * Teams platform supports v1.6 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), and dialogs.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 > * Adaptive Cards within Teams don't provide support for file or image uploads.
 > * The `isEnabled` property for `Action.Submit` type in an Adaptive Card isn't supported in Teams.
-> * Microsoft Teams mobile app supports Adaptive Cards up to version 1.2. Cards that use schema versions later than 1.2 might not render correctly or might have limited or inconsistent functionality on mobile devices. For best results, use Adaptive Cards within the version 1.2.
+> * Microsoft Teams mobile app supports Adaptive Cards up to version 1.6. Cards that use schema versions later than 1.6 might not render correctly or might have limited or inconsistent functionality on mobile devices. For best results, use Adaptive Cards within the version 1.6.
 
 ### Example of Adaptive Card
 
@@ -1000,7 +1000,7 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 
 |S.No.| Description|.NET|Node.js|Manifest
 |--|--|--------------------------------------------------------|-----|-----|
-|1|This sample demonstrates using a bot to send multiple card types in Microsoft Teams, including Adaptive, Hero, Thumbnail, and OAuth cards. It covers setup, deployment, and app installation instructions.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
+|1|This sample demonstrates using a bot to send multiple card types in Microsoft Teams, including Adaptive, Hero, Thumbnail, and OAuth cards. It covers setup, deployment, and app installation instructions.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
 
 ## See also
 

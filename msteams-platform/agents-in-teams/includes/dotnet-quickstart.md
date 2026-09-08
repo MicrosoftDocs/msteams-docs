@@ -2,13 +2,13 @@
 
 - Node.js 24 or later ([installer download](https://nodejs.org))
 - .NET 10 or later ([installer download](https://dotnet.microsoft.com/download))
-- Teams, with a Microsoft 365 work or school account that has permissions to install custom Teams apps (you'll confirm these permissions at the very beginning of the quickstart)
+- A Teams tenant where custom app uploads are allowed, and an account in it with permissions to install custom apps (an admin may need to enable this)
 
 If you don't have a Microsoft 365 work or school account, see [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program) for information about getting a developer sandbox subscription that you can use to try your agent in Teams.
 
 ## Install tools, log in and confirm permissions
 
-Install the Teams developer CLI and Microsoft 365 Agents Playground, then log in to the developer CLI.
+Install the Teams developer CLI and log in with your Microsoft 365 work or school account.
 
 ```console
 npm install -g @microsoft/teams.cli
@@ -26,16 +26,16 @@ Azure CLI: installed, not logged in
 
 **To continue with this quickstart, sideloading must be enabled.** If it is disabled, you will need your organization's Microsoft 365 administrator to enable it for your account. See [Allow users to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps) for administrator instructions for enabling this permission.
 
-## Create code for an agent
+## Create code for an agent runtime
 
-1. Use `teams project new` to create the code for a new agent from a template.
+1. Use `teams project new` to create the code for a new agent runtime from a template.
 
     ```console
     teams project new csharp EchoBot
     cd EchoBot/EchoBot
     ```
 
-1. Start the agent to confirm it runs. Once it's running, you'll see a confirmation that it's running on port 3978.
+1. Start the agent runtime to confirm it runs. Once it's running, you'll see a confirmation that it's reachable on port 3978.
 
     ```console
     dotnet run

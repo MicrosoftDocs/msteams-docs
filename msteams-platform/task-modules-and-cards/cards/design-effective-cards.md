@@ -3,7 +3,7 @@ title: Designing Adaptive Cards for your app
 description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card Designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 11/07/2024
+ms.date: 08/05/2026
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
 
@@ -122,7 +122,7 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile.":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile." lightbox="../../assets/images/adaptive-cards/mobile-request-ticket-card.png":::
 
 #### Desktop
 
@@ -207,11 +207,11 @@ Use [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) to forma
 
 **Do**: In this screen, there are two columns at the bottom of the card. The input component width is set to `stretch`, while the **Select** button width is set to `auto`. This ensures the button remains completely in view.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width for Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width for Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-width-auto-do-large.png":::
 
 **Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="The screenshot shows how not to set column width in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="The screenshot shows how not to set column width in Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-width-auto-dont-large.png":::
 
 # [Code](#tab/code)
 
@@ -391,11 +391,11 @@ Here's the code for implementing the design example you should follow.
 
 **Do**: Layouts tend to display better on mobile with fewer columns.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="The screenshot shows the right number of columns in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-do.png" alt-text="The screenshot shows the right number of columns in Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-column-amount-do-large.png":::
 
 **Don't**: Using too many columns can clutter your card content on mobile.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="The screenshot shows how to many columns can negatively affect Adaptive Card layout.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="The screenshot shows how to many columns can negatively affect Adaptive Card layout." lightbox="../../assets/images/adaptive-cards/design-column-amount-dont-large.png":::
 
 #### Example: Fixed width has its place
 
@@ -403,7 +403,7 @@ Here's the code for implementing the design example you should follow.
 
 When the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-width-auto-do-large.png":::
 
 # [Code](#tab/code)
 
@@ -557,11 +557,11 @@ Whether you're using [`TextBlock`](https://adaptivecards.microsoft.com/?topic=Te
 
 **Do**: In this screen, the card has a `wrap` property set to `true`. This allows the text to fit to any screen size.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="The screenshot shows how to wrap text in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-true.png" alt-text="The screenshot shows how to wrap text in Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-text-wrap-true-large.png":::
 
 **Don't**: In this screen, the card doesn't use the `wrap` property, so the text cuts off on a mobile screen.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="The screenshot shows what can happen if you don't wrap text in Adaptive Cards.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-text-wrap-false.png" alt-text="The screenshot shows what can happen if you don't wrap text in Adaptive Cards." lightbox="../../assets/images/adaptive-cards/design-text-wrap-false-large.png":::
 
 # [Code](#tab/code)
 

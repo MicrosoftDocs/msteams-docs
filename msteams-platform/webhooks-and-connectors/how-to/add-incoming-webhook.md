@@ -104,7 +104,7 @@ You can create and send actionable messages through an Incoming Webhook or conne
 
 # [C#](#tab/dotnet)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/incoming-webhook/csharp/IncomingWebhook/Controllers/CardController.cs#L28)
 
 ```csharp
 var adaptiveCardJson = @"{
@@ -138,7 +138,7 @@ var response = await client.PostAsync(webhookUrl, content);
 
 # [JavaScript](#tab/javascript)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L28)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/incoming-webhook/nodejs/api/server/index.js#L28)
 
 ```javascript
 var formatted_Card_Payload = {
