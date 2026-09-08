@@ -35,7 +35,7 @@
       href: agents-in-teams/configure-agent-runtime-authentication.md
     - name: Incoming request authentication
       href: agents-in-teams/incoming-request-authentication.md
-    - name: Single- and multi-tenant agents
+    - name: Enable multi-tenant usage
       href: agents-in-teams/agent-tenancy.md
   - name: Integrate AI
     items:

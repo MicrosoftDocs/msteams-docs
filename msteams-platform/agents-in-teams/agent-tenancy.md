@@ -1,29 +1,35 @@
 
-# Single-tenant and multi-tenant agents
+# Agent tenancy considerations (single-tenant and multi-tenant agents)
 
-The configuration model that determines whether a Teams agent can be used in multiple Entra tenants has evolved over time. This article reflects the current model and supersedes any descriptions that might be found in older documentation and other online resources.
+Most workflows for creating and registering an agent, including `teams app create`, result in a *multi-tenant agent*: an agent that can be installed and used in any Entra tenant. This article explains configuration, guidance and best practices related to agent tenancy.
 
-The Bot Connector registration of every Teams agent has a 1:1 association with an Entra ID app registration, which resides in a tenant controlled by its developer. A *single-tenant agent* is configured to only allow installation and use in the app registration's tenant. A *multi-tenant agent* is not restricted in that way.
+The configuration model that determines agent tenancy has evolved over time. This article reflects the current model and supersedes any descriptions in older documentation and other online resources.
 
-Most workflows for creating and registering an agent result in multi-tenant configuration by default.
+# Verify and configure agent tenant settings
 
-## Configure and verify agent configuration
+The Bot Connector registration of every Teams agent has a permanent 1:1 association with a single Entra ID app registration. This app registration resides in a tenant controlled by the developer. The `signInAudience` property of this app registration, displayed in some contexts as its **Supported account types**, determines whether it can only be used in that tenant.
 
-To determine an agent's tenancy, examine the `signInAudience` property of the Entra ID app registration linked to its Bot Connector registration. In some contexts, this property is displayed as its **Supported account types**. A `signInAudience` value of `AzureADMultipleOrgs` (**Supported account types** displays as **Multiple Entra ID tenants** or **Multiple organizations**) indicates a multi-tenant agent. A value of `AzureADMyOrg` (**Supported account types** displays as **My organization only** or **Single tenant only**) indicates a single-tenant agent.
+An agent configured as *single-tenant* can only be installed and used in that tenant. A *multi-tenant* agent has no such restriction, but can be restricted to a specified set of tenants by other means.
 
-`signInAudience` can be changed after the app registration is created, but should be confirmed by the time development is complete and remain unchanged once the agent is published.
+To determine whether an agent is single-tenant or multi-tenant, examine the `signInAudience` property of the Entra ID app registration linked to its Bot Connector registration. In some contexts, this property is displayed as its **Supported account types**.
 
-## Implementation and security considerations
+*TODO make this a table*
 
-Agents intended to be used only in one tenant, or in a known set of tenants, should always validate the tenant ID of incoming activity payloads in their runtime code. These agents should be distributed only via organizational app catalogs, not the Teams store.
+A `signInAudience` value of `AzureADMultipleOrgs` (**Supported account types** displays as **Multiple Entra ID tenants** or **Multiple organizations**) indicates a multi-tenant agent. A value of `AzureADMyOrg` (**Supported account types** displays as **My organization only** or **Single tenant only**) indicates a single-tenant agent.
 
-`signInAudience` determines whether new service principals for the app registration can be created in external tenants, and whether users in those tenants can authenticate to the application. When appropriate, setting `signInAudience` to `AzureADMyOrg` or configuring [sign in audience restrictions](/graph/api/resources/allowedtenantsaudience) on a multi-tenant app registration are valid security measures, but are not a substitute for performing tenant validation in code.
+`signInAudience` can be changed after the app registration is created, but should be confirmed by the time development is complete, and should remain unchanged once the agent is published.
 
-As with all multi-tenant applications, developers of multi-tenant agents are responsible for enforcing tenant boundaries. All stored data should be strongly associated with its tenant, and users in one tenant should not be able to access data associated with another.
+## Considerations for implementation and distribution
+
+All installations of an agent, regardless of tenant, are powered by the same runtime endpoint. Developers are responsible for implementing and enforcing data boundaries between tenants. Data stored by an agent should be strongly associated with a tenant, and users in one tenant should not be able to access data associated with another.
+
+Agents intended for use only in a single tenant, or a known set of tenants, should always validate the tenant ID of incoming activity payloads in their application code. Setting `signInAudience = AzureADMyOrg` or configuring [sign in audience restrictions](/graph/api/resources/allowedtenantsaudience) to restrict its use are valid security measures, but are not substitutes for performing tenant validation in code.
+
+*TODO store or organizational app catalog?*
 
 ## Azure AI Bot Service resource bot type
 
-Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might notice that their Bot Service resources appears to be configured as **Single Tenant**.
+Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might observe that its `msaAppType`, **Bot type** or **Type of app** property indicates that it is configured as "Single Tenant". This value's name is based on a legacy configuration model and is retained for compatibility reasons, and **does not** indicate whether an agent
 
 Azure AI Bot Service resource configuration includes a property called `msaAppType`, often referred to as the resource's **Bot type** or **Type of App**. A value of `singleTenant` (**Single Tenant**) for this property **does not** determine whether an agent is single-tenant or multi-tenant.
 

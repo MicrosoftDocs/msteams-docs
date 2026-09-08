@@ -30,7 +30,7 @@ The Teams developer CLI can create both kinds of Bot Connector registration, and
 
 ## See also
 
-- [Registering an agent on the Teams platform](../concepts/registering-agent-teams-platform.md)
+- [Registering an agent on the Teams platform](registering-agent-teams-platform.md)
 
 ## Next steps
 

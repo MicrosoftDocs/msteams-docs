@@ -35,9 +35,9 @@ In some cases, agents might be configured and implemented to use multiple app re
 
 Bot Connector is the service that agents use to access most Teams functionality, especially chat. Before your agent can interact with Teams, you need to register it with the service.
 
-Every Bot Connector registration has a permanent 1:1 association with an Entra ID app registration. The agent's runtime uses credentials attached to the app registration - a client secret or Azure managed identity - to authenticate with Bot Connector. The app registration's application ID is used as the agent's unique identifier anywhere one is needed, such as the app manifest and the agent's runtime configuration.
+Every Bot Connector registration has a permanent 1:1 association with an Entra ID app registration. The agent's runtime uses credentials attached to the app registration - a client secret or Azure managed identity - to authenticate with Bot Connector. The app registration's application ID uniquely references the agent in contexts like the app manifest and the agent's runtime configuration.
 
-A Bot Connector registration is also where you configure an agent's runtime endpoint URL. Bot Connector will send realtime activity data about user actions in Teams to this endpoint.
+An agent's Bot Connector registration is also where you specify its runtime endpoint URL. Bot Connector will send realtime activity data about user actions in Teams to this endpoint.
 
 Bot Connector supports two different kinds of registration: *standalone* and *Azure AI Bot Service resource*. See [Choose a Bot Connector registration type for an agent](../agents-in-teams/choose-agent-registration-type.md) for more information.
 
@@ -47,11 +47,11 @@ An agent's app manifest is a JSON configuration file that contains everything ne
 
 - The agent's name and description
 - Information about the agent's developer
-- The ID of the agent's Bot Connector registration
+- The agent's bot ID (the application ID of the app registration linked to its Bot Connector registration)
 - Platform-level configuration needed for certain agent features
 - A list of privileged Teams operations the agent needs permissions to access
 
-Registering an agent's app manifest in Teams Developer Portal is what establishes it as a Teams app that can be distributed in the Teams store or your organization's app catalog. Certain agent features require app manifest configuration, and as you add them during development, you can use the web interface of Teams Developer Portal to update the manifest.
+Registering an agent's app manifest in Teams Developer Portal is what establishes it as an installable Teams app that can be distributed in the Teams store or your organization's app catalog. Certain agent features require configuration in the app manifest, and as you add those features during development, you can use the web interface of Teams Developer Portal to update the app manifest.
 
 App manifests conform to the [app manifest schema](/microsoft-365/extensibility/schema), which evolves as Microsoft releases new Teams platform features.
 
