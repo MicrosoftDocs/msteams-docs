@@ -59,6 +59,9 @@
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
+    - name: Sessions
+      href: bots/how-to/conversations/agent-sessions.md
+      displayName: sessions, session, conversationId, proactive session, 1:1 chat
   - name: How-tos
     items:
     - name: Port a Slack Bolt app
