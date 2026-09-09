@@ -44,7 +44,7 @@
     - name: Teams emoji reactions reference
       href: agents-in-teams/teams-reactions-reference.md
       displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-    - name: Format agent messages
+    - name: Format your agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
     - name: Suggested actions
