@@ -1,6 +1,6 @@
 ---
-title: Format Agent Messages with Markdown
-description: Learn when to use extended Markdown for agent messages and how to add CommonMark, GFM, images, mentions, citations, math, and code.
+title: Format your agent messages
+description: Learn how to format text in messages sent by your agent, including HTML, Markdown, and plain text.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: anclear
@@ -8,11 +8,11 @@ ms.owner: angovil
 ms.date: 08/25/2026
 ---
 
-# Format agent messages with Markdown
+# Format your agent messages
 
-Agents can respond with Markdown-formatted text, and Teams renders it as rich content. Teams supports multiple text format options, including extended Markdown, which provides the fullest set of formatting capabilities.
+Agents can send messages with formatted text. Teams supports HTML, Markdown, and plain text for the `text` property of an activity.
 
-Use `extendedmarkdown` for all text responses unless your agent is already dependent on the legacy Teams Markdown subset or specifically needs raw text.
+The format you choose depends on the content and capabilities your agent requires. If you don't specify `textFormat`, Teams uses HTML formatting by default.
 
 > [!IMPORTANT]
 > Extended Markdown is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). Test your agent with the latest Teams desktop, web, iOS, and Android clients before distributing it.
@@ -21,7 +21,7 @@ Use `extendedmarkdown` for all text responses unless your agent is already depen
 
 Set the [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how Teams renders the `text` property of your Activity.
 
-The following example shows how to send a message with `extendedmarkdown` formatting:
+The following example shows how to send a message with `extendedmarkdown` formatting. This format supports CommonMark, GitHub Flavored Markdown (GFM), and additional features such as tables, task lists, math equations, images, at-mentions, citations, and streaming.
 
 # [JSON](#tab/json)
 
@@ -74,41 +74,22 @@ await app.send(conversation_id, activity)
 
 Microsoft Teams supports the following formatting options:
 
-| `TextFormat` value | When to use                                                                                                                                                               |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `extendedmarkdown` | **Recommended for most agent text responses.** Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming.                                              |
-| `markdown`         | Use for existing agents that depend on the legacy Teams Markdown subset.                                                                                                  |
-| `plain`            | Use when the message must be displayed as raw text without formatting.                                                                                                    |
-| `xml`              | Use only where a supported rich-card text property accepts the Teams HTML subset. For supported tags, see [format cards](~/task-modules-and-cards/cards/cards-format.md). |
+| `textFormat` value | When to use |
+| ------------------ | ----------- |
+| `extendedmarkdown` | Use when your agent needs the extended Markdown features described in this article. This format is in public developer preview. |
+| `markdown` | Use for existing agents that depend on the legacy Teams Markdown subset. |
+| `plain` | Use when the message must be displayed as raw text without formatting. |
 
-For `extendedmarkdown`, Teams supports CommonMark syntax along with additional features such as tables, task lists, code fences, math equations, images, at-mentions, and citations. In extended Markdown content, `<at>` is the only supported HTML tag.
+When using `extendedmarkdown`, `<at>` is the only supported HTML tag. For HTML formatting, omit `textFormat` and use the HTML syntax supported by Teams.
 
 The following limitations apply to formatting:
 
-- `textFormat` applies to the Activity `text` property. It doesn't enable extended Markdown in Adaptive Card or other rich-card payload properties.
+- `textFormat` applies to the activity `text` property. It doesn't enable Markdown or HTML in Adaptive Card or other rich-card payload properties.
 - In extended Markdown content, don't include arbitrary HTML. Use `<at>` only as part of a valid mention entity.
 - Task-list checkboxes are read-only.
 - Older or unsupported clients might show unsupported constructs as plain text.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
-
-## Standard Markdown support
-
-Some styles aren't supported across all platforms. The following table provides a list of standard Markdown styles and which of these styles are supported in text-only messages and rich cards:
-
-| Style                     | Text-only messages | Rich cards - XML only |
-| ------------------------- | :----------------: | :-------------------: |
-| Bold                      |         ✔️️         |          ❌           |
-| Italic                    |         ✔️         |          ✔️           |
-| Header (levels 1&ndash;3) |         ❌         |          ✔️           |
-| Strikethrough             |         ❌         |          ✔️           |
-| Horizontal rule           |         ❌         |          ❌           |
-| Unordered list            |         ❌         |          ✔️           |
-| Ordered list              |         ❌         |          ✔️           |
-| Preformatted text         |         ✔️         |          ✔️           |
-| Blockquote                |         ✔️         |          ✔️           |
-| Hyperlink                 |         ✔️         |          ✔️           |
-| Image link                |         ❌         |          ❌           |
 
 ## Extended Markdown features
 
@@ -214,31 +195,11 @@ Extended Markdown content will render as it streams:
 
 For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
 
-## Legacy Markdown platform support
+## Legacy Markdown
 
-The following table applies to the legacy `markdown` format, not `extendedmarkdown`. Legacy Markdown supports a smaller subset that varies by platform:
+The `markdown` format remains supported for existing agents that depend on the legacy Teams Markdown subset. It isn't deprecated, but it provides fewer formatting capabilities than `extendedmarkdown`, and rendering can vary across Teams clients. Keep using it when compatibility with an existing agent requires it, and test messages on the Teams clients that your agent supports.
 
-| Style                     | Desktop | iOS | Android |
-| ------------------------- | :-----: | :-: | :-----: |
-| Bold                      |   ✔️    | ✔️  |   ✔️    |
-| Italic                    |   ✔️    | ✔️  |   ✔️    |
-| Header (levels 1&ndash;3) |   ❌    | ❌  |   ❌    |
-| Strikethrough             |   ✔️    | ✔️  |   ❌    |
-| Horizontal rule           |   ❌    | ❌  |   ❌    |
-| Unordered list            |   ✔️    | ❌  |   ❌    |
-| Ordered list              |   ✔️    | ❌  |   ❌    |
-| Preformatted text         |   ✔️    | ✔️  |   ✔️    |
-| Blockquote                |   ✔️    | ✔️  |   ✔️    |
-| Hyperlink                 |   ✔️    | ✔️  |   ✔️    |
-| Image link                |   ❌    | ❌  |   ❌    |
-
-## AI-generated content messages
-
-For AI labels, citations, feedback buttons, and sensitivity labels in your agent's messages, see [agent messages with AI-generated content](format-ai-bot-messages.md).
-
-## Message size limits
-
-[!INCLUDE [agent-message-size-limit](includes/agent-message-size-limit.md)]
+For new Markdown scenarios, review the capabilities and preview status of [extended Markdown](#extended-markdown-features) before using it in an agent.
 
 ## Next step
 
