@@ -9,81 +9,84 @@
 - name: Build conversational agents for Teams
   expanded: true
   items:
-    - name: Get started
-      expanded: true
-      items:
-        - name: "Quickstart: Create and chat with an agent"
-          href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-          displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
-        - name: Agents in Teams
-          href: agents-in-teams/overview.md
-        - name: Agent basics
-          href: bots/bot-concepts.md
-          displayName: scopes, handler, activity
-        - name: Build conversational capability
-          href: bots/build-conversational-capability.md
-          displayName: chat, message, reply
-        - name: Best practices and features checklist
-          href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
-    - name: Integrate AI
-      items:
-        - name: Stream messages
-          href: bots/streaming-ux.md
-          displayName: Thinking, informative
-        - name: Prompt starters
-          href: bots/how-to/conversations/prompt-starters.md
-          displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
-        - name: Enhance AI-generated bot messages
-          href: bots/how-to/bot-messages-ai-generated-content.md
-          displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
-    - name: Rich conversational features
-      items:
-        - name: Emoji reactions
-          href: agents-in-teams/agent-reactions.md
-          displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-        - name: Teams emoji reactions reference
-          href: agents-in-teams/teams-reactions-reference.md
-          displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-        - name: Format your agent messages
-          href: bots/how-to/format-your-bot-messages.md
-          displayName: markdown, extendedmarkdown, CommonMark, GFM, tables, code blocks, math, citations, streaming
-        - name: Suggested actions
-          href: bots/how-to/conversations/suggested-actions.md
-          displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
-        - name: Targeted messages
-          href: agents-in-teams/targeted-messages.md
-          displayName: private messages, ephemeral messages, command, notification, response
-        - name: Agent slash commands
-          href: agents-in-teams/agent-slash-commands.md
-          displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
-        - name: Send and receive files
-          href: bots/how-to/bots-filesv4.md
-          displayName: receive files using bot
-    - name: How-tos
-      items:
-        - name: Receive all chat messages
-          href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
-        - name: Send proactive messages
-          href: bots/how-to/conversations/send-proactive-messages.md
-          displayName: conversationId, send message, bot framework, notification,
-        - name: Subscribe to conversation events
-          href: bots/how-to/conversations/subscribe-to-conversation-events.md
-          displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
-        - name: Get Teams-specific context
-          href: bots/how-to/get-teams-context.md
-          displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
-        - name: Create a configuration experience
-          href: bots/how-to/bot-configuration-experience.md
-          displayName: configuration settings, fetchTask, config/fetch, config/submit
-        - name: Channel and group chat conversations
-          href: bots/how-to/conversations/channel-and-group-conversations.md
-          displayName: Teams conversational bots, mention, tag mention, user mention
-        - name: Shared and private channels
-          href: build-apps-for-shared-private-channels.md
-          displayName: shared channels, private channels
-        - name: Handle rate limits
-          href: bots/how-to/rate-limit.md
-          displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: Get started
+    expanded: true
+    items:
+    - name: "Quickstart: Create and chat with an agent"
+      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+    - name: Agents in Teams
+      href: agents-in-teams/overview.md
+    - name: Agent basics
+      href: bots/bot-concepts.md
+      displayName: scopes, handler, activity
+    - name: Build conversational capability
+      href: bots/build-conversational-capability.md
+      displayName: chat, message, reply
+    - name: Best practices and features checklist
+      href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+  - name: Integrate AI
+    items:
+    - name: Stream messages
+      href: bots/streaming-ux.md
+      displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
+    - name: Prompt starters
+      href: bots/how-to/conversations/prompt-starters.md
+      displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
+    - name: Enhance AI-generated bot messages
+      href: bots/how-to/bot-messages-ai-generated-content.md
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+  - name: Rich conversational features
+    items:
+    - name: Emoji reactions
+      href: agents-in-teams/agent-reactions.md
+      displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Teams emoji reactions reference
+      href: agents-in-teams/teams-reactions-reference.md
+      displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Format agent messages
+      href: bots/how-to/format-your-bot-messages.md
+      displayName: cross-platform support
+    - name: Suggested actions
+      href: bots/how-to/conversations/suggested-actions.md
+      displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+    - name: Targeted messages
+      href: agents-in-teams/targeted-messages.md
+      displayName: private messages, ephemeral messages, command, notification, response
+    - name: Agent slash commands
+      href: agents-in-teams/agent-slash-commands.md
+      displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
+    - name: Send and receive files
+      href: bots/how-to/bots-filesv4.md
+      displayName: receive files using bot
+  - name: How-tos
+    items:
+    - name: Port a Slack Bolt app
+      href: agents-in-teams/port-slack-bolt-javascript-app.md
+      displayName: block kit, 
+    - name: Receive all chat messages
+      href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
+    - name: Send proactive messages
+      href: bots/how-to/conversations/send-proactive-messages.md
+      displayName: conversationId, send message, bot framework, notification,
+    - name: Subscribe to conversation events
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+    - name: Get Teams-specific context
+      href: bots/how-to/get-teams-context.md
+      displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
+    - name: Create a configuration experience
+      href: bots/how-to/bot-configuration-experience.md
+      displayName: configuration settings, fetchTask, config/fetch, config/submit
+    - name: Channel and group chat conversations
+      href: bots/how-to/conversations/channel-and-group-conversations.md
+      displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Shared and private channels
+      href: build-apps-for-shared-private-channels.md
+      displayName: shared channels, private channels
+    - name: Handle rate limits
+      href: bots/how-to/rate-limit.md
+      displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
 - name: Tools and SDKs
   items:
     - name: Overview
@@ -571,64 +574,57 @@
               displayName: Dashboard, widget, Graph API call
     - name: Build message extensions
       items:
-        - name: What are message extensions?
-          href: messaging-extensions/what-are-messaging-extensions.md
-          displayName: handleTeamsMessagingExtensionFetchTask, commands
-        - name: Build message extensions using API
-          expanded: false
-          items:
-            - name: API-based message extensions
-              href: messaging-extensions/api-based-overview.md
-              displayName: OpenAPI Description, Search, single parameter, search based message extension
-            - name: Create API-based message extensions
-              href: messaging-extensions/create-api-message-extension.md
-              displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-        - name: Build message extensions using Bot Framework
-          items:
-            - name: Bot-based message extensions
-              href: messaging-extensions/build-bot-based-message-extension.md
-              displayName: one-on-one conversation, search command, action command, search based message extension, action based message extension
-            - name: Action commands
-              items:
-                - name: Define action commands
-                  href: messaging-extensions/how-to/action-commands/define-action-command.md
-                  displayName: Command invoke locations, static list of parameters, action command manually
-                - name: Create and send dialogs
-                  href: messaging-extensions/how-to/action-commands/create-task-module.md
-                  displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
-                - name: Respond to the dialog submit action
-                  href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-                  displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
-            - name: Search commands
-              items:
-                - name: Define search commands
-                  href: messaging-extensions/how-to/search-commands/define-search-command.md
-                  displayName: bot-based message extensions
-                - name: Respond to search commands
-                  href: messaging-extensions/how-to/search-commands/respond-to-search.md
-                  displayName: response card types
-                - name: Universal actions for search based message extensions
-                  href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
-                  displayName: Handle tap actions, Just-in-time install, JIT
-                - name: Bot-based message extension agent guidelines
-                  href: messaging-extensions/dev-guidelines-agents.md
-                  displayName: criteria, extend message extension, agent, Microsoft 365 Copilot, Copilot agents, plugins
-                - name: Extend bot-based message extension as agent
-                  href: messaging-extensions/build-bot-based-agent.md
-                  displayName: extend message extension, search based message extension, M365, Microsoft 365 Copilot
-                - name: Debug an agent for Microsoft 365 Copilot with developer mode
-                  href: /microsoft-365-copilot/extensibility/debugging-copilot-plugin?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-                  displayName: Copilot, Microsoft 365 Copilot, enabled agents, matched functions, selected functions for execution, function execution details, plugin
-                - name: Copilot handoff
-                  href: bots/how-to/conversations/bot-copilot-handoff.md
-                  displayName: custom agent, custom engine agent, agent, conversation, Microsoft 365 Copilot, plugins
-            - name: Add link unfurling
-              href: messaging-extensions/how-to/link-unfurling.md
-              displayName: domain listing, wildcards, cache
-            - name: Micro-capabilities for website links
-              href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
-              displayName: App less link unfurling
-    - name: Calls and meetings bots
+      - name: Live Share SDK
+        href: apps-in-teams-meetings/teams-live-share-overview.md
+        displayName: Loop, Fluid Framework, Azure Fluid Relay, distributed data structures, web sockets
+      - name: Getting started
+        items:
+        - name: Quick start guide
+          href: apps-in-teams-meetings/teams-live-share-quick-start.md
+        - name: Dice Roller tutorial
+          href: apps-in-teams-meetings/teams-live-share-tutorial.md
+      - name: Core capabilities
+        href: apps-in-teams-meetings/teams-live-share-capabilities.md
+        displayName: Live Share data structures, broadcast
+      - name: Media synchronization
+        href: apps-in-teams-meetings/teams-live-share-media-capabilities.md
+        displayName: Media synchronization, audio ducking
+      - name: Canvas
+        href: apps-in-teams-meetings/teams-live-share-canvas.md
+        displayName: Inking, cursors, live canvas
+      - name: How-to guides
+        items:
+        - name: Agile Poker tutorial
+          href: sbs-teams-live-share.yml
+        - name: Custom Azure Fluid Relay service
+          href: apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md
+          displayName: access token
+      - name: Live Share FAQ
+        href: apps-in-teams-meetings/teams-live-share-faq.md
+    - name: Integrate meetings and calls in external apps
+      href: get-started/b2c-apps.md
+      displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
+  - name: Build webhooks and connectors
+    items:
+    - name: Overview
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+      displayName: Webhooks, Connectors, endpoint, message in channel, Teams message
+    - name: Create Outgoing Webhooks
+      href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      displayName: HMAC security token, message in channel, Teams message
+    - name: Send messages using incoming webhooks
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      displayName: incoming, application, external, script, integration, HTTP, message, log, notification, build, deployment, release, PR, pull request, scan, CI, continuous integration, report, update, event
+    - name: Create connectors for Microsoft 365 Groups (Deprecated)
+      href: webhooks-and-connectors/how-to/connectors-creating.md
+    - name: Create and send messages (Deprecated)
+      href: webhooks-and-connectors/how-to/connectors-using.md
+      displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
+  - name: Build cards and dialogs
+    items:
+    - name: What are cards and dialogs?
+      href: task-modules-and-cards/cards-and-task-modules.md
+    - name: Build cards
       items:
         - name: Overview
           href: bots/calls-and-meetings/calls-meetings-bots-overview.md

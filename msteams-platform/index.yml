@@ -27,6 +27,10 @@ landingContent:
       links:
         - text: "Quickstart: Create an agent and chat with it in Teams"
           url: /microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk
+    - linkListType: how-to-guide
+      links:
+        - text: Port a Slack Bolt app to Teams
+          url: /microsoftteams/platform/agents-in-teams/port-slack-bolt-javascript-app
     - linkListType: concept
       links:
       - text: Best practices and features checklist

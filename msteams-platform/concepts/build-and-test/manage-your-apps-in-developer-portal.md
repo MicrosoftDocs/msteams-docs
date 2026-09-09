@@ -123,32 +123,6 @@ In the **Advanced** section, you can view the following components to manage you
   * **Supported channel types**: Lists the non-standard channel types that the app supports.
   * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the Microsoft Teams Store.
 
-* **Environments**
-
-    > [!IMPORTANT]
-    > The **Environment Variables** feature in Developer Portal is being deprecated. On August 31, 2026, manifests in Developer Portal that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.
-    >
-    > If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the deprecation date.
-
-    You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
-
-    To set up an environment, follow these steps:
-
-    1. In the Developer Portal, select the **Apps** that you're working.
-    1. Go to **Environments** under the **Advanced** section.
-    1. Select **+ Add an environment**>**Add**.
-
-  * **Global variables**
-
-      1. Select **Add a global variable** to create configuration variables for your environment.
-
-      To use global variables:
-
-      Use the variable names instead of hard-coded values to set your app configurations.
-
-1. Enter `{{` in any field within the Developer Portal. A dropdown appears, displaying all variables you've created for the selected environment, along with global variables.
-1. Before downloading your app package (for instance, when preparing to publish to the Teams Store), select the environment you want to use. Your app configurations automatically update based on the environment.
-
 * **Plan and pricing**: Link a Software-as-a-Service (SaaS) offer that you've created in the Partner Center for your app.
 * **Admin settings**:
   * **App Customization**: Customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.
@@ -278,12 +252,9 @@ To add a bot:
 >
 >   * For single tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 >
-> For bots configured as single tenant in **Azure Bot Service**, the developer must ensure the bot requests the correct access token. This requires including the tenant ID as part of the environment variables when requesting the access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
+> For bots configured as single tenant in **Azure Bot Service**, the developer must ensure the bot requests the correct access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
 
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
-
-  > [!NOTE]
-  > Bot ID doesn't support environment variables.
 
 ### Agent Identity Blueprint
 
