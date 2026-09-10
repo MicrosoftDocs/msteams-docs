@@ -1,10 +1,8 @@
 ---
 title: Add Location Capability with TeamsJS
-author: surbhigupta
 description: Learn how to use Teams JavaScript client library and location APIs to utilize location capabilities using code snippets and samples.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 12/13/2022
 ---
 
@@ -68,7 +66,6 @@ Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#d
 >
 > * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
-> * The Location API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `geolocation`.
 
 ## Location APIs
 
@@ -184,7 +181,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
-| App check-in current location | This sample showcases a Microsoft Teams bot that allows users to check in their current location and view all previous check-ins seamlessly. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
+| App check-in current location | This sample showcases a Microsoft Teams bot that allows users to check in their current location and view all previous check-ins seamlessly. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
 
 ## See also
 

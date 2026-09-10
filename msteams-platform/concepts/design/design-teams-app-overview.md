@@ -3,9 +3,9 @@ title: Designing your custom app
 author: heath-hamilton
 description: Learn how to design Microsoft Teams apps and resources include the Microsoft Teams UI Kit, best practices, examples, and more.
 ms.localizationpriority: medium
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.topic: overview
-ms.date: 12/27/2022
+ms.date: 03/02/2026
 ---
 # Designing your Microsoft Teams app
 
@@ -153,7 +153,7 @@ Obtain code samples and understand the implementation specifics for the fundamen
 You can upload a sample app to see how apps should look and behave in the Teams client.
 
 > [!div class="nextstepaction"]
-> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-ui-templates/ts)
 
 ### Adaptive Card Designer
 

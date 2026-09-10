@@ -5,7 +5,6 @@ ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
 ms.date: 02/06/2025
-ms.owner: ryanbliss
 ---
 
 # Create a configurable tab
@@ -18,7 +17,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
 ## Create a configurable tab with JavaScript
 
-Follow the step-by-step guide to [build your tab app using JavaScript](../../sbs-gs-javascript.yml).
+Follow the step-by-step guide to [build your tab app using JavaScript](../../\get-started\build-basic-tab-app.md).
 
 <!--
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:

@@ -1,10 +1,8 @@
 ---
 title: Debug Bot with Microsoft 365 Agents Playground
-author: surbhigupta
 description: Learn how to build, configure, and deploy bot using Agents Playground in Visual Studio, and to mock an activity using predefined and custom activity triggers.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 02/13/2024
 ---
 

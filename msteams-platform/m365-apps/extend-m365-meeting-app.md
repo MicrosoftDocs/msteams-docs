@@ -2,8 +2,6 @@
 title: Build & Extend Meeting App to Outlook
 description: Learn how to build and extend Teams meeting app for Outlook and ensure your Teams meeting app experience works seamlessly in Outlook.
 ms.date: 12/11/2024
-ms.author: mosdevdocs
-author: erikadoyle
 ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: m365apps
@@ -35,7 +33,7 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with uploading enabled.
 * A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
-* [Teams Toolkit CLI v2](~/toolkit/teams-toolkit-cli.md) library installed from npm.
+* [Microsoft 365 Agents Toolkit command line interface](../toolkit/Microsoft-365-Agents-Toolkit-cli.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 

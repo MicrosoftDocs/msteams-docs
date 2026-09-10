@@ -2,11 +2,10 @@
 title: Grant RSC permissions to an app
 description: Learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
 ms.localizationpriority: medium
-author: surbhigupta
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.topic: reference
 ms.owner: vishachadha
-ms.date: 03/28/2023
+ms.date: 08/18/2026
 ---
 
 # Grant RSC permissions to your app
@@ -34,6 +33,9 @@ The Microsoft Entra admin center provides a central platform for you to register
 
 > [!WARNING]
 > You mustn't share your Microsoft Entra app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and a Microsoft Entra app. Installing multiple Teams apps associated with the same Microsoft Entra app ID will cause installation or runtime failures.
+
+> [!NOTE]
+> Register your app in the same tenant where you upload and test your app. If the app registration is in a different tenant, only a tenant administrator can upload the app. For more information, see [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Update your app manifest
 
@@ -441,6 +443,17 @@ The default value of the `isUserPersonalScopeResourceSpecificConsentEnabled` pro
 
 If your Teams admin allows custom app uploads, you can [upload your custom app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
+> [!IMPORTANT]
+>
+>
+> If you encounter the following error while sideloading a Teams app that requires Resource-Specific Consent (RSC) permissions:
+> `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`
+>
+> Ensure that one of the following conditions is met:
+>
+> * The user attempting to install the app is a tenant administrator.
+> * The app registration associated with the Teams app was created in the same tenant as the user.
+
 ## Verify app RSC permission granted to your app
 
 To verify the app RSC permissions, follow these steps:
@@ -532,8 +545,8 @@ For more information on how to get details of the apps installed for the user, s
 
 | **Sample name** | **Description** | **.NET** |**Node.js** | **App manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
-| Resource-Specific Consent (RSC) | This sample application demonstrates how to request Resource Specific Consent (RSC) permissions, use them to call Microsoft Graph, and enumerate permission grants through a Teams tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp/demo-manifest/graph-rsc.zip)|
-| Configure RSC permissions |  This sample demonstrates how to configure Resource Specific Consent (RSC) permissions in a Teams app manifest and use them to call Microsoft Graph, allowing you to observe real API responses in both team channels and group chats. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc-helper/nodeJs)|NA|
+| Resource-Specific Consent (RSC) | This sample application demonstrates how to request Resource Specific Consent (RSC) permissions, use them to call Microsoft Graph, and enumerate permission grants through a Teams tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-rsc/nodeJs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-rsc/csharp/demo-manifest/graph-rsc.zip)|
+| Configure RSC permissions |  This sample demonstrates how to configure Resource Specific Consent (RSC) permissions in a Teams app manifest and use them to call Microsoft Graph, allowing you to observe real API responses in both team channels and group chats. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-rsc-helper/nodeJs)|NA|
 
 ## See also
 

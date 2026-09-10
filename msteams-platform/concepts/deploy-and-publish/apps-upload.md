@@ -2,8 +2,6 @@
 title: Upload your custom app
 description: Learn how to upload your custom app in Microsoft Teams. Custom app upload is common when testing and debugging an app during development.
 ms.topic: how-to
-author: surbhigupta
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 01/23/2025
 ---

@@ -1,8 +1,6 @@
 ---
 title: Debug Teams App using Agents Toolkit
-author: surbhigupta 
 description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
-ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/21/2022

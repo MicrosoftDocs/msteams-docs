@@ -4,8 +4,8 @@ author: laujan
 description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation, and storage partitioning.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.author: lomeybur
-ms.date: 02/06/2025
+ms.author: nickwalk
+ms.date: 06/23/2026
 ---
 
 # Cookies and local storage
@@ -147,7 +147,7 @@ This change might disrupt scenarios like external authentication in browsers. It
 
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Teams cookie app | This sample app demonstrates key web storage features, including managing cookies, SameSite cookies, and partitioned cookies. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-cookie/js) |
+| Teams cookie app | This sample app demonstrates key web storage features, including managing cookies, SameSite cookies, and partitioned cookies. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-app-cookie/js) |
 
 ## See also
 

@@ -1,11 +1,11 @@
 ---
 title: Device Permissions for Teams Apps
-author: surbhigupta
+author: vikasalmal
 description: Learn to update your app manifest to request access to native features that require user consent, such as scan QR, barcode, image, audio, and video capabilities.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.author: surbhigupta
-ms.date: 03/21/2023
+ms.author: vikasalmal
+ms.date: 03/02/2026
 ---
 
 # Request device permissions for your Teams app
@@ -257,7 +257,7 @@ Device permissions are stored for every sign in session. It means that if you si
 
 | Sample name           | Description | Node.js    | Manifest
 |---------------------|--------------|---------|---------|
-|Device permissions | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
+|Device permissions | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## Next step
 

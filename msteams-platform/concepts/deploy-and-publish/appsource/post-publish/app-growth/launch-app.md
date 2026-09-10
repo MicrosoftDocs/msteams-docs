@@ -2,9 +2,8 @@
 title: Launch Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the launch stage of your app to grow your app. Learn about Teams Store listing, landing page, and Store marketing toolkit.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 02/21/2023
 ---
 # Launch your collaborative app

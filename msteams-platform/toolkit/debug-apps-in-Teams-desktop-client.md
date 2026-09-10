@@ -1,8 +1,6 @@
 ---
 title: Debug your apps in Teams Desktop Client
-author: surbhigupta
 description: Learn how to debug your bot, agent, custom engine agent, and message extension apps in Teams desktop client using Microsoft 365 Agents Toolkit.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 10/22/2024
@@ -46,7 +44,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Open your Teams agent or app project.
 
-   To learn more about creating a new agent or app, see [build your first agent](../agents-in-teams/build-first-agent.md) or [apps in Teams](../get-started/get-started-overview.md).
+   To learn more about creating a new agent or app, see [Build a Teams agent with Microsoft 365 Agents Toolkit](../agents-in-teams/build-agent-toolkit.md) or [apps in Teams](../get-started/get-started-overview.md).
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
 

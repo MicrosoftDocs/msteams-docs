@@ -2,9 +2,8 @@
 title: Package your app
 description: Learn how to create, package, and upload Microsoft Teams app, icons for different Teams capabilities, and ensure your app is running and accessible through HTTPS.
 ms.localizationpriority: high
-ms.topic: conceptual
-ms.author: surbhigupta
-ms.date: 12/19/2024
+ms.topic: article
+ms.date: 05/08/2026
 ---
 
 # Teams app package
@@ -24,7 +23,7 @@ When a user installs your app in Teams, they install an app package that contain
 :::image type="content" source="../../assets/images/teams-app-host.png" alt-text="Illustration showing app hosting for Teams app":::
 
 > [!NOTE]
-> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must be aware that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
+> The [Microsoft Teams JavaScript client library (TeamsJS)](../../tabs/how-to/using-teams-client-library.md) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook. When creating your server-side app package, you must know that with version 2.31.0, the TeamsJS library is fully tree-shakeable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. For more information, see [improve load time performance with JavaScript tree shaking](../../tabs/how-to/using-teams-client-library.md#improve-load-time-performance-with-javascript-tree-shaking).
 
 ## App manifest
 
@@ -32,13 +31,13 @@ An app manifest describes your app's configuration, including its capabilities, 
 
 You can create an app and configure the app manifest through one of the following platforms:
 
-* **Teams Toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
+* **Microsoft 365 Agents toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When you create an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
 
 * **Developer Portal for Teams**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Developer Portal for Teams, see [create and register an app](teams-developer-portal.md).
 
 You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md#build-your-first-teams-app).
 
-When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](/microsoft-365/extensibility/schema/). For sample app manifest, see [Hello world sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip).
+When you publish your app to the Microsoft Teams Store, ensure your app manifest references to the latest [app manifest schema](/microsoft-365/extensibility/schema/).
 
 ## App icons
 

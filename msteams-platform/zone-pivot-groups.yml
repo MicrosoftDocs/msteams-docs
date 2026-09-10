@@ -34,16 +34,6 @@ groups:
     title: ASP.NET Core MVC
   - id: blazor-app
     title: Blazor
-- id: What-new-features
-  title: Teams feature updates
-  prompt: Select the feature availability type to explore the features
-  pivots:
-  - id: ga-feature
-    title: Generally available
-  - id: dev-preview
-    title: Developer preview
-  - id: dep-feature
-    title: Deprecated
 - id: teams-app-platform
   title: Teams app platform
   prompt: Before you begin, select your development environment.
@@ -95,4 +85,14 @@ groups:
   - id: qs-csharp
     title: C#
   - id: qs-python
-    title: Python   
+    title: Python
+- id: teams-sdk-languages
+  title: Teams SDK language
+  prompt: Select your Teams SDK language.
+  pivots:
+  - id: teams-sdk-csharp
+    title: C#
+  - id: teams-sdk-typescript
+    title: TypeScript
+  - id: teams-sdk-python
+    title: Python

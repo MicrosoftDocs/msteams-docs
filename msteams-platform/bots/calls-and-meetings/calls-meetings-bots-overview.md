@@ -1,7 +1,7 @@
 ---
 title: Bots for Teams Calls and Online Meeting
 description: Learn how to integrate voice and video in Microsoft Teams apps using Microsoft Graph API for apps to interact with users, and manage real-time media streams.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 05/16/2022
 ---

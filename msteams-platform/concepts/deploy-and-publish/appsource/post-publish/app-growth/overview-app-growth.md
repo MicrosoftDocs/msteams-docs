@@ -2,9 +2,8 @@
 title: Plan & Strategize App Growth
 author: heath-hamilton
 description: Learn to plan, strategize, and execute growth for your app, understand growth model, and grow and succeed on Teams marketplace.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
-ms.author: surbhigupta
 ms.date: 02/21/2023
 ---
 

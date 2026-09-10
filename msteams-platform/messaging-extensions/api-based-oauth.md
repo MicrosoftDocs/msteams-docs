@@ -1,10 +1,8 @@
 ---
 title: OAuth for API based Message Extension
-author: surbhigupta12
 description: Learn about the requirements for implementing OAuth for an API based message extension and its limitation and best practices.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 04/03/2025
 ---
 

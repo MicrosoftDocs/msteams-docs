@@ -2,10 +2,10 @@
 title: Designing your app with UI templates
 author: heath-hamilton
 description: Learn to design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 12/27/2022
+ms.date: 03/02/2026
 ---
 # Designing your Microsoft Teams app with UI templates
 
@@ -36,7 +36,7 @@ View and test individual Fluent UI React components in your browser.
 Install a sample app to see how UI templates look and behave within Teams contexts.
 
 > [!div class="nextstepaction"]
-> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-ui-templates/ts)
 
 ## Calendar
 

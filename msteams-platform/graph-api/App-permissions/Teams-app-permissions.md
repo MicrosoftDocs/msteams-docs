@@ -1,6 +1,5 @@
 ---
 title: Manage Teams app permissions
-author: surbhigupta
 description: Learn how Teams apps are managed in Microsoft Entra ID and resource-specific consent (RSC) based on the feature and capability wise management.
 ms.topic: reference
 ms.localizationpriority: medium

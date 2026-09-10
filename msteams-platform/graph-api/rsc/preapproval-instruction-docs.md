@@ -4,7 +4,7 @@ description: In this article, learn more about to create, manage, and delete pre
 ms.localizationpriority: medium
 author: MSFTRickyCastaneda
 ms.author: rcastaneda
-ms.topic: conceptual
+ms.topic: article
 ms.date: 08/29/2023
 ---
 

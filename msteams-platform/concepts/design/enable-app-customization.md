@@ -3,7 +3,6 @@ title: Enable Customization for App
 author: heath-hamilton
 description: Learn how Teams Administrators can customize your Teams app for their org by changing the app's accent color, description, logo and its outline, and app name.
 ms.localizationpriority: medium
-ms.author: surbhigupta
 ms.topic: overview
 ms.date: 12/10/2022
 ---

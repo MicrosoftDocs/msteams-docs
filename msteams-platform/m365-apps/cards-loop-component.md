@@ -3,7 +3,7 @@ title: Loop Component in Adaptive Cards
 description: Learn how to build and test Adaptive Card-based Loop components for collaborative experiences within Microsoft Teams.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 10/11/2024
+ms.date: 06/23/2026
 ---
 
 # Adaptive Card-based Loop components
@@ -21,7 +21,7 @@ Following is an example of an Adaptive Card-based Loop component:
 
 To build an Adaptive Card-based Loop component, follow these steps:
 
-1. [Build a message extension with a search command](../sbs-gs-msgext.yml).
+1. [Build a message extension with a search command](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript).
 
 1. Add [link unfurling](../messaging-extensions/how-to/link-unfurling.md) to the message extension.
 
@@ -84,7 +84,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 |**Sample name** | **Description** | **Node.js** | **.NET** | **Manifest** |
 |----------------|-----------------|--------------|--------------|--------------|
-| Message extension with Adaptive Card-based Loop component | This sample demonstrates a message extension that uses Adaptive Card-based loop components to enable link unfurling and dynamic interactions in the compose area. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-unfurling-ac-loop-components/nodejs/demo-manifest/msgext-unfurling-ac-loop-components.zip) |
+| Message extension with Adaptive Card-based Loop component | This sample demonstrates a message extension that uses Adaptive Card-based loop components to enable link unfurling and dynamic interactions in the compose area. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-unfurling-ac-loop-components/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-unfurling-ac-loop-components/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-unfurling-ac-loop-components/nodejs/demo-manifest/msgext-unfurling-ac-loop-components.zip) |
 
 ## See also
 

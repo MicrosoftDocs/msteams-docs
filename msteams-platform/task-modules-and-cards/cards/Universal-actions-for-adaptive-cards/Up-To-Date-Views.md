@@ -1,8 +1,7 @@
 ---
 title: Up to date views
 description: Learn about up to date card views within Adaptive Card in Teams with code samples and approval base card with approve or reject buttons.
-author: surbhigupta12
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 12/14/2022
 ---
@@ -259,11 +258,11 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
-| Sequential Workflows Adaptive Cards | This sample demonstrates how to implement sequential flow, user-specific view and up-to-date Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
+| Sequential Workflows Adaptive Cards | This sample demonstrates how to implement sequential flow, user-specific view and up-to-date Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
 
 ## See also
 
 * [Cards and dialogs](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
-* [Form completion feedback](../cards-actions.md#form-completion-feedback)
+* [Server handlers](../cards-actions.md#server-handlers)

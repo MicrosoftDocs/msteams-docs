@@ -10,11 +10,11 @@ ms.date: 11/29/2021
 
 # Provision cloud resources
 
-TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
+TeamsFx integrates with Azure and the Microsoft 365 cloud, allowing you to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), enabling you to provision Azure resources that your application needs for code approach.
 
 ## Provision using Microsoft 365 Agents Toolkit in Visual Studio Code
 
-You can trigger the provision command in Agents Toolkit (previously known as Teams Toolkit) or Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to create or update resources for your application. The steps of the provision command are defined in the `m365agents.yml` file, under `provision` property. You can view the file to understand what resources are created.
+You can trigger the provision command in Agents Toolkit (previously known as Teams Toolkit) or Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to create or update resources for your application. The steps of the provision command are defined in the `m365agents.yml` file, under the `provision` property. You can view the file to understand what resources are created.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
@@ -27,11 +27,11 @@ The following list shows the actions designed for provision.
 
 #### What it is
 
-If the environment variable that stores Teams app ID is empty or the app ID isn't found from Teams Developer Portal, then this action creates a new Teams app.
+If the environment variable that stores the Teams app ID is empty or the app ID isn't found from the Teams Developer Portal, then this action creates a new Teams app.
 
 #### What resource it operates
 
-Teams app in Teams Developer Portal.
+Teams app in the Teams Developer Portal.
 
 #### How to use it
 
@@ -50,11 +50,11 @@ Teams app in Teams Developer Portal.
 
 #### What it is
 
-Apply the app manifest (previously called Teams app manifest) to an existing Teams app in Teams Developer Portal. It uses the app ID in the manifest.json file to determine which Teams app to update.
+Apply the app manifest (previously called Teams app manifest) to an existing Teams app in the Teams Developer Portal. It uses the app ID in the `manifest.json` file to determine which Teams app to update.
 
 #### What resource it operates
 
-Teams app in Teams Developer Portal.
+Teams app in the Teams Developer Portal.
 
 #### How to use it
 
@@ -88,7 +88,7 @@ N/A
 
 #### What it is
 
-This action validates Teams app package using validation rules.
+This action validates the Teams app package using validation rules.
 
 #### What resource it operates
 
@@ -130,11 +130,11 @@ N/A
 
 #### What it is
 
-This action publishes built Teams app zip file to tenant app catalog.
+This action publishes the built Teams app zip file to the tenant app catalog.
 
 #### What resource it operates
 
-Teams app in Microsoft 365 tenant app catalog.
+Teams app in the Microsoft 365 tenant app catalog.
 
 #### How to use it
 
@@ -153,7 +153,7 @@ Teams app in Microsoft 365 tenant app catalog.
 
 #### What it is
 
-This action creates a new Microsoft Entra application to authenticate users if the environment variable that stores clientId is empty.
+This action creates a new Microsoft Entra application to authenticate users if the environment variable that stores `clientId` is empty.
 
 #### What resource it operates
 
@@ -190,7 +190,7 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 
 #### What it is
 
-This action updates your Microsoft Entra application based on give Microsoft Entra app manifest. It refers to the ID property in Microsoft Entra app manifest to determine which Microsoft Entra app to update.
+This action updates your Microsoft Entra application based on the given Microsoft Entra app manifest. It refers to the ID property in the Microsoft Entra app manifest to determine which Microsoft Entra app to update.
 
 #### What resource it operates
 
@@ -211,7 +211,7 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 
 #### What it is
 
-This action creates a new or reuses an existing Microsoft Entra application for bot.
+This action creates a new or reuses an existing Microsoft Entra application for a bot.
 
 #### What resource it operates
 
@@ -338,13 +338,13 @@ N/A
 
 ### Customize resource provision
 
-The provision steps are defined in `m365agents.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in the `m365agents.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
 Agents Toolkit supports referencing the values from environment variables in `m365agents.yml`, app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
-The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
+The following example sets the value of the environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
 ```yml
 subscriptionId: ${{MY_AZURE_SUBSCRIPTION_ID}}
@@ -366,7 +366,7 @@ If the predefined templates don't meet your app requirements, you can create you
       bicepCliVersion: <bicep-cli-version>
 ```
   
-The `arm/deploy` action support ARM templates written in bicep and json format. If you use json format, you can omit the `bicepCliVersion` parameter. You need to have basic knowledge of Azure Resource Manager. You can get started with Azure Resource Manager at [Azure Resource Manager documentation](/azure/azure-resource-manager/).
+The `arm/deploy` action supports ARM templates written in bicep and json format. If you use json format, you can omit the `bicepCliVersion` parameter. You need to have basic knowledge of Azure Resource Manager. You can get started with Azure Resource Manager at [Azure Resource Manager documentation](/azure/azure-resource-manager/).
 
 ### Customize Teams apps
 
@@ -383,7 +383,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Open `m365agents.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Agents Toolkit is as follows:
+1. Find the environment variable names that store information for the Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -428,7 +428,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Open `m365agents.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
+1. Find the environment variable names that store information for the Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:

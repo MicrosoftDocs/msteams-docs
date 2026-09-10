@@ -1,8 +1,6 @@
 ---
 title: Use Certificate or MSI Authentication for Bots
-author: surbhigupta
 description: Learn how to use certificate or MSI-based authentication for your bot app, which resolves compliance concerns with Microsoft Entra ID and bot secret.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 10/22/2024

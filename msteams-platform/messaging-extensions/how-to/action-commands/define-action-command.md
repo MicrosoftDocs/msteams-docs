@@ -1,12 +1,11 @@
 ---
 title: Create Action Commands for App
-author: surbhigupta
 description: Learn to define message extension action commands with app manifest in Teams. Sample (.NET, Node.js), create dialog (task module), respond to dialog submit action.
 ms.localizationpriority: medium
-ms.topic: conceptual
-ms.author: anclear
+ms.topic: article
+ms.author: nickwalk
 ms.owner: ginobuzz
-ms.date: 03/11/2025
+ms.date: 06/18/2026
 ---
 
 # Define message extension action commands
@@ -16,6 +15,8 @@ Before creating the action command, you must decide the following factors:
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
 1. [How is the dialog (referred as task module in TeamsJS v1.x) created?](#select-how-to-create-your-dialog)
 1. [Is the final message or card sent to the channel from a bot, or is the message or card inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 ## Select action command invoke locations
 
@@ -100,7 +101,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
    :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
 
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
-   
+
    1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
 
 1. Select the required scopes.
@@ -110,7 +111,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
    A command details page appears.
 
 1. In the Command details page, select **Action** and then select parameter type.
-    
+
 1. Select **Action** as the type of command and update the following fields:
    * Command ID
    * Command title
@@ -141,7 +142,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
-1. Select **Save**   
+1. Select **Save**
 
 A bot-based action message extension is created.
 
@@ -154,7 +155,7 @@ The following code provides an example of action-based for message extensions:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionfetchtaskasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
 ```csharp
 protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
@@ -199,7 +200,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 # [Node.js](#tab/nodejs)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-action/nodejs/bots/teamsMessagingExtensionsActionBot.js#L24-L61)
 
 ```javascript
 // Invoked when a Messaging Extension Fetch activity is received from the connector.
@@ -231,12 +232,12 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a dialog. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/csharp/demo-manifest/msgext-action.zip) |
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a dialog. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action-based message extension.
+Follow the [step-by-step guide](../../../get-started/tutorials.md#build-action-based-message-extension) to build Teams action-based message extension.
 
 ## Next step
 

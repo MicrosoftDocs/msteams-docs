@@ -70,4 +70,4 @@ Teams platform offers two powerful paths to choose from:
 > [!div class="nextstepaction"]
 > [Agents in Teams](agents-in-teams/overview.md)
 > [!div class="nextstepaction"]
-> [Build your first agent](agents-in-teams/build-first-agent.md)
+> [Quickstart: Create an agent and chat with it in Teams](agents-in-teams/quickstart-create-agent-teams-sdk.md)

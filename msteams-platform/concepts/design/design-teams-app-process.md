@@ -3,9 +3,9 @@ title: App design process
 author: heath-hamilton
 description: Learn how and when to use Microsoft Teams design tools such as Teams UI Kit, resources, choose capabilities and UX flows to design an effective Microsoft Teams app.
 ms.localizationpriority: medium
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.topic: overview
-ms.date: 01/07/2024
+ms.date: 03/02/2026
 ---
 # Design process for Microsoft Teams apps
 
@@ -47,7 +47,7 @@ The UI kit also has prebuilt templates and components that you can copy and modi
 You can upload a sample app to see how apps should look and behave in the Teams client.
 
 > [!div class="nextstepaction"]
-> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
+> [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-ui-templates/ts)
 
 ## Learn Teams design system
 

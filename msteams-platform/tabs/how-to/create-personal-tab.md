@@ -5,13 +5,12 @@ description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NE
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
-ms.date: 02/28/2025
-ms.owner: ryanbliss
+ms.date: 03/16/2026
 ---
 
 # Create a tab
 
-Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
+Tabs in chats, channels, or meetings function similarly to apps, as you can pin only one tab per app to the left pane for easy access.
 
 > [!IMPORTANT]
 >
@@ -411,19 +410,19 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The app package file name is `tab.zip` and it's available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
+1. The app package file name is `tab.zip`, and it's located at the `/bin/Debug/netcoreapp3.1/tab.zip` path.
 
 1. Select `tab.zip` and open it in the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is created and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
-1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer Information**, add the required details. In **Website (must be a valid HTTPS URL)**, provide your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou`, then select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank, select **Context** as personalTab from the dropdown list, and select **Confirm**.
 
 1. Select **Save**.
 
@@ -434,7 +433,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -450,7 +449,7 @@ ngrok http 3978 --host-header=localhost
 
 1. At the command prompt, create a new directory for your tab project.
 
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
+1. Clone the sample repository into your new directory using the following command, or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
@@ -593,15 +592,15 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **tab.zip** and open it in the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is created and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
-1. In **Developer information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer information**, add the required details. In **Website (must be a valid HTTPS URL)**, provide your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou`, then select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank, select **Context** as personalTab from the dropdown list, and select **Confirm**.
 
 1. Select **Save**.
 
@@ -612,7 +611,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
@@ -624,7 +623,7 @@ ngrok http 3978 --host-header=localhost
 
 ::: zone pivot="blazor-app"
 
-Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
+Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
@@ -747,7 +746,7 @@ Start Teams app development by creating your first app. This app uses tab capabi
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step Blazor guide is successfully completed.":::
 
-This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+This tutorial guides you through creating, running, and deploying your first Teams app using .NET/Blazor.
 
 In this page, you'll learn:
 
@@ -756,11 +755,11 @@ In this page, you'll learn:
 
 ## Create your tab project
 
-Use Agents Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+Use Agents Toolkit to create your first tab project. The toolkit guides you through a series of pages to create and configure your Teams app project:
 
-1. **Create a new project** page: You can select the project type.
-1. **Configure your new project** page: You can enter the project details.
-1. **Create a new Teams application** page: You can select the Teams app capabilities.
+1. **Create a new project** page: Select the project type.
+1. **Configure your new project** page: Enter the project details.
+1. **Create a new Teams application** page: Select the Teams app capabilities.
 
 **To create your tab project workspace**
 
@@ -789,7 +788,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on project name.
+      > The project name you enter is automatically filled in as the **Solution name** also. You can change the solution name with no effect on project name.
 
    1. Select the folder path where you want to create the project workspace.
 
@@ -811,7 +810,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
       :::image type="content" source="../../assets/images/toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
 
-   Your Teams tab app is created in few seconds.
+   Your Teams tab app is created in a few seconds.
 
    :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/toolkit-v2/blazor/vs-tab-app.png":::
 
@@ -826,7 +825,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you've the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you've the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of Visual Studio.
 
 :::image type="content" source="../../assets/images/toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -1173,12 +1172,16 @@ Congratulations! You've successfully created a Teams tab with offline functional
 
 To learn how to optimize your tab's performance in the Teams Android and iOS clients, see [best practices for Teams mobile](../../resources/teams-mobile-best-practices.md).
 
+## Step-by-step guide
+
+For learning more about building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|
 |-------------|-------------|------|----|----|
-|Tab personal| This sample showcases the development of a custom personal tab for Microsoft Teams, utilizing ASP.NET Core MVC to enhance user interaction. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal-quickstart/js) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
-|Offline personal tab | This sample app demonstrates a CRUD application that functions offline in Microsoft Teams, allowing users to manage data without an internet connection and automatically sync with blob storage when reconnected. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-support-offline/nodejs/demo-manifest/tab-support-offline.zip)|
+|Tab personal| This sample showcases the development of a custom personal tab for Microsoft Teams, utilizing ASP.NET Core MVC to enhance user interaction. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-personal/mvc-csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-personal-quickstart/js) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-personal/mvc-csharp/demo-manifest/tab-personal.zip)|
+|Offline personal tab | This sample app demonstrates a CRUD application that functions offline in Microsoft Teams, allowing users to manage data without an internet connection and automatically sync with blob storage when reconnected. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-support-offline/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/tab-support-offline/nodejs/demo-manifest/tab-support-offline.zip)|
 
 ## Next step
 

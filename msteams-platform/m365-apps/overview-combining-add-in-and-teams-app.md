@@ -1,10 +1,9 @@
 ---
 title: General Guidance for Combining an Office add-in and a Teams App
 description: Get high-level general guidance about combining an existing Office Add-in with an existing Teams app.
-ms.date: 11/08/2024
-ms.author: mosdevdocs
+ms.date: 06/23/2026
 author: rickki
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---

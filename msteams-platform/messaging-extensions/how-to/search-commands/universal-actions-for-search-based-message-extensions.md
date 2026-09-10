@@ -1,15 +1,15 @@
 ---
 title: Universal Actions for Message Extension
-author: surbhigupta
 description: In this article, learn about Universal Actions and automatic refresh for Adaptive Cards in search based message extensions.
-ms.topic: conceptual
-ms.author: surbhigupta
+ms.topic: article
 ms.date: 02/06/2025
 ms.localizationpriority: medium
 ms.owner: slamba
 ---
 
 # Universal Actions for search based message extensions
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 Adaptive Cards in search based message extensions now support Universal Actions. To enable Universal Actions for search based message extensions, the app must conform to the [schema for Universal Actions for Adaptive Cards](../../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-Universal-Actions-for-Adaptive-Cards.md#schema-for-universal-actions-for-adaptive-cards) along with the following requirements:
 

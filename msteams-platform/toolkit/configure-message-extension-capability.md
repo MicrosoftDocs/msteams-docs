@@ -1,8 +1,6 @@
 ---
 title: Configure Message Extension Capability
-author: surbhigupta
 description: Learn how to configure the message extension capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
-ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -661,7 +659,7 @@ The following code snippet is an example:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-for-adding-capabilities)
+> [How-to guides for adding capabilities](add-how-to-guides-vsc.md#how-to-guides-in-agents-toolkit)
 
 ## See also
 
