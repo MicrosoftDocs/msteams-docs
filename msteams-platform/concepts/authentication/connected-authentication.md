@@ -166,7 +166,7 @@ To implement backend logic for token management and account linking:
     // Pass the token only to the trusted service that expects it.
     const auth0AccessToken = response.token;
     ```
-
+  
 Post authentication the account linking page must call the backend to link the NAA based profile with the bot auth Profile.
 
 1. **Link account to enable persistent login**:
