@@ -28,13 +28,6 @@ For more information about NAA, see [Nested app authentication](nested-authentic
 
 ## Connected authentication at run time
 
-User scenario:
-
-1. As a developer, I build apps for Teams for my organization.
-1. The Contoso app includes both bot and tab capabilities. The app user must log in separately.
-1. I want to the app users to log in only once...
-1. ... but be able access all capabilities.
-
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
 :::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow." border="false" lightbox="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png":::
@@ -82,17 +75,11 @@ With connected authentication, apps with multiple capabilities require the users
 
 - Seamless Access: Connected authentication achieves smoother app transactions and interactions as bot and tab capabilities recognize the user through the linked tokens.
 
-[WIP: Add Flow diagram]
+[WIP: Update Flow diagram as per Teams SDK]
 
 ## Developer experience
 
 [Add introduction]
-
-Notes for flow infographic:
-
-- High-level diagram or description of the authentication flow.
-- Show the main actors (user, app, authentication providers, backend services).
-- Explain how tokens are issued, exchanged, and linked.
 
 ### Enable connected authentication
 
