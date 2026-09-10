@@ -81,7 +81,7 @@ await app.send(conversation_id, activity)
 | `textFormat` value | When to use |
 | ------------------ | ----------- |
 | `extendedmarkdown` | **Recommended for agent text responses that require rich formatting.** Use this format when your agent outputs rich markdown (for example, from LLM). Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming. This format is in public developer preview. |
-| (not specified) | **Default format.** Supports basic Markdown syntax and HTML elements like `<at>` and `<quoted>` tags. Use this format for simple text responses without specifying a `textFormat` value. |
+|  | **Default format.** Supports basic Markdown syntax and HTML elements like `<at>` and `<quoted>` tags. Use this format for simple text responses without specifying a `textFormat` value. |
 
 ### Supported HTML elements in default format
 
