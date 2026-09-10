@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Connected authentication for Teams
 
-Connected authentication provides a streamlined, one-time setup experience for every user, regardless of how they first access an app from the in-context store to an adaptive card, tab, or group chat. It lets users sign in to all app capabilities at once, supports seamless Microsoft Entra ID account linking.
+Connected authentication provides a streamlined, one-time setup experience for every user. Once a user signs in to the agent or bot app, it signs them in to all app capabilities at once, supports seamless Microsoft Entra ID account linking.
 
 [WIP: Updates for Teams SDK, code sample and code snippets, and document structure.]
 
