@@ -10,12 +10,7 @@ ms.localizationpriority: medium
 
 # Connected authentication for Teams
 
-[Add introduction]
-
-Connected authentication enables you to unify sign-in process for Teams agents, bot, and tab apps.
-
-- Efficient developer experience: Developers can implement a single authentication and setup flow. Enabling connected authentication minimizes redundant code and fragmented user onboarding.
-- Enhanced security: Managing authentication centrally ensures compliance with organizational policies and enables advanced security features like multi-factor authentication.
+Connected authentication provides a streamlined, one-time setup experience for every user, regardless of how they first access an app from the in-context store to an adaptive card, tab, or group chat. It lets users sign in to all app capabilities at once, supports seamless Microsoft Entra ID account linking.
 
 ## Prerequisites
 
@@ -26,9 +21,9 @@ For more information about NAA, see [Nested app authentication](nested-authentic
 
 ## Connected authentication at run time
 
-Connected authentication lets a Teams agent or app associate identities established through different authentication systems. For example, an agent app can associate the Auth0 identity used by an agent with the Microsoft Entra identity used by a tab. After the user explicitly approves the association, the app stores a server-side mapping between the identities so its capabilities recognize the same user. Connected authentication doesn’t merge identity-provider accounts or make access tokens interchangeable.
+Connected authentication at run time provides a unified sign-in experience for Microsoft Teams apps that include both a bot and a tab. After a user signs in through the bot and links the app account to their Microsoft account, the tab can use the active Teams session to authenticate the user without another sign-in prompt. This bot-to-tab flow reduces repeated authentication and helps users move seamlessly between app capabilities.
 
-With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
+Agents and apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
 :::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow." border="false" lightbox="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png":::
 
