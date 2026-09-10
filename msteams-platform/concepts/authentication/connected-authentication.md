@@ -23,11 +23,11 @@ For more information about NAA, see [Nested app authentication](nested-authentic
 
 Connected authentication at run time provides a unified sign-in experience for Microsoft Teams apps that include both a bot and a tab. After a user signs in through the bot and links the app account to their Microsoft account, the tab can use the active Teams session to authenticate the user without another sign-in prompt. This bot-to-tab flow reduces repeated authentication and helps users move seamlessly between app capabilities.
 
-Agents and apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
-
 :::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow." border="false" lightbox="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png":::
 
-[WIP: Add screenshots]
+[WIP: Add relevant screenshots with the steps.]
+
+Agents and apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
 **Step 1**: App Installation and Initial Access
 
