@@ -12,6 +12,8 @@ ms.localizationpriority: medium
 
 Connected authentication provides a streamlined, one-time setup experience for every user, regardless of how they first access an app from the in-context store to an adaptive card, tab, or group chat. It lets users sign in to all app capabilities at once, supports seamless Microsoft Entra ID account linking.
 
+[WIP: Updates for Teams SDK, code sample and code snippets, and document structure.]
+
 ## Prerequisites
 
 - Account linking URL: This url must be hosted by the app. Teams will rendered the URL using a task module in an embedded iframe. An example for the account URL can look like `Myapp.com/linkWithMicrosoft`.
