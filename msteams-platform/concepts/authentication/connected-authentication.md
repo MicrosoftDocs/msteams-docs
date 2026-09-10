@@ -12,9 +12,7 @@ ms.localizationpriority: medium
 
 [Add introduction]
 
-Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
-
-[WIP: Query - check for agents]
+Connected authentication enables you to unify sign-in process for Teams agents, bot, and tab apps.
 
 - Efficient developer experience: Developers can implement a single authentication and setup flow. Enabling connected authentication minimizes redundant code and fragmented user onboarding.
 - Enhanced security: Managing authentication centrally ensures compliance with organizational policies and enables advanced security features like multi-factor authentication.
@@ -27,6 +25,8 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 For more information about NAA, see [Nested app authentication](nested-authentication.md).
 
 ## Connected authentication at run time
+
+Connected authentication lets a Teams agent or app associate identities established through different authentication systems. For example, an agent app can associate the Auth0 identity used by an agent with the Microsoft Entra identity used by a tab. After the user explicitly approves the association, the app stores a server-side mapping between the identities so its capabilities recognize the same user. Connected authentication doesn’t merge identity-provider accounts or make access tokens interchangeable.
 
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
@@ -89,7 +89,7 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 
 1. Configure app with Microsoft Entra ID: For more information, see [tabs](../../tabs/how-to/authentication/tab-sso-register-aad.md) and [bots](../../bots/how-to/authentication/bot-sso-register-aad.md).
 1. Backend requirements
-    - secure token management and storage
+    - Secure token management and storage
     - NAA API and other APIs for linking and validating account
     - Integration with IdP (Azure, Auth0)
 1. Build user experience to trigger authentication
@@ -103,7 +103,7 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 
 To implement backend logic for token management and account linking:
 
-[WIP: Add code snippets]
+[WIP: Add Teams SDK code snippets]
 
 1. **Obtain and save the NAA token**:
 
@@ -144,20 +144,27 @@ To implement backend logic for token management and account linking:
 
     Here's an example code snippet to fetch the bot auth flow from the token service:
 
-    ```JavaScript
-    import { App } from '@microsoft/teams.apps';
+    ```TypeScript
+    import { App } from "@microsoft/teams.apps";
+
+    const connectionName = process.env.AUTH0_CONNECTION_NAME;
+
+    if (!connectionName) {
+      throw new Error("AUTH0_CONNECTION_NAME isn't configured.");
+    }
 
     const app = new App({
-        clientId: process.env.ENTRA_CLIENT_ID,
-        clientSecret: process.env.ENTRA_SECRET_ID,
-    });
-    await app.start();
-    const res = await app.api.users.token.get({
-        userId: "aad-user-id",
-        connectionName: "auth0",
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
     });
 
-    const bearer = res.token;
+    const response = await app.api.users.token.get({
+      userId: "<TEAMS_USER_ID>",
+      connectionName,
+    });
+
+    // Pass the token only to the trusted service that expects it.
+    const auth0AccessToken = response.token;
     ```
 
 Post authentication the account linking page must call the backend to link the NAA based profile with the bot auth Profile.
