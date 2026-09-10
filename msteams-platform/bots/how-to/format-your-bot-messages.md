@@ -114,7 +114,7 @@ After you format text content, ensure that your formatting works across all plat
 
 ## Message size limits
 
-[!INCLUDE [agent-message-size-limit](how-to/includes/agent-message-size-limit.md)]
+[!INCLUDE [agent-message-size-limit](includes/agent-message-size-limit.md)]
 
 ## Extended Markdown features
 
