@@ -47,16 +47,16 @@ Here's an example of using RSC permissions to filter @mention messages:
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
 // This code snippet allows the agent to ignore all messages that do not @mention the agent.
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task app.OnMessage(async context => ...) 
 {
         // Ignore the message if agent was not mentioned. 
         // Remove this if block to process all messages received by the agent.
-        if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+        if (!Context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(Context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
         {
-            return;
+            return false;
         }
         // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the agent can receive messages across channels or chats in team without being @mentioned."));
+        await Context.SendActivityAsync("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
 }
 ```
 
@@ -80,7 +80,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
+| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessa ge.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
 
 ## Update app manifest
 
@@ -278,11 +278,15 @@ The following code provides an example of the RSC permissions:
 
 // Handle when a message is addressed to the agent.
 // When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task app.OnMessage(async context => ...) 
 {
-        // Sends an activity to the sender of the incoming activity.
-         await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the agent can receive messages across channels or chats in a team without being @mentioned."));
-}
+app.OnMessage(async (context, state) =>
+{
+    await context.SendActivityAsync(
+        "Using RSC, the agent can receive messages across channels or chats in a team without being @mentioned.");
+ 
+    return true;
+});
 
 ```
 
@@ -291,16 +295,18 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 - [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
-```javascript
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+const app = new App();
 
 // Handle when a message is addressed to the agent.
-// When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
-
-this.onMessage(async (context, next) => {
-    // Sends a message activity to the sender of the incoming activity.
-   await context.sendActivity(MessageFactory.text("Using RSC the agent can receive messages across channels or chats in team without being @mentioned."))
-   await next();
+// When RSC is enabled this runs even when the agent is addressed without being @mentioned.
+app.on('message', async ({ send }) => {
+  await send('Using RSC the agent can receive messages across channels or chats in team without being @mentioned.');
 });
+
+app.start().catch(console.error);
 
 ```
 
@@ -311,20 +317,20 @@ this.onMessage(async (context, next) => {
 
 ```python
 
- # Event handler for when new members are added to a team
-    async def on_teams_members_added(
-        self,
-        teams_members_added: list[TeamsChannelAccount],  # List of new members added
-        team_info: TeamInfo,  # Information about the team
-        turn_context: TurnContext,  # Context for the current turn
-    ):
-        # Welcome message for new members
-        welcome_text = "Hello and welcome! With this sample, your agent can receive user messages across standard channels in a team without being @mentioned."
-        
-        for member in teams_members_added:
-            # Ensure the agent does not send a welcome message to itself
-            if member.id != turn_context.activity.recipient.id:
-                await turn_context.send_activity(MessageFactory.text(welcome_text))
+from microsoft_teams.api.activities import ConversationUpdateActivity
+from microsoft_teams.apps import ActivityContext
+
+
+# Event handler for when new members are added to a team
+@app.on_conversation_update
+async def on_members_added(ctx: ActivityContext[ConversationUpdateActivity]) -> None:
+    # Welcome message for new members
+    welcome_text = "Hello and welcome! With this sample, your agent can receive user messages across standard channels in a team without being @mentioned."
+
+    for member in ctx.activity.members_added or []:
+        # Ensure the agent does not send a welcome message to itself
+        if member.id != ctx.activity.recipient.id:
+            await ctx.send(welcome_text)
 
 ```
 
