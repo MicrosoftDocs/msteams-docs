@@ -52,9 +52,25 @@ Streaming agent messages has two types of updates:
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use `Stream.Update` to write informative updates before beginning the message stream. `Stream.Update` can be called multiple times with different update text.
+Use `TeamsStreamingWriter` to write informative updates and stream response content. Finalize the writer after appending all response chunks.
 
-Use `Stream.Emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `Stream.Emit`, informative updates will no longer be shown and `Stream.Update` will have no effect.
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+  TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
+
+  await writer.SendInformativeUpdateAsync("Testing", cancellationToken);
+  await Task.Delay(1000, cancellationToken);
+  await writer.AppendResponseAsync("hello", cancellationToken);
+  await writer.AppendResponseAsync(", ", cancellationToken);
+  await writer.AppendResponseAsync("world!", cancellationToken);
+  await writer.FinalizeResponseAsync(cancellationToken: cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>

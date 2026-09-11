@@ -35,6 +35,33 @@ The following sample code uses paged member retrieval:
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var membersClient = context.Api.Conversations.Members;
+    var allMembers = new List<TeamsChannelAccount>();
+    string? continuationToken = null;
+
+    do
+    {
+        var page = await membersClient.GetPagedAsync(
+            context.Activity.Conversation.Id,
+            pageSize: 50,
+            continuationToken: continuationToken,
+            cancellationToken: cancellationToken
+        );
+
+        allMembers.AddRange(page.Members.Where(m => m is not null).Select(m => m!));
+        continuationToken = page.ContinuationToken;
+    }
+    while (!string.IsNullOrEmpty(continuationToken));
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {
@@ -123,6 +150,27 @@ The following sample code uses Teams SDK APIs:
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var memberId = context.Activity.From?.Id;
+    if (string.IsNullOrEmpty(memberId))
+    {
+        return;
+    }
+
+    var member = await context.Api.Conversations.Members.GetByIdAsync(
+        context.Activity.Conversation.Id,
+        memberId,
+        cancellationToken: cancellationToken
+    );
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {
@@ -184,6 +232,26 @@ The following sample code uses Teams SDK APIs:
 ::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var teamId = context.Activity.ChannelData?.Team?.Id;
+    if (string.IsNullOrEmpty(teamId))
+    {
+        return;
+    }
+
+    var team = await context.Api.Teams.GetByIdAsync(
+        teamId,
+        cancellationToken: cancellationToken
+    );
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -249,6 +317,26 @@ The following sample code is used to get the list of channels in a team:
 ::: zone pivot="teams-sdk-csharp"
 
 * [Teams SDK API reference](https://microsoft.github.io/teams-sdk/csharp/essentials/api/)
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var teamId = context.Activity.ChannelData?.Team?.Id;
+    if (string.IsNullOrEmpty(teamId))
+    {
+        return;
+    }
+
+    var channels = await context.Api.Teams.GetConversationsAsync(
+        teamId,
+        cancellationToken: cancellationToken
+    );
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>

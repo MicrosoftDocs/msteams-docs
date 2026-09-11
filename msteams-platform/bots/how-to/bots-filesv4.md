@@ -198,7 +198,51 @@ Fetch inline images that are part of the message using the `OnMessage` handler. 
 
 The following code shows an example of fetching inline images from a message:
 
-# [C#](#tab/csharp1)
+# [C# SDK v2.1](#tab/csharp1)
+
+```csharp
+using Microsoft.Teams.Api;
+using Microsoft.Teams.Apps;
+
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
+
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var attachment = context.Activity.Attachments?[0];
+    if (attachment != null && attachment.ContentType.Contains("image"))
+    {
+        // Download the inline image from the content URL.
+        var client = new HttpClient();
+        var responseMessage = await client.GetAsync(attachment.ContentUrl);
+
+        // Save the inline image to Files directory.
+        var filePath = Path.Combine("Files", "ImageFromUser.png");
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+        {
+            await responseMessage.Content.CopyToAsync(fileStream);
+        }
+
+        // Create reply with the received image.
+        var imageData = Convert.ToBase64String(File.ReadAllBytes(filePath));
+        var reply = new MessageActivityInput().WithText(
+            $"Attachment of {attachment.ContentType} type and size of {responseMessage.Content.Headers.ContentLength} bytes received.");
+        reply.AddAttachment(TeamsAttachment.CreateBuilder()
+            .WithContentType("image/png")
+            .WithName("ImageFromUser.png")
+            .WithContentUrl($"data:image/png;base64,{imageData}")
+            .Build());
+        await context.SendAsync(reply, cancellationToken);
+    }
+});
+
+app.Run();
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp1-legacy)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -305,7 +349,32 @@ The following example shows how to handle the complete file consent workflow, in
 
 The following code sends a file consent card to the user, requesting permission to upload the received file to their OneDrive:
 
-#### [C#](#tab/csharp2)
+#### [C# SDK v2.1](#tab/csharp2)
+
+```csharp
+async Task SendFileConsentCard(Context<MessageActivity> context, string fileName, string fileId, int fileSize, CancellationToken cancellationToken)
+{
+    var consentContext = new { filename = fileName, file_id = fileId };
+
+    var fileCard = new FileConsentCard
+    {
+        Description = "This is the file I want to send you",
+        SizeInBytes = fileSize,
+        AcceptContext = consentContext,
+        DeclineContext = consentContext
+    };
+
+    var message = new MessageActivityInput()
+        .AddAttachment(TeamsAttachment.CreateBuilder()
+            .WithContentType(ContentTypeFileConsent)
+            .WithName(fileName)
+            .WithContent(fileCard)
+            .Build());
+    await context.SendAsync(message, cancellationToken);
+}
+```
+
+#### [C# SDK<2.1(legacy)](#tab/csharp2-legacy)
 
 ```csharp
 async Task SendFileConsentCard<T>(IContext<T> context, string fileName, string fileId, int fileSize)
