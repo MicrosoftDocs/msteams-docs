@@ -205,7 +205,7 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 
 The Teams SDK uses simple event-driven handlers for authentication. Use `IsSignedIn` to check authentication status, `SignIn()` to trigger the SSO flow, and subscribe to the `signin` event to handle successful authentication.
 
-# [C# SDK v2.1](#tab/cs3)
+# [C# SDK v2.1](#tab/cs2)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -225,7 +225,7 @@ auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
 });
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs3-legacy)
+# [C# SDK<2.1(legacy)](#tab/cs2-legacy)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -247,7 +247,7 @@ teams.OnSignIn(async (_, teamsEvent, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/ts3)
+# [TypeScript](#tab/ts2)
 
 ```typescript
 app.on('message', async ({ isSignedIn, signin, userToken, send }) => {
@@ -264,7 +264,7 @@ app.event('signin', async ({ send, token }) => {
 });
 ```
 
-# [Python](#tab/py3)
+# [Python](#tab/py2)
 
 ```python
 from teams.api import MessageActivity, SignInEvent
@@ -293,7 +293,7 @@ async def handle_sign_in(event: SignInEvent):
 
 When using SSO, if the token exchange fails, Teams sends a `signin/failure` invoke activity to your app. The SDK includes a built-in default handler that logs a warning with actionable troubleshooting guidance. You can optionally register your own handler to customize the behavior:
 
-# [C# SDK v2.1](#tab/cs5)
+# [C# SDK v2.1](#tab/cs3)
 
 ```csharp
 auth.OnSignInFailure(async (context, failure, cancellationToken) =>
@@ -303,7 +303,7 @@ auth.OnSignInFailure(async (context, failure, cancellationToken) =>
 });
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs5-legacy)
+# [C# SDK<2.1(legacy)](#tab/cs3-legacy)
 
 ```csharp
 teams.OnSignInFailure(async (context, cancellationToken) =>
@@ -314,7 +314,7 @@ teams.OnSignInFailure(async (context, cancellationToken) =>
 });
 ```
 
-# [TypeScript](#tab/ts5)
+# [TypeScript](#tab/ts3)
 
 ```typescript
 app.on('signin.failure', async ({ activity, send }) => {
@@ -324,7 +324,7 @@ app.on('signin.failure', async ({ activity, send }) => {
 });
 ```
 
-# [Python](#tab/py5)
+# [Python](#tab/py3)
 
 ```python
 @app.on_signin_failure()
