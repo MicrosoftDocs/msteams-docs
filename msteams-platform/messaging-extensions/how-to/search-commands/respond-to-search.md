@@ -369,6 +369,40 @@ app.on('message.ext.query', async ({ activity }) => {
 })
 ```
 
+# [Python](#tab/python1)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
+
+```python
+@app.on_message_ext_query
+async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]):
+  command_id = ctx.activity.value.command_id
+  params = ctx.activity.value.parameters or []
+  query = params[0].value if params else ""
+
+  if command_id == "wikipediaSearch":
+    results = await search_wikipedia(query)
+    attachments = [create_attachment(create_wikipedia_card(r), r['title'],
+             re.sub(r'<[^>]+>', '', r.get('snippet', '')))
+            for r in results]
+
+  if not attachments:
+    return MessagingExtensionInvokeResponse(
+      compose_extension=MessagingExtensionResult(
+        type=MessagingExtensionResultType.MESSAGE,
+        text=f"No results found for '{query}'"
+      )
+    )
+
+  return MessagingExtensionInvokeResponse(
+    compose_extension=MessagingExtensionResult(
+      type=MessagingExtensionResultType.RESULT,
+      attachment_layout=AttachmentLayout.LIST,
+      attachments=attachments
+    )
+    )
+```
+
 # [JSON](#tab/json2)
 
 ```json
@@ -501,47 +535,13 @@ app.on('message.ext.query', async ({ activity }) => {
 }
 ```
 
-# [Python](#tab/python1)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions/main.py)
-
-```python
-@app.on_message_ext_query 
-async def handle_query(ctx: ActivityContext[MessageExtensionQueryInvokeActivity]): 
-    command_id = ctx.activity.value.command_id 
-    params = ctx.activity.value.parameters or [] 
-    query = params[0].value if params else "" 
- 
-    if command_id == "wikipediaSearch": 
-        results = await search_wikipedia(query) 
-        attachments = [create_attachment(create_wikipedia_card(r), r['title'], 
-                       re.sub(r'<[^>]+>', '', r.get('snippet', ''))) 
-                      for r in results] 
- 
-    if not attachments: 
-        return MessagingExtensionInvokeResponse( 
-            compose_extension=MessagingExtensionResult( 
-                type=MessagingExtensionResultType.MESSAGE, 
-                text=f"No results found for '{query}'" 
-            ) 
-        ) 
- 
-    return MessagingExtensionInvokeResponse( 
-        compose_extension=MessagingExtensionResult( 
-            type=MessagingExtensionResultType.RESULT, 
-            attachment_layout=AttachmentLayout.LIST, 
-            attachments=attachments 
-        ) 
-    )
-```
-
 * * *
 
 ### Enable and handle tap actions
 
 When a user selects a result from the message extension search query, the preview card displays the description and the Tap actions that were defined. The Tap action must have the required value property assigned that displays as a Tap button in the card sent.
 
-# [.NET](#tab/csharp3)
+# [C#](#tab/csharp3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
@@ -591,23 +591,6 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
     } 
 ```
 
-# [JSON](#tab/json3)
-
-```json
-{
-    "name": "composeExtension/selectItem",
-    "type": "invoke",
-    "value": {
-        "Item1": "Package_Name",
-        "Item2": "Version",
-        "Item3": "Package Description"
-    },
-    .
-    .
-    .
-}
-```
-
 # [Python](#tab/python3)
 
 ```python
@@ -632,6 +615,23 @@ async def on_teams_messaging_extension_select_item(
             attachments=[attachment],  # Include the single attachment
         )
     )
+```
+
+# [JSON](#tab/json3)
+
+```json
+{
+  "name": "composeExtension/selectItem",
+  "type": "invoke",
+  "value": {
+    "Item1": "Package_Name",
+    "Item2": "Version",
+    "Item3": "Package Description"
+  },
+  .
+  .
+  .
+}
 ```
 
 * * *
