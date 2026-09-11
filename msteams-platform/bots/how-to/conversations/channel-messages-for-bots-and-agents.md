@@ -47,16 +47,16 @@ Here's an example of using RSC permissions to filter @mention messages:
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
 // This code snippet allows the agent to ignore all messages that do not @mention the agent.
-protected override async Task app.OnMessage(async context => ...) 
+app.OnMessage(async context =>
 {
         // Ignore the message if agent was not mentioned. 
         // Remove this if block to process all messages received by the agent.
-        if (!Context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(Context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+        if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
         {
-            return false;
+            return;
         }
         // Sends an activity to the sender of the incoming activity.
-        await Context.SendActivityAsync("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
+        await context.Send("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
 }
 ```
 
@@ -80,7 +80,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessa ge.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
+| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
 
 ## Update app manifest
 
@@ -278,14 +278,12 @@ The following code provides an example of the RSC permissions:
 
 // Handle when a message is addressed to the agent.
 // When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
-protected override async Task app.OnMessage(async context => ...) 
+app.OnMessage(async context => ...) 
 {
-app.OnMessage(async (context, state) =>
-{
-    await context.SendActivityAsync(
+    await context.Send(
         "Using RSC, the agent can receive messages across channels or chats in a team without being @mentioned.");
  
-    return true;
+    return;
 });
 
 ```
