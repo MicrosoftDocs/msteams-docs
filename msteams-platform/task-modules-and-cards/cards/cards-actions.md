@@ -117,7 +117,7 @@ var action = new OpenUrlAction("https://adaptivecards.microsoft.com")
 };
 ```
 
-# [TypeScript](#tab/typescript1)
+# [TypeScript](#tab/typescript2)
 
 The following code shows an example of an `Action.OpenUrl` action in TypeScript:
 
