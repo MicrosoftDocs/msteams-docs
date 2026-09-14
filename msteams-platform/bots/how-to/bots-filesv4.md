@@ -287,32 +287,6 @@ teams.OnMessage(async (context, cancellationToken) =>
 app.Run();
 ```
 
-# [Python](#tab/python1)
-
-```python
-import httpx
-from microsoft_teams.api import Attachment, MessageActivity, MessageActivityInput
-from microsoft_teams.apps import ActivityContext, App
-
-app = App()
-
-@app.on_message
-async def on_message(context: ActivityContext[MessageActivity]):
-    attachment = context.activity.attachments[0] if context.activity.attachments else None
-    if attachment and "image" in attachment.content_type:
-        # Download the inline image from the content URL.
-        async with httpx.AsyncClient() as client:
-            response = await client.get(attachment.content_url)
-            file_path = "files/ImageFromUser.png"
-            with open(file_path, "wb") as f:
-                f.write(response.content)
-
-        await context.send(
-            f"Attachment of {attachment.content_type} type and size of "
-            f"{len(response.content)} bytes received."
-        )
-```
-
 # [TypeScript](#tab/typescript1)
 
 ```typescript
@@ -337,6 +311,32 @@ app.on('message', async ({ activity, send }) => {
     );
   }
 });
+```
+
+# [Python](#tab/python1)
+
+```python
+import httpx
+from microsoft_teams.api import Attachment, MessageActivity, MessageActivityInput
+from microsoft_teams.apps import ActivityContext, App
+
+app = App()
+
+@app.on_message
+async def on_message(context: ActivityContext[MessageActivity]):
+    attachment = context.activity.attachments[0] if context.activity.attachments else None
+    if attachment and "image" in attachment.content_type:
+        # Download the inline image from the content URL.
+        async with httpx.AsyncClient() as client:
+            response = await client.get(attachment.content_url)
+            file_path = "files/ImageFromUser.png"
+            with open(file_path, "wb") as f:
+                f.write(response.content)
+
+        await context.send(
+            f"Attachment of {attachment.content_type} type and size of "
+            f"{len(response.content)} bytes received."
+        )
 ```
 
 ---

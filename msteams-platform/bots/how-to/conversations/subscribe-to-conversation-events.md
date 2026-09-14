@@ -89,6 +89,15 @@ app.on('channelCreated', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_channel_created
+async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel = ctx.activity.channel_data.channel
+    await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -127,15 +136,6 @@ app.on('channelCreated', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_created
-async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel = ctx.activity.channel_data.channel
-    await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
-```
-
 ---
 
 ### Channel renamed
@@ -171,6 +171,15 @@ app.on('channelRenamed', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the new Channel name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_renamed
+async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel_name = ctx.activity.channel_data.channel.name
+    await ctx.send(f"The new channel name is {channel_name}")
 ```
 
 # [JSON](#tab/json)
@@ -211,15 +220,6 @@ app.on('channelRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_renamed
-async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel_name = ctx.activity.channel_data.channel.name
-    await ctx.send(f"The new channel name is {channel_name}")
-```
-
 ---
 
 ### Channel deleted
@@ -255,6 +255,15 @@ app.on('channelDeleted', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the Channel deleted`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_deleted
+async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel_name = ctx.activity.channel_data.channel.name
+    await ctx.send(f"The deleted channel is {channel_name}")
 ```
 
 # [JSON](#tab/json)
@@ -295,15 +304,6 @@ app.on('channelDeleted', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_deleted
-async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel_name = ctx.activity.channel_data.channel.name
-    await ctx.send(f"The deleted channel is {channel_name}")
-```
-
 ---
 
 ### Channel restored
@@ -342,6 +342,17 @@ app.on('channelRestored', async ({ activity, send }) => {
 }); 
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_channel_restored
+async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel = ctx.activity.channel_data.channel
+    await ctx.send(
+        f"The restored channel is {channel.name}. The channel id is {channel.id}"
+    )
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -378,17 +389,6 @@ app.on('channelRestored', async ({ activity, send }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_channel_restored
-async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel = ctx.activity.channel_data.channel
-    await ctx.send(
-        f"The restored channel is {channel.name}. The channel id is {channel.id}"
-    )
 ```
 
 ---
@@ -461,6 +461,16 @@ app.on('membersAdded', async ({ activity, send }) => {
         await send(`${member.id} joined ${teamName}.`);
     }
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_conversation_update
+async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
+    if ctx.activity.members_added:
+        for member in ctx.activity.members_added:
+            await ctx.send(f"Welcome your new team member {member.id}")
 ```
 
 # [JSON](#tab/json)
@@ -556,16 +566,6 @@ The message your agent receives when the agent is added to a one-to-one chat.
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_conversation_update
-async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
-    if ctx.activity.members_added:
-        for member in ctx.activity.members_added:
-            await ctx.send(f"Welcome your new team member {member.id}")
-```
-
 ---
 
 ### Members removed
@@ -633,6 +633,16 @@ app.on('membersRemoved', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_conversation_update
+async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity]):
+    if ctx.activity.members_removed:
+        for member in ctx.activity.members_removed:
+            await ctx.send(f"Say goodbye to {member.id}")
+```
+
 # [JSON](#tab/json)
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
@@ -675,16 +685,6 @@ The `channelData` object in the following payload example is based on adding a m
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_conversation_update
-async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity]):
-    if ctx.activity.members_removed:
-        for member in ctx.activity.members_removed:
-            await ctx.send(f"Say goodbye to {member.id}")
-```
-
 ---
 
 ### Team renamed
@@ -722,6 +722,15 @@ app.on('teamRenamed', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_team_renamed
+async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The new team name is {team_name}")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -755,15 +764,6 @@ app.on('teamRenamed', async ({ activity, send }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_team_renamed
-async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The new team name is {team_name}")
 ```
 
 ---
@@ -800,6 +800,15 @@ app.on('teamDeleted', async ({ activity }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_team_deleted
+async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
+    # Handle delete event.
+    pass
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -833,15 +842,6 @@ app.on('teamDeleted', async ({ activity }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_team_deleted
-async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
-    # Handle delete event.
-    pass
 ```
 
 ---
@@ -881,6 +881,15 @@ app.on('teamRestored', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_team_restored
+async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -914,15 +923,6 @@ app.on('teamRestored', async ({ activity, send }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_team_restored
-async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
 ```
 
 ---
@@ -962,6 +962,15 @@ app.on('teamArchived', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_team_archived
+async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -995,15 +1004,6 @@ app.on('teamArchived', async ({ activity, send }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_team_archived
-async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
 ```
 
 ---
@@ -1043,6 +1043,15 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_team_unarchived
+async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1076,15 +1085,6 @@ app.on('teamUnarchived', async ({ activity, send }) => {
         }
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_team_unarchived
-async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
 ```
 
 ---
@@ -1145,6 +1145,17 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_reactions_added
+async def handle_reactions_added(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_added:
+        await ctx.send(
+            f"You added '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1188,17 +1199,6 @@ app.on('reactionsAdded', async ({ activity, send }) => {
       "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_reactions_added
-async def handle_reactions_added(ctx: ActivityContext):
-    for reaction in ctx.activity.reactions_added:
-        await ctx.send(
-            f"You added '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
-        )
 ```
 
 ---
@@ -1247,6 +1247,17 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_reactions_removed
+async def handle_reactions_removed(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_removed:
+        await ctx.send(
+            f"You removed '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1290,17 +1301,6 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
       "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
     }
 }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_reactions_removed
-async def handle_reactions_removed(ctx: ActivityContext):
-    for reaction in ctx.activity.reactions_removed:
-        await ctx.send(
-            f"You removed '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
-        )
 ```
 
 ---
@@ -1392,6 +1392,18 @@ app.on('install.remove', async ({ send }) => {
 });
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext):
+    await ctx.send("Added")
+
+@app.on_install_remove
+async def handle_install_remove(ctx: ActivityContext):
+    await ctx.send("Uninstalled")
+```
+
 # [JSON](#tab/json)
 
 ```json
@@ -1447,18 +1459,6 @@ app.on('install.remove', async ({ send }) => {
     },
     "action": "add"
     }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_install_add
-async def handle_install_add(ctx: ActivityContext):
-    await ctx.send("Added")
-
-@app.on_install_remove
-async def handle_install_remove(ctx: ActivityContext):
-    await ctx.send("Uninstalled")
 ```
 
 ---
