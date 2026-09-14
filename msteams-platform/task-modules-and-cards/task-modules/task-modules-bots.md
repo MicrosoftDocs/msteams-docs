@@ -75,7 +75,58 @@ When the user submits a dialog, the bot receives a `task/submit` invoke message.
 
 The following tabs show how to handle dialog submit events in .NET, TypeScript, and Python:
 
-# [.NET](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.TaskModules;
+
+teams.OnTaskSubmit(async (context, cancellationToken) =>
+{
+  var data = context.Activity.Value?.Data as JsonElement?;
+    if (data == null)
+    {
+    return TaskModuleResponse.CreateBuilder()
+      .WithType(TaskModuleResponseTypes.Message)
+      .WithMessage("No data found in the activity value")
+      .Build();
+    }
+
+    var submissionType = data.Value.TryGetProperty("submissiondialogtype", out var submissionTypeObj) && submissionTypeObj.ValueKind == JsonValueKind.String
+        ? submissionTypeObj.ToString()
+        : null;
+
+    string? GetFormValue(string key)
+    {
+        if (data.Value.TryGetProperty(key, out var val))
+        {
+            if (val is JsonElement element)
+                return element.GetString();
+            return val.ToString();
+        }
+        return null;
+    }
+
+    switch (submissionType)
+    {
+        case "simple_form":
+            var name = GetFormValue("name") ?? "Unknown";
+            await context.SendAsync($"Hi {name}, thanks for submitting the form!", cancellationToken);
+            return TaskModuleResponse.CreateBuilder()
+              .WithType(TaskModuleResponseTypes.Message)
+              .WithMessage("Form was submitted")
+              .Build();
+        default:
+            return TaskModuleResponse.CreateBuilder()
+              .WithType(TaskModuleResponseTypes.Message)
+              .WithMessage("Unknown submission type")
+              .Build();
+    }
+      });
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -183,7 +234,71 @@ async def handle_dialog_submit(ctx: ActivityContext[TaskSubmitInvokeActivity]):
 
 You can chain Adaptive Cards into a multi-step wizard by returning a `ContinueTask` response from the submit handler. Each step returns a new card, and the final step returns a `MessageTask` to close the dialog.
 
-# [.NET](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Apps.TaskModules;
+using Microsoft.Teams.Cards;
+
+// Add these cases to your OnTaskSubmit method
+case "webpage_dialog_step_1":
+    var nameStep1 = GetFormValue("name") ?? "Unknown";
+    var nextStepCardJson = $$"""
+    {
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Email",
+                "size": "Large",
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.Text",
+                "id": "email",
+                "label": "Email",
+                "placeholder": "Enter your email",
+                "isRequired": true
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit",
+                "data": {"submissiondialogtype": "webpage_dialog_step_2", "name": "{{nameStep1}}"}
+            }
+        ]
+    }
+    """;
+
+    var nextStepCard = JsonSerializer.Deserialize<AdaptiveCard>(nextStepCardJson)
+        ?? throw new InvalidOperationException("Failed to deserialize next step card");
+
+    TeamsAttachment nextStepAttachment = TeamsAttachment.CreateBuilder()
+      .WithAdaptiveCard(JsonSerializer.SerializeToElement(nextStepCard))
+      .Build();
+
+    return TaskModuleResponse.CreateBuilder()
+      .WithType(TaskModuleResponseTypes.Continue)
+      .WithTitle($"Thanks {nameStep1} - Get Email")
+      .WithCard(nextStepAttachment)
+      .Build();
+
+case "webpage_dialog_step_2":
+    var nameStep2 = GetFormValue("name") ?? "Unknown";
+    var emailStep2 = GetFormValue("email") ?? "No email";
+    await context.SendAsync($"Hi {nameStep2}, thanks for submitting the form! We got that your email is {emailStep2}", cancellationToken);
+    return TaskModuleResponse.CreateBuilder()
+      .WithType(TaskModuleResponseTypes.Message)
+      .WithMessage("Multi-step form completed successfully")
+      .Build();
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;

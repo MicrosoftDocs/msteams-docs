@@ -74,10 +74,60 @@ Microsoft 365 agents provide integration with various Microsoft 365 products, su
 
 The following code provides an example of search-based for message extensions:
 
-# [.NET](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
+
+```csharp
+teams.OnQuery(async (context, cancellationToken) =>
+{ 
+  MessageExtensionQuery? value = context.Activity.Value;
+  var commandId = value?.CommandId;
+  var parameters = value?.Parameters;
+    var query = parameters?.FirstOrDefault()?.Value?.ToString() ?? ""; 
+ 
+    Console.WriteLine($"Query: command={commandId}, query={query}"); 
+ 
+    var attachments = new List<TeamsAttachment>(); 
+ 
+    // Route to appropriate search 
+    if (commandId == "wikipediaSearch") 
+    { 
+        var results = await SearchWikipedia(query); 
+        attachments = results.Select(r => 
+        { 
+            var title = r["title"]?.ToString() ?? "No Title"; 
+            var snippet = Regex.Replace(r["snippet"]?.ToString() ?? "", "<[^>]+>", ""); 
+            return CreateAttachment(CreateWikipediaCard(r), title, snippet); 
+        }).ToList(); 
+    } 
+ 
+    if (attachments.Count == 0) 
+    { 
+        return new MsgExt.Response 
+        { 
+            ComposeExtension = new MsgExt.Result 
+            { 
+                Type = MsgExt.ResultType.Message, 
+                Text = $"No results found for '{query}'" 
+            } 
+        }; 
+    } 
+ 
+    return new MsgExt.Response 
+    { 
+        ComposeExtension = new MsgExt.Result 
+        { 
+            Type = MsgExt.ResultType.Result, 
+            AttachmentLayout = Attachment.Layout.List, 
+            Attachments = attachments 
+        } 
+    }; 
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 teams.OnQuery(async (ctx) => 
