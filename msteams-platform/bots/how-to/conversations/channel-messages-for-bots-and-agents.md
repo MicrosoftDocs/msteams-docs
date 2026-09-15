@@ -47,17 +47,20 @@ Here's an example of using RSC permissions to filter @mention messages:
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
 // This code snippet allows the agent to ignore all messages that do not @mention the agent.
-app.OnMessage(async context =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
-        // Ignore the message if agent was not mentioned. 
-        // Remove this if block to process all messages received by the agent.
-        if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
-        {
-            return;
-        }
-        // Sends an activity to the sender of the incoming activity.
-        await context.Send("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
+// Ignore the message if agent was not mentioned.
+// Remove this if block to process all messages received by the agent.
+if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+{
+return;
 }
+
+// Sends an activity to the sender of the incoming activity.
+await context.SendAsync(
+    "Using RSC the agent can receive messages across channels or chats in team without being @mentioned.",
+    cancellationToken);
+});
 ```
 
 Developers can create more efficient and user-friendly conversational interfaces in the agents.
@@ -278,12 +281,11 @@ The following code provides an example of the RSC permissions:
 
 // Handle when a message is addressed to the agent.
 // When rsc is enabled the method will be called even when agent is addressed without being @mentioned.
-app.OnMessage(async context => ...) 
+teams.OnMessage(async (context, cancellationToken) =>
 {
-    await context.Send(
-        "Using RSC, the agent can receive messages across channels or chats in a team without being @mentioned.");
- 
-    return;
+await context.SendAsync(
+"Using RSC, the agent can receive messages across channels or chats in a team without being @mentioned.",
+cancellationToken);
 });
 
 ```
