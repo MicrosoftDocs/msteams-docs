@@ -104,7 +104,7 @@ Use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-an
 
 ### Add Microsoft 365 channel for your app
 
-In Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
+In Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](https://docs.azure.cn/en-us/bot-service/bot-service-overview?view=azure-bot-service-4.0) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
 For users to interact with your message extension from Outlook, you need to enable the **Microsoft 365** channel for your Azure bot resource of the message extension app.
 
