@@ -12,7 +12,7 @@ ms.date: 08/25/2026
 
 Agents can send messages with formatted text. Teams supports multiple text formatting options for the `text` property of an activity.
 
-The format you choose depends on the content and capabilities your agent requires. If you don't specify `textFormat`, Teams uses **markdown** format by default, which supports basic Markdown syntax and a limited set of HTML elements. Internally, this markdown is transformed to RichText/HTML.
+The format you choose depends on the content and capabilities your agent requires. If you don't specify `textFormat`, Teams uses a default basic formatting mode that supports a subset of Markdown syntax and a limited set of HTML elements.
 
 > [!IMPORTANT]
 > Extended Markdown is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). Test your agent with the latest Teams desktop, web, iOS, and Android clients before distributing it.
@@ -74,39 +74,52 @@ await app.send(conversation_id, activity)
 
 ## Text formatting options
 
-### Recommended format: Extended Markdown (Preview)
-
-**Extended Markdown** is the recommended format for agent text responses. It supports CommonMark, GitHub Flavored Markdown (GFM), and additional features such as tables, task lists, math equations, images, at-mentions, citations, and streaming.
+Use `textFormat` to choose the formatting behavior for activity text.
 
 | `textFormat` value | When to use |
 | ------------------ | ----------- |
-| `extendedmarkdown` | **Recommended for agent text responses that require rich formatting.** Use this format when your agent outputs rich markdown (for example, from LLM). Supports CommonMark, GFM, math, images, at-mentions, citations, and streaming. This format is in public developer preview. |
-|  | **Default format.** Supports basic Markdown syntax and HTML elements like `<at>` and `<quoted>` tags. Use this format for simple text responses without specifying a `textFormat` value. |
+| *(not specified)* | **Default basic formatting.** Use for simple text responses. Supports a limited subset of Markdown and HTML described in [Standard Markdown support](#standard-markdown-support). |
+| `extendedmarkdown` | **Recommended for rich text responses.** Use this format when your agent outputs richer markdown (for example, from LLM). Supports CommonMark, GitHub Flavored Markdown (GFM), tables, math, images, at-mentions, citations, and streaming. This format is in public developer preview. |
+| `markdown` | **Legacy.** Behaves the same as the default basic formatting and is kept for backward compatibility. |
+| `xml` | **Legacy.** Supports only a basic HTML subset (no Markdown syntax). |
+| `plain` | **Legacy.** Displays raw text without formatting. |
 
-### Supported HTML elements in default format
+### Standard Markdown support
 
-When you don't specify `textFormat`, Teams applies markdown format (basic Markdown syntax plus specific HTML elements):
+When you don't specify `textFormat` (default behavior), or when you use `textFormat: "markdown"`, Teams supports the following practical cross-platform subset. This is intentionally not an exhaustive renderer or sanitizer reference.
+
+Supported Markdown formatting:
+
+| Formatting | Syntax |
+| ---------- | ------ |
+| Bold | `**text**` |
+| Italic | `*text*` |
+| Hyperlink | `[text](https://example.com)` |
+
+Supported HTML formatting:
+
+| Formatting | Supported tags |
+| ---------- | -------------- |
+| Bold | `<b>`, `<strong>` |
+| Italic | `<i>`, `<em>` |
+| Underline | `<u>` |
+| Strikethrough | `<s>` |
+| Line break | `<br>` |
+| Horizontal rule | `<hr>` |
+| Hyperlink | `<a href="URL">` |
+| Image | `<img src="URL">` |
+
+Additional conversation tags:
 
 - `<at>` tags for at-mentions
 - `<quoted>` tags for quoted replies
-- Basic HTML tags like `<b>`, `<i>`, `<u>`, `<br/>`, and others as supported by Teams clients
-
-### Legacy formats (not recommended)
-
-The following formats are supported for backward compatibility but are not recommended for new agents:
-
-| `textFormat` value | When to use |
-| ------------------ | ----------- |
-| `markdown` | **Not recommended.** Behaves identically to the default markdown format. Explicit use is unnecessary. |
-| `xml` | **Not recommended.** Supports only basic HTML without Markdown syntax. Use `extendedmarkdown` for rich content instead. |
-| `plain` | **Not recommended.** Use when the message must be displayed as raw text without any formatting. Consider using default markdown instead for better flexibility. |
 
 When using `extendedmarkdown`, both `<at>` (at-mentions) and `<quoted>` (quoted replies) tags are supported for inline HTML.
 
 The following limitations apply to formatting:
 
 - `textFormat` applies to the activity `text` property. It doesn't enable Markdown or HTML in Adaptive Card or other rich-card payload properties.
-- In extended Markdown content, don't include arbitrary HTML. Use `<at>` only as part of a valid mention entity.
+- In extended Markdown content, don't include arbitrary HTML. Use `<at>` and `<quoted>` only where supported.
 - Task-list checkboxes are read-only.
 - Older or unsupported clients might show unsupported constructs as plain text.
 
@@ -227,15 +240,6 @@ Extended Markdown content will render as it streams:
 - **Task lists**: Render when list items and checkbox markers (`- [ ]`, `- [x]`) are complete
 
 For detailed information about streaming implementation, see [Stream agent messages](../streaming-ux.md).
-
-## Legacy formats
-
-The `markdown` and `xml` formats are supported for backward compatibility with existing agents but are not recommended for new development:
-
-- **`markdown`**: Behaves identically to the default HTML format. Explicit use is unnecessary.
-- **`xml`**: Provides only basic HTML support without Markdown. Use `extendedmarkdown` instead for richer formatting capabilities.
-
-If you're maintaining an existing agent that depends on these formats, they will continue to work, but consider migrating to `extendedmarkdown` when updating your agent for new features.
 
 ## Next step
 
