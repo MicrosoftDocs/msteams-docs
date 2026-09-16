@@ -78,17 +78,17 @@ Use `textFormat` to choose the formatting behavior for activity text.
 
 | `textFormat` value | When to use |
 | ------------------ | ----------- |
-| *(not specified)* | **Default basic formatting.** Use for simple text responses. Supports a limited subset of Markdown and HTML described in [Standard Markdown support](#standard-markdown-support). |
+| *(not specified)* | **Default basic formatting.** Use for simple text responses. Supports a limited subset of Markdown and HTML described in [Basic formatting support](#basic-formatting-support). |
 | `extendedmarkdown` | **Recommended for rich text responses.** Use this format when your agent outputs richer markdown (for example, from LLM). Supports CommonMark, GitHub Flavored Markdown (GFM), tables, math, images, at-mentions, citations, and streaming. This format is in public developer preview. |
 | `markdown` | **Legacy.** Behaves the same as the default basic formatting and is kept for backward compatibility. |
 | `xml` | **Legacy.** Supports only a basic HTML subset (no Markdown syntax). |
 | `plain` | **Legacy.** Displays raw text without formatting. |
 
-### Standard Markdown support
+### Basic formatting support
 
-When you don't specify `textFormat` (default behavior), or when you use `textFormat: "markdown"`, Teams supports the following practical cross-platform subset. This is intentionally not an exhaustive renderer or sanitizer reference.
+When you don't specify `textFormat` (default behavior), or when you use `textFormat: "markdown"`, Teams applies a basic formatting mode that supports a practical subset of Markdown syntax and HTML elements. This is intentionally not an exhaustive renderer or sanitizer reference.
 
-Supported Markdown formatting:
+Supported Markdown:
 
 | Formatting | Syntax |
 | ---------- | ------ |
@@ -96,7 +96,7 @@ Supported Markdown formatting:
 | Italic | `*text*` |
 | Hyperlink | `[text](https://example.com)` |
 
-Supported HTML formatting:
+Supported HTML:
 
 | Formatting | Supported tags |
 | ---------- | -------------- |
@@ -109,10 +109,10 @@ Supported HTML formatting:
 | Hyperlink | `<a href="URL">` |
 | Image | `<img src="URL">` |
 
-Additional conversation tags:
+Additional formatting tags:
 
 - `<at>` tags for at-mentions
-- `<quoted>` tags for quoted replies
+- `<quoted>` tags for quoted replies (requires activity entities)
 
 When using `extendedmarkdown`, both `<at>` (at-mentions) and `<quoted>` (quoted replies) tags are supported for inline HTML.
 
