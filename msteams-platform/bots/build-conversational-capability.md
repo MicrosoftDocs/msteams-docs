@@ -205,7 +205,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ---
 
 > [!NOTE]
-> If your bot supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
+> If your agent supports sessions, the `conversation.id` in the activity payload is session-scoped. Each session has a unique conversation ID. For details on how to handle session-scoped conversation IDs, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
 
 ### Receive a read receipt
 
