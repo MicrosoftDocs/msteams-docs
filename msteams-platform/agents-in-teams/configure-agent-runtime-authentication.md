@@ -1,5 +1,5 @@
 ---
-title: Configure Agent Runtime Authentication to Agent Communications Service
+title: Review or Update Agent Runtime Authentication Configuration
 description: TODO
 author: nickwalkmsft
 ms.author: nickwalk
@@ -9,20 +9,34 @@ ms.topic: feature-guide
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Configure agent runtime authentication to Agent Communications Service
+# Review or update agent runtime authentication configuration
 
-All calls made by a Teams agent runtime to Agent Communications Service must be authenticated using an application credential. This credential is configured in two places:
+Agent Communications Service authenticates all calls it receives from your Teams agent's runtime. The runtime must identify itself using the app ID of the Entra ID app registration linked to its Agent Communications Service registration, and supply a credential associated with that app registration.
 
-1. The Entra ID app registration linked with the agent's Agent Communications Service registration
-1. The agent runtime's local configuration
+The authentication configuration described in this article is related only to how an agent runtime authenticates to interact with Teams. For information about authenticating users using single sign-on (SSO) or OAuth for delegation scenarios, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
 
-The service supports two kinds of credential: client secret and managed identity for Azure resources.
+## Supported credential types
 
-## Configure credentials in Entra ID
+Teams agent runtimes can authenticate to Agent Communications Service using two different kinds of credentials:
 
-See [Add and manage app credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials)
+- **Client secret**: The agent's runtime authenticates using a client secret (sometimes called an *application password*) stored in its configuration.
+- **Managed identities for Azure resources**: Preferred for agent runtimes hosted in Azure compute services. Managed identities associate an identity and its credentials with the runtime's hosting environment, eliminating the need to manage and secure a client secret. See [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for more information.
 
-Client secret authentication is the simplest and most widely-supported runtime authentication method. With this method, the runtime authenticates using a client secret (sometimes called an *application password*) stored in its configuration. New agents created using the Teams developer CLI or the Teams Developer Portal are configured to use client secret authentication by default.
+By default, new agents created using the Teams developer CLI or the Teams Developer Portal use client secret authentication. If you host your agent runtime in an Azure compute service, such as Azure App Service, Azure Kubernetes Service, or Azure Virtual Machines, strongly consider updating your agent's configuration to use a managed identity instead.
+
+## Review or update configurations
+
+### Confirm application ID and tenant ID
+
+The app ID of the Entra ID app registration
+
+Your agent's Entra ID app registration, linked to its Agent Communications Service registration, serves as its identity. Confirm
+
+### Configure the Entra ID app registration
+
+To review or update the credentials configured on the agent's Entra ID app registration, see [Add and manage app credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
+
+## Entra ID app registration
 
 Client IDs. Client secrets are created by Entra ID secrets are not recoverable and are only shown when first created, but new secrets can be generated at any time.
 
@@ -47,8 +61,6 @@ Client secrets should occasionally be rotated and kept secure.
 ::: zone-end
 
 ## Managed identity for Azure resources
-
-The runtime authenticates using a [managed identity for Azure resources](/entra/identity/managed-identities-azure-resources/overview). Available only to agent runtimes hosted on Azure compute resources, this option eliminates the need to handle and configure a sensitive client secret.
 
 Must be on Azure
 

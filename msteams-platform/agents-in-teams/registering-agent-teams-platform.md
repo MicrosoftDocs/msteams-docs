@@ -24,20 +24,21 @@ By registering an agent at the beginning of development, you can use it in Teams
 
 Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that enables multiple agent capabilities:
 
+- **Authentication with Agent Communications Service**: An agent's Agent Communications Service registration is uniquely associated with an app registration configured with the agent's runtime app credentials.
 - **Authentication to organizational resources**: Many agents directly access organizational data and services, such as Microsoft Graph, to power collaboration features.
 - **On-behalf-of flows with single sign-on (SSO) and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
 - **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
-- **Authentication with Agent Communications Service**: An agent's Agent Communications Service registration is uniquely associated with an app registration configured with the agent's runtime app credentials.
 
-In some cases, agents might be configured and implemented to use multiple app registrations to support different identity scenarios. Every agent will have at least one app registration: the one linked to its Bot Connector registration.
+In some cases, agents might be configured and implemented to use multiple app registrations to support different identity scenarios. Every agent will have at least one Entra ID app registration, linked to its Agent Communications Service registration, used to uniquely identify it and that represents its primary identity.
 
 ## Agent Communications Service registration: an agent's interface to Teams
 
-Agent Communications Service is what agents use to access most Teams functionality, especially chat. Before your agent can interact with Teams, you need to register it with the service.
+An agent's connection to Agent Communications Service is what makes it a *Teams* agent - it serves the API that your agent's runtime uses to interact with Teams functionality, especially chat. Before your agent can access Teams, you need to register it with the service.
 
-Every Agent Communications Service registration has a permanent 1:1 association with an Entra ID app registration. The agent's runtime uses credentials attached to the app registration - a client secret or Azure managed identity - to authenticate with Agent Communications Service. The app registration's application ID uniquely references the agent in contexts like the app manifest and the agent's runtime configuration.
+An Agent Communications Service registration contains a small amount of configuration, most importantly:
 
-Agent Communications Service registration is also where you specify the agent's runtime endpoint URL. The service will send realtime activity data about user actions in Teams to this endpoint.
+- A permanent 1:1 reference to an Entra ID app registration. The app registration's app ID becomes the agent's unique *bot ID* and is used to identify the agent in contexts like the app manifest and the agent's runtime configuration.
+- The agent's runtime endpoint URL, where the service will send realtime activity data about user actions in Teams.
 
 Agent Communications Service supports two different kinds of registration: *standalone* and *Azure AI Bot Service resource*. See [Choose a Agent Communications Service registration type for an agent](../agents-in-teams/choose-agent-registration-type.md) for more information.
 
@@ -67,6 +68,7 @@ App manifests conform to the [app manifest schema](/microsoft-365/extensibility/
 ## Next steps
 
 - Use the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to create and register a new Teams agent using `teams app create`.
+- See [Choose an Agent Communications Service registration type for an agent](choose-agent-registration-type.md) for considerations about migrating from a standalone registration to an Azure AI Bot Service registration.
 
 ## See also
 

@@ -12,6 +12,9 @@
   - name: Get started
     expanded: true
     items:
+    - name: "Quickstart: Create and chat with an agent"
+      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
     - name: Agent basics
@@ -22,9 +25,6 @@
     - name: Best practices and features checklist
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
       displayName: scopes, handler, activity
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
   - name: Register and authenticate
     items:
     - name: Agent registration concepts
