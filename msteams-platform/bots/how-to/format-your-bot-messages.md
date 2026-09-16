@@ -1,11 +1,13 @@
 ---
 title: Format your agent messages
-description: Learn how to format text in messages sent by your agent, including HTML, Markdown, and plain text.
+description: Format your agent messages in Teams with Markdown, extended Markdown, HTML, or plain text. Learn how to set textFormat and render rich content.
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ms.owner: angovil
-ms.date: 08/25/2026
+ms.date: 09/16/2026
+author: nickwalkmsft
 ---
 
 # Format your agent messages
@@ -19,18 +21,18 @@ The format you choose depends on the content and capabilities your agent require
 
 ## Format text content
 
-Set the [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how Teams renders the `text` property of your Activity.
+Set the `TextFormat` property on a message activity to change how Teams renders its text.
 
-The following example shows how to send a message with `extendedmarkdown` formatting. This format supports CommonMark, GitHub Flavored Markdown (GFM), and additional features such as tables, task lists, math equations, images, at-mentions, citations, and streaming.
+The following example shows how to send a message with `extendedmarkdown` formatting. This format supports CommonMark, GitHub Flavored Markdown (GFM), and additional features such as tables, task lists, math equations, images, citations, and streaming.
 
-# [JSON](#tab/json)
+# [TypeScript](#tab/typescript)
 
-```json
-{
-  "type": "message",
-  "textFormat": "extendedmarkdown",
-  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
-}
+```typescript
+const activity = 
+  new MessageActivityInput("### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending")
+    .withTextFormat('extendedmarkdown');
+
+await app.send(conversationId, activity);
 ```
 
 # [C#](#tab/csharp)
@@ -46,18 +48,6 @@ var activity = new Activity
 await app.Send(conversationId, activity);
 ```
 
-# [TypeScript](#tab/typescript)
-
-```typescript
-const activity = {
-  type: "message",
-  text: "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
-  textFormat: "extendedmarkdown",
-};
-
-await app.send(conversationId, activity);
-```
-
 # [Python](#tab/python)
 
 ```python
@@ -70,23 +60,31 @@ activity = Activity(
 await app.send(conversation_id, activity)
 ```
 
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "textFormat": "extendedmarkdown",
+  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
+}
+```
+
 ---
 
 ## Text formatting options
 
-Use `textFormat` to choose the formatting behavior for activity text.
-
 | `textFormat` value | When to use |
 | ------------------ | ----------- |
 | *(not specified)* | **Default basic formatting.** Use for simple text responses. Supports a limited subset of Markdown and HTML described in [Basic formatting support](#basic-formatting-support). |
-| `extendedmarkdown` | **Recommended for rich text responses.** Use this format when your agent outputs richer markdown (for example, from LLM). Supports CommonMark, GitHub Flavored Markdown (GFM), tables, math, images, at-mentions, citations, and streaming. This format is in public developer preview. |
+| `extendedmarkdown` | **Recommended for rich text responses.** Use this format when your agent outputs richer markdown (for example, from LLM). Supports CommonMark, GitHub Flavored Markdown (GFM), tables, math, images, citations, and streaming. This format is in public developer preview. |
 | `markdown` | **Legacy.** Behaves the same as the default basic formatting and is kept for backward compatibility. |
 | `xml` | **Legacy.** Supports only a basic HTML subset (no Markdown syntax). |
 | `plain` | **Legacy.** Displays raw text without formatting. |
 
 ### Basic formatting support
 
-When you don't specify `textFormat` (default behavior), or when you use `textFormat: "markdown"`, Teams applies a basic formatting mode that supports a practical subset of Markdown syntax and HTML elements. This is intentionally not an exhaustive renderer or sanitizer reference.
+When you don't specify `textFormat`, Teams applies a basic formatting mode that supports a practical subset of Markdown syntax and HTML elements. This is intentionally not an exhaustive renderer or sanitizer reference.
 
 Supported Markdown:
 
@@ -109,17 +107,10 @@ Supported HTML:
 | Hyperlink | `<a href="URL">` |
 | Image | `<img src="URL">` |
 
-Additional formatting tags:
-
-- `<at>` tags for at-mentions
-- `<quoted>` tags for quoted replies (requires activity entities)
-
-When using `extendedmarkdown`, both `<at>` (at-mentions) and `<quoted>` (quoted replies) tags are supported for inline HTML.
-
 The following limitations apply to formatting:
 
 - `textFormat` applies to the activity `text` property. It doesn't enable Markdown or HTML in Adaptive Card or other rich-card payload properties.
-- In extended Markdown content, don't include arbitrary HTML. Use `<at>` and `<quoted>` only where supported.
+- In extended Markdown content, don't include arbitrary HTML.
 - Task-list checkboxes are read-only.
 - Older or unsupported clients might show unsupported constructs as plain text.
 
@@ -138,28 +129,9 @@ When using `textFormat: "extendedmarkdown"`, the following features are availabl
 | **Fenced code blocks**    | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences                                                                                                         |
 | **Math equations**        | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$`                     | LaTeX/KaTeX math notation rendered inline or as a block                                                                                |
 | **Images and image URLs** | `![alt text](https://example.com/image.png)`                               | Render image content from Markdown                                                                                                     |
-| **At-mentions**           | `<at>User Name</at>` or `<at>GroupName</at>`                               | Reference users or groups                                                                                                              |
 | **Citations**             | `[#]` in message text + `entities` array in Activity                       | Inline citation markers with reference details. For more information, see [citations](bot-messages-ai-generated-content.md#citations). |
 | **Tables**                | Pipe-delimited rows with separator line                                    | Structured tabular data with optional column alignment                                                                                 |
 | **Task lists**            | `- [ ] item` / `- [x] item`                                                | Checklist-style items; checkboxes are read-only                                                                                        |
-
-### At-mention and quoted-reply support
-
-Mention users and groups in your agent messages. At-mentions work with both standard Markdown and extended Markdown:
-
-```markdown
-Hello <at>Jane Smith</at>, please review this.
-
-Notifying team: <at>Engineering Team</at>
-```
-
-You can also quote a previous message in your response by using the `<quoted>` tag:
-
-```markdown
-<quoted>Original message text</quoted>
-
-Thanks for the update!
-```
 
 ### Fenced code blocks
 
@@ -234,7 +206,6 @@ Extended Markdown content will render as it streams:
 - **Fenced code blocks**: Render only after the closing ` ``` ` fence is received on its own line
 - **Math equations**: Render after the closing `$` or `$$` delimiter is received
 - **Images and image URLs**: Render after the closing parenthesis of the image URL passes validation
-- **At-mentions**: Render when `<at>...</at>` tags are complete and valid
 - **Citations**: Render when `[#]` markers and corresponding `entities` are present in the Activity
 - **Tables**: Render when enough rows are received to form a valid table structure
 - **Task lists**: Render when list items and checkbox markers (`- [ ]`, `- [x]`) are complete
