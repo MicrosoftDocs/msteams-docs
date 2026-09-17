@@ -16,6 +16,9 @@ Shared and private channels in Microsoft Teams enable flexible collaboration wit
 
 * **Private channels**: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
+<!-- ### TO BE REVIEWED: sovereign cloud availability
+Confirm with PM/engineering that tab apps in shared channels are GA (not preview) in GCC, GCC High, DoD, and 21Vianet, and that the SharePoint / SharePoint pages app exclusion is accurate for all four clouds. This claim has no supporting source in msteams-docs or on Learn today. Remove this comment once confirmed.
+-->
 > [!NOTE]
 > Tab apps in shared channels are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments. SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
 
@@ -78,15 +81,17 @@ Ensure that you understand how different channels determine app functionality, m
 
 ## Enable apps for shared and private channels
 
-Most apps can support shared and private channels with a simple manifest update.
-
-> [!IMPORTANT]
-> The `supportedChannelTypes` app manifest property is deprecated. Starting with app manifest v1.25, use the `supportsChannelFeatures` property to enable your app in shared and private channels. If your app manifest still uses `supportedChannelTypes`, see [Migrate from supportedChannelTypes](#migrate-from-supportedchanneltypes).
-
-Based on either of the following scenarios, decide the approach:
+Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, decide the approach:
 
 * [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters)
 * [Apps with dependence on specified parameters](#apps-with-dependence-on-specified-parameters)
+
+<!-- ### TO BE REVIEWED: is supportedChannelTypes officially deprecated?
+This callout and the "Migrate from supportedChannelTypes" section below announce a deprecation that isn't stated anywhere else. `supportedChannelTypes` appears zero times in msteams-docs, and the live app manifest schema reference doesn't mark it deprecated. The closest existing statement is teams-store-validation-guidelines.md, which only requires manifest v1.25 + `supportsChannelFeatures` for new channel-enabled Store submissions starting July 2026 -- a requirement, not a deprecation.
+Please confirm: (a) is `supportedChannelTypes` formally deprecated, (b) does it still function for existing apps, and (c) is there a retirement date? If it's not deprecated, soften this to "supportsChannelFeatures is the recommended property" and drop the "don't rely on it in existing apps" line.
+-->
+> [!IMPORTANT]
+> The `supportedChannelTypes` app manifest property is deprecated. Starting with app manifest v1.25, use the `supportsChannelFeatures` property to enable your app in shared and private channels. If your app manifest still uses `supportedChannelTypes`, see [Migrate from supportedChannelTypes](#migrate-from-supportedchanneltypes).
 
 ### Apps with no dependence on specified parameters
 
@@ -103,6 +108,10 @@ Then, you only need to:
 2. Verify expected behavior, and test your app across channels
 
 There's no dependence on classical and admin access for `supportsChannelFeatures`: `tier1`.
+
+### Apps with dependence on specified parameters
+
+If your app handles advanced scenarios, or depends on the specified parameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't rewrite your code.
 
 ### Migrate from supportedChannelTypes
 
@@ -134,16 +143,15 @@ The following table summarizes what changes when you migrate:
 | App logic | Might branch on channel type | Don't branch on `membershipType` or `channelType`; rely on capability-based APIs and events |
 | Channel membership | Combine `members` and `sharedWithTeams` calls | Use the `allMembers` API. For more information, see [Manage channel membership](#manage-channel-membership). |
 
-### Apps with dependence on specified parameters
-
-If your app handles advanced scenarios, or depends on the specified parameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't rewrite your code.
-
 ### Get context for shared and private channels
 
 When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two properties that identify the host team and host tenant, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
 
 The property names differ between TeamsJS v1 and TeamsJS v2:
 
+<!-- ### TO BE REVIEWED: TeamsJS v1 host tenant property name
+Two docs in this repo disagree on the TeamsJS v1 name. tabs/how-to/access-teams-context.md documents `hostTenantId`, but the canonical v1-to-v2 migration table in tabs/how-to/using-teams-client-library.md maps `hostTeamTenantId` -> `app.Context.channel.ownerTenantId`. This table (and two later mentions in this article) asserts `hostTenantId`. Please confirm the correct v1 property name against the TeamsJS v1 Context interface, then fix whichever doc is wrong so all three agree.
+-->
 | Value | TeamsJS v1 (`getContext`) | TeamsJS v2 (`app.getContext()`) |
 |-------|---------------------------|----------------------------------|
 | Host team group ID | `hostTeamGroupId` | `channel.ownerGroupId` |
@@ -155,6 +163,9 @@ This article uses the TeamsJS v2 names. If your app uses TeamsJS v1, read `hostT
 
 Apps must function cross-tenant in installation and usage. The group ID returned in the channel context depends on the channel type:
 
+<!-- ### TO BE REVIEWED: add a Private channel row to this table
+This article covers private channels throughout, but the table lists only Standard and Shared. tabs/how-to/access-teams-context.md states that for private channels `team.groupId` is undefined and `channel.ownerGroupId` is set to the host team groupId. Please confirm those values so a Private row can be added.
+-->
 | Channel type | `team.groupId` | `channel.ownerGroupId` (`hostTeamGroupId` in TeamsJS v1) |
 |--------------|----------------|------------------------------------------------------------|
 | Standard | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
@@ -704,6 +715,11 @@ The message change notification failure happens when the tenant's sharing policy
 * [Manage channel membership](#manage-channel-membership)
 * [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Build tabs for Teams](tabs/what-are-tabs.md)
+<!-- ### TO BE REVIEWED: this relative link does not resolve
+`resources/schema/manifest-schema.md` doesn't exist in this repo (only resources/dev-preview/ and four loose .md files are tracked) or in MicrosoftDocs/msteams-docs. The app manifest schema reference now lives in MicrosoftDocs/m365platform-schemas and publishes at /microsoft-365/extensibility/schema/. The old Learn URL only works via redirect, and the `#supportschannelfeatures` anchor is unverified -- on the live page the property appears only in the version history table, so there may be no anchor to link to.
+Suggested replacement: * [Microsoft 365 app manifest schema reference](/microsoft-365/extensibility/schema/?view=m365-app-1.25&preserve-view=true)
+Please confirm the intended target and anchor before merge. Note: TOC.yml, index.yml, and graph-api/meeting-transcripts/overview-transcripts.md have the same stale path, but those are pre-existing and out of scope for this PR.
+-->
 * [App manifest schema: supportsChannelFeatures](resources/schema/manifest-schema.md#supportschannelfeatures)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
