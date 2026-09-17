@@ -15,7 +15,7 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## Review needed: TLS 1.3 support and TLS fingerprinting
 
-*September 4, 2026*
+*September 17, 2026*
 
 At the **end of October 2026**, Microsoft will add TLS 1.3 support to Agent Communications Service, the `https://smba.*` family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, **developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.**
 
