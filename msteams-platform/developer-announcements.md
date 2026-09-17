@@ -466,7 +466,7 @@ Support for apps in private channels is available in developer preview. For more
 | 01/08/2022 | Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 01/08/2022 | App Studio is deprecated, use Developer Portal for Teams. | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 28/07/2022 | Add the Teams display picture and people card for in-meeting notification. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build in-meeting notification for Teams meeting](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
-| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
+| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](build-apps-for-shared-private-channels.md) |
 | 28/07/2022 | Introduced app manifest v1.14. | App manifest > [App manifest schema for Teams](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 26/07/2022 | Suggested actions for bots. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#send-suggested-actions) |
 | 21/07/2022 | Introduced step by step guide to send activity feed notifications. | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |

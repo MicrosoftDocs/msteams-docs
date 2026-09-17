@@ -1,7 +1,7 @@
 ---
 title: Stream agent messages
 description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
-ms.date: 02/19/2025
+ms.date: 08/24/2026
 ms.topic: article
 ms.author: nickwalk
 ms.localizationpriority: high
@@ -24,13 +24,13 @@ When users observe the agent processing their request in real time, it can incre
 
 Streaming agent messages has two types of updates:
 
-- **Informative updates**: Informative updates appear as a blue progress bar at the bottom of the chat. It informs the user about the agent's ongoing actions while a response is being generated.
+- **Informative updates**: Informative updates appear in the streamed message bubble and inform the user about the agent's ongoing actions while a response is being generated. The `text` remains visible until the next informative update or streamed content replaces it.
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the agents informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
-    Informative messages must not be more than 1 kb or 1000 characters.
+  Informative messages must not be more than 1 kb or 1000 characters.
 
-- **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the agent's response to the user as small updates while the complete response is being generated.
+- **Response streaming**: Response streaming replaces the informative update and displays the agent's response in the message bubble as it is generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
@@ -126,18 +126,16 @@ The following are the properties for streaming agent messages:
 | Property | Required | Description |
 | --- | --- | --- |
 | `type` | ✔️ | Supported values are either `typing` or `message`. </br> • `typing`: Use when streaming the message. </br> • `message`: Use for the final streamed message. |
-| `text` | ✔️ | The contents of the message that is to be streamed. |
-| `entities.type` | ✔️ | Must be `streamInfo`|
+| `text` | ✔️ | The contents of the message that is to be streamed. Teams renders this value in the agent's message bubble. For an `informative` update, the text stays visible until the next update or the first streamed chunk replaces it. A start streaming activity that omits `text` is rejected. |
+| `entities.type` | ✔️ | Must be `streamInfo` |
 | `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
 | `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. `final` is used only in the final message. |
 | `entities.streamSequence` | ✔️ | Incremental integer for each request. |
 
 > [!NOTE]
-> Here are the requirements for using `streamSequence` for REST APIs:
+> For REST APIs, `streamSequence` must start at 1 and increment by 1 for each subsequent streaming request. Don't set `streamSequence` for the final message.
+> The Teams typing animation isn't available while a stream is open. If your agent doesn't have response content yet, send a meaningful informative update instead of empty or whitespace text.
 >
-> - First one must be number '1'.
-> - Subsequent numbers (except final) must be a monotonic increasing integer (for example, 1->2->3).
-> - For the final message, `streamSequence` must not be set.
 
 To enable streaming in agents, follow these steps:
 
@@ -148,6 +146,8 @@ To enable streaming in agents, follow these steps:
 ### Start streaming
 
 The agent can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls.
+
+A start streaming activity must include `text`. If `text` is missing, the request fails with a `400 BadRequest` response and the error message `Start streaming activities should include text`. Teams renders this value in the message bubble, so use a meaningful informative update for the first activity. For more information, see [error codes](#error-codes).
 
 Your agent can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your agent generates its final response to the user.
 
@@ -199,6 +199,8 @@ Use the `streamId` that you've received from the initial request to send either 
 #### Start with informative updates
 
 As your agent generates a response send informative updates to the user such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. Ensure that you make subsequent calls only after the agent receives successful response from the previous calls.
+
+Each informative update replaces the previous one in the message bubble and remains visible to the user until the next update or the first streamed chunk arrives.
 
 ```json
 
@@ -324,7 +326,7 @@ The following image is an example of an agent providing updates in chunks:
 
 :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-### Final Streaming
+### Final streaming
 
 After your agent completes generating its message, send the end streaming signal along with the final message. For the final message, the `type` of activity is `message`. Here, the agent sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
 
@@ -383,7 +385,7 @@ After a user stops message generation:
     | Http status code | 403 |
     | Error code | `ContentStreamNotAllowed` |
     | Error message | Content stream was canceled by user. |
-    | Description |  The streaming was stopped by the user. |
+    | Description | The streaming was stopped by the user. |
 
 ## Response codes
 
@@ -394,32 +396,32 @@ The following are the success and error codes:
 | Http status code | Return value | Description |
 | --- | --- | --- |
 | `201` | `streamId`, this is the same as `activityId` such as `{"id":"1728640934763"}` | The agent returns this value after sending the initial streaming request. </br> For any subsequent streaming requests, the `streamId` is required. |
-| `202` | `{}`| Success code for any subsequent streaming requests. |
+| `202` | `{}` | Success code for any subsequent streaming requests. |
 
 ### Error codes
 
 | Http status code | Error code | Error message | Description |
-|--- |--- |--- |--- |
-| `202`|`ContentStreamSequenceOrderPreConditionFailed`| `PreCondition failed exception when processing streaming activity.` | Few streaming requests might arrive out of sequence and get dropped. The most recent streaming request, determined by `streamSequence`, is used when requests are received in a disordered manner. Ensure to send each request in a sequential manner.|
-| `400`| `BadRequest`| Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
-| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed`| The streaming API feature isn't allowed for the user or agent.|
-| `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| An agent can't continuously stream on a message that has already streamed and completed.|
-| `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The agent failed to complete the streaming process within the strict time limit of two minutes. |
-| `403`| `ContentStreamNotAllowed` | `Message size too large`| The agent sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
+| --- | --- | --- | --- |
+| `202` | `ContentStreamSequenceOrderPreConditionFailed` | `PreCondition failed exception when processing streaming activity.` | Few streaming requests might arrive out of sequence and get dropped. The most recent streaming request, determined by `streamSequence`, is used when requests are received in a disordered manner. Ensure to send each request in a sequential manner. |
+| `400` | `BadRequest` | Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
+| `403` | `ContentStreamNotAllowed` | `Content stream is not allowed` | The streaming API feature isn't allowed for the user or agent. |
+| `403` | `ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message` | An agent can't continuously stream on a message that has already streamed and completed. |
+| `403` | `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.` | The agent failed to complete the streaming process within the strict time limit of two minutes. |
+| `403` | `ContentStreamNotAllowed` | `Message size too large` | The agent sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
 | `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
-| `429`| NA | `API calls quota exceeded`| The number of messages streamed by the agent has exceeded quota. |
+| `429` | NA | `API calls quota exceeded` | The number of messages streamed by the agent has exceeded quota. |
 
 ## Code sample
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams streaming agent sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
-| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot)| [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
+| Teams streaming agent sample | This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
+| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
 - [Format your bot messages](how-to/format-your-bot-messages.md)
 - [Agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
-- [Teams SDK](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
-- [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)
+- [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome)
+- [Best practices and features checklist for Teams agents](how-to/teams-conversational-ai/agents-best-practices-features-checklist.md)

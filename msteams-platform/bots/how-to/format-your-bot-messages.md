@@ -12,7 +12,7 @@ ms.date: 08/17/2026
 Message formatting enables you to bring out the best in agent messages. You can format your agent messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
 
 > [!NOTE]
-> Regarding agent message size limit:
+> Regarding agent or bot message size limit:
 >
 > - The agent message size limit is 100 KB:
 >   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
