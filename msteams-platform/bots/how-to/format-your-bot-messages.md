@@ -25,16 +25,6 @@ Set the `TextFormat` property on a message activity to change how Teams renders 
 
 The following example shows how to send a message with `extendedmarkdown` formatting. This format supports CommonMark, GitHub Flavored Markdown (GFM), and additional features such as tables, task lists, math equations, images, citations, and streaming.
 
-# [TypeScript](#tab/typescript)
-
-```typescript
-const activity = 
-  new MessageActivityInput("### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending")
-    .withTextFormat('extendedmarkdown');
-
-await app.send(conversationId, activity);
-```
-
 # [C#](#tab/csharp)
 
 ```csharp
@@ -46,6 +36,16 @@ var activity = new Activity
 };
 
 await app.Send(conversationId, activity);
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+const activity = 
+  new MessageActivityInput("### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending")
+    .withTextFormat('extendedmarkdown');
+
+await app.send(conversationId, activity);
 ```
 
 # [Python](#tab/python)
@@ -110,7 +110,6 @@ Supported HTML:
 The following limitations apply to formatting:
 
 - `textFormat` applies to the activity `text` property. It doesn't enable Markdown or HTML in Adaptive Card or other rich-card payload properties.
-- In extended Markdown content, don't include arbitrary HTML.
 - Task-list checkboxes are read-only.
 - Older or unsupported clients might show unsupported constructs as plain text.
 
@@ -122,7 +121,7 @@ After you format text content, ensure that your formatting works across all plat
 
 ## Extended Markdown features
 
-When using `textFormat: "extendedmarkdown"`, the following features are available in text-only messages:
+When using `textFormat: "extendedmarkdown"`, the following features are available in text-only messages. In extended Markdown content, don't include arbitrary HTML.
 
 | Feature                   | Syntax                                                                     | Description                                                                                                                            |
 | ------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
