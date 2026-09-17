@@ -5,7 +5,7 @@ description: Learn about apps for shared and private channels to securely collab
 ms.author: nickwalk
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 06/18/2026
+ms.date: 09/17/2026
 ---
 
 # Agents and tab apps for shared and private channels
@@ -15,6 +15,9 @@ Shared and private channels in Microsoft Teams enable flexible collaboration wit
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
 * **Private channels**: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
+
+> [!NOTE]
+> Tab apps in shared channels are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments. SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
 
 ## Understand channels for app integration
 
@@ -75,7 +78,12 @@ Ensure that you understand how different channels determine app functionality, m
 
 ## Enable apps for shared and private channels
 
-Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, decide the approach:
+Most apps can support shared and private channels with a simple manifest update.
+
+> [!IMPORTANT]
+> The `supportedChannelTypes` app manifest property is deprecated. Starting with app manifest v1.25, use the `supportsChannelFeatures` property to enable your app in shared and private channels. If your app manifest still uses `supportedChannelTypes`, see [Migrate from supportedChannelTypes](#migrate-from-supportedchanneltypes).
+
+Based on either of the following scenarios, decide the approach:
 
 * [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters)
 * [Apps with dependence on specified parameters](#apps-with-dependence-on-specified-parameters)
@@ -96,13 +104,63 @@ Then, you only need to:
 
 There's no dependence on classical and admin access for `supportsChannelFeatures`: `tier1`.
 
+### Migrate from supportedChannelTypes
+
+Earlier versions of the app manifest used the optional `supportedChannelTypes` property to enable an app in private and shared channels:
+
+```json
+"supportedChannelTypes": [
+    "sharedChannels",
+    "privateChannels"
+]
+```
+
+This property is deprecated. Don't use `supportedChannelTypes` in new apps, and don't rely on it in existing apps. Migrate to the `supportsChannelFeatures` property introduced in app manifest v1.25.
+
+To migrate your app:
+
+1. Update your app manifest to v1.25 or later.
+1. Remove the `supportedChannelTypes` property from the app manifest.
+1. Add `supportsChannelFeatures`: `tier1` to the app manifest.
+1. If your agent needs channel membership information, request the `ChannelMember.Read.Group` resource-specific consent (RSC) permission. For more information, see [Get app notifications for agent membership changes](#get-app-notifications-for-agent-membership-changes).
+1. Test your app in a standard channel, a private channel, and a shared channel. For more information, see [Test your app across channels](#test-your-app-across-channels).
+
+The following table summarizes what changes when you migrate:
+
+| Area | With `supportedChannelTypes` (deprecated) | With `supportsChannelFeatures` (manifest v1.25 and later) |
+|------|-------------------------------------------|------------------------------------------------------------|
+| Manifest declaration | Per-channel-type values: `sharedChannels`, `privateChannels` | Single readiness flag: `tier1` |
+| Supported app capabilities | Tabs only | Agents and tabs |
+| App logic | Might branch on channel type | Don't branch on `membershipType` or `channelType`; rely on capability-based APIs and events |
+| Channel membership | Combine `members` and `sharedWithTeams` calls | Use the `allMembers` API. For more information, see [Manage channel membership](#manage-channel-membership). |
+
 ### Apps with dependence on specified parameters
 
 If your app handles advanced scenarios, or depends on the specified parameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't rewrite your code.
 
 ### Get context for shared and private channels
 
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two properties that identify the host team and host tenant, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+
+The property names differ between TeamsJS v1 and TeamsJS v2:
+
+| Value | TeamsJS v1 (`getContext`) | TeamsJS v2 (`app.getContext()`) |
+|-------|---------------------------|----------------------------------|
+| Host team group ID | `hostTeamGroupId` | `channel.ownerGroupId` |
+| Host tenant ID | `hostTenantId` | `channel.ownerTenantId` |
+
+This article uses the TeamsJS v2 names. If your app uses TeamsJS v1, read `hostTeamGroupId` and `hostTenantId` from the same context object.
+
+#### Group IDs across channel types
+
+Apps must function cross-tenant in installation and usage. The group ID returned in the channel context depends on the channel type:
+
+| Channel type | `team.groupId` | `channel.ownerGroupId` (`hostTeamGroupId` in TeamsJS v1) |
+|--------------|----------------|------------------------------------------------------------|
+| Standard | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
+| Shared | Empty | Host team Microsoft Entra group ID |
+
+Always use `channel.ownerGroupId` (or `hostTeamGroupId` in TeamsJS v1) as the `{team-id}` when you call the Microsoft Graph channel APIs described in this article.
   
 ### Manage channel membership
 
@@ -111,6 +169,9 @@ Use the `allMembers` API to manage and monitor channel memberships across standa
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
 ```
+
+> [!NOTE]
+> Earlier guidance built the shared channel roster in three steps: list direct members with `GET /teams/{host-team-group-id}/channels/{channel-id}/members`, list shared teams with `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`, and then list the members of each shared team with `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{team-id}/members`. A single `allMembers` call replaces this pattern. Use the `@microsoft.graph.originalSourceMembershipUrl` annotation to distinguish direct and indirect members, and use the `doesUserHaveAccess` API to confirm whether a user still has access after a removal.
 
 ### Identify members
 
@@ -406,7 +467,7 @@ Complete this step when your app stores content in the SharePoint site of the te
 ### [Tabs](#tab/tabs)
 
 1. Save host tenant ID of shared channel where tab is configured.
-1. Retrieve the host tenant ID by using `channel.ownerTenantId` in JSv2 or from the `getContext` call in JSv1.
+1. Retrieve the host tenant ID by using `channel.ownerTenantId` in TeamsJS v2 or `hostTenantId` from the `getContext` call in TeamsJS v1.
 
 ### [Agents](#tab/bots1)
 
@@ -497,7 +558,7 @@ POST /drives/{driveId}/items/{itemId}/invite
 When your tab or task module needs to access SharePoint resources in the channel’s home tenant, perform the following steps:
 
 1. Detect external users
-Use `getContext()` to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId` or `channel.hostTenantId`. If they differ, the user is external.
+Use `getContext()` to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId` (`hostTenantId` in TeamsJS v1). If they differ, the user is external.
 
 1. Request token from home tenant
 Call [getAuthToken()](tabs\how-to\authentication\tab-sso-code.md) with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
@@ -643,6 +704,7 @@ The message change notification failure happens when the tenant's sharing policy
 * [Manage channel membership](#manage-channel-membership)
 * [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Build tabs for Teams](tabs/what-are-tabs.md)
+* [App manifest schema: supportsChannelFeatures](resources/schema/manifest-schema.md#supportschannelfeatures)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
