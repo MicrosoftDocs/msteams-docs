@@ -52,10 +52,10 @@ microsoftTeams.sharing.shareWebContent({
 The payload contains the following parameters:
 
 | Property name | Purpose |
-|---|---|
+| --- | --- |
 | `type` | The type must be `URL` |
 | `url` | `URL` to be shared |
-|`message`| Default message to be loaded in the compose box |
+| `message` | Default message to be loaded in the compose box |
 | `preview` | Set to `true` to enable URL preview |
 
 The following image shows the Share to Teams option:
@@ -71,8 +71,8 @@ Share to Teams button can be hosted or embedded in an app running inside Teams. 
 
 The following table provides the response codes:
 
-|Response code|Description|
-|---|---|
+| Response code | Description |
+| --- | --- |
 | **100** | API not supported in the current platform. |
 | **404** | The file specified wasn't found on the given location. |
 | **500** | Internal error encountered while performing the required operation. |
@@ -123,4 +123,4 @@ The content is presented in a view-only mode. The presenter can interact with th
 
 * [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Create a personal tab](../../tabs/how-to/create-personal-tab.md)
-* [Microsoft Teams Connect shared channels](shared-channels.md)
+* [Agents and tab apps for shared and private channels](../../build-apps-for-shared-private-channels.md)
