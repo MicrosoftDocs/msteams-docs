@@ -195,15 +195,15 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ## Using organization-specific custom emojis
 
-Agents can also utilize custom emojis that are available only inside specific organizations. Using custom emojis follows the same process as using standard emoji reactions. 
+Agents can also utilize organization-specific custom emojis. Use the [List customEmojis](https://learn.microsoft.com/en-us/graph/api/teamworkmessaging-list-customemojis?view=graph-rest-beta&tabs=http) Graph API to retreive a list of custom emojis availabe within an organization.
 
-Use the [customEmoji](https://learn.microsoft.com/en-us/graph/api/teamworkmessaging-list-customemojis?view=graph-rest-beta&tabs=http) Graph API to retreive a list of custom emojis within an organization.
+[!NOTE] You will need `TeamworkCustomEmoji.Read` delegated or  `TeamworkCustomEmoji.Read.All` application permission to use the `customEmojis` Graph API
 
 ```http
 GET /teamwork/messaging/customEmojis
 ```
 
-The response will include a field `customEmojiID`
+The response will include a field `customEmojiId`
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -240,7 +240,7 @@ Content-type: application/json
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use the `customEmojiId` field in your `addAsync` method call
+Use the `customEmojiId` field in your `addAsync` method
 
 The following example illustrates adding a custom emoji reaction to a received message, then removing it.
 
@@ -268,7 +268,7 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-Use the `customEmojiId` field in your `addAsync` method call
+Use the `customEmojiId` field in your `api.reactions.add` method
 
 The following example illustrates adding a custom emoji reaction to a received message, then removing it.
 
@@ -287,7 +287,7 @@ app.on('message', async ({ activity, api }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-Use the `customEmojiId` field in your `addAsync` method call
+Use the `customEmojiId` field in your `reactions.add` method
 
 The following example illustrates adding a custom emoji reaction to a received message, then removing it.
 
