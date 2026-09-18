@@ -1,0 +1,49 @@
+name: Link check
+
+# Validates every external link in the doc set on a schedule and files a single
+# tracking issue when links break. Internal links and TOC entries are already
+# validated by the OpenPublishing build during PR validation.
+
+on:
+  schedule:
+    # 06:00 UTC every Monday.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      paths:
+        description: "Glob of files to check (defaults to the whole doc set)."
+        required: false
+        default: "msteams-platform/**/*.md"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  link-check:
+    name: Check links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config lychee.toml
+            --no-progress
+            --format markdown
+            "${{ github.event.inputs.paths || 'msteams-platform/**/*.md' }}"
+          output: ./lychee/out.md
+          fail: false
+
+      - name: File or update the tracking issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Broken links detected in the doc set"
+          content-filepath: ./lychee/out.md
+          labels: doc-bug

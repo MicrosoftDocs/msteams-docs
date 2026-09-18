@@ -1,0 +1,54 @@
+# Configuration for the scheduled link check (.github/workflows/link-check.yml).
+# Docs: https://lychee.cli.rs/usage/config/
+
+# Networking
+max_concurrency = 16
+max_redirects = 10
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+user_agent = "Mozilla/5.0 (compatible; msteams-docs-link-check/1.0)"
+
+# Treat these as reachable. Many Microsoft and social endpoints reject bots with
+# 403 or throttle with 429 even though the page is live for real users.
+accept = ["200..=299", "403", "429"]
+
+# Only report genuinely broken links, not redirects.
+no_progress = true
+include_verbatim = false
+
+# Folders that aren't authored content.
+exclude_path = [
+    ".git",
+    ".github",
+    "wiki",
+]
+
+exclude = [
+    # Learn-relative paths (`~/...`) are resolved by the docs build, not by HTTP.
+    '^~/',
+
+    # Sign-in walls and tenant-scoped portals always fail for an anonymous checker.
+    '^https?://teams\.microsoft\.com/l/',
+    '^https?://login\.microsoftonline\.com',
+    '^https?://portal\.azure\.com',
+    '^https?://admin\.teams\.microsoft\.com',
+    '^https?://dev\.teams\.microsoft\.com',
+    '^https?://.*\.sharepoint\.com',
+    '^https?://review\.learn\.microsoft\.com',
+
+    # Aggressive bot protection / rate limiting.
+    '^https?://(www\.)?(twitter|x)\.com',
+    '^https?://(www\.)?linkedin\.com',
+    '^https?://(www\.)?facebook\.com',
+    '^https?://stackoverflow\.com',
+
+    # Placeholder and sample hosts used in code snippets.
+    '^https?://localhost',
+    '^https?://127\.0\.0\.1',
+    '^https?://.*\.example\.com',
+    '^https?://.*contoso\.com',
+    '^https?://.*fabrikam\.com',
+    '^https?://your-',
+    '<.*>',
+]
