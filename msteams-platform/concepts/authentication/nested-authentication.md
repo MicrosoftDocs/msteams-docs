@@ -26,15 +26,15 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
     The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
     | Steps required for development | Traditional Teams Entra SSO | NAA |
-    | --- |:---:|:---:|
+    | --- | :---: | :---: |
     | Expose redirect URI | Required | Required |
-    | Register API in Microsoft Entra ID | Required |  |
-    | Define a custom scope in Microsoft Entra ID | Required |  |
-    | Authorize Teams client apps | Required |  |
+    | Register API in Microsoft Entra ID | Required | |
+    | Define a custom scope in Microsoft Entra ID | Required | |
+    | Authorize Teams client apps | Required | |
     | Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
-    | Acquire access token through TeamsJS SDK | Required |  |
-    | Solicit user consent for more permissions | Required |  |
-    | Conduct an OBO exchange on the server | Required |  |
+    | Acquire access token through TeamsJS SDK | Required | |
+    | Solicit user consent for more permissions | Required | |
+    | Conduct an OBO exchange on the server | Required | |
 
 * The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -233,8 +233,9 @@ To enable token prefetching, update your [Teams app manifest](/microsoft-365/ext
 
 > [!important]
 >
-> * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
-> * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
+> * For each NAA token prefetch request, specify the agent or app’s Microsoft Entra ID registration client ID in the optional `clientId` field of the corresponding `nestedAppAuthInfo` entry. When provided, this value is used to prefetch the token for that entry. If an entry does not include `clientId`, the host uses `webApplicationInfo.id` as the client ID for that entry’s NAA token prefetch request.
+> * `webApplicationInfo.id` is the fallback client ID for entries that do not specify clientId. It does not need to match every entry-level clientId. If an app uses only `webApplicationInfo.id` for NAA token prefetching, that value must match the client ID of the app’s Microsoft Entra ID registration used for its actual NAA token requests.
+> * The values in `webApplicationInfo.id` and all fields inside `nestedAppAuthInfo` must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
 > * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
 
 #### How it works
