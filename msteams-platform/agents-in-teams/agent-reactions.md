@@ -193,6 +193,126 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ::: zone-end
 
+## Using organization-specific custom emojis
+
+Agents can also utilize custom emojis that are available only inside specific organizations. Using custom emojis follows the same process as using standard emoji reactions. 
+
+Use the [customEmoji](https://learn.microsoft.com/en-us/graph/api/teamworkmessaging-list-customemojis?view=graph-rest-beta&tabs=http) Graph API to retreive a list of custom emojis within an organization.
+
+```http
+GET /teamwork/messaging/customEmojis
+```
+
+The response will include a field `customEmojiID`
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teamwork/messaging/customEmojis",
+    "value": [
+        {
+            "displayName": "thumbsup_custom",
+            "customEmojiId":"thumbsup_custom_0125de505"
+            "contentBytes": "iVBORw0KGgoAAAANSUhEUgAAA...",
+            "createdDateTime": "2026-03-15T10:30:00Z",
+            "createdBy": {
+                "user": {
+                    "id": "670374fa-3b0e-4a3b-9d33-0e1bc5ff1956",
+                    "displayName": "Adele Vance"
+                }
+            }
+        },
+        {
+            "displayName": "party_parrot",
+            "contentBytes": "R0lGODlhAQABAIAAAAAAAP...",
+            "createdDateTime": "2026-04-20T14:15:00Z",
+            "createdBy": {
+                "user": {
+                    "id": "28c10244-4bad-4fda-993c-f332faef94f0",
+                    "displayName": "Alex Wilber"
+                }
+            }
+        }
+    ]
+}
+```
+
+::: zone pivot="teams-sdk-csharp"
+
+Use the `customEmojiId` field in your `addAsync` method call
+
+The following example illustrates adding a custom emoji reaction to a received message, then removing it.
+
+```csharp
+app.OnMessage(async context =>
+{
+    // First, add a reaction
+    await context.Api.Conversations.Reactions.AddAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        new ReactionType("thumbsup_custom_0125de505")
+    );
+
+    // Wait a bit, then remove it
+    await Task.Delay(2000);
+    await context.Api.Conversations.Reactions.DeleteAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        new ReactionType("thumbsup_custom_0125de505")
+    );
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Use the `customEmojiId` field in your `addAsync` method call
+
+The following example illustrates adding a custom emoji reaction to a received message, then removing it.
+
+```typescript
+app.on('message', async ({ activity, api }) => {
+// First, add a reaction
+  await api.reactions.add(activity.conversation.id, activity.id, 'thumbsup_custom_0125de505');
+
+  // Wait a bit, then remove it
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await api.reactions.delete(activity.conversation.id, activity.id, 'thumbsup_custom_0125de505');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the `customEmojiId` field in your `addAsync` method call
+
+The following example illustrates adding a custom emoji reaction to a received message, then removing it.
+
+```python
+import asyncio
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # First, add a reaction
+    await ctx.api.reactions.add(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        'thumbsup_custom_0125de505'
+    )
+
+    # Wait a bit, then remove it
+    await asyncio.sleep(2)
+    await ctx.api.reactions.delete(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        'thumbsup_custom_0125de505'
+    )
+```
+::: zone-end
+
 ## Best practices and design guidance
 
 **Exception handling**: Reaction activity is a common source of exceptions. Always use dedicated exception handling for reaction operations, especially to handle rate limiting exceptions. For more information, see [Exception handling](#exception-handling).
