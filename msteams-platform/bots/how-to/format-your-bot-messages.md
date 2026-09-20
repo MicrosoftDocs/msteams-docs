@@ -20,7 +20,7 @@ By default, Teams recognizes a subset of Markdown syntax and a limited set of HT
 > **The current behavior will remain the default** to ensure the stability of existing agents, because extended Markdown mode does not fully preserve it. To prepare to take advantage of extended Markdown mode when it becomes generally available:
 >
 > - Avoid or remove the use of HTML for message formatting, and use Markdown exclusively
-> - Use message construction patterns that allow specifying a `textFormat`
+> - Use message construction patterns that allow specifying a `textFormat` (specify `markdown` to retain the current default behavior)
 > - Test messaging scenarios in both default and extended Markdown modes with the latest Teams desktop, web, iOS and Android clients
 
 ## Choose a formatting mode
