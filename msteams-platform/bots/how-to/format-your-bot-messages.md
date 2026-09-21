@@ -4,7 +4,7 @@ description: Format agent messages in Teams with Markdown, extended Markdown, HT
 ms.topic: article
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.date: 09/19/2026
+ms.date: 09/21/2026
 author: nickwalkmsft
 ---
 
@@ -30,7 +30,7 @@ The `textFormat` property of a message activity controls how Teams recognizes Ma
 | `textFormat` value | Capabilities |
 | ------------------ | ----------- |
 | *(not specified)* or `markdown` | Supports a limited subset of Markdown and HTML described in [Default formatting behavior](#default-formatting-behavior). |
-| `extendedmarkdown` | **In public developer preview.** Supports CommonMark, GitHub Flavored Markdown (GFM), tables, task lists, math, images, citations, and progressive streaming; see [Extended Markdown behavior](#extended-markdown-behavior). |
+| `extendedmarkdown` | **In public developer preview.** Supports CommonMark, GitHub Flavored Markdown (GFM), tables, task lists, math, images, citations, and progressive streaming; see [Extended Markdown behavior (preview)](#extended-markdown-behavior-preview). |
 | `xml` | **Legacy.** Supports only a basic HTML subset (no Markdown syntax). |
 | `plain` | **Legacy.** Displays raw text without formatting. |
 
@@ -107,7 +107,9 @@ By default, when no `textFormat` value is specified, Teams recognizes a practica
 | HTML Hyperlink | `<a href="URL">` |
 | HTML Image | `<img src="URL">` |
 
-## Extended Markdown behavior
+## Extended Markdown behavior (preview)
+
+Available in preview.
 
 Setting `textFormat` to `extendedmarkdown` enables support for additional Markdown features, as well as progressive rendering when [streaming messages](../streaming-ux.md). Extended Markdown is not fully backwards compatible with the default rendering behavior. Arbitrary HTML is not supported.
 
