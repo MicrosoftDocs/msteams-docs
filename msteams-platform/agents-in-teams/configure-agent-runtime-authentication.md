@@ -11,9 +11,9 @@ zone_pivot_groups: teams-sdk-languages
 
 # Review or update agent runtime authentication configuration
 
-The Bot Connector service authenticates all calls it receives from your Teams agent's runtime. The runtime must identify itself as the Entra ID app whose registration is linked to the agent's Bot Connector registration.
+To interact with Teams, an agent's runtime must authenticate to Bot Connector. The agent authenticates using credentials associated with the Entra ID app registration that is linked to the agent's Bot Connector registration.
 
-The configuration described in this article is related only to authentication of the agent runtime. For information about configuring and implementing single sign-on (SSO) or OAuth to authenticate users of your agent and allow them to delegate permissions, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
+The configuration described in this article is related only to agent runtime authentication that is required of all Teams agents. For information about configuring and implementing single sign-on (SSO) or OAuth to authenticate users of an agent and allow them to delegate permissions, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
 
 ## Supported credential types
 
@@ -24,9 +24,11 @@ Teams agent runtimes can authenticate to Bot Connector using two different kinds
 
 By default, new agents created using the Teams developer CLI or the Teams Developer Portal use client secret authentication. For agent runtimes hosted on an Azure compute service, such as Azure App Service, Azure Kubernetes Service, or Azure Virtual Machines, updating your configuration to use a managed identity instead is strongly recommended.
 
-## Review or update configurations
+## Review or update configuration
 
 ### Confirm application ID and tenant ID
+
+For
 
 The app ID of the Entra ID app registration
 
@@ -36,17 +38,11 @@ Your agent's Entra ID app registration, linked to its Bot Connector registration
 
 To review or update the credentials configured on the agent's Entra ID app registration, see [Add and manage app credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
 
-## Entra ID app registration
+To use a managed identity for authentication, configure it as a federated credential.
 
-Client IDs. Client secrets are created by Entra ID secrets are not recoverable and are only shown when first created, but new secrets can be generated at any time.
-
-Need to illustrate this for both Azure and standalone reg
-
-Can create and delete via TDP too or cli teams app auth secret
+Client secrets can also be created in Teams Developer Portal or via `teams app auth secret create`.
 
 Client secrets should occasionally be rotated and kept secure.
-
- and linked to the agent's app registration via Entra ID's federated identity credentials feature
 
 ### Runtime configuration
 

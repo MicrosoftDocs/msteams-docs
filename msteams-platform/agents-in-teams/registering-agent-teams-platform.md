@@ -24,7 +24,7 @@ By registering an agent at the beginning of development, you can use it in Teams
 
 Microsoft Entra ID is the identity and access management service used by Teams and Microsoft 365. An app registration in your developer Entra tenant is a globally unique identity that enables multiple agent capabilities:
 
-- **Authentication with Bot Connector service**: An agent's Bot Connector registration is uniquely associated with an app registration configured with the agent's runtime app credentials.
+- **Authentication to Bot Connector**: An agent's Bot Connector registration is uniquely associated with an app registration configured with the agent's runtime app credentials.
 - **Authentication to organizational resources**: Many agents directly access organizational data and services, such as Microsoft Graph, to power collaboration features.
 - **On-behalf-of flows with single sign-on (SSO) and OAuth**: Users can delegate access to agents, granting consent for them to access data and services on their behalf.
 - **Obtaining consent for privileged operations in Teams**: Certain agent actions in Teams require consent from administrators and users.
@@ -33,12 +33,11 @@ In some cases, agents might be configured and implemented to use multiple app re
 
 ## Bot Connector registration: an agent's interface to Teams
 
-An agent's connection to Bot Connector is what makes it a *Teams* agent - it serves the API that your agent's runtime uses to interact with Teams functionality, especially chat. Before your agent can access Teams, you need to register it with the service.
+An agent's connection to Bot Connector is what makes it a *Teams* agent: Bot Connector serves the API that an agent's runtime uses to interact with Teams functionality, especially chat. Before your agent can access Teams, you need to register it with the service.
 
-A Bot Connector registration contains a small amount of configuration, most importantly:
+Every agent's Bot Connector registration uniquely and permanently references an Entra ID app registration by its app ID, also called its client ID. This app registration is the agent's primary identity for most purposes, and its ID becomes the unique *bot ID* of the Bot Connector registration. The agent's runtime uses a credential associated with this app registration - a client secret or an Azure managed identity - to authenticate to Bot Connector.
 
-- A permanent 1:1 reference to an Entra ID app registration. The app registration's unique app ID becomes the Bot Connector registration's *bot ID* and is used to identify the agent in contexts like the app manifest and the agent's runtime configuration.
-- The agent's runtime endpoint URL, where the service will send realtime activity data about user actions in Teams.
+A Bot Connector registration also contains a small amount of configuration, most importantly the agent's runtime endpoint URL. Whenever activity occurs in Teams that is visible to the agent, in any tenant where it's installed, Bot Connector sends realtime data to this endpoint that the agent's runtime processes using an event-handling pattern.
 
 Bot Connector supports two different kinds of registration: *standalone* and *Azure AI Bot Service resource*. See [Choose a Bot Connector registration type for an agent](../agents-in-teams/choose-agent-registration-type.md) for more information.
 
