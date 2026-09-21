@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.owner: angovil
-ms.date: 05/11/2026
+ms.date: 08/25/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -33,7 +33,6 @@ To make agent messages pop, the user can add pictures as attachments:
 
 - Pictures can be up to 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIFs aren't supported.
 - You can specify the height and width of each image using XML. In Markdown, the image size defaults to 256×256. For example:
-
   - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
   - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
@@ -58,25 +57,25 @@ The following code shows an example of sending a simple Adaptive Card:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
     {
-        "items": [
+      "items": [
         {
-            "size": "large",
-            "text": "Simple Adaptive Card example with a Textbox",
-            "type": "TextBlock",
-            "weight": "bolder",
-            "wrap": true
-        },
-        ],
-        "spacing": "extraLarge",
-        "type": "Container",
-        "verticalContentAlignment": "center"
+          "size": "large",
+          "text": "Simple Adaptive Card example with a Textbox",
+          "type": "TextBlock",
+          "weight": "bolder",
+          "wrap": true
+        }
+      ],
+      "spacing": "extraLarge",
+      "type": "Container",
+      "verticalContentAlignment": "center"
     }
-    ]
+  ]
 }
 ```
 
@@ -85,6 +84,10 @@ The following code shows an example of sending a simple Adaptive Card:
 ## Send and receive messages
 
 Sending and receiving messages is the core functionality of an agent.
+
+### Message size limits
+
+[!INCLUDE [agent-message-size-limit](how-to/includes/agent-message-size-limit.md)]
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
@@ -100,12 +103,12 @@ For more information, see [user attribution for agent messages](/microsoftteams/
 
 The following table lists the activity that your agent can receive and take action on:
 
-| Message type | Payload object | Scope |
-| --- | --- | --- |
-| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
-| [Receive edit message activity](#receive-edit-message-activity) | Message edit activity | All |
-| [Receive undelete message activity](#receive-undelete-message-activity) | Message undelete activity | All |
-| [Receive soft delete message activity](#receive-soft-delete-message-activity) | Message soft delete activity | All |
+| Message type                                                                  | Payload object               | Scope |
+| ----------------------------------------------------------------------------- | ---------------------------- | ----- |
+| [Receive a message activity](#receive-a-message-activity)                     | Message activity             | All   |
+| [Receive edit message activity](#receive-edit-message-activity)               | Message edit activity        | All   |
+| [Receive undelete message activity](#receive-undelete-message-activity)       | Message undelete activity    | All   |
+| [Receive soft delete message activity](#receive-soft-delete-message-activity) | Message soft delete activity | All   |
 
 ### Receive a message activity
 
@@ -134,9 +137,8 @@ app.OnMessage(async context =>
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
-
-app.on('message', async ({ activity, send }) => {
-    await send(`Echo: '${activity.text}'`);
+app.on("message", async ({ activity, send }) => {
+  await send(`Echo: '${activity.text}'`);
 });
 ```
 
@@ -157,52 +159,50 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ::: zone-end
 
 ```json
-
 {
-    "type": "message",
-    "id": "1485983408511",
-    "timestamp": "2017-02-01T21:10:07.437Z",
-    "localTimestamp": "2017-02-01T14:10:07.437-07:00",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
-    "channelId": "msteams",
-    "from": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen",
-        "aadObjectId": "7faf8ab2-3d56-4244-b585-20c8a42ed2b8"
-    },
-    "conversation": {
-        "conversationType": "personal",
-        "id": "a:17I0kl9EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-"
-    },
-    "recipient": {
-        "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c",
-        "name": "Teams TestAgent"
-    },
-    "textFormat": "plain",
-    "text": "Hello Teams TestAgent.Sending bold-italic rich text",
-    "attachments": [
-      {
-            "contentType": "text/html",
-            "content": "<div><div>Hello Teams TestAgent. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
-      } 
-    ],
-    "entities": [
-      { 
-        "locale": "en-US",
-        "country": "US",
-        "platform": "Windows",
-        "timezone": "America/Los_Angeles",
-        "type": "clientInfo"
-      }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    },
-    "locale": "en-US"
+  "type": "message",
+  "id": "1485983408511",
+  "timestamp": "2017-02-01T21:10:07.437Z",
+  "localTimestamp": "2017-02-01T14:10:07.437-07:00",
+  "serviceUrl": "https://smba.trafficmanager.net/amer/",
+  "channelId": "msteams",
+  "from": {
+    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB39ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+    "name": "Megan Bowen",
+    "aadObjectId": "7faf8ab2-3d56-4244-b585-20c8a42ed2b8"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id": "a:17I0kl9EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-"
+  },
+  "recipient": {
+    "id": "28:c9e8c047-2a74-40a2-b28a-b162d5f5327c",
+    "name": "Teams TestAgent"
+  },
+  "textFormat": "plain",
+  "text": "Hello Teams TestAgent.Sending bold-italic rich text",
+  "attachments": [
+    {
+      "contentType": "text/html",
+      "content": "<div><div>Hello Teams TestAgent. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+    }
+  ],
+  "entities": [
+    {
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Windows",
+      "timezone": "America/Los_Angeles",
+      "type": "clientInfo"
+    }
+  ],
+  "channelData": {
+    "tenant": {
+      "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+  },
+  "locale": "en-US"
 }
-
 ```
 
 ### Receive a read receipt
@@ -225,41 +225,41 @@ To receive read receipts events for your agent, ensure the following:
 
   # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
-    ```json
-        
-    "webApplicationInfo": {
-        
-         "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
-         "resource": ""
-    },
-    "authorization": {
-        "permissions": {
-        "orgwide": [],
-         "resourceSpecific": [
-            {
-            "name": "ChatMessageReadReceipt.Read.Chat",
-            "type": "Application"
-            }
-            ]
-         }
-     }
-            
-    ```
+  ```json
+
+  "webApplicationInfo": {
+
+       "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+       "resource": ""
+  },
+  "authorization": {
+      "permissions": {
+      "orgwide": [],
+       "resourceSpecific": [
+          {
+          "name": "ChatMessageReadReceipt.Read.Chat",
+          "type": "Application"
+          }
+          ]
+       }
+   }
+
+  ```
 
   # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
 
-    ```json
-        
-     “webApplicationInfo”: {
-    
-         "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-         "resource": "https: //AnyString",
-         "applicationPermissions": [
-         "ChatMessageReadReceipt.Read.Chat"
-         ]
-     }
-            
-    ```
+  ```json
+
+   “webApplicationInfo”: {
+
+       "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+       "resource": "https: //AnyString",
+       "applicationPermissions": [
+       "ChatMessageReadReceipt.Read.Chat"
+       ]
+   }
+
+  ```
 
 ---
 
@@ -269,48 +269,47 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
   The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
 
-    ```csharp
-    app.OnReadReceipt(async context =>
+  ```csharp
+  app.OnReadReceipt(async context =>
 
-    {
-        var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-        await context.Send("User read the agent's message");
-    });
-    ```
+  {
+      var lastReadMessageId = context.Activity.Value.LastReadMessageId;
+      await context.Send("User read the agent's message");
+  });
+  ```
 
 The following example shows a read receipts event request that an agent receives:
 
 ```json
-    {
-        "name": "application/vnd.microsoft.readReceipt",
-        "type": "event",
-        "timestamp": "2023-08-16T17:23:11.1366686Z",
-        "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer/",
-        "from": {
-            "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
-            "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
-        },
-        "conversation": {
-            "conversationType": "personal",
-            "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
-            "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
-        },
-        "recipient": {
-            "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
-            "name": "Test Agent"
-        },
-        "channelData": {
-            "tenant": {
-                "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
-            }
-        },
-        "value": {
-            "lastReadMessageId": "1692206589131"
-        }
+{
+  "name": "application/vnd.microsoft.readReceipt",
+  "type": "event",
+  "timestamp": "2023-08-16T17:23:11.1366686Z",
+  "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
+  "channelId": "msteams",
+  "serviceUrl": "https://smba.trafficmanager.net/amer/",
+  "from": {
+    "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
+    "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+    "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
+  },
+  "recipient": {
+    "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
+    "name": "Test Agent"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
     }
-    
+  },
+  "value": {
+    "lastReadMessageId": "1692206589131"
+  }
+}
 ```
 
 - Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the agent to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
@@ -331,7 +330,7 @@ The following is an example of an edit message activity notification using `OnMe
 app.OnMessageEdit(async context =>
 {
     await context.Send("message is updated");
-}); 
+});
 ```
 
 ::: zone-end
@@ -339,9 +338,9 @@ app.OnMessageEdit(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('messageEdit', async ({ activity, send }) => {
-    const editedMessage = activity.text;
-    await send(`The edited message is ${editedMessage}`);
+app.on("messageEdit", async ({ activity, send }) => {
+  const editedMessage = activity.text;
+  await send(`The edited message is ${editedMessage}`);
 });
 ```
 
@@ -383,7 +382,7 @@ app.on('messageEdit', async ({ activity, send }) => {
 },
 "locale":"en-US",
 "localTimezone":"America/Los_Angeles"
-}  
+} 
 ```
 
 ```http
@@ -392,8 +391,8 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 
 ```json
 {
-    "type": "message",
-    "text": "This message has been updated"
+  "type": "message",
+  "text": "This message has been updated"
 }
 ```
 
@@ -430,12 +429,12 @@ app.OnMembersAdded(async context =>
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
 
 ```typescript
-   app.on('membersAdded', async ({ activity, send }) => {
-    for (const member of activity.membersAdded ?? []) {
-        if (member.id !== activity.recipient.id) {
-            await send(`Welcome to the team ${member.name}`);
-        }
+app.on("membersAdded", async ({ activity, send }) => {
+  for (const member of activity.membersAdded ?? []) {
+    if (member.id !== activity.recipient.id) {
+      await send(`Welcome to the team ${member.name}`);
     }
+  }
 });
 ```
 
@@ -458,21 +457,21 @@ async def handle_members_added(ctx: ActivityContext):
 
 ```json
 {
-    "type": "message",
-    "from": {
-        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestAgent"
-    },
-    "conversation": {
-        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-        "name": "Convo1"
-   },
-   "recipient": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen"
-    },
-    "text": "My agent's reply",
-    "replyToId": "1632474074231"
+  "type": "message",
+  "from": {
+    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+    "name": "Teams TestAgent"
+  },
+  "conversation": {
+    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+    "name": "Convo1"
+  },
+  "recipient": {
+    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+    "name": "Megan Bowen"
+  },
+  "text": "My agent's reply",
+  "replyToId": "1632474074231"
 }
 ```
 
@@ -482,27 +481,27 @@ HTTP Request: {Service URL of your agent}/v3/conversations/{conversationId}/acti
 
 ```json
 {
-    "type": "message",
-    "from": {
-        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestAgent"
-    },
-    "conversation": {
-        "id":"a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-        "name": "Convo1"
-    },
-    "recipient": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen"
-    },
-    "text": "My agent's reply"
+  "type": "message",
+  "from": {
+    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+    "name": "Teams TestAgent"
+  },
+  "conversation": {
+    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+    "name": "Convo1"
+  },
+  "recipient": {
+    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+    "name": "Megan Bowen"
+  },
+  "text": "My agent's reply"
 }
 ```
 
 > [!NOTE]
 >
->- Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
->- Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
+> - Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> - Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
 
 Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
@@ -528,9 +527,11 @@ app.OnMessageUndelete(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('messageUndelete', async ({ activity, send }) => {
-    const undeletedMessage = activity.text;
-    await send(`Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`);
+app.on("messageUndelete", async ({ activity, send }) => {
+  const undeletedMessage = activity.text;
+  await send(
+    `Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`,
+  );
 });
 ```
 
@@ -538,41 +539,42 @@ app.on('messageUndelete', async ({ activity, send }) => {
 
 ```json
 {
-"type":"messageUpdate",
-"timestamp":"2022-10-28T17:19:39.4615413Z",
-"localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
-"id":"1666977568748",
-"channelId":"msteams",
-"serviceUrl":"https://canary.botapi.skype.com/amer/",
-"from": {
-    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
-    "name":"Alex Wilber",
-    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
-},
-"conversation":{
-    "conversationType":"personal",
-    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
-},
-"recipient":{
-    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
-    "name":"Testbot"
-},
-"entities":[
+  "type": "messageUpdate",
+  "timestamp": "2022-10-28T17:19:39.4615413Z",
+  "localTimestamp": "2022-10-28T10:19:39.4615413-07:00",
+  "id": "1666977568748",
+  "channelId": "msteams",
+  "serviceUrl": "https://canary.botapi.skype.com/amer/",
+  "from": {
+    "id": "29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name": "Alex Wilber",
+    "aadObjectId": "976e4d1e-2108-43ee-a092-46a9507c5606"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "tenantId": "528dbe3f-15e0-4e37-84a1-00cc305847dd",
+    "id": "a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+  },
+  "recipient": {
+    "id": "28:0d469698-ab9d-479a-b0d8-758b6e6b1234",
+    "name": "Testbot"
+  },
+  "entities": [
     {
-           "locale":"en-US",
-        "country":"US",
-        "platform":"Web",
-        "timezone":"America/Los_Angeles",
-        "type":"clientInfo"
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Web",
+      "timezone": "America/Los_Angeles",
+      "type": "clientInfo"
     }
-],
-"channelData":{
-    "eventType":"undeleteMessage",
-    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-},
-"locale":"en-US",
-"localTimezone":"America/Los_Angeles"
-}  
+  ],
+  "channelData": {
+    "eventType": "undeleteMessage",
+    "tenant": { "id": "528dbe3f-15e0-4e37-84a1-00cc305847dd" }
+  },
+  "locale": "en-US",
+  "localTimezone": "America/Los_Angeles"
+}
 ```
 
 ```http
@@ -581,8 +583,8 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 
 ```json
 {
-    "type": "message",
-    "text": "This message has been updated"
+  "type": "message",
+  "text": "This message has been updated"
 }
 ```
 
@@ -600,7 +602,7 @@ The following example shows a soft delete message activity notification using `O
 app.OnMessageSoftDelete(async context =>
 {
     await context.Send("message is soft deleted");
-}); 
+});
 ```
 
 ::: zone-end
@@ -608,53 +610,52 @@ app.OnMessageSoftDelete(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('messageSoftDelete', async ({ activity, send }) => {
-    const messageId = activity.id;
-    await send(`The deleted message id is ${messageId}`);
+app.on("messageSoftDelete", async ({ activity, send }) => {
+  const messageId = activity.id;
+  await send(`The deleted message id is ${messageId}`);
 });
 ```
 
 ::: zone-end
 
 ```json
-
 {
-"type":"messageDelete",
-"timestamp":"2022-10-28T17:19:43.1612052Z",
-"localTimestamp":"2022-10-28T10:19:43.1612052-07:00",
-"id":"1666977568748",
-"channelId":"msteams",
-"serviceUrl":"https://canary.botapi.skype.com/amer/",
-"from": {
-    "id":"29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
-    "name":"Alex Wilber",
-    "aadObjectId":"976e4d1e-2108-43ee-a092-46a9507c5606"
-},
-"conversation":{
-    "conversationType":"personal",
-    "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
-},
-"recipient":{
-    "id":"28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
-    "name":"Testagent"
-},
-"entities":[
+  "type": "messageDelete",
+  "timestamp": "2022-10-28T17:19:43.1612052Z",
+  "localTimestamp": "2022-10-28T10:19:43.1612052-07:00",
+  "id": "1666977568748",
+  "channelId": "msteams",
+  "serviceUrl": "https://canary.botapi.skype.com/amer/",
+  "from": {
+    "id": "29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
+    "name": "Alex Wilber",
+    "aadObjectId": "976e4d1e-2108-43ee-a092-46a9507c5606"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "tenantId": "528dbe3f-15e0-4e37-84a1-00cc305847dd",
+    "id": "a:1tewuGJ44RkB90tiJNQ_I4q8vyuN5CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqXQL"
+  },
+  "recipient": {
+    "id": "28:0d469698-ab9d-479a-b0d8-758b6e6b1235",
+    "name": "Testagent"
+  },
+  "entities": [
     {
-        "locale":"en-US",
-        "country":"US",
-        "platform":"Web",
-        "timezone":"America/Los_Angeles",
-        "type":"clientInfo"
+      "locale": "en-US",
+      "country": "US",
+      "platform": "Web",
+      "timezone": "America/Los_Angeles",
+      "type": "clientInfo"
     }
-],
-"channelData":{
-    "eventType":"softDeleteMessage",
-    "tenant":{"id":"528dbe3f-15e0-4e37-84a1-00cc305847dd"}
-},
-"locale":"en-US",
-"localTimezone":"America/Los_Angeles"
-}  
-
+  ],
+  "channelData": {
+    "eventType": "softDeleteMessage",
+    "tenant": { "id": "528dbe3f-15e0-4e37-84a1-00cc305847dd" }
+  },
+  "locale": "en-US",
+  "localTimezone": "America/Los_Angeles"
+}
 ```
 
 ### Update and delete messages sent from agent
@@ -676,7 +677,7 @@ It is not necessary for the new message to match the original in type. For examp
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)`method of the`TurnContext` class.
 
 ```csharp
 app.OnMessage(async context =>
@@ -702,16 +703,16 @@ app.OnMessage(async context =>
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
-app.on('message', async ({ activity, api, send }) => {
-    // Send initial message
-    const response = await send('Your Message');
-    const conversationId = activity.conversation.id;
-    const activityId = response.id;
+app.on("message", async ({ activity, api, send }) => {
+  // Send initial message
+  const response = await send("Your Message");
+  const conversationId = activity.conversation.id;
+  const activityId = response.id;
 
-    await api.conversations.activities(conversationId).update(activityId, {
-        type: 'message',
-        text: 'The new text for the activity'
-    });
+  await api.conversations.activities(conversationId).update(activityId, {
+    type: "message",
+    text: "The new text for the activity",
+  });
 });
 ```
 
@@ -748,8 +749,8 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|Request |Response |
-|----|----|
+| Request                                                                                                                                                     | Response                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
@@ -787,14 +788,14 @@ app.OnMessage(async context =>
 To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
-app.on('message', async ({ activity, api }) => {
-    const conversationId = activity.conversation.id;
-    const activityId = activity.replyToId;
+app.on("message", async ({ activity, api }) => {
+  const conversationId = activity.conversation.id;
+  const activityId = activity.replyToId;
 
-    await api.conversations.activities(conversationId).update(activityId, {
-        type: 'message',
-        attachments: [card]
-    });
+  await api.conversations.activities(conversationId).update(activityId, {
+    type: "message",
+    attachments: [card],
+  });
 });
 ```
 
@@ -829,8 +830,8 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-|Request |Response |
-|----|----|
+| Request                                                                                                                                                     | Response                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
 
 ---
@@ -868,12 +869,12 @@ app.OnMessage(async context =>
 To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` object.
 
 ```typescript
-app.on('message', async ({ activity, api }) => {
-    const conversationId = activity.conversation.id;
+app.on("message", async ({ activity, api }) => {
+  const conversationId = activity.conversation.id;
 
-    for (const activityId of activityIds) {
-        await api.conversations.activities(conversationId).delete(activityId);
-    }
+  for (const activityId of activityIds) {
+    await api.conversations.activities(conversationId).delete(activityId);
+  }
 });
 ```
 
@@ -903,9 +904,9 @@ To delete an existing activity within a conversation, include the `conversationI
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request and response** | **Description** |
-|----|----|
-| N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
+| **Request and response** | **Description**                                                                                                |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| N/A                      | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
 ## Quoted replies
 
@@ -938,13 +939,13 @@ app.OnMessage(async context =>
 When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `getQuotedMessages` method to access all quoted reply entities.
 
 ```typescript
-app.on('message', async ({ activity, reply }) => {
+app.on("message", async ({ activity, reply }) => {
   const quotes = activity.getQuotedMessages();
 
   if (quotes.length > 0) {
     const quote = quotes[0].quotedReply;
     await reply(
-      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`
+      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`,
     );
   }
 });
@@ -1002,19 +1003,19 @@ app.OnMessage(async context =>
 When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
 
 ```typescript
-app.on('message', async ({ reply }) => {
+app.on("message", async ({ reply }) => {
   // reply() automatically quotes the inbound message
-  await reply('Got it!');
+  await reply("Got it!");
 });
 ```
 
 To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
 
 ```typescript
-app.on('message', async ({ quote }) => {
+app.on("message", async ({ quote }) => {
   // Quote a specific message by its ID
-  const parentMessageId = '1772050244572';
-  await quote(parentMessageId, 'Referencing an earlier message');
+  const parentMessageId = "1772050244572";
+  await quote(parentMessageId, "Referencing an earlier message");
 });
 ```
 
@@ -1079,27 +1080,29 @@ await app.Send(conversationId, msg);
 For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `addQuote()` method on a message activity. Pass the message ID and an optional response text.
 
 ```typescript
-import { MessageActivity } from '@microsoft/teams.api';
+import { MessageActivity } from "@microsoft/teams.api";
 
-const parentMessageId = '1772050244572';
-const firstMessageId = '1772050244573';
-const secondMessageId = '1772050244574';
+const parentMessageId = "1772050244572";
+const firstMessageId = "1772050244573";
+const secondMessageId = "1772050244574";
 
 // Single quote with response below it
-let msg = new MessageActivity()
-  .addQuote(parentMessageId, 'Here is my response');
+let msg = new MessageActivity().addQuote(
+  parentMessageId,
+  "Here is my response",
+);
 await app.send(conversationId, msg);
 
 // Multiple quotes with interleaved responses
 msg = new MessageActivity()
-  .addQuote(firstMessageId, 'response to first')
-  .addQuote(secondMessageId, 'response to second');
+  .addQuote(firstMessageId, "response to first")
+  .addQuote(secondMessageId, "response to second");
 await app.send(conversationId, msg);
 
 // Grouped quotes — omit response to group quotes together
-msg = new MessageActivity('see below for previous messages')
+msg = new MessageActivity("see below for previous messages")
   .addQuote(firstMessageId)
-  .addQuote(secondMessageId, 'response to both');
+  .addQuote(secondMessageId, "response to both");
 await app.send(conversationId, msg);
 ```
 
@@ -1261,7 +1264,7 @@ Two non-standard request header fields are added to all the requests sent to age
 | Field key | Value |
 | ---------------- | ----------------- |
 | x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
-| x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
+| x-ms-tenant-id       | The tenant ID corresponding to the conversation in the request activity.                           |
 
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
