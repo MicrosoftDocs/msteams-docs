@@ -11,18 +11,18 @@ zone_pivot_groups: teams-sdk-languages
 
 # Review or update agent runtime authentication configuration
 
-Agent Communications Service authenticates all calls it receives from your Teams agent's runtime. The runtime must identify itself using the app ID of the Entra ID app registration linked to its Agent Communications Service registration, and supply a credential associated with that app registration.
+The Bot Connector service authenticates all calls it receives from your Teams agent's runtime. The runtime must identify itself as the Entra ID app whose registration is linked to the agent's Bot Connector registration.
 
-The authentication configuration described in this article is related only to how an agent runtime authenticates to interact with Teams. For information about authenticating users using single sign-on (SSO) or OAuth for delegation scenarios, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
+The configuration described in this article is related only to authentication of the agent runtime. For information about configuring and implementing single sign-on (SSO) or OAuth to authenticate users of your agent and allow them to delegate permissions, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
 
 ## Supported credential types
 
-Teams agent runtimes can authenticate to Agent Communications Service using two different kinds of credentials:
+Teams agent runtimes can authenticate to Bot Connector using two different kinds of credentials:
 
-- **Client secret**: The agent's runtime authenticates using a client secret (sometimes called an *application password*) stored in its configuration.
-- **Managed identities for Azure resources**: Preferred for agent runtimes hosted in Azure compute services. Managed identities associate an identity and its credentials with the runtime's hosting environment, eliminating the need to manage and secure a client secret. See [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for more information.
+- **Client secret**: A client secret (sometimes called an application password) is configured in the environment variables of the runtime's hosting environment, or in the runtime's deployed configuration file.
+- **Managed identities for Azure resources**: Requires the agent runtime to be hosted in Azure. The runtime authenticates using a credential securely associated with its hosting environment. Managed identity eliminates the need to handle and secure a client secret. See [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for general information.
 
-By default, new agents created using the Teams developer CLI or the Teams Developer Portal use client secret authentication. If you host your agent runtime in an Azure compute service, such as Azure App Service, Azure Kubernetes Service, or Azure Virtual Machines, strongly consider updating your agent's configuration to use a managed identity instead.
+By default, new agents created using the Teams developer CLI or the Teams Developer Portal use client secret authentication. For agent runtimes hosted on an Azure compute service, such as Azure App Service, Azure Kubernetes Service, or Azure Virtual Machines, updating your configuration to use a managed identity instead is strongly recommended.
 
 ## Review or update configurations
 
@@ -30,7 +30,7 @@ By default, new agents created using the Teams developer CLI or the Teams Develo
 
 The app ID of the Entra ID app registration
 
-Your agent's Entra ID app registration, linked to its Agent Communications Service registration, serves as its identity. Confirm
+Your agent's Entra ID app registration, linked to its Bot Connector registration, serves as its identity. Confirm
 
 ### Configure the Entra ID app registration
 
@@ -45,6 +45,8 @@ Need to illustrate this for both Azure and standalone reg
 Can create and delete via TDP too or cli teams app auth secret
 
 Client secrets should occasionally be rotated and kept secure.
+
+ and linked to the agent's app registration via Entra ID's federated identity credentials feature
 
 ### Runtime configuration
 
