@@ -8,15 +8,12 @@ ms.date: 09/11/2026
 
 # Enable agents to receive all chat messages
 
+By default, agents receive channel and chat messages only when they're @mentioned. To enable an agent to receive all channel or chat messages without being @mentioned, configure Resource-specific Consent (RSC) permissions in the app manifest.
+Receiving all messages enhances agents by providing better context, enabling proactive responses, personalized interactions, and faster issue resolution.
+Conversation owners can consent for an agent to receive all messages in channels and chats without @mentions. Consent can be granted during  app installation or upgrade. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
+
 > [!NOTE]
->
->While RSC permissions are supported for existing agent apps, we recommend [migrating to agents](../teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library). For new apps, build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience.
-
-Receiving all messages, even without @mentions, enhances agents by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The Resource-specific Consent (RSC) permissions model of Microsoft Teams Graph APIs improves performance and ensures timely responses.
-
-Developers can customize agent behavior to fit specific needs by specifying permissions in the app manifest. Conversation owners can consent for an agent to receive all messages in channels and chats without @mentions. Consent can be granted during the app installation or upgrade process. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
-
-**Note**: Agents that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
+> This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
 
 ## Enable agents to receive all channel or chat messages
 
@@ -183,72 +180,6 @@ The following code snippet provides an example of how you can declare RSC permis
 ```
 
 </details>
-
-## Upload a custom app in a conversation
-
-After you've updated the app manifest with the required RSC permissions, follow these steps to upload your custom app to Teams.
-
-# [Channel messages](#tab/channel)
-
-The following steps guide you to upload and validate an agent that receives all channel messages in a Team without being @mentioned:
-
-1. Select or create a team.
-1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
-1. Select **Manage team** from the dropdown menu.
-
-   :::image type="content" source="Media/managing-team.png" alt-text="Screenshot shows the managing team option in Teams application.":::
-
-1. Select **Apps**. Multiple apps appear.
-
-1. Select **Upload a custom app** from the lower right corner.
-
-      :::image type="content" source="Media/uploading-custom-app.png" alt-text="Screenshot shows the Upload a custom app option.":::
-
-1. Select **Open**.
-
-      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
-
-1. Select **Add** from the app details pop-up, to add the app to your selected team.
-
-      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the Add button to add the app to a team." lightbox="Media/adding-bot.png":::
-
-1. Select a channel and enter a message in the channel for your app.
-
-    The agent receives the message without being @mentioned.
-
-      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows an agent receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
-
-# [Chat messages](#tab/chat)
-
-The following steps guide you to upload and validate an agent that receives all chat messages in a chat without being @mentioned:
-
-1. Select or create a group chat.
-1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
-1. Select **Manage apps** from the dropdown menu.
-
-   :::image type="content" source="../../../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the Manage apps option from the dropdown menu of a Teams chat." lightbox="../../../assets/images/bots/chats-manage-apps-entry.png":::
-
-1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
-
-   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the Upload an app option." lightbox="../../../assets/images/bots/Chats_Manage_Apps_Page.png":::
-
-1. Select the app package from the **Open** dialog box.
-1. Select **Open**.
-
-   :::image type="content" source="../../../assets/images/bots/Chats_Upload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
-
-1. Select **Add** from the app details pop-up to add the agent to your selected group chat.
-
-   :::image type="content" source="../../../assets/images/bots/Chats_Install_Dialog.png" alt-text="Screenshot shows the addition of the agent to the group chat.":::
-
-1. Enter a message in the group chat for your agent.
-
-   :::image type="content" source="../../../assets/images/bots/Bot_ReceiveMessage.png" alt-text="Screenshot shows the agent replying to a message.":::
-
-   The agent receives the message without being @mentioned.
-
-   :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the agent replying to a message without @mention.":::
-
 ---
 
 ## Update app description for agents
