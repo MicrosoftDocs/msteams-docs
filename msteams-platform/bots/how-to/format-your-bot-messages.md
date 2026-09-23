@@ -12,9 +12,11 @@ author: nickwalkmsft
 
 Agents can use Markdown and HTML to format the text of messages that they send.
 
-By default, Teams recognizes a practical subset of Markdown syntax and HTML elements. Extended Markdown mode provides support for additional Markdown features.
+By default, Teams recognizes a practical subset of Markdown syntax and HTML elements. Opting in to extended Markdown mode enables additional Markdown features.
 
 ## Default formatting features
+
+By default, Teams recognizes the following markup syntax:
 
 | Formatting | Syntax |
 | ---------- | ------ |
@@ -98,6 +100,8 @@ await app.send(conversation_id, activity)
 
 ### Extended Markdown mode features
 
+In extended Markdown mode, Teams recognizes all of the Markdown features of the default formatting behavior, plus the following:
+
 | Feature                   | Syntax                                                                     | Description                                                                                                                            |
 | ------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | **Fenced code blocks**    | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences                                                                                                         |
@@ -173,9 +177,9 @@ Use task list syntax to display completed and pending items in your agent messag
 > [!NOTE]
 > Task list checkboxes are read-only. Users can't interact with them to change their state.
 
-## Legacy textFormat options
+## Legacy formatting modes
 
-The following `textFormat` values are legacy and should not be used in new development.
+The following legacy formatting modes should not be used in new development.
 
 | `textFormat` value | Capabilities |
 | ------------------ | ----------- |
