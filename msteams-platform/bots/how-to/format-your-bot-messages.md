@@ -14,7 +14,7 @@ Agents can use Markdown and HTML to format the text of messages that they send.
 
 By default, Teams recognizes a practical subset of Markdown syntax and HTML elements. Extended Markdown mode provides support for additional Markdown features.
 
-## Features supported by default
+## Default formatting features
 
 | Formatting | Syntax |
 | ---------- | ------ |
@@ -30,10 +30,10 @@ By default, Teams recognizes a practical subset of Markdown syntax and HTML elem
 | HTML Hyperlink | `<a href="URL">` |
 | HTML Image | `<img src="URL">` |
 
-## Extended Markdown mode
+## Extended Markdown mode (preview)
 
 > [!IMPORTANT]
-> Extended Markdown mode is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). When it becomes generally available, the existing behavior will remain the default to ensure the stability of existing agents.
+> Extended Markdown mode is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). When it becomes generally available, the current default behavior will remain the default to ensure the stability of existing agents.
 >
 > To prepare to take advantage of extended Markdown mode's general availability:
 >
@@ -93,6 +93,8 @@ await app.send(conversation_id, activity)
   "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
 }
 ```
+
+---
 
 ### Extended Markdown mode features
 
