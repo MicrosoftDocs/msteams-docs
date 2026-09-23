@@ -25,7 +25,7 @@
     - name: Best practices and features checklist
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
       displayName: scopes, handler, activity
-  - name: Register and authenticate
+  - name: Register and configure
     items:
     - name: Agent registration concepts
       href: agents-in-teams/registering-agent-teams-platform.md
