@@ -4,7 +4,7 @@ description: Learn how to build a bot-based message extension agent for Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/16/2024
+ms.date: 09/23/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
