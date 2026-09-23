@@ -2,16 +2,40 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 09/04/2026
+ms.date: 09/24/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.localizationpriority: high
 ---
 
 # Teams Platform developer announcements
 
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
+feed reader as they're published.
+
+## Released: Teams SDK updates (TypeScript, .NET and Python)
+
+*September 24th, 2026*
+
+Teams SDK 2.1 for TypeScript and Python bring together new capabilities for building more connected, context-aware, observable, and extensible agents for Teams. *TODO* mention dotnet too, this is the summary line for the feed.
+
+### TypeScript and Python: version 2.1.0
+
+- **Build Agentic Users with the Teams SDK**: Build with agentic identity, lifecycle events, token acquisition, and reactive and proactive messaging helpers.
+- **Compose with Microsoft 365 Agents SDK**: Use the Microsoft 365 Agents SDK to extend existing Teams SDK agents to additional channels without rewriting their Teams-specific capabilities.
+- **Observability for developers**: Use OpenTelemetry spans and metrics to understand activity processing, handler execution, authentication, and outbound Teams API calls.
+- **Authenticate multiple services**: Connect one agent to multiple services, such as Microsoft Graph and GitHub, using independent OAuth flows. The SDK handles connection-aware callbacks and duplicate token exchanges.
+- **Built-in state management**: Create personalized, multistep experiences using conversation and user state that automatically loads and saves with each activity.
+- **Seamless file processing**: Receive and securely process file attachments, including files shared by Agentic Users.
+
+For more information, see the [Python](https://github.com/microsoft/teams.py/releases/tag/v2.1.0) and [TypeScript](https://github.com/microsoft/teams.ts/releases/tag/v2.1.0) release notes.
+
+### .NET: version 2.1.1
+
+[
+](https://github.com/microsoft/teams.net/releases/tag/v2.1.1)Release notes
+
+---
 
 ## Review needed: TLS 1.3 support and TLS fingerprinting
 
