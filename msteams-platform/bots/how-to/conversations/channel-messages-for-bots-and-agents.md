@@ -8,7 +8,7 @@ ms.date: 09/11/2026
 
 # Enable agents to receive all chat messages
 
-By default, agents receive channel and chat messages only when they're @mentioned. You can configure Resource-specific consent (RSC) permissions in the app manifest to allow an agent to receive all channel and chat messages without being @mentioned.
+By default, agents receive channel and chat messages only when they're @mentioned. You can configure To receive all channel or chat messages without an @mention, add the appropriate Resource-specific consent (RSC) permission to your app.
 
 When an agent receives all messages, it can use the broader conversation context to respond without requiring an @mention. A conversation owner can consent to this access when the app is installed or upgraded. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
 
@@ -29,6 +29,62 @@ To enable agents or agents to receive all messages:
 
 - [Filter at mention messages](#filter-at-mention-messages)
 - [Use Graph REST APIs to access all messages](#use-graph-rest-apis-to-access-all-messages)
+
+## Update app manifest
+
+For your agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
+
+Here's an app manifest example followed by a sample code snippet:
+
+:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
+
+In this code example:
+
+- **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
+- **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
+- **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
+
+<summary>Select to view a <b>sample code snippet</b> for app manifest version 1.12 or later</summary>
+
+The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
+
+```json
+{
+"webApplicationInfo": {
+  "id": "<MICROSOFT-ENTRA-APP-ID>",
+  "resource": "https://RscBasedStoreApp"
+},
+"authorization": {
+  "permissions": {
+    "resourceSpecific": [
+      {
+        "name": "ChannelMessage.Read.Group",
+        "type": "Application"
+      },
+      {
+        "name": "ChatMessage.Read.Chat",
+        "type": "Application"
+      }
+    ]
+  }
+```
+
+---
+
+### Update permissions in Developer Portal
+
+To configure the RSC permissions without editing the manifest directly:
+
+1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com/).
+1. Select **Apps**, and then select your app.
+1. If your app isn't listed, select **Import app** and import its app package.
+1. Under **Configure**, select **Permissions**.
+1. Under **Team permissions**, add `ChannelMessage.Read.Group` to receive channel messages.
+1. Under **Chat/Meeting permissions**, add `ChatMessage.Read.Chat` to receive group chat messages.
+1. Select **Save**.
+1. Download the updated app package.
+
+After you update the permissions, install or upgrade the app in the target team or group chat. The team or chat owner grants the requested RSC permissions during installation.
 
 ### Filter at mention messages
 
@@ -67,120 +123,6 @@ Developers can create more efficient and user-friendly conversational interfaces
 Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
 
 For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-agents).
-
-## Use RSC permissions to enhance AI agents in Teams
-
-You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files. Instead of broad permissions, RSC allows permissions specific to the context of a resource at a granular level. You must determine the resources that your AI agent needs access to within Microsoft Teams or Microsoft 365. Use RSC permissions to:
-
-- Read messages in Teams channels.
-- Access user's details or data.
-- Access shared documents.
-
-For example, use RSC permissions for an AI agent to manage channel content.
-
-| Use case | How RSC permission in the AI agent can help |
-| --- | --- |
-| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
-
-## Update app manifest
-
-For your agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
-
-Here's an app manifest example followed by a sample code snippet:
-
-:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
-
-In this code example:
-
-- **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
-- **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
-- **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
-
-<details>
-<summary>Select to view a <b>sample code snippet</b> for app manifest version 1.12 or later</summary>
-
-The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
-
-```json
-{
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.21",
-    "version": "1.0.0",
-    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "packageName": "com.contoso.rscechobot",
-    "developer": {
-        "name": "Contoso",
-        "websiteUrl": "https://www.contoso.com",
-        "privacyUrl": "https://www.contoso.com/privacy",
-        "termsOfUseUrl": "https://www.contoso.com/tos"
-    },
-    "icons": {
-        "color": "color.png",
-        "outline": "outline.png"
-    },
-    "name": {
-        "short": "RscEchoBot",
-        "full": "Echo bot with RSC configured for all conversation messages"
-    },
-    "description": {
-        "short": "Echo bot with RSC configured for all channel and chat messages",
-        "full": "Echo bot configured with all channel and chat messages RSC permission in manifest"
-    },
-    "accentColor": "#FFFFFF",
-    "staticTabs": [
-        {
-            "entityId": "conversations",
-            "scopes": [
-                "personal"
-            ]
-        },
-        {
-            "entityId": "about",
-            "scopes": [
-                "personal"
-            ]
-        }
-    ],
-    "webApplicationInfo": {
-        "id": "07338883-af76-47b3-86e4-2603c50be638",
-        "resource": "https://AnyString"
-    },
-    "authorization": {
-        "permissions": {
-            "resourceSpecific": [
-                {
-                    "type": "Application",
-                    "name": "ChannelMessage.Read.Group"
-                },
-                {
-                    "type": "Application",
-                    "name": "ChatMessage.Read.Chat"
-                }
-            ]
-        }
-    },
-    "bots": [
-        {
-            "botId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-            "scopes": [
-                "personal",
-                "team",
-                "groupchat"
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": false
-        }
-    ],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": []
-}
-```
-
-</details>
----
 
 ## Update app description for agents
 
