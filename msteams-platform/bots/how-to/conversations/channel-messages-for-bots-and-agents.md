@@ -3,7 +3,7 @@ title: Get All Channel and Chat Messages
 description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/11/2026
+ms.date: 09/24/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -32,8 +32,6 @@ In this code example:
 * **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
 * **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
-
-Select to view a <b>sample code snippet</b> for app manifest version 1.12 or later.
 
 The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
 
