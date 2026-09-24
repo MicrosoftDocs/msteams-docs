@@ -1,10 +1,11 @@
 ---
 title: Structure conversations with sessions in Microsoft Teams
 description: Sessions enable agents in Microsoft Teams to organize one-on-one conversations into separate, focused chats, helping maintain context, improve response relevance, and support multi-task workflows.
-ms.author: vikasalmal
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 07/10/2026
+ms.date: 09/24/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -14,9 +15,12 @@ zone_pivot_groups: teams-sdk-languages
 
 By default, one-on-one chat between a user and an agent takes place in a single long-running conversation. With sessions, an agent can hold multiple independent one-on-one conversations with a user.
 
+> [!NOTE]
+> Sessions for agents are available in public developer preview.
+
 Sessions offer users and agents a structured way to manage multiple tasks or workflows, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
 
-Sessions is an optional feature that must be enabled for an agent in its manifest configuration.
+Sessions is an optional feature that developers enable for an agent in its app manifest.
 
 ## User experience
 
@@ -107,7 +111,7 @@ For example, a developer productivity bot might create a separate topic for each
 Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
 > [!IMPORTANT]
-> After your agent opts in to sessions, we recommend keeping the feature enabled. Once sessions are enabled on a chat, there is no way to revert it to the exact state of a regular 1:1 chat. Opting out of sessions is **not supported at GA**. Opt-out support is planned as a fast follow-up after GA.
+> After you enable sessions for your agent, we recommend keeping the feature enabled. Although you can later set `supportsSessions` to `false` or remove the property from the app manifest, disabling sessions after they have been enabled isn't recommended. A sessions-enabled chat can't be restored to the exact state of a regular one-on-one chat.
 
 To enable sessions for an agent, set the `supportsSessions` property in its app manifest to `true`.
 
@@ -124,13 +128,13 @@ To enable sessions for an agent, set the `supportsSessions` property in its app 
 
 After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
 
-Agents that don't enable sessions continue to use the single chat experience. When sessions are enabled for an existing agent, Teams automatically converts the existing chat history into a default session. No action is required and users don't lose any conversation history.
+Agents that don't enable sessions continue to use the single chat experience. When you enable sessions for an existing agent, Teams automatically moves the existing chat history into a default session. No action is required and users don't lose any conversation history.
 
 ## Send and receive messages in sessions
 
 For agents with sessions enabled, the conversation ID of every received one-on-one chat message activity includes an embedded session identifier. Sending a message using that activity's conversation ID automatically routes the message to the correct session. Your existing message-handling code works without changes.
 
-Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
+Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent cached a `conversationId` before sessions were enabled for the agent, the cached ID continues to work and routes messages to the default session.
 
 ::: zone pivot="teams-sdk-csharp"
 

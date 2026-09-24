@@ -10,6 +10,28 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
 
+## Preview: Sessions for agents in Teams
+
+*September 24, 2026*
+
+Sessions are now available in public developer preview for agents in Microsoft Teams.
+
+By default, agent conversations take place in a single, long-running one-on-one chat. Sessions allow agents and users to organize conversations into separate, task-focused contexts within the same chat experience. This makes it easier to manage multiple workflows, maintain conversation context, and improve the quality of AI-generated responses.
+
+Key benefits include:
+
+- Organize conversations into independent, task-focused sessions.
+- Help users manage multiple workflows without context switching.
+- Improve context management for AI-powered agents.
+- Create sessions proactively for notifications, tickets, pull requests, approvals, and other workflows.
+- Continue using existing messaging patterns with session-specific conversation IDs.
+
+Most agents that support multiple tasks, workflows, or proactive notifications should enable sessions.
+
+To enable sessions, set `supportsSessions` to `true` in your app manifest.
+
+For more information, see [Manage multiple user conversations with sessions](bots/how-to/conversations/agent-sessions.md).
+
 ## Preview: Extended Markdown formatting for agent messages
 
 *August 20, 2026*
