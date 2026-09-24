@@ -2,7 +2,7 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 09/04/2026
+ms.date: 09/24/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -13,25 +13,19 @@ ms.localizationpriority: high
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
-## Preview: Sessions for agents in Teams
+## Preview: Sessions for Teams agents
 
 *September 24, 2026*
 
-Sessions are now available in public developer preview for agents in Microsoft Teams.
+Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.
 
-By default, agent conversations take place in a single, long-running one-on-one chat. Sessions allow agents and users to organize conversations into separate, task-focused contexts within the same chat experience. This makes it easier to manage multiple workflows, maintain conversation context, and improve the quality of AI-generated responses.
+With sessions, you can:
 
-Key benefits include:
+- Keep conversations organized. Users can start, switch between, and return to sessions from the chat header.
+- Improve AI responses. Shorter, focused contexts help your agent's LLM generate more relevant answers.
+- Create sessions proactively. Start a session for a notification, ticket, pull request, or approval.
 
-- Organize conversations into independent, task-focused sessions.
-- Help users manage multiple workflows without context switching.
-- Improve context management for AI-powered agents.
-- Create sessions proactively for notifications, tickets, pull requests, approvals, and other workflows.
-- Continue using existing messaging patterns with session-specific conversation IDs.
-
-Most agents that support multiple tasks, workflows, or proactive notifications should enable sessions.
-
-To enable sessions, set `supportsSessions` to `true` in your app manifest.
+Most agents can benefit from sessions, especially those that help users with long-running, complex work. To enable them for yours, set `"supportsSessions": true` in your app manifest.
 
 For more information, see [Manage multiple user conversations with sessions](bots/how-to/conversations/agent-sessions.md).
 

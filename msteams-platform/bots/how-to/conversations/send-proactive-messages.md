@@ -58,7 +58,7 @@ Create the conversation, after you have the user or channel information.
 ## Create the conversation
 
 > [!NOTE]
-> If your agent has `supportsSessions` set to `true` in the app manifest, calling the create conversation API to start a one-on-one conversation creates a new session. The returned `conversationId` identifies that session and can be used for subsequent messaging operations within the session. For more information, see [Structure conversations with sessions](agent-sessions.md).
+> If your agent has `supportsSessions` set to `true` in the app manifest, calling the create conversation API to start a one-on-one conversation creates a new session. The returned `conversationId` is scoped to that session and can be used for subsequent messaging operations within the session. For more information, see [Manage multiple user conversations with sessions](agent-sessions.md).
 
 You can create the conversation if it doesn't exist or if you don't know the `conversationId`. Create the conversation only once, and store the resulting `conversationId` for future proactive messages.
 

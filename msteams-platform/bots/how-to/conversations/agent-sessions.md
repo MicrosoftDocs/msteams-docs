@@ -1,5 +1,5 @@
 ---
-title: Structure conversations with sessions in Microsoft Teams
+title: Manage Multiple User Conversations with Sessions
 description: Sessions enable agents in Microsoft Teams to organize one-on-one conversations into separate, focused chats, helping maintain context, improve response relevance, and support multi-task workflows.
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -8,8 +8,6 @@ ms.topic: article
 ms.date: 09/24/2026
 zone_pivot_groups: teams-sdk-languages
 ---
-
-<!-- markdownlint-disable MD024 -->
 
 # Manage multiple user conversations with sessions
 
@@ -20,13 +18,13 @@ By default, one-on-one chat between a user and an agent takes place in a single 
 
 Sessions offer users and agents a structured way to manage multiple tasks or workflows, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
 
-Sessions is an optional feature that developers enable for an agent in its app manifest.
+Sessions is an optional feature enabled via an agent's app manifest, and is recommended for most agents. All existing one-on-one agent chat capabilities continue to work within sessions.
 
 ## User experience
 
-When chatting one-on-one with an agent that supports sessions, controls in the header enable users to create and switch between sessions.
+With session support enabled, either the agent or a user can create new sessions to organize conversations. The first message in a session becomes the session's title.
 
-Clicking on the new session icon starts a new session. The first message in a session becomes the session title.
+User controls in the chat header enable enable creating and navigating between sessions.
 
 # [Desktop](#tab/desktop)
 
@@ -38,7 +36,7 @@ Clicking on the new session icon starts a new session. The first message in a se
 
 ---
 
-After a message is sent, the session is created and saved in the sessions panel. The latest message in the session appears as the preview.
+Users can navigate between sessions using the sessions panel. The latest message in a session appears as the preview.
 
 # [Desktop](#tab/desktop)
 
@@ -50,68 +48,14 @@ After a message is sent, the session is created and saved in the sessions panel.
 
 ---
 
-<!--### Create and navigate topics
-
-Users can create new topics from the chat header or interact with topics created by the bot. Each topic appears as a focused conversation that includes:
-
-- A title generated from the first message in the topic.
-
-- A preview of the most recent message.
-
-- A separate conversation history.
-
-New topics open as fresh conversations and can include prompt starters or guidance to help users begin interactions.
-
-### Track activity across topics
-
-Teams helps users stay informed about topic activity using multiple notification entry points:
-
-- Topics panel displays all active topics and highlights unread topics.
-
-- Activity feed shows notifications such as mentions or reactions within a topic.
-
-- Search helps users locate messages across topics.
-
-Selecting any notification automatically opens the correct topic and message.
--->
-With sessions enabled, users get the following capabilities within the one-on-one agent chat:
-
-- **Create sessions**: Start a new session from the chat header to begin a focused conversation.
-- **Switch between sessions**: Move between active sessions through the sessions panel without losing context.
-- **Track unread activity**: Sessions with new messages are highlighted and badged so users can identify pending updates.
-- **Navigate to specific activity**: Select a notification or session entry to jump directly to the relevant message.
-- **Access from personal app**: Open the agent through the personal app entry point. Sessions are fully supported in the personal app experience, including deep links.
-- **Search across sessions**: Find messages across all sessions using Teams search.
-
-All existing one-on-one agent chat capabilities continue to work within sessions.
-
-Agents can proactively create new sessions with users to organize notifications, updates, or task-specific conversations. Sessions created proactively by an agent appear as unread for the user.
+New messages in sessions generate notifications, and result in highlighting and badging of the session in the sessions panel.
 
 > [!NOTE]
 > Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
 
-<!--## How topics improve bot conversations
-
-Traditional one-on-one bot chats maintain a single, continuous message thread. As conversations grow longer and span multiple subjects, it becomes harder for users and bots to maintain context. Topics address this challenge by introducing boundaries between conversations while keeping them accessible within the same chat experience.
-
-When topics are enabled:
-
-- Each topic maintains its own conversation history.
-
-- Users can switch between topics without losing context.
-
-- Bots can initiate new topics to organize workflows or updates.
-
-- Notifications and navigation experiences help users track new activity.
-
-For example, a developer productivity bot might create a separate topic for each pull request. Users can review updates, track failures, and resolve issues without mixing unrelated conversations.
--->
 ## Enable sessions for your agent
 
 Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
-
-> [!IMPORTANT]
-> After you enable sessions for your agent, we recommend keeping the feature enabled. Although you can later set `supportsSessions` to `false` or remove the property from the app manifest, disabling sessions after they have been enabled isn't recommended. A sessions-enabled chat can't be restored to the exact state of a regular one-on-one chat.
 
 To enable sessions for an agent, set the `supportsSessions` property in its app manifest to `true`.
 
@@ -126,21 +70,22 @@ To enable sessions for an agent, set the `supportsSessions` property in its app 
 }
 ```
 
+> [!IMPORTANT]
+> Disabling sessions after they have been enabled by setting `supportsSessions` to `false` or removing it from the app manifest is not recommended. A sessions-enabled chat can't be restored to the exact state of a regular one-on-one chat.
+
 After you update the manifest, package and republish your app through the [Developer Portal for Teams](https://dev.teams.microsoft.com/) or [Teams admin center](https://admin.teams.microsoft.com/). Users see the sessions experience after they install or upgrade the app.
 
 Agents that don't enable sessions continue to use the single chat experience. When you enable sessions for an existing agent, Teams automatically moves the existing chat history into a default session. No action is required and users don't lose any conversation history.
 
 ## Send and receive messages in sessions
 
-For agents with sessions enabled, the conversation ID of every received one-on-one chat message activity includes an embedded session identifier. Sending a message using that activity's conversation ID automatically routes the message to the correct session. Your existing message-handling code works without changes.
-
-Without sessions, all messages in a 1:1 chat share a single, static `conversationId`. With sessions enabled, each session gets its own unique `conversationId`. The value is always an opaque, encrypted string. Store it and pass it back to the API. If your agent cached a `conversationId` before sessions were enabled for the agent, the cached ID continues to work and routes messages to the default session.
+Session-specific routing of messages is automatic in most scenarios, including [proactive messaging](send-proactive-messages.md). For agents with sessions enabled, the conversation ID of every received one-on-one chat message activity is scoped to its individual session. Using it, or using the received message's context, to send a message will route the sent message to the appropriate session.
 
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 var conversationId = context.Activity.Conversation.Id;
-await app.Send(conversationId, "Hello from Bot");
+await app.Send(conversationId, "Hello from agent");
 ```
 
 ::: zone-end
@@ -149,7 +94,7 @@ await app.Send(conversationId, "Hello from Bot");
 
 ```typescript
 const conversationId = activity.conversation.id;
-await app.send(conversationId, "Hello from Bot");
+await app.send(conversationId, "Hello from agent");
 ```
 
 ::: zone-end
@@ -158,14 +103,15 @@ await app.send(conversationId, "Hello from Bot");
 
 ```python
 conversation_id = ctx.activity.conversation.id
-await app.send(conversation_id, "Hello from Bot")
+await app.send(conversation_id, "Hello from agent")
 ```
 
 ::: zone-end
 
-Responding inside a session works the same way as responding in a normal one-on-one chat. When your agent replies using the conversation ID from the incoming activity, Teams automatically delivers the message to the correct session. Each session maintains independent conversation context. To proactively send a message into an existing session, store the session's conversation ID and use the standard proactive messaging pattern.
+Existing messaging-handling code will work as expected without changes. If your agent cached a conversation ID before sessions were enabled for the agent, the cached value wll continue to work and will route messages to the default session.
 
-If your agent previously cached a `conversationId` from before the user opted into sessions, that cached ID still works and routes messages to the default session.
+> [!NOTE]
+> Conversation IDs should be considered opaque values. Construction or modification of a conversation ID should never be needed and is not supported.
 
 ### HTTP
 
@@ -205,7 +151,7 @@ Member operations (`GetMembers`, `GetMember`, `GetProfile`) work the same regard
 
 ## Create sessions proactively
 
-To create a new session with a user from a session-enabled agent, use the create conversation operator with a single message activity, specifying the user as the sole member.
+To create a new session with a user from a session-enabled agent, use the create conversation operation with a single message activity, specifying the user as the sole member.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -214,7 +160,7 @@ using System.Collections.Generic;
 using Microsoft.Teams.Api.Activities;
 using Microsoft.Teams.Api.Clients;
 
-// Build an authenticated API client targeting the bot's service URL.
+// Build an authenticated API client targeting the agent's service URL.
 var api = new ApiClient(serviceUrl, app.Client);
 
 // Including exactly one initial message activity is required for creating a session
@@ -320,56 +266,16 @@ The `id` is the session's conversationId, an opaque, encrypted string. Store it 
 
 For more information about proactive messaging, see [proactive messaging](send-proactive-messages.md#create-the-conversation).
 
-<!--## Notifications and discovery
-
-Topics integrate with Teams notification systems to help users stay informed about new or updated conversations.
-
-### Topic panel notifications
-
-The topics panel provides an overview of all active topics. When new messages or topics are created:
-
-- The topics panel icon displays a notification badge.
-
-- Unread topics appear in bold.
-
-- Users can open topics directly from the panel.
-
-### Activity feed integration
-
-Topic activity, such as mentions or reactions, appears in the Teams activity feed. Selecting an activity notification opens the relevant topic and message, ensuring users can quickly resume conversations.
-
-## Agents navigation integration
-
-When topics are enabled, Teams introduces an **Agents** navigation experience that aggregates bot-related activity.
-
-The Agents navigation:
-
-- Displays all topic-related activity for the bot.
-
-- Highlights new activity across conversations.
-
-- Allows users to follow or unfollow topics.
-
-Unfollowing a topic removes it from navigation but doesn't delete the conversation.
-
-## Deep linking to topics
-
-Deep links that previously opened one-on-one bot chats continue to work after topics are enabled. When users open an existing deep link:
-
-- Teams routes the user to the correct topic.
-
-- Existing links remain backward compatible.
-
-- Users maintain access to historical conversations.
--->
 ## Detect session support through install events
+
+If you have published an agent that does not have sessions enabled and choose to enable it in a new version, you can detect which version a user currently has installed and adjust the agent's behavior accordingly.
 
 In one-on-one (personal-app) conversations, Teams includes the installed app version in activity payloads delivered to your agent through the `channelData.app.version` field. This field appears in messages, invokes, and `installationUpdate` activities within the 1:1 scope. It is not currently available in group chats, channels, or meetings.
 
+To determine whether a user is using a sessions-enabled version of your agent, implement logic that evaluates the version identifier and compares it against known identifiers of versions that have sessions enabled.
+
 > [!NOTE]
 > In some scenarios, `channelData.app` may not be provided. For example, when a proactive message reaches an agent that isn't installed for the user, or when multiple apps map to a single bot ID. Your agent must handle the case where app ID or version is absent.
-
-Use the version to determine whether the user has a sessions-capable version of your app installed. Your agent should implement logic that evaluates the version identifier it receives and uses that to decide whether to create sessions proactively or adjust behavior accordingly.
 
 ```json
 {
@@ -388,27 +294,25 @@ When your agent receives an `installationUpdate` activity in a sessions-enabled 
 
 ## Error codes
 
-Error codes that bots may encounter during session operations:
+Error codes that agents may encounter during session operations:
 
 | HTTP Status | Error Code | Description |
 | --- | --- | --- |
-| 400 | `BadArgument` | The 1:1 thread already uses a threading mode that cannot be converted to sessions. |
+| 400 | `BadArgument` | The 1:1 conversation already uses a threading mode that cannot be converted to sessions. |
 | 400 | `BadSyntax` | Missing or empty request body, or null activity. Session creation requires exactly one activity. |
 | 400 | `MissingProperty` | Required fields missing from the request. |
 | 401 | `AuthorizationError` | Bot token invalid or expired. |
-| 403 | `NotEnoughPermissions` | Bot doesn't have permission to message this user. |
-| 403 | `BotDisabledByAdmin` | Tenant admin has disabled the bot. |
-| 403 | `BotNotInConversationRoster` | Bot is not installed in the conversation. |
+| 403 | `NotEnoughPermissions` | Agent doesn't have permission to message this user. |
+| 403 | `BotDisabledByAdmin` | Tenant admin has disabled the agent. |
+| 403 | `BotNotInConversationRoster` | Agent is not installed in the conversation. |
 | 404 | `ConversationNotFound` | The conversation thread doesn't exist. |
 | 429 | `Throttled` | Rate limit exceeded. Retry after the indicated delay. |
 | 500 | `ServiceError` | Unexpected server error. |
-| 502 | — | Upstream service timed out while verifying bot session support. |
+| 502 | — | Upstream service timed out while verifying agent session support. |
 
 ## Best practices and design guidance
 
-### When to enable sessions
-
-Most agents should enable sessions. Sessions improve the user experience for any agent that handles multiple tasks, topics, or workflows with the same user. AI-powered agents benefit from shorter, focused conversation contexts that improve the quality of generated responses. Agents that send proactive notifications alongside interactive conversations can use sessions to keep updates separate from ongoing tasks.
+Most agents benefit from sessions and should enable them. Sessions improve the user experience for any agent that handles multiple tasks, topics, or workflows with the same user. AI-powered agents benefit from shorter, focused conversation contexts that improve the quality of generated responses. Agents that send proactive notifications alongside interactive conversations can use sessions to keep updates separate from ongoing tasks.
 
 Agents that serve a single, continuous purpose with no need for task separation may not need sessions.
 
@@ -418,7 +322,7 @@ Create sessions that represent clear goals or workflows. For example, you might 
 
 Clear session separation helps users quickly locate and resume conversations.
 
-### Limit creating too many sessions
+### Avoid creating too many sessions
 
 Create a new session only when it represents a distinct task or workflow that benefits from its own conversation context. Avoid creating sessions for transient updates or single-message interactions. Too many sessions make it harder for users to find relevant conversations in the sessions panel.
 
@@ -428,14 +332,7 @@ If your agent sends updates based on activity outside of Teams, such as CI/CD re
 
 The first message becomes the session title. Use clear, concise messages so users can quickly identify the session in the panel. Long messages are truncated in the title display.
 
-<!--## Considerations and limitations
-
-Topics introduce a structured conversation model that may differ from traditional single-thread chat experiences. Consider how your bot manages context, notifications, and topic lifecycle when designing topic workflows.
-
-Bots should also consider strategies for handling inactive topics and guiding users toward relevant conversations.
--->
-
 ## See also
 
 - [Send proactive messages](send-proactive-messages.md)
-- [Bot conversations overview](conversation-basics.md)
+- [Send and receive messages](../../build-conversational-capability.md)
