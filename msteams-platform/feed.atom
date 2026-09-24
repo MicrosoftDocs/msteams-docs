@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-09-17T00:00:00Z</updated>
+	<updated>2026-09-24T00:00:00Z</updated>
+	<entry>
+		<updated>2026-09-24T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-sessions-for-teams-agents</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-sessions-for-teams-agents"/>
+		<title type="html"><![CDATA[Preview: Sessions for Teams agents]]></title>
+		<summary type="html"><![CDATA[Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.]]></summary>
+		<content type="html"><![CDATA[<p>Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.</p><p>With sessions, you can:</p><ul><li>Keep conversations organized. Users can start, switch between, and return to sessions from the chat header.</li><li>Improve AI responses. Shorter, focused contexts help your agent's LLM generate more relevant answers.</li><li>Create sessions proactively. Start a session for a notification, ticket, pull request, or approval.</li></ul><p>Most agents can benefit from sessions, especially those that help users with long-running, complex work. To enable them for yours, set <code>"supportsSessions": true</code> in your app manifest.</p><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/conversations/agent-sessions">Manage multiple user conversations with sessions</a>.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-09-17T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#review-needed-tls-13-support-and-tls-fingerprinting</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: Apps in private channels]]></title>
 		<summary type="html"><![CDATA[Support for agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/build-apps-for-shared-private-channels">Shared and private channels</a>.]]></summary>
 		<content type="html"><![CDATA[<p>Support for agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/build-apps-for-shared-private-channels">Shared and private channels</a>.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-06-30T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#coming-soon-new-admin-controls-for-meeting-transcripts</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#coming-soon-new-admin-controls-for-meeting-transcripts"/>
-		<title type="html"><![CDATA[Coming soon: New admin controls for meeting transcripts]]></title>
-		<summary type="html"><![CDATA[New controls governing access to meeting transcripts have entered public preview. Using these controls, administrators can:]]></summary>
-		<content type="html"><![CDATA[<p>New controls governing access to meeting transcripts have entered public preview. Using these controls, administrators can:</p><ul><li>Deny all transcript access via Graph API</li><li>Enable access only to transcripts that do not include speaker attribution</li></ul><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording">Graph API access to transcripts and recordings</a>.</p>]]></content>
 	</entry>
 </feed>
