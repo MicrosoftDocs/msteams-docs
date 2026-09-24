@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-08-22T00:00:00Z</updated>
+	<updated>2026-09-17T00:00:00Z</updated>
+	<entry>
+		<updated>2026-09-17T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#review-needed-tls-13-support-and-tls-fingerprinting</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#review-needed-tls-13-support-and-tls-fingerprinting"/>
+		<title type="html"><![CDATA[Review needed: TLS 1.3 support and TLS fingerprinting]]></title>
+		<summary type="html"><![CDATA[At the <strong>end of October 2026</strong>, Microsoft will add TLS 1.3 support to Agent Communications Service, the <code>https://smba.*</code> family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, <strong>developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.</strong>]]></summary>
+		<content type="html"><![CDATA[<p>At the <strong>end of October 2026</strong>, Microsoft will add TLS 1.3 support to Agent Communications Service, the <code>https://smba.*</code> family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, <strong>developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.</strong></p><p>Agent developers should review the network security controls of their hosting environments and consider temporarily relaxing or disabling rules that perform TLS fingerprint validation on client connections to agent runtime endpoints. Once TLS 1.3 support is enabled, they can capture an updated fingerprint and reenable any security rules that depend on it.</p><p>TLS fingerprint validation detects changes in properties of network connections that are typically stable over time. In some hosting environments, it's used to enhance client authentication and flag potential security risks. The addition of TLS 1.3 support to Agent Communications Service might invalidate its established client fingerprint in environments that perform validation, potentially triggering rules that generate warnings or block connectivity.</p><p>TLS 1.3 provides improved security and performance compared to earlier versions. Agent runtimes hosted in environments that support TLS 1.3 will begin taking advantage of it automatically. Agent Communications Service will continue to support TLS 1.2, ensuring compatibility with all existing agent runtimes.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-08-20T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-extended-markdown-formatting-for-agent-messages</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Coming soon: New admin controls for meeting transcripts]]></title>
 		<summary type="html"><![CDATA[New controls governing access to meeting transcripts have entered public preview. Using these controls, administrators can:]]></summary>
 		<content type="html"><![CDATA[<p>New controls governing access to meeting transcripts have entered public preview. Using these controls, administrators can:</p><ul><li>Deny all transcript access via Graph API</li><li>Enable access only to transcripts that do not include speaker attribution</li></ul><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording">Graph API access to transcripts and recordings</a>.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-06-22T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#retiring-teams-together-mode</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#retiring-teams-together-mode"/>
-		<title type="html"><![CDATA[Retiring: Teams Together Mode]]></title>
-		<summary type="html"><![CDATA[On <strong>June 30, 2026</strong>, Teams Together Mode will be retired. Custom Together Mode and Scene Studio in the Teams Developer Portal will no longer be available. For more information, see the <a href="https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312">announcement</a>.]]></summary>
-		<content type="html"><![CDATA[<p>On <strong>June 30, 2026</strong>, Teams Together Mode will be retired. Custom Together Mode and Scene Studio in the Teams Developer Portal will no longer be available. For more information, see the <a href="https://techcommunity.microsoft.com/blog/microsoft365insiderblog/goodbye-together-mode-hello-simplified-meeting-layouts-in-microsoft-teams/4519312">announcement</a>.</p>]]></content>
 	</entry>
 </feed>
