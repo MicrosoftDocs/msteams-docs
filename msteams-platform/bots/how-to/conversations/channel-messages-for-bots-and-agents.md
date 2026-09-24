@@ -8,9 +8,9 @@ ms.date: 09/11/2026
 
 # Enable agents to receive all chat messages
 
-By default, agents receive channel and chat messages only when they're @mentioned. To enable an agent to receive all channel or chat messages without being @mentioned, configure Resource-specific Consent (RSC) permissions in the app manifest.
-Receiving all messages enhances agents by providing better context, enabling proactive responses, personalized interactions, and faster issue resolution.
-Conversation owners can consent for an agent to receive all messages in channels and chats without @mentions. Consent can be granted during  app installation or upgrade. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
+By default, agents receive channel and chat messages only when they're @mentioned. You can configure Resource-specific consent (RSC) permissions in the app manifest to allow an agent to receive all channel and chat messages without being @mentioned.
+
+When an agent receives all messages, it can use the broader conversation context to respond without requiring an @mention. A conversation owner can consent to this access when the app is installed or upgraded. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
 
 > [!NOTE]
 > This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
