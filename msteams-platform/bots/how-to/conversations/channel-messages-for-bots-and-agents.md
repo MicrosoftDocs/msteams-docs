@@ -68,7 +68,7 @@ To configure the RSC permissions without editing the manifest directly:
 
 After you update the permissions, install or upgrade the app in the target team or group chat. The team or chat owner grants the requested RSC permissions during installation.
 
-### Filter at mention messages
+## Filter at mention messages
 
 You can enable the developer to filter agent messages and process only the messages that @mention the agents or the agent. This can be useful for several reasons:
 
