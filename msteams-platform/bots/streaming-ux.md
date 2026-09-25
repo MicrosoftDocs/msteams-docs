@@ -35,6 +35,7 @@ Streaming agent messages has two types of updates:
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
   - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - Progressively-rendered formatting: Teams will progressively render the formatting of streamed messages sent in extended Markdown mode to provide a smooth reading experience. For more information, see [Format agent messages](how-to/format-your-bot-messages.md).
   - Streaming content: While streaming, the agent messages must contain the previous streamed content.
 
       **For example**: This is an example of acceptable streaming response.<br>
@@ -110,8 +111,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ```
 
 ::: zone-end
-
-For guidance on formatting streamed messages with extended Markdown, including supported features and syntax, see [Format your agent messages](how-to/format-your-bot-messages.md#streaming-with-extended-markdown).
 
 ## Stream message through REST API
 

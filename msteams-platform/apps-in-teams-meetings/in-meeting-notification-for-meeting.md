@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.owner: kanchankaur
-ms.date: 06/18/2026
+ms.date: 09/16/2026
 ---
 
 # Build in-meeting notification for Teams meeting
@@ -61,8 +61,8 @@ The following table provides the user types and lists the features that each use
 
 | User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Available | Available |  Available | Available |
-| Guest | Available | Available |  Available | Available |
+| In-tenant | Available | Available | Available | Available |
+| Guest | Available | Available | Available | Available |
 | Federated or External | Available | Not available | Not available | Available |
 | Anonymous | Available | Not available | Not available | Not available |
 

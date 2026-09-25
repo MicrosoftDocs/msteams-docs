@@ -2,7 +2,7 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 09/04/2026
+ms.date: 09/24/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -12,6 +12,24 @@ ms.localizationpriority: high
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Preview: Sessions for Teams agents
+
+*September 24, 2026*
+
+Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.
+
+With sessions, you can:
+
+- Keep conversations organized. Users can start, switch between, and return to sessions from the chat header.
+- Improve AI responses. Shorter, focused contexts help your agent's LLM generate more relevant answers.
+- Create sessions proactively. Start a session for a notification, ticket, pull request, or approval.
+
+Most agents can benefit from sessions, especially those that help users with long-running, complex work. To enable them for yours, set `"supportsSessions": true` in your app manifest.
+
+For more information, see [Manage multiple user conversations with sessions](bots/how-to/conversations/agent-sessions.md).
+
+---
 
 ## Review needed: TLS 1.3 support and TLS fingerprinting
 
@@ -35,7 +53,7 @@ Agents can now send richer, better-formatted responses. Set `textFormat: "extend
 
 Extended Markdown content also renders progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
 
-For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#set-message-text-format).
+For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md).
 
 ---
 
