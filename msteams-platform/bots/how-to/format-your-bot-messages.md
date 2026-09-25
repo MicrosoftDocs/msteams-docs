@@ -4,7 +4,7 @@ description: Format agent messages in Teams with Markdown, extended Markdown, or
 ms.topic: article
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.date: 09/21/2026
+ms.date: 09/25/2026
 author: nickwalkmsft
 ---
 
