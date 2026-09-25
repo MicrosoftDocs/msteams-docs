@@ -51,12 +51,11 @@ The following code snippet provides an example of how you can declare RSC permis
       {
         "name": "ChatMessage.Read.Chat",
         "type": "Application"
-      }
+        }
     ]
   }
+}
 ```
-
----
 
 ### Update permissions in Developer Portal
 
@@ -134,8 +133,7 @@ The following code provides an example of the RSC permissions:
 
 ::: zone pivot="teams-sdk-csharp"
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 ```csharp
 
@@ -145,7 +143,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 {
 await context.SendAsync(
 "Using RSC, the agent can receive messages across channels or chats in a team without being @mentioned.",
-cancellationToken);
+cancellationToken); 
 });
 
 ```
@@ -154,8 +152,7 @@ cancellationToken);
 
 ::: zone pivot="teams-sdk-typescript"
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onmessage&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -176,8 +173,7 @@ app.start().catch(console.error);
 
 ::: zone pivot="teams-sdk-python"
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-send-activity)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python/bots/botActivityHandler.py#L34)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python/bots/botActivityHandler.py#L34)
 
 ```python
 
@@ -199,8 +195,6 @@ async def on_members_added(ctx: ActivityContext[ConversationUpdateActivity]) -> 
 ```
 
 ::: zone-end
-
----
 
 ## Code sample
 
