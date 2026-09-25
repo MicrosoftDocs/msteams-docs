@@ -47,6 +47,9 @@
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
+    - name: Sessions
+      href: bots/how-to/conversations/agent-sessions.md
+      displayName: conversationId, proactive, 1:1 chat, context
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
       displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic

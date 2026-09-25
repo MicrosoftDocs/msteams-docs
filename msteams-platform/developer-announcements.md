@@ -37,6 +37,24 @@ For more information, see the [Python](https://github.com/microsoft/teams.py/rel
 
 ---
 
+## Preview: Sessions for Teams agents
+
+*September 24, 2026*
+
+Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.
+
+With sessions, you can:
+
+- Keep conversations organized. Users can start, switch between, and return to sessions from the chat header.
+- Improve AI responses. Shorter, focused contexts help your agent's LLM generate more relevant answers.
+- Create sessions proactively. Start a session for a notification, ticket, pull request, or approval.
+
+Most agents can benefit from sessions, especially those that help users with long-running, complex work. To enable them for yours, set `"supportsSessions": true` in your app manifest.
+
+For more information, see [Manage multiple user conversations with sessions](bots/how-to/conversations/agent-sessions.md).
+
+---
+
 ## Review needed: TLS 1.3 support and TLS fingerprinting
 
 *September 17, 2026*
