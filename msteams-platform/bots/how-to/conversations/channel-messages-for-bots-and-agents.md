@@ -23,16 +23,6 @@ A conversation owner can consent to this access when the app is installed or upg
 
 For your agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For mor  e information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
-Here's an app manifest example followed by a sample code snippet:
-
-:::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
-
-In this code example:
-
-* **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
-* **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
-* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
-
 The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
 
 ```json
@@ -56,6 +46,12 @@ The following code snippet provides an example of how you can declare RSC permis
   }
 }
 ```
+
+In this code example:
+
+* **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
+* **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
+* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 ### Update permissions in Developer Portal
 
@@ -133,8 +129,6 @@ The following code provides an example of the RSC permissions:
 
 ::: zone pivot="teams-sdk-csharp"
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
-
 ```csharp
 
 // Handle when a message is addressed to the agent.
@@ -151,8 +145,6 @@ cancellationToken);
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -172,8 +164,6 @@ app.start().catch(console.error);
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python/bots/botActivityHandler.py#L34)
 
 ```python
 
