@@ -5,7 +5,7 @@ author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: vishachadha
-ms.date: 02/27/2026
+ms.date: 09/14/2026
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
@@ -147,6 +147,32 @@ This section describes the updates that need to be added to the app manifest. En
 >
 > * The `actor` is a special parameter that always takes the name of the caller. In delegated calls, `actor` is the user's name. In application-only calls, it takes the name of the Teams app.
 > * The reserved `systemDefault` activity type mustn't be included in the `activities` section of the app manifest. The `systemDefault` activity type allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification.
+
+#### Add a display name for granular notification controls
+
+> [!NOTE]
+> The `displayName` property is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). To use it, set the app manifest schema to `https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json` and `manifestVersion` to `devPreview`.
+
+Add the optional `displayName` property to an activity type to provide a localized, user-visible category name for granular notification controls. Teams uses this value in a localized action, such as **Turn off: Weekly digest**. Use a concise category phrase and don't include action text or punctuation. The property accepts 1–128 characters and can be localized through the `activities.activityTypes[<index>].displayName` key. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
+
+If `displayName` is missing or Teams can't resolve a usable localized value, Teams shows the existing app-wide turn-off action. Teams shows either the granular action or the app-wide action, not both.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "activities": {
+    "activityTypes": [
+      {
+        "type": "weeklyDigest",
+        "description": "Your weekly digest is ready",
+        "templateText": "Your weekly digest is ready",
+        "displayName": "Weekly digest"
+      }
+    ]
+  }
+}
+```
 
 #### Authorization update
 
