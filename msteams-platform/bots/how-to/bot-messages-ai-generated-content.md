@@ -1,72 +1,23 @@
 ---
-title: Agent Messages with AI-generated Content
-description: Learn how to add an AI label, sensitivity labels, citations, and feedback buttons for agents built using Teams SDK or Bot Framework SDK.
+title: AI Content Labels
+description: Learn how to add AI labels, citations, and sensitivity labels to agent messages built using Teams SDK.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/12/2026
+ms.date: 09/26/2026
 ---
 
-# Enhance AI-generated agent messages
+# AI Content Labels
 
-[!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
-
-AI label, citation, feedback buttons, and sensitivity label in your agent’s messages improve user engagement and foster transparency and trust.
+AI labels, citations, and sensitivity labels in your agent's messages foster transparency and trust.
 
 * [AI label](#ai-label) enables users to identify that the message was generated using AI.
 * [Citation](#citations) enables users to refer to the source of the agent message through in-text citations and references.
-* [Feedback buttons](#feedback-buttons) enable users to provide positive or negative feedback to the agent messages.
 * [Sensitivity label](#sensitivity-label) enables users to understand the confidentiality of the agent message.
-
-The following screenshots show how agent messages can be enhanced with AI label, citation, feedback buttons, and sensitivity label:
-
-# [Desktop](#tab/desktop)
-
-:::row:::
-:::column span="2":::
-
-**Before**
-
-:::image type="content" source="../../assets/images/bots/ai-bot-no-features-desktop.png" border="false" alt-text="Screenshot shows an agent message with no AI label, citation, feedback buttons, and sensitivity label." lightbox="../../assets/images/bots/ai-bot-no-features-desktop.png":::
-
-:::column-end:::
-
-:::column span="2":::
-
-**After**
-
-:::image type="content" source="../../assets/images/bots/ai-bot-message-desktop.png" border="false" alt-text="Screenshot shows an agent message with AI label, citation, feedback buttons, and sensitivity label in Teams desktop client." lightbox="../../assets/images/bots/ai-bot-message-desktop.png":::
-
-:::column-end:::
-
-:::row-end:::
-
-# [Mobile](#tab/mobile)
-
-:::row:::
-:::column span="2":::
-
-**Before**
-
-:::image type="content" source="../../assets/images/bots/ai-bot-no-features-mobile.png" border="false" alt-text="Screenshot shows an agent message with no AI label, citation, feedback buttons, and sensitivity label in Teams mobile client." lightbox="../../assets/images/bots/ai-bot-no-features-mobile.png":::
-
-:::column-end:::
-
-:::column span="2":::
-
-**After**
-
-:::image type="content" source="../../assets/images/bots/ai-bot-message-mobile.png" border="false" alt-text="Screenshot shows an agent message with AI label, citation, feedback buttons, and sensitivity label in Teams mobile client." lightbox="../../assets/images/bots/ai-bot-message-mobile.png":::
-
-:::column-end:::
-
-:::row-end:::
-
----
 
 > [!NOTE]
 >
-> * AI label, citation, feedback buttons, and sensitivity label are available for agents in personal chats, group chats, and channels.
-> * AI label, citation, feedback buttons, and sensitivity label are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../../concepts/cloud-overview.md) environments.
+> * AI labels, citations, and sensitivity labels are available for agents in personal chats, group chats, and channels.
+> * AI labels, citations, and sensitivity labels are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../../concepts/cloud-overview.md) environments.
 
 ## AI label
 
@@ -246,7 +197,7 @@ async def add_citations(ctx: ActivityContext[MessageActivity]):
 ---
 
 | Property | Type | Required | Description |
-|--|--|--|--|
+| -- | -- | -- | -- |
 | `citation` | Object | ✔️ | Details of the citation. |
 | `citation.@type` | String | ✔️ | Object of the citation.<br>Allowed value: `Claim` |
 | `citation.position` | Integer | ✔️ | Displays the citation number. This value must be unique for every citation. |
@@ -273,115 +224,6 @@ After you enable citations, the agent message includes in-text citations and ref
 | 400 | Agent message with more than 20 citations. |
 | 400 | The `appearance` object is empty. |
 | 400 | Error while parsing citation entity with ID: X. |
-
-## Feedback buttons
-
-Feedback buttons in agent messages are essential for tracking user engagement, identifying errors, and gaining insights into agent performance. These insights enable targeted enhancements of the agent’s conversational capabilities. Enable feedback buttons to allow users to like or dislike messages and provide detailed feedback.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in an agent in the Teams desktop client." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows feedback buttons in an agent in the Teams mobile client." lightbox="../../assets/images/bots/feedback-buttons-mobile.png":::
-
----
-
-When the user selects a feedback button, a feedback form appears based on the user's selection. You can either use the default feedback form or customize it to suit your app's needs.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the default feedback form in an agent in the Teams desktop client.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in an agent in the Teams desktop client." lightbox="../../assets/images/bots/feedback-form-mobile.png":::
-
----
-
-Feedback buttons are located at the footer of the agent’s message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user selects.
-
-### Add feedback buttons
-
-To enable feedback buttons in an agent built using **Teams SDK**, use the `addFeedback()` method on the message activity.
-
-# [JavaScript](#tab/javascript)
-
-```javascript
-app.message(/feedback/i, async ({ send }) => { 
-
-  await send(new MessageActivity("This is an example of a feedback button - this helps to provide feedback for a message").addFeedback()); 
-
-}); 
-```
-
-# [C#](#tab/csharp)
-
-```Csharp
-async Task SendFeedbackButtons(IContext context)
-{
-await context.Send(new MessageActivity("This is an example of a feedback button - this helps to provide feedback for a message")
-.AddFeedback());
-}
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_message_pattern(re.compile(r"feedback", re.IGNORECASE))
-async def add_feedback_buttons(ctx: ActivityContext[MessageActivity]):
-await ctx.send(
-MessageActivityInput(
-text="This is an example of a feedback button - this helps to provide feedback for a message",
-).add_feedback('custom')
-)
-```
-
----
-
-| Property | Type | Required | Description |
-|--|--|--|--|
-| `feedbackLoop` | Object | ✔️ | Enables feedback buttons in the agent's message. |
-| `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when a user selects the feedback buttons.<br>Allowed values: `custom`, `default` |
-
-If you set `feedbackLoop.type` to `default`, the default feedback form appears when a user selects the feedback buttons. If you want to display a custom feedback form, set `feedbackLoop.type` to `custom`. The following invoke request is sent to the agent to retrieve a custom form to be displayed to the user:
-
-```JSON
-{
-    "type": "invoke",
-    "name": "message/fetchTask",
-    "value": {
-        "actionName": "feedback",
-        "actionValue": {
-            "reaction": "like" // like or dislike
-        }
-    }
-}
-```
-
-You must respond to this invoke call with a dialog (referred to as task modules in TeamsJS v1.x), the same way you would respond to a `task/fetch` invoke. For more information regarding invoking dialogs in agents, see [use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
-
-### Handle feedback
-
-The agent receives user input from the feedback form through an agent invoke flow. For agents built using **Teams SDK**, the agent invoke request is automatically handled. Handle user feedback using the `message.submit.feedback` event.
-
-```javascript
-app.on("message.submit.feedback", async (context) => { 
-  // custom logic here... 
-}); 
-```
-
-> [!NOTE]
-> Teams doesn't store or process feedback. It doesn't provide an API or a storage mechanism.
-
-If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback buttons from the agent messages to prevent the user from providing feedback to the agent.
-
-### Error handling
-
-| Error code | Description |
-| --- | --- |
-| 400 | `message.submit.feedback` event app.message(/label/i, async ({ send }) => { response isn't empty. |
 
 ## Sensitivity label
 
@@ -468,7 +310,7 @@ await context.sendActivity({
 ---
 
 | Property | Type | Required | Description |
-|--|--|--|--|
+| -- | -- | -- | -- |
 | `usageInfo.@type` | String | ✔️ | Enables the sensitivity label in the agent message. |
 | `citation.usageInfo.@id` | String | ✔️ | Enables the sensitivity label in the citation reference. It's required when adding sensitivity label to citation reference. |
 | `usageInfo.name` | String | ✔️ | Specifies the title of the sensitivity label. |
@@ -489,10 +331,11 @@ After you add the sensitivity label, your agent message displays a shield icon. 
 
 | **Sample Name** | **Description** | **Node.js** | **.NET** | **Python** |
 |---------------|--------------|--------|-------------|--------|
-| Teams conversation agent | This sample app displays the AI label, citation, feedback buttons, and sensitivity label in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/nodejs/bot-ai-messages) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/dotnet/bot-ai-messages) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/python/bot-ai-messages)
+| Teams conversation agent | This sample app displays AI labels, citations, and sensitivity labels in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/nodejs/bot-ai-messages) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/dotnet/bot-ai-messages) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-ai-messages/python/bot-ai-messages) |
 
 ## See also
 
+* [Add user feedback controls](../../agents-in-teams/integrate-ai/user-feedback-controls.md)
 * [Format agent messages](format-your-bot-messages.md)
 * [Get started with Teams SDK](teams-conversational-ai/how-conversation-ai-get-started.md)
 * [Stream agent messages](~/bots/streaming-ux.md)

@@ -81,7 +81,7 @@ Teams' [indicator for AI-generated messages](../bot-messages-ai-generated-conten
 
 ## User feedback controls
 
-Agents can attach standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
+Agents can attach standardized [feedback controls](../../../agents-in-teams/integrate-ai/user-feedback-controls.md) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
 
 # [Desktop](#tab/desktop)
 

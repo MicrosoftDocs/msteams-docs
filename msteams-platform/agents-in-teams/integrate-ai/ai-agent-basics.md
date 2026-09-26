@@ -11,7 +11,7 @@ ms.reviewer: nickwalk
 
 # Basics of AI agents in Teams
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 This guide walks through building a Teams agent with the [Microsoft.Extensions.AI](https://learn.microsoft.com/dotnet/ai/ai-extensions) abstractions against Azure OpenAI. The Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls, while `IChatClient` and tools provide the model and agent loop.
 
 In a Teams app, `IChatClient` runs the agent loop, including model calls, tool invocations, and conversation history, while the Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls.
@@ -19,7 +19,7 @@ In a Teams app, `IChatClient` runs the agent loop, including model calls, tool i
 The pattern is based on [`core/samples/ExtAIBot`](https://github.com/microsoft/teams.net/tree/main/core/samples/ExtAIBot).
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 This guide walks through building a Teams agent with [Microsoft Agent Framework](/agent-framework/) (MAF) a Microsoft's open-source SDK for AI agents. MAF gives you typed primitives a `Agent`, `tool`, `AgentSession`, `FunctionMiddleware` a that wrap the underlying model API, the tool-dispatch loop, and conversation history into composable pieces, so you don't hand-roll chat completions or thread tool calls yourself. It works against multiple model backends (OpenAI, Azure OpenAI, and others) and scales from a single chat agent up to coordinated multi-agent workflows.
 
 In a Teams app, MAF runs the agent loop (model calls, tool invocations, and per-conversation memory) while the Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls.
@@ -27,7 +27,7 @@ In a Teams app, MAF runs the agent loop (model calls, tool invocations, and per-
 Full source: [examples/ai-mcp](https://github.com/microsoft/teams.py/tree/main/examples/ai-mcp).
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 The agent loop here is driven by the OpenAI SDK's `runTools()` helper, which auto-executes each tool's `function` callback and feeds the result back to the model until it produces final text a so you don't hand-roll the tool-dispatch loop yourself.
 
@@ -42,7 +42,7 @@ Full source: [examples/ai-mcp](https://github.com/microsoft/teams.ts/tree/main/e
 
 An agent is composed of three core elements: a **client** (model backend), **instructions** (system prompt), and **tools** (capabilities beyond text generation). A minimal setup starts with just a chat-enabled agent:
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 
@@ -63,7 +63,7 @@ agent = Agent(
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 The "agent" is the model client plus a system prompt. The OpenAI SDK's `AzureOpenAI` client is the model backend, and `runTools()` (shown below) is the loop that drives instructions and tools together.
 
 ```typescript
@@ -82,7 +82,7 @@ const SYSTEM_PROMPT = 'You are a helpful Teams assistant.';
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 Register the Teams application, chat client, and agent services with ASP.NET Core dependency injection:
 
@@ -131,7 +131,7 @@ Tools extend the agent with executable capabilities. They are regular functions 
 
 A good example is **clarification**: when a request is ambiguous, the agent asks the user to pick between interpretations instead of guessing. The tool builds an Adaptive Card and stashes it in a per-turn bucket the handler inspects after the run completes; the user's choice comes back as the next turn.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 Tools are declared as `AIFunction`s with `AIFunctionFactory.Create`. The function name, description, parameter annotations, and return value tell the model when and how to call the tool.
 
@@ -187,7 +187,7 @@ See [clarification cards](./teams-enhancements#clarification-cards) for how the 
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 Tools are declared with the `@tool` decorator from Agent Framework. The function name, docstring, and type annotations tell the model when and how to call the tool.
 
 ```python
@@ -229,7 +229,7 @@ async def request_clarification(
 See [clarification cards](./teams-enhancements.md#clarification-cards) for how the user's choice flows back in.
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 Tools are declared as `RunnableToolFunction`s a the OpenAI SDK runs each tool's `function` callback during the tool loop. The callback pushes the card into a per-turn bucket the handler inspects after the run completes, and returns a short placeholder string.
 
 ```typescript
@@ -293,7 +293,7 @@ See [clarification cards](./teams-enhancements.md#clarification-cards) for how t
 
 Remote tools are exposed via [MCP](https://modelcontextprotocol.io/introduction) servers and live behind a network boundary. The agent discovers their schemas at runtime and invokes them over HTTP. From the model's perspective, they behave like any other tool.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 Remote tools are declared using MCP client wrappers and passed to the agent alongside local tools. The MCP client discovers the server's tool schemas and invokes those tools over HTTP.
 
@@ -370,7 +370,7 @@ public Agent(IChatClient chatClient, McpToolSetLifetimeService mcpTools, ILogger
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 Remote tools are declared using MCP tool wrappers from Agent Framework and passed to the agent just like local tools:
 
 ```python
@@ -390,7 +390,7 @@ agent = Agent(
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 Connect to the MCP server once at startup, list its tools, and wrap each one as a `RunnableToolFunction`. The callback invokes the server and returns the result text to the model.
 
 ```typescript
@@ -425,7 +425,7 @@ const mcpTools: RunnableToolFunction<Record<string, unknown>>[] = tools.map((too
 
 Integrate with Teams by forwarding incoming messages to the agent and streaming the response back to the chat interface chunk by chunk.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 public async Task<RunResult> RunAsync(
@@ -460,7 +460,7 @@ public async Task<RunResult> RunAsync(
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 
@@ -473,7 +473,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 `runTools()` sends the request with your tool definitions, auto-invokes any tool the model calls, re-prompts with the result, and repeats until the model produces final text. `content` events fire for each text delta; forward them straight to the Teams stream.
 
 ```typescript
@@ -495,7 +495,7 @@ await runner.done();
 
 By default, each run starts with no history a the model only sees the current message. This works for one-shot interactions, but is insufficient for multi-turn conversations where users refer back to earlier context. Keep a per-conversation buffer and reuse it across turns:
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 private readonly ConcurrentDictionary<string, List<ChatMessage>> _histories = new();
@@ -543,7 +543,7 @@ Each turn acquires a per-conversation lock before mutating history.
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 A **session** provides a conversation buffer that maintains state across turns. Create one per Teams conversation and reuse it for subsequent messages:
 
 ```python
@@ -564,7 +564,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 Keep one `ChatCompletionMessageParam[]` per Teams conversation. After each run, sync the runner's view a it includes the system, user, and every tool-call / tool-result / assistant message added during the loop a back into your map so the next turn sees the full prior context.
 
 ```typescript
@@ -595,7 +595,7 @@ In production, push conversation history into Redis, Cosmos DB, or whatever you 
 
 When a tool returns search results, you usually want the model to cite its sources. The pattern: intercept each tool result, assign every source a stable 1-based index, and hand that index back to the model so it can reference it inline as `[1]`, `[2]`, and so on. The collected citations are attached to the final reply in [Enhancing the Teams Experience](./teams-enhancements.md#citations).
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 In Microsoft.Extensions.AI, wrap each MCP tool with a `DelegatingAIFunction`. Override `InvokeCoreAsync`, invoke the wrapped tool, then inspect its result to collect citation metadata without coupling citation logic to the agent.
 
@@ -681,7 +681,7 @@ internal sealed class CitationCollector
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 In Agent Framework this is a `FunctionMiddleware` a it sits between tool execution and the model response, letting you inspect and transform results without coupling that logic to the agent. Override `process`, run the wrapped tool with `call_next()`, then post-process its result.
 
 ```python
@@ -730,7 +730,7 @@ agent = Agent(
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 The extraction lives in a small `CitationCollector`. Each MCP tool callback feeds its raw result into `tryExtract`, which parses the search payload and assigns every source a stable 1-based position. The same collector instance is captured by every tool call on a turn.
 
 ```typescript

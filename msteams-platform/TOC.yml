@@ -36,9 +36,12 @@
     - name: Prompt starters
       href: bots/how-to/conversations/prompt-starters.md
       displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
-    - name: Enhance AI-generated bot messages
+    - name: AI Content Labels
       href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+      displayName: AI label, citations, sensitivity label, Powered by AI UX Kit
+    - name: User feedback controls
+      href: agents-in-teams/integrate-ai/user-feedback-controls.md
+      displayName: feedback buttons, like, dislike, default feedback form, custom feedback form, Teams SDK
   - name: Rich conversational features
     items:
     - name: Emoji reactions
