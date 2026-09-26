@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 Teams offers three kinds of labels that your agent can apply to its messages to help users understand their contexts:
 
-* A standardized **AI Generated** label clearly marks the message as a product of AI.
+* A standardized *AI Generated label* clearly marks the message as a product of AI.
 * *Citations* enable agents to direct users to information sources used to create their messages.
 * *Sensitivity labels* enable users to understand the confidentiality of the agent message.
 
@@ -74,13 +74,6 @@ app.message(async ({ send }) => {
 :::image type="content" source="../../assets/images/bots/bot-ai-label-mobile.png" border="false" alt-text="Screenshot shows an AI label in an agent message in the Teams mobile client." lightbox="../../assets/images/bots/bot-ai-label-mobile.png":::
 
 ---
-
-### Error handling
-
-| Error code | Description |
-| --- | --- |
-| 400 | Multiple root message entities found under `entities` array. |
-| 400 | Error parsing message entity from `entities` array. |
 
 ## Citations
 

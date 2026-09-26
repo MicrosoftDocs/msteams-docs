@@ -9,14 +9,16 @@ zone_pivot_groups: teams-sdk-languages
 
 # Add user feedback controls to agent messages
 
-Feedback controls in agent messages help you track user engagement, identify errors, and gain insights into agent performance. Enable feedback controls to allow users to like or dislike messages and provide detailed feedback.
+Dedicated feedback controls in agent messages enable users to like or dislike messages and provide detailed feedback. Use them to help you track user engagement, identify errors, and gain insights into agent performance.
 
 > [!NOTE]
 >
 > * Feedback controls are available for agents in personal chats, group chats, and channels.
 > * Feedback controls are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../../concepts/cloud-overview.md) environments.
 
-Feedback controls are located at the footer of the agent's message and include a 👍 (thumbs up) and a 👎 (thumbs down) button
+## User experience
+
+Feedback controls are located at the footer of an agent-sent message and include a 👍 (thumbs up) and a 👎 (thumbs down) button.
 
 # [Desktop](#tab/desktop)
 
@@ -39,6 +41,8 @@ When the user selects a feedback button, a feedback form appears based on the us
 :::image type="content" source="../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in an agent in the Teams mobile client." lightbox="../../assets/images/bots/feedback-form-mobile.png":::
 
 ---
+
+If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback controls from the agent messages to prevent the user from invoking the agent's feedback flow.
 
 ## Add feedback controls
 
@@ -77,11 +81,11 @@ ctx.stream.emit(reply)
 
 ## Handle feedback
 
-The Teams platform does not include a mechanism for handling user feedback: processing and/or storing feedback is the responsibility of the agent runtime.
+User feedback is sent to your agent via an invoke flow. The Teams platform does not aggregate or process user feedback - you must implement feedback handling in your agent's runtime.
 
 ::: zone pivot="teams-sdk-python"
 
-The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using an `@app.on_message_submit_feedback` handler:
+Handle user feedback using an `@app.on_message_submit_feedback` handler:
 
 ```python
 # Handle feedback submission events
@@ -122,7 +126,7 @@ async def handle_message_feedback(ctx: ActivityContext[MessageSubmitActionInvoke
 
 ::: zone pivot="teams-sdk-typescript"
 
-The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using a handler for `message.submit.feedback`:
+Handle user feedback using a handler for `message.submit.feedback`:
 
 ```javascript
 // This store would ideally be persisted in a database
@@ -165,7 +169,7 @@ app.on('message.submit.feedback', async ({ activity, log }) => {
 
 ::: zone pivot="teams-sdk-csharp"
 
-The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using the `OnMessageSubmitFeedback` handler:
+Handle user feedback using the `OnMessageSubmitFeedback` handler:
 
 ```csharp
 // This store would ideally be persisted in a database
@@ -211,8 +215,6 @@ bot.OnMessageSubmitFeedback((context, cancellationToken) =>
 ```
 
 ::: zone-end
-
-If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback controls from the agent messages to prevent the user from invoking the agent's feedback flow.
 
 ### Customize the user feedback dialog
 

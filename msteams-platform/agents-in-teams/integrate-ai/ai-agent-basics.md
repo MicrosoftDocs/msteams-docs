@@ -33,11 +33,13 @@ Full source: [examples/ai-mcp](https://github.com/microsoft/teams.py/tree/main/e
 
 ::: zone pivot="teams-sdk-typescript"
 
+This guide walks through building a Teams agent with the [OpenAI SDK](https://github.com/openai/openai-node) against Azure OpenAI. The TypeScript SDK stays agnostic about the intelligence layer — you bring the model client and the tool-call loop, and the Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls.
+
 The agent loop here is driven by the OpenAI SDK's `runTools()` helper, which auto-executes each tool's `function` callback and feeds the result back to the model until it produces final text a so you don't hand-roll the tool-dispatch loop yourself.
 
 > [!NOTE]
 >
-> This sample is bound to the OpenAI chat-completions wire protocol a Azure OpenAI and vanilla OpenAI both work; non-OpenAI providers do not.
+> This sample is bound to the OpenAI chat-completions wire protocol. Azure OpenAI and vanilla OpenAI both work; non-OpenAI providers do not.
 
 Full source: [examples/ai-mcp](https://github.com/microsoft/teams.ts/tree/main/examples/ai-mcp).
 
