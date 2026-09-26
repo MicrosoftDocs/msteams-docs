@@ -4,6 +4,7 @@ description: Learn how to add and handle user feedback controls in agent message
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 09/26/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # User feedback controls
@@ -41,50 +42,48 @@ When the user selects a feedback button, a feedback form appears based on the us
 
 ## Add feedback controls
 
-To enable feedback controls in an agent built using **Teams SDK**, use the `addFeedback()` method on the message activity.
+::: zone pivot="teams-sdk-csharp"
 
-# [JavaScript](#tab/javascript)
-
-```javascript
-app.message(/feedback/i, async ({ send }) => {
-  await send(
-    new MessageActivity("This is an example of a feedback control that helps collect feedback for a message")
-      .addFeedback()
-  );
-});
-```
-
-# [C#](#tab/csharp)
+To include feedback controls on a message, call `AddFeedback(FeedbackTypes.Custom)` on its activity before sending it.
 
 ```csharp
-async Task SendFeedbackControls(IContext context)
-{
-    await context.Send(
-        new MessageActivity("This is an example of a feedback control that helps collect feedback for a message")
-            .AddFeedback());
-}
+MessageActivityInput reply = new MessageActivityInput().AddAIGenerated().AddFeedback(FeedbackTypes.Custom);
+await writer.FinalizeResponseAsync(msg, cancellationToken);
 ```
 
-# [Python](#tab/python)
+Supplying `FeedbackTypes.Custom` as a parameter to `AddFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+To include feedback controls on a message, call `addFeedback('custom')` on its activity before sending it.
+
+```typescript
+const reply = new MessageActivityInput().addAiGenerated().addFeedback('custom');
+stream.emit(reply);
+```
+
+Supplying a parameter of `custom` to `addFeedback()`
+
+Supplying `'custom'` as a parameter to `addFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+To include feedback controls on a message, call `add_feedback(mode="custom")` on its activity before sending it.
 
 ```python
-@app.on_message_pattern(re.compile(r"feedback", re.IGNORECASE))
-async def add_feedback_controls(ctx: ActivityContext[MessageActivity]):
-    await ctx.send(
-        MessageActivityInput(
-            text="This is an example of a feedback control that helps collect feedback for a message",
-        ).add_feedback("custom")
-    )
+reply = MessageActivityInput().add_ai_generated().add_feedback(mode="custom")
+ctx.stream.emit(reply)
 ```
 
----
+Supplying `"custom"` as a parameter to `add_feedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
 
-| Property | Type | Required | Description |
-| -- | -- | -- | -- |
-| `feedbackLoop` | Object | ✔️ | Enables feedback controls in the agent's message. |
-| `feedbackLoop.type` | String | ✔️ | Defines the type of feedback form that appears when a user selects a feedback button.<br>Allowed values: `custom`, `default` |
+::: zone-end
 
-If you set `feedbackLoop.type` to `default`, the default feedback form appears when a user selects a feedback button. To display a custom feedback form, set `feedbackLoop.type` to `custom`. The following invoke request is sent to the agent to retrieve a custom form:
+The following invoke request is sent to the agent to retrieve a custom form:
 
 ```json
 {
@@ -105,20 +104,142 @@ You must respond to this invoke call with a dialog (referred to as a task module
 
 ## Handle feedback
 
-The agent receives user input from the feedback form through an agent invoke flow. For agents built using **Teams SDK**, the agent invoke request is handled automatically. Handle user feedback using the `message.submit.feedback` event:
+The Teams platform does not include a mechanism for handling user feedback: processing and/or storing feedback is the responsibility of the agent runtime.
+
+::: zone pivot="teams-sdk-python"
+
+The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using an `@app.on_message_submit_feedback` handler:
+
+```python
+# Handle feedback submission events
+@app.on_message_submit_feedback
+async def handle_message_feedback(ctx: ActivityContext[MessageSubmitActionInvokeActivity]):
+    """Handle feedback submission events"""
+    activity = ctx.activity
+
+    # Extract feedback data from activity value
+    if not hasattr(activity, "value") or not activity.value:
+        logger.warning(f"No value found in activity {activity.id}")
+        return
+
+    # Access feedback data directly from invoke value
+    invoke_value = activity.value
+    assert invoke_value.action_name == "feedback"
+    feedback_str = invoke_value.action_value.feedback
+    reaction = invoke_value.action_value.reaction
+    feedback_json: Dict[str, Any] = json.loads(feedback_str)
+    # { 'feedbackText': 'the ai response was great!' }
+
+    if not activity.reply_to_id:
+        logger.warning(f"No replyToId found for messageId {activity.id}")
+        return
+
+    # Store the feedback (implement your own storage logic)
+    upsert_feedback_storage(activity.reply_to_id, reaction, feedback_json.get('feedbackText', ''))
+
+    # Optionally Send confirmation response
+    feedback_text: str = feedback_json.get("feedbackText", "")
+    reaction_text: str = f" and {reaction}" if reaction else ""
+    text_part: str = f" with comment: '{feedback_text}'" if feedback_text else ""
+
+    await ctx.reply(f"✅ Thank you for your feedback{reaction_text}{text_part}!")
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using a handler for `message.submit.feedback`:
 
 ```javascript
-app.on("message.submit.feedback", async (context) => {
-  // Add custom logic here.
+// This store would ideally be persisted in a database
+export const storedFeedbackByMessageId = new Map<
+  string,
+  {
+    incomingMessage: string;
+    outgoingMessage: string;
+    likes: number;
+    dislikes: number;
+    feedbacks: string[];
+  }
+>();
+
+app.on('message.submit.feedback', async ({ activity, log }) => {
+  const { reaction, feedback: feedbackJson } = activity.value.actionValue;
+  if (activity.replyToId == null) {
+    log.warn(`No replyToId found for messageId ${activity.id}`);
+    return;
+  }
+  const existingFeedback = storedFeedbackByMessageId.get(activity.replyToId);
+  /**
+   * feedbackJson looks like:
+   * {"feedbackText":"Nice!"}
+   */
+  if (!existingFeedback) {
+    log.warn(`No feedback found for messageId ${activity.id}`);
+  } else {
+    storedFeedbackByMessageId.set(activity.id, {
+      ...existingFeedback,
+      likes: existingFeedback.likes + (reaction === 'like' ? 1 : 0),
+      dislikes: existingFeedback.dislikes + (reaction === 'dislike' ? 1 : 0),
+      feedbacks: [...existingFeedback.feedbacks, feedbackJson],
+    });
+  }
 });
 ```
 
-The response to the `message.submit.feedback` event must be empty. Otherwise, Teams returns a `400` error.
+::: zone-end
 
-> [!NOTE]
-> Teams doesn't store or process feedback and doesn't provide an API or storage mechanism for it.
+::: zone pivot="teams-sdk-csharp"
 
-If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback controls from the agent messages to prevent the user from providing feedback to the agent.
+The agent receives user input from the feedback form through an agent invoke flow. Handle user feedback using the `OnMessageSubmitFeedback` handler:
+
+```csharp
+// This store would ideally be persisted in a database
+public static class FeedbackStore
+{
+    public static readonly Dictionary<string, FeedbackData> StoredFeedbackByMessageId = new();
+
+    public class FeedbackData
+    {
+        public string IncomingMessage { get; set; } = string.Empty;
+        public string OutgoingMessage { get; set; } = string.Empty;
+        public int Likes { get; set; }
+        public int Dislikes { get; set; }
+        public List<string> Feedbacks { get; set; } = new();
+    }
+}
+
+bot.OnMessageSubmitFeedback((context, cancellationToken) =>
+{
+    MessageSubmitFeedbackValue? feedback = context.Activity.Value;
+    var reaction = feedback?.Reaction;
+    var feedbackText = feedback?.Feedback;
+
+    if (context.Activity.ReplyToId == null)
+        return Task.FromResult(InvokeResponse.Ok());
+
+    var existingFeedback = FeedbackStore.StoredFeedbackByMessageId.GetValueOrDefault(context.Activity.ReplyToId);
+
+    if (existingFeedback != null)
+    {
+        FeedbackStore.StoredFeedbackByMessageId[context.Activity.ReplyToId] = new FeedbackStore.FeedbackData
+        {
+            IncomingMessage = existingFeedback.IncomingMessage,
+            OutgoingMessage = existingFeedback.OutgoingMessage,
+            Likes = existingFeedback.Likes + (reaction == "like" ? 1 : 0),
+            Dislikes = existingFeedback.Dislikes + (reaction == "dislike" ? 1 : 0),
+            Feedbacks = existingFeedback.Feedbacks.Concat(new[] { feedbackText ?? string.Empty }).ToList()
+        };
+    }
+
+    return Task.FromResult(InvokeResponse.Ok());
+});
+```
+
+::: zone-end
+
+If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback controls from the agent messages to prevent the user from invoking the agent's feedback flow.
 
 ## Code sample
 
