@@ -1,5 +1,5 @@
 ---
-title: User Feedback Controls
+title: Add User Feedback Controls to Agent Messages
 description: Learn how to add and handle user feedback controls in agent messages using Teams SDK.
 ms.topic: article
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.date: 09/26/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# User feedback controls
+# Add user feedback controls to agent messages
 
 Feedback controls in agent messages help you track user engagement, identify errors, and gain insights into agent performance. Enable feedback controls to allow users to like or dislike messages and provide detailed feedback.
 
@@ -16,7 +16,7 @@ Feedback controls in agent messages help you track user engagement, identify err
 > * Feedback controls are available for agents in personal chats, group chats, and channels.
 > * Feedback controls are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../../concepts/cloud-overview.md) environments.
 
-Feedback controls are located at the footer of the agent's message and include a 👍 (thumbs up) and a 👎 (thumbs down) button that the user selects.
+Feedback controls are located at the footer of the agent's message and include a 👍 (thumbs up) and a 👎 (thumbs down) button
 
 # [Desktop](#tab/desktop)
 
@@ -44,63 +44,36 @@ When the user selects a feedback button, a feedback form appears based on the us
 
 ::: zone pivot="teams-sdk-csharp"
 
-To include feedback controls on a message, call `AddFeedback(FeedbackTypes.Custom)` on its activity before sending it.
+To include feedback controls on a message, call `AddFeedback()` on its activity before sending it.
 
 ```csharp
-MessageActivityInput reply = new MessageActivityInput().AddAIGenerated().AddFeedback(FeedbackTypes.Custom);
+MessageActivityInput reply = new MessageActivityInput().AddAIGenerated().AddFeedback();
 await writer.FinalizeResponseAsync(msg, cancellationToken);
 ```
-
-Supplying `FeedbackTypes.Custom` as a parameter to `AddFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-To include feedback controls on a message, call `addFeedback('custom')` on its activity before sending it.
+To include feedback controls on a message, call `addFeedback()` on its activity before sending it.
 
 ```typescript
-const reply = new MessageActivityInput().addAiGenerated().addFeedback('custom');
+const reply = new MessageActivityInput().addAiGenerated().addFeedback();
 stream.emit(reply);
 ```
-
-Supplying a parameter of `custom` to `addFeedback()`
-
-Supplying `'custom'` as a parameter to `addFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-To include feedback controls on a message, call `add_feedback(mode="custom")` on its activity before sending it.
+To include feedback controls on a message, call `add_feedback()` on its activity before sending it.
 
 ```python
-reply = MessageActivityInput().add_ai_generated().add_feedback(mode="custom")
+reply = MessageActivityInput().add_ai_generated().add_feedback()
 ctx.stream.emit(reply)
 ```
 
-Supplying `"custom"` as a parameter to `add_feedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
-
 ::: zone-end
-
-The following invoke request is sent to the agent to retrieve a custom form:
-
-```json
-{
-  "type": "invoke",
-  "name": "message/fetchTask",
-  "value": {
-    "actionName": "feedback",
-    "actionValue": {
-      "reaction": "like"
-    }
-  }
-}
-```
-
-The value of `reaction` is `like` or `dislike`.
-
-You must respond to this invoke call with a dialog (referred to as a task module in TeamsJS v1.x), the same way you respond to a `task/fetch` invoke. For more information about invoking dialogs in agents, see [Use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 ## Handle feedback
 
@@ -240,6 +213,45 @@ bot.OnMessageSubmitFeedback((context, cancellationToken) =>
 ::: zone-end
 
 If a user uninstalls your agent and still has access to the agent chat, Teams removes the feedback controls from the agent messages to prevent the user from invoking the agent's feedback flow.
+
+### Customize the user feedback dialog
+
+::: zone pivot="teams-sdk-typescript"
+
+Supplying `'custom'` as a parameter to `addFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+Supplying `FeedbackTypes.Custom` as a parameter to `AddFeedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Supplying `mode="custom"` as a parameter to `add_feedback()` results in the feedback controls triggering a task dialog invoke so the agent can return its own task module dialog instead of Teams' default feedback dialog.
+
+::: zone-end
+
+When the user interacts with the feedback controls, Teams sends the following invoke request to the agent to retrieve a custom form:
+
+```json
+{
+  "type": "invoke",
+  "name": "message/fetchTask",
+  "value": {
+    "actionName": "feedback",
+    "actionValue": {
+      "reaction": "like"
+    }
+  }
+}
+```
+
+The value of `reaction` is `like` or `dislike`.
+
+You must respond to this invoke call with a dialog (referred to as a task module in TeamsJS v1.x), the same way you respond to a `task/fetch` invoke. For more information about invoking dialogs in agents, see [Use dialogs with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
 ## Code sample
 
