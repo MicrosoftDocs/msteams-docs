@@ -44,7 +44,7 @@
     - name: Agent2Agent protocol
       href: agents-in-teams/integrate-ai/agent-to-agent.md
     - name: Sample AI agent walkthrough
-      href: agents-in-teams/integrate-ai/ai-agent-basics.md
+      href: agents-in-teams/integrate-ai/ai-agent-sample-walkthrough.md
       displayName: tool, clarification, MCP, memory, citations, OpenAI, MAF, Microsoft Agent Framework
   - name: Rich conversational features
     items:
