@@ -2,7 +2,7 @@
 title: Exposing Teams to AI Agents (MCP)
 description: Turn your Teams bot into an MCP server so external AI agents can reach real users a finding them by name, sending notifications, asking questions, and requesting approvals through chat.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 07/27/2026
 ---
 
@@ -12,7 +12,7 @@ This guide turns your Teams bot into an [MCP](https://modelcontextprotocol.io/in
 
 The bot and the MCP server run in the same process, exposing two HTTP surfaces: `/api/messages` for Teams and `/mcp` for agents.
 
-:::image type="content" source="~/assets/mcp-server.gif" alt-text="Animated screenshot of an AI agent calling the Teams MCP server: it resolves a user by name, sends a notification, then asks a question that lands in the user's Teams chat." lightbox="~/assets/mcp-server.png" :::
+:::image type="content" source="~/assets/mcp-server.gif" alt-text="Animated screenshot of an AI agent calling the Teams MCP server: it resolves a user by name, sends a notification, then asks a question that lands in the user's Teams chat." lightbox="~/assets/mcp-server.gif" :::
 
 ::: zone pivot="teams-sdk-python"
 
@@ -251,7 +251,7 @@ await app.ConversationClient.SendActivityAsync(conversationId, notifyActivity, s
 
 ::: zone-end
 
-See [Proactive Messaging](../../essentials/sending-messages/proactive-messaging.md) for the full story on how Teams handles bot-initiated conversations.
+See [Proactive messages](../../bots/how-to/conversations/send-proactive-messages.md) for the full story on how Teams handles bot-initiated conversations.
 
 ## Asking the user a question
 

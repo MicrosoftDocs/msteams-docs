@@ -44,6 +44,8 @@
       displayName: feedback buttons, like, dislike, default feedback form, custom feedback form, Teams SDK
     - name: Host an MCP server
       href: agents-in-teams/integrate-ai/mcp-server.md
+    - name: Agent2Agent protocol
+      href: agents-in-teams/integrate-ai/agent-to-agent.md
   - name: Rich conversational features
     items:
     - name: Emoji reactions

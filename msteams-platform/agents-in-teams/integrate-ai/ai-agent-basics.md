@@ -13,7 +13,7 @@ ms.reviewer: nickwalk
 
 ::: zone pivot="teams-sdk-csharp"
 
-This guide walks through building a Teams agent with the [Microsoft.Extensions.AI](https://learn.microsoft.com/dotnet/ai/ai-extensions) abstractions against Azure OpenAI. The Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls, while `IChatClient` and tools provide the model and agent loop.
+This guide walks through building a Teams agent with the [Microsoft.Extensions.AI](/dotnet/ai/ai-extensions) abstractions against Azure OpenAI. The Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls, while `IChatClient` and tools provide the model and agent loop.
 
 In a Teams app, `IChatClient` runs the agent loop, including model calls, tool invocations, and conversation history, while the Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls.
 
@@ -727,7 +727,7 @@ In production, push conversation history into Redis, Cosmos DB, or whatever you 
 
 ## Grounding responses with citations
 
-When a tool returns search results, you usually want the model to cite its sources. The pattern: intercept each tool result, assign every source a stable 1-based index, and hand that index back to the model so it can reference it inline as `[1]`, `[2]`, and so on. The collected citations are attached to the final reply in [Enhancing the Teams Experience](./teams-enhancements.md#citations).
+When a tool returns search results, you usually want the model to cite its sources. The pattern: intercept each tool result, assign every source a stable 1-based index, and hand that index back to the model so it can reference it inline as `[1]`, `[2]`, and so on.
 
 ::: zone pivot="teams-sdk-csharp"
 
