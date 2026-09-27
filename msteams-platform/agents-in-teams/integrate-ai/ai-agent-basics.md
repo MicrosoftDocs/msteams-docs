@@ -191,8 +191,6 @@ internal static class LocalTools
 }
 ```
 
-See [clarification cards](./teams-enhancements#clarification-cards) for how the user's choice flows back in.
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
@@ -234,8 +232,6 @@ async def request_clarification(
     cards.append(card)
     return "Clarification card attached."
 ```
-
-See [clarification cards](./teams-enhancements.md#clarification-cards) for how the user's choice flows back in.
 
 ::: zone-end
 
@@ -295,11 +291,130 @@ function buildClarificationCard(args: ClarificationArgs): AdaptiveCard {
 }
 ```
 
-See [clarification cards](./teams-enhancements.md#clarification-cards) for how the user's choice flows back in.
-
 ::: zone-end
 
 :::image type="content" source="../../assets/clarification.png" alt-text="Screenshot of a clarification Adaptive Card in Teams chat, asking the user to choose an option.":::
+
+When the agent calls the `request_clarification` tool, the reply is a card, not text. The model still produces a short wrap-up after the tool returns, so discard the streamed text and send only the card. Clearing the stream's accumulated text before emitting the card-only activity keeps the turn to a single clean reply.
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+function shipResult(result: AgentRunResult, stream: IStreamer, recipientId: string): void {
+  if (result.pendingCard) {
+    // Clarification card — discard any streamed text, then emit card-only.
+    stream.clearText();
+    stream.emit(new MessageActivityInput().addCard('adaptive', result.pendingCard).addAiGenerated());
+    return;
+  }
+  // normal reply: attach follow-ups, citations, feedback (below).
+}
+```
+
+The user's choice is captured by a card-action handler and fed straight back into the agent as the next turn:
+
+```typescript
+app.on('card.action.clarification', async ({ activity, stream }) => {
+  const data = (activity.value.action.data ?? {}) as Record<string, unknown>;
+  const choice = typeof data[CLARIFICATION_INPUT_ID] === 'string' ? (data[CLARIFICATION_INPUT_ID] as string) : '';
+  if (choice) {
+    const result = await agent.run(activity.conversation.id, choice, stream);
+    shipResult(result, stream, activity.from.id);
+  }
+  return { statusCode: 200, type: 'application/vnd.microsoft.activity.message', value: 'OK' };
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+async def _run_agent_and_reply(ctx, session, text: str) -> None:
+    cards: list[AdaptiveCard] = []
+    pending_cards.set(cards)
+
+    full_text = ""
+    async for chunk in agent.run(text, session=session, stream=True):
+        if chunk.text:
+            ctx.stream.emit(chunk.text)
+            full_text += chunk.text
+
+    if cards:
+        # Clarification card — discard any streamed text, then emit card-only.
+        ctx.stream.clear_text()
+        reply = MessageActivityInput().add_ai_generated()
+        for card in cards:
+            reply.add_card(card)
+        ctx.stream.emit(reply)
+    else:
+        # normal reply: attach follow-ups, citations, feedback (below).
+        ...
+```
+
+The user's choice is captured by a card-action handler and fed straight back into the agent as the next turn:
+
+```python
+@app.on_card_action_execute(CLARIFICATION_VERB)
+async def handle_clarification(ctx: ActivityContext[AdaptiveCardInvokeActivity]) -> AdaptiveCardInvokeResponse:
+    choice = (ctx.activity.value.action.data or {}).get(CLARIFICATION_INPUT_ID, "")
+    if choice:
+        session = _sessions[ctx.activity.conversation.id]
+        await _run_agent_and_reply(ctx, session, choice)
+    return AdaptiveCardActionMessageResponse(
+        status_code=200, type="application/vnd.microsoft.activity.message", value="OK",
+    )
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+    private async Task RespondAsync<TActivity>(Context<TActivity> context, string userText, CancellationToken cancellationToken)
+        where TActivity : TeamsActivity
+    {
+        _ = context.Activity.Conversation?.Id
+            ?? throw new InvalidOperationException("Missing conversation ID.");
+
+        TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
+        RunResult result = await _agent.RunAsync(context.Activity.Conversation!.Id, userText, writer, cancellationToken);
+
+        MessageActivityInput msg = new MessageActivityInput();
+
+        if (result.PendingCards.Count > 0)
+        {
+            // Card-only reply (e.g. clarification). No text and no feedback — the card IS the question.
+            msg.WithText("")
+                .AddAttachment([.. result.PendingCards.Select(c =>
+                    TeamsAttachment.CreateBuilder().WithAdaptiveCard(c).Build())])
+                    .AddAIGenerated();
+        }
+        else
+        {
+            // normal reply: attach follow-ups, citations, feedback (below).
+            ...
+        }
+
+        await writer.FinalizeResponseAsync(msg, cancellationToken);
+    }
+```
+
+```csharp
+this.OnAdaptiveCardAction(async (context, cancellationToken) =>
+{
+    if (context.Activity.Value?.Action?.Verb == "clarification")
+    {
+        string choice = context.Activity.Value.Action.Data?["clarificationChoice"]?.ToString() ?? "";
+        await RespondAsync(context, choice, cancellationToken);
+    }
+    return InvokeResponse.Ok();
+});
+```
+
+::: zone-end
+
+:::image type="content" source="../../assets/clarification-2.gif" alt-text="Animated screenshot of the clarification flow: the user asks an ambiguous question, the bot replies with a choice card, the user picks an option, and the bot streams a grounded answer with an inline citation.":::
 
 ## Adding remote MCP tools
 
@@ -781,8 +896,109 @@ export class CitationCollector {
 }
 ```
 
-To wire it in, call `citations.tryExtract(text)` inside each MCP tool's callback before returning the result. The collected entries are attached to the final reply in [Enhancing the Teams Experience](./teams-enhancements.md#citations).
+To wire it in, call `citations.tryExtract(text)` inside each MCP tool's callback before returning the result.
 
 ::: zone-end
 
-For Teams-specific enhancements a continue to [Enhancing the Teams Experience](./teams-enhancements.md).
+Citations render as footnote-style references inline with the reply — `[1]`, `[2]`, etc. — surfacing the source title, abstract, and URL on hover.
+
+When building the final reply, attach only the citations whose position actually appears in the streamed text.
+
+::: zone pivot="teams-sdk-typescript"
+
+Use the `CitationCollector`. `attachCitations` reads the `[N]` markers out of the streamed text and writes a citation entity onto the final activity for each one it has data for.
+
+```typescript
+attachCitations(activity: MessageActivityInput, fullText: string): number {
+  const used = new Set<number>();
+  for (const match of fullText.matchAll(/\[(\d+)\]/g)) used.add(Number(match[1]));
+
+  let attached = 0;
+  for (const entry of this.entries.values()) {
+    if (!used.has(entry.position)) continue;
+    activity.addCitation(entry.position, {
+      name: entry.title || `Source ${entry.position}`,
+      abstract: entry.snippet || 'No description available.',
+      url: entry.url,
+    });
+    attached++;
+  }
+  return attached;
+}
+```
+
+Assemble the final marker activity with everything at once — the AI label, custom feedback, citations, and follow-up chips — then emit it so the streamer folds them into the final message:
+
+```typescript
+const finalMarker = new MessageActivityInput().addAiGenerated().addFeedback('custom');
+result.citations.attachCitations(finalMarker, result.fullText);
+if (result.followUps.length > 0) {
+  finalMarker.withSuggestedActions({
+    to: [recipientId],
+    actions: result.followUps.map((p) => ({ type: 'imBack', title: p, value: p })),
+  });
+}
+stream.emit(finalMarker);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+result.Citations.AttachCitations(reply, result.FullText);
+
+public void AttachCitations(MessageActivityInput reply, string fullText)
+{
+    HashSet<int> used = [];
+    foreach (Match match in Regex.Matches(fullText, @"\[(\d+)\]"))
+    {
+        if (int.TryParse(match.Groups[1].Value, out int position))
+            used.Add(position);
+    }
+
+    foreach (CitationEntry citation in _citations.Values.Where(e => used.Contains(e.Position)))
+    {
+        reply.AddCitation(
+            citation.Position,
+            new CitationAppearance
+            {
+                Name = string.IsNullOrEmpty(citation.Title)
+                    ? $"Source {citation.Position}"
+                    : citation.Title[..Math.Min(80, citation.Title.Length)],
+                Abstract = string.IsNullOrEmpty(citation.Snippet)
+                    ? "No description available."
+                    : citation.Snippet,
+                Url = Uri.TryCreate(citation.Url, UriKind.Absolute, out Uri? uri) ? uri : null
+            });
+    }
+}
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+import re
+
+from microsoft_teams.api import CitationAppearance
+
+def _attach_citations(reply: MessageActivityInput, full_text: str) -> None:
+    used_positions = {int(n) for n in re.findall(r"\[(\d+)\]", full_text)}
+    for annotation in tool_logger.citations.values():
+        pos = annotation["position"]
+        if pos in used_positions:
+            reply.add_citation(
+                position=pos,
+                appearance=CitationAppearance(
+                    name=annotation.get("title") or f"Source {pos}",
+                    abstract=annotation.get("snippet") or "No description available.",
+                    url=annotation.get("url"),
+                ),
+            )
+```
+
+::: zone-end
+
+:::image type="content" source="../../assets/citations-2.gif" alt-text="Animated screenshot showing a user hovering over a footnote citation in an agent response, with a pop-up showing explanatory text.":::
