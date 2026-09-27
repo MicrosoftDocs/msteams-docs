@@ -550,6 +550,18 @@
     - name: Get context for your tab
       href: tabs/how-to/access-teams-context.md
       displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
+    - name: Build with Teams SDK
+      items:
+      - name: Getting started
+        href: tabs/teams-sdk/getting-started.md
+      - name: Using the App class
+        href: tabs/teams-sdk/using-the-app.md
+      - name: App options
+        href: tabs/teams-sdk/tab-app-options.md
+      - name: Tab app Graph client
+        href: tabs/teams-sdk/tab-graph.md
+      - name: Tab app functions
+        href: tabs/teams-sdk/tab-app-functions.md
     - name: Tab features
       items:
       - name: Open content in multi-window
