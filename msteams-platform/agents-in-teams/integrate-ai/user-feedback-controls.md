@@ -265,5 +265,5 @@ The Teams conversation agent sample displays feedback controls and handles user 
 
 ## See also
 
-* [AI Content Labels](../../bots/how-to/bot-messages-ai-generated-content.md)
+* [AI Content Labels](ai-content-labels.md)
 * [Format agent messages](../../bots/how-to/format-your-bot-messages.md)

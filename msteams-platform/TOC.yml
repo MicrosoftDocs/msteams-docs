@@ -34,7 +34,7 @@
       href: bots/how-to/conversations/prompt-starters.md
       displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
     - name: AI content labels
-      href: bots/how-to/bot-messages-ai-generated-content.md
+      href: agents-in-teams/integrate-ai/ai-content-labels.md
       displayName: AI label, citations, sensitivity label, Powered by AI UX Kit
     - name: User feedback controls
       href: agents-in-teams/integrate-ai/user-feedback-controls.md

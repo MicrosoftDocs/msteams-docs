@@ -67,7 +67,7 @@ Suggested actions are key to enabling efficient and satisfying *human-in-the-loo
 
 ## AI content labels
 
-Always use Teams' [AI content labels](../bot-messages-ai-generated-content.md) as appropriate.
+Always use Teams' [AI content labels](../../../agents-in-teams/integrate-ai/ai-content-labels.md) as appropriate.
 
 - The **AI Generated** label should be attached to all AI-generated messages, and its use is a policy requirement for agents distributed through the Teams Store
 - Citations surface and link data sources used to generate a message

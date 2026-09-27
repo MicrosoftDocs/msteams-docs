@@ -3,9 +3,6 @@ title: AI Content Labels
 description: Learn how to add AI labels, citations, and sensitivity labels to agent messages built using Teams SDK.
 ms.topic: article
 ms.date: 09/27/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -333,7 +330,7 @@ After you add the sensitivity label, your agent message displays a shield icon. 
 
 ## See also
 
-* [Add user feedback controls](../../agents-in-teams/integrate-ai/user-feedback-controls.md)
-* [Format agent messages](format-your-bot-messages.md)
-* [Get started with Teams SDK](teams-conversational-ai/how-conversation-ai-get-started.md)
+* [Add user feedback controls](user-feedback-controls.md)
+* [Format agent messages](../../bots/how-to/format-your-bot-messages.md)
+* [Get started with Teams SDK](../../bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md)
 * [Stream agent messages](~/bots/streaming-ux.md)
