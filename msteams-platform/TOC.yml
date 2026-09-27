@@ -100,6 +100,8 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Extend with Agents SDK
+      href: agents-in-teams/extend-with-agents-sdk.md
 - name: Tools and SDKs
   items:
   - name: Overview
