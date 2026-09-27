@@ -371,33 +371,33 @@ async def handle_clarification(ctx: ActivityContext[AdaptiveCardInvokeActivity])
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-    private async Task RespondAsync<TActivity>(Context<TActivity> context, string userText, CancellationToken cancellationToken)
-        where TActivity : TeamsActivity
+private async Task RespondAsync<TActivity>(Context<TActivity> context, string userText, CancellationToken cancellationToken)
+    where TActivity : TeamsActivity
+{
+    _ = context.Activity.Conversation?.Id
+        ?? throw new InvalidOperationException("Missing conversation ID.");
+
+    TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
+    RunResult result = await _agent.RunAsync(context.Activity.Conversation!.Id, userText, writer, cancellationToken);
+
+    MessageActivityInput msg = new MessageActivityInput();
+
+    if (result.PendingCards.Count > 0)
     {
-        _ = context.Activity.Conversation?.Id
-            ?? throw new InvalidOperationException("Missing conversation ID.");
-
-        TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
-        RunResult result = await _agent.RunAsync(context.Activity.Conversation!.Id, userText, writer, cancellationToken);
-
-        MessageActivityInput msg = new MessageActivityInput();
-
-        if (result.PendingCards.Count > 0)
-        {
-            // Card-only reply (e.g. clarification). No text and no feedback — the card IS the question.
-            msg.WithText("")
-                .AddAttachment([.. result.PendingCards.Select(c =>
-                    TeamsAttachment.CreateBuilder().WithAdaptiveCard(c).Build())])
-                    .AddAIGenerated();
-        }
-        else
-        {
-            // normal reply: attach follow-ups, citations, feedback (below).
-            ...
-        }
-
-        await writer.FinalizeResponseAsync(msg, cancellationToken);
+        // Card-only reply (e.g. clarification). No text and no feedback — the card IS the question.
+        msg.WithText("")
+            .AddAttachment([.. result.PendingCards.Select(c =>
+                TeamsAttachment.CreateBuilder().WithAdaptiveCard(c).Build())])
+                .AddAIGenerated();
     }
+    else
+    {
+        // normal reply: attach follow-ups, citations, feedback (below).
+        ...
+    }
+
+    await writer.FinalizeResponseAsync(msg, cancellationToken);
+}
 ```
 
 ```csharp
@@ -413,6 +413,8 @@ this.OnAdaptiveCardAction(async (context, cancellationToken) =>
 ```
 
 ::: zone-end
+
+The user's selection arrives as a fresh turn through the card-action route — the same code path as a normal message — so the agent picks up with full context.
 
 :::image type="content" source="../../assets/clarification-2.gif" alt-text="Animated screenshot of the clarification flow: the user asks an ambiguous question, the bot replies with a choice card, the user picks an option, and the bot streams a grounded answer with an inline citation.":::
 
