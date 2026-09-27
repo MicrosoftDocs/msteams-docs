@@ -14,7 +14,7 @@ This guide walks through building a Teams agent with the [Microsoft.Extensions.A
 
 In a Teams app, `IChatClient` runs the agent loop, including model calls, tool invocations, and conversation history, while the Teams SDK handles activity routing, streaming, and Teams-native affordances like Adaptive Cards and feedback controls.
 
-The pattern is based on [`core/samples/ExtAIBot`](https://github.com/microsoft/teams.net/tree/main/core/samples/ExtAIBot).
+The pattern is based on [`ExtAIBot`](https://github.com/microsoft/teams.net/tree/main/samples/ExtAIBot).
 
 ::: zone-end
 
@@ -584,6 +584,7 @@ public async Task<RunResult> RunAsync(
 
         await writer.FinalizeResponseAsync();
     }
+}
 ```
 
 ::: zone-end

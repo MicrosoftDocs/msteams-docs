@@ -32,7 +32,7 @@ Full source: [examples/mcp-server](https://github.com/microsoft/teams.ts/tree/ma
 
 ::: zone pivot="teams-sdk-csharp"
 
-This guide is based on [`core/samples/McpServer`](https://github.com/microsoft/teams.net/tree/main/core/samples/McpServer): a single ASP.NET process hosts both Teams (`/api/messages`) and MCP (`/mcp`).
+This guide is based on the [`McpServer`](https://github.com/microsoft/teams.net/tree/main/samples/McpServer) sample: a single ASP.NET process hosts both Teams (`/api/messages`) and MCP (`/mcp`).
 
 ::: zone-end
 

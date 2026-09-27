@@ -4,9 +4,6 @@ description: "Hand a user off between two Teams bots over the Agent2Agent protoc
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
 ms.date: 09/27/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
 ---
 
 # Bot-to-Bot Communication with Agent2Agent (A2A)
@@ -33,7 +30,7 @@ Full source: [examples/a2a](https://github.com/microsoft/teams.ts/tree/main/exam
 
 ::: zone pivot="teams-sdk-csharp"
 
-This guide is based on [`core/samples/A2ABot`](https://github.com/microsoft/teams.net/tree/main/core/samples/A2ABot): two SDK 2.1 bots run the same code with different config and hand users off through A2A.
+This guide is based on [`A2ABot`](https://github.com/microsoft/teams.net/tree/main/samples/A2ABot): two SDK 2.1 bots run the same code with different config and hand users off through A2A.
 
 ::: zone-end
 
