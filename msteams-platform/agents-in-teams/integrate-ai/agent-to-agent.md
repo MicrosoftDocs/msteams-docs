@@ -1,12 +1,15 @@
 ---
-title: Bot-to-Bot Communication with A2A
-description: Hand a user off between two Teams bots over the Agent2Agent protocol a the receiving bot opens a proactive 1:1 and greets the user with full context so the conversation continues seamlessly.
+title: Bot-to-Bot Communication with Agent2Agent (A2A)
+description: "Hand a user off between two Teams bots over the Agent2Agent protocol a the receiving bot opens a proactive 1:1 and greets the user with full context so the conversation continues seamlessly."
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
-ms.date: 07/27/2026
+ms.date: 09/27/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ---
 
-# Bot-to-Bot Communication with A2A
+# Bot-to-Bot Communication with Agent2Agent (A2A)
 
 Agents are typically designed to interact either with people (chatbots) or with systems (tools, APIs, MCP servers). [Agent2Agent](https://a2a-protocol.org/) (A2A) introduces a third interaction model: agents communicating directly with other agents as peers a each with its own model, capabilities, and human audience.
 

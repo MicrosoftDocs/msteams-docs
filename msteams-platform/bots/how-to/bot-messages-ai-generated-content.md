@@ -2,8 +2,10 @@
 title: AI Content Labels
 description: Learn how to add AI labels, citations, and sensitivity labels to agent messages built using Teams SDK.
 ms.topic: article
-ms.localizationpriority: medium
-ms.date: 09/26/2026
+ms.date: 09/27/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 zone_pivot_groups: teams-sdk-languages
 ---
 

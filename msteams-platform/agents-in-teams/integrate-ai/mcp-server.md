@@ -3,7 +3,7 @@ title: Exposing Teams to AI Agents (MCP)
 description: Turn your Teams bot into an MCP server so external AI agents can reach real users a finding them by name, sending notifications, asking questions, and requesting approvals through chat.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
-ms.date: 07/27/2026
+ms.date: 09/27/2026
 ---
 
 # Exposing Teams to AI Agents (MCP)

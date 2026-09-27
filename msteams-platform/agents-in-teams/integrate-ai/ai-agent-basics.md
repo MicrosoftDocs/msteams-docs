@@ -1,15 +1,12 @@
 ---
-title: Basics of AI Agents in Teams
+title: AI Agent Sample Walkthrough
 description: Create an agent, add a local clarification tool and remote MCP tool servers, stream responses into Teams, and preserve conversation history across turns.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
 ms.date: 09/26/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
 ---
 
-# Basics of AI agents in Teams
+# AI agent sample walkthrough
 
 ::: zone pivot="teams-sdk-csharp"
 
