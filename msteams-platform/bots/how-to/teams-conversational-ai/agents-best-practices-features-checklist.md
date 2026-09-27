@@ -67,21 +67,15 @@ Suggested actions are key to enabling efficient and satisfying *human-in-the-loo
 
 ## AI content labels
 
-Teams' [indicator for AI-generated messages](../bot-messages-ai-generated-content.md#ai-label) should always be used when applicable. Correct usage of the AI indicator is a policy requirement for agents distributed through the Teams Store.
+Always use Teams' [AI content labels](../../../agents-in-teams/integrate-ai/ai-content-labels.md) as appropriate.
 
-:::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message.":::
-
-[Sensitivity labels](../bot-messages-ai-generated-content.md#sensitivity-label) indicate messages that might contain confidential information, or links to resources only accessible to certain individuals.
-
-:::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
-
-[Citations](../bot-messages-ai-generated-content.md#citations) provide a standard way to surface and link any data sources used to generate a message.
-
-:::image type="content" source="../../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
+- The **AI Generated** label should be attached to all AI-generated messages, and its use is a policy requirement for agents distributed through the Teams Store
+- Citations surface and link data sources used to generate a message
+- Sensitivity labels clearly indicate that messages contain confidential information
 
 ## User feedback controls
 
-Agents can attach standardized [feedback controls](../bot-messages-ai-generated-content.md#feedback-buttons) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
+Agents can attach standardized [feedback controls](../../../agents-in-teams/integrate-ai/user-feedback-controls.md) to their messages. Users can like or dislike messages and optionally provide detailed feedback.
 
 # [Desktop](#tab/desktop)
 

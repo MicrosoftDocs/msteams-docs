@@ -358,7 +358,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 4. The bot must include the following UX design components:
 
    1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables users to identify that the message was generated using AI. This label may appear as a persistent disclaimer, per-message or content disclaimer, or during the first-run experience. [*Must fix*]
-   2. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables users to provide positive or negative feedback on the agent's messages. [*Must fix*]
+   2. A [feedback button](/microsoftteams/platform/agents-in-teams/integrate-ai/user-feedback-controls) that enables users to provide positive or negative feedback on the agent's messages. [*Must fix*]
    3. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables users to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    4. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables users to understand the confidentiality of the bot message. [*Good-to-fix*]
    5. The agent must stream its responses to the user. [*Must fix*]

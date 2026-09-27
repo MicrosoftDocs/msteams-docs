@@ -203,7 +203,7 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 **Reactions as status indicators**: Reactions can go unnoticed by users, especially in active conversations. Updating (removing and adding) status reactions on a message is an effective way of recording outcomes for historical reference, but it's easy to miss when used for live status updates. Use messages, including [targeted messages](targeted-messages.md), to communicate live status and completion for longer running tasks.
 
-**Interpreting reaction events**: User reactions aren't a reliable or consistent indicator of intent, and shouldn't drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback buttons](../bots/how-to/bot-messages-ai-generated-content.md#feedback-buttons) to give users an unambiguous way to provide agent feedback.
+**Interpreting reaction events**: User reactions aren't a reliable or consistent indicator of intent, and shouldn't drive agent behavior. Use [suggested actions](../bots/how-to/conversations/prompt-suggestions.md#suggested-actions-1) or [cards](../task-modules-and-cards/what-are-cards.md) to present clearly-defined interactions. Implement [feedback controls](integrate-ai/user-feedback-controls.md) to give users an unambiguous way to provide agent feedback.
 
 ## See also
 
