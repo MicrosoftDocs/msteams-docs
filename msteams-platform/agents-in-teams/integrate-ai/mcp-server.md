@@ -1,22 +1,22 @@
 ---
-title: Exposing Teams to AI Agents (MCP)
-description: Turn your Teams bot into an MCP server so external AI agents can reach real users a finding them by name, sending notifications, asking questions, and requesting approvals through chat.
+title: Host an MCP Server from a Teams Agent
+description: Turn your Teams agent into an MCP server so external AI agents can reach real users a finding them by name, sending notifications, asking questions, and requesting approvals through chat.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
 ms.date: 09/27/2026
 ---
 
-# Exposing Teams to AI Agents (MCP)
+# Host an MCP server from a Teams agent
 
-This guide turns your Teams bot into an [MCP](https://modelcontextprotocol.io/introduction) server, enabling external AI agents to interact with users in Teams. Through this server, agents can find users by name, send messages into chats, ask questions, and trigger workflows such as notifications or approvals a turning Teams into a communication surface for agent-to-human interaction.
+This guide turns your Teams agent into an [MCP](https://modelcontextprotocol.io/introduction) server, enabling external AI agents to interact with users in Teams. Through this server, agents can find users by name, send messages into chats, ask questions, and trigger workflows such as notifications or approvals a turning Teams into a communication surface for agent-to-human interaction.
 
-The bot and the MCP server run in the same process, exposing two HTTP surfaces: `/api/messages` for Teams and `/mcp` for agents.
+The agent and the MCP server run in the same process, exposing two HTTP surfaces: `/api/messages` for Teams and `/mcp` for agents.
 
 :::image type="content" source="~/assets/mcp-server.gif" alt-text="Animated screenshot of an AI agent calling the Teams MCP server: it resolves a user by name, sends a notification, then asks a question that lands in the user's Teams chat." lightbox="~/assets/mcp-server.gif" :::
 
 ::: zone pivot="teams-sdk-python"
 
-The setup uses the official [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) (`FastMCP`) mounted onto the same FastAPI server that hosts the Teams bot.
+The setup uses the official [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) (`FastMCP`) mounted onto the same FastAPI server that hosts the Teams agent.
 
 Full source: [examples/mcp-server](https://github.com/microsoft/teams.py/tree/main/examples/mcp-server).
 
@@ -24,7 +24,7 @@ Full source: [examples/mcp-server](https://github.com/microsoft/teams.py/tree/ma
 
 ::: zone pivot="teams-sdk-typescript"
 
-The setup uses the official [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) (`McpServer`) over a streamable-HTTP transport, mounted onto the same Express app that hosts the Teams bot.
+The setup uses the official [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) (`McpServer`) over a streamable-HTTP transport, mounted onto the same Express app that hosts the Teams agent.
 
 Full source: [examples/mcp-server](https://github.com/microsoft/teams.ts/tree/main/examples/mcp-server).
 
@@ -102,7 +102,7 @@ public sealed class McpTools(TeamsBotApplication app, State state, IConfiguratio
 
 ## Finding users by name
 
-The agent talks in terms of names ("message Mehak about the deploy"), but every other tool needs an **AAD object id**. `find_user` bridges that gap by searching the tenant directory through Microsoft Graph, using the bot's own app identity.
+The agent talks in terms of names ("message Mehak about the deploy"), but every other tool needs an **AAD object id**. `find_user` bridges that gap by searching the tenant directory through Microsoft Graph, using the agent's own app identity.
 
 ::: zone pivot="teams-sdk-python"
 
@@ -172,7 +172,7 @@ structuredTool(
 );
 ```
 
-`app.graph` calls Microsoft Graph as the bot's app identity a no extra credentials beyond `CLIENT_ID` / `CLIENT_SECRET` / `TENANT_ID`.
+`app.graph` calls Microsoft Graph as the agent's app identity a no extra credentials beyond `CLIENT_ID` / `CLIENT_SECRET` / `TENANT_ID`.
 
 ::: zone-end
 
@@ -191,11 +191,11 @@ public async Task<FindUserResult> FindUser(string query, CancellationToken cance
 
 ::: zone-end
 
-This requires the bot's app registration to have the **`User.ReadBasic.All`** (Microsoft Graph, Application) permission with admin consent granted.
+This requires the agent's app registration to have the **`User.ReadBasic.All`** (Microsoft Graph, Application) permission with admin consent granted.
 
 ## Sending proactive notifications
 
-A one-way notification needs no response. The tool resolves the user's 1:1 conversation a opening one proactively if the user hasn't messaged the bot a and sends the message.
+A one-way notification needs no response. The tool resolves the user's 1:1 conversation a opening one proactively if the user hasn't messaged the agent a and sends the message.
 
 ::: zone pivot="teams-sdk-python"
 
@@ -209,7 +209,7 @@ async def notify(user_id: str, message: str) -> NotifyResult:
     return NotifyResult(notified=True, user_id=user_id)
 ```
 
-`_get_or_create_conversation` returns the cached 1:1 conversation id for the user, or opens one proactively via `app.api.conversations.create(...)` if the user hasn't messaged the bot yet.
+`_get_or_create_conversation` returns the cached 1:1 conversation id for the user, or opens one proactively via `app.api.conversations.create(...)` if the user hasn't messaged the agent yet.
 
 ::: zone-end
 
@@ -235,7 +235,7 @@ structuredTool(
 );
 ```
 
-`getOrCreateConversation` returns the cached 1:1 conversation id for the user, or opens one proactively via `app.api.conversations.create({ members, tenantId })` if the user hasn't messaged the bot yet.
+`getOrCreateConversation` returns the cached 1:1 conversation id for the user, or opens one proactively via `app.api.conversations.create({ members, tenantId })` if the user hasn't messaged the agent yet.
 
 ::: zone-end
 
@@ -251,7 +251,7 @@ await app.ConversationClient.SendActivityAsync(conversationId, notifyActivity, s
 
 ::: zone-end
 
-See [Proactive messages](../../bots/how-to/conversations/send-proactive-messages.md) for the full story on how Teams handles bot-initiated conversations.
+See [Proactive messages](../../bots/how-to/conversations/send-proactive-messages.md) for the full story on how Teams handles agent-initiated conversations.
 
 ## Asking the user a question
 
@@ -654,7 +654,7 @@ if (state.ApprovalWaiters.TryRemove(approvalId, out TaskCompletionSource<string>
 
 ## Wiring the MCP server into your Teams app
 
-The Teams bot handles `/api/messages`, while the MCP server is mounted on the same HTTP server at `/mcp`.
+The Teams agent handles `/api/messages`, while the MCP server is mounted on the same HTTP server at `/mcp`.
 
 ::: zone pivot="teams-sdk-python"
 

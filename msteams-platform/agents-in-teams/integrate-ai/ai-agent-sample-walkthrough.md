@@ -413,7 +413,7 @@ this.OnAdaptiveCardAction(async (context, cancellationToken) =>
 
 The user's selection arrives as a fresh turn through the card-action route — the same code path as a normal message — so the agent picks up with full context.
 
-:::image type="content" source="../../assets/clarification-2.gif" alt-text="Animated screenshot of the clarification flow: the user asks an ambiguous question, the bot replies with a choice card, the user picks an option, and the bot streams a grounded answer with an inline citation.":::
+:::image type="content" source="../../assets/clarification-2.gif" alt-text="Animated screenshot of the clarification flow: the user asks an ambiguous question, the agent replies with a choice card, the user picks an option, and the agent streams a grounded answer with an inline citation.":::
 
 ## Adding remote MCP tools
 

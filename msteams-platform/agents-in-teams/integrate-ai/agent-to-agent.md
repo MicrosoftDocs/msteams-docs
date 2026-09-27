@@ -1,20 +1,20 @@
 ---
-title: Bot-to-Bot Communication with Agent2Agent (A2A)
+title: Communicate With Other Agents Using Agent2Agent (A2A)
 description: "Hand a user off between two Teams bots over the Agent2Agent protocol a the receiving bot opens a proactive 1:1 and greets the user with full context so the conversation continues seamlessly."
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
 ms.date: 09/27/2026
 ---
 
-# Bot-to-Bot Communication with Agent2Agent (A2A)
+# Communicate with other agents using Agent2Agent (A2A)
 
 Agents are typically designed to interact either with people (chatbots) or with systems (tools, APIs, MCP servers). [Agent2Agent](https://a2a-protocol.org/) (A2A) introduces a third interaction model: agents communicating directly with other agents as peers a each with its own model, capabilities, and human audience.
 
-This guide walks through a **handoff** between two Teams bots, **Alice** and **Bob**, each backed by its own LLM agent. A user DMs one bot; its agent reads the peer's capability description and decides whether to answer directly or hand the user off. On handoff, the receiving bot **proactively opens a 1:1 chat** with the user and greets them with the context that came across a so the conversation continues seamlessly in the new chat.
+This guide walks through a **handoff** between two Teams agents, **Alice** and **Bob**, each backed by its own LLM agent. A user DMs one agent; its agent reads the peer's capability description and decides whether to answer directly or hand the user off. On handoff, the receiving agent **proactively opens a 1:1 chat** with the user and greets them with the context that came across a so the conversation continues seamlessly in the new chat.
 
 ::: zone pivot="teams-sdk-python"
 
-Both bots run the **same code**, differentiated entirely by environment variables (name, description, self/peer URLs). They use the [`a2a-sdk`](https://github.com/a2aproject/a2a-python) for the protocol and `agent_framework` for the LLM agent.
+Both agents run the **same code**, differentiated entirely by environment variables (name, description, self/peer URLs). They use the [`a2a-sdk`](https://github.com/a2aproject/a2a-python) for the protocol and `agent_framework` for the LLM agent.
 
 Full source: [examples/a2a](https://github.com/microsoft/teams.py/tree/main/examples/a2a).
 
@@ -22,7 +22,7 @@ Full source: [examples/a2a](https://github.com/microsoft/teams.py/tree/main/exam
 
 ::: zone pivot="teams-sdk-typescript"
 
-Both bots run the **same code**, differentiated entirely by environment variables (name, description, self/peer URLs). They use [`@a2a-js/sdk`](https://www.npmjs.com/package/@a2a-js/sdk) for the protocol and the OpenAI SDK for the LLM agent.
+Both agents run the **same code**, differentiated entirely by environment variables (name, description, self/peer URLs). They use [`@a2a-js/sdk`](https://www.npmjs.com/package/@a2a-js/sdk) for the protocol and the OpenAI SDK for the LLM agent.
 
 Full source: [examples/a2a](https://github.com/microsoft/teams.ts/tree/main/examples/a2a).
 
@@ -30,7 +30,7 @@ Full source: [examples/a2a](https://github.com/microsoft/teams.ts/tree/main/exam
 
 ::: zone pivot="teams-sdk-csharp"
 
-This guide is based on [`A2ABot`](https://github.com/microsoft/teams.net/tree/main/samples/A2ABot): two SDK 2.1 bots run the same code with different config and hand users off through A2A.
+This guide is based on [`A2ABot`](https://github.com/microsoft/teams.net/tree/main/samples/A2ABot): two SDK 2.1 agents run the same code with different config and hand users off through A2A.
 
 ::: zone-end
 
@@ -96,7 +96,7 @@ function buildAgentCard(config: Config): AgentCard {
 
 ::: zone pivot="teams-sdk-csharp"
 
-The sample publishes an A2A `AgentCard` per bot:
+The sample publishes an A2A `AgentCard` per agent:
 
 ```csharp
 public static AgentCard Build(Config config) => new()
@@ -126,11 +126,11 @@ public static AgentCard Build(Config config) => new()
 
 ::: zone-end
 
-The `description` is the most important knob in this sample a it's the natural-language summary another bot's LLM uses to decide whether *this* bot is the right peer for a given user. Tweak it to match the persona and expertise you want each bot to advertise.
+The `description` is the most important knob in this sample a it's the natural-language summary another agent's LLM uses to decide whether *this* agent is the right peer for a given user. Tweak it to match the persona and expertise you want each agent to advertise.
 
 ## The handoff message contract
 
-A handoff carries everything the receiving bot needs to reach the user proactively: their **`aadObjectId`** (the tenant-wide identity both bots share a the Teams MRI one bot sees isn't valid against the other), the **`tenantId`**, the **`serviceUrl`**, and a **`summary`** of the conversation so the peer can pick up cold.
+A handoff carries everything the receiving agent needs to reach the user proactively: their **`aadObjectId`** (the tenant-wide identity both agents share a the Teams MRI one agent sees isn't valid against the other), the **`tenantId`**, the **`serviceUrl`**, and a **`summary`** of the conversation so the peer can pick up cold.
 
 ::: zone pivot="teams-sdk-python"
 
@@ -151,7 +151,7 @@ class HandoffMessage(BaseModel):
     summary: str
 ```
 
-The `alias_generator` camel-cases the field names on the wire (`from_` a `from`, `aad_object_id` a `aadObjectId`) so both bots a regardless of language a agree on the payload shape.
+The `alias_generator` camel-cases the field names on the wire (`from_` a `from`, `aad_object_id` a `aadObjectId`) so both agents a regardless of language a agree on the payload shape.
 
 ::: zone-end
 
@@ -182,7 +182,7 @@ export function isHandoffMessage(value: unknown): value is HandoffMessage {
 }
 ```
 
-A type guard validates the inbound `DataPart` before the receiving bot acts on it.
+A type guard validates the inbound `DataPart` before the receiving agent acts on it.
 
 ::: zone-end
 
@@ -205,7 +205,7 @@ internal record HandoffMessage(
 
 ## LLM-driven handoff
 
-Routing is not a hard-coded rule a the LLM decides. Each bot exposes a single `handoff_to_peer` tool to its agent, and the agent's instructions include the live `AgentCard.description` of the peer. When a question fits the peer's expertise better than its own, the model calls the tool.
+Routing is not a hard-coded rule a the LLM decides. Each agent exposes a single `handoff_to_peer` tool to its agent, and the agent's instructions include the live `AgentCard.description` of the peer. When a question fits the peer's expertise better than its own, the model calls the tool.
 
 ::: zone pivot="teams-sdk-python"
 
@@ -511,7 +511,7 @@ Because the greeting turn is left in the per-conversation history, when the user
 
 ## Wiring A2A into your Teams app
 
-The Teams bot and A2A server run in the same process and share one HTTP surface: `/api/messages` for Teams, `/a2a` for inbound handoffs, and `/.well-known/agent-card.json` for the AgentCard.
+The Teams agent and A2A server run in the same process and share one HTTP surface: `/api/messages` for Teams, `/a2a` for inbound handoffs, and `/.well-known/agent-card.json` for the AgentCard.
 
 ::: zone pivot="teams-sdk-python"
 
@@ -580,11 +580,11 @@ webApp.Run();
 
 ::: zone-end
 
-Each bot needs its own Teams app registration (so DMs route to the right bot) and its own port. The sample runs Alice on `3978` and Bob on `3979`; their peer URLs point at each other.
+Each agent needs its own Teams app registration (so DMs route to the right agent) and its own port. The sample runs Alice on `3978` and Bob on `3979`; their peer URLs point at each other.
 
 ## Putting it all together
 
-With both bots running and installed for the user, DM Alice with a question outside her specialty and watch the round-trip: Alice's LLM calls `handoff_to_peer`, Bob receives it over A2A, opens a new 1:1 with the user, and greets them with an answer already in hand. The bots are symmetric; the same flow runs the other way from Bob to Alice.
+With both agents running and installed for the user, DM Alice with a question outside her specialty and watch the round-trip: Alice's LLM calls `handoff_to_peer`, Bob receives it over A2A, opens a new 1:1 with the user, and greets them with an answer already in hand. The agents are symmetric; the same flow runs the other way from Bob to Alice.
 
 :::image type="content" source="../../assets/agent-to-agent.gif" alt-text="Animated screenshot of the end-to-end A2A handoff: a user DMs Alice, Alice hands off to Bob, and Bob opens a new chat greeting the user with context.":::
 />
