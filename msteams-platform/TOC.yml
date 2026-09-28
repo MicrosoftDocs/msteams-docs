@@ -70,7 +70,7 @@
       href: agents-in-teams/agent-slash-commands.md
       displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
     - name: Send and receive files
-      href: bots/how-to/bots-filesv4.md
+      href: agents-in-teams/files/receive-files.md
       displayName: receive files using bot
   - name: How-tos
     items:
