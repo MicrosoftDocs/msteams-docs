@@ -15,7 +15,7 @@ feed reader as they're published.
 
 ## Released: Teams SDK updates (TypeScript, .NET and Python)
 
-*September 24th, 2026*
+*September 28th, 2026*
 
 The release of Teams SDK 2.1 for TypeScript and Python brings together new capabilities for building more connected, context-aware, observable, and extensible agents for Teams. Teams SDK for .NET gets a version bump to 2.1.1 with a few of these new capabilities as well.
 

@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-09-24T00:00:00Z</updated>
+	<updated>2026-09-28T00:00:00Z</updated>
+	<entry>
+		<updated>2026-09-28T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-updates-typescript-net-and-python</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-updates-typescript-net-and-python"/>
+		<title type="html"><![CDATA[Released: Teams SDK updates (TypeScript, .NET and Python)]]></title>
+		<summary type="html"><![CDATA[The release of Teams SDK 2.1 for TypeScript and Python brings together new capabilities for building more connected, context-aware, observable, and extensible agents for Teams. Teams SDK for .NET gets a version bump to 2.1.1 with a few of these new capabilities as well.]]></summary>
+		<content type="html"><![CDATA[<p>The release of Teams SDK 2.1 for TypeScript and Python brings together new capabilities for building more connected, context-aware, observable, and extensible agents for Teams. Teams SDK for .NET gets a version bump to 2.1.1 with a few of these new capabilities as well.</p><h3>TypeScript and Python: version 2.1.0</h3><ul><li><strong>Build Agentic Users</strong>: Build with agentic identity, lifecycle events, token acquisition, and reactive and proactive messaging helpers.</li><li><strong>Compose with Microsoft 365 Agents SDK</strong>: Use the Microsoft 365 Agents SDK to extend existing Teams SDK agents to additional channels without rewriting their Teams-specific capabilities.</li><li><strong>Observability for developers</strong>: Use OpenTelemetry spans and metrics to understand activity processing, handler execution, authentication, and outbound Teams API calls.</li><li><strong>Authenticate multiple services</strong>: Connect one agent to multiple services, such as Microsoft Graph and GitHub, using independent OAuth flows. The SDK handles connection-aware callbacks and duplicate token exchanges.</li><li><strong>Built-in state management</strong>: Create personalized, multistep experiences using conversation and user state that automatically loads and saves with each activity.</li><li><strong>Seamless file processing</strong>: Receive and securely process file attachments, including files shared by Agentic Users.</li></ul><p>For more information, see the release notes (<a href="https://github.com/microsoft/teams.ts/releases/tag/v2.1.0">TypeScript</a>, <a href="https://github.com/microsoft/teams.py/releases/tag/v2.1.0">Python</a>) and reference documentation (<a href="https://learn.microsoft.com/javascript/api/teams-sdk-typescript">TypeScript</a>, <a href="https://learn.microsoft.com/python/api/msteams-sdk-python">Python</a>).</p><h3>.NET: version 2.1.1</h3><p>Version 2.1.1 of Teams SDK for .NET (<a href="https://github.com/microsoft/teams.net/releases/tag/v2.1.1">release notes</a>; <a href="https://learn.microsoft.com/dotnet/teams-sdk-dotnet">reference documentation</a>) brings the same new Microsoft 365 Agents SDK composability and file-receive API additions, as well as removal of the <code>Experimental</code> attribute on APIs related to targeted messages.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-09-24T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-sessions-for-teams-agents</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: Emoji chat reactions for agents]]></title>
 		<summary type="html"><![CDATA[🌟 Emoji chat reactions 🌟 for agents are now generally available! 🚀 Agents can add and remove reactions to any message in a chat to communicate acknowledgement ✅, status ⏳ and other information in a lightweight way.]]></summary>
 		<content type="html"><![CDATA[<p>🌟 Emoji chat reactions 🌟 for agents are now generally available! 🚀 Agents can add and remove reactions to any message in a chat to communicate acknowledgement ✅, status ⏳ and other information in a lightweight way.</p><p>See the <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/agent-reactions">reactions documentation</a> to learn how to add reaction behaviors and event handling to your agent.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-07-07T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-apps-in-private-channels</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-apps-in-private-channels"/>
-		<title type="html"><![CDATA[Released: Apps in private channels]]></title>
-		<summary type="html"><![CDATA[Support for agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/build-apps-for-shared-private-channels">Shared and private channels</a>.]]></summary>
-		<content type="html"><![CDATA[<p>Support for agent and app participation in private channels is now generally available. Operation in private channels requires some consideration in the agent's implementation and app manifest configuration. For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/build-apps-for-shared-private-channels">Shared and private channels</a>.</p>]]></content>
 	</entry>
 </feed>
