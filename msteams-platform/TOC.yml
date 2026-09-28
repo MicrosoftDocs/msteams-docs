@@ -33,9 +33,19 @@
     - name: Prompt starters
       href: bots/how-to/conversations/prompt-starters.md
       displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
-    - name: Enhance AI-generated bot messages
-      href: bots/how-to/bot-messages-ai-generated-content.md
-      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
+    - name: AI content labels
+      href: agents-in-teams/integrate-ai/ai-content-labels.md
+      displayName: AI label, citations, sensitivity label, Powered by AI UX Kit
+    - name: User feedback controls
+      href: agents-in-teams/integrate-ai/user-feedback-controls.md
+      displayName: feedback buttons, like, dislike, default feedback form, custom feedback form, Teams SDK
+    - name: Host an MCP server
+      href: agents-in-teams/integrate-ai/mcp-server.md
+    - name: Agent2Agent protocol
+      href: agents-in-teams/integrate-ai/agent-to-agent.md
+    - name: Sample AI agent walkthrough
+      href: agents-in-teams/integrate-ai/ai-agent-sample-walkthrough.md
+      displayName: tool, clarification, MCP, memory, citations, OpenAI, MAF, Microsoft Agent Framework
   - name: Rich conversational features
     items:
     - name: Emoji reactions
@@ -66,9 +76,9 @@
     items:
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
-      displayName: block kit, 
+      displayName: block kit,
     - name: Receive all chat messages
-      href: bots/how-to/conversations/channel-messages-for-bots-and-agents.md
+      href: agents-in-teams/enable-receive-all-chat-messages.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId, send message, bot framework, notification,
@@ -540,6 +550,18 @@
     - name: Get context for your tab
       href: tabs/how-to/access-teams-context.md
       displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
+    - name: Build with Teams SDK
+      items:
+      - name: Getting started
+        href: tabs/teams-sdk/getting-started.md
+      - name: Using the App class
+        href: tabs/teams-sdk/using-the-app.md
+      - name: App options
+        href: tabs/teams-sdk/tab-app-options.md
+      - name: Tab app Graph client
+        href: tabs/teams-sdk/tab-graph.md
+      - name: Tab app functions
+        href: tabs/teams-sdk/tab-app-functions.md
     - name: Tab features
       items:
       - name: Open content in multi-window

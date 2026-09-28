@@ -96,3 +96,11 @@ groups:
     title: TypeScript
   - id: teams-sdk-python
     title: Python
+- id: teams-sdk-languages-typescript-csharp
+  title: Teams SDK language
+  prompt: Select your Teams SDK language.
+  pivots:
+  - id: csharp
+    title: C#
+  - id: typescript
+    title: TypeScript
