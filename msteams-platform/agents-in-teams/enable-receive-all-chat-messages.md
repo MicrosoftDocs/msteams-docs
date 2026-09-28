@@ -1,17 +1,19 @@
 ---
-title: Get All Channel and Chat Messages
+title: Enable an Agent to Receive All Chat Messages
 description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.date: 09/28/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Enable agents to receive all chat messages
+# Enable an agent to receive all chat messages
 
-By default, the only chat messages that agents can receive or access via Graph APIs are the ones where they're @mentioned. To receive and access all chat messages in a channel or chat, an agent must request the appropriate [resource-specific consent permissions](../../../graph-api/rsc/resource-specific-consent.md) via its manifest.
+By default, the only chat messages that agents receive or can access via Graph APIs are the ones where they're @mentioned. This behavior predates LLM-driven agents: historically, scripted or flow-based bots had no need to receive messages that didn't directly invoke them. Additionally, requiring the explicit consent of conversation owners for agents to access all of their conversation's messages aligns with Teams' stance on data privacy.
+
+Modern agents are most effective when they can observe and process all of the messages in conversations where they participate. To receive and access all chat messages in a channel or chat, an agent must request the appropriate [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) via its manifest.
 
 > [!NOTE]
-> This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
+> This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
 
 ## Update requested RSC permissions
 
@@ -59,16 +61,10 @@ Alternatively, use Teams Developer Portal to configure RSC permissions instead o
 1. Under **Team permissions**, add `ChannelMessage.Read.Group` to receive channel messages.
 1. Under **Chat/Meeting permissions**, add `ChatMessage.Read.Chat` to receive group chat messages.
 1. Select **Save**.
-1. Download the updated app package.
 
 ## Filter @mention messages
 
-In some scenarios, once an agent has access to all messages in a conversation, it can be helpful to distinguish between messages where the agent is @mentioned and where it isn't:
-
-* **Ensure contextual relevance**: Messages that are directed to the agent are likely to have higher relevance for the users of the agent. It helps the app to respond accurately and to engage in meaningful responses.
-* **Better agent performance**: Filtering messages can reduce the need for unnecessary processing for the agent. Processing contextually irrelevant messages can be avoided to improve the agent performance. It can also keep the agent or the user from responding to irrelevant messages or triggering unnecessary actions.
-* **Enhance user experience**: Users are more likely to engage with the agent if it responds only when it's addressed. The developer can create a seamless and intuitive user experience.
-* **Efficient message handling**: Filtering relevant message enables the agent to handle larger volume of conversations and make it more useful and relatable.
+In some scenarios, once an agent has access to all messages in a conversation, it can be helpful to distinguish between messages where the agent is @mentioned and where it isn't. Messages in which the agent is @mentioned typically include direct requests from users and are of the highest relevance, and you might want to prioritize their processing when the agent is under load. When retrieving and using historical messages to assemble context, @mention messages might be considered higher-priority than other messages.
 
 The following code illustrates how to create a filter to determine whether the agent is @mentioned in a message. Here, it's shown in use as a filter on received messages, but it can be applied to message activities in any scenario.
 
@@ -79,12 +75,12 @@ The following code illustrates how to create a filter to determine whether the a
 // This code snippet allows the agent to ignore all messages that do not @mention the agent.
 teams.OnMessage(async (context, cancellationToken) =>
 {
-// Ignore the message if agent was not mentioned.
-// Remove this if block to process all messages received by the agent.
-if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
-{
-return;
-}
+    // Ignore the message if agent was not mentioned.
+    // Remove this if block to process all messages received by the agent.
+    if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
+    {
+        return;
+    }
 
 // Sends an activity to the sender of the incoming activity.
 await context.SendAsync(
@@ -150,14 +146,14 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ## Update the app description
 
-To pass the Microsoft Teams Store approval, the app description must describe how an agent uses the data it has access to, including chat messages. If your agent receives all messages in conversations in which it participates, consider including a statement about how it uses the information from those chat messages.
+To pass the Microsoft Teams Store approval, the app description must describe how an agent uses the data it has access to, including chat messages. If your agent receives all messages in conversations in which it participates, consider including a statement about how it uses and protects that data.
 
-For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
+For more information, see [app descriptions](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
 ## See also
 
-* [Send and receive messages](../../build-conversational-capability.md)
-* [Resource-specific consent for your Teams app](../../../graph-api/rsc/resource-specific-consent.md)
-* [Test resource-specific consent permissions in Teams](../../../graph-api/rsc/test-resource-specific-consent.md)
-* [Upload your app in Teams](../../../concepts/deploy-and-publish/apps-upload.md)
+* [Send and receive messages](../bots/build-conversational-capability.md)
+* [Resource-specific consent for your Teams app](../graph-api/rsc/resource-specific-consent.md)
+* [Test resource-specific consent permissions in Teams](../graph-api/rsc/test-resource-specific-consent.md)
+* [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
 * [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)
