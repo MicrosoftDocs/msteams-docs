@@ -79,6 +79,8 @@ You can enable the developer to filter agent messages and process only the messa
 
 Here's an example of using RSC permissions to filter @mention messages:
 
+::: zone pivot="teams-sdk-csharp"
+
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
 // This code snippet allows the agent to ignore all messages that do not @mention the agent.
@@ -97,6 +99,61 @@ await context.SendAsync(
     cancellationToken);
 });
 ```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
+// This code snippet allows the agent to ignore all messages that do not @mention the agent.
+app.on('message', async ({ activity, send }) => {
+  // Ignore the message if agent was not mentioned.
+  // Remove this if block to process all messages received by the agent.
+  const mentioned = activity.entities?.some(
+    (entity) =>
+      entity.type === 'mention' &&
+      entity.mentioned?.id === activity.recipient.id
+  );
+
+  if (!mentioned) {
+    return;
+  }
+
+  // Sends an activity to the sender of the incoming activity.
+  await send(
+    'Using RSC the agent can receive messages across channels or chats in team without being @mentioned.'
+  );
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+# When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when agent is not @mentioned.
+# This code snippet allows the agent to ignore all messages that do not @mention the agent.
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Ignore the message if agent was not mentioned.
+    # Remove this if block to process all messages received by the agent.
+    mentioned = any(
+        entity.type == "mention"
+        and entity.mentioned.id == ctx.activity.recipient.id
+        for entity in (ctx.activity.entities or [])
+    )
+
+    if not mentioned:
+        return
+
+    # Sends an activity to the sender of the incoming activity.
+    await ctx.send(
+        "Using RSC the agent can receive messages across channels or chats in team without being @mentioned."
+    )
+```
+
+::: zone-end
 
 Developers can create more efficient and user-friendly conversational interfaces in the agents.
 
@@ -185,12 +242,6 @@ async def on_members_added(ctx: ActivityContext[ConversationUpdateActivity]) -> 
 ```
 
 ::: zone-end
-
-## Code sample
-
-| Sample name | Description | .NET | Node.js | Python | App manifest |
-| --- | --- | --- | --- | --- |
-|Channel messages with RSC permissions| This sample app shows how an agent can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-receive-channel-messages-withRSC/csharp/demo-manifest/Bot-RSC.zip) |
 
 ## See also
 
