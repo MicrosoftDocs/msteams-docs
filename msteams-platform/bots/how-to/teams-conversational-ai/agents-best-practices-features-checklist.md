@@ -1,12 +1,8 @@
 ---
 title: Best Practices and Features Checklist for Teams Agents
 description: Agent best practices for Microsoft Teams cover the features every agent should implement, from conversational context to citations. Review the checklist and build a great experience.
-ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 08/17/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
+ms.date: 09/28/2026
 ---
 
 # Best practices and features checklist for Teams agents
@@ -14,6 +10,10 @@ ms.reviewer: nickwalk
 This article provides a list of best practices and features that developers should consider when implementing Teams agents.
 
 These practices and features represent standard user expectations for agents in Teams and are broadly applicable. Agents that omit any of them should have a strong reason for doing so. Review each item to ensure your agent provides a great experience in Teams.
+
+## Enable access to all messages in conversations
+
+Modern agents are most effective when they can [observe and process the full conversation](../../../agents-in-teams/enable-receive-all-chat-messages.md), rather than only messages that @mention them. Request the appropriate resource-specific consent (RSC) permissions to enable this access while ensuring conversation owners explicitly consent.
 
 ## Message streaming and thinking indicators
 
@@ -43,7 +43,7 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 ## Prompt starters
 
-[Prompt starters](../conversations/prompt-starters.md) are prewritten prompts that help users understand an agent's capabilities and quickly begin interacting with it. Prompt starters are conveniently accessible and discoverable in all chat scenarios. In one-on-one chats, they are displayed prominently before the conversation starts for agents that do not send a welcome message.
+[Prompt starters](../conversations/prompt-starters.md) are prewritten prompts that help users understand an agent's capabilities and quickly begin interacting with it. Users can conveniently access and discover prompt starters in all chat scenarios. In one-on-one chats, the app displays prompt starters prominently before the conversation starts for agents that don't send a welcome message.
 
 :::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters.":::
 
@@ -55,7 +55,7 @@ Agents distributed through the Teams Store and enabled for personal scope (one-o
 
 ## Agent slash commands
 
-Agents that provide command-style functionality can make it discoverable and easily usable with [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). An agent's commands are discoverable and invokable through Teams' slash command and @mention autocomplete menus in chat.
+Agents that provide command-style functionality can make it discoverable and easily usable with [agent slash commands](../../../agents-in-teams/agent-slash-commands.md). Users can discover and invoke an agent's commands through Teams' slash command and @mention autocomplete menus in chat.
 
 ## Suggested actions
 
@@ -63,7 +63,7 @@ Agents that provide command-style functionality can make it discoverable and eas
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
-Suggested actions are key to enabling efficient and satisfying *human-in-the-loop* workflows, where an agent requests user approval or confirmation before taking action, but are useful in any scenario that benefits from quick user interaction. They can be configured to send a command-style chat response to the agent, silently invoke an agent behavior without a chat message, or insert a pre-constructed message into the user's compose box.
+Suggested actions are key to enabling efficient and satisfying *human-in-the-loop* workflows, where an agent requests user approval or confirmation before taking action, but they're useful in any scenario that benefits from quick user interaction. They can be configured to send a command-style chat response to the agent, silently invoke an agent behavior without a chat message, or insert a pre-constructed message into the user's compose box.
 
 ## AI content labels
 

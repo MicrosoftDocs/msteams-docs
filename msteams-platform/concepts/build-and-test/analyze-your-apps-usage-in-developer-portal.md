@@ -16,7 +16,10 @@ Whether you're tracking active users, retention rates, or usage patterns across 
 The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
 
 > [!NOTE]
-> Analytics in Developer Portal is only available for apps with custom-developed capabilities (bots, message extensions, tabs). Apps that are purely declarative agents or Copilot Studio agents won't have analytics available in Developer Portal.
+> Analytics in Developer Portal is only available for apps with custom-developed capabilities (bots, message extensions, tabs). Declarative agents are a separate capability and are used through Microsoft 365 Copilot. If your app includes a declarative agent together with other app capabilities, the available analytics depend on the capabilities and telemetry supported by Developer Portal.
+
+> [!IMPORTANT]
+> A declarative agent and a bot are separate app capabilities and have different interaction experiences. A bot can be tested through its bot conversation in Teams, while a declarative agent is used through the Microsoft 365 Copilot experience. Adding both capabilities to the same app package doesn't make the declarative agent available through the bot conversation.
 
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
@@ -101,8 +104,8 @@ The **Usage by retention state** chart allows you to track four key retention or
 :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows app and agent usage by retention state of your published app in Developer Portal.":::
 
 | Metric | Definition |
-| :-----------------------| :------------------------------------------------------------------------------------------------------|
-| New users| Active users who used your app and agent for the first time in the current time period. |
+| :----------------------- | :------------------------------------------------------------------------------------------------------ |
+| New users | Active users who used your app and agent for the first time in the current time period. |
 | Returning users | Active users who used your app and agent during the current period and in the immediately preceding period. |
 | Resurrected users | Active users who started using your app and agent again in the current period, after a previous period of inactivity. |
 | Lapsed users | Active users who stopped using your app and agent in the current period, after a previous period of activity. |
@@ -151,6 +154,7 @@ The first two scorecards display metrics such as the host with the most active u
 #### App and agent usage by host product
 
 The **App usage by host product** chart shows your app's and agent's active usage across various host products, including **Microsoft 365 app**, **Microsoft 365 Copilot**, **Outlook**, and **Teams**.
+For apps that contain multiple capabilities, the host product data reflects the usage reported for the supported app and agent capabilities. For example, a bot can be used in Teams while a declarative agent is used through Microsoft 365 Copilot.
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows app and agent usage in different host product of your published app in Developer Portal.":::
 
@@ -184,7 +188,7 @@ The **Capability** tab shows the usage of individual app and agent capabilities 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
    > [!NOTE]
-   > **Microsoft 365 Copilot Agent** includes the usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal.
+   > **Microsoft 365 Copilot Agent** includes the usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal. Declarative agents are used through Microsoft 365 Copilot and are separate from bot capabilities. If an app contains both a declarative agent and a bot, review the corresponding capabilities separately in Developer Portal.
 
 # [Custom apps (Deprecating)](#tab/custom-apps-deprecating)
 

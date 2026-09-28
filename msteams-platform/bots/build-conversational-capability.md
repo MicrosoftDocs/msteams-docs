@@ -3,9 +3,9 @@ title: Conversations with an Agent
 description: Learn about sending and receiving messages using an agent app
 ms.topic: article
 ms.localizationpriority: medium
-ms.author: vikasalmal
-ms.owner: angovil
-ms.date: 08/25/2026
+ms.author: nickwalk
+ms.reviewer: nickwalk
+ms.date: 09/28/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -36,7 +36,7 @@ To make agent messages pop, the user can add pictures as attachments:
   - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
   - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+For more information on attachments, see [send messages and attachments](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview).
 
 > [!NOTE]
 >In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links cannot be rendered. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
@@ -91,11 +91,11 @@ Sending and receiving messages is the core functionality of an agent.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
-Basic conversations are managed through the Teams SDK Framework connector, which is a single REST API. This API enables your agent talk to Teams and other channels. The Bot Builder SDK offers the following features:
+Basic conversations are managed through the Teams SDK, which handles the activity protocol between your agent and Teams. The Teams SDK offers the following features:
 
-- Easy access to the Teams SDK Framework connector.
+- Typed activity handlers for incoming messages and events.
 - Tools to manage conversation flow and state.
-- Simple ways to add cognitive services, like natural language processing (NLP).
+- A Teams API client to send, update, and delete activities.
 
 Your agent gets messages from Teams using the `Text` property and can send back single or multiple responses to users.
 
@@ -112,15 +112,15 @@ The following table lists the activity that your agent can receive and take acti
 
 ### Receive a message activity
 
-To receive a text message, use the `Text` property of an `Activity` object. In the agent's activity handler, use the turn context object's `Activity` to read a single message request.
+To receive a text message, use the `Text` property of an `Activity` object. In the agent's activity handler, use the activity context object's `Activity` property to read a single message request.
 
 The following code shows an example of receiving a message activity:
 
 ::: zone pivot="teams-sdk-csharp"
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
+- [SDK reference](/dotnet/api/microsoft.teams.apps.messagehandlerextensions?view=msteams-sdk-dotnet-latest&preserve-view=true)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
 ```csharp
 app.OnMessage(async context =>
@@ -133,8 +133,8 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-- [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/app-localization/nodejs/server/bot/botActivityHandler.js#L25)
+- [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.apps/app?view=msteams-sdk-ts-latest&preserve-view=true)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
 
 ```typescript
 app.on("message", async ({ activity, send }) => {
@@ -146,8 +146,8 @@ app.on("message", async ({ activity, send }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L103)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/on-activity/overview)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
 
 ```python
 
@@ -226,7 +226,7 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 To receive read receipts events for your agent, ensure the following:
 
-- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific#rsc-delegated-permissionsd), as follows:
+- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific), as follows:
 
   # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
@@ -234,7 +234,7 @@ To receive read receipts events for your agent, ensure the following:
 
   "webApplicationInfo": {
 
-       "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+       "id": "38f0ca43-1c38-4c39-8097-47f62c686500",
        "resource": ""
   },
   "authorization": {
@@ -255,10 +255,10 @@ To receive read receipts events for your agent, ensure the following:
 
   ```json
 
-   “webApplicationInfo”: {
+   "webApplicationInfo": {
 
        "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-       "resource": "https: //AnyString",
+       "resource": "https://AnyString",
        "applicationPermissions": [
        "ChatMessageReadReceipt.Read.Chat"
        ]
@@ -272,7 +272,7 @@ You can also add RSC permissions through Graph API. For more information, see [`
 
 - Override the method `OnReadReceipt` with `context.Activity.Value.LastReadMessageId`.
 
-  The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
+  The `context.Activity.Value.LastReadMessageId` method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
 
   ```csharp
   app.OnReadReceipt(async context =>
@@ -358,18 +358,18 @@ app.on("messageEdit", async ({ activity, send }) => {
 "localTimestamp":"2022-10-28T10:19:39.4615413-07:00",
 "id":"1666977568748",
 "channelId":"msteams",
-"serviceUrl":"https://canary.botapi.skype.com/amer/",
+"serviceUrl":"https://smba.trafficmanager.net/amer/",
 "from": {
     "id":"29:1BLjP9j3_PM4mubmQZsYPx7jDyLeLf_YVA9sVPV08KMAFMjJWB_EUGveb9EVDh9TslNp9qjnzEBy3kgw01Jf1Kg",
     "name":"Mike Wilber",
-    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"caching
+    "aadObjectId":"520e4d1e-2108-43ee-a092-46a9507c6200"
 },
 "conversation":{
     "conversationType":"personal",
     "tenantId":"528dbe3f-15e0-4e37-84a1-00cc305847dd","id":"a:1pweuGJ44RkB90tiJNQ_I6g3vyuP4CYA_f-v6f0Vd-Bs3Ce85C73Ah1y8TvyjESsTHWjjgw-gnsuIuCUOWkfOCq6qaUYsk2_-fj93XXXHUMAUzhFFvTnaCU7V4WiMqRPB"
 },
 "recipient":{
-    "id":"28:0d569679-gb4j-479a-b0d8-238b6e6b1149",
+    "id":"28:0d569679-ab4c-479a-b0d8-238b6e6b1149",
     "name":"TestAgent"
 },
 "entities":[
@@ -403,15 +403,15 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 
 ### Send a message
 
-To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.Send(...)` method to send a single message response. Use the object's `multiple context.Send(...) calls` method to send multiple responses.
+To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the activity context object's `context.Send(...)` method to send a single message response. Call `context.Send(...)` multiple times to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
 ::: zone pivot="teams-sdk-csharp"
 
-- [SDK reference](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
 
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -430,8 +430,8 @@ app.OnMembersAdded(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-- [SDK reference](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
 
 ```typescript
 app.on("membersAdded", async ({ activity, send }) => {
@@ -447,8 +447,8 @@ app.on("membersAdded", async ({ activity, send }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/python/bots/auth_bot.py#L33)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
 
 ```python
 @app.on_members_added
@@ -508,7 +508,7 @@ HTTP Request: {Service URL of your agent}/v3/conversations/{conversationId}/acti
 > - Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 > - Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
 
-Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Teams SDK allows you to modify the message structure.
 
 ### Receive undelete message activity
 
@@ -549,7 +549,7 @@ app.on("messageUndelete", async ({ activity, send }) => {
   "localTimestamp": "2022-10-28T10:19:39.4615413-07:00",
   "id": "1666977568748",
   "channelId": "msteams",
-  "serviceUrl": "https://canary.botapi.skype.com/amer/",
+  "serviceUrl": "https://smba.trafficmanager.net/amer/",
   "from": {
     "id": "29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
     "name": "Alex Wilber",
@@ -630,7 +630,7 @@ app.on("messageSoftDelete", async ({ activity, send }) => {
   "localTimestamp": "2022-10-28T10:19:43.1612052-07:00",
   "id": "1666977568748",
   "channelId": "msteams",
-  "serviceUrl": "https://canary.botapi.skype.com/amer/",
+  "serviceUrl": "https://smba.trafficmanager.net/amer/",
   "from": {
     "id": "29:1BLjP9j3_TM4mubmQZsYEo7jDyLeLf_YVA9sVPVO7KMAFMjJWB_EUGveb9EVDh9LgoNp9qjnzEBy4kgw83Jf1Kg",
     "name": "Alex Wilber",
@@ -665,9 +665,7 @@ app.on("messageSoftDelete", async ({ activity, send }) => {
 
 ### Update and delete messages sent from agent
 
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
-
-Your agent can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
+Your agent can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
 > [!NOTE]
 > An agent can't update or delete messages sent by the user in Microsoft Teams.
@@ -680,9 +678,9 @@ It is not necessary for the new message to match the original in type. For examp
 
 ::: zone pivot="teams-sdk-csharp"
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)`method of the`TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the activity `Context<T>` object.
 
 ```csharp
 app.OnMessage(async context =>
@@ -702,10 +700,10 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-- [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
+- [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.apps/activitycontext?view=msteams-sdk-ts-latest&preserve-view=true)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `api.conversations.activities(conversationId).update(...)` method of the activity context object.
 
 ```typescript
 app.on("message", async ({ activity, api, send }) => {
@@ -725,10 +723,10 @@ app.on("message", async ({ activity, api, send }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-update-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L156)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `ctx.api.conversations.activities(conversation_id).update(...)` method of the `ActivityContext` object.
 
 ```python
 @app.on_message
@@ -746,7 +744,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 ::: zone-end
 
 > [!NOTE]
-> You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
+> You can develop Teams apps in any web-programming technology and call the Teams messaging REST endpoints directly. To do so, you must implement authentication security procedures with your API requests. For more information, see [Teams API client](/microsoftteams/platform/teams-sdk/essentials/api).
 
 To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
@@ -754,9 +752,9 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| Request                                                                                                                                                     | Response                                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
+| Request | Response |
+| --- | --- |
+| An `Activity` object. | A `ResourceResponse` object. |
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
@@ -766,9 +764,9 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 ::: zone pivot="teams-sdk-csharp"
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the activity `Context<T>` object.
 
 ```csharp
 app.OnMessage(async context =>
@@ -787,10 +785,10 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-- [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
+- [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.apps/activitycontext?view=msteams-sdk-ts-latest&preserve-view=true)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/nodejs)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `api.conversations.activities(conversationId).update(...)` method of the activity context object.
 
 ```typescript
 app.on("message", async ({ activity, api }) => {
@@ -808,10 +806,10 @@ app.on("message", async ({ activity, api }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L156)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/python)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `ctx.api.conversations.activities(conversation_id).update(...)` method of the `TurnContext` class.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `ctx.api.conversations.activities(conversation_id).update(...)` method of the `ActivityContext` object.
 
 ```python
 @app.on_message
@@ -827,7 +825,7 @@ async def handle_update_card(ctx: ActivityContext[MessageActivity]):
 ::: zone-end
 
 > [!NOTE]
-> You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
+> You can develop Teams apps in any web programming technology and call the Teams messaging REST endpoints directly. To do this, you must implement authentication security procedures with your API requests. For more information, see [Teams API client](/microsoftteams/platform/teams-sdk/essentials/api).
 
 To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
@@ -835,23 +833,22 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| Request                                                                                                                                                     | Response                                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true#resourceresponse-object) object. |
+| Request | Response |
+| --- | --- |
+| An `activity` object. | A `ResourceResponse` object. |
 
----
 
-Now that you have updated cards, you can delete messages using the Teams SDK Framework.
+Now that you have updated cards, you can delete messages using the Teams SDK.
 
 #### Delete messages
 
-In Teams SDK Framework, every message has its unique activity identifier. Messages can be deleted using the Teams SDK Framework's `context.Api.Conversations.Activities.DeleteAsync(...)` method.
+In the Teams SDK, every message has its unique activity identifier. Messages can be deleted using the `context.Api.Conversations.Activities.DeleteAsync(...)` method.
 
 ::: zone pivot="teams-sdk-csharp"
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` class.
+To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the activity `Context<T>` object.
 
 ```csharp
 app.OnMessage(async context =>
@@ -869,9 +866,9 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
 
-To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` object.
+To delete a message, pass that activity's ID to the `api.conversations.activities(conversationId).delete(...)` method of the activity context object.
 
 ```typescript
 app.on("message", async ({ activity, api }) => {
@@ -887,10 +884,10 @@ app.on("message", async ({ activity, api }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-delete-activity)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/python/bots/teams_conversation_bot.py#L227)
+- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/api)
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
 
-To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object.
+To delete that message, pass that activity's ID to the `ctx.api.conversations.activities(conversation_id).delete(...)` method of the `ActivityContext` object.
 
 ```python
 @app.on_message
@@ -1144,46 +1141,9 @@ await app.send(conversation_id, msg)
 
 ::: zone-end
 
-## Send messages in Teams channel data
-
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `App` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
-
-A typical `channelData` object in an activity sent to your agent contains the following information:
-
-- `eventType`: Teams event type passed only in cases of [conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md).
-- `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
-- `team`: Passed only in channel contexts, not in personal chat.
-  - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
-- `channel`: Passed only in channel contexts, when the agent is mentioned or for events in channels in teams, where the agent is added.
-  - `id`: GUID for the channel.
-  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-- `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
-- `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-The following code shows an example of channelData object (channelCreated event):
-
-```json
-"channelData": {
-    "eventType": "channelCreated",
-    "tenant": {
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "channel": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
-        "name": "My New Channel"
-    },
-    "team": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
-    }
-}
-```
-
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `App` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `App` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the activity context object.
 
 The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
@@ -1193,7 +1153,7 @@ A typical `channelData` object in an activity sent to your agent contains the fo
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of (how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
+  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
 - `channel`: Passed only in channel contexts, when the agent is mentioned or for events in channels in teams, where the agent is added.
   - `id`: GUID for the channel.
   - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -1243,8 +1203,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your agent messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the agent. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
 | 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](../feedback.md#report-issues). |
-[developer community forums](../feedback.md#developer-community-forums). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums).. |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums). |
 | 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
 | 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
 
