@@ -45,6 +45,7 @@ The following code snippet provides an example of how you can declare RSC permis
     ]
   }
 }
+}
 ```
 
 In this code example:
@@ -157,7 +158,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 Developers can create more efficient and user-friendly conversational interfaces in the agents.
 
-### Use Graph REST APIs to access all messages
+## Use Graph REST APIs to access all messages
 
 Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
 
