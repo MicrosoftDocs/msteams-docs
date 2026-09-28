@@ -1734,6 +1734,11 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "msteams-platform/bots/how-to/bot-messages-ai-generated-content.md",
+        "redirect_url": "../../agents-in-teams/integrate-ai/ai-content-labels",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-for-bots-and-agents.md",
         "redirect_url": "../../../agents-in-teams/enable-receive-all-chat-messages",
         "redirect_document_id": false

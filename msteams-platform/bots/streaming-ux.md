@@ -114,7 +114,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ## Stream message through REST API
 
-Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
+Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
 
 When your agent invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your agent uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
@@ -421,6 +421,7 @@ The following are the success and error codes:
 ## See also
 
 - [Format your bot messages](how-to/format-your-bot-messages.md)
-- [Agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
+- [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md)
+- [User feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md)
 - [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome)
 - [Best practices and features checklist for Teams agents](how-to/teams-conversational-ai/agents-best-practices-features-checklist.md)
