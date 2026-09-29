@@ -61,6 +61,7 @@ To enable sessions for an agent, ensure that your agent is using the [developer 
 
 ```json
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
 
   "bots": [
