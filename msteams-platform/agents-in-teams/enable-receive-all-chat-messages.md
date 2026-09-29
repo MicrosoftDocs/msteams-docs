@@ -1,19 +1,27 @@
 ---
-title: Enable an Agent to Receive All Chat Messages
+title: Enable an Agent to Receive All Messages In Its Conversations
 description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: article
 ms.date: 09/28/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Enable an agent to receive all chat messages
+# Enable an agent to receive all messages in its conversations
 
-By default, the only chat messages that agents receive or can access via Graph APIs are the ones where they're @mentioned. This behavior predates LLM-driven agents: historically, scripted or flow-based bots had no need to receive messages that didn't directly invoke them. Additionally, requiring the explicit consent of conversation owners for agents to access all of their conversation's messages aligns with Teams' stance on data privacy.
+By default, the only chat messages that agents receive or can access via Graph APIs are the ones where they're @mentioned. To receive and access all chat messages in a conversation it's in, an agent must declare the right [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) in its app manifest.
 
-Modern agents are most effective when they can observe and process all of the messages in conversations where they participate. To receive and access all chat messages in a channel or chat, an agent must request the appropriate [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) via its manifest.
+Full access to all of a conversation's messages provides essential context needed for LLM-driven agents to collaborate in groups. Most modern agents should enable it, especially those designed to participate naturally in group scenarios, but should be carefully designed to ensure appropriate behavior with respect to data privacy and expectations for agent participation.
+
+An agent must be a participant in a conversation to access its messages *TODO is this right for teams?*
 
 > [!NOTE]
 > This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
+
+## Why don't agents receive all messages by default?
+
+Not all agents benefit from access to all of a conversation's messages. Historically, scripted or flow-based bots had no need to receive messages that didn't directly invoke them. Limited, invoke-based interactions remain valid and valuable for some agent scenarios, even with modern LLM-driven agents.
+
+Requiring explicit developer opt-in and user consent to access all of a conversation's messages sets clear expectations about the boundaries of an agent's participation and aligns with Teams' stance on data privacy.
 
 ## Update requested RSC permissions
 
