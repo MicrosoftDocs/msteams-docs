@@ -325,23 +325,23 @@ For more information about these concepts and shared channels, see [shared chann
 
 Use the following `getContext` properties in shared channels:
 
-| Property | Description |
+|Property|Description|
 |----------|--------------|
-|`channelId`| The property is set to the shared channels thread ID.|
-|`channelType`| The property is set to `sharedChannel` for shared channels.|
+|`channelId`|The property is set to the shared channels thread ID.|
+|`channelType`|The property is set to `sharedChannel` for shared channels.|
 |`groupId`|The property is `null` for shared channels.|
-|`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
-|`hostTeamGroupId`| The property is newly added and describes the host team’s Microsoft Entra group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
-|`teamId`|The property is newly added and set to the thread ID of the current shared team. |
-|`teamName`|The property is set to current shared team's `teamName`. |
+|`hostTenantId`|The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property.|
+|`hostTeamGroupId`|The property is newly added and describes the host team’s Microsoft Entra group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership.|
+|`teamId`|The property is newly added and set to the thread ID of the current shared team.|
+|`teamName`|The property is set to current shared team's `teamName`.|
 |`teamType`|The property is set to current shared team's `teamType`.|
 |`teamSiteUrl`|The property describes the shared channel's `channelSiteUrl`.|
-|`teamSitePath`| The property describes the shared channel's `channelSitePath`.|
-|`teamSiteDomain`| The property describes the shared channel's `channelSiteDomain`.|
-|`tenantSKU`| The property describes the host team’s `tenantSKU`.|
-|`tid`|  The property describes the current user’s tenant ID.|
-|`userObjectId`|  The property describes current user’s ID.|
-|`userPrincipalName`| The property describes the current user’s UPN.|
+|`teamSitePath`|The property describes the shared channel's `channelSitePath`.|
+|`teamSiteDomain`|The property describes the shared channel's `channelSiteDomain`.|
+|`tenantSKU`|The property describes the host team’s `tenantSKU`.|
+|`tid`|The property describes the current user’s tenant ID.|
+|`userObjectId`|The property describes current user’s ID.|
+|`userPrincipalName`|The property describes the current user’s UPN.|
 
 For more information on shared channels, see [shared channels](~/concepts/build-and-test/shared-channels.md).
 
@@ -381,6 +381,6 @@ The following image shows the dark theme option in the Teams:
 * [Build tabs for Teams](../what-are-tabs.md)
 * [Design your tab for Microsoft Teams](../design/tabs.md)
 * [Enable SSO for tab app](authentication/tab-sso-overview.md)
-* [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
+* [Agents and tab apps for shared and private channels](../../build-apps-for-shared-private-channels.md)
 * [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Use dialogs in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)

@@ -3,7 +3,7 @@ title: Up to date views
 description: Learn about up to date card views within Adaptive Card in Teams with code samples and approval base card with approve or reject buttons.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 12/14/2022
+ms.date: 09/16/2026
 ---
 
 # Up to date cards

@@ -35,6 +35,7 @@ Streaming agent messages has two types of updates:
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
   - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - Progressively-rendered formatting: Teams will progressively render the formatting of streamed messages sent in extended Markdown mode to provide a smooth reading experience. For more information, see [Format agent messages](how-to/format-your-bot-messages.md).
   - Streaming content: While streaming, the agent messages must contain the previous streamed content.
 
       **For example**: This is an example of acceptable streaming response.<br>
@@ -111,11 +112,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-For guidance on formatting streamed messages with extended Markdown, including supported features and syntax, see [Format your agent messages](how-to/format-your-bot-messages.md#streaming-with-extended-markdown).
-
 ## Stream message through REST API
 
-Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards) and [agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md).
+Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
 
 When your agent invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your agent uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
 
@@ -422,6 +421,7 @@ The following are the success and error codes:
 ## See also
 
 - [Format your bot messages](how-to/format-your-bot-messages.md)
-- [Agent messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
+- [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md)
+- [User feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md)
 - [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome)
 - [Best practices and features checklist for Teams agents](how-to/teams-conversational-ai/agents-best-practices-features-checklist.md)
