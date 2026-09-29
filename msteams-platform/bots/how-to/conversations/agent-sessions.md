@@ -14,7 +14,7 @@ zone_pivot_groups: teams-sdk-languages
 By default, one-on-one chat between a user and an agent takes place in a single long-running conversation. With sessions, an agent can hold multiple independent one-on-one conversations with a user.
 
 > [!NOTE]
-> Sessions for agents are available in public developer preview.
+> The sessions feature is in public developer preview and requires use of the [developer preview app manifest](../../../resources/dev-preview/developer-preview-intro.md).
 
 Sessions offer users and agents a structured way to manage multiple tasks or workflows, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
 
@@ -57,10 +57,12 @@ New messages in sessions generate notifications, and result in highlighting and 
 
 Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
-To enable sessions for an agent, set the `supportsSessions` property in its app manifest to `true`.
+To enable sessions for an agent, ensure that your agent is using the [developer preview app manifest](../../../resources/dev-preview/developer-preview-intro.md), and set the `supportsSessions` property in its app manifest to `true`.
 
 ```json
 {
+  "manifestVersion": "devPreview",
+
   "bots": [
     {
       "botId": "{{BOT_ID}}",
