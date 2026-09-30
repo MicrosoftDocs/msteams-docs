@@ -1,11 +1,9 @@
 ---
 title: Manage Multiple User Conversations with Sessions
 description: Sessions enable agents in Microsoft Teams to organize one-on-one conversations into separate, focused chats, helping maintain context, improve response relevance, and support multi-task workflows.
-ms.author: nickwalk
-ms.reviewer: nickwalk
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 09/24/2026
+ms.date: 09/30/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -14,7 +12,7 @@ zone_pivot_groups: teams-sdk-languages
 By default, one-on-one chat between a user and an agent takes place in a single long-running conversation. With sessions, an agent can hold multiple independent one-on-one conversations with a user.
 
 > [!NOTE]
-> The sessions feature is in public developer preview and requires use of the [developer preview app manifest](../../../resources/dev-preview/developer-preview-intro.md).
+> The sessions feature is currently in public preview. Enabling sessions for an agent requires use of the [developer preview version of the app manifest](../../../resources/dev-preview/developer-preview-intro.md). Users must be enrolled in [Teams public preview](/MicrosoftTeams/public-preview-doc-updates) to access the sessions experience.
 
 Sessions offer users and agents a structured way to manage multiple tasks or workflows, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
 
