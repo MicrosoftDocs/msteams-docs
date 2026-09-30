@@ -70,7 +70,7 @@
       href: agents-in-teams/agent-slash-commands.md
       displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
     - name: Send and receive files
-      href: bots/how-to/bots-filesv4.md
+      href: agents-in-teams/files/receive-files.md
       displayName: receive files using bot
   - name: How-tos
     items:
@@ -100,6 +100,10 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Manage conversation state
+      href: agents-in-teams/manage-conversation-state.md
+    - name: Extend with Agents SDK
+      href: agents-in-teams/extend-with-agents-sdk.md
 - name: Tools and SDKs
   items:
   - name: Overview

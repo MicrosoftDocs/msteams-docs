@@ -300,13 +300,6 @@ async def list_channels(ctx: ActivityContext[MessageActivity]) -> None:
 
 If you need raw connector REST endpoints, use the Teams SDK API for most agent scenarios and only use REST directly for advanced cases that aren't covered by SDK abstractions.
 
-<!-- [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)] -->
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Send and receive files using agent](bots-filesv4.md)
-
 ## See also
 
 * [Build agents for Teams](../what-are-bots.md)

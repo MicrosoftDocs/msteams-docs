@@ -214,14 +214,6 @@ To simplify two common scenarios, the context provides the `getCurrentConversati
 
 ::: zone-end
 
-## Additional resources
-
-::: zone pivot="csharp"
-
-- For more information about the teams-js getContext() API, see the [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library) documentation.
-
-::: zone-end
-
 ::: zone pivot="typescript"
 
 ## Executing Functions
@@ -332,3 +324,7 @@ The `exec()` function supports incremental, just-in-time consent such that the u
 If you find that you'd rather test for consent or request consent before making the `exec()` call, the `hasConsentForScopes` and `ensureConsentForScopes` can be used. More details about those are given in the [Graph](tab-graph.md) section.
 
 ::: zone-end
+
+## Additional resources
+
+- For more information about the teams-js getContext() API, see the [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library) documentation.

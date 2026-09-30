@@ -1742,6 +1742,11 @@
         "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-for-bots-and-agents.md",
         "redirect_url": "../../../agents-in-teams/enable-receive-all-chat-messages",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/bots-filesv4.md",
+        "redirect_url": "../../agents-in-teams/attachments/receive-files",
+        "redirect_document_id": false
       }
     ]
 }

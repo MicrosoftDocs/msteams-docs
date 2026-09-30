@@ -410,7 +410,7 @@ Support for apps in private channels is available in developer preview. For more
 | 14/11/2023 | Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID. | |
 | 03/11/2023 | Apps for Teams meetings are available in GCC High environment. | [Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 02/11/2023 | Introduced Adaptive Card Previewer in public developer preview. | Tools > [Adaptive Card Previewer](concepts/build-and-test/adaptive-card-previewer.md) |
-| 25/10/2023 | Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events) |
+| 25/10/2023 | Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-real-time-teams-meeting-events) |
 | 25/10/2023 | Introduced the `extensions` property in public developer preview app manifest schema. | App manifest > [Public developer preview](/microsoft-365/extensibility/schema/element-extensions) |
 | 25/10/2023 | Build message extensions using API (API-based) to interact directly with third-party data, apps, and services (developer preview). | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md) |
 | 11/10/2023 | Introduced the new Microsoft Teams client to provide better experience for your apps and users. | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md) |
