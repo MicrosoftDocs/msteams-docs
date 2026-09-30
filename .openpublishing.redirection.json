@@ -1727,6 +1727,11 @@
         "source_path": "msteams-platform/mstdd-landing.yml",
         "redirect_url": "/microsoftteams/platform",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/shared-channels.md",
+        "redirect_url": "/microsoftteams/platform/build-apps-for-shared-private-channels",
+        "redirect_document_id": false
       }
     ]
 }

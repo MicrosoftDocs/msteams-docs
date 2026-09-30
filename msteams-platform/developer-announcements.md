@@ -1,14 +1,31 @@
 ---
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
-ms.topic: reference
-ms.date: 08/16/2026
+ms.topic: whats-new
+ms.date: 09/04/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ms.localizationpriority: high
 ---
 
 # Teams Platform developer announcements
 
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Review needed: TLS 1.3 support and TLS fingerprinting
+
+*September 17, 2026*
+
+At the **end of October 2026**, Microsoft will add TLS 1.3 support to Agent Communications Service, the `https://smba.*` family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, **developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.**
+
+Agent developers should review the network security controls of their hosting environments and consider temporarily relaxing or disabling rules that perform TLS fingerprint validation on client connections to agent runtime endpoints. Once TLS 1.3 support is enabled, they can capture an updated fingerprint and reenable any security rules that depend on it.
+
+TLS fingerprint validation detects changes in properties of network connections that are typically stable over time. In some hosting environments, it's used to enhance client authentication and flag potential security risks. The addition of TLS 1.3 support to Agent Communications Service might invalidate its established client fingerprint in environments that perform validation, potentially triggering rules that generate warnings or block connectivity.
+
+TLS 1.3 provides improved security and performance compared to earlier versions. Agent runtimes hosted in environments that support TLS 1.3 will begin taking advantage of it automatically. Agent Communications Service will continue to support TLS 1.2, ensuring compatibility with all existing agent runtimes.
+
+---
 
 ## Preview: Extended Markdown formatting for agent messages
 
@@ -449,7 +466,7 @@ Support for apps in private channels is available in developer preview. For more
 | 01/08/2022 | Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 01/08/2022 | App Studio is deprecated, use Developer Portal for Teams. | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 28/07/2022 | Add the Teams display picture and people card for in-meeting notification. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build in-meeting notification for Teams meeting](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
-| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
+| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](build-apps-for-shared-private-channels.md) |
 | 28/07/2022 | Introduced app manifest v1.14. | App manifest > [App manifest schema for Teams](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 26/07/2022 | Suggested actions for bots. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#send-suggested-actions) |
 | 21/07/2022 | Introduced step by step guide to send activity feed notifications. | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |

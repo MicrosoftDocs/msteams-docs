@@ -18,7 +18,7 @@ Conversational agents communicate with users through messaging, enabling seamles
 Messages interaction between your agent and user can include different types of message content that:
 
 | Content type | From user to agent | From agent to user |
-| --- |:---:|:---:|
+| --- | :---: | :---: |
 | [Rich text and emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
 | [Pictures](#use-picture-messages) | ✔️ | ✔️ |
 | [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
@@ -38,6 +38,9 @@ To make agent messages pop, the user can add pictures as attachments:
   - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+> [!NOTE]
+>In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links cannot be rendered. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
 
 ### Use Adaptive Cards
 
@@ -1214,14 +1217,14 @@ The following code shows an example of channelData object (channelCreated event)
 Ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the descriptions under which the errors are generated:
 
 | Status code | Error code and message values | Description | Retry request | Developer action |
-|----------------|-----------------|-----------------|----------------|----------------|
+| ---------------- | ----------------- | ----------------- | ---------------- | ---------------- |
 | 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the agent. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this agent. | The registration for this agent wasn't found. | No | Verify the agent ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled.|
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this agent. | The registration for this agent wasn't found. | No | Verify the agent ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this agent | Admin blocked interactions between user and the agent app. Admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with agent is explicitly initiated by a user in the conversation indicating that the agent is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The agent isn't part of the conversation roster. | The agent isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the agent is added again.|
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The agent isn't part of the conversation roster. | The agent isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the agent is added again. |
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the agent. | User blocked the agent in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with agent is explicitly initiated by a user in the conversation, indicating that the agent is no longer blocked. |
-| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Agent isn't installed in user's personal scope | Proactive message is sent by an agent, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
-| 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid agent api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`.|The agent called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
+| 403 | **Code**: `ForbiddenOperationException` <br/> **Message**: Agent isn't installed in user's personal scope | Proactive message is sent by an agent, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
+| 403 | **Code**: `InvalidBotApiHost` <br/> **Message**: Invalid agent api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`. | The agent called the public API endpoint for a conversation that belongs to a GCC tenant. | No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request. |
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Agent doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it is deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: Conversation not found. | Conversation wasn't found as it doesn't exist or is deleted. | No | Check if conversation ID sent is an expected value. Remove the ID if it was cached. |
@@ -1238,9 +1241,9 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 The general retry guidance for each status code is listed in the following table, agent must avoid retrying status codes that aren't specified:
 
-|Status code | Retry strategy |
-|----------------|-----------------|
-| 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`.|
+| Status code | Retry strategy |
+| ---------------- | ----------------- |
+| 403 | Retry by calling the GCC API `https://smba.infra.gcc.teams.microsoft.com` for `InvalidBotApiHost`. |
 | 412 | Retry using exponential backoff. |
 | 429 | Retry using `Retry-After` header to determine the wait time in seconds and in between requests, if available. Otherwise, retry using exponential backoff with thread ID, if possible. |
 | 502 | Retry using exponential backoff. |
@@ -1256,7 +1259,7 @@ The current outgoing requests to the agent don't contain in the header or URL an
 Two non-standard request header fields are added to all the requests sent to agents, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
 
 | Field key | Value |
-|----------------|-----------------|
+| ---------------- | ----------------- |
 | x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
 | x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
 

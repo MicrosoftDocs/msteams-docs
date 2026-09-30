@@ -5,23 +5,23 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.author: nickwalk
 ms.owner: slamba
-ms.date: 06/23/2026
+ms.date: 08/27/2026
 ---
 # Build message extensions
 
-Message extensions enable users to engage with your web service through buttons and forms within the Microsoft Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. The results of these interactions can be returned to the Teams client as a richly formatted card.
+Message extensions enable users to engage with your web service through buttons and forms within the Microsoft Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can return the results of these interactions to the Teams client as a richly formatted card.
 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
 
-The article provides an overview of message extensions, use cases, functionality, action and search commands, and link unfurling.
+This article provides an overview of message extensions, use cases, functionality, action and search commands, and link unfurling.
 
-The following image displays the locations from where message extensions can be invoked:
+The following image displays the locations from where users can invoke message extensions:
 
 > [!NOTE]
 >
-> * @mentioning message extensions in the compose box isn't supported.
-> * Message extension options aren't supported for group chats with external users.
+> * You can't @mention message extensions in the compose box.
+> * Teams doesn't support message extension options for group chats with external users.
 
 # [Desktop](#tab/desktop)
 
@@ -35,7 +35,7 @@ The following image displays the locations from where message extensions can be 
 
 ## Scenarios where message extensions are used
 
-| Scenario | Example |
+|Scenario|Example|
 |:-----------------|:-----------------|
 |You need an external system to perform an action and return the result to your conversation.|Reserve a resource and allow the channel to know the reserved time slot.|
 |You need to search for something in an external system and share the results with the conversation.|Search for a work item in Azure DevOps and share it with the group as an Adaptive Card.|
@@ -43,30 +43,30 @@ The following image displays the locations from where message extensions can be 
 
 ## Understand how message extensions work
 
-A message extension is composed of a web service hosted by you and an app manifest that defines the location where your web service is invoked within the Teams client. The web service utilizes the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
+A message extension is composed of a web service that you host and an app manifest that defines the location where your web service is invoked within the Teams client. The web service uses the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
 
 > [!NOTE]
-> Though it's possible to manually create the web service, we recommend to use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
+> Although you can manually create the web service, use the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
-In the app manifest (previously called as Teams app manifest), a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload with all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
+In the app manifest (previously called the Teams app manifest), you define a single message extension with up to 10 different commands. Each command defines a type, such as action or search, and the locations in the client where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. When you invoke the message extension, the web service receives an HTTPS message with a JSON payload that contains all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
 
-## Message extension commands types
+## Message extension command types
 
-There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. Certain interactions, such as authentication and configuration, are available for both commands types.
+There are two types of message extension commands: action commands and search commands. The message extension command type defines the UI elements and interaction flows available to your web service. Both command types provide interactions for authentication and configuration.
 
 ### Action commands
 
-Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message. For more complex workflows, you can link multiple forms together.
+Use action commands to present users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message. For more complex workflows, you can link multiple forms together.
 
-Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v1.x):
+Trigger action commands from the compose message area, the command box, or a message. When you invoke the command from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred to as task module in TeamsJS v1.x):
 
 :::image type="content" source="../assets/images/task-module.png" alt-text="Message extension action command dialog":::
 
 ### Search commands
 
-Search commands allow the users to search an external system for information. To use search commands, enter a query manually into the search box or insert a link to a monitored domain in the compose message area, then embed the search results into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+Search commands allow you to search an external system for information. To use search commands, enter a query manually into the search box or insert a link to a monitored domain in the compose message area, then embed the search results into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-The cards are triggered from the compose message area or the command box, but not from a message. They can't be triggered from a message.
+You trigger the cards from the compose message area or the command box, but not from a message. You can't trigger them from a message.
 The following image displays the message extension search command dialog:
 
 :::image type="content" source="../assets/images/search-extension.png" alt-text="Message extension search command":::
@@ -79,7 +79,7 @@ The following image displays the message extension search command dialog:
 > [!NOTE]
 > Link unfurling is supported only for bot-based message extensions.
 
-When a URL is pasted in the compose message area, a web service is invoked. This functionality is known as link unfurling. You can subscribe to receive an invoke message when URLs containing a specific domain are pasted into the compose message area. Your web service can **unfurl** the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
+When you paste a URL in the compose message area, Teams invokes a web service. This functionality is known as link unfurling. You can subscribe to receive an invoke message when URLs containing a specific domain are pasted into the compose message area. Your web service can **unfurl** the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Teams client.
 The following images display link unfurling feature when a link is pasted in a message extension:
 
 :::image type="content" source="../assets/images/messaging-extension/unfurl-link.png" alt-text="unfurl link":::
@@ -88,11 +88,11 @@ The following images display link unfurling feature when a link is pasted in a m
 
 ## Build message extensions
 
-To build a message extension, if you don't already have one, there are two ways:
+To build a message extension, use one of the following methods:
 
-* **Build message extensions using API (API-based)**: You can easily create a message extension from an existing API. An OpenAPI Description (OAD) document is required for this method.
+* **Build message extensions using API (API-based)**: Create a message extension from an existing API. This method requires an OpenAPI Description (OAD) document.
 
-* **Build message extensions using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
+* **Build message extensions using Bot Framework (Bot-based)**: Create a new message extension from a bot if you want a one-on-one conversational experience.
 
 [!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
@@ -144,6 +144,6 @@ The following table helps you select a message extension type to get started:
 |------------|-------------|----------------|------------|------------|
 | Message extension with action-based commands | This sample demonstrates how to create Action-Based Message Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action/python) |
 | Message extension with search-based commands | This sample demonstrates how to create a Message Extension in Microsoft Teams that allows users to perform searches and retrieve results. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/nodejs/bot-message-extensions)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-message-extensions/python/bot-message-extensions) |
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams Message Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/nodejs) |NA|
+|Message extension action preview| This sample app illustrates how to use action previews in Teams Message Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-action-preview/nodejs) |NA|
 |Message extension action for task scheduling|This sample demonstrates a Message Extension that allows users to schedule tasks and receive reminder cards in Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-message-reminder/nodejs)| NA |
-| Northwind inventory message extension| This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-copilot-handoff/ts) |NA |
+| Northwind inventory message extension| This sample implements a Teams message extension that you can use as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-copilot-handoff/ts) |NA |
