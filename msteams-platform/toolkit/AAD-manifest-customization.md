@@ -4,30 +4,33 @@ author: zyxiaoyuer
 description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Agents Toolkit, app development lifecycle, and view app in Azure portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 02/06/2025
+ms.date: 04/30/2026
 ---
 
 # Edit Microsoft Entra manifest
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
+Microsoft 365 Agents Toolkit (previously called Teams Toolkit) uses the Microsoft Entra manifest file as the source of truth for managing your Microsoft Entra app throughout the Teams agent or app development lifecycle.
+
+This article explains how to customize and deploy the Microsoft Entra app manifest in Microsoft 365 Agents Toolkit, including permissions, preauthorized applications, redirect URIs, placeholders, and lifecycle behavior across local and cloud environments.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
 ## Customize Microsoft Entra manifest template
 
-You can customize Microsoft Entra manifest template to update Microsoft Entra application.
+You can customize Microsoft Entra manifest template to update Microsoft Entra app configuration for your project.
 
 1. Open `aad.template.json` in your project.
-  
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
 
-2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
-  
+2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Manage-AAD-application-in-Teams-Toolkit/e2ec3673cdc36a4a5d06ce08dd9b061feebd1c90#Placeholders-in-AAD-manifest-template). For more information see, [customize AAD manifest](AAD-manifest-customization.md)
+
+    Following are the customization scenarios:
+
     <details>
 
-    <summary>Add an application permission</summary>
-
-     If the Teams application requires more permissions to call an API with additional permissions, you need to update `requiredResourceAccess` property in the Microsoft Entra manifest template. You can see the following example for this property:
+    <summary>Add an agent or app permission</summary>
+     If your Teams agent or app needs additional permissions to call an API, update the `requiredResourceAccess` property in the Microsoft Entra manifest template. Use `Scope` for delegated permissions and `Role` for application permissions, and note that Microsoft Graph and Office 365 SharePoint Online can use readable names in this template while other APIs require UUID values. Here's a code snippet example:
 
     ```JSON
     "requiredResourceAccess": [
@@ -57,13 +60,13 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     ```
 
-    The following list provides different property IDs and their usage:
+    The following properties are used in different ways depending on the API and permission type:
 
     - The `resourceAppId` property is used for different APIs. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the name directly instead of UUID, and for other APIs use UUID.
 
     - The `resourceAccess.id` property is used for different permissions. For `Microsoft Graph` and `Office 365 SharePoint Online`, enter the permission name directly instead of UUID, and for other APIs use UUID.
 
-    - The `resourceAccess.type` property is used for delegated permission or application permission. `Scope` means delegated permission and `Role` means application permission.
+    - The `resourceAccess.type` property is used for delegated permission or app permission. `Scope` means delegated permission and `Role` means app permission.
 
     </details>
 
@@ -71,7 +74,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Preauthorize a client application</summary>
 
-     You can use `preAuthorizedApplications` property to authorize a client application to indicate that the API trusts the application. Users don't consent when the client calls exposed API. You can see the following example for this property:
+     You can use the preAuthorizedApplications property to authorize a client app and indicate that your API trusts it. When the client calls the exposed API, users do not need to provide consent again. The following example shows this property. This is useful when you already know which agent or app will consume the API and want to streamline the authentication experience. You can see the following example for this property:
 
      ```JSON
      "api": {
@@ -89,13 +92,13 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
      ```
 
-     `preAuthorizedApplications.appId` property is used for the application you want to authorize. If you don't know the application ID and know only the application name, use the following steps to search application ID:
+     The `preAuthorizedApplications.appId` property identifies the agent or app you want to authorize. If you don't know the app ID and know only the app name, use the following steps to search app ID:
 
      1. Go to [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and open **Application Registrations**.
 
-     1. Select **All applications** and search for the application name.
+     1. Select **All applications** and search for the app name.
 
-     1. Select the application name and get the application ID from the overview page.
+     1. Select the app name and get the app ID from the overview page.
 
     </details>
 
@@ -103,7 +106,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     <summary>Update redirect URL for authentication response</summary>
 
-     Redirect URLs are used while returning authentication responses such as tokens after successful authentication. You can customize redirect URLs using property `redirectUris` inside `web`, `spa`, `publicClient`. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
+     Redirect URIs define where authentication responses, such as tokens, are sent after sign-in completes. Configure the `redirectUris` property under `publicClient`, `web`, or `spa` based on the agent or app type you are building, and ensure each value matches the actual endpoint used by that client flow. For example, to add `https://www.examples.com/auth-end.html` as redirect URL, you can add it as the following example:
 
       ``` JSON
      "publicClient": {
@@ -126,7 +129,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
     </details>
 
-3. Update Microsoft Entra application changes for local or remote environment.
+3. Update Microsoft Entra app changes for local or remote environment.
 
    1. Select `Preview` CodeLens in `aad.template.json`.
   
@@ -140,9 +143,10 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy3.png" alt-text="Screenshot shows the deploy option highlighted." lightbox="../assets/images/toolkit-v2/manual/add deploy3.png":::
 
-   1. The changes for Microsoft Entra application used in local or dev environment are deployed.
+   1. The changes are deployed to the Microsoft Entra app used in the local or dev environment.
 
-   1. Additionally, you can open the command palette and select **Teams: Update Microsoft Entra App** to update Microsoft Entra app.
+   1. You can also open the command palette and select **Microsoft 365 Agents: Update Microsoft Entra App** to update Microsoft Entra app.
+
       :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
 
 > [!div class="nextstepaction"]
@@ -152,31 +156,31 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
 ## Microsoft Entra manifest template placeholders
 
-The Microsoft Entra manifest file contains placeholder arguments with {{...}} statements, it's replaced during build for different environments. You can reference to environment variables with the placeholder arguments.
+The Microsoft Entra manifest template includes placeholder values in the form ${{...}}. These values are resolved during the build process for each environment, allowing you to reference environment-specific settings without hardcoding them in the template.
 
 <a name='reference-environment-variable-in-azure-ad-manifest-template'></a>
 
 ### Reference environment variable in Microsoft Entra manifest template
 
-You don't need to enter permanent values in Microsoft Entra manifest template and Microsoft Entra manifest template file supports reference environment variable values. You can use the syntax `${{YOUR_ENV_VARIABLE_NAME}}` in the tool as parameter values to resolve the environment variable values.
+Microsoft Entra manifest template file supports reference environment variable values. You don't need to store permanent values directly in the Microsoft Entra manifest template. Instead, you can reference environment variables by using the syntax `${{YOUR_ENV_VARIABLE_NAME}}` to resolve the environment variable values wherever a parameter value is needed.
 
 <a name='edit-and-preview-azure-ad-manifest-with-codelens'></a>
 
 ## Edit and preview Microsoft Entra manifest with CodeLens
 
-Microsoft Entra manifest template file has CodeLens to review and edit the code.
+The Microsoft Entra manifest template includes CodeLens features that help you preview, inspect, and edit the manifest more efficiently.
 
 <a name='azure-ad-manifest-template-file'></a>
 
 ### Microsoft Entra manifest template file
 
-There's a preview CodeLens at the beginning of the Microsoft Entra manifest template file. Select the CodeLens to generate a Microsoft Entra manifest based as per your environment.
+A Preview CodeLens appears at the top of the Microsoft Entra manifest template file. Select it to generate a view of the Microsoft Entra manifest based on the environment you choose.
 
 :::image type="content" source="../assets/images/toolkit-v2/manual/add codelens.png" alt-text="Screenshot shows the preview of add codelens.":::
 
 ### Placeholder argument CodeLens
 
-Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows tooltip box for the values of all the environments.
+The Placeholder argument CodeLens helps you view the values used for local debugging and other environments. If you hover the mouse on a placeholder argument, a tooltip shows the resolved value for each environment.
 
 :::image type="content" source="../assets/images/toolkit-v2/manual/add arguments.png" alt-text="Screenshot shows the add arguments.":::
 
@@ -188,88 +192,90 @@ Microsoft Entra manifest template in Agents Toolkit also supports user readable 
 
 ### Preauthorized applications CodeLens
 
-CodeLens shows the application name for the preauthorized application ID for the `preAuthorizedApplications` property inside api property.
+CodeLens displays the app name that corresponds to the preauthorized app ID in the `preAuthorizedApplications` property inside the `api` section.
 
 <a name='view-azure-ad-application-on-the-azure-portal'></a>
 
-## View Microsoft Entra application on the Azure portal
+## View Microsoft Entra app on the Azure portal
 
-1. Copy the Microsoft Entra application client ID from `.env.xxx` () file in the `AAD_APP_CLIENT_ID` property.
+1. Copy the Microsoft Entra app client ID from the appropriate `.env.xxx` file by locating the `AAD_APP_CLIENT_ID` value.
   
      :::image type="content" source="../assets/images/toolkit-v2/manual/add view1.png" alt-text="Screenshot shows the client ID." lightbox="../assets/images/toolkit-v2/manual/add view1.png":::
 
    > [!NOTE]
-   > xxx in the client ID indicates the environment name where you have deployed the Microsoft Entra application.
+   > In this context, xxx represents the environment name where you have deployed the Microsoft Entra app.
 
 1. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
-   > Ensure that login credentials of Teams application and M365 account are the same.
+   > Ensure that you sign in with the same account for both the Teams app and Microsoft 365.
 
-1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra application using client ID that you copied before.
-  
+1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra app by using the client ID you copied earlier.
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add-view-app-registrations.png" alt-text="Screenshot shows the client ID under All applications tab.":::
 
-1. Select Microsoft Entra application from search result to view the detailed information.
+1. Select Microsoft Entra app from search result to view its detailed information.
   
-1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/entra/identity-platform/reference-microsoft-graph-app-manifest).
-  
+1. On  the Microsoft Entra app information page, select **Manifest** to view the manifest of this app. The schema matches the one used in the `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/entra/identity-platform/reference-microsoft-graph-app-manifest).
+
      :::image type="content" source="../assets/images/toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
-1. You can select **Other Menu** to view or configure Microsoft Entra application through its portal.
-  
+1. You can use the other menu options to view or configure the Microsoft Entra app in the portal.
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20View%20Microsoft%20Entra%20application%20on%20the%20Azure%20portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Faad-manifest-customization%23view-microsoft-entra-application-on-the-azure-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FAAD-manifest-customization.md&documentVersionIndependentId=70b95cac-24c1-4279-8656-cd3c5d0b5235&author=surbhigupta&platformId=d983c833-f680-17be-bf5e-ec2810040727&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 <a name='use-an-existing-azure-ad-application'></a>
 
-## Use an existing Microsoft Entra application
+## Use an existing Microsoft Entra app
 
-You can use the existing Microsoft Entra application for the Teams project. For more information, see [use an existing Microsoft Entra application for your Teams application](/microsoftteams/platform/toolkit/use-existing-aad-app).
+You can also use an existing Microsoft Entra app for a Teams agent or app project. For more information, see [use an existing Microsoft Entra app](/microsoftteams/platform/toolkit/use-existing-aad-app).
 
 <a name='azure-ad-application-in-teams-application-development-lifecycle'></a>
 
-## Microsoft Entra application in Teams application development lifecycle
+## Microsoft Entra app in Teams app development lifecycle
 
-You need to interact with Microsoft Entra application during various stages of your Teams application development lifecycle.
+During the Teams app development lifecycle, Agents Toolkit works with the Microsoft Entra app at several stages. Based on the relevant `.env` file, it either reuses an existing app or creates and updates one from `aad.template.json`. Once the required endpoints are known, it fills in context-dependent values such as `identifierUris` and `redirectUris`.
 
-1. **To create Project**
+Here are examples of how Microsoft Entra app interacts with app development lifecycle in Agents Toolkit:
 
-      You can create a project with Agents Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Agents Toolkit creates or updates the Microsoft Entra application during local development or while you move the application to the cloud.
+1. **Create Project**
 
-1. **To add SSO to your bot or tab**
+      You can create a project in Agents Toolkit with single sign-on (SSO) enabled by default, such as an SSO-enabled tab app. For more information, see [create a new Teams app using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is created automatically in `aad.template.json`, and Agents Toolkit creates or updates the Microsoft Entra app during local development and when you move the app to the cloud.
 
-      After you create a Teams application without built-in SSO, Agents Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
+1. **Add SSO to your bot or tab**
 
-      Agents Toolkit creates or updates the Microsoft Entra application during next local development session or while you move the application to the cloud.
+      After you create a Teams agent or app without built-in SSO, Agents Toolkit can help you add SSO to the project. As part of that process, a Microsoft Entra manifest file is created automatically in `aad.template.json`.
 
-1. **To build locally**
+      Agents Toolkit creates or updates the Microsoft Entra app during next local development session or while you move the app to the cloud.
+
+1. **Build locally**
 
     Agents Toolkit performs the following functions during local development:
 
-    - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+    - The Agents Toolkit reads the `.env.local` file to determine whether an existing Microsoft Entra app is available. If one already exists, Agents Toolkit reuses the existing app. Otherwise, you need to create a new Microsoft Entra app by using the `aad.template.json` file.
 
-    - Initially ignores some properties in the manifest file that requires more context, such as `redirectUris` property that requires a local development endpoint during the creation of a new Microsoft Entra application with the manifest file.
+    - Initially the toolkit ignores some properties in the manifest file that require additional context, such as `redirectUris`, which depend on the local development endpoint when a new Microsoft Entra app is created from the manifest file.
 
-    - After the local dev environment starts successfully, the Microsoft Entra application's `identifierUris`, `redirectUris`, and other properties that aren't available during creation stage are updated accordingly.
+    - After the local development environment starts successfully, Agents Toolkit updates the Microsoft Entra app with values such as `identifierUris`, `redirectUris`, and other properties that were not available during the initial creation stage.
 
-    - The changes you've done to your Microsoft Entra application are loaded during next local development session. You can see [Microsoft Entra application changes](https://github.com/OfficeDev/TeamsFx/wiki/) applied manually.
+    - The toolkit loads any changes you made to the Microsoft Entra app during the next local development session. You can also see [Microsoft Entra app changes](https://github.com/OfficeDev/TeamsFx/wiki/) that were applied manually.
 
-1. **To provision for cloud resources**
+1. **Provision for cloud resources**
 
-      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Agents Toolkit:
+    When you move your app to the cloud, you must provision cloud resources and deploy the app. During this stage, Agents Toolkit behaves much like it does during local debugging:
 
-      - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+    - Reads the `.env.{env}` file to find an existing Microsoft Entra app. If a Microsoft Entra app already exists, Agents Toolkit reuses the existing Microsoft Entra app. Otherwise, you need to create a new app using the `aad.template.json` file.
 
-      - Ignores some properties in the manifest file initially that requires more context such as `redirectUris` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra application with the manifest file.
+    - Initially ignores manifest properties that need more context, such as `redirectUris`, because those values depend on the frontend or bot endpoint when the Microsoft Entra app is first created from the manifest file.
 
-      - Completes other resources provision, then Microsoft Entra application's `identifierUris`, and `redirectUris` are updated according to the correct endpoints.
+    - After other resources are provisioned, Agents Toolkit updates the Microsoft Entra app values, including `identifierUris` and `redirectUris`, so they match the correct endpoints.
 
-1. **To build application**
+1. **Build app**
 
-    - The cloud command deploys your application to the provisioned resources. It doesn't include deploying Microsoft Entra application changes you've made.
+    - The cloud command deploys your app to the provisioned resources. It doesn't include deploying Microsoft Entra app changes you've made.
 
-    - Agents Toolkit updates the Microsoft Entra application according to the Microsoft Entra manifest template file.
+    - Agents Toolkit updates the Microsoft Entra app according to the Microsoft Entra manifest template file.
 
 ## Limitations
 
@@ -284,10 +290,10 @@ You need to interact with Microsoft Entra application during various stages of y
       |`logoUrl`|Read-only and can't change|
       |`publisherDomain`|Read-only and can't change|
 
-2. The `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
+2. The `requiredResourceAccess` property supports human-readable resource app names or permission names only for `Microsoft Graph` and `Office 365 SharePoint Online`. For other APIs, you must use UUID values. To retrieve those IDs from the Azure portal, follow these steps:
 
-    1. Register a new Microsoft Entra application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
-    1. Select `API permissions` from the Microsoft Entra application page.
+    1. Register a new Microsoft Entra app on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
+    1. Select `API permissions` from the Microsoft Entra app page.
     1. Select `add a permission` to add the permission you need.
     1. Select `Manifest` from the `requiredResourceAccess` property, where you can find the IDs of API, and the permissions.
 
