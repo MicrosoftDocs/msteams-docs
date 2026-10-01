@@ -1,7 +1,7 @@
 ---
 title: Extend Personal Tab to Microsoft 365
 description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
-ms.date: 09/30/2026
+ms.date: 10/01/2026
 ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: m365apps
@@ -187,7 +187,7 @@ The final step to running your app in Microsoft 365 and Outlook is to upload you
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 
