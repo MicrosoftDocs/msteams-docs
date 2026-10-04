@@ -48,8 +48,7 @@ Users can navigate between sessions using the sessions panel. The latest message
 
 New messages in sessions generate notifications, and result in highlighting and badging of the session in the sessions panel.
 
-> [!NOTE]
-> Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
+The user experience of sessions shouldn't be confused with [threaded conversations in channels](channel-and-group-conversations.md#threaded-conversations). Users experience sessions as independent conversations with a single agent, not threads within one larger conversation.
 
 ## Enable sessions for your agent
 
