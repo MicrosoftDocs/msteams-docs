@@ -21,10 +21,10 @@ Use the support channels listed in this article to report issues, ask questions,
 Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 365 admin center**](https://admin.microsoft.com) for any business-critical issues that need SLA-based support.
 
 | **Product support** | **How to contact** |
-|:------------|:------------|
+| :------------ | :------------ |
 | **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, go to the Microsoft 365 admin center and use the **Support** menu to [open a service request](https://admin.microsoft.com/). |
 | **Azure portal help and support** | If you have a paid Azure subscription, go to the Azure portal to [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about using Teams** | For questions about using the Teams app, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). Select **Ask a question** to start conversing. For development questions, use [Microsoft Q&A](#developer-community-forums) instead. |
+| **General questions about using Teams** | For questions about using the Teams app, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). Select **Ask a question** to start conversing. For development questions, use [Microsoft Q&A](#developer-community-forums). |
 | **Partner Center support** | For Partner Center issues  (example: app submissions, account setup, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
 
 ## Developer community forums
@@ -37,8 +37,8 @@ Use community forums to ask development-related questions, share solutions, and 
 
 | **Tag** | **When to use it** |
 |:--------------------|:--------------------|
-| [`Microsoft Teams Development`](/answers/tags/339/office-teams-development-routing) | Teams apps, bots, tabs, message extensions, app manifest, publishing, and the Teams developer tools and APIs. |
-| [`Microsoft 365 Copilot Development`](/answers/tags/466/microsoft-copilot-microsoft-365-copilot-development-routing) | Declarative agents, custom engine agents, and other Microsoft 365 Copilot extensibility scenarios. |
+| `Microsoft Teams Development`| Teams apps, bots, tabs, message extensions, app manifest, publishing, and the Teams developer tools and APIs. |
+| `Microsoft 365 Copilot Development`| Declarative agents, custom engine agents, and other Microsoft 365 Copilot extensibility scenarios. |
 
 To post a question, select **Ask a question**, describe your scenario, and add the tag that matches it. Select **Sign in to follow** a tag to stay updated on new questions and answers.
 
@@ -46,7 +46,7 @@ You can also use the following community forums, which are monitored by Microsof
 
 | **Community forums**| **How to connect** |
 |:--------------------|:--------------------|
-| :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Report bugs and request features for [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and the [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). For how-to questions, use Microsoft Q&A instead. |
+| :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Report bugs and request features for [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and the [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues).
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Power Platform Community Forums](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553&page=1&sortorder=mspwrplt_cmty_MostrecentPostswithnoreplies&status=&category=) | Community forums for getting help, sharing knowledge, and connecting with experts across Power Platform products. |
 
@@ -55,9 +55,9 @@ You can also use the following community forums, which are monitored by Microsof
 Use the following community channels to report SDK, samples, or platform issues.
 
 | **Community help channels** | **Where to report** |
-|:----------------------|:------------|
+| :---------------------- | :------------ |
 | **Platform outages** | Check if your issue is already reported under [Teams platform outages](https://github.com/MicrosoftDocs/msteams-docs/labels/outage) before raising a new one. |
-| **Samples** | Submit issues for samples in the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
+| **Samples** | Submit issues for samples in the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository. |
 | **Microsoft 365 Agents Toolkit** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [microsoft-365-agents-toolkit GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/agents-toolkit): Use the `agents-toolkit` tag to post questions. Follow Stack Overflow guidelines. </li> </ul> |
 | **TeamsJS (Tabs)** | Submit issues and feature requests to the [Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues) repository. Select **New issue** or browse existing issues. |
 
@@ -76,10 +76,10 @@ Documentation feedback is reviewed regularly by the Microsoft documentation team
 Share feature ideas, ask questions, or let us know about your experience with the Teams developer platform.
 
 | **Community channel** | **How to contact** |
-|:----------------------|:------------|
+| :---------------------- | :------------ |
 | **Features suggestions** | Post new feature suggestions or vote on the existing ones on the :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **General questions** | For general questions about the Teams developer platform, post your question on [Microsoft Q&A](/answers/tags/339/office-teams-development-routing) using the `Microsoft Teams Development` tag. If your question isn't suited to a public forum, [contact us](mailto:microsoftteamsdev@microsoft.com). |
-| **Feedback interview** | Your feedback is valuable. If you're interested to share your experience with our documentation, community responses, or Teams Store publishing process, feel free to [book a slot](https://aka.ms/bookdevfeedback).|
+| **Feedback interview** | Your feedback is valuable. If you're interested to share your experience with our documentation, community responses, or Teams Store publishing process, feel free to [book a slot](https://aka.ms/bookdevfeedback). |
 
 ## See also
 
