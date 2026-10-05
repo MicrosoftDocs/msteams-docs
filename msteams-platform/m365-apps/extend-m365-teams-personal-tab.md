@@ -217,7 +217,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More apps**. Your uploaded custom app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+Windows&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
