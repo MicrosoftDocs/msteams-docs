@@ -24,7 +24,7 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 | :------------ | :------------ |
 | **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, go to the Microsoft 365 admin center and use the **Support** menu to [open a service request](https://admin.microsoft.com/). |
 | **Azure portal help and support** | If you have a paid Azure subscription, go to the Azure portal to [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about using Teams** | For questions about using the Teams app, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). Select **Ask a question** to start conversing. For development questions, use [Microsoft Q&A](/answers/tags/339/office-teams-development-routing?orderby=createdat). |
+| **General questions about using Teams** | For questions about using the Teams app, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). Select **Ask a question** to start conversing. For development questions, use [Microsoft Q&A](/answers/questions/). |
 | **Partner Center support** | For Partner Center issues  (example: app submissions, account setup, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
 
 ## Developer community forums
@@ -33,7 +33,7 @@ Use community forums to ask development-related questions, share solutions, and 
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
-[Microsoft Q&A](/answers/tags/339/office-teams-development-routing?orderby=createdat) is the recommended place to ask development-related questions. Questions are answered by Microsoft engineers and community experts, and tagging your question correctly routes it to the right people. Use the following tags:
+[Microsoft Q&A](/answers/questions/) is the recommended place to ask development-related questions. Questions are answered by Microsoft engineers and community experts, and tagging your question correctly routes it to the right people. Use the following tags:
 
 | **Tag** | **When to use it** |
 |:--------------------|:--------------------|
@@ -78,7 +78,7 @@ Share feature ideas, ask questions, or let us know about your experience with th
 | **Community channel** | **How to contact** |
 | :---------------------- | :------------ |
 | **Features suggestions** | Post new feature suggestions or vote on the existing ones on the :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
-| **General questions** | For general questions about the Teams developer platform, post your question on [Microsoft Q&A](/answers/tags/339/office-teams-development-routing?orderby=createdat) using the `Microsoft Teams Development` tag. If your question isn't suited to a public forum, [contact us](mailto:microsoftteamsdev@microsoft.com). |
+| **General questions** | For general questions about the Teams developer platform, post your question on [Microsoft Q&A](/answers/tags/339/office-teams-development-routing) using the `Microsoft Teams Development` tag. If your question isn't suited to a public forum, [contact us](mailto:microsoftteamsdev@microsoft.com). |
 | **Feedback interview** | Your feedback is valuable. If you're interested to share your experience with our documentation, community responses, or Teams Store publishing process, feel free to [book a slot](https://aka.ms/bookdevfeedback). |
 
 ## See also
