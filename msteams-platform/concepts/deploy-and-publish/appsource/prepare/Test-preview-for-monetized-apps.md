@@ -4,7 +4,7 @@ description: Learn to create and test SaaS preview offers for Teams app. Generat
 ms.topic: article
 ms.author: vikasalmal
 ms.localizationpriority: high
-ms.date: 03/02/2026
+ms.date: 09/16/2026
 ---
 
 # Test your SaaS offer
