@@ -25,7 +25,7 @@ Opening or signing in to the tab first doesn’t establish authentication for th
 
 - **Unified user experience**: Users sign in to the agent and can access the associated tab with fewer repeated sign-in prompts.
 - **Consistent Onboarding**: Connected authentication flow ensures that all users meet minimum setup requirements before accessing app features. Following onboarding, the user experiences increased reliability and lesser support issues.
-- **Fewer sign-in prompts**: Microsoft Entra Nested app authentication (NAA) allows the associated tab to reuse the user's active Microsoft session when authentication requirements are satisfied.
+- **Fewer sign-in prompts**: Account linking with Entra Nested app authentication (NAA) ensures that the user stays logged in, even if the primary login method expires.
 - **Seamless access**: Connected authentication provides smoother interactions as the agent and associated tab recognize the same authenticated user.
 
 ## Connected authentication at runtime
