@@ -1,7 +1,7 @@
 ---
 title: Extend Personal Tab to Microsoft 365
 description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
-ms.date: 10/17/2024
+ms.date: 10/07/2026
 ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: m365apps
@@ -206,6 +206,9 @@ Here's how to preview your app running in Microsoft 365 and Outlook, web and Win
 
 [!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
+> [!IMPORTANT]
+> The steps in this section describe how to **preview** your app using the Microsoft 365 developer sandbox tenant and the custom app upload flow that you set up in [Prerequisites](prerequisites.md). They aren't the deployment path for a production tenant. To make your app available to users in a production tenant, see [Publish Teams apps for Microsoft 365](publish.md).
+
 > [!NOTE]
 > If you use Agents Toolkit sample app and uninstall it from Teams, it is removed from the **More Apps** catalogs in Outlook and Microsoft 365 app.
 
@@ -245,6 +248,9 @@ To view your app running in Outlook for Android app:
 
     :::image type="content" source="images/outlook-mobile-android-more.png" alt-text="Screenshot shows the Apps option of the Outlook app on Android.":::
 
+> [!NOTE]
+> Ensure that your device runs Outlook app version 4.2247.1 (52247812) or later for Android. For more information, see [Android prerequisites](prerequisites.md#android). If your app doesn't appear in the **Apps** list, see [App doesn't appear in Outlook or Microsoft 365 mobile apps](#app-doesnt-appear-in-outlook-or-microsoft-365-mobile-apps).
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+for+Android+app&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -257,6 +263,9 @@ To view your app running in Outlook app for iOS:
 1. Select your app icon to open your app in the Outlook app.
 
     :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the More option of the Outlook app on iOS.":::
+
+> [!NOTE]
+> Ensure that your device runs Outlook app version 4.2310.0 (18999702) or later for iOS. For more information, see [iOS prerequisites](prerequisites.md#ios). If your app doesn't appear in the installed apps list, see [App doesn't appear in Outlook or Microsoft 365 mobile apps](#app-doesnt-appear-in-outlook-or-microsoft-365-mobile-apps).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+app+for+iOS&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-app-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -322,6 +331,27 @@ For an overall summary of Microsoft 365 host and platform support for Teams apps
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This action allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+
+### App doesn't appear in Outlook or Microsoft 365 mobile apps
+
+If your personal tab appears in Teams but not in the installed apps list of Outlook or the Microsoft 365 app on Android or iOS, check the following:
+
+| Check | Details |
+|---|---|
+| Manifest version | To be surfaced across host applications, your app must use [app manifest](/microsoft-365/extensibility/schema/) version 1.13 or later. For more information, see [Apps for Microsoft 365 that work across application hosts](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365). |
+| Client version | For Android, use Microsoft 365 app version 16.0.15726.20000 or later and Outlook app version 4.2247.1 (52247812) or later. For iOS, use Microsoft 365 app version 2.72.23030700 or later and Outlook app version 4.2310.0 (18999702) or later. For more information, see [Mobile prerequisites](prerequisites.md#mobile). |
+| Host app restart | If the host app was running when you uploaded your app, restart the host app. For more information, see [Upload your custom app in Teams](#upload-your-custom-app-in-teams). |
+| Capability support | Confirm that the capabilities your app uses are supported on the mobile host. For more information, see [TeamsJS capability support across Microsoft 365](teamsjs-support-m365.md) and [Platform support](overview.md#platform-support). |
+| Admin availability in production tenants | Availability in Outlook and the Microsoft 365 Copilot app is managed separately from Teams, through **Integrated apps** in the Microsoft 365 admin center. Confirm that the app isn't in the **Blocked Apps** list and that the user is included in the app's deployment or availability assignment. For more information, see [Manage how users can install cross application apps](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#manage-how-users-can-install-cross-application-apps-for-microsoft-365). |
+| Duplicate uploads | If you uploaded your app from the Teams admin center, it already appears in the **Available Apps** list of the integrated apps portal. Deploy that entry instead of uploading the app package a second time. For more information, see [Upload custom cross application apps](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365#upload-custom-cross-application-apps). |
+| Propagation time in sandbox tenants | It can take up to five days after you create a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enroll in Microsoft 365 Targeted Releases for uploaded apps to appear in Outlook and Microsoft 365 app. For more information, see [Enroll your developer tenant for Microsoft 365 Targeted Releases](prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional). |
+
+If your app is deployed correctly and still doesn't appear for an assigned user in a production tenant, ask your tenant admin to [open a support request](/microsoft-365/admin/get-help-support) from the Microsoft 365 admin center. Include the following diagnostic information:
+
+* The app manifest and its schema version, and the app ID.
+* The deployment and user assignment shown for the app in **Integrated apps**.
+* The host application name and build number, such as the Outlook for Android build.
+* The affected user account and the time that you reproduced the issue.
 
 ### Debugging
 

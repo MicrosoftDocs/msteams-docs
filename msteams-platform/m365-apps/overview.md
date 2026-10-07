@@ -1,7 +1,7 @@
 ---
 title: Use Agents and Apps across Microsoft 365
 description: Learn how to extend Teams agents and apps across Microsoft 365 (running in Teams, Outlook, Word, Excel, PowerPoint and Microsoft 365 as application hosts).
-ms.date: 03/27/2026
+ms.date: 10/07/2026
 ms.author: rickki 
 author: rick-kirkham
 ms.topic: overview
@@ -81,9 +81,12 @@ For more information, see [Apps for meetings and calls](/microsoftteams/platform
 
 The following table shows platforms supporting the various types of apps for Microsoft 365.
 
+> [!NOTE]
+> This table shows the platforms on which each app feature can run. It doesn't describe how an app is made available to users. For an app that your organization uploads, availability in Outlook and the Microsoft 365 Copilot app is managed from **Integrated apps** in the Microsoft 365 admin center, separately from Teams. For more information, see [Publish Teams apps for Microsoft 365](publish.md) and [Apps for Microsoft 365 that work across application hosts](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+
 | Teams app features| Teams support |Outlook as a hub support |Microsoft 365 Copilot support |Word, Excel, Outlook, PowerPoint add-in support| Notes |
 |--|--|--|--|--|--|--|
-| [**Tabs-personal scope**](/microsoftteams/platform/tabs/how-to/create-personal-tab)     |Web, Desktop, Mobile | Web, Desktop, Mobile (Android, iOS) | Web, Desktop, Mobile (Android, iOS)|-|Channel and group scopes aren't supported for Microsoft 365. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Tabs-personal scope**](/microsoftteams/platform/tabs/how-to/create-personal-tab)     |Web, Desktop, Mobile | Web, Desktop, Mobile (Android, iOS) | Web, Desktop, Mobile (Android, iOS)|-|Channel and group scopes aren't supported for Microsoft 365. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#microsoft-365-support-running-teams-apps-in-office-and-outlook). To deploy a personal tab to users and troubleshoot discovery on mobile hosts, see [Publish Teams apps for Microsoft 365](publish.md) and [App doesn't appear in Outlook or Microsoft 365 mobile apps](extend-m365-teams-personal-tab.md#app-doesnt-appear-in-outlook-or-microsoft-365-mobile-apps).
 | [**Meeting apps**](/microsoftteams/platform/m365-apps/extend-m365-meeting-app)|Web, Desktop, Mobile|Desktop|-|-|Meeting Stageview isn't supported in Outlook. See [Extend a meeting app to Outlook](/microsoftteams/platform/m365-apps/extend-m365-meeting-app).|
 | [**Message extensions-search-based**](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command)| Web, Desktop, Mobile| Web, Desktop | - |-|For limitations and troubleshooting, see [Limitations](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension#limitations). |
 | [**Action-based message extensions**](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command)| Web, Desktop, Mobile| Web | - |-| Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). For limitations and troubleshooting, see [Limitations](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension#limitations). |
