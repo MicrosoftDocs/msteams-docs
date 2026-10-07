@@ -64,7 +64,6 @@ Coordinate the app manifest, Teams SDK agent sign-in, NAA token acquisition, and
 Before you implement connected authentication, you need:
 
 - A Teams app with a personal agent and a tab.
-- A Teams SDK agent using `@microsoft/teams.apps`, `@microsoft/teams.api`, and related Teams SDK packages.
 - An Azure bot resource configured for OAuth provider or Microsoft Entra ID authentication.
 - One of the following:
   - A Microsoft Entra app registration configured for NAA.
@@ -119,52 +118,6 @@ Use app manifest version 1.22 or later to add `nestedAppAuthInfo`. The following
 - `webApplicationInfo.resource`: Identifies the agent API resource. Set the application ID URI, such as `api://botid-${{ENTRA_APP_ID}}`, to associate the Teams app with its protected API.
 - `nestedAppAuthInfo.redirectUri`: Registers the trusted NAA broker redirect. Set the SPA redirect to `brk-multihub://<app-host-name>` without a path so Microsoft 365 hosts can broker NAA authentication.
 - `nestedAppAuthInfo.scopes`: Declares permissions requested during NAA authentication. Add the exact runtime scopes, such as `User.Read`, to enable token prefetch and Microsoft Entra consent validation.
-
-### Configure Teams SDK authentication
-
-Set the external provider's OAuth connection as the default connection for your agent:
-
-```typescript
-import { App, ExpressAdapter } from '@microsoft/teams.apps';
-
-const connectionName = process.env.CONNECTION_NAME || 'Auth0';
-const httpServerAdapter = new ExpressAdapter();
-
-const app = new App({
-  applicationIdUri: process.env.RESOURCE_URI,
-  httpServerAdapter,
-  oauth: {
-    defaultConnectionName: connectionName,
-  },
-});
-```
-
-- `connectionName`: Identifies the external OAuth connection. Set `CONNECTION_NAME` to the exact name of the OAuth connection configured for the Azure Bot resource; the example uses `Auth0` when the environment variable isn't set.
-- `applicationIdUri`: Identifies the protected agent resource. Set `RESOURCE_URI` to the application ID URI configured in Microsoft Entra ID.
-- `httpServerAdapter`: Connects the Teams SDK app to the web server. Create an `ExpressAdapter` instance so the app can receive activities and register the account-linking routes on the same server.
-- `oauth.defaultConnectionName`: Selects the connection used by `signin()` and token retrieval. Set it to `connectionName` so both operations use the same external identity provider.
-
-Start sign-in when the user sends a message and handle the successful sign-in event:
-
-```typescript
-app.on('message', async ({ send, signin, isSignedIn }) => {
-  if (!isSignedIn) {
-    await send(`Sign in with ${connectionName} to continue.`);
-    await signin();
-    return;
-  }
-
-  await send('You are signed in.');
-});
-
-app.event('signin', async ({ send }) => {
-  await send('Sign-in succeeded. Complete account linking to use the tab.');
-});
-```
-
-- `isSignedIn`: Indicates whether the agent user authenticated. Use the value supplied by Teams SDK for the current activity to avoid starting another sign-in for an authenticated user.
-- `signin()`: Starts the configured external OAuth sign-in. Call it without a connection name to use `oauth.defaultConnectionName` and authenticate the primary account before account linking.
-- `app.event('signin', ...)`: Handles successful external-provider authentication. Register the event handler to notify the user that sign-in succeeded and account linking can continue.
 
 ### Return the account-linking URL
 
