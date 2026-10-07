@@ -5,7 +5,7 @@ description: Learn to add link unfurling with Developer Portal and messaging ext
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: slamba
-ms.date: 04/23/2026
+ms.date: 09/24/2026
 ---
 # Link unfurling
 
