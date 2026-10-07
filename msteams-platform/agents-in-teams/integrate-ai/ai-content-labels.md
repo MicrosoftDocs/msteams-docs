@@ -127,19 +127,19 @@ If you're using **Teams SDK** to build your agent, Use `addCitation()` to includ
 ```csharp
 async Task SendCitations(Context<MessageActivity> context, CancellationToken cancellationToken)
 {
-var message = new MessageActivityInput()
-  .WithText("Hey I'm a friendly AI agent. This message is generated through AI [1]");
+    var message = new MessageActivityInput()
+        .WithText("Hey I'm a friendly AI agent. This message is generated through AI [1]");
 
-message.AddCitation(1, new CitationAppearance
-{
-    Name = "AI messages agent",
-    Url = new Uri("https://example.com/claim-1"),
-    Abstract = "Excerpt description",
-    Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
-    Icon = CitationIcons.MicrosoftWord
-});
+    message.AddCitation(1, new CitationAppearance
+    {
+        Name = "AI messages agent",
+        Url = new Uri("https://example.com/claim-1"),
+        Abstract = "Excerpt description",
+        Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
+        Icon = CitationIcons.MicrosoftWord
+    });
 
-  await context.SendAsync(message, cancellationToken);
+    await context.SendAsync(message, cancellationToken);
 }
 ```
 
@@ -148,21 +148,21 @@ message.AddCitation(1, new CitationAppearance
 ```csharp
 async Task SendCitations(IContext context)
 {
-var message = new MessageActivity
-{
-Text = "Hey I'm a friendly AI agent. This message is generated through AI [1]"
-};
+    var message = new MessageActivity
+    {
+        Text = "Hey I'm a friendly AI agent. This message is generated through AI [1]"
+    };
 
-message.AddCitation(1, new CitationAppearance
-{
-    Name = "AI messages agent",
-    Url = "https://example.com/claim-1",
-    Abstract = "Excerpt description",
-    Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
-    Icon = CitationIcon.MicrosoftWord
-});
+    message.AddCitation(1, new CitationAppearance
+    {
+        Name = "AI messages agent",
+        Url = "https://example.com/claim-1",
+        Abstract = "Excerpt description",
+        Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
+        Icon = CitationIcon.MicrosoftWord
+    });
 
-await context.Send(message);
+    await context.Send(message);
 }
 ```
 

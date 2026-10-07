@@ -1456,7 +1456,7 @@ To enable your agents to get only those channel or chat messages where your agen
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
-    teams.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
     {
@@ -1470,7 +1470,7 @@ To enable your agents to get only those channel or chat messages where your agen
 # [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
-  app.OnMessage(async context =>
+app.OnMessage(async context =>
 {
     if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
     {
