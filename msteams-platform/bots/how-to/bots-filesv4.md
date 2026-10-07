@@ -1,7 +1,7 @@
 ---
 title: Send and Receive Files
 description: Learn how to create agents that send and receive files using Microsoft Graph APIs and Teams SDK for personal, channel, and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 08/19/2026
+ms.date: 10/07/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -13,7 +13,7 @@ ms.owner: angovil
 
 > [!IMPORTANT]
 >
-> * Agents don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
+> Agents don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send and receive files:
 
