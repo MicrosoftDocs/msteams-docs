@@ -1789,16 +1789,23 @@ async def handle_meeting_end(ctx: ActivityContext[MeetingEndEventActivity]) -> N
     # Retrieve the user ID of the organizer for the transcript API
     user_id = ""
     if meeting_info and meeting_info.organizer:
-        user_id = getattr(meeting_info.organizer, 'aadObjectId', None) or ""
+        user_id = meeting_info.organizer.aad_object_id or ""
 
     if not ms_graph_resource_id and meeting_info and meeting_info.details:
         ms_graph_resource_id = meeting_info.details.ms_graph_resource_id
 
+    # Wait for the transcript to become available
+    await asyncio.sleep(30)
+
     transcript = ''
     if ms_graph_resource_id:
-        vtt_transcript = await get_meeting_transcript(ms_graph_resource_id, user_id)
-        if vtt_transcript:
-            transcript = parse_vtt(vtt_transcript)
+        for attempt in range(1, 4):
+            vtt_transcript = await get_meeting_transcript(ms_graph_resource_id, user_id)
+            if vtt_transcript:
+                transcript = parse_vtt(vtt_transcript)
+                break
+            if attempt < 3:
+                await asyncio.sleep(10)
 
     transcript_blocks = (
         [TextBlock(text=line, wrap=True) for line in transcript.splitlines() if line]
@@ -1841,11 +1848,12 @@ The following code provides an example of meeting start event payload:
     "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
   },
   "value": {
-    "id": "meeting_id",
-    "joinUrl": "join_url",
-    "title": "Example meeting",
-    "meetingType": "Scheduled",
-    "startTime": "2023-02-23T19:34:07.478Z"
+    "Id": "meeting_id",
+    "JoinUrl": "join_url",
+    "Title": "Example meeting",
+    "MeetingType": "Scheduled",
+    "StartTime": "2023-02-23T19:34:07.478Z",
+    "EndTime": null
   },
   "channelData": {
     "tenant": {
@@ -1879,11 +1887,12 @@ The following code provides an example of meeting end event payload:
     "id": "28:65f50003-e15d-434a-9e14-0fcfeb3d7817"
   },
   "value": {
-    "id": "meeting_id",
-    "joinUrl": "join_url",
-    "title": "Example meeting",
-    "meetingType": "Scheduled",
-    "endTime": "2023-02-23T20:30:07.478Z"
+    "Id": "meeting_id",
+    "JoinUrl": "join_url",
+    "Title": "Example meeting",
+    "MeetingType": "Scheduled",
+    "StartTime": null,
+    "EndTime": "2023-02-23T20:30:07.478Z"
   },
   "channelData": {
     "tenant": {
@@ -1917,9 +1926,9 @@ The following code provides an example of meeting end event payload:
 | **value.MeetingType** | The type of meeting. |
 | **value.Title** | The subject of the meeting. |
 | **value.Id** | The default ID associated with the meeting. |
-| **value.JoinUrl** | The join URL of the meeting. |
-| **value.StartTime** | The meeting start time in UTC. |
-| **value.endTime** | The meeting end time in UTC. |
+| **value.JoinUrl** | The join URL of the meeting. May be `null`. |
+| **value.StartTime** | The meeting start time in UTC. `null` on `meetingEnd`. |
+| **value.EndTime** | The meeting end time in UTC. `null` on `meetingStart`. |
 | **locale** | The locale of the message set by the client. |
 
 ### Receive meeting participant events
