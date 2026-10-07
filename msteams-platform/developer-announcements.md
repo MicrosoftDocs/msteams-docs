@@ -1,14 +1,72 @@
 ---
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
-ms.topic: reference
-ms.date: 08/16/2026
-ms.localizationpriority: high
+ms.topic: whats-new
+ms.date: 09/28/2026
+author: nickwalkmsft
+ms.author: nickwalk
+ms.reviewer: nickwalk
 ---
 
 # Teams Platform developer announcements
 
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they are published.
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
+feed reader as they're published.
+
+## Released: Teams SDK updates (TypeScript, .NET and Python)
+
+*September 28th, 2026*
+
+The release of Teams SDK 2.1 for TypeScript and Python brings together new capabilities for building more connected, context-aware, observable, and extensible agents for Teams. Teams SDK for .NET gets a version bump to 2.1.1 with a few of these new capabilities as well.
+
+### TypeScript and Python: version 2.1.0
+
+- **Build Agentic Users**: Build with agentic identity, lifecycle events, token acquisition, and reactive and proactive messaging helpers.
+- **Compose with Microsoft 365 Agents SDK**: Use the Microsoft 365 Agents SDK to extend existing Teams SDK agents to additional channels without rewriting their Teams-specific capabilities.
+- **Observability for developers**: Use OpenTelemetry spans and metrics to understand activity processing, handler execution, authentication, and outbound Teams API calls.
+- **Authenticate multiple services**: Connect one agent to multiple services, such as Microsoft Graph and GitHub, using independent OAuth flows. The SDK handles connection-aware callbacks and duplicate token exchanges.
+- **Built-in state management**: Create personalized, multistep experiences using conversation and user state that automatically loads and saves with each activity.
+- **Seamless file processing**: Receive and securely process file attachments, including files shared by Agentic Users.
+
+For more information, see the release notes ([TypeScript](https://github.com/microsoft/teams.ts/releases/tag/v2.1.0), [Python](https://github.com/microsoft/teams.py/releases/tag/v2.1.0)) and reference documentation ([TypeScript](/javascript/api/teams-sdk-typescript), [Python](/python/api/msteams-sdk-python)).
+
+### .NET: version 2.1.1
+
+Version 2.1.1 of Teams SDK for .NET ([release notes](https://github.com/microsoft/teams.net/releases/tag/v2.1.1); [reference documentation](/dotnet/teams-sdk-dotnet)) brings the same new Microsoft 365 Agents SDK composability and file-receive API additions, as well as removal of the `Experimental` attribute on APIs related to targeted messages.
+
+---
+
+## Preview: Sessions for Teams agents
+
+*September 24, 2026*
+
+Until now, a user's chat with an agent was one long, ongoing thread. Now in preview, sessions let users and agents split that chat into separate conversations. Each session keeps its own context, so users can juggle multiple projects without them getting mixed up, and your agent's AI responses stay on topic.
+
+With sessions, you can:
+
+- Keep conversations organized. Users can start, switch between, and return to sessions from the chat header.
+- Improve AI responses. Shorter, focused contexts help your agent's LLM generate more relevant answers.
+- Create sessions proactively. Start a session for a notification, ticket, pull request, or approval.
+
+Most agents can benefit from sessions, especially those that help users with long-running, complex work. To enable them for yours, set `"supportsSessions": true` in your app manifest.
+
+For more information, see [Manage multiple user conversations with sessions](bots/how-to/conversations/agent-sessions.md).
+
+---
+
+## Review needed: TLS 1.3 support and TLS fingerprinting
+
+*September 17, 2026*
+
+At the **end of October 2026**, Microsoft will add TLS 1.3 support to Agent Communications Service, the `https://smba.*` family of service endpoints used by Teams agents and Microsoft 365 custom engine agents. In most cases, no developer action is required. However, **developers hosting agent runtimes in environments that perform validation of TLS fingerprints, including JA3 and JA4 fingerprints, might need to take action to avoid network security warnings and maintain agent connectivity.**
+
+Agent developers should review the network security controls of their hosting environments and consider temporarily relaxing or disabling rules that perform TLS fingerprint validation on client connections to agent runtime endpoints. Once TLS 1.3 support is enabled, they can capture an updated fingerprint and reenable any security rules that depend on it.
+
+TLS fingerprint validation detects changes in properties of network connections that are typically stable over time. In some hosting environments, it's used to enhance client authentication and flag potential security risks. The addition of TLS 1.3 support to Agent Communications Service might invalidate its established client fingerprint in environments that perform validation, potentially triggering rules that generate warnings or block connectivity.
+
+TLS 1.3 provides improved security and performance compared to earlier versions. Agent runtimes hosted in environments that support TLS 1.3 will begin taking advantage of it automatically. Agent Communications Service will continue to support TLS 1.2, ensuring compatibility with all existing agent runtimes.
+
+---
 
 ## Preview: Extended Markdown formatting for agent messages
 
@@ -18,7 +76,7 @@ Agents can now send richer, better-formatted responses. Set `textFormat: "extend
 
 Extended Markdown content also renders progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
 
-For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md#set-message-text-format).
+For more information, see [Format your agent messages](bots/how-to/format-your-bot-messages.md).
 
 ---
 
@@ -426,7 +484,7 @@ Support for apps in private channels is available in developer preview. For more
 | 17/11/2022 | Updated Manifest schema v1.15. | App manifest > [Manifest schema v1.15](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 16/11/2022 | Introducing Adaptive Cards overflow menu. | Build cards and task modules > Build cards > Format cards in Microsoft Teams > [Adaptive Cards overflow menu](task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu) |
 | 14/11/2022 | Introducing single sign-on for Visual Studio. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app > [Add single sign-on to your Teams app](toolkit/add-single-sign-on.md) |
-| 10/11/2022 | Enable bots to receive all conversation messages without being @mentioned in relevant contexts (developer preview). | Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-for-bots-and-agents.md) |
+| 10/11/2022 | Enable bots to receive all conversation messages without being @mentioned in relevant contexts (developer preview). | Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](agents-in-teams/enable-receive-all-chat-messages.md) |
 | 02/11/2022 | Support global routing for bot APIs. | Build bots > Bot conversations > Proactive messages > [Create the conversation](bots/how-to/conversations/send-proactive-messages.md#create-the-conversation) |
 | 27/10/2022 | Introducing Workflow bot for Teams. | Tools and SDKs > Teams Toolkit > Use Teams Toolkit to create your app > Develop your Teams app > Create multi capability app > [Create Teams workflow bot](sbs-gs-workflow-bot.yml) |
 | 26/10/2022 | Build an in-meeting app for enabling meeting participants to sign documents in real time. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build apps for Teams meeting stage](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#build-an-in-meeting-document-signing-app) |
@@ -449,7 +507,7 @@ Support for apps in private channels is available in developer preview. For more
 | 01/08/2022 | Notice: Developer Portal is now GA and App Studio is deprecated from August, 01, 2022. | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 01/08/2022 | App Studio is deprecated, use Developer Portal for Teams. | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 | 28/07/2022 | Add the Teams display picture and people card for in-meeting notification. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Build in-meeting notification for Teams meeting](apps-in-teams-meetings/in-meeting-notification-for-meeting.md) |
-| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](concepts/build-and-test/Shared-channels.md) |
+| 28/07/2022 | Build shared channels in Teams. | Build apps for Teams meetings and calls > [Shared channels](build-apps-for-shared-private-channels.md) |
 | 28/07/2022 | Introduced app manifest v1.14. | App manifest > [App manifest schema for Teams](/microsoft-365/extensibility/schema/#all-generally-available-versions) |
 | 26/07/2022 | Suggested actions for bots. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#send-suggested-actions) |
 | 21/07/2022 | Introduced step by step guide to send activity feed notifications. | Design your app > UI components> Activity feed notifications > [Send activity feed notification](sbs-graphactivity-feedbroadcast.yml) |
