@@ -44,7 +44,11 @@ Teams admin can upload and preinstall the app package for your organization's te
 
 Global Administrator can upload and preinstall the app package from [Microsoft admin](https://admin.microsoft.com/). For more information, see [test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
 
-An app that surfaces in more than one host application, such as a personal tab that runs in both Teams and Outlook, is managed as a *cross application app*. Its availability in Outlook and the Microsoft 365 Copilot app is controlled from **Integrated apps** in the Microsoft 365 admin center, and its availability in Teams is controlled from the Teams admin center. To deploy a custom line-of-business app to Outlook, go to **Settings** > **Integrated apps** > **Upload custom apps**, and then assign the app to users. If you already uploaded the app from the Teams admin center, deploy the existing entry in the **Available Apps** list instead of uploading the app package again. For more information, see [Apps for Microsoft 365 that work across application hosts](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+An app that surfaces in more than one host application, such as a personal tab that runs in both Teams and Outlook, is managed as a *cross-application app*. Its availability in Outlook and the Microsoft 365 Copilot app is controlled from **Integrated apps** in the Microsoft 365 admin center, while its availability in Teams is controlled from the Teams admin center.
+
+To deploy a custom line-of-business app to Outlook, go to **Settings** > **Integrated apps** > **Upload custom apps**, and then assign the app to users. If you already uploaded the app from the Teams admin center, deploy the existing entry in the **Available Apps** list instead of uploading the app package again.
+
+For more information, see [Apps for Microsoft 365 that work across application hosts](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
 
 ## Multitenant distribution
 

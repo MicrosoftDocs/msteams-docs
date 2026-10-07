@@ -100,7 +100,7 @@ The following table shows platforms supporting the various types of apps for Mic
 
 To create an app within the Microsoft 365 ecosystem, consider how it helps your users to perform their work and complete their daily tasks. By being thoughtful in your app planning and design, you can create an experience that is more integrated and introduces less friction for users with their app.
 
-To get started with apps extended across Microsoft 365, see [app playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and [Microsoft 365 UI Kit (Figma) preview](https://aka.ms/M365UIKit).
+To get started with apps extended across Microsoft 365, see [Microsoft 365 UI Kit (Figma) preview](https://aka.ms/M365UIKit).
 
 ## Microsoft commercial marketplace submission
 
@@ -119,5 +119,5 @@ Set up your dev environment to build Teams apps for Microsoft 365.
 
 ## See also
 
-* [Manage access to the enhanced apps](/microsoftteams/manage-third-party-teams-apps#manage-users-access-to-the-enhanced-apps)
-* [Validation of Teams apps extensible across Microsoft 365](/training/modules/microsoft-teams-metaos-app/)
+- [Manage access to the enhanced apps](/microsoftteams/manage-third-party-teams-apps#manage-users-access-to-the-enhanced-apps)
+- [Validation of Teams apps extensible across Microsoft 365](/training/modules/microsoft-teams-metaos-app/)
