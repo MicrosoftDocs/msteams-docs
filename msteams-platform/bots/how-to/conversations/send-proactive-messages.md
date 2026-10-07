@@ -365,3 +365,4 @@ The following table provides code samples that incorporate basic conversation fl
 ## See also
 
 * [Channel and group chat conversations with an agent](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [Structure conversations with sessions](agent-sessions.md)
