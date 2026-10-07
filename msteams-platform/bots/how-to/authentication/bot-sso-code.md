@@ -76,7 +76,7 @@ var teams = app.UseTeamsBotApplication();
 OAuthFlow auth = teams.GetOAuthFlow(connectionName);
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs1-legacy)
+# [C# SDK &lt;2.1 (legacy)](#tab/cs1-legacy)
 
 ```csharp
 using Microsoft.Teams.Apps.Extensions;
@@ -147,7 +147,7 @@ auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
 });
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs2-legacy)
+# [C# SDK &lt;2.1 (legacy)](#tab/cs2-legacy)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -225,7 +225,7 @@ auth.OnSignInFailure(async (context, failure, cancellationToken) =>
 });
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs3-legacy)
+# [C# SDK &lt;2.1 (legacy)](#tab/cs3-legacy)
 
 ```csharp
 teams.OnSignInFailure(async (context, cancellationToken) =>
@@ -272,7 +272,7 @@ teams.OnMessage("/signout", async (context, cancellationToken) =>
 });
 ```
 
-# [C# SDK<2.1(legacy)](#tab/cs4-legacy)
+# [C# SDK &lt;2.1 (legacy)](#tab/cs4-legacy)
 
 ```csharp
 teams.OnMessage("/signout", async (context, cancellationToken) =>

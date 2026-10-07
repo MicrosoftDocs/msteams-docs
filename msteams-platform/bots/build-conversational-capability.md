@@ -115,8 +115,6 @@ The following code shows an example of receiving a message activity:
 
 ::: zone pivot="teams-sdk-csharp"
 
-- [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
@@ -575,9 +573,17 @@ The following is an example of an undelete message activity notification when a 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
-// Undelete events are handled in the merged OnMessageUpdate handler above,
-// which checks context.Activity.ChannelData?.EventType == "undeleteMessage".
+teams.OnMessageUpdate(async (context, cancellationToken) =>
+{
+    if (context.Activity.ChannelData?.EventType == "undeleteMessage")
+    {
+        await context.SendAsync("message is undeleted", cancellationToken);
+    }
+});
 ```
+
+> [!NOTE]
+> In Teams SDK 2.1, all matching handlers run in sequence. If you already handle `undeleteMessage` in the `OnMessageUpdate` handler shown in [Receive edit message activity](#receive-edit-message-activity), don't register this handler as well, or your agent responds twice.
 
 # [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 

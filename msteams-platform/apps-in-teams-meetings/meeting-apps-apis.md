@@ -779,7 +779,6 @@ The following table includes the query parameter:
 
 # [C# SDK v2.1](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
@@ -814,7 +813,6 @@ app.OnMessage(async (context, cancellationToken) =>
 
 # [TypeScript](#tab/javascript2)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```typescript
@@ -1131,8 +1129,6 @@ The following table lists the query parameter:
 ### Example
 
 # [C# SDK v2.1](#tab/dotnet)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -1600,10 +1596,9 @@ The following examples show how to capture the meeting start and end events:
 
 #### Meeting start event
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
-
 # [C# SDK v2.1](#tab/dotnet4)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
 // Register meeting start handler
@@ -1735,10 +1730,9 @@ async def handle_meeting_start(ctx: ActivityContext[MeetingStartEventActivity]) 
 
 #### Meeting end event
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
-
 # [C# SDK v2.1](#tab/dotnet5)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
 // Register meeting end handler with transcript support
@@ -2151,9 +2145,9 @@ The following examples show how to capture the participant join and leave events
 
 #### Participant join event
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
-
 # [C# SDK v2.1](#tab/dotnet6)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 // Register meeting participant join handler
@@ -2279,9 +2273,9 @@ async def handle_meeting_participant_join(ctx: ActivityContext[MeetingParticipan
 
 #### Participant leave event
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
-
 # [C# SDK v2.1](#tab/dotnet7)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 // Register meeting participant leave handler
