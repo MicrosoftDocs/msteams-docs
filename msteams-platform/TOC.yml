@@ -100,6 +100,18 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Add middleware and logging
+      href: agents-in-teams/agent-observability.md
+      displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
+    - name: Host web content and manage your server
+      href: agents-in-teams/host-agent-server.md
+      displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
+    - name: Authenticate your agent
+      href: agents-in-teams/authenticate-your-agent.md
+      displayName: app authentication, client secret, user-assigned managed identity, federated identity credentials, CLIENT_ID, CLIENT_SECRET, MANAGED_IDENTITY_CLIENT_ID, passwordless
+    - name: Agent trust model
+      href: agents-in-teams/agent-trust-model.md
+      displayName: token validation, JWT, JWKS, issuer, audience, bearer token, custom route authentication, security
 - name: Tools and SDKs
   items:
   - name: Overview
