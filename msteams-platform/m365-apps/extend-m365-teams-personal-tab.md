@@ -392,4 +392,4 @@ Publish your app to be discoverable in Teams, Outlook, and Microsoft 365 app:
 ## See also
 
 * [Extend Teams apps across Microsoft 365](overview.md)
-* [Public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md)
+* [Public developer preview for Teams](../developer-preview-features.md)

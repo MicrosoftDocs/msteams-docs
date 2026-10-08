@@ -189,8 +189,8 @@ The scope defines who can access the apps.
 
 The `context` property determines if the app is available in specific view after installation and configuration. Following are the values for the `context` property from which you can use all or some of the values:
 
-|Value|Description|
-|---|---|
+| Value | Description |
+| --- | --- |
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either `meetingChatTab` or `meetingDetailsTab` to ensure the apps work in mobile. |

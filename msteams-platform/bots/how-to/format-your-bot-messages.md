@@ -35,7 +35,7 @@ By default, Teams recognizes the following markup syntax:
 ## Extended Markdown mode (preview)
 
 > [!IMPORTANT]
-> Extended Markdown mode is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). When it becomes generally available, the current default behavior will remain the default to ensure the stability of existing agents.
+> Extended Markdown mode is available in [public developer preview](../../developer-preview-features.md). When it becomes generally available, the current default behavior will remain the default to ensure the stability of existing agents.
 >
 > To prepare to take advantage of extended Markdown mode's general availability:
 >

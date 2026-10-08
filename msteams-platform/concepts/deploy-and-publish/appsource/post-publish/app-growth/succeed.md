@@ -109,7 +109,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Early access to unreleased Teams Platform features</summary>
 
-Microsoft-offered public [Developer Preview for Teams](../../../../../resources/dev-preview/developer-preview-intro.md) is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. While the program is open for all Teams developers, strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
+Microsoft-offered public [Developer Preview for Teams](../../../../../developer-preview-features.md) is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. While the program is open for all Teams developers, strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
 
 </details>
 <br>

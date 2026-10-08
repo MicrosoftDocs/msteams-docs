@@ -12,7 +12,7 @@ zone_pivot_groups: teams-sdk-languages
 By default, one-on-one chat between a user and an agent takes place in a single long-running conversation. With sessions, an agent can hold multiple independent one-on-one conversations with a user.
 
 > [!NOTE]
-> The sessions feature is currently in public preview. Enabling sessions for an agent requires use of the [developer preview version of the app manifest](../../../resources/dev-preview/developer-preview-intro.md). Users must be enrolled in [Teams public preview](/MicrosoftTeams/public-preview-doc-updates) to access the sessions experience.
+> The sessions feature is currently in public preview. Enabling sessions for an agent requires use of the [developer preview version of the app manifest](../../../developer-preview-features.md). Users must be enrolled in [Teams public preview](/MicrosoftTeams/public-preview-doc-updates) to access the sessions experience.
 
 Sessions offer users and agents a structured way to manage multiple tasks or workflows, similar to other modern AI assistant experiences. Encouraging users to organize their interactions into shorter, more focused contexts can also improve the quality of LLM-generated responses.
 
@@ -48,14 +48,13 @@ Users can navigate between sessions using the sessions panel. The latest message
 
 New messages in sessions generate notifications, and result in highlighting and badging of the session in the sessions panel.
 
-> [!NOTE]
-> Sessions are distinct from threaded replies in channels. A session is a full, independent conversation context within a 1:1 chat and not a reply chain under a single message.
+The user experience of sessions shouldn't be confused with [threaded conversations in channels](channel-and-group-conversations.md#threaded-conversations). Users experience sessions as independent conversations with a single agent, not threads within one larger conversation.
 
 ## Enable sessions for your agent
 
 Sessions are an opt-in capability that you enable through your app manifest. After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
-To enable sessions for an agent, ensure that your agent is using the [developer preview app manifest](../../../resources/dev-preview/developer-preview-intro.md), and set the `supportsSessions` property in its app manifest to `true`.
+To enable sessions for an agent, ensure that your agent is using the [developer preview app manifest](../../../developer-preview-features.md), and set the `supportsSessions` property in its app manifest to `true`.
 
 ```json
 {

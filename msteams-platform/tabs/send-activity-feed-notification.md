@@ -82,7 +82,7 @@ Activity feed APIs work with a Teams app. The following are the requirements to 
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
     > [!NOTE]
-    > The `systemDefault` activity type is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+    > The `systemDefault` activity type is available only in [public developer preview](../developer-preview-features.md).
   * If you want to send a templated notification in the traditional mode, the `activityTypes` property must be added in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
 * Teams app must be installed for the recipient either personally, or in a team or chat they're part of.
 
