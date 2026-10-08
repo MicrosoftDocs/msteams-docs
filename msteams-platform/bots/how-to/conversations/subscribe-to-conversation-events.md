@@ -550,6 +550,8 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
 The following code shows an example of a team members removed event:
 
+::: zone pivot="csharp"
+
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -570,7 +572,9 @@ app.OnMembersRemoved(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('membersRemoved', async ({ activity, send }) => {
@@ -581,7 +585,9 @@ app.on('membersRemoved', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
@@ -623,7 +629,9 @@ The `channelData` object in the following payload example is based on adding a m
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_conversation_update
@@ -633,7 +641,7 @@ async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity
             await ctx.send(f"Say goodbye to {member.id}")
 ```
 
----
+::: zone-end
 
 ### Team renamed
 
@@ -641,7 +649,7 @@ Your agent is notified when the team is renamed. It receives a `conversationUpda
 
 The following code shows an example of a team renamed event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamRenamed(async context =>
@@ -651,7 +659,9 @@ app.OnTeamRenamed(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamRenamed', async ({ activity, send }) => {
@@ -660,7 +670,9 @@ app.on('teamRenamed', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -695,7 +707,9 @@ app.on('teamRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_renamed
@@ -704,7 +718,7 @@ async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
     await ctx.send(f"The new team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team deleted
 
