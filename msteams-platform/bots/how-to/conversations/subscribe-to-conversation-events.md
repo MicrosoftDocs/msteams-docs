@@ -726,7 +726,7 @@ The agent receives a notification when the team is deleted. It receives a `conve
 
 The following code shows an example of a team deleted event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamDeleted(async context =>
@@ -735,7 +735,9 @@ app.OnTeamDeleted(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamDeleted', async ({ activity }) => {
@@ -743,7 +745,9 @@ app.on('teamDeleted', async ({ activity }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -778,7 +782,9 @@ app.on('teamDeleted', async ({ activity }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_deleted
@@ -787,7 +793,7 @@ async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
     pass
 ```
 
----
+::: zone-end
 
 ### Team restored
 
@@ -795,7 +801,7 @@ The agent receives a notification when a team is restored after being deleted. I
 
 The following code shows an example of a team restored event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamRestored(async context =>
@@ -805,7 +811,9 @@ app.OnTeamRestored(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamRestored', async ({ activity, send }) => {
@@ -814,7 +822,9 @@ app.on('teamRestored', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -849,7 +859,9 @@ app.on('teamRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_restored
@@ -858,7 +870,7 @@ async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity])
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team archived
 
