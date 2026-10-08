@@ -1034,9 +1034,9 @@ Now that you've worked with the conversation update events, you can understand t
 
 The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your agent. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your agent, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
-| EventType       | Payload object   | Description                                                             | Scope |
-| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-agent-message).           | All   |
+| EventType | Payload object | Description | Scope |
+| --- | --- | --- | --- |
+| messageReaction | reactionsAdded | [Reactions added to agent message](#reactions-added-to-agent-message). | All |
 | messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-agent-message). | All |
 
 For more information about agent reactions, see [Use emoji reactions in Teams chat](../../../agents-in-teams/agent-reactions.md).
@@ -1045,7 +1045,9 @@ For more information about agent reactions, see [Use emoji reactions in Teams ch
 
 The following code shows an example of reactions to an agent message:
 
-# [C#](#tab/dotnet)
+::: zone-end
+
+::: zone pivot="csharp"
 
 ```csharp
 app.OnReactionsAdded(async context =>
@@ -1058,7 +1060,9 @@ app.OnReactionsAdded(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 
@@ -1073,7 +1077,9 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1118,7 +1124,9 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_reactions_added
@@ -1129,13 +1137,13 @@ async def handle_reactions_added(ctx: ActivityContext):
         )
 ```
 
----
+::: zone-end
 
 ### Reactions removed from agent message
 
 The following code shows an example of reactions removed from agent message:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnReactionsRemoved(async context =>
@@ -1148,7 +1156,9 @@ app.OnReactionsRemoved(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('reactionsRemoved', async ({ activity, send }) => {
@@ -1162,7 +1172,9 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1207,7 +1219,9 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_reactions_removed
@@ -1218,7 +1232,7 @@ async def handle_reactions_removed(ctx: ActivityContext):
         )
 ```
 
----
+::: zone-end
 
 ## Installation update event
 
