@@ -1,7 +1,7 @@
 ---
 title: Extend Personal Tab to Microsoft 365
 description: Learn how to update personal tab app to run in Outlook and Microsoft 365 app, configure Content Security Policy headers, update app registration for SSO.
-ms.date: 10/17/2024
+ms.date: 10/01/2026
 ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: m365apps
@@ -187,7 +187,7 @@ The final step to running your app in Microsoft 365 and Outlook is to upload you
 
 1. Select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
 1. Choose the **Upload a custom app** option and select your app package.
 
@@ -217,7 +217,7 @@ To view your app running in Outlook on Windows desktop:
 1. On the side bar, select  **More apps**. Your uploaded custom app title appears among your installed apps.
 1. Select your app icon to launch your app in Outlook.
 
-    :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+Windows&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -230,7 +230,7 @@ To view your app in Outlook on the web:
 1. On the side bar, select  **Apps**. Your uploaded custom app title appears among your installed apps.
 1. Select your app icon to launch and preview your app running in Outlook on the web.
 
-    :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of outlook.com to see your installed tab app.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/outlook-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of outlook.com to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+the+web&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-on-the-web&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -269,7 +269,7 @@ To view your app running in Microsoft 365 on Windows desktop:
 1. Select the **Apps** icon on the side bar. Your uploaded custom app title appears among your installed apps.
 1. Select your app icon to launch your app in Microsoft 365.
 
-    :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/office-desktop-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+on+Windows&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -295,7 +295,7 @@ To view your app running in Microsoft 365 for Android app:
 1. Select the **Apps** icon. Your uploaded custom app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/m365-android-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/m365-android-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+Android+app&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -308,7 +308,7 @@ To view your app running in Microsoft 365 for iOS:
 1. Select the **Apps** icon. Your uploaded custom app appears among installed apps.
 1. Select your app icon to launch your app in the Microsoft 365 app.
 
-    :::image type="content" source="images/m365-ios-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
+    :::image type="content" source="../assets/images/extend-m365-teams-personal-tab/m365-ios-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+iOS&&author=%40vikasalmal0201&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -376,11 +376,11 @@ Agents Toolkit (`F5`) doesn't support debugging Android apps in Microsoft 365. H
 ## Code sample
 
 | **Sample Name** | **Description** | **Node.js** |
-|---------------|--------------|--------|
-| Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend)  |
-| Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend-M365)|
+| --------------- | -------------- | -------- |
+| Todo List | Editable todo list with SSO built with React and Azure Functions. Works only in Teams (use this sample app to try the upgrade process described in this tutorial). | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend) |
+| Todo List (Microsoft 365) | Editable todo list with SSO built with React and Azure Functions. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend-M365) |
 | Image Editor (Microsoft 365 app) | Create, edit, open, and save images using Microsoft Graph API. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/m365-extensibility-image-editor) |
-| Northwind Orders app | Demonstrates how to use the TeamsJS library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile.| [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
+| Northwind Orders app | Demonstrates how to use the TeamsJS library v.2 to extend teams application to other Microsoft 365 host apps. Works in Teams, Outlook, Microsoft 365 app. Optimized for mobile. | [View](https://github.com/microsoft/app-camp/tree/main/experimental/ExtendTeamsforM365) |
 
 ## Next step
 
