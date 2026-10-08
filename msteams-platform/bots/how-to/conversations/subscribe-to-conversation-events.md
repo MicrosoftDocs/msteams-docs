@@ -878,7 +878,9 @@ The agent receives a notification when the team is installed and archived. It re
 
 The following code shows an example of team archived event:
 
-# [C#](#tab/dotnet)
+::: zone-end
+
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamArchived(async context =>
@@ -888,7 +890,9 @@ app.OnTeamArchived(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamArchived', async ({ activity, send }) => {
@@ -897,7 +901,9 @@ app.on('teamArchived', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -932,7 +938,9 @@ app.on('teamArchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_archived
@@ -941,7 +949,7 @@ async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity])
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team unarchived
 
@@ -949,7 +957,7 @@ The agent receives a notification when the team is installed and unarchived. It 
 
 The following code shows an example of a team unarchived event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamUnarchived(async context =>
@@ -959,7 +967,9 @@ app.OnTeamUnarchived(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamUnarchived', async ({ activity, send }) => {
@@ -968,7 +978,9 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -1003,7 +1015,9 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_unarchived
@@ -1012,7 +1026,7 @@ async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
 
