@@ -221,7 +221,7 @@ The `channelDeleted` event is sent to your agent, whenever a channel is deleted 
 
 The following code shows an example of a channel deleted event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelDeleted(async context =>
@@ -231,7 +231,9 @@ app.OnChannelDeleted(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('channelDeleted', async ({ activity, send }) => {
@@ -240,7 +242,9 @@ app.on('channelDeleted', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -278,7 +282,9 @@ app.on('channelDeleted', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_deleted
@@ -287,7 +293,7 @@ async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The deleted channel is {channel_name}")
 ```
 
----
+::: zone-end
 
 ### Channel restored
 
