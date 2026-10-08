@@ -20,7 +20,7 @@ By default, the preapproval policies are managed by Microsoft, and we recommend 
 
 > [!NOTE]
 >
-> * Preapproval of RSC permissions are available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Preapproval of RSC permissions are available only in [public developer preview](../../developer-preview-features.md).
 > * Preapproval of RSC permissions and its operating procedures are subject to change.
 
 ## Set up PowerShell to manage preapproval of RSC permissions

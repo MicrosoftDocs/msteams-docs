@@ -13,7 +13,7 @@ Agents in Microsoft 365<!--, such as [Channel Agent](/microsoftteams/set-up-chan
 <!--
 > [!NOTE]
 >
-> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) and only supported in Channel Agent for Microsoft Teams. Additional agent hosts will be supported in the future.
+> Agent Connectors are available in [public developer preview](../developer-preview-features.md) and only supported in Channel Agent for Microsoft Teams. Additional agent hosts will be supported in the future.
 -->
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
