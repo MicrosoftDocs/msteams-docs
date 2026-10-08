@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.date: 10/09/2026
-zone_pivot_groups: teams-sdk-languages
+zone_pivot_groups: sdk-languages
 ---
 
 # Conversation events for agents
