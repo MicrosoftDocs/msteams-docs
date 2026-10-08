@@ -155,8 +155,6 @@ app.OnChannelRenamed(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-# [TypeScript](#tab/typescript)
-
 ```typescript
 app.on('channelRenamed', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
@@ -167,8 +165,6 @@ app.on('channelRenamed', async ({ activity, send }) => {
 ::: zone-end
 
 ::: zone pivot="teams-sdk-json"
-
-# [JSON](#tab/json)
 
 ```json
 {
@@ -209,8 +205,6 @@ app.on('channelRenamed', async ({ activity, send }) => {
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
-
-# [Python](#tab/python)
 
 ```python
 @app.on_channel_renamed
