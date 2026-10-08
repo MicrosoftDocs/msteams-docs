@@ -301,7 +301,7 @@ The `channelRestored` event is sent to your agent, whenever a channel that was p
 
 The following code shows an example of a channel restored event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelRestored(async context =>
@@ -311,7 +311,9 @@ app.OnChannelRestored(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 
@@ -321,7 +323,9 @@ app.on('channelRestored', async ({ activity, send }) => {
 }); 
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -359,7 +363,9 @@ app.on('channelRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_restored
@@ -370,7 +376,7 @@ async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivit
     )
 ```
 
----
+::: zone-end
 
 ### Members added
 
@@ -391,7 +397,7 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 
 The following code shows an example of a team members added event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -411,7 +417,9 @@ app.OnMembersAdded(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('membersAdded', async ({ activity, send }) => {
@@ -422,7 +430,9 @@ app.on('membersAdded', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 The message your agent receives when the agent is added to a team.
 
@@ -512,7 +522,9 @@ The message your agent receives when the agent is added to a one-to-one chat.
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_conversation_update
@@ -522,7 +534,7 @@ async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity])
             await ctx.send(f"Welcome your new team member {member.id}")
 ```
 
----
+::: zone-end
 
 ### Members removed
 
