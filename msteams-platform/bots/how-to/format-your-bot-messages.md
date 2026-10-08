@@ -2,17 +2,14 @@
 title: Format Agent Messages
 description: Format agent messages in Teams with Markdown, extended Markdown, or HTML. Learn how to set textFormat and render rich content.
 ms.topic: article
-ms.author: nickwalk
-ms.reviewer: nickwalk
-ms.date: 09/25/2026
-author: nickwalkmsft
+ms.date: 10/08/2026
 ---
 
 # Format agent messages
 
-Agents can use Markdown and HTML to format the text of messages that they send.
+Agents can use Markdown to format the text of messages that they send.
 
-By default, Teams recognizes a practical subset of Markdown syntax and HTML elements. Opting in to extended Markdown mode enables additional Markdown features.
+By default, for compatibility reasons, Teams recognizes a basic subset of Markdown syntax and HTML elements. Most agent scenarios should enable extended Markdown mode to take advantage of additional formatting capabilities.
 
 ## Default formatting features
 
@@ -32,16 +29,7 @@ By default, Teams recognizes the following markup syntax:
 | HTML Hyperlink | `<a href="URL">` |
 | HTML Image | `<img src="URL">` |
 
-## Extended Markdown mode (preview)
-
-> [!IMPORTANT]
-> Extended Markdown mode is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md). When it becomes generally available, the current default behavior will remain the default to ensure the stability of existing agents.
->
-> To prepare to take advantage of extended Markdown mode's general availability:
->
-> - Avoid or remove the use of HTML for message formatting, and use Markdown exclusively
-> - Everywhere your implementation constructs or sends messages, use a pattern that allows specifying a `textFormat` (specify `markdown` to retain the current default behavior)
-> - Test messaging scenarios in both default and extended Markdown modes with the latest Teams desktop, web, iOS and Android clients
+## Extended Markdown mode
 
 Extended Markdown mode supports additional CommonMark and GitHub Flavored Markdown features to enhance agent expressiveness and better support the output of modern large language models (LLMs). It also enables progressive rendering of formatting when [streaming messages](../streaming-ux.md).
 
@@ -49,7 +37,7 @@ Extended Markdown mode is recommended for all messaging scenarios that aren't st
 
 ### Enable extended Markdown mode
 
-Enable extended Markdown mode on a message by setting its activity's `textFormat` property to `extendedmarkdown` before sending it.
+Extended Markdown mode is configured on a per-message basis. To enable it, set a message activity's `textFormat` property to `extendedmarkdown` before sending it.
 
 # [C#](#tab/csharp)
 
@@ -177,13 +165,21 @@ Use task list syntax to display completed and pending items in your agent messag
 > [!NOTE]
 > Task list checkboxes are read-only. Users can't interact with them to change their state.
 
+### Adopt extended Markdown mode in existing agents
+
+If you implemented your agent before extended Markdown mode was available, consider adopting it. Use the following guidance to update an existing agent:
+
+- Remove any usage of HTML for message formatting, and use Markdown exclusively.
+- Everywhere your implementation constructs or sends messages, adopt a pattern that allows specifying a `textFormat`. To enable progressive testing, specify the value `markdown` to temporarily retain the existing default behavior.
+- As you transition different messaging scenarios to use extended Markdown mode, test them with the latest Teams desktop, web, iOS, and Android clients.
+
 ## Legacy formatting modes
 
-The following legacy formatting modes should not be used in new development.
+Don't use the following legacy formatting modes in new development.
 
 | `textFormat` value | Capabilities |
 | ------------------ | ----------- |
-| `markdown` | Default behavior, same as not setting `textFormat` |
+| `markdown` | Default behavior, same as not setting `textFormat`. |
 | `xml` | Supports only a basic HTML subset (no Markdown syntax). |
 | `plain` | Displays raw text without formatting. |
 
