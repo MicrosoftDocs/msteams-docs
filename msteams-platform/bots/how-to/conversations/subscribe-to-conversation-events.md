@@ -59,7 +59,7 @@ The `channelCreated` event is sent to your agent whenever a new channel is creat
 
 The following code shows an example of a channel created event:
 
-::: zone pivot="teams-sdk-csharp"
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -71,7 +71,7 @@ app.OnChannelCreated(async context =>
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="typescript"
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -84,7 +84,7 @@ app.on('channelCreated', async ({ activity, send }) => {
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-json"
+::: zone pivot="json"
 
 ```json
 {
@@ -124,7 +124,7 @@ app.on('channelCreated', async ({ activity, send }) => {
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-python"
+::: zone pivot="python"
 
 ```python
 @app.on_channel_created
@@ -141,7 +141,7 @@ The `channelRenamed` event is sent to your agent whenever a channel is renamed i
 
 The following code shows an example of a channel renamed event:
 
-::: zone pivot="teams-sdk-csharp"
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelRenamed(async context =>
@@ -153,7 +153,7 @@ app.OnChannelRenamed(async context =>
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="typescript"
 
 ```typescript
 app.on('channelRenamed', async ({ activity, send }) => {
@@ -164,7 +164,7 @@ app.on('channelRenamed', async ({ activity, send }) => {
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-json"
+::: zone pivot="json"
 
 ```json
 {
@@ -204,7 +204,7 @@ app.on('channelRenamed', async ({ activity, send }) => {
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-python"
+::: zone pivot="python"
 
 ```python
 @app.on_channel_renamed
