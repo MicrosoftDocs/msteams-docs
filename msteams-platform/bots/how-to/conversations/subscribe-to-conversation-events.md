@@ -40,7 +40,7 @@ The `conversationUpdate` event is sent to your agent when it receives informatio
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken | EventType | Method called | Description | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| --- | --- | --- | --- | --- |
 | Channel created | channelCreated | OnTeamsChannelCreatedAsync | [A channel is created](#channel-created). | Team |
 | Channel renamed | channelRenamed | OnTeamsChannelRenamedAsync | [A channel is renamed](#channel-renamed). | Team |
 | Channel deleted | channelDeleted | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
@@ -59,7 +59,7 @@ The `channelCreated` event is sent to your agent whenever a new channel is creat
 
 The following code shows an example of a channel created event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -69,7 +69,9 @@ app.OnChannelCreated(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -80,7 +82,9 @@ app.on('channelCreated', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="teams-sdk-json"
 
 ```json
 {
@@ -118,7 +122,9 @@ app.on('channelCreated', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_channel_created
@@ -127,7 +133,7 @@ async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
 ```
 
----
+::: zone-end
 
 ### Channel renamed
 
