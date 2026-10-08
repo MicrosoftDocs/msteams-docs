@@ -141,7 +141,7 @@ The `channelRenamed` event is sent to your agent whenever a channel is renamed i
 
 The following code shows an example of a channel renamed event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 app.OnChannelRenamed(async context =>
@@ -151,6 +151,10 @@ app.OnChannelRenamed(async context =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
 # [TypeScript](#tab/typescript)
 
 ```typescript
@@ -159,6 +163,10 @@ app.on('channelRenamed', async ({ activity, send }) => {
     await send(`${channelName} is the new Channel name`);
 });
 ```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-json"
 
 # [JSON](#tab/json)
 
@@ -198,6 +206,10 @@ app.on('channelRenamed', async ({ activity, send }) => {
 }
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
 # [Python](#tab/python)
 
 ```python
@@ -207,7 +219,7 @@ async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The new channel name is {channel_name}")
 ```
 
----
+::: zone-end
 
 ### Channel deleted
 
