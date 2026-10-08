@@ -1254,7 +1254,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnInstall(async context =>
@@ -1280,7 +1280,9 @@ protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallatio
 }
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('install.add', async ({ send }) => {
@@ -1292,7 +1294,9 @@ app.on('install.remove', async ({ send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1349,7 +1353,9 @@ app.on('install.remove', async ({ send }) => {
     }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_install_add
@@ -1361,7 +1367,7 @@ async def handle_install_remove(ctx: ActivityContext):
     await ctx.send("Uninstalled")
 ```
 
----
+::: zone-end
 
 ## Uninstall behavior for personal app with agent
 
@@ -1389,8 +1395,8 @@ In the development phase, it's always helpful to send meaningful messages in con
 ## Code sample
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|--------------|--------|-------------|--------|
-| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+| --- | --- | --- | --- | --- |
+| Conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Next step
 
