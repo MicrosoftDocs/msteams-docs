@@ -1,10 +1,10 @@
 ---
-title: Conversation events
+title: Conversation Events
 description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams agents.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 08/19/2026
+ms.date: 10/09/2026
 ---
 
 # Conversation events for agents
@@ -967,6 +967,8 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
 | messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-agent-message).           | All   |
 | messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-agent-message). | All |
+
+For more information about agent reactions, see [Use emoji reactions in Teams chat](../../../agents-in-teams/agent-reactions.md).
 
 ### Reactions added to agent message
 
