@@ -1,12 +1,12 @@
 ---
 title: Create Customized Tab Apps for Meetings
-author: vikasalmal
+author: nickwalk
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: article
 ms.author: nickwalk
 ms.localizationpriority: high
 ms.owner: vichug
-ms.date: 06/18/2026
+ms.date: 10/09/2026
 ---
 
 # Build tabs for meeting
@@ -189,8 +189,8 @@ The scope defines who can access the apps.
 
 The `context` property determines if the app is available in specific view after installation and configuration. Following are the values for the `context` property from which you can use all or some of the values:
 
-|Value|Description|
-|---|---|
+| Value | Description |
+| --- | --- |
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either `meetingChatTab` or `meetingDetailsTab` to ensure the apps work in mobile. |

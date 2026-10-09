@@ -3,9 +3,9 @@ title: Explore Responses to Action Commands
 description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
 ms.topic: article
-ms.author: anclear
-ms.owner: ginobuzz
-ms.date: 05/14/2026
+ms.author: nickwalk
+ms.owner: nickwalk
+ms.date: 10/09/2026
 ---
 
 # Respond to the dialog submit action
@@ -33,11 +33,11 @@ If the app doesn't respond within five seconds, the Teams client retries the req
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
-|Response Type | Compose | Command bar | Message |
-|--------------|:-------------:|:-------------:|:---------:|
-|Card response | ✔️ | ✔️ | ✔️ |
-|Another dialog | ✔️ | ✔️ | ✔️ |
-|Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
+| Response Type | Compose | Command bar | Message |
+| -------------- | :-------------: | :-------------: | :---------: |
+| Card response | ✔️ | ✔️ | ✔️ |
+| Another dialog | ✔️ | ✔️ | ✔️ |
+| Bot with Adaptive Card | ✔️ | ❌ | ✔️ |
 | No response | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
@@ -707,8 +707,8 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
-|`mentionType`|String|Describes the mention of a "person". |
-|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>." |
+|`mentionType`|String|Describes the mention of a "person".|
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>."|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## Code sample
