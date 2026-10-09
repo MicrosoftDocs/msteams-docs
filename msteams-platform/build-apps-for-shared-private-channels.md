@@ -5,7 +5,7 @@ description: Learn about apps for shared and private channels to securely collab
 ms.author: nickwalk
 ms.localizationpriority: high
 ms.topic: article
-ms.date: 09/17/2026
+ms.date: 10/06/2026
 ---
 
 # Agents and tab apps for shared and private channels
@@ -277,58 +277,67 @@ Your agent receives a member removed event in the following scenarios:
 
 For more information, see [Conversation events](/graph/teams-changenotifications-teammembership).
 
-If you install the agent in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method when you add a shared channel to another team.
+If you install the agent in the team or channel, the Agents SDK receives a `conversationUpdate` activity when you add a shared channel to another team.
 
-When you add a new member to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, so the agent can respond accordingly.
+In your `AgentApplication` subclass, register handlers for the `MembersAdded` and `MembersRemoved` conversation update events. The activity passed to each handler provides the context and details of the affected users.
 
 The following Agents SDK examples apply to both direct and indirect member add and remove events.
 
 Member added event
 
 ```csharp
-public async Task OnMembersAddedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
+public SharedChannelAgent(AgentApplicationOptions options) : base(options)
 {
-    var membersAdded = turnContext.Activity.MembersAdded;
+    OnConversationUpdate(ConversationUpdateEvents.MembersAdded, OnMembersAddedAsync);
+    OnConversationUpdate(ConversationUpdateEvents.MembersRemoved, OnMembersRemovedAsync);
+}
 
-    List<string> addedMembers = new List<string>();
-    foreach (var member in membersAdded)
+private static async Task OnMembersAddedAsync(
+    ITurnContext turnContext,
+    ITurnState turnState,
+    CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.MembersAdded is not { } membersAdded)
     {
-        if (member.Id != turnContext.Activity.Recipient.Id)
-        {
-            addedMembers.Add($"Member {member.Name} (ID {member.Id}) added.");
-        }
+        return;
     }
 
-    await ActivityUtils.SendAdaptiveCard(
-        "Member Added",
-        addedMembers,
-        new List<object> { "membersAdded", membersAdded },
-        turnContext,
-        cancellationToken).ConfigureAwait(false);
+    var agentId = turnContext.Activity.Recipient?.Id;
+    foreach (var member in membersAdded)
+    {
+        if (member.Id != agentId)
+        {
+            await turnContext.SendActivityAsync(
+                $"Member {member.Name} (ID {member.Id}) added.",
+                cancellationToken: cancellationToken);
+        }
+    }
+}
 ```
 
 Member removed event
 
 ```csharp
-public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
+private static async Task OnMembersRemovedAsync(
+    ITurnContext turnContext,
+    ITurnState turnState,
+    CancellationToken cancellationToken)
 {
-    var membersRemoved = turnContext.Activity.MembersRemoved;
-
-    List<string> removedMembers = new List<string>();
-    foreach (var member in membersRemoved)
+    if (turnContext.Activity.MembersRemoved is not { } membersRemoved)
     {
-        if (member.Id != turnContext.Activity.Recipient.Id)
-        {
-            removedMembers.Add($"Member {member.Name} (ID {member.Id}) removed.");
-        }
+        return;
     }
 
-    await ActivityUtils.SendAdaptiveCard(
-        "Member Removed",
-        removedMembers,
-        new List<object> { "membersRemoved", membersRemoved },
-        turnContext,
-        cancellationToken).ConfigureAwait(false);
+    var agentId = turnContext.Activity.Recipient?.Id;
+    foreach (var member in membersRemoved)
+    {
+        if (member.Id != agentId)
+        {
+            await turnContext.SendActivityAsync(
+                $"Member {member.Name} (ID {member.Id}) removed.",
+                cancellationToken: cancellationToken);
+        }
+    }
 }
 ```
 
@@ -381,7 +390,7 @@ You can collaborate with external members outside of your organization by using 
 
 ## Verify agent installation in a channel
 
-When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, only if the agent is installed in the team. There’s no dedicated API to check if your app is part of a channel. Agents can detect when your app is added to a channel indirectly.
+When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity only if the agent is installed in the team. There’s no dedicated API to check if your app is part of a channel. Agents can detect when your app is added to a channel indirectly.
 
 Use this `channelMemberAdded` event to trigger app-specific logic such as:
 
@@ -390,71 +399,7 @@ Use this `channelMemberAdded` event to trigger app-specific logic such as:
 * Configuring tabs
 * Starting scheduled jobs
 
-```csharp
-        protected override async Task OnConversationUpdateActivityAsync(
-            ITurnContext<IConversationUpdateActivity> turnContext,
-            CancellationToken cancellationToken)
-        {
-            var tcd = turnContext.Activity.GetChannelData<TeamsChannelData>();
-            var eventType = tcd?.EventType?.ToLowerInvariant();
-
-            var extended = turnContext.Activity.GetChannelData<SharedChannelChannelData>();
-
-            var raw = turnContext.Activity.ChannelData as JObject
-                      ?? (turnContext.Activity.ChannelData != null
-                          ? JObject.FromObject(turnContext.Activity.ChannelData)
-                          : new JObject());
-
-            _logger.LogInformation("ConversationUpdate eventType={EventType}, channelId={ChannelId}, teamId={TeamId}",
-                eventType, tcd?.Channel?.Id, tcd?.Team?.Id);
-
-            switch (eventType)
-            {
-                case "channelshared":
-                {
-                    var hostTeam = extended?.Team; 
-                    var sharedWith = extended?.SharedWithTeams ?? new List<TeamInfoEx>();
-
-                    _logger.LogInformation("ChannelShared: hostTeam={HostTeamId}, sharedWithCount={Count}",
-                        hostTeam?.Id, sharedWith.Count);
-
-                    foreach (var team in sharedWith)
-                    {
-                        _logger.LogInformation("SharedWithTeam: id={Id}, name={Name}, aadGroupId={AadGroupId}, tenantId={TenantId}",
-                            team.Id, team.Name, team.AadGroupId, team.TenantId);
-                    }
-
-                    await turnContext.SendActivityAsync(
-                        MessageFactory.Text($" Channel shared with {sharedWith.Count} team(s)."),
-                        cancellationToken);
-                    break;
-                }
-
-                case "channelunshared":
-                {
-                    var unsharedFrom = extended?.UnsharedFromTeams ?? new List<TeamInfoEx>();
-
-                    _logger.LogInformation("ChannelUnshared: unsharedFromCount={Count}", unsharedFrom.Count);
-
-                    foreach (var team in unsharedFrom)
-                    {
-                        _logger.LogInformation("UnsharedFromTeam: id={Id}, name={Name}, aadGroupId={AadGroupId}, tenantId={TenantId}",
-                            team.Id, team.Name, team.AadGroupId, team.TenantId);
-                    }
-
-                    await turnContext.SendActivityAsync(
-                        MessageFactory.Text($" Channel unshared from {unsharedFrom.Count} team(s)."),
-                        cancellationToken);
-                    break;
-                }
-
-                default:
-                    break;
-            }
-
-            await base.OnConversationUpdateActivityAsync(turnContext, cancellationToken);
-        }
-```
+Register a conversation update route with the Agents SDK and inspect `activity.channelData.eventType`. A `channelshared` event identifies teams in `activity.channelData.sharedWithTeams`, and a `channelunshared` event identifies teams in `activity.channelData.unsharedFromTeams`. Use the host team, channel, and tenant identifiers from the same channel data payload to scope your app-specific logic.
 
 ## Authenticate external users to access app content in SharePoint
 
@@ -465,7 +410,7 @@ Complete this step when your app stores content in the SharePoint site of the te
 1. Save host tenant ID of shared channel where tab is configured.
 1. Retrieve the host tenant ID by using `channel.ownerTenantId` in TeamsJS v2 or `hostTenantId` from the `getContext` call in TeamsJS v1.
 
-### [Agents](#tab/bots1)
+### [Agents](#tab/agents1)
 
 To retrieve the host tenant ID for any event or action payload received by an agent, use `turnContext.activity.conversation.tenantId`.
 
@@ -565,7 +510,7 @@ Before publishing updates, ensure your app works correctly across all channel ty
 
 ### Standard channel
 
-Confirm that the existing functionality remains intact after your changes. Ensure tabs, bots, and messaging extensions continue to work as expected.
+Confirm that the existing functionality remains intact after your changes. Ensure tabs, agents, and messaging extensions continue to work as expected.
 
 ### Shared channel
   
@@ -692,7 +637,6 @@ The message change notification failure happens when the tenant's sharing policy
 
 | Sample Name                   | Description                                                                                                                                                                                                 | .NET | Node.js | Python |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---------|--------|
-| Agent Shared Channel Events | This sample app displays the Teams agent transitive member add and remove events in shared channels. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-shared-channel-events/csharp) | NA   | NA     |
 | Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/graph-membership-change-notification/python)   |
 
 ## See also
