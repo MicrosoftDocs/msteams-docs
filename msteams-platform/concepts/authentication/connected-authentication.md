@@ -41,6 +41,8 @@ In either path, connected authentication doesn’t merge authentication sessions
 
 The connected authentication flow works as follows for the OAuth scenario:
 
+[**WIP**: The image needs to be updated as per the steps.]
+
 :::image type="content" source="../../assets/images/authentication/connected-authentication/authentication-flow.png" alt-text="This image shows the authentication flow for connected authentication.":::
 
 1. The user opens the agent and is prompted to sign in with an OAuth provider or Microsoft Entra ID.
@@ -320,7 +322,7 @@ Follow these guidelines when you design and deploy connected authentication:
 
 ## Error codes
 
-[Note: Connected authentication doesn't define a standardized set of error codes. The following status and error codes are application-defined responses used in the code sample or responses returned by the configured identity provider.]
+[**Note**: Connected authentication doesn't define a standardized set of error codes. The following status and error codes are application-defined responses used in the code sample or responses returned by the configured identity provider.]
 
 Handle these errors appropriately in your agent or app:
 
@@ -348,7 +350,7 @@ Handle these errors appropriately in your agent or app:
 
 | Sample name | Description | TypeScript |
 | --- | --- | --- |
-| Connected authentication with Auth0 | This sample shows how to link an agent's Auth0 identity to a Microsoft identity for seamless tab authentication. | Coming soon |
+| Connected authentication with Auth0 | This sample shows how to link an agent's Auth0 identity to a Microsoft identity for seamless tab authentication. | [**WIP**: Coming soon] |
 
 ## See also
 
