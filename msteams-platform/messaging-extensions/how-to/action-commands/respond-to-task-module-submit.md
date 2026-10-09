@@ -3,9 +3,9 @@ title: Explore Responses to Action Commands
 description: Learn to respond to message extension action commands with Proactive message. Define and respond to search commands and display username on Adaptive Card headers.
 ms.localizationpriority: medium
 ms.topic: article
-ms.author: anclear
-ms.owner: ginobuzz
-ms.date: 00/10/2026
+ms.author: nickwalk
+ms.owner: nickwalk
+ms.date: 10/09/2026
 ---
 
 # Respond to the dialog submit action
