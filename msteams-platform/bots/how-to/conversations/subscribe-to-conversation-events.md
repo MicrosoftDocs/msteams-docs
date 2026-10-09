@@ -1,10 +1,11 @@
 ---
-title: Conversation events
+title: Conversation Events
 description: Learn about conversation update, message reaction, app installation update events, uninstall behavior, and events and error handling for Microsoft Teams agents.
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 08/19/2026
+ms.date: 10/09/2026
+zone_pivot_groups: sdk-languages
 ---
 
 # Conversation events for agents
@@ -39,7 +40,7 @@ The `conversationUpdate` event is sent to your agent when it receives informatio
 The following table shows a list of Teams conversation update events with more details:
 
 | Action taken | EventType | Method called | Description | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| --- | --- | --- | --- | --- |
 | Channel created | channelCreated | OnTeamsChannelCreatedAsync | [A channel is created](#channel-created). | Team |
 | Channel renamed | channelRenamed | OnTeamsChannelRenamedAsync | [A channel is renamed](#channel-renamed). | Team |
 | Channel deleted | channelDeleted | OnTeamsChannelDeletedAsync | [A channel is deleted](#channel-deleted). | Team |
@@ -58,7 +59,7 @@ The `channelCreated` event is sent to your agent whenever a new channel is creat
 
 The following code shows an example of a channel created event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -68,7 +69,9 @@ app.OnChannelCreated(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -79,7 +82,9 @@ app.on('channelCreated', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -117,7 +122,9 @@ app.on('channelCreated', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_created
@@ -126,7 +133,7 @@ async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
 ```
 
----
+::: zone-end
 
 ### Channel renamed
 
@@ -134,7 +141,7 @@ The `channelRenamed` event is sent to your agent whenever a channel is renamed i
 
 The following code shows an example of a channel renamed event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelRenamed(async context =>
@@ -144,7 +151,9 @@ app.OnChannelRenamed(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('channelRenamed', async ({ activity, send }) => {
@@ -153,7 +162,9 @@ app.on('channelRenamed', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -191,7 +202,9 @@ app.on('channelRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_renamed
@@ -200,7 +213,7 @@ async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The new channel name is {channel_name}")
 ```
 
----
+::: zone-end
 
 ### Channel deleted
 
@@ -208,7 +221,7 @@ The `channelDeleted` event is sent to your agent, whenever a channel is deleted 
 
 The following code shows an example of a channel deleted event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelDeleted(async context =>
@@ -218,7 +231,9 @@ app.OnChannelDeleted(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('channelDeleted', async ({ activity, send }) => {
@@ -227,7 +242,9 @@ app.on('channelDeleted', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -265,7 +282,9 @@ app.on('channelDeleted', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_deleted
@@ -274,7 +293,7 @@ async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The deleted channel is {channel_name}")
 ```
 
----
+::: zone-end
 
 ### Channel restored
 
@@ -282,7 +301,7 @@ The `channelRestored` event is sent to your agent, whenever a channel that was p
 
 The following code shows an example of a channel restored event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnChannelRestored(async context =>
@@ -292,7 +311,9 @@ app.OnChannelRestored(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 
@@ -302,7 +323,9 @@ app.on('channelRestored', async ({ activity, send }) => {
 }); 
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -340,7 +363,9 @@ app.on('channelRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_channel_restored
@@ -351,7 +376,7 @@ async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivit
     )
 ```
 
----
+::: zone-end
 
 ### Members added
 
@@ -372,7 +397,7 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 
 The following code shows an example of a team members added event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -392,7 +417,9 @@ app.OnMembersAdded(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('membersAdded', async ({ activity, send }) => {
@@ -403,7 +430,9 @@ app.on('membersAdded', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 The message your agent receives when the agent is added to a team.
 
@@ -493,7 +522,9 @@ The message your agent receives when the agent is added to a one-to-one chat.
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_conversation_update
@@ -503,7 +534,7 @@ async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity])
             await ctx.send(f"Welcome your new team member {member.id}")
 ```
 
----
+::: zone-end
 
 ### Members removed
 
@@ -518,6 +549,8 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 The following code shows an example of a team members removed event:
+
+::: zone pivot="csharp"
 
 # [C#](#tab/dotnet)
 
@@ -539,7 +572,9 @@ app.OnMembersRemoved(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('membersRemoved', async ({ activity, send }) => {
@@ -550,7 +585,9 @@ app.on('membersRemoved', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
@@ -592,7 +629,9 @@ The `channelData` object in the following payload example is based on adding a m
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_conversation_update
@@ -602,7 +641,7 @@ async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity
             await ctx.send(f"Say goodbye to {member.id}")
 ```
 
----
+::: zone-end
 
 ### Team renamed
 
@@ -610,7 +649,7 @@ Your agent is notified when the team is renamed. It receives a `conversationUpda
 
 The following code shows an example of a team renamed event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamRenamed(async context =>
@@ -620,7 +659,9 @@ app.OnTeamRenamed(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamRenamed', async ({ activity, send }) => {
@@ -629,7 +670,9 @@ app.on('teamRenamed', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -664,7 +707,9 @@ app.on('teamRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_renamed
@@ -673,7 +718,7 @@ async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
     await ctx.send(f"The new team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team deleted
 
@@ -681,7 +726,7 @@ The agent receives a notification when the team is deleted. It receives a `conve
 
 The following code shows an example of a team deleted event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamDeleted(async context =>
@@ -690,7 +735,9 @@ app.OnTeamDeleted(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamDeleted', async ({ activity }) => {
@@ -698,7 +745,9 @@ app.on('teamDeleted', async ({ activity }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -733,7 +782,9 @@ app.on('teamDeleted', async ({ activity }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_deleted
@@ -742,7 +793,7 @@ async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
     pass
 ```
 
----
+::: zone-end
 
 ### Team restored
 
@@ -750,7 +801,7 @@ The agent receives a notification when a team is restored after being deleted. I
 
 The following code shows an example of a team restored event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamRestored(async context =>
@@ -760,7 +811,9 @@ app.OnTeamRestored(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamRestored', async ({ activity, send }) => {
@@ -769,7 +822,9 @@ app.on('teamRestored', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -804,7 +859,9 @@ app.on('teamRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_restored
@@ -813,7 +870,7 @@ async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity])
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team archived
 
@@ -821,7 +878,9 @@ The agent receives a notification when the team is installed and archived. It re
 
 The following code shows an example of team archived event:
 
-# [C#](#tab/dotnet)
+::: zone-end
+
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamArchived(async context =>
@@ -831,7 +890,9 @@ app.OnTeamArchived(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamArchived', async ({ activity, send }) => {
@@ -840,7 +901,9 @@ app.on('teamArchived', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -875,7 +938,9 @@ app.on('teamArchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_archived
@@ -884,7 +949,7 @@ async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity])
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 ### Team unarchived
 
@@ -892,7 +957,7 @@ The agent receives a notification when the team is installed and unarchived. It 
 
 The following code shows an example of a team unarchived event:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnTeamUnarchived(async context =>
@@ -902,7 +967,9 @@ app.OnTeamUnarchived(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('teamUnarchived', async ({ activity, send }) => {
@@ -911,7 +978,9 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 { 
@@ -946,7 +1015,9 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_team_unarchived
@@ -955,7 +1026,7 @@ async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity
     await ctx.send(f"The team name is {team_name}")
 ```
 
----
+::: zone-end
 
 Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
 
@@ -963,16 +1034,20 @@ Now that you've worked with the conversation update events, you can understand t
 
 The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your agent. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your agent, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
-| EventType       | Payload object   | Description                                                             | Scope |
-| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reactions added to agent message](#reactions-added-to-agent-message).           | All   |
+| EventType | Payload object | Description | Scope |
+| --- | --- | --- | --- |
+| messageReaction | reactionsAdded | [Reactions added to agent message](#reactions-added-to-agent-message). | All |
 | messageReaction | reactionsRemoved | [Reactions removed from agent message](#reactions-removed-from-agent-message). | All |
+
+For more information about agent reactions, see [Use emoji reactions in Teams chat](../../../agents-in-teams/agent-reactions.md).
 
 ### Reactions added to agent message
 
 The following code shows an example of reactions to an agent message:
 
-# [C#](#tab/dotnet)
+::: zone-end
+
+::: zone pivot="csharp"
 
 ```csharp
 app.OnReactionsAdded(async context =>
@@ -985,7 +1060,9 @@ app.OnReactionsAdded(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 
@@ -1000,7 +1077,9 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1045,7 +1124,9 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_reactions_added
@@ -1056,13 +1137,13 @@ async def handle_reactions_added(ctx: ActivityContext):
         )
 ```
 
----
+::: zone-end
 
 ### Reactions removed from agent message
 
 The following code shows an example of reactions removed from agent message:
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnReactionsRemoved(async context =>
@@ -1075,7 +1156,9 @@ app.OnReactionsRemoved(async context =>
 });
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('reactionsRemoved', async ({ activity, send }) => {
@@ -1089,7 +1172,9 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1134,7 +1219,9 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_reactions_removed
@@ -1145,7 +1232,7 @@ async def handle_reactions_removed(ctx: ActivityContext):
         )
 ```
 
----
+::: zone-end
 
 ## Installation update event
 
@@ -1167,7 +1254,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
-# [C#](#tab/dotnet)
+::: zone pivot="csharp"
 
 ```csharp
 app.OnInstall(async context =>
@@ -1193,7 +1280,9 @@ protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallatio
 }
 ```
 
-# [TypeScript](#tab/typescript)
+::: zone-end
+
+::: zone pivot="typescript"
 
 ```typescript
 app.on('install.add', async ({ send }) => {
@@ -1205,7 +1294,9 @@ app.on('install.remove', async ({ send }) => {
 });
 ```
 
-# [JSON](#tab/json)
+::: zone-end
+
+::: zone pivot="json"
 
 ```json
 {
@@ -1262,7 +1353,9 @@ app.on('install.remove', async ({ send }) => {
     }
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="python"
 
 ```python
 @app.on_install_add
@@ -1274,7 +1367,7 @@ async def handle_install_remove(ctx: ActivityContext):
     await ctx.send("Uninstalled")
 ```
 
----
+::: zone-end
 
 ## Uninstall behavior for personal app with agent
 
@@ -1302,8 +1395,8 @@ In the development phase, it's always helpful to send meaningful messages in con
 ## Code sample
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|--------------|--------|-------------|--------|
-| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+| --- | --- | --- | --- | --- |
+| Conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Next step
 
