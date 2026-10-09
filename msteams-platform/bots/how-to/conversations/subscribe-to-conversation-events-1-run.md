@@ -8,7 +8,7 @@ ms.date: 10/09/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Conversation events for agents
+# Manage conversation events for agents
 
 Conversation events are activities that Teams sends to your agent when a conversation changes. Handle these events to welcome members, respond to team and channel changes, track reactions to agent messages, and manage data when your app is installed or uninstalled.
 
