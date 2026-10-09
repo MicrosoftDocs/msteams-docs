@@ -5,6 +5,11 @@ ms.topic: whats-new
 ms.date: 10/08/2026
 ---
 
+# Teams Platform developer announcements
+
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
+feed reader as they're published.
+
 ## Released: Extended Markdown formatting for agent messages
 
 *October 8, 2026*
@@ -18,11 +23,6 @@ For compatibility reasons, extended Markdown mode is not the default, but adopti
 For more information, including guidance for updating existing agents to use extended Markdown mode, see [Format your agent messages](bots/how-to/format-your-bot-messages.md).
 
 ---
-
-# Teams Platform developer announcements
-
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
-feed reader as they're published.
 
 ## Released: Teams SDK updates (TypeScript, .NET and Python)
 
