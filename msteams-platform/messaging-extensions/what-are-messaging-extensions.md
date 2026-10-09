@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.author: nickwalk
 ms.owner: slamba
-ms.date: 08/27/2026
+ms.date: 10/07/2026
 ---
 # Build message extensions
 
