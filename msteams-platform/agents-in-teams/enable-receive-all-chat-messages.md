@@ -1,23 +1,23 @@
 ---
 title: Enable an Agent to Receive All Chat Messages
-description: Enable agents to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
+description: Enable a Teams agent to receive all chat messages with RSC permissions. Learn how to update your app manifest and filter @mentions in group chats and channels.
 ms.topic: article
-ms.date: 09/28/2026
+ms.date: 10/09/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
 # Enable an agent to receive all chat messages
 
-By default, the only chat messages that agents receive or can access via Graph APIs are the ones where they're @mentioned. This behavior predates LLM-driven agents: historically, scripted or flow-based bots had no need to receive messages that didn't directly invoke them. Additionally, requiring the explicit consent of conversation owners for agents to access all of their conversation's messages aligns with Teams' stance on data privacy.
+By default, the only chat messages that agents receive or can access via Graph APIs in group chats and channels are the ones where they're @mentioned. This behavior predates LLM-driven agents: historically, scripted or flow-based bots had no need to receive messages that didn't directly invoke them. Additionally, requiring the explicit consent of conversation owners for agents to access all of their conversation's messages aligns with Teams' stance on data privacy.
 
-Modern agents are most effective when they can observe and process all of the messages in conversations where they participate. To receive and access all chat messages in a channel or chat, an agent must request the appropriate [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) via its manifest.
+Modern agents are most effective when they can observe and process all of the messages in conversations where they participate. To receive and access all chat messages in group chats and channels, an agent must request the appropriate [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) via its manifest.
 
 > [!NOTE]
 > This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
 
 ## Update requested RSC permissions
 
-To enable your agent to receive all conversation messages, include one or both of the following RSC permission declarations in the agent's app manifest:
+To enable your agent to receive all messages in group chats and channels, include one or both of the following RSC permission declarations in the agent's app manifest:
 
 * `ChannelMessage.Read.Group`: Receive all messages in the channels of the team where the app is installed.
 * `ChatMessage.Read.Chat`: Receive all messages in the group chat where the app is installed.
