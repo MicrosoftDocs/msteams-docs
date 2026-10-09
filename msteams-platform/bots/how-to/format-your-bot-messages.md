@@ -9,7 +9,7 @@ ms.date: 10/08/2026
 
 Agents can use Markdown to format the text of messages that they send.
 
-By default, for compatibility reasons, Teams recognizes a basic subset of Markdown syntax and HTML elements. Most agent scenarios should enable extended Markdown mode to take advantage of additional formatting capabilities.
+By default, Teams recognizes a basic subset of Markdown syntax and HTML markup. Most agent scenarios should enable extended Markdown mode to take advantage of additional formatting capabilities.
 
 ## Default formatting features
 
@@ -167,11 +167,11 @@ Use task list syntax to display completed and pending items in your agent messag
 
 ### Adopt extended Markdown mode in existing agents
 
-If you implemented your agent before extended Markdown mode was available, consider adopting it. Use the following guidance to update an existing agent:
+If you implemented your agent before extended Markdown mode was available, use the following guidance to update it:
 
 - Remove any usage of HTML for message formatting, and use Markdown exclusively.
 - Everywhere your implementation constructs or sends messages, adopt a pattern that allows specifying a `textFormat`. To enable progressive testing, specify the value `markdown` to temporarily retain the existing default behavior.
-- As you transition different messaging scenarios to use extended Markdown mode, test them with the latest Teams desktop, web, iOS, and Android clients.
+- As you transition messaging scenarios to use extended Markdown mode, test them with the latest Teams desktop, web, iOS, and Android clients.
 
 ## Legacy formatting modes
 
