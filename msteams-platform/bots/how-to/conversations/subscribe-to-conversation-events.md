@@ -58,7 +58,17 @@ The `channelCreated` event is sent to your agent whenever a new channel is creat
 
 The following code shows an example of a channel created event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnChannelCreated(async (context, cancellationToken) =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.SendAsync($"{channelName} is the Channel created", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnChannelCreated(async context =>
@@ -77,6 +87,15 @@ app.on('channelCreated', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the Channel created`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_created
+async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel = ctx.activity.channel_data.channel
+    await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
 ```
 
 # [JSON](#tab/json)
@@ -117,15 +136,6 @@ app.on('channelCreated', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_created
-async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel = ctx.activity.channel_data.channel
-    await ctx.send(f"The new channel is {channel.name}. The channel id is {channel.id}")
-```
-
 ---
 
 ### Channel renamed
@@ -134,7 +144,17 @@ The `channelRenamed` event is sent to your agent whenever a channel is renamed i
 
 The following code shows an example of a channel renamed event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnChannelRenamed(async (context, cancellationToken) =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.SendAsync($"{channelName} is the new Channel name", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnChannelRenamed(async context =>
@@ -151,6 +171,15 @@ app.on('channelRenamed', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the new Channel name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_renamed
+async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel_name = ctx.activity.channel_data.channel.name
+    await ctx.send(f"The new channel name is {channel_name}")
 ```
 
 # [JSON](#tab/json)
@@ -191,15 +220,6 @@ app.on('channelRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_renamed
-async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel_name = ctx.activity.channel_data.channel.name
-    await ctx.send(f"The new channel name is {channel_name}")
-```
-
 ---
 
 ### Channel deleted
@@ -208,7 +228,17 @@ The `channelDeleted` event is sent to your agent, whenever a channel is deleted 
 
 The following code shows an example of a channel deleted event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnChannelDeleted(async (context, cancellationToken) =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.SendAsync($"{channelName} is the Channel deleted", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnChannelDeleted(async context =>
@@ -225,6 +255,15 @@ app.on('channelDeleted', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the Channel deleted`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_deleted
+async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel_name = ctx.activity.channel_data.channel.name
+    await ctx.send(f"The deleted channel is {channel_name}")
 ```
 
 # [JSON](#tab/json)
@@ -265,15 +304,6 @@ app.on('channelDeleted', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_deleted
-async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel_name = ctx.activity.channel_data.channel.name
-    await ctx.send(f"The deleted channel is {channel_name}")
-```
-
 ---
 
 ### Channel restored
@@ -282,7 +312,17 @@ The `channelRestored` event is sent to your agent, whenever a channel that was p
 
 The following code shows an example of a channel restored event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnChannelRestored(async (context, cancellationToken) =>
+{
+    var channelName = context.Activity.ChannelData.Channel.Name;
+    await context.SendAsync($"{channelName} is the Channel restored.", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnChannelRestored(async context =>
@@ -300,6 +340,17 @@ app.on('channelRestored', async ({ activity, send }) => {
     const channelName = activity.channelData.channel.name;
     await send(`${channelName} is the Channel restored`);
 }); 
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_channel_restored
+async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivity]):
+    channel = ctx.activity.channel_data.channel
+    await ctx.send(
+        f"The restored channel is {channel.name}. The channel id is {channel.id}"
+    )
 ```
 
 # [JSON](#tab/json)
@@ -340,17 +391,6 @@ app.on('channelRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_channel_restored
-async def handle_channel_restored(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel = ctx.activity.channel_data.channel
-    await ctx.send(
-        f"The restored channel is {channel.name}. The channel id is {channel.id}"
-    )
-```
-
 ---
 
 ### Members added
@@ -372,7 +412,27 @@ The member added activity `eventType` is set to `teamMemberAdded` when the event
 
 The following code shows an example of a team members added event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id == context.Activity.Recipient.Id)
+        {
+            // Send a message to introduce the bot to the team.
+            await context.SendAsync($"The {member.Name} agent has joined {context.Activity.ChannelData.Team.Name}", cancellationToken);
+        }
+        else
+        {
+            await context.SendAsync($"{member.Name} joined {context.Activity.ChannelData.Team.Name}", cancellationToken);
+        }
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMembersAdded(async context =>
@@ -401,6 +461,16 @@ app.on('membersAdded', async ({ activity, send }) => {
         await send(`${member.id} joined ${teamName}.`);
     }
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_conversation_update
+async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
+    if ctx.activity.members_added:
+        for member in ctx.activity.members_added:
+            await ctx.send(f"Welcome your new team member {member.id}")
 ```
 
 # [JSON](#tab/json)
@@ -448,11 +518,14 @@ The message your agent receives when the agent is added to a team.
             "name": "TestTeam2022",
             "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
-        "eventType": "teamMemberAdded",
         "tenant": {
             "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
         }
-    }
+    },
+    "action": "add"
 }
 ```
 
@@ -493,16 +566,6 @@ The message your agent receives when the agent is added to a one-to-one chat.
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_conversation_update
-async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
-    if ctx.activity.members_added:
-        for member in ctx.activity.members_added:
-            await ctx.send(f"Welcome your new team member {member.id}")
-```
-
 ---
 
 ### Members removed
@@ -519,7 +582,27 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
 The following code shows an example of a team members removed event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnMembersRemoved(async (context, cancellationToken) =>
+{
+    foreach (var member in context.Activity.MembersRemoved)
+    {
+        if (member.Id == context.Activity.Recipient.Id)
+        {
+            // The agent was removed.
+            // You should clear any cached data you have for this team.
+        }
+        else
+        {
+            await context.SendAsync($"{member.Name} was removed from {context.Activity.ChannelData.Team.Name}", cancellationToken);
+        }
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMembersRemoved(async context =>
@@ -548,6 +631,16 @@ app.on('membersRemoved', async ({ activity, send }) => {
         await send(`${member.id} removed from ${teamName}.`);
     }
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_conversation_update
+async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity]):
+    if ctx.activity.members_removed:
+        for member in ctx.activity.members_removed:
+            await ctx.send(f"Say goodbye to {member.id}")
 ```
 
 # [JSON](#tab/json)
@@ -592,16 +685,6 @@ The `channelData` object in the following payload example is based on adding a m
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_conversation_update
-async def handle_members_removed(ctx: ActivityContext[ConversationUpdateActivity]):
-    if ctx.activity.members_removed:
-        for member in ctx.activity.members_removed:
-            await ctx.send(f"Say goodbye to {member.id}")
-```
-
 ---
 
 ### Team renamed
@@ -610,7 +693,17 @@ Your agent is notified when the team is renamed. It receives a `conversationUpda
 
 The following code shows an example of a team renamed event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnTeamRenamed(async (context, cancellationToken) =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.SendAsync($"{teamName} is the new Team name", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnTeamRenamed(async context =>
@@ -627,6 +720,15 @@ app.on('teamRenamed', async ({ activity, send }) => {
     const teamName = activity.channelData.team.name;
     await send(`${teamName} is the new Team name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_team_renamed
+async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The new team name is {team_name}")
 ```
 
 # [JSON](#tab/json)
@@ -664,15 +766,6 @@ app.on('teamRenamed', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_team_renamed
-async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The new team name is {team_name}")
-```
-
 ---
 
 ### Team deleted
@@ -681,7 +774,16 @@ The agent receives a notification when the team is deleted. It receives a `conve
 
 The following code shows an example of a team deleted event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnTeamDeleted(async (context, cancellationToken) =>
+{
+    // Handle delete event.
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnTeamDeleted(async context =>
@@ -696,6 +798,15 @@ app.OnTeamDeleted(async context =>
 app.on('teamDeleted', async ({ activity }) => {
     // Handle delete event.
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_team_deleted
+async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
+    # Handle delete event.
+    pass
 ```
 
 # [JSON](#tab/json)
@@ -733,15 +844,6 @@ app.on('teamDeleted', async ({ activity }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_team_deleted
-async def handle_team_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
-    # Handle delete event.
-    pass
-```
-
 ---
 
 ### Team restored
@@ -750,7 +852,17 @@ The agent receives a notification when a team is restored after being deleted. I
 
 The following code shows an example of a team restored event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnTeamRestored(async (context, cancellationToken) =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnTeamRestored(async context =>
@@ -767,6 +879,15 @@ app.on('teamRestored', async ({ activity, send }) => {
     const teamName = activity.channelData.team.name;
     await send(`${teamName} is the team name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_team_restored
+async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
 ```
 
 # [JSON](#tab/json)
@@ -804,15 +925,6 @@ app.on('teamRestored', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_team_restored
-async def handle_team_restored(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
-```
-
 ---
 
 ### Team archived
@@ -821,7 +933,17 @@ The agent receives a notification when the team is installed and archived. It re
 
 The following code shows an example of team archived event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnTeamArchived(async (context, cancellationToken) =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnTeamArchived(async context =>
@@ -838,6 +960,15 @@ app.on('teamArchived', async ({ activity, send }) => {
     const teamName = activity.channelData.team.name;
     await send(`${teamName} is the team name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_team_archived
+async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
 ```
 
 # [JSON](#tab/json)
@@ -875,15 +1006,6 @@ app.on('teamArchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_team_archived
-async def handle_team_archived(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
-```
-
 ---
 
 ### Team unarchived
@@ -892,7 +1014,17 @@ The agent receives a notification when the team is installed and unarchived. It 
 
 The following code shows an example of a team unarchived event:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnTeamUnarchived(async (context, cancellationToken) =>
+{
+    var teamName = context.Activity.ChannelData.Team.Name;
+    await context.SendAsync($"{teamName} is the team name", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnTeamUnarchived(async context =>
@@ -909,6 +1041,15 @@ app.on('teamUnarchived', async ({ activity, send }) => {
     const teamName = activity.channelData.team.name;
     await send(`${teamName} is the team name`);
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_team_unarchived
+async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
+    team_name = ctx.activity.channel_data.team.name
+    await ctx.send(f"The team name is {team_name}")
 ```
 
 # [JSON](#tab/json)
@@ -946,15 +1087,6 @@ app.on('teamUnarchived', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_team_unarchived
-async def handle_team_unarchived(ctx: ActivityContext[ConversationUpdateActivity]):
-    team_name = ctx.activity.channel_data.team.name
-    await ctx.send(f"The team name is {team_name}")
-```
-
 ---
 
 Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
@@ -972,7 +1104,20 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 The following code shows an example of reactions to an agent message:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnMessageReactionAdded(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsAdded)
+    {
+        var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{context.Activity.ReplyToId}'";
+        await context.SendAsync(newReaction, cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnReactionsAdded(async context =>
@@ -998,6 +1143,17 @@ app.on('reactionsAdded', async ({ activity, send }) => {
         }
     }
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_reactions_added
+async def handle_reactions_added(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_added:
+        await ctx.send(
+            f"You added '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
 ```
 
 # [JSON](#tab/json)
@@ -1045,24 +1201,26 @@ app.on('reactionsAdded', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_reactions_added
-async def handle_reactions_added(ctx: ActivityContext):
-    for reaction in ctx.activity.reactions_added:
-        await ctx.send(
-            f"You added '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
-        )
-```
-
 ---
 
 ### Reactions removed from agent message
 
 The following code shows an example of reactions removed from agent message:
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved)
+    {
+        var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{context.Activity.ReplyToId}'";
+        await context.SendAsync(newReaction, cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnReactionsRemoved(async context =>
@@ -1087,6 +1245,17 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
         }
     }
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_reactions_removed
+async def handle_reactions_removed(ctx: ActivityContext):
+    for reaction in ctx.activity.reactions_removed:
+        await ctx.send(
+            f"You removed '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
+        )
 ```
 
 # [JSON](#tab/json)
@@ -1134,17 +1303,6 @@ app.on('reactionsRemoved', async ({ activity, send }) => {
 }
 ```
 
-# [Python](#tab/python)
-
-```python
-@app.on_reactions_removed
-async def handle_reactions_removed(ctx: ActivityContext):
-    for reaction in ctx.activity.reactions_removed:
-        await ctx.send(
-            f"You removed '{reaction.type}' regarding message '{ctx.activity.reply_to_id}'"
-        )
-```
-
 ---
 
 ## Installation update event
@@ -1167,7 +1325,36 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
-# [C#](#tab/dotnet)
+# [C# SDK v2.1](#tab/dotnet)
+
+```csharp
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    var action = context.Activity.Action;
+    if (string.Equals(action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        await context.SendAsync("Added", cancellationToken);
+    }
+    else
+    {
+        await context.SendAsync("Uninstalled", cancellationToken);
+    }
+});
+```
+
+You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
+
+```csharp
+teams.OnInstallUpdate(async (context, cancellationToken) =>
+{
+    if (string.Equals(context.Activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+    {
+        await context.SendAsync("Added", cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnInstall(async context =>
@@ -1187,7 +1374,7 @@ app.OnInstall(async context =>
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
-protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> Context object, CancellationToken cancellationToken)
+protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> context, CancellationToken cancellationToken)
 {
     // TO:DO Installation workflow return;
 }
@@ -1203,6 +1390,18 @@ app.on('install.add', async ({ send }) => {
 app.on('install.remove', async ({ send }) => {
     await send('Uninstalled');
 });
+```
+
+# [Python](#tab/python)
+
+```python
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext):
+    await ctx.send("Added")
+
+@app.on_install_remove
+async def handle_install_remove(ctx: ActivityContext):
+    await ctx.send("Uninstalled")
 ```
 
 # [JSON](#tab/json)
@@ -1260,18 +1459,6 @@ app.on('install.remove', async ({ send }) => {
     },
     "action": "add"
     }
-```
-
-# [Python](#tab/python)
-
-```python
-@app.on_install_add
-async def handle_install_add(ctx: ActivityContext):
-    await ctx.send("Added")
-
-@app.on_install_remove
-async def handle_install_remove(ctx: ActivityContext):
-    await ctx.send("Uninstalled")
 ```
 
 ---
