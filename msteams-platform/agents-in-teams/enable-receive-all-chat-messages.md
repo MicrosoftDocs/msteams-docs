@@ -8,20 +8,14 @@ zone_pivot_groups: teams-sdk-languages
 
 # Configure an agent to receive all messages in group chats and channels
 
-By default, in group chats and channels, the only chat messages that an agent receives or can access through Graph APIs are the ones where it's @mentioned. To receive and access all messages from the group chats and channels it's in, an agent must declare the appropriate [resource-specific consent permissions](../graph-api/rsc/resource-specific-consent.md) in its app manifest.
+By default, in group chats and channels, the only chat messages that an agent receives or can access through Graph APIs are the messages in which it's @mentioned. To receive and access all messages from the group chats and channels it's in, an agent must declare the appropriate [resource-specific consent (RSC) permissions](../graph-api/rsc/resource-specific-consent.md) in its app manifest.
 
-Most LLM-driven agents benefit from requesting these permissions so they can use the full contents of a conversation as context and, when appropriate, take action without being explicitly invoked. However, you should carefully design and evaluate your agent to ensure appropriate behavior with respect to data privacy and user expectations for agent participation.
+Most LLM-driven agents benefit from requesting these permissions so they can use the full contents of a conversation as context and proactively interact with users when appropriate. However, you should carefully design and evaluate your agent to ensure appropriate behavior with respect to data privacy and user expectations for agent participation.
 
 The permissions described in this article are only relevant to agents that are installable in `team` and/or `groupChat` scopes. They don't provide agents with access to additional conversations, only to additional *messages* in conversations they can already access.
 
 > [!NOTE]
 > This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
-
-## Why don't agents receive all group chat and channel messages by default?
-
-Agents that don't benefit from full message access can minimize processing load, data privacy concerns, and complexity by retaining the @mention limitation. Scripted and flow-based bots aren't designed to benefit from additional context and have no need to receive messages that don't directly invoke them. Even for LLM-powered agents, invoke-based interaction and limited context might be sufficient for some scenarios.
-
-Users generally expect modern agents to observe all messages in group chats and channels, and it's a critical capability for many agent scenarios. Even so, requiring developers to opt in gives them a choice, and requiring users to consent sets clear expectations about the boundaries of an agent's participation.
 
 ## Update declared RSC permissions
 
@@ -59,7 +53,7 @@ After you update the permissions, install or upgrade the app in the target team 
 
 For more information, see the [app manifest schema documentation](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
-### Update permissions in Developer Portal
+### Update permissions by using Developer Portal
 
 Alternatively, use Teams Developer Portal to configure RSC permissions instead of editing the app manifest directly:
 
@@ -69,6 +63,12 @@ Alternatively, use Teams Developer Portal to configure RSC permissions instead o
 1. Under **Team permissions**, add `ChannelMessage.Read.Group` to receive channel messages.
 1. Under **Chat/Meeting permissions**, add `ChatMessage.Read.Chat` to receive group chat messages.
 1. Select **Save**.
+
+## Why don't agents receive all group chat and channel messages by default?
+
+Agents that don't benefit from full message access can minimize processing load, data privacy concerns, and complexity by retaining the @mention limitation. Scripted and flow-based bots aren't designed to benefit from additional context in messages that don't directly invoke them. Even for LLM-powered agents, invoke-based interaction and limited context might be sufficient for some scenarios.
+
+Users generally expect modern agents to observe all messages in group chats and channels, and it's a critical capability for many agent scenarios. Even so, requiring developers to opt in gives them a choice, and requiring users to consent sets clear expectations about the boundaries of an agent's participation.
 
 ## Filter @mention messages
 

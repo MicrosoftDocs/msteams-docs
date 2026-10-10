@@ -27,6 +27,9 @@
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
   - name: Integrate AI
     items:
+    - name: Receive all messages in group chats and channels
+      href: agents-in-teams/enable-receive-all-chat-messages.md
+      displayName: RSC, consent, configure, @mention, permission, LLM, context, proactive, channelmessage, chatmessage
     - name: Stream messages
       href: bots/streaming-ux.md
       displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
@@ -76,9 +79,7 @@
     items:
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
-      displayName: block kit,
-    - name: Receive all chat messages
-      href: agents-in-teams/enable-receive-all-chat-messages.md
+      displayName: block kit
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId, send message, bot framework, notification,
