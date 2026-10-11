@@ -44,9 +44,9 @@
         "ms.reviewer": "nickwalk",
         "searchScope": [ "Teams" ],
         "feedback_system": "Standard",
-        "feedback_product_url": "https://experience.dynamics.com/ideas/",
-        "feedback_help_link_url": "https://experience.dynamics.com/ideas",
-        "feedback_help_link_type": "ask-the-community",
+        "feedback_product_url": "https://learn.microsoft.com/microsoftteams/platform/feedback",
+        "feedback_help_link_url": "hhttps://learn.microsoft.com/microsoftteams/platform/feedback/",
+        "feedback_help_link_type": "get-product-support",
         "titleSuffix": "Teams",
         "recommendations": false,
         "zone_pivot_group_filename": "platform/zone-pivot-groups.json"
