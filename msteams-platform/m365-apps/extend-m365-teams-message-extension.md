@@ -98,7 +98,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` values:
 }
 ```
 
-Use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
+Use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-agent-or-app) and identify any errors.
 
 [!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
