@@ -205,11 +205,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 }
 ```
 
----
-
-> [!NOTE]
-> If your agent supports sessions, the `conversation.id` value in one-on-one chat activities is scoped to a specific session. Each session has its own unique `conversationId`, and messages sent using that ID are automatically routed to the corresponding session. For more information, see [Structure conversations with sessions](how-to/conversations/agent-sessions.md).
-
 ### Receive a read receipt
 
 The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your agent to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
@@ -837,7 +832,6 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 | --- | --- |
 | An `activity` object. | A `ResourceResponse` object. |
 
-
 Now that you have updated cards, you can delete messages using the Teams SDK.
 
 #### Delete messages
@@ -1231,7 +1225,7 @@ Two non-standard request header fields are added to all the requests sent to age
 | Field key | Value |
 | ---------------- | ----------------- |
 | x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
-| x-ms-tenant-id       | The tenant ID corresponding to the conversation in the request activity.                           |
+| x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
 
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
@@ -1262,4 +1256,3 @@ If you want your agent to receive all messages, then you don't need to filter th
 ## See also
 
 - [Conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md)
-- [Structure conversations with sessions](how-to/conversations/agent-sessions.md)
