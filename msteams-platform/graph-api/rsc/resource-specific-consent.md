@@ -1,9 +1,7 @@
 ---
 title: Resource-specific Consent for Apps
 description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
-ms.localizationpriority: medium
 ms.topic: article
-ms.owner: vishachadha
 ms.date: 02/20/2025
 ---
 
@@ -91,7 +89,6 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeeting.ReadBasic.Group`|Read the basic properties of the channel meetings in this team.| NA | Supported |
 |`ChannelMeetingParticipant.Read.Group`|Read the participant information including name, role, ID, join and left time of channel meetings associated with this team.| NA | Supported |
 |`ChannelMeetingRecording.Read.Group`|Read the recordings of all channel meetings associated with this team.| NA | Supported |
-|`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.| NA | Supported |
 |`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.| NA | Supported |
 |`ChannelMessage.Read.Group`|Read this team's channel messages. | NA | Supported |
 |`ChannelMessage.Send.Group`|Send messages to this team's channels. | NA | Supported |
