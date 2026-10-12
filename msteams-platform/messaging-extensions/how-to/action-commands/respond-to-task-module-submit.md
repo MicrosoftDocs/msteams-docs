@@ -51,10 +51,24 @@ If the app contains a conversational bot, install the bot in the conversation, a
 
 Examples of receiving the invoke message are as follows:
 
-# [C#/.NET](#tab/dotnet1)
+# [C# SDK v2.1](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.teams.apps.app?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
+```csharp
+using Microsoft.Teams.Apps.MessageExtensions;
+
+var teams = app.UseTeamsBotApplication();
+ 
+teams.OnSubmitAction(async (context, cancellationToken) =>
+{
+  MessageExtensionAction? action = context.Activity.Value;
+  // handle the submit action and return MessageExtensionActionResponse
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet1-legacy)
 
 ```csharp
 var teams = app.UseTeams();
@@ -131,10 +145,59 @@ The following example is a JSON object that you receive. The `commandContext` pa
 
 The most common way to respond to the `composeExtensions/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-# [C#/.NET](#tab/dotnet2)
+# [C# SDK v2.1](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.teams.cards.adaptivecard?view=msteams-sdk-dotnet-latest&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-message-extensions/dotnet/bot-message-extensions/Program.cs)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps.MessageExtensions;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Cards;
+
+// Inside the action handler:
+
+var card = new AdaptiveCard
+{
+    Version = Microsoft.Teams.Cards.Version.Version1_4,
+    Body =
+    [
+        new TextBlock(title)
+        {
+            Weight = TextWeight.Bolder,
+            Size = TextSize.Large
+        },
+        new TextBlock(subtitle)
+        {
+            IsSubtle = true
+        },
+        new TextBlock(text)
+        {
+            Wrap = true
+        }
+    ]
+};
+
+TeamsAttachment previewAttachment = TeamsAttachment.CreateBuilder()
+  .WithContent(new ThumbnailCard { Title = title, Text = text })
+  .WithContentType(AttachmentContentTypes.ThumbnailCard)
+  .Build();
+
+TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+  .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+  .WithProperty("preview", previewAttachment)
+  .Build();
+
+return MessageExtensionActionResponse.CreateBuilder()
+  .WithComposeExtension(MessageExtensionResponse.CreateBuilder()
+    .WithType(MessageExtensionResponseTypes.Result)
+    .WithAttachmentLayout(TeamsAttachmentLayouts.List)
+    .WithAttachments(attachment))
+  .Build();
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet2-legacy)
 
 ```csharp
 using Microsoft.Teams.Api;
@@ -554,7 +617,28 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a message with the Adaptive Card to the conversation, and also reply to the invoke.
 
-# [C#/.NET](#tab/dotnet5)
+# [C# SDK v2.1](#tab/dotnet5)
+
+```csharp
+if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
+{
+    // Extract the card from the bot activity preview
+    var cardAttachment = action.BotActivityPreview?.FirstOrDefault()?.Attachments?.FirstOrDefault();
+    if (cardAttachment != null)
+    {
+        await context.SendAsync(
+            new MessageActivityInput().AddAttachment(
+                TeamsAttachment.CreateBuilder()
+                    .WithContentType(cardAttachment.ContentType)
+                    .WithContent(cardAttachment.Content)
+                    .Build()),
+            cancellationToken);
+    }
+    return MessageExtensionActionResponse.CreateBuilder().Build();
+}
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet5-legacy)
 
 ```csharp
 if (action.BotMessagePreviewAction == MsgExt.MessagePreviewAction.Send)
