@@ -2,16 +2,27 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 09/28/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
+ms.date: 10/08/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
 feed reader as they're published.
+
+## Released: Extended Markdown formatting for agent messages
+
+*October 8, 2026*
+
+Extended Markdown formatting for agent messages is now generally available to all Teams users. With extended Markdown mode, agents can send richer, more expressive, better-formatted responses than were previously possible in Teams.
+
+Extended Markdown mode enables rendering of Markdown tables, task lists, code blocks, equations, images, at-mentions, and citations in your agent's messages. Additionally, extended Markdown messages render progressively during [streaming](bots/streaming-ux.md), so users see formatted output as it arrives.
+
+For compatibility reasons, extended Markdown mode is not the default, but adopting it is recommended for all messaging scenarios that aren't strictly dependent on the default formatting behavior. Extended Markdown mode is enabled on a per-message basis by setting `textFormat: "extendedmarkdown"` on outgoing message activities.
+
+For more information, including guidance for updating existing agents to use extended Markdown mode, see [Format your agent messages](bots/how-to/format-your-bot-messages.md).
+
+---
 
 ## Released: Teams SDK updates (TypeScript, .NET and Python)
 

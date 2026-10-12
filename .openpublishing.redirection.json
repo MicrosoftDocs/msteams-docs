@@ -1744,6 +1744,11 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "msteams-platform/bots/how-to/conversations/agent-sessions.md",
+        "redirect_url": "/microsoftteams/platform/index",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/assistants-api-quick-start.md",
         "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk",
         "redirect_document_id": false
