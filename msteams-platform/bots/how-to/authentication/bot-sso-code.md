@@ -1,10 +1,9 @@
 ﻿---
-title: Update App Manifest to Enable SSO
+title: Add code to enable SSO in a bot
 description: Learn how to add code configuration, handle an access token, receive token, and handle app user sign out for enabling SSO in Teams bots.
 ms.topic: how-to
 ms.localizationpriority: high
-zone_pivot_groups: enable-sso
-ms.date: 09/02/2026
+ms.date: 10/12/2026
 ---
 # Add code to enable SSO in your bot app
 
@@ -17,8 +16,6 @@ You need to configure your app's code to obtain an access token from Microsoft E
 
 > [!NOTE]
 > If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript, TypeScript, and C# apps in Visual Studio Code.
-
-::: zone pivot="bot-app"
 
 This section covers:
 
@@ -400,14 +397,6 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 | **Sample name** | **Description** | **.NET** | **Node.js** |
 | --- | --- | --- | --- |
 | Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) |
-
-::: zone-end
-
-::: zone pivot="mex-app"
-
-[!INCLUDE [msgex-sso-code](../../../includes/messaging-extensions/msgex-sso-code.md)]
-
-::: zone-end
 
 ## Next step
 
