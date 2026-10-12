@@ -318,7 +318,7 @@
     - name: Add code to enable SSO for bot
       href: bots/how-to/authentication/bot-sso-code.md
     - name: Add code to enable SSO for message extension
-      href: bots/how-to/authentication/msgext-sso-code.md
+      href: bots/how-to/authentication/message-extension-sso-code.md
     - name: Update app manifest and preview bot app
       href: bots/how-to/authentication/bot-sso-manifest.md
     - name: Grant Microsoft Graph permissions and scopes
