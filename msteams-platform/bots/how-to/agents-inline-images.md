@@ -12,9 +12,9 @@ zone_pivot_groups: teams-sdk-languages
 ---
 # Send and receive inline images
 
-Inline images render directly in a Microsoft Teams conversation instead of appearing as stored documents. Teams represents each image as an activity attachment with an image MIME type and a hosted URL or base64 data URI.
+An inline image is part of the message and renders directly in a Microsoft Teams conversation instead of appearing as stored documents in the conversation's **Shared** tab. Teams represents each image as an activity attachment with an image MIME type and a hosted URL or base64 data URI.
 
-Use Teams SDK to download images that users paste into messages and to send images from hosted URLs or in-memory bytes. For documents stored in OneDrive or SharePoint, see [Send and receive files](bots-filesv4.md).
+Use [Teams SDK](/microsoftteams/platform/teams-sdk/welcome) to download images that users paste into messages and to send images from hosted URLs or in-memory bytes. For documents stored in OneDrive or SharePoint, see [Send and receive files](bots-filesv4.md).
 
 > [!NOTE]
 >
@@ -22,16 +22,13 @@ Use Teams SDK to download images that users paste into messages and to send imag
 
 ## User experience
 
-Understand how inline images appear and behave so you can select the right presentation for visual content.
+Use a hosted attachment for a standalone image, base64 HTML/XML content for exact placement, or an Adaptive Card when the image belongs to interactive content. Users can:
 
-Users can:
-
+* View an image that an agent sends with a message text and a base64 image positioned within formatted message text.
 * Paste an image that renders at its position in a composed message.
-* View an image that an agent sends beside message text.
-* View a base64 image positioned within formatted message text.
 * Interact with an image included in an Adaptive Card.
 
-An inline image is part of the message and doesn't appear in the conversation's **Files** tab. Use a hosted attachment for a standalone image, base64 HTML/XML content for exact placement, or an Adaptive Card when the image belongs to interactive content.
+Understand how inline images appear and behave so you can select the right presentation for visual content.
 
 ## Developer experience
 
