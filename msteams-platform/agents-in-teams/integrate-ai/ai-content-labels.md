@@ -115,7 +115,7 @@ Citations in your agent's messages can include the following:
 > [!NOTE]
 >
 > * A maximum of 20 citations are displayed in a message.
-> * Citations with Adaptive Cards are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Citations with Adaptive Cards are available in [public developer preview](../../developer-preview-features.md).
 > * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the agent's message or in the citation's modal window accessible from the pop-up window.
 
 ### Add citations
