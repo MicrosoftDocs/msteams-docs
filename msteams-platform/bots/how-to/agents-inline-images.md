@@ -182,9 +182,7 @@ Process the bytes directly when possible. Convert them to base64 only when a dow
 
 An outbound inline image uses an image MIME type in `ContentType` and either a reachable HTTPS URL or a base64 data URI in `ContentUrl`. Sending doesn't upload the image to OneDrive or SharePoint and requires no Graph permission or user sign-in.
 
-Choose a hosted URL for externally available images or base64 data for small images held by your app, then create the corresponding outgoing message attachment.
-
-Teams supports inline images with the following limits:
+Choose a hosted URL for externally available images or base64 data for small images held by your app, then create the corresponding outgoing message attachment. Teams supports inline images with the following limits:
 
 | Limit | Value |
 | --- | --- |

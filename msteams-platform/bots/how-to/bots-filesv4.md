@@ -720,9 +720,7 @@ Key properties and values:
 
 ## Handle errors
 
-Handle known SDK file errors separately from transport and service failures:
-
-For agentic users, handle credential and Graph access errors first because file retrieval depends on the agentic identity and consented blueprint permissions. The expired URL error applies to the bot path that uses a pre-authorized download URL.
+Handle known SDK file errors separately from transport and service failures. For agentic users, handle credential and Graph access errors first because file retrieval depends on the agentic identity and consented blueprint permissions. The expired URL error applies to the bot path that uses a pre-authorized download URL.
 
 ::: zone pivot="teams-sdk-csharp"
 
