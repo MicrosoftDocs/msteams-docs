@@ -829,11 +829,6 @@
     - name: Create Virtual Assistant
       href: samples/virtual-assistant.md
       displayName: OnMessageActivityAsync, multi-language support
-    - name: Power Platform apps
-      items:
-      - name: Low-code custom apps
-        href: samples/teams-low-code-solutions.md
-        displayName: Power BI, Power Platform apps, Project Oakdale
     - name: App templates for Microsoft Teams
       href: samples/app-templates.md
       displayName: Attendance, Adoption, Champion Management Platform, Company Communicator, FAQ Plus, Icebreaker, Microsoft 365 Learning Pathways, Microsoft Teams Emergency Operations Center (TEOC), Tournaments of Teams
