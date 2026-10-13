@@ -1109,7 +1109,7 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
-- name: Preview features for developers
+- name: Develop with preview features
   href: developer-preview-features.md
   displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
 - name: Frequently asked questions
