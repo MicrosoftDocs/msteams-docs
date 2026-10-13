@@ -6,7 +6,7 @@ ms.date: 10/12/2026
 ---
 # Teams preview features for agent and app developers
 
-New Teams platform features often become available to developers before they reach general availability. Consider integrating these preview features into test versions of your agents and apps, [providing feedback](feedback.md) about them, and preparing to use them as soon as they're released.
+Microsoft often makes new Teams platform features available to developers before they reach general availability. Consider integrating these preview features into test versions of your agents and apps, [providing feedback](feedback.md) about them, and preparing to use them as soon as they're released.
 
 Preview-related implementation and user experience considerations vary by feature, and the documentation for each preview feature explains them. This article explains two of the most common requirements:
 
@@ -17,13 +17,13 @@ Both developer- and user-facing aspects of preview features might change before 
 
 ## Teams public preview
 
-Teams public preview is an opt-in feature of the Teams client that enables users to experience a select set of unreleased Teams features. Most preview platform features available to agent and app developers require users to opt in to public preview before they can access them in the Teams client.
+Teams public preview is an opt-in feature of the Teams client that enables users to experience a select set of unreleased Teams features. Public preview features are generally available to developers unconditionally, but require users to opt in to public preview to access them in the Teams client.
 
 User participation in public preview is controlled by administrator policy. Administrators can set policies that require or disallow participation, or allow users to individually decide whether to opt in. Developers integrating public preview features in their agents and apps should enable public preview themselves to perform their own evaluation and testing, and should work with administrators to enroll users involved with testing. See [Microsoft Teams Public preview](/MicrosoftTeams/public-preview-doc-updates) in the Teams administrator documentation for more information about enabling public preview.
 
-Public preview is a Teams client option and has no corresponding developer setting. Generally, public preview features are unconditionally available to developers for implementation.
+Users' public preview participation status isn't made known to developers, agents, or apps, and it can't be used as a general feature flag. It only determines access to platform features that developers might integrate into their agents and apps.
 
-Public preview is available to all Teams users, subject to administrator consent, but don't expect or require production users to participate. Public preview participation isn't exposed to developers, agents, or apps and can't be used to conditionally enable features.
+Any Teams user can opt in to public preview, subject to administrator policy, but don't expect or require production users to participate.
 
 ## Developer preview app manifest
 
