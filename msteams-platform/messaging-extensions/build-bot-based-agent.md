@@ -4,7 +4,7 @@ description: Learn how to build a bot-based message extension agent for Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/16/2024
+ms.date: 09/25/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -276,7 +276,7 @@ To create a bot-based search message extension agent using Agents Toolkit CLI, f
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
    ```
-    teamsapp preview --env dev
+   teamsapp preview --env dev
    ```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
@@ -361,7 +361,7 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365-copilot/extensibility/debugging-copilot-plugin).
+For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio)
 
 ## See also
 

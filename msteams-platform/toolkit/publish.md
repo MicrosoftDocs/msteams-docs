@@ -1,10 +1,10 @@
 ---
 title: Publish Custom Apps with Microsoft 365 Agents Toolkit
-author: zyxiaoyuer
+author: nickwalk
 description: In this module, learn how to publish Teams apps using Microsoft 365 Agents Toolkit and publish to individual scope or custom app upload permission.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 11/29/2021
+ms.date: 10/09/2026
 ---
 
 # Publish Teams apps using Microsoft 365 Agents Toolkit

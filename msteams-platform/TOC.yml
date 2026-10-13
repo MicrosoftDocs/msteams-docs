@@ -27,6 +27,9 @@
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
   - name: Integrate AI
     items:
+    - name: Receive all messages in group chats and channels
+      href: agents-in-teams/enable-receive-all-chat-messages.md
+      displayName: RSC, consent, configure, @mention, permission, LLM, context, proactive, channelmessage, chatmessage
     - name: Stream messages
       href: bots/streaming-ux.md
       displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
@@ -57,9 +60,6 @@
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
-    - name: Sessions
-      href: bots/how-to/conversations/agent-sessions.md
-      displayName: conversationId, proactive, 1:1 chat, context
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
       displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
@@ -76,9 +76,7 @@
     items:
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
-      displayName: block kit,
-    - name: Receive all chat messages
-      href: agents-in-teams/enable-receive-all-chat-messages.md
+      displayName: block kit
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId, send message, bot framework, notification,
@@ -309,8 +307,10 @@
       href: bots/how-to/authentication/bot-sso-overview.md
     - name: Configure bot app in Microsoft Entra ID
       href: bots/how-to/authentication/bot-sso-register-aad.md
-    - name: Add code to enable SSO
+    - name: Add code to enable SSO for bot
       href: bots/how-to/authentication/bot-sso-code.md
+    - name: Add code to enable SSO for message extension
+      href: bots/how-to/authentication/message-extension-sso-code.md
     - name: Update app manifest and preview bot app
       href: bots/how-to/authentication/bot-sso-manifest.md
     - name: Grant Microsoft Graph permissions and scopes

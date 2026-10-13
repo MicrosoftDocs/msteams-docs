@@ -13,7 +13,7 @@ This article covers how to invoke and dismiss dialogs (formerly known as task mo
 The event registration varies by language:
 
 * **TypeScript**: `app.on('dialog.open', ...)` and `app.on('dialog.submit', ...)`
-* **C#**: `teamsApp.OnTaskFetch(...)` and `teamsApp.OnTaskSubmit(...)`
+* **C#**: `teams.OnTaskFetch(...)` and `teams.OnTaskSubmit(...)`
 * **Python**: `@app.on_dialog_open` and `@app.on_dialog_submit`
 
  The dialog content can be an Adaptive Card or a URL-based webpage.
@@ -73,7 +73,46 @@ The next section provides examples of triggering and handling dialogs using the 
 
 To open a dialog, send an Adaptive Card with a `TaskFetchAction` button. When the user selects the button, Teams sends a task fetch invoke to your app. Each button's `value` data specifies the type of dialog to open (for example, `{ "data": "AdaptiveCard" }`).
 
-# [C#](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Cards;
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
+        {
+            new TextBlock("Task Module Invocation from Adaptive Card")
+            {
+                Weight = TextWeight.Bolder,
+                Size = TextSize.Large
+            }
+        },
+        Actions = new List<Action>
+        {
+            new TaskFetchAction(new Dictionary<string, object?> { { "data", "AdaptiveCard" } })
+            { Title = "Adaptive Card" },
+            new TaskFetchAction(new Dictionary<string, object?> { { "data", "CustomForm" } })
+            { Title = "Custom Form" },
+            new TaskFetchAction(new Dictionary<string, object?> { { "data", "MultiStep" } })
+            { Title = "Multi-step Form" }
+        }
+    };
+
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+        .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+        .Build();
+
+    await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using Microsoft.Teams.Api.Activities;
@@ -175,7 +214,94 @@ async def handle_message(context: ActivityContext[MessageActivity]) -> None:
 
 When Teams sends a task fetch invoke, your app returns the dialog content. The content can be an Adaptive Card or a webpage URL. In C#, wrap the dialog metadata in a `ContinueTask` response. In TypeScript, return a `TaskModuleResponse` with `type: 'continue'`. In Python, return an `InvokeResponse` containing a `TaskModuleContinueResponse`.
 
-# [C#](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+using Microsoft.Teams.Apps.TaskModules;
+using Microsoft.Teams.Cards;
+
+teams.OnTaskFetch(async (context, cancellationToken) =>
+{
+    await Task.CompletedTask;
+
+    // The button's Action.Submit payload arrives on the invoke value, nested under "data".
+    string? data = context.Activity.Value?.Data is JsonElement value
+        && value.TryGetProperty("data", out JsonElement dataProp)
+            ? dataProp.GetString()
+            : null;
+
+    if (data == "CustomForm")
+    {
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Custom Form")
+            .WithWidth(510)
+            .WithHeight(450)
+            .WithUrl($"{botEndpoint}/customform")
+            .WithFallbackUrl($"{botEndpoint}/customform")
+            .Build();
+    }
+
+    if (data == "MultiStep")
+    {
+        var step1Card = new AdaptiveCard
+        {
+            Version = "1.5",
+            Body = new List<CardElement>
+            {
+                new TextBlock("Multi-step Form: Step 1") { Wrap = true },
+                new TextInput { Id = "name", Label = "Name" }
+            },
+            Actions = new List<Microsoft.Teams.Cards.Action>
+            {
+                new SubmitAction { Title = "Next" }
+            }
+        };
+
+        TeamsAttachment step1Attachment = TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(step1Card))
+            .Build();
+
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Multi-step Form")
+            .WithWidth(400)
+            .WithHeight(300)
+            .WithCard(step1Attachment)
+            .Build();
+    }
+
+    var dialogCard = new AdaptiveCard
+    {
+        Version = "1.5",
+        Body = new List<CardElement>
+        {
+            new TextInput { Id = "usertext", Label = "Enter text" }
+        },
+        Actions = new List<Microsoft.Teams.Cards.Action>
+        {
+            new SubmitAction { Title = "Submit" }
+        }
+    };
+
+    TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+        .WithAdaptiveCard(JsonSerializer.SerializeToElement(dialogCard))
+        .Build();
+
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("Adaptive Card: Inputs")
+        .WithWidth(400)
+        .WithHeight(200)
+        .WithCard(attachment)
+        .Build();
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -417,7 +543,77 @@ async def handle_dialog_open(context: ActivityContext[TaskFetchInvokeActivity]):
 
 When a user presses `Action.Submit` in a dialog, Teams sends a task submit invoke to your app. You can respond by completing the task, showing a message, or opening another dialog (for example, to chain multi-step forms).
 
-# [C#](#tab/csharp)
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps.TaskModules;
+using Microsoft.Teams.Cards;
+
+teams.OnTaskSubmit(async (context, cancellationToken) =>
+{
+    var activity = context.Activity;
+    var json = JsonSerializer.Deserialize<JsonElement>(JsonSerializer.Serialize(activity));
+    var submitData = JsonSerializer.Deserialize<Dictionary<string, object>>(
+        json.GetProperty("value").GetProperty("data").GetRawText());
+    var submissionType = submitData?.GetValueOrDefault("submissiontype")?.ToString();
+
+    if (submissionType == "multi_step_1")
+    {
+        var name = submitData["name"]?.ToString();
+        var step2Card = new AdaptiveCard
+        {
+            Body = new List<CardElement>
+            {
+                new TextBlock("Step 2 of 2 - Your Email") { Size = TextSize.Large, Weight = TextWeight.Bolder },
+                new TextInput { Id = "email", Label = "Email", Placeholder = "Enter your email", IsRequired = true }
+            },
+            Actions = new List<Action>
+            {
+                new SubmitAction().WithTitle("Submit").WithData(
+                    new Union<string, SubmitActionData>(new SubmitActionData
+                    {
+                        NonSchemaProperties = new Dictionary<string, object?>
+                        {
+                            { "submissiontype", "multi_step_2" },
+                            { "name", name! }
+                        }
+                    }))
+            }
+        };
+
+        TeamsAttachment step2Attachment = TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(step2Card))
+            .Build();
+
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Continue)
+            .WithTitle("Multi-step Form: Step 2")
+            .WithWidth(400)
+            .WithHeight(300)
+            .WithCard(step2Attachment)
+            .Build();
+    }
+
+    if (submissionType == "multi_step_2")
+    {
+        await context.SendAsync($"Hi {submitData["name"]}, thanks for submitting! Your email is {submitData["email"]}", cancellationToken);
+        return TaskModuleResponse.CreateBuilder()
+            .WithType(TaskModuleResponseTypes.Message)
+            .WithMessage("Multi-step form completed!")
+            .Build();
+    }
+
+    var usertext = submitData?.GetValueOrDefault("usertext")?.ToString();
+    await context.SendAsync($"You submitted: {usertext}", cancellationToken);
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Message)
+        .WithMessage("Thanks for submitting!")
+        .Build();
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using System.Text.Json;
