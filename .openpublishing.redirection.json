@@ -1523,6 +1523,11 @@
       {
         "source_path": "msteams-platform/resources/schema/localization-schema.md",
         "redirect_url": "/microsoft-365/extensibility/schema/loc-schema/root"
-      }
+      },
+    {
+      "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
+      "redirect_url": "/power-apps/teams/overview",
+      "redirect_document_id": false
+    }
     ]
 }
