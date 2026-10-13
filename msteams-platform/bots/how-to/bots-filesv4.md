@@ -1,7 +1,7 @@
 ---
-title: Send and receive files and inline images
-description: Learn how agents send and receive files and inline images in Microsoft Teams using Teams SDK and Microsoft Graph.
-ms.date: 09/23/2026
+title: Send and receive files
+description: Learn how agents send and receive files in Microsoft Teams using Teams SDK and Microsoft Graph.
+ms.date: 10/13/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -10,61 +10,46 @@ ms.topic: how-to
 ms.owner: angovil
 zone_pivot_groups: teams-sdk-languages
 ---
-# Send and receive files and inline images
+# Send and receive files
 
-Agents can work with document files and inline images in Microsoft Teams conversations. A document file is stored in OneDrive or SharePoint and usually appears as a file card. An inline image renders directly in the conversation and doesn't appear in the **Files** tab.
+Agents can receive, read, and send documents in Microsoft Teams conversations. Teams stores these files in OneDrive or SharePoint and displays them as file cards or stored items.
 
-Use Teams SDK to receive files in personal chats, send files through file consent, and receive or send inline images. Use Microsoft Graph when your app must work with stored files across personal chats, group chats, and channels.
+Use Teams SDK to receive files in personal chats and send files through bot file consent. Use Microsoft Graph when your agent must work with stored files across personal chats, group chats, and channels. For images that render directly in a conversation, see [Send and receive inline images](bots-inline-images.md).
 
 > [!IMPORTANT]
 >
-> Agents don't support document-file send and receive workflows in Government Community Cloud High (GCC High), Department of Defense (DoD), or Teams operated by 21Vianet. In these environments, use a base64 image attachment to include an inline image in a message.
+> Agents don't support document-file send and receive workflows in Government Community Cloud High (GCC High), Department of Defense (DoD), or Teams operated by 21Vianet.
 
 ## User experience
 
-Understand how users exchange documents and images with an agent so you can choose clear prompts, consent flows, and confirmations for each interaction.
+Understand how users exchange documents with an agent so you can provide clear prompts, consent requests, and confirmations.
 
 Users can:
 
 * Attach a document to a personal chat with an agent.
-* Accept or decline a file that an agent offers.
-* Paste an image that renders within a message.
-* View an image that an agent sends from a hosted URL or as base64 data.
+* Review and accept or decline a file that a bot offers.
+* Open a successfully uploaded file from its file card.
+* Work with stored OneDrive or SharePoint files across supported conversation scopes.
 
-Files and inline images behave differently:
-
-| Document file | Inline image |
-| --- | --- |
-| Stored in OneDrive or SharePoint. | Rendered as part of the message. |
-| Appears as a file card or stored item. | Doesn't appear in the **Files** tab. |
-| Received as `file.download.info` metadata. | Received as an `image/*` attachment. |
-| Sent through file consent or Microsoft Graph. | Sent through an image attachment or HTML content. |
+A received document is stored in OneDrive or SharePoint and appears as a file card or stored item. A bot that sends a file in personal chat first asks for consent, uploads the file after acceptance, and then sends a file information card.
 
 ## Developer experience
 
-Choose an approach based on the content and conversation scope. The following options follow the implementation order in this article:
+Choose a file API based on the app identity, direction, and conversation scope. The following options match the implementation order in this article:
 
 | Requirement | Recommended approach |
 | --- | --- |
-| Receive a document in a personal chat | Teams SDK file accessor |
-| Send a document from a bot in a personal chat | Teams SDK file consent |
+| Receive and read a document in a personal chat | Teams SDK file accessor |
 | Send or retrieve stored files across conversation scopes | Microsoft Graph |
-| Receive an image pasted into a message | Inspect the activity attachments |
-| Send an image beside message text | Image attachment |
-| Position an image within formatted text | Base64 image in HTML/XML content |
-| Add an image to interactive content | Adaptive Card `Image` element |
+| Send a document from a bot in a personal chat | Teams SDK file consent |
 
-The activity attachment collection contains non-text message content, including files, inline images, Adaptive Cards, mentions, link previews, and HTML layout information. The Teams SDK file accessor filters this collection and exposes supported document files as lazy incoming-file handles.
-
-The following table summarizes scope and permission requirements:
+The Teams SDK file accessor filters the activity attachment collection and exposes supported documents as lazy incoming-file handles. Agentic users retrieve file bytes through Microsoft Graph with their identity. Traditional bots use the short-lived, pre-authorized URL supplied by Teams.
 
 | Operation | Personal chat | Group chat | Channel | Requirement |
 | --- | --- | --- | --- | --- |
 | Receive files with the Teams SDK file accessor | Supported | Not explicitly supported | Not explicitly supported | Agentic users require Graph file permissions. Bots use a pre-authorized URL. |
-| Send or retrieve files with Graph | Supported | Supported | Supported | Configure Microsoft Graph permissions appropriate to the storage location, API, calling identity, and access model used by your app. Use the least-privileged permission documented for the selected OneDrive or SharePoint operation. |
-| Send files with bot file consent | Supported | Not supported | Not supported | Set `supportsFiles` to `true` for bots. |
-| Receive inline images | Supported through activity attachments | Use activity attachments | Use activity attachments | Use the app's authenticated HTTP client. |
-| Send inline images | Supported | Supported | Supported | No Graph permission or user sign-in is required. |
+| Send or retrieve files with Graph | Supported | Supported | Supported | Configure permissions for the storage location, API, calling identity, and access model. |
+| Send files with bot file consent | Supported | Not supported | Not supported | Set `supportsFiles` to `true` on the bot entry. |
 
 ## Receive files
 
@@ -81,7 +66,6 @@ The required configuration depends on the identity and file operation:
 | Agentic user receives a file | None | Add a Microsoft Graph file permission to the agent blueprint and obtain administrator consent. |
 | Bot receives or sends a file through file consent | Set `supportsFiles` to `true` on the bot entry. | None for the pre-authorized file URL supplied by Teams. |
 | App sends or retrieves a stored file with Microsoft Graph | No file-specific app manifest property | Configure the required Microsoft Graph permission and authentication for the calling identity. |
-| App receives or sends an inline image | None | Use the authenticated SDK client to receive images. Sending images requires no Graph permission or user sign-in. |
 
 #### Agentic user
 
@@ -497,11 +481,22 @@ Key APIs and values:
 
 ::: zone-end
 
-Don't log raw attachment URLs, identifiers, or the complete payload. The file accessor doesn't return inline images, cards, mentions, link previews, HTML attachments, or malformed file entries. Access these items through the activity's attachment collection.
+Don't log raw attachment URLs, identifiers, or the complete payload. The file accessor doesn't return inline images, cards, mentions, link previews, HTML attachments, or malformed file entries. Access these items through the activity's attachment collection. For image-specific guidance, see [Send and receive inline images](bots-inline-images.md).
 
 ## Send files
 
 Send stored documents to users when your app must deliver generated reports, exports, or other downloadable content. Use Microsoft Graph for agentic and cross-scope scenarios, or use bot file consent in personal chats.
+
+### Use Microsoft Graph for stored files
+
+Use Microsoft Graph when your app must send or retrieve stored files across personal chats, group chats, or channels:
+
+* Use a user's OneDrive for personal and group-chat files.
+* Use the team's SharePoint site for channel files.
+* Obtain the required storage access through OAuth 2.0.
+* Post a message attachment that references an existing stored file.
+
+For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&preserve-view=true&tabs=http#example-4-file-attachments) and [OneDrive and SharePoint APIs](/onedrive/developer/rest-api/).
 
 ### Send files with bot file consent
 
@@ -725,429 +720,6 @@ Key properties and values:
 * `uniqueId`: Set the OneDrive or SharePoint drive-item ID.
 * `fileType`: Set the platform-reported file extension without punctuation.
 
-### Use Microsoft Graph for stored files
-
-Use Microsoft Graph when your app must send or retrieve stored files across personal chats, group chats, or channels:
-
-* Use a user's OneDrive for personal and group-chat files.
-* Use the team's SharePoint site for channel files.
-* Obtain the required storage access through OAuth 2.0.
-* Post a message attachment that references an existing stored file.
-
-For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&preserve-view=true&tabs=http#example-4-file-attachments) and [OneDrive and SharePoint APIs](/onedrive/developer/rest-api/).
-
-## Work with inline images
-
-Work with inline images when users or agents need visual content rendered directly in a conversation instead of as a stored document. Use authenticated activity attachments to receive images and image attachments or HTML/XML content to send them.
-
-### Receive inline images
-
-An inline image isn't exposed through the Teams SDK file accessor. An inbound message commonly includes an `image/*` attachment with the authenticated download URL and a `text/html` attachment that preserves the image position.
-
-Use the `image/*` attachment as the canonical source. Don't use the `<img src>` URL from the HTML attachment to download the image.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Teams.Apps.Clients;
-using Microsoft.Teams.Apps.Schema;
-
-HttpClient imageClient = app.Services
-    .GetRequiredService<IHttpClientFactory>()
-    .CreateClient(nameof(ApiClient));
-
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    TeamsAttachment? image =
-        context.Activity.Attachments?.FirstOrDefault(
-            attachment =>
-                attachment.ContentType is not null &&
-                attachment.ContentType.Value.StartsWith(
-                    "image/",
-                    StringComparison.OrdinalIgnoreCase) &&
-                attachment.ContentUrl is not null);
-
-    if (image?.ContentUrl is not Uri contentUrl)
-    {
-        return;
-    }
-
-    using HttpResponseMessage response =
-        await imageClient.GetAsync(
-            contentUrl,
-            HttpCompletionOption.ResponseHeadersRead,
-            cancellationToken);
-
-    response.EnsureSuccessStatusCode();
-
-    byte[] bytes =
-        await response.Content.ReadAsByteArrayAsync(
-            cancellationToken);
-
-    // Process the image bytes.
-});
-```
-
-Key APIs and values:
-
-* `nameof(ApiClient)`: Select the SDK client with platform authentication.
-* `ContentType`: Match an `image/*` MIME type case-insensitively.
-* `ContentUrl`: Use the canonical authenticated image download URL.
-* `ResponseHeadersRead`: Begin processing without buffering response content first.
-* `EnsureSuccessStatusCode`: Fail explicitly when image retrieval is unsuccessful.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('message', async ({ activity }) => {
-  const image = activity.attachments?.find(
-    (attachment) =>
-      attachment.contentType?.toLowerCase().startsWith('image/') &&
-      attachment.contentUrl
-  );
-
-  if (image?.contentUrl) {
-    const response = await app.api.http.get<ArrayBuffer>(
-      image.contentUrl,
-      { responseType: 'arraybuffer' }
-    );
-    const bytes = Buffer.from(response.data);
-
-    // Process the image bytes.
-  }
-});
-```
-
-Key APIs and values:
-
-* `activity.attachments`: Search all inbound message attachments.
-* `contentType`: Match an `image/*` MIME type case-insensitively.
-* `contentUrl`: Use the canonical authenticated image download URL.
-* `app.api.http`: Download bytes with the SDK's authenticated client.
-* `responseType`: Set `arraybuffer` to receive binary image content.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
-    image = next(
-        (
-            attachment
-            for attachment in (ctx.activity.attachments or [])
-            if attachment.content_type
-            and attachment.content_type.lower().startswith("image/")
-            and attachment.content_url
-        ),
-        None,
-    )
-
-    if image and image.content_url:
-        response = await app.api.http.get(image.content_url)
-        image_bytes = response.content
-
-        # Process the image bytes.
-```
-
-Key APIs and values:
-
-* `ctx.activity.attachments`: Search all inbound message attachments.
-* `content_type`: Match an `image/*` MIME type case-insensitively.
-* `content_url`: Use the canonical authenticated image download URL.
-* `app.api.http`: Download bytes with the SDK's authenticated client.
-* `response.content`: Access the downloaded binary image content.
-
-::: zone-end
-
-Process the bytes directly when possible. Convert them to base64 only when a downstream API requires it, and preserve the attachment's actual MIME type.
-
-### Send an inline image
-
-An outbound inline image uses an image MIME type in `ContentType` and either a reachable HTTPS URL or a base64 data URI in `ContentUrl`. Sending doesn't upload the image to OneDrive or SharePoint and requires no Graph permission or user sign-in.
-
-Choose a hosted URL for externally available images or base64 data for small images held by your app, then create the corresponding outgoing message attachment.
-
-Teams supports inline images with the following limits:
-
-| Limit | Value |
-| --- | --- |
-| Maximum dimensions | 1024 x 1024 pixels |
-| Maximum image size | 1 MB |
-| Supported formats | PNG, JPEG, and GIF |
-| Animated GIF | Not supported |
-| SDK validation | Not performed |
-
-> [!WARNING]
->
-> An image outside the supported dimensions, size, or format can be accepted by the send API but fail to render in the Teams client.
-
-#### Send an image from a hosted URL
-
-Use a hosted URL when the image is already available through a public HTTPS endpoint or is too large to embed efficiently. Add the reachable URL and matching MIME type to an image attachment.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-TeamsAttachment image = TeamsAttachment.CreateBuilder()
-    .WithContentType(new AttachmentContentType("image/png"))
-    .WithContentUrl(new Uri("https://contoso.com/charts/weekly.png"))
-    .WithName("weekly.png")
-    .Build();
-
-await context.SendAsync(
-    new MessageActivityInput()
-        .WithText("Here is the latest chart:")
-        .AddAttachment(image),
-    cancellationToken);
-```
-
-Key properties and values:
-
-* `ContentType`: Set the MIME type matching hosted image bytes.
-* `ContentUrl`: Set a publicly reachable HTTPS image URL.
-* `Name`: Add an optional display name for the image.
-* `AddAttachment`: Attach the image to the outgoing message.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('message', async ({ send }) => {
-  await send(
-    new MessageActivityInput('Here is the latest chart:')
-      .addAttachments({
-        contentType: 'image/png',
-        contentUrl: 'https://contoso.com/charts/weekly.png',
-        name: 'weekly.png'
-      })
-  );
-});
-```
-
-Key properties and values:
-
-* `contentType`: Set the MIME type matching hosted image bytes.
-* `contentUrl`: Set a publicly reachable HTTPS image URL.
-* `name`: Add an optional display name for the image.
-* `addAttachments`: Attach the image to the outgoing message.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
-    await ctx.send(
-        MessageActivityInput(text="Here is the latest chart:").add_attachments(
-            Attachment(
-                content_type="image/png",
-                content_url="https://contoso.com/charts/weekly.png",
-                name="weekly.png",
-            )
-        )
-    )
-```
-
-Key properties and values:
-
-* `content_type`: Set the MIME type matching hosted image bytes.
-* `content_url`: Set a publicly reachable HTTPS image URL.
-* `name`: Add an optional display name for the image.
-* `add_attachments`: Attach the image to the outgoing message.
-
-::: zone-end
-
-The URL must be reachable by the Teams client without agent credentials. Prefer this approach for images that aren't small.
-
-#### Send image bytes as base64
-
-Use a base64 data URI when image bytes exist only in your app, such as for a generated icon, thumbnail, or chart. Encode the bytes, preserve the correct MIME type, and attach the resulting data URI to the message.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-byte[] bytes = await File.ReadAllBytesAsync(
-    "./charts/weekly.png",
-    cancellationToken);
-
-string dataUri =
-    $"data:image/png;base64,{Convert.ToBase64String(bytes)}";
-
-TeamsAttachment image = TeamsAttachment.CreateBuilder()
-    .WithContentType(new AttachmentContentType("image/png"))
-    .WithContentUrl(new Uri(dataUri))
-    .WithName("weekly.png")
-    .Build();
-
-await context.SendAsync(
-    new MessageActivityInput()
-        .WithText("Here is the latest chart:")
-        .AddAttachment(image),
-    cancellationToken);
-```
-
-Key properties and values:
-
-* `dataUri`: Prefix base64 bytes with the matching MIME type.
-* `ContentType`: Match the data URI and actual image format.
-* `ContentUrl`: Wrap the complete data URI in `Uri`.
-* `Name`: Add an optional filename matching the image format.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('message', async ({ send }) => {
-  const bytes = await readFile('./charts/weekly.png');
-
-  await send(
-    new MessageActivityInput('Here is the latest chart:')
-      .addAttachments({
-        contentType: 'image/png',
-        contentUrl: `data:image/png;base64,${bytes.toString('base64')}`,
-        name: 'weekly.png'
-      })
-  );
-});
-```
-
-Key properties and values:
-
-* `contentUrl`: Prefix base64 bytes with the matching MIME type.
-* `contentType`: Match the data URI and actual image format.
-* `bytes.toString('base64')`: Encode the image bytes for the data URI.
-* `name`: Add an optional filename matching the image format.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
-    encoded = b64encode(
-        Path("./charts/weekly.png").read_bytes()
-    ).decode("ascii")
-
-    await ctx.send(
-        MessageActivityInput(text="Here is the latest chart:").add_attachments(
-            Attachment(
-                content_type="image/png",
-                content_url=f"data:image/png;base64,{encoded}",
-                name="weekly.png",
-            )
-        )
-    )
-```
-
-Key properties and values:
-
-* `content_url`: Prefix base64 bytes with the matching MIME type.
-* `content_type`: Match the data URI and actual image format.
-* `b64encode`: Encode the image bytes for the data URI.
-* `name`: Add an optional filename matching the image format.
-
-::: zone-end
-
-Base64 increases payload size by approximately one-third. Use it for small generated images and use a hosted URL for larger images.
-
-#### Position an image within message text
-
-Use HTML/XML content to control image placement and dimensions:
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-string encoded = Convert.ToBase64String(
-    await File.ReadAllBytesAsync(
-        "./charts/weekly.png",
-        cancellationToken));
-
-await context.SendAsync(
-    new MessageActivityInput()
-        .WithText(
-            $"<div>Revenue is up." +
-            $"<img src=\"data:image/png;base64,{encoded}\"/>" +
-            $"Questions?</div>")
-        .WithTextFormat(TextFormats.Xml),
-    cancellationToken);
-```
-
-Key properties and values:
-
-* `src`: Use a base64 data URI for embedded images.
-* `TextFormats.Xml`: Enable HTML elements within the message body.
-* `height` and `width`: Add optional dimensions to the image element.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('message', async ({ send }) => {
-  const bytes = await readFile('./charts/weekly.png');
-  const encoded = bytes.toString('base64');
-
-  await send(
-    new MessageActivityInput(
-      `<div>Revenue is up.` +
-      `<img src="data:image/png;base64,${encoded}"/>` +
-      `Questions?</div>`
-    ).withTextFormat('xml')
-  );
-});
-```
-
-Key properties and values:
-
-* `src`: Use a base64 data URI for embedded images.
-* `withTextFormat('xml')`: Enable HTML elements in the message body.
-* `height` and `width`: Add optional dimensions to the image element.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_message
-async def send_positioned_image(
-    ctx: ActivityContext[MessageActivity],
-) -> None:
-    encoded = base64.b64encode(
-        Path("./charts/weekly.png").read_bytes()
-    ).decode("ascii")
-
-    await ctx.send(
-        MessageActivityInput(
-            text=(
-                '<div>Revenue is up.'
-                f'<img src="data:image/png;base64,{encoded}"/>'
-                'Questions?</div>'
-            )
-        ).with_text_format("xml")
-    )
-```
-
-Key properties and values:
-
-* `src`: Use a base64 data URI for embedded images.
-* `with_text_format("xml")`: Enable HTML elements in the message body.
-* `height` and `width`: Add optional dimensions to the image element.
-
-::: zone-end
-
-An HTTPS `<img src>` isn't uploaded or rewritten. Use a hosted image attachment instead. Every embedded image counts toward the message payload, and exceeding the limit can reject the entire message.
-
-For multiple standalone images, add each attachment and select `List`, `Carousel`, or `Grid` through `AttachmentLayoutType`. For an image within interactive content, use an Adaptive Card `Image` element. For streamed responses, add attachments only to the final message because intermediate typing activities don't carry attachments.
-
 ## Handle errors
 
 Handle known SDK file errors separately from transport and service failures:
@@ -1299,34 +871,28 @@ Key types and values:
 
 ## Design guidelines and best practices
 
-Apply these guidelines to create secure, predictable file and image experiences for users. Review them while designing handlers and before deploying your app.
+Apply these guidelines to create secure, predictable file experiences. Review them while designing handlers and before deploying your app.
 
-* Clearly tell users whether content appears as a stored file or an inline image.
-* Acknowledge successful file receipt, upload, or image processing.
-* Explain why the agent requests file consent before sending a document.
-* Handle a declined consent request without repeatedly prompting the user.
-* Prefer the Teams SDK file accessor over manually parsing received document attachments.
-* Download once and reuse `DownloadedFile` when processing content repeatedly.
+* Tell users whether the agent received a file or is asking to upload one.
+* Acknowledge successful file receipt and upload.
+* Explain why the bot requests file consent before sending a document.
+* Handle declined consent without repeatedly prompting the user.
+* Prefer the Teams SDK file accessor over manually parsing document attachments.
+* Download once and reuse the downloaded file when processing content repeatedly.
 * Stream large files instead of buffering the complete file in memory.
 * Sanitize uploader-provided filenames and use application-controlled destinations.
 * Validate actual content instead of trusting extensions or reported MIME types.
-* Use the authenticated SDK HTTP client for inbound inline-image URLs.
-* Search all attachments instead of assuming the first is an image.
-* Preserve the actual image MIME type when receiving or sending images.
-* Prefer hosted URLs for larger images and keep base64 images small.
-* Validate image size, dimensions, and format before sending.
-* Don't log file bytes, credentials, or pre-authorized upload and download URLs.
+* Don't log file bytes, credentials, identifiers, or pre-authorized upload and download URLs.
 * Apply expiration and cleanup policies to pending file-consent uploads.
 * Propagate cancellation and handle HTTP, credential, scope, and expiration failures.
 
 ## See also
 
-Use these resources to explore the Teams SDK file and image APIs, related messaging features, and authentication guidance.
+Use these resources to explore related Teams SDK file APIs, inline images, authentication, and messaging guidance.
 
+* [Send and receive inline images](bots-inline-images.md)
 * [Teams SDK overview](/microsoftteams/platform/teams-sdk/why)
 * [File and Image Handling](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/)
 * [Receiving Files](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/receiving-files/)
-* [Receiving Inline Images](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/receiving-inline-images/)
-* [Sending Inline Images](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/sending-inline-images/)
 * [Sending messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp)
 * [User authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication?tabs=portal&pivots=csharp)
