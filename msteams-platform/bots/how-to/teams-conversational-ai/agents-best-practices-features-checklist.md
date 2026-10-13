@@ -2,7 +2,7 @@
 title: Best Practices and Features Checklist for Teams Agents
 description: Agent best practices for Microsoft Teams cover the features every agent should implement, from conversational context to citations. Review the checklist and build a great experience.
 ms.topic: overview
-ms.date: 09/28/2026
+ms.date: 10/09/2026
 ---
 
 # Best practices and features checklist for Teams agents
@@ -11,9 +11,9 @@ This article provides a list of best practices and features that developers shou
 
 These practices and features represent standard user expectations for agents in Teams and are broadly applicable. Agents that omit any of them should have a strong reason for doing so. Review each item to ensure your agent provides a great experience in Teams.
 
-## Enable access to all messages in conversations
+## Enable access to all messages in group chats and channels
 
-Modern agents are most effective when they can [observe and process the full conversation](../../../agents-in-teams/enable-receive-all-chat-messages.md), rather than only messages that @mention them. Request the appropriate resource-specific consent (RSC) permissions to enable this access while ensuring conversation owners explicitly consent.
+Agents that participate in Teams group chats and channels must opt in via configuration to receive messages in which they aren't @mentioned. For many agents, the context provided by this capability is critical to intelligent and proactive participation. To opt an agent in to receive all messages in group chats and channels, see [Configure an agent to receive all messages in group chats and channels](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 
 ## Message streaming and thinking indicators
 
@@ -33,11 +33,11 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Screenshot of agent reactions in the Teams desktop client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Image shows agent reactions in the mobile client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
+:::image type="content" source="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png" alt-text="Screenshot of agent reactions in the Teams mobile client." border="false" lightbox="../../../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile.png":::
 
 ---
 
@@ -45,7 +45,7 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 [Prompt starters](../conversations/prompt-starters.md) are prewritten prompts that help users understand an agent's capabilities and quickly begin interacting with it. Users can conveniently access and discover prompt starters in all chat scenarios. In one-on-one chats, the app displays prompt starters prominently before the conversation starts for agents that don't send a welcome message.
 
-:::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters.":::
+:::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Screenshot of an example of prompt starters.":::
 
 ## Welcome messages
 
@@ -61,7 +61,7 @@ Agents that provide command-style functionality can make it discoverable and eas
 
 [Suggested actions](../conversations/suggested-actions.md) are buttons on agent messages that enable users to quickly respond or take action. Unlike prompt starters and command names, agents can dynamically generate and attach suggested actions with each message they send, guiding users through workflows with context-aware options or intelligently suggesting next steps.
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Screenshot of bot suggested actions." border="false" lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 Suggested actions are key to enabling efficient and satisfying *human-in-the-loop* workflows, where an agent requests user approval or confirmation before taking action, but they're useful in any scenario that benefits from quick user interaction. They can be configured to send a command-style chat response to the agent, silently invoke an agent behavior without a chat message, or insert a pre-constructed message into the user's compose box.
 
@@ -69,9 +69,9 @@ Suggested actions are key to enabling efficient and satisfying *human-in-the-loo
 
 Always use Teams' [AI content labels](../../../agents-in-teams/integrate-ai/ai-content-labels.md) as appropriate.
 
-- The **AI Generated** label should be attached to all AI-generated messages, and its use is a policy requirement for agents distributed through the Teams Store
-- Citations surface and link data sources used to generate a message
-- Sensitivity labels clearly indicate that messages contain confidential information
+- Attach the **AI Generated** label to all AI-generated messages. Use of this label is a policy requirement for agents distributed through the Teams Store.
+- Citations surface and link data sources used to generate a message.
+- Sensitivity labels clearly indicate that messages contain confidential information.
 
 ## User feedback controls
 
@@ -79,15 +79,15 @@ Agents can attach standardized [feedback controls](../../../agents-in-teams/inte
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams desktop client.":::
+:::image type="content" source="../../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot of the feedback buttons in a bot in the Teams desktop client.":::
 
-:::image type="content" source="../../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams desktop client.":::
+:::image type="content" source="../../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot of the default feedback form in a bot in the Teams desktop client.":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-buttons-mobile.png":::
+:::image type="content" source="../../../assets/images/bots/feedback-buttons-mobile.png" border="false" alt-text="Screenshot of the feedback buttons in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-buttons-mobile.png":::
 
-:::image type="content" source="../../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot shows the default feedback form in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-form-mobile.png":::
+:::image type="content" source="../../../assets/images/bots/feedback-form-mobile.png" border="false" alt-text="Screenshot of the default feedback form in a bot in the Teams mobile client." lightbox="../../../assets/images/bots/feedback-form-mobile.png":::
 
 ---
 
