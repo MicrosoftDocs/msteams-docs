@@ -60,9 +60,6 @@
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
-    - name: Sessions
-      href: bots/how-to/conversations/agent-sessions.md
-      displayName: conversationId, proactive, 1:1 chat, context
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
       displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
@@ -284,14 +281,6 @@
   - name: Legacy tools and SDKs
     href: legacy-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
-- name: Manifest for agent or app
-  items:
-  - name: Manifest schema
-    href: resources/schema/manifest-schema.md
-    displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-  - name: Developer preview manifest schema
-    href: resources/dev-preview/developer-preview-intro.md
-    displayName: developer preview, preview, public preview
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -318,8 +307,10 @@
       href: bots/how-to/authentication/bot-sso-overview.md
     - name: Configure bot app in Microsoft Entra ID
       href: bots/how-to/authentication/bot-sso-register-aad.md
-    - name: Add code to enable SSO
+    - name: Add code to enable SSO for bot
       href: bots/how-to/authentication/bot-sso-code.md
+    - name: Add code to enable SSO for message extension
+      href: bots/how-to/authentication/message-extension-sso-code.md
     - name: Update app manifest and preview bot app
       href: bots/how-to/authentication/bot-sso-manifest.md
     - name: Grant Microsoft Graph permissions and scopes
@@ -1118,6 +1109,9 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
+- name: Develop with preview features
+  href: developer-preview-features.md
+  displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
 - name: Frequently asked questions
   href: teams-faq.md
 - name: Glossary
@@ -1126,8 +1120,11 @@
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
-- name: SDK Reference
+- name: Reference
   items:
+  - name: App manifest schema
+    href: /microsoft-365/extensibility/schema
+    displayName: Reference, JSON, package
   - name: Teams SDK for .NET
     href: /dotnet/teams-sdk-dotnet
     displayName: Reference
