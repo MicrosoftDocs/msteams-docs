@@ -14,7 +14,7 @@ zone_pivot_groups: teams-sdk-languages
 
 Agents can receive, read, and send documents in Microsoft Teams conversations. Teams stores these files in OneDrive or SharePoint and displays them as file cards or stored items.
 
-Use Teams SDK to receive files in personal chats and send files through bot file consent. Use Microsoft Graph when your agent must work with stored files across personal chats, group chats, and channels. For images that render directly in a conversation, see [Send and receive inline images](bots-inline-images.md).
+Use Teams SDK to receive files in personal chats and send files through bot file consent. Use Microsoft Graph when your agent must work with stored files across personal chats, group chats, and channels. For images that render directly in a conversation, see [Send and receive inline images](agents-inline-images.md).
 
 > [!IMPORTANT]
 >
@@ -481,7 +481,7 @@ Key APIs and values:
 
 ::: zone-end
 
-Don't log raw attachment URLs, identifiers, or the complete payload. The file accessor doesn't return inline images, cards, mentions, link previews, HTML attachments, or malformed file entries. Access these items through the activity's attachment collection. For image-specific guidance, see [Send and receive inline images](bots-inline-images.md).
+Don't log raw attachment URLs, identifiers, or the complete payload. The file accessor doesn't return inline images, cards, mentions, link previews, HTML attachments, or malformed file entries. Access these items through the activity's attachment collection. For image-specific guidance, see [Send and receive inline images](agents-inline-images.md).
 
 ## Send files
 
@@ -890,7 +890,7 @@ Apply these guidelines to create secure, predictable file experiences. Review th
 
 Use these resources to explore related Teams SDK file APIs, inline images, authentication, and messaging guidance.
 
-* [Send and receive inline images](bots-inline-images.md)
+* [Send and receive inline images](agents-inline-images.md)
 * [Teams SDK overview](/microsoftteams/platform/teams-sdk/why)
 * [File and Image Handling](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/)
 * [Receiving Files](https://microsoft.github.io/teams-sdk/csharp/in-depth-guides/file-handling/receiving-files/)
