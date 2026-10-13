@@ -22,13 +22,13 @@ Use [Teams SDK](/microsoftteams/platform/teams-sdk/welcome) to download images t
 
 ## User experience
 
-Use a hosted attachment for a standalone image, base64 HTML/XML content for exact placement, or an Adaptive Card when the image belongs to interactive content. Users can:
+Understand how inline images appear and behave so you can select the right presentation for visual content. Users can:
 
 * View an image that an agent sends with a message text and a base64 image positioned within formatted message text.
 * Paste an image that renders at its position in a composed message.
 * Interact with an image included in an Adaptive Card.
 
-Understand how inline images appear and behave so you can select the right presentation for visual content.
+Use a hosted attachment for a standalone image, base64 HTML/XML content for exact placement, or an Adaptive Card when the image belongs to interactive content.
 
 ## Developer experience
 
