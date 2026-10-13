@@ -22,12 +22,10 @@ Use Teams SDK to receive files in personal chats and send files through bot file
 
 ## User experience
 
-Understand how users exchange documents with an agent so you can provide clear prompts, consent requests, and confirmations.
-
-Users can:
+Understand how users exchange documents with an agent so you can provide clear prompts, consent requests, and confirmations. Users can:
 
 * Attach a document to a personal chat with an agent.
-* Review and accept or decline a file that a bot offers.
+* Review and accept or decline a file that an agent offers.
 * Open a successfully uploaded file from its file card.
 * Work with stored OneDrive or SharePoint files across supported conversation scopes.
 

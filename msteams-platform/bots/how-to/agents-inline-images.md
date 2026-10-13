@@ -12,7 +12,7 @@ zone_pivot_groups: teams-sdk-languages
 ---
 # Send and receive inline images
 
-An inline image is part of the message and renders directly in a Microsoft Teams conversation instead of appearing as stored documents in the conversation's **Shared** tab. Teams represents each image as an activity attachment with an image MIME type and a hosted URL or base64 data URI.
+An inline image is a part of the message and renders directly in a Microsoft Teams conversation instead of appearing as stored documents in the conversation's **Shared** tab. Teams represents each image as an activity attachment with an image MIME type and a hosted URL or base64 data URI.
 
 Use [Teams SDK](/microsoftteams/platform/teams-sdk/welcome) to download images that users paste into messages and to send images from hosted URLs or in-memory bytes. For documents stored in OneDrive or SharePoint, see [Send and receive files](bots-filesv4.md).
 
@@ -50,7 +50,7 @@ The activity attachment collection contains the image payload and any HTML layou
 
 ## Work with inline images
 
-Work with inline images when users or agents need visual content rendered directly in a conversation instead of as a stored document. Use authenticated activity attachments to receive images and image attachments or HTML/XML content to send them.
+Use inline images when users or agents need visual content rendered directly in a conversation instead of as a stored document. Use authenticated activity attachments to receive images and image attachments or HTML/XML content to send them.
 
 ### Receive inline images
 
