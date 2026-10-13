@@ -829,7 +829,7 @@
     - name: Create Virtual Assistant
       href: samples/virtual-assistant.md
       displayName: OnMessageActivityAsync, multi-language support
-    - name: Power Platform apps
+    - name: Power Apps
       href: /power-apps/teams/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/TOC.json
     - name: App templates for Microsoft Teams
       href: samples/app-templates.md
