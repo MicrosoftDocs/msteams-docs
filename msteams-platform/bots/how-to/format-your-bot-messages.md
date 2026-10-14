@@ -1,100 +1,193 @@
 ---
-title: Customize Agent Messages
-description: Learn how to format and style your agent messages such as strikethrough, ordered and unordered list, hyperlink, or image link. Understand cross-platform support.
+title: Format Agent Messages
+description: Format agent messages in Teams with Markdown, extended Markdown, or HTML. Learn how to set textFormat and render rich content.
 ms.topic: article
-ms.localizationpriority: medium
-ms.author: anclear
-ms.owner: angovil
-ms.date: 03/11/2025
+ms.date: 10/08/2026
 ---
-# Format your agent messages
 
-Message formatting enables you to bring out the best in agent messages. You can format your agent messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
+# Format agent messages
+
+Agents can use Markdown to format the text of messages that they send.
+
+By default, Teams recognizes a basic subset of Markdown syntax and HTML markup. Most agent scenarios should enable extended Markdown mode to take advantage of additional formatting capabilities.
+
+## Default formatting features
+
+By default, Teams recognizes the following markup syntax:
+
+| Formatting | Syntax |
+| ---------- | ------ |
+| Markdown Bold | `**text**` |
+| Markdown Italic | `*text*` |
+| Markdown Hyperlink | `[text](https://example.com)` |
+| HTML Bold | `<b>`, `<strong>` |
+| HTML Italic | `<i>`, `<em>` |
+| HTML Underline | `<u>` |
+| HTML Strikethrough | `<s>` |
+| HTML Line break | `<br>` |
+| HTML Horizontal rule | `<hr>` |
+| HTML Hyperlink | `<a href="URL">` |
+| HTML Image | `<img src="URL">` |
+
+## Extended Markdown mode
+
+Extended Markdown mode supports additional CommonMark and GitHub Flavored Markdown features to enhance agent expressiveness and better support the output of modern large language models (LLMs). It also enables progressive rendering of formatting when [streaming messages](../streaming-ux.md).
+
+Extended Markdown mode is recommended for all messaging scenarios that aren't strictly dependent on the default formatting behavior. It's opt-in because it's not fully backwards compatible with the default formatting behavior, and does not support arbitrary HTML.
+
+### Enable extended Markdown mode
+
+Extended Markdown mode is configured on a per-message basis. To enable it, set a message activity's `textFormat` property to `extendedmarkdown` before sending it.
+
+# [C#](#tab/csharp)
+
+```csharp
+var activity = new Activity
+{
+    Type = ActivityTypes.Message,
+    Text = "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
+    TextFormat = "extendedmarkdown"
+};
+
+await app.Send(conversationId, activity);
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+const activity = 
+  new MessageActivityInput("### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending")
+    .withTextFormat('extendedmarkdown');
+
+await app.send(conversationId, activity);
+```
+
+# [Python](#tab/python)
+
+```python
+activity = Activity(
+    type=ActivityTypes.message,
+    text="### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending",
+    text_format="extendedmarkdown"
+)
+
+await app.send(conversation_id, activity)
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+  "type": "message",
+  "textFormat": "extendedmarkdown",
+  "text": "### Sprint update\n\n- [x] Build completed\n- [ ] Deploy pending"
+}
+```
+
+---
+
+### Extended Markdown mode features
+
+In extended Markdown mode, Teams recognizes all of the Markdown features of the default formatting behavior, plus the following:
+
+| Feature                   | Syntax                                                                     | Description                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fenced code blocks**    | Use triple backticks with a language identifier, for example ` ```python ` | Syntax-highlighted code fences                                                                                                         |
+| **Math equations**        | Inline: `$E = mc^2$` Block: `$$\int_0^\infty f(x)dx$$`                     | LaTeX/KaTeX math notation rendered inline or as a block                                                                                |
+| **Images and image URLs** | `![alt text](https://example.com/image.png)`                               | Render image content from Markdown                                                                                                     |
+| **Citations**             | `[#]` in message text + `entities` array in Activity                       | Inline citation markers with reference details. For more information, see [citations](../../agents-in-teams/integrate-ai/ai-content-labels.md). |
+| **Tables**                | Pipe-delimited rows with separator line                                    | Structured tabular data with optional column alignment                                                                                 |
+| **Task lists**            | `- [ ] item` / `- [x] item`                                                | Checklist-style items; checkboxes are read-only                                                                                        |
+
+#### Fenced code blocks
+
+Use triple backticks with a language identifier to display syntax-highlighted code in your agent messages.
+
+````markdown
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+````
+
+#### Math equations
+
+Use LaTeX/KaTeX syntax to render mathematical notation. Use single dollar signs for inline equations and double dollar signs for block equations.
+
+```markdown
+Inline math: $E = mc^2$
+
+Block math:
+
+$$
+\int_0^\infty f(x)dx
+$$
+```
+
+#### Images
+
+Use standard Markdown image syntax to render images in your agent messages.
+
+```markdown
+![Build status](https://example.com/build-status.png)
+```
+
+#### Citations
+
+Cite sources in your agent messages using `[#]` notation in the message text and providing citation details in the Activity `entities` array. For more information on how to add citations, see [citations](../../agents-in-teams/integrate-ai/ai-content-labels.md).
+
+#### Tables
+
+Use GitHub Flavored Markdown (GFM) table syntax to present structured data. Tables support column alignment using colons in the separator row.
+
+```markdown
+| Feature | Status | Priority |
+| :------ | :----: | -------: |
+| Tables  |  Done  |     High |
+| Math    |  Done  |     High |
+```
+
+In this example, the first column is left-aligned, the second is centered, and the third is right-aligned.
+
+#### Task lists
+
+Use task list syntax to display completed and pending items in your agent messages.
+
+```markdown
+- [x] Checkout code
+- [x] Install dependencies
+- [x] Run unit tests
+- [ ] Deploy to production
+```
 
 > [!NOTE]
-> Regarding agent message size limit:
->
-> - The agent message size limit is 100 KB:
->   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
->   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
-> - If the agent message exceeds the size limit, the agent receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
+> Task list checkboxes are read-only. Users can't interact with them to change their state.
 
-## Format text content
+### Adopt extended Markdown mode in existing agents
 
-To format your agent messages, you can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your agent message's text content is rendered.
+If you implemented your agent before extended Markdown mode was available, use the following guidance to update it:
 
-Microsoft Teams supports the following formatting options:
+- Remove any usage of HTML for message formatting, and use Markdown exclusively.
+- Everywhere your implementation constructs or sends messages, adopt a pattern that allows specifying a `textFormat`. To enable progressive testing, specify the value `markdown` to temporarily retain the existing default behavior.
+- As you transition messaging scenarios to use extended Markdown mode, test them with the latest Teams desktop, web, iOS, and Android clients.
 
-| `TextFormat` value | Description |
-| --- | --- |
-| `plain` | The text must be treated as raw text with no formatting applied.|
-| `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
-| `xml` | The text is simple XML markup. |
+## Legacy formatting modes
 
-Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your agent can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+Don't use the following legacy formatting modes in new development.
 
-The following limitations apply to formatting:
+| `textFormat` value | Capabilities |
+| ------------------ | ----------- |
+| `markdown` | Default behavior, same as not setting `textFormat`. |
+| `xml` | Supports only a basic HTML subset (no Markdown syntax). |
+| `plain` | Displays raw text without formatting. |
 
-- Text-only messages don't support table formatting.
-- Rich cards support formatting in the text property only, not in the title or subtitle properties.
-- Rich cards don't support Markdown or table formatting.
+## Message size limits
 
-After you format text content, ensure that your formatting works across all platforms supported by Teams.
+[!INCLUDE [agent-message-size-limit](includes/agent-message-size-limit.md)]
 
-## Cross-platform support
-
-Some styles aren't supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
-
-| Style                     | Text-only messages | Rich cards - XML only |
-| ---                       | :---: | :---: |
-| Bold                      | ✔️️ | ❌ |
-| Italic                    | ✔️ | ✔️ |
-| Header (levels 1&ndash;3) | ❌ | ✔️ |
-| Strikethrough             | ❌ | ✔️ |
-| Horizontal rule           | ❌ | ❌ |
-| Unordered list            | ❌ | ✔️ |
-| Ordered list              | ❌ | ✔️ |
-| Preformatted text         | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ |
-
-After checking cross-platform support, ensure that support by individual platforms is also available.
-
-## Support by individual platform
-
-Support for text formatting varies by type of message and platform.
-
-### Text-only messages
-
-The following table provides a list of styles, which are supported on desktop, iOS, and Android:
-
-| Style                     | Desktop | iOS | Android |
-| ---                       | :---: | :---: | :---: |
-| Bold                      | ✔️ | ✔️ | ✔️ |
-| Italic                    | ✔️ | ✔️ | ✔️ |
-| Header (levels 1&ndash;3) | ❌ | ❌ | ❌ |
-| Strikethrough             | ✔️ | ✔️ | ❌ |
-| Horizontal rule           | ❌ | ❌ | ❌ |
-| Unordered list            | ✔️ | ❌ | ❌ |
-| Ordered list              | ✔️ | ❌ | ❌ |
-| Preformatted text         | ✔️ | ✔️ | ✔️ |
-| Blockquote                | ✔️ | ✔️ | ✔️ |
-| Hyperlink                 | ✔️ | ✔️ | ✔️ |
-| Image link                | ❌ | ❌ | ❌ |
-
-## AI-generated content messages
-
-AI labels, citations, feedback buttons, and sensitivity labels in your agent’s messages improve user engagement and foster transparency and trust.
-
-- [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
-- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the agent's message through in-text citations and references.
-- [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the agent's messages.
-- [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the agent's message.
-
-For more information, see [agent messages with AI-generated content](format-ai-bot-messages.md).
-
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Update and delete messages sent from agent](update-and-delete-bot-messages.md)

@@ -1,10 +1,6 @@
 {
   "docsets_to_publish": [
     {
-      "customized_tasks": {
-        "docset_prebuild": [
-        ]
-      },
       "docset_name": "msteams-platform",
       "build_source_folder": "msteams-platform",
       "build_output_subfolder": "msteams-platform",
@@ -19,17 +15,18 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": []
+      }
     }
   ],
   "notification_subscribers": [],
-  "sync_notification_subscribers": null,
+  "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/msteams-docs",
   "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-  "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -72,6 +69,10 @@
       "Pdf"
     ]
   },
+  "targets": {},
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/CommonPlugins",
@@ -81,8 +82,5 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
   ],
-  "need_generate_pdf_url_template": false,
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  }
+  "need_generate_pdf_url_template": false
 }

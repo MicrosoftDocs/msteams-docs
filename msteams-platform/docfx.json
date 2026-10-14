@@ -37,10 +37,11 @@
       "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
         "breadcrumb_path": "/microsoftteams/platform/breadcrumb/TOC.json",
-        "author": "vikasalmal0201",
+        "author": "nickwalkmsft",
         "ms.suite": "office365",
         "ms.service": "msteams",
-        "ms.author": "vikasalmal",
+        "ms.author": "nickwalk",
+        "ms.reviewer": "nickwalk",
         "searchScope": [ "Teams" ],
         "feedback_system": "OpenSource",
         "feedback_github_repo": "MicrosoftDocs/msteams-docs",

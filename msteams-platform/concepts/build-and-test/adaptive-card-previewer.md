@@ -9,7 +9,7 @@ ms.date: 10/20/2023
 # Microsoft Adaptive Card Previewer
 
 > [!NOTE]
-> Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Adaptive Card Previewer is available in [public developer preview](../../developer-preview-features.md).
 
 Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) that allows you to preview Adaptive Cards created for Agents, Teams bot, and message extensions. You can open a side-by-side preview to observe live changes and switch between different themes.
 

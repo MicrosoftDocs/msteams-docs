@@ -3,7 +3,7 @@ title: User Specific Views in Adaptive Cards
 description: In this module, learn about User Specific Views using Universal Actions with Code Sample and adaptiveCard/action invoke response card
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 12/14/2022
+ms.date: 10/01/2026
 ---
 
 # User Specific Views
@@ -19,11 +19,11 @@ For example, Megan, a safety inspector at Contoso, wants to create an incident a
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
+:::image type="content" source="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.png" alt-text="Mobile User Specific Views" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.png":::
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
+:::image type="content" source="../../../assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views" lightbox="../../../assets/images/adaptive-cards/universal-bots-incident-management.png":::
 
 * * *
 

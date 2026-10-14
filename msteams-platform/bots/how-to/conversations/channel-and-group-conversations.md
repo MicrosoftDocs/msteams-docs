@@ -16,7 +16,7 @@ By default, agents in group chats and channels only receive messages when they'r
 
 > [!NOTE]
 >
-> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [receive all messages for agents](channel-messages-for-bots-and-agents.md).
+> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 > * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
 ## Design guidelines
@@ -27,7 +27,22 @@ In group chats and channels, design your agent for collaborative conversations w
 
 ::: zone pivot="teams-sdk-csharp"
 
-In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `Send()` to send a message in the same thread without quoting, or `Reply()` to send with a visual quote of the inbound message.
+In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `SendAsync()` to send a message in the same thread without quoting, or `ReplyAsync()` to send with a visual quote of the inbound message.
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Send in the same thread, no quote
+    await context.SendAsync("Acknowledged", cancellationToken);
+
+    // Send in the same thread with a visual quote of the inbound message
+    await context.ReplyAsync("Got it!", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
@@ -88,6 +103,17 @@ The following code shows an example of sending welcome messages on installation:
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    await context.SendAsync("Hello! I'm your agent. Here's what I can do...", cancellationToken);
+}); 
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnInstall(async context => 
 { 
@@ -145,6 +171,29 @@ You can retrieve all mentions in the message by filtering the `entities` array i
 The following code shows an example of retrieving mentions:
 
 ::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var mentions = context.Activity.Entities?
+        .Where(e => e.Type == "mention")
+        .ToList();
+
+    if (mentions != null && mentions.Any())
+    {
+        var firstMention = mentions[0].Properties["mentioned"]?["name"]?.ToString();
+        await context.SendAsync($"Hello {firstMention}", cancellationToken);
+    }
+    else
+    {
+        await context.SendAsync("Aw, no one was mentioned.", cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async context =>
@@ -327,6 +376,21 @@ The following code shows an example of adding mentions to your messages:
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var user = context.Activity.From;
+    var message = new MessageActivityInput()
+        .WithText($"Hello <at>{user.Name}</at>!")
+        .AddMention(user);
+    await context.SendAsync(message, cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -410,6 +474,19 @@ The following code snippet shows an example of mentioning users with Entra Objec
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Mention a user by their User Principal Name (UPN)
+    var user = new Account { Id = "Adele@microsoft.com", Name = "Adele" };
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(user), cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -471,6 +548,19 @@ To mention a tag, include a mention entity with `"type": "tag"` in your message.
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Mention a tag using the tag's Graph API ID
+    var tag = new Account { Id = "<base64-encoded-tag-id>", Name = "Test Tag" };
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(tag), cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -531,17 +621,17 @@ Example:
 
 ###### Query Parameters
 
-|Name |Description |
+|Name|Description|
 |---------|----------------|
-|`type`| The type of mention. The supported type is `tag`.|
+|`type`|The type of mention. The supported type is `tag`.|
 |`id`|The unique identifier for the tag. For more information, see [teamworkTag](/graph/api/resources/teamworktag?view=graph-rest-1.0&preserve-view=true).|
 
 ###### Error code
 
-| Status code | Error code | Message values | Retry request | Developer action|
-|----------------|-----------------|-----------------|----------------|----------------|
-| 400 | **Code**: `Bad Request` | Mentioned tag with ID {id string} doesn't exist in current team<br/>Tag can only be mentioned in channel<br/>Invalid mentioned tag because no tag exists in the team| No | Reevaluate request payload for errors. Check returned error message for details. |
-| 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/>Malformed tenant ID for the tag<br/>Mention ID can't be resolved | No |Retry manually.|
+| Status code | Error code | Message values | Retry request | Developer action |
+| ---------------- | ----------------- | ----------------- | ---------------- | ---------------- |
+| 400 | **Code**: `Bad Request` | Mentioned tag with ID {id string} doesn't exist in current team<br/>Tag can only be mentioned in channel<br/>Invalid mentioned tag because no tag exists in the team | No | Reevaluate request payload for errors. Check returned error message for details. |
+| 502 | **Code**: `Bad Gateway` | Invalid team group ID<br/>Malformed tenant ID for the tag<br/>Mention ID can't be resolved | No | Retry manually. |
 
 ##### Throttling limits
 

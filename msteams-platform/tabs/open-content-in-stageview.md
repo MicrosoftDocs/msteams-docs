@@ -3,7 +3,7 @@ title: Multi-window Experience for App Content
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 06/25/2026
+ms.date: 09/16/2026
 ---
 
 # Open content in multi-window
@@ -55,10 +55,10 @@ Stageview Modal is a full-screen UI component used to render your app content in
 You can invoke Stageview in Teams through one of the following methods and configure the expected Stageview response. The following table provides the default and defined response for each Stageview invoke method:
 
 | Invoke method | Default response | Defined response |
-| ---| ---| --- |
+| --- | --- | --- |
 | [Adaptive Card](#invoke-collaborative-stageview-from-adaptive-card) | Opens in Collaborative Stageview. | Opens in Stageview Modal, if Collaborative Stageview or Stageview Multi-window isn't supported. |
 | [stageView API](#invoke-from-stageview-api) | Opens in Collaborative Stageview. | Opens in the respective Stageview based on the `openMode` [defined](#openmode). |
-| [Deep link](#invoke-from-deep-link)| Opens in Collaborative Stageview. | Opens in the respective Stageview based on the `openMode` [defined](#openmode). |
+| [Deep link](#invoke-from-deep-link) | Opens in Collaborative Stageview. | Opens in the respective Stageview based on the `openMode` [defined](#openmode). |
 
 <br>
 <details>
@@ -73,9 +73,9 @@ You can invoke Stageview in Teams through one of the following methods and confi
 The following table provides the Stageview response of the `openMode` values:
 
 | Input | Response |
-| ---| ---|
+| --- | --- |
 | `openMode` defined as `popoutWithChat` | Opens in Collaborative Stageview with an associated side panel conversation. |
-| `openMode` defined as `popout`| Opens in Stageview Multi-window without a side panel conversation. |
+| `openMode` defined as `popout` | Opens in Stageview Multi-window without a side panel conversation. |
 | `openMode` defined as `modal` | Opens in Stageview Modal. |
 
 When `openMode` isn't defined, the content opens by default in Collaborative Stageview with an associated side panel conversation. The fallback hierarchy for a Stageview response is `popoutWithChat` > `popout` > `modal`.

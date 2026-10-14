@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.topic: article
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 01/23/2025
+ms.date: 08/10/2026
 ---
 # Designing your Microsoft Teams bot
 
