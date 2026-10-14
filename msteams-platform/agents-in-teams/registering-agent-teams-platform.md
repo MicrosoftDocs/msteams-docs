@@ -1,11 +1,8 @@
 ---
 title: Registering an Agent on the Teams Platform
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
 description: "Registering an agent in Teams requires configuring it across three services: Entra ID, Bot Connector service, and the Teams platform. Learn how to configure each and get started."
 ms.topic: concept-article
-ms.date: 09/08/2026
+ms.date: 10/14/2026
 ---
 
 # Registering an agent on the Teams platform

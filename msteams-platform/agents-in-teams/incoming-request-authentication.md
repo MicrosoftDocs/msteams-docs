@@ -1,10 +1,7 @@
 ---
 title: Teams SDK Incoming Request Authentication
 description: Teams SDK incoming request authentication validates every inbound JWT at the HTTP boundary. Learn what the SDK checks automatically and how to protect custom routes.
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
-ms.date: 09/02/2026
+ms.date: 10/14/2026
 ms.topic: concept-article
 zone_pivot_groups: teams-sdk-languages
 ---

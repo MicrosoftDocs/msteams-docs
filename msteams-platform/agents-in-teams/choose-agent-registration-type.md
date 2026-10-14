@@ -1,10 +1,7 @@
 ---
 title: Choose a Bot Connector Registration Type for an Agent
 description: Learn the differences between standalone registrations and Azure AI Bot Service resources and how to choose a registration type.
-ms.date: 08/24/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
+ms.date: 10/14/2026
 ms.topic: how-to
 ---
 
