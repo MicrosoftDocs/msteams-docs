@@ -3,7 +3,7 @@ title: Format Text in Cards
 description: Learn about card text formatting with Markdown and HTML, how to design responsive Adaptive Cards, and other elements to create actionable Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 06/10/2026
+ms.date: 10/16/2026
 ---
 
 # Format cards in Teams
@@ -53,7 +53,7 @@ Formatting is different between the desktop and the mobile versions of Teams for
 | Italic | _Italic_ | ```_Italic_``` |
 | Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
+| Hyperlinks | [Bing](https://www.bing.com/) | ```[Title](url)``` |
 
 The following Markdown tags aren't supported:
 
@@ -206,9 +206,9 @@ Teams platform allows you to mention users with their Microsoft Entra Object ID 
 
 The following table describes the newly supported user mention IDs:
 
-|IDs | Supporting capabilities | Description | Example |
-|----------|--------|---------------|---------|
-| Microsoft Entra Object ID | Bot, Connector |  Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| IDs | Supporting capabilities | Description | Example |
+| ---------- | -------- | --------------- | --------- |
+| Microsoft Entra Object ID | Bot, Connector | Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | Microsoft Entra user’s UPN | `john.smith@microsoft.com` |
 
 #### User mention in bots with Adaptive Cards
@@ -409,7 +409,7 @@ The following image is an example of the people icon in an Adaptive Card:
 The following table lists the properties of the `Component` element:
 
 | Property name | Description |
-|---------|---------|
+| --------- | --------- |
 | `type` | `component` |
 | `name` | Use `graph.microsoft.com/users` to search all members across the organization |
 | `view` | `compact` |
@@ -529,8 +529,8 @@ Use the `targetWidth` property on any element to:
 
   The following table lists the available `targetWidth` values:
 
-  |Value  |Description  |
-  |---------|---------|
+  | Value | Description |
+  | --------- | --------- |
   | `veryNarrow` | The element is visible when the Adaptive Card's width is very narrow such as in a meeting chat. |
   | `narrow` | The element is visible when the Adaptive Card's width is narrow such as on a mobile phone in portrait mode. |
   | `standard` | The element is visible when the Adaptive Card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. |
@@ -771,14 +771,14 @@ Connector cards support limited Markdown and HTML formatting.
 | --- | --- | --- |
 | Bold | **text** | `**text**` |
 | Italic | _text_ | `*text*` |
-| Header (levels 1&ndash;3) | **Text** | `### Text`|
+| Header (levels 1&ndash;3) | **Text** | `### Text` |
 | Strikethrough | ~~text~~ | `~~text~~` |
 | Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
 | Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Preformatted text | `text` | ``preformatted text`` |
 | Blockquote | >blockquote text | `>blockquote text` |
 | Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| Image link |![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| Image link | ![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
@@ -863,7 +863,7 @@ The following screenshot shows an Adaptive Card with a code snippet:
 The `CodeBlock` element supports the following languages:
 
 | Language | Supported | Language | Supported |
-|:---|:---:|:---|:---:|
+| :--- | :---: | :--- | :---: |
 | Bash | ✔️ | JSON | ✔️ |
 | C | ✔️ | Perl | ✔️ |
 | C++ | ✔️ | PHP | ✔️ |
@@ -921,7 +921,7 @@ The following code is an example of an Adaptive Card displaying a code snippet:
 The `CodeBlock` element supports the following properties:
 
 | Property | Type | Required | Description |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `codeSnippet` | String | Yes | The code snippet to be displayed in an Adaptive Card. |
 | `language` | Enum | Yes | The language of the code snippet to be displayed in an Adaptive Card. |
 | `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
@@ -956,7 +956,7 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu.|
+|`mode`|Enum (Primary, Secondary)|No|Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu.|
 
 The following example shows the `mode` property in the `actions` type and the `ActionSet` element:
 
@@ -1340,30 +1340,30 @@ Compound button is a special type of button with an icon, title, and description
 Here are the properties of the `CompoundButton` element:
 
 | Property | Required | Type | Description |
-|---------|---------|---------|---------|
+| --------- | --------- | --------- | --------- |
 | `type` | ✔️ | String | Must be `CompoundButton`. |
 | `title` | ✔️ | String | Title of the button. Markdown isn't supported. |
-| `id` |  | String | Unique identifier for the element or action. |
-| `requires` |  | Object | A list of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
-| `isVisible` |  | Boolean | Controls the visibility of the element. |
-| `separator` |  | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`. |
-| `height` |  | String | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch` |
-| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right` |
-| `Spacing` |  | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` |  | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout). <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
-| `icon` |  | String | Icon shown on the button. |
-| `badge` |  | String | Badge shown on the button. Markdown isn't supported. |
-| `description` |  | String | Description text of the button. Markdown isn't supported. |
-| `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
+| `id` | | String | Unique identifier for the element or action. |
+| `requires` | | Object | A list of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
+| `isVisible` | | Boolean | Controls the visibility of the element. |
+| `separator` | | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`. |
+| `height` | | String | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch` |
+| `horizontalAlignment` | | String | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right` |
+| `Spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
+| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout). <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon` | | String | Icon shown on the button. |
+| `badge` | | String | Badge shown on the button. Markdown isn't supported. |
+| `description` | | String | Description text of the button. Markdown isn't supported. |
+| `selectAction` | | | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
 
 Here are the properties of the `icon` element:
 
 | Property | Required | Type | Description |
-|---------|---------|---------|---------|
+| --------- | --------- | --------- | --------- |
 | `name` | ✔️ | String | Name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
-| `size` |  | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
-| `style` |  | String | Style of the icon. Allowed values: `Regular`, `Filled` |
-| `color` |  | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
+| `size` | | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style` | | String | Style of the icon. Allowed values: `Regular`, `Filled` |
+| `color` | | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
 
 Here's an Adaptive Card example that uses the `CompoundButton` element:
 
@@ -1490,7 +1490,7 @@ The following payload shows an Adaptive Card with input-enabled and read-only st
 Here are the properties of the `Input.Rating` element:
 
 | Property | Required | Type | Description |
-|----|----|----|----|
+| ---- | ---- | ---- | ---- |
 | `type` | ✔️ | String | Must be `Input.Rating`. |
 | `allowHalfSteps` | | Boolean | Controls if the user can select half stars. Default value: `false` |
 | `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
@@ -1517,7 +1517,7 @@ Here are the properties of the `Input.Rating` element:
 Here are the properties of the `Rating` element:
 
 | Property | Required | Type | Description |
-|----|----|----|----|
+| ---- | ---- | ---- | ---- |
 | `type` | ✔️ | String | Must be `Rating`. |
 | `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
 | `count` | | Number | The number of "votes" associated with the rating. |
@@ -1651,7 +1651,7 @@ HTML tags are supported for simple cards, such as the hero and thumbnail cards. 
 | Preformatted text | `text` | `<pre>text</pre>` |
 | Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
 | Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### Mobile and desktop differences for simple cards
 
