@@ -1762,6 +1762,11 @@
       "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
       "redirect_url": "/power-apps/teams/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/m365-apps/agent-connectors.md",
+      "redirect_url": "/microsoftteams/platform/m365-apps/agent-connectors",
+      "redirect_document_id": false
     }
     ]
 }
