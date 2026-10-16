@@ -8,7 +8,7 @@ ms.date: 10/09/2026
 zone_pivot_groups: sdk-languages
 ---
 
-# Conversation events for agents
+# Subscribe to conversation events for agents
 
 When building your conversational agents for Microsoft Teams, you can work with conversation events. Teams sends notifications to your agent for conversation events that happen in scopes where your agent is active. You can capture these events in your code and take the following actions:
 
