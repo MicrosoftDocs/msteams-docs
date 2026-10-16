@@ -1758,10 +1758,15 @@
         "redirect_url": "../../developer-preview-features",
         "redirect_document_id": false
       },
-    {
-      "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
-      "redirect_url": "/power-apps/teams/overview",
-      "redirect_document_id": false
-    }
+      {
+        "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
+        "redirect_url": "/power-apps/teams/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/agent-connectors.md",
+        "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
+        "redirect_document_id": false
+      }
     ]
 }
