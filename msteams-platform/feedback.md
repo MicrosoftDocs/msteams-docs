@@ -10,8 +10,6 @@ ms.date: 10/16/2026
 
 Use this page to find the right place to get help or share feedback while building agents and apps for Microsoft Teams.
 
-<!-- TODO: Confirm https://aka.ms/TeamsDeveloperQuestion is live before merge. -->
-
 ## Get help and share feedback
 
 Developer support and feedback for the Teams platform goes through the [Teams SDK repository](https://github.com/microsoft/teams-sdk) on GitHub.
