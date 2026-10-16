@@ -1,5 +1,5 @@
 ---
-title: Create an Agent Configuration Experience in Teams
+title: Create an Agent Configuration Experience
 description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
 ms.topic: article
 ms.owner: angovil
@@ -88,7 +88,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 The following table lists the response type associated with the invoke requests:
 
-|Invoke request |Response type |
+| Invoke request | Response type |
 | --- | --- |
 | `config.fetch` | `Type: "continue"` or `Type = "auth"` |
 | `config.submit` | `Type: "continue"` or `Type: "message"` |

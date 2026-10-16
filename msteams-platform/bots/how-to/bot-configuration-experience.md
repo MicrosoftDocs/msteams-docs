@@ -1,13 +1,13 @@
 ---
 title: Create an Agent Configuration Experience in Teams
-description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
+description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample.
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 06/10/2026
 ---
 
-# Create an agent configuration experience in Teams
+# Create an agent configuration experience
 
 An agent configuration experience allows users to set up and reconfigure their agents' settings directly within the channel or group chat scope post-installation. This enhances the agent’s operational efficiency from the start. Agent configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
 
@@ -87,7 +87,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 The following table lists the response type associated with the invoke requests:
 
-|Invoke request |Response type |
+| Invoke request | Response type |
 | --- | --- |
 | `config.fetch` | `Type: "continue"` or `Type = "auth"` |
 | `config.submit` | `Type: "continue"` or `Type: "message"` |
