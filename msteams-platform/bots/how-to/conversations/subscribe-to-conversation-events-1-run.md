@@ -8,7 +8,7 @@ ms.date: 10/09/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Manage conversation events for agents
+# Conversation events for agents
 
 Conversation events are activities that Teams sends to your agent when a conversation changes. Handle these events to welcome members, respond to team and channel changes, track reactions to agent messages, and manage data when your app is installed or uninstalled.
 
@@ -53,21 +53,24 @@ Teams sends a `conversationUpdate` activity when:
 
 The following table lists the supported conversation update events:
 
-| Change | `channelData.eventType` | Teams SDK handler | Scope |
-| --- | --- | --- | --- |
-| Channel created | `channelCreated` | `OnChannelCreated`, `channelCreated`, or `on_channel_created` | Team |
-| Channel renamed | `channelRenamed` | `OnChannelRenamed`, `channelRenamed`, or `on_channel_renamed` | Team |
-| Channel deleted | `channelDeleted` | `OnChannelDeleted`, `channelDeleted`, or `on_channel_deleted` | Team |
-| Channel restored | `channelRestored` | `OnChannelRestored`, `channelRestored`, or `on_channel_restored` | Team |
-| Members added | `teamMemberAdded` in a team | `OnMembersAdded`, `membersAdded`, or `on_conversation_update` | All |
-| Members removed | `teamMemberRemoved` in a team | `OnMembersRemoved`, `membersRemoved`, or `on_conversation_update` | All |
-| Team renamed | `teamRenamed` | `OnTeamRenamed`, `teamRenamed`, or `on_team_renamed` | Team |
-| Team deleted | `teamDeleted` | `OnTeamDeleted`, `teamDeleted`, or `on_team_deleted` | Team |
-| Team restored | `teamRestored` | `OnTeamRestored`, `teamRestored`, or `on_team_restored` | Team |
-| Team archived | `teamArchived` | `OnTeamArchived`, `teamArchived`, or `on_team_archived` | Team |
-| Team unarchived | `teamUnarchived` | `OnTeamUnarchived`, `teamUnarchived`, or `on_team_unarchived` | Team |
-
-The handler names in the table are listed in C#, TypeScript, and Python order.
+| Event type | Description | Scope |
+| --- | --- | --- |
+| [`channelCreated`](#register-conversation-event-handlers) | A channel is created. | Team |
+| [`channelRenamed`](#register-conversation-event-handlers) | A channel is renamed. | Team |
+| [`channelDeleted`](#register-conversation-event-handlers) | A channel is deleted. | Team |
+| [`channelRestored`](#register-conversation-event-handlers) | A deleted channel is restored. | Team |
+| [`channelShared`](#register-conversation-event-handlers) | A shared channel is shared with a team. | Shared channel |
+| [`channelUnshared`](#register-conversation-event-handlers) | A shared channel is unshared from a team. | Shared channel |
+| [`channelMemberAdded`](#handle-membership-updates-by-scope) | A member is added to a shared channel. | Shared channel |
+| [`channelMemberRemoved`](#handle-membership-updates-by-scope) | A member is removed from a shared channel. | Shared channel |
+| [`teamMemberAdded`](#handle-membership-updates-by-scope) | A member is added to a team. | Team |
+| [`teamMemberRemoved`](#handle-membership-updates-by-scope) | A member is removed from a team. | Team |
+| [`teamRenamed`](#register-conversation-event-handlers) | A team is renamed. | Team |
+| [`teamDeleted`](#register-conversation-event-handlers) | A team is deleted. | Team |
+| [`teamHardDeleted`](#register-conversation-event-handlers) | A team is permanently deleted. | Team |
+| [`teamRestored`](#register-conversation-event-handlers) | A deleted team is restored. | Team |
+| [`teamArchived`](#register-conversation-event-handlers) | A team is archived. | Team |
+| [`teamUnarchived`](#register-conversation-event-handlers) | An archived team is restored. | Team |
 
 #### Read conversation update data
 
@@ -82,90 +85,212 @@ Use these activity properties to determine what changed:
 | `membersRemoved` | Contains the members removed from the conversation. |
 | `recipient.id` | Identifies your agent. Compare this value with a member ID to determine whether the event is about the agent. |
 
-When a member is added or removed, compare each member's `id` with `recipient.id`:
+#### Handle membership updates by scope
+
+The general membership handlers route activities that contain `membersAdded` or `membersRemoved`. The activity payload varies by scope. Team and shared-channel membership activities also set `channelData.eventType`, which allows you to use a Teams-specific handler.
+
+| Scope | General routing and payload | `channelData.eventType` |
+| --- | --- | --- |
+| Personal chat | Use the general added-members handler. `conversation.conversationType` is `personal`, `membersAdded` identifies the members, and `channelData.team` isn't present. | Not set to a team or channel membership event. |
+| Group chat | Use the general added-members or removed-members handler and inspect `membersAdded` or `membersRemoved`. Team and channel data isn't present. | Not set to a team or channel membership event. |
+| Team membership | The activity includes `membersAdded` or `membersRemoved` and team information in `channelData`. You can use either the general membership handler or the matching team-specific handler. | `teamMemberAdded` or `teamMemberRemoved`. |
+| Shared-channel membership | The activity identifies the shared channel in `channelData` and includes the affected members. Use the matching channel-specific handler when the SDK provides one. | `channelMemberAdded` or `channelMemberRemoved`. |
+
+Don't treat a shared-channel membership activity as a team membership activity. Shared-channel changes use `channelMemberAdded` or `channelMemberRemoved`, not `teamMemberAdded` or `teamMemberRemoved`.
+
+For any membership collection, compare each member's `id` with `recipient.id`:
 
 * If the IDs match, the agent was added or removed.
 * If the IDs don't match, another member was added or removed.
 
-In a team, member IDs received in the activity are unique to your agent. You can cache them when you need to send a proactive message to that member later.
+Member IDs received in the activity are unique to your agent. You can cache them when you need to send a proactive message to that member later.
+
+> [!TIP]
+> Use the [`installationUpdate` event](#installation-update-event) rather than a membership event to determine when your agent is installed in or uninstalled from a conversation.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, Teams sends a `conversationUpdate` activity with a `membersRemoved` collection.
 
 #### Register conversation event handlers
 
-The following examples show the overall registration pattern. Add another handler with the event name from the preceding table instead of duplicating the complete activity-processing flow for each event.
+Handler syntax and availability vary by SDK language. Select a language to view the handler for each event and the overall registration pattern.
 
 ::: zone pivot="teams-sdk-csharp"
 
+| Event | Handler syntax |
+| --- | --- |
+| Channel created | `app.OnChannelCreated(handler)` |
+| Channel renamed | `app.OnChannelRenamed(handler)` |
+| Channel deleted | `app.OnChannelDeleted(handler)` |
+| Channel restored | `app.OnChannelRestored(handler)` |
+| Channel shared | `app.OnChannelShared(handler)` |
+| Channel unshared | `app.OnChannelUnshared(handler)` |
+| Channel member added | `app.OnChannelMemberAdded(handler)` |
+| Channel member removed | `app.OnChannelMemberRemoved(handler)` |
+| General members added | `app.OnMembersAdded(handler)` |
+| General members removed | `app.OnMembersRemoved(handler)` |
+| Team member added | `app.OnTeamMemberAdded(handler)` |
+| Team member removed | `app.OnTeamMemberRemoved(handler)` |
+| Team renamed | `app.OnTeamRenamed(handler)` |
+| Team deleted | `app.OnTeamDeleted(handler)` |
+| Team permanently deleted | `app.OnConversationUpdate(handler)` and check `ChannelData.EventType` |
+| Team restored | `app.OnTeamRestored(handler)` |
+| Team archived | `app.OnTeamArchived(handler)` |
+| Team unarchived | `app.OnTeamUnarchived(handler)` |
+
 ```csharp
-app.OnChannelCreated(async context =>
+app.OnChannelCreated(async (context, cancellationToken) =>
 {
-    var channel = context.Activity.ChannelData.Channel;
-    await context.Send($"The {channel.Name} channel was created.");
+    var channelName = context.Activity.ChannelData?.Channel?.Name ?? "unknown";
+    await context.SendAsync(
+        $"The {channelName} channel was created.",
+        cancellationToken
+    );
 });
 
-app.OnMembersAdded(async context =>
+app.OnMembersAdded(async (context, cancellationToken) =>
 {
-    foreach (var member in context.Activity.MembersAdded)
+    var membersAdded = context.Activity.MembersAdded;
+    var agentId = context.Activity.Recipient?.Id;
+
+    if (membersAdded is null || agentId is null)
     {
-        if (member.Id != context.Activity.Recipient.Id)
+        return;
+    }
+
+    foreach (var member in membersAdded)
+    {
+        if (member.Id != agentId)
         {
-            await context.Send($"Welcome, {member.Name}.");
+            await context.SendAsync(
+                $"Welcome, {member.Name ?? member.Id}.",
+                cancellationToken
+            );
         }
     }
 });
 ```
 
-* `OnChannelCreated` registers the channel event handler. Use the corresponding `On...` method for another event.
-* `ChannelData.Channel` contains the channel that changed.
+* The handler receives both `context` and `cancellationToken` in Teams SDK 2.1.
+* `ChannelData?.Channel?.Name` safely reads the channel that changed.
 * `MembersAdded` contains every member included in the update.
+* `SendAsync` sends the response and propagates the handler's cancellation token.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
+| Event | Handler syntax |
+| --- | --- |
+| Channel created | `app.on('channelCreated', handler)` |
+| Channel renamed | `app.on('channelRenamed', handler)` |
+| Channel deleted | `app.on('channelDeleted', handler)` |
+| Channel restored | `app.on('channelRestored', handler)` |
+| Channel shared | `app.on('channelShared', handler)` |
+| Channel unshared | `app.on('channelUnshared', handler)` |
+| Channel member added | `app.on('channelMemberAdded', handler)` |
+| Channel member removed | `app.on('channelMemberRemoved', handler)` |
+| General members added | `app.on('membersAdded', handler)` |
+| General members removed | `app.on('membersRemoved', handler)` |
+| Team member added | `app.on('teamMemberAdded', handler)` |
+| Team member removed | `app.on('teamMemberRemoved', handler)` |
+| Team renamed | `app.on('teamRenamed', handler)` |
+| Team deleted | `app.on('teamDeleted', handler)` |
+| Team permanently deleted | `app.on('teamHardDeleted', handler)` |
+| Team restored | `app.on('teamRestored', handler)` |
+| Team archived | `app.on('teamArchived', handler)` |
+| Team unarchived | `app.on('teamUnarchived', handler)` |
+
 ```typescript
 app.on('channelCreated', async ({ activity, send }) => {
     const channel = activity.channelData.channel;
+
+    if (!channel) {
+        return;
+    }
+
     await send(`The ${channel.name} channel was created.`);
 });
 
 app.on('membersAdded', async ({ activity, send }) => {
-    for (const member of activity.membersAdded) {
-        if (member.id !== activity.recipient.id) {
-            await send(`Welcome, ${member.name ?? member.id}.`);
+    const membersAdded = activity.membersAdded ?? [];
+    const agentId = activity.recipient?.id;
+
+    if (!agentId) {
+        return;
+    }
+
+    for (const member of membersAdded) {
+        if (member.id === agentId) {
+            // Use installationUpdate to handle the agent installation lifecycle.
+            continue;
         }
+
+        await send(`Welcome, ${member.name ?? member.id}.`);
     }
 });
 ```
 
 * `channelCreated` selects the channel event to handle. Use another event name from the table for a different change.
-* `activity.channelData.channel` contains the channel that changed.
-* `activity.recipient.id` identifies the agent in membership updates.
+* The `channel` guard handles an activity without channel details.
+* `activity.membersAdded ?? []` handles an activity without an added-members collection.
+* `activity.recipient?.id` identifies the agent when recipient data is available.
+* A matching member ID identifies the agent rather than a human member. Ignore it here and use `installationUpdate` for installation lifecycle work.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
+| Event | Handler syntax |
+| --- | --- |
+| Channel created | `@app.on_channel_created` |
+| Channel renamed | `@app.on_channel_renamed` |
+| Channel deleted | `@app.on_channel_deleted` |
+| Channel restored | `@app.on_channel_restored` |
+| Channel shared | `@app.on_conversation_update` and check `channel_data.event_type` |
+| Channel unshared | `@app.on_conversation_update` and check `channel_data.event_type` |
+| Channel member added | `@app.on_conversation_update` and check `channel_data.event_type` |
+| Channel member removed | `@app.on_conversation_update` and check `channel_data.event_type` |
+| General members added | `@app.on_conversation_update` and check `members_added` |
+| General members removed | `@app.on_conversation_update` and check `members_removed` |
+| Team member added | `@app.on_conversation_update` and check `channel_data.event_type` |
+| Team member removed | `@app.on_conversation_update` and check `channel_data.event_type` |
+| Team renamed | `@app.on_team_renamed` |
+| Team deleted | `@app.on_team_deleted` |
+| Team permanently deleted | `@app.on_team_hard_deleted` |
+| Team restored | `@app.on_team_restored` |
+| Team archived | `@app.on_team_archived` |
+| Team unarchived | `@app.on_team_unarchived` |
+
 ```python
 @app.on_channel_created
 async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity]):
-    channel = ctx.activity.channel_data.channel
+    channel_data = ctx.activity.channel_data
+    channel = channel_data.channel if channel_data else None
+
+    if not channel:
+        return
+
     await ctx.send(f"The {channel.name} channel was created.")
 
 
 @app.on_conversation_update
 async def handle_members_added(ctx: ActivityContext[ConversationUpdateActivity]):
-    if ctx.activity.members_added:
-        for member in ctx.activity.members_added:
-            if member.id != ctx.activity.recipient.id:
-                await ctx.send(f"Welcome, {member.name or member.id}.")
+    members_added = ctx.activity.members_added or []
+    recipient = ctx.activity.recipient
+
+    if not recipient:
+        return
+
+    for member in members_added:
+        if member.id != recipient.id:
+            await ctx.send(f"Welcome, {member.name or member.id}.")
 ```
 
-* `@app.on_channel_created` registers the channel event handler. Use the corresponding decorator for another event.
-* `ctx.activity.channel_data.channel` contains the channel that changed.
-* `ctx.activity.members_added` contains members included in the update.
+* `@app.on_channel_created` registers the channel event handler. Use a dedicated decorator when the SDK provides one. Otherwise, use `@app.on_conversation_update` and check `channel_data.event_type`.
+* The `channel_data` and `channel` checks handle an activity without channel details.
+* `ctx.activity.members_added or []` handles an activity without an added-members collection.
+* The `recipient` check ensures that the agent ID is available before comparing member IDs.
 
 ::: zone-end
 
@@ -182,11 +307,27 @@ Teams sends a `messageReaction` activity when a user adds or removes a reaction 
 
 The activity doesn't contain the original message. If your scenario depends on the message content, store the message with its ID when your agent sends it.
 
-Register `OnReactionsAdded` and `OnReactionsRemoved` in C#, `reactionsAdded` and `reactionsRemoved` in TypeScript, or `@app.on_reactions_added` and `@app.on_reactions_removed` in Python. In each handler, iterate through the corresponding reaction collection and use `replyToId` to correlate the reaction with the original agent message.
+::: zone pivot="teams-sdk-csharp"
+
+Register `OnMessageReaction` to handle both added and removed reactions. Inspect `context.Activity.ReactionsAdded` and `context.Activity.ReactionsRemoved`, and use `context.Activity.ReplyToId` to correlate the activity with the original agent message. You can instead register `OnMessageReactionAdded` or `OnMessageReactionRemoved` when you only need one type of change.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Register `app.on('messageReaction', handler)` and inspect `activity.reactionsAdded` and `activity.reactionsRemoved`. Use `activity.replyToId` to correlate the activity with the original agent message.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Register `@app.on_message_reaction` and inspect `ctx.activity.reactions_added` and `ctx.activity.reactions_removed`. Use `ctx.activity.reply_to_id` to correlate the activity with the original agent message.
+
+::: zone-end
 
 ### Installation update event
 
-Teams sends an `installationUpdate` activity when an agent is installed in or uninstalled from a conversation. Use this event to send an introduction, initialize conversation data, or delete retained user and thread data.
+Teams sends an `installationUpdate` activity when an agent is installed in or uninstalled from a conversation. Use this event to send an introduction, initialize conversation data, or delete retained user and conversation data.
 
 | `action` value | Meaning |
 | --- | --- |
@@ -210,7 +351,7 @@ Register `OnInstall` in C#, `install.add` and `install.remove` in TypeScript, or
 
 ### Plan for uninstall behavior
 
-When a user uninstalls an app, Teams also uninstalls its agent. The user receives an HTTP 403 response if they try to message the uninstalled app, and the agent receives an HTTP 403 response if it tries to send a new message. This behavior is consistent in personal, team, and group chat scopes.
+When a user uninstalls an app, Teams also uninstalls its agent. Messages to or from the uninstalled agent fail. Teams shows a failed-send experience when a user tries to message the agent, and an outbound request from the agent returns HTTP 403 with the `BotNotInConversationRoster` error. This behavior is consistent in personal, team, and group chat scopes.
 
 :::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Screenshot of the response after a user messages an uninstalled agent." lightbox="../../../assets/images/bots/uninstallbot.png" border="true":::
 
@@ -228,7 +369,7 @@ During development, return meaningful diagnostic information without posting irr
 
 | Sample name | Description | C# | TypeScript | Python |
 | --- | --- | --- | --- | --- |
-| Conversation bot | Demonstrates conversation events, Adaptive Cards, read receipts, and message update events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+| Bot quickstart | Provides a basic Teams bot project and setup instructions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Design guidelines and best practices
 
