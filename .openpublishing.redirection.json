@@ -1757,6 +1757,11 @@
         "source_path": "msteams-platform/resources/dev-preview/developer-preview-intro.md",
         "redirect_url": "../../developer-preview-features",
         "redirect_document_id": false
-      }
+      },
+    {
+      "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
+      "redirect_url": "/power-apps/teams/overview",
+      "redirect_document_id": false
+    }
     ]
 }
