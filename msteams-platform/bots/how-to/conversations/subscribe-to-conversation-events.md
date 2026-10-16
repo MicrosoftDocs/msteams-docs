@@ -477,11 +477,14 @@ The message your agent receives when the agent is added to a team.
             "name": "TestTeam2022",
             "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
         },
-        "eventType": "teamMemberAdded",
         "tenant": {
             "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+        },
+        "source": {
+            "name": "message"
         }
-    }
+    },
+    "action": "add"
 }
 ```
 
@@ -1274,7 +1277,7 @@ app.OnInstall(async context =>
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
-protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> Context object, CancellationToken cancellationToken)
+protected override async Task OnInstallationUpdateAddAsync(IContext<IInstallationUpdateActivity> context, CancellationToken cancellationToken)
 {
     // TO:DO Installation workflow return;
 }

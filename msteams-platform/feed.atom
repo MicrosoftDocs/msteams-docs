@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-09-28T00:00:00Z</updated>
+	<updated>2026-10-08T00:00:00Z</updated>
+	<entry>
+		<updated>2026-10-08T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-extended-markdown-formatting-for-agent-messages</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-extended-markdown-formatting-for-agent-messages"/>
+		<title type="html"><![CDATA[Released: Extended Markdown formatting for agent messages]]></title>
+		<summary type="html"><![CDATA[Extended Markdown formatting for agent messages is now generally available to all Teams users. With extended Markdown mode, agents can send richer, more expressive, better-formatted responses than were previously possible in Teams.]]></summary>
+		<content type="html"><![CDATA[<p>Extended Markdown formatting for agent messages is now generally available to all Teams users. With extended Markdown mode, agents can send richer, more expressive, better-formatted responses than were previously possible in Teams.</p><p>Extended Markdown mode enables rendering of Markdown tables, task lists, code blocks, equations, images, at-mentions, and citations in your agent's messages. Additionally, extended Markdown messages render progressively during <a href="https://learn.microsoft.com/microsoftteams/platform/bots/streaming-ux">streaming</a>, so users see formatted output as it arrives.</p><p>For compatibility reasons, extended Markdown mode is not the default, but adopting it is recommended for all messaging scenarios that aren't strictly dependent on the default formatting behavior. Extended Markdown mode is enabled on a per-message basis by setting <code>textFormat: "extendedmarkdown"</code> on outgoing message activities.</p><p>For more information, including guidance for updating existing agents to use extended Markdown mode, see <a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/format-your-bot-messages">Format your agent messages</a>.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-09-28T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-updates-typescript-net-and-python</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: Targeted messages and agent slash commands]]></title>
 		<summary type="html"><![CDATA[The general-availability release of targeted messaging and agent slash commands enables exciting new agent interaction patterns in collaborative settings.]]></summary>
 		<content type="html"><![CDATA[<p>The general-availability release of targeted messaging and agent slash commands enables exciting new agent interaction patterns in collaborative settings.</p><p>Targeted messages are private messages between a user and an agent in a group conversation. Users can send targeted messages to agents to request information or direct background work within the context of a conversation without distracting others. Agents can respond privately using their own targeted messages.</p><p>Developers can use agent slash commands to surface agent functionality as named commands that users can activate from chat. Activating a command from the menu will send it as a chat message that the agent can detect and act on.</p><p>All agents that operate in group conversations are eligible to implement targeted message sends to individual users. App manifest updates are required to register agent slash commands and to enable users to send targeted messages to an agent. See the <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/targeted-messages">targeted messages</a> and <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/agent-slash-commands">agent slash commands</a> documentation to start building these new features into your agent.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-07-10T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-emoji-chat-reactions-for-agents</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-emoji-chat-reactions-for-agents"/>
-		<title type="html"><![CDATA[Released: Emoji chat reactions for agents]]></title>
-		<summary type="html"><![CDATA[🌟 Emoji chat reactions 🌟 for agents are now generally available! 🚀 Agents can add and remove reactions to any message in a chat to communicate acknowledgement ✅, status ⏳ and other information in a lightweight way.]]></summary>
-		<content type="html"><![CDATA[<p>🌟 Emoji chat reactions 🌟 for agents are now generally available! 🚀 Agents can add and remove reactions to any message in a chat to communicate acknowledgement ✅, status ⏳ and other information in a lightweight way.</p><p>See the <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/agent-reactions">reactions documentation</a> to learn how to add reaction behaviors and event handling to your agent.</p>]]></content>
 	</entry>
 </feed>

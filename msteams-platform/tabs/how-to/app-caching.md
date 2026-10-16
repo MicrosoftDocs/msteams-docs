@@ -102,7 +102,7 @@ MicrosoftTeams.app.lifecycle.registerBeforeSuspendOrTerminateHandler(() => {
 ## Debug tool for cached apps
 
 > [!NOTE]
-> The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
+> The debug tool for cached apps is available in [public developer preview](../../developer-preview-features.md) for Teams apps.
 
 You can enable Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. In your Teams client, select the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac to open Proto Task Manager.
 
