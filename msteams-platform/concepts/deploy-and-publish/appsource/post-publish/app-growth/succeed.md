@@ -66,7 +66,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Share feedback to enrich the Teams platform</summary>
 
-Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to your customers. Use your Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly [here](../../../../../feedback.md#feature-request-and-general-help).
+Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to your customers. Use your Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly in [Teams SDK feature requests](../../../../../feedback.md#get-help-and-share-feedback).
 
 </details>
 <br>
