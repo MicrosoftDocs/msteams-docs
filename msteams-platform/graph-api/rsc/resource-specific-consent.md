@@ -7,7 +7,7 @@ ms.date: 10/16/2026
 
 # Resource-specific consent for Teams agents and apps
 
-Resource-specific consent (RSC) is the authorization framework in Teams that scopes certain agent and app permissions to teams, chats, meetings, and individual users. It extends the [Microsoft Graph authorization model](/graph/permissions-overview) with a set of permissions that apply only to the data and operations associated with the specific *resources* - teams, chats/meetings, or users - where the agent or app is installed.
+Resource-specific consent (RSC) is the component of Teams' authorization framework for agents and apps that recognizes *resources* - teams, chats, meetings, and user personal scopes - as boundaries for certain permissions. RSC extends the [Microsoft Graph authorization model](/graph/permissions-overview) with a set of permissions that apply only to the resources in which it is installed.
 
 RSC enables greater privacy and control than permissions that apply across an entire tenant, and empowers users to make their own choices about access to resources that they own.
 
@@ -15,7 +15,7 @@ RSC enables greater privacy and control than permissions that apply across an en
 
 Developers declare an agent or app's RSC permissions requirements in its app manifest. When a user attempts to install it, Teams presents them with a one-time request to grant the needed permissions for the installation scope. If the user consents and proceeds with the installation, the RSC permissions granted to the agent or app only extend to the team, chat/meeting, or user where it is installed.
 
-Installing an agent or app requires granting all of the RSC permissions it requests. Users can't grant or deny individual permissions separately during installation. A user's ability to consent to different permissions can be subject to administrator and resource owner policies.
+Installing an agent or app requires granting all of the RSC permissions it requests. Users can't grant or deny individual permissions separately during installation. A user's ability to consent to permission requests can be subject to administrator and resource owner policies.
 
 RSC permissions are not declared or displayed in the Entra admin center. If you want to know the RSC permissions associated with an app, see the app installation or app information dialog within the Teams client.
 
@@ -50,7 +50,7 @@ Additionally, the `TeamsActivity.Send` RSC application permission is always enab
 
 ## RSC permissions for teams and channels
 
-These RSC permissions apply at the team scope. The permissions related to channel data and operations apply across all of a team's channels except [private and shared channels](../../build-apps-for-shared-private-channels.md). Channel-related RSC permissions only extend to private and shared channels in which the agent or app is explicitly enabled.
+These RSC permissions apply at the team scope. When an agent or app is installed in a team, its channel-related RSC permissions automatically extend to all of the team's channels except [private and shared channels](../../build-apps-for-shared-private-channels.md). Channel-related RSC permissions only extend to private and shared channels in which a user has explicitly enabled the agent or app.
 
 | Permission name | Action | Supported access scenarios |
 | ----- | ----- | :-----: |
