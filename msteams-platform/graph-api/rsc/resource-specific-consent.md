@@ -7,25 +7,25 @@ ms.date: 10/16/2026
 
 # Resource-specific consent for Teams agents and apps
 
-Resource-specific consent (RSC) is the component of Teams' authorization framework for agents and apps that recognizes *resources* - teams, chats, meetings, and user personal scopes - as boundaries for certain permissions. RSC extends the [Microsoft Graph authorization model](/graph/permissions-overview) with a set of permissions that apply only to the resources in which it is installed.
+Resource-specific consent (RSC) is the component of Teams' authorization framework that recognizes *resources* - teams, chats, meetings, and user personal scopes - as user-owned boundaries for certain agent and app permissions. Developers declare up front which resource-scoped permissions their agents and apps need, such as the ability to [read all messages in a chat](../../agents-in-teams/enable-receive-all-chat-messages.md) or add members to a channel, and users grant them as part of installation.
 
-RSC enables greater privacy and control than permissions that apply across an entire tenant, and empowers users to make their own choices about access to resources that they own.
+RSC is an extension of the [Microsoft Graph authorization model](/graph/permissions-overview). It enables greater user privacy and control than permissions that apply across an entire tenant, empowering users to make their own decisions about access to resources that they own.
 
 ## Requesting and obtaining RSC permissions
 
-Developers declare an agent or app's RSC permissions requirements in its app manifest. When a user attempts to install it, Teams presents them with a one-time request to grant the needed permissions for the installation scope. If the user consents and proceeds with the installation, the RSC permissions granted to the agent or app only extend to the team, chat/meeting, or user where it is installed.
+Developers declare an agent or app's RSC permissions requirements in its app manifest. See [Grant RSC permissions to your app](grant-resource-specific-consent.md) for more information.
 
-Installing an agent or app requires granting all of the RSC permissions it requests. Users can't grant or deny individual permissions separately during installation. A user's ability to consent to permission requests can be subject to administrator and resource owner policies.
+When a user attempts to install the agent or app, Teams presents them with a one-time request to grant the needed permissions. If the user consents and proceeds with the installation, the RSC permissions granted to the agent or app only extend to the team, chat/meeting, or user where it is installed.
+
+A user's ability to consent to RSC permission requests can be subject to administrator and resource owner policies. Installing an agent or app requires granting all of the RSC permissions it requests: users can't grant or deny permissions individually.
 
 RSC permissions are not declared or displayed in the Entra admin center. If you want to know the RSC permissions associated with an app, see the app installation or app information dialog within the Teams client.
-
-For more information, see [Grant RSC permissions to your app](grant-resource-specific-consent.md).
 
 ## Access scenarios: delegated and app-only
 
 As with standard Microsoft Graph permissions, each RSC permission supports either delegated access, app-only access, or both. For more information about delegated and app-only access scenarios in the Microsoft Graph authorization model, see [Access scenarios](/graph/auth/auth-concepts#access-scenarios).
 
-Any member of a resource can consent to requests for delegated permissions when installing an agent or app, but only administrators or resource owners can consent to requests for app-only permissions.
+Any member of a team or chat can consent to requests for delegated permissions when installing an agent or app there, but only administrators or resource owners can consent to requests for app-only permissions.
 
 ## RSC-based data access APIs
 
@@ -60,7 +60,7 @@ These RSC permissions apply at the team scope. When an agent or app is installed
 | `ChannelMeetingParticipant.Read.Group` | Read the participant information including name, role, ID, join and left time of channel meetings associated with this team. | App-only |
 | `ChannelMeetingRecording.Read.Group` | Read the recordings of all channel meetings associated with this team. | App-only |
 | `ChannelMeetingNotification.Send.Group` | Send notifications in all the channel meetings associated with this team. | App-only |
-| `ChannelMessage.Read.Group` | Read this team's channel messages. | App-only |
+| `ChannelMessage.Read.Group` | Read and receive all of this team's channel messages. See [Configure an agent to receive all messages in group chats and channels](../../agents-in-teams/enable-receive-all-chat-messages.md). | App-only |
 | `ChannelMessage.Send.Group` | Send messages to this team's channels. | App-only |
 | `ChannelSettings.Read.Group` | Read the names, descriptions, and settings of this team's channels​. | App-only |
 | `ChannelSettings.ReadWrite.Group` | Update the names, descriptions, and settings of this team's channels.​ | App-only |
@@ -96,7 +96,7 @@ If a chat has a meeting or a call associated with it, the relevant RSC permissio
 | `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. | App-only |
 | `ChatSettings.Read.Chat` | Read this chat's settings. | App-only |
 | `ChatSettings.ReadWrite.Chat` | Read and write this chat's settings. | App-only |
-| `ChatMessage.Read.Chat` | Read this chat's messages. | App-only |
+| `ChatMessage.Read.Chat` | Read and receive all of this chat's messages. See [Configure an agent to receive all messages in group chats and channels](../../agents-in-teams/enable-receive-all-chat-messages.md). | App-only |
 | `ChatMessageReadReceipt.Read.Chat` | Read the ID of the last seen message in this chat. | App-only |
 | `ChatMember.Read.Chat` | Read this chat's members. | App-only |
 | `Chat.Manage.Chat` | Manage this chat. | App-only |
