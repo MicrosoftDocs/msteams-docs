@@ -147,7 +147,7 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
-If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#business-critical-and-paid-support) for further assistance.
+If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../developer-support-feedback.md#business-critical-and-paid-support) for further assistance.
 
 ## See also
 
