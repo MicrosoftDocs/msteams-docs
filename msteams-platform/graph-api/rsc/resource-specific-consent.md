@@ -1,49 +1,21 @@
 ---
-title: Resource-specific Consent for Apps
+title: Resource-Specific Consent for Teams Agents and Apps
 description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.topic: article
 ms.date: 10/16/2026
 ---
 
-# Resource-specific consent for your Teams app
+# Resource-specific consent for Teams agents and apps
 
-Resource-specific consent (RSC) is an authorization framework that enables authorized users to grant permissions to Teams agents and apps that are scoped to the *resources* - teams, chats, and users - with which they interact.
+Resource-specific consent (RSC) is the authorization framework in Teams that scopes certain agent and app permissions to teams, chats, meetings, and individual users. It extends the [Microsoft Graph authorization model](/graph/permissions-overview) with a set of permissions that apply only to the data and operations associated with the specific *resources* - teams, chats/meetings, or users - where the agent or app is installed. RSC enables greater privacy and control than permissions that apply across an entire tenant, and empowers users to make their own choices about access to resources that they own.
 
-With RSC, an agent or app declares in its app manifest which resource-specific permissions it needs.
+Developers declare an agent or app's RSC permissions requirements in its app manifest. When a user attempts to install it, Teams presents them with a request to grant the needed permissions, and the user must consent before proceeding with the installation. If the user proceeds, the RSC permissions granted to the agent or app only extend to the team, chat/meeting, or user where it is installed. A user's ability to consent to different permissions can be subject to administrator and resource owner policies.
 
-With RSC, an agent or app declares a need for these permissions.
+As with standard Microsoft Graph permissions, each RSC permission supports either delegated access, app-only access, or both. Only administrators or resource owners, not other resource members, can consent to requests for app-only RSC permissions. For more information about delegated and app-only access in the Microsoft Graph authorization model, see [Access scenarios](/graph/auth/auth-concepts#access-scenarios).
 
-Teams agents and apps to demand access to resources at
+Installing an agent or app requires consenting to all of its RSC permissions requests. Users can't grant or deny individual permissions separately during installation.
 
-used by Teams agents and apps
- that extends the [Microsoft Graph permissions model](/graph/permissions-overview) with permissions that
-
-with permissions scoped to individual teams and their channels, group chats, meetings, and user operations.
-
-RSC enables agents and applications to demand access to resources and operations of the specific teams or chats they're added to.  an authorized user can give an app access to the data of a specific instance of a resource type. They don't need to give app access to every instance of the resource type in the entire tenant.
-
-RSC extends the [Microsoft Graph permissions model](/graph/permissions-overview) with permissions that apply only at these Teams-specific scopes.
-
-For example, a person who owns both team A and team B can decide to give Contoso app access to the data of only team A and not team B. The same concept of scoped data access applies to chats and meetings as well.
-
-Following are the types of RSC permissions:
-
-1. The resource type on which data access is being granted:
-    * Teams (and the channels within those teams)
-    * Chats (and meetings associated with those chats)
-    * Users
-
-1. The mode of data access:
-    * Application: The app accesses data without the presence of a signed-in user.
-    * Delegated: The app only accesses data in the context of a signed-in user's sessions. It doesn't allow access in the absence of a signed-in user.
-
-RSC permissions for Teams agents and apps are not displayed in the Entra admin center. If you want to know the RSC permissions associated with an app, see the app installation or app information dialog within Teams client.
-
-## Types of RSC permissions
-
-* **Application context RSC permissions (application permission)**: Allows an app to access data without the user being signed in. Only resource owners can grant application RSC permissions.
-
-* **Delegated context RSC permissions (delegated permission)**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
+RSC permissions are not declared or displayed in the Entra admin center. If you want to know the RSC permissions associated with an app, see the app installation or app information dialog within the Teams client.
 
 ## RSC-based data access APIs
 
@@ -54,24 +26,23 @@ Microsoft Graph SDK, Teams SDK, and Microsoft TeamsJS client library support fin
 | Application | • Microsoft Graph  <br> • Teams SDK | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Microsoft Entra admin center-based controls for Teams | • Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
-> [!NOTE]
-> The `TeamsActivity.Send` RSC application permission is always enabled at the tenant level. App users don't need admin consent to use the permission.
+## Basic RSC permissions
 
-## Basic RSC Permissions
+The Microsoft privacy and security teams have reviewed a limited set of RSC permissions and deemed them low risk. Any user can consent to these permissions at any time when they install and use an app. The following low-risk basic permissions are always consented to upon installation.
 
-A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions are always consented to upon installation.
-
-| Permission name | Action | Type |
+| Permission name | Action | Access scenario (application or delegated) |
 | ----- | ----- | :-----: |
 | `TeamsActivity.Send.Group` | Send activity feed notifications to users in this team. | Application |
 | `TeamsActivity.Send.Chat` | Send activity feed notifications to users in this chat. | Application |
 | `TeamsActivity.Send.User` | Send activity feed notifications to the user. | Application |
 
-## RSC permissions for teams
+Additionally, the `TeamsActivity.Send` RSC application permission is always enabled at the tenant level. App users don't need administrator consent to use it.
 
-Installing an app to a team does not automatically make the app or agent available in every channel. For private and shared channels, and other channel types that require channel-level enablement, the app might also need to be enabled for the target channel. Channel enablement controls the app’s availability, channel status, and roster behavior; it doesn't expand or replace the team-scoped RSC grant.
+## RSC permissions for teams and channels
 
-| Permission name | Action | Type |
+These RSC permissions apply at the team scope. The permissions related to channel data and operations apply across all of a team's channels except [private and shared channels](../../build-apps-for-shared-private-channels.md). Channel-related RSC permissions only extend to private and shared channels in which the agent or app is explicitly enabled.
+
+| Permission name | Action | Access scenario (application or delegated) |
 | ----- | ----- | :-----: |
 | `Channel.Create.Group` | Create channels in this team. | Application |
 | `Channel.Delete.Group` | Delete this team's channels. | Application |
@@ -101,17 +72,15 @@ Installing an app to a team does not automatically make the app or agent availab
 | `MeetingParticipantReaction.Read.Group` | Read reactions of participants in channel meetings associated with this team. | Delegated |
 | `ChannelMember.ReadWrite.Group` | Read and write the members of this team's channels. | Application |
 | `ChannelMember.Read.Group` | Read the members of this team's channels. | Application |
-| `File.Read.Group` | Read files and folders associated with this team's channels. | Application |
-
-For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
+| `File.Read.Group` | Read information about the files and folders associated with this team’s channels. | Application |
 
 ## RSC permissions for chats and meetings
 
 The only RSC permission relevant to chats in personal scope is `ChatMessageReadReceipt.Read.Chat`.
 
-If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
+If a chat has a meeting or a call associated with it, the relevant RSC permissions apply to those resources.
 
-| Permission name | Action | Type |
+| Permission name | Action | Access scenario (application or delegated) |
 | ----- | ----- | :-----: |
 | `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. | Application |
 | `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. | Application |
@@ -141,9 +110,9 @@ If a chat has a meeting or a call associated with it, then the relevant RSC perm
 | `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat. | Delegated or application |
 | `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. | Delegated |
 
-## RSC permissions for user access
+## RSC permissions for users (personal scope)
 
-| Permission name | Action | Type |
+| Permission name | Action | Access scenario (application or delegated) |
 | ----- | ----- | :-----: |
 | `CameraStream.Read.User` | Read the user's camera stream. | Delegated |
 | `InAppPurchase.Allow.User` | Show and complete in-app purchases. | Delegated |
