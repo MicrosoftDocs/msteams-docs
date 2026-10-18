@@ -7,13 +7,11 @@ ms.topic: article
 
 # Agent tenancy (single-tenant and multi-tenant agents)
 
-Most workflows for creating and registering an agent, including `teams app create`, result in a *multi-tenant agent*: an agent that can be made available for installation and use in any organization (Entra tenant). This article explains configuration, guidance and best practices related to agent tenancy.
-
-The configuration model that determines agent tenancy has evolved over time. This article reflects the current model and supersedes any descriptions in older documentation and other online resources.
+Most workflows for creating and registering an agent, including `teams app create` the Teams Developer Portal's bot creation dialog, result in a *multi-tenant agent*: an agent that can be made available for installation and use in any organization (Entra tenant). This article explains configuration, guidance and best practices related to agent tenancy.
 
 ## Verify and configure agent tenant settings
 
-The Bot Connector registration of every Teams agent uniquely and permanently references an Entra ID app registration by its app ID, also called its client ID.  This app registration resides in a tenant controlled by the developer, and its `signInAudience` property (displayed in some contexts as its **Supported account types**) determines whether the agent can only be used in that tenant.
+The Bot Connector registration of every Teams agent is permanently linked to the agent's primary Entra ID app registration. This app registration resides in a tenant controlled by the developer, and its `signInAudience` property (displayed in some contexts as its **Supported account types**) determines whether the agent is limited to installation and use in that tenant, or can be installed and used in any tenant.
 
 To determine whether an agent is single-tenant or multi-tenant, sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) and examine the app registration's **Supported account types**.
 
@@ -26,15 +24,13 @@ To determine whether an agent is single-tenant or multi-tenant, sign in to the [
 
 ## Considerations for implementation and distribution
 
-All usage of an agent in Teams, across any tenant, is powered by the single runtime endpoint configured with the agent's Bot Connector registration. Developers are responsible for enforcing data boundaries between tenants within their agent runtime implementations. Data stored by an agent should be strongly associated with a tenant, and users in one tenant should not be able to access data associated with another.
+All usage of an agent in Teams, across any tenant, is powered by the single runtime endpoint configured in the agent's Bot Connector registration. Developers are responsible for enforcing tenant boundaries within their agent runtime implementations. Data stored by an agent should be strongly associated with a tenant, and users in one tenant should not be able to access data associated with another.
 
 Agents intended for use only in a single tenant, or a known set of tenants, should always validate the tenant ID of incoming activity payloads in their application code. Setting `signInAudience = AzureADMyOrg` or configuring [sign in audience restrictions](/graph/api/resources/allowedtenantsaudience) to restrict its use are valid security measures, but are not substitutes for performing tenant validation in code.
 
 ## Azure AI Bot Service bot type
 
-Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might observe that its `msaAppType`, **Bot type** or **Type of app** property indicates that it is "Single Tenant". This designation is based on a legacy configuration model and is retained for compatibility reasons, and *does not* indicate whether an agent can be used in multiple tenants.
-
-Additionally, Azure AI Bot Service offers a legacy bot type option, **User-Assigned Managed Identity**, that links it directly with an Azure user-assigned managed identity instead of an Entra ID app registration. Agents that use a Bot Service resource with a bot type of User-Assigned Managed Identity *are* restricted to the tenant in which they are registered. New agent development that uses a Bot Service resource should specify the **Single Tenant** bot type, and use Entra ID federated identity credentials if runtime authentication using a user-assigned managed identity is desired.
+Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might observe that its `msaAppType`, **Bot type** or **Type of app** property indicates that it is "Single Tenant". Despite its name, the "Single Tenant" bot type **does not** control whether an agent can be installed and used in multiple tenants and should be used for all Teams agent Bot Service resources. See [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type) for more information.
 
 ## See also
 
