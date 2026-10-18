@@ -7,17 +7,20 @@ ms.date: 10/16/2026
 
 # Resource-specific consent for Teams agents and apps
 
-Resource-specific consent (RSC) is the component of Teams' authorization framework that recognizes *resources* - teams, chats, meetings, and user personal scopes - as user-owned boundaries for certain agent and app permissions. Developers declare up front which resource-scoped permissions their agents and apps need, such as the ability to [read all messages in a chat](../../agents-in-teams/enable-receive-all-chat-messages.md) or add members to a channel, and users grant them as part of installation.
+Resource-specific consent (RSC) is the permissions model for Teams that scopes certain agent and app permissions to the *resources* - teams, chats, meetings, and user personal scopes - where users install them.
 
-RSC is an extension of the [Microsoft Graph authorization model](/graph/permissions-overview). It enables greater user privacy and control than permissions that apply across an entire tenant, empowering users to make their own decisions about access to resources that they own.
+RSC is based on two concepts:
+
+- **Resource-scoped permissions**: RSC permissions are a category of [Microsoft Graph permissions](/graph/permissions-overview) for agents and apps that extend only to the teams, chats, meetings, and user personal scopes where they are installed. Developers declare up front which RSC permissions their agents and apps need, like the ability to [read all messages in a chat](../../agents-in-teams/enable-receive-all-chat-messages.md), or add members to a team. Installing the agent or app requires consenting to its RSC permissions requests.
+- **User consent**: RSC users, not just administrators, are empowered to grant RSC permissions within the scope of the teams and channels they work in, enabling them to install agents and apps themselves.
 
 ## Requesting and obtaining RSC permissions
 
 Developers declare an agent or app's RSC permissions requirements in its app manifest. See [Grant RSC permissions to your app](grant-resource-specific-consent.md) for more information.
 
-When a user attempts to install the agent or app, Teams presents them with a one-time request to grant the needed permissions. If the user consents and proceeds with the installation, the RSC permissions granted to the agent or app only extend to the team, chat/meeting, or user where it is installed.
+When a user attempts to install the agent or app, Teams presents them with a one-time request to grant its needed RSC permissions. If the user consents and proceeds with the installation, the permissions granted only extend to the team, chat/meeting, or user where they installed it.
 
-A user's ability to consent to RSC permission requests can be subject to administrator and resource owner policies. Installing an agent or app requires granting all of the RSC permissions it requests: users can't grant or deny permissions individually.
+A user's ability to consent to RSC permission requests can be subject to administrator and resource owner policies. Installing an agent or app requires consenting to all of its RSC permissions requests: users can't grant or deny permissions individually.
 
 RSC permissions are not declared or displayed in the Entra admin center. If you want to know the RSC permissions associated with an app, see the app installation or app information dialog within the Teams client.
 
@@ -139,8 +142,8 @@ If a chat has a meeting or a call associated with it, the relevant RSC permissio
 
 ## See also
 
-* [Microsoft Graph permissions reference](/graph/permissions-reference)
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
-* [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
-* [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
-* [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main)
+- [Microsoft Graph permissions reference](/graph/permissions-reference)
+- [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+- [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
+- [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
+- [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main)
