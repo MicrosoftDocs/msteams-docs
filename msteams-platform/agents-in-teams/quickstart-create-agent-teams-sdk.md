@@ -156,3 +156,6 @@ Explore the documentation to learn more about features and best practices for ag
 
 - [Best practices and features checklist for Teams agents](../bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md)
 - [Send and receive messages](../bots/build-conversational-capability.md)
+- [Authenticate your agent with Microsoft Entra ID](authenticate-your-agent.md)
+- [Add middleware and logging](agent-observability.md)
+- [Host web content and manage your agent's HTTP server](host-agent-server.md)
