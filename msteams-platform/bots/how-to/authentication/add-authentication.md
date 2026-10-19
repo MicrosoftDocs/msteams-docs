@@ -13,7 +13,7 @@ ms.date: 10/19/2026
 In this end-to-end tutorial, you configure OAuth 2.0 authentication with Microsoft Entra ID, deploy a Teams SDK bot to Azure, and test it in Microsoft Teams. OAuth lets the bot access resources on behalf of a user without collecting the user's password. The Bot Auth Quickstart sample also uses Teams single sign-on (SSO) to reuse the user's Teams identity and retrieve their Microsoft Graph profile.
 
 > [!TIP]
-> Already have a bot and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
+> Already have a bot and only need OAuth setup? See Configure OAuth authentication for a Teams bot. You don't need to work through resource provisioning and deployment to configure an OAuth connection.
 
 The Azure Bot Token Service flow requires an **Azure Bot resource**, regardless of where you host the bot code. Registration connects the bot to the service and its OAuth connection settings; it doesn't deploy the bot's web service. This tutorial uses Azure App Service for hosting, but you can host the code elsewhere or test locally through a public HTTPS tunnel.
 
@@ -37,7 +37,7 @@ If you already have hosting resources, skip to [Create Azure Bot resource regist
 - The following sample:
 
     | Sample |
-    |:---|
+    | :--- |
     | **Bot Auth Quickstart** in [cs-auth-sample][teams-bot-auth-quickstart-cs] |
     | **Bot Auth Quickstart** in [js-auth-sample][teams-bot-auth-quickstart-js] |
     | **Bot Auth Quickstart** in [py-auth-sample][teams-bot-auth-quickstart-py] |
@@ -152,8 +152,6 @@ For more information, see [Connect a bot to Microsoft Teams](/azure/bot-service/
 
 This tutorial uses Microsoft Entra ID as the identity provider. Keep the bot identity credentials separate from the identity-provider application credentials: the former authenticate the bot to the service, and the latter authorize access on behalf of users.
 
-For OAuth setup without deployment or SSO, see [Register the identity-provider application](configure-oauth.md#register-the-identity-provider-application).
-
 1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Microsoft Entra ID**.
     > [!TIP]
     > You must create and register this Microsoft Entra resource in a tenant in which you can consent to delegate permissions requested by an application. For instructions on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
@@ -192,7 +190,7 @@ For OAuth setup without deployment or SSO, see [Register the identity-provider a
 ### Configure the identity provider connection and register it with the bot
 
 >[!NOTE]
-> Use **Azure Active Directory v2** for the SSO sample in this tutorial. The v1 procedure below is retained for existing OAuth integrations, not for this sample's Teams SSO setup. For explicit OAuth sign-in without SSO, see [Configure OAuth authentication for a Teams bot](configure-oauth.md).
+> Use **Azure Active Directory v2** for the SSO sample in this tutorial. The v1 procedure below is retained for existing OAuth integrations, not for this sample's Teams SSO setup.
 
 #### Microsoft Azure Active Directory (Azure AD) v1
 
@@ -257,7 +255,7 @@ For OAuth setup without deployment or SSO, see [Register the identity-provider a
 1. Review the permissions requested by the identity-provider application.
 
 1. Select **Accept**.
-1. Confirm that **Test Connection to \<your-connection-name> Succeeded** appears. If it fails, use [Troubleshoot OAuth setup](configure-oauth.md#troubleshoot-oauth-setup) before trying again.
+1. Confirm that **Test Connection to \<your-connection-name> Succeeded** appears.
 
 The bot code uses the connection name to retrieve user authentication tokens. This test verifies the provider connection, not the Teams SSO token exchange.
 
@@ -405,7 +403,7 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
 1. Enter `signout` to sign out.
 
 > [!NOTE]
-> If sign-in fails, [test the connection](#test-the-connection) and check the provider error, connection name, and bot credentials. See [Troubleshoot OAuth setup](configure-oauth.md#troubleshoot-oauth-setup).
+> If sign-in fails, [test the connection](#test-the-connection) and check the provider error, connection name, and bot credentials.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+the+deployed+bot&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cdotnet-sample%23test-the-deployed-bot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -543,7 +541,6 @@ The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft E
 
 ## See also
 
-- [Configure OAuth authentication for a Teams bot](configure-oauth.md)
 - [Enable SSO for your app](bot-sso-overview.md)
 - [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md)
 - [Supported OAuth URLs](/azure/bot-service/ref-oauth-redirect-urls)
