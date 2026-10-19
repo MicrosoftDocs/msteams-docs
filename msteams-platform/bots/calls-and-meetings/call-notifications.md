@@ -124,6 +124,7 @@ If your bot doesn't use the SDK, accept a callback only if its token passes all 
 | Check | Requirement |
 |---|---|
 | Signature | Signed (`RS256` or `PS256`) by a key from the Microsoft Entra OpenID configuration for your cloud. |
+| Signing key issuer | If the signing key in the keys document has an `issuer` value, replace any `{tenantid}` placeholder with the token's `tid`. The result must equal the token's `iss`, or for v1.0 tokens, the v2.0 issuer for the same `tid` (for example, `https://login.microsoftonline.com/{tid}/v2.0`). This check is required because the `common` keys document lists keys for every tenant. For more information, see [validate the signing key issuer](/entra/identity-platform/access-tokens#validate-the-signing-key-issuer). |
 | `iss` | Issued for the token's tenant (`tid`): `https://login.microsoftonline.com/{tid}/v2.0` or `https://sts.windows.net/{tid}/`. US Government uses `https://login.microsoftonline.us/{tid}/v2.0` or `https://sts.windows.net/{tid}/`, and Azure operated by 21Vianet uses `https://login.chinacloudapi.cn/{tid}/v2.0` or `https://sts.chinacloudapi.cn/{tid}/`. |
 | `aud` | Your bot's application (client) ID. |
 | `azp` (or `appid` in v1.0 tokens) | The calling platform's application ID: `26a18ebc-cdf7-4a6a-91cb-beb352805e81`, or `e736143e-5e30-4821-9609-0b032986a3a3` in US Government clouds. Without this check, any app that can get a token for your bot's audience could impersonate the calling platform. |
@@ -154,7 +155,12 @@ Legacy tokens have the following values:
 * `tid` is the tenant ID for Contoso.com.
 * `iss` is the token issuer, `https://api.botframework.com`.
 
-Validate the token, ensure it hasn't expired, check that `aud` matches your application ID, and check that it's signed by a key from the legacy OpenID configuration for your cloud:
+Accept a legacy token only if all of the following are true:
+
+* It's signed by a key from the legacy OpenID configuration for your cloud, listed in the following table.
+* `iss` is exactly `https://api.botframework.com`.
+* `aud` matches your bot's application ID.
+* It hasn't expired (`exp`) and, if it contains `nbf`, it's already valid.
 
 | Cloud | Legacy OpenID configuration |
 |---|---|
