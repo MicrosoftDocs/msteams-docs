@@ -29,7 +29,7 @@ Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-applicat
 
 |Name|Type|Description|
 |---|---|---|
-|`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent).|
+|`id`|String|Your Microsoft Entra app ID.|
 |`resource`|String|This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
 Specify permissions needed by the app.
@@ -199,7 +199,7 @@ Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-applicat
 
 |Name|Type|Description|
 |---|---|---|
-|`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent).|
+|`id`|String|Your Microsoft Entra app ID.|
 |`resource`|String|This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
