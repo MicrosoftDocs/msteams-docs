@@ -17,7 +17,7 @@ Agents that participate in Teams group chats and channels must opt in via config
 
 ## Message streaming and thinking indicators
 
-Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) in one-on-one conversations to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updatable *thinking indicator* to indicate liveness and provide insight into how the message is being generated.
+Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) in one-on-one chats, group chats, meeting chats, and channels to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updatable *thinking indicator* to indicate liveness and provide insight into how the message is being generated.
 
 :::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated":::
 

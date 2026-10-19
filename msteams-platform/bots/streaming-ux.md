@@ -1,7 +1,7 @@
 ---
 title: Stream agent messages
 description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
-ms.date: 08/24/2026
+ms.date: 10/19/2026
 ms.topic: article
 ms.author: nickwalk
 ms.localizationpriority: high
@@ -12,7 +12,8 @@ zone_pivot_groups: teams-sdk-languages
 
 > [!NOTE]
 >
-> - Streaming agent messages are supported only in one-on-one chats.
+> - Streaming agent messages are supported in one-on-one chats, group chats, meeting chats, and channels, including threads.
+> - To stream in conversations other than one-on-one chats, use the latest version of the Teams SDK. For more information, see [Earlier SDK versions and proactive messages](#earlier-sdk-versions-and-proactive-messages).
 > - Teams supports only one concurrent streaming response per chat at a time.
 > - Streaming is generally available on web, desktop, and mobile.
 
@@ -24,15 +25,15 @@ When users observe the agent processing their request in real time, it can incre
 
 Streaming agent messages has two types of updates:
 
-- **Informative updates**: Informative updates appear in the streamed message bubble and inform the user about the agent's ongoing actions while a response is being generated. The `text` remains visible until the next informative update or streamed content replaces it.
+- **Informative updates**: Informative updates inform the user about the agent's ongoing actions while a response is being generated. Informative updates appear beneath the user's message that the agent is responding to, not as a separate message. This behavior applies in all conversations, including one-on-one chats, when your agent uses the latest version of the Teams SDK. The `text` remains visible until the next informative update or streamed content replaces it. Informative updates don't create notifications or unread messages.
 
-  :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the agents informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
+  :::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
 
   Informative messages must not be more than 1 kb or 1000 characters.
 
-- **Response streaming**: Response streaming replaces the informative update and displays the agent's response in the message bubble as it is generated.
+- **Response streaming**: Response streaming displays the agent's response in a message bubble as it is generated. After response streaming starts, Teams no longer shows informative updates.
 
-  :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the agents response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
+  :::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot shows the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
 
   - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
   - Progressively-rendered formatting: Teams will progressively render the formatting of streamed messages sent in extended Markdown mode to provide a smooth reading experience. For more information, see [Format agent messages](how-to/format-your-bot-messages.md).
@@ -49,7 +50,18 @@ Streaming agent messages has two types of updates:
 
     For more information about the error, see [error codes](#error-codes).
 
+### Streaming in group chats, meeting chats, and channels
+
+When an agent streams a response in a group chat, meeting chat, or channel:
+
+- Everyone in the conversation sees the informative updates and the streamed response, not only the user who sent the request.
+- Any participant can stop the agent's response.
+- Participants can continue the conversation while the agent works. Informative updates stay attached to the user's message.
+- Only the final response triggers notifications.
+
 ## Implement streaming with Teams SDK
+
+The Teams SDK manages the details required to stream in all supported conversations, so you don't need to change your streaming code. Use the latest version of the Teams SDK to stream in conversations other than one-on-one chats and to provide the latest streaming experience.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -128,6 +140,13 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
+### Earlier SDK versions and proactive messages
+
+Streaming in conversations other than one-on-one chats depends on associating the streamed response with the user's message that the agent is responding to. The following scenarios don't support this association:
+
+- **Earlier SDK versions**: If your agent uses an earlier version of the Teams SDK, streaming and informative updates continue to work in one-on-one chats with the previous user experience. Streaming isn't supported in other conversations.
+- **Proactive messages**: If your agent saves a conversation ID and later uses it to stream a [proactive message](how-to/conversations/send-proactive-messages.md), streaming works in one-on-one chats with the previous user experience. Streaming isn't supported in other conversations.
+
 ## Stream message through REST API
 
 Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
@@ -141,6 +160,7 @@ The following are the properties for streaming agent messages:
 | Property | Required | Description |
 | --- | --- | --- |
 | `type` | ✔️ | Supported values are either `typing` or `message`. </br> • `typing`: Use when streaming the message. </br> • `message`: Use for the final streamed message. |
+| `replyToId` | | The ID of the user's message that the agent is responding to. Teams uses this value to associate informative updates and the streamed response with the user's message. Required to stream in group chats, meeting chats, and channels. Include it in every streaming request, including the final message. If you omit this value in a one-on-one chat, streaming uses the previous user experience. |
 | `text` | ✔️ | The contents of the message that is to be streamed. Teams renders this value in the agent's message bubble. For an `informative` update, the text stays visible until the next update or the first streamed chunk replaces it. A start streaming activity that omits `text` is rejected. |
 | `entities.type` | ✔️ | Must be `streamInfo` |
 | `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
@@ -189,6 +209,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US",
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
   "text": "Searching through documents...", //(required) first informative loading message.
   "entities":[
     {
@@ -240,6 +261,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en -US",
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
   "text": "Searching through emails...", // (required) second informative loading message.
   "entities":[
     {
@@ -256,13 +278,13 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of an agent providing informative updates:
 
-:::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
 
 #### Switch to response streaming
 
 After your agent is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your agent should incorporate any new tokens generated by the Large Language Models (LLMs). Append these tokens to the previous message version and then send it to the user.
 
-The throttling limit is 1 request per second. You must ensure that the agent sends the request  within this limit. The agent may send requests at a slower rate, as needed.
+The throttling limit is 1 request per second for each agent in a conversation thread. You must ensure that the agent sends the request  within this limit. The agent may send requests at a slower rate, as needed.
 
 ```json
 
@@ -287,6 +309,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
   "text": "A brown fox", // (required) first streaming content.
   "entities":[
     {
@@ -324,6 +347,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
   "text": "A brown fox jumped over the fence", // (required) first streaming content.
   "entities":[
     {
@@ -339,7 +363,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of an agent providing updates in chunks:
 
-:::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot shows the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png" border="false":::
 
 ### Final streaming
 
@@ -368,6 +392,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US",
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
   "text": "A brown fox jumped over the fence.", // (required) first streaming content.
   "entities":[
     {
@@ -383,11 +408,18 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of the agent's final response:
 
-:::image type="content" source="../assets/images/bots/ai-stream-message-formatting.png" alt-text="Screenshot shows the final streamed message." lightbox="../assets/images/bots/ai-stream-message-formatting.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot shows the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png" border="false":::
 
 ## Stop streaming agent response
 
 The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with agents for better user experience.
+
+In group chats, meeting chats, and channels, any participant can stop the agent's response. What remains depends on when the user stops the response:
+
+- **During informative updates**: The informative update is removed, and no message remains.
+- **During response streaming**: The partial response remains and is marked as stopped by the user.
+
+:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot shows a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png" border="false":::
 
 After a user stops message generation:
 
@@ -421,7 +453,7 @@ The following are the success and error codes:
 | `400` | `BadRequest` | Depending on the scenario, you might encounter various error messages such as `Start streaming activities should include text` | The incoming payload doesn't adhere to or contain the necessary values. |
 | `403` | `ContentStreamNotAllowed` | `Content stream is not allowed` | The streaming API feature isn't allowed for the user or agent. |
 | `403` | `ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message` | An agent can't continuously stream on a message that has already streamed and completed. |
-| `403` | `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.` | The agent failed to complete the streaming process within the strict time limit of two minutes. |
+| `403` | `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.` | The agent failed to complete the streaming process within the time limit of 10 minutes. |
 | `403` | `ContentStreamNotAllowed` | `Message size too large` | The agent sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
 | `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
 | `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
