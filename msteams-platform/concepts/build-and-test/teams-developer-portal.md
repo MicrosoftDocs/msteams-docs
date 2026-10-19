@@ -1,9 +1,9 @@
 ---
-title: Know about Developer Portal for Teams
-description: Learn how to create a brand new app, import an existing or published app in Developer Portal, and changelog for Developer Portal.
+title: Teams Developer Portal Overview
+description: Learn how to create a brand new app, import an existing or published app in Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 01/23/2025
+ms.date: 10/19/2026
 ---
 
 # Developer Portal for Teams
@@ -87,23 +87,6 @@ To resolve this error, we recommend that you ask a Teams Administrator or Global
 This information is required to verify the app owner's identity, who raises the ticket and to allow them to import an app.
 
 After the ticket is resolved, the Teams Administrator or Global Administrator can [import an existing app](#import-an-existing-app). To share access of the app, the admin or existing owner can [add an owner](manage-your-apps-in-developer-portal.md#advanced) in Developer Portal.
-
-## Changelog for Developer Portal
-
-Changelog for Developer Portal allows you to stay engaged with the latest updates in Teams. You can view the updates about features, recent changes in APIs, and important bug fixes.
-
-To view **Changelog**, sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Changelog** from the left pane.
-
-:::image type="content" source="../../assets/images/tdp/changelog.png" alt-text="Screenshot shows the Changelog in the Developer Portal highlighted in red.":::
-
-The updates for Changelog in Developer Portal are categorized based on the following:
-
-- **Added**: Updates on a service or feature that's a new feature or capability.
-- **Changed**: Updates on a service or API that's modified.
-- **Removed**: Updates on a service or API that's removed and may be replaced with a new and updated service.
-- **Fixed**: Updates on a service or API that was previously identified as a high-priority or breaking-change issue that's fixed or mitigated.
-- **Deprecated**: Updates on a service or API at the end of its life and deprecated.
-- **Security**: Updates on important and critical security patch.
 
 ## Next step
 
