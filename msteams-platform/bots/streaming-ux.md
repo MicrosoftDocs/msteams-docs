@@ -8,22 +8,20 @@ zone_pivot_groups: teams-sdk-languages
 
 # Stream agent messages
 
-While a Teams agent is preparing a response to a user in chat, it can provide realtime insight about its status and stream the message content into the conversation as its generated. These techniques effectively communicate that an agent has received a message and is processing it, and improve overall agent responsiveness.
+While a Teams agent is preparing a response to a user in chat, it can provide realtime insight about its status and stream the message content into the conversation as its generated. An agent can use these techniques to maximize overall responsiveness and unambiguously communicate that it has received a specific message and is processing it.
 
 > [!NOTE]
-> Implementing the current streaming experience requires Teams SDK 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the current streaming experience with Teams SDK requires version 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
 ## User experience
 
 Streaming an agent message has two phases: informative updates and response streaming. Users are also presented with a stop button that halts streaming.
 
-Each agent in a conversation can stream one message into the conversation at a time. Multiple agents can stream messages into a conversation simultaneously.
-
 ### Informative updates
 
 Informative updates provide insight into an agent's actions before it begins generating a response message. They appear with an animated icon beneath the message to which the agent is responding, not as a separate message. Each emitted update replaces the previous one, and the final update remains displayed until the agent begins streaming its response or a user selects the stop button, even as the conversation continues. They don't create notifications or unread messages.
 
-:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot of an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
 
 In group chats, channels, and meeting chats, informative updates are displayed to everyone. Each informative message text must not be more than 1 kb or 1000 characters.
 
@@ -31,7 +29,7 @@ In group chats, channels, and meeting chats, informative updates are displayed t
 
 When an agent begins streaming a response, a message bubble is created in the conversation into which the content is streamed. Any remaining informative update disappears, and the agent can no longer send them for the current message activity.
 
-:::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot shows the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot of the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
 
 The bubble remains in the same position as content is streamed to it, and animates to indicate when streaming is completed.
 
@@ -41,15 +39,17 @@ Streamed messages sent using extended Markdown mode will render formatting progr
 
 The stop button enables users to halt message streaming. It's available during both informative update generation and response streaming, and is displayed a few seconds after each one begins.
 
+:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png" border="false":::
+
 In group chats, channels, and meeting chats, the stop button is available to all users in the conversation.
 
 ## General developer considerations for streaming
 
-An agent can maintain only one active stream per conversation, but can have a stream open in each of multiple conversations concurrently.
+An agent can maintain only one open stream per conversation, but can have a stream open in each of multiple conversations concurrently.
 
-Once an agent begins emitting the streamed response, any further informative updates it emits will be ignored.
+Once an agent begins emitting a streamed response, any further informative updates it emits will be ignored.
 
-Use of the stop button is not accompanied by an event. After a user selects the stop button, updates to the user experience are immediately halted, and further informative updates or writes to the stream will result in a 403 `ContentStreamNotAllowed` error that should be handled appropriately.
+Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and response streaming are immediately halted in the client, and further attempts to emit informative updates or response content to the stream will result in a 403 `ContentStreamNotAllowed` error with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
 
 Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or response chunk.
 
@@ -58,7 +58,7 @@ Streaming is not supported in [proactive messaging scenarios](how-to/conversatio
 ## Implement streaming with Teams SDK
 
 > [!NOTE]
-> Implementing the current streaming experience requires Teams SDK 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the current streaming experience with Teams SDK requires version 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -216,7 +216,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of start streaming:
 
-:::image type="content" source="../assets/images/bots/start_streaming.png" alt-text="Screenshot shows start streaming." lightbox="../assets/images/bots/start_streaming.png" border="false":::
+:::image type="content" source="../assets/images/bots/start-streaming.png" alt-text="Screenshot of an agent starting to stream a message." lightbox="../assets/images/bots/start-streaming.png" border="false":::
 
 ### Continue streaming
 
@@ -355,7 +355,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of an agent providing updates in chunks:
 
-:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot shows the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot of the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png" border="false":::
 
 ### Final streaming
 
@@ -400,31 +400,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of the agent's final response:
 
-:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot shows the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png" border="false":::
-
-## Stop streaming agent response
-
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses. The **Stop** button is available by default during streaming, allowing users to stop a response early. Users can interrupt the message streaming and refine their prompts or send new ones. It enhances conversation management with agents for better user experience.
-
-In group chats, meeting chats, and channels, any participant can stop the agent's response. What remains depends on when the user stops the response:
-
-- **During informative updates**: The informative update is removed, and no message remains.
-- **During response streaming**: The partial response remains and is marked as stopped by the user.
-
-:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot shows a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png" border="false":::
-
-After a user stops message generation:
-
-- Agents treat stopped responses as incomplete or discarded in the conversation.
-- Agents can't change the content already streamed.
-- The following error is generated if an agent continues streaming on a message that is stopped by a user:
-
-    | Error detail | Description |
-    | --- | --- |
-    | Http status code | 403 |
-    | Error code | `ContentStreamNotAllowed` |
-    | Error message | Content stream was canceled by user. |
-    | Description | The streaming was stopped by the user. |
+:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot of the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png" border="false":::
 
 ## Response codes
 
