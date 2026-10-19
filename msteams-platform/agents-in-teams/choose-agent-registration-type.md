@@ -30,14 +30,16 @@ The Teams developer CLI can create both kinds of Bot Connector registration, and
 
 ## About Azure AI Bot Service bot type
 
-Creating an Azure AI Bot Service resource requires setting its *bot type*, for which there are two options: **Single Tenant** and **User-Assigned Managed Identity**. The choice of bot type is permanent and is displayed as the resource's `msaAppType`, **Bot type** or **Type of app** in different interfaces.
+Creating an Azure AI Bot Service resource requires selecting its *bot type*, which determines the shape of some of its identity-related configuration. The choice of bot type is permanent and is displayed as the Bot Service resource's `msaAppType`, **Bot type** or **Type of app** depending on the interface.
 
-**Bot Service resources used by Teams agents should be configured with the *Single Tenant* bot type, which *does not* prevent the agent from being installed and used in multiple tenants.** The name of this choice is based on a legacy configuration model and is retained for compatibility reasons. An agent's ability to be used in multiple tenants is dictated by separate configuration in Entra ID; see [Agent tenancy (single-tenant and multi-tenant agents)](agent-tenancy.md) for more information about tenancy considerations for agents.
+**Bot Service resources used by Teams agents should be of *Single Tenant* bot type regardless of agent tenancy and runtime authentication needs.** The names of these bot type choices do not indicate their functionality; they are based on a legacy configuration model and are retained for compatibility reasons.
 
-Existing Bot Service resources may be configured with one of the following legacy bot types:
+"Single Tenant" bot type does not prevent an agent from being installed and used in multiple tenants. An agent's tenancy is determined by its Entra ID app registration configuration; see [Agent tenancy (single-tenant and multi-tenant agents)](agent-tenancy.md) for more information about tenancy considerations for agents.
 
-- **User-Assigned Managed Identity**: This bot type configuration links the Bot Service resource directly with an Azure user-assigned managed identity instead of an Entra ID app registration. Teams SDK provides legacy configuration support for this configuration, but it should not be used in new development. If runtime authentication using a user-assigned managed identity is desired, use the **Single Tenant** bot type and use Entra ID federated identity credentials to associate the managed identity with the agent's Entra ID app registration.
-- **Multi Tenant**: This bot type configuration is deprecated and is no longer supported.
+The following legacy bot types might be found on existing Bot Service resources, but should not be used in new development:
+
+- **User-Assigned Managed Identity**: Do not use in new development. If runtime authentication with a user-assigned managed identity is desired, use "Single Tenant" bot type and configure the identity on the linked Entra ID app registration as a federated identity credential; see [Review or update agent runtime authentication configuration](configure-agent-runtime-authentication.md). Teams SDK provides [legacy configuration support](configure-agent-runtime-authentication.md#legacy-user-assigned-managed-identity-configuration) for this bot type.
+- **Multi Tenant**: This bot type configuration is deprecated and is no longer supported. "Single Tenant" should be used regardless of bot tenancy needs.
 
 ## See also
 

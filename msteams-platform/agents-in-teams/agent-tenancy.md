@@ -11,9 +11,9 @@ Most workflows for creating and registering an agent, including `teams app creat
 
 ## Verify and configure agent tenant settings
 
-The Bot Connector registration of every Teams agent is permanently linked to the agent's primary Entra ID app registration. This app registration resides in a tenant controlled by the developer, and its `signInAudience` property (displayed in some contexts as its **Supported account types**) determines whether the agent is limited to installation and use in that tenant, or can be installed and used in any tenant.
+An agent's primary Entra ID app registration, linked to its Bot Connector registration, resides in a a tenant controlled by its developer. The `signInAudience` property of the app registration (displayed in some contexts as its **Supported account types**) determines whether the agent is limited to installation and use in that tenant, or can be installed and used in any tenant.
 
-To determine whether an agent is single-tenant or multi-tenant, sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) and examine the app registration's **Supported account types**.
+To check whether an agent is single-tenant or multi-tenant, sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) and examine the app registration's **Supported account types**.
 
 | Tenant availability | `signInAudience` | Supported account types display |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ Agents intended for use only in a single tenant, or a known set of tenants, shou
 
 ## Azure AI Bot Service bot type
 
-Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might observe that its `msaAppType`, **Bot type** or **Type of app** property indicates that it is "Single Tenant". Despite its name, the "Single Tenant" bot type **does not** control whether an agent can be installed and used in multiple tenants and should be used for all Teams agent Bot Service resources. See [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type) for more information.
+Developers with agents that use an Azure AI Bot Service resource instead of a standalone Bot Connector registration might observe that its `msaAppType`, **Bot type** or **Type of app** property indicates that it is "Single Tenant". Despite its name, the "Single Tenant" bot type is the correct choice of bot type for Teams agents and **does not** control whether an agent can be installed and used in multiple tenants. See [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type) for more information.
 
 ## See also
 
