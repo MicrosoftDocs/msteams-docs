@@ -130,7 +130,7 @@ To migrate your app:
 The following table summarizes what changes when you migrate:
 
 | Area | `supportedChannelTypes` (app manifest v1.24 and earlier) | `supportsChannelFeatures` (app manifest v1.25 and later) |
-|------|-------------------------------------------|------------------------------------------------------------|
+| ------ | ------------------------------------------- | ------------------------------------------------------------ |
 | App manifest declaration | Per-channel-type values: `sharedChannels`, `privateChannels` | Single readiness flag: `tier1` |
 | Supported app capabilities | Tabs only | Agents and tabs |
 
@@ -141,7 +141,7 @@ When loading the user experience in a shared or private channel, use the data re
 The property names differ between TeamsJS v1 and TeamsJS v2:
 
 | Value | TeamsJS v1 (`getContext`) | TeamsJS v2 (`app.getContext()`) |
-|-------|---------------------------|----------------------------------|
+| ------- | --------------------------- | ---------------------------------- |
 | Host team group ID | `hostTeamGroupId` | `channel.ownerGroupId` |
 | Host tenant ID | `hostTenantId` | `channel.ownerTenantId` |
 
@@ -152,7 +152,7 @@ This article uses the TeamsJS v2 names. If your app uses TeamsJS v1, read `hostT
 Apps must function cross-tenant in installation and usage. The group ID returned in the channel context depends on the channel type:
 
 | Channel type | `team.groupId` | `channel.ownerGroupId` (`hostTeamGroupId` in TeamsJS v1) |
-|--------------|----------------|------------------------------------------------------------|
+| -------------- | ---------------- | ------------------------------------------------------------ |
 | Standard | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
 | Shared | Empty | Host team Microsoft Entra group ID |
 
@@ -372,9 +372,9 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
 
 1. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
 
-## Understand app permissions in shared channels
+## Understand agent and app permissions in shared and private channels
 
-You can collaborate with external members outside of your organization by using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
+When a user installs an agent or app in a team, its channel-related [RSC permissions](graph-api/rsc/resource-specific-consent.md) and channel availability are automatically extended to all of the team's standard channels, but not its shared and private channels. Channel-related RSC permissions only extend to shared and private channels to which users explicitly add the agent or app.
 
 > [!NOTE]
 > The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
@@ -698,7 +698,6 @@ The message change notification failure happens when the tenant's sharing policy
 ## See also
 
 * [Manage channel membership](#manage-channel-membership)
-* [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Build tabs for Teams](tabs/what-are-tabs.md)
 * [Microsoft 365 app manifest schema reference](/microsoft-365/extensibility/schema/?view=m365-app-1.25&preserve-view=true)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
