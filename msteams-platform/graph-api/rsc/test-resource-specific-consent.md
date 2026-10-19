@@ -27,14 +27,14 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
-|Name| Type | Description|
+|Name|Type|Description|
 |---|---|---|
-|`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
+|`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent).|
+|`resource`|String|This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 
 Specify permissions needed by the app.
 
-|Name| Type | Description|
+|Name|Type|Description|
 |---|---|---|
 |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization](/microsoft-365/extensibility/schema/root-authorization).|
 
@@ -197,10 +197,10 @@ Example for RSC in a chat
 
 Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
-|Name| Type | Description|
+|Name|Type|Description|
 |---|---|---|
-|`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
+|`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent).|
+|`resource`|String|This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
 Example for RSC in a team
