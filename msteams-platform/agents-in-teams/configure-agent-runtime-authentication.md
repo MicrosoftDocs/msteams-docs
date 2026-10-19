@@ -37,13 +37,13 @@ By default, new agents created using the Teams developer CLI or the Teams Develo
 
 ### Configure the Entra ID app registration
 
-To review or update the credentials configured on the agent's Entra ID app registration, see [Add and manage app credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
+A credential must be associated with agent's Entra ID app registration to enable its use for runtime authentication. To review or update the credentials configured on the agent's Entra ID app registration, see [Add and manage app credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
 
-To use a managed identity for authentication, follow the linked instructions to configure it as a federated credential.
+To use a managed identity for authentication, follow the linked instructions to configure it as a federated identity credential.
 
 Client secrets for an app registration can also be created in Teams Developer Portal or via `teams app auth secret create`.
 
-### Runtime configuration
+### Configure the agent runtime
 
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
@@ -51,7 +51,7 @@ Teams SDK reads runtime configuration information from environment variables. By
 
 Set environment variables as follows, depending on the type of authentication credential used:
 
-| Authentication type                                                         | Variables                                                                                                         |
+| Authentication type                                                         | Environment variables                                                                                                         |
 |-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Client secret                                                               | `CLIENT_ID=<app registration client ID>`<br>`CLIENT_SECRET=<client secret>`<br>`TENANT_ID=<Entra tenant ID>`                          |
 | System-assigned Azure managed identity (via federated identity credentials) | `CLIENT_ID=<app registration client ID>`<br>`MANAGED_IDENTITY_CLIENT_ID=system`<br>`TENANT_ID=<Entra tenant ID>`                         |
@@ -61,7 +61,7 @@ Set environment variables as follows, depending on the type of authentication cr
 
 ::: zone pivot="teams-sdk-csharp"
 
-Beginning with version 2.1, Teams SDK for .NET uses the [standard Microsoft.Identity.Web configuration structure](/entra/msidweb/authentication/credentials-overview) in an appsettings.json file for credential configuration.
+Beginning with version 2.1, Teams SDK for .NET uses the standard Microsoft.Identity.Web configuration structure in an appsettings.json file for credential configuration. See [Configure credentials in appsettings.json](/entra/msidweb/authentication/credentials-overview) for detailed guidance.
 
 Examples:
 
@@ -147,7 +147,7 @@ Agents that use an Azure AI Bot Service resource configured with the legacy **Us
 
 ::: zone-end
 
-For more information about Bot Service bot type, see [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type).
+See [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type) for more information.
 
 ## Bot Connector authentication troubleshooting
 
