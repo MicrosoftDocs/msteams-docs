@@ -19,17 +19,19 @@ Streaming an agent message has two phases: informative updates and response stre
 
 ### Informative updates
 
-Informative updates provide insight into an agent's actions before it begins generating a response message. They appear with an animated icon beneath the message to which the agent is responding, not as a separate message. Each emitted update replaces the previous one, and the final update remains displayed until the agent begins streaming its response or a user selects the stop button, even as the conversation continues. They don't create notifications or unread messages.
+Informative updates provide insight into an agent's actions before it begins generating a response message. They appear with an animated icon beneath the message to which the agent is responding, not as a separate message.
 
-:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot of an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot of an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png":::
 
-In group chats, channels, and meeting chats, informative updates are displayed to everyone. Each informative message text must not be more than 1 kb or 1000 characters.
+Each emitted update replaces the previous one, and the final update remains displayed until the agent begins streaming its response or a user selects the stop button. Updates don't create notifications or trigger the unread message badge for the conversation.
+
+In group chats, channels, and meeting chats, informative updates are displayed to everyone.
 
 ### Response streaming
 
 When an agent begins streaming a response, a message bubble is created in the conversation into which the content is streamed. Any remaining informative update disappears, and the agent can no longer send them for the current message activity.
 
-:::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot of the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot of the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png":::
 
 The bubble remains in the same position as content is streamed to it, and animates to indicate when streaming is completed.
 
@@ -39,17 +41,19 @@ Streamed messages sent using extended Markdown mode will render formatting progr
 
 The stop button enables users to halt message streaming. It's available during both informative update generation and response streaming, and is displayed a few seconds after each one begins.
 
-:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png":::
 
 In group chats, channels, and meeting chats, the stop button is available to all users in the conversation.
 
 ## General developer considerations for streaming
 
-An agent can maintain only one open stream per conversation, but can have a stream open in each of multiple conversations concurrently.
+An agent can maintain only one open stream per conversation, but can have streams open in multiple conversations concurrently.
+
+Each informative message text must not be more than 1 kb or 1000 characters.
 
 Once an agent begins emitting a streamed response, any further informative updates it emits will be ignored.
 
-Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and response streaming are immediately halted in the client, and further attempts to emit informative updates or response content to the stream will result in a 403 `ContentStreamNotAllowed` error with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
+Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and response streaming are immediately halted in the client. Further attempts to emit informative updates or response content to the stream will result in a 403 `ContentStreamNotAllowed` error with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
 
 Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or response chunk.
 
@@ -216,7 +220,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of start streaming:
 
-:::image type="content" source="../assets/images/bots/start-streaming.png" alt-text="Screenshot of an agent starting to stream a message." lightbox="../assets/images/bots/start-streaming.png" border="false":::
+:::image type="content" source="../assets/images/bots/start-streaming.png" alt-text="Screenshot of an agent starting to stream a message." lightbox="../assets/images/bots/start-streaming.png":::
 
 ### Continue streaming
 
@@ -268,7 +272,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of an agent providing informative updates:
 
-:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png":::
 
 #### Switch to response streaming
 
@@ -355,7 +359,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of an agent providing updates in chunks:
 
-:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot of the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot of the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png":::
 
 ### Final streaming
 
@@ -400,7 +404,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The following image is an example of the agent's final response:
 
-:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot of the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot of the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png":::
 
 ## Response codes
 
