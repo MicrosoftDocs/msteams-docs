@@ -1,9 +1,7 @@
 ---
 title: Manage apps with Developer Portal
 description: Learn how to configure, develop, validate, publish, and manage your apps using the Developer Portal for Microsoft Team
-ms.localizationpriority: medium
 ms.topic: overview
-ms.author: vikasalmal
 ms.date: 09/24/2026
 ---
 
@@ -220,7 +218,6 @@ The Developer Portal provides options for testing and debugging your app:
 
 The Developer Portal includes tools to help you build key features of Teams apps. The following are the tools:
 
-* **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend using the latest app validation tool in your app under [**Publish**](#publish) section.
 * **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define an Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
@@ -237,22 +234,6 @@ To add a bot:
 1. Enter the name and select **Add**.
 
     :::image type="content" source="../../assets/images/tdp/Add_new_bot.PNG" alt-text="Add a new bot by using bot management option." lightbox="../../assets/images/tdp/Add_new_bot.PNG":::
-
-> [!NOTE]
->
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
-> * Bots configured as multi tenant in **Azure Bot Service** are deprecated. However, bots that were previously created as **multi tenant** continue to work as expected.
-> * Apps registered in **Microsoft Entra ID** are multi-tenant applications by default and remain supported. These app registrations are separate from bot tenant configuration in **Azure Bot Service** A bot configured as single tenant in Azure Bot Service can use a multi tenant application.
-> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
-> * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with an equivalent permission. The following least-privileged roles are supported for this operation:
->
->   * For multi tenant apps:
->     * Application Administrator
->     * Cloud Application Administrator
->
->   * For single tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
->
-> For bots configured as single tenant in **Azure Bot Service**, the developer must ensure the bot requests the correct access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
 
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
 
