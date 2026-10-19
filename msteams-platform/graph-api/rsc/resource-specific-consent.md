@@ -53,7 +53,7 @@ Additionally, the `TeamsActivity.Send` RSC application permission is always enab
 
 ## RSC permissions for teams and channels
 
-These RSC permissions apply at the team scope. When an agent or app is installed in a team, its channel-related RSC permissions automatically extend to all of the team's channels except [private and shared channels](../../build-apps-for-shared-private-channels.md). Channel-related RSC permissions only extend to private and shared channels in which a user has explicitly enabled the agent or app.
+These RSC permissions apply at the team scope. When an agent or app is installed in a team, its channel-related RSC permissions automatically extend to all of the team's channels except [private and shared channels](../../build-apps-for-shared-private-channels.md). Channel-related RSC permissions only extend to private and shared channels in which a user has explicitly added the agent or app.
 
 | Permission name | Action | Supported access scenarios |
 | ----- | ----- | :-----: |
