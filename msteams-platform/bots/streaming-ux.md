@@ -1,67 +1,64 @@
 ---
-title: Stream agent messages
+title: Stream Agent Messages
 description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
 ms.date: 10/19/2026
 ms.topic: article
-ms.author: nickwalk
-ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
 ---
 
 # Stream agent messages
 
+While a Teams agent is preparing a response to a user in chat, it can provide realtime insight about its status and stream the message content into the conversation as its generated. These techniques effectively communicate that an agent has received a message and is processing it, and improve overall agent responsiveness.
+
 > [!NOTE]
->
-> - Streaming agent messages are supported in one-on-one chats, group chats, meeting chats, and channels, including threads.
-> - To stream in conversations other than one-on-one chats, use the latest version of the Teams SDK. For more information, see [Earlier SDK versions and proactive messages](#earlier-sdk-versions-and-proactive-messages).
-> - Teams supports only one concurrent streaming response per chat at a time.
-> - Streaming is generally available on web, desktop, and mobile.
+> Implementing the current streaming experience requires Teams SDK 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
-You can stream agent messages to deliver an agent's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, agents take a long time to generate responses without updating the user interface, leading to a less engaging experience.
+## User experience
 
-When users observe the agent processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the agent.
+Streaming an agent message has two phases: informative updates and response streaming. Users are also presented with a stop button that halts streaming.
 
-## Stream messages user experience
+Each agent in a conversation can stream one message into the conversation at a time. Multiple agents can stream messages into a conversation simultaneously.
 
-Streaming agent messages has two types of updates:
+### Informative updates
 
-- **Informative updates**: Informative updates inform the user about the agent's ongoing actions while a response is being generated. Informative updates appear beneath the user's message that the agent is responding to, not as a separate message. This behavior applies in all conversations, including one-on-one chats, when your agent uses the latest version of the Teams SDK. The `text` remains visible until the next informative update or streamed content replaces it. Informative updates don't create notifications or unread messages.
+Informative updates provide insight into an agent's actions before it begins generating a response message. They appear with an animated icon beneath the message to which the agent is responding, not as a separate message. Each emitted update replaces the previous one, and the final update remains displayed until the agent begins streaming its response or a user selects the stop button, even as the conversation continues. They don't create notifications or unread messages.
 
-  :::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
+:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png" border="false":::
 
-  Informative messages must not be more than 1 kb or 1000 characters.
+In group chats, channels, and meeting chats, informative updates are displayed to everyone. Each informative message text must not be more than 1 kb or 1000 characters.
 
-- **Response streaming**: Response streaming displays the agent's response in a message bubble as it is generated. After response streaming starts, Teams no longer shows informative updates.
+### Response streaming
 
-  :::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot shows the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
+When an agent begins streaming a response, a message bubble is created in the conversation into which the content is streamed. Any remaining informative update disappears, and the agent can no longer send them for the current message activity.
 
-  - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
-  - Progressively-rendered formatting: Teams will progressively render the formatting of streamed messages sent in extended Markdown mode to provide a smooth reading experience. For more information, see [Format agent messages](how-to/format-your-bot-messages.md).
-  - Streaming content: While streaming, the agent messages must contain the previous streamed content.
+:::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot shows the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png" border="false":::
 
-      **For example**: This is an example of acceptable streaming response.<br>
-        *A brown*<br>
-        *A brown fox*<br>
-        *A brown fox jumps over the fence*
+The bubble remains in the same position as content is streamed to it, and animates to indicate when streaming is completed.
 
-      **Non-example**: This is an example of a streaming response that will return an error.<br>
-        *A brown*<br>
-        *Hello*
+Streamed messages sent using extended Markdown mode will render formatting progressively to provide a smooth reading experience. See [Format agent messages](how-to/format-your-bot-messages.md) for more information.
 
-    For more information about the error, see [error codes](#error-codes).
+### Stop button
 
-### Streaming in group chats, meeting chats, and channels
+The stop button enables users to halt message streaming. It's available during both informative update generation and response streaming, and is displayed a few seconds after each one begins.
 
-When an agent streams a response in a group chat, meeting chat, or channel:
+In group chats, channels, and meeting chats, the stop button is available to all users in the conversation.
 
-- Everyone in the conversation sees the informative updates and the streamed response, not only the user who sent the request.
-- Any participant can stop the agent's response.
-- Participants can continue the conversation while the agent works. Informative updates stay attached to the user's message.
-- Only the final response triggers notifications.
+## General developer considerations for streaming
+
+An agent can maintain only one active stream per conversation, but can have a stream open in each of multiple conversations concurrently.
+
+Once an agent begins emitting the streamed response, any further informative updates it emits will be ignored.
+
+Use of the stop button is not accompanied by an event. After a user selects the stop button, updates to the user experience are immediately halted, and further informative updates or writes to the stream will result in a 403 `ContentStreamNotAllowed` error that should be handled appropriately.
+
+Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or response chunk.
+
+Streaming is not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md), with the exception of one-on-one conversations between an agent and a user. In one-on-one conversations, informative updates and streamed responses are rendered using a legacy experience.
 
 ## Implement streaming with Teams SDK
 
-The Teams SDK manages the details required to stream in all supported conversations, so you don't need to change your streaming code. Use the latest version of the Teams SDK to stream in conversations other than one-on-one chats and to provide the latest streaming experience.
+> [!NOTE]
+> Implementing the current streaming experience requires Teams SDK 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -140,14 +137,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-### Earlier SDK versions and proactive messages
-
-Streaming in conversations other than one-on-one chats depends on associating the streamed response with the user's message that the agent is responding to. The following scenarios don't support this association:
-
-- **Earlier SDK versions**: If your agent uses an earlier version of the Teams SDK, streaming and informative updates continue to work in one-on-one chats with the previous user experience. Streaming isn't supported in other conversations.
-- **Proactive messages**: If your agent saves a conversation ID and later uses it to stream a [proactive message](how-to/conversations/send-proactive-messages.md), streaming works in one-on-one chats with the previous user experience. Streaming isn't supported in other conversations.
-
-## Stream message through REST API
+## Implement streaming via REST API
 
 Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
 
@@ -282,7 +272,9 @@ The following image is an example of an agent providing informative updates:
 
 #### Switch to response streaming
 
-After your agent is ready to generate its final message for the user, switch from providing informative updates to response streaming. For every response streaming update, the message content should be the latest version of the final message. This means that your agent should incorporate any new tokens generated by the Large Language Models (LLMs). Append these tokens to the previous message version and then send it to the user.
+After your agent is ready to generate its final message for the user, switch from providing informative updates to response streaming.
+
+The message `text` of each stream update request sent by your agent must contain the previously streamed content as well as newly-emitted content. As your agent generates content, accumulate it locally in a string and send its entire contents with each request.
 
 The throttling limit is 1 request per second for each agent in a conversation thread. You must ensure that the agent sends the request  within this limit. The agent may send requests at a slower rate, as needed.
 
@@ -464,7 +456,7 @@ The following are the success and error codes:
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
 | Teams streaming agent sample | This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
-| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | [View](https://github.com/microsoft/teams.net/blob/main/Samples/Samples.AI/Program.cs) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
+| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | NA | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
