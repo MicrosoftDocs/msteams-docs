@@ -10,8 +10,26 @@ zone_pivot_groups: teams-sdk-languages
 
 A Teams agent can provide realtime updates about its status as it prepares a chat response to a user, then stream the response content into the conversation as it's being generated. Using these techniques, agents can clearly acknowledge receipt of user messages, communicate liveness, and maximize overall responsiveness.
 
+::: zone pivot="teams-sdk-csharp"
+
 > [!NOTE]
-> Implementing the streaming experience shown here with Teams SDK requires version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the streaming experience shown here with Teams SDK requires package `Microsoft.Teams.Apps` version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+> [!NOTE]
+> Implementing the streaming experience shown here with Teams SDK requires package `microsoft-teams-apps` version 2.0.15 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+> [!NOTE]
+> Implementing the streaming experience shown here with Teams SDK requires package `@microsoft/teams.apps` version 2.0.14 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
 
 ## User experience
 
