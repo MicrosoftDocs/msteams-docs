@@ -79,6 +79,8 @@ Streams time out and are automatically closed 10 minutes after the agent writes 
 
 Informative updates and content streaming are intended for responding to specific user messages within the context of the received message's activity handler. They're not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md).
 
+Some messaging features, such as attachment, AI labels, feedback buttons, and sensitivity labels are only rendered once the agent finishes streaming. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
+
 ## Implement streaming with Teams SDK
 
 > [!NOTE]
@@ -163,9 +165,73 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ## Implement streaming via REST API
 
-Agent messages can be streamed through REST API. Streaming messages support rich text and citation. Attachment, AI-label, feedback button, and sensitivity labels are available only for the final streaming message. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
+Despite its name, content streaming does not depend on HTTP streaming or similar technologies. At the HTTP API level, it's implemented as a sequence of requests. Each request either sets a new informative update text to be displayed or updates the contents of the streamed message.
 
-When your agent invokes streaming through REST API, ensure to call the next streaming API only after receiving a successful response from the initial API call. If your agent uses SDK, verify that you receive a null response object from the send activity method to confirm that the previous call was successfully transmitted.
+To begin streaming, send an activity payload to the `/conversations/<conversationId>/activities` endpoint including the following property values (in addition to other required values):
+
+- `type`: `typing`
+- `replyToId`: The ID of the user message being responded to.
+- `text`: The first informative update text. If skipping the informative update phase, the first content chunk.
+- `entities.type`: `streamInfo`
+- `entities.streamType`: `informative`. If skipping the informative update phase and sending the first content chunk, set to `streaming`.
+- `entities.streamSequence`: 1
+
+```json
+//Ex: An agent sends the first request with content & the content is informative loading message.
+POST /conversations/<conversationId>/activities HTTP/1.1
+{
+  "type": "typing",
+  "serviceurl": "<https://smba.trafficmanager.net/amer/>",
+  "channelId": "msteams",
+  "from": {
+    "id": "<botId>",
+    "name": "<BotName>"
+  },
+  "conversation": {
+    "conversationType": "personal",
+    "id": "<conversationId>"
+  },
+  "recipient": {
+    "id": "<recipientId>",
+    "name": "<recipientName>",
+    "aadObjectId": "<recipient aad objecID>"
+  },
+  "locale": "en-US",
+  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
+  "text": "Searching through documents...", //(required) first informative loading message.
+  "entities":[
+    {
+      "type": "streaminfo",
+      "streamType": "informative", // informative or streaming; default= streaming.
+      "streamSequence": 1 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
+    }
+  ],
+}
+```
+
+The `201 Created` response will include a JSON payload with an `id` property whose value must be used as the `entities.streamId` value in subsequent requests.
+
+To continue, send additional requests with values as follows:
+
+- `type`: `typing`
+- `replyToId`: The ID of the user message being responded to.
+- `text`: The new informative update text to display, or the full contents of the message generated so far.
+- `entities.type`: `streamInfo`
+- `entities.streamId`: The `id` value obtained from the initial response
+- `entities.streamType`: `informative` if setting a new informative update text, `streaming` if updating the message content
+- `entities.streamSequence`: \<Incremented with each request sent\>
+
+Note that, when providing message content, `text` must contain a full message update. It must include all content sent to that point, unchanged, appended with the most recently generated chunk of content being added. Previously sent content can't be changed while streaming.
+
+Once you begin providing message content, do not send any further informative updates.
+
+The service rate-limits requests to 1 per second, per stream. Buffer generated content as necessary.
+
+---
+
+Each activity payload sent, except the last, must include a `streamSequence` value that begins at 1 and increments with each request sent.
+
+Requests are rate-limited to 1 per second
 
 When your agent calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your agent streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
 
@@ -185,12 +251,6 @@ The following are the properties for streaming agent messages:
 > For REST APIs, `streamSequence` must start at 1 and increment by 1 for each subsequent streaming request. Don't set `streamSequence` for the final message.
 > The Teams typing animation isn't available while a stream is open. If your agent doesn't have response content yet, send a meaningful informative update instead of empty or whitespace text.
 >
-
-To enable streaming in agents, follow these steps:
-
-1. [Start streaming](#start-streaming)
-1. [Continue streaming](#continue-streaming)
-1. [Final streaming](#final-streaming)
 
 ### Start streaming
 
