@@ -2,13 +2,57 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/08/2026
+ms.date: 10/20/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
 feed reader as they're published.
+
+## Action required: Update Teams bots to authenticate file download and upload requests
+
+*October 22, 2026*
+
+Microsoft Teams is updating how bots access files shared in personal chats. This change improves security by requiring file requests to be authenticated using the bot’s Microsoft Entra application identity.
+
+### What is changing?
+
+Today, when a user shares a file with a bot, Teams provides the bot with a `downloadUrl`. When a user accepts a bot’s file-consent request, Teams similarly provides an `uploadUrl`. Bots can currently call these URLs without including an authorization token.
+
+With the updated flow, bots must:
+
+1. Acquire a Microsoft Entra app-only access token using the bot’s application identity.
+2. Use the token audience provided by Teams when requesting the token.
+3. Include the token as a Bearer token in the `Authorization` header when calling the provided `downloadUrl` or `uploadUrl`.
+
+There is no change required to the Teams app manifest or the `supportsFiles` property.
+
+### Who needs to take action?
+
+You need to update your bot if it:
+
+- Receives files from users in personal or 1:1 chats and calls the provided `downloadUrl` directly.
+- Uploads files to a user’s OneDrive after the user accepts a file-consent card.
+- Implements the Teams file flow without relying on an SDK method that manages authentication on the bot’s behalf.
+
+### What should I do now?
+
+Update your bot to include its Entra app-only token in the `Authorization` header for both file download and upload requests.
+
+You can make this change before enforcement begins. Supplying the authorization header is compatible with the current PreAuth-based flow, so you do not need to wait for the new behavior to be enforced.
+
+If your bot continues calling these URLs without an authorization token after enforcement begins, its file download or upload operations may fail.
+
+### When will this be enforced?
+
+The enforcement date is **December 31, 2026**. Begin the update now to avoid disruption.
+
+### Learn more
+
+Review the current Teams bot file-sharing flow in [File and image handling](/microsoftteams/platform/teams-sdk/in-depth-guides/file-handling/overview).
+
+---
 
 ## Released: Extended Markdown formatting for agent messages
 
