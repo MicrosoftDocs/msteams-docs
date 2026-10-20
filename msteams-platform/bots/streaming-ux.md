@@ -8,38 +8,38 @@ zone_pivot_groups: teams-sdk-languages
 
 # Stream agent messages
 
-While a Teams agent is preparing a response to a user in chat, it can provide realtime insight about its status and stream the message content into the conversation as its generated. An agent can use these techniques to maximize overall responsiveness and unambiguously communicate that it has received a specific message and is processing it.
+A Teams agent can provide realtime updates about its status as it prepares a chat response to a user, then stream the response content into the conversation as it's being generated. Using these techniques, agents can clearly acknowledge receipt of user messages, communicate liveness, and maximize overall responsiveness.
 
 > [!NOTE]
-> Implementing the current streaming experience with Teams SDK requires version 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the streaming experience shown here with Teams SDK requires version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
 ## User experience
 
-Streaming an agent message has two phases: informative updates and response streaming. Users are presented with a stop button during both phases that halts streaming.
+Message streaming consists of two phases: optional informative updates followed by content streaming. A stop button displayed during both phases enables users to halt message generation.
 
 ### Informative updates
 
-Agents can send informative updates to acknowledge a user's message, indicate liveness, and provide realtime insight into their actions before beginning generation of a response message. Updates appear with an animated icon beneath the message to which the agent is responding.
+Informative updates are short texts that an agent can optionally display while preparing to stream a response to a user message. They're shown directly beneath the chat message to which the agent is responding, not in message bubbles, and are accompanied by an animated icon. Each new update the agent sends replaces the previous one.
 
 :::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot of an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png":::
 
-Each update the agent emits replaces the previous one, and the final update remains displayed until the agent begins streaming its response or a user selects the stop button. Updates don't create notifications or trigger the unread message badge for the conversation.
+Updates don't create notifications or trigger the unread message badge for the conversation. In group chats, channels, and meeting chats, informative updates are displayed to everyone in the conversation.
 
-In group chats, channels, and meeting chats, informative updates are displayed to everyone.
+### Content streaming
 
-### Response streaming
-
-When an agent begins streaming a response, a message bubble is created in the conversation into which the response content streams. Any remaining informative update disappears, and the agent can no longer send them for the current message activity.
+Content streaming appends chunks of message content into a conversation bubble as an agent emits them.
 
 :::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot of the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png":::
 
-The bubble remains in the same position as content is streamed to it, and animates to indicate when streaming is completed.
+Emitting the first content chunk creates the bubble and stops the display of informative updates. The bubble's position in the conversation remains fixed as streamed content is appended, and the bubble animates when the agent signals that streaming is complete.
 
-Streamed messages sent using extended Markdown mode will render formatting progressively to provide a smooth reading experience. See [Format agent messages](how-to/format-your-bot-messages.md) for more information.
+<!-- TODO also mention stuff that only renders when message is finalized -->
+
+Streamed messages sent using extended Markdown mode render their formatting progressively to provide a smooth reading experience. See [Format agent messages](how-to/format-your-bot-messages.md) for more information.
 
 ### Stop button
 
-The stop button enables users to halt message streaming. It's available during both informative update generation and response streaming, and is displayed a few seconds after each one begins.
+The stop button allows users to halt informative updates and content streaming. It's displayed during both phases, a few seconds after each phase begins.
 
 :::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png":::
 
@@ -51,24 +51,24 @@ An agent can maintain only one open stream per conversation, but can have stream
 
 Each informative message text must not be more than 1 kb or 1000 characters.
 
-Once an agent begins emitting a streamed response, any further informative updates it emits will be ignored.
+Once an agent begins emitting streamed content, any further informative updates it emits will not be displayed.
 
-[Extended Markdown mode](how-to/format-your-bot-messages.md) is compatible with response streaming and results in progressively rendered formatting.
+[Extended Markdown mode](how-to/format-your-bot-messages.md) is compatible with content streaming and enables progressively rendered formatting.
 
-Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and response streaming are immediately halted in the client. Further attempts to emit informative updates or response content to the stream will result in a 403 `ContentStreamNotAllowed` error with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
+Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and content streaming are immediately halted in the client. Further attempts by the agent to emit informative updates or message content to the stream will result in `403 ContentStreamNotAllowed` errors with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
 
-Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or response chunk.
+Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or content chunk.
 
-Streaming is not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md), with the exception of one-on-one conversations between an agent and a user. In one-on-one conversations, informative updates and streamed responses are rendered using a legacy experience.
+Informative updates and content streaming are intended for responding to specific user messages within the context of the received message's activity handler. They're not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md).
 
 ## Implement streaming with Teams SDK
 
 > [!NOTE]
-> Implementing the current streaming experience with Teams SDK requires version 2.1.0 or newer. Older versions of Teams SDK can stream messages only in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the streaming experience shown here with Teams SDK requires version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use `TeamsStreamingWriter` to write informative updates and stream response content. Finalize the writer after appending all response chunks.
+Use `TeamsStreamingWriter` to write informative updates and stream content. Finalize the writer after appending all content chunks.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -103,7 +103,7 @@ app.OnMessage(async (context, cancellationToken) =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-Use `stream.update` to write informative updates before beginning the message stream. `stream.update` can be called multiple times with different update text.
+Use `stream.update` to write informative updates before emitting message content. `stream.update` can be called multiple times with different update text.
 
 Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
@@ -123,7 +123,7 @@ app.on('message', async ({ activity, stream }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-Use `stream.update` to write informative updates before beginning the message stream. `stream.update` can be called multiple times with different update text.
+Use `stream.update` to write informative updates before emitting message content. `stream.update` can be called multiple times with different update text.
 
 Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
