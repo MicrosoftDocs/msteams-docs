@@ -185,7 +185,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 Despite its name, content streaming does not depend on HTTP streaming or similar technologies. At the HTTP API level, it's implemented as a sequence of requests. Each request either sets a new informative update text to be displayed or updates the contents of the streamed message.
 
-## Open a stream
+### Open a stream
 
 To begin streaming, send an activity payload to the `/conversations/<conversationId>/activities` endpoint including the following required payload values (in addition to other required values):
 
@@ -231,7 +231,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The `201 Created` response will include a JSON payload with an `id` property whose value must be used as the `entities.streamId` value in all subsequent requests.
 
-## Send informative messages and message content updates
+### Send informative messages and message content updates
 
 Once the stream is open, send additional requests using the stream's ID to display informative updates and stream message content. Include the following payload follows:
 
@@ -250,108 +250,7 @@ Each streaming request can include additional `entities` values representing mes
 
 The service is rate-limited to 1 per second, per stream. Buffer generated content to throttle requests as necessary.
 
-### Close the stream
-
-Once message generation is complete, close the stream by sending a message activity with the following payload properties:
-
-- `type`: `message`
-- `replyToId`: The ID of the user message being responded to. Optional in one-on-one conversations, but streaming and informative updates will render in a legacy experience.
-- `text`: The complete message contents
-- `entities[0].type`: `streamInfo`
-- `entities[0].streamId`: The `id` value obtained from the initial response
-- `entities[0.streamType`: `final`
-
-Do not include `entities[0].streamSequence` in the final request payload.
-
----
-
-Each activity payload sent, except the last, must include a `streamSequence` value that begins at 1 and increments with each request sent.
-
-Requests are rate-limited to 1 per second
-
-When your agent calls streaming API too fast, you may encounter issues and streaming experience can be interrupted. We recommend that your agent streams one message at a time to ensure that it calls the streaming API at a consistent pace. If not, the request might be throttled. Buffer the tokens from the model for 1.5 to two seconds to ensure a smooth streaming process.
-
-The following are the properties for streaming agent messages:
-
-| Property | Required | Description |
-| --- | --- | --- |
-| `type` | ✔️ | Supported values are either `typing` or `message`. </br> • `typing`: Use when streaming the message. </br> • `message`: Use for the final streamed message. |
-| `replyToId` | | The ID of the user's message that the agent is responding to. Teams uses this value to associate informative updates and the streamed response with the user's message. Required to stream in group chats, meeting chats, and channels. Include it in every streaming request, including the final message. If you omit this value in a one-on-one chat, streaming uses the previous user experience. |
-| `text` | ✔️ | The contents of the message that is to be streamed. Teams renders this value in the agent's message bubble. For an `informative` update, the text stays visible until the next update or the first streamed chunk replaces it. A start streaming activity that omits `text` is rejected. |
-| `entities.type` | ✔️ | Must be `streamInfo` |
-| `entities.streamId` | ✔️ | `streamId` from the initial streaming request, [start streaming](#start-streaming). |
-| `entities.streamType` | | Type of streaming updates. Supported values are either `informative`, `streaming`, or `final`. The default value is `streaming`. `final` is used only in the final message. |
-| `entities.streamSequence` | ✔️ | Incremental integer for each request. |
-
-> [!NOTE]
-> For REST APIs, `streamSequence` must start at 1 and increment by 1 for each subsequent streaming request. Don't set `streamSequence` for the final message.
-> The Teams typing animation isn't available while a stream is open. If your agent doesn't have response content yet, send a meaningful informative update instead of empty or whitespace text.
->
-
-### Start streaming
-
-The agent can send either an informative or a streaming message as its initial communication. The response includes the `streamId`, which is important for executing subsequent calls.
-
-A start streaming activity must include `text`. If `text` is missing, the request fails with a `400 BadRequest` response and the error message `Start streaming activities should include text`. Teams renders this value in the message bubble, so use a meaningful informative update for the first activity. For more information, see [error codes](#error-codes).
-
-Your agent can send multiple informative updates while processing the user's request such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. You can send these updates before your agent generates its final response to the user.
-
 ```json
-
-//Ex: An agent sends the first request with content & the content is informative loading message.
-
-POST /conversations/<conversationId>/activities HTTP/1.1 
-{
-  "type": "typing",
-  "serviceurl": "https://smba.trafficmanager.net/amer/",
-  "channelId": "msteams",
-  "from": {
-    "id": "<botId>",
-    "name": "<BotName>"
-  },
-  "conversation": {
-    "conversationType": "personal",
-    "id": "<conversationId>"
-  },
-  "recipient": {
-    "id": "<recipientId>",
-    "name": "<recipientName>",
-    "aadObjectId": "<recipient aad objecID>"
-  },
-  "locale": "en-US",
-  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
-  "text": "Searching through documents...", //(required) first informative loading message.
-  "entities":[
-    {
-      "type": "streaminfo",
-      "streamType": "informative", // informative or streaming; default= streaming.
-      "streamSequence": 1 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
-    }
-  ],
-}
-
-201 created { "id": "a-0000l" } // return stream id
-
-```
-
-The following image is an example of start streaming:
-
-:::image type="content" source="../assets/images/bots/start-streaming.png" alt-text="Screenshot of an agent starting to stream a message." lightbox="../assets/images/bots/start-streaming.png":::
-
-### Continue streaming
-
-Use the `streamId` that you've received from the initial request to send either informative or streaming messages. You can [start with informative updates](#start-with-informative-updates) and later [switch to response streaming](#switch-to-response-streaming) when the final response is ready.
-
-#### Start with informative updates
-
-As your agent generates a response send informative updates to the user such as, **Scanning through documents**, **Summarizing Content**, and **Found relevant work items**. Ensure that you make subsequent calls only after the agent receives successful response from the previous calls.
-
-Each informative update replaces the previous one in the message bubble and remains visible to the user until the next update or the first streamed chunk arrives.
-
-```json
-
-// Ex: An agent sends the second request with content & the content is informative loading message.
-
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
   "type": "typing",
@@ -371,120 +270,33 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en -US",
-  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
-  "text": "Searching through emails...", // (required) second informative loading message.
+  "replyToId": "<userMessageId>",
+  "text": "Searching through emails...",
   "entities":[
     {
       "type": "streaminfo",
-      "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "informative", // informative or streaming; default= streaming.
-      "streamSequence": 2 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
-    }
-  ],
-} 
-202 0K { }
-
-```
-
-The following image is an example of an agent providing informative updates:
-
-:::image type="content" source="../assets/images/bots/stream-informative-update.png" alt-text="Screenshot shows an informative update under the user's request." lightbox="../assets/images/bots/stream-informative-update.png":::
-
-#### Switch to response streaming
-
-After your agent is ready to generate its final message for the user, switch from providing informative updates to response streaming.
-
-The message `text` of each stream update request sent by your agent must contain the previously streamed content as well as newly-emitted content. As your agent generates content, accumulate it locally in a string and send its entire contents with each request.
-
-The throttling limit is 1 request per second for each agent in a conversation thread. You must ensure that the agent sends the request  within this limit. The agent may send requests at a slower rate, as needed.
-
-```json
-
-// Ex: An agent sends the third request with content & the content is actual streaming content.
-
-POST /conversations/<conversationId>/activities HTTP/1.1
-{
-  "type": "typing",
-  "serviceurl" : "https://smba.trafficmanager.net/amer/ ",
-  "channelId": "msteams",
-  "from": {
-    "id": "<botId>",
-    "name": "<BotName>"
-  },
-  "conversation": {
-    "conversationType": "personal",
-    "id" : "<conversationId>"
-  },
-  "recipient": {
-    "id" : "<recipientId>",
-    "name": "<recipientName>",
-    "aadObjectId": "<recipient aad objecID>"
-  },
-  "locale": "en-US" ,
-  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
-  "text": "A brown fox", // (required) first streaming content.
-  "entities":[
-    {
-      "type": "streaminfo",
-      "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "streaming", // informative or streaming; default= streaming.
-      "streamSequence": 3 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
+      "streamId": "a-0000l",
+      "streamType": "informative",
+      "streamSequence": 2
     }
   ],
 }
-202 0K{ }
-
 ```
 
-```json
+### Close the stream
 
-// Ex: An agent sends the fourth request with content & the content is actual streaming content.
+Once message generation is complete, close the stream by sending a message activity with the following payload properties:
 
-POST /conversations/<conversationId>/activities HTTP/1.1
-{
-  "type": "typing",
-  "serviceurl" : "https://smba.trafficmanager.net/amer/ ",
-  "channelId": "msteams",
-  "from": {
-    "id": "<botId>",
-    "name": "<BotName>"
-  },
-  "conversation": {
-    "conversationType": "personal",
-    "id" : "<conversationId>"
-  },
-  "recipient": {
-    "id" : "<recipientId>",
-    "name": "<recipientName>",
-    "aadObjectId": "<recipient aad objecID>"
-  },
-  "locale": "en-US" ,
-  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
-  "text": "A brown fox jumped over the fence", // (required) first streaming content.
-  "entities":[
-    {
-      "type": "streaminfo",
-      "streamId": "a-0000l", // // (required) must be present for any subsequent request after the first chunk.
-      "streamType": "streaming", // informative or streaming; default= streaming.
-      "streamSequence": 4 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
-    }
-  ],
-}
-202 0K{ }
-```
+- `type`: `message`
+- `replyToId`: The ID of the user message being responded to. Optional in one-on-one conversations, but streaming and informative updates will render in a legacy experience.
+- `text`: The complete message contents
+- `entities[0].type`: `streamInfo`
+- `entities[0].streamId`: The `id` value obtained from the initial response
+- `entities[0.streamType`: `final`
 
-The following image is an example of an agent providing updates in chunks:
-
-:::image type="content" source="../assets/images/bots/stream-response-growing.png" alt-text="Screenshot of the agent's response growing as more content streams in." lightbox="../assets/images/bots/stream-response-growing.png":::
-
-### Final streaming
-
-After your agent completes generating its message, send the end streaming signal along with the final message. For the final message, the `type` of activity is `message`. Here, the agent sets any fields that are allowed for the regular message activity but `final` is the only allowed value for `streamType`.
+Do not include `entities[0].streamSequence` in the final request payload.
 
 ```json
-
-// Ex: An agent sends the second request with content && the content is informative loading message.
-
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
   "type": "message",
@@ -513,14 +325,8 @@ POST /conversations/<conversationId>/activities HTTP/1.1
       "streamType": "final", // (required) final is only allowed for the last message of the streaming.
     }
   ],
-  }
-202 0K{ }
-
+}
 ```
-
-The following image is an example of the agent's final response:
-
-:::image type="content" source="../assets/images/bots/stream-final-response.png" alt-text="Screenshot of the agent's completed response." lightbox="../assets/images/bots/stream-final-response.png":::
 
 ## Response codes
 
