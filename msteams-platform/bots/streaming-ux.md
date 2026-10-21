@@ -85,27 +85,6 @@ Some messaging features, such as attachment, AI labels, feedback buttons, and se
 
 ::: zone pivot="teams-sdk-csharp"
 
-> [!NOTE]
-> Implementing the streaming experience shown here with Teams SDK requires package `Microsoft.Teams.Apps` version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-> [!NOTE]
-> Implementing the streaming experience shown here with Teams SDK requires package `microsoft-teams-apps` version 2.0.15 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-> [!NOTE]
-> Implementing the streaming experience shown here with Teams SDK requires package `@microsoft/teams.apps` version 2.0.14 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
 Use `TeamsStreamingWriter` to write informative updates and stream content. Finalize the writer after appending all content chunks.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
@@ -115,25 +94,35 @@ teams.OnMessage(async (context, cancellationToken) =>
 {
   TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
 
-  await writer.SendInformativeUpdateAsync("Testing", cancellationToken);
+  await writer.SendInformativeUpdateAsync("Reviewing the latest project status...", cancellationToken);
   await Task.Delay(1000, cancellationToken);
-  await writer.AppendResponseAsync("hello", cancellationToken);
-  await writer.AppendResponseAsync(", ", cancellationToken);
-  await writer.AppendResponseAsync("world!", cancellationToken);
+
+  string summary = """
+  ## Project status
+
+  - [x] API tests passed
+  - [x] Deployment checks completed
+  - [ ] Final sign-off pending
+
+  The release is on track for Friday.
+  """;
+
+  await writer.AppendResponseAsync(summary, cancellationToken);
   await writer.FinalizeResponseAsync(cancellationToken: cancellationToken);
 });
 ```
+
+The emitted content can include markdown headings, task lists, and emphasis to improve readability while the message streams in.
 
 # [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async (context, cancellationToken) =>
 {   
-   context.Stream.Update("Testing");
+   context.Stream.Update("Reviewing the latest project status...");
    await Task.Delay(1000);
-   context.Stream.Emit("hello");
-   context.Stream.Emit(", ");
-   context.Stream.Emit("world!");
+
+   context.Stream.Emit("## Project status\n\n- [x] API tests passed\n- [x] Deployment checks completed\n- [ ] Final sign-off pending");
 });
 ```
 
@@ -147,15 +136,24 @@ Use `stream.emit` to write a chunk of content to the stream. Chunks will be rend
 
 ```typescript
 app.on('message', async ({ activity, stream }) => {
-  stream.update("Thinking...");
-  await new Promise(resolve => setTimeout(resolve, 1000))  
-  stream.emit('hello');
-  stream.emit(', ');
-  stream.emit('world!');
+  stream.update("Preparing a project status update...");
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
-  // result message: "hello, world!"
+  const summary = [
+    '## Project status',
+    '',
+    '- [x] API tests passed',
+    '- [x] Build completed',
+    '- [ ] Final sign-off pending',
+    '',
+    'The rollout is still on track for Friday.'
+  ].join('\n');
+
+  stream.emit(new MessageActivityInput(summary).withTextFormat('extendedmarkdown'));
 });
 ```
+
+The same pattern works for multi-part responses that stream progressively, using extended Markdown to render headings, lists, and inline emphasis as each chunk arrives.
 
 ::: zone-end
 
@@ -168,15 +166,36 @@ Use `stream.emit` to write a chunk of content to the stream. Chunks will be rend
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    ctx.stream.update("Stream starting...")
+    ctx.stream.update("Preparing a status update...")
     await asyncio.sleep(1)
 
-    # Stream messages with delays using ctx.stream.emit
-    for message in STREAM_MESSAGES:
-        # Add some randomness to timing
-        await asyncio.sleep(random())
+    status = """## Project status
 
-        ctx.stream.emit(message)
+- [x] API tests passed
+- [x] Build completed
+- [ ] Final sign-off pending
+
+The rollout is still on track for Friday.
+"""
+
+    ctx.stream.emit(MessageActivityInput(text=status).with_text_format("extendedmarkdown"))
+```
+
+For a more natural streaming experience, emit a sequence of markdown-formatted text chunks and let Teams progressively render them as they arrive.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    ctx.stream.update("Starting the *extended* markdown stream...", "markdown")
+    await asyncio.sleep(1)
+
+    for message in [
+        "### Release summary\n\n- [x] Build complete\n- [x] Tests passed\n",
+        "- [ ] Final sign-off pending\n\nThe app is ready to ship once approval is received.\n",
+        "**Important:** package validation is still running in the background.",
+    ]:
+        await asyncio.sleep(0.5)
+        ctx.stream.emit(MessageActivityInput(text=message).with_text_format("extendedmarkdown"))
 ```
 
 ::: zone-end
@@ -357,8 +376,8 @@ The following are the success and error codes:
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams streaming agent sample | This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-streaming/csharp) | NA |
-| Conversational streaming agent | This is a conversational streaming agent with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | NA | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
+| Teams SDK streaming sample | This sample shows how to stream agent responses and use extended Markdown formatting in the latest SDKs. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/dotnet/samples) | [View](https://github.com/microsoft/teams.py/tree/main/examples/stream) |
+| Streaming + extended Markdown sample | This sample demonstrates progressive rendering of markdown-formatted output while content is still streaming. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot) | NA | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
