@@ -33,7 +33,7 @@ A Teams agent can provide realtime updates about its status as it prepares a cha
 
 ## User experience
 
-Message streaming consists of two phases: optional informative updates followed by content streaming. A stop button displayed during both phases enables users to halt message generation.
+Message streaming consists of two phases: optional informative updates followed by message content streaming. A stop button displayed during both phases enables users to halt message generation.
 
 ### Informative updates
 
@@ -43,9 +43,9 @@ Informative updates are short texts that an agent can optionally display while p
 
 Updates don't create notifications or trigger the unread message badge for the conversation. In group chats, channels, and meeting chats, informative updates are displayed to everyone in the conversation.
 
-### Content streaming
+### Message content streaming
 
-Content streaming appends chunks of message content into a conversation bubble as an agent emits them.
+Message content streaming appends chunks of message content into a conversation bubble as an agent emits them.
 
 :::image type="content" source="../assets/images/bots/stream-response-start.png" alt-text="Screenshot of the agent's response as it starts streaming." lightbox="../assets/images/bots/stream-response-start.png":::
 
@@ -57,7 +57,7 @@ Streamed messages sent using extended Markdown mode render their formatting prog
 
 ### Stop button
 
-The stop button allows users to halt informative updates and content streaming. It's displayed during both phases, a few seconds after each phase begins.
+The stop button allows users to halt informative updates and message content streaming. It's displayed during both phases, a few seconds after each phase begins.
 
 :::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png":::
 
@@ -71,20 +71,38 @@ Each informative message text must not be more than 1 kb or 1000 characters.
 
 Once an agent begins emitting streamed content, any further informative updates it emits will not be displayed.
 
-[Extended Markdown mode](how-to/format-your-bot-messages.md) is compatible with content streaming and enables progressively rendered formatting.
+[Extended Markdown mode](how-to/format-your-bot-messages.md) is compatible with message content streaming and enables progressively rendered formatting.
 
-Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and content streaming are immediately halted in the client. Further attempts by the agent to emit informative updates or message content to the stream will result in `403 ContentStreamNotAllowed` errors with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
+Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and message content streaming are immediately halted in the client. Further attempts by the agent to emit informative updates or message content to the stream will result in `403 ContentStreamNotAllowed` errors with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
 
 Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or content chunk.
 
-Informative updates and content streaming are intended for responding to specific user messages within the context of the received message's activity handler. They're not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md).
+Informative updates and message content streaming are intended for responding to specific user messages within the context of the received message's activity handler. They're not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md).
 
 Some messaging features, such as attachment, AI labels, feedback buttons, and sensitivity labels are only rendered once the agent finishes streaming. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
 
 ## Implement streaming with Teams SDK
 
+::: zone pivot="teams-sdk-csharp"
+
 > [!NOTE]
-> Implementing the streaming experience shown here with Teams SDK requires version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+> Implementing the streaming experience shown here with Teams SDK requires package `Microsoft.Teams.Apps` version 2.1.0 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+> [!NOTE]
+> Implementing the streaming experience shown here with Teams SDK requires package `microsoft-teams-apps` version 2.0.15 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+> [!NOTE]
+> Implementing the streaming experience shown here with Teams SDK requires package `@microsoft/teams.apps` version 2.0.14 or newer. Agents using older versions of Teams SDK can only use the streaming API in one-on-one conversations between an agent and a user, and informative updates and response generation will render in a legacy experience.
+
+::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -167,18 +185,20 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 Despite its name, content streaming does not depend on HTTP streaming or similar technologies. At the HTTP API level, it's implemented as a sequence of requests. Each request either sets a new informative update text to be displayed or updates the contents of the streamed message.
 
-To begin streaming, send an activity payload to the `/conversations/<conversationId>/activities` endpoint including the following property values (in addition to other required values):
+## Open a stream
+
+To begin streaming, send an activity payload to the `/conversations/<conversationId>/activities` endpoint including the following required payload values (in addition to other required values):
 
 - `type`: `typing`
-- `replyToId`: The ID of the user message being responded to.
+- `replyToId`: The ID of the user message being responded to. Optional in one-on-one conversations, but streaming and informative updates will render in a legacy experience.
 - `text`: The first informative update text. If skipping the informative update phase, the first content chunk.
-- `entities.type`: `streamInfo`
-- `entities.streamType`: `informative`. If skipping the informative update phase and sending the first content chunk, set to `streaming`.
-- `entities.streamSequence`: 1
+- `entities[0].type`: `streamInfo`
+- `entities[0].streamType`: `informative`. If skipping the informative update phase and sending the first content chunk, set to `streaming`.
+- `entities[0].streamSequence`: 1
 
 ```json
-//Ex: An agent sends the first request with content & the content is informative loading message.
 POST /conversations/<conversationId>/activities HTTP/1.1
+
 {
   "type": "typing",
   "serviceurl": "<https://smba.trafficmanager.net/amer/>",
@@ -197,35 +217,51 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US",
-  "replyToId": "<userMessageId>", // ID of the user's message that the agent is responding to. Required in conversations other than one-on-one chats.
-  "text": "Searching through documents...", //(required) first informative loading message.
+  "replyToId": "<userMessageId>",
+  "text": "Searching through documents...",
   "entities":[
     {
       "type": "streaminfo",
-      "streamType": "informative", // informative or streaming; default= streaming.
-      "streamSequence": 1 // (required) incremental integer; must be present for start and continue streaming request, but must not be set for final streaming request.
+      "streamType": "informative",
+      "streamSequence": 1
     }
-  ],
+  ]
 }
 ```
 
-The `201 Created` response will include a JSON payload with an `id` property whose value must be used as the `entities.streamId` value in subsequent requests.
+The `201 Created` response will include a JSON payload with an `id` property whose value must be used as the `entities.streamId` value in all subsequent requests.
 
-To continue, send additional requests with values as follows:
+## Send informative messages and message content updates
+
+Once the stream is open, send additional requests using the stream's ID to display informative updates and stream message content. Include the following payload follows:
 
 - `type`: `typing`
-- `replyToId`: The ID of the user message being responded to.
-- `text`: The new informative update text to display, or the full contents of the message generated so far.
-- `entities.type`: `streamInfo`
-- `entities.streamId`: The `id` value obtained from the initial response
-- `entities.streamType`: `informative` if setting a new informative update text, `streaming` if updating the message content
-- `entities.streamSequence`: \<Incremented with each request sent\>
+- `replyToId`: The ID of the user message being responded to. Optional in one-on-one conversations, but streaming and informative updates will render in a legacy experience.
+- `text`: The new informative update text to display, or the entirety of the message content generated to this point
+- `entities[0].type`: `streamInfo`
+- `entities[0].streamType`: `informative` if setting a new informative update text, `streaming` if updating the message content
+- `entities[0].streamSequence`: \<Incremented with each request sent\>
 
-Note that, when providing message content, `text` must contain a full message update. It must include all content sent to that point, unchanged, appended with the most recently generated chunk of content being added. Previously sent content can't be changed while streaming.
+Once you begin sending message content, do not send any further informative updates, as they will not be displayed.
 
-Once you begin providing message content, do not send any further informative updates.
+When streaming message content, each request represents a full message update, not just new content to be appended. Accumulate content locally as it is generated and send the entire accumulated value as the payload's `text` with each request. Requests that attempt to change content provided in previous request will result in a `403 ContentStreamNotAllowed` error with the message `Request streamed content should contain the previously streamed content`.
 
-The service rate-limits requests to 1 per second, per stream. Buffer generated content as necessary.
+Each streaming request can include additional `entities` values representing message features, but most features will not be rendered in the Teams client until the stream is closed.
+
+The service is rate-limited to 1 per second, per stream. Buffer generated content to throttle requests as necessary.
+
+### Close the stream
+
+Once message generation is complete, close the stream by sending a message activity with the following payload properties:
+
+- `type`: `message`
+- `replyToId`: The ID of the user message being responded to. Optional in one-on-one conversations, but streaming and informative updates will render in a legacy experience.
+- `text`: The complete message contents
+- `entities[0].type`: `streamInfo`
+- `entities[0].streamId`: The `id` value obtained from the initial response
+- `entities[0.streamType`: `final`
+
+Do not include `entities[0].streamSequence` in the final request payload.
 
 ---
 
