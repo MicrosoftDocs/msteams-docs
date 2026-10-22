@@ -734,7 +734,6 @@ Remember the following:
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
-* You can have up to five screenshots per listing. You must have a minimum of three and maximum of five screenshots in your app listing. [*Must fix*]
 * Use mockups that accurately depict the app’s actual UI for the benefit of end-users. Screenshots must accurately depict the app’s actual UI or scenarios relevant to and related to the app. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-suppliement-screenshot.png" alt-text="Screenshot shows the failed scenario of supplement content used in screenshot.":::
@@ -746,10 +745,6 @@ Remember the following:
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-fail-app-functionality.png" alt-text="Screenshot shows the failed scenario of app functionality or integration.":::
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
-
-* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Good-to-fix*]
-
-   :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
 
 * You must provide captions in your screenshots to let the user clearly understand the app capability. [*Must fix*]
 
