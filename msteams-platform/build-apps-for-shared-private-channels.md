@@ -494,7 +494,7 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 Use the Microsoft Graph invite API to access the document library of the SharePoint in Microsoft 365 site linked to a shared or private channel.
 
 > [!NOTE]
-> For any requirements on Mailbox or Calendar scenarios, see [Feature request and general help](feedback.md).
+> For any requirements on Mailbox or Calendar scenarios, see [Feature request and general help](developer-support-feedback.md).
 
 ### Access SharePoint storage for channel files by using Graph API
 
