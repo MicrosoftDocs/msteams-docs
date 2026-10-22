@@ -492,9 +492,9 @@ It's important to understand that updating the configuration file has three majo
 
 * Bot or agent features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
 
-* Agents Playground doesn't support all types of cards except Adaptive Cards.
+* Agents Playground doesn't support all types of cards except Adaptive Cards. Other card types aren't supported.
 
-* Agents Playground doesn't support the following Adaptive Card features:
+* Within Adaptive Cards, Agents Playground doesn't support the following Adaptive Card features:
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
