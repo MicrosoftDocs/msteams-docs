@@ -51,8 +51,6 @@ Message content streaming appends chunks of message content into a conversation 
 
 Emitting the first content chunk creates the bubble and stops the display of informative updates. The bubble's position in the conversation remains fixed as streamed content is appended, and the bubble animates when the agent signals that streaming is complete.
 
-<!-- TODO also mention stuff that only renders when message is finalized -->
-
 Streamed messages sent using extended Markdown mode render their formatting progressively to provide a smooth reading experience. See [Format agent messages](how-to/format-your-bot-messages.md) for more information.
 
 ### Stop button
@@ -83,9 +81,11 @@ Some messaging features, such as attachment, AI labels, feedback buttons, and se
 
 ## Implement streaming with Teams SDK
 
+The stream is exposed on the incoming message activity context. Use the stream object to send informative updates, emit content chunks, and finalize the response when generation is complete. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing each request. If you don't close the stream explicitly, the SDK finalizes and closes it automatically when the handler ends.
+
 ::: zone pivot="teams-sdk-csharp"
 
-Use `TeamsStreamingWriter` to write informative updates and stream content. Finalize the writer after appending all content chunks. When the streamed response uses richer formatting, set the message activity's `TextFormat` property to `extendedmarkdown`.
+Use `TeamsStreamingWriter` to write informative updates and stream content from the message context. Finalize the writer after appending all content chunks, or let the SDK close the stream automatically when the handler returns. When the streamed response uses richer formatting, set the message activity's `TextFormat` property to `extendedmarkdown`. Some message features, such as AI labels or cards, are rendered only after the stream closes.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -117,25 +117,13 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-The emitted content can include markdown headings, task lists, and emphasis to improve readability while the message streams in.
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async (context, cancellationToken) =>
-{   
-   context.Stream.Update("Reviewing the latest project status...");
-   await Task.Delay(1000);
-
-   context.Stream.Emit("## Project status\n\n- [x] API tests passed\n- [x] Deployment checks completed\n- [ ] Final sign-off pending");
-});
-```
+The emitted content can include markdown headings, task lists, and emphasis to improve readability while the message streams in. If you include additional message features such as an AI label or card, they render only after the stream is closed.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-Use `stream.update` to write informative updates before emitting message content. `stream.update` can be called multiple times with different update text.
+Use the `stream` object on the incoming message activity context to send informative updates and emit content chunks. `stream.update` can be called multiple times with different update text, and `stream.emit` writes a chunk of message content into the active conversation bubble. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing requests. If you don't close the stream explicitly, the SDK finalizes it automatically when the message handler exits.
 
 Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
@@ -154,6 +142,7 @@ app.on('message', async ({ activity, stream }) => {
     'The rollout is still on track for Friday.'
   ].join('\n');
 
+  // AI labels and cards render only after the stream is closed.
   stream.emit(new MessageActivityInput(summary).withTextFormat('extendedmarkdown'));
 });
 ```
@@ -164,7 +153,7 @@ The same pattern works for multi-part responses that stream progressively, using
 
 ::: zone pivot="teams-sdk-python"
 
-Use `stream.update` to write informative updates before emitting message content. `stream.update` can be called multiple times with different update text.
+Use the `stream` object on the incoming message activity context to send informative updates and emit content chunks. `stream.update` can be called multiple times with different update text, and `stream.emit` writes a chunk of message content into the active conversation bubble. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing requests. If you don't close the stream explicitly, the SDK finalizes it automatically when the message handler exits.
 
 Use `stream.emit` to write a chunk of content to the stream. Chunks will be rendered into the message as soon as they are received by Teams. After the first call to `stream.emit`, informative updates will no longer be shown and `stream.update` will have no effect.
 
@@ -183,6 +172,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 The rollout is still on track for Friday.
 """
 
+    # AI labels and cards render only after the stream is closed.
     ctx.stream.emit(MessageActivityInput(text=status).with_text_format("extendedmarkdown"))
 ```
 
