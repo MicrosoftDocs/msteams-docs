@@ -3,7 +3,7 @@ title: Format Text in Cards
 description: Learn about card text formatting with Markdown and HTML, how to design responsive Adaptive Cards, and other elements to create actionable Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 10/16/2026
+ms.date: 10/22/2026
 ---
 
 # Format cards in Teams
@@ -74,7 +74,6 @@ On the desktop, Adaptive Card Markdown formatting appears as shown in the follow
 :::image type="content" source="../../assets/images/Cards/Adaptive-markdown-desktop-client.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams desktop client.":::
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
-
 :::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams iOS platform.":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
