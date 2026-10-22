@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/feedback.md",
+      "redirect_url": "developer-support-feedback",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "msteams-platform/toolkit/TeamsFx-SDK.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-SDK",
       "redirect_document_id": false
