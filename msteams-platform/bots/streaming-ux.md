@@ -85,7 +85,7 @@ Some messaging features, such as attachment, AI labels, feedback buttons, and se
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use `TeamsStreamingWriter` to write informative updates and stream content. Finalize the writer after appending all content chunks.
+Use `TeamsStreamingWriter` to write informative updates and stream content. Finalize the writer after appending all content chunks. When the streamed response uses richer formatting, set the message activity's `TextFormat` property to `extendedmarkdown`.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -97,17 +97,22 @@ teams.OnMessage(async (context, cancellationToken) =>
   await writer.SendInformativeUpdateAsync("Reviewing the latest project status...", cancellationToken);
   await Task.Delay(1000, cancellationToken);
 
-  string summary = """
-  ## Project status
+  var activity = new Activity
+  {
+    Type = ActivityTypes.Message,
+    TextFormat = "extendedmarkdown",
+    Text = """
+    ## Project status
 
-  - [x] API tests passed
-  - [x] Deployment checks completed
-  - [ ] Final sign-off pending
+    - [x] API tests passed
+    - [x] Deployment checks completed
+    - [ ] Final sign-off pending
 
-  The release is on track for Friday.
-  """;
+    The release is on track for Friday.
+    """
+  };
 
-  await writer.AppendResponseAsync(summary, cancellationToken);
+  await writer.AppendResponseAsync(activity.Text, cancellationToken);
   await writer.FinalizeResponseAsync(cancellationToken: cancellationToken);
 });
 ```
