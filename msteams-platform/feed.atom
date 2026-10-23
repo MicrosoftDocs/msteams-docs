@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-10-08T00:00:00Z</updated>
+	<updated>2026-10-22T00:00:00Z</updated>
+	<entry>
+		<updated>2026-10-22T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-update-agent-sessions-preview-ended-will-not-be-released</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-update-agent-sessions-preview-ended-will-not-be-released"/>
+		<title type="html"><![CDATA[Preview update: Agent sessions preview ended, will not be released]]></title>
+		<summary type="html"><![CDATA[After careful consideration of the agent sessions feature, released in public preview in September, Teams has decided not to move forward with it. Preview availability for sessions has ended and it will not be released, but keep an eye out for updates about coming features that will help users and agents structure their conversations in Teams.]]></summary>
+		<content type="html"><![CDATA[<p>After careful consideration of the agent sessions feature, released in public preview in September, Teams has decided not to move forward with it. Preview availability for sessions has ended and it will not be released, but keep an eye out for updates about coming features that will help users and agents structure their conversations in Teams.</p><p>The enabling <code>supportsSessions</code> property has been removed from the developer preview version of the app manifest schema. If it's still present in your app's manifest, remove it and update your app in all installed scopes.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-10-08T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-extended-markdown-formatting-for-agent-messages</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: New admin controls for meeting transcripts]]></title>
 		<summary type="html"><![CDATA[New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center. Using these controls, administrators can:]]></summary>
 		<content type="html"><![CDATA[<p>New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center. Using these controls, administrators can:</p><ul><li>Deny all transcript access via Graph API</li><li>Enable access only to transcripts that do not include speaker attribution</li></ul><p>Developers should ensure their agents and apps clearly communicate expectations and requirements about transcript access, gracefully handle denied access, and correctly handle the non-attributed transcript format.</p><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording">Graph API access to transcripts and recordings</a>.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-07-30T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-targeted-messages-and-agent-slash-commands</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-targeted-messages-and-agent-slash-commands"/>
-		<title type="html"><![CDATA[Released: Targeted messages and agent slash commands]]></title>
-		<summary type="html"><![CDATA[The general-availability release of targeted messaging and agent slash commands enables exciting new agent interaction patterns in collaborative settings.]]></summary>
-		<content type="html"><![CDATA[<p>The general-availability release of targeted messaging and agent slash commands enables exciting new agent interaction patterns in collaborative settings.</p><p>Targeted messages are private messages between a user and an agent in a group conversation. Users can send targeted messages to agents to request information or direct background work within the context of a conversation without distracting others. Agents can respond privately using their own targeted messages.</p><p>Developers can use agent slash commands to surface agent functionality as named commands that users can activate from chat. Activating a command from the menu will send it as a chat message that the agent can detect and act on.</p><p>All agents that operate in group conversations are eligible to implement targeted message sends to individual users. App manifest updates are required to register agent slash commands and to enable users to send targeted messages to an agent. See the <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/targeted-messages">targeted messages</a> and <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/agent-slash-commands">agent slash commands</a> documentation to start building these new features into your agent.</p>]]></content>
 	</entry>
 </feed>
