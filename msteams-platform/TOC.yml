@@ -333,7 +333,10 @@
       displayName: OAuth Identity Providers, authentication using IdP
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Add authentication to bot app
+    - name: Configure OAuth authentication for bots
+      href: bots/how-to/authentication/configure-oauth.md
+      displayName: OAuth authentication, bots
+    - name: Tutorial - Add OAuth authentication
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
     - name: Add authentication to message extension app
