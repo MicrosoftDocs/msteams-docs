@@ -60,16 +60,16 @@ To add RSC permission in app manifest:
 
 1. Add the [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
-    |Name| Type | Description|
+    |Name|Type|Description|
     |---|---|---|
-    |`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-    |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
+    |`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+    |`resource`|String|This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 
 1. Add permissions needed by your app.
 
-    |Name| Type | Description|
+    |Name|Type|Description|
     |---|---|---|
-    |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in app manifest](/microsoft-365/extensibility/schema/root-authorization). |
+    |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in app manifest](/microsoft-365/extensibility/schema/root-authorization).|
 
     If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `authorization`.
 
@@ -268,11 +268,11 @@ Example for RSC permissions for user:
 
 Add the [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
-|Name| Type | Description|
+|Name|Type|Description|
 |---|---|---|
-|`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
-|`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
+|`id`|String|Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`resource`|String|This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Resource-specific consent for Teams agents and apps](resource-specific-consent.md).|
 
 If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `applicationPermissions`.
 

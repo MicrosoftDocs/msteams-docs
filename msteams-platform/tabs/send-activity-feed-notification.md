@@ -39,7 +39,7 @@ The components include:
 |Counter|Description|
 |----------|-----------|
 |1|**Avatar**: Shows who initiated the activity.|
-|2|**Activity type or app icon**: The activity type or app icon depicts the type of activity. For app notifications, the line icon gets replaced with an app icon. |
+|2|**Activity type or app icon**: The activity type or app icon depicts the type of activity. For app notifications, the line icon gets replaced with an app icon.|
 |3|**Title: Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
 |4|**Timestamp**: Shows when the activity happened.|
 |5|**Text preview**: Shows a truncated line from the start of the notification.|
@@ -175,7 +175,7 @@ This section describes the updates that need to be added to the app manifest. En
 |Parameter|Type|Description|
 |:---|:---|:---|
 |type|string|The type of the RSC permission.|
-|name|string|The name of the RSC permission. For more information, see [supported RSC permissions.](../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions) |
+|name|string|The name of the RSC permission. For more information, see [Resource-specific consent for Teams agents and apps](../graph-api/rsc/resource-specific-consent.md).|
 
 ### Install the Teams app
 
