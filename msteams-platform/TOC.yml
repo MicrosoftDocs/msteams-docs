@@ -336,7 +336,7 @@
     - name: Configure OAuth authentication for bots
       href: bots/how-to/authentication/configure-oauth-authentication.md
       displayName: OAuth authentication, bots
-    - name: Add authentication to bot app
+    - name: Tutorial - Add OAuth authentication
       href: bots/how-to/authentication/add-authentication.md
       displayName: Loop, validDomain, valid domain, validdomain
     - name: Add authentication to message extension app
