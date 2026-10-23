@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.author: vikasalmal
 ms.topic: reference
 ms.owner: vishachadha
-ms.date: 10/19/2026
+ms.date: 10/23/2026
 ---
 
 # Declare RSC permission requirements for an agent or app
@@ -29,6 +29,8 @@ Before you declare permissions:
 * Identify the [RSC permissions](resource-specific-consent.md#supported-rsc-permissions) and resource scopes required by your app. Request only the permissions that its features need.
 * Have the existing application (client) ID available for the app's `webApplicationInfo.id` property.
 * Ensure your organization's policies allow the required consent. Work with your administrator if consent is blocked. For related admin guidance, see [Grant and manage consent to Teams app permissions](/microsoftteams/manage-consent-app-permissions#view-resource-specific-consent-permissions-of-an-app).
+
+For custom app testing, ensure your organization allows custom app uploads and use an app configured for the organization where you install it. For packaging and installation prerequisites, see [Upload your app in Teams](../../concepts/deploy-and-publish/apps-upload.md).
 
 <a name="add-rsc-permissions-to-your-teams-app"></a>
 
@@ -226,7 +228,7 @@ Example for RSC permissions for a user:
 
 ## Verify the RSC permissions granted to your app
 
-Before you verify grants, [upload and install your app in Teams](../../concepts/deploy-and-publish/apps-upload.md) in the team, chat, or personal scope you want to test. Have an authorized user consent to the requested permissions.
+Before you verify grants, install your app in the team, chat, or personal scope you want to test. For custom app installation, see [Upload your app in Teams](../../concepts/deploy-and-publish/apps-upload.md). Have an authorized user consent to the requested permissions.
 
 > [!IMPORTANT]
 >
@@ -234,7 +236,7 @@ Before you verify grants, [upload and install your app in Teams](../../concepts/
 >
 > "Custom apps must come from the same organization that they are being installed in, and the webApplicationInfo.id must be registered in the same organization."
 >
-> The corresponding error identifier is `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`. For upload prerequisites and troubleshooting, see [Upload your app in Teams](../../concepts/deploy-and-publish/apps-upload.md).
+> The corresponding error identifier is `WebApplicationInfoIdOfSideloadedAppMustBeInTheSameTenantAsUser`. Check that you're using the intended organization in Teams and that `webApplicationInfo.id` references an app registration in that organization. For the custom app upload procedure, see [Upload your app in Teams](../../concepts/deploy-and-publish/apps-upload.md).
 
 Verify grants after the first installation, after changing permission requirements and completing the applicable [app update and consent flow](/microsoftteams/apps-update-experience), or when troubleshooting an access-denied response. This check distinguishes permissions declared in the manifest from permissions actually granted on a specific resource.
 
