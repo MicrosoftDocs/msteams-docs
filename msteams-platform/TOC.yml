@@ -334,7 +334,7 @@
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
     - name: Configure OAuth authentication for bots
-      href: bots/how-to/authentication/configure-oauth-authentication.md
+      href: bots/how-to/authentication/configure-oauth.md
       displayName: OAuth authentication, bots
     - name: Tutorial - Add OAuth authentication
       href: bots/how-to/authentication/add-authentication.md
