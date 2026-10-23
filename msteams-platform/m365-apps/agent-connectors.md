@@ -2,7 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-ms.date: 06/19/2026
+ms.date: 10/23/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -92,7 +92,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. Th
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client registration
 - **AzureKeyVault**: Secrets stored in your own Azure Key Vault instance
-- **ApiHubVault**(preview): API Hub-managed connection/configuration referenced by ID
+- **ConnectionVault**: Connection configuration referenced by ID
 
 ### Use OAuth authentication
 
@@ -168,32 +168,25 @@ To set up Azure Key Vault authentication:
 1. Register the secret reference in [Developer Portal](https://dev.teams.microsoft.com) and note the registration ID.
 1. Use the registration ID as the `referenceId` in your manifest.
 
-### Use API Hub Vault authentication(preview)
+### Use Connection Vault authentication
 
-> [!NOTE]
->
-> `ApiHubVault` is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+Use `ConnectionVault` to reference the connection configuration for your MCP connector without including credentials in your app manifest.
 
-API Hub-managed connections allow your MCP server to use connection/configuration provisioned and managed externally by API Hub. This approach is useful when your MCP server infrastructure is integrated with API Hub for centralized connection management and credential lifecycle operations.
-
-Configure the authorization type as `ApiHubVault`:
+Within `agentConnectors[].toolSource.remoteMcpServer`, set `authorization.type` to `ConnectionVault` and `authorization.referenceId` to the reference supplied for your connector:
 
 ````json
-"authorization": {
-  "type": "ApiHubVault",
-  "referenceId": "api-hub-connection-id"
+{
+  "remoteMcpServer": {
+    "mcpServerUrl": "https://mcp.example.com/mcp",
+    "authorization": {
+      "type": "ConnectionVault",
+      "referenceId": "shared_example"
+    }
+  }
 }
 ````
 
-The `referenceId` points to an API Hub-issued identifier that corresponds to your provisioned API Hub connection.
-
-To set up API Hub authentication:
-
-1. Provision your MCP server connection in API Hub and obtain the API Hub-issued connection identifier.
-1. Register the connection reference in [Developer Portal](https://dev.teams.microsoft.com) and note the registration ID.
-1. Use the registration ID as the `referenceId` in your manifest.
-
-This approach provides centralized management of your connector's authentication details and supports rotation and updates without requiring manifest republication.
+Replace the example endpoint and `shared_example` placeholder with your MCP server endpoint and connector reference. The `referenceId` isn't a credential; don't put API keys, tokens, or client secrets in this field.
 
 ### Use no authentication
 
