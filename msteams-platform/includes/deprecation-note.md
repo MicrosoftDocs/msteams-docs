@@ -1,6 +1,6 @@
 > [!IMPORTANT]
 >
-> Office 365 Connectors in Teams, including connector-based Incoming Webhooks, were retired in May 2026. The retirement rolled out from May 18 to May 22, 2026. To receive webhook requests and post messages in Teams, use the Workflows app. For details, see [Retirement of Office 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+> Office 365 Connectors in Teams, including connector-based Incoming Webhooks, were retired in May 2026. To receive webhook requests and post messages in Teams, use the Workflows app. For details, see [Retirement of Office 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
 >
 > **How can you create a webhook in Teams**?
 >
