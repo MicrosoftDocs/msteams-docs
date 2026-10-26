@@ -2,7 +2,7 @@
 title: Use threads in channels and one-on-one agent chats in Microsoft Teams
 description: Understand agent reply behavior and conversation context when using threads in Teams channels and one-on-one agent chats.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 10/26/2026
 ---
 
