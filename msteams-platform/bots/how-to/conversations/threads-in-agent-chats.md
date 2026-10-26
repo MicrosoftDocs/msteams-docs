@@ -37,7 +37,7 @@ In one-on-one chats, let users decide when to start a thread. Use the default co
 
 Use the Teams SDK's send or reply methods on the context of the received activity for this default behavior. The SDK carries the routing context for the response, so your handler doesn't need to construct a thread identifier. For existing channel-thread messaging guidance and examples, see [Threaded conversations](channel-and-group-conversations.md#threaded-conversations).
 
-<!-- TODO: SDK support for the behavior described above. Add implementation examples after the SDK design is finalized. -->
+TODO: SDK support for the behavior described above. Add implementation examples after the SDK design is finalized.
 
 ### Threaded replies and quoted replies
 
@@ -57,7 +57,7 @@ For an AI-powered agent, distinguish the conversation used to route a response f
 
 Treat conversation IDs as opaque values. Don't parse or construct them to infer a relationship between a chat and a thread.
 
-<!-- TODO: The SDK design includes related-chat information in channelData, but the exact properties and usage are pending. -->
+TODO: The SDK design includes related-chat information in channelData, but the exact properties and usage are pending.
 
 ## Considerations for proactive messages
 
@@ -65,7 +65,7 @@ The default behavior described above applies when responding to a received messa
 
 For channels, the existing Teams SDK guidance describes targeting a thread with its conversation ID and root-message ID. Don't assume that the same targeting pattern applies to one-on-one chat threads. For the existing channel pattern, see [Proactive threading](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging#proactive-threading). For general proactive messaging guidance, see [Send proactive messages](send-proactive-messages.md).
 
-<!-- TODO: Confirm whether and how agents can intentionally start a new one-on-one thread or proactively target an existing one. -->
+TODO: Confirm whether and how agents can intentionally start a new one-on-one thread or proactively target an existing one.
 
 ## See also
 
