@@ -37,7 +37,7 @@ If you already have hosting resources, skip to [Create Azure Bot resource regist
 - The following sample:
 
     | Sample |
-    |:---|
+    | :--- |
     | **Bot Auth Quickstart** in [cs-auth-sample][teams-bot-auth-quickstart-cs] |
     | **Bot Auth Quickstart** in [js-auth-sample][teams-bot-auth-quickstart-js] |
     | **Bot Auth Quickstart** in [py-auth-sample][teams-bot-auth-quickstart-py] |
@@ -276,9 +276,7 @@ The bot code uses the connection name to retrieve user authentication tokens. Th
 
 ## Prepare the bot sample code
 
-Use one implementation of the Bot Auth Quickstart sample. Keep credentials out of source control and use the sample's local configuration or your hosting platform's secret settings.
-
-The linked samples don't all use the same Teams SDK authentication APIs:
+Use one implementation of the Bot Auth Quickstart sample. Keep credentials out of source control and use the sample's local configuration or your hosting platform's secret settings. The linked samples don't all use the same Teams SDK authentication APIs:
 
 | Implementation | SDK dependency in the sample | Authentication API version |
 | --- | --- | --- |
