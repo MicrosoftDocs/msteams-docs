@@ -3,7 +3,7 @@ title: Create & Explore Card Types in Teams
 description: In this module, learn about cards and card actions available to bots in Teams, and how to create hero, thumbnail, and Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
-ms.date: 09/16/2024
+ms.date: 10/13/2026
 ---
 
 # Types of cards
@@ -56,7 +56,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v1.x) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
+| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v1.x) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
@@ -89,7 +89,7 @@ Images must be at most 1024 × 1024 pixels and in PNG, JPEG, or GIF format. Anim
 
 The following table provides the properties of inline card images:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
 | url | URL | HTTPS URL to the image. |
 | alt | String | Accessible description of the image. |
@@ -330,7 +330,7 @@ A card that typically contains a single large image, one or more buttons, and te
 
 The following table provides the features that support hero cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -338,10 +338,10 @@ The following table provides the features that support hero cards:
 
 The following table provides the properties of a hero card:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
-| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum two lines. |
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 16:9. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum six. |
@@ -397,18 +397,18 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 The following table provides the features that support list cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔️ | ❌ | ❌ |✔️ |
+| ✔️ | ❌ | ❌ | ✔️ |
 
 ### Properties of a list card
 
 The following table provides the properties of a list card:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum two lines.|
-| items | Array of list items | Set of items applicable to the card.|
+| title | Rich text | Title of the card. Maximum two lines. |
+| items | Array of list items | Set of items applicable to the card. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
 ### Example of a list card
@@ -475,7 +475,7 @@ You can work with a connector card for Microsoft 365 Groups that provides a flex
 
 The following table provides the features that support connector cards for Microsoft 365 Groups:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ✔️ | ❌ |
 
@@ -483,10 +483,10 @@ The following table provides the features that support connector cards for Micro
 
 The following table provides the properties of the connector card for Microsoft 365 Groups:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum two lines. |
-| summary | Rich text | Required if the card doesn't contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might read **New tweet from @someuser** without mentioning the content of the tweet itself.|
+| summary | Rich text | Required if the card doesn't contain a text property, otherwise optional. The summary property is typically displayed in the notification pop-up in Teams, as a way to quickly determine what the card is all about.<br><br> **Do** always include a summary.<br> **Don't** include the details in the summary. For example, for a Twitter post, a summary might read **New tweet from @someuser** without mentioning the content of the tweet itself. |
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the `accentColor` provided from the application manifest. |
 
@@ -500,7 +500,7 @@ The important difference between using connector cards from a connector and usin
 
 | Connector | Bot |
 | --- | --- |
-| The endpoint receives the card payload through HTTP POST. | The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.|
+| The endpoint receives the card payload through HTTP POST. | The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot. |
 
 Each connector card can display a maximum of 10 sections, and each section can contain a maximum of five images and five actions.
 
@@ -599,7 +599,7 @@ Teams supports receipt card, which enables a bot to provide a receipt to the use
 
 The following table provides the features that support receipt cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -673,7 +673,7 @@ The sign in action can be used from any card in Teams, not just the sign in card
 
 The following table provides the features that support sign in cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ | ✔️ |
 
@@ -692,7 +692,7 @@ You can work with a thumbnail card that is used for sending a simple actionable 
 
 The following table provides the features that support thumbnail cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -702,10 +702,10 @@ The following table provides the features that support thumbnail cards:
 
 The following table provides the properties of a thumbnail card:
 
-| Property | Type  | Description |
+| Property | Type | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum two lines.|
-| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
+| title | Rich text | Title of the card. Maximum two lines. |
+| subtitle | Rich text | Subtitle of the card. Maximum two lines. |
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 1:1 square. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
@@ -775,7 +775,7 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 The following table provides the features that support carousel collections:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ | ✔️ |
 
@@ -969,7 +969,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 The following table provides the features that support list collections:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -998,7 +998,7 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 
 ## Code samples
 
-|S.No.| Description|.NET|Node.js|Manifest
+|S.No.|Description|.NET|Node.js|Manifest
 |--|--|--------------------------------------------------------|-----|-----|
 |1|This sample demonstrates using a bot to send multiple card types in Microsoft Teams, including Adaptive, Hero, Thumbnail, and OAuth cards. It covers setup, deployment, and app installation instructions.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-all-cards/csharp/demo-manifest/bot-all-cards.zip)
 
