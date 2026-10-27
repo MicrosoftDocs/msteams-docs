@@ -17,6 +17,9 @@ The permissions described in this article are only relevant to agents that are i
 > [!NOTE]
 > This capability is supported in Microsoft Teams commercial environments, [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
 
+> [!NOTE]
+> Teams doesn't deliver messages authored by bots, including the Workflows (Power Automate Flow) bot, to other bots, even if the receiving bot has the `ChannelMessage.Read.Group` RSC permission. Only user-authored messages are delivered.
+
 ## Update declared RSC permissions
 
 To configure an agent to receive all messages in group chats and/or channels, include one or both of the following RSC permission declarations in the agent's app manifest:

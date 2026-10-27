@@ -17,6 +17,7 @@ By default, agents in group chats and channels only receive messages when they'r
 > [!NOTE]
 >
 > * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
+> * Teams doesn't deliver messages authored by bots, including the Workflows (Power Automate Flow) bot, to other bots, even if the receiving bot has the `ChannelMessage.Read.Group` RSC permission. Only user-authored messages are delivered.
 > * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
 ## Design guidelines
