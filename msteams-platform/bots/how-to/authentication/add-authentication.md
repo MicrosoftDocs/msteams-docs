@@ -2,7 +2,7 @@
 title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
-ms.date: 04/14/2026
+ms.date: 10/27/2026
 ---
 
 # Add authentication to your Teams bot
