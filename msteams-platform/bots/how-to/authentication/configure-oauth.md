@@ -1,12 +1,12 @@
 ---
-title: Configure OAuth authentication for a Teams bot
+title: Configure OAuth authentication for an agent
 description: Learn how to configure an identity provider and Azure Bot OAuth connection for an existing Teams bot without deploying it to Azure App Service.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/26/2026
+ms.date: 10/27/2026
 ---
 
-# Configure OAuth authentication for a Teams bot
+# Configure OAuth authentication for an agent
 
 OAuth 2.0 lets your bot access an API, such as Microsoft Graph, on behalf of a user without collecting the user's password. With the Azure Bot Token Service, you configure an identity provider connection, and the service handles token acquisition, storage, and refresh.
 
