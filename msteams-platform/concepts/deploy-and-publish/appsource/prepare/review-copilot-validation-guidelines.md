@@ -164,7 +164,6 @@ For utilising `worker_agents` property in your Declarative agent manifest, ensur
 You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
-* Apps with agent functionality must have at least one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#agent-store-validation-guidelines)
 

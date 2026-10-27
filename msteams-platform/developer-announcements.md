@@ -2,13 +2,22 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/08/2026
+ms.date: 10/22/2026
 ---
 
 # Teams Platform developer announcements
 
-Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your
-feed reader as they're published.
+Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Preview update: Agent sessions preview ended, will not be released
+
+*October 22, 2026*
+
+After careful consideration of the agent sessions feature, released in public preview in September, Teams has decided not to move forward with it. Preview availability for sessions has ended and it will not be released, but keep an eye out for updates about coming features that will help users and agents structure their conversations in Teams.
+
+The enabling `supportsSessions` property has been removed from the developer preview version of the app manifest schema. If it's still present in your app's manifest, remove it and update your app in all installed scopes.
+
+---
 
 ## Released: Extended Markdown formatting for agent messages
 
@@ -465,7 +474,7 @@ Support for apps in private channels is available in developer preview. For more
 | 20/03/2023 | Bots are available in Department of Defense (DoD) environment. | Build bots > [Overview](bots/what-are-bots.md) |
 | 20/03/2023 | Message extensions are available in Department of Defense (DoD) environment. | Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 | 28/02/2023 | Use the resources and best practices to support the rollout of your Teams app in your customers' organizations and facilitate adoption of your app. | Publish your app > adoption > [Drive customer adoption of your app](promote-app-adoption.md) |
-| 27/02/2023 | Use Changelog to view the latest updates on Developer Portal about features, recent changes in APIs, and important bug fixes. | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md#changelog-for-developer-portal) |
+| 27/02/2023 | Use Changelog to view the latest updates on Developer Portal about features, recent changes in APIs, and important bug fixes. | Tools and SDKs > Developer Portal for Teams > [Overview](concepts/build-and-test/teams-developer-portal.md) |
 | 23/02/2023 | Enable single sign-on (SSO) authentication to access Adaptive Cards Universal Actions in a bot. | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
 | 23/02/2023 | Enable third party authentication to add user-specific views in instances where an Adaptive Card with Universal Action is shared. | Add authentication > Use third party IdP authentication > [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md) |
 | 21/02/2023 | Send notifications to specific participants on a meeting stage with targeted in-meeting notification. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
