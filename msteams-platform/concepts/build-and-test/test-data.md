@@ -17,7 +17,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
-5. [Install the Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0&viewFallbackFrom=graph-powershell).
+5. [Install the Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0&viewFallbackFrom=graph-powershell&preserve-view=true).
 
 > [!NOTE]
 > You must have Global Administrator permissions in the tenant to run the scripts.
