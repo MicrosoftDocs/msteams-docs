@@ -1,12 +1,12 @@
 ---
-title: "Tutorial: Add OAuth authentication to a Teams bot"
+title: Tutorial: Add OAuth authentication to a Teams bot
 description: Create an Azure Bot resource, configure OAuth and Teams SSO with Microsoft Entra ID, deploy a Teams SDK sample to Azure, and test sign-in in Teams.
 ms.topic: tutorial
 ms.localizationpriority: high
 ms.date: 10/23/2026
 ---
 
-# Tutorial: Add OAuth authentication to a Teams bot
+# Tutorial - Add OAuth authentication to a Teams bot
 
 <a name="add-authentication-to-your-teams-bot"></a>
 
