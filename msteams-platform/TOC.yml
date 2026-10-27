@@ -333,7 +333,7 @@
       displayName: OAuth Identity Providers, authentication using IdP
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
-    - name: Configure OAuth authentication for an agent
+    - name: Add OAuth authentication to an agent
       href: bots/how-to/authentication/configure-oauth.md
       displayName: OAuth authentication, bots
     - name: Add authentication to bot app
