@@ -1,12 +1,9 @@
 ---
 title: Teams Platform Tools and SDKs
-author: nickwalkmsft
-description: TODO
+description: Teams platform tools and SDKs help you build agents and apps for Microsoft Teams. Explore Teams SDK, Agents Toolkit, and Developer Portal to start building today.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: nickwalk
-ms.reviewer: nickwalk
-ms.date: 08/18/2026
+ms.date: 10/28/2026
 ---
 
 # Teams Platform tools and SDKs

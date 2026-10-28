@@ -2,10 +2,7 @@
 title: Port a Slack Bolt for JavaScript App to Teams
 description: Port a Slack Bolt for JavaScript app to Teams with this step-by-step guide. Compare Slack and Teams concepts, then port handlers, cards, and auth code.
 ms.topic: how-to
-ms.date: 08/31/2026
-author: nickwalkmsft
-ms.author: nickwalk
-ms.reviewer: nickwalk
+ms.date: 10/28/2026
 ---
 
 # Port a Slack Bolt for JavaScript app to Teams
@@ -36,7 +33,7 @@ Let's take a look at some similarities and differences between Slack and Teams c
 | **Slash commands** | [Slash commands](agent-slash-commands.md), declared in the app manifest and made discoverable via an autocomplete menu. Commands can be sent as private targeted messages, or visible to all users in a conversation via @mention. Commands are sent as messages: listen for commands with an `app.message` handler, either via `app.message('/command')` or `app.message(regexp)`. | Slack Bolt has a dedicated `app.command` handler for commands in the Slack app manifest. Slash commands are not displayed to other users in collaborative contexts. |
 | **Workflows** | Teams integrates with Power Automate for workflows. Workflows are not a component of Teams SDK. | Slack Workflows are integrated with Slack Bolt. |
 | **UI dialogs** | Adaptive Cards can include actions that open UI dialogs with an embedded website or another adaptive card. Dialogs must be opened via an adaptive card action and thus cannot be opened directly via a slash command. | Block Kit UI modals can be opened via slash commands (using `client.views.open`) or Block Kit actions. |
-| **AI strategy** | Teams has unique AI-native features for things like user feedback, AI-generated labels, prompt suggestions, streaming, and citations. We also feature an optional `ChatPrompt` class to simplify integrating LLMs into your bot. Leverage grounded search via the [Microsoft 365 Copilot Retrieval Graph API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview). AI features are generally designed for use in any conversation type. | Slack has a dedicated `Assistant` class for AI interactions in a dedicated agent side panel view, which differs from Teams's strategy of using existing bot interaction patterns. Can still use AI in other conversation types using standard bot APIs. Can use Slack Data Access API for grounded search. |
+| **AI strategy** | Teams has unique AI-native features for things like user feedback, AI-generated labels, prompt suggestions, streaming, and citations. Teams SDK provides the platform and conversational interface for your app, while letting you choose the underlying intelligence. Leverage grounded search via the [Microsoft 365 Copilot Retrieval Graph API](/microsoft-365-copilot/extensibility/api/ai-services/retrieval/overview). AI features are generally designed for use in any conversation type. | Slack has a dedicated `Assistant` class for AI interactions in a dedicated agent side panel view, which differs from Teams's strategy of using existing bot interaction patterns. Can still use AI in other conversation types using standard bot APIs. Can use Slack Data Access API for grounded search. |
 | **AI user feedback** | User feedback buttons are natively rendered in Teams with dedicated APIs for handling feedback. After user gives positive or negative feedback, a modal is opened where additional information (e.g., plain text response) can be captured. | Slack uses a dedicated `feedback_buttons` Block Kit element type and `app.action('feedback')` for attaching user feedback (positive vs. negative) to messages. |
 
 ## Register a Teams agent
