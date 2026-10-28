@@ -2,7 +2,7 @@
 title: Resource-specific Consent for Apps
 description: Learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions, and how to grant RSC permissions to an app.
 ms.topic: article
-ms.date: 02/20/2025
+ms.date: 10/27/2026
 ---
 
 # Resource-specific consent for your Teams app
@@ -114,9 +114,6 @@ The following table provides RSC application permissions for a team and their ap
 | `ChannelMember.Read.Group` | Read the members of this team's channels. | NA | NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
-
-> [!NOTE]
-> Teams doesn't deliver messages authored by bots, including the Workflows (Power Automate Flow) bot, to other bots, even if the receiving bot has the `ChannelMessage.Read.Group` RSC permission. Only user-authored messages are delivered.
 
 ### RSC permissions for a chat or meeting
 
