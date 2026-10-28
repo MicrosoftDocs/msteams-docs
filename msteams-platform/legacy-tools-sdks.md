@@ -17,7 +17,7 @@ This article briefly describes deprecated SDKs and tools for Teams app developme
 
 The Bot Framework SDK, also called BotBuilder SDK, was used to build cross-platform bots compatible with Teams. The name "Bot Framework" is still used to refer to a larger ecosystem of cloud service and infrastructure components that remain an important part of the Teams platform, but the Bot Framework SDK is no longer supported as an SDK for creating bots or agents.
 
-Teams SDK is the successor to the Bot Framework SDK for agents that specifically target Teams and seek to make full use of its conversational features and collaborative surface. Use Microsoft Agents 365 SDK for agents that need compatibility with multiple conversational platforms.
+Teams SDK is the successor to the Bot Framework SDK for agents that specifically target Teams and seek to make full use of its conversational features and collaborative surface. Use [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/) for agents that need compatibility with multiple conversational platforms.
 
 ## Teams AI Library
 
