@@ -1,7 +1,7 @@
 ---
 title: Stream Agent Messages
 description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
-ms.date: 10/19/2026
+ms.date: 10/28/2026
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
 ---
@@ -33,7 +33,7 @@ A Teams agent can provide realtime updates about its status as it prepares a cha
 
 ## User experience
 
-Message streaming consists of two phases: optional informative updates followed by message content streaming. A stop button displayed during both phases enables users to halt message generation.
+Message streaming consists of two phases: optional informative updates followed by message content streaming.
 
 ### Informative updates
 
@@ -53,14 +53,6 @@ Emitting the first content chunk creates the bubble and stops the display of inf
 
 Streamed messages sent using extended Markdown mode render their formatting progressively to provide a smooth reading experience. See [Format agent messages](how-to/format-your-bot-messages.md) for more information.
 
-### Stop button
-
-The stop button allows users to halt informative updates and message content streaming. It's displayed during both phases, a few seconds after each phase begins.
-
-:::image type="content" source="../assets/images/bots/stream-stopped-response.png" alt-text="Screenshot of a partial response marked as stopped by a user." lightbox="../assets/images/bots/stream-stopped-response.png":::
-
-In group chats, channels, and meeting chats, the stop button is available to all users in the conversation.
-
 ## General developer considerations for streaming
 
 An agent can maintain only one open stream per conversation, but can have streams open in multiple conversations concurrently.
@@ -71,8 +63,6 @@ Once an agent begins emitting streamed content, any further informative updates 
 
 [Extended Markdown mode](how-to/format-your-bot-messages.md) is compatible with message content streaming and enables progressively rendered formatting.
 
-Use of the stop button is not accompanied by an event. When a user selects the stop button, informative updates and message content streaming are immediately halted in the client. Further attempts by the agent to emit informative updates or message content to the stream will result in `403 ContentStreamNotAllowed` errors with the error message "Content stream was canceled by user". Agents should anticipate this scenario and handle the error appropriately.
-
 Streams time out and are automatically closed 10 minutes after the agent writes the first informative update or content chunk.
 
 Informative updates and message content streaming are intended for responding to specific user messages within the context of the received message's activity handler. They're not supported in [proactive messaging scenarios](how-to/conversations/send-proactive-messages.md).
@@ -81,13 +71,11 @@ Some messaging features, such as attachment, AI labels, feedback buttons, and se
 
 ## Implement streaming with Teams SDK
 
-The stream is exposed on the incoming message activity context. Use the stream object to send informative updates, emit content chunks, and finalize the response when generation is complete. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing each request. If you don't close the stream explicitly, the SDK finalizes and closes it automatically when the handler ends.
+The stream is exposed on the incoming message activity context. Use the stream object to send informative updates, emit content chunks, and finalize the response when generation is complete. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing each request. In TypeScript and Python, the SDK closes the stream automatically when the handler ends if you haven't closed it explicitly. In C#, you must explicitly close the stream with `writer.FinalizeResponseAsync(finalActivity)`.
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use `TeamsStreamingWriter` to write informative updates and stream content from the message context. Finalize the writer after appending all content chunks, or let the SDK close the stream automatically when the handler returns. When the streamed response uses richer formatting, set the message activity's `TextFormat` property to `extendedmarkdown`. Some message features, such as AI labels or cards, are rendered only after the stream closes.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
+Use `TeamsStreamingWriter` to write informative updates and stream content from the message context. After appending all content chunks, explicitly close the stream by calling `writer.FinalizeResponseAsync(finalActivity)` with the final message activity. The C# SDK doesn't close the stream automatically when the handler returns. When the streamed response uses richer formatting, set the final message activity's `TextFormat` property to `extendedmarkdown`. Some message features, such as AI labels or cards, are rendered only after the stream closes.
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -97,7 +85,7 @@ teams.OnMessage(async (context, cancellationToken) =>
   await writer.SendInformativeUpdateAsync("Reviewing the latest project status...", cancellationToken);
   await Task.Delay(1000, cancellationToken);
 
-  var activity = new Activity
+  var finalActivity = new Activity
   {
     Type = ActivityTypes.Message,
     TextFormat = "extendedmarkdown",
@@ -112,8 +100,8 @@ teams.OnMessage(async (context, cancellationToken) =>
     """
   };
 
-  await writer.AppendResponseAsync(activity.Text, cancellationToken);
-  await writer.FinalizeResponseAsync(cancellationToken: cancellationToken);
+  await writer.AppendResponseAsync(finalActivity.Text, cancellationToken);
+  await writer.FinalizeResponseAsync(finalActivity);
 });
 ```
 
@@ -363,7 +351,6 @@ The following are the success and error codes:
 | `403` | `ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message` | An agent can't continuously stream on a message that has already streamed and completed. |
 | `403` | `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.` | The agent failed to complete the streaming process within the time limit of 10 minutes. |
 | `403` | `ContentStreamNotAllowed` | `Message size too large` | The agent sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
-| `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
 | `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
 | `429` | NA | `API calls quota exceeded` | The number of messages streamed by the agent has exceeded quota. |
 
