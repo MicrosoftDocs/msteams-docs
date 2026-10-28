@@ -1,6 +1,6 @@
 ---
 title: Stream Agent Messages
-description: Learn how to enhance the user experience in agents using streaming techniques and to stream message through Teams SDK and configure streaming agent messages. 
+description: Stream agent messages in Microsoft Teams to show real-time informative updates and progressive responses. Learn how to implement streaming with Teams SDK or REST API.
 ms.date: 10/28/2026
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
@@ -57,7 +57,7 @@ Streamed messages sent using extended Markdown mode render their formatting prog
 
 An agent can maintain only one open stream per conversation, but can have streams open in multiple conversations concurrently.
 
-Each informative message text must not be more than 1 kb or 1000 characters.
+Each informative update text must not be more than 1 kb or 1000 characters.
 
 Once an agent begins emitting streamed content, any further informative updates it emits will not be displayed.
 
@@ -233,7 +233,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 
 The `201 Created` response will include a JSON payload with an `id` property whose value must be used as the `entities.streamId` value in all subsequent requests.
 
-### Send informative messages and message content updates
+### Send informative updates and message content updates
 
 Once the stream is open, send additional requests using the stream's ID to display informative updates and stream message content. Include the following payload follows:
 
