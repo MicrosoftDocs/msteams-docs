@@ -2,12 +2,33 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/22/2026
+ms.date: 10/28/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Released: Agents can now stream in group chats, channels, and meetings
+
+*October 28, 2026*
+
+Streaming now works in every conversation type.
+
+Users judge an agent by how quickly they see it working. When they see activity right away, the agent feels faster and more responsive. Agents used to get that only in one-on-one chats. Now they get it in group chats, channels, and meeting chats too.
+
+With streaming, users can read your agent's response while it's being generated. Before the response starts, informative updates show what your agent is doing, and your agent can change them as the work progresses.
+
+Informative updates have also been redesigned for group conversations. They now appear right under the message your agent is replying to. In a busy channel or chat, everyone can see which request your agent is working on, and the updates don't clutter the conversation.
+
+To adopt:
+
+- **Teams SDK**: Update to the latest version. Your existing streaming code then works in every conversation type. Older versions keep the legacy experience, in one-on-one chats only.
+- **REST API**: Set `replyToId` to the ID of the user message you're replying to. It's required outside one-on-one chats. If you leave it out in a one-on-one chat, you get the legacy experience.
+
+For details, see [Stream agent messages](bots/streaming-ux.md).
+
+---
 
 ## Preview update: Agent sessions preview ended, will not be released
 
