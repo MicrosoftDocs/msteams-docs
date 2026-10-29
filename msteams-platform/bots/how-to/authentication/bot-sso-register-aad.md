@@ -3,11 +3,13 @@ title: Configure App in Microsoft Entra ID
 description: Learn to configure your bot or message extension app with Microsoft Entra ID for enabling SSO, messaging endpoint, and OAuth connection.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/11/2025
+ms.date: 10/29/2026
 ---
 # Configure your app in Microsoft Entra ID
 
 Microsoft Entra ID provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
+
+For baseline OAuth setup without Teams SSO, see [Configure OAuth authentication for a Teams bot](configure-oauth.md). This article adds the SSO-specific configuration: expose an API scope, authorize Teams clients, configure the token exchange URL, and update the app manifest.
 
 <a name='sso-configuration-in-azure-ad-portal'></a>
 
@@ -201,7 +203,7 @@ You need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms. |
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
@@ -415,6 +417,8 @@ The Microsoft Entra app configuration is complete, and now you must enable SSO s
 
 ## Configure OAuth connection
 
+For explicit OAuth sign-in without SSO, follow [Add an OAuth connection to the Azure Bot resource](configure-oauth.md#add-an-oauth-connection-to-the-azure-bot-resource). For SSO, don't leave **Token Exchange URL** blank: use the application ID URI configured for your SSO app.
+
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
 
 * Microsoft Entra app ID, which is the client ID
@@ -428,7 +432,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
+1. Search for and open your **Azure Bot resource**, not the Microsoft Entra app registration.
 
 1. Select **Settings** > **Configuration**.
 
@@ -589,7 +593,7 @@ To configure scope and authorize trusted client applications, you'll need:
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
-    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms. |
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
     >    Use the lowercase option *demoapplication* as base resource name.
@@ -843,6 +847,8 @@ Now, you must configure the OAuth connection to enable SSO for your bot resource
 
 ### Configure OAuth connection for your bot resource
 
+For explicit OAuth sign-in without SSO, follow [Add an OAuth connection to the Azure Bot resource](configure-oauth.md#add-an-oauth-connection-to-the-azure-bot-resource). For SSO, use your SSO app's application ID URI for **Token Exchange URL**.
+
 For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
 
 * Microsoft Entra app ID, which is the client ID
@@ -856,7 +862,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
+1. Search for and open your **Azure Bot resource**, not the Microsoft Entra app registration.
 
 1. Select **Settings** > **Configuration**.
 
