@@ -210,7 +210,19 @@ For OAuth setup without deployment or SSO, see [Register the identity-provider a
    1. Before leaving this page, **record the secret**. Use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
 
 1. Select **API permissions** > **Add a permission** > **Microsoft Graph** > **Delegated permissions**. Add `User.Read` for the sample's profile command. Obtain admin consent if required by your tenant.
-1. Complete the SSO-specific setup in [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md) for this identity-provider app: expose an API with an application ID URI and `access_as_user` scope, authorize the Teams clients, and configure the access token version. Save the application ID URI for the OAuth connection and app manifest.
+1. In **Microsoft Entra ID** > **App registrations** > **All applications**, open the identity-provider app you just created, such as *BotTeamsIdentity*. Verify that its **Application (client) ID** matches the value you saved for this app, not the bot's Microsoft App ID. Follow [Configure SSO with a separate authentication app](bot-sso-register-aad.md#configure-sso-with-a-separate-authentication-app) to expose its API, add `access_as_user`, authorize the Teams clients, and configure the access token version. Don't use **Azure Bot** > **Configuration** > **Manage** for this step: that opens the bot's identity registration.
+
+Use the following mapping throughout this tutorial. The bot and authentication app IDs are different; don't replace one with the other.
+
+| Value | Source and use |
+| --- | --- |
+| `BOT_ID` | The **Microsoft App ID** on the Azure Bot resource's **Configuration** page. Use it for the bot runtime's client ID and `bots[].botId` in the app manifest. |
+| `SSO_APP_ID` | The **Application (client) ID** of the separate identity-provider app. Use it for the OAuth connection's **Client id** and the app manifest's `webApplicationInfo.id`. Use this app's secret for the OAuth connection's **Client secret**, not for the bot runtime. |
+| `SSO_APP_ID_URI` | The **Application ID URI** exposed on the identity-provider app. For this standalone bot, set it to `api://botid-{BOT_ID}`, replacing `{BOT_ID}` with the bot's Microsoft App ID, not `SSO_APP_ID`. |
+| **Token Exchange URL** | Set the Azure Bot OAuth connection field to the exact `SSO_APP_ID_URI`, without the `/access_as_user` scope suffix. |
+| `webApplicationInfo.resource` | Set this app manifest field to the exact same `SSO_APP_ID_URI`. |
+
+For example, if the bot ID is `11111111-1111-4111-8111-111111111111` and the authentication app ID is `22222222-2222-4222-8222-222222222222`, expose `api://botid-11111111-1111-4111-8111-111111111111` on the authentication app. The OAuth connection's client ID and `webApplicationInfo.id` are still `22222222-2222-4222-8222-222222222222`.
 
 > [!NOTE]
 > This tutorial uses the default public-cloud redirect URI. For other clouds or regional data residency, use [Supported OAuth URLs](/azure/bot-service/ref-oauth-redirect-urls).
@@ -672,7 +684,7 @@ Use the app manifest provided by your sample. The following example shows how th
 - `bots[].botId` connects Teams to the registered bot. Set `BOT_ID` to the bot's Microsoft App ID.
 - `validDomains` allows the OAuth token-service domain. Keep `token.botframework.com` for this public-cloud flow and replace `BOT_DOMAIN` with your bot's hostname.
 - `webApplicationInfo.id` identifies the SSO identity-provider application. Set `SSO_APP_ID` to its application (client) ID.
-- `webApplicationInfo.resource` identifies the API used for token exchange. Set `SSO_APP_ID_URI` to that app's application ID URI, matching **Token Exchange URL** in the OAuth connection.
+- `webApplicationInfo.resource` identifies the API used for token exchange. Set `SSO_APP_ID_URI` to the application ID URI exposed on the identity-provider app: `api://botid-{BOT_ID}` for this standalone bot. It must match **Token Exchange URL** in the OAuth connection, even though `webApplicationInfo.id` uses the separate `SSO_APP_ID`.
 
 The SSO placeholders describe the required values; if your sample uses different environment variable names, map those variables to the same values. For more information, see [Update app manifest for SSO](bot-sso-manifest.md).
 
