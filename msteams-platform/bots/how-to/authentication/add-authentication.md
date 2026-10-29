@@ -1,19 +1,22 @@
 ---
-title: Add OAuth authentication to a Teams bot
-description: Create an Azure Bot resource, configure OAuth and Teams SSO with Microsoft Entra ID, deploy a Teams SDK sample to Azure, and test sign-in in Teams.
+title: "Tutorial: Add OAuth authentication to a Teams bot"
+description: Configure and test OAuth and Teams SSO with Microsoft Entra ID using a Teams SDK bot sample, as a foundation for conversational agents.
 ms.topic: tutorial
 ms.localizationpriority: high
-ms.date: 10/23/2026
+ms.date: 10/29/2026
 ---
 
-# Tutorial - Add OAuth authentication to a Teams bot
+# Tutorial: Add OAuth authentication to a Teams bot
 
 <a name="add-authentication-to-your-teams-bot"></a>
 
 In this end-to-end tutorial, you configure OAuth 2.0 authentication with Microsoft Entra ID, deploy a Teams SDK bot to Azure, and test it in Microsoft Teams. OAuth lets the bot access resources on behalf of a user without collecting the user's password. The Bot Auth Quickstart sample also uses Teams single sign-on (SSO) to reuse the user's Teams identity and retrieve their Microsoft Graph profile.
 
+> [!NOTE]
+> This tutorial also provides a user-authentication foundation for conversational agents built with Teams SDK. It demonstrates delegated access on behalf of a signed-in user through a command-based bot sample, not an end-to-end AI agent with an AI framework or orchestration. It doesn't cover app-only access or Agent 365 agentic identity. The bot service credentials configured here are separate from delegated user tokens; other service-identity scenarios, Microsoft 365 Agents SDK, and declarative agents require their own guidance.
+
 > [!TIP]
-> Already have a bot and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
+> Already have a bot or Teams agent and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
 
 The Azure Bot Token Service flow requires an **Azure Bot resource**, regardless of where you host the bot code. Registration connects the bot to the service and its OAuth connection settings; it doesn't deploy the bot's web service. This tutorial uses Azure App Service for hosting, but you can host the code elsewhere or test locally through a public HTTPS tunnel.
 
@@ -289,6 +292,8 @@ The linked samples don't all use the same Teams SDK authentication APIs:
 > [!NOTE]
 > The TypeScript and Python instructions below follow the linked legacy implementations; they aren't SDK 2.1 code examples. For current SDK 2.1 examples in all three languages, see [Teams SDK user authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication). When updating an implementation, migrate its authentication code together with its SDK dependencies. Don't mix legacy default-connection configuration with the current flow-registration APIs.
 
+When adapting the authentication flow for an agent task, interactive sign-in completes on a **later turn**. Don't assume the original message handler waits for sign-in and then continues. Preserve the pending request before starting sign-in and resume it in the completion callback for the correct user, conversation, and OAuth connection. See [Integrate with Teams SDK 2.1](configure-oauth.md#integrate-with-teams-sdk-21) for runtime guidance and versioned examples.
+
 # [C#/.NET](#tab/dotnet)
 
 1. Clone [cs-auth-sample][teams-bot-auth-quickstart-cs].
@@ -495,6 +500,8 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
 1. Enter `signin`. Complete consent or the sign-in prompt if one appears.
 1. Enter `profile` and confirm that the bot returns your Microsoft Graph profile.
 1. Enter `signout` and confirm the sign-out response.
+
+If you adapt this sample into an agent that resumes pending tasks, also test that behavior in Teams. While signed out, request an operation that needs delegated access, complete sign-in, and confirm the pending operation resumes for the correct user and conversation using the intended OAuth connection. Test cancellation or sign-in failure to verify that the agent provides feedback and expires or clears abandoned work. These are additional checks for your agent adaptation, not behavior demonstrated by the sample's `signin`, `profile`, and `signout` command sequence.
 
 For current app-upload instructions, see [Upload your app in Microsoft Teams](../../../concepts/deploy-and-publish/apps-upload.md).
 
