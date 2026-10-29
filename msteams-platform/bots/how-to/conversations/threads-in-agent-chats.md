@@ -18,6 +18,8 @@ Threads in one-on-one agent chats don't require an app manifest opt-in property.
 
 A **top-level message (L1)** appears in the main chat or channel conversation. A **thread reply (L2)** belongs to the discussion under a top-level message, also called the thread's root message. Threads keep related exchanges together so users can follow a discussion without mixing it with other messages in the chat or channel.
 
+Channel owners can choose a posts or threads layout for a channel. These layouts present channel conversations differently, but both use the same threaded conversation model.
+
 A user starts a thread in a one-on-one agent chat by replying to a message in the main chat. The agent can then respond within that thread.
 
 An agent doesn't need to create a thread to reply to a user's top-level message in a one-on-one chat. The Teams SDK uses the context of the received message to send the response to the appropriate location.
@@ -47,13 +49,19 @@ The presence of a quote doesn't determine whether a message appears in the main 
 
 The existing Teams SDK channel examples use send methods for responses without a quote and reply methods for responses that quote the incoming message. Both responses remain in the channel thread. For more information about quoting, see [Quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview#quoted-replies).
 
-## Manage conversation context across threads
+## Agent design guidance and best practices
+
+In channels, users expect responses to their messages to appear in the associated thread. Keep top-level channel messages for proactive messages that are intended to start a new conversation.
+
+In one-on-one chats, use the default context-based response behavior shown above. A response to a top-level message stays in the main chat, and a response to a threaded message stays in that thread. Let users start a thread when they want to continue a discussion there; don't force top-level exchanges into threads.
+
+### Use threads as context boundaries
 
 In a one-on-one agent chat, each thread has a conversation ID that differs from the conversation ID of the main chat. When a user starts a thread, the first reply in that thread can therefore look like activity in a new conversation to an agent that uses the conversation ID to identify its state.
 
-Review how your agent keys conversation history, authentication state, and first-message behavior. For example, an agent that treats every unfamiliar conversation ID as a new chat might send another welcome message, restart a sign-in flow, or fail to use relevant context from the main chat. Decide which state should be shared with the main chat and which should remain specific to the thread. Don't assume that a thread's conversation ID is interchangeable with the main chat's ID.
+Plan how your agent handles state when it receives activity with a new conversation ID. For example, avoid unintentionally sending another welcome message or restarting sign-in when a user starts a thread. Decide which state should be shared with the main chat and which should remain specific to the thread. Don't assume that a thread's conversation ID is interchangeable with the main chat's ID.
 
-For an AI-powered agent, distinguish the conversation used to route a response from the history used to generate it. A discussion in a thread might need relevant context from the main chat, but unrelated exchanges shouldn't automatically become part of that thread's model context. Plan how your agent selects relevant history while keeping each discussion focused.
+For an AI-powered agent, distinguish message placement from model context. A thread may need relevant information from the main chat, but unrelated exchanges shouldn't automatically become part of the thread's context. Select relevant history for each response while keeping the thread focused.
 
 Treat conversation IDs as opaque values. Don't parse or construct them to infer a relationship between a chat and a thread.
 
