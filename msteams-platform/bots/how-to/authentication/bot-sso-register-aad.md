@@ -11,6 +11,33 @@ Microsoft Entra ID provides app users access to your bot or message extension ap
 
 For baseline OAuth setup without Teams SSO, see [Configure OAuth authentication for a Teams bot](configure-oauth.md). This article adds the SSO-specific configuration: expose an API scope, authorize Teams clients, configure the token exchange URL, and update the app manifest.
 
+## Configure SSO with a separate authentication app
+
+If your bot identity and authentication app use different registrations, as in the [OAuth tutorial](add-authentication.md#create-the-identity-provider), configure SSO on the **authentication app**, not the bot's identity registration. Use this procedure instead of the shared-registration navigation in the tabs below. Keep the existing bot registration and messaging endpoint.
+
+1. Record the **Microsoft App ID** from your Azure Bot resource's **Settings** > **Configuration** page as `BOT_ID`.
+1. Open **Microsoft Entra ID** > **App registrations** > **All applications**. Select the separate authentication app by its **Application (client) ID**, and record that ID as `SSO_APP_ID`. Don't select **Manage** on the Azure Bot resource to open this app: that link opens the bot identity registration.
+1. In the authentication app, select **Manage** > **Manifest** and set `api.requestedAccessTokenVersion` to `2`. Save the change.
+1. Select **Manage** > **Expose an API**. For a standalone bot, set **Application ID URI** to `api://botid-{BOT_ID}`, replacing `{BOT_ID}` with the bot ID recorded in step 1. Save this URI as `SSO_APP_ID_URI`. The API belongs to the authentication app even though its URI includes the bot ID.
+1. On the same app, add and enable the `access_as_user` scope. Configure its consent settings for your intended users.
+1. Under **Authorized client applications**, add the following Teams clients and authorize the `access_as_user` scope for each:
+
+   | Teams client | Client ID |
+   | --- | --- |
+   | Desktop and mobile | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` |
+   | Web | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` |
+
+1. In this authentication app, configure the **Web** redirect URI `https://token.botframework.com/.auth/web/redirect`, create a client secret if you don't already have one, and add the delegated Microsoft Graph permissions your bot needs. The tutorial uses `User.Read`. Obtain consent as required by your tenant.
+1. Return to the Azure Bot resource's **Settings** > **Configuration** and add or update its **Azure Active Directory v2** OAuth connection:
+
+   * Set **Client id**, **Client secret**, and **Tenant ID** from the authentication app, not the bot identity registration. For a multitenant authentication app, use `common` for **Tenant ID**.
+   * Set **Token Exchange URL** to `SSO_APP_ID_URI`, without the `/access_as_user` scope suffix.
+   * Set **Scopes** to the delegated permissions the bot needs, such as `User.Read`.
+
+1. Update the [app manifest](bot-sso-manifest.md): keep `bots[].botId` set to `BOT_ID`, set `webApplicationInfo.id` to `SSO_APP_ID`, and set `webApplicationInfo.resource` to `SSO_APP_ID_URI`. The resource URI must exactly match both **Application ID URI** on the authentication app and **Token Exchange URL** on the OAuth connection.
+
+Keep the bot runtime configured with the bot identity's credentials. The authentication app's credentials belong in the OAuth connection; creating that connection doesn't change the bot's identity.
+
 <a name='sso-configuration-in-azure-ad-portal'></a>
 
 ## SSO configuration in Microsoft Entra admin center
@@ -152,6 +179,9 @@ You need:
 
 #### To configure application ID URI
 
+> [!IMPORTANT]
+> The navigation below opens the bot's identity registration. If you use a separate authentication app, follow [Configure SSO with a separate authentication app](#configure-sso-with-a-separate-authentication-app) instead.
+
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
    The Microsoft Azure Bot page opens.
@@ -194,7 +224,7 @@ You need:
     >
     > * **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
     >
-    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as `api://botid-{YourBotId}`. Here, `{YourBotId}` is the **Microsoft App ID** on your Azure Bot resource, not a separate authentication app's client ID.
     > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
     >
     > * **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
@@ -544,6 +574,9 @@ To configure scope and authorize trusted client applications, you'll need:
 
 #### To configure application ID URI for your app
 
+> [!IMPORTANT]
+> The navigation below opens the bot's identity registration. If you use a separate authentication app, follow [Configure SSO with a separate authentication app](#configure-sso-with-a-separate-authentication-app) instead.
+
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
    The Microsoft Azure Bot page opens.
@@ -584,7 +617,7 @@ To configure scope and authorize trusted client applications, you'll need:
 
     > [!IMPORTANT]
     >
-    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as `api://botid-{YourBotId}`. Here, `{YourBotId}` is the **Microsoft App ID** on your Azure Bot resource, not a separate authentication app's client ID.
     > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
     >
     > * **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
