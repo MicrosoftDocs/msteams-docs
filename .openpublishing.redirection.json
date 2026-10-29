@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/feedback.md",
+      "redirect_url": "developer-support-feedback",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "msteams-platform/toolkit/TeamsFx-SDK.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-SDK",
       "redirect_document_id": false
@@ -1535,7 +1540,7 @@
       },
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema.md",
@@ -1623,7 +1628,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",

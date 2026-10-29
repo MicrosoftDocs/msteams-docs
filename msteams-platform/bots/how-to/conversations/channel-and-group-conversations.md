@@ -4,7 +4,7 @@ description: Learn how to work with user mentions, send messages, and handle age
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 06/23/2026
+ms.date: 10/27/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -16,7 +16,7 @@ By default, agents in group chats and channels only receive messages when they'r
 
 > [!NOTE]
 >
-> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
+> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. Teams doesn't deliver messages authored by other agents or bots to the agent, even with these permissions. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 > * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
 ## Design guidelines

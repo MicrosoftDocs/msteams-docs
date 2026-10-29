@@ -49,7 +49,7 @@ Here's an outline of the different channels and their capabilities across variou
 > [!IMPORTANT]
 >
 > * Avoid relying on channel type values for app logic.
-> * Teams channel experiences continue to evolve. To ensure your app remains compatible over time, don't build logic that depends on specific `membershipType` or `channelType` values returned by Microsoft Graph, Agents SDK, or Teams SDK. Instead, rely on the capability‑based APIs and events provided by the platform to determine how your app should behave within a channel.
+> * Teams channel experiences continue to evolve. To ensure your app remains compatible over time, don't build logic that depends on specific `membershipType` or `channelType` values returned by Microsoft Graph or Teams SDK. Instead, rely on the capability‑based APIs and events provided by the platform to determine how your app should behave within a channel.
 
 > [!NOTE]
 >
@@ -130,7 +130,7 @@ To migrate your app:
 The following table summarizes what changes when you migrate:
 
 | Area | `supportedChannelTypes` (app manifest v1.24 and earlier) | `supportsChannelFeatures` (app manifest v1.25 and later) |
-|------|-------------------------------------------|------------------------------------------------------------|
+| ------ | ------------------------------------------- | ------------------------------------------------------------ |
 | App manifest declaration | Per-channel-type values: `sharedChannels`, `privateChannels` | Single readiness flag: `tier1` |
 | Supported app capabilities | Tabs only | Agents and tabs |
 
@@ -141,7 +141,7 @@ When loading the user experience in a shared or private channel, use the data re
 The property names differ between TeamsJS v1 and TeamsJS v2:
 
 | Value | TeamsJS v1 (`getContext`) | TeamsJS v2 (`app.getContext()`) |
-|-------|---------------------------|----------------------------------|
+| ------- | --------------------------- | ---------------------------------- |
 | Host team group ID | `hostTeamGroupId` | `channel.ownerGroupId` |
 | Host tenant ID | `hostTenantId` | `channel.ownerTenantId` |
 
@@ -152,7 +152,7 @@ This article uses the TeamsJS v2 names. If your app uses TeamsJS v1, read `hostT
 Apps must function cross-tenant in installation and usage. The group ID returned in the channel context depends on the channel type:
 
 | Channel type | `team.groupId` | `channel.ownerGroupId` (`hostTeamGroupId` in TeamsJS v1) |
-|--------------|----------------|------------------------------------------------------------|
+| -------------- | ---------------- | ------------------------------------------------------------ |
 | Standard | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
 | Shared | Empty | Host team Microsoft Entra group ID |
 
@@ -494,7 +494,7 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 Use the Microsoft Graph invite API to access the document library of the SharePoint in Microsoft 365 site linked to a shared or private channel.
 
 > [!NOTE]
-> For any requirements on Mailbox or Calendar scenarios, see [Feature request and general help](feedback.md).
+> For any requirements on Mailbox or Calendar scenarios, see [Feature request and general help](developer-support-feedback.md).
 
 ### Access SharePoint storage for channel files by using Graph API
 
