@@ -1,12 +1,13 @@
 ---
-title: "Tutorial: Add OAuth authentication to a Teams bot"
+title: Tutorial - Add OAuth authentication to a Teams bot
 description: Configure and test OAuth and Teams SSO with Microsoft Entra ID using a Teams SDK bot sample, as a foundation for conversational agents.
 ms.topic: tutorial
 ms.localizationpriority: high
 ms.date: 10/29/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
-# Tutorial: Add OAuth authentication to a Teams bot
+# Tutorial - Add OAuth authentication to a Teams bot
 
 <a name="add-authentication-to-your-teams-bot"></a>
 
@@ -16,7 +17,7 @@ In this end-to-end tutorial, you configure OAuth 2.0 authentication with Microso
 > This tutorial also provides a user-authentication foundation for conversational agents built with Teams SDK. It demonstrates delegated access on behalf of a signed-in user through a command-based bot sample, not an end-to-end AI agent with an AI framework or orchestration. It doesn't cover app-only access or Agent 365 agentic identity. The bot service credentials configured here are separate from delegated user tokens; other service-identity scenarios, Microsoft 365 Agents SDK, and declarative agents require their own guidance.
 
 > [!TIP]
-> Already have a bot or Teams agent and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
+> Already have a bot or Teams SDK conversational agent and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
 
 The Azure Bot Token Service flow requires an **Azure Bot resource**, regardless of where you host the bot code. Registration connects the bot to the service and its OAuth connection settings; it doesn't deploy the bot's web service. This tutorial uses Azure App Service for hosting, but you can host the code elsewhere or test locally through a public HTTPS tunnel.
 
@@ -37,23 +38,38 @@ If you already have hosting resources, skip to [Create Azure Bot resource regist
 - Git and the language-specific tools listed below. Install Visual Studio Code with Microsoft 365 Agents Toolkit if you use the sample's Toolkit deployment workflow.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - A Teams account with permission to upload custom apps, and permission to configure app registrations and grant consent in your test tenant.
-- The following sample:
+- The Bot Auth Quickstart sample for your selected language.
 
-    | Sample |
-    | :--- |
-    | **Bot Auth Quickstart** in [cs-auth-sample][teams-bot-auth-quickstart-cs] |
-    | **Bot Auth Quickstart** in [js-auth-sample][teams-bot-auth-quickstart-js] |
-    | **Bot Auth Quickstart** in [py-auth-sample][teams-bot-auth-quickstart-py] |
+Select **C#** for C#/.NET, **TypeScript** for TypeScript/JavaScript on Node.js, or **Python** in the language selector. The selection applies throughout this article. The following paths are relative to `samples/TeamsSDK/bot-auth-quickstart` in the sample repository.
 
-Use the following paths relative to `samples/TeamsSDK/bot-auth-quickstart` in the sample repository:
+::: zone pivot="teams-sdk-csharp"
 
-| Implementation | Required tools | Runtime project folder | App package folder |
-| --- | --- | --- | --- |
-| C#/.NET | .NET 10 SDK; a Visual Studio version that supports .NET 10 if using the IDE. | `dotnet/bot-auth-quickstart/BotAuthQuickstart` | `dotnet/bot-auth-quickstart/M365Agent/appPackage` |
-| TypeScript (Node.js) | Node.js LTS and npm. | `nodejs/bot-auth-quickstart` | `nodejs/bot-auth-quickstart/appPackage` |
-| Python | Python 3.11 or later, below 4.0, with pip and a virtual environment. | `python/bot-auth-quickstart` | `python/bot-auth-quickstart/appPackage` |
+Use the [C#/.NET Bot Auth Quickstart sample][teams-bot-auth-quickstart-cs]. Install the .NET 10 SDK and, if using the IDE, a Visual Studio version that supports .NET 10.
+
+- Runtime project: `dotnet/bot-auth-quickstart/BotAuthQuickstart`.
+- App package: `dotnet/bot-auth-quickstart/M365Agent/appPackage`.
 
 For .NET, the runtime project and the `M365Agent` packaging/deployment project are siblings. Don't look for `appPackage` inside `BotAuthQuickstart`.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Use the [TypeScript/JavaScript Bot Auth Quickstart sample][teams-bot-auth-quickstart-js]. Install Node.js LTS and npm. The sample's source code is TypeScript and builds to JavaScript.
+
+- Runtime project: `nodejs/bot-auth-quickstart`.
+- App package: `nodejs/bot-auth-quickstart/appPackage`.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the [Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py]. Install Python 3.11 or later, below 4.0, with pip and a virtual environment.
+
+- Runtime project: `python/bot-auth-quickstart`.
+- App package: `python/bot-auth-quickstart/appPackage`.
+
+::: zone-end
 
 ## Create the resource group
 
@@ -281,20 +297,13 @@ The bot code uses the connection name to retrieve user authentication tokens. Th
 
 Use one implementation of the Bot Auth Quickstart sample. Keep credentials out of source control and use the sample's local configuration or your hosting platform's secret settings.
 
-The linked samples don't all use the same Teams SDK authentication APIs:
-
-| Implementation | SDK dependency in the sample | Authentication API version |
-| --- | --- | --- |
-| C#/.NET | `Microsoft.Teams.Apps` `2.1.*` | Current SDK 2.1 OAuth flows, including `AddOAuthFlow` and `SignInAsync`. |
-| TypeScript (Node.js) | `@microsoft/teams.apps` `^2.0.0` | Legacy SDK 2.0-style `oauth.defaultConnectionName` and context-level sign-in. The dependency range can resolve to later 2.x versions; it isn't a pin to SDK 2.0. |
-| Python | `microsoft-teams-apps==2.0.15` | Legacy SDK 2.0 `default_connection_name` and context-level sign-in. |
-
-> [!NOTE]
-> The TypeScript and Python instructions below follow the linked legacy implementations; they aren't SDK 2.1 code examples. For current SDK 2.1 examples in all three languages, see [Teams SDK user authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication). When updating an implementation, migrate its authentication code together with its SDK dependencies. Don't mix legacy default-connection configuration with the current flow-registration APIs.
+For current SDK 2.1 examples, see [Teams SDK user authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication). When updating an implementation, migrate its authentication code together with its SDK dependencies. Don't mix legacy default-connection configuration with the current flow-registration APIs.
 
 When adapting the authentication flow for an agent task, interactive sign-in completes on a **later turn**. Don't assume the original message handler waits for sign-in and then continues. Preserve the pending request before starting sign-in and resume it in the completion callback for the correct user, conversation, and OAuth connection. See [Integrate with Teams SDK 2.1](configure-oauth.md#integrate-with-teams-sdk-21) for runtime guidance and versioned examples.
 
-# [C#/.NET](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
+
+The C#/.NET sample references `Microsoft.Teams.Apps` `2.1.*` and uses current SDK 2.1 OAuth flows, including `AddOAuthFlow` and `SignInAsync`.
 
 1. Clone [cs-auth-sample][teams-bot-auth-quickstart-cs].
 1. Open Visual Studio.
@@ -329,7 +338,12 @@ When adapting the authentication flow for an agent task, interactive sign-in com
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+C%23%2F.NET&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dnode-js%252Cdotnet-sample%23test-the-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# [JavaScript](#tab/node-js)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+> [!NOTE]
+> The TypeScript/JavaScript sample references `@microsoft/teams.apps` `^2.0.0` and uses legacy SDK 2.0-style `oauth.defaultConnectionName` and context-level sign-in. The dependency range can resolve to later 2.x versions; it isn't a pin to SDK 2.0. These instructions follow the linked legacy implementation, not SDK 2.1 code examples.
 
 1. Clone [node-auth-sample][teams-bot-auth-quickstart-js].
 1. In a console, go to the `samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart` project folder.
@@ -369,7 +383,12 @@ When adapting the authentication flow for an agent task, interactive sign-in com
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+JavaScript&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dnode-js%252Cdotnet-sample%23prepare-the-bot-sample-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+> [!NOTE]
+> The Python sample pins `microsoft-teams-apps==2.0.15` and uses legacy SDK 2.0 `default_connection_name` and context-level sign-in. These instructions follow the linked legacy implementation, not SDK 2.1 code examples.
 
 1. Clone [py-auth-sample][teams-bot-auth-quickstart-py] from the GitHub repository.
 1. In the Python runtime project folder, create and activate a virtual environment for your operating system. Install the sample and its dependencies:
@@ -405,7 +424,7 @@ When adapting the authentication flow for an agent task, interactive sign-in com
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+Python&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dpython%252Cdotnet-sample%23prepare-the-bot-sample-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
----
+::: zone-end
 
 ## Deploy the bot to Azure
 
@@ -413,13 +432,25 @@ Deploy the Teams SDK web service, not just the Teams app package. You can use th
 
 1. Create an Azure App Service web app on the plan you prepared earlier, with an operating system and runtime appropriate to your implementation. If the plan's operating system doesn't match the selected language's hosting requirements, create a compatible plan:
 
-    | Implementation | Toolkit project folder, relative to the sample root | Deployment and host startup |
-    | --- | --- | --- |
-    | C#/.NET | `dotnet/bot-auth-quickstart/M365Agent` | The supplied lifecycle publishes `BotAuthQuickstart.csproj` for `win-x86`, self-contained, and uploads `BotAuthQuickstart/bin/Release/net10.0/win-x86/publish`. Use a Windows App Service compatible with this target. Alternatively, publish the **BotAuthQuickstart** web project from Visual Studio to this App Service, not the `M365Agent` project. |
-    | TypeScript (Node.js) | `nodejs/bot-auth-quickstart` | The lifecycle runs `npm install` and `npm run build --if-present`, then uploads the project. For this walkthrough, use a Linux Node.js App Service and set its startup command to `npm start`, which runs `lib/app.js`. Use the same supported Node.js LTS version for the build and host; see [Configure a Node.js app in App Service](/azure/app-service/configure-language-nodejs). |
-    | Python | `python/bot-auth-quickstart` | The lifecycle uploads the project but doesn't install its dependencies. Use a Linux Python App Service with a supported Python version matching the sample. Configure deployment-time dependency installation, set the startup command to `python main.py`, and set the app environment variable `PORT=8000` to match the built-in Python container's HTTP port; see [Configure a Python app in App Service](/azure/app-service/configure-language-python). |
+    ::: zone pivot="teams-sdk-csharp"
 
-    For Python, prepare a `requirements.txt` for App Service build automation from the sample's `pyproject.toml` dependency declarations, including the pinned Teams SDK versions. Enable `SCM_DO_BUILD_DURING_DEPLOYMENT=true` so the deployment installs those dependencies. Don't upload your local virtual environment.
+    Use the Toolkit project folder `dotnet/bot-auth-quickstart/M365Agent`, relative to the sample root. The supplied lifecycle publishes `BotAuthQuickstart.csproj` for `win-x86`, self-contained, and uploads `BotAuthQuickstart/bin/Release/net10.0/win-x86/publish`. Use a Windows App Service compatible with this target. Alternatively, publish the **BotAuthQuickstart** web project from Visual Studio to this App Service, not the `M365Agent` project.
+
+    ::: zone-end
+
+    ::: zone pivot="teams-sdk-typescript"
+
+    Use the Toolkit project folder `nodejs/bot-auth-quickstart`, relative to the sample root. The lifecycle runs `npm install` and `npm run build --if-present`, then uploads the project. For this walkthrough, use a Linux Node.js App Service and set its startup command to `npm start`, which runs `lib/app.js`. Use the same supported Node.js LTS version for the build and host; see [Configure a Node.js app in App Service](/azure/app-service/configure-language-nodejs).
+
+    ::: zone-end
+
+    ::: zone pivot="teams-sdk-python"
+
+    Use the Toolkit project folder `python/bot-auth-quickstart`, relative to the sample root. The lifecycle uploads the project but doesn't install its dependencies. Use a Linux Python App Service with a supported Python version matching the sample. Configure deployment-time dependency installation, set the startup command to `python main.py`, and set the app environment variable `PORT=8000` to match the built-in Python container's HTTP port; see [Configure a Python app in App Service](/azure/app-service/configure-language-python).
+
+    Prepare a `requirements.txt` for App Service build automation from the sample's `pyproject.toml` dependency declarations, including the pinned Teams SDK versions. Enable `SCM_DO_BUILD_DURING_DEPLOYMENT=true` so the deployment installs those dependencies. Don't upload your local virtual environment.
+
+    ::: zone-end
 
 1. Open the Toolkit project folder for your implementation in Visual Studio Code. In the selected environment's `env/.env.<environment>` file, set `BOT_AZURE_APP_SERVICE_RESOURCE_ID` to the resource ID of the existing App Service web app.
 
@@ -428,10 +459,17 @@ Deploy the Teams SDK web service, not just the Teams app package. You can use th
 
 1. Configure runtime settings in the App Service environment, using the bot identity and connection name from this tutorial:
 
-    | Implementation | App Service environment variables |
-    | --- | --- |
-    | C#/.NET | `AzureAd__TenantId`, `AzureAd__ClientId`, `AzureAd__ClientCredentials__0__SourceType=ClientSecret`, `AzureAd__ClientCredentials__0__ClientSecret`, and `OAuth__ConnectionName`. |
-    | TypeScript and Python | `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET`, and `CONNECTION_NAME`. |
+    ::: zone pivot="teams-sdk-csharp"
+
+    Set `AzureAd__TenantId`, `AzureAd__ClientId`, `AzureAd__ClientCredentials__0__SourceType=ClientSecret`, `AzureAd__ClientCredentials__0__ClientSecret`, and `OAuth__ConnectionName`.
+
+    ::: zone-end
+
+    ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
+
+    Set `TENANT_ID`, `CLIENT_ID`, `CLIENT_SECRET`, and `CONNECTION_NAME`.
+
+    ::: zone-end
 
     Set credentials through secure host configuration, such as Key Vault references. Don't deploy local secrets or rely on `.localConfigs` or `.env` being present on the server. Before deployment, review the `azureAppService/zipDeploy` action's `ignoreFile` and ensure it excludes secret-bearing files, Toolkit environment files, and local virtual environments.
 
@@ -447,7 +485,25 @@ Only one messaging endpoint is active per bot registration. For local Teams test
 
 Microsoft 365 Agents Playground is optional for checking local message routing, replies, and activity payloads without installing the app in Teams. It doesn't verify the real Teams user identity, consent experience, OAuth token exchange, or Teams SSO. Use non-authenticated commands to check message handling; mocked activities aren't proof that user authentication works.
 
-Follow the [Teams SDK Playground setup](/microsoftteams/platform/teams-sdk/developer-tools/agents-playground/overview) for your installed SDK version. Playground sends requests without a Bot Framework JWT by default. SDK versions that reject unauthenticated requests require explicit local request-authentication configuration. The current guide documents `dangerouslyAllowUnauthenticatedRequests` for TypeScript, `dangerously_allow_unauthenticated_requests` for Python, and the `AzureAd__DangerouslyAllowUnauthenticatedRequests` launch-profile setting for .NET. Check version compatibility before applying current options to the legacy samples.
+Follow the [Teams SDK Playground setup](/microsoftteams/platform/teams-sdk/developer-tools/agents-playground/overview) for your installed SDK version. Playground sends requests without a Bot Framework JWT by default. SDK versions that reject unauthenticated requests require explicit local request-authentication configuration.
+
+::: zone pivot="teams-sdk-csharp"
+
+The current guide documents the `AzureAd__DangerouslyAllowUnauthenticatedRequests` launch-profile setting for .NET.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+The current guide documents `dangerouslyAllowUnauthenticatedRequests` for TypeScript/JavaScript. Check version compatibility before applying current options to the legacy sample.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+The current guide documents `dangerously_allow_unauthenticated_requests` for Python. Check version compatibility before applying current options to the legacy sample.
+
+::: zone-end
 
 > [!WARNING]
 > Allow unauthenticated requests only in an isolated local Playground configuration. Never enable this bypass in production, deploy it to App Service, or expose a bypass-enabled local endpoint through a public tunnel. Disable it before testing through the Azure Bot Service and Teams.
@@ -480,7 +536,7 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
 
 ## Install and test the bot in Teams
 
-1. Locate your implementation's app package folder from the [prerequisites table](#prerequisites). For .NET, use `M365Agent/appPackage`, not a folder under the `BotAuthQuickstart` runtime project. Ensure the package contains `manifest.json`, `outline.png`, and `color.png`.
+1. Locate your selected language's app package folder from [Prerequisites](#prerequisites). Ensure the package contains `manifest.json`, `outline.png`, and `color.png`.
 1. Open `manifest.json` in your editor and assign the following values:
     1. Set `id` to your Teams app's unique ID and `bots[].botId` to the bot's Microsoft App ID.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
@@ -526,11 +582,23 @@ To set up ngrok in preparation for running your Teams app locally, follow these 
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.
 1. Disable any local Playground request-authentication bypass. Start your configured bot from its runtime project folder:
 
-    | Implementation | Local startup |
-    | --- | --- |
-    | C#/.NET | Run `dotnet run --no-launch-profile --urls http://localhost:3978` from `BotAuthQuickstart`. This builds the project and explicitly selects the port used by the tunnel example. |
-    | TypeScript (Node.js) | After `npm install` and `npm run build`, run `npx --no-install env-cmd -f .localConfigs npm start`. For automatic restarts, use `npm run dev:teamsfx`. |
-    | Python | Activate the virtual environment, install dependencies with `python -m pip install -e .`, and set the runtime environment variables described in [Prepare the bot sample code](#prepare-the-bot-sample-code). Run `python main.py`, or use the supplied **Start Python** debug configuration to load `.env`. |
+    ::: zone pivot="teams-sdk-csharp"
+
+    Run `dotnet run --no-launch-profile --urls http://localhost:3978` from `BotAuthQuickstart`. This builds the project and explicitly selects the port used by the tunnel example.
+
+    ::: zone-end
+
+    ::: zone pivot="teams-sdk-typescript"
+
+    After `npm install` and `npm run build`, run `npx --no-install env-cmd -f .localConfigs npm start`. For automatic restarts, use `npm run dev:teamsfx`.
+
+    ::: zone-end
+
+    ::: zone pivot="teams-sdk-python"
+
+    Activate the virtual environment, install dependencies with `python -m pip install -e .`, and set the runtime environment variables described in [Prepare the bot sample code](#prepare-the-bot-sample-code). Run `python main.py`, or use the supplied **Start Python** debug configuration to load `.env`.
+
+    ::: zone-end
 
     Confirm the actual listening port in the startup output and use that port for the tunnel. Keep inbound request authentication enabled when connecting Teams to your local endpoint.
 1. Test the bot while running locally using the Azure portal's **Test in Web Chat**.
@@ -615,9 +683,23 @@ The SSO placeholders describe the required values; if your sample uses different
 
 The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access.
 
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-|---------------|------------|------------|-------------|---------------|
-| Bot Auth Quickstart | Sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) |
+::: zone pivot="teams-sdk-csharp"
+
+[View the C#/.NET Bot Auth Quickstart sample][teams-bot-auth-quickstart-cs] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+[View the TypeScript/JavaScript Bot Auth Quickstart sample][teams-bot-auth-quickstart-js] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+[View the Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+
+::: zone-end
 
 ## See also
 
