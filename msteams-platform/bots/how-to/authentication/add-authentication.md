@@ -244,7 +244,7 @@ For example, if the bot ID is `11111111-1111-4111-8111-111111111111` and the aut
 
 1. Complete the form as follows:
 
-    1. **Name**. Enter a name for the connection. You use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv1*.
+    1. **Name**. Enter a name for the connection, such as *BotTeamsAuthADv1*. Save this exact name for your bot's runtime configuration; see [Prepare the bot sample code](#prepare-the-bot-sample-code) for language-specific settings.
     1. **Service Provider**. Select **Azure Active Directory**. Once you select this option, the Azure Active Directory-specific fields are displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app.
@@ -272,7 +272,7 @@ For example, if the bot ID is `11111111-1111-4111-8111-111111111111` and the aut
 
 1. Complete the form as follows:
 
-    1. **Name**. Enter a name for the connection. Use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
+    1. **Name**. Enter a name for the connection, such as *BotTeamsAuthADv2*. Save this exact name for your bot's runtime configuration; see [Prepare the bot sample code](#prepare-the-bot-sample-code) for language-specific settings.
     1. **Service Provider**. Select **Azure Active Directory v2**. Once you select this option, the Azure AD v2 specific fields are displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app.
