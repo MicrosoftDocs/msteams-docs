@@ -467,7 +467,7 @@ Deploy the Teams SDK web service, not just the Teams app package. You can use th
 1. Open the Toolkit project folder for your implementation in Visual Studio Code. In the selected environment's `env/.env.<environment>` file, set `BOT_AZURE_APP_SERVICE_RESOURCE_ID` to the resource ID of the existing App Service web app.
 
     > [!IMPORTANT]
-    > This tutorial already creates a single-tenant bot registration with a client secret. The samples' cloud provisioning templates create managed-identity resources. Don't run their unmodified **Provision** lifecycle against this setup or replace the bot ID with a newly provisioned identity. Use **Deploy** to upload code to your existing App Service.
+    > This tutorial already creates a single-tenant bot registration with a client secret. The samples' cloud provisioning templates create managed-identity resources. Don't run their unmodified **Provision** lifecycle against this setup or replace the bot ID with a newly provisioned identity. Use **Deploy** to upload code to your existing App Service. Deployment doesn't generate the Teams app package; create it manually in [Install and test the bot in Teams](#install-and-test-the-bot-in-teams).
 
 1. Configure runtime settings in the App Service environment, using the bot identity and connection name from this tutorial:
 
@@ -520,7 +520,7 @@ The current guide documents `dangerously_allow_unauthenticated_requests` for Pyt
 > [!WARNING]
 > Allow unauthenticated requests only in an isolated local Playground configuration. Never enable this bypass in production, deploy it to App Service, or expose a bypass-enabled local endpoint through a public tunnel. Disable it before testing through the Azure Bot Service and Teams.
 
-To validate OAuth and SSO, complete [Install and test the bot in Teams](#install-and-test-the-bot-in-teams), using either the deployed bot or an authenticated local bot behind an HTTPS tunnel. Check `signin`, `profile`, and `signout` in Teams; Playground message tests alone don't complete this tutorial's authentication validation.
+To validate OAuth and SSO, complete [Install and test the bot in Teams](#install-and-test-the-bot-in-teams), using either the deployed bot or an authenticated local bot behind an HTTPS tunnel. Complete both the command checks and [SSO token-exchange verification](#verify-teams-sso-token-exchange); Playground message tests alone don't complete this tutorial's authentication validation.
 
 ## Test the deployed bot
 
@@ -553,11 +553,12 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
     1. Set `id` to your Teams app's unique ID and `bots[].botId` to the bot's Microsoft App ID.
     1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
     1. Set `webApplicationInfo.id` to the SSO identity-provider application's client ID and `webApplicationInfo.resource` to its application ID URI. The resource must match **Token Exchange URL** in the OAuth connection.
-1. Replace all remaining template placeholders before packaging. For manual packaging, **zip** `manifest.json`, `outline.png`, and `color.png` at the archive root, without an enclosing `appPackage` folder. If you use Toolkit packaging instead, upload its generated `appPackage/build/appPackage.<environment>.zip` for the selected environment, not the unexpanded source template.
+1. Replace all remaining template placeholders in `manifest.json` with literal values before packaging, including the Teams app ID, bot ID, bot hostname, authentication app ID, and application ID URI. See the [manifest value mapping](#apppackagemanifestjson). Don't include client secrets in the manifest or package.
+1. Manually **zip** the completed `manifest.json`, `outline.png`, and `color.png` at the archive root, without an enclosing `appPackage` folder. Save the ZIP in a location you can select during upload. This workflow doesn't use a Toolkit-generated package: **Deploy** uploads bot code but doesn't generate a Teams app package.
 1. Open **Microsoft Teams**.
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
-1. Go to the `appPackage` folder and upload the zipped manifest.
+1. Browse to the ZIP you created and upload it.
 1. Select **Add** to install the app to Teams.
 
 1. Open a personal chat with the bot for this tutorial's sign-in test.
@@ -565,9 +566,24 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
    > [!NOTE]
    > This tutorial tests personal scope. Teams SSO also supports group chat; see [Enable SSO for your app](bot-sso-overview.md) for scope-specific behavior.
 
-1. Enter `signin`. Complete consent or the sign-in prompt if one appears.
+### Verify user sign-in and OAuth fallback
+
+1. Enter `signin`. Complete consent or the sign-in prompt if one appears. When Teams uses the OAuth sign-in card and pop-up, a successful sign-in verifies the interactive fallback path, not SSO token exchange.
 1. Enter `profile` and confirm that the bot returns your Microsoft Graph profile.
 1. Enter `signout` and confirm the sign-out response.
+
+A successful profile response or sign-in-completion callback doesn't distinguish SSO from OAuth fallback. If Teams completes sign-in without a pop-up, continue with token-exchange verification rather than treating the absence of a prompt as proof of SSO.
+
+### Verify Teams SSO token exchange
+
+Run this check after granting the required consent, using the same account in Teams and the authentication flow.
+
+1. Enable the installed SDK version's authentication diagnostics, or use a debugger at the SDK's invoke handler. For a deployed bot, inspect its application logs; for a local bot, use its debugger or diagnostic output. Inspect only activity names, correlation identifiers, connection names, and exchange outcomes. Don't log access tokens, authorization headers, secrets, or full invoke payloads.
+1. Enter `signout` to clear the sample's stored token for the current user and OAuth connection. Enter `signin` again while observing diagnostics so a previously cached token doesn't satisfy the test without a new exchange.
+1. Verify that Teams sends a `signin/tokenExchange` invoke and that the SDK successfully exchanges the token for the configured OAuth connection. Correlate that successful exchange with sign-in completion for the same user and conversation. Receiving the invoke alone isn't sufficient: an exchange can fail and fall back to interactive OAuth. A `signin/verifyState` invoke indicates completion of the interactive flow, not proof of SSO.
+1. Enter `profile` and confirm that the bot returns the expected user's profile following that exchange. Enter `signout` when finished.
+
+If there is no new token-exchange activity, the outcome is inconclusive; confirm that sign-out cleared the correct user's connection token and repeat. If exchange fails or Teams uses an interactive sign-in card, record OAuth fallback separately and don't mark SSO as verified. Check `signin/failure` diagnostics, Teams client preauthorization, consent, and the matching Application ID URI, Token Exchange URL, and `webApplicationInfo.resource`. See [SSO troubleshooting](/microsoftteams/platform/teams-sdk/teams/user-authentication/troubleshooting-sso).
 
 If you adapt this sample into an agent that resumes pending tasks, also test that behavior in Teams. While signed out, request an operation that needs delegated access, complete sign-in, and confirm the pending operation resumes for the correct user and conversation using the intended OAuth connection. Test cancellation or sign-in failure to verify that the agent provides feedback and expires or clears abandoned work. These are additional checks for your agent adaptation, not behavior demonstrated by the sample's `signin`, `profile`, and `signout` command sequence.
 
@@ -614,7 +630,7 @@ To set up ngrok in preparation for running your Teams app locally, follow these 
 
     Confirm the actual listening port in the startup output and use that port for the tunnel. Keep inbound request authentication enabled when connecting Teams to your local endpoint.
 1. Test the bot while running locally using the Azure portal's **Test in Web Chat**.
-1. Open the bot's personal chat in Teams and test `signin`, `profile`, and `signout`. Web Chat alone doesn't verify Teams SSO.
+1. Open the bot's personal chat in Teams and complete [user sign-in and OAuth fallback checks](#verify-user-sign-in-and-oauth-fallback) and [SSO token-exchange verification](#verify-teams-sso-token-exchange). Web Chat alone doesn't verify Teams SSO.
 
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you're using, you must update all URL references.
