@@ -14,7 +14,7 @@ zone_pivot_groups: teams-sdk-languages
 In this end-to-end tutorial, you configure OAuth 2.0 authentication with Microsoft Entra ID, deploy a Teams SDK bot to Azure, and test it in Microsoft Teams. OAuth lets the bot access resources on behalf of a user without collecting the user's password. The Bot Auth Quickstart sample also uses Teams single sign-on (SSO) to reuse the user's Teams identity and retrieve their Microsoft Graph profile.
 
 > [!NOTE]
-> This tutorial also provides a user-authentication foundation for conversational agents built with Teams SDK. It demonstrates delegated access on behalf of a signed-in user through a command-based bot sample, not an end-to-end AI agent with an AI framework or orchestration. It doesn't cover app-only access or Agent 365 agentic identity. The bot service credentials configured here are separate from delegated user tokens; other service-identity scenarios, Microsoft 365 Agents SDK, and declarative agents require their own guidance.
+> This tutorial provides a user-authentication foundation for Teams SDK agents. Its command-based bot sample demonstrates delegated access for a signed-in user, not an end-to-end AI agent. It excludes app-only access, Agent 365 agentic identity, and scenarios involving Microsoft 365 Agents SDK or declarative agents, which require separate guidance. Bot service credentials remain separate from delegated user tokens.
 
 > [!TIP]
 > Already have a bot or Teams SDK conversational agent and only need OAuth setup? See [Configure OAuth authentication for a Teams bot](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
@@ -192,8 +192,8 @@ For OAuth setup without deployment or SSO, see [Register the identity-provider a
    1. **Name**. Enter the name for the application. An example could be  *BotTeamsIdentity*. Remember that the name must be unique.
    1. Select the **Supported account types** for your intended users. For a single-tenant test, select **Accounts in this organizational directory only**.
    1. For the **Redirect URI**:<br/>
-       &#x2713;Select **Web**. <br/>
-       &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
+       a. Select **Web**. <br/>
+       b. Set the URL to `https://token.botframework.com/.auth/web/redirect`.
    1. Select **Register**.
 
 1. After Azure creates the app, it displays the **Overview** page for the app. Copy and save the following information to a file:
