@@ -1770,7 +1770,7 @@
       },
       {
         "source_path": "msteams-platform/m365-apps/agent-connectors.md",
-        "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
+        "redirect_url": "/microsoft-365/copilot/extensibility/configure-plugin-mcp-servers",
         "redirect_document_id": false
       }
     ]
