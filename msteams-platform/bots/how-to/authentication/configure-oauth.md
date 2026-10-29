@@ -99,7 +99,7 @@ Keep the bot runtime's client ID, credential, and tenant ID associated with the 
 
 ### Integrate with Teams SDK 2.1
 
-For an existing bot or conversational agent built with **Teams SDK 2.1**, follow the linked runtime examples below. In each section, select your language and the **SDK 2.1 (current)** tab. Replace the example connection name, such as `graph`, with your saved connection name, such as `BotTeamsOAuth`.
+For an existing bot or Teams agent built with **Teams SDK 2.1**, follow the linked runtime examples below. In each section, select your language and the **SDK 2.1 (current)** tab. Replace the example connection name, such as `graph`, with your saved connection name, such as `BotTeamsOAuth`.
 
 1. [Register the OAuth flow](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#configure-the-oauth-connection) during app initialization. Use `AddOAuthFlow` with `AddTeamsBotApplication` in .NET, `app.addOAuthFlow` in TypeScript, or `app.add_oauth_flow` in Python. Retain or retrieve that flow object for the handlers below. Read any sample-specific connection-name setting in your code and pass its value to the registration API.
 1. [Start sign-in](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#signing-in) from a message handler using the flow's `SignInAsync` (.NET), `signIn` (TypeScript), or `sign_in` (Python). If a token is returned, continue the protected operation. Otherwise, the SDK sends an OAuth card; return from the handler instead of calling the protected API without a token.
