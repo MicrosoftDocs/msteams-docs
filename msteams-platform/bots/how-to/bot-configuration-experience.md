@@ -230,31 +230,38 @@ Use `type: "auth"` in a response to `config.fetch` when your agent requires the 
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-app.OnConfigFetch(async (context) =>
+app.OnConfigFetch((context, cancellationToken) =>
 {
-    return new ConfigAuthResponse(
+    var response = new ConfigAuthResponse(
         new ConfigAuth
         {
             SuggestedActions = new SuggestedActions
             {
-                Actions = new List<CardAction>
-                {
-                    new CardAction
+                To = [context.Activity.From.Id],
+                Actions =
+                [
+                    new CardAction(ActionType.OpenUrl)
                     {
-                        Type = "openUrl",
-                        Value = "https://example.com/auth",
-                        Title = "Sign in to this app"
+                        Title = "Sign in to this app",
+                        Value = "https://example.com/auth"
                     }
-                }
+                ]
             }
-        }
-    );
-});
+        });
 
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
+});
+app.OnConfigSubmit((context, cancellationToken) =>
+{
+    var response = new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up agent"));
+
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
+});
 ```
 
-* `Type` — Specifies the action used to open authentication. Set this to `"openUrl"` so users can open your authentication page.
+* `SuggestedActions.To` — Identifies the user who receives the sign-in action. Set this to `[context.Activity.From.Id]` so the action targets the user configuring the agent.
+* `ActionType.OpenUrl` — Specifies the action used to open authentication. Pass this to `CardAction` so users can open your authentication page.
 * `Value` — Provides the destination URL for the sign-in action. Set this to your authentication page URL, replacing `"https://example.com/auth"` so users reach your service.
 
 ::: zone-end
@@ -262,11 +269,13 @@ app.OnConfigFetch(async (context) =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('config.fetch', async ({ activity }) => {
+app.on('config.open', async ({ activity }): Promise<ConfigResponse> => {
   return {
+    responseType: 'config',
     config: {
       type: 'auth',
       suggestedActions: {
+        to: [activity.from.id],
         actions: [
           {
             type: 'openUrl',
@@ -281,6 +290,7 @@ app.on('config.fetch', async ({ activity }) => {
 ```
 
 * `config.type` — Selects an authentication response for the configuration request. Set this to `'auth'` so Teams prompts the user to sign in.
+* `suggestedActions.to` — Identifies the user who receives the sign-in action. Set this to `[activity.from.id]` so the action targets the user configuring the agent.
 * `suggestedActions.actions[].value` — Provides the destination URL for the sign-in action. Set this to your authentication page URL, replacing `'https://example.com/auth'` so users reach your service.
 
 ::: zone-end
