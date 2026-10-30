@@ -4,44 +4,60 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 06/10/2026
+ms.date: 10/30/2026
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Create an agent configuration experience in Teams
 
-An agent configuration experience allows users to set up and reconfigure their agents' settings directly within the channel or group chat scope post-installation. This enhances the agent’s operational efficiency from the start. Agent configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
+An agent configuration experience is a settings flow that lets users configure an agent during installation and reconfigure it later in a channel or group chat. Use it to collect the information your agent needs to work with a team's workflows, without asking users to leave Teams. For example, users can choose the news topics or GitHub repositories an agent monitors, then change those settings as their needs change.
 
-With the agent configuration experience, you can ensure the agent's ongoing relevance and value as users can:
+## Prerequisites
 
-* Tailor the agent to their specific workflows and preferences during installation.
-* Reconfigure settings to adapt to changing requirements post installation.
+Before you implement the configuration experience, you need:
 
-For example, an agent that tracks and shares news topics or monitors GitHub repositories can initially be set up to match user workflows. Later, it can be easily reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating agents seamlessly into daily operations.
+* An agent project that supports a channel or group chat scope. For more information, see [Understand agent concepts](../bot-concepts.md).
+* Access to the app manifest to update `bots.configuration`.
+* A configuration dialog or Adaptive Card to collect the settings your agent needs. For more information, see [Dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
-Here's an example, where a user adds the agent to a group chat and then configures it to align with their specific requirements. The user then reconfigures the agent to change the status.
+## User experience
 
-**Configure**
+Users configure the agent when they add it to a channel or group chat. They can later reopen its settings to adapt the agent to changing requirements.
 
-:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphical representation that shows adding an agent to a group chat and configuring the agent settings during installation.":::
+### Configure during installation
 
-**Reconfigure**
+The following example shows a user adding an agent to a group chat and configuring its settings.
 
-:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the agent in the message compose area.":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Screenshot that shows adding an agent to a group chat and configuring its settings during installation.":::
 
-To configure agent as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+### Reconfigure after installation
 
-## Build agent configuration experience
+Users can reopen the configuration experience to change the agent's settings, as shown in the following example.
 
-> [!NOTE]
-> Agent configuration experience is supported only in channel or group chat.
+:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot that shows the agent settings option above the message compose area.":::
 
-When you build the agent configuration experience, you must ensure that the user must be able to configure an agent on first installation and reconfigure it at any time.
+Users can reopen settings in either of the following ways:
 
-To build the agent configuration experience, follow these steps:
+* @mention the agent in the message compose area, then select **Settings** above the compose area. Update the agent's configuration in the dialog that opens.
+
+   :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot that shows where to open agent settings after mentioning the agent.":::
+
+* Hover over the agent to open its profile card, then select the settings icon. Update the agent's configuration in the dialog that opens.
+
+   :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot that shows the settings icon in an agent profile card in a group chat.":::
+
+## Developer experience
+
+To implement the configuration experience, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
+1. [Configure your agent](#configure-your-agent)
 
-1. [Configure your bot](#configure-your-agent)
+<a id="build-agent-configuration-experience"></a>
+
+## Implement agent configuration experience
+
+Support both initial configuration during installation and reconfiguration after installation.
 
 ### Update app manifest
 
@@ -70,10 +86,13 @@ In the app manifest (previously called Teams app manifest) file, update the `fet
   ],
 ```
 
+* `groupChat.fetchTask` — Enables dynamic configuration requests in the group chat scope. Set this to `true` so your agent can return a configuration dialog or Adaptive Card.
+* `team.fetchTask` — Enables dynamic configuration requests in the team channel scope. Set this to `true` so channel users can configure your agent.
+
 For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-bots-configuration).
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+app+manifest&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23update-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+app+manifest&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%23update-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Configure your agent
 
@@ -87,104 +106,72 @@ If you set the `fetchTask` property in the app manifest to:
 
 The following table lists the response type associated with the invoke requests:
 
-|Invoke request |Response type |
+| Invoke request | Response type |
 | --- | --- |
-| `config.fetch` | `Type: "continue"` or `Type = "auth"` |
-| `config.submit` | `Type: "continue"` or `Type: "message"` |
+| `config.fetch` | `type: "continue"` or `type: "auth"` |
+| `config.submit` | `type: "continue"` or `type: "message"` |
 
-* `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within an agent configuration. When the type is set to `continue`, it indicates that the agent is expecting further interaction from the user to continue with the configuration process.
+#### Continue the configuration dialog
 
-   When the user submits the configuration, the `config.submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the agent configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
+Use `type: "continue"` to return a dialog or Adaptive Card when your agent needs more input from the user.
 
-# [C# SDK v2.1](#tab/teams-bot-sdk1)
+When the user submits the configuration, the `config.submit` invoke is triggered. Read the user's input and return a different Adaptive Card if more input is needed. You can also return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
+
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-teams.OnTaskFetch(async (context, cancellationToken) =>
+using CardAction = Microsoft.Teams.Cards.Action;
+using TaskSize = Microsoft.Teams.Api.TaskModules.Size;
+
+app.OnConfigFetch((context, cancellationToken) =>
 {
     var card = new AdaptiveCard
     {
         Body = new List<CardElement>
         {
-            new TextBlock("Configure your agent")
-            {
-                Weight = TextWeight.Bolder
-            }
+            new TextBlock("Configure your agent") { Weight = TextWeight.Bolder }
         },
-        Actions = new List<Action>
+        Actions = new List<CardAction>
         {
-            new SubmitAction
-            {
-                Title = "Submit"
-            }
+            new SubmitAction { Title = "Submit" }
         }
     };
 
-    return TaskModuleResponse.CreateBuilder()
-        .WithType(TaskModuleResponseTypes.Continue)
-        .WithTitle("test card")
-        .WithHeight("medium")
-        .WithWidth("medium")
-        .WithCard(TeamsAttachment.CreateBuilder()
-            .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
-            .Build())
-        .Build();
-});
-   ```
-
-# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk1-legacy)
-
-```csharp
-
-app.OnConfigFetch(async (context) =>
-{
-    var card = new AdaptiveCard
-    {
-        Body = new List<CardElement>
-        {
-            new TextBlock("Configure your agent")
-            {
-                Weight = TextWeight.Bolder
-            }
-        },
-        Actions = new List<Action>
-        {
-            new SubmitAction
-            {
-                Title = "Submit"
-            }
-        }
-    };
     var taskInfo = new TaskInfo
     {
         Title = "test card",
-        Width = new Union<int, Size>(600),
-        Height = new Union<int, Size>(500),
-        Card = new Attachment
-        {
-            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-            Content = card
-        }
+        Width = new Union<int, TaskSize>(600),
+        Height = new Union<int, TaskSize>(500),
+        Card = new Attachment(card)
     };
-    return new ConfigTaskResponse(
-        new ContinueTask(taskInfo)
-    );
+
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(
+        new ConfigTaskResponse(new ContinueTask(taskInfo)));
 });
-   ```
+```
 
-# [TypeScript](#tab/typescript1)
+* `CardAction` and `TaskSize` — Identify the card action and dialog size types. Use the aliases `Microsoft.Teams.Cards.Action` and `Microsoft.Teams.Api.TaskModules.Size` so the action list and size unions reference the intended types.
+* `TaskInfo.Title` — Sets the title shown on the configuration dialog. Set this to `"test card"` for the sample, or use a title that describes your settings.
+* `TaskInfo.Width` and `TaskInfo.Height` — Set the dimensions of the agent configuration dialog. Set these to `new Union<int, TaskSize>(600)` and `new Union<int, TaskSize>(500)`, respectively, so the sample card has room to display.
+* `TaskInfo.Card` — Supplies the Adaptive Card shown in the dialog. Set this to `new Attachment(card)` so the dialog displays your configuration card.
+* `Task.FromResult<ConfigResponse>` — Returns the configuration response from the fetch handler. Pass `new ConfigTaskResponse(new ContinueTask(taskInfo))` so the handler returns a task containing the continuation dialog.
 
-   ```typescript
-app.on('config.fetch', async ({ activity }) => {
-  const card = new AdaptiveCard(
-    {
-      type: 'TextBlock',
-      text: 'Configure your agent',
-      weight: 'Bolder',
-    }
-  ).withActions(
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('config.open', async (): Promise<ConfigResponse> => {
+  const card = new AdaptiveCard({
+    type: 'TextBlock',
+    text: 'Configure your agent',
+    weight: 'Bolder',
+  }).withActions(
     new SubmitAction().withTitle('Submit')
   );
+
   return {
+    responseType: 'config',
     config: {
       type: 'continue',
       value: {
@@ -196,11 +183,18 @@ app.on('config.fetch', async ({ activity }) => {
     },
   };
 });
-   ```
+```
 
-# [Python](#tab/Py1)
+* `app.on` event — Selects the handler for opening the configuration experience. Set this to `'config.open'` so the handler returns the initial configuration card.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
+* `config.type` — Keeps the configuration interaction open for user input. Set this to `'continue'` so Teams displays the configuration card.
+* `config.value.card` — Supplies the Adaptive Card shown in the dialog. Set this to `cardAttachment('adaptive', card)` so users can interact with your configuration card.
 
-   ```python
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
 @app.on_config_open
 async def handle_config_open(
     ctx: ActivityContext[ConfigFetchInvokeActivity]
@@ -224,64 +218,72 @@ async def handle_config_open(
             )
         )
     )
-   ```
+```
 
----
+* `card` — Supplies the Adaptive Card shown in the dialog. Set this to `card_attachment(AdaptiveCardAttachment(content=card))` so users can interact with your configuration card.
+* `height` and `width` — Set the dimensions of the agent configuration dialog. Set these to `500` and `600` so the sample card has room to display.
 
-* `type: "auth"`: You can also request the user to authenticate as a response to `config.fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the agent requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the agent’s functionality.
+::: zone-end
 
-   > [!NOTE]
-   > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+#### Request authentication
 
-# [C# SDK v2.1](#tab/teams-bot-sdk2)
+Use `type: "auth"` in a response to `config.fetch` when your agent requires the user to authenticate. Provide a sign-in URL that opens a valid authentication page in a browser.
 
-```csharp
-teams.OnTaskFetch(async (context, cancellationToken) =>
-{
-    return TaskModuleResponse.CreateBuilder()
-        .WithType(TaskModuleResponseTypes.Continue)
-        .WithTitle("Sign in to this app")
-        .WithUrl("https://example.com/auth")
-        .Build();
-});
+> [!NOTE]
+> `type: "auth"` supports only third-party authentication, not single sign-on (SSO). For more information, see [Add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
-   ```
-
-# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk2-legacy)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-app.OnConfigFetch(async (context) =>
+app.OnConfigFetch((context, cancellationToken) =>
 {
-    return new ConfigAuthResponse(
+    var response = new ConfigAuthResponse(
         new ConfigAuth
         {
             SuggestedActions = new SuggestedActions
             {
-                Actions = new List<CardAction>
-                {
-                    new CardAction
+                To = [context.Activity.From.Id],
+                Actions =
+                [
+                    new CardAction(ActionType.OpenUrl)
                     {
-                        Type = "openUrl",
-                        Value = "https://example.com/auth",
-                        Title = "Sign in to this app"
+                        Title = "Sign in to this app",
+                        Value = "https://example.com/auth"
                     }
-                }
+                ]
             }
-        }
-    );
+        });
+
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
 });
+app.OnConfigSubmit((context, cancellationToken) =>
+{
+    var response = new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up agent"));
 
-   ```
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
+});
+```
 
-# [TypeScript](#tab/typescript2)
+* `SuggestedActions.To` — Identifies the user who receives the sign-in action. Set this to `[context.Activity.From.Id]` so the action targets the user configuring the agent.
+* `ActionType.OpenUrl` — Specifies the action used to open authentication. Pass this to `CardAction` so users can open your authentication page.
+* `CardAction.Title` — Sets the label displayed for the sign-in action. Set this to `"Sign in to this app"` so users understand the action.
+* `CardAction.Value` — Provides the destination URL for the sign-in action. Replace `"https://example.com/auth"` with your authentication page URL so users reach your service.
+* `MessageTask` message — Supplies the final message returned by the submit handler. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
+* `Task.FromResult<ConfigResponse>` — Returns a typed response from each configuration handler. Pass `response` so the fetch handler returns the authentication response and the submit handler returns the completion message.
 
-   ```typescript
-app.on('config.fetch', async ({ activity }) => {
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('config.open', async ({ activity }): Promise<ConfigResponse> => {
   return {
+    responseType: 'config',
     config: {
       type: 'auth',
       suggestedActions: {
+        to: [activity.from.id],
         actions: [
           {
             type: 'openUrl',
@@ -293,11 +295,20 @@ app.on('config.fetch', async ({ activity }) => {
     },
   };
 });
-   ```
+```
 
-# [Python](#tab/Py2)
+* `app.on` event — Selects the handler for opening the configuration experience. Set this to `'config.open'` so the handler can request authentication.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
+* `config.type` — Selects an authentication response for the configuration request. Set this to `'auth'` so Teams prompts the user to sign in.
+* `config.suggestedActions.to` — Identifies the user who receives the sign-in action. Set this to `[activity.from.id]` so the action targets the user configuring the agent.
+* `config.suggestedActions.actions[].type` — Specifies the action used to open authentication. Set this to `'openUrl'` so users can open your authentication page.
+* `config.suggestedActions.actions[].value` — Provides the destination URL for the sign-in action. Replace `'https://example.com/auth'` with your authentication page URL so users reach your service.
 
-   ```python
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
 @app.on_config_open
 async def handle_config_open(
     ctx: ActivityContext[ConfigFetchInvokeActivity]
@@ -316,54 +327,58 @@ async def handle_config_open(
             )
         )
     )
-   ```
+```
 
----
+* `type` — Specifies the action used to open authentication. Set this to `"openUrl"` so users can open your authentication page.
+* `value` — Provides the destination URL for the sign-in action. Set this to your authentication page URL, replacing `"https://example.com/auth"` so users reach your service.
 
-* `type="message"`: When the type is set to message, it indicates that the agent is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
+::: zone-end
 
-# [C# SDK v2.1](#tab/teams-bot-sdk3)
+#### Complete configuration
 
-```csharp
-teams.OnTaskSubmit(async (context, cancellationToken) =>
-{
-    return TaskModuleResponse.CreateBuilder()
-        .WithType(TaskModuleResponseTypes.Message)
-        .WithMessage("You have chosen to finish setting up agent")
-        .Build();
-});
+Use `type: "message"` to return a message that ends the interaction or provides information without requesting more input.
 
-   ```
-
-# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk3-legacy)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-app.OnConfigSubmit(async (context) =>
+app.OnConfigSubmit((context, cancellationToken) =>
 {
-    return new ConfigTaskResponse(
-        new MessageTask("You have chosen to finish setting up agent")
-    );
+    var response = new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up agent"));
+
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
 });
+```
 
-   ```
+* `MessageTask` message — Supplies the final message shown after configuration completes. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
+* `Task.FromResult<ConfigResponse>` — Returns the completion response from the submit handler. Pass `response`, containing `ConfigTaskResponse` and `MessageTask`, so the handler returns a task containing the final message.
 
-# [TypeScript](#tab/TS3)
+::: zone-end
 
-   ```typescript
-app.on('config.submit', async ({ activity, send }) => {
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('config.submit', async (): Promise<ConfigResponse> => {
   return {
+    responseType: 'config',
     config: {
       type: 'message',
       value: 'You have chosen to finish setting up agent',
     },
   };
 });
-   ```
+```
 
-# [Python](#tab/Py3)
+* `app.on` event — Selects the handler for submitted agent configuration settings. Set this to `'config.submit'` so the handler returns a completion response.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
+* `config.type` — Ends the configuration interaction with a response message. Set this to `'message'` so Teams doesn't request more input.
+* `config.value` — Supplies the final message shown after configuration completes. Set this to `'You have chosen to finish setting up agent'` for the sample, or use a confirmation that describes the result.
 
-   ```python
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
 @app.on_config_submit
 async def handle_config_submit(
     ctx: ActivityContext[ConfigSubmitInvokeActivity]
@@ -373,39 +388,53 @@ async def handle_config_submit(
             value="You have chosen to finish setting up agent",
         )
     )
-   ```
+```
 
----
+* `value` — Supplies the final message shown after configuration completes. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
 
-When a user reconfigures the agent, the `fetchTask` property in the app manifest file initiates `config.fetch` in the agent logic. The user can reconfigure the agent settings post-installation in two ways:
+::: zone-end
 
-* @mention the agent in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the agent's configuration settings in the dialog.
-
-   :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the agent in the message compose area.":::
-
-* Hover over the agent, the agent profile card appears. To update or change the agent's configuration settings, select the settings icon in the agent profile card.
-
-   :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot shows the configuration option for the agent in a Teams group chat.":::
+When a user reconfigures the agent, the `fetchTask` property in the app manifest initiates `config.fetch` in the agent logic. Use the same handler to support the entry points described in [Reconfigure after installation](#reconfigure-after-installation).
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+your+bot&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23configure-your-bot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+your+agent&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%23configure-your-agent&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Best practices
+## Handle errors
 
-* If you want to have an individual channel-level configuration of your agent, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- |
 
-* Provide a clear and user-friendly dialog that prompts the user to enter the required information for the agent to operate properly, such as a URL, an area path, or a dashboard link.
-
-* Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
+<!-- TODO: Add error codes -->
 
 ## Code sample
 
-| **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
-|----------------|-----------------|--------------|--------------|--------------|
-| Agent configuration app | This sample demonstrates an agent for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp/demo-manifest)|
-| Agent configuration app with auth | This Teams agent enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/demo-manifest)|
+| Sample name | Description | .NET | Node.js | Manifest |
+| --- | --- | --- | --- | --- |
+| Agent configuration app | Configure and reconfigure Adaptive Cards in teams and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app/csharp/demo-manifest) |
+| Agent configuration app with auth | Configure and reconfigure an agent with dynamic search on Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-configuration-app-auth/csharp/demo-manifest) |
+
+<a id="best-practices"></a>
+
+## Design guidelines and best practices
+
+* Track configuration per channel when your agent needs channel-specific settings. Configuration data isn't stored for you. Use the [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat) in the invoke payload to identify the channel.
+* Provide a clear dialog that asks for the information your agent needs, such as a URL, an area path, or a dashboard link.
+* Avoid sending repeated configuration notifications after installation, which can confuse users.
+* For an app with both agent and tab capabilities, choose the default landing capability that matches your configuration flow. For more information, see [Configure your app's default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+
+## Limitations and known issues
+
+* The agent configuration experience is supported only in a channel or group chat, not in personal scope.
+* Authentication responses support only third-party authentication. SSO isn't supported for `type: "auth"`.
+* Your agent is responsible for storing configuration data.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Invoke and dismiss dialogs](../../task-modules-and-cards/task-modules/invoking-task-modules.md)
 
 ## See also
 
-* [Build agents for Teams](../what-are-bots.md)
-* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Understand agent concepts](../bot-concepts.md)
+* [Dialogs](../../task-modules-and-cards/what-are-task-modules.md)
+* [Cards](../../task-modules-and-cards/what-are-cards.md)
