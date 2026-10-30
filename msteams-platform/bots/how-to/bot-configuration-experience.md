@@ -330,14 +330,13 @@ Use `type: "message"` to return a message that ends the interaction or provides 
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-
-app.OnConfigSubmit(async (context) =>
+app.OnConfigSubmit((context, cancellationToken) =>
 {
-    return new ConfigTaskResponse(
-        new MessageTask("You have chosen to finish setting up agent")
-    );
-});
+    var response = new ConfigTaskResponse(
+        new MessageTask("You have chosen to finish setting up agent"));
 
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(response);
+});
 ```
 
 * `MessageTask` message — Supplies the final message shown after configuration completes. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
@@ -347,8 +346,9 @@ app.OnConfigSubmit(async (context) =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('config.submit', async ({ activity, send }) => {
+app.on('config.submit', async (): Promise<ConfigResponse> => {
   return {
+    responseType: 'config',
     config: {
       type: 'message',
       value: 'You have chosen to finish setting up agent',
