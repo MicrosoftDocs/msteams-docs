@@ -1,34 +1,35 @@
 ---
-title: Configure OAuth authentication for Teams bots and agents
-description: Learn to configure user-delegated OAuth access for Teams bots and Teams SDK agents with an identity provider, Azure Bot connection, and runtime flow.
+title: Configure OAuth authentication for Teams agents and bots
+description: Learn to configure user-delegated OAuth access for Teams SDK agents and bots with an identity provider, Azure Bot connection, and runtime flow.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 10/30/2026
 ---
 
 <a name="configure-oauth-authentication-for-a-teams-bot"></a>
+<a name="configure-oauth-authentication-for-teams-bots-and-agents"></a>
 
-# Configure OAuth authentication for Teams bots and agents
+# Configure OAuth authentication for Teams agents and bots
 
-OAuth 2.0 lets your bot or conversational agent access an API, such as Microsoft Graph, on behalf of a user without collecting the user's password. For example, an agent can retrieve the signed-in user's profile as part of a task. With the Azure Bot Token Service, you configure an identity provider connection, and the service handles token acquisition, storage, and refresh.
+OAuth 2.0 lets your conversational agent or bot access an API, such as Microsoft Graph, on behalf of a user without collecting the user's password. For example, an agent can retrieve the signed-in user's profile as part of a task. With the Azure Bot Token Service, you configure an identity provider connection, and the service handles token acquisition, storage, and refresh.
 
-Use this article to configure user-delegated OAuth sign-in for an existing bot or Teams SDK conversational agent. It uses Microsoft Entra ID and the public-cloud OAuth endpoints. For a walkthrough that also creates resources, deploys a sample, and tests it in Teams, see [Tutorial: Add OAuth authentication to a Teams bot](add-authentication.md).
+Use this article to configure user-delegated OAuth sign-in for an existing Teams SDK conversational agent or bot. It uses Microsoft Entra ID and the public-cloud OAuth endpoints. For a walkthrough that also creates resources, deploys a sample, and tests it in Teams, see [Tutorial: Add OAuth authentication to a Teams bot](add-authentication.md).
 
 > [!IMPORTANT]
-> The Azure Bot Token Service flow requires an **Azure Bot resource**, even if your bot runs locally or is hosted outside Azure. An Azure Bot registration and Azure App Service hosting are separate requirements: you don't need an App Service plan to configure OAuth. A bot created only in Developer Portal doesn't provide the Azure Bot OAuth connection settings used here.
+> The Azure Bot Token Service flow requires an **Azure Bot resource**, even if your agent or bot runs locally or is hosted outside Azure. An Azure Bot registration and Azure App Service hosting are separate requirements: you don't need an App Service plan to configure OAuth. A bot created only in Developer Portal doesn't provide the Azure Bot OAuth connection settings used here.
 
 For a Teams SDK agent, the Azure Bot resource and bot identity are the registration and service credentials used by the agent's Teams messaging endpoint. This article uses **bot identity** for that service identity, not an identity acting autonomously as an agent. The OAuth connection provides access on behalf of a signed-in user; it doesn't grant app-only permissions or configure Microsoft Entra agent identities.
 
 ## Prerequisites
 
-- An existing bot or Teams SDK conversational agent and access to its Azure Bot resource. If you don't have a resource, follow [Create Azure Bot resource registration](add-authentication.md#create-azure-bot-resource-registration).
+- An existing Teams SDK conversational agent or bot and access to its Azure Bot resource. If you don't have a resource, follow [Create Azure Bot resource registration](add-authentication.md#create-azure-bot-resource-registration).
 - Permission to register an application in Microsoft Entra ID and configure its credentials and delegated API permissions.
 - Access to your app's configuration and handlers so you can register the OAuth flow and handle sign-in completion. The runtime guidance below targets Teams SDK 2.1.
 - A test account that can consent to the required permissions, or help from a tenant administrator when admin consent is required.
 
 ## User experience
 
-When a user requests an operation that needs access to their data, your app checks for a token. If sign-in is required, the bot or agent sends an OAuth card or link and explains which operation requires access. The user opens the sign-in experience, authenticates with the identity provider, and grants the requested permissions if permitted by tenant policy.
+When a user requests an operation that needs access to their data, your app checks for a token. If sign-in is required, the agent or bot sends an OAuth card or link and explains which operation requires access. The user opens the sign-in experience, authenticates with the identity provider, and grants the requested permissions if permitted by tenant policy.
 
 After sign-in, the SDK notifies your app on a later turn. Your completion handler can resume an agent's pending task if you stored it before starting sign-in; the SDK doesn't automatically resume the agent's task or tool call. Subsequent requests can use a cached token until authentication is required again. Signing out clears the connection's cached user token; it doesn't sign the user out of Teams.
 
@@ -40,7 +41,7 @@ Teams SSO can avoid the explicit sign-in experience when token exchange succeeds
 1. [Register the identity-provider application](#register-the-identity-provider-application) with the token-service redirect URI, credentials, and delegated permissions.
 1. [Add an OAuth connection to the Azure Bot resource](#add-an-oauth-connection-to-the-azure-bot-resource) using the identity-provider app's settings.
 1. [Test the connection](#test-the-connection) to verify sign-in and consent with the provider.
-1. [Use the connection in your bot or agent](#use-the-connection-in-your-bot-or-agent) to register a runtime flow, handle sign-in completion, call the API, and sign out.
+1. [Use the connection in your agent or bot](#use-the-connection-in-your-agent-or-bot) to register a runtime flow, handle sign-in completion, call the API, and sign out.
 
 ## Implement OAuth authentication
 
@@ -59,7 +60,7 @@ The [Bot Auth Quickstart sample](https://github.com/OfficeDev/Microsoft-Teams-Sa
 
 ### Register the identity-provider application
 
-The bot identity authenticates communication between the bot and the bot service. The identity-provider application authorizes access to an API on behalf of the user. Keep track of which application's credentials each setting requires.
+The bot identity authenticates communication between your agent or bot and the bot service. The identity-provider application authorizes access to an API on behalf of the user. Keep track of which application's credentials each setting requires.
 
 For the steps below, register a separate identity-provider app and leave the existing bot identity unchanged. If you already have an app configured for this purpose, verify its redirect URI, credentials, account audience, and permissions instead of creating another registration.
 
@@ -73,10 +74,10 @@ For the steps below, register a separate identity-provider app and leave the exi
 1. Enter a description, choose an expiration, and select **Add**.
 1. Copy the secret **Value**, not the secret ID, and store it securely. The value isn't displayed again after you leave the page.
 1. Select **API permissions** > **Add a permission** > **Microsoft Graph** > **Delegated permissions**.
-1. Add only the permissions your bot needs. For example, use `User.Read` to read the signed-in user's profile. Arrange admin consent if the permission or tenant policy requires it.
+1. Add only the permissions your agent or bot needs. For example, use `User.Read` to read the signed-in user's profile. Arrange admin consent if the permission or tenant policy requires it.
 
 > [!NOTE]
-> Regional and sovereign-cloud bots can require different redirect and OAuth URLs. Use the matching endpoints in [Supported OAuth URLs](/azure/bot-service/ref-oauth-redirect-urls). The redirect URI belongs to the token service, not your bot's messaging endpoint.
+> Regional and sovereign-cloud deployments can require different redirect and OAuth URLs. Use the matching endpoints in [Supported OAuth URLs](/azure/bot-service/ref-oauth-redirect-urls). The redirect URI belongs to the token service, not your app's messaging endpoint.
 
 ### Add an OAuth connection to the Azure Bot resource
 
@@ -86,12 +87,12 @@ For the steps below, register a separate identity-provider app and leave the exi
 
     | Field | Value |
     | --- | --- |
-    | **Name** | A connection name, such as `BotTeamsOAuth`. Use this exact name in your bot configuration. |
+    | **Name** | A connection name, such as `BotTeamsOAuth`. Use this exact name in your agent or bot configuration. |
     | **Service Provider** | **Azure Active Directory v2**, the Microsoft Entra ID v2 provider. |
     | **Client id** | The application (client) ID of the identity-provider application you registered. |
     | **Client secret** | The secret **Value** from that application. Don't enter the secret ID or credentials from a different application. |
     | **Token Exchange URL** | Leave blank for explicit OAuth sign-in. For Teams SSO, use the application ID URI as described in the [SSO configuration guidance](bot-sso-register-aad.md#configure-oauth-connection). |
-    | **Tenant ID** | For a single-tenant identity-provider app, use its directory (tenant) ID. For a multitenant identity-provider app, use `common` to support its configured account audience. This field is separate from the bot runtime's tenant ID. |
+    | **Tenant ID** | For a single-tenant identity-provider app, use its directory (tenant) ID. For a multitenant identity-provider app, use `common` to support its configured account audience. This field is separate from your app runtime's tenant ID. |
     | **Scopes** | A case-sensitive, space-separated list of required delegated permissions, such as `User.Read`. Match the permissions configured for the identity-provider app. |
 
 1. Select **Save**.
@@ -109,11 +110,12 @@ For other identity providers, select the appropriate **Service Provider** and su
 1. Review the requested permissions and grant consent if allowed.
 1. Confirm that **Test Connection to \<your-connection-name> Succeeded** appears.
 
-This test verifies the identity-provider connection. It doesn't verify your bot's messaging endpoint, app installation, or Teams SSO token exchange.
+This test verifies the identity-provider connection. It doesn't verify your agent's or bot's messaging endpoint, app installation, or Teams SSO token exchange.
 
 <a name="use-the-connection-in-your-bot"></a>
+<a name="use-the-connection-in-your-bot-or-agent"></a>
 
-### Use the connection in your bot or agent
+### Use the connection in your agent or bot
 
 Use the exact **Name** saved on the Azure Bot resource when registering the connection in your runtime. The following configuration names are conventions used by the Bot Auth Quickstart sample, not settings that automatically register a flow in every Teams SDK app:
 
@@ -123,11 +125,11 @@ Use the exact **Name** saved on the Azure Bot resource when registering the conn
 | TypeScript (Node.js) | `CONNECTION_NAME` in the sample's environment configuration. |
 | Python | `CONNECTION_NAME` in the sample's environment configuration. |
 
-Keep the bot runtime's client ID, credential, and tenant ID associated with the **bot identity**. The identity-provider application's client ID and secret belong in the OAuth connection. Some SSO configurations reuse an app registration; don't assume the two identities are always the same.
+Keep your agent or bot runtime's client ID, credential, and tenant ID associated with the **bot identity**. The identity-provider application's client ID and secret belong in the OAuth connection. Some SSO configurations reuse an app registration; don't assume the two identities are always the same.
 
 #### Integrate with Teams SDK 2.1
 
-For an existing bot or conversational agent built with **Teams SDK 2.1**, follow the linked runtime examples below. In each section, select your language and the **SDK 2.1 (current)** tab. Replace the example connection name, such as `graph`, with your saved connection name, such as `BotTeamsOAuth`.
+For an existing conversational agent or bot built with **Teams SDK 2.1**, follow the linked runtime examples below. In each section, select your language and the **SDK 2.1 (current)** tab. Replace the example connection name, such as `graph`, with your saved connection name, such as `BotTeamsOAuth`.
 
 1. [Register the OAuth flow](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#configure-the-oauth-connection) during app initialization. Use `AddOAuthFlow` with `AddTeamsBotApplication` in .NET, `app.addOAuthFlow` in TypeScript, or `app.add_oauth_flow` in Python. Retain or retrieve that flow object for the handlers below. Read any sample-specific connection-name setting in your code and pass its value to the registration API.
 1. [Start sign-in](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#signing-in) from a message handler using the flow's `SignInAsync` (.NET), `signIn` (TypeScript), or `sign_in` (Python). If a token is returned, continue the protected operation. Otherwise, the SDK sends an OAuth card; return from the handler instead of calling the protected API without a token.
@@ -139,7 +141,7 @@ If sign-in interrupts an agent's task, preserve it before starting sign-in and r
 
 For an agent, keep the authenticated API call in application code, such as a tool handler, rather than passing the access token to the language model. Select the OAuth flow for the intended API and current user before executing that call. If no token is available, pause the protected operation and start sign-in; don't substitute another user's token or continue with unauthenticated access.
 
-For a Teams app using the default public-cloud OAuth endpoint, include `token.botframework.com` in the app manifest's `validDomains`. Test sign-in, a protected API call, and sign-out from a personal chat in Teams with the bot's authenticated HTTPS messaging endpoint configured. A successful portal connection test or local Playground message test doesn't validate this runtime integration. If you also enable Teams SSO, [verify its token exchange in Teams](add-authentication.md#verify-teams-sso-token-exchange).
+For a Teams app using the default public-cloud OAuth endpoint, include `token.botframework.com` in the app manifest's `validDomains`. Test sign-in, a protected API call, and sign-out from a personal chat in Teams with your agent's or bot's authenticated HTTPS messaging endpoint configured. A successful portal connection test or local Playground message test doesn't validate this runtime integration. If you also enable Teams SSO, [verify its token exchange in Teams](add-authentication.md#verify-teams-sso-token-exchange).
 
 For an agent adaptation, also verify the following behaviors in Teams:
 
@@ -167,10 +169,10 @@ Use the following checks when a provider code isn't available or the failure occ
 | The redirect URI is rejected. | Verify that the identity-provider application's **Web** redirect URI exactly matches the token-service redirect URI for your cloud and region. |
 | **Test Connection** fails. | Verify the identity-provider client ID, secret value, secret expiration, tenant setting, and configured scopes. Use the error displayed by the provider to identify the failing setting, then test again. |
 | The user can't grant consent. | Verify the app's supported account types and delegated permissions. Ask a tenant administrator to grant consent when required. |
-| The connection test succeeds, but the bot can't get a user token. | Verify that the bot uses the exact connection name from its own Azure Bot resource and that its runtime credentials identify that bot. |
+| The connection test succeeds, but the agent or bot can't get a user token. | Verify that your app uses the exact connection name from its own Azure Bot resource and that its runtime credentials match the registered bot identity. |
 | Sign-in succeeds, but the agent's task doesn't resume. | Verify that pending work was saved before sign-in and retrieved by the completion callback for the same user, conversation, and connection. Don't wait for interactive sign-in inside the original handler. |
 | OAuth works, but Teams SSO doesn't. | Verify the exposed API scope, authorized Teams clients, **Token Exchange URL**, and `webApplicationInfo` using the [SSO configuration guidance](bot-sso-register-aad.md). |
-| Teams can't reach the bot. | Verify the bot's public HTTPS messaging endpoint and Teams channel configuration. A successful connection test doesn't test message delivery. |
+| Teams can't reach the agent or bot. | Verify your app's public HTTPS messaging endpoint and Teams channel configuration. A successful connection test doesn't test message delivery. |
 
 Handle cancellation and [sign-in failures](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#handling-sign-in-failures) with a user-facing explanation and a way to retry. Don't continue a protected operation without a token or record secrets in diagnostic output.
 
@@ -187,7 +189,7 @@ The .NET sample uses Teams SDK 2.1. The TypeScript and Python implementations us
 ## Design guidelines and best practices
 
 - Request only the delegated permissions needed for the user's operation. Explain why sign-in is needed before starting the flow, and handle tenant policies that require administrator consent.
-- Keep bot identity credentials in the bot runtime and identity-provider credentials in the OAuth connection. Use the exact saved connection name when registering the SDK flow.
+- Keep bot identity credentials in your agent or bot runtime and identity-provider credentials in the OAuth connection. Use the exact saved connection name when registering the SDK flow.
 - Use a token only for its intended API and granted permissions. Let the token service manage acquisition, storage, and refresh rather than exposing tokens to users or adding a separate refresh-token store.
 - If an agent must [resume a pending request](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#resuming-pending-messages-after-sign-in), store the pending work before starting sign-in. Scope it to the user, conversation, and connection because the original message isn't available on the completion turn. Retrieve and clear it after success, and expire or clear abandoned work after cancellation or failure.
 - Keep access tokens and credentials out of model prompts, conversation history, and tool results. Return only the API data needed for the user's task, subject to your app's data-handling rules. Authentication establishes access; it doesn't replace application authorization or confirmation for consequential actions.
