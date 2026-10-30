@@ -333,9 +333,12 @@
       displayName: OAuth Identity Providers, authentication using IdP
     - name: Add authentication to tab app
       href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Add OAuth authentication to an agent
+      href: bots/how-to/authentication/configure-oauth.md
+      displayName: OAuth, agent authentication, Teams SDK, bot authentication, identity provider, Azure Bot, connection settings
     - name: Add authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
-      displayName: Loop, validDomain, valid domain, validdomain
+      displayName: OAuth, bot authentication, tutorial, Azure Bot, Microsoft Entra ID, deployment
     - name: Add authentication to message extension app
       href: messaging-extensions/how-to/add-authentication.md
     - name: Add authentication to Adaptive Cards
