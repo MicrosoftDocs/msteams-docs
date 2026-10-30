@@ -150,8 +150,11 @@ app.OnConfigFetch((context, cancellationToken) =>
 });
 ```
 
-* `Title` — Sets the title shown on the configuration dialog. Set this to `"test card"` for the sample, or use a title that describes your settings.
-* `Width` and `Height` — Set the dimensions of the agent configuration dialog. Set these to `600` and `500` so the sample card has room to display.
+* `CardAction` and `TaskSize` — Identify the card action and dialog size types. Use the aliases `Microsoft.Teams.Cards.Action` and `Microsoft.Teams.Api.TaskModules.Size` so the action list and size unions reference the intended types.
+* `TaskInfo.Title` — Sets the title shown on the configuration dialog. Set this to `"test card"` for the sample, or use a title that describes your settings.
+* `TaskInfo.Width` and `TaskInfo.Height` — Set the dimensions of the agent configuration dialog. Set these to `new Union<int, TaskSize>(600)` and `new Union<int, TaskSize>(500)`, respectively, so the sample card has room to display.
+* `TaskInfo.Card` — Supplies the Adaptive Card shown in the dialog. Set this to `new Attachment(card)` so the dialog displays your configuration card.
+* `Task.FromResult<ConfigResponse>` — Returns the configuration response from the fetch handler. Pass `new ConfigTaskResponse(new ContinueTask(taskInfo))` so the handler returns a task containing the continuation dialog.
 
 ::: zone-end
 
@@ -182,6 +185,8 @@ app.on('config.open', async (): Promise<ConfigResponse> => {
 });
 ```
 
+* `app.on` event — Selects the handler for opening the configuration experience. Set this to `'config.open'` so the handler returns the initial configuration card.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
 * `config.type` — Keeps the configuration interaction open for user input. Set this to `'continue'` so Teams displays the configuration card.
 * `config.value.card` — Supplies the Adaptive Card shown in the dialog. Set this to `cardAttachment('adaptive', card)` so users can interact with your configuration card.
 
@@ -262,7 +267,10 @@ app.OnConfigSubmit((context, cancellationToken) =>
 
 * `SuggestedActions.To` — Identifies the user who receives the sign-in action. Set this to `[context.Activity.From.Id]` so the action targets the user configuring the agent.
 * `ActionType.OpenUrl` — Specifies the action used to open authentication. Pass this to `CardAction` so users can open your authentication page.
-* `Value` — Provides the destination URL for the sign-in action. Set this to your authentication page URL, replacing `"https://example.com/auth"` so users reach your service.
+* `CardAction.Title` — Sets the label displayed for the sign-in action. Set this to `"Sign in to this app"` so users understand the action.
+* `CardAction.Value` — Provides the destination URL for the sign-in action. Replace `"https://example.com/auth"` with your authentication page URL so users reach your service.
+* `MessageTask` message — Supplies the final message returned by the submit handler. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
+* `Task.FromResult<ConfigResponse>` — Returns a typed response from each configuration handler. Pass `response` so the fetch handler returns the authentication response and the submit handler returns the completion message.
 
 ::: zone-end
 
@@ -289,9 +297,12 @@ app.on('config.open', async ({ activity }): Promise<ConfigResponse> => {
 });
 ```
 
+* `app.on` event — Selects the handler for opening the configuration experience. Set this to `'config.open'` so the handler can request authentication.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
 * `config.type` — Selects an authentication response for the configuration request. Set this to `'auth'` so Teams prompts the user to sign in.
-* `suggestedActions.to` — Identifies the user who receives the sign-in action. Set this to `[activity.from.id]` so the action targets the user configuring the agent.
-* `suggestedActions.actions[].value` — Provides the destination URL for the sign-in action. Set this to your authentication page URL, replacing `'https://example.com/auth'` so users reach your service.
+* `config.suggestedActions.to` — Identifies the user who receives the sign-in action. Set this to `[activity.from.id]` so the action targets the user configuring the agent.
+* `config.suggestedActions.actions[].type` — Specifies the action used to open authentication. Set this to `'openUrl'` so users can open your authentication page.
+* `config.suggestedActions.actions[].value` — Provides the destination URL for the sign-in action. Replace `'https://example.com/auth'` with your authentication page URL so users reach your service.
 
 ::: zone-end
 
@@ -340,6 +351,7 @@ app.OnConfigSubmit((context, cancellationToken) =>
 ```
 
 * `MessageTask` message — Supplies the final message shown after configuration completes. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
+* `Task.FromResult<ConfigResponse>` — Returns the completion response from the submit handler. Pass `response`, containing `ConfigTaskResponse` and `MessageTask`, so the handler returns a task containing the final message.
 
 ::: zone-end
 
@@ -357,6 +369,8 @@ app.on('config.submit', async (): Promise<ConfigResponse> => {
 });
 ```
 
+* `app.on` event — Selects the handler for submitted agent configuration settings. Set this to `'config.submit'` so the handler returns a completion response.
+* `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
 * `config.type` — Ends the configuration interaction with a response message. Set this to `'message'` so Teams doesn't request more input.
 * `config.value` — Supplies the final message shown after configuration completes. Set this to `'You have chosen to finish setting up agent'` for the sample, or use a confirmation that describes the result.
 
