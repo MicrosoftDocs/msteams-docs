@@ -52,3 +52,5 @@ Here's a knowledge hub scenario for which you can build an agent in Teams:
 
 > [!div class="nextstepaction"]
 > [Quickstart: Create an agent and chat with it in Teams](quickstart-create-agent-teams-sdk.md)
+
+After you create an agent, learn how to [authenticate the agent](authenticate-your-agent.md), [understand its trust model](agent-trust-model.md), [add middleware and logging](agent-observability.md), and [host web content or manage its HTTP server](host-agent-server.md).
