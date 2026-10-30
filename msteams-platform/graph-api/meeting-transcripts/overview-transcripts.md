@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vichug
 ms.author: nickwalk
-ms.date: 09/07/2026
+ms.date: 10/29/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -110,6 +110,8 @@ For more information about how your app can know when the meetings ends, see [su
 ## Get AI-generated meeting summaries for online meeting instances
 
 Your app can directly fetch AI-generated meeting summaries, including conversation summaries, action items, and mentions using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
+
+To know when AI-generated insights are available for a meeting, your app can [subscribe to change notifications for AI insights](meeting-insights.md#get-notified-when-meeting-ai-insights-are-available).
 
 ## Code samples
 
