@@ -284,7 +284,7 @@ To process a rich notification, follow these steps:
 
 1. [Validate the tokens](/graph/change-notifications-with-resource-data#validate-the-authenticity-of-notifications) in the `validationTokens` property.
 
-1. [Decrypt](/graph/change-notifications-with-resource-data#decrypting-resource-data-from-change-notifications) the `data` property of `encryptedContent` with the private key of your certificate. The decrypted content is the callAiInsight object, which contains the same properties that the Get AI Insights API returns. As with the Get AI Insights API, the `viewpoint` property is specific to the user in the resource path.
+1. [Decrypt](/graph/change-notifications-with-resource-data#decrypting-resource-data-from-change-notifications) the `data` property of `encryptedContent` with the private key of your certificate. The decrypted content is the callAiInsight object, which contains the same properties that the Get AI Insights API returns. As with the Get AI Insights API, the `viewpoint` property is specific to the user in the resource path. The decrypted content also includes the `recapUrl` property, which is a link that opens the meeting recap in Teams. If the link can't be generated, the `recapUrl` property isn't included.
 
 The following example shows the decrypted content of a rich notification:
 
@@ -332,7 +332,8 @@ The following example shows the decrypted content of a rich notification:
         }
       }
     ]
-  }
+  },
+  "recapUrl": "https://teams.microsoft.com/l/meetingrecap?driveId=b!Dx3...&driveItemId=01QFW...&...&callId=97d0b...&contentCorrelationId=fb7aa...&recapType=ODSPTranscript"
 }
 ```
 
