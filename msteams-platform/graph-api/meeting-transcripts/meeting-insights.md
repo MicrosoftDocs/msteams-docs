@@ -201,10 +201,6 @@ AI insight subscriptions support the following types of notifications:
 
 Before you create a subscription for rich notifications, [configure application access](/graph/change-notifications-with-resource-data#application-configuration-for-notifications) for your app's service principal. Otherwise, the notifications contain a `null` validation token.
 
-> [!NOTE]
->
-> Rich notifications for AI insights are rolling out gradually. If rich notifications aren't available yet, a subscription request with `includeResourceData` set to `true` fails with the error message `Rich notifications are not supported for this resource. Please set includeResourceData field to false.` In this case, subscribe to basic notifications and use the [Get AI Insights API](/graph/api/callaiinsight-get?preserve-view=true) to fetch the insight.
-
 ### Example: Subscribe to rich notifications for AI insights
 
 #### Request
