@@ -4,7 +4,7 @@ description: Learn to set up and reconfigure bot settings directly within the ch
 ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 10/16/2026
+ms.date: 10/30/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -120,40 +120,33 @@ When the user submits the configuration, the `config.submit` invoke is triggered
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
+using CardAction = Microsoft.Teams.Cards.Action;
+using TaskSize = Microsoft.Teams.Api.TaskModules.Size;
 
-app.OnConfigFetch(async (context) =>
+app.OnConfigFetch((context, cancellationToken) =>
 {
     var card = new AdaptiveCard
     {
         Body = new List<CardElement>
         {
-            new TextBlock("Configure your agent")
-            {
-                Weight = TextWeight.Bolder
-            }
+            new TextBlock("Configure your agent") { Weight = TextWeight.Bolder }
         },
-        Actions = new List<Action>
+        Actions = new List<CardAction>
         {
-            new SubmitAction
-            {
-                Title = "Submit"
-            }
+            new SubmitAction { Title = "Submit" }
         }
     };
+
     var taskInfo = new TaskInfo
     {
         Title = "test card",
-        Width = new Union<int, Size>(600),
-        Height = new Union<int, Size>(500),
-        Card = new Attachment
-        {
-            ContentType = new ContentType("application/vnd.microsoft.card.adaptive"),
-            Content = card
-        }
+        Width = new Union<int, TaskSize>(600),
+        Height = new Union<int, TaskSize>(500),
+        Card = new Attachment(card)
     };
-    return new ConfigTaskResponse(
-        new ContinueTask(taskInfo)
-    );
+
+    return System.Threading.Tasks.Task.FromResult<ConfigResponse>(
+        new ConfigTaskResponse(new ContinueTask(taskInfo)));
 });
 ```
 
@@ -165,17 +158,17 @@ app.OnConfigFetch(async (context) =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on('config.fetch', async ({ activity }) => {
-  const card = new AdaptiveCard(
-    {
-      type: 'TextBlock',
-      text: 'Configure your agent',
-      weight: 'Bolder',
-    }
-  ).withActions(
+app.on('config.open', async (): Promise<ConfigResponse> => {
+  const card = new AdaptiveCard({
+    type: 'TextBlock',
+    text: 'Configure your agent',
+    weight: 'Bolder',
+  }).withActions(
     new SubmitAction().withTitle('Submit')
   );
+
   return {
+    responseType: 'config',
     config: {
       type: 'continue',
       value: {
