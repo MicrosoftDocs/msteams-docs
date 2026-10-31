@@ -3,7 +3,7 @@ title: Enable SSO for Bot & Message Extension
 description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 05/22/2026
+ms.date: 10/28/2026
 ---
 # Update app manifest for SSO and preview your app
 
@@ -22,8 +22,8 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 
 | Element | Description |
 | --- | --- |
-| `id` | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
-| `resource` | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
+| `id` | Enter the Application (client) ID of the Microsoft Entra app registration configured for SSO. Use the registration created or selected when configuring the bot, or a separate registration if the bot uses a user-assigned managed identity. Don't use the managed identity's client ID for this property. |
+| `resource` | Enter the **Application ID URI** configured under **Expose an API** in the SSO app registration. This value must match the **Token Exchange URL** in the bot's OAuth connection. |
 
 > [!NOTE]
 > Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
@@ -37,7 +37,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 >
 > If you use the managed identity ID directly in `webApplicationInfo` without an associated App Registration, app installation fails with the error: *Failed to execute TeamsGraphService backend request IsUserAuthorizedToGrantPersonalScopeResourceSpecificPermissionsRequestV2*.
 
-The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
+The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For an app with both a bot and a tab, include the tab's domain in this URI, as shown in the following examples. Copy the complete URI into `resource`.
 
 For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
@@ -52,34 +52,64 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
     > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/).
 
 1. Open the `manifest.json` file.
-1. Add one of the following code snippets to the app manifest file to add the new property:
+1. Identify the bot and SSO app registration IDs for your configuration:
 
-    - If your app has a standalone bot, add the following code snippet:
+    - **Bot using an app registration**: If the bot and SSO use the same Microsoft Entra app registration, `bots[].botId` and `webApplicationInfo.id` have the same Application (client) ID. This applies whether the registration is newly created or pre-existing.
+    - **Bot using a user-assigned managed identity**: Set `bots[].botId` to the managed identity's client ID. Set `webApplicationInfo.id` to the Application (client) ID of the separate Microsoft Entra app registration configured for SSO. These IDs are different.
+
+1. Add the `webApplicationInfo` property using the appropriate app manifest excerpt:
+
+    - If your app has a standalone bot, use the following excerpt:
 
         ```json
-        "webApplicationInfo": 
         {
-        "id": "{Azure AD AppId}",
-        "resource": "api://botid-{Azure AD AppId}"
+          "webApplicationInfo": {
+            "id": "<<SSO_APP_CLIENT_ID>>",
+            "resource": "api://botid-<<BOT_ID>>"
+          }
         }
         ```
 
-    - If your app contains a bot and a tab, add the following code snippet:
+    - If your app contains a bot and a tab, use the following excerpt:
 
         ```json
-        "webApplicationInfo": 
         {
-        "id": "{Azure AD AppId}",
-        "resource": "api://subdomain.example.com/botid-{Azure AD AppId}"
+          "webApplicationInfo": {
+            "id": "<<SSO_APP_CLIENT_ID>>",
+            "resource": "api://<<BASE_URI_DOMAIN>>/botid-<<BOT_ID>>"
+          }
         }
         ```
 
-        where,
-        - `{Azure AD AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
-        - `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
+    Replace the placeholders in these excerpts and the full example that follows:
 
-4. Update the app ID from Microsoft Entra ID in the **id** property.
-5. Update the subdomain URL in the following properties:
+    - `<<BOT_ID>>`: The bot's ID, used in `bots[].botId`. For a bot using an app registration, this is that registration's Application (client) ID. For a bot using a user-assigned managed identity, this is the managed identity's client ID.
+    - `<<SSO_APP_CLIENT_ID>>`: The Application (client) ID of the Microsoft Entra app registration configured for SSO.
+    - `<<BASE_URI_DOMAIN>>`: The fully qualified domain name that hosts your tab, such as `subdomain.example.com`.
+
+    Ensure that `resource` exactly matches the Application ID URI exposed by the SSO app registration and the **Token Exchange URL** in the bot's OAuth connection. The `botid-` segment uses `<<BOT_ID>>`, not the separate SSO app registration's client ID.
+
+    For example, a standalone bot using a user-assigned managed identity has the following app manifest excerpt. Replace `<<MANAGED_IDENTITY_CLIENT_ID>>` with the managed identity's client ID:
+
+    ```json
+    {
+      "bots": [
+        {
+          "botId": "<<MANAGED_IDENTITY_CLIENT_ID>>",
+          "scopes": [
+            "personal"
+          ]
+        }
+      ],
+      "webApplicationInfo": {
+        "id": "<<SSO_APP_CLIENT_ID>>",
+        "resource": "api://botid-<<MANAGED_IDENTITY_CLIENT_ID>>"
+      }
+    }
+    ```
+
+6. Update `webApplicationInfo.id` with the SSO app registration's Application (client) ID.
+7. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
@@ -87,11 +117,13 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
    > [!NOTE]
    > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Bot Framework. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
-6. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
+8. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
 
 <br>
 <details>
 <summary>Here's an example of the app manifest after it's updated</summary>
+
+This example contains a bot and tabs. If the bot and SSO use the same app registration, replace `<<BOT_ID>>` and `<<SSO_APP_CLIENT_ID>>` with the same Application (client) ID. If the bot uses a user-assigned managed identity, replace `<<BOT_ID>>` with the managed identity's client ID and `<<SSO_APP_CLIENT_ID>>` with the separate SSO app registration's Application (client) ID.
 
 ```json
 {
@@ -149,7 +181,7 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
   ],
   "bots": [
     {
-      "botId": "<<REGISTERED_BOT_ID>>",
+      "botId": "<<BOT_ID>>",
       "scopes": [
         "personal",
         "groupChat"
@@ -165,8 +197,8 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
     "token.botframework.com"
   ],
   "webApplicationInfo": {
-      "id": "<<REGISTERED_BOT_ID>>",
-      "resource": "api://<<BASE_URI_DOMAIN>>/<<REGISTERED_BOT_ID>>"
+      "id": "<<SSO_APP_CLIENT_ID>>",
+      "resource": "api://<<BASE_URI_DOMAIN>>/botid-<<BOT_ID>>"
   }
 }
 ```
@@ -174,7 +206,7 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
 </details>
 
 > [!NOTE]
-> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, replace the domain in `api://subdomain.example.com/botid-<<BOT_ID>>` with your ngrok domain. Whenever the ngrok domain changes, update the Application ID URI in the SSO app registration, `webApplicationInfo.resource`, and the OAuth connection's **Token Exchange URL** to match. Keep the `botid-<<BOT_ID>>` segment unchanged.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23to-configure-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
