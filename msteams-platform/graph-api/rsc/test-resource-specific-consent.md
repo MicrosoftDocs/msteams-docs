@@ -1,10 +1,6 @@
 ---
 title: Test RSC Permissions Using Postman
 description: Learn to test and revoke resource-specific consent (RSC) permission to a team and chat in Teams using Postman with code samples.
-ms.localizationpriority: medium
-author: akjo
-ms.topic: tutorial
-ms.owner: vishachadha
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
 ms.date: 03/28/2023
 ---

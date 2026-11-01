@@ -382,7 +382,7 @@
     - name: Preapproval of RSC permissions
       href: graph-api/rsc/preapproval-instruction-docs.md
       displayName: User, team, chat, application, delegated
-    - name: Grant RSC permission to your app
+    - name: Declare RSC permission requirements
       href: graph-api/rsc/grant-resource-specific-consent.md
       displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive app installation to send messages
