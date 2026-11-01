@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-10-22T00:00:00Z</updated>
+	<updated>2026-10-28T00:00:00Z</updated>
+	<entry>
+		<updated>2026-10-28T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-agents-can-now-stream-in-group-chats-channels-and-meetings</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-agents-can-now-stream-in-group-chats-channels-and-meetings"/>
+		<title type="html"><![CDATA[Released: Agents can now stream in group chats, channels, and meetings]]></title>
+		<summary type="html"><![CDATA[Streaming now works in every conversation type.]]></summary>
+		<content type="html"><![CDATA[<p>Streaming now works in every conversation type.</p><p>Users judge an agent by how quickly they see it working. When they see activity right away, the agent feels faster and more responsive. Agents used to get that only in one-on-one chats. Now they get it in group chats, channels, and meeting chats too.</p><p>With streaming, users can read your agent's response while it's being generated. Before the response starts, informative updates show what your agent is doing, and your agent can change them as the work progresses.</p><p>Informative updates have also been redesigned for group conversations. They now appear right under the message your agent is replying to. In a busy channel or chat, everyone can see which request your agent is working on, and the updates don't clutter the conversation.</p><p>To adopt:</p><ul><li><strong>Teams SDK</strong>: Update to the latest version. Your existing streaming code then works in every conversation type. Older versions keep the legacy experience, in one-on-one chats only.</li><li><strong>REST API</strong>: Set <code>replyToId</code> to the ID of the user message you're replying to. It's required outside one-on-one chats. If you leave it out in a one-on-one chat, you get the legacy experience.</li></ul><p>For details, see <a href="https://learn.microsoft.com/microsoftteams/platform/bots/streaming-ux">Stream agent messages</a>.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-10-22T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-update-agent-sessions-preview-ended-will-not-be-released</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Retiring: App manifest environment variables]]></title>
 		<summary type="html"><![CDATA[On <strong>August 31, 2026</strong>, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.]]></summary>
 		<content type="html"><![CDATA[<p>On <strong>August 31, 2026</strong>, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.</p><p>If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the retirement date.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-07-30T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-new-admin-controls-for-meeting-transcripts</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-new-admin-controls-for-meeting-transcripts"/>
-		<title type="html"><![CDATA[Released: New admin controls for meeting transcripts]]></title>
-		<summary type="html"><![CDATA[New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center. Using these controls, administrators can:]]></summary>
-		<content type="html"><![CDATA[<p>New controls governing access to meeting transcripts are now generally available to tenant administrators in Teams Admin Center. Using these controls, administrators can:</p><ul><li>Deny all transcript access via Graph API</li><li>Enable access only to transcripts that do not include speaker attribution</li></ul><p>Developers should ensure their agents and apps clearly communicate expectations and requirements about transcript access, gracefully handle denied access, and correctly handle the non-attributed transcript format.</p><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording">Graph API access to transcripts and recordings</a>.</p>]]></content>
 	</entry>
 </feed>

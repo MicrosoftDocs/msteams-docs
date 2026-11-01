@@ -8,9 +8,11 @@ zone_pivot_groups: teams-sdk-languages
 
 # Configure an agent to receive all messages in group chats and channels
 
-By default, in group chats and channels, the only chat messages that an agent receives or can access through Graph APIs are the messages in which it's @mentioned. To receive and access all messages from the group chats and channels it's in, an agent must declare the appropriate [resource-specific consent (RSC) permissions](../graph-api/rsc/resource-specific-consent.md) in its app manifest.
+By default, in group chats and channels, the only chat messages that an agent receives or can access through Graph APIs are the messages in which it's @mentioned. To receive and access all messages from the group chats and channels it's in, an agent must declare the appropriate [resource-specific consent (RSC) permissions](../graph-api/rsc/resource-specific-consent.md) in its app manifest. These permissions also let the agent access messages in those conversations through Microsoft Graph APIs.
 
-Most LLM-driven agents benefit from requesting these permissions so they can use the full contents of a conversation as context and proactively interact with users when appropriate. However, you should carefully design and evaluate your agent to ensure appropriate behavior with respect to data privacy and user expectations for agent participation.
+Teams doesn't deliver messages authored by other agents or bots, including the Workflows (Power Automate) bot, to your agent, even when these RSC permissions are configured. This limitation applies to message delivery to the agent, not to reading messages through Microsoft Graph APIs.
+
+Most LLM-driven agents benefit from requesting these permissions so they can use the user messages in a conversation as context and proactively interact with users when appropriate. However, you should carefully design and evaluate your agent to ensure appropriate behavior with respect to data privacy and user expectations for agent participation.
 
 The permissions described in this article are only relevant to agents that are installable in `team` and/or `groupChat` scopes. They don't provide agents with access to additional conversations, only to additional *messages* in conversations they can already access.
 
@@ -19,10 +21,10 @@ The permissions described in this article are only relevant to agents that are i
 
 ## Update declared RSC permissions
 
-To configure an agent to receive all messages in group chats and/or channels, include one or both of the following RSC permission declarations in the agent's app manifest:
+To configure an agent to receive all user messages in group chats and/or channels, include one or both of the following RSC permission declarations in the agent's app manifest:
 
-* `ChannelMessage.Read.Group`: Receive all messages in the channels of the team where the app is installed.
-* `ChatMessage.Read.Chat`: Receive all messages in the group chat where the app is installed.
+* `ChannelMessage.Read.Group`: Receive all user messages in the channels of the team where the app is installed.
+* `ChatMessage.Read.Chat`: Receive all user messages in the group chat where the app is installed.
 
 Example:
 

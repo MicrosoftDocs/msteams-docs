@@ -17,7 +17,7 @@ This article briefly describes deprecated SDKs and tools for Teams app developme
 
 The Bot Framework SDK, also called BotBuilder SDK, was used to build cross-platform bots compatible with Teams. The name "Bot Framework" is still used to refer to a larger ecosystem of cloud service and infrastructure components that remain an important part of the Teams platform, but the Bot Framework SDK is no longer supported as an SDK for creating bots or agents.
 
-Teams SDK is the successor to the Bot Framework SDK for agents that specifically target Teams and seek to make full use of its conversational features and collaborative surface. Use Microsoft Agents 365 SDK for agents that need compatibility with multiple conversational platforms.
+Teams SDK is the successor to the Bot Framework SDK for agents that specifically target Teams and seek to make full use of its conversational features and collaborative surface.
 
 ## Teams AI Library
 
@@ -27,13 +27,13 @@ Teams AI Library is now Teams SDK. Update existing solutions that use any versio
 
 TeamsFx was an SDK that simplified some aspects of Teams app development, including authentication, Microsoft Graph access, configuration, and deployment.
 
-Like the Bot Framework SDK, TeamsFx is superseded by the Teams SDK and Microsoft 365 Agents SDK.
+Like the Bot Framework SDK, TeamsFx is superseded by Teams SDK.
 
 ## Teams Toolkit
 
 Teams Toolkit was previously the main developer tooling experience for Teams app development, consisting of a command-line tool and extensions for Visual Studio Code and Visual Studio. Teams Toolkit integrated with TeamsFx and offered support for creating, debugging, provisioning, and deploying Teams applications.
 
-Microsoft 365 Agents Toolkit most directly succeeds Teams Toolkit. You can use it to create apps by using the Microsoft 365 Agents SDK or the Teams SDK. Alternatively, the Teams developer CLI provides a command-line based developer workflow.
+The successor to Teams Toolkit for developing Teams agents and apps is the Teams developer CLI's command-line workflow.
 
 ## Additional resources
 
