@@ -1,6 +1,7 @@
 ---
 title: Declare RSC permission requirements for an agent or app
 description: Learn how to declare resource-specific consent (RSC) permissions in Developer Portal or an app manifest and verify the grants for your agent or app.
+ms.topic: article
 ms.date: 10/26/2026
 ---
 
@@ -16,7 +17,7 @@ This article assumes that you already have an agent or app set up through the [T
 
 Before you declare permissions:
 
-* Identify the [RSC permissions](resource-specific-consent.md#supported-rsc-permissions) and resource scopes required by your app. Request only the permissions that its features need.
+* Identify the [RSC permissions](resource-specific-consent.md) and resource scopes required by your app. Request only the permissions that its features need.
 * Have the existing application (client) ID available for the app's `webApplicationInfo.id` property.
 * Ensure your organization's policies allow the required consent. Work with your administrator if consent is blocked. For related admin guidance, see [Grant and manage consent to Teams app permissions](/microsoftteams/manage-consent-app-permissions#view-resource-specific-consent-permissions-of-an-app).
 
@@ -63,7 +64,7 @@ To declare RSC permissions in the app manifest:
     |---|---|---|
     |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in app manifest](/microsoft-365/extensibility/schema/root-authorization).|
 
-    List each permission name and its `Application` or `Delegated` type in `authorization.permissions.resourceSpecific`. If an app supports installation in both team and chat scopes, you can declare both team and chat permissions in the same array. Include only the permissions that your app needs; the [RSC overview](resource-specific-consent.md#supported-rsc-permissions) lists the supported permissions.
+    List each permission name and its `Application` or `Delegated` type in `authorization.permissions.resourceSpecific`. If an app supports installation in both team and chat scopes, you can declare both team and chat permissions in the same array. Include only the permissions that your app needs; the [RSC overview](resource-specific-consent.md) lists the supported permissions.
 
 Example:
 
@@ -98,7 +99,7 @@ Add the [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-applic
 |---|---|---|
 |`id`|String|The existing application (client) ID for your agent or app.|
 |`resource`|String|Optional authentication resource value. It doesn't grant RSC access. Preserve the configured value if your app uses SSO.|
-|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
+|`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md).|
 
 If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `applicationPermissions`.
 
