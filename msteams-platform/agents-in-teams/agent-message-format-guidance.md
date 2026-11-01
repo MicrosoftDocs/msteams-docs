@@ -2,27 +2,44 @@
 
 Teams agents can respond using four message formats. Choosing the right format optimizes user experience by preventing cognitive overload, missed actions, or broken experiences. This guide helps you pick the right format based on what you're communicating and what the user needs to do.
 
+## Format profiles overview
+
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain text, Markdown, Adaptive Cards and HTML widget." border="false":::
+
 | # | Format | Best for | Complexity of implementation |
 |---|---|---|---|
 | 1 | Plain text | Conversational replies, quick confirmations, single-sentence facts | Low |
 | 2 | Markdown | Structured information, lists, code — no action required | Low – Medium |
 | 3 | Adaptive Card | Structured, visually rich content with optional actionability | Medium – High |
-| 4 | Widget / MCP-UI | Fully custom, stateful experiences with bespoke UI | High |
+| 4 | HTML widget | MCP Apps. Fully custom, stateful experiences with bespoke UI | High |
 
-## Key principles
+### Key principles
 
-1. **Default to the simplest format that meets the need.** Plain Text → Markdown → Adaptive Card → Widget. 
+1. **Default to the simplest format that meets the need.** Plain text → Markdown → Adaptive Card → HTML widget. 
 2. **Cards are for attraction, clarity and actions.** Include both informational and interactive elements in Adaptive Cards. Use cards when you need clarity, consistency or polished presentation aligned with Teams' design system. 
-3. **Widgets are an escalation path, not a default.** Validate on Adaptive Cards first; escalate only when cards hit a hard ceiling (live refresh, complex state, custom layouts etc.).
-4. **Match the surface.** Adaptive Cards are the most reliable cross-device choice for interactive content. Widget support varies on mobile and classic Teams.
+3. **Widgets are for an escalation path, not a default.** Validate on Adaptive Cards first; escalate only when cards hit a hard ceiling (live refresh, complex state, custom layouts etc.).
 5. **Avoid format mixing in a single turn.** A markdown block followed by a card in the same message creates visual noise. It is better to pick one format.
 
+### Quick-Reference Cheat Sheet
 
-
-## Format profiles overview
-
-
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain Text, Markdown, Adaptive Cards and HTML Widget." border="false":::
+| Scenario in agent's message | Recommended Format |
+|---|---|
+| Simple yes/no or single-sentence confirmation | Plain text |
+| Step-by-step instructions or numbered list | Markdown |
+| User must approve or reject something | Adaptive Card |
+| Code snippet or technical reference | Markdown |
+| Real-time service health or live status monitor | HTML widget |
+| Presenting options for the user to choose from | Adaptive Card |
+| Action completed or action failed | Plain Text |
+| Meeting recap or structured summary | Markdown |
+| Form the user needs to fill out and submit | Adaptive Card |
+| Live sales pipeline or updating data feed | HTML widget |
+| Search result the user can act on | Adaptive Card |
+| Interactive map with zoom and filter controls | HTML widget |
+| Scheduled status report - no action needed | Markdown |
+| Scheduled status report - user action required | Adaptive Card |
+| On-demand status report with real-time data and custom UI | HTML widget |
 
 
 ## Plain text
@@ -65,7 +82,7 @@ Use when you need lightweight structure — headers, bullets, bold, inline code 
 
 
 
-## Adaptive Card
+## Adaptive card
 
 Use when you need a structured, visually rich layout with actionability. Cards may include both informational and interactive elements. Adaptive Cards support components such as badges, progress indicators, tables, charts, and forms, and automatically adapt to Teams’ design language, accessibility modes, and themes (light, dark, high contrast).
 
@@ -96,7 +113,7 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 
 
 
-## Widget / MCP-UI
+## HTML widget
 
 Use for rich, stateful, interactive experiences beyond what a card can offer — embedded charts, live data, multi-step flows, or custom UI. Widgets render as a pane, not inline in chat. Widgets render as an iframe inline in chat.
 
@@ -125,31 +142,11 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png" alt-text="Image shows multiple design samples of html widgets." border="false":::
 
-## Which message format should I use?
+## Next steps
 
-Use the decision tree to help choosing the best message format:
+1. Link to Markdown message dev doc
+2. Link to Adaptive card dev doc
+3. Link to HTML widget dev doc
+4. Link to HTML widget design guidelines and accessibility guidelines
 
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-decision-tree.png" alt-text="Image shows a decision tree for agent to choose the right message format." border="false":::
-
-
-
-## Quick-Reference Cheat Sheet
-
-| Scenario in agent's message | Recommended Format |
-|---|---|
-| Simple yes/no or single-sentence confirmation | Plain text |
-| Step-by-step instructions or numbered list | Markdown |
-| User must approve or reject something | Adaptive Card |
-| Code snippet or technical reference | Markdown |
-| Real-time service health or live status monitor | Widget / MCP-UI |
-| Presenting options for the user to choose from | Adaptive Card |
-| Action completed or action failed | Plain Text |
-| Meeting recap or structured summary | Markdown |
-| Form the user needs to fill out and submit | Adaptive Card |
-| Live sales pipeline or updating data feed | Widget / MCP-UI |
-| Search result the user can act on | Adaptive Card |
-| Interactive map with zoom and filter controls | Widget / MCP-UI |
-| Scheduled status report - no action needed | Markdown |
-| Scheduled status report - user action required | Adaptive Card |
-| On-demand status report with real-time data and custom UI | Widget / MCP-UI |
