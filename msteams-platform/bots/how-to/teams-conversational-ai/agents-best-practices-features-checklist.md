@@ -15,11 +15,11 @@ These practices and features represent standard user expectations for agents in 
 
 Agents that participate in Teams group chats and channels must opt in via configuration to receive messages in which they aren't @mentioned. For many agents, the context provided by this capability is critical to intelligent and proactive participation. To opt an agent in to receive all messages in group chats and channels, see [Configure an agent to receive all messages in group chats and channels](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 
-## Message streaming and thinking indicators
+## Message streaming and informative updates
 
-Like many LLM chat experiences, Teams agents can [stream messages](../../streaming-ux.md) in one-on-one conversations to maximize responsiveness. Before streaming begins, Teams can also display a customizable, updatable *thinking indicator* to indicate liveness and provide insight into how the message is being generated.
+Like many agent chat experiences, Teams agents can [stream messages](../../streaming-ux.md) to maximize responsiveness. Before streaming begins, they can display informative updates to indicate liveness and provide insight into how the message is being generated.
 
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's thinking indicator status updates, followed by message content being streamed as it is generated":::
+:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Animated screen capture depicting an agent's informative status updates, followed by message content being streamed as it is generated":::
 
 ## Targeted messaging
 

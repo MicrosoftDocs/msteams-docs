@@ -492,14 +492,14 @@ It's important to understand that updating the configuration file has three majo
 
 * Bot or agent features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
 
-* Agents Playground doesn't support all types of cards except Adaptive Cards.
+* Agents Playground supports only Adaptive Cards. Other card types aren't supported.
 
-* Agents Playground doesn't support the following Adaptive Card features:
+* Within Adaptive Cards, Agents Playground doesn't support the following Adaptive Card features:
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
   * [Stageview](../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
-  * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
+  * [Full width cards](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Agents Playground doesn't support the following experiences:
 
@@ -691,4 +691,3 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Agents SDK](https://github.com/microsoft/Agents)

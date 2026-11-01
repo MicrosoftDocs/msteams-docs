@@ -1511,7 +1511,7 @@ The following table provides the error codes:
 | **400** | Bad request. The response body has more information. For example, not of all required parameters presented.|
 | **401** | Unauthorized. Bad or expired token. If you receive this error, generate a new CART URL in Teams. |
 | **404** | Meeting not found or not started. If you receive this error, ensure that you start the meeting and select start captions. After captions are enabled in the meeting, you can begin POSTing captions into the meeting.|
-| **500** |Internal server error. For more information, [contact support or provide feedback](../feedback.md).|
+| **500** |Internal server error. For more information, [contact support or provide feedback](../developer-support-feedback.md).|
 
 ## Receive real-time Teams meeting events
 

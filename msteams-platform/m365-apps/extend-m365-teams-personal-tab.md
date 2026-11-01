@@ -321,7 +321,7 @@ For an overall summary of Microsoft 365 host and platform support for Teams apps
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This action allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
 
-Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Microsoft Teams developer community channels](/microsoftteams/platform/developer-support-feedback) to report issues and provide feedback.
 
 ### Debugging
 
