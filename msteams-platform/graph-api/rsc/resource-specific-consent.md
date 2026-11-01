@@ -16,7 +16,7 @@ RSC is based on two concepts:
 
 ## Requesting and obtaining RSC permissions
 
-Developers declare which RSC permissions an agent or app needs in its app manifest. See [Grant RSC permissions to your app](grant-resource-specific-consent.md) for more information.
+Developers declare which RSC permissions an agent or app needs in its app manifest. See [Grant RSC permissions to your app](declare-resource-specific-consent-requirements.md) for more information.
 
 When a user attempts to install the agent or app, Teams presents them with a one-time request to grant the RSC permissions it needs. If the user consents and proceeds with the installation, the permissions granted extend only to the team, chat/meeting, or user where they installed it.
 
@@ -138,7 +138,7 @@ If a chat has a meeting or a call associated with it, the relevant RSC permissio
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Grant RSC permissions to an app](grant-resource-specific-consent.md)
+> [Grant RSC permissions to an app](declare-resource-specific-consent-requirements.md)
 
 ## See also
 
