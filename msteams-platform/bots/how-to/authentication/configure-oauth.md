@@ -25,11 +25,11 @@ Configure OAuth 2.0 so your Teams SDK conversational agent or bot can access API
 
 ## User experience
 
-When a user requests an operation that needs access to their data, your app checks for a token. If sign-in is required, the agent or bot sends an OAuth card or link and explains which operation requires access. The user opens the sign-in experience, authenticates with the identity provider, and grants the requested permissions if permitted by tenant policy.
+When an operation requires access to their data, users see an explanation and an OAuth card or link. They open the sign-in experience, authenticate with the identity provider, and grant the requested permissions if permitted by tenant policy.
 
-After sign-in, the SDK notifies your app on a later turn. Your completion handler can resume an agent's pending task if you stored it before starting sign-in; the SDK doesn't automatically resume the agent's task or tool call. Subsequent requests can use a cached token until authentication is required again. Signing out clears the connection's cached user token; it doesn't sign the user out of Teams.
+After sign-in, users can continue the protected task. They might not need to sign in again for subsequent requests. Signing out of the app's OAuth connection leaves them signed in to Teams.
 
-Teams SSO can avoid the explicit sign-in experience when token exchange succeeds. Consent or another interaction can still be required. Choose the experience before configuring the connection.
+Teams SSO can avoid the explicit sign-in experience, but consent or another interaction can still be required.
 
 ## Developer experience
 
@@ -129,13 +129,11 @@ For an existing conversational agent or bot built with **Teams SDK 2.1**, follow
 
 1. [Register the OAuth flow](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#configure-the-oauth-connection) during app initialization. Use `AddOAuthFlow` with `AddTeamsBotApplication` in .NET, `app.addOAuthFlow` in TypeScript, or `app.add_oauth_flow` in Python. Retain or retrieve that flow object for the handlers below. Read any sample-specific connection-name setting in your code and pass its value to the registration API.
 1. [Start sign-in](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#signing-in) from a message handler using the flow's `SignInAsync` (.NET), `signIn` (TypeScript), or `sign_in` (Python). If a token is returned, continue the protected operation. Otherwise, the SDK sends an OAuth card; return from the handler instead of calling the protected API without a token.
-1. [Handle sign-in completion](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#handling-sign-in-completion) on that flow using `OnSignInComplete` (.NET), `onSignInComplete` (TypeScript), or `@flow.on_signin` (Python). Interactive sign-in completes on a **later turn**, not by waiting inside the original message handler. Use the completion callback to continue with the authenticated user.
+1. [Handle sign-in completion](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#handling-sign-in-completion) on that flow using `OnSignInComplete` (.NET), `onSignInComplete` (TypeScript), or `@flow.on_signin` (Python). Interactive sign-in completes on a **later turn**, not by waiting inside the original message handler. Use the completion callback to continue with the authenticated user; the SDK doesn't automatically resume an agent's task or tool call. For pending-work storage and cleanup, see [Design guidelines and best practices](#design-guidelines-and-best-practices).
 1. [Use the token with the API client](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#start-using-the-client). Build the Graph client or authorized HTTP request from the token returned by the selected flow or its completion callback. Use a token for its intended API and granted delegated permissions; don't reuse another connection's token. Never send access tokens to chat or logs.
 1. [Implement sign-out](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#signing-out) using the flow's `SignOutAsync` (.NET), `signOut` (TypeScript), or `sign_out` (Python). Sign-out clears the user's cached token for that connection; it doesn't sign the user out of Teams or every identity provider.
 
-If sign-in interrupts an agent's task, preserve it before starting sign-in and resume it in the completion callback. See [Design guidelines and best practices](#design-guidelines-and-best-practices) for state scoping and cleanup.
-
-For an agent, keep the authenticated API call in application code, such as a tool handler, rather than passing the access token to the language model. Select the OAuth flow for the intended API and current user before executing that call. If no token is available, pause the protected operation and start sign-in; don't substitute another user's token or continue with unauthenticated access.
+Execute the agent's authenticated API call in application code, such as a tool handler, using the selected flow's token for the current user.
 
 For a Teams app using the default public-cloud OAuth endpoint, include `token.botframework.com` in the app manifest's `validDomains`. Test sign-in, a protected API call, and sign-out from a personal chat in Teams with your agent's or bot's authenticated HTTPS messaging endpoint configured. A successful portal connection test or local Playground message test doesn't validate this runtime integration. If you also enable Teams SSO, [verify its token exchange in Teams](add-authentication.md#verify-teams-sso-token-exchange).
 
@@ -166,11 +164,11 @@ Use the following checks when a provider code isn't available or the failure occ
 | **Test Connection** fails. | Verify the identity-provider client ID, secret value, secret expiration, tenant setting, and configured scopes. Use the error displayed by the provider to identify the failing setting, then test again. |
 | The user can't grant consent. | Verify the app's supported account types and delegated permissions. Ask a tenant administrator to grant consent when required. |
 | The connection test succeeds, but the agent or bot can't get a user token. | Verify that your app uses the exact connection name from its own Azure Bot resource and that its runtime credentials match the registered bot identity. |
-| Sign-in succeeds, but the agent's task doesn't resume. | Verify that pending work was saved before sign-in and retrieved by the completion callback for the same user, conversation, and connection. Don't wait for interactive sign-in inside the original handler. |
+| Sign-in succeeds, but the agent's task doesn't resume. | Check the completion handler in [SDK integration](#integrate-with-teams-sdk-21) and the pending-work handling in [best practices](#design-guidelines-and-best-practices). |
 | OAuth works, but Teams SSO doesn't. | Verify the exposed API scope, authorized Teams clients, **Token Exchange URL**, and `webApplicationInfo` using the [SSO configuration guidance](bot-sso-register-aad.md). |
 | Teams can't reach the agent or bot. | Verify your app's public HTTPS messaging endpoint and Teams channel configuration. A successful connection test doesn't test message delivery. |
 
-Handle cancellation and [sign-in failures](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#handling-sign-in-failures) with a user-facing explanation and a way to retry. Don't continue a protected operation without a token or record secrets in diagnostic output.
+Handle cancellation and [sign-in failures](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#handling-sign-in-failures) with a user-facing explanation and a way to retry.
 
 ## Code sample
 
@@ -185,11 +183,11 @@ The .NET sample uses Teams SDK 2.1. The TypeScript and Python implementations us
 ## Design guidelines and best practices
 
 - Request only the delegated permissions needed for the user's operation. Explain why sign-in is needed before starting the flow, and handle tenant policies that require administrator consent.
-- Keep bot identity credentials in your agent or bot runtime and identity-provider credentials in the OAuth connection. Use the exact saved connection name when registering the SDK flow.
+- Follow the credential separation described in [runtime configuration](#use-the-connection-in-your-agent-or-bot), and use the exact saved connection name when registering the SDK flow.
 - Use a token only for its intended API and granted permissions. Let the token service manage acquisition, storage, and refresh rather than exposing tokens to users or adding a separate refresh-token store.
 - If an agent must [resume a pending request](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication#resuming-pending-messages-after-sign-in), store the pending work before starting sign-in. Scope it to the user, conversation, and connection because the original message isn't available on the completion turn. Retrieve and clear it after success, and expire or clear abandoned work after cancellation or failure.
 - Keep access tokens and credentials out of model prompts, conversation history, and tool results. Return only the API data needed for the user's task, subject to your app's data-handling rules. Authentication establishes access; it doesn't replace application authorization or confirmation for consequential actions.
-- Provide clear sign-out feedback. Explain that signing out of a connection doesn't sign the user out of Teams or revoke all consent at the identity provider.
+- Provide clear sign-out feedback and explain its scope: signing out of a connection doesn't revoke all consent at the identity provider.
 
 ## Limitations and known issues
 
