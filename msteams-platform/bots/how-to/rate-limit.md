@@ -4,7 +4,7 @@ description: Learn how to optimize agent with rate limiting, detect transient ex
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: angovil
-ms.date: 02/06/2025
+ms.date: 10/08/2026
 ---
 
 # Rate limiting for agents
@@ -17,101 +17,18 @@ As the exact values of rate limits are subject to change, your application must 
 
 ## Handle rate limits
 
-When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOperationException` and check for the status code.
-
-The following code shows an example of handling rate limits:
-
-```csharp
-try
-{
-    // Perform Agent Framework operation
-    // for example, await connector.Conversations.UpdateActivityAsync(reply);
-}
-catch (HttpOperationException ex)
-{
-    if (ex.Response != null && (uint)ex.Response.StatusCode ==  429)
-    {
-        //Perform retry of the above operation/Action method
-    }
-}
-```
-
-After you handle rate limits for agents, you can handle `HTTP 429` responses using an exponential backoff.
+When an API returns an `HTTP 429 Too Many Requests` response, wait for the period specified in the `Retry-After` response header before you retry the request. If the response doesn't include a `Retry-After` header, use an exponential backoff with random jitter and a bounded number of retries.
 
 ## Handle `HTTP 429` responses
 
 You must take simple precautions to avoid receiving `HTTP 429` responses. For example, avoid issuing multiple requests to the same personal or channel conversation. Instead, create a batch of the API requests.
 
-Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
-
-After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
+Using an exponential backoff with random jitter prevents multiple requests from colliding again when they're retried. Store the retry values and strategy in a configuration file so you can fine-tune them at runtime.
 
 > [!NOTE]
-> In addition to retrying error code **429**, error codes **412**, **502**, and **504** must also be retried.
+> In addition to error code **429**, retry error codes **412**, **502**, **503**, and **504**.
 
-## Detect transient exceptions example
-
-The following code shows an example of using exponential backoff using the transient fault handling application block:
-
-```csharp
-public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectionStrategy
-    {
-        // List of error codes to retry on
-        List<int> transientErrorStatusCodes = new List<int>() { 429 };
-
-        public bool IsTransient(Exception ex) 
-          {
-          {
-              if (ex.Message.Contains("429"))
-                  return true;
-
-              HttpResponseMessageWrapper? response = null;
-              if (ex is HttpOperationException httpOperationException)
-              {
-                  response = httpOperationException.Response;
-              }
-              else
-              if (ex is ErrorResponseException errorResponseException)
-              {
-                  response = errorResponseException.Response;
-              }
-              return response != null && transientErrorStatusCodes.Contains((int)response.StatusCode);
-          }
-    }
-```
-
-You can perform backoff and retries using [transient fault handling](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). For guidelines on obtaining and installing the NuGet package, see [adding the transient fault handling application block to your solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). See also [transient fault handling](/azure/architecture/best-practices/transient-faults).
-
-After you go through the example for detecting transient exceptions, go through the exponential backoff example. You can use exponential backoff instead of retrying on failures.
-
-## Backoff example
-
-In addition to detecting rate limits, you can also perform an exponential backoff.
-
-The following code shows an example of exponential backoff:
-
-```csharp
-/**
-* The first parameter specifies the number of retries before failing the operation.
-* The second parameter specifies the minimum and maximum backoff time respectively.
-* The last parameter is used to add a randomized  +/- 20% delta to avoid numerous clients retrying simultaneously.
-*/
-var exponentialBackoffRetryStrategy = new ExponentialBackoffRetryStrategy(3, TimeSpan.FromSeconds(2),
-                        TimeSpan.FromSeconds(20), TimeSpan.FromSeconds(1));
-
-
-// Define the Retry Policy
-var retryPolicy = new RetryPolicy(new BotSdkTransientExceptionDetectionStrategy(), exponentialBackoffRetryStrategy);
-
-//Execute any bot sdk action
-await retryPolicy.ExecuteAsync(() => connector.Conversations.ReplyToActivityAsync( (Activity)reply) ).ConfigureAwait(false);
-```
-
-You can also perform a `System.Action` method execution with the retry policy described in this section. The referenced library also allows you to specify a fixed interval or a linear backoff mechanism.
-
-Store the value and strategy in a configuration file to fine-tune and tweak values at run time.
-
-For more information, see [retry patterns](/azure/architecture/patterns/retry).
+For more information, see [Transient fault handling](/azure/architecture/best-practices/transient-faults) and [Retry pattern](/azure/architecture/patterns/retry).
 
 You can also handle rate limit using the per agent per thread limit.
 
@@ -123,7 +40,7 @@ The per agent per thread limit controls the traffic that a agent is allowed to g
 >
 > * The thread limit of 3600 seconds and 1800 operations applies only if multiple agent messages are sent to a single user.
 > * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of agent messages per second must not cross the thread limit.
-> * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
+> * Message splitting at the service level results in higher than expected RPS. If you're concerned about approaching the limits, you must implement a [backoff strategy](#handle-rate-limits). The values provided in this section are for estimation only.
 
 The following table provides the per agent per thread limits:
 
