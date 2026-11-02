@@ -3,7 +3,7 @@ title: Configure OAuth authentication for Teams agents and bots
 description: Learn to configure user-delegated OAuth access for Teams SDK agents and bots with an identity provider, Azure Bot connection, and runtime flow.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/30/2026
+ms.date: 11/02/2026
 ---
 
 <a name="configure-oauth-authentication-for-a-teams-bot"></a>
@@ -11,14 +11,10 @@ ms.date: 10/30/2026
 
 # Configure OAuth authentication for Teams agents and bots
 
-OAuth 2.0 lets your conversational agent or bot access an API, such as Microsoft Graph, on behalf of a user without collecting the user's password. For example, an agent can retrieve the signed-in user's profile as part of a task. With the Azure Bot Token Service, you configure an identity provider connection, and the service handles token acquisition, storage, and refresh.
-
-Use this article to configure user-delegated OAuth sign-in for an existing Teams SDK conversational agent or bot. It uses Microsoft Entra ID and the public-cloud OAuth endpoints. For a walkthrough that also creates resources, deploys a sample, and tests it in Teams, see [Tutorial: Add OAuth authentication to a Teams bot](add-authentication.md).
+Configure OAuth 2.0 so your Teams SDK conversational agent or bot can access APIs on behalf of a signed-in user. This guide covers Microsoft Entra ID registration, an Azure Bot OAuth connection, and runtime integration; for provisioning and deployment, see the [end-to-end tutorial](add-authentication.md).
 
 > [!IMPORTANT]
-> The Azure Bot Token Service flow requires an **Azure Bot resource**, even if your agent or bot runs locally or is hosted outside Azure. An Azure Bot registration and Azure App Service hosting are separate requirements: you don't need an App Service plan to configure OAuth. A bot created only in Developer Portal doesn't provide the Azure Bot OAuth connection settings used here.
-
-For a Teams SDK agent, the Azure Bot resource and bot identity are the registration and service credentials used by the agent's Teams messaging endpoint. This article uses **bot identity** for that service identity, not an identity acting autonomously as an agent. The OAuth connection provides access on behalf of a signed-in user; it doesn't grant app-only permissions or configure Microsoft Entra agent identities.
+> This Azure Bot Token Service flow requires an **Azure Bot resource**, regardless of hosting location, but not Azure App Service hosting. A Developer Portal-only bot registration doesn't provide the OAuth connection settings used here.
 
 ## Prerequisites
 
