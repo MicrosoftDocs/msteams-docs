@@ -3,7 +3,7 @@ title: Add Third Party Authentication
 description: Learn how to add third party authentication to Adaptive Cards Universal Actions, its scenarios, and about authentication flow.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 09/02/2026
+ms.date: 10/29/2026
 ---
 
 # Add third party authentication to Adaptive Cards Universal Actions
@@ -40,7 +40,7 @@ Bots can respond with sign-in request in response to `Action.Execute` for:
 
 The OAuth or nominal authentication steps for Adaptive Cards with Universal Actions are similar to bot in Teams.
 
-Ensure that you added authentication to your Teams bot. To learn more about how to create an authentication-enabled bot, how to deploy the bot to Azure and associate it with an identity provider, and how to integrate the bot within Microsoft Teams, see [add authentication to your Teams bot](../../../bots/how-to/authentication/add-authentication.md).
+Ensure that your bot has an identity-provider connection. For an existing bot or Teams agent, see [Configure OAuth authentication for a Teams bot](../../../bots/how-to/authentication/configure-oauth.md). If you also need to create resources, deploy a sample, and install it in Teams, follow [Tutorial: Add OAuth authentication to a Teams bot](../../../bots/how-to/authentication/add-authentication.md).
 
 For an OAuth or nominal sign-on experience in which the user is presented with a sign-in button or link, the following is the OAuth or nominal sign-on flow:
 
