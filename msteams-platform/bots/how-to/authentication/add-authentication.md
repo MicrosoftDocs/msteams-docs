@@ -206,19 +206,21 @@ For OAuth setup without deployment or SSO, see [Register the identity-provider a
    1. Before leaving this page, **record the secret**. Use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
 
 1. Select **API permissions** > **Add a permission** > **Microsoft Graph** > **Delegated permissions**. Add `User.Read` for the sample's profile command. Obtain admin consent if required by your tenant.
-1. In **Microsoft Entra ID** > **App registrations** > **All applications**, open the identity-provider app you just created, such as *BotTeamsIdentity*. Verify that its **Application (client) ID** matches the value you saved for this app, not the bot's Microsoft App ID. Follow [Configure SSO with a separate authentication app](bot-sso-register-aad.md#configure-sso-with-a-separate-authentication-app) to expose its API, add `access_as_user`, authorize the Teams clients, and configure the access token version. Don't use **Azure Bot** > **Configuration** > **Manage** for this step: that opens the bot's identity registration.
+1. On the identity-provider app you just created, complete the API, `access_as_user` scope, Teams client authorization, and access token version steps in [Configure SSO with a separate authentication app](bot-sso-register-aad.md#configure-sso-with-a-separate-authentication-app). Its redirect URI, secret, and Graph permissions are already configured above; configure the Azure Bot OAuth connection in the next section. Don't open the bot identity registration through **Azure Bot** > **Configuration** > **Manage** for the SSO app changes.
+
+<a name="identity-value-mapping"></a>
 
 Use the following mapping throughout this tutorial. The bot and authentication app IDs are different; don't replace one with the other.
 
 | Value | Source and use |
 | --- | --- |
+| `TEAMS_APP_ID` | Your Teams app's unique ID. Use it for `id` in the app manifest, independently of the bot and authentication app IDs. |
 | `BOT_ID` | The **Microsoft App ID** on the Azure Bot resource's **Configuration** page. Use it for the bot runtime's client ID and `bots[].botId` in the app manifest. |
 | `SSO_APP_ID` | The **Application (client) ID** of the separate identity-provider app. Use it for the OAuth connection's **Client id** and the app manifest's `webApplicationInfo.id`. Use this app's secret for the OAuth connection's **Client secret**, not for the bot runtime. |
 | `SSO_APP_ID_URI` | The **Application ID URI** exposed on the identity-provider app. For this standalone bot, set it to `api://botid-{BOT_ID}`, replacing `{BOT_ID}` with the bot's Microsoft App ID, not `SSO_APP_ID`. |
 | **Token Exchange URL** | Set the Azure Bot OAuth connection field to the exact `SSO_APP_ID_URI`, without the `/access_as_user` scope suffix. |
 | `webApplicationInfo.resource` | Set this app manifest field to the exact same `SSO_APP_ID_URI`. |
-
-For example, if the bot ID is `11111111-1111-4111-8111-111111111111` and the authentication app ID is `22222222-2222-4222-8222-222222222222`, expose `api://botid-11111111-1111-4111-8111-111111111111` on the authentication app. The OAuth connection's client ID and `webApplicationInfo.id` are still `22222222-2222-4222-8222-222222222222`.
+| `validDomains` | Include `token.botframework.com` for this public-cloud OAuth flow. Preserve other required domains and replace any `BOT_DOMAIN` placeholder with your bot's hostname. |
 
 > [!NOTE]
 > This tutorial uses the default public-cloud redirect URI. For other clouds or regional data residency, use [Supported OAuth URLs](/azure/bot-service/ref-oauth-redirect-urls).
@@ -545,11 +547,7 @@ Use Web Chat to check message delivery and explicit sign-in. Test Teams SSO sepa
 ## Install and test the bot in Teams
 
 1. Locate your selected language's app package folder from [Prerequisites](#prerequisites). Ensure the package contains `manifest.json`, `outline.png`, and `color.png`.
-1. Open `manifest.json` in your editor and assign the following values:
-    1. Set `id` to your Teams app's unique ID and `bots[].botId` to the bot's Microsoft App ID.
-    1. Assign this value: `validDomains: [ "token.botframework.com" ]`.
-    1. Set `webApplicationInfo.id` to the SSO identity-provider application's client ID and `webApplicationInfo.resource` to its application ID URI. The resource must match **Token Exchange URL** in the OAuth connection.
-1. Replace all remaining template placeholders in `manifest.json` with literal values before packaging, including the Teams app ID, bot ID, bot hostname, authentication app ID, and application ID URI. See the [manifest value mapping](#apppackagemanifestjson). Don't include client secrets in the manifest or package.
+1. Open the sample's `manifest.json` and apply the [identity value mapping](#identity-value-mapping), preserving its other fields. Replace all remaining template placeholders with literal values before packaging. Don't include client secrets in the manifest or package.
 1. Manually **zip** the completed `manifest.json`, `outline.png`, and `color.png` at the archive root, without an enclosing `appPackage` folder. Save the ZIP in a location you can select during upload. This workflow doesn't use a Toolkit-generated package: **Deploy** uploads bot code but doesn't generate a Teams app package.
 1. Open **Microsoft Teams**.
 1. In the left panel, at the bottom, select the **Apps icon**.
@@ -638,17 +636,7 @@ To set up ngrok in preparation for running your Teams app locally, follow these 
 
 ### appPackage/manifest.json
 
-Update the existing `manifest.json` provided by your selected sample. Preserve its other fields and replace template placeholders with literal values before [packaging the app](#install-and-test-the-bot-in-teams).
-
-| Field | Value for this tutorial |
-| --- | --- |
-| `id` | Your Teams app's unique ID (`TEAMS_APP_ID`), separate from the bot identity. |
-| `bots[].botId` | The Azure Bot resource's Microsoft App ID (`BOT_ID`). |
-| `validDomains` | Include `token.botframework.com` for this public-cloud OAuth flow. Preserve other required domains and replace any `BOT_DOMAIN` placeholder with your bot's hostname. |
-| `webApplicationInfo.id` | The separate identity-provider application's client ID (`SSO_APP_ID`), not `BOT_ID`. |
-| `webApplicationInfo.resource` | The application ID URI exposed on the identity-provider app (`SSO_APP_ID_URI`): `api://botid-{BOT_ID}` for this standalone bot. It must exactly match **Token Exchange URL** in the OAuth connection, without the `/access_as_user` suffix. |
-
-These configuration names describe the required values; map any differently named sample variables to the same values. For more information, see [Update app manifest for SSO](bot-sso-manifest.md).
+Update the existing sample manifest using the [identity value mapping](#identity-value-mapping), preserving its other fields. Map any differently named sample variables to those values and replace placeholders before [packaging the app](#install-and-test-the-bot-in-teams). For more information, see [Update app manifest for SSO](bot-sso-manifest.md).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+appPackage%2Fmanifest.json&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23apppackagemanifestjson&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
