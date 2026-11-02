@@ -1,12 +1,16 @@
 ---
 title: Chain of Thought for Teams Agents
 description: Learn how Chain of Thought lets Teams agents show structured progress steps, status updates, and sources while working on a user request.
-ms.date: 10/26/2026
+ms.date: 11/02/2026
 ms.topic: article
 ms.localizationpriority: high
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Chain of Thought for Teams agents
+
+> [!NOTE]
+> In Teams SDK, structured progress is implemented with the **Plan** API. Plan APIs are in preview and might change.
 
 Chain of Thought (CoT) lets a Teams agent show its progress as a structured list of steps while working on a user's request. Each step has a title and status, and can include a description and source citations. Users can expand the progress indicator to see what the agent is doing and review completed steps alongside the final response.
 
@@ -103,9 +107,160 @@ How your agent responds to an edited user message depends on the associated CoT'
 
 When an associated user or agent message is deleted, its associated CoTs are also deleted. This applies to user, agent, administrator, and retention-driven deletion. The thinking indicator disappears, and a deleted CoT can't be relinked to another response.
 
-## Implementation guidance
+## Implement CoT with Teams SDK
 
-Implementation examples will be added after the feature team confirms the API and SDK contracts. This draft doesn't specify SDK methods, package versions, request payloads, or cancellation error handling.
+The Teams SDK exposes CoT through a Plan associated with the incoming message. Start a Plan with one or more steps, update the steps as work progresses, and complete the Plan with a final answer. The Plan API is experimental, and its types and methods can change. For end-to-end examples, see the SDK sample projects in the following table.
+
+Keep each step's ID stable throughout the Plan. Increment its version whenever you change its status, title, description, or sources. A step requires an ID, version, title, and status; description and sources are optional.
+
+### Start a Plan, update a step, and send an answer
+
+The following examples start a Plan with an active step, mark the step complete, and send a final answer.
+
+::: zone pivot="teams-sdk-csharp"
+
+Enable the experimental API diagnostic in your project file:
+
+```xml
+<PropertyGroup>
+    <NoWarn>$(NoWarn);ExperimentalTeamsPlan</NoWarn>
+</PropertyGroup>
+```
+
+```csharp
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema.Entities;
+
+teams.OnMessage(async (context, ct) =>
+{
+        Plan plan = Plan.CreateFromContext(context);
+        PlanStep step = new()
+        {
+                Id = "answer",
+                Version = 1,
+                Title = "Prepare answer",
+                Status = PlanStepStatuses.Active
+        };
+
+        await plan.StartAsync([step], ct);
+
+        string answer = "Here is your answer.";
+        step.Status = PlanStepStatuses.Completed;
+        step.Version++;
+        await plan.UpdateAsync([step], ct);
+        await plan.CompleteAsync(answer, ct);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+import type { Step } from '@microsoft/teams.api';
+
+app.on('message', async (ctx) => {
+    const plan = ctx.plan();
+    const step: Step = {
+        id: 'answer',
+        version: 1,
+        title: 'Prepare answer',
+        status: 'active',
+    };
+
+    await plan.start([step]);
+
+    const answer = 'Here is your answer.';
+    await plan.update([{ ...step, version: 2, status: 'completed' }]);
+    await plan.complete(answer);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+from microsoft_teams.api import MessageActivity, Step
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
+        plan = ctx.plan()
+        step = Step(id="answer", version=1, title="Prepare answer", status="active")
+        await plan.start([step])
+
+        answer = "Here is your answer."
+        completed_step = step.model_copy(update={"version": 2, "status": "completed"})
+        await plan.update([completed_step])
+        await plan.complete(answer)
+```
+
+::: zone-end
+
+### Stream the final answer
+
+You can stream the answer after updating the Plan. Use the same conversation stream and emit the Plan completion metadata after all answer text, as the final item. Don't call both the direct Plan completion method and the streamed completion path for the same answer.
+
+The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the Plan.
+
+Python and TypeScript close the stream automatically after a normal handler return. Explicitly await `ctx.stream.close()` if you need to handle final-send errors inside the handler or finish one response before starting another.
+
+::: zone pivot="teams-sdk-csharp"
+
+In C#, explicitly finalize the writer with the Plan completion activity. Creating a Plan or returning from the handler doesn't close the writer.
+
+```csharp
+TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
+await writer.AppendResponseAsync("Here is ", ct);
+await writer.AppendResponseAsync("your answer.", ct);
+await writer.FinalizeResponseAsync(plan.Completion(), ct);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+ctx.stream.emit('Here is ');
+ctx.stream.emit('your answer.');
+ctx.stream.emit(plan.completion());
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+ctx.stream.emit("Here is ")
+ctx.stream.emit("your answer.")
+ctx.stream.emit(plan.completion())
+```
+
+::: zone-end
+
+### Stop a Plan or report an error
+
+Use a terminal Plan outcome when work is stopped or fails instead of completing it with an answer.
+
+| Outcome | Python | TypeScript | C# |
+| --- | --- | --- | --- |
+| Stop | `await plan.stop()` | `await plan.stop()` | `await plan.StopAsync(ct)` |
+| Report failure | `await plan.error()` | `await plan.error()` | `await plan.ErrorAsync(ct)` |
+
+These methods don't accept a reason string or cancel your application's work. To describe a failure, first update the affected step with a higher version, an `error` status, and a description, then report the Plan error. Don't blindly retry a service `PlanConflict` response.
+
+### Continue work later
+
+For background work, save the conversation ID and the original prompt activity ID. Reconstruct the Plan later using those IDs and an authenticated SDK client scoped to the same service URL and identity. Preserve the full conversation ID; don't substitute the bot's answer ID or stream ID for the original prompt ID.
+
+Don't store credentials or the runtime client in saved Plan data. Your application is responsible for scheduling background work, cancellation, and recovery; the Teams SDK doesn't retain the incoming handler context for you.
+
+## Code samples
+
+| Sample | Description | C# | TypeScript | Python |
+| --- | --- | --- | --- | --- |
+| Teams SDK Plan sample | Demonstrates creating and updating a Plan, completing it with a final answer, and streaming completion metadata. | [View](https://github.com/microsoft/teams.net/tree/main/samples/PlanBot) | [View](https://github.com/microsoft/teams.ts/tree/main/examples/plan) | [View](https://github.com/microsoft/teams.py/tree/main/examples/plan) |
 
 ## See also
 
