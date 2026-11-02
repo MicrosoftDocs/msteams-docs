@@ -1772,6 +1772,11 @@
         "source_path": "msteams-platform/m365-apps/agent-connectors.md",
         "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/graph-api/rsc/grant-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/declare-resource-specific-consent-requirements",
+        "redirect_document_id": false
       }
     ]
 }
