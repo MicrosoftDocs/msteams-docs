@@ -11,15 +11,13 @@ zone_pivot_groups: teams-sdk-languages
 
 <a name="add-authentication-to-your-teams-bot"></a>
 
-In this end-to-end tutorial, you configure OAuth 2.0 authentication with Microsoft Entra ID, deploy a Teams SDK bot to Azure, and test it in Microsoft Teams. OAuth lets the bot access resources on behalf of a user without collecting the user's password. The Bot Auth Quickstart sample also uses Teams single sign-on (SSO) to reuse the user's Teams identity and retrieve their Microsoft Graph profile.
+In this end-to-end tutorial, you configure OAuth 2.0 with Microsoft Entra ID, deploy a Teams SDK bot to Azure, and test it in Microsoft Teams. The Bot Auth Quickstart sample uses Teams single sign-on (SSO) to access the signed-in user's Microsoft Graph profile.
 
 > [!NOTE]
-> This tutorial also provides a user-authentication foundation for conversational agents built with Teams SDK. It demonstrates delegated access on behalf of a signed-in user through a command-based bot sample, not an end-to-end AI agent with an AI framework or orchestration. It doesn't cover app-only access or Agent 365 agentic identity. The bot service credentials configured here are separate from delegated user tokens; other service-identity scenarios, Microsoft 365 Agents SDK, and declarative agents require their own guidance.
+> This command-based sample provides a delegated user-authentication foundation for Teams SDK conversational agents, not a complete AI agent.
 
 > [!TIP]
-> Already have a bot or Teams SDK conversational agent and only need OAuth setup? See [Configure OAuth authentication for Teams agents and bots](configure-oauth.md). You don't need to work through resource provisioning and deployment to configure an OAuth connection.
-
-The Azure Bot Token Service flow requires an **Azure Bot resource**, regardless of where you host the bot code. Registration connects the bot to the service and its OAuth connection settings; it doesn't deploy the bot's web service. This tutorial uses Azure App Service for hosting, but you can host the code elsewhere or test locally through a public HTTPS tunnel.
+> For OAuth setup in an existing agent or bot without the deployment walkthrough, see [Configure OAuth authentication for Teams agents and bots](configure-oauth.md).
 
 In this tutorial, you:
 
@@ -28,8 +26,6 @@ In this tutorial, you:
 1. Configure Microsoft Entra ID, an OAuth connection, and Teams SSO.
 1. Configure and deploy the sample in your preferred language.
 1. Install the app in Teams and test `signin`, `profile`, and `signout`.
-
-If you already have hosting resources, skip to [Create Azure Bot resource registration](#create-azure-bot-resource-registration). If your bot is already registered in Azure, continue with [Create the identity provider](#create-the-identity-provider). For background on the protocol, see [OAuth 2.0](https://oauth.net/2/).
 
 ## Prerequisites
 

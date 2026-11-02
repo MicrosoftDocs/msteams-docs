@@ -336,7 +336,7 @@
     - name: Add OAuth authentication to an agent
       href: bots/how-to/authentication/configure-oauth.md
       displayName: OAuth, agent authentication, Teams SDK, bot authentication, identity provider, Azure Bot, connection settings
-    - name: Add authentication to bot app
+    - name: Tutorial - Add authentication to bot app
       href: bots/how-to/authentication/add-authentication.md
       displayName: OAuth, bot authentication, tutorial, Azure Bot, Microsoft Entra ID, deployment
     - name: Add authentication to message extension app
