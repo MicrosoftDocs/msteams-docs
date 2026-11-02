@@ -43,17 +43,17 @@ Choose to add authentication for your app in one of the following ways:
 
 ## Select authentication method
 
-Choose the sign-in experience for your tab, bot, message extension, or Teams agent built with Teams SDK. Teams SSO builds on OAuth to use the user's Teams identity; an explicit OAuth sign-in flow prompts the user to sign in to an identity provider.
+Choose the sign-in experience for your tab, bot, message extension, or conversational agent built with Teams SDK. Teams SSO builds on OAuth to use the user's Teams identity; an explicit OAuth sign-in flow prompts the user to sign in to an identity provider.
 
-For a bot or Teams agent that accesses APIs on behalf of a signed-in user, choose the guidance that matches your starting point:
+For a bot or Teams SDK conversational agent that accesses APIs on behalf of a signed-in user, choose the guidance that matches your starting point:
 
-* **Existing bot or Teams agent**: [Configure OAuth authentication for a Teams bot](../../bots/how-to/authentication/configure-oauth.md) without following a deployment tutorial.
+* **Existing bot or Teams SDK agent**: [Configure OAuth authentication for Teams agents and bots](../../bots/how-to/authentication/configure-oauth.md) without following a deployment tutorial.
 * **End-to-end walkthrough**: [Tutorial: Add OAuth authentication to a Teams bot](../../bots/how-to/authentication/add-authentication.md) covers resource creation, OAuth and SSO configuration, Azure deployment, and testing.
 * **Teams SSO**: [Enable SSO for your app](../../bots/how-to/authentication/bot-sso-overview.md) explains the sign-in experience and additional token-exchange configuration.
-* **Agent runtime integration**: [Teams SDK user authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication) provides language-specific examples for sign-in, token use, sign-out, and resuming pending requests.
+* **Teams SDK agent runtime integration**: [Teams SDK user authentication](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication) provides language-specific examples for sign-in, token use, sign-out, and resuming pending requests.
 
 > [!NOTE]
-> These bot and Teams agent routes cover user-delegated access. They don't configure the bot or Teams agent's own service identity, app-only API access, or [Agent 365 agentic identity](/microsoftteams/platform/teams-sdk/in-depth-guides/agentic-identity). Microsoft 365 Agents SDK and declarative agents require guidance specific to their SDK or agent type; don't apply Teams SDK runtime APIs to them. Nested app authentication and API-based message-extension authentication remain specific to the app surfaces described above.
+> These bot and Teams SDK agent routes cover user-delegated access. They don't configure the bot or agent's own service identity, app-only API access, or [Agent 365 agentic identity](/microsoftteams/platform/teams-sdk/in-depth-guides/agentic-identity). Microsoft 365 Agents SDK and declarative agents require guidance specific to their SDK or agent type; don't apply Teams SDK runtime APIs to them. Nested app authentication and API-based message-extension authentication remain specific to the app surfaces described above.
 
 The Azure Bot Token Service flow requires an Azure Bot registration, but doesn't require you to host your bot code in Azure App Service.
 
@@ -114,9 +114,9 @@ The Azure Bot Token Service flow requires an Azure Bot registration, but doesn't
 
 ## See also
 
-* [Configure OAuth authentication for a Teams bot](../../bots/how-to/authentication/configure-oauth.md)
+* [Configure OAuth authentication for Teams agents and bots](../../bots/how-to/authentication/configure-oauth.md)
 * [Tutorial: Add OAuth authentication to a Teams bot](../../bots/how-to/authentication/add-authentication.md)
-* [User authentication for agents](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication)
+* [User authentication for Teams SDK agents](/microsoftteams/platform/teams-sdk/in-depth-guides/user-authentication)
 * [Enable single sign-on in a tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
 * [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [Enable SSO for your app](~/bots/how-to/authentication/bot-sso-overview.md)
