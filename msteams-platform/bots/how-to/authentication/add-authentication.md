@@ -642,67 +642,17 @@ To set up ngrok in preparation for running your Teams app locally, follow these 
 
 ### appPackage/manifest.json
 
-Use the app manifest provided by your sample. The following example shows how the Teams app, bot identity, and SSO application are connected. Replace the placeholders through your project's configuration before packaging.
+Update the existing `manifest.json` provided by your selected sample. Preserve its other fields and replace template placeholders with literal values before [packaging the app](#install-and-test-the-bot-in-teams).
 
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.22",
-  "version": "1.0.0",
-  "id": "${{TEAMS_APP_ID}}",
-  "developer": {
-    "name": "Teams App, Inc.",
-    "websiteUrl": "https://example.azurewebsites.net",
-    "privacyUrl": "https://example.azurewebsites.net/privacy",
-    "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
-  },
-  "icons": {
-    "color": "color.png",
-    "outline": "outline.png"
-  },
-  "name": {
-    "short": "Auth Bot",
-    "full": "Auth Bot"
-  },
-  "description": {
-    "short": "Teams bot with OAuth, SSO, and Microsoft Graph integration.",
-    "full": "This bot demonstrates OAuth and SSO in Teams using Microsoft Entra ID and retrieves the signed-in user's profile from Microsoft Graph."
-  },
-  "accentColor": "#FFFFFF",
-  "bots": [
-    {
-      "botId": "${{BOT_ID}}",
-      "scopes": [
-        "personal",
-        "groupChat",
-        "team"
-      ],
-      "supportsFiles": false,
-      "isNotificationOnly": false
-    }
-  ],
-  "permissions": [
-    "identity",
-    "messageTeamMembers"
-  ],
-  "validDomains": [
-    "token.botframework.com",
-    "${{BOT_DOMAIN}}"
-  ],
-  "webApplicationInfo": {
-    "id": "${{SSO_APP_ID}}",
-    "resource": "${{SSO_APP_ID_URI}}"
-  }
-}
-```
+| Field | Value for this tutorial |
+| --- | --- |
+| `id` | Your Teams app's unique ID (`TEAMS_APP_ID`), separate from the bot identity. |
+| `bots[].botId` | The Azure Bot resource's Microsoft App ID (`BOT_ID`). |
+| `validDomains` | Include `token.botframework.com` for this public-cloud OAuth flow. Preserve other required domains and replace any `BOT_DOMAIN` placeholder with your bot's hostname. |
+| `webApplicationInfo.id` | The separate identity-provider application's client ID (`SSO_APP_ID`), not `BOT_ID`. |
+| `webApplicationInfo.resource` | The application ID URI exposed on the identity-provider app (`SSO_APP_ID_URI`): `api://botid-{BOT_ID}` for this standalone bot. It must exactly match **Token Exchange URL** in the OAuth connection, without the `/access_as_user` suffix. |
 
-- `id` identifies the Teams app independently of its bot. Set `TEAMS_APP_ID` to the Teams app's unique ID.
-- `bots[].botId` connects Teams to the registered bot. Set `BOT_ID` to the bot's Microsoft App ID.
-- `validDomains` allows the OAuth token-service domain. Keep `token.botframework.com` for this public-cloud flow and replace `BOT_DOMAIN` with your bot's hostname.
-- `webApplicationInfo.id` identifies the SSO identity-provider application. Set `SSO_APP_ID` to its application (client) ID.
-- `webApplicationInfo.resource` identifies the API used for token exchange. Set `SSO_APP_ID_URI` to the application ID URI exposed on the identity-provider app: `api://botid-{BOT_ID}` for this standalone bot. It must match **Token Exchange URL** in the OAuth connection, even though `webApplicationInfo.id` uses the separate `SSO_APP_ID`.
-
-The SSO placeholders describe the required values; if your sample uses different environment variable names, map those variables to the same values. For more information, see [Update app manifest for SSO](bot-sso-manifest.md).
+These configuration names describe the required values; map any differently named sample variables to the same values. For more information, see [Update app manifest for SSO](bot-sso-manifest.md).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+appPackage%2Fmanifest.json&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Ddotnet%252Cpython-sample%23apppackagemanifestjson&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
