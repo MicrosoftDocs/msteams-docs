@@ -104,7 +104,10 @@
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Teams SDK
-    href: teams-sdk-overview.md
+    items:
+    - name: Overview
+      href: teams-sdk-overview.md
+    - name: 
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
   - name: Coding agent skill
@@ -927,6 +930,8 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Enable agent or app in Copilot
+    href: m365-apps/enable-agent-app-copilot.md
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency

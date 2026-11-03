@@ -12,8 +12,8 @@ Agent Skills give AI coding assistants relevant context for specific development
 > [!TIP]
 > If you'd rather not install a skill, you can provide the same context by pointing your AI tool to the llms.txt URL:
 >
-> ```text
-> https://microsoft.github.io/teams-sdk/llms_docs/llms.txt`
+> ```
+> https://microsoft.github.io/teams-sdk/llms_docs/llms.txt
 > ```
 
 ## Install the `teams-dev` skill
@@ -22,13 +22,13 @@ Agent Skills give AI coding assistants relevant context for specific development
 
 Add the marketplace (first time only):
 
-```bash
+```
 /plugin marketplace add microsoft/teams-sdk
 ```
 
 Install the skill:
 
-```bash
+```
 /plugin install teams-sdk@teams-skills
 ```
 
@@ -38,13 +38,13 @@ After installing, restart GitHub Copilot for the skills to load.
 
 Add the marketplace (first time only):
 
-```bash
+```
 /plugin marketplace add microsoft/teams-sdk
 ```
 
 Install the skill:
 
-```bash
+```
 /plugin install teams-sdk@teams-skills
 ```
 
@@ -84,13 +84,13 @@ The skill loads automatically when your agent detects a relevant request.
 
 **Direct invocation:**
 
-```text
+```
 /teams-dev
 ```
 
 ## Example session
 
-```console
+```
 You: Help me create a Teams bot that echoes what I'm saying back to me
 
 Agent: I'll create an echo bot for you.
