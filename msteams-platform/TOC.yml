@@ -60,6 +60,9 @@
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
+    - name: Teams agent message format guidance
+      href: agents-in-teams/teams-agent-message-format-guidance.md
+      displayName: Teams, agent, message, format, guidance
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
       displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
