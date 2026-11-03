@@ -69,6 +69,17 @@
     - name: Agent slash commands
       href: agents-in-teams/agent-slash-commands.md
       displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
+    - name: HTML widgets
+      items:
+      - name: Send HTML widgets
+        href: html-widgets/build-html-widgets.md
+        displayName: HTML, widget, Teams, integration
+      - name: UX guidelines for HTML widgets
+        href: html-widgets/ux-guidelines.md
+        displayName: UX, guidelines, HTML, widget, Teams
+      - name: Accessibility guidelines for HTML widgets
+        href: html-widgets/accessibility-guidelines.md
+        displayName: Accessibility, guidelines, HTML, widget, Teams
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
