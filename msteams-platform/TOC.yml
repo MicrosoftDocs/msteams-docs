@@ -107,6 +107,12 @@
     items:
     - name: Overview
       href: teams-sdk-overview.md
+    - name: Add middleware and logging
+      href: agents-in-teams/agent-observability.md
+      displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
+    - name: Host web content and manage your server
+      href: agents-in-teams/host-agent-server.md
+      displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
   - name: Coding agent skill
