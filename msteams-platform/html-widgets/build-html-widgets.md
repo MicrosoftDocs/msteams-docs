@@ -6,7 +6,7 @@ ms.date: 11/03/2026
 ms.topic: reference
 ---
 
-# Building HTML Widgets in Teams Bots
+# Build HTML Widgets in Teams Bots
 
 This guide shows how a Teams bot written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
 

@@ -57,21 +57,12 @@
     - name: Teams emoji reactions reference
       href: agents-in-teams/teams-reactions-reference.md
       displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Choose agent message format
+      href: agents-in-teams/agent-message-format-guidance.md
+      displayName: Teams, agent, message, format, guidance
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
-    - name: Teams agent message format guidance
-      href: agents-in-teams/agent-message-format-guidance.md
-      displayName: Teams, agent, message, format, guidance
-    - name: Suggested actions
-      href: bots/how-to/conversations/suggested-actions.md
-      displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
-    - name: Targeted messages
-      href: agents-in-teams/targeted-messages.md
-      displayName: private messages, ephemeral messages, command, notification, response
-    - name: Agent slash commands
-      href: agents-in-teams/agent-slash-commands.md
-      displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
     - name: HTML widgets
       items:
       - name: Send HTML widgets
@@ -83,6 +74,15 @@
       - name: Accessibility guidelines for HTML widgets
         href: html-widgets/accessibility-guidelines.md
         displayName: Accessibility, guidelines, HTML, widget, Teams
+    - name: Suggested actions
+      href: bots/how-to/conversations/suggested-actions.md
+      displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
+    - name: Targeted messages
+      href: agents-in-teams/targeted-messages.md
+      displayName: private messages, ephemeral messages, command, notification, response
+    - name: Agent slash commands
+      href: agents-in-teams/agent-slash-commands.md
+      displayName: private messages, ephemeral messages, targeted messages, message extension command, bot command, agent command, named command
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
