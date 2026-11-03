@@ -39,7 +39,7 @@ The components include:
 |Counter|Description|
 |----------|-----------|
 |1|**Avatar**: Shows who initiated the activity.|
-|2|**Activity type or app icon**: The activity type or app icon depicts the type of activity. For app notifications, the line icon gets replaced with an app icon. |
+|2|**Activity type or app icon**: The activity type or app icon depicts the type of activity. For app notifications, the line icon gets replaced with an app icon.|
 |3|**Title: Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
 |4|**Timestamp**: Shows when the activity happened.|
 |5|**Text preview**: Shows a truncated line from the start of the notification.|
@@ -82,7 +82,7 @@ Activity feed APIs work with a Teams app. The following are the requirements to 
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
     > [!NOTE]
-    > The `systemDefault` activity type is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+    > The `systemDefault` activity type is available only in [public developer preview](../developer-preview-features.md).
   * If you want to send a templated notification in the traditional mode, the `activityTypes` property must be added in the [activities](#activities-update) section. For more information, see [app manifest schema](/microsoftteams/platform/resources/schema/manifest-schema#activities).
 * Teams app must be installed for the recipient either personally, or in a team or chat they're part of.
 
@@ -175,7 +175,7 @@ This section describes the updates that need to be added to the app manifest. En
 |Parameter|Type|Description|
 |:---|:---|:---|
 |type|string|The type of the RSC permission.|
-|name|string|The name of the RSC permission. For more information, see [supported RSC permissions.](../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions) |
+|name|string|The name of the RSC permission. For more information, see [Resource-specific consent for Teams agents and apps](../graph-api/rsc/resource-specific-consent.md).|
 
 ### Install the Teams app
 

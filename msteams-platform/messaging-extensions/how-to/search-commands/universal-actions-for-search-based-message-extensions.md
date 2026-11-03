@@ -2,7 +2,7 @@
 title: Universal Actions for Message Extension
 description: In this article, learn about Universal Actions and automatic refresh for Adaptive Cards in search based message extensions.
 ms.topic: article
-ms.date: 02/06/2025
+ms.date: 09/24/2026
 ms.localizationpriority: medium
 ms.owner: slamba
 ---

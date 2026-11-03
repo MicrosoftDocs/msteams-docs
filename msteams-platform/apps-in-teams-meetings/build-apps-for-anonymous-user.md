@@ -2,10 +2,10 @@
 title: Build app for anonymous user
 description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
 ms.topic: article
-ms.author: vikasalmal
+ms.author: nickwalk
 ms.localizationpriority: medium
 ms.owner: vichug
-ms.date: 03/16/2026
+ms.date: 10/12/2026
 ---
 
 # Build apps for anonymous users

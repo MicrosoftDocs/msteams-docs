@@ -10,7 +10,7 @@ ms.owner: ginobuzz
 
 > [!NOTE]
 >
-> * Copilot handoff is only available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> * Copilot handoff is only available in [public developer preview](../../../developer-preview-features.md).
 > * Copilot handoff is only supported in one-on-one chat with bot.
 
 Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Microsoft 365 Copilot to your bot service. You can enhance your Copilot message extension agent to hand off a conversation to your custom engine agent to handle scenarios where specialized knowledge or actions are required, such as complex IT support queries, detailed product inquiries, or interactive order management.
