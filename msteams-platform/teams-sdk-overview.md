@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams SDK overview
-description: Overview and positioning of the Microsoft Teams SDK, the primary way to build applications and agents for Microsoft Teams.
+description: "Teams SDK helps you build conversational agents, tabs, and message extensions for Microsoft Teams in TypeScript, C#, or Python. Explore its key features today."
 ms.topic: overview
 ms.date: 11/03/2026
 ---

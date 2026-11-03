@@ -1,6 +1,6 @@
 ---
 title: Agent Skills
-description: TODO
+description: Agent Skills give AI coding assistants context to build Teams bots. Install the teams-dev skill and let your assistant handle bot setup for you. Get started today.
 ms.topic: article
 ms.date: 11/03/2026
 ---
