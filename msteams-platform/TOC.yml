@@ -61,7 +61,7 @@
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
     - name: Teams agent message format guidance
-      href: agents-in-teams/teams-agent-message-format-guidance.md
+      href: agents-in-teams/agent-message-format-guidance.md
       displayName: Teams, agent, message, format, guidance
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
