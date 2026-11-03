@@ -2,7 +2,6 @@
 title: OAuth 2.0 Bot Authentication with Azure
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
-ms.localizationpriority: high
 ms.date: 04/14/2026
 ---
 
@@ -29,7 +28,7 @@ In this article you'll learn:
 - The following sample:
 
     | Sample |
-    |:---|
+    | :--- |
     | **Bot Auth Quickstart** in [cs-auth-sample][teams-bot-auth-quickstart-cs] |
     | **Bot Auth Quickstart** in [js-auth-sample][teams-bot-auth-quickstart-js] |
     | **Bot Auth Quickstart** in [py-auth-sample][teams-bot-auth-quickstart-py] |
@@ -85,14 +84,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Enter bot handle name in **Bot handle** field.
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
-1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
-
-    >[!IMPORTANT]
-    >
-    > - The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continue to work for now.
-    > - All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.
-    > - When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.
-    > - In all cases, the **TENANT_ID** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
+1. Select **Type of App** as **Single-Tenant**. Despite the name, this choice does not restrict the bot from installation and use in any tenant.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 

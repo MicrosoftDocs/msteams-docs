@@ -4,7 +4,7 @@ description: Learn how to add the share in meeting button, which allows users to
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
-ms.date: 02/27/2026
+ms.date: 10/08/2026
 ---
 # Share in meeting
 
@@ -119,7 +119,7 @@ The `async shareInMeetingClickHandler(content: IShareInMeetingContent)` API crea
 The following are the launcher.js definitions:
 
 | Property | HTML attribute | Type | Required | Default | Description |
-| -------------- | ---------------------- | --------------------- | ------- |  ------- |---------------------------------------------------------------------- |
+| -------------- | ---------------------- | --------------------- | ------- | ------- | ---------------------------------------------------------------------- |
 | url | `data-href` | String | Yes | NA | URL of the app content to share. |
 | appId | `data-app-id` | String | Yes | NA | ID of the app to share. |
 | entityName | `data-entity-name` | String | No | NA | App entity name. |

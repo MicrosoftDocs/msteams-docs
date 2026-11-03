@@ -4,4 +4,7 @@
   items:
   - name: Platform
     tocHref: /microsoftteams/platform/
-    topicHref: /microsoftteams/platform        
+    topicHref: /microsoftteams/platform
+  - name: Platform
+    tocHref: /power-apps/teams/
+    topicHref: /power-apps/teams/overview

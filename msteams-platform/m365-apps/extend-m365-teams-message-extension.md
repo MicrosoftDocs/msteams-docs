@@ -211,7 +211,7 @@ While your updated message extension continues to run in Teams, be aware of the 
 > [!NOTE]
 > When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would be in Teams.
 
-Use the [Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Teams developer community channels](/microsoftteams/platform/developer-support-feedback) to report issues and provide feedback.
 
 ## Code sample
 
