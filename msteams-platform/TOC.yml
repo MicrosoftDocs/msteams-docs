@@ -107,6 +107,8 @@
     href: teams-sdk-overview.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
+  - name: Coding agent skill
+    href: coding-agent-skill.md
   - name: Teams Developer Portal
     items:
     - name: Overview
