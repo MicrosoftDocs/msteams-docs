@@ -10,7 +10,7 @@ zone_pivot_groups: teams-sdk-languages
 # Chain of Thought for Teams agents
 
 > [!NOTE]
-> In Teams SDK, structured progress is implemented with the **Plan** API. The API is experimental and might change. Public SDK packages with Plan support are scheduled for release on November 5, 2026; check the SDK release notes for current availability.
+> In Teams SDK, structured progress is implemented with the **Plan** API. The API is experimental and might change.
 
 Chain of Thought (CoT) lets a Teams agent show its progress as a structured list of steps while working on a user's request. Each step has a title and status, and can include a description and source citations. Users can expand the progress indicator to see what the agent is doing and review completed steps alongside the final response.
 
