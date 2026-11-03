@@ -6,7 +6,7 @@ ms.date: 11/02/2026
 ---
 # Design Adaptive Cards for use in Teams
 
-Adaptive Cards are declarative UI views, authored in JSON, that agents and users (via message extensions) can include in Teams chat messages. Adaptive Cards are an important source of expressivity for Teams agents, which can use them to present interactive, richly structured interfaces right in the flow of conversation.
+Adaptive Cards are declarative UI views, authored in JSON, that agents and users (via message extensions) can include in Teams chat messages. Adaptive Cards provide Teams agents with a richer means of expression than plain or formatted text, allowing them to present interactive, structured interfaces right in the flow of conversation.
 
 :::image type="content" source="../../assets/images/hero-light.jpg" alt-text="Image illustrating presentation of a complex Adaptive Card in a Teams message both on the desktop and on mobile." lightbox="../../assets/images/hero-light.jpg":::
 
