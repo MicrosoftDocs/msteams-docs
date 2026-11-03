@@ -1,8 +1,8 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 3/27/2026
-ms.topic: conceptual
+ms.date: 06/23/2026
+ms.topic: article
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
@@ -131,8 +131,8 @@ The following JSON snippet shows a static tab that requires its host to support 
 
 | Sample name | Description | JavaScript |
 |----------------|-----------------|--------------|
-| Requirements targeting: One-way dependency | This sample app illustrates how to specify one-way dependency relationships between app capabilities in Microsoft Teams using the "elementRelationshipSet" property and functionality requirements with "hostMustSupportFunctionalities". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-oneway-dependency/nodejs) |
-| Requirements targeting: Mutual dependency | This sample Node.js app showcases how to specify mutual-dependency relationships between app capabilities in Microsoft Teams using the 'elementRelationshipSet' property in the app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/requirement-targeting-mutual-dependency/nodejs)
+| Requirements targeting: One-way dependency | This sample app illustrates how to specify one-way dependency relationships between app capabilities in Microsoft Teams using the "elementRelationshipSet" property and functionality requirements with "hostMustSupportFunctionalities". | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/requirement-targeting-oneway-dependency/nodejs) |
+| Requirements targeting: Mutual dependency | This sample Node.js app showcases how to specify mutual-dependency relationships between app capabilities in Microsoft Teams using the 'elementRelationshipSet' property in the app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/requirement-targeting-mutual-dependency/nodejs)
 
 ## See also
 

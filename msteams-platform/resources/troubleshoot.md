@@ -4,7 +4,7 @@ description: Learn about different issues or error scenarios while building apps
 keywords: teams apps development troubleshooting
 ms.localizationpriority: medium
 ms.topic: troubleshooting
-ms.date: 02/06/2025
+ms.date: 07/10/2026
 ---
 
 # Troubleshoot your Microsoft Teams app
@@ -81,6 +81,21 @@ Bots in channels receive messages only when they're explicitly @mentioned, even 
 
 Because bots in channels only receive messages when they're @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It's a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) for tips on how to handle this case.
 
+### My bot doesn't receive messages when testing locally over a dev tunnel
+
+When you host your bot locally and route Teams messages through a dev tunnel (such as Dev Tunnels or ngrok), messages might stop reaching your bot even though the tunnel appears healthy.
+
+Symptoms include:
+
+* Requests sent directly to the tunnel URL (for example, by using `curl`) receive a response.
+* No inbound activities appear on the dev tunnel inspection page.
+* Your Teams app ID mapping, messaging endpoint, and Bot Framework authentication are already validated as correct.
+
+If you see these symptoms, restart the **Microsoft Teams** channel for your bot's Azure Bot resource in the Azure portal. After the restart, send a test message and verify that inbound activities appear again on the dev tunnel inspection page.
+
+> [!CAUTION]
+> Restart the Teams channel rather than deleting and re-adding it. Deleting the Teams channel regenerates keys and invalidates the stored `29:xxx` and `a:xxx` IDs that proactive messaging relies on. For more information, see [Connect a bot to Teams](/azure/bot-service/channel-connect-teams).
+
 ## Issues with packaging and uploading
 
 ### Error while reading manifest.json
@@ -132,11 +147,11 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
-If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
+If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../developer-support-feedback.md#business-critical-and-paid-support) for further assistance.
 
 ## See also
 
 * [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Receive all channel messages for bots and agents](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)
+* [Enable an agent to receive all chat messages](../agents-in-teams/enable-receive-all-chat-messages.md)

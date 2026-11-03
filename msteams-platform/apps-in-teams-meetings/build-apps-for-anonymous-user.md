@@ -1,11 +1,11 @@
 ---
 title: Build app for anonymous user
 description: Learn how to build apps for anonymous users and test the experience delivered to the anonymous users in meeting apps with all admin settings.
-ms.topic: conceptual
-ms.author: vikasalmal
+ms.topic: article
+ms.author: nickwalk
 ms.localizationpriority: medium
 ms.owner: vichug
-ms.date: 03/16/2026
+ms.date: 10/12/2026
 ---
 
 # Build apps for anonymous users
@@ -23,9 +23,6 @@ To enable anonymous users to interact with the apps in Teams meetings, ensure to
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in the Teams admin center.
 
 ## App manifest update for anonymous users
-
-> [!NOTE]
-> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
 

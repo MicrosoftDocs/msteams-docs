@@ -1,10 +1,8 @@
 ---
 title: Manage apps with Developer Portal
 description: Learn how to configure, develop, validate, publish, and manage your apps using the Developer Portal for Microsoft Team
-ms.localizationpriority: medium
 ms.topic: overview
-ms.author: vikasalmal
-ms.date: 4/3/2026
+ms.date: 09/24/2026
 ---
 
 
@@ -123,27 +121,6 @@ In the **Advanced** section, you can view the following components to manage you
   * **Supported channel types**: Lists the non-standard channel types that the app supports.
   * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the Microsoft Teams Store.
 
-* **Environments**
-
-    You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
-
-    To set up an environment, follow these steps:
-
-    1. In the Developer Portal, select the **Apps** that you're working.
-    1. Go to **Environments** under the **Advanced** section.
-    1. Select **+ Add an environment**>**Add**.
-
-  * **Global variables**
-
-      1. Select **Add a global variable** to create configuration variables for your environment.
-
-      To use global variables:
-
-      Use the variable names instead of hard-coded values to set your app configurations.
-
-1. Enter `{{` in any field within the Developer Portal. A dropdown appears, displaying all variables you've created for the selected environment, along with global variables.
-1. Before downloading your app package (for instance, when preparing to publish to the Teams Store), select the environment you want to use. Your app configurations automatically update based on the environment.
-
 * **Plan and pricing**: Link a Software-as-a-Service (SaaS) offer that you've created in the Partner Center for your app.
 * **Admin settings**:
   * **App Customization**: Customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.
@@ -241,8 +218,6 @@ The Developer Portal provides options for testing and debugging your app:
 
 The Developer Portal includes tools to help you build key features of Teams apps. The following are the tools:
 
-* **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
-* **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend using the latest app validation tool in your app under [**Publish**](#publish) section.
 * **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define an Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
@@ -260,26 +235,7 @@ To add a bot:
 
     :::image type="content" source="../../assets/images/tdp/Add_new_bot.PNG" alt-text="Add a new bot by using bot management option." lightbox="../../assets/images/tdp/Add_new_bot.PNG":::
 
-> [!NOTE]
->
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
-> * Bots configured as multi tenant in **Azure Bot Service** are deprecated. However, bots that were previously created as **multi tenant** continue to work as expected.
-> * Apps registered in **Microsoft Entra ID** are multi-tenant applications by default and remain supported. These app registrations are separate from bot tenant configuration in **Azure Bot Service** A bot configured as single tenant in Azure Bot Service can use a multi tenant application.
-> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
-> * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with an equivalent permission. The following least-privileged roles are supported for this operation:
->
->   * For multi tenant apps:
->     * Application Administrator
->     * Cloud Application Administrator
->
->   * For single tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
->
-> For bots configured as single tenant in **Azure Bot Service**, the developer must ensure the bot requests the correct access token. This requires including the tenant ID as part of the environment variables when requesting the access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
-
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
-
-  > [!NOTE]
-  > Bot ID doesn't support environment variables.
 
 ### Agent Identity Blueprint
 

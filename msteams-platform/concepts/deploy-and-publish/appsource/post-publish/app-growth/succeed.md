@@ -2,7 +2,7 @@
 title: Succeed Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the final stage of your app to grow your app, wider TAM coverage, convert PQLs from app, app metrics and data-backed insights.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/21/2023
 ---
@@ -59,14 +59,14 @@ Ensure that you monitor reviews for your app on the marketplace, user feedback c
 
 Keep an eye on your competitors and other leading SaaS apps in your segment to continuously learn from the market and evolve your app’s strategy and roadmap. Since Teams marketplace is public, your product team can at the minimum use the [Microsoft 365 developer sandbox](https://developer.microsoft.com/microsoft-365/dev-program) to experience other apps.
 
-Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in [public developer preview](../../../../../whats-new.md?pivots=dev-preview).
+Strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, can get early access to new and latest cutting-edge collaborative features on Teams app platform. It's an opportunity for you to deliver unparalleled value to customers and use global GTM and marketing moments, being an early adopter to showcase new innovation on Teams. However you can always discover and use Microsoft Teams platform features that are in developer preview.
 
 </details>
 <br>
 <details>
 <summary>Share feedback to enrich the Teams platform</summary>
 
-Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to your customers. Use your Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly [here](../../../../../feedback.md#feature-request-and-general-help).
+Microsoft Teams app platform is ever-evolving with newer features that provide even more opportunities for developers like you to deliver unique, differentiated, and collaborative scenarios of value to your customers. Use your Microsoft field, account, engineering representatives to share feedback or product ask on Teams platform. You can also post product feature suggestions publicly in [Teams SDK feature requests](../../../../../developer-support-feedback.md#get-help-and-share-feedback).
 
 </details>
 <br>
@@ -109,7 +109,7 @@ Strategic developers, who are part of the invite-only Teams engineering’s buil
 <details>
 <summary>Early access to unreleased Teams Platform features</summary>
 
-Microsoft-offered public [Developer Preview for Teams](../../../../../resources/dev-preview/developer-preview-intro.md) is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. While the program is open for all Teams developers, strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
+Microsoft-offered public [Developer Preview for Teams](../../../../../developer-preview-features.md) is a public program for developers, which provides early access to unreleased features in Microsoft Teams. It allows you to explore and test upcoming features for potential inclusion in your Teams app and share feedback about the feature. While the program is open for all Teams developers, strategic developers, who are part of the invite-only Teams engineering’s build-with partner program, have a direct line to work together with Microsoft engineering to use these features in their apps.
 
 </details>
 <br>

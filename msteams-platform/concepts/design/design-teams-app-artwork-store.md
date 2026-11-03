@@ -1,11 +1,11 @@
 ---
 title: Best Practices to Design App Artwork
 description: Learn about guidelines and app image templates for displaying the Microsoft Teams app artwork for Teams Store. Learn to use Fluent icons and Teams icon.
-author: heath-hamilton
+author: nickwalkmsft
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.date: 05/23/2023
+ms.date: 07/22/2026
 ---
 # Teams app artwork for Teams Store
 

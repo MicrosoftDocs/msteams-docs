@@ -1,10 +1,10 @@
 ---
-title: Design App with Advanced UI Components
+title: Designing Apps with Advanced UI Components
 author: heath-hamilton
 description: Learn about the Teams UI components, such as breadcrumbs, left nav, notification bar, Stageview, and Toolbar along with relevant use cases. 
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 05/17/2023
+ms.date: 07/28/2026
 ---
 # Designing your Microsoft Teams app with advanced UI components
 
@@ -53,7 +53,7 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ## Notification bar
 
-A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
+A notification bar is a dedicated area for displaying brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
 
 You can implement a notification bar using the Fluent UI [alert](https://react.fluentui.dev/?path=/docs/preview-components-alert--default) component.
 

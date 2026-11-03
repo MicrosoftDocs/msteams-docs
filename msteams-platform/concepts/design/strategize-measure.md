@@ -2,7 +2,7 @@
 title: Measure App Performance
 author: heath-hamilton
 description: Learn to strategize and decide what to measure using instrumentation data for your Microsoft Teams app analytics and monitor events for your app.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ---

@@ -2,7 +2,7 @@
 title: TeamsJS Support across Microsoft 365
 description: Learn the level of support for different TeamsJS library capabilities across different hosts for Teams apps, including Teams, Outlook, and Microsoft 365 app.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.custom: m365apps
 ms.date: 07/11/2024
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365

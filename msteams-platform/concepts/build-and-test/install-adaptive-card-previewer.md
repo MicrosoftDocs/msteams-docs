@@ -2,14 +2,14 @@
 title: How to Install Adaptive Card Previewer
 description: In this article, learn more about how to install the Adaptive Card Previewer extension for Visual Studio Code code and Visual Studio Code Marketplace.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.date: 10/20/2023
 ---
 
 # Install Adaptive Card Previewer
 
 > [!NOTE]
-> Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Adaptive Card Previewer is available in [public developer preview](../../developer-preview-features.md).
 
 Adaptive Card Previewer is a Visual Studio Code extension that enables real-time previews of Adaptive Cards within the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can visualize changes instantly and ensure that your designs are accurate and effective.
 

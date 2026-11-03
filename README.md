@@ -2,7 +2,7 @@
 
 Microsoft Teams is a cloud-based communications platform that combines different services for collaboration, such as chat, meetings, calling, and files. Teams is well integrated into Microsoft 365 and combines multiple workloads into a unified communication and collaboration system. In addition, Teams offers integration capabilities for other tools and third-party products.
 
-Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps. See [Microsoft Teams developer documentation](https://learn.microsoft.com/microsoftteams/platform/mstdd-landing/).
+Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps. See [Microsoft Teams developer documentation](https://learn.microsoft.com/microsoftteams/platform).
 
 You can check out [Platform Announcement](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements).
 

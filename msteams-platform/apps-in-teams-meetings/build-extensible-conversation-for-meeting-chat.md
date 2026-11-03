@@ -1,10 +1,10 @@
 ---
 title: Build Extensible Conversations
 description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
-ms.topic: conceptual
+ms.topic: concept-article
+ms.author: nickwalk
 ms.localizationpriority: medium
-ms.date: 01/11/2023
-ms.owner: ginobuzz
+ms.date: 05/01/2026
 ---
 
 # Build extensible conversation for meeting chat
@@ -21,9 +21,9 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ### Code samples - Bots
 
-| Sample name | Description | .NETCore | Node.js | Python | Java | Manifest |
-|----------------|-----------------|--------------|----------------|----------------|----------------|----------------|
-| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip) |
+| Sample name | Description | .NETCore | Node.js | Python | Java |
+| ---------------- | ----------------- | -------------- | ---------------- | ---------------- | ---------------- |
+| Bot Quickstart | This sample demonstrates how to handle various bot conversation events in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | NA |
 | Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Message extensions
@@ -55,6 +55,6 @@ The following table provides the user types and lists the features that each use
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
 * [Design dialogs for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)
+* [Enable an agent to receive all chat messages](../agents-in-teams/enable-receive-all-chat-messages.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

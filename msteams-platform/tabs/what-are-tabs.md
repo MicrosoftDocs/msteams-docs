@@ -3,7 +3,7 @@ title: Tabs in Microsoft Teams
 description: Learn about types of tabs, different tab context and it's benefits, tab features and user scenarios, custom tabs, and tools used to build tabs.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 02/06/2025
+ms.date: 08/27/2026
 ---
 
 # Build tabs for Teams
@@ -11,7 +11,8 @@ ms.date: 02/06/2025
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library).
 
 > [!IMPORTANT]
-> Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+>
+> * Custom tabs are available in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
 
 There are two types of tabs, static and configurable tabs. These tabs can be utilized in three distinct scopes: `personal`, `groupchat`, and `teams`. [Personal (static) tabs](~/tabs/how-to/create-personal-tab.md), along with personal-scoped bots, are part of the personal apps that are scoped to a single user and pinned to the left navigation bar for easy access. Personal (static) tabs in personal scope continue to work the same way. However, you can now [extend static tabs](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) to group chats, channels, or meetings with a [customizable experience.](~/tabs/how-to/create-personal-tab.md#customizing-your-static-tab-in-chats-or-meetings)
 
@@ -155,7 +156,6 @@ Now let's build your tab. But first select your choice of tab to build:
 * [Design your tab for Microsoft Teams](design/tabs.md)
 * [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
-* [Microsoft Teams updates](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
 * [Agents Toolkit for Visual Studio Code](../toolkit/agents-toolkit-fundamentals.md)
 * [Agents Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)

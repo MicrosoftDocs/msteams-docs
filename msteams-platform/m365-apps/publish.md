@@ -2,7 +2,7 @@
 title: Publish App for Microsoft 365 & Outlook
 description: Learn to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app via single tenant and multitenant distribution.
 ms.date: 10/10/2022
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
@@ -43,7 +43,7 @@ Global Administrator can upload and preinstall the app package from [Microsoft a
 
 ## Multitenant distribution
 
-The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) submission process for Teams apps enabled for Outlook and Microsoft 365 app is same as traditional Teams apps. The difference is you need to use app manifest (previously called Teams app manifest) [version 1.13](../tabs/how-to/using-teams-client-library.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
+The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) submission process for Teams apps enabled for Outlook and Microsoft 365 app is same as traditional Teams apps. The difference is you need to use app manifest (previously called Teams app manifest) [version 1.13](../tabs/how-to/using-teams-client-library.md) in your app package, which introduces support for Teams apps that run across Microsoft 365. Starting July 2026, if your app is channel-enabled, all new Teams Store submissions must use manifest schema version 1.25 or later.
 
 > [!TIP]
 > Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Cloud Partner Program](https://partner.microsoft.com/)), formerly known as Microsoft Partner Network.

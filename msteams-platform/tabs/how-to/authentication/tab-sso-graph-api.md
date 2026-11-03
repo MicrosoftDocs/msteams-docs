@@ -4,7 +4,7 @@ description: Learn how to configure API permissions and authentication for diffe
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
-ms.date: 03/16/2026
+ms.date: 06/25/2026
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -167,7 +167,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 ### [Node.js](#tab/nodejs)
 
-[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
+[ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
 ```javascript
 // Exchange client Id side token with server token
@@ -239,7 +239,7 @@ To implement SSO authentication in a personal tab, follow these steps:
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
 1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs. For more information, see
-[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
+[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
 sample code.
 
 ## Race condition when making an OBO call after invalid grant exception
@@ -260,7 +260,7 @@ This approach helps reduce the possibility of user being prompted for consent mo
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
+| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-sso/nodejs)|
 
 ## See also
 

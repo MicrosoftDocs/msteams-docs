@@ -3,7 +3,7 @@ title: Enable Third-party Cloud Storage
 description: Learn how to set third-party storage app for your Teams app for the files that are dragged and dropped in a message compose area of a Teams chat or channel.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 02/26/2025
+ms.date: 06/23/2026
 ---
 
 # Third-party cloud storage app
@@ -16,11 +16,11 @@ For Teams app to support third-party cloud storage for drag-dropped files:
 
 * Use the latest version of the [TeamsJS SDK](/javascript/api/@microsoft/teams-js).
 
-* The app manifest (previously called Teams app manifest) must be configured with the app ID of the third-party storage app. Search for the property named `defaultFilesUploadAppId` and configure the app ID. 
+* The app manifest (previously called Teams app manifest) must be configured with the app ID of the third-party storage app. Search for the property named `defaultFilesUploadAppId` and configure the app ID.
 
     > [!NOTE]
     > Use plain string only and do not use inverted commas.
-    
+
     Alternatively, admins can also configure the third-party cloud storage app ID. For more information, see [admin settings for file drag-drop to third-party storage](/MicrosoftTeams/admin-settings-for-file-drag-drop-to-third-party-storage).
 
 * The app manifest must have the first action as `Upload`. This action automatically opens the app in upload mode when files are drag-dropped into the message compose area.
@@ -193,7 +193,7 @@ Here's how the files are uploaded to third-party cloud storage app:
 
 Sample name | Description | Node.js | .NET | Python |
 |----------------|-----------------|--------------|----------------|----------------|
-| Third-party cloud storage | Demonstrates how to implement third-party cloud storage app for files that are drag-dropped in the message compose area. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-thirdparty-storage/python) |
+| Third-party cloud storage | Demonstrates how to implement third-party cloud storage app for files that are drag-dropped in the message compose area. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-thirdparty-storage/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-thirdparty-storage/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-thirdparty-storage/python) |
 
 ## See also
 

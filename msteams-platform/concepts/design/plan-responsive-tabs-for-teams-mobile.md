@@ -1,7 +1,7 @@
 ---
 title: Plan for Teams mobile
 description: Learn how to plan responsive tabs for Teams mobile which includes app functionalities and user roles, and understand different stages to build app.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/06/2025
 ---

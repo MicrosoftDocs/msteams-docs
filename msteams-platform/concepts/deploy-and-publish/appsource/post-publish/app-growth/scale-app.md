@@ -2,7 +2,7 @@
 title: Scale Stage for Collaborative Apps
 author: heath-hamilton
 description: Learn what you can do during the scale stage of your app to grow your app, onboarding CSP resellers, tailoring SaaS offers, digital webinars, and user retargeting.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/21/2023
 ---

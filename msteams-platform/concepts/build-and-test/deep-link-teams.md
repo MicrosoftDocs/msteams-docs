@@ -1,7 +1,7 @@
 ---
 title: Deep link to a Teams chat
 description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
-ms.topic: conceptual
+ms.topic: article
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.date: 03/26/2026
@@ -38,7 +38,7 @@ The query parameters are:
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
-Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+Example: `https://teams.microsoft.com/l/chat/0/0?tenantId=f4c2b8e1-7a3d-4e6f-9b12-8c5d0e3a1f47&users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
 
 ### Configure deep link to start a chat using TeamsJS library
 
@@ -86,13 +86,13 @@ The query parameters are:
 > [!NOTE]
 > You can see `channelId` and `groupId` in the URL from the channel.
 
-Example: `https://teams.microsoft.com/l/message/<channelId>/1648741500652?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=1648741500652&teamName=<teamName>&channelName=<channelName>&createdTime=1648741500652`
+Example: `https://teams.microsoft.com/l/message/19:3997a8734ee5432bb9cdedb7c432ae7d@thread.tacv2/1648741500652?tenantId=f4c2b8e1-7a3d-4e6f-9b12-8c5d0e3a1f47&groupId=3606f714-ec2e-41b3-9ad1-6afb331bd35d&parentMessageId=1648741500652&teamName=Product%20Launch&channelName=General&createdTime=1648741500652`
 
 ## Deep link to navigate to chat messages
 
 Use the following deep link format to navigate a user to a message in a personal or group chat in Teams:
 
-`https://teams.microsoft.com/l/message/{chatId}/{messageId}?context={"contextType":"chat"}`
+`https://teams.microsoft.com/l/message/<chatId>/<messageId>?context={"contextType":"chat"}`
 
 The query parameters are:
 
@@ -107,9 +107,9 @@ Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f02
 
 You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:` in place of an email address. The format of the deep link is:
 
-`https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
+`https://teams.microsoft.com/l/chat/0/0?users=28:<botId>&message=This%20message%20was%20triggered%20by%20a%20link!`
 
-The query parameter is `bot guid`, which is the bot ID attribute in the app manifest.
+The query parameter is `botId`, which is the bot ID attribute in the app manifest.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=28:47345678-2134-6534-9143-65146789012&message=This%20message%20was%20triggered%20by%20a%20link!`
 
@@ -202,4 +202,4 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This Teams sample application highlights deeplinks for various functionalities, such as initiating calls, chats, and navigating within tabs and apps. It features a comprehensive setup guide and supports interactions with both bots and tabs for enhanced user engagement. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep link consuming Subentity ID | This Teams sample application highlights deeplinks for various functionalities, such as initiating calls, chats, and navigating within tabs and apps. It features a comprehensive setup guide and supports interactions with both bots and tabs for enhanced user engagement. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/tab-deeplink/nodejs)|

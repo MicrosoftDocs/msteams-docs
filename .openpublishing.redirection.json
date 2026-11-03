@@ -1,5 +1,143 @@
 {
   "redirections": [
+    {
+      "source_path": "msteams-platform/feedback.md",
+      "redirect_url": "developer-support-feedback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "msteams-platform/toolkit/TeamsFx-SDK.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-SDK",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-overview.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bot-conversations/bots-conversations.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conversations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bot-conversations/bots-conv-personal.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-personal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bot-conversations/bots-conv-channel.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-channel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bot-conversations/bots-conv-proactive.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bot-conversations/bots-conv-proactive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-cards.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-cards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-message-format.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-message-format",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-notifications.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-context.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-files.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-notification-only.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-notification-only",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-menus.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-menus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-with-tabs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-with-tabs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-text-formats.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-text-formats",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/bot-v3/bots-test.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/bot-v3/bots-test",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/messaging-extension-v3/messaging-extensions-overview.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/messaging-extension-v3/messaging-extensions-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/messaging-extension-v3/search-extensions.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/messaging-extension-v3/search-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/resources/messaging-extension-v3/create-extensions.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/resources/messaging-extension-v3/create-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/get-started/tutorials.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/get-started/tutorials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/overview.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/build-a-bot.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/build-a-bot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/build-notification-capability.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/build-notification-capability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/command-bot-in-teams.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/how-to/conversations/command-bot-in-teams",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/workflow-bot-in-teams.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/bots/how-to/conversations/workflow-bot-in-teams",
+      "redirect_document_id": false
+    },
+      {
+        "source_path": "msteams-platform/apps-in-teams-meetings/teams-together-mode.md",
+        "redirect_url": "/microsoftteams/platform"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/prompt-suggestions.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/prompt-starters"
+      },
       {
         "source_path": "msteams-platform/m365-apps/actions-in-m365-quick-start-guide.md",
         "redirect_url": "/microsoftteams/platform/overview"
@@ -617,10 +755,6 @@
         "redirect_url": "/microsoftteams/platform/get-started/first-message-extension"
       },
       {
-        "source_path": "msteams-platform/get-started/code-samples.md",
-        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
-      },
-      {
         "source_path": "msteams-platform/get-started/prerequisites.md",
         "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
       },
@@ -1106,47 +1240,47 @@
       },
       {
         "source_path": "msteams-platform/samples/collaboration-control.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/install-collaboration-control.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/app-with-collaboration-controls.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/deploy-collaboration-control-in-teams.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-control-power-automate.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/configure-tasks.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-tables-for-tasks.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-tables-api.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/virtual-table-entity-references.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-api-reference.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/samples/collaboration-controls-limitations.md",
-        "redirect_url": "/microsoftteams/platform/whats-new#deprecated"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/high-quality-message-extension.md",
@@ -1154,7 +1288,7 @@
       },
       {
         "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       { 
         "source_path": "msteams-platform/messaging-extensions/build-bot-based-plugin.md",
@@ -1302,7 +1436,7 @@
       },
       {
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/includes/get-started/prepare-teams-toolkit.md",
@@ -1406,7 +1540,7 @@
       },
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema.md",
@@ -1414,7 +1548,7 @@
       },
       {
         "source_path": "msteams-platform/sbs-gs-spfx.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-api-based-message-extensions.yml",
@@ -1430,39 +1564,39 @@
       },
       {
         "source_path": "msteams-platform/sbs-gs-blazorupdate.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-bot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-commandbot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
      {
         "source_path": "msteams-platform/sbs-gs-csharp.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-javascript.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-msgext.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-nodejs.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-notificationbot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-gs-workflow-bot.yml",
-        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+        "redirect_url": "/microsoftteams/platform"
       },
       {
         "source_path": "msteams-platform/sbs-meetingextension-action.yml",
@@ -1475,10 +1609,6 @@
       {
         "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
-      },
-      {
-        "source_path": "msteams-platform/index.yml",
-        "redirect_url": "https://developer.microsoft.com/en-us/microsoft-teams"
       },
       { 
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md",
@@ -1498,7 +1628,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
@@ -1541,8 +1671,112 @@
         "redirect_url": "/microsoft-copilot-studio/unified-authoring-conversion"
       },
       {
+        "source_path": "msteams-platform/resources/team-chat-member-api-changes.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/get-teams-context"
+      },
+      {
         "source_path": "msteams-platform/toolkit/teams-toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/create-a-bot-commands-menu.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/agent-slash-commands",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/agents-in-teams/build-first-agent.md",
+        "redirect_url": "quickstart-create-agent-teams-sdk",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/teams-updates.md",
+        "redirect_url": "/microsoftteams/platform/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodleInstructions.md",
+        "redirect_url": "/microsoftteams/install-moodle-integration",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/moodle-overview.md",
+        "redirect_url": "/microsoftteams/moodle-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/m365-plugins/m365-plugins-overview.md",
+        "redirect_url": "/microsoftteams/m365-plugins-overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/faqs.md",
+        "redirect_url": "microsoftteams/moodle-faqs",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/whats-new.md",
+        "redirect_url": "developer-announcements",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/ai-ux.md",
+        "redirect_url": "agents-best-practices-features-checklist",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/get-started/tool-options-and-code-samples.md",
+        "redirect_url": "code-samples",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/mstdd-landing.yml",
+        "redirect_url": "/microsoftteams/platform",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/shared-channels.md",
+        "redirect_url": "/microsoftteams/platform/build-apps-for-shared-private-channels",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/bot-messages-ai-generated-content.md",
+        "redirect_url": "../../agents-in-teams/integrate-ai/ai-content-labels",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-for-bots-and-agents.md",
+        "redirect_url": "../../../agents-in-teams/enable-receive-all-chat-messages",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/agent-sessions.md",
+        "redirect_url": "/microsoftteams/platform/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/assistants-api-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/dev-preview/developer-preview-intro.md",
+        "redirect_url": "../../developer-preview-features",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
+        "redirect_url": "/power-apps/teams/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/agent-connectors.md",
+        "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/graph-api/rsc/grant-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/declare-resource-specific-consent-requirements",
+        "redirect_document_id": false
+      }
     ]
 }

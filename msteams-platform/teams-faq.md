@@ -2,7 +2,7 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 05/01/2026
 ms.localizationpriority: high
 ms.owner: angovil
 ---
@@ -607,6 +607,7 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 
 </details>
 
+<!--
 ## Moodle
 
 <details>
@@ -754,9 +755,10 @@ However, you can access the invite and manually add participant names to the **R
 <details>
 <summary>Is there any support site where we can get more help on products and other issues?</summary>
 
-For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
+For support and help on the product and services issues or developer community help see, [Support and feedback](developer-support-feedback.md).
 
 </details>
+-->
 
 ## Notifications
 
@@ -784,7 +786,7 @@ No. You can use apps in landscape mode by default.
 <details>
 <summary>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</summary>
 
-Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](feedback.md).
+Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](developer-support-feedback.md).
 <br>
 &nbsp;
 </details>
@@ -819,7 +821,7 @@ Yes, the landscape mode is supported on both Android and iOS Teams apps, providi
 <details>
 <summary>Can I customize the app's behavior differently for landscape and portrait modes?</summary>
 
-The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](feedback.md) with your feedback and suggestions.
+The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](developer-support-feedback.md) with your feedback and suggestions.
 <br>
 &nbsp;
 </details>
@@ -867,8 +869,8 @@ You can create a Partner Center account one of the following ways:
 Open a [Partner Center support ticket](https://partner.microsoft.com/support/v2/?stage=1) and select the following:
 
 | Menu | Option |
-| ---   | --- |
-| Category | Commercial Marketplace|
+| --- | --- |
+| Category | Commercial Marketplace |
 | Topic | General Marketplace Help and How-to questions |
 | Subtopic | Office add-in |
 
@@ -1008,7 +1010,7 @@ The following resources can also assist:
 
 You can open the authentication page in the dialog (referred as task module in TeamsJS v1.x) when the user selects the button.
 
-You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-task-modules/python/bot-task-modules) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
 
 <br>
 &nbsp;
@@ -1049,7 +1051,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 
 If you use Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
-For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
+For more information about Node js code sample, see [Bot auth quickstart](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart).
 <br>
 &nbsp;
 </details>

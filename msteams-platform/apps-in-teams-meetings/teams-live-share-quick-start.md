@@ -1,7 +1,7 @@
 ---
 title: Live Share quick start
 description: Learn how to quickly build and run the Dice Roller sample using Microsoft Live Share SDK with Microsoft Visual Studio Code, Node.js, and Git.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 04/07/2022
 ---

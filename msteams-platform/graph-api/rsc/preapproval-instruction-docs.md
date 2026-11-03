@@ -20,7 +20,7 @@ By default, the preapproval policies are managed by Microsoft, and we recommend 
 
 > [!NOTE]
 >
-> * Preapproval of RSC permissions are available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Preapproval of RSC permissions are available only in [public developer preview](../../developer-preview-features.md).
 > * Preapproval of RSC permissions and its operating procedures are subject to change.
 
 ## Set up PowerShell to manage preapproval of RSC permissions
@@ -53,12 +53,12 @@ For example, to allow RSC permissions for all unblocked apps in your organizatio
 
 The following are the different states that allow and disallow RSC permissions in your organization:
 
-|Configuration| Description|
+|Configuration|Description|
 |---|---|
-|`ManagedByMicrosoft`|A dynamic policy administered by Microsoft. It might be updated based on best security practices. By default, this state enables RSC for all unblocked apps in the organization. |
-|`EnabledForAllApps`|Users can consent to RSC permissions for any unblocked apps in the organization. |
-|`EnabledForPreApprovedAppsOnly`| Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option must be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis. |
-|`DisabledForAllApps`| Users can't consent to the RSC permissions required by any app even if the app is unblocked in the organization. **Warning:** This state doesn't allow installation for apps that need RSC permissions. |
+|`ManagedByMicrosoft`|A dynamic policy administered by Microsoft. It might be updated based on best security practices. By default, this state enables RSC for all unblocked apps in the organization.|
+|`EnabledForAllApps`|Users can consent to RSC permissions for any unblocked apps in the organization.|
+|`EnabledForPreApprovedAppsOnly`|Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option must be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis.|
+|`DisabledForAllApps`|Users can't consent to the RSC permissions required by any app even if the app is unblocked in the organization. **Warning:** This state doesn't allow installation for apps that need RSC permissions.|
 
    >[!WARNING]
    > If you change your chat or team RSC configuration to `DisabledForAllApps`, it disables preapproval in your tenant and users run into errors when they install RSC enabled apps.
@@ -88,7 +88,7 @@ To create a preapproval policy without a sensitivity label, ensure that you have
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
-|Configuration| Description|
+|Configuration|Description|
 |---|---|
 |`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 |`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](resource-specific-consent.md).|
@@ -127,7 +127,7 @@ You can also create a preapproval policy for specific permissions in addition to
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
-|Configuration| Description|
+|Configuration|Description|
 |---|---|
 |`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 |`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
@@ -161,10 +161,10 @@ You can update a preapproval policy with the `Update-MgBetaTeamAppPreApproval` c
 
 The following RSC configurations are available to manage an existing preapproval policy:
 
-|Configuration| Description|
+|Configuration|Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`| Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`| Use this configuration when you create a preapproval policy for RSC permissions for a team, use this configuration. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration when you create a preapproval policy for RSC permissions for a team, use this configuration. For the list of all permissions, see [RSC permissions](resource-specific-consent.md).|
 
 #### Update the preapproval policy for chat RSC
 
@@ -201,5 +201,5 @@ Remove-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 
 ## See also
 
-* [Grant RSC permissions to your app](grant-resource-specific-consent.md)
+* [Declare RSC permission requirements for an agent or app](declare-resource-specific-consent-requirements.md)
 * [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)

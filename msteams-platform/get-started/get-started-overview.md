@@ -58,21 +58,9 @@ Teams platform supports the following app types:
 
   Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start to end), notify participants, and provide in-meeting UI for notes, tasks, and workflows.
 
-## SDKs and tools
+## Teams SDK and developer CLI
 
-Here's a list of SDKs and tools that you can use to build app capabilities:
-
-- Teams SDK (previously known as Teams AI library)
-
-  The Teams SDK offers streamlined client APIs of TeamsJS v2 capabilities for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, Adaptive Cards, dialogs, and more).
-
-- Microsoft 365 Agents SDK (multi hub, pro code agents)
-
-  The Microsoft 365 Agents SDK lets you build agents and apps that you can publish to Microsoft 365 Copilot and other endpoints and that can interoperate with Teams. It's designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol (MCP)).
-
-- Microsoft 365 Agents Toolkit (developer workflow and scaffolding)
-
-  The Microsoft 365 Agents Toolkit (evolution of Teams Toolkit) provides VS Code and CLI templates, local debugging, resource provisioning, and testing against Teams or Copilot. The toolkit is a quick way to scaffold tabs, message extensions, and agents, then deploy using Azure defaults.
+[Teams SDK and developer CLI](/microsoftteams/platform/teams-sdk/welcome) form the main developer toolkit for building conversational agents and other app experiences in Teams. The SDK is developed alongside the Teams platform, enabling developers to build apps that integrate deeply with Teams and take advantage of its unique features that make it so effective for collaborative work. The developer CLI provides tools for creating, configuring, and managing Teams agents and apps.
 
 ## Build your first Teams app
 
@@ -82,12 +70,11 @@ In this section, learn how to build a Teams app with different capabilities, suc
 - [Build a Teams tab app](build-basic-tab-app.md)
 - [Build a Teams message extension app](build-message-extension.md)
 
-After you build the basic app capabilities, explore [tutorials](tutorials.md) and [code samples](tool-options-and-code-samples.md).
+After you build the basic app capabilities, explore [tutorials](tutorials.md) and [code samples](code-samples.md).
 
 Get started with building apps for Microsoft Teams and beyond!
 
 ## See also
 
-- [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
 - [Git and GitHub resources](/contribute/additional-resources)
-- [Teams app tutorials and code samples](tool-options-and-code-samples.md)
+- [Code samples](code-samples.md)

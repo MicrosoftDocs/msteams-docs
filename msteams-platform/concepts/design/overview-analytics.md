@@ -2,7 +2,7 @@
 title: App Analytics - Overview
 author: heath-hamilton
 description: Learn to plan and build analytics for your Teams app, instrumentation markers for app specific analytics, and aggregate and user-specific insights.
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ---
