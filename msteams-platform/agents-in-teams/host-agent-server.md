@@ -349,12 +349,8 @@ await app.initialize()
 
 ::: zone-end
 
-> [!IMPORTANT]
-> The SDK authenticates requests to the routes it registers. Any route you add yourself is unauthenticated unless you add authentication to it. For more information, see [Agent trust model](agent-trust-model.md).
-
 ## See also
 
-* [Agent trust model](agent-trust-model.md)
 * [Observe agent activity with middleware and logging](agent-observability.md)
 * [Build tabs for Teams](../tabs/what-are-tabs.md)
 * [Getting started with tab apps in Teams SDK](../tabs/teams-sdk/getting-started.md)
