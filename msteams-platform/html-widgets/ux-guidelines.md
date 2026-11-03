@@ -10,15 +10,13 @@ ms.date: 06/01/2026
 
 This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
-
-
 ## UX principles
 
 Building a great widget for Teams means delivering a focused experience that surfaces the right information or action at the right time. HTML widgets should feel like a natural part of the Teams conversation — not an application embedded inside it.
 
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-conversastion-bubble.png":::
+    :::image type="icon" source="../assets/images/html-widgets/icon-conversastion-bubble.png":::
 
     ### Complement the conversation
 
@@ -30,8 +28,7 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column-end:::
   :::column:::
 
-  
-    :::image type="icon" source="images/icon-puzzle.png":::
+    :::image type="icon" source="..assets/images/html-widgets/icon-puzzle.png":::
 
     ### Surface capabilities, not full apps
 
@@ -43,11 +40,9 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column-end:::
 :::row-end:::
 
-
-
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-mouse.png":::
+    :::image type="icon" source="..assets/images/html-widgets/icon-mouse.png":::
 
     ### Be transparent and predictable
 
@@ -57,9 +52,8 @@ Building a great widget for Teams means delivering a focused experience that sur
     
   :::column-end:::
 
-  
   :::column:::
-    :::image type="icon" source="images/icon-arrow.png":::
+    :::image type="icon" source="..assets/images/html-widgets/icon-arrow.png":::
 
     ### Scale to the task
 
@@ -68,30 +62,26 @@ Building a great widget for Teams means delivering a focused experience that sur
      - Widgets always appear inline in the chat.
      - Teams provides an expanded surface — a larger view that opens above the chat. If your widget contains rich content or a deeper workflow that would benefit from more space, add an expand icon to your widget's action area to enable this experience.
 
-  
   :::column-end:::
 :::row-end:::
 
-
 :::row:::
   :::column:::
-    :::image type="icon" source="images/icon-shield.png":::
+    :::image type="icon" source="..assets/images/html-widgets/icon-shield.png":::
 
     ### Preserve human control
 
     Trust matters, especially when widget actions affect data or trigger external workflows.
+
 - Allow users to remain in control of their experience.
 - Provide clear visibility into what the widget is doing and why.
 - Confirm important or sensitive actions before they happen.
 - Communicate the outcome transparently — what was created, changed, or sent.
 
-    
   :::column-end:::
   :::column:::
   :::column-end:::
 :::row-end:::
-
-
 
 ## Understanding the chat surface
 
@@ -111,13 +101,8 @@ Keep in mind:
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
 
-
 > [!TIP]
 > If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
-
-
-
-
 
 ## Widget anatomy
 
@@ -126,7 +111,7 @@ Many widgets follow a common pattern that helps users orient quickly — but not
 **Common elements**
 
 | Element | Description | Notes |
-|---|---|---|
+| --- | --- | --- |
 | **Title** | Identifies the widget or what it represents | Gives users an immediate sense of what the widget is and what to expect, helping it stand out clearly within the conversation |
 | **Body content** | The primary information, media, or interactive content | The core of most widgets — may be the only element present |
 | **Actions** | Buttons, links, or other interactive elements that let the user take the next step | Optional. Interactive elements may appear throughout the widget, not only at the bottom — but when a widget includes a dedicated action area, it's typically placed at the bottom |
@@ -141,10 +126,6 @@ When a widget does follow this common pattern, content typically flows top to bo
 2. Primary content — key information, data, or media
 3. Action area (if present) — placed at the bottom
 
-
-
-
-
 ## Widget requirements
 
 The following requirements apply to all HTML widgets submitted to Teams. Widgets that don't meet these requirements may be rejected or require remediation before publishing.
@@ -158,13 +139,8 @@ Widgets must render correctly in both Teams light mode and dark mode.
 
 <img src="images/ThemeModes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
 
-
-
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
-
-
-
 
 ### Responsive scaling
 
@@ -177,9 +153,6 @@ Widgets must adapt to the width of the chat container. Teams chat containers var
 The widths shown below represent the most common scenarios to test against: wide, standard desktop, mobile, and meeting chat or side-by-side view. These are not breakpoints or size slots — they are reference points for evaluating how your single fluid layout scales across the range of contexts where your widget may appear.
 
 <img src="images/responsive.png" alt="A widget shown at four representative widths: wide, standard desktop, mobile, and meeting chat or side-by-side — demonstrating fluid layout scaling">
-
-
-
 
 ### Horizontal scrolling
 
@@ -209,7 +182,7 @@ Widgets must communicate the outcome of user actions clearly.
 Widgets must meet all of the following requirements to be accepted by the Teams Store.
 
 | Requirement |
-|:---|
+| :--- |
 | ✅ Renders correctly in both Teams light mode and dark mode (exceptions apply for content where color is meaningful) |
 | ✅ Scales responsively to the chat container width without horizontal scrolling (exceptions apply for intentional horizontal scroll patterns) |
 | ✅ Provides visible feedback for loading, success, and error states within the widget |
@@ -235,8 +208,6 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 - Use your brand color sparingly — as an accent for primary actions and key elements, not as a dominant background color
 - Never rely on color alone to convey meaning — always pair color with a label, icon, or other indicator
-
-
 
 ##### Container colors
 
@@ -293,10 +264,7 @@ Unlike Adaptive Cards, HTML widgets don't automatically inherit a card backgroun
 
 <br>
 
-
 <img src="images/container_gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
-
-
 
 ##### Text colors
 
@@ -356,7 +324,6 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 
 <br>
 
-
 > [!NOTE]
 > **Overlay text** tokens are static colors for text rendered on top of images or background media. Unlike other text tokens, these do not adapt to theme changes — choose dark or light based on the luminosity of the underlying image.
 
@@ -384,16 +351,12 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 <br>
 <img src="images/textColorExamples.png" alt="Example of cards showing different font colors">
 
-
-
-
-
 #### Typography
 
 Use the following base text styles to create clear visual hierarchy in your widget. These styles align with the Teams design system and cover the most common text roles in a widget.
 
 | Style | Fluent token | Size / Weight | Use for |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Header** | — * | 18px / 600 | Widget or card title |
 | **Label** | `Body1Strong` | 14px / 600 | Section headers, status labels |
 | **Body** | `Body1` | 14px / 400 | Primary content, descriptions |
@@ -416,8 +379,6 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 <br>
 
-
-
 #### Containers and borders
 
 Use containers to group related content and create visual hierarchy within your widget.
@@ -433,8 +394,6 @@ Use containers to group related content and create visual hierarchy within your 
 
 <img src="images/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
-
-
 <br>
 
 #### Spacing
@@ -444,7 +403,7 @@ The recommended global padding for a widget is 16px (`spacingHorizontalL` / `spa
 The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents.
 
 | Name | Token | Size | Common use |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Extra Small | `spacingVerticalXS` | 4px | Between an icon and its label, inside a badge |
 | Small | `spacingVerticalS` | 8px | Between buttons or tightly grouped elements |
 | Medium | `spacingVerticalM` | 12px | Vertical rhythm between text blocks and inputs |
@@ -458,7 +417,6 @@ The following examples show how spacing tokens apply in real widget layouts.
 
 For the full spacing scale, see <img src="images/icon_spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
 
-
 #### Iconography
 
 Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than custom or third-party icon sets where possible. Fluent icons are recognized by Teams users and scale correctly at standard sizes.
@@ -466,8 +424,6 @@ Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than c
 <img src="images/icons.png" alt="Fluent 2 iconography examples">
 
 <img src="images/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
-
-
 
 ### Actions
 
@@ -481,7 +437,6 @@ Actions allow users to take the next step without leaving the conversation.
 > [!TIP]
 > If you are building with React, [Fluent 2 button components](https://fluent2.microsoft.design/components/web/react/core/button/usage) implement the correct Teams-aligned button styles and states out of the box.
 
-
 <img src="images/icon-button.png" alt="Button icon" width="20"> [Button](https://fluent2.microsoft.design/components/web/react/core/button/usage)
 
 ### Content and layout
@@ -492,8 +447,6 @@ Actions allow users to take the next step without leaving the conversation.
 - **Avoid deep navigation:** Tabs, drill-down menus, and multi-level navigation are not appropriate for the inline widget
 - **Don't duplicate content:** Widget content and agent body text should complement each other — do not repeat the same information in both
 
-  
-
 ### Progressive disclosure
 
 Not all information needs to be visible at once. Use progressive disclosure to keep widgets concise while allowing users to access more detail when needed.
@@ -502,9 +455,7 @@ Not all information needs to be visible at once. Use progressive disclosure to k
 - Use scrolling within a defined container for longer content lists — ensure the container has a clear label and is keyboard accessible
 - Transition to the expanded surface for content that requires significant vertical space or multi-step interaction
 
-
 <img src="images/progressiveDisclosure.png" alt="Examples of progressive disclosure in widgets">
-
 
 ### Input gathering
 
@@ -516,8 +467,6 @@ If your widget includes a form or input fields:
 - Keep forms short — if a form requires more than four or five fields, consider moving it to the expanded surface
 
 <img src="images/input_examples.png" alt="Examples forms and inputs">
-
-
 
 ## Expanded surface
 
@@ -532,16 +481,12 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 
 <img src="images/expanded_surface.png" alt="Example of expanded card surface">
 
-
-
 ### Interaction guidelines
 
 - **Use expansion intentionally** — not every widget needs an expanded view. Reserve it for content that genuinely benefits from more space
 - **Don't replicate your full application** — the expanded surface is a focused workspace for a specific task, not a product shell. Avoid global navigation, settings panels, or unrelated features
 - **Scope to one task** — the expanded surface should support a single coherent workflow
 - **Preserve context** — the chat remains visible when the expanded surface is open. Design the expanded content to work alongside the conversation
-
-
 
 ## Best practices
 
@@ -567,7 +512,6 @@ The expanded surface opens as a modal above the chat when the user taps an expan
   :::column-end:::
 :::row-end:::
 
-
 ## Nice to have
 
 The following items are optional but contribute to a higher-quality widget experience.
@@ -577,8 +521,6 @@ The following items are optional but contribute to a higher-quality widget exper
 - **Charts and data visualization**: Ensure axis labels and data points are clearly readable at widget width. Consider transitioning to the expanded surface for complex charts.
 - **Media elements**: For inline video or rich media, provide a clear play control and a static thumbnail. Autoplay is not recommended.
 - **Illustrations**: Use illustrations sparingly and purposefully. Avoid decorative illustrations that add height without adding value.
-
-
 
 ## Related content
 
