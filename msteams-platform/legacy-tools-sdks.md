@@ -34,8 +34,3 @@ Like the Bot Framework SDK, TeamsFx is superseded by Teams SDK.
 Teams Toolkit was previously the main developer tooling experience for Teams app development, consisting of a command-line tool and extensions for Visual Studio Code and Visual Studio. Teams Toolkit integrated with TeamsFx and offered support for creating, debugging, provisioning, and deploying Teams applications.
 
 The successor to Teams Toolkit for developing Teams agents and apps is the Teams developer CLI's command-line workflow.
-
-## Additional resources
-
-- [Archived Teams Platform documentation](/previous-versions/microsoftteams/platform/toolkit/teamsfx-sdk)
-- [Bot Framework SDK documentation](/azure/bot-service/index-bf-sdk)
