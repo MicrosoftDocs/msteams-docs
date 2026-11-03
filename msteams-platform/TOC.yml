@@ -107,11 +107,12 @@
     items:
     - name: Overview
       href: teams-sdk-overview.md
-    - name: 
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
   - name: Coding agent skill
     href: coding-agent-skill.md
+  - name: llms.txt
+    href: llms-txt.md
   - name: Teams Developer Portal
     items:
     - name: Overview

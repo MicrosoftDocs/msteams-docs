@@ -58,6 +58,8 @@ See [VS Code Agent Skills documentation](https://code.visualstudio.com/docs/copi
 
 See [Cursor Skills documentation](https://cursor.com/docs/skills#installing-skills-from-github) for installation instructions.
 
+---
+
 ## What the skill covers
 
 The `teams-dev` skill guides your AI assistant through:
