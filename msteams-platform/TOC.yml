@@ -889,8 +889,6 @@
     - name: Best practices for Teams mobile app
       href: resources/teams-mobile-best-practices.md
       displayName: Teams mobile app, best practices, service worker, lighthouse, performance audit
-    - name: Contribute to Teams documentation
-      href: resources/teams-contributor-reference.md
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
