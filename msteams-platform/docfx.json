@@ -45,7 +45,7 @@
         "searchScope": [ "Teams" ],
         "feedback_system": "Standard",
         "feedback_product_url": "https://learn.microsoft.com/microsoftteams/platform/feedback",
-        "feedback_help_link_url": "hhttps://learn.microsoft.com/microsoftteams/platform/feedback/",
+        "feedback_help_link_url": "https://learn.microsoft.com/microsoftteams/platform/feedback/",
         "feedback_help_link_type": "get-product-support",
         "titleSuffix": "Teams",
         "recommendations": false,
