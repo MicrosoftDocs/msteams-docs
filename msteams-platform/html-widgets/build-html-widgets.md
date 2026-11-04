@@ -64,8 +64,8 @@ src/
 
 Follow these steps to send the widget:
 
-1. Step 1: [Create the widget file](#create-the-widget-file)
-1. Step 2: [Send the widget](#send-the-widget)
+1. Step 1: [Create the widget file](#create-the-widget-file).
+1. Step 2: [Send the widget](#send-the-widget).
 
 ## Create the widget file
 
