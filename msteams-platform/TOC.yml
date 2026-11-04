@@ -614,7 +614,7 @@
       - name: Create API-based message extensions
         href: messaging-extensions/create-api-message-extension.md
         displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-    - name: Build message extensions using Bot Framework
+    - name: Build message extensions using Teams SDK
       items:
       - name: Bot-based message extensions
         href: messaging-extensions/build-bot-based-message-extension.md
