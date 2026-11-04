@@ -793,6 +793,10 @@ To try it:
 1. Run your bot and make it send the widget in a Teams chat.
 2. Select **Roll a 6-sided die** a few times. Each roll appears in the list, and the widget grows to fit it without a scroll bar.
 
+> [!NOTE]
+>
+> HTML widget content can't currently be exported through export APIs. Consider this limitation when developing bots for organizations with content export requirements. Organizations can disable bots that can send HTML widgets if this limitation doesn't meet their requirements.
+
 ## Checklist
 
 **Sending the widget**

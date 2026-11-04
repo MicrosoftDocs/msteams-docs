@@ -9,13 +9,15 @@ ms.date: 11/03/2026
 
 # Share HTML Widgets
 
-An HTML widget is an HTML document embedded in a Teams chat message. To make it interactive, connect the widget to its Teams host, report its content height, and send tool requests to the bot. This lets users complete actions and see results inside the conversation without leaving the chat.
+An MCP-generated HTML widget is an interactive interface that an MCP server provides alongside a tool result. Your Teams agent reads the widget's HTML, sends it in an extended Markdown message, and forwards user-initiated tool calls to the originating MCP server. Users can interact with the tool's results directly in the conversation.
+
+Use this walkthrough when an MCP server supplies the widget rather than your agent owning the HTML. To build your own widget, including its handshake, sizing, and bot-side tool handler, see [Send an HTML widget from an agent](build-html-widgets.md).
 
 ## Prerequisites
 
-- Complete [Send the widget](build-html-widgets.md), including the HTML shell, payload builder, and Markdown helper.
-- Use a working TypeScript Teams SDK bot available on a public HTTPS endpoint.
-- For the optional MCP integration, use a bot that already calls MCP servers through a Client from `@modelcontextprotocol/sdk`.
+- A working TypeScript Teams SDK bot available on a public HTTPS endpoint.
+- An MCP client connected to a server that provides MCP App tools and widget resources, using Client from @modelcontextprotocol/sdk.
+- The [widget Markdown helper](build-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](build-html-widgets.md#handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses handleWidgetTool for calls that aren't from MCP widgets.
 
 ## Widgets from MCP servers
 
