@@ -26,6 +26,42 @@ Azure-managed bots and Teams-managed bots have separate lists. An Azure-managed 
 - An existing Azure Bot resource and Azure read permission at the resource, resource-group, or subscription scope. Only enabled subscriptions are included.
 - To use the bot in Teams, enable the Microsoft Teams channel in Azure.
 
-### Delivery settings at a glance
+## Delivery settings at a glance
 
 Configure provides HTTP endpoint settings and, for bots, Socket Mode. HTTP uses a messaging endpoint; Socket Mode uses an outbound connection for development. For setup steps, endpoint-access requirements, and delivery-specific troubleshooting, use the delivery-method documentation [Link to Socket mode documentation].
+
+## Find an Azure bot
+
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com/) and select **Tools** from the left pane.
+1. Select **Bot management**, and then select **Azure-managed bots**. The Teams-managed bots tab is the default.
+1. In **Subscription**, select a subscription or **All subscriptions**. Search the subscription picker by subscription name or ID. Bot results load after you choose a scope.
+1. If you selected one subscription, optionally choose a **Resource group** to narrow the results. The resource-group picker is unavailable when All subscriptions is selected.
+1. Use **Search app** to search bot name, display name, application ID, or resource group within your selected scope. Scroll to view more results or select **Load more** when available.
+1. Select the bot’s name to open **Configure**. Verify the subscription and resource group, especially when bots share a name.
+
+The App ID identifies the bot’s backing Microsoft Entra application. It isn’t the Teams app package’s app ID. Keep these identifiers separate when configuring your Teams app.
+
+> [!NOTE]
+>
+> The list reflects Azure resources your signed-in account can read, not a list of applications you own. Seeing a bot doesn’t automatically grant permission to change its settings.
+
+Developer Portal can remember a previously selected specific subscription if you still have access to it. All subscriptions isn’t restored automatically.
+
+### If you don’t have an Azure bot
+
+Select **Create an Azure bot** to open the Azure portal and create the resource there. Return to Developer Portal, select its subscription, and search again. New Azure resources and recent changes might take a short time to appear in the list.
+
+### Enable the Microsoft Teams channel
+
+You configure channels for Azure-managed bots in Azure, not on the Teams-managed bot Channels page in Developer Portal.
+
+1. In the [Azure portal](https://portal.azure.com/), open your Azure Bot resource.
+1. Select **Channels**, and then select **Microsoft Teams**.
+1. Accept the terms of service if prompted. Select the appropriate cloud environment on the Messaging tab, and select Apply.
+1. Return to your bot in Developer Portal and reload its details before continuing.
+
+> [!NOTE]
+>
+> The Microsoft Teams bot channel connects an Azure bot to Teams. It isn’t a team or a conversation channel inside Teams. Enabling it doesn’t install or publish a Teams app.
+
+For the complete Azure procedure, see [Connect a bot to Microsoft Teams](https://learn.microsoft.com/en-us/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
