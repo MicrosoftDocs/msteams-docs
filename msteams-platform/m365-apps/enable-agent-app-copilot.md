@@ -1,6 +1,6 @@
 ---
 title: Enable an Agent or App in Microsoft 365 Copilot
-description: TODO
+description: Enable your Teams app or agent in Microsoft 365 Copilot with a single CLI command. Learn how to update scopes, refresh the manifest, and test your agent.
 ms.topic: article
 ms.date: 11/03/2026
 ---

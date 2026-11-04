@@ -818,6 +818,12 @@
           displayName: Sequential Workflows
         - name: Up to date cards
           href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
+    - name: Build cards with Teams SDK
+      items:
+      - name: Overview
+        href: task-modules-and-cards/cards/build-with-teams-sdk.md
+      - name: Executing actions
+        href: task-modules-and-cards/cards/executing-actions.md
     - name: Build dialogs
       items:
       - name: Dialogs overview

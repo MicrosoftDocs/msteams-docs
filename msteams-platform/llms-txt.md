@@ -19,9 +19,8 @@ High-level SDK overview with links to reference guides.
 https://microsoft.github.io/teams-sdk/llms_docs/llms.txt
 ```
 
-:::tip
-Instead of manually providing URLs, you can install the [`teams-dev` agent skill](coding-agent-skill.md) which automatically gives your coding assistant the right context.
-:::
+> [!TIP]
+> Instead of manually providing URLs, you can install the [`teams-dev` agent skill](coding-agent-skill.md) which automatically gives your coding assistant the right context.
 
 ### Per-language
 
@@ -53,9 +52,8 @@ https://microsoft.github.io/teams-sdk/llms_docs/llms_python.txt
 https://microsoft.github.io/teams-sdk/llms_docs/llms_python_full.txt
 ```
 
-# [C#](#tab/csharp
+# [C#](#tab/csharp)
 
-)
 **Small** — navigation index, the assistant fetches individual pages as needed.
 
 ```
