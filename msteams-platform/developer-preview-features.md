@@ -6,7 +6,7 @@ ms.date: 10/12/2026
 ---
 # Teams preview features for agent and app developers
 
-Microsoft often makes new Teams platform features available to developers before they reach general availability. Consider integrating these preview features into test versions of your agents and apps, [providing feedback](feedback.md) about them, and preparing to use them as soon as they're released.
+Microsoft often makes new Teams platform features available to developers before they reach general availability. Consider integrating these preview features into test versions of your agents and apps, [providing feedback](developer-support-feedback.md) about them, and preparing to use them as soon as they're released.
 
 Preview-related implementation and user experience considerations vary by feature, and the documentation for each preview feature explains them. This article explains two of the most common requirements:
 

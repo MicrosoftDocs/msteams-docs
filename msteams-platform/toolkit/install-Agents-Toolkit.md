@@ -46,9 +46,6 @@ You can install Agents Toolkit using **Extensions** in Visual Studio Code or ins
 
     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.png" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar.":::
 
- > [!div class="nextstepaction"]
- > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Agents+Toolkit+for+Visual+Studio+Code+using+Visual+Studio+Code&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dvscode%23install-agents-toolkit-for-visual-studio-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 # [Marketplace](#tab/marketplace)
 
 1. Go to [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) in a web browser.
@@ -75,9 +72,6 @@ You can install Agents Toolkit using **Extensions** in Visual Studio Code or ins
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.png" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar after installation.":::
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Agents+Toolkit+for+Visual+Studio+Code+using+Marketplace&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dmarketplace%23install-agents-toolkit-for-visual-studio-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ---
 
 ## Install a different release version
@@ -102,9 +96,6 @@ By default, Visual Studio Code automatically keeps Agents Toolkit up-to-date. If
 
    Agents Toolkit installs the selected version.
 
- > [!div class="nextstepaction"]
- > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+a+different+release+version&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dmarketplace%23install-a-different-release-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## Install a prerelease version
 
 Agents Toolkit for Visual Studio Code extension is available in a prerelease version. To install Agents Toolkit prerelease version, follow these steps:
@@ -119,8 +110,6 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 > [!NOTE]
 > The **Install Pre-Release Version** option may not appear depending on the update track of your currently installed **Microsoft 365 Agents Toolkit** extension. Use **Install Specific Version...** to manually select a version.
 >
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+a+prerelease+version&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dvscode%23install-a-prerelease-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Next step
 
