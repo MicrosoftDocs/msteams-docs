@@ -1,6 +1,6 @@
 ---
 title: UX guidelines for HTML widgets in Microsoft Teams
-author: Suzanne Tocco
+author: nickwalkmsft
 description: UX guidance for partners building HTML widgets in Microsoft Teams chat, including design principles, visual design recommendations, and a minimum quality bar for submission.
 ms.topic: article
 ms.date: 06/01/2026
@@ -29,6 +29,8 @@ Building a great widget for Teams means delivering a focused experience that sur
   :::column:::
 
     :::image type="icon" source="..assets/images/html-widgets/icon-puzzle.png":::
+
+    :::image type="icon" source="../assets/images/html-widgets/icon-puzzle.png":::
 
     ### Surface capabilities, not full apps
 

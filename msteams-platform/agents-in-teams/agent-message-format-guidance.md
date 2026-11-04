@@ -1,6 +1,6 @@
 ---
 title: Agent message format guidance for Microsoft Teams
-author: Suzanne Tocco
+author: nickwalkmsft
 description: Guidelines for formatting agent messages in Microsoft Teams chat.
 ms.topic: article
 ms.date: 11/03/2026
