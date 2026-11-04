@@ -2,20 +2,10 @@
 title: BotBuilder User Authentication
 description: Migrate from BotBuilder's complex OAuthPrompt dialogs to Teams SDK's simple signin/signout methods.
 ms.topic: how-to
-zone_pivot_groups: teams-sdk-languages
+zone_pivot_groups: teams-sdk-languages-typescript-python
 ms.date: 10/09/2026
 ---
 # BotBuilder User Authentication
-
-::: zone pivot="teams-sdk-csharp"
-This article is not available for the selected development language.
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript,teams-sdk-python"
-
-## User Authentication
-
-::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 BotBuilder uses its `dialogs` for authentication via the `OAuthPrompt`. Teams SDK doesn't have any
@@ -112,11 +102,10 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
         conversation_state,
         user_state
     )
-    ```
-
----
+```
 
 # [Teams SDK](#tab/Teams SDK)
+
 ```python showLineNumbers
     from microsoft_teams.apps import ActivityContext, App, SignInEvent
     from microsoft_teams.api import MessageActivity
@@ -140,11 +129,16 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
     @flow.on_signin
     async def on_signin(event: SignInEvent):
         await event.activity_ctx.send("You have been signed in.")
-    ```
+```
+
+---
+
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
+
 # [BotBuilder](#tab/BotBuilder)
+
 ```typescript showLineNumbers
       import restify from 'restify';
       import {
@@ -277,11 +271,10 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
       server.post('/api/messages', async (req, res) => {
           await adapter.process(req, res, (context) => bot.run(context));
       });
-      ```
-
----
+```
 
 # [Teams SDK](#tab/Teams SDK)
+
 ```typescript showLineNumbers
       import { App } from '@microsoft/teams.apps';
 
@@ -306,7 +299,8 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
       (async () => {
         await app.start();
       })();
-      ```
+```
+
+---
+
 ::: zone-end
-
-
