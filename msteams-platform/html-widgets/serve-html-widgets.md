@@ -1,13 +1,13 @@
 ---
-title: Share HTML Widgets
-description: Learn how to build HTML widgets for your Teams bots
+title: Serve an MCP-generated HTML widget in Teams
+description: Learn how to share HTML widgets with Teams
 ms.localizationpriority: high
 author: nickwalkmsft
 ms.topic: reference
 ms.date: 11/03/2026
 ---
 
-# Share HTML Widgets
+# Serve an MCP-generated HTML widget in Teams
 
 An MCP-generated HTML widget is an interactive interface that an MCP server provides alongside a tool result. Your Teams agent reads the widget's HTML, sends it in an extended Markdown message, and forwards user-initiated tool calls to the originating MCP server. Users can interact with the tool's results directly in the conversation.
 
