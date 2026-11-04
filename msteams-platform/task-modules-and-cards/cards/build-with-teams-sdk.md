@@ -1,5 +1,5 @@
 ---
-title: Search Types & Usage in Adaptive Cards
+title: Building Adaptive Cards
 description: "Build Adaptive Cards for Microsoft Teams with type-safe builder helpers in C#, TypeScript, or Python. Learn to create interactive, schema-validated cards today."
 ms.topic: article
 ms.date: 11/04/2026

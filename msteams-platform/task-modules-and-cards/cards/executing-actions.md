@@ -1,5 +1,5 @@
 ---
-title: Search Types & Usage in Adaptive Cards
+title: Executing Actions
 description: Adaptive Card actions in the Teams SDK let users submit forms, open URLs, and trigger workflows. Learn how to build, validate, and handle actions in your bot.
 ms.topic: article
 ms.date: 11/04/2026

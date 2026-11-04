@@ -124,7 +124,7 @@
         - name: Proactive Activities
           href: botbuilder-migration/proactive-activities.md
         - name: The API Client
-          href: botbuilder-migration/the-api-client.md
+          href: botbuilder-migration/api-client.md
         - name: User Authentication
           href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI

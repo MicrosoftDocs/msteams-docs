@@ -11,7 +11,7 @@ ms.date: 10/09/2026
 This article is not available for the selected development language.
 ::: zone-end
 
-::: zone pivot="typescript,python"
+::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
 ## The API Client
 
@@ -153,7 +153,8 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
     ```
 ::: zone-end
 
-::: zone pivot="typescript,python"
+::: zone pivot="teams-sdk-typescript,teams-sdk-python"
+
 ## Mapping TeamsInfo APIs to Teams SDK ApiClient Methods
 
 The following table shows common BotBuilder `TeamsInfo` methods and their equivalent Teams SDK `ApiClient` methods:

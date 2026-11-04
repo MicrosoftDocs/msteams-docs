@@ -11,7 +11,7 @@ ms.date: 10/09/2026
 This article is not available for the selected development language.
 ::: zone-end
 
-::: zone pivot="typescript,python"
+::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
 ## Proactive Activities
 
