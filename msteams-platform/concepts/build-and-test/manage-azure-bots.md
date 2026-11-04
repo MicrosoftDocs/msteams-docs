@@ -64,4 +64,4 @@ You configure channels for Azure-managed bots in Azure, not on the Teams-managed
 >
 > The Microsoft Teams bot channel connects an Azure bot to Teams. It isn’t a team or a conversation channel inside Teams. Enabling it doesn’t install or publish a Teams app.
 
-For the complete Azure procedure, see [Connect a bot to Microsoft Teams](https://learn.microsoft.com/en-us/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0).
+For the complete Azure procedure, see [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
