@@ -1,6 +1,6 @@
 ---
 title: Review or Update Agent Runtime Authentication Configuration
-description: Agent runtime authentication for Teams agents uses client secrets or managed identities. Learn how to review and update credentials for Bot Connector.
+description: Agent runtime authentication for Teams agents uses client secrets or managed identities. Learn how to review and update credentials for Agent Communications Service.
 ms.date: 10/18/2026
 ms.topic: feature-guide
 zone_pivot_groups: teams-sdk-languages
@@ -8,7 +8,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Review or update agent runtime authentication configuration
 
-To interact with Teams, an agent's runtime must authenticate to Bot Connector. The agent authenticates using credentials configured on the Entra ID app registration that is linked to its Bot Connector registration.
+To interact with Teams, an agent's runtime must authenticate to Agent Communications Service (ACS). The agent authenticates using credentials configured on the Entra ID app registration that is linked to its ACS registration.
 
 The configuration described in this article is related only to agent runtime authentication that is required of all Teams agents. For information about configuring and implementing single sign-on (SSO) or OAuth to authenticate users of an agent and allow them to delegate permissions, see [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md).
 
@@ -18,7 +18,7 @@ The project creation workflow supported by the Teams developer CLI creates all o
 
 ::: zone pivot="teams-sdk-typescript,teams-sdk-python"
 
-Teams agent runtimes can authenticate to Bot Connector using two different kinds of credentials:
+Teams agent runtimes can authenticate to ACS using two different kinds of credentials:
 
 - **Client secret**: A client secret (sometimes called an application password) is configured in the environment variables of the runtime's hosting environment, or in the runtime's deployed configuration file.
 - **Managed identities for Azure resources**: Requires the agent runtime to be hosted in Azure. The runtime authenticates using a credential securely associated with its Azure hosting environment. Managed identity eliminates the need to handle and secure a client secret. See [Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for general information.
@@ -27,7 +27,7 @@ Teams agent runtimes can authenticate to Bot Connector using two different kinds
 
 ::: zone pivot="teams-sdk-csharp"
 
-Beginning with version 2.1, Teams SDK for .NET authenticates to Bot Connector using the [Microsoft Authentication Library](/entra/identity-platform/msal-overview) (MSAL) and can use any of its supported credential types. See [Supported credential types](/entra/msidweb/authentication/credentials-overview) for more information.
+Beginning with version 2.1, Teams SDK for .NET authenticates to ACS using the [Microsoft Authentication Library](/entra/identity-platform/msal-overview) (MSAL) and can use any of its supported credential types. See [Supported credential types](/entra/msidweb/authentication/credentials-overview) for more information.
 
 ::: zone-end
 
@@ -149,7 +149,7 @@ Agents that use an Azure AI Bot Service resource configured with the legacy **Us
 
 See [About Azure AI Bot Service bot type](choose-agent-registration-type.md#about-azure-ai-bot-service-bot-type) for more information.
 
-## Bot Connector authentication troubleshooting
+## ACS authentication troubleshooting
 
 ### Missing service principal in tenant
 
@@ -227,4 +227,4 @@ To solve this problem, create a service principal:
 
 ## See also
 
-For more information about how Teams SDK authenticates inbound communications from Bot Connector, see [Teams SDK incoming request authentication](incoming-request-authentication.md).
+For more information about how Teams SDK authenticates inbound communications from ACS, see [Teams SDK incoming request authentication](incoming-request-authentication.md).
