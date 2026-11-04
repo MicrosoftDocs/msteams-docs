@@ -95,5 +95,5 @@ Listing an Azure bot doesn’t create, install, or publish its Teams app. Use Ap
 
 - [Developer Portal overview](teams-developer-portal.md)
 - [Manage apps with Developer Portal](manage-your-apps-in-developer-portal.md)
-- [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0)
+- [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true)
 - [Test your app](test-app-overview.md)
