@@ -2,7 +2,7 @@
 title: Botbuilder Compatibility
 description: How to integrate existing BotBuilder adapters/handlers with Teams SDK during migration.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 10/09/2026
 ---
 
@@ -58,7 +58,7 @@ Your `ActivityHandler` (`Bot.cs`) and `CloudAdapter` implementations require no 
 > On SDK 2.0? Use `Microsoft.Teams.Plugins.AspNetCore.BotBuilder` and follow the plugin registration pattern shown below.
 >
 >
-> ::: zone pivot="csharp"
+> ::: zone pivot="teams-sdk-csharp"
 >
 > ### Program.cs
 >
@@ -138,7 +138,7 @@ Your `ActivityHandler` (`Bot.cs`) and `CloudAdapter` implementations require no 
 >     ```
 > ::: zone-end
 >
-> ::: zone pivot="python"
+> ::: zone pivot="teams-sdk-python"
 > **app.py**
 > ```python
 >     import asyncio
@@ -206,7 +206,7 @@ Your `ActivityHandler` (`Bot.cs`) and `CloudAdapter` implementations require no 
 >     ```
 > ::: zone-end
 >
-> ::: zone pivot="typescript"
+> ::: zone pivot="teams-sdk-typescript"
 > **index.ts**
 > ```typescript
 >     import { App } from '@microsoft/teams.apps';
@@ -290,11 +290,11 @@ Your `ActivityHandler` (`Bot.cs`) and `CloudAdapter` implementations require no 
 >
 > ```
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 <!-- Not applicable -->
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ## Adapters
 
@@ -412,7 +412,7 @@ hi from teams...
 ```
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 ## Adapters
 A BotBuilder `CloudAdapter` is responsible for managing communication between a bot and its users.
 It serves as the entry point for incoming activities and forwards them to the registered `ActivityHandler` for processing.

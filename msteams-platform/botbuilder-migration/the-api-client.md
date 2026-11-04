@@ -2,12 +2,12 @@
 title: The API Client
 description: Replace BotBuilder's static TeamsInfo class with Teams SDK's injected ApiClient for cleaner API interactions.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 10/09/2026
 ---
 # The API Client
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 This article is not available for the selected development language.
 ::: zone-end
 
@@ -23,8 +23,10 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
+
 # [Diff](#tab/Diff)
+
 ```python
   # highlight-error-start
 -  from botbuilder.core import ActivityHandler, TurnContext
@@ -49,6 +51,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 ---
 
 # [BotBuilder](#tab/BotBuilder)
+
 ```python showLineNumbers
     from botbuilder.core import ActivityHandler, TurnContext
     from botbuilder.core.teams import TeamsInfo
@@ -73,7 +76,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
     ```
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 # [Diff](#tab/Diff)
 ```typescript
   // highlight-error-start
@@ -113,6 +116,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 ---
 
 # [BotBuilder](#tab/BotBuilder)
+
 ```typescript showLineNumbers
     import {
       CloudAdapter,
@@ -155,7 +159,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 The following table shows common BotBuilder `TeamsInfo` methods and their equivalent Teams SDK `ApiClient` methods:
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 | BotBuilder (TeamsInfo) | Teams SDK (ApiClient) |
 |------------------------|----------------------|
 | `TeamsInfo.get_member(context, user_id)` | `api.conversations.get_member_by_id(conversation_id, user_id)` |
@@ -164,7 +168,7 @@ The following table shows common BotBuilder `TeamsInfo` methods and their equiva
 | `TeamsInfo.send_message_to_teams_channel(context, team_id, message)` | `api.conversations.create(CreateConversationParams)` then `api.conversations.create_activity(conversation_id, activity)` |
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 | BotBuilder (TeamsInfo) | Teams SDK (ApiClient) |
 |------------------------|----------------------|
 | `TeamsInfo.getMember(context, userId)` | `api.conversations.getMemberById(conversationId, userId)` |

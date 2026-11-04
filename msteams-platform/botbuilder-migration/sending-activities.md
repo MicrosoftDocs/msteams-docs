@@ -2,12 +2,12 @@
 title: Sending Activities
 description: Migrate from BotBuilder's TurnContext activity sending to Teams SDK's simplified send method with better Adaptive Card support.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 10/09/2026
 ---
 # Sending Activities
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 This article is not available for the selected development language.
 ::: zone-end
 
@@ -19,8 +19,10 @@ BotBuilder's pattern for sending activities via its `TurnContext` is similar to 
 but one key difference is that sending adaptive cards doesn't require constructing the entire activity yourself.
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
+
 # [Diff](#tab/Diff)
+
 ```python
     # highlight-error-start
 -   from botbuilder.core import ActivityHandler, TurnContext
@@ -240,7 +242,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
     ```
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 # [Diff](#tab/Diff)
 ```typescript
     // highlight-error-start

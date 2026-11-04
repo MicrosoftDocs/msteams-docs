@@ -2,34 +2,35 @@
 title: BotBuilder User Authentication
 description: Migrate from BotBuilder's complex OAuthPrompt dialogs to Teams SDK's simple signin/signout methods.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 10/09/2026
 ---
 # BotBuilder User Authentication
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 This article is not available for the selected development language.
 ::: zone-end
 
 ::: zone pivot="typescript,python"
 
 ## User Authentication
+
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 BotBuilder uses its `dialogs` for authentication via the `OAuthPrompt`. Teams SDK doesn't have any
 equivalent feature for dialogs, but we do support auth flows in our own way via our `sign_in` and `sign_out` methods.
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 BotBuilder uses its `dialogs` for authentication via the `OAuthPrompt`. Teams SDK doesn't have any
 equivalent feature for dialogs, but we do support auth flows in our own way via our `signin` and `signout` methods.
 ::: zone-end
 
+::: zone pivot="teams-sdk-python"
 
-
-::: zone pivot="python"
 # [BotBuilder](#tab/BotBuilder)
+
 ```python showLineNumbers
     from botbuilder.core import (
         ActivityHandler,
@@ -142,7 +143,7 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
     ```
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 # [BotBuilder](#tab/BotBuilder)
 ```typescript showLineNumbers
       import restify from 'restify';
