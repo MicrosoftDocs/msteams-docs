@@ -2,8 +2,9 @@
 title: Build HTML Widgets
 description: Learn how to build HTML widgets for your Teams bots
 ms.localizationpriority: high
-ms.date: 11/03/2026
+author: nickwalkmsft
 ms.topic: reference
+ms.date: 11/03/2026
 ---
 
 # Build HTML Widgets in Teams Bots
@@ -29,11 +30,11 @@ Every step in this guide builds the same small widget:
 
 When the bot sends it, the widget looks like this:
 
-![The dice widget in a chat message: a "Roll a 6-sided die" button.](images/dice-widget-initial.png)
+![The dice widget in a chat message: a "Roll a 6-sided die" button.](../assets/images/html-widgets/dice-widget-initial.png)
 
 After three rolls, the widget has grown to fit its list of results:
 
-![The dice widget after three rolls, listing "You rolled 4.", "You rolled 2.", and "You rolled 6."](images/dice-widget-rolls.png)
+![The dice widget after three rolls, listing "You rolled 4.", "You rolled 2.", and "You rolled 6."](../assets/images/html-widgets/dice-widget-rolls.png)
 
 ## What you write
 

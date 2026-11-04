@@ -20,9 +20,6 @@ These guidelines apply to all partner-built HTML widgets (MCP apps) that are ren
 > [!TIP]
 > If you are building your widget with React, we recommend using [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components and tokens. They implement accessible, Teams-compatible patterns out of the box and reduce the amount of custom accessibility work required. Fluent UI React v9 is not required — partners may use any framework or library as long as the accessibility requirements in this article are met.
 
-
-
-
 ## Recommended best practices
 
 The following practices aren't required but are strongly recommended to improve the overall experience.
@@ -32,33 +29,32 @@ The following practices aren't required but are strongly recommended to improve 
 - **Simple interaction models:** Prefer simple, predictable interaction patterns over highly custom or novel controls
 - **Scrolling:** Avoid complex nested scroll regions. If a scrollable region is necessary, ensure it has a clear label and is keyboard accessible
 - **Tooltips:** Implement accessible tooltips using `aria-describedby` and ensure they're available on focus as well as hover
-- **Tooltips:** Use [Fluent UI React v9 ](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
-
+- **Tooltips:** Use [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
 
 ## Responsibility model
 
 Teams and partners share responsibility for accessibility. The following table clarifies what each party owns.
 
 | Requirement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Teams | Partner |
-|-------------------------------------------|:-----:|:-------:|
-| Widget container label (e.g. "Scout widget") | ✅ |   |
-| Tab stop for widget container | ✅ |   |
-| Tab order of message elements | ✅ |   |
-| Focus into and out of the widget container | ✅ |   |
-| Widget-level loading and error states | ✅ |   |
-| Keyboard navigation inside widget |   | ✅ |
-| ARIA labels for interactive elements |   | ✅ |
-| Screen reader support for widget content |   | ✅ |
-| Color contrast inside widget |   | ✅ |
-| High contrast support inside widget |   | ✅ |
-| Error handling for content inside widget |   | ✅ |
+| ------------------------------------------- | :-----: | :-------: |
+| Widget container label (e.g. "Scout widget") | ✅ | |
+| Tab stop for widget container | ✅ | |
+| Tab order of message elements | ✅ | |
+| Focus into and out of the widget container | ✅ | |
+| Widget-level loading and error states | ✅ | |
+| Keyboard navigation inside widget | | ✅ |
+| ARIA labels for interactive elements | | ✅ |
+| Screen reader support for widget content | | ✅ |
+| Color contrast inside widget | | ✅ |
+| High contrast support inside widget | | ✅ |
+| Error handling for content inside widget | | ✅ |
 
 ## Minimum accessibility bar for submission
 
 Widgets must meet all of the following requirements to be accepted. Widgets that don't meet this bar may be rejected or require remediation before publishing.
 
 | Requirements |
-|:---|
+| :--- |
 | ✅ Fully operable with a keyboard, with no focus traps inside the widget |
 | ✅ Usable with screen readers, with meaningful roles, names, and states on all interactive elements |
 | ✅ Meets WCAG 2.2 AA contrast ratios for text and essential UI elements |
@@ -69,8 +65,6 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 
 > [!WARNING]
 > Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
-
-
 
 ### Keyboard accessibility
 
@@ -88,12 +82,7 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 **Dialogs and modals**: Modal dialogs and overlays are possible within a widget but are not recommended. Because widgets render inside a small iframe, a modal will be constrained to that space and may feel disorienting to users. If your use case requires a modal, consider whether the expanded surface would be a better fit for that interaction.
 If you do implement a modal inside your widget, if you are using Fluent UI React v9 use the [Dialog](https://storybooks.fluentui.dev/react/?path=/docs/components-dialog--docs) or [Popover](https://storybooks.fluentui.dev/react/?path=/docs/components-popover--docs) components rather than a custom implementation, as they handle focus trapping, focus restoration, and ARIA attributes correctly out of the box. For custom modal behavior, [useModalAttributes](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-usemodalattributes--docs)  is available.
 
-
-
-
 **Focus restoration**: When an element is removed from the DOM after a user action (for example, after submitting a form or closing a panel), focus must be restored to a logical element rather than dropping to the document body. Use Fluent V9's [useRestoreFocusSource and useRestoreFocusTarget](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-userestorefocussource--docs) hooks to handle this automatically.
-
-
 
 <table>
 <tr>
@@ -145,7 +134,6 @@ If you are using Fluent V9 and React, use [AriaLiveAnnouncer](https://storybooks
 
 Images that convey meaning must include descriptive `alt` text. Decorative images should be marked with empty `alt=""` or hidden from assistive technologies.
 
-
 <table>
 <tr>
 <th align="left">✅ Do</th>
@@ -167,9 +155,6 @@ Images that convey meaning must include descriptive `alt` text. Decorative image
 </tr>
 </table>
 
-
-
-
 ## Focus management
 
 Because widgets are embedded in a conversational experience, focus behavior within the widget must be predictable and must not disrupt the user's workflow in chat.
@@ -189,8 +174,6 @@ If the widget opens a modal dialog:
 - Move focus into the dialog when it opens
 - Trap focus within the dialog while it's open
 - Return focus to the triggering element when the dialog closes
-
-  
 
 ## Color, contrast, and high contrast mode
 
@@ -234,7 +217,6 @@ Don't rely on color alone to convey meaning. Use text, icons, patterns, or other
 </tr>
 </table>
 
-
 ## Responsive layout and zoom
 
 Widgets must adapt to the chat container and remain usable at different zoom levels and viewport sizes.
@@ -242,8 +224,6 @@ Widgets must adapt to the chat container and remain usable at different zoom lev
 - **Zoom support:** Text and interactive controls must remain readable and operable at 200% browser zoom. Fixed-aspect content — such as data visualizations, embedded media, maps, or canvas-based rendering — is exempt where zoom would inherently distort the experience. In these cases, ensure the content remains accessible through alternative means such as descriptive alt text, data tables, or captions.
 - **Flexible layout:** Avoid fixed pixel heights — allow the widget to grow vertically as needed so content isn't clipped.
 - **Horizontal scrolling:** Avoid horizontal scrolling for primary widget content. Layout should adapt to the narrow widths typical of chat containers. Intentional horizontal scrolling for specific content types such as wide data tables or carousels is acceptable.
-
-  
 
 ## Motion, animation, and timing
 
@@ -253,18 +233,14 @@ Motion and animation must not cause discomfort or interfere with usability.
 - **Safe motion:** Avoid flashing content or rapid animations that could trigger photosensitive reactions
 - **Auto-advancing content:** Don't auto-advance carousels or content without user input. If auto-advance is necessary, provide controls to pause, stop, and manually navigate
 
-
-
 ## Error handling inside the widget
 
 > [!NOTE]
 > Teams handles renderer-level loading and error states — the outer states shown when the widget itself fails to load or render. Partners are responsible for accessible error handling within their own widget content.
 
-
 **Announcements**
 
 Use `aria-live="assertive"` or an appropriate live region to announce critical errors to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: false` for error announcements.
-
 
 **Clear messaging**
 
@@ -273,14 +249,12 @@ Error messages must:
 - Describe what went wrong in clear, concise language
 - Explain how the user can fix the issue or try again
   
-
 **Input errors**
 
 For invalid fields:
 
 - Set `aria-invalid="true"` on the input
 - Associate the error message with the input using `aria-describedby` or a similar mechanism
-
 
 ## Loading states inside the widget
 
@@ -292,10 +266,6 @@ For invalid fields:
 - **Focus behavior:** Don't trap focus during loading — users must still be able to move focus within the widget
 - **Skeleton UI:** If you use skeleton screens, either hide them from assistive technologies using `aria-hidden="true"`, or provide meaningful labels that describe the loading state
 
-
-
-
-
 ## Testing guidance
 
 Partners should validate accessibility before submission using the three-step workflow below. Because widgets run inside a sandboxed iframe, open your widget content directly in a browser tab before running any automated tools — most tools cannot scan iframe content by default.
@@ -305,7 +275,7 @@ Partners should validate accessibility before submission using the three-step wo
 Start with an automated scan to catch the most common issues quickly. Automated tools typically identify 30–40% of accessibility issues, so manual testing is required in addition.
 
 | Tool | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching missing labels, contrast failures, and structural issues. No install required. Run first. |
 | [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed than Lighthouse. Free version covers a broader range of WCAG violations with clearer remediation guidance. |
 | [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Useful for quickly spotting missing alt text, form labels, and heading structure. |
@@ -315,7 +285,7 @@ Start with an automated scan to catch the most common issues quickly. Automated 
 Automated tools don't always catch contrast failures reliably. After your automated scan, verify color contrast manually using either of these tools:
 
 | Tool | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) | Desktop tool | Sample any two colors directly on screen and check against WCAG AA ratios. |
 | [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Web-based | Enter hex values to verify text and background combinations. No install required. |
 
@@ -324,7 +294,7 @@ Automated tools don't always catch contrast failures reliably. After your automa
 Manual testing is required to verify keyboard behavior, screen reader output, and visual adaptability. Work through each test in order:
 
 | Test type | What to verify |
-|---|---|
+| --- | --- |
 | Keyboard-only | Navigate the entire widget using only Tab, Shift+Tab, arrow keys, Enter, and Space. Verify no focus traps and a logical tab order throughout. |
 | Screen reader | Test with at least one screen reader — Narrator or NVDA on Windows, VoiceOver on Mac. Verify all elements are announced meaningfully. |
 | Zoom | Increase browser zoom to 200% and confirm text and interactive controls remain fully usable. |
