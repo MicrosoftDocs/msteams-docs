@@ -32,6 +32,8 @@ Expanding the thinking indicator reveals a list of steps with status icons and t
 
 The agent can add steps as work progresses and update existing steps. Steps can run in parallel, they don't have to complete one at a time. A **Stop** button is available in the expanded view.
 
+Although steps can run in parallel, send updates to the same Plan one at a time. Wait for each call to finish before sending the next. The SDK doesn't order overlapping calls or automatically resolve conflicts.
+
 The expanded header reflects the overall status, such as **Thinking**, **Assistance Required**, or **Ran into issues**.
 
 ### Completed steps
@@ -255,7 +257,7 @@ If Teams returns `PlanConflict`, it means the requested operation conflicts with
 
 Plans created from an incoming message context are reactive and bound to that prompt. To continue work later, save the full conversation ID and the original prompt's `replyToId`, and provide an authenticated `apiClient` scoped to the same service URL and identity when reconstructing the Plan. Don't substitute the bot's answer ID or stream ID for the original prompt ID.
 
-Don't store credentials or the runtime client in saved Plan data. Your application is responsible for scheduling background work, cancellation, and recovery; the Teams SDK doesn't retain the incoming handler context for you.
+The SDK doesn't persist Plans or their steps. Persist the Plan data your application needs to resume its work, but don't store credentials or the runtime client. Your application is responsible for scheduling background work, cancellation, and recovery; the Teams SDK doesn't retain the incoming handler context for you.
 
 ## Code samples
 
