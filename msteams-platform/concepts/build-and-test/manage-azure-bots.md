@@ -65,3 +65,35 @@ You configure channels for Azure-managed bots in Azure, not on the Teams-managed
 > The Microsoft Teams bot channel connects an Azure bot to Teams. It isn’t a team or a conversation channel inside Teams. Enabling it doesn’t install or publish a Teams app.
 
 For the complete Azure procedure, see [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
+
+## Troubleshoot Azure bot discovery
+
+Use the message shown in Developer Portal to choose the recovery action. This section covers finding and opening Azure bots. Delivery-method setup, endpoint access, and save troubleshooting are covered in the separate delivery-method documentation.
+
+| # | What you see | What to check or do |
+| --- | --- | --- |
+| 1. | Azure-managed bots isn’t available | Confirm that the preview is enabled for your tenant and supported in your cloud. The planned preview is commercial-cloud only. |
+| 2. | No enabled subscriptions | Check the signed-in account and tenant. Ask the Azure resource owner to confirm your access and the subscription’s status. Disabled, warned, past-due, and deleted subscriptions aren’t included. |
+| 3. | No Azure bots or no matching results | Check the subscription, resource group, and search text. Try All subscriptions. Confirm that the resource is an Azure Bot and that your account can read it. Allow time for recent Azure changes to appear. |
+| 4. | We couldn’t load your subscriptions or bots | Select Retry. If the failure continues, check Azure access and service availability. A failed subscription load isn’t a complete empty inventory. |
+| 5. | We couldn’t reach Azure | Check your network connection and select Retry. |
+| 6. | No access to a subscription or bot | Ask the Azure resource owner to confirm that your account has read access. Retrying alone doesn’t grant missing permission. |
+| 7. | Azure access isn’t available yet | Contact your administrator to confirm that Azure access is enabled for your tenant. |
+| 8. | Policy blocked or Sign in again | Follow the sign-in action shown, or ask your administrator to review the blocking policy. Retry after the requirement is resolved. |
+| 9. | Azure is busy | Wait for the retry interval shown, then retry. Avoid repeated rapid requests. |
+| 10. | This Azure bot no longer exists | Return to Bot management. Check whether the resource was deleted or moved and locate its current subscription and resource group in Azure. |
+
+## Manage other bot properties
+
+On Configure, select the Azure portal link in Update other bot properties in Azure portal. Use Azure to manage the bot’s channels, icon, credentials, and other resource settings. Developer Portal doesn’t create, delete, or migrate the Azure resource.
+
+### Test the bot as part of a Teams app
+
+Listing an Azure bot doesn’t create, install, or publish its Teams app. Use Apps to configure the app that references the bot’s application ID, prepare its package, and test it in Teams. Your tenant must allow the applicable custom-app upload or installation workflow.
+
+## Related content
+
+- [Developer Portal overview](teams-developer-portal.md)
+- [Manage apps with Developer Portal](manage-your-apps-in-developer-portal.md)
+- [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0)
+- [Test your app](test-app-overview.md)
