@@ -11,19 +11,12 @@ ms.date: 11/03/2026
 
 An HTML widget is an HTML document that Teams renders in a sandboxed iframe inside a chat message. Use widgets to bring a custom interactive interface into a conversation, so users can work with your bot without leaving the chat. Your bot sends the HTML in an extended Markdown message, and the widget connects to Teams to resize its interface and call the bot's tools.
 
-This article shows how to create the widget file and send its payload from a TypeScript bot built with the Teams SDK. Then follow Share the widget with Teams to add the handshake, height reporting, and tool calls that make the widget interactive. In that article, share means connecting the embedded widget to its Teams host, not forwarding a message or publishing an app.
+This article shows how to create the widget file and send its payload from a TypeScript bot built with the [Teams SDK](https://github.com/microsoft/teams.ts). Then follow [Share the widget with Teams](share-html-widgets.md) to add the handshake, height reporting, and tool calls that make the widget interactive. In that article, share means connecting the embedded widget to its Teams host, not forwarding a message or publishing an app.
 
-> [!Note]
->
-> HTML widgets are a preview feature. The Teams SDK marks the related APIs as experimental, and they may change.
+## Prerequisites
 
-This guide shows how a Teams bot written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
-
-1. **Send** an interactive HTML widget into a chat.
-2. **Size the widget correctly**, so that Teams always shows all of its content.
-3. **Handle `callTool` requests** that the widget sends back to the bot.
-
-It assumes that you already have a working Teams SDK bot, and that the bot is available on a public HTTPS endpoint.
+- A working TypeScript bot built with the Teams SDK.
+- A public HTTPS endpoint for your bot.
 
 > [!NOTE]
 > HTML widgets are a preview feature. The Teams SDK marks the related APIs as experimental, and they may change.
@@ -69,7 +62,12 @@ src/
 
 ---
 
-## Step 1: Create the widget file
+Follow these steps to send the widget:
+
+1. Step 1: [Create the widget file](#create-the-widget-file)
+1. Step 2: [Send the widget](#send-the-widget)
+
+## Create the widget file
 
 Create `widgets/dice-widget.html`. This is the complete page that Teams displays. The `<script>` element at the end is empty for now; Steps 3, 4, and 5 fill it in.
 
@@ -110,7 +108,7 @@ Create `widgets/dice-widget.html`. This is the complete page that Teams displays
 
 Everything is in one file: the CSS and JavaScript are inline, and the widget loads nothing from other origins.
 
-## Step 2: Send the widget
+## Send the widget
 
 Widgets are sent in **extended markdown messages**: message activities whose `textFormat` is `"extendedmarkdown"`. The widget goes in the message's `text`, as a fenced code block with the language `html-widget`. The content of the code block is the widget's payload, as JSON:
 
