@@ -68,7 +68,7 @@
       - name: Send HTML widgets
         href: html-widgets/build-html-widgets.md
         displayName: HTML, widget, Teams, integration
-      - name: Share HTML widgets with Teams
+      - name: Serve HTML widgets in Teams
         href: html-widgets/serve-html-widgets.md
         displayName: Share, HTML, widget, Teams
       - name: UX guidelines for HTML widgets
