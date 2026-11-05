@@ -68,16 +68,16 @@ src/
 
 Follow these steps to send the widget:
 
-1. Step 1: [Create the widget file](#create-the-widget-file).
-1. Step 2: [Send the widget](#send-the-widget).
-1. Step 3: [Connect the widget to Teams](#connect-the-widget-to-teams).
+1. Step 1: [Create the widget file](#step-1-create-the-widget-file).
+1. Step 2: [Send the widget](#step-2-send-the-widget).
+1. Step 3: [Connect the widget to Teams](#step-3-connect-the-widget-to-teams).
 1. Step 4: [Report the widget's height](#report-the-widgets-height).
 1. Step 5: [Call a tool from the widget](#call-a-tool-from-the-widget).
 1. Step 6: [Handle tool calls in the bot](#handle-tool-calls-in-the-bot).
 1. Optionally, [display widgets from MCP servers](#optional-identify-which-widget-is-calling).
 1. [Put it all together](#put-it-all-together).
 
-## Create the widget file
+## Step 1: Create the widget file
 
 Create `widgets/dice-widget.html`. This is the complete page that Teams displays. The `<script>` element at the end is empty for now; Steps 3, 4, and 5 fill it in.
 
@@ -118,7 +118,7 @@ Create `widgets/dice-widget.html`. This is the complete page that Teams displays
 
 Everything is in one file: the CSS and JavaScript are inline, and the widget loads nothing from other origins.
 
-## Send the widget
+## Step 2: Send the widget
 
 Widgets are sent in **extended markdown messages**: message activities whose `textFormat` is `"extendedmarkdown"`. The widget goes in the message's `text`, as a fenced code block with the language `html-widget`. The content of the code block is the widget's payload, as JSON:
 
@@ -140,7 +140,7 @@ The payload has these fields:
 | `domain`         | Yes      | An HTTPS origin associated with the widget. Use your bot's origin.                                                                                                                                                                                                                    |
 | `html`           | Yes      | The complete HTML document that Teams renders in the iframe.                                                                                                                                                                                                                          |
 | `securityPolicy` | No       | Origins the HTML may use. `resourceDomains` covers external scripts, styles, images, and fonts. `connectDomains` covers `fetch`, XHR, and WebSocket calls. Anything not listed is blocked.                                                                                            |
-| `mcpUrl`         | No       | Only for widgets produced by an MCP tool, and always set for them: the URL of the MCP server whose tool produced the widget. Teams uses it to run the widget on a dedicated domain scoped to the bot's ID and the MCP URL. See [Widgets from MCP servers](#widgets-from-mcp-servers). |
+| `mcpUrl`         | No       | Only for widgets produced by an MCP tool, and always set for them: the URL of the MCP server whose tool produced the widget. Teams uses it to run the widget on a dedicated domain scoped to the bot's ID and the MCP URL. See [Widgets from MCP servers](serve-html-widgets.md#widgets-from-mcp-servers). |
 
 ### Build the widget's payload
 
@@ -292,7 +292,7 @@ https://<hash>.widget-renderer.usercontent.microsoft
 | Widget                                          | What to set in the payload                                                 | Domain scoped to              | Text to hash         |
 | ----------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------- | -------------------- |
 | Your bot's own widgets, such as the dice roller | Nothing                                                                    | Your bot's ID                 | `<bot id>`           |
-| A widget produced by an MCP tool                | `mcpUrl`: the URL of the MCP server ([details](#widgets-from-mcp-servers)) | Your bot's ID and the MCP URL | `<bot id>-<mcp URL>` |
+| A widget produced by an MCP tool                | `mcpUrl`: the URL of the MCP server ([details](serve-html-widgets.md#widgets-from-mcp-servers)) | Your bot's ID and the MCP URL | `<bot id>-<mcp URL>` |
 
 When you send a widget produced by an MCP tool, pass the MCP server's URL in the `mcpUrl` field of the widget's payload. Teams then generates the hash from your bot's ID and that URL, so the widget gets its own domain.
 
@@ -303,7 +303,7 @@ To find the domain, generate the hash with the [widget domain tool](https://widg
 > [!WARNING]
 > If you omit `mcpUrl` from a widget produced by an MCP tool, the widget runs on the domain scoped to your bot's ID only. It can then call any service that accepts calls from that domain, including the services meant for your bot's own widgets. Always pass `mcpUrl` in the payload of widgets produced by MCP tools.
 
-## Connect the widget to Teams
+## Step 3: Connect the widget to Teams
 
 Before Teams accepts anything else from the widget, the widget must complete a handshake:
 
@@ -493,7 +493,7 @@ The dice widget's height is driven by its content: its button, its list of rolls
 
 ## Call a tool from the widget
 
-A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#step-6-handle-tool-calls-in-the-bot).
+A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#handle-tool-calls-in-the-bot).
 
 ### The callTool function
 
