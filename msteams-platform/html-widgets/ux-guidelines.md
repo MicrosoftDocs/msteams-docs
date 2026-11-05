@@ -16,7 +16,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
 :::row:::
   :::column:::
-    :::image type="icon" source="../assets/images/html-widgets/icon-conversastion-bubble.png":::
+    :::image type="icon" source="../assets/images/html-widgets/icon-conversation-bubble.png":::
 
     ### Complement the conversation
 
@@ -375,8 +375,7 @@ Use the following base text styles to create clear visual hierarchy in your widg
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-<img src="../assets/images/html-widgets/icon-
-text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="../assets/images/html-widgets/icon-text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
 <br>
 

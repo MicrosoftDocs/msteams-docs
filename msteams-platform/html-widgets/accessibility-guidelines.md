@@ -1,9 +1,9 @@
 ---
 title: Accessibility Guidelines for HTML Widgets in Teams
-author: Suzanne Tocco
-description: TODO
+author: nickwalkmsft
+description: Learn about the accessibility guidelines for HTML widgets in Teams
 ms.topic: article
-ms.date: 05/27/2026
+ms.date: 11/05/2026
 ---
 
 
@@ -64,7 +64,7 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 | ✅ Avoids horizontal scrolling for primary content — intentional horizontal scroll patterns such as wide tables or carousels are acceptable |
 
 > [!WARNING]
-> Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
+> Widgets must meet all of the following requirements to be accepted by the Teams Store. Widgets that don't meet this bar may be rejected or require remediation before [publishing to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md).
 
 ### Keyboard accessibility
 
