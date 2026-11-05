@@ -102,7 +102,7 @@ Keep in mind:
 - While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
 
 > [!TIP]
-> If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
+> If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
 
 ## Widget anatomy
 
