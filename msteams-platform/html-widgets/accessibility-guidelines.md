@@ -304,9 +304,8 @@ Manual testing is required to verify keyboard behavior, screen reader output, an
 
 ## Related content
 
-- [HTML widgets overview for Microsoft Teams](#)
-- [UX guidelines for HTML widgets in Microsoft Teams](#)
-- [Teams store validation guidelines](#)
+- [UX guidelines for HTML widgets in Microsoft Teams](ux-guidelines.md)
+- [Teams store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 - [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs)
 - [Fluent UI React v9 components](https://react.fluentui.dev/)
 - [WCAG 2.2 contrast requirements](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
