@@ -524,9 +524,8 @@ The following items are optional but contribute to a higher-quality widget exper
 
 ## Related content
 
-- [HTML widgets overview for Microsoft Teams](#)
-- [Accessibility guidelines for HTML widgets in Microsoft Teams](#)
-- [Teams store validation guidelines](#)
+- [Accessibility guidelines for HTML widgets in Microsoft Teams](accessibility-guidelines.md)
+- [Teams store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 - [Fluent 2 design system](https://fluent2.microsoft.design/)
 - [Fluent UI React v9](https://react.fluentui.dev/)
 - [Fluent 2 color tokens](https://fluent2.microsoft.design/color)
