@@ -28,7 +28,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
             members = await TeamsInfo.get_members(turn_context)
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python
     from microsoft_teams.api import MessageActivity
@@ -69,7 +69,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
     }
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript
     import { App } from '@microsoft/teams.apps';

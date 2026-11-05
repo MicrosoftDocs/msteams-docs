@@ -104,7 +104,7 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
     )
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.apps import ActivityContext, App, SignInEvent
@@ -273,7 +273,7 @@ equivalent feature for dialogs, but we do support auth flows in our own way via 
       });
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
       import { App } from '@microsoft/teams.apps';

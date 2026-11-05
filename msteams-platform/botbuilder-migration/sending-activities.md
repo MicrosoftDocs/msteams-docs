@@ -24,7 +24,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
             await turn_context.send_activity(Activity(type="typing"))
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.api import MessageActivity, TypingActivityInput
@@ -51,7 +51,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
             await turn_context.send_activity("hello world")
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.api import MessageActivity
@@ -83,7 +83,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
           # highlight-end
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.api import MessageActivity
@@ -115,7 +115,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
             # highlight-end
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.api import Attachment, MessageActivity, MessageActivityInput
@@ -152,7 +152,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
     }
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
     app.on('message', async ({ send }) => {
@@ -181,7 +181,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
     }
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
     app.on('message', async ({ send }) => {
@@ -224,7 +224,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
     }
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
     import { AdaptiveCard, TextBlock } from '@microsoft/teams.cards';
@@ -261,7 +261,7 @@ but one key difference is that sending adaptive cards doesn't require constructi
     }
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
     import { MessageActivityInput } from '@microsoft/teams.api';

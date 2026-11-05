@@ -49,7 +49,7 @@ passed into our activity handlers through our context. This method accepts a `co
     # highlight-end
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```python showLineNumbers
     from microsoft_teams.apps import App
@@ -96,7 +96,7 @@ passed into our activity handlers through our context. This method accepts a `co
     // highlight-end
 ```
 
-# [Teams SDK](#tab/Teams SDK)
+# [Teams SDK](#tab/TeamsSDK)
 
 ```typescript showLineNumbers
     import { App } from '@microsoft/teams.apps';
