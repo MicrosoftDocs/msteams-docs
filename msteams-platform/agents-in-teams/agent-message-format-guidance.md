@@ -136,7 +136,8 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 ## Next steps
 
-1. Link to Markdown message dev doc
-2. Link to Adaptive card dev doc
-3. Link to HTML widget dev doc
-4. Link to HTML widget design guidelines and accessibility guidelines
+- [Extended Markdown mode](../bots/how-to/format-your-bot-messages.md)
+- [Adaptive Cards](../task-modules-and-cards/what-are-cards.md)
+- [Build HTML widget](../html-widgets/build-html-widgets.md)
+- [UX guidelines for HTML widgets in Microsoft Teams](../html-widgets/ux-guidelines.md)
+- [Accessibility guidelines for HTML widgets in Microsoft Teams 365](../html-widgets/accessibility-guidelines.md)
