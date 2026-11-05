@@ -66,17 +66,6 @@ src/
 
 ---
 
-Follow these steps to send the widget:
-
-1. Step 1: [Create the widget file](#step-1-create-the-widget-file).
-1. Step 2: [Send the widget](#step-2-send-the-widget).
-1. Step 3: [Connect the widget to Teams](#step-3-connect-the-widget-to-teams).
-1. Step 4: [Report the widget's height](#report-the-widgets-height).
-1. Step 5: [Call a tool from the widget](#call-a-tool-from-the-widget).
-1. Step 6: [Handle tool calls in the bot](#handle-tool-calls-in-the-bot).
-1. Optionally, [display widgets from MCP servers](#optional-identify-which-widget-is-calling).
-1. [Put it all together](#put-it-all-together).
-
 ## Step 1: Create the widget file
 
 Create `widgets/dice-widget.html`. This is the complete page that Teams displays. The `<script>` element at the end is empty for now; Steps 3, 4, and 5 fill it in.
@@ -435,7 +424,7 @@ function connect(appName) {
 }
 ```
 
-## Report the widget's height
+## Step 4: Report the widget's height
 
 **A widget's height must be driven by its content.**
 
@@ -491,7 +480,7 @@ Because the iframe is sized from the widget, the widget can't be sized from the 
 
 The dice widget's height is driven by its content: its button, its list of rolls, and its error message.
 
-## Call a tool from the widget
+## Step 5: Call a tool from the widget
 
 A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#handle-tool-calls-in-the-bot).
 
@@ -599,7 +588,7 @@ connect("Dice roller").then(
 - The button is disabled while a call is in progress, so a quick double click does not roll twice.
 - Each new roll and each error message makes the root taller. The `ResizeObserver` from Step 4 reports the new height.
 
-## Handle tool calls in the bot
+## Step 6: Handle tool calls in the bot
 
 When the widget calls a tool, your bot receives an `htmlwidget/calltool` invoke activity. In the Teams SDK, handle it with the `widget.callTool` route:
 
