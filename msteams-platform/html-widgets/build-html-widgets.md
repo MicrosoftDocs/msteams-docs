@@ -482,7 +482,7 @@ The dice widget's height is driven by its content: its button, its list of rolls
 
 ## Step 5: Call a tool from the widget
 
-A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#handle-tool-calls-in-the-bot).
+A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#step-6-handle-tool-calls-in-the-bot).
 
 ### The callTool function
 
@@ -775,7 +775,7 @@ Your existing bot needs two additions:
 
 The `<script>` element in `widgets/dice-widget.html` contains the code from [Step 3](#step-3-connect-the-widget-to-teams), [Step 4](#step-4-report-the-widgets-height), and [Step 5](#step-5-call-a-tool-from-the-widget), in that order.
 
-To show widgets from MCP servers, also declare widget support on your MCP client, call MCP tools with `callMcpTool`, and send tool calls from MCP widgets to `handleMcpWidgetTool` ([Widgets from MCP servers](#widgets-from-mcp-servers)).
+To show widgets from MCP servers, also declare widget support on your MCP client, call MCP tools with `callMcpTool`, and send tool calls from MCP widgets to `handleMcpWidgetTool` ([Widgets from MCP servers](serve-html-widgets.md#widgets-from-mcp-servers)).
 
 To try it:
 
