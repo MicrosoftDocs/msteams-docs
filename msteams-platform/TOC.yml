@@ -65,7 +65,7 @@
       displayName: cross-platform support
     - name: HTML widgets
       items:
-      - name: Send HTML widgets
+      - name: Build HTML widgets
         href: html-widgets/build-html-widgets.md
         displayName: HTML, widget, Teams, integration
       - name: Serve HTML widgets in Teams
