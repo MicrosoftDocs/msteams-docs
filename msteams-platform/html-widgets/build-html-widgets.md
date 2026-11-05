@@ -105,7 +105,7 @@ Create `widgets/dice-widget.html`. This is the complete page that Teams displays
 </html>
 ```
 
-Everything is in one file: the CSS and JavaScript are inline, and the widget loads nothing from other origins.
+Everything is in one file: the CSS and JavaScript are inline, and the widget loads nothing from other origins. For more details on creating a widget, see [UX guidelines for HTML widgets in Microsoft Teams](ux-guidelines.md).
 
 ## Step 2: Send the widget
 

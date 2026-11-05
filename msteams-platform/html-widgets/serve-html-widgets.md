@@ -17,13 +17,13 @@ Use this walkthrough when an MCP server supplies the widget rather than your age
 
 - A working TypeScript Teams SDK bot available on a public HTTPS endpoint.
 - An MCP client connected to a server that provides MCP App tools and widget resources, using Client from @modelcontextprotocol/sdk.
-- The [widget Markdown helper](build-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](build-html-widgets.md#handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses handleWidgetTool for calls that aren't from MCP widgets.
+- The [widget Markdown helper](build-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](build-html-widgets.md#step-6-handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses handleWidgetTool for calls that aren't from MCP widgets.
 
 ## Widgets from MCP servers
 
 Some MCP servers return a widget along with a tool's result: these tools are MCP App tools. Your bot can show those widgets in Teams the same way as its own widgets. It sends each widget in an extended markdown message, and forwards the widget's tool calls to the MCP server that provided it.
 
-This section assumes that your bot already calls tools on MCP servers with a `Client` from the MCP TypeScript SDK (`@modelcontextprotocol/sdk`). It uses the correlation ID from [Optional: identify which widget is calling](#optional-identify-which-widget-is-calling) to route each widget's tool calls to the right MCP server.
+This section assumes that your bot already calls tools on MCP servers with a `Client` from the MCP TypeScript SDK (`@modelcontextprotocol/sdk`). It uses the correlation ID from [Optional: identify which widget is calling](build-html-widgets.md#optional-identify-which-widget-is-calling) to route each widget's tool calls to the right MCP server.
 
 ### Declare widget support
 
@@ -54,7 +54,7 @@ An MCP App tool declares its widget with a `ui://` URI in the tool's `_meta.ui.r
 A widget produced by an MCP tool must include the `mcpUrl` field in its payload: the URL of the MCP server whose tool produced it.
 
 > [!IMPORTANT]
-> Always set `mcpUrl` on widgets produced by MCP tools. Teams uses it to run the widget on a dedicated domain, scoped to your bot's ID and to that MCP server's URL. This keeps widgets from different MCP servers isolated from each other and from your bot's own widgets. Without `mcpUrl`, an MCP widget runs on the domain scoped to your bot's ID only, and can call any service that accepts calls from that domain. See [Where widgets run](#where-widgets-run).
+> Always set `mcpUrl` on widgets produced by MCP tools. Teams uses it to run the widget on a dedicated domain, scoped to your bot's ID and to that MCP server's URL. This keeps widgets from different MCP servers isolated from each other and from your bot's own widgets. Without `mcpUrl`, an MCP widget runs on the domain scoped to your bot's ID only, and can call any service that accepts calls from that domain. See [Where widgets run](build-html-widgets.md#where-widgets-run).
 
 Create `src/bot/mcp-widgets.ts`. Its imports cover the code in this section and in [Forward the widget's tool calls](#forward-the-widgets-tool-calls):
 
@@ -225,7 +225,7 @@ if (widget) {
 // to your model.
 ```
 
-An MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](#mix-markdown-and-widgets).
+An MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](build-html-widgets.md#mix-markdown-and-widgets).
 
 ### Forward the widget's tool calls
 
@@ -310,7 +310,7 @@ export async function handleMcpWidgetTool(
 }
 ```
 
-Then update the `widget.callTool` route from [Step 6](#step-6-handle-tool-calls-in-the-bot), so that it sends tool calls from MCP widgets to `handleMcpWidgetTool`:
+Then update the `widget.callTool` route from [Step 6](build-html-widgets.md#step-6-handle-tool-calls-in-the-bot), so that it sends tool calls from MCP widgets to `handleMcpWidgetTool`:
 
 ```ts
 import type { IHtmlWidgetCallToolResponse } from "@microsoft/teams.api";
