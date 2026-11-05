@@ -118,7 +118,7 @@ Many widgets follow a common pattern that helps users orient quickly — but not
 
 <p></p>
 
-<img src="../assets/images/html-widgets/cardAnatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
+<img src="../assets/images/html-widgets/card-anatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
 
 When a widget does follow this common pattern, content typically flows top to bottom:
 
@@ -137,7 +137,7 @@ Widgets must render correctly in both Teams light mode and dark mode.
 - Test your widget in both themes before submission
 - Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes
 
-<img src="../assets/images/html-widgets/ThemeModes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
+<img src="../assets/images/html-widgets/theme-modes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
 
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
@@ -222,37 +222,37 @@ Use container color tokens to establish hierarchy and communicate status within 
 </tr>
 <tr>
 <td>Default</td>
-<td><img src="../assets/images/html-widgets/container_default.png" alt="Default container color swatch — white background with light gray border"></td>
+<td><img src="../assets/images/html-widgets/container-default.png" alt="Default container color swatch — white background with light gray border"></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
 <td><strong>Outer card surface</strong> — apply this token to your widget's base container to match the Teams-native card background</td>
 </tr>
 <tr>
 <td>Emphasis</td>
-<td><img src="../assets/images/html-widgets/container_emphasis.png" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
+<td><img src="../assets/images/html-widgets/container-emphasis.png" alt="Emphasis container color swatch — light gray background with medium gray border"></td>
 <td><code>colorNeutralBackground3</code><br><code>colorNeutralStroke1</code></td>
 <td>Grouped or secondary content areas — the most common inner container</td>
 </tr>
 <tr>
 <td>Accent</td>
-<td><img src="../assets/images/html-widgets/container_accent.png" alt="Accent container color swatch — light blue background with blue border"></td>
+<td><img src="../assets/images/html-widgets/container-accent.png" alt="Accent container color swatch — light blue background with blue border"></td>
 <td><code>colorBrandBackground2</code><br><code>colorBrandStroke2</code></td>
 <td>Brand-accented highlights and callouts</td>
 </tr>
 <tr>
 <td>Good</td>
-<td><img src="../assets/images/html-widgets/container_good.png" alt="Good container color swatch — light green background with green border"></td>
+<td><img src="../assets/images/html-widgets/container-good.png" alt="Good container color swatch — light green background with green border"></td>
 <td><code>colorPaletteLightGreenBackground1</code><br><code>colorStatusSuccessBorder1</code></td>
 <td>Confirmations and successful outcomes</td>
 </tr>
 <tr>
 <td>Warning</td>
-<td><img src="../assets/images/html-widgets/container_warning.png" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
+<td><img src="../assets/images/html-widgets/container-warning.png" alt="Warning container color swatch — light yellow background with yellow-brown border"></td>
 <td><code>colorPaletteMarigoldBackground1</code><br><code>colorPaletteMarigoldBorder1</code></td>
 <td>Cautions and time-sensitive alerts</td>
 </tr>
 <tr>
 <td>Attention</td>
-<td><img src="../assets/images/html-widgets/container_attention.png" alt="Attention container color swatch — light red background with red border"></td>
+<td><img src="../assets/images/html-widgets/container-attention.png" alt="Attention container color swatch — light red background with red border"></td>
 <td><code>colorStatusDangerBackground1</code><br><code>colorStatusDangerBorder1</code></td>
 <td>Errors, failures, and critical alerts</td>
 </tr>
@@ -264,7 +264,7 @@ Unlike Adaptive Cards, HTML widgets don't automatically inherit a card backgroun
 
 <br>
 
-<img src="../assets/images/html-widgets/container_gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
+<img src="../assets/images/html-widgets/container-gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
 
 ##### Text colors
 
@@ -280,42 +280,42 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
   
 <tr>
 <td>Default</td>
-<td><img src="../assets/images/html-widgets/textColor_default.png" width="24" height="24" alt="Default text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-default.png" width="24" height="24" alt="Default text color swatch"></td>
 <td><code>colorNeutralForeground1</code></td>
 <td><strong>Primary text</strong> — titles, key values</td>
 </tr>
   
 <tr>
 <td>Subtle</td>
-<td><img src="../assets/images/html-widgets/textColor_subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-subtle.png" width="24" height="24" alt="Subtle text color swatch"></td>
 <td><code>colorNeutralForeground3</code></td>
 <td>Secondary text — supporting details, metadata</td>
 </tr>
 
 <tr>
 <td>Accent</td>
-<td><img src="../assets/images/html-widgets/textColor_accent.png" width="24" height="24" alt="Accent text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-accent.png" width="24" height="24" alt="Accent text color swatch"></td>
 <td><code>colorBrandForeground2</code></td>
 <td>Teams brand-accented text and inline links</td>
 </tr>
 
 <tr>
   <td>Good</td>
-<td><img src="../assets/images/html-widgets/textColor_good.png" width="24" height="24" alt="Good text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-good.png" width="24" height="24" alt="Good text color swatch"></td>
 <td><code>colorStatusSuccessForeground1</code></td>
 <td>Success labels and status indicators</td>
 </tr>
 
 <tr>
 <td>Warning</td>
-<td><img src="../assets/images/html-widgets/textColor_warning.png" width="24" height="24" alt="Warning text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-warning.png" width="24" height="24" alt="Warning text color swatch"></td>
 <td><code>colorPaletteMarigoldForeground2</code></td>
 <td>Warning labels and status indicators</td>
 </tr>
 
 <tr>
 <td>Attention</td>
-<td><img src="../assets/images/html-widgets/textColor_attention.png" width="24" height="24" alt="Attention text color swatch"></td>
+<td><img src="../assets/images/html-widgets/text-color-attention.png" width="24" height="24" alt="Attention text color swatch"></td>
 <td><code>colorStatusDangerForeground3</code></td>
 <td>Error labels and status indicators</td>
 </tr>
@@ -336,20 +336,20 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 </tr>
 <tr>
 <td>Overlay dark</td>
-<td><img src="../assets/images/html-widgets/textColor_dark.png" width="24" height="24" alt="Overlay dark text color swatch — near black"></td>
+<td><img src="../assets/images/html-widgets/text-color-dark.png" width="24" height="24" alt="Overlay dark text color swatch — near black"></td>
 <td><code>colorNeutralForeground1Static</code></td>
 <td>Text on light or mid-tone images</td>
 </tr>
 <tr>
 <td>Overlay light</td>
-<td><img src="../assets/images/html-widgets/textColor_light.png" width="24" height="24" alt="Overlay light text color swatch — white"></td>
+<td><img src="../assets/images/html-widgets/text-color-light.png" width="24" height="24" alt="Overlay light text color swatch — white"></td>
 <td><code>colorNeutralForegroundStaticInverted</code></td>
 <td>Text on dark images</td>
 </tr>
 </table>
 
 <br>
-<img src="../assets/images/html-widgets/textColorExamples.png" alt="Example of cards showing different font colors">
+<img src="../assets/images/html-widgets/text-color-examples.png" alt="Example of cards showing different font colors">
 
 #### Typography
 
@@ -375,7 +375,8 @@ Use the following base text styles to create clear visual hierarchy in your widg
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
 
-<img src="../assets/images/html-widgets/icon_text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
+<img src="../assets/images/html-widgets/icon-
+text.png" alt="Typography icon" width="20"> [Typography](https://fluent2.microsoft.design/typography)
 
 <br>
 
@@ -388,11 +389,11 @@ Use containers to group related content and create visual hierarchy within your 
 - Use full-width (edge-to-edge) backgrounds sparingly — they work well for hero images or strong section dividers
 - Avoid deep nesting — limit container nesting to a maximum of two levels
 
-<img src="../assets/images/html-widgets/borderRadiusStyles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
+<img src="../assets/images/html-widgets/border-radius-styles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
 
-<img src="../assets/images/html-widgets/borderShapeExamples.png" alt="Variety of cards with varying container styles">
+<img src="../assets/images/html-widgets/border-shape-examples.png" alt="Variety of cards with varying container styles">
 
-<img src="../assets/images/html-widgets/icon_shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
+<img src="../assets/images/html-widgets/icon-shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
 <br>
 
@@ -415,7 +416,7 @@ The following examples show how spacing tokens apply in real widget layouts.
 
 <img src="../assets/images/html-widgets/spacing.png" alt="Two widget layout examples with spacing annotations showing how Fluent spacing tokens apply to padding and gaps between elements">
 
-For the full spacing scale, see <img src="../assets/images/html-widgets/icon_spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
+For the full spacing scale, see <img src="../assets/images/html-widgets/icon-spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
 
 #### Iconography
 
@@ -423,7 +424,7 @@ Use [Fluent 2 icons](https://fluent2.microsoft.design/iconography) rather than c
 
 <img src="../assets/images/html-widgets/icons.png" alt="Fluent 2 iconography examples">
 
-<img src="../assets/images/html-widgets/icon_icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
+<img src="../assets/images/html-widgets/icon-icon.png" alt="Iconography icon" width="20"> [Iconography](https://fluent2.microsoft.design/iconography)
 
 ### Actions
 
@@ -455,7 +456,7 @@ Not all information needs to be visible at once. Use progressive disclosure to k
 - Use scrolling within a defined container for longer content lists — ensure the container has a clear label and is keyboard accessible
 - Transition to the expanded surface for content that requires significant vertical space or multi-step interaction
 
-<img src="../assets/images/html-widgets/progressiveDisclosure.png" alt="Examples of progressive disclosure in widgets">
+<img src="../assets/images/html-widgets/progressive-disclosure.png" alt="Examples of progressive disclosure in widgets">
 
 ### Input gathering
 
@@ -466,7 +467,7 @@ If your widget includes a form or input fields:
 - Validate input inline and surface error messages adjacent to the relevant field
 - Keep forms short — if a form requires more than four or five fields, consider moving it to the expanded surface
 
-<img src="../assets/images/html-widgets/input_examples.png" alt="Examples forms and inputs">
+<img src="../assets/images/html-widgets/input-examples.png" alt="Examples forms and inputs">
 
 ## Expanded surface
 
@@ -479,7 +480,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 - Detailed data tables or comparison views
 - Iterative workflows with persistent state
 
-<img src="../assets/images/html-widgets/expanded_surface.png" alt="Example of expanded card surface">
+<img src="../assets/images/html-widgets/expanded-surface.png" alt="Example of expanded card surface">
 
 ### Interaction guidelines
 
