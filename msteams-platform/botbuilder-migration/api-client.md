@@ -18,7 +18,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 
 # [BotBuilder](#tab/BotBuilder)
 
-```python showLineNumbers
+```python
     from botbuilder.core import ActivityHandler, TurnContext
     from botbuilder.core.teams import TeamsInfo
 
@@ -30,7 +30,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 
 # [Teams SDK](#tab/Teams SDK)
 
-```python showLineNumbers
+```python
     from microsoft_teams.api import MessageActivity
     from microsoft_teams.apps import ActivityContext
 
@@ -48,7 +48,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 
 # [BotBuilder](#tab/BotBuilder)
 
-```typescript showLineNumbers
+```typescript
     import {
       CloudAdapter,
       ConfigurationBotFrameworkAuthentication,
@@ -71,7 +71,7 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 
 # [Teams SDK](#tab/Teams SDK)
 
-```typescript showLineNumbers
+```typescript
     import { App } from '@microsoft/teams.apps';
 
     const app = new App();
