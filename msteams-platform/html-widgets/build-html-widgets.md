@@ -70,11 +70,11 @@ Follow these steps to send the widget:
 
 1. Step 1: [Create the widget file](#create-the-widget-file).
 1. Step 2: [Send the widget](#send-the-widget).
-1. 1. Step 1: [Connect the widget to Teams](#connect-the-widget-to-teams).
-1. Step 2: [Report the widget's height](#report-the-widgets-height).
-1. Step 3: [Call a tool from the widget](#call-a-tool-from-the-widget).
-1. Step 4: [Handle tool calls in the bot](#handle-tool-calls-in-the-bot).
-1. Optionally, [display widgets from MCP servers](#widgets-from-mcp-servers).
+1. Step 3: [Connect the widget to Teams](#connect-the-widget-to-teams).
+1. Step 4: [Report the widget's height](#report-the-widgets-height).
+1. Step 5: [Call a tool from the widget](#call-a-tool-from-the-widget).
+1. Step 6: [Handle tool calls in the bot](#handle-tool-calls-in-the-bot).
+1. Optionally, [display widgets from MCP servers](#optional-identify-which-widget-is-calling).
 1. [Put it all together](#put-it-all-together).
 
 ## Create the widget file
@@ -303,7 +303,7 @@ To find the domain, generate the hash with the [widget domain tool](https://widg
 > [!WARNING]
 > If you omit `mcpUrl` from a widget produced by an MCP tool, the widget runs on the domain scoped to your bot's ID only. It can then call any service that accepts calls from that domain, including the services meant for your bot's own widgets. Always pass `mcpUrl` in the payload of widgets produced by MCP tools.
 
-## Step 3: Connect the widget to Teams
+## Connect the widget to Teams
 
 Before Teams accepts anything else from the widget, the widget must complete a handshake:
 
@@ -730,7 +730,7 @@ Follow these rules in every tool handler:
 5. **Do not authorize based on `activity.from`.** The invoke identifies the conversation, but it does not reliably carry the user's Microsoft Entra identity. If a tool needs a verified user, the widget must send a token that the bot validates, which is outside the scope of this guide.
 6. **Respond quickly.** The user is waiting for the result in the widget.
 
-### Optional: identify which widget is calling
+### Optional: Identify which widget is calling
 
 > [!NOTE]
 > This behavior is not documented by Teams yet. Treat it as preview behavior.
