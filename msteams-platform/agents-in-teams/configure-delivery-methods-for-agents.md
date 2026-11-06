@@ -17,7 +17,7 @@ The delivery method (see [Choose how your agent receives activity data from Team
 - The agent's **bot registration**, configured in Teams Developer Portal or with the Teams CLI.
 - The agent's **runtime code**.
 
-You can update both at any time. Change both together: the registration controls how ACS delivers, and the code controls how your agent receives.
+You can update both at any time. Change both together: the registration controls how Agent Communication Service (ACS) delivers, and the code controls how your agent receives.
 
 You can choose the delivery method when you create an agent with `teams app create`, and change it later with `teams app update` or in Teams Developer Portal, plus a matching change in your agent's code:
 
