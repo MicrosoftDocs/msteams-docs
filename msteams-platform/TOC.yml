@@ -34,7 +34,7 @@
       href: bots/streaming-ux.md
       displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
     - name: Plans and steps
-      href: agents-in-teams/integrate-ai/plans-and-steps.md
+      href: agents-in-teams/integrate-ai/agent-plans.md
       displayName: plan, thinking indicator, progress, steps, status, sources
     - name: Prompt starters
       href: bots/how-to/conversations/prompt-starters.md

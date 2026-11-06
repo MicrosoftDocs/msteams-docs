@@ -28,7 +28,7 @@ A plan represents the work an agent is doing to respond to a request. It contain
 
 Teams uses plan and step updates to show the agent's progress and whether it needs assistance.
 
-:::image type="content" source="../../assets/images/agents-in-teams/Plans-and-steps/plan-progress-expanded.png" alt-text="Expanded plan showing the Thinking status and parallel steps in progress." lightbox="../../assets/images/agents-in-teams/Plans-and-steps/plan-progress-expanded.png":::
+:::image type="content" source="../../assets/images/agents-in-teams/agent-plans/plan-progress-expanded.png" alt-text="Expanded plan showing the Thinking status and parallel steps in progress." lightbox="../../assets/images/agents-in-teams/agent-plans/plan-progress-expanded.png":::
 
 ## User experience
 
@@ -52,7 +52,7 @@ When the agent explicitly completes the plan and sends its final response, the t
 
 Users can expand **Completed steps** to review the steps, including descriptions and sources where provided. Completed plans can't be updated.
 
-:::image type="content" source="../../assets/images/agents-in-teams/Plans-and-steps/plan-completed-steps-expanded.png" alt-text="Final agent response with Completed steps expanded to show the completed work." lightbox="../../assets/images/agents-in-teams/Plans-and-steps/plan-completed-steps-expanded.png":::
+:::image type="content" source="../../assets/images/agents-in-teams/agent-plans/plan-completed-steps-expanded.png" alt-text="Final agent response with Completed steps expanded to show the completed work." lightbox="../../assets/images/agents-in-teams/agent-plans/plan-completed-steps-expanded.png":::
 
 ### Stopped responses and errors
 
