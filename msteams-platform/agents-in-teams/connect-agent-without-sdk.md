@@ -14,7 +14,7 @@ ms.topic: article
 
 > [!Note]
 >
-> We recommend that you use the Teams SDK, which implements everything in this article for you, you can see the configuring guide with Teams SDK, here.
+> We recommend that you use the Teams SDK, which implements everything in this article for you, you can see the configuring guide with Teams SDK, [here](configure-delivery-methods-for-agents.md).
 
  This article describes the protocol under the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to ACS. An agent then receives activities either at an HTTPS endpoint or over socket mode.
 
@@ -65,7 +65,7 @@ With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [
 
    Reject a request that fails any check with `401 Unauthorized`. For the full procedure, see [Authenticate requests to your bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
 2. **Respond.** For an invoke activity (`"type": "invoke"`), return the invoke response as the HTTP response, with its status code and JSON body. For any other activity, return `200 OK` once you've handled it. Respond within 25 seconds.
-3. **Send.** To post messages, use the ACS REST API (see the previous section).
+3. **Send.** To post messages, use the ACS REST API (see the [previous section](#implement-acs-request-construction)).
 
 ## Implement Socket Mode (WebSocket) activity delivery
 
@@ -73,7 +73,7 @@ In socket mode, your agent opens sockets to ACS and receives activities over the
 
 **What you need:**
 
-- Socket mode turned on in the agent's bot registration (see *Configure the agent's bot registration* in *Configure delivery method for an agent*).
+- Socket mode turned on in the agent's bot registration (see [Configure the agent's bot registration](configure-delivery-methods-for-agents.md#configure-the-agents-bot-registration)).
 - A [SignalR client](/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python, so for Python use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
 
 | Step | What your agent does |
@@ -88,7 +88,7 @@ In socket mode, your agent opens sockets to ACS and receives activities over the
 
 ### 1. Call connect
 
-Call the connect endpoint for a region with the agent's token (see *Get a token* in *Implement ACS request construction*):
+Call the connect endpoint for a region with the agent's token (see [Get a token](#implement-acs-request-construction)):
 
 ```http
 POST https://botapi.skype.com/{region}/v3/websockets/connect

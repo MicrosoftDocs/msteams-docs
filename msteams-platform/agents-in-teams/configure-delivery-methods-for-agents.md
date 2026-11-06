@@ -286,7 +286,7 @@ If your agent can't connect, check the status code that the connect request retu
 
 | Status | Error message | Cause and fix |
 | --- | --- | --- |
-| `401` | | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
+| `401` | TODO | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
 | `403` | `WebSocket connect requires an authenticated bot.` | The token isn't the agent's own bot token, for example because it was issued to another app or to an agentic user. Use the credentials of the agent's own app registration. |
 | `403` | `Socket mode is not enabled for this bot.` | Socket mode isn't turned on in the agent's bot registration, or isn't available for your tenant yet. Turn it on, and allow about a minute for the change to take effect. The Teams SDK stops retrying after a `403`; restart your agent after you fix the cause. |
 | `429` | `This bot already has ... socket connections open ...` | The agent already has the maximum number of sockets in this region. Wait for the number of seconds in the `Retry-After` header, then retry. The Teams SDK retries automatically. Check for instances that open more sockets than they need. |
