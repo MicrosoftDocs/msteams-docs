@@ -1,52 +1,73 @@
 ---
-title: Chain of Thought for Teams Agents
-description: Learn how Chain of Thought lets Teams agents show structured progress steps, status updates, and sources while working on a user request.
-ms.date: 11/03/2026
+title: Plans and steps for Teams agents
+description: Learn how Teams agents use plans and steps to show structured progress, status updates, and sources while working on a user request.
+ms.date: 11/06/2026
 ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Chain of Thought for Teams agents
+# Plans and steps for Teams agents
 
 > [!NOTE]
-> In Teams SDK, structured progress is implemented with the **Plan** API. The API is experimental and might change.
+> In Teams SDK, structured progress is implemented with the experimental plan API. Its types and methods might change.
 
-Chain of Thought (CoT) lets a Teams agent show its progress as a structured list of steps while working on a user's request. Each step has a title and status, and can include a description and source citations. Users can expand the progress indicator to see what the agent is doing and review completed steps alongside the final response.
+A plan lets a Teams agent show its progress while working on a user's request. Users can see which steps are complete, what the agent is working on, and when it needs assistance. The agent can update this progress without sending additional chat messages.
 
 For example, an agent preparing a meeting agenda can show steps for gathering discussion topics, reviewing related documents, and putting together the agenda. As the work progresses, the agent updates each step's status and adds relevant details or sources.
 
-Teams manages the thinking indicator, expand and collapse controls, and stop button. Your agent supplies the steps and their updates, and explicitly signals completion with a final response.
+Teams manages the thinking indicator, expand and collapse controls, and stop button. Your agent supplies and updates the steps, and explicitly completes the plan with a final response.
+
+## How plans work
+
+A plan represents the work an agent is doing to respond to a request. It contains steps that describe the work:
+
+- Each step has its own status. Steps can run in parallel.
+- The agent can add steps and update them as work progresses.
+- The plan has a separate lifecycle from its steps. It remains active until the agent completes it, stops it, or reports an error.
+
+Teams uses plan and step updates to show the agent's progress and whether it needs assistance.
+
+:::image type="content" source="../../assets/images/agents-in-teams/Plans-and-steps/plan-progress-expanded.png" alt-text="Expanded plan showing the Thinking status and parallel steps in progress." lightbox="../../assets/images/agents-in-teams/Plans-and-steps/plan-progress-expanded.png":::
 
 ## User experience
 
 ### Thinking indicator
 
-When an agent starts a CoT in response to a user message, Teams displays a thinking indicator below that message. The indicator shows a status icon and a one-line preview of the current step. In threaded channels, a reply indicator opens the thread containing the CoT.
+When an agent starts a plan in response to a user message, Teams displays a thinking indicator below that message. The indicator shows a status icon and a one-line preview of the current step. In threaded channels, a reply indicator opens the thread containing the plan.
 
 The thinking indicator is collapsed by default. Each user can independently expand or collapse it without changing the view for other participants. Participants see the same step content and statuses.
 
 ### Progress steps
 
-Expanding the thinking indicator reveals a list of steps with status icons and titles. Users can expand steps that contain additional details to view their descriptions and sources.
+Users can expand the thinking indicator to see the agent's progress and each step's status. Steps can include optional descriptions and sources.
 
-The agent can add steps as work progresses and update existing steps. Steps can run in parallel, they don't have to complete one at a time. A **Stop** button is available in the expanded view.
+Add or update steps as the agent works. A **Stop** button is available in the expanded view.
 
-Although steps can run in parallel, send updates to the same Plan one at a time. Wait for each call to finish before sending the next. The SDK doesn't order overlapping calls or automatically resolve conflicts.
-
-The expanded header reflects the overall status, such as **Thinking**, **Assistance Required**, or **Ran into issues**.
+Teams shows the overall plan status in the header, such as **Thinking** or **Assistance Required**.
 
 ### Completed steps
 
-When the agent explicitly completes the CoT and sends its final response, the thinking indicator disappears. A collapsed **Completed steps** component appears at the bottom of the response.
+When the agent explicitly completes the plan and sends its final response, the thinking indicator disappears. A collapsed **Completed steps** component appears at the bottom of the response.
 
-Users can expand **Completed steps** to review the steps, including descriptions and sources where provided. Completed CoTs can't be updated.
+Users can expand **Completed steps** to review the steps, including descriptions and sources where provided. Completed plans can't be updated.
+
+:::image type="content" source="../../assets/images/agents-in-teams/Plans-and-steps/plan-completed-steps-expanded.png" alt-text="Final agent response with Completed steps expanded to show the completed work." lightbox="../../assets/images/agents-in-teams/Plans-and-steps/plan-completed-steps-expanded.png":::
 
 ### Stopped responses and errors
 
-When a user selects **Stop**, the CoT ends and the indicator is replaced with **Response stopped by [User Name]**. In the initial experience described by the specification, individual steps aren't shown after stopping.
+When a user selects **Stop**, the plan indicator disappears. Teams doesn't display a "Response stopped" message. If the agent tries to update or complete a plan after the user stops it, Teams returns a `PlanConflict` error:
 
-If the agent sets the CoT to an error state, the indicator is replaced with **Ran into issues**. The initial error experience also hides individual steps. A stopped or errored CoT doesn't produce a final response through the CoT completion flow and can't receive further updates.
+```json
+{
+    "error": {
+        "code": "PlanConflict",
+        "message": "The user stopped this plan. It can no longer be updated or completed."
+    }
+}
+```
+
+When the agent reports a plan error, the plan indicator also disappears; Teams doesn't display a "Ran into issues" message. A stopped or errored plan is terminal and can't be updated or completed. Stopping a plan doesn't cancel your application's work or stop a response stream; handle application cancellation and streaming separately.
 
 ## Define and update steps
 
@@ -59,7 +80,7 @@ Each step requires a title and status. Descriptions and sources are optional.
 | Description | No | Additional details that users can view by expanding the step. |
 | Sources | No | References supplied as citation objects. |
 
-While the CoT is active, your agent can add one or more steps or update the title, status, description, and sources of existing steps.
+While the plan is active, your agent can add one or more steps or update the title, status, description, and sources of existing steps.
 
 ### Step statuses
 
@@ -73,48 +94,48 @@ While the CoT is active, your agent can add one or more steps or update the titl
 
 Teams determines the thinking indicator's overall status from the highest-priority step status, in this order: **Blocked**, **Active**, **Error**, **Proposed**, **Completed**.
 
-A step in the error state isn't the same as setting the entire CoT to an error state. The latter ends the CoT and prevents further updates.
+A step in the error state isn't the same as setting the entire plan to an error state. Setting the plan to an error state ends the plan and prevents further updates.
 
-## Manage the CoT lifecycle
+## Manage the plan lifecycle
 
-The following flow describes how an agent manages a Plan in response to a user message.
+The following flow describes how an agent manages a plan in response to a user message.
 
-1. **Associate the Plan with a user message.** In a message handler, `ctx.plan()` or `Plan.CreateFromContext(context)` creates a reactive Plan associated with the incoming prompt. An agent can have only one ongoing Plan per user message.
+1. **Associate the plan with a user message.** In a message handler, `ctx.plan()` or `Plan.CreateFromContext(context)` creates a reactive plan associated with the incoming prompt. An agent can have only one ongoing plan per user message.
 1. **Add and update steps.** Provide a title and status for each step, with optional descriptions and sources. Update steps as the work progresses.
-1. **Complete the Plan with a final response.** Teams doesn't infer Plan completion from step statuses. Marking every step as completed before completing the Plan is recommended, but not required. When the Plan is completed, the Teams client renders its steps as completed without changing their stored statuses.
+1. **Complete the plan with a final response.** Teams doesn't infer plan completion from step statuses. Marking every step as completed before completing the plan is recommended, but not required. When the plan is completed, the Teams client renders steps with any status other than `error` as completed. Steps in the `error` state remain in that state; the client doesn't change stored statuses.
 
-Completion, stopping, an overall error, timeout, and deletion are terminal states. Don't attempt to update a CoT after it reaches a terminal state.
+Completion, stopping, an overall error, timeout, and deletion are terminal states. Don't attempt to update a plan after it reaches a terminal state.
 
 ### Time limits
 
-The following time limits apply to CoT updates:
+The following time limits apply to plan updates:
 
 | Limit | Behavior |
 | --- | --- |
-| First update | The agent must send the first CoT update within five minutes of the user's message. |
-| Inactivity timeout | The CoT times out after 24 hours without updates. Teams treats the timeout as an error and displays **Ran into issues**. |
+| First update | The agent must send the first plan update within five minutes of the user's message. |
+| Inactivity timeout | The plan times out after 24 hours without updates and enters an error state. |
 
 ### Edited messages
 
-How your agent responds to an edited user message depends on the associated CoT's state:
+How your agent responds to an edited user message depends on the associated plan's state:
 
-| Existing CoT state | Agent behavior |
+| Existing plan state | Agent behavior |
 | --- | --- |
-| Active | Update the current CoT to reflect the edited request. |
-| Completed | Create a new CoT for the edited request. The new CoT is separate from the completed CoT and its final response. |
-| Stopped or error | Create a new CoT for the edited request. The new CoT replaces the stopped or errored CoT. |
+| Active | Update the current plan to reflect the edited request. |
+| Completed | Create a new plan for the edited request. The new plan is separate from the completed plan and its final response. |
+| Stopped or error | Create a new plan for the edited request. The new plan replaces the stopped or errored plan. |
 
 ### Deleted messages
 
-When an associated user or agent message is deleted, its associated CoTs are also deleted. This applies to user, agent, administrator, and retention-driven deletion. The thinking indicator disappears, and a deleted CoT can't be relinked to another response.
+When an associated user or agent message is deleted, its associated plans are also deleted. This applies to user, agent, administrator, and retention-driven deletion. The thinking indicator disappears, and a deleted plan can't be relinked to another response.
 
-## Implement CoT with Teams SDK
+## Implement plans with Teams SDK
 
-The Teams SDK exposes CoT through a Plan associated with the incoming message. Start a Plan with one or more steps, update the steps as work progresses, and complete the Plan with a final answer. The Plan API is experimental, and its types and methods can change. For end-to-end examples, see the SDK sample projects in the following table.
+The Teams SDK exposes plans through a plan associated with the incoming message. Start a plan with one or more steps, update the steps as work progresses, and complete the plan with a final answer. The plan API is experimental, and its types and methods can change. For end-to-end examples, see the SDK sample projects in the following table.
 
-Give every step a unique ID within its Plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. Increment its version whenever you change its status, title, description, or sources. A step requires an ID, version, title, and status; description and sources are optional.
+Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. Increment its version whenever you change its status, title, description, or sources. A step requires an ID, version, title, and status; description and sources are optional.
 
-### Start a Plan, update a step, and send an answer
+### Start a plan, update a step, and send an answer
 
 The following examples start a Plan with an active step, mark the step complete, and send a final answer.
 
@@ -199,17 +220,21 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
 
 ::: zone-end
 
+Send plan updates sequentially. Wait for each update call to finish before sending the next; the SDK doesn't order overlapping calls or automatically resolve conflicts.
+
 ### Stream the final answer
 
-You can stream the answer after updating the Plan. Use the same conversation stream and emit the Plan completion metadata after all answer text, as the final item. Don't call both the direct Plan completion method and the streamed completion path for the same answer.
+You can stream the answer after updating the plan. Use the same conversation stream and emit the plan completion metadata after all answer text, as the final item. Don't call both the direct plan completion method and the streamed completion path for the same answer.
 
-The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the Plan.
+When using a plan with response streaming, start the plan first, skip informative updates, and attach the plan completion metadata to the final streamed message. Stopping the plan doesn't stop the response stream; your application must handle both lifecycles.
+
+The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the plan.
 
 Python and TypeScript close the stream automatically after a normal handler return. Explicitly await `ctx.stream.close()` if you need to handle final-send errors inside the handler or finish one response before starting another.
 
 ::: zone pivot="teams-sdk-csharp"
 
-In C#, explicitly finalize the writer with the Plan completion activity. Creating a Plan or returning from the handler doesn't close the writer.
+In C#, explicitly finalize the writer with the plan completion activity. Creating a plan or returning from the handler doesn't close the writer.
 
 ```csharp
 TeamsStreamingWriter writer = TeamsStreamingWriter.CreateFromContext(context);
@@ -240,9 +265,9 @@ ctx.stream.emit(plan.completion())
 
 ::: zone-end
 
-### Stop a Plan or report an error
+### Stop a plan or report an error
 
-Use a terminal Plan outcome when work is stopped or fails instead of completing it with an answer.
+Use a terminal plan outcome when work is stopped or fails instead of completing it with an answer.
 
 | Outcome | Python | TypeScript | C# |
 | --- | --- | --- | --- |
@@ -251,19 +276,113 @@ Use a terminal Plan outcome when work is stopped or fails instead of completing 
 
 These methods don't accept a reason string or cancel your application's work. To describe a failure, it's recommended that you first update the affected step with a higher version, an `error` status, and a description, then report the Plan error.
 
-If Teams returns `PlanConflict`, it means the requested operation conflicts with the Plan's current lifecycle. The response is an authoritative HTTP `409`; for example, it can occur if you try to complete a Plan that has already been stopped. Don't automatically retry the operation or treat the conflict as a streaming timeout. Log the service error details, then terminate or clean up the local worker as appropriate.
+If Teams returns `PlanConflict`, the requested operation conflicts with the plan's current lifecycle. This authoritative HTTP `409` can occur if you try to update or complete a plan after the user stops it. Don't automatically retry the operation or treat the conflict as a streaming timeout. Log the service error details, then terminate or clean up the local worker as appropriate.
 
-### Continue work later
+### Proactive plans and background work
 
-Plans created from an incoming message context are reactive and bound to that prompt. To continue work later, save the full conversation ID and the original prompt's `replyToId`, and provide an authenticated `apiClient` scoped to the same service URL and identity when reconstructing the Plan. Don't substitute the bot's answer ID or stream ID for the original prompt ID.
+You can create and manage a plan outside an activity handler, such as from a scheduled job, queue consumer, or background worker. Starting a plan inside a message handler is reactive, even if the handler later returns and work continues in the background. A proactive worker doesn't need the original handler or activity context, but it still needs the original prompt binding.
 
-The SDK doesn't persist Plans or their steps. Persist the Plan data your application needs to resume its work, but don't store credentials or the runtime client. Your application is responsible for scheduling background work, cancellation, and recovery; the Teams SDK doesn't retain the incoming handler context for you.
+Before scheduling the work, save the routing metadata required to bind the plan to the original prompt:
+
+- The full conversation ID, including any channel thread suffix.
+- The original prompt activity ID as `replyToId`. Don't substitute the bot's answer ID or a stream ID.
+- For a reply in a one-to-one chat thread, the reply-chain binding with the chat or channel ID and root message ID. Omit `replyChain` for a channel thread or a top-level chat message.
+- The service URL and identity information needed to create an authenticated SDK client scoped to the original conversation.
+
+For example, the serialized routing metadata for a one-to-one chat thread can look like this:
+
+```json
+{
+    "conversationId": "a:opaque-conversation",
+    "replyToId": "original-prompt-id",
+    "replyChain": {
+        "chatOrChannelId": "19:chat@thread.v2",
+        "replyChainId": "root-message-id"
+    }
+}
+```
+
+When a `replyChain` binding is present, completing the plan posts the final message to that thread. Plan operations, such as starting and updating steps, remain conversation-level activities. Plan positioning and message streaming are configured separately.
+
+When the worker runs, create a scoped, authenticated API client and reconstruct the plan from the saved binding. The SDK doesn't persist plans or steps or retain the incoming handler context. Your application owns job scheduling, cancellation, and recovery. Store only serializable routing metadata with the job; don't store credentials or the runtime API client.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+PlanOptions options = JsonSerializer.Deserialize<PlanOptions>(savedPlan)
+        ?? throw new InvalidOperationException("The saved plan binding is missing.");
+
+Plan plan = new(apiClient, options);
+await plan.StartAsync(
+[
+        new PlanStep
+        {
+                Id = "report",
+                Version = 1,
+                Status = PlanStepStatuses.Active,
+                Title = "Preparing report",
+                Description = "Preparing the report in the background."
+        }
+], cancellationToken);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+import { Plan, PlanOptions } from '@microsoft/teams.apps';
+import { Client } from '@microsoft/teams.api';
+
+type SavedPlanBinding = Omit<PlanOptions, 'apiClient'>;
+
+async function runPlanJob(savedPlan: SavedPlanBinding, apiClient: Client) {
+    const plan = new Plan({ ...savedPlan, apiClient });
+    await plan.start([
+        {
+            id: 'report',
+            version: 1,
+            status: 'active',
+            title: 'Preparing report',
+            description: 'Preparing the report in the background.',
+        },
+    ]);
+}
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+from typing import Any
+
+from microsoft_teams.api import ApiClient, Step
+from microsoft_teams.apps import Plan, PlanOptions
+
+async def run_plan_job(saved_plan: dict[str, Any], api_client: ApiClient) -> None:
+        options = PlanOptions(**saved_plan, api_client=api_client)
+        plan = Plan(**options)
+        await plan.start(
+                [
+                        Step(
+                                id="report",
+                                version=1,
+                                status="active",
+                                title="Preparing report",
+                                description="Preparing the report in the background.",
+                        )
+                ]
+        )
+```
+
+::: zone-end
 
 ## Code samples
 
 | Sample | Description | C# | TypeScript | Python |
 | --- | --- | --- | --- | --- |
-| Teams SDK Plan sample | Demonstrates creating and updating a Plan, completing it with a final answer, and streaming completion metadata. | [View](https://github.com/microsoft/teams.net/tree/main/samples/PlanBot) | [View](https://github.com/microsoft/teams.ts/tree/main/examples/plan) | [View](https://github.com/microsoft/teams.py/tree/main/examples/plan) |
+| Teams SDK plan sample | Demonstrates creating and updating a plan, completing it with a final answer, and streaming completion metadata. | [View](https://github.com/microsoft/teams.net/tree/main/samples/PlanBot) | [View](https://github.com/microsoft/teams.ts/tree/main/examples/plan) | [View](https://github.com/microsoft/teams.py/tree/main/examples/plan) |
 
 ## See also
 
