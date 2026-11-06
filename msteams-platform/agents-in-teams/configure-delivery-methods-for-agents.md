@@ -12,7 +12,7 @@ zone_pivot_groups: teams-sdk-languages
 > [!Note]
 > Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
 
-The delivery method (see *Choose how your agent receives activity data from Teams*) is configured in two places:
+The delivery method (see [Choose how your agent receives activity data from Teams](agent-connectivity.md)) is configured in two places:
 
 - The agent's **bot registration**, configured in Teams Developer Portal or with the Teams CLI.
 - The agent's **runtime code**.
@@ -48,14 +48,14 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 
 To switch back, select **HTTP endpoint** and enter your agent's endpoint URL. It must be an `https://` URL.
 
-Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure Managed bots see Manage Azure bots in Developer Portal (LINK)
+Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure managed bots, see Manage Azure bots in Developer Portal (LINK)
 
 **TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
 
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
 
 - **Turning socket mode on.** ACS delivers activities only over sockets, not to the messaging endpoint. Until your agent connects, activities aren't delivered.
-- **Turning socket mode off.** ACS closes the agent's open sockets, each gets a `SocketClosing` notice first (see *Handle disconnects*) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
+- **Turning socket mode off.** ACS closes the agent's open sockets, each gets a `SocketClosing` notice first (see [Handle disconnects](connect-agent-without-sdk.md#6-handle-disconnects)) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
 
 ## Configure the agent's runtime
 
@@ -276,7 +276,7 @@ await host.WaitForShutdownAsync();
 
 ### Without an SDK
 
-To implement socket mode yourself, see *Connect an agent to Teams without an SDK*.
+To implement socket mode yourself, see [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md).
 
 ## Error Codes
 
@@ -300,7 +300,7 @@ If your agent connects but doesn't receive activities:
 | --- | --- |
 | Activities still go to the messaging endpoint. | The change to the bot registration hasn't taken effect everywhere yet. Wait about a minute. |
 | Some conversations reach the agent and others don't. | The agent isn't connected in every region. Connect in `amer`, `emea` and `apac`. |
-| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See step 4, *Handle activities and reply*, in *Connect an agent to Teams without an SDK*. |
+| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See [Step 4, Handle activities and reply](connect-agent-without-sdk.md#4-handle-activities-and-reply), in [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md). |
 | The socket connects but never gets `SocketReady`. | Another socket already used the same access token. Call connect again for every socket. |
 
 ## Code sample
