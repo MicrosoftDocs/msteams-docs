@@ -48,7 +48,7 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 
 To switch back, select **HTTP endpoint** and enter your agent's endpoint URL. It must be an `https://` URL.
 
-Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure managed bots, see Manage Azure bots in Developer Portal (LINK)
+Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure managed bots, see Manage Azure bots in Developer Portal (TODO)
 
 **TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
 
