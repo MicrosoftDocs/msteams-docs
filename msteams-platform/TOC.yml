@@ -21,7 +21,7 @@
       href: bots/bot-concepts.md
       displayName: scopes, handler, activity
     - name: Agent connectivity in Teams
-      href: agents-in-teams/agent-connectivity-in-teams.md
+      href: agents-in-teams/agent-connectivity.md
       displayName: connectivity, Teams, agent, network, integration
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
@@ -84,7 +84,7 @@
       href: agents-in-teams/configure-delivery-methods-for-agents.md
       displayName: delivery method, agent, configuration
     - name: Connect an agent to Teams without an SDK
-      href: agents-in-teams/connect-an-agent-to-teams-without-teams-sdk.md
+      href: agents-in-teams/connect-agent-without-sdk.md
       displayName: agent, Teams, connectivity, without SDK
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
