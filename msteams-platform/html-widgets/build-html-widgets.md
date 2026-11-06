@@ -7,7 +7,7 @@ ms.topic: reference
 ms.date: 11/03/2026
 ---
 
-# Build HTML Widgets in Teams Bots
+# Send HTML Widgets
 
 An HTML widget is an HTML document that Teams renders in a sandboxed iframe inside a chat message. Use widgets to bring a custom interactive interface into a conversation, so users can work with your bot without leaving the chat. Your bot sends the HTML in an extended Markdown message, and the widget connects to Teams to resize its interface and call the bot's tools.
 
