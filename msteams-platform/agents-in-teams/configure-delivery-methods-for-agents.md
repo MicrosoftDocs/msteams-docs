@@ -9,7 +9,8 @@ zone_pivot_groups: teams-sdk-languages
 
 # Configure delivery method for an agent
 
-> **Note:** Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
+> [!Note]
+> Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
 
 The delivery method (see *Choose how your agent receives activity data from Teams*) is configured in two places:
 
@@ -36,7 +37,8 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 
 ## Configure the agent's bot registration
 
-> WARNING! You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot you will receive a `403` error code. Ask you tenant admin to add you as an onwer of the Entra app if this occurs.
+> [!Warning]
+> You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot you will receive a `403` error code. Ask you tenant admin to add you as an onwer of the Entra app if this occurs.
 
 **In Teams Developer Portal:**
 

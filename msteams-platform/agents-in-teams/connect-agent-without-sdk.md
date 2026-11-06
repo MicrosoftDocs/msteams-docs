@@ -307,7 +307,8 @@ Before ACS closes a socket on purpose, it calls the client method `SocketClosing
 
 Act on `code`; `reason` is for people and can change. For a `code` you don't recognize, follow `reconnect`. Many closes have no notice, for example when the socket's token expires or an ACS service instance restarts. Treat any close without a notice as temporary, and reconnect.
 
-*Review note: `SocketClosing` ships with ACS PR 1598105, which isn't merged yet.*
+> [!Note]
+> `SocketClosing` ships with ACS PR 1598105, which isn't merged yet.*
 
 ### 7. Connect in every region
 
