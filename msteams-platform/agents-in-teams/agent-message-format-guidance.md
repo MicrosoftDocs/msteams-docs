@@ -137,7 +137,7 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 ## Next steps
 
 - [Extended Markdown mode](../bots/how-to/format-your-bot-messages.md)
-- [Adaptive Cards](../task-modules-and-cards/what-are-cards.md)
+- [Adaptive Cards](https://adaptivecards.microsoft.com/)
 - [Build HTML widget](../html-widgets/build-html-widgets.md)
 - [UX guidelines for HTML widgets in Microsoft Teams](../html-widgets/ux-guidelines.md)
 - [Accessibility guidelines for HTML widgets in Microsoft Teams 365](../html-widgets/accessibility-guidelines.md)
