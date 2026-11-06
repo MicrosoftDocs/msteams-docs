@@ -1,3 +1,11 @@
+---
+title: Configure delivery method for an agent
+description: Learn how to configure delivery method for your agents.
+ms.localizationpriority: high
+ms.date: 11/06/2026
+ms.topic: article
+---
+
 # Configure delivery method for an agent
 
 > **Note:** Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
@@ -23,11 +31,11 @@ teams app update <app-id> --messaging-mode http
 
 ```
 
-Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by running `npm install -g @microsoft/teams.cli@3.1.0` 
+Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by running `npm install -g @microsoft/teams.cli@3.1.0`
 
 ## Configure the agent's bot registration
 
-> WARNING! You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot you will receive a `403` error code. Ask you tenant admin to add you as an onwer of the Entra app if this occurs. 
+> WARNING! You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot you will receive a `403` error code. Ask you tenant admin to add you as an onwer of the Entra app if this occurs.
 
 **In Teams Developer Portal:**
 
@@ -42,6 +50,7 @@ Using an Azure Bot? You can update socket mode selection for both Teams-managed 
 **TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
 
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
+
 - **Turning socket mode on.** ACS delivers activities only over sockets, not to the messaging endpoint. Until your agent connects, activities aren't delivered.
 - **Turning socket mode off.** ACS closes the agent's open sockets, each gets a `SocketClosing` notice first (see *Handle disconnects*) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
 
@@ -54,10 +63,11 @@ In your agent's code, turn on socket mode when you create the app. The SDK then 
 If you change the toggle at anytime, you will need to restart your app so it reflects the changes.
 
 **For options, you can specify either two values:**
+
 1. `geos` - Geographies to connect, one independent socket each. Ever one must connect for `start()` to success, after which each is supervised on its own
 2. `negotiateBaseUrl` - Service host to negotiate the connection
 
-Socket mode requires a minimum of **Version 2.2** of the SDK. Update by running `npm install -g @microsoft/teams.sdk@2.2.0` 
+Socket mode requires a minimum of **Version 2.2** of the SDK. Update by running `npm install -g @microsoft/teams.sdk@2.2.0`
 
 ```TypeScript
 
@@ -118,6 +128,7 @@ app.on('message', async ({ reply, activity }) => {
 })();
 
 ```
+
 ```python
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common';
@@ -175,6 +186,7 @@ app.on('message', async ({ reply, activity }) => {
 })();
 
 ```
+
 ```csharp
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -258,7 +270,7 @@ When socket mode works, your agent connects in every region: with the Teams SDK,
 If your agent can't connect, check the status code that the connect request returns.
 
 | Status | Error message | Cause and fix |
-|---|---|---|
+| --- | --- | --- |
 | `401` | | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
 | `403` | `WebSocket connect requires an authenticated bot.` | The token isn't the agent's own bot token, for example because it was issued to another app or to an agentic user. Use the credentials of the agent's own app registration. |
 | `403` | `Socket mode is not enabled for this bot.` | Socket mode isn't turned on in the agent's bot registration, or isn't available for your tenant yet. Turn it on, and allow about a minute for the change to take effect. The Teams SDK stops retrying after a `403`; restart your agent after you fix the cause. |
@@ -270,7 +282,7 @@ If your agent can't connect, check the status code that the connect request retu
 If your agent connects but doesn't receive activities:
 
 | Symptom | Cause and fix |
-|---|---|
+| --- | --- |
 | Activities still go to the messaging endpoint. | The change to the bot registration hasn't taken effect everywhere yet. Wait about a minute. |
 | Some conversations reach the agent and others don't. | The agent isn't connected in every region. Connect in `amer`, `emea` and `apac`. |
 | Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See step 4, *Handle activities and reply*, in *Connect an agent to Teams without an SDK*. |

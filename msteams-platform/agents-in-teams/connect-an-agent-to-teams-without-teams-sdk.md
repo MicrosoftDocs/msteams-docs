@@ -1,3 +1,10 @@
+---
+title: Connect an agent to Teams without an SDK
+description: Learn how to connect your agent to Teams without an SDK.
+ms.localizationpriority: high
+ms.date: 11/06/2026
+ms.topic: article
+---
 
 # Connect an agent to Teams without an SDK
 
@@ -33,7 +40,7 @@ curl -X POST "<serviceUrl>/v3/conversations/<conversation-id>/activities" \
 ```
 
 | To | Call |
-|---|---|
+| --- | --- |
 | Send a message to a conversation | `POST {serviceUrl}/v3/conversations/{conversationId}/activities` |
 | Reply to an activity | `POST {serviceUrl}/v3/conversations/{conversationId}/activities/{activityId}` |
 | Update a message | `PUT {serviceUrl}/v3/conversations/{conversationId}/activities/{activityId}` |
@@ -61,11 +68,12 @@ With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [
 In socket mode, your agent opens sockets to ACS and receives activities over them. This section walks through the protocol step by step. The snippets together make a complete Node.js agent.
 
 **What you need:**
+
 - Socket mode turned on in the agent's bot registration (see *Configure the agent's bot registration* in *Configure delivery method for an agent*).
 - A [SignalR client](https://learn.microsoft.com/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python, so for Python use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
 
 | Step | What your agent does |
-|---|---|
+| --- | --- |
 | 1 | Calls connect for a region to get a socket URL and token. |
 | 2 | Opens the socket with a SignalR client. |
 | 3 | Waits for `SocketReady`. |
@@ -96,7 +104,7 @@ Content-Length: 0
 ```
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | `url` | The URL to open the socket on. It's different each time; don't store it. |
 | `accessToken` | The token for opening **one** socket. Call connect again for every socket, including every reconnect. |
 | `expiresIn` | Seconds until the token expires. The socket closes then, so replace it before then (step 5). |
@@ -176,7 +184,7 @@ ACS calls the client method `Activity` with an **envelope** for each activity, a
 ```
 
 | Envelope field | Description |
-|---|---|
+| --- | --- |
 | `protocolVersion` | `1`. |
 | `type` | `invoke` for an invoke activity; `activity` for any other activity. |
 | `envelopeId` | The ID of this delivery. Return it in your reply. |
@@ -201,7 +209,7 @@ Return a reply frame for every envelope, within `deadlineMs`:
 ```
 
 | Reply field | Description |
-|---|---|
+| --- | --- |
 | `protocolVersion` | Required. `1`. |
 | `envelopeId` | Required. The `envelopeId` from the envelope. |
 | `status` | Required. An HTTP status code. For an invoke, the status of your invoke response. For any other activity, `200` once you've handled it, or `500` if handling failed. |
@@ -287,7 +295,7 @@ Before ACS closes a socket on purpose, it calls the client method `SocketClosing
 ```
 
 | `code` | Why ACS closes the socket | `reconnect` | What to do |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `SocketModeDisabled` | Socket mode was turned off for the agent. | `false` | Stop. A new connect request gets `403`. |
 | `Replaced` | A newer socket replaced this one (step 5), and this one was still open 60 seconds later. | `false` | Nothing. The newer socket is already open. |
 | `TokenReused` | Another socket already used this socket's access token. | `true` | Call connect again, once for every socket. |
@@ -350,13 +358,12 @@ async function handleActivity(activity) {
 await Promise.all(REGIONS.map((region) => runRegion(region, handleActivity)));
 ```
 
-
 ### Recommended client settings
 
 These values match the Teams SDK. The SignalR client's other settings can keep their defaults.
 
 | Setting | Recommended value |
-|---|---|
+| --- | --- |
 | Hub protocol | JSON (the default) |
 | Keep-alive interval | 15 seconds (the SignalR default) |
 | Server timeout | 30 seconds (the SignalR default) |
@@ -367,9 +374,6 @@ These values match the Teams SDK. The SignalR client's other settings can keep t
 | Keep a replaced socket open | 5 seconds after the new socket's `SocketReady`, and until its in-flight replies are sent |
 | Sockets per instance | One per region |
 
-
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Socket mode sample | This sample shows how to receive activites from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**https://github.com/premkaretimsft/prkare-default-mode-socket-bot) |
-
-
+| Socket mode sample | This sample shows how to receive activites from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**<https://github.com/premkaretimsft/prkare-default-mode-socket-bot>) |
