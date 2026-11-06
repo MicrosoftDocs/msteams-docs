@@ -4,6 +4,7 @@ description: Learn how to configure delivery method for your agents.
 ms.localizationpriority: high
 ms.date: 11/06/2026
 ms.topic: article
+zone_pivot_groups: teams-sdk-languages
 ---
 
 # Configure delivery method for an agent
@@ -69,6 +70,8 @@ If you change the toggle at anytime, you will need to restart your app so it ref
 
 Socket mode requires a minimum of **Version 2.2** of the SDK. Update by running `npm install -g @microsoft/teams.sdk@2.2.0`
 
+::: zone pivot="teams-sdk-typescript"
+
 ```TypeScript
 
 import { App } from '@microsoft/teams.apps';
@@ -129,6 +132,10 @@ app.on('message', async ({ reply, activity }) => {
 
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
 ```python
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common';
@@ -186,6 +193,10 @@ app.on('message', async ({ reply, activity }) => {
 })();
 
 ```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 // Copyright (c) Microsoft Corporation.
@@ -258,6 +269,8 @@ if (teamsApp.SocketMode is { } startedSocketMode)
 await host.WaitForShutdownAsync();
 
 ```
+
+::: zone-end
 
 **Without an SDK**
 
