@@ -46,11 +46,11 @@ curl -X POST "<serviceUrl>/v3/conversations/<conversation-id>/activities" \
 | Update a message | `PUT {serviceUrl}/v3/conversations/{conversationId}/activities/{activityId}` |
 | Delete a message | `DELETE {serviceUrl}/v3/conversations/{conversationId}/activities/{activityId}` |
 
-For authentication details, see [REST API authentication](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-authentication). For every operation, see the [REST API reference](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference).
+For authentication details, see [REST API authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication). For every operation, see the [REST API reference](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference).
 
 ## Implement HTTP endpoint activity delivery
 
-With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [activity](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#activity-object) body to the messaging endpoint in your bot registration.
+With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) body to the messaging endpoint in your bot registration.
 
 1. **Validate the request.** Every request has an `Authorization: Bearer <token>` header. Before you act on the activity, check that:
    - The token is signed by a key from the OpenID metadata at `https://login.botframework.com/v1/.well-known/openidconfiguration`.
@@ -59,7 +59,7 @@ With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [
    - The token hasn't expired.
    - The token's `serviceUrl` claim matches the activity's `serviceUrl`.
 
-   Reject a request that fails any check with `401 Unauthorized`. For the full procedure, see [Authenticate requests to your bot](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#connector-to-bot).
+   Reject a request that fails any check with `401 Unauthorized`. For the full procedure, see [Authenticate requests to your bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
 2. **Respond.** For an invoke activity (`"type": "invoke"`), return the invoke response as the HTTP response, with its status code and JSON body. For any other activity, return `200 OK` once you've handled it. Respond within 25 seconds.
 3. **Send.** To post messages, use the ACS REST API (see the previous section).
 
@@ -70,7 +70,7 @@ In socket mode, your agent opens sockets to ACS and receives activities over the
 **What you need:**
 
 - Socket mode turned on in the agent's bot registration (see *Configure the agent's bot registration* in *Configure delivery method for an agent*).
-- A [SignalR client](https://learn.microsoft.com/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python, so for Python use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
+- A [SignalR client](/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python, so for Python use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
 
 | Step | What your agent does |
 | --- | --- |
