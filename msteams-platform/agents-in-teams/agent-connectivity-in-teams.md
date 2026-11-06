@@ -19,7 +19,7 @@ Your agent always uses HTTPS requests to send data to ACS. You choose how ACS se
 | **HTTPS endpoint** | Your agent hosts an HTTPS endpoint that's reachable from the internet. You set the endpoint URL in the agent's bot registration. ACS sends each activity as an HTTPS request to that endpoint. |
 | **Socket mode** | You turn on socket mode in the agent's bot registration; no endpoint is needed. When your agent starts, it opens outbound WebSocket connections to ACS. ACS sends each activity over one of those connections, and your agent's response goes back over HTTPS. |
 
-Either way, your agent sends messages and other requests to ACS the same way, with the ACS [REST API](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference). And either way it receives the same activities with the same payloads. You can change the delivery method at any time. This article helps you decide which one to use.
+Either way, your agent sends messages and other requests to ACS the same way, with the ACS [REST API](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference). And either way it receives the same activities with the same payloads. You can change the delivery method at any time. This article helps you decide which one to use.
 
 ## Choose
 
@@ -62,7 +62,7 @@ This section explains what happens under the hood in socket mode, so you can ass
 
 ### How socket mode works
 
-Socket mode is built on [Azure SignalR Service](https://learn.microsoft.com/azure/azure-signalr/signalr-overview). Your agent never sees an inbound connection:
+Socket mode is built on [Azure SignalR Service](/azure/azure-signalr/signalr-overview). Your agent never sees an inbound connection:
 
 ::: mermaid
 sequenceDiagram
