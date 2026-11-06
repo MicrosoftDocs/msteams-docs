@@ -114,7 +114,7 @@ Content-Length: 0
 | `expiresIn` | Seconds until the token expires. The socket closes then, so replace it before then (step 5). |
 | `protocolVersion` | The version of the socket protocol described here: `1`. |
 
-If the request fails, see the status codes under *Verify* in *Configure delivery method for an agent*. Stop retrying on `401` or `403`, which you need to fix; wait for `Retry-After` on `429`; and retry `503` with backoff.
+If the request fails, see the status codes in [Configure delivery method for an agent](configure-delivery-methods-for-agents.md#error-codes). Stop retrying on `401` or `403`, which you need to fix; wait for `Retry-After` on `429`; and retry `503` with backoff.
 
 ```javascript
 // Node.js 18 or later, as an ES module. npm install @microsoft/signalr
