@@ -80,6 +80,12 @@
       displayName: receive files using agents
   - name: How-tos
     items:
+    - name: Configure delivery method for an agent
+      href: agents-in-teams/configure-delivery-methods-for-agents.md
+      displayName: delivery method, agent, configuration
+    - name: Connect an agent to Teams without an SDK
+      href: agents-in-teams/connect-an-agent-to-teams-without-teams-sdk.md
+      displayName: agent, Teams, connectivity, without SDK
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
       displayName: block kit
