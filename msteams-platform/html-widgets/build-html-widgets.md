@@ -721,9 +721,6 @@ Follow these rules in every tool handler:
 
 ### Optional: Identify which widget is calling
 
-> [!NOTE]
-> This behavior is not documented by Teams yet. Treat it as preview behavior.
-
 If you add a top-level `correlationId` string to the widget payload, Teams passes it back with every tool call from that widget in `arguments.__msteams__.correlationId`. Use it to find server-side state that belongs to that specific widget. For example, generate a random UUID, store it with your data, and look it up when a tool is called.
 
 Create `src/bot/correlation.ts`:

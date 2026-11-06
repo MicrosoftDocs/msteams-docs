@@ -106,7 +106,7 @@ Keep in mind:
 
 ## Widget anatomy
 
-Many widgets follow a common pattern that helps users orient quickly — but not every widget needs all of these elements, and some widgets (such as maps, charts, or forms) may not follow this structure at all.
+Many widgets follow a common pattern that helps users quickly understand the layout — but not every widget needs all of these elements, and some widgets (such as maps, charts, or forms) may not follow this structure at all.
 
 **Common elements**
 
