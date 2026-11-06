@@ -20,6 +20,9 @@
     - name: Agent basics
       href: bots/bot-concepts.md
       displayName: scopes, handler, activity
+    - name: Agent connectivity in Teams
+      href: agents-in-teams/agent-connectivity-in-teams.md
+      displayName: connectivity, Teams, agent, network, integration
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
