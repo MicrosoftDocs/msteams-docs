@@ -66,7 +66,7 @@
     - name: HTML widgets
       items:
       - name: Send HTML widgets
-        href: html-widgets/build-html-widgets.md
+        href: html-widgets/send-html-widgets.md
         displayName: HTML, widget, Teams, integration
       - name: Serve MCP-generated HTML widgets
         href: html-widgets/serve-html-widgets.md

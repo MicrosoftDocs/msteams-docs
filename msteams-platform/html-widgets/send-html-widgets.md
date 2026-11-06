@@ -1,6 +1,6 @@
 ---
-title: Build HTML Widgets
-description: Learn how to build HTML widgets for your Teams bots
+title: Send HTML Widgets
+description: Learn how to build and send HTML widgets for your Teams bots
 ms.localizationpriority: high
 author: nickwalkmsft
 ms.topic: reference
