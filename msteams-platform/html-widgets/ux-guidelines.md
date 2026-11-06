@@ -1,16 +1,16 @@
 ---
-title: UX guidelines for HTML widgets in Microsoft Teams
+title: User Experience Guidelines for HTML Widgets
 author: nickwalkmsft
-description: UX guidance for partners building HTML widgets in Microsoft Teams chat, including design principles, visual design recommendations, and a minimum quality bar for submission.
+description: User experience guidance for partners building HTML widgets in Microsoft Teams chat, including design principles, visual design recommendations, and a minimum quality bar for submission.
 ms.topic: article
 ms.date: 06/01/2026
 ---
 
-# UX guidelines for HTML widgets in Microsoft Teams
+# User experience guidelines for HTML widgets in Microsoft Teams
 
-This guide provides UX guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
+This guide provides user experience guidance for partners building HTML widgets in Microsoft Teams. It covers principles and recommendations for creating focused, high-quality widget experiences that integrate naturally into the Teams chat conversation. The goal is not to enforce a single visual style, but to ensure that widgets feel intentional and work well in the Teams context.
 
-## UX principles
+## User experience principles
 
 Building a great widget for Teams means delivering a focused experience that surfaces the right information or action at the right time. HTML widgets should feel like a natural part of the Teams conversation — not an application embedded inside it.
 
@@ -102,7 +102,7 @@ Keep in mind:
 - While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
 
 > [!TIP]
-> If your widget also renders in Microsoft 365 Copilot, refer to the [UX guidelines for MCP apps in declarative agents](/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
+> If your widget also renders in Microsoft 365 Copilot, refer to the [User experience guidelines for MCP apps in declarative agents](/microsoft-365/copilot/extensibility/plugin-mcp-apps-ui-guidelines) for Copilot-specific guidance.
 
 ## Widget anatomy
 
@@ -177,7 +177,7 @@ Widgets must communicate the outcome of user actions clearly.
 
 <br>
 
-## Minimum UX bar for submission
+## Minimum User experience bar for submission
 
 Widgets must meet all of the following requirements to be accepted by the Teams Store.
 
