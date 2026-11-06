@@ -57,7 +57,7 @@ Using an Azure Bot? You can update socket mode selection for both Teams-managed 
 
 ## Configure the agent's runtime
 
-**Teams SDK**
+### Teams SDK
 
 In your agent's code, turn on socket mode when you create the app. The SDK then connects in every region, handles activities exactly as it does for an HTTPS endpoint, replaces sockets before their tokens expire, and reconnects when a socket closes.
 
@@ -272,7 +272,7 @@ await host.WaitForShutdownAsync();
 
 ::: zone-end
 
-**Without an SDK**
+### Without an SDK
 
 To implement socket mode yourself, see *Connect an agent to Teams without an SDK*.
 

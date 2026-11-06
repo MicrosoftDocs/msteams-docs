@@ -8,9 +8,13 @@ ms.topic: article
 
 # Connect an agent to Teams without an SDK
 
-> **Warning:** Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
+> [!Warning]
+>
+> Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
 
-> **Note** We recommend that you use the Teams SDK, which implements everything in this article for you, you can see the configuring guide with Teams SDK, here.
+> [!Note]
+>
+> We recommend that you use the Teams SDK, which implements everything in this article for you, you can see the configuring guide with Teams SDK, here.
 
  This article describes the protocol under the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to ACS. An agent then receives activities either at an HTTPS endpoint or over socket mode.
 
@@ -18,7 +22,7 @@ ms.topic: article
 
 Your agent sends messages and other requests to ACS with the ACS REST API, whichever delivery method it uses.
 
-**1. Get a token.** Use the client credentials of the agent's Microsoft Entra app registration and request the scope `https://api.botframework.com/.default`:
+1. **Get a token.** Use the client credentials of the agent's Microsoft Entra app registration and request the scope `https://api.botframework.com/.default`:
 
 ```bash
 curl -X POST "https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token" \
@@ -30,7 +34,7 @@ curl -X POST "https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token" \
 
 Use your app registration's tenant ID, or `botframework.com` for a multi-tenant registration. Cache the token until shortly before it expires. In socket mode, the same token also authenticates the connect request.
 
-**2. Call the API.** Send requests to the `serviceUrl` of the activity you're responding to, with the token in the `Authorization` header. For example, to reply in a conversation:
+2. **Call the API.** Send requests to the `serviceUrl` of the activity you're responding to, with the token in the `Authorization` header. For example, to reply in a conversation:
 
 ```bash
 curl -X POST "<serviceUrl>/v3/conversations/<conversation-id>/activities" \
