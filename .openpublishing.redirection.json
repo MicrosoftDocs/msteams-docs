@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/feedback.md",
+      "redirect_url": "developer-support-feedback",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "msteams-platform/toolkit/TeamsFx-SDK.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-SDK",
       "redirect_document_id": false
@@ -1535,11 +1540,11 @@
       },
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema.md",
-        "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-1.23?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
+        "redirect_url": "/microsoft-365/extensibility/schema/"
       },
       {
         "source_path": "msteams-platform/sbs-gs-spfx.yml",
@@ -1623,7 +1628,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk"
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
@@ -1744,8 +1749,38 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "msteams-platform/bots/how-to/bots-filesv4.md",
-        "redirect_url": "../../agents-in-teams/attachments/receive-files",
+        "source_path": "msteams-platform/bots/how-to/conversations/agent-sessions.md",
+        "redirect_url": "/microsoftteams/platform/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/assistants-api-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/quickstart-create-agent-teams-sdk",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/dev-preview/developer-preview-intro.md",
+        "redirect_url": "../../developer-preview-features",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/samples/teams-low-code-solutions.md",
+        "redirect_url": "/power-apps/teams/overview",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/m365-apps/agent-connectors.md",
+        "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/graph-api/rsc/grant-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/declare-resource-specific-consent-requirements",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/teams-contributor-reference.md",
+        "redirect_url": "/microsoftteams/platform/developer-support-feedback",
         "redirect_document_id": false
       }
     ]

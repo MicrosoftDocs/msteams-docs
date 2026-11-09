@@ -118,9 +118,6 @@ Agents Playground offers a faster debug experience for applications when compare
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the app open in agents playground.":::
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23test-tool-experience-in-agents-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&platformId=dde152a9-2ee9-ef8b-602d-5ec98cffb908&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 # [Command line](#tab/cli)
 
 1. You can use command line for JavaScript and TypeScript or C# to debug your app in Agents Playground. To get started select the following language:
@@ -216,9 +213,6 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Agents Playground opens the app in a webpage.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Agents Playground."
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dcli%252Cclijs%23test-tool-experience-in-agents-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&platformId=dde152a9-2ee9-ef8b-602d-5ec98cffb908&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ---
 
@@ -492,14 +486,14 @@ It's important to understand that updating the configuration file has three majo
 
 * Bot or agent features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
 
-* Agents Playground doesn't support all types of cards except Adaptive Cards.
+* Agents Playground supports only Adaptive Cards. Other card types aren't supported.
 
-* Agents Playground doesn't support the following Adaptive Card features:
+* Within Adaptive Cards, Agents Playground doesn't support the following Adaptive Card features:
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
   * [Stageview](../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
-  * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
+  * [Full width cards](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Agents Playground doesn't support the following experiences:
 
@@ -641,9 +635,6 @@ Ensure you have an existing app created using Agents Toolkit. To debug your app 
 
 Agents Playground successfully debugs your existing bot.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20an%20existing%20app%20with%20Test%20Tool&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-agents-playground%3Ftabs%3Dvscode%252Cclijs%23debug-an-existing-app-with-agents-playground&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-agents-playground.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&platformId=dde152a9-2ee9-ef8b-602d-5ec98cffb908&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ## Disabling data collection
 
 If you decide that you don't want to allow Agents Playground to collect usage data, you can easily disable data collection by adding option `--disable-telemetry` when start Agents Playground via command line.
@@ -691,4 +682,3 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Agents SDK](https://github.com/microsoft/Agents)

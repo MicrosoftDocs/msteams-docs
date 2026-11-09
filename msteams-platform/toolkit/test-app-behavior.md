@@ -3,7 +3,7 @@ title: Test App in Local & Cloud Environments
 description: Learn about the prerequisites and how to test app behavior in local and cloud environments using toolkit after integration with Teams.
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 01/23/2025
+ms.date: 09/30/2026
 ---
 # Test app behavior in different environment
 
