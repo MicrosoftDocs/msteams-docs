@@ -66,5 +66,4 @@ Or zip the manifest and icons manually (manifest.json + color.png + outline.png)
 
 ## Resources
 
-- [Convert Your Declarative Agent for Microsoft 365 Copilot to a Custom Engine Agent](/microsoft-365-copilot/extensibility/convert-declarative-agent)
 - [Teams app manifest reference](/microsoftteams/platform/resources/schema/manifest-schema)

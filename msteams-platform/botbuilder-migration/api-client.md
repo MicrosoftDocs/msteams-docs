@@ -19,25 +19,23 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 # [BotBuilder](#tab/BotBuilder)
 
 ```python
-    from botbuilder.core import ActivityHandler, TurnContext
-    from botbuilder.core.teams import TeamsInfo
+from botbuilder.core import ActivityHandler, TurnContext
+from botbuilder.core.teams import TeamsInfo
 
-    class MyActivityHandler(ActivityHandler):
-        async def on_message_activity(self, turn_context: TurnContext):
-            # highlight-next-line
-            members = await TeamsInfo.get_members(turn_context)
+class MyActivityHandler(ActivityHandler):
+    async def on_message_activity(self, turn_context: TurnContext):
+        members = await TeamsInfo.get_members(turn_context)
 ```
 
 # [Teams SDK](#tab/TeamsSDK)
 
 ```python
-    from microsoft_teams.api import MessageActivity
-    from microsoft_teams.apps import ActivityContext
+from microsoft_teams.api import MessageActivity
+from microsoft_teams.apps import ActivityContext
 
-    @app.on_message
-    async def on_message(context: ActivityContext[MessageActivity]):
-        # highlight-next-line
-        members = await context.api.conversations.get_members(context.activity.conversation.id)
+@app.on_message
+async def on_message(context: ActivityContext[MessageActivity]):
+    members = await context.api.conversations.get_members(context.activity.conversation.id)
 ```
 
 ---
@@ -49,37 +47,35 @@ we pass an instance of our `ApiClient` into all our activity handlers through th
 # [BotBuilder](#tab/BotBuilder)
 
 ```typescript
-    import {
-      CloudAdapter,
-      ConfigurationBotFrameworkAuthentication,
-      TeamsInfo,
-    } from 'botbuilder';
+import {
+  CloudAdapter,
+  ConfigurationBotFrameworkAuthentication,
+  TeamsInfo,
+} from 'botbuilder';
 
-    const auth = new ConfigurationBotFrameworkAuthentication(process.env);
-    const adapter = new CloudAdapter(auth);
+const auth = new ConfigurationBotFrameworkAuthentication(process.env);
+const adapter = new CloudAdapter(auth);
 
-    export class ActivityHandler extends TeamsActivityHandler {
-      constructor() {
-        super();
-        this.onMessage(async (context) => {
-          // highlight-next-line
-          const members = await TeamsInfo.getMembers(context);
-        });
-      }
-    }
+export class ActivityHandler extends TeamsActivityHandler {
+  constructor() {
+    super();
+    this.onMessage(async (context) => {
+      const members = await TeamsInfo.getMembers(context);
+    });
+  }
+}
 ```
 
 # [Teams SDK](#tab/TeamsSDK)
 
 ```typescript
-    import { App } from '@microsoft/teams.apps';
+import { App } from '@microsoft/teams.apps';
 
-    const app = new App();
+const app = new App();
 
-    app.on('message', async ({ api, activity }) => {
-      // highlight-next-line
-      const members = await api.conversations.getMembers(activity.conversation.id);
-    });
+app.on('message', async ({ api, activity }) => {
+  const members = await api.conversations.getMembers(activity.conversation.id);
+});
 ```
 
 ---
