@@ -241,9 +241,7 @@ This matters because the message bubble’s background normally frames a message
 
 - Add a border and padding around your widget's content
 - Choose a border color, corner radius, and background that fit your design. [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) and color tokens are a good starting point if you want your widget to feel native to Teams
-- Use the recommended 16px padding described in Spacing
-
-
+- Use the recommended 16px padding described in [Spacing](#spacing)
 
 
 
