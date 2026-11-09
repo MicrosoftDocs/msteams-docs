@@ -1,6 +1,6 @@
 ---
 title: Manage Azure Bots with Developer Portal
-description: Learn how to manage Azure bots using the Developer Portal for Microsoft Team
+description: Learn how to manage Azure bots using the Developer Portal for Microsoft Teams
 ms.topic: overview
 ms.date: 11/04/2026
 ---
@@ -16,7 +16,7 @@ Azure-managed bots and Teams-managed bots have separate lists. An Azure-managed 
 | Task | Where to do it |
 | --- | --- |
 | Find Azure bots by subscription, resource group, or search | Developer Portal: Tools > Bot management > Azure-managed bots |
-| View supported delivery settings | Open the bot and select Configure. HTTP endpoint and Socket Mode availability depends on the preview and your access. |
+| View supported delivery settings | Open the bot and select **Configure**. **HTTP endpoint** and **Socket Mode** availability depends on the preview and your access. |
 | Create or delete an Azure bot; manage channels, credentials, or its icon | Azure portal, or the linked identity management experience where applicable |
 | Package, test, or publish a Teams app that uses the bot | The app’s workflow under Apps in Developer Portal |
 
@@ -28,7 +28,7 @@ Azure-managed bots and Teams-managed bots have separate lists. An Azure-managed 
 
 ## Delivery settings at a glance
 
-Configure provides HTTP endpoint settings and, for bots, Socket Mode. HTTP uses a messaging endpoint; Socket Mode uses an outbound connection for development. For setup steps, endpoint-access requirements, and delivery-specific troubleshooting, use the delivery-method documentation [Link to Socket mode documentation].
+The **Configure** page provides HTTP endpoint settings and Socket Mode settings for bots. HTTP uses a messaging endpoint; Socket Mode uses an outbound connection for development. For setup steps, endpoint-access requirements, and delivery-specific troubleshooting, use the delivery-method documentation [Link to Socket mode documentation].
 
 ## Find an Azure bot
 
