@@ -67,8 +67,8 @@ If you change the socket mode setting at any time, you will need to restart your
 
 **For options, you can specify the following two values:**
 
-1. `geos` - Geographies to connect, one independent socket each. Ever one must connect for `start()` to success, after which each is supervised on its own
-2. `negotiateBaseUrl` - Service host to negotiate the connection
+1. `geos` - Geographies to connect to, with one independent socket each. Every socket must connect for `start()` to succeed, after which each is supervised on its own.
+2. `negotiateBaseUrl` - Service host used to negotiate the connection.
 
 Socket mode requires a minimum of **Version 2.2** of the SDK. Update by running `npm install -g @microsoft/teams.sdk@2.2.0`
 
@@ -278,7 +278,7 @@ await host.WaitForShutdownAsync();
 
 To implement socket mode yourself, see [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md).
 
-## Error Codes
+## Error codes
 
 When socket mode works, your agent connects in every region: with the Teams SDK, the app finishes starting only after it connects; without an SDK, each socket receives a `SocketReady` message. Send your agent a message in Teams to confirm that it receives activities.
 
