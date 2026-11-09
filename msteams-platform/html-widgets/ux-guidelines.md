@@ -474,7 +474,7 @@ The following are commonly used spacing values for widget layouts. These map to 
 | Medium | `spacingVerticalM` | 12px | Vertical rhythm between text blocks and inputs |
 | Large | `spacingVerticalL` | 16px | Standard internal padding for cards and containers |
 | Extra Large | `spacingVerticalXL` | 20px | Separation between distinct content sections |
-| Extra Extra Large | `spacingVerticalXXL` | 24px | Global card padding, generous breathing room |
+| Extra Extra Large | `spacingVerticalXXL` | 24px | Generous breathing room |
 
 The following examples show how spacing tokens apply in real widget layouts.
 
