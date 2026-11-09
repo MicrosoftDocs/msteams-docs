@@ -87,11 +87,11 @@ sequenceDiagram
 2. **Open the socket.** Your agent opens a WebSocket to that URL. Once ACS is ready to deliver to it, ACS sends a `SocketReady` message.
 3. **Receive activities.** ACS sends each activity to the agent over the socket. The activity is the same JSON your HTTPS endpoint would receive.
 4. **Respond.** Your agent's handler returns a reply on the same call: for an invoke (such as a card action), the invoke response; for any other activity, an acknowledgment once the agent has handled it. ACS waits for this reply, just as it waits for the HTTP response from an HTTPS endpoint.
-5. **Send.** To post messages, reply in a thread, update cards and so on, your agent calls the ACS REST API over HTTPS, exactly as with an HTTPS endpoint.
+5. **Send.** To post messages, reply in a thread, update cards, and so on, your agent calls the ACS REST API over HTTPS, exactly as with an HTTPS endpoint.
 
 ### Regions
 
-Teams handles each conversation in one region, `amer`, `emea` or `apac`, and ACS delivers its activities only to sockets connected in that region. Your agent must connect one socket in **each** region where its users' conversations are handled. To cover all users, connect to all three. The Teams SDK does this by default. If your agent has no socket in a region, activities from conversations in that region aren't delivered.
+Teams handles each conversation in one region, `amer`, `emea`, or `apac`, and ACS delivers its activities only to sockets connected in that region. Your agent must connect one socket in **each** region where its users' conversations are handled. To cover all users, connect to all three. The Teams SDK does this by default. If your agent has no socket in a region, activities from conversations in that region aren't delivered.
 
 ### Multiple instances and load distribution
 
@@ -101,7 +101,7 @@ ACS doesn't wait for one activity's reply before it sends the next on the same s
 
 ### Delivery and timing
 
-- **Time limit.** ACS waits for your reply for the same time as with HTTPS delivery: currently 25 seconds, given in each delivery as `deadlineMs`. After that the delivery fails. For an invoke, the user sees an error. If your work takes longer, acknowledge the activity and finish the work in the background, then send the result with the ACS REST API.
+- **Time limit.** ACS waits for your reply for the same time as with HTTPS delivery: currently 25 seconds, given in each delivery as `deadlineMs`. After that, the delivery fails. For an invoke, the user sees an error. If your work takes longer, acknowledge the activity and finish the work in the background, then send the result with the ACS REST API.
 - **No retry on the socket.** ACS sends each activity once, to one socket. If the reply doesn't arrive (the agent was too slow, the socket closed, or the reply was invalid), ACS doesn't resend it on another socket or to an HTTPS endpoint.
 - **Duplicates.** As with HTTPS delivery, the sender of an activity can retry a delivery that failed, so your agent might occasionally see an activity twice. Use the activity `id` to detect duplicates.
 - **Ordering.** Activities can arrive concurrently and on different instances, so don't rely on their order.
@@ -129,7 +129,7 @@ When an agent already has the maximum number of sockets in a region, the connect
 
 ### Security
 
-- **Outbound only.** Your agent opens every connection. It needs no inbound ports, public IP address or public DNS name.
+- **Outbound only.** Your agent opens every connection. It needs no inbound ports, public IP address, or public DNS name.
 - **Authenticated with the agent's own identity.** To connect, your agent proves its identity with the token from its Microsoft Entra app registration, the same token it uses to send messages. ACS only gives a socket to the agent the token belongs to.
 - **Scoped, short-lived socket tokens.** Each socket token works for one socket, for that agent only, and expires. ACS delivers only that agent's activities on the socket. Treat the token as a secret: don't log it or share it.
 - **Encrypted.** All connections use TLS.
