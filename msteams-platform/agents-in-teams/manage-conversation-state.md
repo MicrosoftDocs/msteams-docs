@@ -30,7 +30,7 @@ Registering an OAuth flow with `addOAuthFlow()` automatically enables state so p
 
 ## Reading and writing state
 
-Use `ctx.state.conversation` and `ctx.state.user` /> in an activity handler. Values must be JSON-serializable.
+Use `ctx.state.conversation` and `ctx.state.user` in an activity handler. Values must be JSON-serializable.
 
 ```typescript
 app.on('message', async (ctx) => {
