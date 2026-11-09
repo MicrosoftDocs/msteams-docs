@@ -40,19 +40,20 @@ In one-on-one chats, `conversation.id` can differ between the main chat and a th
 
 | Activity | Determine that it is threaded when |
 | --- | --- |
-| Message, edit, delete, or reaction | `channelData.replyChain.id` differs from `activity.id` |
-| Card action or task-module action associated with a message | `channelData.replyChain.id` differs from `replyToId` |
-| Message action on a message | When both values are present, `channelData.replyChain.id` differs from `value.messagePayload.id`, some message actions in channel threads currently omit thread data |
-| Compose-box or settings invoke with no associated message | `channelData.replyChain.id` is present, it identifies the thread containing the compose box |
+| Typed message | When present, `channelData.replyChain.id` differs from `activity.id` |
+| Reaction, card button click, or invoke associated with a message | When both values are present, `channelData.replyChain.id` differs from the ID of the message the user acted on, such as `replyToId` |
+| Message action on a message | When both values are present, `channelData.replyChain.id` differs from `value.messagePayload.id` |
 
-Some activity types have known gaps. For example, message actions in channel threads might not include `channelData.replyChain.id`. Other event types, including conversation and installation updates, aren't associated with a message placement. Handle chat/channel IDs and `replyChain.id` as optional, and don't infer placement when an activity doesn't provide enough information.
+`channelData.replyChain.id` is present on threaded messages, but isn't present on every message or activity. Some message actions in channel threads currently omit thread data. Other event types, including conversation and installation updates, aren't associated with a message placement. Handle chat/channel IDs and `replyChain.id` as optional, and don't infer placement when an activity doesn't provide enough information.
 
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ activity }) => {
   const rootId = activity.channelData?.replyChain?.id;
-  const isTopLevel = rootId === activity.id;
+  if (rootId) {
+    const isTopLevel = rootId === activity.id;
+  }
 });
 ```
 
@@ -63,8 +64,10 @@ app.on('message', async ({ activity }) => {
 ```python
 @app.on_message
 async def on_message(ctx: ActivityContext[MessageActivity]):
-    root_id = ctx.activity.channel_data.reply_chain.id
-    is_top_level = root_id == ctx.activity.id
+    data = ctx.activity.channel_data
+    root_id = data.reply_chain.id if data and data.reply_chain else None
+    if root_id:
+        is_top_level = root_id == ctx.activity.id
 ```
 
 ::: zone-end
@@ -75,7 +78,10 @@ async def on_message(ctx: ActivityContext[MessageActivity]):
 teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 {
     string? rootId = context.Activity.ChannelData?.ReplyChain?.Id;
-    bool isTopLevel = rootId == context.Activity.Id;
+    if (!string.IsNullOrEmpty(rootId))
+    {
+        bool isTopLevel = rootId == context.Activity.Id;
+    }
 });
 ```
 
@@ -83,19 +89,19 @@ teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 
 ### Reply in a one-on-one thread
 
-Use the incoming chat ID and root message ID to explicitly target an L2 reply. The examples use the SDK `reply` method with a message activity.
+Use the incoming chat ID and root message ID to explicitly target an L2 reply. The examples use the SDK `reply` method with response text.
 
-The following examples show explicit thread targeting in a one-on-one chat.
+The following examples show explicit thread targeting in a one-on-one chat. `replyChain.id` is optional, so check that it is available before calling `reply`.
 
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-import { MessageActivity } from "@microsoft/teams.api";
-
 app.on('message', async ({ activity }) => {
-  const { chat, replyChain } = activity.channelData!;
-  const response = new MessageActivity('Replying in the thread');
-  await app.reply(chat!.id, replyChain!.id, response);
+  const chatId = activity.channelData?.chat?.id;
+  const rootId = activity.channelData?.replyChain?.id;
+  if (chatId && rootId) {
+    await app.reply(chatId, rootId, 'Replying in the thread');
+  }
 });
 ```
 
@@ -104,13 +110,13 @@ app.on('message', async ({ activity }) => {
 ::: zone pivot="teams-sdk-python"
 
 ```python
-from microsoft_teams.api.activities.message import MessageActivityInput
-
 @app.on_message
 async def on_message(ctx: ActivityContext[MessageActivity]):
     data = ctx.activity.channel_data
-  response = MessageActivityInput(text='Replying in the thread')
-  await app.reply(data.chat.id, data.reply_chain.id, response)
+    chat_id = data.chat.id if data and data.chat else None
+    root_id = data.reply_chain.id if data and data.reply_chain else None
+    if chat_id and root_id:
+        await app.reply(chat_id, root_id, 'Replying in the thread')
 ```
 
 ::: zone-end
@@ -120,17 +126,17 @@ async def on_message(ctx: ActivityContext[MessageActivity]):
 ```csharp
 teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 {
-    var data = context.Activity.ChannelData!;
-  var response = new Activity
-  {
-    Type = ActivityTypes.Message,
-    Text = "Replying in the thread"
-  };
-    await teamsApp.ReplyAsync(
-        data.Chat!.Id!,
-        data.ReplyChain!.Id!,
-    response,
-        cancellationToken: cancellationToken);
+    var data = context.Activity.ChannelData;
+    string? chatId = data?.Chat?.Id;
+    string? rootId = data?.ReplyChain?.Id;
+    if (!string.IsNullOrEmpty(chatId) && !string.IsNullOrEmpty(rootId))
+    {
+        await teamsApp.ReplyAsync(
+            chatId,
+            rootId,
+            "Replying in the thread",
+            cancellationToken: cancellationToken);
+    }
 });
 ```
 
@@ -143,11 +149,10 @@ To send a new top-level message outside the incoming activity context, use proac
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-import { MessageActivity } from "@microsoft/teams.api";
-
-const message = new MessageActivity('A new top-level message');
-const destinationId = activity.channelData!.chat?.id ?? activity.channelData!.channel!.id;
-await app.send(destinationId, message);
+const destinationId = activity.channelData?.chat?.id ?? activity.channelData?.channel?.id;
+if (destinationId) {
+  await app.send(destinationId, 'A new top-level message');
+}
 ```
 
 ::: zone-end
@@ -155,12 +160,10 @@ await app.send(destinationId, message);
 ::: zone pivot="teams-sdk-python"
 
 ```python
-from microsoft_teams.api.activities.message import MessageActivityInput
-
-message = MessageActivityInput(text='A new top-level message')
 data = ctx.activity.channel_data
-destination_id = data.chat.id if data.chat else data.channel.id
-await app.send(destination_id, message)
+destination_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
+if destination_id:
+  await app.send(destination_id, 'A new top-level message')
 ```
 
 ::: zone-end
@@ -168,15 +171,15 @@ await app.send(destination_id, message)
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-var message = new Activity
+var data = context.Activity.ChannelData;
+string? destinationId = data?.Chat?.Id ?? data?.Channel?.Id;
+if (!string.IsNullOrEmpty(destinationId))
 {
-  Type = ActivityTypes.Message,
-  Text = "A new top-level message"
-};
 await teamsApp.SendAsync(
-  context.Activity.ChannelData!.Chat?.Id ?? context.Activity.ChannelData.Channel!.Id!,
-  message,
+  destinationId,
+  "A new top-level message",
   cancellationToken: cancellationToken);
+}
 ```
 
 ::: zone-end
@@ -213,22 +216,21 @@ The default behavior described above applies when responding to a received messa
 
 Use the proactive reply method to target a thread in either a one-on-one chat or a channel. For channels, see [Proactive threading](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging#proactive-threading). For general proactive messaging guidance, see [Send proactive messages](send-proactive-messages.md).
 
-To proactively reply in a thread, call `app.reply(chatId, replyChainId, activity)` with the stored chat or channel ID, root message ID, and message activity. To send a new top-level message, call `app.send(chatId, activity)` with the chat or channel ID. Also retain any service URL and agent identity required by your proactive messaging setup.
+To proactively reply in a thread, call `app.reply(chatId, replyChainId, text)` with the stored chat or channel ID, root message ID, and response text. To send a new top-level message, call `app.send(chatId, text)` with the chat or channel ID. Also retain the service URL and agentic identity, if applicable, required by your proactive messaging setup.
 
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-import { MessageActivity } from "@microsoft/teams.api";
-
 // Store when the message arrives.
 const saved = {
-  chatOrChannelId: activity.channelData!.chat?.id ?? activity.channelData!.channel!.id,
-  rootId: activity.channelData!.replyChain!.id,
+  chatOrChannelId: activity.channelData?.chat?.id ?? activity.channelData?.channel?.id,
+  rootId: activity.channelData?.replyChain?.id,
 };
 
 // Later, outside a handler.
-const message = new MessageActivity('Following up in the thread');
-await app.reply(saved.chatOrChannelId, saved.rootId, message);
+if (saved.chatOrChannelId && saved.rootId) {
+  await app.reply(saved.chatOrChannelId, saved.rootId, 'Following up in the thread');
+}
 ```
 
 ::: zone-end
@@ -236,16 +238,14 @@ await app.reply(saved.chatOrChannelId, saved.rootId, message);
 ::: zone pivot="teams-sdk-python"
 
 ```python
-from microsoft_teams.api.activities.message import MessageActivityInput
-
 # Store when the message arrives.
 data = ctx.activity.channel_data
-chat_or_channel_id = data.chat.id if data.chat else data.channel.id
-root_id = data.reply_chain.id
+chat_or_channel_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
+root_id = data.reply_chain.id if data and data.reply_chain else None
 
 # Later, outside a handler.
-message = MessageActivityInput(text='Following up in the thread')
-await app.reply(chat_or_channel_id, root_id, message)
+if chat_or_channel_id and root_id:
+  await app.reply(chat_or_channel_id, root_id, 'Following up in the thread')
 ```
 
 ::: zone-end
@@ -254,17 +254,15 @@ await app.reply(chat_or_channel_id, root_id, message)
 
 ```csharp
 // Store when the message arrives.
-var data = context.Activity.ChannelData!;
-string chatOrChannelId = data.Chat?.Id ?? data.Channel!.Id!;
-string rootId = data.ReplyChain!.Id!;
+var data = context.Activity.ChannelData;
+string? chatOrChannelId = data?.Chat?.Id ?? data?.Channel?.Id;
+string? rootId = data?.ReplyChain?.Id;
 
 // Later, outside a handler.
-var message = new Activity
+if (!string.IsNullOrEmpty(chatOrChannelId) && !string.IsNullOrEmpty(rootId))
 {
-  Type = ActivityTypes.Message,
-  Text = "Following up in the thread"
-};
-await teamsApp.ReplyAsync(chatOrChannelId, rootId, message);
+    await teamsApp.ReplyAsync(chatOrChannelId, rootId, "Following up in the thread");
+}
 ```
 
 ::: zone-end
