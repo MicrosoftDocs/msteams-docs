@@ -14,9 +14,9 @@ ms.topic: article
 
 > [!Note]
 >
-> We recommend that you use the Teams SDK, which implements everything in this article for you, you can see the configuring guide with Teams SDK, [here](configure-delivery-methods-for-agents.md).
+> We recommend that using the Teams SDK, which implements everything in this article. You can see the configuring guide with Teams SDK, [here](configure-delivery-methods-for-agents.md).
 
- This article describes the protocol under the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to ACS. An agent then receives activities either at an HTTPS endpoint or over socket mode.
+ This article describes the protocol used by the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to Agent Communication Service (ACS). An agent then receives activities either at an HTTPS endpoint or over socket mode.
 
 ## Implement ACS request construction
 
