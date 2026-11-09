@@ -8,19 +8,19 @@ ms.date: 09/27/2026
 
 # Tab app functions
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 Agents may want to expose REST APIs that client applications can call. This SDK makes it easy to implement those APIs through the `app.AddFunction()` method. The function takes a name and a callback that implements the function.
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 Agents may want to expose REST APIs that client applications can call. This SDK makes it easy to implement those APIs through the `app.function()` method. The function takes a name and a callback that implements the function.
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 
@@ -52,7 +52,7 @@ app.AddFunction<ProcessMessageData> ("process-message", (context) => {
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 
@@ -80,7 +80,7 @@ app.function<{}, { message: string }>('process-message', ({ data, log }) => {
 >
 > This SDK does not validate that the function arguments are of the expected types or otherwise trustworthy. You must take care to validate the input arguments before using them.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 If desired, the function can return data to the caller.
 
@@ -95,7 +95,7 @@ app.AddFunction('get-random-number', () => {
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 If desired, the function can return data to the caller. The return value can be a string, an object, or an array.
 
@@ -127,7 +127,7 @@ app.function('privileged-action', ({ userId }) => {
 
 The function callback receives a context object with a number of useful values. Some originate within the agent itself, while others are furnished by the caller via the HTTP Request.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 | Property       | Source | Description                                                                                                        |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
@@ -151,7 +151,7 @@ The function callback receives a context object with a number of useful values. 
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 | Property                   | Source | Description                                                                                                                               |
 | -------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -176,7 +176,7 @@ The function callback receives a context object with a number of useful values. 
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 The `AuthToken` is validated before the function callback is invoked, and the `TenantId`, `UserId`, and `UserName` values are extracted from the validated token. In the typical case, the remaining caller-supplied values would reflect what the Teams Tab app retrieves from the teams-js `getContext()` API, but the agent does not validate these.
 
 > [!WARNING]
@@ -185,7 +185,7 @@ The `AuthToken` is validated before the function callback is invoked, and the `T
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 The `authToken` is validated before the function callback is invoked, and the `tenantId` and `userId` values are extracted from the validated token. In the typical case, the remaining caller-supplied values would reflect what the Teams Tab app retrieves from the teams-js `getContext()` API, but the agent does not validate them.
 
@@ -195,7 +195,7 @@ The `authToken` is validated before the function callback is invoked, and the `t
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 To simplify a common scenarios, the context provides a `Send` method. This method sends an activity to the current conversation ID, determined from the context values provided by the client (chatId and channelId). If neither chatId or channelId is provided by the caller, the ID of the 1:1 conversation between the agent and the user is assumed.
 
@@ -205,7 +205,7 @@ To simplify a common scenarios, the context provides a `Send` method. This metho
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 To simplify two common scenarios, the context provides the `getCurrentConversationId` and `send` methods.
 
@@ -216,13 +216,13 @@ To simplify two common scenarios, the context provides the `getCurrentConversati
 
 ## Additional resources
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 - For more information about the teams-js getContext() API, see the [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-library) documentation.
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ## Executing Functions
 
