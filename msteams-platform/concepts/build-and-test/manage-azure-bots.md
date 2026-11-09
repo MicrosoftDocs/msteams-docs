@@ -35,17 +35,17 @@ The **Configure** page provides HTTP endpoint settings and Socket Mode settings 
 1. Sign in to [Developer Portal](https://dev.teams.microsoft.com/) and select **Tools** from the left pane.
 1. Select **Bot management**, and then select **Azure-managed bots**. The Teams-managed bots tab is the default.
 1. In **Subscription**, select a subscription or **All subscriptions**. Search the subscription picker by subscription name or ID. Bot results load after you choose a scope.
-1. If you selected one subscription, optionally choose a **Resource group** to narrow the results. The resource-group picker is unavailable when All subscriptions is selected.
-1. Use **Search app** to search bot name, display name, application ID, or resource group within your selected scope. Scroll to view more results or select **Load more** when available.
+1. If you selected one subscription, optionally choose a **Resource group** to narrow the results. The resource-group picker is unavailable when **All subscriptions** is selected.
+1. Use **Search app** to the search by bot name, display name, application ID, or resource group within your selected scope. Scroll to view more results or select **Load more** when available.
 1. Select the bot’s name to open **Configure**. Verify the subscription and resource group, especially when bots share a name.
 
-The App ID identifies the bot’s backing Microsoft Entra application. It isn’t the Teams app package’s app ID. Keep these identifiers separate when configuring your Teams app.
+The app ID identifies the bot’s backing Microsoft Entra application. It isn’t the Teams app package’s app ID. Keep these identifiers separate when configuring your Teams app.
 
 > [!NOTE]
 >
 > The list reflects Azure resources your signed-in account can read, not a list of applications you own. Seeing a bot doesn’t automatically grant permission to change its settings.
 
-Developer Portal can remember a previously selected specific subscription if you still have access to it. All subscriptions isn’t restored automatically.
+Developer Portal can remember a previously selected specific subscription if you still have access to it. **All subscriptions** isn’t restored automatically.
 
 ### If you don’t have an Azure bot
 
@@ -53,11 +53,11 @@ Select **Create an Azure bot** to open the Azure portal and create the resource 
 
 ### Enable the Microsoft Teams channel
 
-You configure channels for Azure-managed bots in Azure, not on the Teams-managed bot Channels page in Developer Portal.
+You configure channels for Azure-managed bots in Azure portal, not on the Teams-managed bot **Channels** page in Developer Portal.
 
 1. In the [Azure portal](https://portal.azure.com/), open your Azure Bot resource.
 1. Select **Channels**, and then select **Microsoft Teams**.
-1. Accept the terms of service if prompted. Select the appropriate cloud environment on the Messaging tab, and select Apply.
+1. Accept the terms of service, if prompted. Select the appropriate cloud environment on the **Messaging** tab, and select **Apply**.
 1. Return to your bot in Developer Portal and reload its details before continuing.
 
 > [!NOTE]
@@ -72,20 +72,20 @@ Use the message shown in Developer Portal to choose the recovery action. This se
 
 | # | What you see | What to check or do |
 | --- | --- | --- |
-| 1. | Azure-managed bots isn’t available | Confirm that the preview is enabled for your tenant and supported in your cloud. The planned preview is commercial-cloud only. |
-| 2. | No enabled subscriptions | Check the signed-in account and tenant. Ask the Azure resource owner to confirm your access and the subscription’s status. Disabled, warned, past-due, and deleted subscriptions aren’t included. |
-| 3. | No Azure bots or no matching results | Check the subscription, resource group, and search text. Try All subscriptions. Confirm that the resource is an Azure Bot and that your account can read it. Allow time for recent Azure changes to appear. |
-| 4. | We couldn’t load your subscriptions or bots | Select Retry. If the failure continues, check Azure access and service availability. A failed subscription load isn’t a complete empty inventory. |
-| 5. | We couldn’t reach Azure | Check your network connection and select Retry. |
-| 6. | No access to a subscription or bot | Ask the Azure resource owner to confirm that your account has read access. Retrying alone doesn’t grant missing permission. |
-| 7. | Azure access isn’t available yet | Contact your administrator to confirm that Azure access is enabled for your tenant. |
-| 8. | Policy blocked or Sign in again | Follow the sign-in action shown, or ask your administrator to review the blocking policy. Retry after the requirement is resolved. |
-| 9. | Azure is busy | Wait for the retry interval shown, then retry. Avoid repeated rapid requests. |
-| 10. | This Azure bot no longer exists | Return to Bot management. Check whether the resource was deleted or moved and locate its current subscription and resource group in Azure. |
+| 1. | **Azure-managed bots** isn’t available. | Confirm that the preview is enabled for your tenant and supported in your cloud. The planned preview is commercial-cloud only. |
+| 2. | No enabled subscriptions. | Check the signed-in account and tenant. Ask the Azure resource owner to confirm your access and the subscription’s status. Disabled, warned, past-due, and deleted subscriptions aren’t included. |
+| 3. | No Azure bots or no matching results. | Check the subscription, resource group, and search text. Try **All subscriptions**. Confirm that the resource is an Azure Bot and that your account can read it. Allow time for recent Azure changes to appear. |
+| 4. | We couldn’t load your subscriptions or bots. | Select **Retry**. If the failure continues, check Azure access and service availability. A failed subscription load isn’t a complete empty inventory. |
+| 5. | We couldn’t reach Azure. | Check your network connection and select **Retry**. |
+| 6. | No access to a subscription or bot. | Ask the Azure resource owner to confirm that your account has read access. Retrying alone doesn’t grant missing permission. |
+| 7. | Azure access isn’t available yet. | Contact your administrator to confirm that Azure access is enabled for your tenant. |
+| 8. | Policy blocked or Sign in again. | Follow the sign-in action shown, or ask your administrator to review the blocking policy. Retry after the requirement is resolved. |
+| 9. | Azure is busy. | Wait for the retry interval shown, then retry. Avoid repeated rapid requests. |
+| 10. | This Azure bot no longer exists. | Return to **Bot management**. Check whether the resource was deleted or moved and locate its current subscription and resource group in Azure. |
 
 ## Manage other bot properties
 
-On Configure, select the Azure portal link in Update other bot properties in Azure portal. Use Azure to manage the bot’s channels, icon, credentials, and other resource settings. Developer Portal doesn’t create, delete, or migrate the Azure resource.
+On **Configure**, select the Azure portal link in Update other bot properties in Azure portal. Use Azure to manage the bot’s channels, icon, credentials, and other resource settings. Developer Portal doesn’t create, delete, or migrate the Azure resource.
 
 ### Test the bot as part of a Teams app
 
