@@ -55,7 +55,7 @@ Using an Azure Bot? You can update socket mode selection for both Teams-managed 
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
 
 - **Turning socket mode on.** ACS delivers activities only over sockets, not to the messaging endpoint. Until your agent connects, activities aren't delivered.
-- **Turning socket mode off.** ACS closes the agent's open sockets, each gets a `SocketClosing` notice first (see [Handle disconnects](connect-agent-without-sdk.md#6-handle-disconnects)) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
+- **Turning socket mode off.** ACS closes the agent's open sockets, and each gets a `SocketClosing` notice first (see [Handle disconnects](connect-agent-without-sdk.md#6-handle-disconnects)) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
 
 ## Configure the agent's runtime
 
@@ -63,9 +63,9 @@ Using an Azure Bot? You can update socket mode selection for both Teams-managed 
 
 In your agent's code, turn on socket mode when you create the app. The SDK then connects in every region, handles activities exactly as it does for an HTTPS endpoint, replaces sockets before their tokens expire, and reconnects when a socket closes.
 
-If you change the toggle at anytime, you will need to restart your app so it reflects the changes.
+If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes.
 
-**For options, you can specify either two values:**
+**For options, you can specify the following two values:**
 
 1. `geos` - Geographies to connect, one independent socket each. Ever one must connect for `start()` to success, after which each is supervised on its own
 2. `negotiateBaseUrl` - Service host to negotiate the connection
