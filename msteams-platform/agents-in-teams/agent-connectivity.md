@@ -50,12 +50,13 @@ The choice isn't permanent. Many developers use socket mode while building an ag
 
 **HTTPS**
 
-During your agent creation in Teams Developer Portal or Teams CLI you'll be asked to provide an HTTPS endpoint. If you are using HTTP mode you supply the endpoint and no further steps are needed.
+During your agent creation in Teams Developer Portal or Teams CLI, you'll be asked to provide an HTTPS endpoint. If you are using HTTP mode you supply the endpoint and no further steps are needed.
 
 **Socket mode**
 
-It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the web socket connections for you, steps to connecting your agent to Teams via socket mode with the Teams SDK can be found in the *Configure delivery methods for agents* guide, here.
-If you prefer to use another language or framework with socket mode, steps to connecting your agent to teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, here.
+It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the web socket connections for you. Steps to connecting your agent to Teams via socket mode with Teams SDK can be found in the *Configure delivery methods for agents* guide, [here](configure-delivery-methods-for-agents.md).
+
+If you prefer to use another language or framework with socket mode, steps to connecting your agent to Teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, [here](connect-agent-without-sdk.md).
 
 ## Architectural considerations
 
