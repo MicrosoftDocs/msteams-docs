@@ -100,9 +100,6 @@ You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. 
     $DNSLABEL.$REGION.cloudapp.azure.com
     ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Setup%20ingress%20with%20HTTPS%20on%20AKS&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23setup-ingress-with-https-on-aks&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Provision resources with Agents Toolkit
 
 You can use the `provision` command in Agents Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
@@ -137,9 +134,6 @@ To provision resources with Agents Toolkit, follow these steps:
     kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
     ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23provision-resources-with-agents-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Apply the deployment
 
 The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference.
@@ -161,9 +155,6 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
 
 1. To preview the Teams bot application deployed on AKS, select **Start Debugging (F5)**.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Apply%20the%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23apply-the-deployment&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Deploy Teams bot to an on-premises Kubernetes Cluster
 
@@ -229,9 +220,6 @@ To provision resources with Agents Toolkit, follow these steps:
     kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
     ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23provision-resources-with-agents-toolkit-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Apply the deployment
 
 The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
@@ -253,9 +241,6 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
 
 1. To preview the Teams bot application deployed on AKS, select **Start Debugging (F5)**.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Apply%20the%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23apply-the-deployment-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Deploy Teams tab app to Kubernetes
 
@@ -306,9 +291,6 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
     $DNSLABEL.$REGION.cloudapp.azure.com
     ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Setup%20ingress%20with%20HTTPS%20on%20AKS&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23setup-ingress-with-https-on-aks-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ### Provision resources with Agents Toolkit
 
 You can use the `provision` command in Agents Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
@@ -328,9 +310,6 @@ To provision resources with Agents Toolkit, follow these steps:
 1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
 
 1. To obtain the actual value of `SECRET_AAD_APP_CLIENT_SECRET`. Select the Decrypt secret annotation.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23provision-resources-with-agents-toolkit-2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Apply the deployment
 
@@ -355,6 +334,3 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
 
 1. To preview the Teams bot application deployed on AKS, select **Start Debugging (F5)**.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Apply%20the%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23apply-the-deployment-2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
