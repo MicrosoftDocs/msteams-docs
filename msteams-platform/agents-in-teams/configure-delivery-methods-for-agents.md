@@ -287,7 +287,7 @@ If your agent can't connect, check the status code that the connect request retu
 | Status | Error message | Cause and fix |
 | --- | --- | --- |
 | `401` | TODO | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
-| `403` | `WebSocket connect requires an authenticated bot.` | The token isn't the agent's own bot token, for example because it was issued to another app or to an agentic user. Use the credentials of the agent's own app registration. |
+| `403` | `WebSocket connect requires an authenticated bot.` | The token isn't the agent's own bot token, for example, because it was issued to another app or to an agentic user. Use the credentials of the agent's own app registration. |
 | `403` | `Socket mode is not enabled for this bot.` | Socket mode isn't turned on in the agent's bot registration, or isn't available for your tenant yet. Turn it on, and allow about a minute for the change to take effect. The Teams SDK stops retrying after a `403`; restart your agent after you fix the cause. |
 | `429` | `This bot already has ... socket connections open ...` | The agent already has the maximum number of sockets in this region. Wait for the number of seconds in the `Retry-After` header, then retry. The Teams SDK retries automatically. Check for instances that open more sockets than they need. |
 | `503` | `Socket mode is not available for this bot.` or `Unable to allocate WebSocket session.` | A temporary problem in ACS. Retry with backoff. The Teams SDK retries automatically. |
@@ -299,14 +299,14 @@ If your agent connects but doesn't receive activities:
 | Symptom | Cause and fix |
 | --- | --- |
 | Activities still go to the messaging endpoint. | The change to the bot registration hasn't taken effect everywhere yet. Wait about a minute. |
-| Some conversations reach the agent and others don't. | The agent isn't connected in every region. Connect in `amer`, `emea` and `apac`. |
-| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See [Step 4, Handle activities and reply](connect-agent-without-sdk.md#4-handle-activities-and-reply), in [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md). |
+| Some conversations reach the agent and others don't. | The agent isn't connected in every region. Connect in `amer`, `emea`, and `apac`. |
+| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See [Step 4, Handle activities and reply](connect-agent-without-sdk.md#4-handle-activities-and-reply) in [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md). |
 | The socket connects but never gets `SocketReady`. | Another socket already used the same access token. Call connect again for every socket. |
 
 ## Code sample
 
 | Sample name | Description | TypeScript | Python | .NET |
 | --- | --- | --- | --- | --- |
-| Teams SDK socket mode sample | This sample shows how to receive activites from ACS via socket mode | [View](https://github.com/microsoft/teams.ts/tree/main/examples/socket) | [View](https://github.com/microsoft/teams.py/tree/main/examples/socket) | [View](https://github.com/microsoft/teams.net/tree/main/samples/SocketModeBot) |
+| Teams SDK socket mode sample | This sample shows how to receive activities from ACS using socket mode. | [View](https://github.com/microsoft/teams.ts/tree/main/examples/socket) | [View](https://github.com/microsoft/teams.py/tree/main/examples/socket) | [View](https://github.com/microsoft/teams.net/tree/main/samples/SocketModeBot) |
 
 ---
