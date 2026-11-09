@@ -172,7 +172,7 @@ Save `connectionId`; you need it to replace the socket (step 5). If `SocketReady
 
 ### 4. Handle activities and reply
 
-ACS calls the client method `Activity` with an **envelope** for each activity, and waits for your handler's return value. That return value, the **reply frame**, goes back to ACS on the same call.
+ACS calls the client method `Activity` with an **envelope** for each activity and waits for your handler's return value. That return value, the **reply frame**, goes back to ACS on the same call.
 
 ```json
 {
@@ -217,7 +217,7 @@ Return a reply frame for every envelope, within `deadlineMs`:
 | `protocolVersion` | Required. `1`. |
 | `envelopeId` | Required. The `envelopeId` from the envelope. |
 | `status` | Required. An HTTP status code. For an invoke, the status of your invoke response. For any other activity, `200` once you've handled it, or `500` if handling failed. |
-| `body` | For an invoke, the invoke response body, the JSON your HTTPS endpoint would return. Omit it for other activities. |
+| `body` | For an invoke, set the invoke response body to the JSON your HTTPS endpoint would return. Omit it for other activities. |
 | `botKey` | Optional. If you include it, it must be your agent's app ID. |
 | `recvAt`, `ts` | Optional. When you received the envelope and when you replied, in milliseconds since the Unix epoch. ACS uses them to measure your agent's processing time. |
 
@@ -305,10 +305,7 @@ Before ACS closes a socket on purpose, it calls the client method `SocketClosing
 | `TokenReused` | Another socket already used this socket's access token. | `true` | Call connect again, once for every socket. |
 | `NoIdentity` | The access token has no agent identity. | `true` | Call connect again. |
 
-Act on `code`; `reason` is for people and can change. For a `code` you don't recognize, follow `reconnect`. Many closes have no notice, for example when the socket's token expires or an ACS service instance restarts. Treat any close without a notice as temporary, and reconnect.
-
-> [!Note]
-> `SocketClosing` ships with ACS PR 1598105, which isn't merged yet.*
+Act on `code` to determine how to handle disconnection. `reason` is for human-readable text and can change. For a `code` you don't recognize, follow `reconnect`. Many closes have no notice, for example, when the socket's token expires or an ACS service instance restarts. Treat any close without a notice as temporary, and reconnect.
 
 ### 7. Connect in every region
 
@@ -381,4 +378,4 @@ These values match the Teams SDK. The SignalR client's other settings can keep t
 
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Socket mode sample | This sample shows how to receive activites from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**<https://github.com/premkaretimsft/prkare-default-mode-socket-bot>) |
+| Socket mode sample | This sample shows how to receive activities from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**<https://github.com/premkaretimsft/prkare-default-mode-socket-bot>). |
