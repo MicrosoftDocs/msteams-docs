@@ -97,6 +97,7 @@ When designing for Teams, follow these core principles:
 Keep in mind:
 
 - The widget appears inside a chat thread, alongside the agent's text response and other messages
+- Depending on the user's message layout, your widget may sit inside a message bubble (Cozy mode) or directly on the chat canvas (Compact mode and Teams mobile). Make sure it looks good in both.
 - Users are in a conversational mindset — they expect lightweight, focused interactions
 - One or more widgets may appear in the same message, combined with optional body text in any order
 - While your widget may also render in other host platforms, use this guidance to ensure it feels intentional and native in Teams.
@@ -200,6 +201,24 @@ Widgets must meet all of the following requirements to be accepted by the Teams 
 
 The following guidance is strongly recommended to help your widget feel at home in Teams. Partners may deviate for legitimate brand or design reasons, but should do so intentionally.
 
+> [!TIP]
+> Start with Widget border and padding. It frames everything else in this section.
+
+
+### Widget border and padding
+
+Teams provides the iframe that your widget renders in, but doesn't add a border, corner radius, or background to it. Add your own border and padding so your widget reads as a contained unit within the message. <br>
+
+This matters because the message bubble’s background normally frames a message and everything in it. In Cozy mode the bubble sits behind your widget and does that job. In Compact mode and on Teams mobile there’s no bubble, so your widget sits directly on the chat canvas. Without its own border and padding, it can appear to float.
+
+- Add a border and padding around your widget's content
+- Choose a border color, corner radius, and background that fit your design. [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) and color tokens are a good starting point if you want your widget to feel native to Teams
+- Use the recommended 16px padding described in [Spacing](#spacing)
+
+
+
+
+
 ### Visual design
 
 #### Colors and theming
@@ -211,7 +230,7 @@ Use [Fluent 2](https://fluent2.microsoft.design/color) color tokens for backgrou
 
 ##### Container colors
 
-Use container color tokens to establish hierarchy and communicate status within your widget. Start with Default for your outer card surface, then nest containers inside it to group related content or surface status meaning.
+Use container color tokens to establish hierarchy and communicate status within your widget. Start with Default if you want your outer card surface to match Teams, then nest containers inside it to group related content or surface status meaning.
 
 <table>
 <tr>
@@ -260,7 +279,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 
 <br>
 
-Unlike Adaptive Cards, HTML widgets don't automatically inherit a card background. Apply `colorNeutralCardBackground` to your outer container to match the Teams-native card surface. Inside it, use Emphasis containers to group or separate content, and Good, Warning, or Attention containers when specific content areas carry status meaning.
+Unlike Adaptive Cards, HTML widgets don’t automatically inherit a card background. If you want to match the Teams-native card surface, apply <code>colorNeutralCardBackground</code> to your outer container. Inside it, use Emphasis containers to group or separate content, and Good, Warning, or Attention containers when specific content areas carry status meaning.
 
 <br>
 
@@ -381,7 +400,9 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 #### Containers and borders
 
-Use containers to group related content and create visual hierarchy within your widget.
+For the border and padding around your whole widget, see [Widget border and padding](#widget-border-and-padding).<Br>
+
+Inside your widget's frame, use containers to group related content and create visual hierarchy.
 
 - Apply border radius values consistent with [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) to keep containers feeling native to Teams
 - Add a border when you need extra separation or emphasis between content areas — use the border token paired with your container color
@@ -398,7 +419,7 @@ Use containers to group related content and create visual hierarchy within your 
 
 #### Spacing
 
-The recommended global padding for a widget is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
+The recommended padding inside your widget's border is 16px (spacingHorizontalL / spacingVerticalL) on all sides.
 
 The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents.
 
@@ -409,7 +430,7 @@ The following are commonly used spacing values for widget layouts. These map to 
 | Medium | `spacingVerticalM` | 12px | Vertical rhythm between text blocks and inputs |
 | Large | `spacingVerticalL` | 16px | Standard internal padding for cards and containers |
 | Extra Large | `spacingVerticalXL` | 20px | Separation between distinct content sections |
-| Extra Extra Large | `spacingVerticalXXL` | 24px | Global card padding, generous breathing room |
+| Extra Extra Large | `spacingVerticalXXL` | 24px | Generous breathing room |
 
 The following examples show how spacing tokens apply in real widget layouts.
 
