@@ -115,8 +115,6 @@
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
     - name: Manage conversation state
       href: agents-in-teams/manage-conversation-state.md
-    - name: Extend with Agents SDK
-      href: agents-in-teams/extend-with-agents-sdk.md
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -978,6 +976,9 @@
     href: m365-apps/prerequisites.md
   - name: Enable agent or app in Copilot
     href: m365-apps/enable-agent-app-copilot.md
+  - name: Extend with Microsoft 365 Agents SDK
+    href: agents-in-teams/extend-with-agents-sdk.md
+    displayName: direct line, extensions, useTeamsSdk, email
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency
