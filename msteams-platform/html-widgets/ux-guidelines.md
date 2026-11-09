@@ -243,7 +243,7 @@ Use container color tokens to establish hierarchy and communicate status within 
 <td>Default</td>
 <td><img src="../assets/images/html-widgets/container-default.png" alt="Default container color swatch — white background with light gray border"></td>
 <td><code>colorNeutralCardBackground</code><br><code>colorNeutralStroke2</code></td>
-<td><strong>Outer card surface</strong> — apply this token to your widget's base container to match the Teams-native card background</td>
+<td><strong>Outer card surface</strong> — use this token if you want your widget’s base container to match the Teams-native card background </td>
 </tr>
 <tr>
 <td>Emphasis</td>
