@@ -1,6 +1,6 @@
 ---
 title: Configure delivery method for an agent
-description: Learn how to configure delivery method for your agents.
+description: Learn how to configure the delivery method for your agents.
 ms.localizationpriority: high
 ms.date: 11/06/2026
 ms.topic: article
@@ -17,9 +17,9 @@ The delivery method (see [Choose how your agent receives activity data from Team
 - The agent's **bot registration**, configured in Teams Developer Portal or with the Teams CLI.
 - The agent's **runtime code**.
 
-You can update both at any time. Change both together: the registration controls how Agent Communication Service (ACS) delivers, and the code controls how your agent receives.
+You can update both at any time. Change both together: the registration controls how Agent Communication Service (ACS) delivers activities, and the code controls how your agent receives them.
 
-You can choose the delivery method when you create an agent with `teams app create`, and change it later with `teams app update` or in Teams Developer Portal, plus a matching change in your agent's code:
+You can choose the delivery method when you create an agent with `teams app create`, and change it later with `teams app update` or in Teams Developer Portal, and make the corresponding change in your agent's code:
 
 ```bash
 # Create an agent that uses socket mode
