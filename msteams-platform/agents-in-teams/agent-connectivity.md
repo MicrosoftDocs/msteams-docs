@@ -1,6 +1,6 @@
 ---
 title: Agent Connectivity in Teams
-description: Choose how agents receives activity data from Teams
+description: Choose how agents receive activity data from Teams
 ms.localizationpriority: high
 ms.date: 11/06/2026
 ms.topic: article
@@ -20,14 +20,14 @@ Your agent always uses HTTPS requests to send data to ACS. You choose how ACS se
 | **HTTPS endpoint** | Your agent hosts an HTTPS endpoint that's reachable from the internet. You set the endpoint URL in the agent's bot registration. ACS sends each activity as an HTTPS request to that endpoint. |
 | **Socket mode** | You turn on socket mode in the agent's bot registration; no endpoint is needed. When your agent starts, it opens outbound WebSocket connections to ACS. ACS sends each activity over one of those connections, and your agent's response goes back over HTTPS. |
 
-Either way, your agent sends messages and other requests to ACS the same way, with the ACS [REST API](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference). And either way it receives the same activities with the same payloads. You can change the delivery method at any time. This article helps you decide which one to use.
+With either delivery method, your agent sends messages and other requests to ACS the same way, with the ACS [REST API](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference), and receives the same activities with the same payloads. You can change the delivery method at any time. This article helps you decide which one to use.
 
-## Choose
+## Choose a delivery method
 
 | | HTTPS endpoint | Socket mode |
 | --- | --- | --- |
 | **How activities reach your agent** | ACS sends an HTTPS POST for each activity. | ACS sends each activity over a WebSocket that your agent opened. |
-| **Network** | A public HTTPS endpoint. For local development you need a tunnel, such as dev tunnels or ngrok. | Outbound connections only, on port 443. No inbound connectivity, no tunnel, no public URL. |
+| **Network** | A public HTTPS endpoint. For local development, you need a tunnel such as dev tunnels or ngrok. | Outbound connections only, on port 443. No inbound connectivity, no tunnel, no public URL. |
 | **Authentication** | Your agent validates the token on every incoming request. | ACS authenticates your agent once, when it connects. Activities on the socket don't need validation. |
 | **Connection** | A short-lived request per activity. | Long-lived connections, replaced at least once an hour. Your agent keeps them open and reconnects when one closes. |
 | **Scale** | Any number of instances behind a load balancer. | Up to 4 open connections per agent in each region, so up to 4 connected instances. |
@@ -46,13 +46,13 @@ Either way, your agent sends messages and other requests to ACS the same way, wi
 
 The choice isn't permanent. Many developers use socket mode while building an agent and switch to an HTTPS endpoint when they deploy it. Switching is a registration change plus a configuration change in your agent's code; the agent's logic doesn't change.
 
-## Getting Started
+## Getting started
 
 **HTTPS**
 
 During your agent creation in Teams Developer Portal or Teams CLI you'll be asked to provide an HTTPS endpoint. If you are using HTTP mode you supply the endpoint and no further steps are needed.
 
-**Socket Mode**
+**Socket mode**
 
 It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the web socket connections for you, steps to connecting your agent to Teams via socket mode with the Teams SDK can be found in the *Configure delivery methods for agents* guide, here.
 If you prefer to use another language or framework with socket mode, steps to connecting your agent to teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, here.
