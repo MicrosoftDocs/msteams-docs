@@ -72,6 +72,9 @@
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
+    - name: Send and receive inline images
+      href: bots/how-to/agents-inline-images.md
+      displayName: receive files using agents
   - name: How-tos
     items:
     - name: Port a Slack Bolt app
