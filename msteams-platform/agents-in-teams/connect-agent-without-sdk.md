@@ -67,14 +67,14 @@ With an HTTPS endpoint, ACS sends each activity as an HTTPS `POST` with a JSON [
 2. **Respond.** For an invoke activity (`"type": "invoke"`), return the invoke response as the HTTP response, with its status code and JSON body. For any other activity, return `200 OK` once you've handled it. Respond within 25 seconds.
 3. **Send.** To post messages, use the ACS REST API (see the [previous section](#implement-acs-request-construction)).
 
-## Implement Socket Mode (WebSocket) activity delivery
+## Implement socket mode (WebSocket) activity delivery
 
 In socket mode, your agent opens sockets to ACS and receives activities over them. This section walks through the protocol step by step. The snippets together make a complete Node.js agent.
 
 **What you need:**
 
 - Socket mode turned on in the agent's bot registration (see [Configure the agent's bot registration](configure-delivery-methods-for-agents.md#configure-the-agents-bot-registration)).
-- A [SignalR client](/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python, so for Python use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
+- A [SignalR client](/aspnet/core/signalr/client-features) that supports **client results**, that is, returning a value from a handler: [`@microsoft/signalr`](https://www.npmjs.com/package/@microsoft/signalr) for JavaScript, or [`Microsoft.AspNetCore.SignalR.Client`](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) for .NET, version 7.0 or later. There's no Microsoft-supported SignalR client for Python. For Python, use the Teams SDK. You can't use a plain WebSocket library unless you implement the SignalR hub protocol yourself.
 
 | Step | What your agent does |
 | --- | --- |
@@ -96,7 +96,7 @@ Authorization: Bearer <token>
 Content-Length: 0
 ```
 
-`{region}` is `amer`, `emea` or `apac`. A successful response is `200 OK`:
+`{region}` is `amer`, `emea`, or `apac`. A successful response is `200 OK`:
 
 ```json
 {
@@ -283,7 +283,7 @@ The header tells ACS that the new socket replaces the old one, so the replacemen
 
 ### 6. Handle disconnects
 
-Expect sockets to close. When one closes unexpectedly, connect again, with a **new** connect call (each access token works for one socket only). Retry with backoff: 1, 2, 4 and 8 seconds, then every 15 seconds, with some random jitter.
+Expect sockets to close. When one closes unexpectedly, connect again, with a **new** connect call (each access token works for one socket only). Retry with backoff: 1, 2, 4, and 8 seconds, then every 15 seconds, with some random jitter.
 
 Before ACS closes a socket on purpose, it calls the client method `SocketClosing`:
 
