@@ -28,17 +28,17 @@ teams app create --name "My agent" --messaging-mode socket
 # Switch an existing agent to socket mode
 teams app update <app-id> --messaging-mode socket
 
-#Switch an existing agent back to HTTP (will use previously saved endpoint)
+# Switch an existing agent back to HTTP (will use previously saved endpoint)
 teams app update <app-id> --messaging-mode http
 
 ```
 
-Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by running `npm install -g @microsoft/teams.cli@3.1.0`
+Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by running `npm install -g @microsoft/teams.cli@3.1.0`.
 
 ## Configure the agent's bot registration
 
 > [!Warning]
-> You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot you will receive a `403` error code. Ask you tenant admin to add you as an onwer of the Entra app if this occurs.
+> You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot, you will receive a `403` error code. Ask your tenant admin to add you as an owner of the Entra app if this occurs.
 
 **In Teams Developer Portal:**
 
@@ -48,7 +48,7 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 
 To switch back, select **HTTP endpoint** and enter your agent's endpoint URL. It must be an `https://` URL.
 
-Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure managed bots, see [Manage Azure bots in Developer Portal](../concepts/build-and-test/manage-azure-bots.md).
+Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure-managed bots, see [Manage Azure bots in Developer Portal](../concepts/build-and-test/manage-azure-bots.md).
 
 **TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
 
