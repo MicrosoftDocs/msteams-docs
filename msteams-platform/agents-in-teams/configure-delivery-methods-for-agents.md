@@ -52,6 +52,8 @@ Using an Azure Bot? You can update socket mode selection for both Teams-managed 
 
 **TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
 
+:::image type="content" source="../assets/images/agents-in-teams/socket-mode/configure-socket-status.png" alt-text="Image shows the screenshot for configuring soket status in Developer Portal.":::
+
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
 
 - **Turning socket mode on.** ACS delivers activities only over sockets, not to the messaging endpoint. Until your agent connects, activities aren't delivered.
