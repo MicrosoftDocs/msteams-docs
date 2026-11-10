@@ -48,11 +48,11 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 
 To switch back, select **HTTP endpoint** and enter your agent's endpoint URL. It must be an `https://` URL.
 
-Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure-managed bots, see [Manage Azure bots in Developer Portal](../concepts/build-and-test/manage-azure-bots.md).
-
-**TODO (Teams Developer Portal team):** add screenshots, confirm the final UI labels and who can change the delivery method, and cover bots created before socket mode shipped.
-
 :::image type="content" source="../assets/images/agents-in-teams/socket-mode/configure-socket-status.png" alt-text="Image shows the screenshot for configuring soket status in Developer Portal.":::
+
+When **Socket Mode is on** appears, start your bot to establish the outbound WebSocket connection. A public HTTPS endpoint or development tunnel isn't required. To enable socket mode, you must be an owner of the bot's associated Microsoft Entra ID app registration. Bots published to the Teams Store must use an HTTPS endpoint.
+
+Using an Azure Bot? You can update socket mode selection for both Teams-managed and Azure-managed bots from Teams Developer Portal. For more information on Azure-managed bots, see [Manage Azure bots in Developer Portal](../concepts/build-and-test/manage-azure-bots.md).
 
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
 
