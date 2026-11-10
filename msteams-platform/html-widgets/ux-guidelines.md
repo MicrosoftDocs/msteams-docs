@@ -217,7 +217,7 @@ This matters because the message bubble’s background normally frames a message
 - Use the recommended 16px padding described in [Spacing](#spacing)
 
 
-
+<img src="../assets/images/html-widgets/widget-frame-comparison.png" alt="A widget shown in Cozy and Compact mode, with and without a border and padding. Without them, the widget has no visible edge in Compact mode.">
 
 
 ### Visual design
