@@ -66,7 +66,7 @@ This section explains what happens under the hood in socket mode, so you can ass
 
 Socket mode is built on [Azure SignalR Service](/azure/azure-signalr/signalr-overview). Your agent never sees an inbound connection:
 
-:::image type="content" source="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png" alt-text="Image shows sequence diagram showing how socket mode works.":::
+:::image type="content" source="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png" alt-text="Image shows sequence diagram showing how socket mode works." lightbox="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png":::
 
 <!--
 ::: mermaid
