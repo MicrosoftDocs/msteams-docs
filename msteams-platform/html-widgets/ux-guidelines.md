@@ -217,7 +217,23 @@ This matters because the message bubble’s background normally frames a message
 - Use the recommended 16px padding described in [Spacing](#spacing)
 
 
-<img src="../assets/images/html-widgets/widget-frame-comparison.png" alt="A widget shown in Cozy and Compact mode, with and without a border and padding. Without them, the widget has no visible edge in Compact mode.">
+<table>
+<tr>
+<th></th>
+<th>Cozy (message bubble)</th>
+<th>Compact and mobile (no bubble)</th>
+</tr>
+<tr>
+<th>With border and padding</th>
+<td><img src="../assets/images/html-widgets/widget-frame-cozy-with.png" alt="The same widget inside a message bubble, with a border and padding that set it apart from the message text."></td>
+<td><img src="../assets/images/html-widgets/widget-frame-compact-with.png" alt="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas."></td>
+</tr>
+<tr>
+<th>No border or padding</th>
+<td><img src="../assets/images/html-widgets/widget-frame-cozy-without.png" alt="A pull request widget inside a message bubble, with no border or padding. The content sits flush against the bubble's edges."></td>
+<td><img src="../assets/images/html-widgets/widget-frame-compact-without.png" alt="The same widget with no message bubble, no border, and no padding. The content has no visible edge and appears to float on the chat canvas."></td>
+</tr>
+</table>
 
 
 ### Visual design
