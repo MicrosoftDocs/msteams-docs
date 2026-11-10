@@ -19,12 +19,24 @@
       href: agents-in-teams/overview.md
     - name: Agent basics
       href: bots/bot-concepts.md
-      displayName: scopes, handler, activity
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
     - name: Best practices and features checklist
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+      displayName: scopes, handler, activity
+  - name: Register and configure
+    items:
+    - name: Agent registration concepts
+      href: agents-in-teams/registering-agent-teams-platform.md
+    - name: Choose an agent registration type
+      href: agents-in-teams/choose-agent-registration-type.md
+    - name: Configure runtime authentication
+      href: agents-in-teams/configure-agent-runtime-authentication.md
+    - name: Incoming request authentication
+      href: agents-in-teams/incoming-request-authentication.md
+    - name: Multi-tenant and single-tenant agents
+      href: agents-in-teams/agent-tenancy.md
   - name: Integrate AI
     items:
     - name: Receive all messages in group chats and channels
@@ -118,13 +130,43 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Manage conversation state
+      href: agents-in-teams/manage-conversation-state.md
 - name: Tools and SDKs
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Teams SDK
-    href: /microsoftteams/platform/teams-ai-library/welcome
+    items:
+    - name: Overview
+      href: teams-sdk-overview.md
+    - name: Add middleware and logging
+      href: agents-in-teams/agent-observability.md
+      displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
+    - name: Host web content and manage your server
+      href: agents-in-teams/host-agent-server.md
+      displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
+    - name: Migrate a Bot Framework SDK bot
+      items:
+        - name: Overview
+          href: botbuilder-migration/overview.md
+        - name: Botbuilder Compatibility
+          href: botbuilder-migration/integration.md
+        - name: Sending Activities
+          href: botbuilder-migration/sending-activities.md
+        - name: Proactive Activities
+          href: botbuilder-migration/proactive-activities.md
+        - name: The API Client
+          href: botbuilder-migration/api-client.md
+        - name: User Authentication
+          href: botbuilder-migration/user-authentication.md
+  - name: Teams developer CLI
+    href: teams-developer-cli-overview.md
+  - name: Coding agent skill
+    href: coding-agent-skill.md
+  - name: llms.txt
+    href: llms-txt.md
   - name: Teams Developer Portal
     items:
     - name: Overview
@@ -301,7 +343,7 @@
   - name: Legacy tools and SDKs
     href: legacy-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
-- name: Add authentication
+- name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
@@ -620,7 +662,7 @@
       - name: Create API-based message extensions
         href: messaging-extensions/create-api-message-extension.md
         displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-    - name: Build message extensions using Bot Framework
+    - name: Build message extensions using Teams SDK
       items:
       - name: Bot-based message extensions
         href: messaging-extensions/build-bot-based-message-extension.md
@@ -824,6 +866,12 @@
           displayName: Sequential Workflows
         - name: Up to date cards
           href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
+    - name: Build cards with Teams SDK
+      items:
+      - name: Overview
+        href: task-modules-and-cards/cards/build-with-teams-sdk.md
+      - name: Executing actions
+        href: task-modules-and-cards/cards/executing-actions.md
     - name: Build dialogs
       items:
       - name: Dialogs overview
@@ -943,6 +991,11 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Enable agent or app in Copilot
+    href: m365-apps/enable-agent-app-copilot.md
+  - name: Extend with Microsoft 365 Agents SDK
+    href: agents-in-teams/extend-with-agents-sdk.md
+    displayName: direct line, extensions, useTeamsSdk, email
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency
