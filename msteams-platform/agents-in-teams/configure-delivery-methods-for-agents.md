@@ -10,7 +10,7 @@ zone_pivot_groups: teams-sdk-languages
 # Configure delivery method for an agent
 
 > [!Note]
-> Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommnedd to use an HTTPS endpoint. Preview features can change before general availability.
 
 The delivery method (see [Choose how your agent receives activity data from Teams](agent-connectivity.md)) is configured in two places:
 

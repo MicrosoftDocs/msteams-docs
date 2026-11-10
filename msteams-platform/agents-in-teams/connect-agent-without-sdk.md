@@ -9,8 +9,7 @@ ms.topic: article
 # Connect an agent to Teams without an SDK
 
 > [!Note]
->
-> Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommnedd to use an HTTPS endpoint. Preview features can change before general availability.
 
 > [!Note]
 >
