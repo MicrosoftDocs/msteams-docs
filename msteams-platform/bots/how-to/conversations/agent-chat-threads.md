@@ -19,11 +19,13 @@ A **top-level message (L1)** appears in the main chat or channel conversation. A
 
 Channel owners can choose a posts or threads layout for a channel. These layouts present channel conversations differently, but both use the same threaded conversation model.
 
-A user starts a thread in a one-on-one agent chat by replying to a message in the main chat. The agent can then respond within that thread.
+Users can start a thread in a one-on-one agent chat by sending a threaded reply to a top-level message. The agent can then respond in that thread.
 
 The Teams SDK uses the context of the received message to determine the default response location. In a one-on-one chat, the response matches the level of the incoming message.
 
 ## Respond to messages
+
+In this article, a context-based response is a response sent from an activity handler using the received activity's context, without explicitly targeting a chat, channel, or reply chain. The Teams SDK uses that context to choose the default placement.
 
 The default placement depends on the conversation scope and the incoming message:
 
@@ -51,9 +53,7 @@ In one-on-one chats, `conversation.id` can differ between the main chat and a th
 ```typescript
 app.on('message', async ({ activity }) => {
   const rootId = activity.channelData?.replyChain?.id;
-  if (rootId) {
-    const isTopLevel = rootId === activity.id;
-  }
+  const isTopLevel = !rootId || rootId === activity.id;
 });
 ```
 
@@ -66,8 +66,7 @@ app.on('message', async ({ activity }) => {
 async def on_message(ctx: ActivityContext[MessageActivity]):
     data = ctx.activity.channel_data
     root_id = data.reply_chain.id if data and data.reply_chain else None
-    if root_id:
-        is_top_level = root_id == ctx.activity.id
+    is_top_level = not root_id or root_id == ctx.activity.id
 ```
 
 ::: zone-end
@@ -78,10 +77,7 @@ async def on_message(ctx: ActivityContext[MessageActivity]):
 teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 {
     string? rootId = context.Activity.ChannelData?.ReplyChain?.Id;
-    if (!string.IsNullOrEmpty(rootId))
-    {
-        bool isTopLevel = rootId == context.Activity.Id;
-    }
+    bool isTopLevel = string.IsNullOrEmpty(rootId) || rootId == context.Activity.Id;
 });
 ```
 
@@ -142,9 +138,9 @@ teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 
 ::: zone-end
 
-### Send a new top-level message proactively
+### Set placement for proactive messages
 
-To send a new top-level message outside the incoming activity context, use proactive messaging. In a one-on-one chat, target `channelData.chat.id`. In a channel, target `channelData.channel.id`. Don't use a thread's `conversation.id` as the containing chat or channel ID.
+To send a new top-level message outside the incoming activity context, use proactive messaging and target the chat or channel ID. In a one-on-one chat, use `channelData.chat.id`. In a channel, use `channelData.channel.id`. Don't use a thread's `conversation.id` as the containing chat or channel ID. Use `app.send(chatOrChannelId, text)` for an L1 message. To proactively send an L2 reply, use `app.reply(chatOrChannelId, rootMessageId, text)`. See [Considerations for proactive messages](#considerations-for-proactive-messages) for examples that store these IDs.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -232,7 +228,7 @@ The default behavior described above applies when responding to a received messa
 
 Use the proactive reply method to target a thread in either a one-on-one chat or a channel. For channels, see [Proactive threading](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging#proactive-threading). For general proactive messaging guidance, see [Send proactive messages](send-proactive-messages.md).
 
-To proactively reply in a thread, call `app.reply(chatId, replyChainId, text)` with the stored chat or channel ID, root message ID, and response text. To send a new top-level message, call `app.send(chatId, text)` with the chat or channel ID. Also retain the service URL and agentic identity, if applicable, required by your proactive messaging setup.
+To proactively reply in a thread, call the targeted `app.reply(chatId, replyChainId, text)` overload with the stored chat or channel ID, root message ID, and response text. This targets the reply-chain endpoint. It doesn't quote a current message because there's no current activity in a proactive context. To send a new top-level message, call `app.send(chatId, text)` with the chat or channel ID. Also retain the service URL and agentic identity, if applicable, required by your proactive messaging setup.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -285,9 +281,11 @@ if (!string.IsNullOrEmpty(chatOrChannelId) && !string.IsNullOrEmpty(rootId))
 
 ## Streaming in threads
 
-For SDK streaming, the first streamed response follows the same placement rules as a context-based send. In a one-on-one chat, it matches the incoming message level. In a channel, it appears in the thread. Later chunks and the final message update the same streamed message.
+The first streamed response creates the message and determines its placement. It follows the same rules as a context-based send. In a one-on-one chat, it matches the incoming message level. In a channel, it appears in the thread. Later chunks and the final response update that same message. They don't create separate messages or change its placement.
 
-`plan.complete()` currently posts at L1, even when the incoming message is in an L2 thread.
+## Plan completion in threads
+
+`plan.complete()` currently places the completed plan at L1, even when the message that prompted it is in an L2 thread. Plan completion is separate from the streamed-message behavior described above. This article doesn't cover the placement of other plan operations.
 
 ## See also
 
