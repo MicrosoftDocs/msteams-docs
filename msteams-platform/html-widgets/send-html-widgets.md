@@ -777,7 +777,8 @@ To show widgets from MCP servers, also declare widget support on your MCP client
 To try it:
 
 1. Run your bot and make it send the widget in a Teams chat.
-2. Select **Roll a 6-sided die** a few times. Each roll appears in the list, and the widget grows to fit it without a scroll bar.
+1. Select **Roll a 6-sided die** a few times. Each roll appears in the list, and the widget grows to fit it without a scroll bar.
+1. Test the widget in Teams on iOS and Android in both portrait and landscape orientations. Check that primary content isn't clipped and actions are usable by touch without relying on hover. See [Responsive scaling](ux-guidelines.md#responsive-scaling).
 
 > [!NOTE]
 >

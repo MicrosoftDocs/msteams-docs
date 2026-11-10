@@ -299,7 +299,7 @@ Manual testing is required to verify keyboard behavior, screen reader output, an
 | Screen reader | Test with at least one screen reader — Narrator or NVDA on Windows, VoiceOver on Mac. Verify all elements are announced meaningfully. |
 | Zoom | Increase browser zoom to 200% and confirm text and interactive controls remain fully usable. |
 | Reduced motion | Enable reduced motion in OS settings and verify animations are minimized or disabled. |
-| Responsive | Test at narrow viewport widths representative of Teams chat container widths. |
+| Responsive | Test at narrow viewport widths representative of Teams chat container widths.  In Teams on iOS and Android, test both portrait and landscape orientations. Verify that primary content isn't clipped and actions are usable by touch without relying on hover. See [Responsive scaling](ux-guidelines.md#responsive-scaling). |
 | High contrast | Enable Windows High Contrast Mode and verify content, controls, and focus indicators remain visible. |
 
 ## Related content

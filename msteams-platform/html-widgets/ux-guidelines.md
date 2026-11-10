@@ -151,6 +151,8 @@ Widgets must adapt to the width of the chat container. Teams chat containers var
 - Avoid fixed pixel heights — allow the widget to grow vertically as content requires
 - Test across a range of widths to ensure your layout holds up in common Teams contexts
 
+Design for narrow mobile containers first, then adapt the layout for wider containers. Keep primary content readable without clipping or unintended horizontal scrolling. Make every action available by touch without relying on hover. Test in Teams on iOS and Android in portrait and landscape orientations, and confirm that the layout also works at desktop widths.
+
 The widths shown below represent the most common scenarios to test against: wide, standard desktop, mobile, and meeting chat or side-by-side view. These are not breakpoints or size slots — they are reference points for evaluating how your single fluid layout scales across the range of contexts where your widget may appear.
 
 <img src="../assets/images/html-widgets/responsive.png" alt="A widget shown at four representative widths: wide, standard desktop, mobile, and meeting chat or side-by-side — demonstrating fluid layout scaling">
@@ -204,8 +206,6 @@ The following guidance is strongly recommended to help your widget feel at home 
 > [!TIP]
 > Start with [Widget border and padding](#widget-border-and-padding). It frames everything else in this section.
 
-
-
 ### Widget border and padding
 
 Teams provides the iframe that your widget renders in, but doesn't add a border, corner radius, or background to it. Add your own border and padding so your widget reads as a contained unit within the message. <br>
@@ -215,7 +215,6 @@ This matters because the message bubble’s background normally frames a message
 - Add a border and padding around your widget's content
 - Choose a border color, corner radius, and background that fit your design. [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) and color tokens are a good starting point if you want your widget to feel native to Teams
 - Use the recommended 16px padding described in [Spacing](#spacing)
-
 
 <table>
 <tr>
@@ -234,7 +233,6 @@ This matters because the message bubble’s background normally frames a message
 <td><img src="../assets/images/html-widgets/widget-frame-compact-without.png" alt="The same widget with no message bubble, no border, and no padding. The content has no visible edge and appears to float on the chat canvas."></td>
 </tr>
 </table>
-
 
 ### Visual design
 
