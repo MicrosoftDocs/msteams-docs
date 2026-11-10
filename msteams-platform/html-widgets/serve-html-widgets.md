@@ -225,7 +225,9 @@ if (widget) {
 // to your model.
 ```
 
-An MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](send-html-widgets.md#mix-markdown-and-widgets).
+AAn MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](send-html-widgets.md#mix-markdown-and-widgets).
+
+Test the supplied widget on Teams mobile against the [responsive scaling guidance](ux-guidelines.md#responsive-scaling). If layout or interaction changes are needed, work with the MCP server owner.
 
 ### Forward the widget's tool calls
 

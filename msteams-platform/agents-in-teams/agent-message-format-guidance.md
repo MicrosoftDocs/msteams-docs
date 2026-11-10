@@ -114,7 +114,7 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 Use for rich, stateful, interactive experiences beyond what a card can offer — embedded charts, live data, multi-step flows, or custom UI. Widgets render as a pane, not inline in chat. Widgets render as an iframe inline in chat.
 
 > [!NOTE]
-> Unlike Adaptive Cards, HTML widgets use a single fluid layout that scales continuously across widths. If your content requires significantly different layouts at different sizes, consider Adaptive Cards instead.
+> Unlike Adaptive Cards, HTML widgets use a single fluid layout that scales continuously across widths. Your widget is responsible for adapting its layout and interactions to mobile containers and touch input. See [Responsive scaling](../html-widgets/ux-guidelines.md#responsive-scaling). If your content requires significantly different layouts at different sizes, consider Adaptive Cards instead.
 
 **Use for:**
 
