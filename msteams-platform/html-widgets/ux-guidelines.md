@@ -419,7 +419,7 @@ Inside your widget's frame, use containers to group related content and create v
 
 #### Spacing
 
-The recommended padding inside your widget's border is 16px (spacingHorizontalL / spacingVerticalL) on all sides.
+The recommended padding inside your widget's border is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
 
 The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents.
 
@@ -514,6 +514,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 :::row:::
   :::column:::
     ### ✅ Do
+    - Add a border and padding so your widget holds together with or without a message bubble
     - Keep widgets lightweight and action-oriented
     - Support up to two primary actions
     - Use the expanded surface for deep navigation or multi-step workflows
@@ -524,6 +525,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
   :::column-end:::
   :::column:::
     ### ❌ Don't
+    - Don't rely on the message bubble to separate your widget from the chat
     - Don't embed a full application experience inside a widget
     - Don't recreate Teams chat capabilities such as prompt input or retry controls
     - Don't hardcode colors — use Fluent 2 tokens or CSS variables
