@@ -202,7 +202,8 @@ Widgets must meet all of the following requirements to be accepted by the Teams 
 The following guidance is strongly recommended to help your widget feel at home in Teams. Partners may deviate for legitimate brand or design reasons, but should do so intentionally.
 
 > [!TIP]
-> Start with Widget border and padding. It frames everything else in this section.
+> Start with [Widget border and padding](#widget-border-and-padding). It frames everything else in this section.
+
 
 
 ### Widget border and padding
