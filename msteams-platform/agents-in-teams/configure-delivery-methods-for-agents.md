@@ -38,7 +38,7 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI. Update by runnin
 ## Configure the agent's bot registration
 
 > [!Warning]
-> You must be the Entra owner of the agent for which you are enabling socket mode. If you do not have Entra ownership of the bot, you will receive a `403` error code. Ask your tenant admin to add you as an owner of the Entra app if this occurs.
+> To enable socket mode, you must be an owner of the Microsoft Entra ID app registration associated with the bot. If you aren't an owner, you'll receive a `403` error. Ask your tenant administrator to add you as an owner of that app registration.
 
 **In Teams Developer Portal:**
 
