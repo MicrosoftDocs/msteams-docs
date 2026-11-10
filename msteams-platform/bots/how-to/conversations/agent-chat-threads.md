@@ -3,7 +3,7 @@ title: Use threads in channels and one-on-one agent chats in Microsoft Teams
 description: Understand agent reply behavior and conversation context when using threads in Teams channels and one-on-one agent chats.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 10/26/2026
+ms.date: 11/10/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 In Microsoft Teams, users can start a thread in a one-on-one chat with an agent to keep a follow-up discussion with its original message. Agents can also participate in threads in channels. The way an agent's reply is placed depends on whether the incoming message appears in the main chat or in a thread.
 
-This article covers threads in **one-on-one agent chats** and **channels**. Group chats don't support threads.
+This article covers threads in **one-on-one agent chats**, including chats with agentic users, and **channels**. Group chats don't support threads.
 
 ## Understand messages in a chat and a thread
 
@@ -89,16 +89,16 @@ teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 
 ### Reply in a one-on-one thread
 
-Use the incoming chat ID and root message ID to explicitly target an L2 reply. The examples use the SDK `reply` method with response text.
+Use the incoming chat ID and root message ID to explicitly target an L2 reply. For an incoming L1 message, use its `activity.id` as the root ID. For an incoming L2 message, use `channelData.replyChain.id`. The examples use the SDK `reply` method with response text.
 
-The following examples show explicit thread targeting in a one-on-one chat. `replyChain.id` is optional, so check that it is available before calling `reply`.
+The following examples show how to reply in a thread for either an L1 or L2 incoming message.
 
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ activity }) => {
   const chatId = activity.channelData?.chat?.id;
-  const rootId = activity.channelData?.replyChain?.id;
+  const rootId = activity.channelData?.replyChain?.id ?? activity.id;
   if (chatId && rootId) {
     await app.reply(chatId, rootId, 'Replying in the thread');
   }
@@ -114,7 +114,7 @@ app.on('message', async ({ activity }) => {
 async def on_message(ctx: ActivityContext[MessageActivity]):
     data = ctx.activity.channel_data
     chat_id = data.chat.id if data and data.chat else None
-    root_id = data.reply_chain.id if data and data.reply_chain else None
+    root_id = data.reply_chain.id if data and data.reply_chain else ctx.activity.id
     if chat_id and root_id:
         await app.reply(chat_id, root_id, 'Replying in the thread')
 ```
@@ -128,7 +128,7 @@ teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
 {
     var data = context.Activity.ChannelData;
     string? chatId = data?.Chat?.Id;
-    string? rootId = data?.ReplyChain?.Id;
+    string? rootId = data?.ReplyChain?.Id ?? context.Activity.Id;
     if (!string.IsNullOrEmpty(chatId) && !string.IsNullOrEmpty(rootId))
     {
         await teamsApp.ReplyAsync(
@@ -163,7 +163,7 @@ if (destinationId) {
 data = ctx.activity.channel_data
 destination_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
 if destination_id:
-  await app.send(destination_id, 'A new top-level message')
+    await app.send(destination_id, 'A new top-level message')
 ```
 
 ::: zone-end
@@ -175,14 +175,30 @@ var data = context.Activity.ChannelData;
 string? destinationId = data?.Chat?.Id ?? data?.Channel?.Id;
 if (!string.IsNullOrEmpty(destinationId))
 {
-await teamsApp.SendAsync(
-  destinationId,
-  "A new top-level message",
-  cancellationToken: cancellationToken);
+    await teamsApp.SendAsync(
+        destinationId,
+        "A new top-level message",
+        cancellationToken: cancellationToken);
 }
 ```
 
 ::: zone-end
+
+## Send messages without the SDK (preview)
+
+Agents that don't use the Teams SDK can send an activity to the conversation activities endpoint to create a top-level message:
+
+```http
+POST {serviceUrl}/v3/conversations/{conversationId}/activities
+```
+
+To send a threaded reply, post the activity to the reply chain endpoint. Use `channelData.chat.id` for a one-on-one chat or `channelData.channel.id` for a channel as `chatOrChannelId`. Use the root message ID as `rootId`.
+
+```http
+POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootId}
+```
+
+Setting `replyToId` on the activity doesn't determine its placement. Include the standard activity payload and authenticate the request as described in [Build a conversational capability](../../build-conversational-capability.md).
 
 ### Threaded replies and quoted replies
 
@@ -196,7 +212,7 @@ The existing Teams SDK channel examples use send methods for responses without a
 
 In channels, users expect responses to their messages to appear in the associated thread. Keep top-level channel messages for proactive messages that are intended to start a new conversation.
 
-In one-on-one chats, use the default context-based response behavior shown above. A response matches the incoming message level. Let users start a thread when they want to continue a discussion there. The agent's response stays at that level.
+In one-on-one chats, recommend that agents respond in a thread for both top-level and threaded user messages. A response to a top-level message starts a thread under that message. A response to a threaded message stays in the same thread. This recommendation differs from the SDK's default context-based placement for a top-level message, which remains at L1. To follow the recommendation, explicitly target the root message when responding to a top-level message. The same guidance applies to chats with agentic users.
 
 ### Use threads as context boundaries
 
@@ -208,7 +224,7 @@ For an AI-powered agent, distinguish message placement from model context. A thr
 
 Treat conversation IDs as opaque values. Don't parse or construct them to infer a relationship between a chat and a thread.
 
-For proactive replies, store `channelData.chat.id` and `channelData.replyChain.id` for a one-on-one thread, or `channelData.channel.id` and `channelData.replyChain.id` for a channel thread. If the recipient is an agentic user, also store the agentic identity required to send to that user.
+For proactive replies in a thread, store the chat or channel ID and the root message ID. For an L2 message, the root ID is `channelData.replyChain.id`. For an L1 message that you want to follow up on in a new thread, the root ID is the message's `activity.id`. If the recipient is an agentic user, also store the agentic identity required to send to that user.
 
 ## Considerations for proactive messages
 
@@ -224,7 +240,7 @@ To proactively reply in a thread, call `app.reply(chatId, replyChainId, text)` w
 // Store when the message arrives.
 const saved = {
   chatOrChannelId: activity.channelData?.chat?.id ?? activity.channelData?.channel?.id,
-  rootId: activity.channelData?.replyChain?.id,
+  rootId: activity.channelData?.replyChain?.id ?? activity.id,
 };
 
 // Later, outside a handler.
@@ -241,7 +257,7 @@ if (saved.chatOrChannelId && saved.rootId) {
 # Store when the message arrives.
 data = ctx.activity.channel_data
 chat_or_channel_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
-root_id = data.reply_chain.id if data and data.reply_chain else None
+root_id = data.reply_chain.id if data and data.reply_chain else ctx.activity.id
 
 # Later, outside a handler.
 if chat_or_channel_id and root_id:
@@ -256,7 +272,7 @@ if chat_or_channel_id and root_id:
 // Store when the message arrives.
 var data = context.Activity.ChannelData;
 string? chatOrChannelId = data?.Chat?.Id ?? data?.Channel?.Id;
-string? rootId = data?.ReplyChain?.Id;
+string? rootId = data?.ReplyChain?.Id ?? context.Activity.Id;
 
 // Later, outside a handler.
 if (!string.IsNullOrEmpty(chatOrChannelId) && !string.IsNullOrEmpty(rootId))

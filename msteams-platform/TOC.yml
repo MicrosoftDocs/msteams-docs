@@ -92,6 +92,9 @@
     - name: Channel and group chat conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
+    - name: Threads in channels and one-on-one agent chats
+      href: bots/how-to/conversations/agent-chat-threads.md
+      displayName: threaded messages, reply chains, posts layout, threads layout, one-on-one chat, L1, L2, thread reply
     - name: Shared and private channels
       href: build-apps-for-shared-private-channels.md
       displayName: shared channels, private channels

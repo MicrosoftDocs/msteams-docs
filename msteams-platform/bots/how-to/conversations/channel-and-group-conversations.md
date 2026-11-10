@@ -25,6 +25,8 @@ In group chats and channels, design your agent for collaborative conversations w
 
 ## Threaded conversations
 
+For an overview of how message placement works in channels and one-on-one agent chats, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
+
 ::: zone pivot="teams-sdk-csharp"
 
 In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `SendAsync()` to send a message in the same thread without quoting, or `ReplyAsync()` to send with a visual quote of the inbound message.

@@ -94,6 +94,7 @@ After you get the appropriate address information, you can send your message.
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.SendAsync()` method and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
 To proactively send a message as a reply to a thread in a channel, use `app.ReplyAsync()` with both the conversation ID and the ID of the thread's root message.
+For message placement and proactive thread-reply guidance across channels and one-on-one agent chats, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
 
 > [!NOTE]
 > Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
