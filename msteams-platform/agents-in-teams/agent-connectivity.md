@@ -54,7 +54,7 @@ During your agent creation in Teams Developer Portal or Teams CLI, you'll be ask
 
 **Socket mode**
 
-It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the web socket connections for you. Steps to connecting your agent to Teams via socket mode with Teams SDK can be found in the *Configure delivery methods for agents* guide, [here](configure-delivery-methods-for-agents.md).
+It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the WebSocket connections for you. To connect your agent to Teams via socket mode with Teams SDK see [Configure delivery methods for an agent](configure-delivery-methods-for-agents.md).
 
 If you prefer to use another language or framework with socket mode, steps to connecting your agent to Teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, [here](connect-agent-without-sdk.md).
 

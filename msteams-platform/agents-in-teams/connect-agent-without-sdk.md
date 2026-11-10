@@ -8,13 +8,13 @@ ms.topic: article
 
 # Connect an agent to Teams without an SDK
 
-> [!Warning]
+> [!Note]
 >
 > Socket mode is in public preview. It's recommended for developing and testing agents. For agents in production, use an HTTPS endpoint. Preview features can change before general availability.
 
 > [!Note]
 >
-> We recommend that using the Teams SDK, which implements everything in this article. You can see the configuring guide with Teams SDK, [here](configure-delivery-methods-for-agents.md).
+> We recommend that you use the Teams SDK, which implements everything in this article. For SDK configuration instructions see [Configure delivery method for an agent](configure-delivery-methods-for-agents.md).
 
  This article describes the protocol used by the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to Agent Communication Service (ACS). An agent then receives activities either at an HTTPS endpoint or over socket mode.
 
@@ -88,15 +88,15 @@ In socket mode, your agent opens sockets to ACS and receives activities over the
 
 ### 1. Call connect
 
-Call the connect endpoint for a region with the agent's token (see [Get a token](#implement-acs-request-construction)):
+Call the connect endpoint for a geo with the agent's token (see [Get a token](#implement-acs-request-construction)):
 
 ```http
-POST https://botapi.skype.com/{region}/v3/websockets/connect
+POST https://{geo}.botapi.skype.com/v3/websockets/connect
 Authorization: Bearer <token>
 Content-Length: 0
 ```
 
-`{region}` is `amer`, `emea`, or `apac`. A successful response is `200 OK`:
+`{geo}` is `amer`, `emea`, or `apac`. A successful response is `200 OK`:
 
 ```json
 {
@@ -145,7 +145,7 @@ async function getToken() {
 async function connect(region, replacesConnectionId) {
   const headers = { authorization: `Bearer ${await getToken()}`, "content-length": "0" };
   if (replacesConnectionId) headers["x-ms-socket-replaces-connection-id"] = replacesConnectionId; // see step 5
-  const res = await fetch(`https://botapi.skype.com/${region}/v3/websockets/connect`, { method: "POST", headers });
+  const res = await fetch(`https://${region}.botapi.skype.com/v3/websockets/connect`, { method: "POST", headers });
   if (!res.ok) {
     const error = new Error(`Connect failed: ${res.status} ${await res.text()}`);
     error.status = res.status;
@@ -307,9 +307,9 @@ Before ACS closes a socket on purpose, it calls the client method `SocketClosing
 
 Act on `code` to determine how to handle disconnection. `reason` is for human-readable text and can change. For a `code` you don't recognize, follow `reconnect`. Many closes have no notice, for example, when the socket's token expires or an ACS service instance restarts. Treat any close without a notice as temporary, and reconnect.
 
-### 7. Connect in every region
+### 7. Connect in every geo
 
-Run steps 1-6 for each region on its own, so a problem in one region doesn't affect the others:
+Run steps 1-6 for each geo on its own, so global user traffic to the bot can be handled through the socket communication:
 
 ```javascript
 async function openWithRetry(region, handleActivity, replacesConnectionId) {
