@@ -224,8 +224,8 @@ This matters because the message bubble’s background normally frames a message
 </tr>
 <tr>
 <th>With border and padding</th>
-<td><img src="../assets/images/html-widgets/widget-frame-cozy-with.png" alt="The same widget inside a message bubble, with a border and padding that set it apart from the message text."></td>
-<td><img src="../assets/images/html-widgets/widget-frame-compact-with.png" alt="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas."></td>
+<td style="background-color:#ffffff"><img src="../assets/images/html-widgets/widget-frame-cozy-with.png" alt="The same widget inside a message bubble, with a border and padding that set it apart from the message text."></td>
+<td style="background-color:#ffffff"><img src="../assets/images/html-widgets/widget-frame-compact-with.png" alt="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas."></td>
 </tr>
 <tr>
 <th>No border or padding</th>
