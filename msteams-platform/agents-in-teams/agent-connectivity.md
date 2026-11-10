@@ -66,6 +66,9 @@ This section explains what happens under the hood in socket mode, so you can ass
 
 Socket mode is built on [Azure SignalR Service](/azure/azure-signalr/signalr-overview). Your agent never sees an inbound connection:
 
+:::image type="content" source="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png" alt-text="Image shows sequence diagram showing how socket mode works.":::
+
+<!--
 ::: mermaid
 sequenceDiagram
     participant Agent as Your agent
@@ -74,14 +77,15 @@ sequenceDiagram
     participant Socket as ACS socket service (Azure SignalR)
     Agent->>Entra: Get a bot token (the agent's app credentials)
     Agent->>ACS: POST connect for a region, with the bot token
-    ACS-->>Agent: Socket URL and a socket access token
+    ACS-- >>Agent: Socket URL and a socket access token
     Agent->>Socket: Open the WebSocket (outbound, port 443)
-    Socket-->>Agent: SocketReady
+    Socket-- >>Agent: SocketReady
     Note over ACS,Agent: A user sends the agent a message
-    ACS->>Agent: Activity, over the socket
-    Agent-->>ACS: Reply frame, on the same call (an ack, or the invoke response)
+    ACS- >>Agent: Activity, over the socket
+    Agent-- >>ACS: Reply frame, on the same call (an ack, or the invoke response)
     Agent->>ACS: Send messages with the REST API (HTTPS)
 :::
+-->
 
 1. **Connect.** Your agent gets a token for its own app registration, the same token it uses to send messages, and calls the ACS connect endpoint for a region. ACS checks that socket mode is on for the agent and returns a URL and an access token for one socket.
 2. **Open the socket.** Your agent opens a WebSocket to that URL. Once ACS is ready to deliver to it, ACS sends a `SocketReady` message.
