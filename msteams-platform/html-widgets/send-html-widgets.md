@@ -7,7 +7,7 @@ ms.topic: reference
 ms.date: 11/03/2026
 ---
 
-# Send HTML Widgets
+# Send HTML widgets
 
 An HTML widget is an HTML document that Teams renders in a sandboxed iframe inside a chat message. Use widgets to bring a custom interactive interface into a conversation, so users can work with your bot without leaving the chat. Your bot sends the HTML in an extended Markdown message, and the widget connects to Teams to resize its interface and call the bot's tools.
 
@@ -48,7 +48,7 @@ A widget is an HTML document that Teams renders inside a sandboxed iframe in the
 | Piece      | What it is                                                         | Responsibilities                                                              |
 | ---------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | **Widget** | One HTML file with inline CSS and plain JavaScript. No frameworks. | Performs the handshake with Teams, reports its height, and calls tools.       |
-| **Bot**    | TypeScript code in your existing Teams SDK bot.                    | Sends the widget in an extended markdown message, and answers its tool calls. |
+| **Bot**    | TypeScript code in your existing Teams SDK bot.                    | Sends the widget in an extended Markdown message, and answers its tool calls. |
 
 ## Project layout
 
@@ -117,7 +117,7 @@ Widgets are sent in **extended markdown messages**: message activities whose `te
 ```
 ````
 
-Teams displays the code block as the widget. The message's `text` can also contain ordinary markdown around the code block (see [Mix markdown and widgets](#mix-markdown-and-widgets)).
+Teams displays the code block as the widget. The message's `text` can also contain ordinary Markdown around the code block (see [Mix Markdown and widgets](#mix-markdown-and-widgets)).
 
 The payload has these fields:
 
@@ -212,9 +212,9 @@ await send({
 > [!IMPORTANT]
 > Don't use the `buildHtmlWidgetMessage` or `buildHtmlWidgetMarkdown` helpers exported by `@microsoft/teams.apps`. They add their own handshake and height-reporting code to the widget's HTML, which conflicts with the widget's own code (Steps 3 and 4).
 
-### Mix markdown and widgets
+### Mix Markdown and widgets
 
-An extended markdown message can contain ordinary markdown around a widget. Build the message's `text` from an array of markdown strings and widgets, joined with blank lines:
+An extended Markdown message can contain ordinary Markdown around a widget. Build the message's `text` from an array of Markdown strings and widgets, joined with blank lines:
 
 ```ts
 import { createDiceWidget } from "./dice-widget";
@@ -767,7 +767,7 @@ A correlation ID identifies a widget. It does not prove who the user is. Check t
 
 Your existing bot needs two additions:
 
-1. A `send` call for the extended markdown message that contains the widget ([Step 2](#send-the-message)).
+1. A `send` call for the extended Markdown message that contains the widget ([Step 2](#send-the-message)).
 2. The `widget.callTool` route ([Step 6](#step-6-handle-tool-calls-in-the-bot)).
 
 The `<script>` element in `widgets/dice-widget.html` contains the code from [Step 3](#step-3-connect-the-widget-to-teams), [Step 4](#step-4-report-the-widgets-height), and [Step 5](#step-5-call-a-tool-from-the-widget), in that order.
@@ -789,7 +789,7 @@ To try it:
 **Sending the widget**
 
 - [ ] The widget is one HTML file with inline CSS and JavaScript.
-- [ ] The widget is sent in an extended markdown message (`textFormat: "extendedmarkdown"`), as an `html-widget` fenced code block containing the payload. The message is not built with `buildHtmlWidgetMessage` or `buildHtmlWidgetMarkdown`.
+- [ ] The widget is sent in an extended Markdown message (`textFormat: "extendedmarkdown"`), as an `html-widget` fenced code block containing the payload. The message is not built with `buildHtmlWidgetMessage` or `buildHtmlWidgetMarkdown`.
 - [ ] Any origin the HTML loads from is in `resourceDomains`; any origin it calls is in `connectDomains`.
 - [ ] The HTML contains no secrets.
 - [ ] Services that the widget calls accept calls from the widget's domain, `https://<hash>.widget-renderer.usercontent.microsoft`.
