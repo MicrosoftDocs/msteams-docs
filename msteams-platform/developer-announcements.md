@@ -17,7 +17,7 @@ Enable socket mode in your bot registration and configure your agent's runtime t
 
 Socket mode is intended for development and testing. For production agents, including bots published to the Teams Store, use an HTTPS endpoint.
 
-For setup instructions, see [Configure the delivery method for an agent](https://learn.microsoft.com/en-us/microsoftteams/platform/agents-in-teams/configure-delivery-methods-for-agents).
+For setup instructions, see [Configure the delivery method for an agent](/microsoftteams/platform/agents-in-teams/configure-delivery-methods-for-agents).
 
 ## Released: Agents can now stream in group chats, channels, and meetings
 
