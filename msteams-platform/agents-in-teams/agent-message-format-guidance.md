@@ -24,21 +24,21 @@ Teams agents can respond using four message formats. Choosing the right format o
 ### Key principles
 
 1. **Default to the simplest format that meets the need.** Plain text → Markdown → Adaptive Card → HTML widget.
-2. **Cards are for attraction, clarity and actions.** Include both informational and interactive elements in Adaptive Cards. Use cards when you need clarity, consistency, or polished presentation aligned with Teams' design system.
-3. **Widgets are an escalation path, not a default.** Validate on Adaptive Cards first. Escalate only when cards hit a hard ceiling such as live refresh, complex state, or custom layouts.
-5. **Avoid format mixing in a single turn.** A markdown block followed by a card in the same message creates visual noise. It is better to pick one format.
+1. **Cards are for attraction, clarity and actions.** Include both informational and interactive elements in Adaptive Cards. Use cards when you need clarity, consistency, or polished presentation aligned with Teams' design system.
+1. **Widgets are an escalation path, not a default.** Validate on Adaptive Cards first. Use HTML widgets only when cards hit a hard ceiling such as live refresh, complex state, or custom layouts.
+1. **Avoid format mixing in a single turn.** A markdown block followed by a card in the same message creates visual noise. It is better to pick one format.
 
-### Quick-Reference Cheat Sheet
+### Quick-reference cheat sheet
 
-| Scenario in agent's message | Recommended Format |
+| Scenario in agent's message | Recommended format |
 | --- | --- |
-| Simple yes/no or single-sentence confirmation | Plain text |
+| Simple yes or no or single-sentence confirmation | Plain text |
 | Step-by-step instructions or numbered list | Markdown |
 | User must approve or reject something | Adaptive Card |
 | Code snippet or technical reference | Markdown |
 | Real-time service health or live status monitor | HTML widget |
 | Presenting options for the user to choose from | Adaptive Card |
-| Action completed or action failed | Plain Text |
+| Action completed or action failed | Plain text |
 | Meeting recap or structured summary | Markdown |
 | Form the user needs to fill out and submit | Adaptive Card |
 | Live sales pipeline or updating data feed | HTML widget |
@@ -64,7 +64,7 @@ Use when the response is conversational, brief, or a single-sentence fact. Plain
 
 **Example:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-plain-text.png" alt-text="Image shows a sample of Plain Text message format." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-plain-text.png" alt-text="Image shows a sample of Plain text message format." border="false":::
 
 ## Markdown
 
@@ -82,9 +82,9 @@ Use when you need lightweight structure — headers, bullets, bold, inline code 
 
 **Example:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-markdown.png" alt-text="Image shows a sample of markdown message format." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-markdown.png" alt-text="Image shows a sample of Markdown message format." border="false":::
 
-## Adaptive card
+## Adaptive Card
 
 Use when you need a structured, visually rich layout with actionability. Cards may include both informational and interactive elements. Adaptive Cards support components such as badges, progress indicators, tables, charts, and forms, and automatically adapt to Teams’ design language, accessibility modes, and themes (light, dark, high contrast).
 
@@ -103,11 +103,11 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 
 **Example:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card.png" alt-text="Image shows a sample of adaptive card message format." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card.png" alt-text="Image shows a sample of Adaptive Card message format." border="false":::
 
 **Design samples:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of adaptive card." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of Adaptive Cards." border="false":::
 
 ## HTML widget
 
@@ -128,11 +128,11 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 **Example:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget.png" alt-text="Image shows a sample of html widget message format." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget.png" alt-text="Image shows a sample of HTML widget message format." border="false":::
 
 **Design samples:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png" alt-text="Image shows multiple design samples of html widgets." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png" alt-text="Image shows multiple design samples of HTML widgets." border="false":::
 
 ## Next steps
 
