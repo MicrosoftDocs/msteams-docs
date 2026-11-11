@@ -472,7 +472,7 @@ function reportHeight(root) {
 
 Because the iframe is sized from the widget, the widget can't be sized from the iframe. To keep the widget's height driven by its content:
 
-- **Put all content inside one root element, and measure that element** with `getBoundingClientRect().height`. Don't measure `document.documentElement.scrollHeight` or `document.body.scrollHeight`: they are never smaller than the iframe, so the widget could grow but never shrink.
+- **Put all content inside one root element, and measure that element** with `getBoundingClientRect().height`. Don't measure `document.documentElement.scrollHeight` or `document.body.scrollHeight`. These values are never smaller than the iframe, so the widget could grow but never shrink.
 - **Report the exact height.** Don't round it. Rounding up leaves a strip below the widget, and rounding down clips it.
 - **Don't size the widget to fit the iframe.** Don't use `100vh`, or `height: 100%` on `html`, `body`, or the root element.
 - **Keep all content inside the root, in the normal page flow.** Content placed outside the root with negative margins or `position: fixed` is not measured, so it can be clipped.
@@ -585,7 +585,7 @@ connect("Dice roller").then(
 );
 ```
 
-- The button is disabled while a call is in progress, so a quick double click does not roll twice.
+- The button is disabled while a call is in progress, so a quick double-click does not roll twice.
 - Each new roll and each error message makes the root taller. The `ResizeObserver` from Step 4 reports the new height.
 
 ## Step 6: Handle tool calls in the bot
