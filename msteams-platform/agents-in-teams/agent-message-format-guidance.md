@@ -12,7 +12,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 ## Format profiles overview
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of Generative UI: Plain text, Markdown, Adaptive Cards and HTML widget." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of generative UI: plain text, Markdown, Adaptive Cards, and HTML widgets." border="false":::
 
 | # | Format | Best for | Complexity of implementation |
 | --- | --- | --- | --- |
@@ -24,8 +24,8 @@ Teams agents can respond using four message formats. Choosing the right format o
 ### Key principles
 
 1. **Default to the simplest format that meets the need.** Plain text → Markdown → Adaptive Card → HTML widget.
-2. **Cards are for attraction, clarity and actions.** Include both informational and interactive elements in Adaptive Cards. Use cards when you need clarity, consistency or polished presentation aligned with Teams' design system.
-3. **Widgets are for an escalation path, not a default.** Validate on Adaptive Cards first; escalate only when cards hit a hard ceiling (live refresh, complex state, custom layouts etc.).
+2. **Cards are for attraction, clarity and actions.** Include both informational and interactive elements in Adaptive Cards. Use cards when you need clarity, consistency, or polished presentation aligned with Teams' design system.
+3. **Widgets are an escalation path, not a default.** Validate on Adaptive Cards first. Escalate only when cards hit a hard ceiling such as live refresh, complex state, or custom layouts.
 5. **Avoid format mixing in a single turn.** A markdown block followed by a card in the same message creates visual noise. It is better to pick one format.
 
 ### Quick-Reference Cheat Sheet
