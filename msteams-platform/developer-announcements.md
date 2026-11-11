@@ -9,6 +9,19 @@ ms.date: 10/28/2026
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
+## Retiring: Upcoming changes to file upload and download authentication for Microsoft Teams agents
+
+*November 10th, 2026*
+
+Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations and laying the foundation for more durable file access.
+
+These changes are intended to strengthen security, align with Microsoft OneDrive and SharePoint authentication requirements, and support future file-sharing capabilities across Teams conversations.
+
+**Action required:** If your agent uses the downloadUrl in file attachments, or the uploadUrl it gets after a user accepts a file consent card to download or upload files, you'll need to migrate to requests that include your agent's own Microsoft Entra ID access token, obtained with a certificate, federated identity credential (FIC) or managed identity, to continue to download or upload files. Client secrets are not longer supported. If your agent downloads files with the Teams SDK, update to the latest version once it's released (expected by the end of November 2026) and add one of these credentials to its configuration. For more details see [Prepare for upcoming file authentication changes](bots/how-to/bots-filesv4.md)
+
+**Deadline:** Changes to your agent must be made and deployed by 12/31/2026 or you risk your agent not being able to upload or download files or presenting errors to end users.
+
+
 ## Released: Agents can now stream in group chats, channels, and meetings
 
 *October 28, 2026*
