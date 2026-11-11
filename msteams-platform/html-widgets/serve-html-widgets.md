@@ -16,12 +16,12 @@ Use this walkthrough when an MCP server supplies the widget rather than your age
 ## Prerequisites
 
 - A working TypeScript Teams SDK bot available on a public HTTPS endpoint.
-- An MCP client connected to a server that provides MCP App tools and widget resources, using Client from @modelcontextprotocol/sdk.
-- The [widget Markdown helper](send-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](send-html-widgets.md#step-6-handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses handleWidgetTool for calls that aren't from MCP widgets.
+- An MCP client connected to a server that provides MCP App tools and widget resources, using `Client` from `@modelcontextprotocol/sdk`.
+- The [widget Markdown helper](send-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](send-html-widgets.md#step-6-handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses `handleWidgetTool` for calls that aren't from MCP widgets.
 
 ## Widgets from MCP servers
 
-Some MCP servers return a widget along with a tool's result: these tools are MCP App tools. Your bot can show those widgets in Teams the same way as its own widgets. It sends each widget in an extended markdown message, and forwards the widget's tool calls to the MCP server that provided it.
+Some MCP servers return a widget along with a tool's result: these tools are MCP App tools. Your bot can show those widgets in Teams the same way as its own widgets. It sends each widget in an extended Markdown message and forwards the widget's tool calls to the MCP server that provided it.
 
 This section assumes that your bot already calls tools on MCP servers with a `Client` from the MCP TypeScript SDK (`@modelcontextprotocol/sdk`). It uses the correlation ID from [Optional: identify which widget is calling](send-html-widgets.md#optional-identify-which-widget-is-calling) to route each widget's tool calls to the right MCP server.
 
