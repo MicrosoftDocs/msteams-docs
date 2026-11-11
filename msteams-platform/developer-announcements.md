@@ -11,6 +11,8 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## Preview: Socket mode for Teams agents
 
+*November 11, 2026*
+
 Socket mode lets your agent receive Teams activities over an outbound WebSocket connection, without a public HTTPS endpoint or development tunnel.
 
 Enable socket mode in your bot registration and configure your agent's runtime to use it. We recommend the Teams SDK, which manages connections, token refresh, and reconnection for you.
