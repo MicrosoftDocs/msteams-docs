@@ -115,6 +115,18 @@
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
     - name: Manage conversation state
       href: agents-in-teams/manage-conversation-state.md
+  - name: Agentic identity
+    items:
+    - name: Overview
+      href: concepts/agentic-identity/overview.md
+    - name: Setup
+      href: concepts/agentic-identity/setup.md
+    - name: Receiving and sending messages
+      href: concepts/agentic-identity/receiving-sending-messages.md
+    - name: Lifecycle events
+      href: concepts/agentic-identity/lifecycle-events.md
+    - name: Observability and governance
+      href: concepts/agentic-identity/observability-governance.md
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -124,6 +136,22 @@
     items:
     - name: Overview
       href: teams-sdk-overview.md
+    - name: Why an SDK?
+      href: concepts/why-sdk.md
+    - name: Code basics
+      href: concepts/sdk-code-basics.md
+    - name: App basics
+      href: concepts/sdk-app-basics.md
+    - name: Listening to events
+      href: concepts/listening-events.md
+    - name: Listening to activities
+      href: concepts/listening-activities.md
+    - name: Graph API client
+      href: concepts/sdk-graph-api-client.md
+    - name: Agent Communication Service API client
+      href: concepts/sdk-teams-api-client.md
+    - name: OpenTelemetry (.NET)
+      href: concepts/sdk-opentelemetry.md
     - name: Add middleware and logging
       href: agents-in-teams/agent-observability.md
       displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
