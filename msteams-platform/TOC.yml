@@ -115,6 +115,18 @@
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
     - name: Manage conversation state
       href: agents-in-teams/manage-conversation-state.md
+  - name: Agentic identity
+    items:
+    - name: Overview
+      href: concepts/agentic-identity/overview.md
+    - name: Setup
+      href: concepts/agentic-identity/setup.md
+    - name: Receiving and sending messages
+      href: concepts/agentic-identity/receiving-sending-messages.md
+    - name: Lifecycle events
+      href: concepts/agentic-identity/lifecycle-events.md
+    - name: Observability and governance
+      href: concepts/agentic-identity/observability-governance.md
 - name: Tools and SDKs
   items:
   - name: Overview
