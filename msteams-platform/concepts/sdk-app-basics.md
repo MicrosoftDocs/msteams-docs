@@ -22,6 +22,14 @@ It is responsible for:
 
 :::image type="content" source="~/assets/essentials-app-basics-1.png" alt-text="Flowchart showing Teams sending requests to the /api/messages endpoint of an ASP.NET Core app, through turn middleware and activity routing to your handlers, with auth and utilities also feeding the handlers." lightbox="~/assets/essentials-app-basics-1.png" :::
 
+## Definitions
+
+- Activity: The Teams-specific payload that flows between the user and your app. Activities include things like messages, reactions, adaptive card actions, and installs.
+- InvokeActivity: A specific kind of activity triggered by user interaction (like submitting a form), which may or may not require a response.
+- Handler: The logic in your application that reacts to an activity. You register handlers (`OnMessage`, `OnMessageReaction`, `OnEvent`, …) that decide what to do, when, and how to respond.
+
+:::image type="content" source="~/assets/essentials-overview-1.png" alt-text="Flowchart showing Teams activities, sign-in events, and other incoming events reaching an ASP.NET Core app server, then passing through turn middleware and the activity router to activity handlers for message, card, installation, and other activities." lightbox="~/assets/essentials-overview-1.png" :::
+
 ## Core Components
 
 **Hosting (ASP.NET Core)**
@@ -70,6 +78,13 @@ It is responsible for:
 
 :::image type="content" source="~/assets/essentials-app-basics-2.png" alt-text="Flowchart showing Teams passing through core plugins, events, activity routing, and secondary plugins to application logic, with auth and utilities also feeding the application logic." lightbox="~/assets/essentials-app-basics-2.png" :::
 
+## Definitions
+
+- Event: Anything interesting that happens on Teams — or within your application as a result of handling an earlier event.
+- Activity: A special type of Teams-specific event. Activities include things like messages, reactions, and adaptive card actions.
+- InvokeActivity: A specific kind of activity triggered by user interaction (like submitting a form), which may or may not require a response.
+- Handler: The logic in your application that reacts to events or activities. Handlers decide what to do, when, and how to respond.
+
 ## Core Components by Language
 
 **Plugins**
@@ -102,6 +117,14 @@ It is responsible for:
 
 ## Plugins
 
-You'll notice that plugins are present in the front, which exposes your application as a server, and also in the back after the app does some processing to the incoming message. The plugin architecture allows the application to be built in an extremely modular way. Each plugin can be swapped out to change or augment the functionality of the application. The plugins can listen to various events that happen (e.g. the server starting or ending, an error occuring, etc), activities being sent to or from the application and more. This allows the application to be extremely flexible and extensible.
+You'll notice that plugins are present in the front, which exposes your application as a server, and also in the back after the app does some processing to the incoming message. The plugin architecture allows the application to be built in an extremely modular way. Each plugin can be swapped out to change or augment the functionality of the application. The plugins can listen to various events that happen (e.g. the server starting or ending, an error occurring, etc), activities being sent to or from the application and more. This allows the application to be extremely flexible and extensible.
 
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+:::image type="content" source="~/assets/essentials-overview-3.png" alt-text="Flowchart showing Teams activities, sign-in events, and other incoming events reaching the app server, which sends activity events to the activity router and incoming and outgoing events to an event handler decorator, with the router dispatching to activity handler decorators." lightbox="~/assets/essentials-overview-3.png" :::
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+:::image type="content" source="~/assets/essentials-overview-4.png" alt-text="Flowchart showing Teams activities, sign-in events, and other incoming events reaching the app server, which sends activity events to the activity router and incoming and outgoing events to an app.event() handler, with the router dispatching to app.on() activity handlers." lightbox="~/assets/essentials-overview-4.png" :::
 ::: zone-end
