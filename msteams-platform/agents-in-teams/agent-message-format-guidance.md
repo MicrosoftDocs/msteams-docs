@@ -99,7 +99,7 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 - Interview scheduling: candidate name, time slots, [Confirm Slot] actions
 - Recurring status dashboard with progress rings or charts
 
-**Avoid when:** Content is concise and purely informational (use Markdown); the experience requires live refresh or complex state management (use Widget).
+**Avoid when:** Content is concise and purely informational (use Markdown); the experience requires live refresh or complex state management (use HTML widgets).
 
 **Example:**
 
@@ -124,7 +124,7 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 - Live analytics dashboard refreshing every 30 seconds
 - Code diff viewer with syntax highlighting and inline comments
 
-**Avoid when:** The experience fits in a card (use Adaptive Cards instead), or the UI is too rich to belong in a Teams message at all — a full analytics suite, an interactive CAD viewer, or any app-scale UI should live on the web and be linked to, not embedded. Widgets could take longer to load, require extra infrastructure, and have limited support on classic Teams. Default to Adaptive Cards; escalate to Widget only when cards hit a hard ceiling.
+**Avoid when:** The experience fits in a card (use Adaptive Cards instead), or the UI is too rich to belong in a Teams message at all — a full analytics suite, an interactive CAD viewer, or any app-scale UI should live on the web and be linked to, not embedded. Widgets could take longer to load, require extra infrastructure, and have limited support on classic Teams. Default to Adaptive Cards; escalate to HTML widgets only when cards hit a hard ceiling.
 
 **Example:**
 
@@ -138,6 +138,6 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 - [Extended Markdown mode](../bots/how-to/format-your-bot-messages.md)
 - [Adaptive Cards](https://adaptivecards.microsoft.com/)
-- [Send HTML widget](../html-widgets/send-html-widgets.md)
+- [Send HTML widgets](../html-widgets/send-html-widgets.md)
 - [UX guidelines for HTML widgets in Microsoft Teams](../html-widgets/ux-guidelines.md)
 - [Accessibility guidelines for HTML widgets in Microsoft Teams 365](../html-widgets/accessibility-guidelines.md)
