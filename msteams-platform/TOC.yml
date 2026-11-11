@@ -135,7 +135,9 @@
     - name: Listening to activities
       href: concepts/listening-activities.md
     - name: Graph API client
-      href: concepts/sdk-graph-api-client.md      
+      href: concepts/sdk-graph-api-client.md
+    - name: Agent Communication Service API client
+      href: concepts/sdk-teams-api-client.md
     - name: Add middleware and logging
       href: agents-in-teams/agent-observability.md
       displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
