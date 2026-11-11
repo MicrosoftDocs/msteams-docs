@@ -9,7 +9,7 @@ ms.topic: article
 # Choose how your agent receives activity data from Teams
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommnedd to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommneded to use an HTTPS endpoint. Preview features can change before general availability.
 
 Teams agents do most of their work with Teams, especially chat, through Agent Communication Service (ACS), the service that connects agents to Teams. The connection between an agent and ACS is bidirectional. ACS sends data to your agent to tell it about activity in Teams in real time: messages, card actions, installs, reactions, meeting events, and more. Your agent sends data to ACS to act on that activity: reply, post a card, update a message, and so on.
 
