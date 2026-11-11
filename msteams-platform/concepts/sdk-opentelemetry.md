@@ -204,7 +204,7 @@ IChatClient chatClient = innerClient
     .Build();
 ```
 
-The `sourceName` parameter determines the `ActivitySource` name used for the emitted spans. If you use [Model Context Protocol (MCP)](../ai-integrations/mcp-server.md) tools, the MCP client also emits its own spans under the `"ModelContextProtocol"` source.
+The `sourceName` parameter determines the `ActivitySource` name used for the emitted spans. If you use [Model Context Protocol (MCP)](../agents-in-teams/integrate-ai/mcp-server.md) tools, the MCP client also emits its own spans under the `"ModelContextProtocol"` source.
 
 ### Step 2: Register the AI source and meter names
 

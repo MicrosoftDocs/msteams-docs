@@ -69,7 +69,7 @@ In the above example, the `ctx.activity` parameter is of type `MessageActivity`,
 ::: zone pivot="teams-sdk-typescript"
 In the above example, the `activity` parameter is of type `MessageActivity`, which has a `text` property. You'll notice that the handler here does not return anything, but instead handles it by `send`ing a message back. For message activities, Teams does not expect your application to return anything (though it's usually a good idea to send some sort of friendly acknowledgment!).
 
-[Other activity types](./activity-ref.md) have different properties and different required results. For a given handler, the SDK will automatically determine the type of `activity` and also enforce the correct return type.
+Other activity types have different properties and different required results. For a given handler, the SDK will automatically determine the type of `activity` and also enforce the correct return type.
 ::: zone-end
 
 ## Slash Commands
@@ -149,7 +149,7 @@ app.on('message', async ({ activity, send, next }) => {
 ## Activity handler chaining
 
 ::: zone pivot="teams-sdk-csharp"
-In SDK 2.1, activity handlers no longer form a next()-style processing chain. Instead, every handler that matches an activity is invoked in the order it was registered, and one handler cannot prevent subsequent matching handlers from running. If you need to intercept, short-circuit, or wrap request processing (for example, to stop execution when a condition is met), implement `ITurnMiddleware` and control whether to call `nextTurn(...)`. See [turn middleware](../middleware-error-handling.md) for details.
+In SDK 2.1, activity handlers no longer form a next()-style processing chain. Instead, every handler that matches an activity is invoked in the order it was registered, and one handler cannot prevent subsequent matching handlers from running. If you need to intercept, short-circuit, or wrap request processing (for example, to stop execution when a condition is met), implement `ITurnMiddleware` and control whether to call `nextTurn(...)`.
 
 > [!NOTE]
 > SDK 2.0 (Legacy). In SDK 2.0, activity handlers are chained. Call `context.Next()` to continue to the next matching handler; return without it to stop the chain. Registration order determines handler execution order.
@@ -237,14 +237,9 @@ app.on('message', async ({ activity }) => {
 
 ## Activity Reference
 
-::: zone pivot="csharp,python"
-This article is not available for the selected development language.
-::: zone-end
-
-::: zone pivot="typescript"
 The application supports a number of activity types:
 
-## Core Activity Routes
+### Core Activity Routes
 
 | Route            | Responsibility                                                                                  |
 | ---------------- | ----------------------------------------------------------------------------------------------- |
@@ -253,7 +248,7 @@ The application supports a number of activity types:
 | `deleteUserData` | Triggered when a user requests their data to be deleted according to privacy regulations        |
 | `mention`        | Triggered when the bot is @mentioned in a conversation                                          |
 
-## Configuration Routes
+### Configuration Routes
 
 | Route           | Invoke Path     | Responsibility                                                |
 | --------------- | --------------- | ------------------------------------------------------------- |
@@ -262,21 +257,21 @@ The application supports a number of activity types:
 | `tab.open`      | `tab/fetch`     | Initializes tab configuration experiences                     |
 | `tab.submit`    | `tab/submit`    | Processes tab configuration submissions                       |
 
-## Dialog Routes
+### Dialog Routes
 
 | Route           | Invoke Path   | Responsibility               |
 | --------------- | ------------- | ---------------------------- |
 | `dialog.open`   | `task/fetch`  | Opens a dialog               |
 | `dialog.submit` | `task/submit` | Processes dialog submissions |
 
-## Authentication Routes
+### Authentication Routes
 
 | Route                   | Invoke Path            | Responsibility                                |
 | ----------------------- | ---------------------- | --------------------------------------------- |
 | `signin.token-exchange` | `signin/tokenExchange` | When a token exchange happens during SSO Auth |
 | `signin.verify-state`   | `signin/verifyState`   | When a verification passes after OAuth        |
 
-## Message Interaction Routes
+### Message Interaction Routes
 
 | Route             | Invoke Path                       | Responsibility                                                          |
 | ----------------- | --------------------------------- | ----------------------------------------------------------------------- |
@@ -284,7 +279,7 @@ The application supports a number of activity types:
 | `message.submit`  | `message/submitAction`            | Handles message action submissions                                      |
 | `card.action`     | `adaptiveCard/action`             | Triggered when a user interacts with an Adaptive Card button or control |
 
-## File Handling Routes
+### File Handling Routes
 
 | Route                  | Responsibility                                               |
 | ---------------------- | ------------------------------------------------------------ |
@@ -292,7 +287,7 @@ The application supports a number of activity types:
 | `file.consent.accept`  | Triggered when user accepts a file consent card for sharing  |
 | `file.consent.decline` | Triggered when user declines a file consent card for sharing |
 
-## Message Extension Routes
+### Message Extension Routes
 
 | Route                             | Invoke Path                            | Responsibility                                        |
 | --------------------------------- | -------------------------------------- | ----------------------------------------------------- |
@@ -308,7 +303,7 @@ The application supports a number of activity types:
 | `message.ext.edit`                | N/A                                    | Processes edits to message extension previews         |
 | `message.ext.send`                | N/A                                    | Handles sending of message extension content          |
 
-## Lifecycle Routes
+### Lifecycle Routes
 
 | Route            | Responsibility                                              |
 | ---------------- | ----------------------------------------------------------- |
@@ -317,7 +312,7 @@ The application supports a number of activity types:
 | `install.update` | Triggered when the app is updated in a team or chat         |
 | `handoff.action` | Manages handoffs from a different agent to your application |
 
-## Conversation Update Routes
+### Conversation Update Routes
 
 | Route             | Responsibility                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------ |
@@ -336,7 +331,7 @@ The application supports a number of activity types:
 | `messageUpdate`   | Triggered when a message is edited in a conversation with the bot                    |
 | `messageDelete`   | Triggered when a message is deleted in a conversation with the bot                   |
 
-## Meeting Routes
+### Meeting Routes
 
 | Route                     | Invoke Path                                         | Responsibility                                                             |
 | ------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -345,4 +340,5 @@ The application supports a number of activity types:
 | `meetingParticipantJoin`  | `application/vnd.microsoft.meetingParticipantJoin`  | Triggered when participants join a Teams meeting where the bot is present  |
 | `meetingParticipantLeave` | `application/vnd.microsoft.meetingParticipantLeave` | Triggered when participants leave a Teams meeting where the bot is present |
 | `readReceipt`             | `application/vnd.microsoft.readReceipt`             | Tracks when messages are read by users                                     |
+
 ::: zone-end

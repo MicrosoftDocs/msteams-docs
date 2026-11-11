@@ -15,7 +15,7 @@ The Teams SDK makes it easy to subscribe to these events and respond appropriate
 
 Here are the events that you can start building handlers for:
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 | **Event Name**      | **Description**                                                                |
 | ------------------- | ------------------------------------------------------------------------------ |
@@ -33,7 +33,7 @@ Here are the events that you can start building handlers for:
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 | **Event Name**      | **Description**                                                                |
 | ------------------- | ------------------------------------------------------------------------------ |
@@ -60,7 +60,7 @@ async def handle_error(event: ErrorEvent):
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.event('error', ({ error }) => {
@@ -90,11 +90,11 @@ async def handle_signin(event: SignInEvent):
 ```
 
 > [!TIP]
-> The app-wide `sign_in` event fires for every connection. To react to just one, use its flow's `@flow.on_signin` handler as shown above. See the [auth guide](../in-depth-guides/user-authentication.md).
+> The app-wide `sign_in` event fires for every connection. To react to just one, use its flow's `@flow.on_signin` handler as shown above. See [Authenticate users in Microsoft Teams](authentication/authentication.md).
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 When a user signs in using `OAuth` or `SSO`, use the graph api to fetch their profile and say hello.
 
@@ -112,6 +112,6 @@ graph.onSignInComplete(async (ctx, token) => {
 ```
 
 > [!TIP]
-> The app-wide `signin` event fires for every connection. To react to just one, use its flow's `onSignInComplete` callback as shown above. See the [auth guide](../in-depth-guides/user-authentication.md).
+> The app-wide `signin` event fires for every connection. To react to just one, use its flow's `onSignInComplete` callback as shown above. See the See [Authenticate users in Microsoft Teams](authentication/authentication.md).
 
 ::: zone-end
