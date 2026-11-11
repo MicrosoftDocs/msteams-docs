@@ -37,17 +37,17 @@ Teams and partners share responsibility for accessibility. The following table c
 
 | Requirement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Teams | Partner |
 | ------------------------------------------- | :-----: | :-------: |
-| Widget container label (e.g. "Scout widget") | ✅ | |
+| Widget container label (for example, "Scout widget") | ✅ | |
 | Tab stop for widget container | ✅ | |
 | Tab order of message elements | ✅ | |
 | Focus into and out of the widget container | ✅ | |
 | Widget-level loading and error states | ✅ | |
-| Keyboard navigation inside widget | | ✅ |
+| Keyboard navigation inside the widget | | ✅ |
 | ARIA labels for interactive elements | | ✅ |
 | Screen reader support for widget content | | ✅ |
 | Color contrast inside widget | | ✅ |
 | High contrast support inside widget | | ✅ |
-| Error handling for content inside widget | | ✅ |
+| Error handling for content inside the widget | | ✅ |
 
 ## Minimum accessibility bar for submission
 
@@ -77,10 +77,10 @@ Widgets must meet all of the following requirements to be accepted. Widgets that
 
 **Visible focus**: All interactive elements must have a clear, visible focus indicator that meets contrast requirements and is not removed via CSS without an accessible replacement.
 
-**Custom controls**: Custom widgets and controls must follow the keyboard interaction patterns defined in the [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) for their respective roles (for example,`button`, `menu`, `dialog`, `listbox`).
+**Custom controls**: Custom widgets and controls must follow the keyboard interaction patterns defined in the [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) for their respective roles (for example, `button`, `menu`, `dialog`, `listbox`).
 
 **Dialogs and modals**: Modal dialogs and overlays are possible within a widget but are not recommended. Because widgets render inside a small iframe, a modal will be constrained to that space and may feel disorienting to users. If your use case requires a modal, consider whether the expanded surface would be a better fit for that interaction.
-If you do implement a modal inside your widget, if you are using Fluent UI React v9 use the [Dialog](https://storybooks.fluentui.dev/react/?path=/docs/components-dialog--docs) or [Popover](https://storybooks.fluentui.dev/react/?path=/docs/components-popover--docs) components rather than a custom implementation, as they handle focus trapping, focus restoration, and ARIA attributes correctly out of the box. For custom modal behavior, [useModalAttributes](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-usemodalattributes--docs)  is available.
+If you do implement a modal inside your widget, if you are using Fluent UI React v9 use the [Dialog](https://storybooks.fluentui.dev/react/?path=/docs/components-dialog--docs) or [Popover](https://storybooks.fluentui.dev/react/?path=/docs/components-popover--docs) components rather than a custom implementation, as they handle focus trapping, focus restoration, and ARIA attributes correctly out of the box. For custom modal behavior, [useModalAttributes](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-usemodalattributes--docs) is available.
 
 **Focus restoration**: When an element is removed from the DOM after a user action (for example, after submitting a form or closing a panel), focus must be restored to a logical element rather than dropping to the document body. Use Fluent V9's [useRestoreFocusSource and useRestoreFocusTarget](https://storybooks.fluentui.dev/react/?path=/docs/utilities-focus-management-userestorefocussource--docs) hooks to handle this automatically.
 
@@ -128,7 +128,7 @@ Use live regions to announce important changes to screen readers:
 - `aria-live="polite"` for non-critical updates such as loading results
 - `aria-live="assertive"` for critical updates such as errors
 
-If you are using Fluent V9 and React, use [AriaLiveAnnouncer](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-arialiveannouncer--docs) with the [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) hook rather than implementing raw aria-live regions. If your widget includes text inputs and needs to announce updates while the user is typing, use [useTypingAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-usetypingannounce--docs) instead.
+If you are using Fluent V9 and React, use [AriaLiveAnnouncer](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-arialiveannouncer--docs) with the [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) hook rather than implementing raw `aria-live` regions. If your widget includes text inputs and needs to announce updates while the user is typing, use [useTypingAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-usetypingannounce--docs) instead.
 
 **Images**
 
@@ -259,12 +259,12 @@ For invalid fields:
 ## Loading states inside the widget
 
 > [!NOTE]
-> Teams handles the widget-level loading state. The requirements below apply to any loading states that occur within your widget content after initial render.
+> Teams handles the widget-level loading state. The requirements below apply to any loading states that occur within your widget content after the initial render.
 
-- **Visible indicator:** Show a clear loading indicator when your widget fetches or processes data after initial render
-- **Announcements:** Use `aria-live="polite"` to announce loading and completion states to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: true`
-- **Focus behavior:** Don't trap focus during loading — users must still be able to move focus within the widget
-- **Skeleton UI:** If you use skeleton screens, either hide them from assistive technologies using `aria-hidden="true"`, or provide meaningful labels that describe the loading state
+- **Visible indicator:** Show a clear loading indicator when your widget fetches or processes data after the initial render.
+- **Announcements:** Use `aria-live="polite"` to announce loading and completion states to screen readers. If using Fluent UI React v9, use [useAnnounce](https://storybooks.fluentui.dev/react/?path=/docs/utilities-aria-live-useannounce--docs) with `polite: true`.
+- **Focus behavior:** Don't trap focus during loading — users must still be able to move focus within the widget.
+- **Skeleton UI:** If you use skeleton screens, either hide them from assistive technologies using `aria-hidden="true"`, or provide meaningful labels that describe the loading state.
 
 ## Testing guidance
 
@@ -276,8 +276,8 @@ Start with an automated scan to catch the most common issues quickly. Automated 
 
 | Tool | Type | Notes |
 | --- | --- | --- |
-| [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — good starting point for catching missing labels, contrast failures, and structural issues. No install required. Run first. |
-| [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed than Lighthouse. Free version covers a broader range of WCAG violations with clearer remediation guidance. |
+| [Lighthouse](https://developer.chrome.com/docs/lighthouse) | Browser (Chrome DevTools) | Built into Chrome — a good starting point for catching missing labels, contrast failures, and structural issues. No install required. Run first. |
+| [axe DevTools](https://www.deque.com/axe/devtools/) | Browser extension | More detailed than Lighthouse. The free version covers a broader range of WCAG violations with clearer remediation guidance. |
 | [WAVE](https://wave.webaim.org/extension/) | Browser extension | Visual overlay that highlights issues directly on the page. Useful for quickly spotting missing alt text, form labels, and heading structure. |
 
 ### Step 2 — Verify contrast manually
@@ -299,8 +299,8 @@ Manual testing is required to verify keyboard behavior, screen reader output, an
 | Screen reader | Test with at least one screen reader — Narrator or NVDA on Windows, VoiceOver on Mac. Verify all elements are announced meaningfully. |
 | Zoom | Increase browser zoom to 200% and confirm text and interactive controls remain fully usable. |
 | Reduced motion | Enable reduced motion in OS settings and verify animations are minimized or disabled. |
-| Responsive | Test at narrow viewport widths representative of Teams chat container widths.  In Teams on iOS and Android, test both portrait and landscape orientations. Verify that primary content isn't clipped and actions are usable by touch without relying on hover. See [Responsive scaling](ux-guidelines.md#responsive-scaling). |
-| High contrast | Enable Windows High Contrast Mode and verify content, controls, and focus indicators remain visible. |
+| Responsive | Test at narrow viewport widths representative of Teams chat container widths. In Teams on iOS and Android, test both portrait and landscape orientations. Verify that primary content isn't clipped and actions are usable by touch without relying on hover. See [Responsive scaling](ux-guidelines.md#responsive-scaling). |
+| High Contrast | Enable Windows High Contrast Mode and verify content, controls, and focus indicators remain visible. |
 
 ## Related content
 
