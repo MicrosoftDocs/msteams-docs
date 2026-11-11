@@ -2,19 +2,19 @@
 title: Teams SDK Code Basics
 description: Understanding the structure and key components of a Teams SDK application including the Application class, dependency injection, and project organization.
 ms.topic: how-to
-zone_pivot_groups: dev-lang
+zone_pivot_groups: teams-sdk-languages
 ms.date: 11/11/2026
 ---
 
 # Teams SDK Code Basics
 
-After following the guidance in [the quickstart](quickstart.md) to create your first Teams application, let's review its structure and key components. This knowledge can help you build more complex applications as you progress.
+After following the guidance in the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) to create your first Teams application, let's review its structure and key components. This knowledge can help you build more complex applications as you progress.
 
 ## Project Structure
 
 When you create a new Teams application, it generates a directory with this basic structure:
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```
 QuoteAgent/
@@ -24,7 +24,7 @@ QuoteAgent/
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```
 quote-agent/
@@ -34,7 +34,7 @@ quote-agent/
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```
 quote-agent/
@@ -44,31 +44,31 @@ quote-agent/
 
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 - **Program.cs**: The entry point. A standard ASP.NET Core app that registers the Teams application into DI and wires it into the request pipeline.
 - **appsettings.json**: Standard ASP.NET Core configuration — logging levels, bot credentials.
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 - **src/**: Contains the main application code. The `main.py` file is the entry point for your application.
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 - **src/**: Contains the main application code. The `index.ts` file is the entry point for your application.
 ::: zone-end
 
 ## Core Components
 
-Let's break down the simple application from the [quickstart](quickstart.md) into its core components.
+Let's break down the simple application from the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) into its core components.
 
 ### The App Class
 
 The heart of an application is the `App` class. This class handles all incoming activities and manages the application's lifecycle. It also acts as a way to host your application service.
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 using Microsoft.Teams.Apps;
@@ -92,7 +92,7 @@ app.Run();
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 from microsoft_teams.api import MessageActivity, TypingActivityInput
@@ -106,7 +106,7 @@ The app configuration includes a variety of options that allow you to customize 
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -121,25 +121,27 @@ The app configuration includes a variety of options that allow you to customize 
 
 ### Plugins
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 .
 Plugins are a core part of the Teams SDK. They allow you to hook into various lifecycles of the application. The lifecycles include server events (start, stop, initialize, etc.), and also Teams Activity events (on_activity, on_activity_sent, etc.)
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 Plugins are a core part of the Teams SDK. They allow you to hook into various lifecycles of the application. The lifecycles include server events (start, stop, initialize, etc.), and also Teams Activity events (onActivity, onActivitySent, etc.)
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 > [!NOTE]
 > Removed in SDK 2.1. Plugins have been removed in SDK 2.1. Because your app is a standard ASP.NET Core app, extend it with regular **middleware** and **dependency injection** instead — for per-turn logic, implement `ITurnMiddleware` and register it with `teams.UseMiddleware(...)`.
+
+::: zone-end
 
 ### Message Handling
 
 Teams applications respond to various types of activities. The most basic is handling messages:
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -153,7 +155,7 @@ You can also match specific messages with a regular expression — `teams.OnMess
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_message
@@ -168,7 +170,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 app.on('message', async ({ send, activity }) => {
@@ -181,40 +183,40 @@ app.on('message', async ({ send, activity }) => {
 
 This code:
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 1. Listens for all incoming messages using the `OnMessage` handler.
 2. Sends a typing indicator, which renders as an animated ellipsis (…) in the chat.
 3. Responds by echoing back the received message.
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 1. Listens for all incoming messages using `app.on_message`
 2. Sends a typing indicator, which renders as an animated ellipsis (…) in the chat.
 3. Responds by echoing back the received message if any other text aside from "reply" is sent.
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 1. Listens for all incoming messages using `app.on('message')`.
 2. Sends a typing indicator, which renders as an animated ellipsis (…) in the chat.
 3. Responds by echoing back the received message.
 ::: zone-end
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 > [!NOTE]
 > Each activity type has a dedicated handler method (`OnMessage`, `OnMessageReaction`, `OnMembersAdded`, and so on) for type-safe, readable routing.
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 > [!NOTE]
 > Python uses type hints for better development experience. You can change the activity handler to different supported activities, and the type system will provide appropriate hints and validation.
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 > [!NOTE]
 > Type safety is a core tenet of this version of the SDK. You can change the activity `name` to a different supported value, and the type system will automatically adjust the type of activity to match the new value.
 
@@ -224,7 +226,7 @@ This code:
 
 Your application starts when you run:
 
-::: zone pivot="csharp"
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 WebApplication app = builder.Build();
@@ -234,7 +236,7 @@ app.Run();
 
 ::: zone-end
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 if __name__ == "__main__":
@@ -243,7 +245,7 @@ if __name__ == "__main__":
 
 ::: zone-end
 
-::: zone pivot="typescript"
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript title="src/index.ts"
 await app.start();

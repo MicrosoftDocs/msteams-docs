@@ -128,6 +128,8 @@
       href: concepts/why-sdk.md
     - name: Code basics
       href: concepts/sdk-code-basics.md
+    - name: App basics
+      href: concepts/sdk-app-basics.md      
     - name: Add middleware and logging
       href: agents-in-teams/agent-observability.md
       displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
