@@ -182,5 +182,3 @@ app.on('meetingStart', async ({ activity, api }) => {
 ```
 
 ::: zone-end
-
-Visit [Meeting Events](../in-depth-guides/meeting-events.md) to learn more about meeting events.

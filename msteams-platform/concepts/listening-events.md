@@ -49,7 +49,7 @@ Here are the events that you can start building handlers for:
 
 We can subscribe to errors that occur in the app.
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.event("error")
@@ -73,7 +73,7 @@ app.event('error', ({ error }) => {
 
 ### Example 2
 
-::: zone pivot="python"
+::: zone pivot="teams-sdk-python"
 
 When a user signs in using `OAuth` or `SSO`, use the Graph API to fetch their profile and say hello.
 

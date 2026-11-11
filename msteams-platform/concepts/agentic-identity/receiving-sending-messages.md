@@ -142,8 +142,6 @@ A proactive operation has no inbound activity that identifies the sender. Create
 
 If your app will send proactive messages later, store the conversation ID, service URL, Agentic App Instance ID, Agentic User ID, and tenant ID in persistent storage when it receives an activity.
 
-<LanguageInclude section="proactive" />
-
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp

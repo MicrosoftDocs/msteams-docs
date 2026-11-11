@@ -1,5 +1,5 @@
 ---
-title: Agentic Identity
+title: Set Up Agentic Users
 description: Connect an existing Teams SDK app to an Agentic User and configure app authentication.
 ms.topic: how-to
 ms.date: 11/11/2026
@@ -43,7 +43,7 @@ a365 setup blueprint --endpoint-only `
 ## 4. Publish and create an instance
 
 1. Run `a365 publish` to create the agent package.
-2. Follow [Publish the agent](https://learn.microsoft.com/microsoft-agent-365/developer/publish) to upload the package to the Microsoft 365 admin center.
-3. [Create an agent instance](https://learn.microsoft.com/microsoft-agent-365/developer/create-instance).
+2. Follow [Publish the agent](/microsoft-agent-365/developer/publish) to upload the package to the Microsoft 365 admin center.
+3. [Create an agent instance](/microsoft-agent-365/developer/create-instance).
 
 After the instance is approved, its Agentic User can communicate through the deployed Teams SDK app.

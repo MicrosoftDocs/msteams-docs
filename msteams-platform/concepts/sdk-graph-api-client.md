@@ -44,7 +44,7 @@ npm install @microsoft/teams.graph-endpoints
 
 ## Calling APIs
 
-Microsoft Graph can be accessed by your application using its own application token, or by using the user's token. If you need access to resources that your application may not have, but your user does, you will need to use the user's scoped graph client. To grant explicit consent for your application to access resources on behalf of a user, follow the [auth guide](../in-depth-guides/user-authentication.md).
+Microsoft Graph can be accessed by your application using its own application token, or by using the user's token. If you need access to resources that your application may not have, but your user does, you will need to use the user's scoped graph client. To grant explicit consent for your application to access resources on behalf of a user, see [Authenticate users in Microsoft Teams](authentication/authentication.md).
 
 ::: zone pivot="teams-sdk-csharp"
 To access the graph using the Graph using the app, you may use the `GraphServiceClient` object to call the endpoint of your choice.

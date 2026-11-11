@@ -2,6 +2,7 @@
 title: Observability and governance
 description: Connect Teams SDK telemetry to Agent 365 monitoring and governance while protecting sensitive data.
 ms.topic: article
+zone_pivot_groups: teams-sdk-languages
 ms.date: 11/11/2026
 ---
 
