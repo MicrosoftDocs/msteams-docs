@@ -18,7 +18,7 @@ Agent Skills give AI coding assistants relevant context for specific development
 
 ## Install the `teams-dev` skill
 
-# [GitHub Copilot CLI](#tab/copilot)
+### [GitHub Copilot CLI](#tab/copilot)
 
 Add the marketplace (first time only):
 
@@ -34,7 +34,7 @@ Install the skill:
 
 After installing, restart GitHub Copilot for the skills to load.
 
-# [Claude Code](#tab/claude)
+### [Claude Code](#tab/claude)
 
 Add the marketplace (first time only):
 
@@ -50,11 +50,11 @@ Install the skill:
 
 After installing, restart Claude Code for the skills to load.
 
-# [VS Code](#tab/vscode)
+### [VS Code](#tab/vscode)
 
 See [VS Code Agent Skills documentation](https://code.visualstudio.com/docs/copilot/customization/agent-skills#_use-shared-skills) for installation instructions.
 
-# [Cursor](#tab/cursor)
+### [Cursor](#tab/cursor)
 
 See [Cursor Skills documentation](https://cursor.com/docs/skills#installing-skills-from-github) for installation instructions.
 
