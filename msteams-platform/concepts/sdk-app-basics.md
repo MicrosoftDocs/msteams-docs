@@ -10,7 +10,7 @@ ms.date: 11/11/2026
 
 ::: zone pivot="teams-sdk-csharp"
 
-The app is the main entry point for your agent. In **Teams SDK for .NET 2.1** it is a `TeamsBotApplication`, built on top of a standard ASP.NET Core web application. You register it at startup with `builder.Services.AddTeamsBotApplication()` and expose it as your bot's HTTP endpoint with `app.UseTeamsBotApplication()` — see the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) or [Teams SDK Code Basics](sdk-code-basics.md) for the full setup.
+The app is the main entry point for your agent. It is a `TeamsBotApplication`, built on top of a standard ASP.NET Core web application. You register it at startup with `builder.Services.AddTeamsBotApplication()` and expose it as your bot's HTTP endpoint with `app.UseTeamsBotApplication()` — see the [quickstart](../agents-in-teams/quickstart-create-agent-teams-sdk.md) or [Teams SDK Code Basics](sdk-code-basics.md) for the full setup.
 
 It is responsible for:
 
@@ -58,9 +58,6 @@ It is responsible for:
 **Dependency Injection**
 
 - Register your own services in `builder.Services` and inject them into handlers and middleware, just like any ASP.NET Core app
-
-> [!NOTE]
-> SDK 2.0 (Legacy). The SDK 2.0 model exposed the app as an `App` class with a **plugin architecture** — plugins sat both in front of the app (hosting it as a server) and behind it (reacting to activities being sent), and communicated through an event bus. The 2.1 **removes plugins** in favor of ASP.NET Core middleware and dependency injection. If you're upgrading from Bot Framework or 2.0 patterns, see the [BotBuilder Migration Guide](../botbuilder-migration/overview.md). The plugin-based model is still described below for the TypeScript and Python SDKs.
 
 ::: zone-end
 

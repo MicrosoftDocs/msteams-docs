@@ -149,28 +149,7 @@ app.on('message', async ({ activity, send, next }) => {
 ## Activity handler chaining
 
 ::: zone pivot="teams-sdk-csharp"
-In SDK 2.1, activity handlers no longer form a next()-style processing chain. Instead, every handler that matches an activity is invoked in the order it was registered, and one handler cannot prevent subsequent matching handlers from running. If you need to intercept, short-circuit, or wrap request processing (for example, to stop execution when a condition is met), implement `ITurnMiddleware` and control whether to call `nextTurn(...)`.
-
-> [!NOTE]
-> SDK 2.0 (Legacy). In SDK 2.0, activity handlers are chained. Call `context.Next()` to continue to the next matching handler; return without it to stop the chain. Registration order determines handler execution order.
->
-> ```csharp
-> app.OnMessage(async (context, cancellationToken) =>
-> {
->     if (context.Activity.Text == "/help")
->     {
->         await context.Send("Here are all the ways I can help you...", cancellationToken);
->         return; // stop chain
->     }
->
->     await context.Next(); // continue chain
-> });
->
-> app.OnMessage(async (context, cancellationToken) =>
-> {
->     await context.Send($"Hello! you said {context.Activity.Text}", cancellationToken);
-> });
-> ```
+In Teams SDK for .NET, activity handlers do not form a next()-style processing chain. Instead, every handler that matches an activity is invoked in the order it was registered, and one handler cannot prevent subsequent matching handlers from running. If you need to intercept, short-circuit, or wrap request processing (for example, to stop execution when a condition is met), implement `ITurnMiddleware` and control whether to call `nextTurn(...)`.
 
 ::: zone-end
 

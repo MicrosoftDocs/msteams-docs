@@ -29,8 +29,6 @@ For Azure Monitor / Application Insights export, also add:
 dotnet add package Azure.Monitor.OpenTelemetry.AspNetCore
 ```
 
-Or start from the [OTelBotWithAspire sample](https://github.com/microsoft/teams-agent-accelerator-templates/tree/main/dotnet/OTelBotWithAspire), which includes all dependencies pre-configured through [.NET Aspire service defaults](/dotnet/aspire/fundamentals/service-defaults).
-
 ## Setup
 
 Register the Teams SDK's telemetry sources when configuring OpenTelemetry. The key lines are `AddSource` and `AddMeter` — everything else is standard OpenTelemetry .NET setup:
@@ -134,31 +132,7 @@ For local development, you can send telemetry to any OTLP-compatible backend wit
 
 ### Aspire Dashboard
 
-The [.NET Aspire Dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) shows traces, metrics, and structured logs in a single standalone UI:
-
-The [OTelBotWithAspire sample](https://github.com/microsoft/teams-agent-accelerator-templates/tree/main/dotnet/OTelBotWithAspire) includes an Aspire AppHost that orchestrates the bot and automatically provides the dashboard. Run the AppHost project and the dashboard opens at `http://localhost:18888`:
-
-```csharp
-// OTelBotWithAspire.AppHost/AppHost.cs
-IDistributedApplicationBuilder builder = DistributedApplication.CreateBuilder(args);
-builder.AddProject<Projects.OTelBot>("otelbot");
-builder.Build().Run();
-```
-
-Alternatively, run the [standalone Aspire Dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) as a Docker container:
-
-```bash
-docker run --rm -d --name aspire-dashboard \
-  -p 18888:18888 -p 4317:18889 \
-  mcr.microsoft.com/dotnet/aspire-dashboard:latest
-
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
-export OTEL_SERVICE_NAME=my-teams-bot
-
-dotnet run
-```
-
-:::image type="content" source="~/assets/aspire-otel-trace.png" alt-text="Aspire Dashboard trace view showing the bot turn span hierarchy — POST api/messages, turn, handler, conversation_client, auth.outbound, and the outbound Bot Service POST" lightbox="~/assets/aspire-otel-trace.png" :::
+The [.NET Aspire Dashboard](/dotnet/aspire/fundamentals/dashboard/standalone) shows traces, metrics, and structured logs in a single standalone UI.
 
 ### Grafana LGTM
 
@@ -236,8 +210,6 @@ With both steps in place, your traces show the full chain — from the inbound T
 
 :::image type="content" source="~/assets/appinsights-aibot-trace.png" alt-text="Application Insights end-to-end transaction showing an AI bot turn — handler, orchestrate_tools, two gpt-5.4-mini chat completions, an MCP microsoft_docs_search tool call, and the outbound Bot Service response" lightbox="~/assets/appinsights-aibot-trace.png" :::
 
-For a complete working example, see the [AIBotWithOTel sample](https://github.com/microsoft/teams-agent-accelerator-templates/tree/main/dotnet/AIBotWithOTel).
-
 ## Resource Configuration
 
 [Resource attributes](/azure/azure-monitor/app/opentelemetry-configuration#set-the-cloud-role-name-and-the-cloud-role-instance) identify your service in the backend. At a minimum, set `service.name` so your bot is distinguishable in Application Map and trace views:
@@ -268,41 +240,7 @@ If multiple bots share the same Application Insights resource, `service.name` an
 
 > **Note:** When using .NET Aspire, the AppHost automatically sets `service.name` from the project name passed to `AddProject<T>("name")`, so you typically don't need to configure it manually.
 
-## Full Example with Aspire
-
-The [OTelBotWithAspire sample](https://github.com/microsoft/teams-agent-accelerator-templates/tree/main/dotnet/OTelBotWithAspire) is a ready-to-run Aspire solution with three projects:
-
-| Project | Purpose |
-| --- | --- |
-| `OTelBot` | The Teams bot — `Program.cs` is 18 lines |
-| `OTelBotWithAspire.ServiceDefaults` | OpenTelemetry, health checks, and service discovery |
-| `OTelBotWithAspire.AppHost` | Aspire orchestrator that launches the bot with the dashboard |
-
-The bot's `Program.cs` stays minimal because all observability is configured in service defaults:
-
-```csharp
-using Microsoft.Teams.Apps;
-
-WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-builder.AddServiceDefaults();
-builder.Services.AddTeamsBotApplication();
-WebApplication app = builder.Build();
-
-TeamsBotApplication bot = app.UseTeamsBotApplication();
-
-bot.OnMessage(async (ctx, ct) =>
-{
-    string? message = ctx.Activity.TextWithoutMentions;
-    await ctx.SendActivityAsync($"Echo: {message}", ct);
-});
-
-app.MapDefaultEndpoints();
-app.Run();
-```
-
-`AddServiceDefaults()` configures OpenTelemetry (traces, metrics, logs), health checks, service discovery, and resilience — all through the standard [.NET Aspire service defaults](/dotnet/aspire/fundamentals/service-defaults) pattern. The service defaults register the Teams SDK's `ActivitySource` and `Meter` names, and conditionally enable OTLP and Azure Monitor exporters based on environment variables.
-
-## Full Example (Standalone)
+## Full Example
 
 If you are not using .NET Aspire, here is a standalone `Program.cs` that wires up a Teams bot with OpenTelemetry tracing, metrics, and logs — exporting to OTLP and optionally to Azure Monitor:
 
@@ -378,7 +316,6 @@ Run with a local OTLP collector (Aspire Dashboard or Grafana LGTM) to see traces
 
 ## Next Steps
 
-- [OTelBotWithAspire sample](https://github.com/microsoft/teams-agent-accelerator-templates/tree/main/dotnet/OTelBotWithAspire) — ready-to-run Aspire solution with the Aspire Dashboard
 - [.NET observability with OpenTelemetry](/dotnet/core/diagnostics/observability-with-otel) — conceptual overview of the three pillars
 - [Configure Azure Monitor OpenTelemetry](/azure/azure-monitor/app/opentelemetry-configuration) — sampling, resource attributes, and advanced configuration
 - [OpenTelemetry .NET documentation](https://opentelemetry.io/docs/languages/dotnet/) — upstream reference

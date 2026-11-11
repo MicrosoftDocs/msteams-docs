@@ -132,8 +132,7 @@ Plugins are a core part of the Teams SDK. They allow you to hook into various li
 
 ::: zone pivot="teams-sdk-csharp"
 
-> [!NOTE]
-> Removed in SDK 2.1. Plugins have been removed in SDK 2.1. Because your app is a standard ASP.NET Core app, extend it with regular **middleware** and **dependency injection** instead — for per-turn logic, implement `ITurnMiddleware` and register it with `teams.UseMiddleware(...)`.
+Because your app is a standard ASP.NET Core app, extend it with regular **middleware** and **dependency injection** instead of plugins. For per-turn logic, implement `ITurnMiddleware` and register it with `teams.UseMiddleware(...)`.
 
 ::: zone-end
 
