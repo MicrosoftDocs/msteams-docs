@@ -67,13 +67,11 @@ Using an Azure Bot? See [Manage Azure bots in Developer Portal for Teams](../con
 
 In your agent's code, turn on socket mode when you create the app. The SDK then connects in every region, handles activities exactly as it does for an HTTPS endpoint, replaces sockets before their tokens expire, and reconnects when a socket closes.
 
-If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes.
+If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes. Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick the language that suits you best:
 
-Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick whichever language suits you best:
-
-  - [TypeScript Release v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
-  - [Python Release v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
-  - [.NET Release v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
+- [TypeScript Release v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
+- [Python Release v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
+- [.NET Release v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
 
 **For options, you can specify the following value:**
 
