@@ -225,13 +225,13 @@ if (widget) {
 // to your model.
 ```
 
-An MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](send-html-widgets.md#mix-markdown-and-widgets).
+An MCP widget's HTML already performs the handshake and reports its height. Send it unchanged. To add Markdown around an MCP widget, put `widgetMarkdown(widget)` in a `text` array, as shown in [Mix markdown and widgets](send-html-widgets.md#mix-markdown-and-widgets).
 
-Test the supplied widget on Teams mobile against the [responsive scaling guidance](ux-guidelines.md#responsive-scaling). If layout or interaction changes are needed, work with the MCP server owner.
+Test the supplied widget on Teams mobile following the [responsive scaling guidance](ux-guidelines.md#responsive-scaling). If layout or interaction changes are needed, work with the MCP server owner.
 
 ### Forward the widget's tool calls
 
-When an MCP widget calls a tool, the bot forwards the call to the MCP server that provided the widget, and returns the server's result to the widget.
+When an MCP widget calls a tool, the bot forwards the call to the MCP server that provided the widget and returns the server's result to the widget.
 
 Add the following code to `src/bot/mcp-widgets.ts`:
 
@@ -345,7 +345,7 @@ app.on(
 );
 ```
 
-`handleMcpWidgetTool` follows the same rules as any tool handler in Step 6, and adds these:
+`handleMcpWidgetTool` follows the same rules as any tool handler in Step 6 and adds these requirements:
 
 - **Only forward calls from widgets you sent.** A call is forwarded only if its correlation ID is known and belongs to the same conversation.
 - **Only forward tools that widgets may call.** A tool whose `_meta.ui.visibility` is `["model"]` is reserved for the model.
