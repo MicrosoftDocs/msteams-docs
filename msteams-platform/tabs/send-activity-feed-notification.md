@@ -5,7 +5,7 @@ author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: vishachadha
-ms.date: 02/27/2026
+ms.date: 11/12/2026
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
@@ -211,9 +211,7 @@ You can use Activity feed notification in the following scenarios:
 
 ## Customize the notifications
 
-Teams users can customize the notifications they see in their feed or as a banner. Notifications generated through activity feed APIs can also be customized. Users can choose how they're notified via settings in Teams. Teams apps appear in the list for the user to choose from, as shown in the following screenshot:
-
-:::image type="content" source="../assets/images/activity-feed/notification-settings.png" alt-text="Screenshot shows the Notifications settings in Teams, with the Custom option highlighted.":::
+Teams users can customize how they receive activity feed notifications. Notifications generated through the activity feed APIs can appear in the activity feed or as banners, based on the user's notification settings. Users can manage these settings in Teams.
 
 Users can select **Edit** next to an app and customize the notifications. The app manifest displays the `description` field.
 
