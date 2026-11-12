@@ -9,11 +9,10 @@ ms.topic: article
 # Connect an agent to Teams without an SDK
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it's recommneded to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. We recommend using an HTTPS messaging endpoint for agents in production. Preview features can change before general availability.
 
 > [!Note]
->
-> We recommend that you use the Teams SDK, which implements everything in this article. For SDK configuration instructions, see [Configure delivery method for an agent](configure-delivery-methods-for-agents.md).
+> We recommend that you use the Teams SDK, which implements everything in this article. For SDK configuration instructions, see [Configure the delivery method for an agent](configure-delivery-methods-for-agents.md).
 
  This article describes the protocol used by the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to Agent Communication Service (ACS). An agent then receives activities either at an HTTPS endpoint or over socket mode.
 

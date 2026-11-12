@@ -9,7 +9,7 @@ ms.topic: article
 # Choose how your agent receives activity data from Teams
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommneded to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. We recommend using an HTTPS messaging endpoint for agents in production. Preview features can change before general availability.
 
 Teams agents do most of their work with Teams, especially chat, through Agent Communication Service (ACS), the service that connects agents to Teams. The connection between an agent and ACS is bidirectional. ACS sends data to your agent to tell it about activity in Teams in real time: messages, card actions, installs, reactions, meeting events, and more. Your agent sends data to ACS to act on that activity: reply, post a card, update a message, and so on.
 
@@ -50,13 +50,13 @@ The choice isn't permanent. Many developers use socket mode while building an ag
 
 **HTTPS**
 
-During your agent creation in Teams Developer Portal or Teams CLI, you'll be asked to provide an HTTPS endpoint. If you are using HTTP mode you supply the endpoint and no further steps are needed.
+During your agent creation in Teams Developer Portal or Teams CLI, you'll be asked to provide an HTTPS endpoint. If you're using HTTPS mode, supply the endpoint and no further steps are needed.
 
 **Socket mode**
 
-It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the WebSocket connections for you. To connect your agent to Teams via socket mode with Teams SDK see [Configure delivery methods for an agent](configure-delivery-methods-for-agents.md).
+It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the WebSocket connections for you. To connect your agent to Teams via socket mode with the Teams SDK, see [Configure delivery methods for an agent](configure-delivery-methods-for-agents.md).
 
-If you prefer to use another language or framework with socket mode, steps to connecting your agent to Teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, [here](connect-agent-without-sdk.md).
+If you prefer to use another language or framework with socket mode, steps for connecting your agent to Teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, [here](connect-agent-without-sdk.md).
 
 ## Architectural considerations
 
@@ -66,7 +66,7 @@ This section explains what happens under the hood in socket mode, so you can ass
 
 Socket mode is built on [Azure SignalR Service](/azure/azure-signalr/signalr-overview). Your agent never sees an inbound connection:
 
-:::image type="content" source="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png" alt-text="Image shows sequence diagram showing how socket mode works." lightbox="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png":::
+:::image type="content" source="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png" alt-text="Sequence diagram showing how socket mode works." lightbox="../assets/images/agents-in-teams/socket-mode/agent-socket-mode.png":::
 
 <!--
 ::: mermaid

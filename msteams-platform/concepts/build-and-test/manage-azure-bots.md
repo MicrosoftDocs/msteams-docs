@@ -28,7 +28,7 @@ Azure-managed bots and Teams-managed bots have separate lists. An Azure-managed 
 
 ## Delivery settings at a glance
 
-The **Configure** page provides HTTP endpoint settings and Socket Mode settings for bots. HTTP uses a messaging endpoint; Socket Mode uses an outbound connection for development. For setup steps, endpoint-access requirements, and delivery-specific troubleshooting, use the delivery-method documentation [Link to Socket mode documentation].
+The **Configure** page provides HTTP endpoint settings and Socket Mode settings for bots. HTTP uses a messaging endpoint; Socket Mode uses an outbound connection for development. For setup steps, endpoint access requirements, and delivery-specific troubleshooting, refer to [Configure the delivery method for an agent](configure-delivery-methods-for-agents.md)
 
 ## Find an Azure bot
 
@@ -36,8 +36,8 @@ The **Configure** page provides HTTP endpoint settings and Socket Mode settings 
 1. Select **Bot management**, and then select **Azure-managed bots**. The Teams-managed bots tab is the default.
 1. In **Subscription**, select a subscription or **All subscriptions**. Search the subscription picker by subscription name or ID. Bot results load after you choose a scope.
 1. If you selected one subscription, optionally choose a **Resource group** to narrow the results. The resource-group picker is unavailable when **All subscriptions** is selected.
-1. Use **Search app** to the search by bot name, display name, application ID, or resource group within your selected scope. Scroll to view more results or select **Load more** when available.
-1. Select the bot’s name to open **Configure**. Verify the subscription and resource group, especially when bots share a name.
+1. Use **Search app** to search by bot name, display name, application ID, or resource group within your selected scope. Scroll to view more results or select **Load more** when available.
+1. Select the bot’s name to open the **Configure** page. Verify the subscription and resource group, especially when you have multiple bots with the same name.
 
 The app ID identifies the bot’s backing Microsoft Entra application. It isn’t the Teams app package’s app ID. Keep these identifiers separate when configuring your Teams app.
 

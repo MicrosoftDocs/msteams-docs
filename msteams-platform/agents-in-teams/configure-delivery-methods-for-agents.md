@@ -1,5 +1,5 @@
 ---
-title: Configure delivery method for an agent
+title: Configure the delivery method for an agent
 description: Learn how to configure the delivery method for your agents.
 ms.localizationpriority: high
 ms.date: 11/06/2026
@@ -7,10 +7,10 @@ ms.topic: article
 zone_pivot_groups: teams-sdk-languages
 ---
 
-# Configure delivery method for an agent
+# Configure the delivery method for an agent
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommnedd to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. We recommend using an HTTPS messaging endpoint for agents in production. Preview features can change before general availability.
 
 The delivery method (see [Choose how your agent receives activity data from Teams](agent-connectivity.md)) is configured in two places:
 
@@ -165,13 +165,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(na
 logging.getLogger("microsoft_teams.apps.socket_mode").setLevel(logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-app = App(
-    socket_mode=SocketModeOptions(
-        # Socket Mode is only available on the Canary and Pilot1 rings for now.
-        # Pilot1 (https://pilot1.botapi.skype.com) is supported as well.
-        negotiate_base_url=" https://github.com/microsoft/teams.py/blob/main/examples/socket/src/main.py",
-    )
-)
+app = App(socket_mode=True)
 
 
 # Handlers are transport-agnostic: the exact same code works over HTTP or Socket Mode.
