@@ -119,8 +119,6 @@ Many widgets follow a common pattern that helps users quickly understand the lay
 
 <p></p>
 
-<img src="../assets/images/html-widgets/card-anatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
-
 :::image type="content" source="../assets/images/html-widgets/card-anatomy.png" alt-text="aa" lightbox="../assets/images/html-widgets/card-anatomy.png":::
 
 When a widget does follow this common pattern, content typically flows top to bottom:
@@ -137,10 +135,10 @@ The following requirements apply to all HTML widgets submitted to Teams. Widgets
 
 Widgets must render correctly in both Teams light mode and dark mode.
 
-- Test your widget in both themes before submission
-- Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes
+- Test your widget in both themes before submission.
+- Use CSS variables or [Fluent 2](https://fluent2.microsoft.design/color) color tokens rather than hardcoded hex values so your widget adapts automatically to theme changes.
 
-<img src="../assets/images/html-widgets/theme-modes.png" alt="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes">
+:::image type="content" source="../assets/images/html-widgets/theme-modes.png" alt-text="The same widget rendered in Teams light mode and dark mode, showing correct color adaptation in both themes." lightbox="../assets/images/html-widgets/theme-modes.png":::
 
 > [!NOTE]
 > Theme adaptation is not required for content where color is meaningful and should not be altered, such as design documents, branded presentations, data visualizations, or media where color carries specific meaning. In these cases, render the content as-is.
@@ -157,7 +155,7 @@ Design for narrow mobile containers first, then adapt the layout for wider conta
 
 The widths shown below represent the most common scenarios to test against: wide, standard desktop, mobile, and meeting chat or side-by-side view. These are not breakpoints or size slots — they are reference points for evaluating how your single fluid layout scales across the range of contexts where your widget may appear.
 
-<img src="../assets/images/html-widgets/responsive.png" alt="A widget shown at four representative widths: wide, standard desktop, mobile, and meeting chat or side-by-side — demonstrating fluid layout scaling">
+:::image type="content" source="../assets/images/html-widgets/responsive.png" alt-text="A widget shown at four representative widths: wide, standard desktop, mobile, and meeting chat or side-by-side — demonstrating fluid layout scaling." lightbox="../assets/images/html-widgets/responsive.png":::
 
 ### Horizontal scrolling
 
@@ -226,8 +224,8 @@ This matters because the message bubble’s background normally frames a message
 </tr>
 <tr>
 <th>With border and padding</th>
-<td><img src="../assets/images/html-widgets/widget-frame-cozy-with.png" alt="The same widget inside a message bubble, with a border and padding that set it apart from the message text."></td>
-<td><img src="../assets/images/html-widgets/widget-frame-compact-with.png" alt="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas."></td>
+<td>:::image type="content" source="../assets/images/html-widgets/widget-frame-cozy-with.png" alt-text="The same widget inside a message bubble, with a border and padding that set it apart from the message text." lightbox="../assets/images/html-widgets/widget-frame-cozy-with.png":::</td>
+<td>:::image type="content" source="../assets/images/html-widgets/widget-frame-compact-with.png" alt-text="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas." lightbox="../assets/images/html-widgets/widget-frame-compact-with.png":::</td>
 </tr>
 </table>
 
