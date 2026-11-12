@@ -7,7 +7,7 @@ ms.date: 11/05/2026
 ---
 
 
-# Accessibility guidelines for HTML widgets in Microsoft Teams 365
+# Accessibility guidelines for HTML widgets in Microsoft Teams
 
 HTML widgets (MCP apps) allow partners to render custom HTML and JavaScript experiences inside a sandboxed `<iframe>` within Teams chat. Because these widgets appear inline with conversational content, they must meet a consistent accessibility bar so that all users, including those who use assistive technologies, can perceive, understand, and operate them.
 
@@ -29,7 +29,7 @@ The following practices aren't required but are strongly recommended to improve 
 - **Simple interaction models:** Prefer simple, predictable interaction patterns over highly custom or novel controls
 - **Scrolling:** Avoid complex nested scroll regions. If a scrollable region is necessary, ensure it has a clear label and is keyboard accessible
 - **Tooltips:** Implement accessible tooltips using `aria-describedby` and ensure they're available on focus as well as hover
-- **Tooltips:** Use [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
+- **Accessible components:** Use [Fluent UI React v9](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs) components wherever possible — they implement accessible patterns out of the box and reduce the amount of custom accessibility work required
 
 ## Responsibility model
 
