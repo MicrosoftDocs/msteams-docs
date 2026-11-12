@@ -784,6 +784,30 @@ To try it:
 >
 > HTML widget content can't currently be exported through export APIs. Consider this limitation when developing bots for organizations with content export requirements. Organizations can disable bots that can send HTML widgets if this limitation doesn't meet their requirements.
 
+## Supported Teams deep links
+
+HTML widgets support only the following Teams deep links:
+
+| Link type | Supported URL pattern |
+| --- | --- |
+| Chat | `https://teams.microsoft.com/l/chat/...` |
+| Message | `https://teams.microsoft.com/l/message/...` |
+| Join a meeting | `https://teams.microsoft.com/l/meetup-join/...` |
+| Join a meeting by meeting ID | `https://teams.microsoft.com/meet/...` |
+
+These deep links must meet all of the following requirements:
+
+- Use HTTPS.
+- Point to the same cloud environment as the widget, and open in the widget's own account.
+- Contain no URL fragment (`#`).
+- Contain neither the `fqdn` nor the `homeCloud` query parameter.
+
+Teams deep links open using the account associated with the widget.
+
+> [!Note]
+>
+> Teams ignores unsupported Teams deep links, and `openLink` returns an error. These restrictions don't apply to regular web links.
+
 ## Checklist
 
 **Sending the widget**
