@@ -12,7 +12,7 @@ Teams agents can respond using four message formats. Choosing the right format o
 
 ## Format profiles overview
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of generative UI: plain text, Markdown, Adaptive Cards, and HTML widgets." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png" alt-text="Image shows a spectrum of generative UI: plain text, Markdown, Adaptive Cards, and HTML widgets." border="false" lightbox="../assets/images/agents-in-teams/agent-message-format/agent-message-format-artifacts.png":::
 
 | # | Format | Best for | Complexity of implementation |
 | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ Use when you need a structured, visually rich layout with actionability. Cards m
 
 **Design samples:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of Adaptive Cards." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png" alt-text="Image shows multiple design samples of Adaptive Cards." border="false" lightbox="../assets/images/agents-in-teams/agent-message-format/agent-message-format-adaptive-card-design-samples.png":::
 
 ## HTML widget
 
@@ -132,7 +132,7 @@ Use for rich, stateful, interactive experiences beyond what a card can offer —
 
 **Design samples:**
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png" alt-text="Image shows multiple design samples of HTML widgets." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png" alt-text="Image shows multiple design samples of HTML widgets." border="false" lightbox="../assets/images/agents-in-teams/agent-message-format/agent-message-format-html-widget-design-samples.png":::
 
 ## Next steps
 
