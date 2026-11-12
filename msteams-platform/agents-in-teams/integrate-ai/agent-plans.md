@@ -127,7 +127,7 @@ How your agent responds to an edited user message depends on the associated plan
 
 | Existing plan state | Agent behavior |
 | --- | --- |
-| Active | Update the current plan to reflect the edited request. |
+| Active | Continue updating the current plan if its steps still apply to the edited request. Otherwise, stop it and start a new plan. Starting a new plan can be more practical when many existing steps would need updates. |
 | Completed | Create a new plan for the edited request. The new plan is separate from the completed plan and its final response. |
 | Stopped or error | Create a new plan for the edited request. The new plan replaces the stopped or errored plan. |
 
