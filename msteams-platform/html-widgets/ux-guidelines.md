@@ -121,6 +121,8 @@ Many widgets follow a common pattern that helps users quickly understand the lay
 
 <img src="../assets/images/html-widgets/card-anatomy.png" alt="Diagram showing widget anatomy: title at top, body content in the middle, and action area at the bottom">
 
+:::image type="content" source="../assets/images/html-widgets/card-anatomy.png" alt-text="aa" lightbox="../assets/images/html-widgets/card-anatomy.png":::
+
 When a widget does follow this common pattern, content typically flows top to bottom:
 
 1. Title (if applicable)
