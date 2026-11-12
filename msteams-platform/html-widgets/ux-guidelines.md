@@ -21,7 +21,7 @@ Building a great widget for Teams means delivering a focused experience that sur
     ### Complement the conversation
 
     - Widgets exist alongside agent-generated text in a chat thread and should always feel like a natural part of the conversation.
-     - A widget may be display-only, interactive, or prompt the user for input.
+     - A widget may be display-only, support interactions, or prompt the user for input.
      - Content should support the conversation, not feel like a separate or disconnected experience.
      - Design for the conversational context — a widget should provide value that is native to the moment, not simply replicate what already exists in your standalone application.
      
@@ -46,7 +46,7 @@ Building a great widget for Teams means delivering a focused experience that sur
 
     ### Be transparent and predictable
 
-     - Widget content should be clear and any interactions obvious.
+     - Widget content should be clear, and any interactions should be obvious.
      - Users should always understand what a widget is showing.
      - The expected outcome of any interaction should be obvious before the user acts.
     
@@ -180,7 +180,7 @@ Widgets must communicate the outcome of user actions clearly.
 
 <br>
 
-## Minimum User experience bar for submission
+## Minimum user experience bar for submission
 
 Widgets must meet all of the following requirements to be accepted by the Teams Store.
 
@@ -214,7 +214,7 @@ This matters because the message bubble’s background normally frames a message
 
 - Add a border and padding around your widget's content
 - Choose a border color, corner radius, and background that fit your design. [Fluent 2 shapes](https://fluent2.microsoft.design/shapes#corner-radius) and color tokens are a good starting point if you want your widget to feel native to Teams
-- Use the recommended 16px padding described in [Spacing](#spacing)
+- Use the recommended 16 px padding described in [Spacing](#spacing).
 
 <table>
 <tr>
@@ -386,15 +386,15 @@ Use the following base text styles to create clear visual hierarchy in your widg
 
 | Style | Fluent token | Size / Weight | Use for |
 | --- | --- | --- | --- |
-| **Header** | — * | 18px / 600 | Widget or card title |
-| **Label** | `Body1Strong` | 14px / 600 | Section headers, status labels |
-| **Body** | `Body1` | 14px / 400 | Primary content, descriptions |
-| **Caption Label** | `Caption1Strong` | 12px / 600 | Small labels, field values |
-| **Caption** | `Caption1` | 12px / 400 | Supporting details, timestamps |
-| **Caption Subtle Label** | `Caption1Strong` + `ColorNeutralForeground3` | 12px / 600 | Subtle section labels, metadata keys |
-| **Caption Subtle** | `Caption1` + `ColorNeutralForeground3` | 12px / 400 | De-emphasized text, secondary metadata |
+| **Header** | — * | 18 px / 600 | Widget or card title |
+| **Label** | `Body1Strong` | 14 px / 600 | Section headers, status labels |
+| **Body** | `Body1` | 14 px / 400 | Primary content, descriptions |
+| **Caption Label** | `Caption1Strong` | 12 px / 600 | Small labels, field values |
+| **Caption** | `Caption1` | 12 px / 400 | Supporting details, timestamps |
+| **Caption Subtle Label** | `Caption1Strong` + `ColorNeutralForeground3` | 12 px / 600 | Subtle section labels, metadata keys |
+| **Caption Subtle** | `Caption1` + `ColorNeutralForeground3` | 12 px / 400 | De-emphasized text, secondary metadata |
 
-\* _Header is a custom size not included in the Fluent UI React v9 type ramp. Use 18px / 600 directly._
+\* _Header is a custom size not included in the Fluent UI React v9 type ramp. Use 18 px / 600 directly._
 
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
@@ -429,18 +429,18 @@ Inside your widget's frame, use containers to group related content and create v
 
 #### Spacing
 
-The recommended padding inside your widget's border is 16px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
+The recommended padding inside your widget's border is 16 px (`spacingHorizontalL` / `spacingVerticalL`) on all sides.
 
 The following are commonly used spacing values for widget layouts. These map to Fluent UI React v9 spacing tokens — swap `Vertical` for `Horizontal` for horizontal spacing equivalents.
 
 | Name | Token | Size | Common use |
 | --- | --- | --- | --- |
-| Extra Small | `spacingVerticalXS` | 4px | Between an icon and its label, inside a badge |
-| Small | `spacingVerticalS` | 8px | Between buttons or tightly grouped elements |
-| Medium | `spacingVerticalM` | 12px | Vertical rhythm between text blocks and inputs |
-| Large | `spacingVerticalL` | 16px | Standard internal padding for cards and containers |
-| Extra Large | `spacingVerticalXL` | 20px | Separation between distinct content sections |
-| Extra Extra Large | `spacingVerticalXXL` | 24px | Generous breathing room |
+| Extra Small | `spacingVerticalXS` | 4 px | Between an icon and its label, inside a badge |
+| Small | `spacingVerticalS` | 8 px | Between buttons or tightly grouped elements |
+| Medium | `spacingVerticalM` | 12 px | Vertical rhythm between text blocks and inputs |
+| Large | `spacingVerticalL` | 16 px | Standard internal padding for cards and containers |
+| Extra Large | `spacingVerticalXL` | 20 px | Separation between distinct content sections |
+| Extra Extra Large | `spacingVerticalXXL` | 24 px | Generous breathing room |
 
 The following examples show how spacing tokens apply in real widget layouts.
 
@@ -462,7 +462,7 @@ Actions allow users to take the next step without leaving the conversation.
 
 - **Limit to two primary actions** — use a primary button for the most important action and a secondary button for an alternative
 - **Use overflow for additional actions** — place additional actions in an overflow menu (`•••`) rather than adding more buttons
-- **Label actions clearly** — Use outcome-oriented labels such as "Reserve now" or "Approve" rather than vague labels like "OK"
+- **Label actions clearly** — use outcome-oriented labels such as "Reserve now" or "Approve" rather than vague labels like "OK"
 - **Disable, don't hide** — if an action is not available in the current state, disable the control rather than hiding it
 
 > [!TIP]
@@ -497,11 +497,11 @@ If your widget includes a form or input fields:
 - Validate input inline and surface error messages adjacent to the relevant field
 - Keep forms short — if a form requires more than four or five fields, consider moving it to the expanded surface
 
-<img src="../assets/images/html-widgets/input-examples.png" alt="Examples forms and inputs">
+:::image type="content" source="../assets/images/html-widgets/input-examples.png" alt-text="Examples of forms and inputs." lightbox="../assets/images/html-widgets/input-examples.png":::
 
 ## Expanded surface
 
-The expanded surface opens as a modal above the chat when the user taps an expand button. Use it for content or workflows that require more space than the inline widget can reasonably provide.
+The expanded surface opens as a modal above the chat when the user selects an expand button. Use it for content or workflows that require more space than the inline widget can reasonably provide.
 
 ### When to use the expanded surface
 
@@ -549,7 +549,7 @@ The expanded surface opens as a modal above the chat when the user taps an expan
 
 The following items are optional but contribute to a higher-quality widget experience.
 
-- **Use Fluent 2 components**: [Fluent 2](https://fluent2.microsoft.design/) components implement Teams-aligned visual patterns and interactions out of the box. If building with React, [Fluent UI React v9](https://react.fluentui.dev/) is the recommended implementation.
+- **Use Fluent 2 components**: [Fluent 2](https://fluent2.microsoft.design/) components implement Teams-aligned visual patterns and interactions out of the box. If you're building with React, [Fluent UI React v9](https://react.fluentui.dev/) is the recommended implementation.
 - **Support layout patterns**: Consider established layout patterns — hero (image at top, content below), article (text-heavy, hierarchical), form (input-focused), or list (repeating items) — and choose the pattern that fits your content type.
 - **Charts and data visualization**: Ensure axis labels and data points are clearly readable at widget width. Consider transitioning to the expanded surface for complex charts.
 - **Media elements**: For inline video or rich media, provide a clear play control and a static thumbnail. Autoplay is not recommended.
