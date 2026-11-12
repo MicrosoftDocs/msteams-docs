@@ -11,7 +11,7 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## Preview: Socket mode for Teams agents
 
-*November 11, 2026*
+*November 12, 2026*
 
 Socket mode lets your agent receive Teams activities over an outbound WebSocket connection, without a public HTTPS endpoint or development tunnel.
 

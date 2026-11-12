@@ -375,6 +375,8 @@ These values match the Teams SDK. The SignalR client's other settings can keep t
 | Keep a replaced socket open | 5 seconds after the new socket's `SocketReady`, and until its in-flight replies are sent |
 | Sockets per instance | One per region |
 
+## Code sample
+
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Socket mode sample | This sample shows how to receive activities from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**<https://github.com/premkaretimsft/prkare-default-mode-socket-bot>). |
+| Add Teams bot sample using Azure SignalR default-mode socket delivery | This sample shows how to receive activities from ACS via socket mode without using an SDK | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-signalr-default-mode). |
