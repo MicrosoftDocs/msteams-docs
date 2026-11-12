@@ -602,7 +602,7 @@
         href: concepts/design/activity-feed-notifications.md
         displayName: notify, notification
       - name: Send activity feed notifications to users in Microsoft Teams
-        href: concepts/design/send-activity-feed-notification.md
+        href: platform/tabs/send-activity-feed-notification.md
         displayName: notify, notification      
   - name: Build tabs
     items:
