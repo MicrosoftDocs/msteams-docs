@@ -355,3 +355,9 @@ app.on(
 - **Only forward tools that widgets may call.** A tool whose `_meta.ui.visibility` is `["model"]` is reserved for the model.
 - **Remove `__msteams__` from the arguments.** It is meant for your bot, not for the MCP server.
 - **Return the server's result.** Set `structuredContent` and `isError` even if the server omitted them, and remove `resource_link` content items, which Teams does not support.
+
+## See also
+
+- [Send HTML widgets](send-html-widgets.md)
+- [User experience guidelines for HTML widgets in Microsoft Teams](ux-guidelines.md)
+- [Accessibility guidelines for HTML widgets in Microsoft Teams](accessibility-guidelines.md)

@@ -851,3 +851,9 @@ Teams deep links open using the account associated with the widget.
 | Bot    | `widget.callTool` route (`htmlwidget/calltool`) | Handler      | `activity.value`: `{ name, arguments }`                            | `{ responseType: "htmlwidget/calltoolresult", callToolResult }`  |
 
 Requests wait for a reply. Notifications do not.
+
+## Next step
+
+- [Serve MCP-generated HTML widgets](serve-html-widgets.md)
+- [User experience guidelines for HTML widgets in Microsoft Teams](ux-guidelines.md)
+- [Accessibility guidelines for HTML widgets in Microsoft Teams](accessibility-guidelines.md)
