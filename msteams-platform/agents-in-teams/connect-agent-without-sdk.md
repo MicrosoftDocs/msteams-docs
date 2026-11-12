@@ -9,11 +9,11 @@ ms.topic: article
 # Connect an agent to Teams without an SDK
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommended to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it's recommneded to use an HTTPS endpoint. Preview features can change before general availability.
 
 > [!Note]
 >
-> We recommend that you use the Teams SDK, which implements everything in this article. For SDK configuration instructions see [Configure delivery method for an agent](configure-delivery-methods-for-agents.md).
+> We recommend that you use the Teams SDK, which implements everything in this article. For SDK configuration instructions, see [Configure delivery method for an agent](configure-delivery-methods-for-agents.md).
 
  This article describes the protocol used by the SDK, so you can implement it in another language or framework, or understand what the SDK does. Every agent, whichever delivery method it uses, needs to send requests to Agent Communication Service (ACS). An agent then receives activities either at an HTTPS endpoint or over socket mode.
 
@@ -375,6 +375,8 @@ These values match the Teams SDK. The SignalR client's other settings can keep t
 | Keep a replaced socket open | 5 seconds after the new socket's `SocketReady`, and until its in-flight replies are sent |
 | Sockets per instance | One per region |
 
+## Code sample
+
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Socket mode sample | This sample shows how to receive activities from ACS via socket mode without using an SDK | [View](**NEED TO MOVE PREMS SAMPLE AND PAST LINK**<https://github.com/premkaretimsft/prkare-default-mode-socket-bot>). |
+| Add Teams bot sample using Azure SignalR default-mode socket delivery | This sample shows how to receive activities from ACS via socket mode without using an SDK | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-signalr-default-mode). |

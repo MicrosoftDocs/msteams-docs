@@ -9,6 +9,18 @@ ms.date: 10/28/2026
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
+## Preview: Socket mode for Teams agents
+
+*November 12, 2026*
+
+Socket mode lets your agent receive Teams activities over an outbound WebSocket connection, without a public HTTPS endpoint or development tunnel.
+
+Enable socket mode in your bot registration and configure your agent's runtime to use it. We recommend the Teams SDK, which manages connections, token refresh, and reconnection for you.
+
+Socket mode is intended for development and testing. For production agents, including bots published to the Teams Store, use an HTTPS endpoint.
+
+For setup instructions, see [Configure the delivery method for an agent](/microsoftteams/platform/agents-in-teams/configure-delivery-methods-for-agents).
+
 ## Released: Agents can now stream in group chats, channels, and meetings
 
 *October 28, 2026*

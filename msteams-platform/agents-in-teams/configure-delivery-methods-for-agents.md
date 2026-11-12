@@ -67,17 +67,13 @@ Using an Azure Bot? See [Manage Azure bots in Developer Portal for Teams](../con
 
 In your agent's code, turn on socket mode when you create the app. The SDK then connects in every region, handles activities exactly as it does for an HTTPS endpoint, replaces sockets before their tokens expire, and reconnects when a socket closes.
 
-If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes.
+If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes. Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick the language that suits you best:
 
-Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick whichever language suits you best:
+- [TypeScript Release v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
+- [Python Release v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
+- [.NET Release v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
 
-  - [TypeScript Release v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
-  - [Python Release v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
-  - [.NET Release v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
-
-**For options, you can specify the following value:**
-
-1. `geos` - Geographies to connect to, with one independent socket each. Every socket must connect for `start()` to succeed, after which each is supervised on its own.
+Use `geos` to specify the geographies to connect to, with one independent socket per geography; all sockets must connect for `start()` to succeed, after which each socket is supervised independently.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -177,7 +173,13 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(na
 logging.getLogger("microsoft_teams.apps.socket_mode").setLevel(logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-app = App(socket_mode=True)
+app = App(
+    socket_mode=SocketModeOptions(
+        # Socket Mode is only available on the Canary and Pilot1 rings for now.
+        # Pilot1 (https://pilot1.botapi.skype.com) is supported as well.
+        negotiate_base_url="https://canary.botapi.skype.com",
+    )
+)
 
 
 # Handlers are transport-agnostic: the exact same code works over HTTP or Socket Mode.
@@ -318,7 +320,7 @@ If your agent can't connect, check the status code that the connect request retu
 
 | Status | Error message | Cause and fix |
 | --- | --- | --- |
-| `401` | Unauthenticated request | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
+| `401` | `Unauthenticated request` | The request has no token, or the token is invalid or expired. Get a token for the scope `https://api.botframework.com/.default` with the agent's own app registration. |
 | `403` | `WebSocket connect requires an authenticated bot.` | The token isn't the agent's own bot token, for example, because it was issued to another app or to an agentic user. Use the credentials of the agent's own app registration. |
 | `403` | `Socket mode is not enabled for this bot.` | Socket mode isn't turned on in the agent's bot registration, or isn't available for your tenant yet. Turn it on, and allow about a minute for the change to take effect. The Teams SDK stops retrying after a `403`; restart your agent after you fix the cause. |
 | `429` | `This bot already has ... socket connections open ...` | The agent already has the maximum number of sockets in this region. Wait for the number of seconds in the `Retry-After` header, then retry. The Teams SDK retries automatically. Check for instances that open more sockets than they need. |
