@@ -1,11 +1,12 @@
 ---
 title: Designing activity feed notifications
-author: heath-hamilton
+author: nickwalk
 description: Learn how to design activity feed notifications for your Teams app and get the Teams UI Kit. Develop notifications from Teams channel in Visual Studio C#
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 07/24/2026
+ms.date: 11/12/2026
 ---
+
 # Designing activity feed notifications for your Microsoft Teams app
 
 The activity feed is a surface for users to access their notifications in Microsoft Teams. The feed retains notifications from the past four weeks.
@@ -45,7 +46,7 @@ You can add custom activity icons in activity feed notifications to increase use
 
 ## Manage activity feed notifications
 
-Users can manage notifications sent from your app in the Teams settings page.
+Users can manage notifications from apps and services in the Teams notification settings. Available notification settings depend on the app or service.
 
 ## Related system notifications
 
