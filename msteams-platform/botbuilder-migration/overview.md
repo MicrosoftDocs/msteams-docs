@@ -1,12 +1,12 @@
 ---
-title: From BotBuilder
-description: Migration guide from BotBuilder to Teams SDK, including the BotBuilder plugin for compatibility with existing activity handlers and adapters.
+title: BotBuilder (Bot Framework SDK) Migration Guide
+description: Migration guide from BotBuilder (Bot Framework SDK) to Teams SDK, including the BotBuilder plugin for compatibility with existing activity handlers and adapters.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
 ms.date: 10/09/2026
 ---
 
-# From BotBuilder
+# BotBuilder (Bot Framework SDK) migration guide
 
 ::: zone pivot="teams-sdk-csharp"
 This new iteration of Teams SDK has been rebuilt from the ground up.
