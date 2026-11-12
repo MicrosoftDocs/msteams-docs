@@ -10,7 +10,7 @@ zone_pivot_groups: teams-sdk-languages
 # Configure delivery method for an agent
 
 > [!Note]
-> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommnedd to use an HTTPS endpoint. Preview features can change before general availability.
+> Socket mode is in public preview and only available for newly created bots and agents. For agents in production, it is recommended to use an HTTPS endpoint. Preview features can change before general availability.
 
 The delivery method (see [Choose how your agent receives activity data from Teams](agent-connectivity.md)) is configured in two places:
 
@@ -86,12 +86,23 @@ Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick whichever l
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common';
 
-
+/**
+ * Socket Mode echo bot.
+ *
+ * This sample shows how to run a bot entirely over inbound **Socket Mode** — no
+ * public HTTP endpoint or dev tunnel required — and how to observe the socket
+ * lifecycle. By default a single bot opens one connection per geo
+ * (`amer`, `emea`, `apac`), so lifecycle events are reported per geo.
+ * WebSocket is only recommended for use when developing agents.
+ * Socket Mode is currently only available for new bots.
+ */
 const app = new App({
   logger: new ConsoleLogger('@examples/socket', { level: 'debug' }),
-  socketMode: {
-    geos: ['amer', 'emea', 'apac'], // the default
-  },
+
+  // Receive activities over the Teams backend service-negotiated WebSocket.
+  // Socket Mode starts no HTTP listener or public endpoint, so tabs, remote
+  // functions, OAuth callbacks, and other browser routes are unavailable.
+  socketMode: true,
 });
 
 // --- Socket lifecycle events -------------------------------------------------
@@ -140,13 +151,11 @@ app.on('message', async ({ reply, activity }) => {
 })();
 
 ```
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
 ```python
-
 import asyncio
 import logging
 
@@ -157,7 +166,6 @@ from microsoft_teams.apps import (
     ActivityContext,
     App,
     SocketModeDisconnectedEvent,
-    SocketModeOptions,
     SocketModeReadyEvent,
     SocketModeReconnectedEvent,
 )
@@ -169,13 +177,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(na
 logging.getLogger("microsoft_teams.apps.socket_mode").setLevel(logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-app = App(
-    socket_mode=SocketModeOptions(
-        # Socket Mode is only available on the Canary and Pilot1 rings for now.
-        # Pilot1 (https://pilot1.botapi.skype.com) is supported as well.
-        negotiate_base_url="https://canary.botapi.skype.com",
-    )
-)
+app = App(socket_mode=True)
 
 
 # Handlers are transport-agnostic: the exact same code works over HTTP or Socket Mode.
@@ -224,10 +226,7 @@ if app.socket_mode:
 
 if __name__ == "__main__":
     asyncio.run(app.start())
-
-
 ```
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
@@ -244,12 +243,13 @@ using Microsoft.Teams.Apps.SocketMode;
 
 // Socket Mode receives activities over an outbound WebSocket, so the bot runs on a
 // generic host with no web server and no public messaging endpoint.
+// Socket Mode is currently only available for new bots.
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
 {
     Args = args,
     ContentRootPath = AppContext.BaseDirectory,
 });
-builder.Services.AddTeamsBotApplication();
+builder.Services.AddTeamsBotApplication(options => options.UseSocketMode());
 using IHost host = builder.Build();
 
 TeamsBotApplication teamsApp = host.UseTeamsBotApplication();
