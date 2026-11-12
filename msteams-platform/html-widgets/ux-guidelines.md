@@ -224,8 +224,8 @@ This matters because the message bubble’s background normally frames a message
 </tr>
 <tr>
 <th>With border and padding</th>
-<td>:::image type="content" source="../assets/images/html-widgets/widget-frame-cozy-with.png" alt-text="The same widget inside a message bubble, with a border and padding that set it apart from the message text." lightbox="../assets/images/html-widgets/widget-frame-cozy-with.png":::</td>
-<td>:::image type="content" source="../assets/images/html-widgets/widget-frame-compact-with.png" alt-text="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas." lightbox="../assets/images/html-widgets/widget-frame-compact-with.png":::</td>
+<td><img src="../assets/images/html-widgets/widget-frame-cozy-with.png" alt="The same widget inside a message bubble, with a border and padding that set it apart from the message text."></td>
+<td><img src="../assets/images/html-widgets/widget-frame-compact-with.png" alt="The same widget with no message bubble, but with a border and padding. It reads as a contained card on the chat canvas."></td>
 </tr>
 </table>
 
@@ -293,7 +293,7 @@ Unlike Adaptive Cards, HTML widgets don’t automatically inherit a card backgro
 
 <br>
 
-<img src="../assets/images/html-widgets/container-gallery.png" alt="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators">
+:::image type="content" source="../assets/images/html-widgets/container-gallery.png" alt-text="Three example widgets showing container color nesting: a time-off request card using an Accent container for balance summary, a travel expense card using a Good container for approval status, and a distribution center card using Good and Attention containers for inventory delta indicators" lightbox="../assets/images/html-widgets/container-gallery.png":::
 
 ##### Text colors
 
@@ -378,7 +378,8 @@ Use text color tokens to create hierarchy and communicate meaning in widget cont
 </table>
 
 <br>
-<img src="../assets/images/html-widgets/text-color-examples.png" alt="Example of cards showing different font colors">
+
+:::image type="content" source="../assets/images/html-widgets/text-color-examples.png" alt-text="Example of cards showing different font colors." lightbox="../assets/images/html-widgets/text-color-examples.png":::
 
 #### Typography
 
@@ -399,7 +400,7 @@ Use the following base text styles to create clear visual hierarchy in your widg
 - Use a maximum of three distinct text sizes in a single widget to maintain visual hierarchy
 - Allow text blocks to wrap by default — avoid truncating body content unless space is genuinely constrained
 
-<img src="../assets/images/html-widgets/typography.png" alt="Two example widget cards showing typographic hierarchy using Header, Label, Body, Caption Label, and Caption text styles">
+:::image type="content" source="../assets/images/html-widgets/typography.png" alt-text="Two example widget cards showing typographic hierarchy using Header, Label, Body, Caption Label, and Caption text styles." lightbox="../assets/images/html-widgets/typography.png":::
 
 > [!TIP]
 > If you are building with React, use [Fluent UI React v9 typography tokens](https://react.fluentui.dev/?path=/docs/theme-typography--docs) rather than hardcoded pixel values. Tokens adapt automatically to theme changes and stay in sync with the Fluent design system.
@@ -419,9 +420,9 @@ Inside your widget's frame, use containers to group related content and create v
 - Use full-width (edge-to-edge) backgrounds sparingly — they work well for hero images or strong section dividers
 - Avoid deep nesting — limit container nesting to a maximum of two levels
 
-<img src="../assets/images/html-widgets/border-radius-styles.png" alt="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed">
+:::image type="content" source="../assets/images/html-widgets/border-radius-styles.png" alt-text="Five container style variations: base, rounded corners, border, border with rounded corners, and full-width bleed." lightbox="../assets/images/html-widgets/border-radius-styles.png":::
 
-<img src="../assets/images/html-widgets/border-shape-examples.png" alt="Variety of cards with varying container styles">
+:::image type="content" source="../assets/images/html-widgets/border-shape-examples.png" alt-text="Variety of cards with varying container styles." lightbox="../assets/images/html-widgets/border-shape-examples.png":::
 
 <img src="../assets/images/html-widgets/icon-shapes.png" alt="Shapes icon" width="20"> [Shapes and corner radius](https://fluent2.microsoft.design/shapes#corner-radius)
 
@@ -444,7 +445,7 @@ The following are commonly used spacing values for widget layouts. These map to 
 
 The following examples show how spacing tokens apply in real widget layouts.
 
-<img src="../assets/images/html-widgets/spacing.png" alt="Two widget layout examples with spacing annotations showing how Fluent spacing tokens apply to padding and gaps between elements">
+:::image type="content" source="../assets/images/html-widgets/spacing.png" alt-text="Two widget layout examples with spacing annotations showing how Fluent spacing tokens apply to padding and gaps between elements." lightbox="../assets/images/html-widgets/spacing.png":::
 
 For the full spacing scale, see <img src="../assets/images/html-widgets/icon-spacing.png" alt="Spacing icon" width="20"> [Fluent 2 > Spacing](https://fluent2.microsoft.design/layout).
 
@@ -486,7 +487,7 @@ Not all information needs to be visible at once. Use progressive disclosure to k
 - Use scrolling within a defined container for longer content lists — ensure the container has a clear label and is keyboard accessible
 - Transition to the expanded surface for content that requires significant vertical space or multi-step interaction
 
-<img src="../assets/images/html-widgets/progressive-disclosure.png" alt="Examples of progressive disclosure in widgets">
+:::image type="content" source="../assets/images/html-widgets/progressive-disclosure.png" alt-text="Examples of progressive disclosure in widgets." lightbox="../assets/images/html-widgets/progressive-disclosure.png":::
 
 ### Input gathering
 
