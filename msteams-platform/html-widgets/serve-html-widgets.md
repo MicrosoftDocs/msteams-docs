@@ -229,7 +229,9 @@ An MCP widget's HTML already performs the handshake and reports its height. Send
 
 Test the supplied widget on Teams mobile following the [responsive scaling guidance](ux-guidelines.md#responsive-scaling). If layout or interaction changes are needed, work with the MCP server owner.
 
-If the supplied widget includes Teams deep links, ensure that they meet the requirements in [Supported Teams deep links](send-html-widgets.md#supported-teams-deep-links).
+> [!Note]
+>
+> If the supplied widget includes Teams deep links, ensure that they meet the requirements in [Supported Teams deep links](send-html-widgets.md#supported-teams-deep-links).
 
 ### Forward the widget's tool calls
 
