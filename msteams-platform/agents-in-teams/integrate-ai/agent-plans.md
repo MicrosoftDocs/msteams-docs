@@ -100,7 +100,7 @@ The illustration shows the **Proposed**, **Active**, and **Completed** states.
 
 A step in the `error` state marks that step as failed. It doesn't end the plan. Reporting an error for the plan is a separate, terminal operation that ends the entire plan and prevents further updates. While a plan is active, its displayed status is derived from its steps. After the plan reaches a terminal state, its lifecycle determines whether it can be updated.
 
-The Bot API contract doesn't expose an operation for querying the current persisted plan state. The service checks the state internally when validating completion, but the Bot doesn't receive that state or the internal plan ID. Track the operations and step states in your application, and confirm with the SDK team before relying on a plan-state read API.
+There is no SDK or Bot API operation for reading a plan's current state. The Bot must maintain plan state based on the operations it sends and their responses. See [Code samples](#code-samples) for links to the SDK samples.
 
 ## Manage the plan lifecycle
 
@@ -137,9 +137,9 @@ When an associated user or agent message is deleted, its associated plans are al
 
 ## Implement plans with Teams SDK
 
-The Teams SDK exposes plans through a plan associated with the incoming message. Start a plan with one or more steps, update the steps as work progresses, and complete the plan with a final answer. The plan API is experimental, and its types and methods can change. The SDK sample projects provide end-to-end examples.
+The Teams SDK exposes plans through a plan associated with the incoming message. Start a plan with one or more steps, update the steps as work progresses, and complete the plan with a final answer. The plan API is experimental, and its types and methods can change. See [Code samples](#code-samples) for links to end-to-end SDK examples.
 
-Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. A step requires an ID, version, title, and status. Description and sources are optional.
+Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
 ### Start a plan, update a step, and send an answer
 
@@ -226,17 +226,17 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
 
 ::: zone-end
 
-Send plan updates sequentially. Wait for each update call to finish before sending the next. The SDK doesn't order overlapping calls or automatically resolve conflicts.
+Each `continue` request returns `202 Accepted`. If requests overlap, the higher version of each step wins regardless of request arrival order. The SDK doesn't order overlapping calls. When later work depends on an earlier update, wait for that update call to finish before sending the next request.
 
 ### Send or stream the final answer
 
-Use `plan.complete(answer)` when the complete answer is ready to send as one message. Use response streaming when you want users to receive the answer progressively as it's generated. The difference is how the answer is delivered: one message at once or progressively as it is generated. Use only one path for an answer.
+Use `plan.complete(answer)` when the complete answer is ready to send as one message. Use response streaming when you want users to receive the answer progressively as it's generated. Both paths provide the same completed-plan user experience. The difference is how the answer is delivered: one message at once or progressively as it is generated. Use only one path for an answer.
 
-When using a plan with response streaming, start the plan first, skip informative updates, and attach the plan completion metadata to the final streamed message. Emit the completion metadata after all answer text. Stopping the plan doesn't stop the response stream. Your application must handle both lifecycles.
+When using a plan with response streaming, start the plan first and skip informative updates. Emit the answer text, then attach the plan completion metadata to the final streaming activity with `streamType: "final"`. The SDK sends this activity through the normal Bot activity `POST` path. Don't call `plan.complete()` separately for the same answer. Stopping the plan doesn't stop the response stream. Your application must handle both lifecycles.
 
-The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the plan. The Bot API contract confirms completion with a normal final-message `POST`. Although the SDK samples attach completion metadata to a final-stream `PUT`, the contract supplied for this article doesn't confirm that the service completes the plan on this path. Confirm end-to-end support before relying on streamed plan completion in production.
+The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the plan. In TypeScript and Python, the SDK closes the stream automatically after a normal handler return. In C#, explicitly finalize the writer with the final activity.
 
-Python and TypeScript close the stream automatically after a normal handler return. Explicitly await `ctx.stream.close()` if you need to handle final-send errors inside the handler or finish one response before starting another.
+In TypeScript and Python, explicitly await `ctx.stream.close()` if you need to handle final-send errors inside the handler or finish one response before starting another.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -271,7 +271,7 @@ ctx.stream.emit(plan.completion())
 
 ::: zone-end
 
-### Stop or report a plan error with the Bot API
+### Stop or report a plan error with Teams SDK
 
 Use a terminal plan outcome when work is stopped or fails instead of completing it with an answer.
 
@@ -304,7 +304,7 @@ await plan.error()
 
 These methods don't accept a reason string or cancel your application's work. To describe a failure, it's recommended that you first update the affected step with a higher version, an `error` status, and a description, then report the Plan error.
 
-`PlanConflict` is an HTTP `409` for different plan conflicts, including a stopped or already completed plan, a version race, or an operation that's invalid for the current state. Don't blindly retry terminal-state conflicts. For a version-race response, the Bot API response message says to retry the request. Log the service error details and handle the specific response. A lost version race doesn't by itself mean that the plan is terminal.
+`PlanConflict` is an HTTP `409` for plan lifecycle conflicts, including a stopped or already completed plan, or an operation that's invalid for the current state. Don't blindly retry terminal-state conflicts. For overlapping `continue` requests, each request returns `202 Accepted`. A higher version wins for each step regardless of request arrival order, and a revision that isn't newer is skipped.
 
 ### Proactive plans and background work
 
@@ -551,7 +551,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Update steps
 
-Send the full desired state for each step you add or update. Keep each step ID stable, and increment its version by 1 when any of its fields change. The service compares the ID and version to append a new step, replace a step with a newer revision, or skip a revision that isn't newer. The Bot API doesn't read the plan before each update, so wait for each `continue` request to succeed before sending the next operation.
+Send the full desired state for each step you add or update. Keep each step ID stable, and increment its version by 1 when any of its fields change. The service compares the ID and version to append a new step, replace a step with a newer revision, or skip a revision that isn't newer. The Bot API doesn't read the plan before each update. Each `continue` request returns `202 Accepted`, and the higher version of a step wins regardless of request arrival order. When later work depends on an earlier update, wait for that request to finish before sending the next operation.
 
 ```http
 POST /v3/conversations/{conversationId}/activities
@@ -608,7 +608,7 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-For a streamed final answer, include `planInfo` on the final message alongside the final `streamInfo` entity. Intermediate stream messages don't complete the plan. The Bot API contract supplied for this article doesn't confirm that the service completes the plan on a final-stream message.
+For a streamed final answer, include `planInfo` with `planType: "complete"` on the final message alongside the final `streamInfo` entity with `streamType: "final"`. Intermediate stream messages don't complete the plan. The SDK sends the final activity through the normal Bot activity `POST` path.
 
 ### Stop a plan or report an error
 
@@ -623,10 +623,9 @@ Successful `start`, `continue`, `stop`, and `error` operations return `202 Accep
 | User stopped the plan | `409` | `The user stopped this plan. It can no longer be updated or completed.` |
 | Plan was stopped by the Bot or after a Bot error | `409` | The response explains that the plan was stopped and can no longer be updated or completed. |
 | Plan was already completed | `409` | `This plan is already complete. It can no longer be updated.` |
-| A version race was lost | `409` | `This plan changed during the request. Retry the request.` |
 | Operation isn't allowed in the current state | `409` | `Plan state does not allow this operation.` |
 
-`PlanConflict` doesn't always mean that the user stopped the plan. Use the response message to distinguish terminal states from a version-race conflict. The Bot API contract doesn't define an operation for reading the current plan state. Track the operations and step states your application sends.
+`PlanConflict` doesn't always mean that the user stopped the plan. Use the response message to identify the specific plan lifecycle conflict. Overlapping `continue` requests return `202 Accepted`; for updates to the same step, the higher version wins regardless of request arrival order, and a revision that isn't newer is skipped. The Bot API doesn't define an operation for reading the current plan state. The Bot must track its plan state from its requests and responses.
 
 ## Code samples
 
