@@ -772,6 +772,41 @@ The MCP Apps standard defines additional requests widgets can use to interact wi
 | `ui/update-model-context` | Silently tell the model about the widget's state, for later turns. | `hostCapabilities.updateModelContext` |
 | `ui/request-display-mode` | Ask to be shown inline, fullscreen, or picture-in-picture.         | `hostContext.availableDisplayModes`   |
 
+All four are requests, like `tools/call`: send them after the handshake and wait for the reply. The examples below are high-level; adapt them to your widget.
+
+Teams supports all of these requests. Still, it's good practice for a widget to always check that its host supports a feature before using it, and to fall back gracefully when it doesn't. The host's response to the `ui/initialize` request says what it supports:
+
+- **`hostCapabilities`** has one property for each optional request that the host supports: `openLinks` for `ui/open-link`, `message` for `ui/message`, and `updateModelContext` for `ui/update-model-context`. If the property is missing, don't send the request.
+- **`hostContext.availableDisplayModes`** lists the display modes that the host supports, for `ui/request-display-mode`. `hostContext.displayMode` is the widget's current mode.
+
+Keep both objects when the handshake completes. In this example and the ones below, `sendRequest(method, params)` sends a JSON-RPC request to Teams with `postMessage`, and returns a promise for the response's `result`:
+
+```js
+// Set when the handshake completes. The examples below use them.
+let hostCapabilities = {};
+let hostContext = {};
+
+const result = await sendRequest("ui/initialize", {
+  protocolVersion: "2026-01-26",
+  appInfo: { name: "My widget", version: "1.0.0" },
+  // The display modes that the widget supports, if it uses more than inline.
+  appCapabilities: { availableDisplayModes: ["inline", "fullscreen"] },
+});
+
+hostCapabilities = result.hostCapabilities ?? {};
+hostContext = result.hostContext ?? {};
+// Then send ui/notifications/initialized to complete the handshake.
+
+if (hostCapabilities.openLinks) {
+  // The host accepts ui/open-link requests from this widget.
+}
+```
+
+Like `tools/call`, these requests can fail in two ways. Handle both:
+
+- **The promise rejects** when Teams returns an error (for example, the request is denied or not supported) or doesn't reply in time.
+- **The promise resolves with `isError: true`** when Teams accepted the request but couldn't complete it. `ui/open-link` and `ui/message` can report failures this way.
+
 ## Put it all together
 
 Your existing bot needs two additions:
