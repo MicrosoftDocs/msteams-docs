@@ -9,9 +9,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use threads in channels and one-on-one agent chats
 
-This article explains how to choose where an agent response appears in one-on-one chats and channels. Group chats don't support threads.
-
-The TypeScript Teams SDK examples are based on version 2.2.0. See the [ActivityContext methods](https://github.com/microsoft/teams.ts/blob/v2.2.0/packages/apps/src/contexts/activity.ts) and [App send and reply methods](https://github.com/microsoft/teams.ts/blob/v2.2.0/packages/apps/src/app.ts) for their definitions. TODO: Add version-verified C# and Python examples.
+Threads group replies under a top-level message. The top-level message is L1, and its thread replies are L2. Threads have one reply level. Channels can use the Posts or Threads layout, and one-on-one agent chats use the same thread model. This article explains how an agent's response is placed in these conversations. Group chats don't support threads.
 
 ## Understand message placement
 
@@ -31,8 +29,6 @@ Use the incoming activity to identify the message, containing chat, and thread r
 `channelData.chat.id` identifies the containing one-on-one chat. In a channel, use `channelData.channel.id` instead.
 
 For an L1 message, `replyChain.id` can be absent or equal `activity.id`. For an L2 message, it identifies the L1 root and differs from the incoming message ID. Don't parse or construct `conversation.id` to find the containing chat. Its value can differ between a main chat and a thread.
-
-Names such as `chatId` and `threadRootMessageId` in examples are local variable names, not incoming or outgoing payload fields.
 
 ### Identify placement for other activities
 
@@ -97,6 +93,8 @@ In a 1:1 chat, the SDK default keeps the response at the incoming level. For a f
 In channels, a response sent from the incoming activity handler is placed at L2. To post a new L1 message in a channel, use a proactive send. For channel-thread behavior, see [Threaded conversations](channel-and-group-conversations.md#threaded-conversations).
 
 ## Implement a placement choice
+
+The explicit `app.send()` and `app.reply()` examples below use TypeScript Teams SDK 2.2.0. See the [ActivityContext methods](https://github.com/microsoft/teams.ts/blob/v2.2.0/packages/apps/src/contexts/activity.ts) and [App send and reply methods](https://github.com/microsoft/teams.ts/blob/v2.2.0/packages/apps/src/app.ts) for their definitions. TODO: Add version-verified C# and Python examples.
 
 Use the targeted `app.reply(chatOrChannelId, threadRootMessageId, message)` method to send at L2. Use the containing chat or channel ID—not `conversation.id`—as `chatOrChannelId`. For an incoming L1 message, use `activity.id` as the root. For an incoming L2 message, use `channelData.replyChain.id`.
 
