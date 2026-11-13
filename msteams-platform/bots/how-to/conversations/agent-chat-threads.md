@@ -41,9 +41,9 @@ The `chat` object in `channelData` identifies a one-on-one chat. The `channel` o
 | Activity | ID to compare with `channelData.replyChain.id` | How to interpret the result |
 | --- | --- | --- |
 | Message, edit, or delete | `activity.id` | Equal IDs mean L1. Different IDs mean L2. |
-| Reaction or card button click | `replyToId` | Different IDs mean the action is on an L2 message. |
-| Message action | `value.messagePayload.id` | Different IDs mean the action is on an L2 message. |
-| Invoke associated with a message | The acted-on message ID, such as `replyToId` | Different IDs mean the invoke is associated with an L2 message. |
+| Reaction or card button click | `replyToId` | Different IDs mean the action is on an L2 message. Equal IDs mean it targets the L1 root. |
+| Message action | `value.messagePayload.id` | Different IDs mean the action is on an L2 message. Equal IDs mean it targets the L1 root. |
+| Invoke associated with a message | The acted-on message ID, such as `replyToId` | Different IDs mean the invoke is associated with an L2 message. Equal IDs mean it targets the L1 root. |
 | Invoke not associated with a message | No message ID | A present `replyChain.id` identifies the containing thread. |
 | Conversation or installation update | No message ID | No message placement applies. |
 | Required message or thread ID is missing | Not available | Placement is unknown. Don't assume L1. |
@@ -128,11 +128,9 @@ TODO: Add a version-verified Python example for targeting L1 and L2 messages.
 
 ::: zone-end
 
-Use `app.send(chatOrChannelId, message)` to send at L1. In a 1:1 chat, `chatOrChannelId` is `channelData.chat.id`. In a channel, it is `channelData.channel.id`. This is also how to move an L2 response back to the main chat. Channel context-based responses are always placed at L2, so use a proactive send to post at L1.
+Use `app.send(chatOrChannelId, message)` to send at L1. In a 1:1 chat, `chatOrChannelId` is `channelData.chat.id`. In a channel, it is `channelData.channel.id`. This is also how to move an L2 response back to the main chat. In channels, a response sent from the incoming activity handler appears at L2. Use a proactive send to post at L1.
 
 To proactively send an L2 reply, store the containing chat or channel ID and thread root ID when the incoming message arrives, then call `app.reply(chatOrChannelId, threadRootMessageId, message)` outside the activity handler. Use `activity.id` as the root for an incoming L1 message and `channelData.replyChain.id` for an incoming L2 message. See [Send proactive messages](send-proactive-messages.md) for setup requirements.
-
-For a proactive L2 reply, store the containing chat or channel ID and the root message ID when the incoming message arrives, then use targeted `app.reply()` with those IDs. See [Send proactive messages](send-proactive-messages.md) for setup details.
 
 ## Send messages without the SDK (preview)
 
