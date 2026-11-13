@@ -28,6 +28,8 @@ Use the incoming activity to identify the message, containing chat, and thread r
 | Top-level message (L1) | `activity.id` | `channelData.chat.id` | `activity.id` |
 | Thread reply (L2) | `activity.id` | `channelData.chat.id` | `channelData.replyChain.id` |
 
+`channelData.chat.id` identifies the containing one-on-one chat. In a channel, use `channelData.channel.id` instead.
+
 For an L1 message, `replyChain.id` can be absent or equal `activity.id`. For an L2 message, it identifies the L1 root and differs from the incoming message ID. Don't parse or construct `conversation.id` to find the containing chat. Its value can differ between a main chat and a thread.
 
 Names such as `chatId` and `threadRootMessageId` in examples are local variable names, not incoming or outgoing payload fields.
@@ -127,6 +129,8 @@ TODO: Add a version-verified Python example for targeting L1 and L2 messages.
 ::: zone-end
 
 Use `app.send(chatOrChannelId, message)` to send at L1. In a 1:1 chat, `chatOrChannelId` is `channelData.chat.id`. In a channel, it is `channelData.channel.id`. This is also how to move an L2 response back to the main chat. Channel context-based responses are always placed at L2, so use a proactive send to post at L1.
+
+To proactively send an L2 reply, store the containing chat or channel ID and thread root ID when the incoming message arrives, then call `app.reply(chatOrChannelId, threadRootMessageId, message)` outside the activity handler. Use `activity.id` as the root for an incoming L1 message and `channelData.replyChain.id` for an incoming L2 message. See [Send proactive messages](send-proactive-messages.md) for setup requirements.
 
 For a proactive L2 reply, store the containing chat or channel ID and the root message ID when the incoming message arrives, then use targeted `app.reply()` with those IDs. See [Send proactive messages](send-proactive-messages.md) for setup details.
 
