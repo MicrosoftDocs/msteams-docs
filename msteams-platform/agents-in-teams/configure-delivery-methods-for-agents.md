@@ -82,12 +82,23 @@ Use `geos` to specify the geographies to connect to, with one independent socket
 import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common';
 
-
+/**
+ * Socket Mode echo bot.
+ *
+ * This sample shows how to run a bot entirely over inbound **Socket Mode** — no
+ * public HTTP endpoint or dev tunnel required — and how to observe the socket
+ * lifecycle. By default a single bot opens one connection per geo
+ * (`amer`, `emea`, `apac`), so lifecycle events are reported per geo.
+ * WebSocket is only recommended for use when developing agents.
+ * Socket Mode is currently only available for new bots.
+ */
 const app = new App({
   logger: new ConsoleLogger('@examples/socket', { level: 'debug' }),
-  socketMode: {
-    geos: ['amer', 'emea', 'apac'], // the default
-  },
+
+  // Receive activities over the Teams backend service-negotiated WebSocket.
+  // Socket Mode starts no HTTP listener or public endpoint, so tabs, remote
+  // functions, OAuth callbacks, and other browser routes are unavailable.
+  socketMode: true,
 });
 
 // --- Socket lifecycle events -------------------------------------------------
@@ -136,13 +147,11 @@ app.on('message', async ({ reply, activity }) => {
 })();
 
 ```
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
 ```python
-
 import asyncio
 import logging
 
@@ -153,7 +162,6 @@ from microsoft_teams.apps import (
     ActivityContext,
     App,
     SocketModeDisconnectedEvent,
-    SocketModeOptions,
     SocketModeReadyEvent,
     SocketModeReconnectedEvent,
 )
@@ -214,10 +222,7 @@ if app.socket_mode:
 
 if __name__ == "__main__":
     asyncio.run(app.start())
-
-
 ```
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
@@ -234,12 +239,13 @@ using Microsoft.Teams.Apps.SocketMode;
 
 // Socket Mode receives activities over an outbound WebSocket, so the bot runs on a
 // generic host with no web server and no public messaging endpoint.
+// Socket Mode is currently only available for new bots.
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
 {
     Args = args,
     ContentRootPath = AppContext.BaseDirectory,
 });
-builder.Services.AddTeamsBotApplication();
+builder.Services.AddTeamsBotApplication(options => options.UseSocketMode());
 using IHost host = builder.Build();
 
 TeamsBotApplication teamsApp = host.UseTeamsBotApplication();
