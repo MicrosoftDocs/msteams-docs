@@ -1101,6 +1101,13 @@ To try it:
 - [ ] The bot's handler always returns `content`, `structuredContent`, and `isError`, and never throws.
 - [ ] The bot validates `arguments`, ignores unknown properties such as `__msteams__`, and does not authorize based on `activity.from`.
 
+**Other APIs**
+
+- [ ] `ui/open-link`, `ui/message`, `ui/update-model-context`, and `ui/request-display-mode` are sent only after the handshake, and only when Teams declares support for them in its response to `ui/initialize`.
+- [ ] `ui/open-link` and `ui/message` are sent only in response to a user action, and the widget has a fallback when they fail.
+- [ ] Each `ui/update-model-context` request contains the widget's complete current state, with a text description in `content`.
+- [ ] Every display mode that the widget uses is declared in `appCapabilities.availableDisplayModes`, and the widget uses the mode in the reply and in `ui/notifications/host-context-changed`.
+
 **Widgets from MCP servers**
 
 - [ ] The MCP client declares the `io.modelcontextprotocol/ui` extension.
@@ -1117,6 +1124,12 @@ To try it:
 | Widget | `ui/notifications/initialized`                  | Notification | `{}`                                                               | None                                                             |
 | Widget | `ui/notifications/size-changed`                 | Notification | `{ height }` in CSS pixels                                         | None                                                             |
 | Widget | `tools/call`                                    | Request      | `{ name, arguments }`                                              | The bot's `callToolResult`                                       |
+| Widget | `ui/open-link`                                  | Request      | `{ url }`                                                          | `{}`, or `{ isError: true }` if the URL could not be opened      |
+| Widget | `ui/message`                                    | Request      | `{ role: "user", content }`, where `content` is an array of blocks | `{}`, or `{ isError: true }` if the message was not posted       |
+| Widget | `ui/update-model-context`                       | Request      | `{ content?, structuredContent? }`                                 | `{}`                                                             |
+| Widget | `ui/request-display-mode`                       | Request      | `{ mode }`: `"inline"`, `"fullscreen"`, or `"pip"`                 | `{ mode }`: the widget's actual display mode                     |
+| Teams  | `ui/notifications/host-context-changed`         | Notification | The `hostContext` fields that changed, such as `displayMode`       | None                                                             |
+| Bot    | `message` activity (`tryGetWidgetModelContext`) | Handler      | `activity.value`: the `ui/update-model-context` request            | None                                                             |
 | Bot    | `widget.callTool` route (`htmlwidget/calltool`) | Handler      | `activity.value`: `{ name, arguments }`                            | `{ responseType: "htmlwidget/calltoolresult", callToolResult }`  |
 
 Requests wait for a reply. Notifications do not.
