@@ -139,6 +139,14 @@ When an associated user or agent message is deleted, its associated plans are al
 
 The Teams SDK exposes plans through a plan associated with the incoming message. Start a plan with one or more steps, update the steps as work progresses, and complete the plan with a final answer. The plan API is experimental, and its types and methods can change. See [Code samples](#code-samples) for links to end-to-end SDK examples.
 
+### Plan placement in threads
+
+The prompt and the destination thread are separate. `replyToId` identifies the message the plan answers. A reply-chain binding identifies the one-to-one chat and the root (L1) message for a plan completion posted in a thread reply (L2).
+
+In TypeScript SDK 2.2.0, `ctx.plan()` binds the plan to the incoming prompt. When the prompt is in a one-to-one chat thread, completion uses the reply-chain binding. Start, update, stop, and error activities use the conversation route with the prompt ID.
+
+This describes TypeScript SDK request routing. Verify how each supported Teams client renders plan progress throughout the lifecycle before relying on thread placement. Don't infer C# or Python behavior from the TypeScript implementation. Plan positioning and message streaming are configured separately.
+
 Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
 ### Start a plan, update a step, and send an answer
