@@ -351,8 +351,8 @@
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md
       displayName: ACP
-  - name: Legacy tools and SDKs
-    href: legacy-tools-sdks.md
+  - name: Deprecated tools and SDKs
+    href: deprecated-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
 - name: Add user authentication (SSO and OAuth)
   items:
