@@ -865,7 +865,44 @@ Teams deep links open using the account associated with the widget.
 > [!NOTE]
 > Teams ignores unsupported Teams deep links, and the `ui/open-link` request returns an error. These restrictions don't apply to regular web links.
 
-To learn more about Teams deep links, visit [Deep link to an application](../concepts/build-and-test/deep-link-application.md).
+To learn more about Teams deep links, visit [Explore and configure deep links to apps](../concepts/build-and-test/deep-link-application.md).
+
+### Post a message to the chat: `ui/message`
+
+`ui/message` adds a message to the conversation **as if the user had sent it**, and the agent responds to it. Use it when a selection in the widget should continue the conversation, for example a **Book this flight** or **Tell me more about this** button.
+
+The parameters are `role`, which is always `"user"`, and `content`: an array of MCP content blocks. Use text blocks unless `hostCapabilities.message` lists other kinds, such as `image`.
+
+```js
+/**
+ * Posts a message to the chat on the user's behalf. The agent responds to it.
+ * @param {string} text The message's text.
+ * @returns {Promise<void>} Rejects if Teams doesn't post the message.
+ */
+async function sendMessage(text) {
+  if (!hostCapabilities.message) {
+    throw new Error("Teams can't post messages from this widget.");
+  }
+
+  const result = await sendRequest("ui/message", {
+    role: "user",
+    content: [{ type: "text", text }],
+  });
+
+  if (result.isError) {
+    throw new Error("The message could not be posted.");
+  }
+}
+
+// For example, when the user selects a flight in the widget:
+bookButton.addEventListener("click", () =>
+  sendMessage("Book flight " + flight.number + " on " + flight.date + "."),
+);
+```
+
+- **Send messages only in response to an explicit user action.** The message appears in the chat as the user's own, so its text must be something the user clearly asked for.
+- **Write the text for the agent and for the user.** It is a normal chat message: keep it short and readable, and never include secrets.
+- Teams can ask the user to approve the message before it is posted.
 
 ## Put it all together
 
