@@ -904,6 +904,95 @@ bookButton.addEventListener("click", () =>
 - **Write the text for the agent and for the user.** It is a normal chat message: keep it short and readable, and never include secrets.
 - Teams can ask the user to approve the message before it is posted.
 
+### Update the agent's context: `ui/update-model-context`
+
+`ui/update-model-context` tells the agent what is happening in the widget **without** posting a message or starting a new turn. Use it for state that the agent needs to answer the user's next question, for example the item that the user selected, the filters that are applied, or the values in a form.
+
+The parameters are `content`, an array of content blocks, and `structuredContent`, an object with machine-readable data. Both are optional. The reply is an empty object.
+
+```js
+/**
+ * Replaces the widget's context for the agent. Teams sends it to the
+ * agent, which decides how to use it.
+ * @param {string} text A short description of the widget's current state.
+ * @param {object} [structuredContent] The same state, as data.
+ * @returns {Promise<void>}
+ */
+async function updateModelContext(text, structuredContent) {
+  // Context updates are optional: skip them if Teams doesn't accept them.
+  if (!hostCapabilities.updateModelContext) {
+    return;
+  }
+
+  await sendRequest("ui/update-model-context", {
+    content: [{ type: "text", text }],
+    structuredContent,
+  });
+}
+
+// For example, when the user selects a laptop configuration:
+updateModelContext(
+  "The user is viewing the Contoso 14 laptop, in silver, with 16 GB of memory.",
+  { productId: "contoso-14", color: "silver", memoryGb: 16 },
+);
+```
+
+- **Send the complete current state every time.** Each update replaces the previous one; it isn't added to it.
+- **Don't send an update for every small change.** Teams sends each update to the agent. Wait until a change is complete, for example by debouncing input.
+- **Always include a text description in `content`.** The model may not receive `structuredContent`, unless `hostCapabilities.updateModelContext` lists `structuredContent`.
+- **Treat the context as visible.** The model reads it, and Teams can show it to the user. Never include secrets.
+
+The two ways of telling the agent something behave differently:
+
+|                         | `ui/message`                        | `ui/update-model-context`                         |
+| ----------------------- | ----------------------------------- | ------------------------------------------------- |
+| Appears in the chat     | Yes, as a message from the user     | No                                                |
+| Makes the agent respond | Yes, right away                     | No. The agent decides how to use it.              |
+| Repeated calls          | Each call posts a new message       |     Each call replaces the previous context           |
+
+#### Handle context updates in the bot
+
+In Teams, the widget's agent receives each `ui/update-model-context` request. Like an `Action.Submit` from an Adaptive Card, it arrives as a **message activity** whose `value` contains the request:
+
+```json
+{
+  "method": "ui/update-model-context",
+  "params": {
+    "content": [{ "type": "text", "text": "The user is viewing the Contoso 14 laptop..." }],
+    "structuredContent": { "productId": "contoso-14", "color": "silver", "memoryGb": 16 }
+  }
+}
+```
+
+It is the **agent's responsibility** to handle the update in whatever way it wants. Teams doesn't add the context to the conversation or pass it to a model. For example, the agent can store the latest context for the conversation and include it in the model's prompt on the next turn, or ignore it.
+
+In the Teams SDK, check for the update at the start of the `message` handler with `tryGetWidgetModelContext`, from `@microsoft/teams.apps`. It returns the request, or `undefined` if the activity isn't a context update:
+
+```ts
+import { tryGetWidgetModelContext } from "@microsoft/teams.apps";
+
+// The latest widget context for each conversation. Use your own storage.
+const widgetContexts = new Map<string, unknown>();
+
+app.on("message", async ({ activity }) => {
+  const update = tryGetWidgetModelContext(activity);
+
+  if (update) {
+    // A context update from a widget, not a message from the user. Each
+    // update replaces the previous one. Don't reply: a reply would appear in the chat.
+    widgetContexts.set(activity.conversation.id, update.params);
+    return;
+  }
+
+  // Your normal message handling. For example, add the stored widget context
+  // to the model's prompt.
+});
+```
+
+- **Handle updates before your normal message handling**, so that they aren't treated as messages from the user.
+- **Treat the context as untrusted input.** It comes from the browser. Validate it, and keep in mind that text passed to a model can try to change the model's instructions.
+- **Don't reply to the update.** The widget doesn't wait for the agent: Teams answers the widget's request itself.
+
 ## Put it all together
 
 Your existing bot needs two additions:
