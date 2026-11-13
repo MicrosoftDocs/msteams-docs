@@ -725,7 +725,7 @@ Key parameters and values:
 
 > [!NOTE]
 >
-> These samples send the `Authorization` header when you pass an access token. Today's TempAuth upload URLs ignore the header, but upload URLs that aren't TempAuth return HTTP 401 without it. Unlike Microsoft Graph upload session guidance, send the header on every request to `uploadUrl`. To acquire the token, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). Make and deploy these changes by December 31, 2026.
+> These samples send the `Authorization` header when you pass an access token. Today's files download/upload URLs will start following new authentication model-based values. This requires bot developesr to supply bots' app-only Entra token in the request header to perform files upload/download, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). Make and deploy these changes by March 1st, 2027 or your agent will not be able to upload/download files. 
 
 #### Notify the user
 
@@ -951,10 +951,8 @@ Request the file token for the tenant ID provided with the file:
 
 | Operation | Tenant ID field | Fallback |
 | --- | --- | --- |
-| Download | `attachment.content.tenantId` on the file attachment | The activity's tenant ID |
+| Download | `attachment.content.tenantId` when present in the file attachment, if not use `activity.channelData.tenant.id` | The activity's tenant ID |
 | Upload | `activity.value.uploadInfo.tenantId` on the `fileConsent/invoke` activity | The activity's tenant ID |
-
-If the field is missing, use the activity's tenant ID, such as `activity.channelData.tenant.id`. Bots that use managed identity can skip this step.
 
 The file's tenant ID identifies the tenant context to use when requesting authentication for the file operation. If your bot always uses the activity tenant ID, it can select the wrong tenant context when the file belongs to a different tenant.
 
@@ -970,8 +968,6 @@ For each download or upload request:
 1. Request an app-only token for the `https://<url host>/.default` scope, where `<url host>` is the host of the download URL or `uploadUrl`.
 1. Send `Authorization: Bearer <token>` on the download `GET` and on every request to `uploadUrl`.
 1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it.
-
-Because the token is requested for the URL's own host, it isn't sent anywhere else.
 
 > [!IMPORTANT]
 >
@@ -994,6 +990,8 @@ try {
   // Use the bot's Microsoft App ID (bots[].botId) with a certificate,
   // federated identity credential, or managed identity.
   // Don't use a client secret.
+  // the acquireAppOnlyToken method used here is a placeholder for your own implementation. 
+
   token = await acquireAppOnlyToken({ clientId: botAppId, tenantId, scope });
 } catch (error) {
   log.warn('File token request failed.');
