@@ -19,6 +19,10 @@
       href: agents-in-teams/overview.md
     - name: Agent basics
       href: bots/bot-concepts.md
+      displayName: scopes, handler, activity
+    - name: Agent connectivity in Teams
+      href: agents-in-teams/agent-connectivity.md
+      displayName: connectivity, Teams, agent, network, integration
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
@@ -89,6 +93,12 @@
       displayName: receive files using agents
   - name: How-tos
     items:
+    - name: Configure delivery method for an agent
+      href: agents-in-teams/configure-delivery-methods-for-agents.md
+      displayName: delivery method, agent, configuration
+    - name: Connect an agent to Teams without an SDK
+      href: agents-in-teams/connect-agent-without-sdk.md
+      displayName: agent, Teams, connectivity, without SDK
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
       displayName: block kit
@@ -186,6 +196,9 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
+    - name: Manage Azure bots in Developer Portal
+      href: concepts/build-and-test/manage-azure-bots.md
+      displayName: Azure bots, manage, Developer Portal
     - name: Develop your apps with Agents Toolkit
       href: concepts/build-and-test/develop-your-apps-with-toolkit.md
       displayName: visual studio code, visual studio, agents toolkit, react web app, publish react app, debug
