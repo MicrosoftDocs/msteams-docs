@@ -1,5 +1,5 @@
 ---
-title: Agent Connectivity in Teams
+title: Choose how agents receive activity data from Teams
 description: Choose how agents receive activity data from Teams
 ms.localizationpriority: high
 ms.date: 11/06/2026
@@ -11,7 +11,7 @@ ms.topic: article
 > [!Note]
 > Socket mode is in public preview and only available for newly created bots and agents. We recommend using an HTTPS messaging endpoint for agents in production. Preview features can change before general availability.
 
-Teams agents do most of their work with Teams, especially chat, through Agent Communication Service (ACS), the service that connects agents to Teams. The connection between an agent and ACS is bidirectional. ACS sends data to your agent to tell it about activity in Teams in real time: messages, card actions, installs, reactions, meeting events, and more. Your agent sends data to ACS to act on that activity: reply, post a card, update a message, and so on.
+Choose how your agent receives Teams activities: through an HTTPS endpoint or socket mode. Agent Communication Service (ACS) connects your agent to Teams. ACS sends your agent activity data in real time, such as messages, card actions, installs, reactions, and meeting events. Your agent sends data to ACS to act on those activities, such as replying, posting a card, or updating a message.
 
 Your agent always uses HTTPS requests to send data to ACS. You choose how ACS sends data to your agent:
 
@@ -31,9 +31,9 @@ With either delivery method, your agent sends messages and other requests to ACS
 | **Authentication** | Your agent validates the token on every incoming request. | ACS authenticates your agent once, when it connects. Activities on the socket don't need validation. |
 | **Connection** | A short-lived request per activity. | Long-lived connections, replaced at least once an hour. Your agent keeps them open and reconnects when one closes. |
 | **Scale** | Any number of instances behind a load balancer. | Up to 4 open connections per agent in each region, so up to 4 connected instances. |
-| **When your agent is offline** | Requests to your endpoint fail. | Activities aren't delivered. ACS doesn't fall back to an HTTPS endpoint. |
+| **When your agent is offline** | Requests to your endpoint fail. | ACS doesn't deliver activities in a region unless your agent has an active WebSocket connection in that region. It doesn't fall back to a previously-saved HTTPS endpoint. |
 | **Status** | Generally available. | Public preview. |
-| **Teams Store** | Supported. | Not supported. |
+| **Distribution via Teams Store** | Supported. | Not supported. |
 
 **Use socket mode when:**
 
@@ -50,17 +50,17 @@ The choice isn't permanent. Many developers use socket mode while building an ag
 
 **HTTPS**
 
-During your agent creation in Teams Developer Portal or Teams CLI, you'll be asked to provide an HTTPS endpoint. If you're using HTTPS mode, supply the endpoint and no further steps are needed.
+When you create your agent in Teams Developer Portal or with the Teams CLI, provide an HTTPS endpoint if you're using HTTPS mode.
 
 **Socket mode**
 
-It's recommended to use the Teams SDK with socket mode. Teams SDK can handle the WebSocket connections for you. To connect your agent to Teams via socket mode with the Teams SDK, see [Configure delivery methods for an agent](configure-delivery-methods-for-agents.md).
+To connect your agent to Teams using socket mode with the Teams SDK, see [Configure the delivery method for an agent](configure-delivery-methods-for-agents.md). We recommend using the Teams SDK with socket mode, because the SDK handles the WebSocket connections for you. 
 
-If you prefer to use another language or framework with socket mode, steps for connecting your agent to Teams without an SDK can be found in the *Connect an agent to Teams without an SDK* guide, [here](connect-agent-without-sdk.md).
+If you prefer to use another language or framework with socket mode, see [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md).
 
 ## Architectural considerations
 
-This section explains what happens under the hood in socket mode, so you can assess its effect on your system and choose the right settings. If you use the Teams SDK, it handles all of this for you.
+This section explains what happens under the hood in socket mode, so you can assess its effect on your system and choose the right settings.
 
 ### How socket mode works
 
@@ -90,23 +90,23 @@ sequenceDiagram
 1. **Connect.** Your agent gets a token for its own app registration, the same token it uses to send messages, and calls the ACS connect endpoint for a region. ACS checks that socket mode is on for the agent and returns a URL and an access token for one socket.
 2. **Open the socket.** Your agent opens a WebSocket to that URL. Once ACS is ready to deliver to it, ACS sends a `SocketReady` message.
 3. **Receive activities.** ACS sends each activity to the agent over the socket. The activity is the same JSON your HTTPS endpoint would receive.
-4. **Respond.** Your agent's handler returns a reply on the same call: for an invoke (such as a card action), the invoke response; for any other activity, an acknowledgment once the agent has handled it. ACS waits for this reply, just as it waits for the HTTP response from an HTTPS endpoint.
+4. **Respond.** Your agent's handler returns a reply on the same call. For an invoke (such as a card action) the reply is the invoke response. For any other activity, the reply is an acknowledgment that the agent has handled it. ACS waits for this reply, just as it waits for the HTTP response from an HTTPS messaging endpoint.
 5. **Send.** To post messages, reply in a thread, update cards, and so on, your agent calls the ACS REST API over HTTPS, exactly as with an HTTPS endpoint.
 
 ### Regions
 
-Teams handles each conversation in one region, `amer`, `emea`, or `apac`, and ACS delivers its activities only to sockets connected in that region. Your agent must connect one socket in **each** region where its users' conversations are handled. To cover all users, connect to all three. The Teams SDK does this by default. If your agent has no socket in a region, activities from conversations in that region aren't delivered.
+Teams handles each conversation in one region, and ACS delivers the conversation's activities only to sockets connected for that region. Your agent must connect at least one socket in **each** region, otherwise it won't receive activities from converations in that region. To cover all users, connect to all regions, currently: `amer`, `emea`, and `apac`. The Teams SDK does this by default.
 
 ### Multiple instances and load distribution
 
-Each instance of your agent opens its own sockets, one per region. ACS sends each activity to **one** of the agent's sockets in the region, never to all of them, and favors the socket with the fewest activities waiting for a reply. ACS doesn't keep a conversation on the same socket: two messages in one conversation can go to different instances, just as two HTTPS requests can land on different instances behind a load balancer. Keep conversation state in shared storage, as you would for an HTTPS agent.
+Each instance of your agent opens its own sockets, one per region. ACS sends each activity to **one** of the agent's sockets in the activity's region, favoring the socket with the fewest activities waiting for a reply. ACS doesn't keep a conversation on the same socket: two messages in one conversation can go to different instances, just as two HTTPS requests can land on different instances behind a load balancer. Keep conversation state in shared storage, as you would for an HTTPS agent.
 
 ACS doesn't wait for one activity's reply before it sends the next on the same socket. Handle activities concurrently, and don't block the handler while waiting on slow work.
 
 ### Delivery and timing
 
-- **Time limit.** ACS waits for your reply for the same time as with HTTPS delivery: currently 25 seconds, given in each delivery as `deadlineMs`. After that, the delivery fails. For an invoke, the user sees an error. If your work takes longer, acknowledge the activity and finish the work in the background, then send the result with the ACS REST API.
-- **No retry on the socket.** ACS sends each activity once, to one socket. If the reply doesn't arrive (the agent was too slow, the socket closed, or the reply was invalid), ACS doesn't resend it on another socket or to an HTTPS endpoint.
+- **Time limit.** ACS waits for your reply for the same duration as with HTTPS delivery: currently 25 seconds, given in each delivery as `deadlineMs`. After that, the delivery fails. If your work takes longer, acknowledge the activity, then finish the work in the background.
+- **No retry on the socket.** ACS sends each activity once, to one socket. If a reply doesn't arrive (the agent was too slow, the socket closed, or the reply was invalid), ACS considers the delivery to have failed. It doesn't resend it on another socket.
 - **Duplicates.** As with HTTPS delivery, the sender of an activity can retry a delivery that failed, so your agent might occasionally see an activity twice. Use the activity `id` to detect duplicates.
 - **Ordering.** Activities can arrive concurrently and on different instances, so don't rely on their order.
 
@@ -115,14 +115,15 @@ ACS doesn't wait for one activity's reply before it sends the next on the same s
 Sockets are long-lived but not permanent:
 
 - **Token expiry.** Each socket's access token expires after a set lifetime, currently 60 minutes (given as `expiresIn` when you connect), and the socket closes when its token expires. Replace each socket shortly before its token expires to avoid a gap. The Teams SDK does this automatically.
-- **Other closes.** Sockets can also close at any time: during ACS service updates, after a network problem, or when ACS closes them on purpose (for example, when socket mode is turned off for the agent). Your agent should reconnect right away, with backoff.
-- **Redundancy.** While a socket is reconnecting, activities for that region go to the agent's other sockets in the region. If there are none, they aren't delivered. Running two or more instances keeps delivery going while one reconnects.
+- **Other disconnections.** Sockets can also close at any time: during ACS service updates, when there is a network problem, or when ACS closes them on purpose (for example, when socket mode is turned off for the agent). Your agent should reconnect right away, with backoff.
+- **Redundancy.** While a socket is reconnecting, activities for that region go to the agent's other sockets in the region. If there are none, the activity is not delivered. Running two or more instances of your agent keeps delivery going while one instance reconnects.
+- **Turning it off.** When you turn off socket mode for an agent, ACS closes the agent's open sockets within about a minute and refuses new ones.
 
 ### Limits
 
 | Limit | Value |
 | --- | --- |
-| Open sockets per agent, per region | 4. A socket that's being replaced by a refresh doesn't count. |
+| Open sockets per agent, per region | 4. A socket that's being replaced by a refresh doesn't count towards this limit. |
 | Time to reply to an activity | 25 seconds (`deadlineMs`) |
 | Reply size, from your agent to ACS | 1 MB |
 | Socket access token lifetime | 60 minutes (`expiresIn`) |
@@ -135,7 +136,7 @@ When an agent already has the maximum number of sockets in a region, the connect
 
 - **Outbound only.** Your agent opens every connection. It needs no inbound ports, public IP address, or public DNS name.
 - **Authenticated with the agent's own identity.** To connect, your agent proves its identity with the token from its Microsoft Entra app registration, the same token it uses to send messages. ACS only gives a socket to the agent the token belongs to.
-- **Scoped, short-lived socket tokens.** Each socket token works for one socket, for that agent only, and expires. ACS delivers only that agent's activities on the socket. Treat the token as a secret: don't log it or share it.
+- **Scoped, short-lived socket tokens.** Each socket token works for one socket, for that agent only, and expires. ACS delivers only that agent's activities on the socket. Like any access token, treat the socket's token as a secret: don't log it or share it.
 - **Encrypted.** All connections use TLS.
 
 ### For IT admins
@@ -145,8 +146,6 @@ When an agent already has the maximum number of sockets in a region, the connect
   | Destination | Used for |
   | --- | --- |
   | `login.microsoftonline.com` | Getting the agent's token. Every agent needs this, whichever delivery method it uses. |
-  | `botapi.skype.com` | The connect request |
+  | `*.botapi.skype.com` | The connect request |
   | `*.service.signalr.net` | The socket. Proxies and firewalls must allow WebSocket upgrades and long-lived connections. |
   | The `serviceUrl` hosts in incoming activities (for example, `smba.trafficmanager.net`) | Sending messages with the ACS REST API. Every agent needs this, whichever delivery method it uses. |
-
-- **Turning it off.** When socket mode is turned off for an agent, ACS closes the agent's open sockets within about a minute and refuses new ones.
