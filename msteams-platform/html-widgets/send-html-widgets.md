@@ -906,7 +906,7 @@ bookButton.addEventListener("click", () =>
 
 ### Update the agent's context: `ui/update-model-context`
 
-`ui/update-model-context` tells the agent what is happening in the widget **without** posting a message or starting a new turn. Use it for state that the agent needs to answer the user's next question, for example the item that the user selected, the filters that are applied, or the values in a form.
+`ui/update-model-context` tells the agent what is happening in the widget **without** posting a message or starting a new turn. Use it for state that the agent needs to answer the user's next question, for example, the item that the user selected, the filters that are applied, or the values in a form.
 
 The parameters are `content`, an array of content blocks, and `structuredContent`, an object with machine-readable data. Both are optional. The reply is an empty object.
 
@@ -992,6 +992,69 @@ app.on("message", async ({ activity }) => {
 - **Handle updates before your normal message handling**, so that they aren't treated as messages from the user.
 - **Treat the context as untrusted input.** It comes from the browser. Validate it, and keep in mind that text passed to a model can try to change the model's instructions.
 - **Don't reply to the update.** The widget doesn't wait for the agent: Teams answers the widget's request itself.
+
+### Change the display mode: `ui/request-display-mode`
+
+A widget can be displayed in one of three modes:
+
+| Mode         | Description                                                               | Supported in Teams |
+| ------------ | ------------------------------------------------------------------------- | ------------------ |
+| `inline`     | The default: the widget is shown in the chat message.                     | Yes                |
+| `fullscreen` | The widget is shown in a large modal dialog within the Teams main window. | Yes                |
+| `pip`        | Picture-in-picture: the widget floats over the conversation.              | No                 |
+
+Teams doesn't support `pip`. In Teams, `fullscreen` shows the widget in a large modal dialog that appears within the Teams main window.
+
+To use a mode other than `inline`:
+
+1. **Declare every mode that the widget supports**, including `inline`, in `appCapabilities.availableDisplayModes` of the `ui/initialize` request. Teams only switches the widget to modes that it declared.
+2. **Check that Teams supports the mode**, in `hostContext.availableDisplayModes`, before you request it.
+3. **Use the mode in the reply.** The reply's `mode` is the mode the widget is actually in, which can differ from the one you requested.
+4. **Listen for `ui/notifications/host-context-changed`.** Teams can change the mode without a request, for example when the user exits fullscreen.
+
+```js
+/**
+ * Asks Teams to show the widget in another display mode.
+ * @param {"inline" | "fullscreen" | "pip"} mode The requested mode.
+ * @returns {Promise<string>} The mode that the widget is in afterward.
+ */
+async function requestDisplayMode(mode) {
+  // Don't request a mode that Teams doesn't support.
+  if (!hostContext.availableDisplayModes?.includes(mode)) {
+    return hostContext.displayMode ?? "inline";
+  }
+
+  const result = await sendRequest("ui/request-display-mode", { mode });
+
+  return result.mode;
+}
+
+// Teams sends changes to the host context, such as a new display mode.
+window.addEventListener("message", (event) => {
+  const message = event.data;
+
+  if (
+    event.source !== window.parent ||
+    message?.method !== "ui/notifications/host-context-changed"
+  ) {
+    return;
+  }
+
+  // An update contains only the fields that changed: merge it.
+  hostContext = { ...hostContext, ...message.params };
+  // Let CSS adapt the layout, with selectors like [data-display-mode="fullscreen"].
+  document.body.dataset.displayMode = hostContext.displayMode ?? "inline";
+});
+
+// For example, an "Expand" button.
+expandButton.addEventListener("click", async () => {
+  const mode = await requestDisplayMode("fullscreen");
+
+  document.body.dataset.displayMode = mode;
+});
+```
+
+[Reporting the widget's height](#step-4-report-the-widgets-height) only applies to `inline` mode, where the widget's height is driven by its content. In `fullscreen` mode, Teams sets the widget's height. Make the widget fill that height (for example, with `height: 100vh` on its root element) instead of sizing it to its content, and return to content-driven sizing when the widget is back in `inline` mode.
 
 ## Put it all together
 
