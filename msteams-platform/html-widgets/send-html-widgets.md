@@ -807,6 +807,66 @@ Like `tools/call`, these requests can fail in two ways. Handle both:
 - **The promise rejects** when Teams returns an error (for example, the request is denied or not supported) or doesn't reply in time.
 - **The promise resolves with `isError: true`** when Teams accepted the request but couldn't complete it. `ui/open-link` and `ui/message` can report failures this way.
 
+### Open a link: `ui/open-link`
+
+A widget runs in a sandboxed iframe, so ordinary links, `target="_blank"`, and `window.open` can be blocked. To open a page, ask Teams to open it:
+
+```js
+/**
+ * Asks Teams to open a URL outside the widget, for example in a browser tab.
+ * @param {string} url An absolute URL.
+ * @returns {Promise<void>} Rejects if Teams can't or won't open the URL.
+ */
+async function openLink(url) {
+  if (!hostCapabilities.openLinks) {
+    throw new Error("Teams can't open links from this widget.");
+  }
+
+  const result = await sendRequest("ui/open-link", { url });
+
+  if (result.isError) {
+    throw new Error("The link could not be opened.");
+  }
+}
+
+// For example, open the widget's links through Teams.
+link.addEventListener("click", (event) => {
+  event.preventDefault();
+  openLink(link.href).catch(() => {
+    // Fall back, for example by showing the URL so that the user can copy it.
+  });
+});
+```
+
+- **Open links only in response to a user action** such as selecting a link or button.
+- **Use absolute `https://` URLs.** Teams can reject other URLs or ask the user to confirm before it opens them.
+- **You don't need to list the URL's origin in `securityPolicy`.** Teams opens the page outside the widget; `securityPolicy` only controls what the widget itself loads and calls.
+
+#### Supported Teams deep links
+
+HTML widgets support only the following Teams deep links:
+
+| Link type                    | Supported URL pattern                            |
+| ---------------------------- | ------------------------------------------------ |
+| Chat                         | `https://teams.microsoft.com/l/chat/...`         |
+| Message                      | `https://teams.microsoft.com/l/message/...`      |
+| Join a meeting               | `https://teams.microsoft.com/l/meetup-join/...`  |
+| Join a meeting by meeting ID | `https://teams.microsoft.com/meet/...`           |
+
+These deep links must meet all of the following requirements:
+
+- Use HTTPS.
+- Point to the same cloud environment as the widget, and open in the widget's own account.
+- Contain no URL fragment (`#`).
+- Contain neither the `fqdn` nor the `homeCloud` query parameter.
+
+Teams deep links open using the account associated with the widget.
+
+> [!NOTE]
+> Teams ignores unsupported Teams deep links, and the `ui/open-link` request returns an error. These restrictions don't apply to regular web links.
+
+To learn more about Teams deep links, visit [Deep link to an application](../concepts/build-and-test/deep-link-application.md).
+
 ## Put it all together
 
 Your existing bot needs two additions:
@@ -827,30 +887,6 @@ To try it:
 > [!NOTE]
 >
 > HTML widget content can't currently be exported through export APIs. Consider this limitation when developing bots for organizations with content export requirements. Organizations can disable bots that can send HTML widgets if this limitation doesn't meet their requirements.
-
-## Supported Teams deep links
-
-HTML widgets support only the following Teams deep links:
-
-| Link type | Supported URL pattern |
-| --- | --- |
-| Chat | `https://teams.microsoft.com/l/chat/...` |
-| Message | `https://teams.microsoft.com/l/message/...` |
-| Join a meeting | `https://teams.microsoft.com/l/meetup-join/...` |
-| Join a meeting by meeting ID | `https://teams.microsoft.com/meet/...` |
-
-These deep links must meet all of the following requirements:
-
-- Use HTTPS.
-- Point to the same cloud environment as the widget, and open in the widget's own account.
-- Contain no URL fragment (`#`).
-- Contain neither the `fqdn` nor the `homeCloud` query parameter.
-
-Teams deep links open using the account associated with the widget.
-
-> [!Note]
->
-> Teams ignores unsupported Teams deep links, and `openLink` returns an error. These restrictions don't apply to regular web links.
 
 ## Checklist
 
