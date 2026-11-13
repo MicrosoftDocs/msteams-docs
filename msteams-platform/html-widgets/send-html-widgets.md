@@ -9,9 +9,7 @@ ms.date: 11/03/2026
 
 # Send HTML widgets
 
-An HTML widget is an HTML document that Teams renders in a sandboxed iframe inside a chat message. Use widgets to bring a custom interactive interface into a conversation, so users can work with your bot without leaving the chat. Your bot sends the HTML in an extended Markdown message, and the widget connects to Teams to resize its interface and call the bot's tools.
-
-This guide shows how a Teams bot written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
+HTML Widgets are a new type of rich content bots and agents can send in Teams messages. Widgets are built on top of the [MCP Apps standard](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx). This guide shows how a Teams bot written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
 
 1. **Send** an interactive HTML widget into a chat.
 2. **Size the widget correctly**, so that Teams always shows all of its content.
@@ -713,11 +711,11 @@ app.on(
 Follow these rules in every tool handler:
 
 1. **Always return a result. Never let the handler throw.** Report failures with `isError: true` and a readable message in `content`. If the handler throws, the invoke fails and the widget receives only a generic error.
-2. **Always set all three fields:** `content`, `structuredContent` (use `{}` when there is no data), and `isError`. Fields you omit can reach the widget as `null`, which widgets built with MCP Apps SDKs reject.
-3. **Validate `arguments`.** They come from the browser. Treat them as untrusted input, like the body of any HTTP request.
-4. **Ignore properties you do not recognize.** Teams can add a reserved `__msteams__` property to `arguments`, so do not reject unexpected properties.
-5. **Do not authorize based on `activity.from`.** The invoke identifies the conversation, but it does not reliably carry the user's Microsoft Entra identity. If a tool needs a verified user, the widget must send a token that the bot validates, which is outside the scope of this guide.
-6. **Respond quickly.** The user is waiting for the result in the widget.
+1. **Always set all three fields:** `content`, `structuredContent` (use `{}` when there is no data), and `isError`. Fields you omit can reach the widget as `null`, which widgets built with the [MCP Apps SDK](https://github.com/modelcontextprotocol/ext-apps) reject.
+1. **Validate `arguments`.** They come from the browser. Treat them as untrusted input, like the body of any HTTP request.
+1. **Ignore properties you do not recognize.** Teams can add a reserved `__msteams__` property to `arguments`, so do not reject unexpected properties.
+1. **Do not authorize based on `activity.from`.** The invoke identifies the conversation, but it does not reliably carry the user's Microsoft Entra identity. If a tool needs a verified user, the widget must send a token that the bot validates, which is outside the scope of this guide.
+1. **Respond quickly.** The user is waiting for the result in the widget.
 
 ### Optional: Identify which widget is calling
 
@@ -762,6 +760,17 @@ export function correlationIdOf(
 ```
 
 A correlation ID identifies a widget. It does not prove who the user is. Check that the ID exists in your store and belongs to the conversation in `activity.conversation.id` before you use it.
+
+## Other APIs available to widgets
+
+The MCP Apps standard defines additional requests widgets can use to interact with the chat around them:
+
+| Request                   | Use it to                                                          | Check before using                    |
+| ------------------------- | ------------------------------------------------------------------ | ------------------------------------- |
+| `ui/open-link`            | Open a URL outside the widget, for example in a browser tab.       | `hostCapabilities.openLinks`          |
+| `ui/message`              | Post a message to the chat on the user's behalf.                   | `hostCapabilities.message`            |
+| `ui/update-model-context` | Silently tell the model about the widget's state, for later turns. | `hostCapabilities.updateModelContext` |
+| `ui/request-display-mode` | Ask to be shown inline, fullscreen, or picture-in-picture.         | `hostContext.availableDisplayModes`   |
 
 ## Put it all together
 
