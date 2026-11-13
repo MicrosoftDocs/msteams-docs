@@ -942,9 +942,9 @@ updateModelContext(
 - **Always include a text description in `content`.** The model may not receive `structuredContent`, unless `hostCapabilities.updateModelContext` lists `structuredContent`.
 - **Treat the context as visible.** The model reads it, and Teams can show it to the user. Never include secrets.
 
-The two ways of telling the agent something behave differently:
+The following ways of telling the agent that something is behaving differently:
 
-|                         | `ui/message`                        | `ui/update-model-context`                         |
+| How to tell the agent              | `ui/message`                        | `ui/update-model-context`                         |
 | ----------------------- | ----------------------------------- | ------------------------------------------------- |
 | Appears in the chat     | Yes, as a message from the user     | No                                                |
 | Makes the agent respond | Yes, right away                     | No. The agent decides how to use it.              |
