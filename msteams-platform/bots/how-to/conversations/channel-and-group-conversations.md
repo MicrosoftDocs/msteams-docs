@@ -25,9 +25,11 @@ In group chats and channels, design your agent for collaborative conversations w
 
 ## Threaded conversations
 
+Teams channels support threaded conversations. A context-based response to an L1 message starts an L2 thread, and a response to an L2 message stays in that thread. For the message placement model across channels and one-on-one agent chats, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
+
 ::: zone pivot="teams-sdk-csharp"
 
-In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `SendAsync()` to send a message in the same thread without quoting, or `ReplyAsync()` to send with a visual quote of the inbound message.
+The conversation context carries the thread ID. Use `SendAsync()` to respond without quoting, or `ReplyAsync()` to include a visual quote of the inbound message.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 

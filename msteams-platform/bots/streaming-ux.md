@@ -69,6 +69,12 @@ Informative updates and message content streaming are intended for responding to
 
 Some messaging features, such as attachment, AI labels, feedback buttons, and sensitivity labels are only rendered once the agent finishes streaming. For more information, see [attachments](/azure/bot-service/rest-api/bot-framework-rest-connector-add-rich-cards), [AI Content Labels](~/bots/how-to/bot-messages-ai-generated-content.md), and [user feedback controls](~/agents-in-teams/integrate-ai/user-feedback-controls.md).
 
+### Streaming in threaded conversations
+
+When a stream starts in response to an incoming message, its first content chunk creates the response message at the placement the SDK uses for a context-based send. In a one-on-one chat, the response matches the incoming message level. In a channel, it appears in the thread. Later chunks and finalization update that message without changing its placement. For the message placement model and raw thread endpoints, see [Use threads in channels and one-on-one agent chats](how-to/conversations/agent-chat-threads.md).
+
+In TypeScript SDK 2.2.0, the first thread-bound stream message is sent to the reply-chain endpoint. Later updates use the activities endpoint and the stream ID. This is a stream lifecycle detail, not evidence that the response moves between threads. TODO: Add version-specific guidance for explicitly overriding stream placement in each SDK.
+
 ## Implement streaming with Teams SDK
 
 The stream is exposed on the incoming message activity context. Use the stream object to send informative updates, emit content chunks, and finalize the response when generation is complete. The SDK handles throttling for you, so you can emit chunks as your model produces them without manually pacing each request. In TypeScript and Python, the SDK closes the stream automatically when the handler ends if you haven't closed it explicitly. In C#, you must explicitly close the stream with `writer.FinalizeResponseAsync(finalActivity)`.
