@@ -69,9 +69,26 @@
     - name: Teams emoji reactions reference
       href: agents-in-teams/teams-reactions-reference.md
       displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
+    - name: Choose agent message format
+      href: agents-in-teams/agent-message-format-guidance.md
+      displayName: Teams, agent, message, format, guidance
     - name: Format agent messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: cross-platform support
+    - name: HTML widgets
+      items:
+      - name: Send HTML widgets
+        href: html-widgets/send-html-widgets.md
+        displayName: HTML, widget, Teams, integration
+      - name: Serve MCP-generated HTML widgets
+        href: html-widgets/serve-html-widgets.md
+        displayName: Share, HTML, widget, Teams
+      - name: UX guidelines for HTML widgets
+        href: html-widgets/ux-guidelines.md
+        displayName: UX, guidelines, HTML, widget, Teams
+      - name: Accessibility guidelines for HTML widgets
+        href: html-widgets/accessibility-guidelines.md
+        displayName: Accessibility, guidelines, HTML, widget, Teams
     - name: Suggested actions
       href: bots/how-to/conversations/suggested-actions.md
       displayName: agent, command, quick, response, button, imBack, Action.Compose, compose, Action.Submit, submit, automatic
