@@ -28,10 +28,10 @@ With either delivery method, your agent sends messages and other requests to ACS
 | --- | --- | --- |
 | **How activities reach your agent** | ACS sends an HTTPS POST for each activity. | ACS sends each activity over a WebSocket that your agent opened. |
 | **Network** | A public HTTPS endpoint. For local development, you need a tunnel such as dev tunnels or ngrok. | Outbound connections only, on port 443. No inbound connectivity, no tunnel, no public URL. |
-| **Authentication** | Your agent validates the token on every incoming request. | ACS authenticates your agent once, when it connects. Activities on the socket don't need validation. |
+| **Authentication** | Your agent validates the bearer token on every incoming request. | ACS authenticates your agent once, when it connects. Your agent can trust that activities received over the authenticated socket come from Teams. It doesn’t need to authenticate each activity separately. |
 | **Connection** | A short-lived request per activity. | Long-lived connections, replaced at least once an hour. Your agent keeps them open and reconnects when one closes. |
 | **Scale** | Any number of instances behind a load balancer. | Up to 4 open connections per agent in each region, so up to 4 connected instances. |
-| **When your agent is offline** | Requests to your endpoint fail. | ACS doesn't deliver activities in a region unless your agent has an active WebSocket connection in that region. It doesn't fall back to a previously-saved HTTPS endpoint. |
+| **When your agent is offline** | Requests to your endpoint fail. | ACS doesn't deliver activities in a region unless your agent has an active WebSocket connection in that region. It doesn't fall back to a previously saved HTTPS endpoint. |
 | **Status** | Generally available. | Public preview. |
 | **Distribution via Teams Store** | Supported. | Not supported. |
 
@@ -95,7 +95,7 @@ sequenceDiagram
 
 ### Regions
 
-Teams handles each conversation in one region, and ACS delivers the conversation's activities only to sockets connected for that region. Your agent must connect at least one socket in **each** region, otherwise it won't receive activities from converations in that region. To cover all users, connect to all regions, currently: `amer`, `emea`, and `apac`. The Teams SDK does this by default.
+Teams handles each conversation in one region, and ACS delivers the conversation's activities only to sockets connected for that region. Your agent must connect at least one socket in **each** region. Otherwise, it won't receive activities from conversations in that region. To cover all users, connect to all regions, currently: `amer`, `emea`, and `apac`. The Teams SDK does this by default.
 
 ### Multiple instances and load distribution
 
@@ -115,7 +115,7 @@ ACS doesn't wait for one activity's reply before it sends the next on the same s
 Sockets are long-lived but not permanent:
 
 - **Token expiry.** Each socket's access token expires after a set lifetime, currently 60 minutes (given as `expiresIn` when you connect), and the socket closes when its token expires. Replace each socket shortly before its token expires to avoid a gap. The Teams SDK does this automatically.
-- **Other disconnections.** Sockets can also close at any time: during ACS service updates, when there is a network problem, or when ACS closes them on purpose (for example, when socket mode is turned off for the agent). Your agent should reconnect right away, with backoff.
+- **Other disconnections.** Sockets can close during ACS service updates or network problems. Reconnect with backoff after these transient disconnections. If ACS sends a `SocketClosing` notice, follow its reconnect instructions (see [Handle disconnects](connect-agent-without-sdk.md#6-handle-disconnects)). Don't reconnect if socket mode is turned off for the agent.
 - **Redundancy.** While a socket is reconnecting, activities for that region go to the agent's other sockets in the region. If there are none, the activity is not delivered. Running two or more instances of your agent keeps delivery going while one instance reconnects.
 - **Turning it off.** When you turn off socket mode for an agent, ACS closes the agent's open sockets within about a minute and refuses new ones.
 

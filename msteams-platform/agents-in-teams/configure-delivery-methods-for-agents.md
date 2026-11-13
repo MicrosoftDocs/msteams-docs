@@ -12,20 +12,18 @@ zone_pivot_groups: teams-sdk-languages
 > [!Note]
 > Socket mode is in public preview and only available for newly created bots and agents. We recommend using an HTTPS messaging endpoint for agents in production. Preview features can change before general availability.
 
-The delivery method (see [Choose how your agent receives activity data from Teams](agent-connectivity.md)) is configured in two places:
+After choosing your agent's [delivery method](agent-connectivity.md), specify it in two places. The settings must match:
 
-- The agent's **bot registration**, configured in Teams Developer Portal or with the Teams CLI.
-- The agent's **runtime code**.
+- In the agent's **bot registration**, configured in Teams Developer Portal or with the Teams CLI. This setting controls how Agent Communication Service (ACS) delivers activities to your agent.
+- In the agent's **runtime code**. This controls how your agent receives the activities delivered by ACS.
 
-You can update both at any time. Change both together: the registration controls how Agent Communication Service (ACS) delivers activities, and the code controls how your agent receives them.
-
-You can choose the delivery method when you create an agent with `teams app create`, and change it later with `teams app update` or in Teams Developer Portal, and make the corresponding change in your agent's code:
+Choose the delivery method when you create an agent with `teams app create`. To change it later, use `teams app update` or the Teams Developer Portal. Update your agent's runtime configuration to match.
 
 ```bash
-# Setup 
-npm install -g @microsoft/teams.cli@3.1.0
+# Set up the Teams CLI
+npm install -g "@microsoft/teams.cli@>=3.1.0"
 teams login
-teams --version # Expected output 3.1.0
+teams --version # Expected output is 3.1.0 or higher
 
 # Create an agent that uses socket mode
 teams app create --name "My agent" --messaging-mode socket
@@ -33,12 +31,14 @@ teams app create --name "My agent" --messaging-mode socket
 # Switch an existing agent to socket mode
 teams app update <app-id> --messaging-mode socket
 
-# Switch an existing agent back to HTTP (will use previously saved endpoint)
+# Switch an existing agent back to HTTP (will use previously saved messaging endpoint)
 teams app update <app-id> --messaging-mode http
 
+# Switch an existing agent back to HTTP (will use the specified messaging endpoint)
+teams app update <app-id> --messaging-mode http --endpoint <https-url>
 ```
 
-Socket mode requires a minimum of **Version 3.1.0** of the CLI.
+Socket mode requires Teams CLI **version 3.1.0 or later**.
 
 ## Configure the agent's bot registration
 
@@ -48,9 +48,9 @@ Socket mode requires a minimum of **Version 3.1.0** of the CLI.
 2. Select **Configure**.
 3. Under **Delivery method**, select **Socket mode**, and then select **Save**.
 
-To switch back, select **HTTP endpoint** and enter your agent's endpoint URL. It must be an `https://` URL.
+To switch back, select **HTTPS endpoint** and enter your agent's messaging endpoint URL. It must be an `https://` URL.
 
-:::image type="content" source="../assets/images/agents-in-teams/socket-mode/configure-socket-status.png" alt-text="Image shows the screenshot for configuring socket status in Developer Portal.":::
+:::image type="content" source="../assets/images/agents-in-teams/socket-mode/configure-socket-status.png" alt-text="Delivery method settings in Developer Portal with socket mode selected.":::
 
 When **Socket Mode is on** appears, start your bot to establish the outbound WebSocket connection. A public HTTPS endpoint or development tunnel isn't required. Bots published to the Teams Store must use an HTTPS endpoint.
 
@@ -58,22 +58,23 @@ Using an Azure Bot? See [Manage Azure bots in Developer Portal for Teams](../con
 
 **What changes when you switch.** ACS picks up a change to the registration within about a minute.
 
-- **Turning socket mode on.** ACS delivers activities only over sockets, not to the messaging endpoint. Until your agent connects, activities aren't delivered.
-- **Turning socket mode off.** ACS closes the agent's open sockets, and each gets a `SocketClosing` notice first (see [Handle disconnects](connect-agent-without-sdk.md#6-handle-disconnects)) and delivers to the messaging endpoint again. New connect requests are refused with `403`.
+- **Turning socket mode on.** ACS delivers activities only over connected sockets, not to the messaging endpoint. ACS won't deliver any activities to your agent until it establishes a socket connection.
+- **Turning socket mode off.** ACS sends each socket a `SocketClosing` notice, closes the sockets, and resumes delivery to the saved HTTPS messaging endpoint if there is one. ACS rejects new connect requests with an HTTP status code of `403 Forbidden`.
 
 ## Configure the agent's runtime
 
 ### Teams SDK
 
-In your agent's code, turn on socket mode when you create the app. The SDK then connects in every region, handles activities exactly as it does for an HTTPS endpoint, replaces sockets before their tokens expire, and reconnects when a socket closes.
+In your agent's code, specify socket mode when you create the application object. In the socket mode options, use the `geos` property to specify the regions in which to establish connections, or omit it to connect in all supported regions (the default). Your agent will establish one independent socket per region. All sockets must connect for `start()` to succeed, after which each socket is managed and reports its status independently.
 
-If you change the socket mode setting at any time, you will need to restart your app so it reflects the changes. Socket mode requires a minimum of **Version 2.2.1** of the SDK. Pick the language that suits you best:
+After changing the delivery method in your bot registration, update your agent’s runtime configuration and restart it.
 
-- [TypeScript Release v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
-- [Python Release v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
-- [.NET Release v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
+Socket mode requires Teams SDK **version 2.2.1 or later**. Pick the language that suits you best:
 
-Use `geos` to specify the geographies to connect to, with one independent socket per geography; all sockets must connect for `start()` to succeed, after which each socket is supervised independently.
+- [TypeScript SDK v2.2.1](https://github.com/microsoft/teams.ts/releases/tag/v2.2.1)
+- [Python SDK v2.2.1](https://github.com/microsoft/teams.py/releases/tag/v2.2.1)
+- [.NET SDK v2.2.1](https://github.com/microsoft/teams.net/releases/tag/v2.2.1)
+
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -83,20 +84,20 @@ import { App } from '@microsoft/teams.apps';
 import { ConsoleLogger } from '@microsoft/teams.common';
 
 /**
- * Socket Mode echo bot.
+ * Socket mode echo bot.
  *
- * This sample shows how to run a bot entirely over inbound **Socket Mode** — no
+ * This sample shows how to run a bot entirely over inbound **socket mode** — no
  * public HTTP endpoint or dev tunnel required — and how to observe the socket
  * lifecycle. By default a single bot opens one connection per geo
  * (`amer`, `emea`, `apac`), so lifecycle events are reported per geo.
- * WebSocket is only recommended for use when developing agents.
- * Socket Mode is currently only available for new bots.
+ * We recommend socket mode only for development and testing of agents.
+ * Socket mode is currently only available for new bots.
  */
 const app = new App({
   logger: new ConsoleLogger('@examples/socket', { level: 'debug' }),
 
   // Receive activities over the Teams backend service-negotiated WebSocket.
-  // Socket Mode starts no HTTP listener or public endpoint, so tabs, remote
+  // Socket mode starts no HTTP listener or public endpoint, so tabs, remote
   // functions, OAuth callbacks, and other browser routes are unavailable.
   socketMode: true,
 });
@@ -114,7 +115,7 @@ app.socketMode?.events.on('ready', ({ geo, frame }) => {
 app.socketMode?.events.on('disconnected', ({ geo, error, terminal }) => {
   if (terminal) {
     // Negotiate rejected the bot with HTTP 401/403 (a `NegotiateError`). This geo
-    // will not reconnect until the credentials or Socket Mode access are fixed
+    // will not reconnect until the bot's credentials are fixed or socket mode is enabled,
     // and the app is restarted.
     app.log.error(`[socket] geo '${geo}' stopped: ${error?.message}`);
     return;
@@ -129,8 +130,7 @@ app.socketMode?.events.on('reconnected', ({ geo }) => {
 });
 
 // --- Bot logic ---------------------------------------------------------------
-// Handlers are transport-agnostic: the exact same code works over HTTP or
-// Socket Mode.
+// Handlers are transport-agnostic: the exact same code works over HTTP or socket mode.
 app.on('message', async ({ reply, activity }) => {
   await reply({ type: 'typing' });
   await reply(`you said "${activity.text}"`);
@@ -176,7 +176,7 @@ logger = logging.getLogger(__name__)
 app = App(socket_mode=True)
 
 
-# Handlers are transport-agnostic: the exact same code works over HTTP or Socket Mode.
+# Handlers are transport-agnostic: the exact same code works over HTTP or socket mode.
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     await ctx.send(TypingActivityInput())
@@ -202,7 +202,7 @@ def on_ready(event: SocketModeReadyEvent) -> None:
 def on_disconnected(event: SocketModeDisconnectedEvent) -> None:
     if event.terminal:
         logger.error(
-            "[socket] geo '%s' stopped: %s; check bot credentials or Socket Mode access, then restart the app",
+            "[socket] geo '%s' stopped: %s; check bot credentials and that socket mode is enabled, then restart the app",
             event.geo,
             event.error,
         )
@@ -237,9 +237,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Teams.Apps;
 using Microsoft.Teams.Apps.SocketMode;
 
-// Socket Mode receives activities over an outbound WebSocket, so the bot runs on a
+// Socket mode receives activities over an outbound WebSocket, so the bot runs on a
 // generic host with no web server and no public messaging endpoint.
-// Socket Mode is currently only available for new bots.
+// Socket mode is currently only available for new bots.
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(new HostApplicationBuilderSettings
 {
     Args = args,
@@ -264,7 +264,7 @@ if (teamsApp.SocketMode is { } socketMode)
         if (e.Terminal)
         {
             logger.LogError(
-                "[socket] Geo {Geo} stopped: {Error}; check bot credentials or Socket Mode access, then restart the app.",
+                "[socket] Geo {Geo} stopped: {Error}; check bot credentials and that socket mode is enabled, then restart the app.",
                 e.Geo, e.Error?.Message);
         }
         else
@@ -308,9 +308,7 @@ To implement socket mode yourself, see [Connect an agent to Teams without an SDK
 
 ## Error codes
 
-When socket mode works, your agent connects in every region: with the Teams SDK, the app finishes starting only after it connects; without an SDK, each socket receives a `SocketReady` message. Send your agent a message in Teams to confirm that it receives activities.
-
-If your agent can't connect, check the status code that the connect request returns.
+If your agent can't connect, check the status code that the connect request returns:
 
 | Status | Error message | Cause and fix |
 | --- | --- | --- |
@@ -320,15 +318,19 @@ If your agent can't connect, check the status code that the connect request retu
 | `429` | `This bot already has ... socket connections open ...` | The agent already has the maximum number of sockets in this region. Wait for the number of seconds in the `Retry-After` header, then retry. The Teams SDK retries automatically. Check for instances that open more sockets than they need. |
 | `503` | `Socket mode is not available for this bot.` or `Unable to allocate WebSocket session.` | A temporary problem in ACS. Retry with backoff. The Teams SDK retries automatically. |
 
+Confirm that your agent connects successfully in every configured region. If you use the Teams SDK, the SDK manages connection readiness. If you implement socket mode yourself, wait for a `SocketReady` message on each socket before considering it ready to receive activities.
+
+To test activity delivery, send your agent a message in Teams and confirm that it receives the message.
+
 ## Troubleshooting
 
-If your agent connects but doesn't receive activities:
+If your agent connects but doesn't receive activities, check the following:
 
 | Symptom | Cause and fix |
 | --- | --- |
 | Activities still go to the messaging endpoint. | The change to the bot registration hasn't taken effect everywhere yet. Wait about a minute. |
 | Some conversations reach the agent and others don't. | The agent isn't connected in every region. Connect in `amer`, `emea`, and `apac`. |
-| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See [Step 4, Handle activities and reply](connect-agent-without-sdk.md#4-handle-activities-and-reply) in [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md). |
+| Activities arrive but the user sees an error, or the activity is reported as failed. | The agent's reply was late (more than 25 seconds) or invalid. See [Step 4: Handle activities and reply](connect-agent-without-sdk.md#4-handle-activities-and-reply) in [Connect an agent to Teams without an SDK](connect-agent-without-sdk.md). |
 | The socket connects but never gets `SocketReady`. | Another socket already used the same access token. Call connect again for every socket. |
 
 ## Code sample
