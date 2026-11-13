@@ -150,9 +150,9 @@ This is the raw API equivalent of targeted `app.reply(chatOrChannelId, threadRoo
 
 Setting `replyToId` on the activity doesn't determine its placement. Include the standard activity payload and authenticate the request as described in [Build a conversational capability](../../build-conversational-capability.md).
 
-## Related guidance
+## See also
 
-- [Quoted replies](../../build-conversational-capability.md#quoted-replies): choosing and formatting a message to quote. Quoting doesn't choose the thread destination.
-- [Stream agent messages](../../streaming-ux.md): streaming lifecycle and placement.
-- [Channel and group chat conversations for agents](channel-and-group-conversations.md): channel-thread behavior.
-- [Send proactive messages](send-proactive-messages.md): sending outside an activity handler.
+* [Send quoted replies](../../build-conversational-capability.md#quoted-replies)
+* [Stream agent messages](../../streaming-ux.md)
+* [Channel and group chat conversations for agents](channel-and-group-conversations.md)
+* [Send proactive messages](send-proactive-messages.md)
