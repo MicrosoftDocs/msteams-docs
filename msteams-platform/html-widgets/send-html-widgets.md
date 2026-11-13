@@ -763,11 +763,11 @@ A correlation ID identifies a widget. It does not prove who the user is. Check t
 
 ## Other APIs available to widgets
 
-The MCP Apps standard defines additional requests widgets can use to interact with the chat around them:
+The MCP Apps standard defines additional requests that widgets can use to interact with the chat around them:
 
 | Request                   | Use it to                                                          | Check before using                    |
 | ------------------------- | ------------------------------------------------------------------ | ------------------------------------- |
-| `ui/open-link`            | Open a URL outside the widget, for example in a browser tab.       | `hostCapabilities.openLinks`          |
+| `ui/open-link`            | Open a URL outside the widget, for example, in a browser tab.       | `hostCapabilities.openLinks`          |
 | `ui/message`              | Post a message to the chat on the user's behalf.                   | `hostCapabilities.message`            |
 | `ui/update-model-context` | Silently tell the model about the widget's state, for later turns. | `hostCapabilities.updateModelContext` |
 | `ui/request-display-mode` | Ask to be shown inline, fullscreen, or picture-in-picture.         | `hostContext.availableDisplayModes`   |
@@ -777,9 +777,9 @@ All four are requests, like `tools/call`: send them after the handshake and wait
 Teams supports all of these requests. Still, it's good practice for a widget to always check that its host supports a feature before using it, and to fall back gracefully when it doesn't. The host's response to the `ui/initialize` request says what it supports:
 
 - **`hostCapabilities`** has one property for each optional request that the host supports: `openLinks` for `ui/open-link`, `message` for `ui/message`, and `updateModelContext` for `ui/update-model-context`. If the property is missing, don't send the request.
-- **`hostContext.availableDisplayModes`** lists the display modes that the host supports, for `ui/request-display-mode`. `hostContext.displayMode` is the widget's current mode.
+- **`hostContext.availableDisplayModes`** lists the display modes that the host supports for `ui/request-display-mode`. `hostContext.displayMode` is the widget's current mode.
 
-Keep both objects when the handshake completes. In this example and the ones below, `sendRequest(method, params)` sends a JSON-RPC request to Teams with `postMessage`, and returns a promise for the response's `result`:
+Keep both objects when the handshake completes. In this example and the ones below, `sendRequest(method, params)` sends a JSON-RPC request to Teams with `postMessage` and returns a promise for the response's `result`:
 
 ```js
 // Set when the handshake completes. The examples below use them.
@@ -865,13 +865,13 @@ Teams deep links open using the account associated with the widget.
 > [!NOTE]
 > Teams ignores unsupported Teams deep links, and the `ui/open-link` request returns an error. These restrictions don't apply to regular web links.
 
-To learn more about Teams deep links, visit [Explore and configure deep links to apps](../concepts/build-and-test/deep-link-application.md).
+To learn more about Teams deep links, see [Explore and configure deep links to apps](../concepts/build-and-test/deep-link-application.md).
 
 ### Post a message to the chat: `ui/message`
 
-`ui/message` adds a message to the conversation **as if the user had sent it**, and the agent responds to it. Use it when a selection in the widget should continue the conversation, for example a **Book this flight** or **Tell me more about this** button.
+`ui/message` adds a message to the conversation **as if the user had sent it**, and the agent responds to it. Use it when a selection in the widget should continue the conversation, for example, a **Book this flight** or **Tell me more about this** button.
 
-The parameters are `role`, which is always `"user"`, and `content`: an array of MCP content blocks. Use text blocks unless `hostCapabilities.message` lists other kinds, such as `image`.
+The parameters are `role`, which is always `"user"`, and `content`, which is an array of MCP content blocks. Use text blocks unless `hostCapabilities.message` lists other kinds, such as `image`.
 
 ```js
 /**
@@ -939,12 +939,12 @@ updateModelContext(
 
 - **Send the complete current state every time.** Each update replaces the previous one; it isn't added to it.
 - **Don't send an update for every small change.** Teams sends each update to the agent. Wait until a change is complete, for example by debouncing input.
-- **Always include a text description in `content`.** The model may not receive `structuredContent`, unless `hostCapabilities.updateModelContext` lists `structuredContent`.
+- **Always include a text description in `content`.** The model may not receive `structuredContent` unless `hostCapabilities.updateModelContext` lists `structuredContent`.
 - **Treat the context as visible.** The model reads it, and Teams can show it to the user. Never include secrets.
 
-The following ways of telling the agent that something is behaving differently:
+The two ways of telling the agent something behave differently:
 
-| How to tell the agent              | `ui/message`                        | `ui/update-model-context`                         |
+| Behavior                        | `ui/message`                        | `ui/update-model-context`                         |
 | ----------------------- | ----------------------------------- | ------------------------------------------------- |
 | Appears in the chat     | Yes, as a message from the user     | No                                                |
 | Makes the agent respond | Yes, right away                     | No. The agent decides how to use it.              |
@@ -966,7 +966,7 @@ In Teams, the widget's agent receives each `ui/update-model-context` request. Li
 
 It is the **agent's responsibility** to handle the update in whatever way it wants. Teams doesn't add the context to the conversation or pass it to a model. For example, the agent can store the latest context for the conversation and include it in the model's prompt on the next turn, or ignore it.
 
-In the Teams SDK, check for the update at the start of the `message` handler with `tryGetWidgetModelContext`, from `@microsoft/teams.apps`. It returns the request, or `undefined` if the activity isn't a context update:
+In the Teams SDK, check for the update at the start of the `message` handler with `tryGetWidgetModelContext` from `@microsoft/teams.apps`. It returns the request, or `undefined` if the activity isn't a context update:
 
 ```ts
 import { tryGetWidgetModelContext } from "@microsoft/teams.apps";
@@ -1010,7 +1010,7 @@ To use a mode other than `inline`:
 1. **Declare every mode that the widget supports**, including `inline`, in `appCapabilities.availableDisplayModes` of the `ui/initialize` request. Teams only switches the widget to modes that it declared.
 2. **Check that Teams supports the mode**, in `hostContext.availableDisplayModes`, before you request it.
 3. **Use the mode in the reply.** The reply's `mode` is the mode the widget is actually in, which can differ from the one you requested.
-4. **Listen for `ui/notifications/host-context-changed`.** Teams can change the mode without a request, for example when the user exits fullscreen.
+4. **Listen for `ui/notifications/host-context-changed`.** Teams can change the mode without a request, for example when the user exits `fullscreen`.
 
 ```js
 /**
