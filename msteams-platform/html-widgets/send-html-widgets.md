@@ -769,10 +769,10 @@ The MCP Apps standard defines additional requests that widgets can use to intera
 | ------------------------- | ------------------------------------------------------------------ | ------------------------------------- |
 | `ui/open-link`            | Open a URL outside the widget, for example, in a browser tab.       | `hostCapabilities.openLinks`          |
 | `ui/message`              | Post a message to the chat on the user's behalf.                   | `hostCapabilities.message`            |
-| `ui/update-model-context` | Silently tell the model about the widget's state, for later turns. | `hostCapabilities.updateModelContext` |
+| `ui/update-model-context` | Silently tell the model about the widget's state for later turns. | `hostCapabilities.updateModelContext` |
 | `ui/request-display-mode` | Ask to be shown inline, fullscreen, or picture-in-picture.         | `hostContext.availableDisplayModes`   |
 
-All four are requests, like `tools/call`: send them after the handshake and wait for the reply. The examples below are high-level; adapt them to your widget.
+All four are requests, like `tools/call`. Send them after the handshake and wait for the reply. The examples below are high-level; adapt them to your widget.
 
 Teams supports all of these requests. Still, it's good practice for a widget to always check that its host supports a feature before using it, and to fall back gracefully when it doesn't. The host's response to the `ui/initialize` request says what it supports:
 
@@ -809,7 +809,7 @@ Like `tools/call`, these requests can fail in two ways. Handle both:
 
 ### Open a link: `ui/open-link`
 
-A widget runs in a sandboxed iframe, so ordinary links, `target="_blank"`, and `window.open` can be blocked. To open a page, ask Teams to open it:
+A widget runs in a sandboxed iframe, so ordinary links, `target="_blank"`, and `window.open` can be blocked. To open a page, ask Teams to open it as shown in the following example:
 
 ```js
 /**
@@ -838,9 +838,9 @@ link.addEventListener("click", (event) => {
 });
 ```
 
-- **Open links only in response to a user action** such as selecting a link or button.
+- **Open links only in response to a user action**, such as, selecting a link or button.
 - **Use absolute `https://` URLs.** Teams can reject other URLs or ask the user to confirm before it opens them.
-- **You don't need to list the URL's origin in `securityPolicy`.** Teams opens the page outside the widget; `securityPolicy` only controls what the widget itself loads and calls.
+- **You don't need to list the URL's origin in `securityPolicy`.** Teams opens the page outside the widget; `securityPolicy` controls only what the widget itself loads and calls.
 
 #### Supported Teams deep links
 
@@ -871,7 +871,12 @@ To learn more about Teams deep links, see [Explore and configure deep links to a
 
 `ui/message` adds a message to the conversation **as if the user had sent it**, and the agent responds to it. Use it when a selection in the widget should continue the conversation, for example, a **Book this flight** or **Tell me more about this** button.
 
-The parameters are `role`, which is always `"user"`, and `content`, which is an array of MCP content blocks. Use text blocks unless `hostCapabilities.message` lists other kinds, such as `image`.
+The parameters are:
+
+- `role`, which is always `"user"`.
+- `content`, which is an array of MCP content blocks.
+
+Use text blocks unless `hostCapabilities.message` lists other kinds, such as, `image`.
 
 ```js
 /**
@@ -906,7 +911,7 @@ bookButton.addEventListener("click", () =>
 
 ### Update the agent's context: `ui/update-model-context`
 
-`ui/update-model-context` tells the agent what is happening in the widget **without** posting a message or starting a new turn. Use it for state that the agent needs to answer the user's next question, for example, the item that the user selected, the filters that are applied, or the values in a form.
+`ui/update-model-context` tells the agent what is happening in the widget **without** posting a message or starting a new turn. Use it for state that the agent needs to answer the user's next question. Examples include the item that the user selected, the applied filters, or the values in a form.
 
 The parameters are `content`, an array of content blocks, and `structuredContent`, an object with machine-readable data. Both are optional. The reply is an empty object.
 
@@ -938,7 +943,7 @@ updateModelContext(
 ```
 
 - **Send the complete current state every time.** Each update replaces the previous one; it isn't added to it.
-- **Don't send an update for every small change.** Teams sends each update to the agent. Wait until a change is complete, for example by debouncing input.
+- **Don't send an update for every small change.** Teams sends each update to the agent. Wait until a change is complete, for example, by debouncing input.
 - **Always include a text description in `content`.** The model may not receive `structuredContent` unless `hostCapabilities.updateModelContext` lists `structuredContent`.
 - **Treat the context as visible.** The model reads it, and Teams can show it to the user. Never include secrets.
 
@@ -966,7 +971,7 @@ In Teams, the widget's agent receives each `ui/update-model-context` request. Li
 
 It is the **agent's responsibility** to handle the update in whatever way it wants. Teams doesn't add the context to the conversation or pass it to a model. For example, the agent can store the latest context for the conversation and include it in the model's prompt on the next turn, or ignore it.
 
-In the Teams SDK, check for the update at the start of the `message` handler with `tryGetWidgetModelContext` from `@microsoft/teams.apps`. It returns the request, or `undefined` if the activity isn't a context update:
+In the Teams SDK, check for the update at the start of the `message` handler with `tryGetWidgetModelContext` from `@microsoft/teams.apps`. It returns the request or `undefined` if the activity isn't a context update:
 
 ```ts
 import { tryGetWidgetModelContext } from "@microsoft/teams.apps";
@@ -995,7 +1000,7 @@ app.on("message", async ({ activity }) => {
 
 ### Change the display mode: `ui/request-display-mode`
 
-A widget can be displayed in one of three modes:
+A widget can be displayed in one of the following three modes:
 
 | Mode         | Description                                                               | Supported in Teams |
 | ------------ | ------------------------------------------------------------------------- | ------------------ |
@@ -1007,7 +1012,7 @@ Teams doesn't support `pip`. In Teams, `fullscreen` shows the widget in a large 
 
 To use a mode other than `inline`:
 
-1. **Declare every mode that the widget supports**, including `inline`, in `appCapabilities.availableDisplayModes` of the `ui/initialize` request. Teams only switches the widget to modes that it declared.
+1. **Declare every mode that the widget supports**, including `inline`, in `appCapabilities.availableDisplayModes` of the `ui/initialize` request. Teams switches the widget to only those modes that are declared.
 2. **Check that Teams supports the mode**, in `hostContext.availableDisplayModes`, before you request it.
 3. **Use the mode in the reply.** The reply's `mode` is the mode the widget is actually in, which can differ from the one you requested.
 4. **Listen for `ui/notifications/host-context-changed`.** Teams can change the mode without a request, for example when the user exits `fullscreen`.
@@ -1112,7 +1117,7 @@ To try it:
 
 - [ ] The MCP client declares the `io.modelcontextprotocol/ui` extension.
 - [ ] Each MCP widget's payload includes `mcpUrl`, the URL of the MCP server whose tool produced it, so the widget runs on a dedicated domain scoped to the bot's ID and that URL.
-- [ ] Each MCP widget has a unique `correlationId`, stored with its MCP server and conversation.
+- [ ] Each MCP widget has a unique `correlationId` that is stored with its MCP server and conversation.
 - [ ] Tool calls are forwarded only for known widgets in the same conversation and only for tools that widgets may call.
 - [ ] `__msteams__` is removed from the arguments before they are forwarded.
 
