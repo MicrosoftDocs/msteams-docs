@@ -942,7 +942,7 @@ updateModelContext(
 - **Always include a text description in `content`.** The model may not receive `structuredContent` unless `hostCapabilities.updateModelContext` lists `structuredContent`.
 - **Treat the context as visible.** The model reads it, and Teams can show it to the user. Never include secrets.
 
-The two ways of telling the agent something behave differently:
+The two ways of telling the agent that something behaves differently:
 
 | Behavior                        | `ui/message`                        | `ui/update-model-context`                         |
 | ----------------------- | ----------------------------------- | ------------------------------------------------- |
@@ -1082,7 +1082,7 @@ To try it:
 **Sending the widget**
 
 - [ ] The widget is one HTML file with inline CSS and JavaScript.
-- [ ] The widget is sent in an extended Markdown message (`textFormat: "extendedmarkdown"`), as an `html-widget` fenced code block containing the payload. The message is not built with `buildHtmlWidgetMessage` or `buildHtmlWidgetMarkdown`.
+- [ ] The widget is sent in an extended Markdown message (`textFormat: "extendedmarkdown"`) as an `html-widget` fenced code block containing the payload. The message is not built with `buildHtmlWidgetMessage` or `buildHtmlWidgetMarkdown`.
 - [ ] Any origin the HTML loads from is in `resourceDomains`; any origin it calls is in `connectDomains`.
 - [ ] The HTML contains no secrets.
 - [ ] Services that the widget calls accept calls from the widget's domain, `https://<hash>.widget-renderer.usercontent.microsoft`.
@@ -1098,12 +1098,12 @@ To try it:
 
 - [ ] The widget calls tools in response to user actions.
 - [ ] The widget handles both a rejected `callTool` promise and a result with `isError: true`.
-- [ ] The bot's handler always returns `content`, `structuredContent`, and `isError`, and never throws.
+- [ ] The bot's handler always returns `content`, `structuredContent`, and `isError` and never throws.
 - [ ] The bot validates `arguments`, ignores unknown properties such as `__msteams__`, and does not authorize based on `activity.from`.
 
 **Other APIs**
 
-- [ ] `ui/open-link`, `ui/message`, `ui/update-model-context`, and `ui/request-display-mode` are sent only after the handshake, and only when Teams declares support for them in its response to `ui/initialize`.
+- [ ] `ui/open-link`, `ui/message`, `ui/update-model-context`, and `ui/request-display-mode` are sent only after the handshake and only when Teams declares support for them in its response to `ui/initialize`.
 - [ ] `ui/open-link` and `ui/message` are sent only in response to a user action, and the widget has a fallback when they fail.
 - [ ] Each `ui/update-model-context` request contains the widget's complete current state, with a text description in `content`.
 - [ ] Every display mode that the widget uses is declared in `appCapabilities.availableDisplayModes`, and the widget uses the mode in the reply and in `ui/notifications/host-context-changed`.
@@ -1113,7 +1113,7 @@ To try it:
 - [ ] The MCP client declares the `io.modelcontextprotocol/ui` extension.
 - [ ] Each MCP widget's payload includes `mcpUrl`, the URL of the MCP server whose tool produced it, so the widget runs on a dedicated domain scoped to the bot's ID and that URL.
 - [ ] Each MCP widget has a unique `correlationId`, stored with its MCP server and conversation.
-- [ ] Tool calls are forwarded only for known widgets in the same conversation, and only for tools that widgets may call.
+- [ ] Tool calls are forwarded only for known widgets in the same conversation and only for tools that widgets may call.
 - [ ] `__msteams__` is removed from the arguments before they are forwarded.
 
 ## Reference: messages
@@ -1124,8 +1124,8 @@ To try it:
 | Widget | `ui/notifications/initialized`                  | Notification | `{}`                                                               | None                                                             |
 | Widget | `ui/notifications/size-changed`                 | Notification | `{ height }` in CSS pixels                                         | None                                                             |
 | Widget | `tools/call`                                    | Request      | `{ name, arguments }`                                              | The bot's `callToolResult`                                       |
-| Widget | `ui/open-link`                                  | Request      | `{ url }`                                                          | `{}`, or `{ isError: true }` if the URL could not be opened      |
-| Widget | `ui/message`                                    | Request      | `{ role: "user", content }`, where `content` is an array of blocks | `{}`, or `{ isError: true }` if the message was not posted       |
+| Widget | `ui/open-link`                                  | Request      | `{ url }`                                                          | `{}` or `{ isError: true }` if the URL could not be opened      |
+| Widget | `ui/message`                                    | Request      | `{ role: "user", content }`, where `content` is an array of blocks | `{}` or `{ isError: true }` if the message was not posted       |
 | Widget | `ui/update-model-context`                       | Request      | `{ content?, structuredContent? }`                                 | `{}`                                                             |
 | Widget | `ui/request-display-mode`                       | Request      | `{ mode }`: `"inline"`, `"fullscreen"`, or `"pip"`                 | `{ mode }`: the widget's actual display mode                     |
 | Teams  | `ui/notifications/host-context-changed`         | Notification | The `hostContext` fields that changed, such as `displayMode`       | None                                                             |
