@@ -1,5 +1,5 @@
 ---
-title: Use threads in channels and one-on-one agent chats in Microsoft Teams
+title: Use threads in channels and one-on-one agent chats
 description: Learn why agents should use threads, identify incoming message placement, and send responses to the main conversation or a thread.
 ms.localizationpriority: medium
 ms.topic: how-to
@@ -15,16 +15,21 @@ Threading is available in one-on-one agent chats, including chats with agentic u
 
 In a given context, messages appear at one of two levels:
 
-- **L1 (top-level):** A message in the main chat or channel conversation. An L1 message can be the root of a thread.
-- **L2 (in-thread):** A reply in the thread under an L1 message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
+- **L1 (top-level):** A message in the main chat or channel conversation. Where threading is supported, an L1 message can be the root of a thread.
+- **L2 (in-thread):** A reply in the thread under a top-level (L1) message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
 
-When responding to a user's message or action, an agent should send its response in the thread associated with that message (L2). Use a top-level message (L1) only when the agent needs to start a new discussion.
+## Recommended agent behavior
 
-For example, a trip-planning request and the agent's responses about dates, hotels, and itinerary changes belong in one thread, keeping the discussion separate from other requests.
+In channels and chats that support threading, agents should respond in threads (L2):
 
-The following sections explain how to create top-level messages (L1) and thread replies (L2) using the [Teams SDK](#implement-threading-with-teams-sdk) and [REST API](#implement-threading-with-rest-api-preview).
+- If the user's message is top-level (L1), reply in a thread under that message.
+- If the user's message is already in a thread (L2), reply in the same thread.
 
-## General developer considerations for threading
+Use the same placement when responding to an action on a message. Send a new top-level message (L1) only to start a separate discussion.
+
+For example, a user sends "Help me plan a trip" as a top-level message. The agent replies in a thread under that request, where the user and agent discuss dates, hotels, and itinerary changes.
+
+## General developer considerations
 
 When threading is supported, incoming L1 and L2 activities both include `channelData.replyChain.id`. This value always identifies the L1 root message. If you need to determine the incoming activity's level, use the value of this field, rather than its presence, as described in [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
 
@@ -84,16 +89,15 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 ::: zone-end
 
-The context-based placement defaults shown above may change in future SDK versions. Use app-level methods when your agent requires explicit placement. To follow the recommendation to respond at L2, use the app-level reply method for all incoming requests. Use the app-level send method to create a top-level message (L1).
-
-The following examples assume you've initialized a Teams SDK app and use the explicit app-level methods.
-
-> [!NOTE]
-> Reply-chain types and low-level SDK operations are marked experimental. The SDK send and reply helpers used in this article aren't marked experimental. See the SDK reference for language-specific annotations and warnings.
+> [!IMPORTANT]
+> In a one-on-one chat, the send and reply methods on the incoming context object respond to a top-level (L1) message at L1. **This default differs from the recommended agent behavior, which is to respond in the message's thread (L2).** To respond at L2 in a supported chat, use the app-level reply method with the containing chat ID and the root message ID. In channels, context-based responses already go to L2.
 
 ### Sending a reply
 
-The following handlers send a thread reply (L2) in a one-on-one chat, including the recipient's agentic identity when applicable. For channels, use the channel ID shown in the table above.
+The following examples show how to send a thread reply (L2) in a one-on-one chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
+
+> [!NOTE]
+> Reply-chain types and low-level SDK operations are marked experimental. The SDK send and reply helpers used in this article aren't marked experimental. See the SDK reference for language-specific annotations and warnings.
 
 ::: zone pivot="teams-sdk-typescript"
 
