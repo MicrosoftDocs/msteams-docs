@@ -1,409 +1,286 @@
 ---
 title: Use threads in channels and one-on-one agent chats in Microsoft Teams
-description: Understand agent reply behavior and conversation context when using threads in Teams channels and one-on-one agent chats.
+description: Learn why agents should use threads, identify incoming message placement, and send responses to the main conversation or a thread.
 ms.localizationpriority: medium
 ms.topic: how-to
-ms.date: 11/10/2026
+ms.date: 11/13/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
 # Use threads in channels and one-on-one agent chats
 
-In Microsoft Teams, users can start a thread in a one-on-one chat with an agent to keep a follow-up discussion with its original message. Agents can also participate in threads in channels. The way an agent's reply is placed depends on whether the incoming message appears in the main chat or in a thread.
+A Teams agent can start a thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
 
-This article covers threads in **one-on-one agent chats**, including chats with agentic users, and **channels**. Group chats don't support threads.
+Threading is available in one-on-one agent chats, including chats with agentic users, and in channels. Support will expand to group chats.
 
-When you respond, make three separate choices: which incoming message you're answering, where the response should appear (main chat or thread), and whether to quote a message. The SDK can choose the default placement from the incoming activity. Use explicit targeting when you want a different location.
+In a given context, messages appear at one of two levels:
 
-## Understand messages in a chat and a thread
+- **L1 (top-level):** A message in the main chat or channel conversation. An L1 message can be the root of a thread.
+- **L2 (in-thread):** A reply in the thread under an L1 message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
 
-A **top-level message (L1)** appears in the main chat or channel conversation. A **thread reply (L2)** belongs to the discussion under a top-level message, also called the thread's root message. Threads keep related exchanges together so users can follow a discussion without mixing it with other messages in the chat or channel. Threads have one reply level. A reply can't start a nested thread.
+When responding to a user's message or action, an agent should send its response in the thread associated with that message (L2). Use a top-level message (L1) only when the agent needs to start a new discussion.
 
-Channel owners can choose a posts or threads layout for a channel. These layouts present channel conversations differently, but both use the same threaded conversation model.
+For example, a trip-planning request and the agent's responses about dates, hotels, and itinerary changes belong in one thread, keeping the discussion separate from other requests.
 
-Users can start a thread in a one-on-one agent chat by sending a threaded reply to a top-level message. The agent can then respond in that thread.
+The following sections explain how to create top-level messages (L1) and thread replies (L2) using the [Teams SDK](#implement-threading-with-teams-sdk) and [REST API](#implement-threading-with-rest-api-preview).
 
-For message placement, keep the chat, incoming message, and thread root IDs distinct:
+## General developer considerations for threading
 
-| Incoming message | `activity.id` | `conversation.id` | `channelData.chat.id` | `channelData.replyChain.id` |
-| --- | --- | --- | --- | --- |
-| Top-level message (L1) | Root message ID | Opaque main-chat ID | Containing chat ID | Root message ID when supplied |
-| Thread reply (L2) | Follow-up message ID | Opaque thread ID | Same containing chat ID | Original root message ID |
+When threading is supported, incoming L1 and L2 activities both include `channelData.replyChain.id`. This value always identifies the L1 root message. If you need to determine the incoming activity's level, use the value of this field, rather than its presence, as described in [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
 
-For an L1 message, `replyChain.id` can equal `activity.id`. For an L2 message, it differs. Its presence alone doesn't indicate an L2 message. Some message actions and other events might omit thread metadata, so missing `replyChain.id` doesn't always establish placement. Don't parse or construct `conversation.id` to determine the chat or thread.
+Incoming activities also provide the containing chat ID in `channelData.chat.id`, or the containing channel ID in `channelData.channel.id`. Use this ID together with the root message ID to select the response destination and organize stored conversation history by discussion.
 
-Three separate IDs can be involved when you respond: `chatId` identifies the containing chat, `incomingMessageId` identifies the request being answered, and `threadRootMessageId` identifies the thread destination. If you quote a message, `messageToQuoteId` identifies the message shown in the quote. These IDs can refer to different messages.
+Treat conversation IDs as opaque values; don't parse them or use them to distinguish L1 from L2. `conversation.id` has different meanings in channels and chats, and the chat behavior is subject to change:
 
-The Teams SDK uses the context of the received message to determine the default response location. In a one-on-one chat, the response matches the level of the incoming message.
-
-## Respond to messages
-
-In this article, a context-based response is a response sent from an activity handler using the received activity's context, without explicitly targeting a chat, channel, or reply chain. The Teams SDK uses that context to choose the default placement.
-
-Choose the response location based on the incoming level and where you want the answer to appear. In this table, `ctx.send()` and `ctx.reply()` use the incoming activity context. The explicit `app` methods and signatures are from TypeScript SDK 2.2.0. TODO: Add version-specific C# and Python methods and examples.
-
-| Incoming message | SDK default in a 1:1 chat | Respond at L1 in the main chat | Respond at L2 in a thread |
-| --- | --- | --- | --- |
-| Top-level message (L1) | L1 | `ctx.send(message)` or `ctx.reply(message)` | `app.reply(chatId, activity.id, message)` |
-| Thread reply (L2) | L2 in the same thread | `app.send(chatId, message)` | `ctx.send(message)`, `ctx.reply(message)`, or `app.reply(chatId, replyChainId, message)` |
-
-In channels, context-based responses are placed at L2. Use proactive `app.send(channelId, message)` to post at L1. For existing channel-thread guidance, see [Threaded conversations](channel-and-group-conversations.md#threaded-conversations).
-
-### Identify message placement
-
-Use `channelData.chat.id` to identify a one-on-one chat. For a channel, use `channelData.channel.id`. When supplied, `channelData.replyChain.id` identifies the root L1 message. Use the activity fields appropriate to the event to determine placement:
-
-| Activity | Determine that it is threaded when |
+| Scope | Current meaning of `conversation.id` |
 | --- | --- |
-| Typed message | `channelData.replyChain.id` equals `activity.id` for L1, and differs from `activity.id` for L2. If the property is absent, determine placement only when the activity type makes that inference reliable. |
-| Reaction, card button click, or invoke associated with a message | When both values are present, `channelData.replyChain.id` differs from the ID of the message the user acted on, such as `replyToId` |
-| Message action on a message | When both values are present, `channelData.replyChain.id` differs from `value.messagePayload.id` |
+| Channel | Identifies the thread associated with the message, even when the incoming message is L1. Sending to this conversation places the response at L2. |
+| Chat | Identifies the containing chat for both L1 and L2 activities. For now, the value remains unchanged when an activity occurs in a thread to avoid breaking existing apps that may use it as a key to store data about the chat. Sending to this conversation alone places the response at L1. |
 
-`channelData.replyChain.id` is present on threaded messages, but isn't present on every message or activity. Some message actions in channel threads currently omit thread data. Other event types, including conversation and installation updates, aren't associated with a message placement. Handle chat/channel IDs and `replyChain.id` as optional, and don't infer placement when an activity doesn't provide enough information.
+A quote shows which message a response refers to, but doesn't select a destination. Similarly, setting the `replyToId` property alone doesn't select a thread for a regular message. During streaming, `replyToId` affects where the in-progress response is displayed, not where the final response is posted.
+
+## Implement threading with Teams SDK
+
+The activity context (`ctx` or `context`) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later, proactively.
+
+### Choose where a message goes
+
+::: zone pivot="teams-sdk-csharp"
+
+| To do this | Call | One-on-one chat | Channel |
+| --- | --- | --- | --- |
+| Respond where the user wrote | `context.SendAsync(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
+| Respond and quote the user's message | `context.ReplyAsync(message)` | Same placement as `SendAsync`, with a quote when eligible. | Same placement as `SendAsync`, with a quote when eligible. |
+| Post a new top-level message | `teamsApp.SendAsync(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
+| Reply in a thread | `teamsApp.ReplyAsync(chatOrChannelId, rootId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+
+Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, and `rootId` from `ChannelData.ReplyChain.Id`.
+
+::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-```typescript
-app.on('message', async ({ activity }) => {
-  const rootId = activity.channelData?.replyChain?.id;
-  const isTopLevel = !rootId || rootId === activity.id;
-});
-```
+| To do this | Call | One-on-one chat | Channel |
+| --- | --- | --- | --- |
+| Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
+| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
+| Post a new top-level message | `app.send(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
+| Reply in a thread | `app.reply(chatOrChannelId, rootId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+
+Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, and `rootId` from `channelData.replyChain.id`.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-```python
-@app.on_message
-async def on_message(ctx: ActivityContext[MessageActivity]):
-    data = ctx.activity.channel_data
-    root_id = data.reply_chain.id if data and data.reply_chain else None
-    is_top_level = not root_id or root_id == ctx.activity.id
-```
+| To do this | Call | One-on-one chat | Channel |
+| --- | --- | --- | --- |
+| Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
+| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
+| Post a new top-level message | `app.send(chat_or_channel_id, message)` | At the top level (L1). | At the top level (L1). |
+| Reply in a thread | `app.reply(chat_or_channel_id, root_id, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+
+Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.id`, and `root_id` from `channel_data.reply_chain.id`.
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-csharp"
+The context-based placement defaults shown above may change in future SDK versions. Use app-level methods when your agent requires explicit placement. To follow the recommendation to respond at L2, use the app-level reply method for all incoming requests. Use the app-level send method to create a top-level message (L1).
 
-```csharp
-teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
-{
-    string? rootId = context.Activity.ChannelData?.ReplyChain?.Id;
-    bool isTopLevel = string.IsNullOrEmpty(rootId) || rootId == context.Activity.Id;
-});
-```
+The following examples assume you've initialized a Teams SDK app and use the explicit app-level methods.
 
-::: zone-end
+> [!NOTE]
+> Reply-chain types and low-level SDK operations are marked experimental. The SDK send and reply helpers used in this article aren't marked experimental. See the SDK reference for language-specific annotations and warnings.
 
-### Reply in a one-on-one thread
+### Sending a reply
 
-Use the incoming chat ID and root message ID to explicitly target an L2 reply. For an incoming L1 message, use its `activity.id` as the root ID. For an incoming L2 message, use `channelData.replyChain.id`. The examples use the SDK `reply` method with response text.
-
-The following examples show how to reply in a thread for either an L1 or L2 incoming message.
+The following handlers send a thread reply (L2) in a one-on-one chat, including the recipient's agentic identity when applicable. For channels, use the channel ID shown in the table above.
 
 ::: zone pivot="teams-sdk-typescript"
 
+These examples use `@microsoft/teams.apps` version 2.2.0.
+
+Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
+
 ```typescript
+import { getAgenticIdentity } from '@microsoft/teams.api';
+
 app.on('message', async ({ activity }) => {
   const chatId = activity.channelData?.chat?.id;
-  const rootId = activity.channelData?.replyChain?.id ?? activity.id;
-  if (chatId && rootId) {
-    await app.reply(chatId, rootId, 'Replying in the thread');
+  const rootId = activity.channelData?.replyChain?.id;
+  if (!chatId || !rootId) {
+    throw new Error('A chat ID and thread root ID are required.');
   }
+
+  await app.reply(chatId, rootId, 'Let us plan your trip in this thread.', {
+    agenticIdentity: getAgenticIdentity(activity.recipient),
+  });
 });
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_message
-async def on_message(ctx: ActivityContext[MessageActivity]):
-    data = ctx.activity.channel_data
-    chat_id = data.chat.id if data and data.chat else None
-    root_id = data.reply_chain.id if data and data.reply_chain else ctx.activity.id
-    if chat_id and root_id:
-        await app.reply(chat_id, root_id, 'Replying in the thread')
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teamsApp.OnMessage("(?s)^.*$", async (context, cancellationToken) =>
-{
-    var data = context.Activity.ChannelData;
-    string? chatId = data?.Chat?.Id;
-    string? rootId = data?.ReplyChain?.Id ?? context.Activity.Id;
-    if (!string.IsNullOrEmpty(chatId) && !string.IsNullOrEmpty(rootId))
-    {
-        await teamsApp.ReplyAsync(
-            chatId,
-            rootId,
-            "Replying in the thread",
-            cancellationToken: cancellationToken);
-    }
-});
-```
-
-::: zone-end
-
-### Choose an explicit destination
-
-Use app-level methods when you need to choose a destination explicitly or send outside an activity handler. `app.send(chatOrChannelId, message)` posts at L1. `app.reply(chatOrChannelId, threadRootMessageId, message)` posts at L2. In a 1:1 chat, use `channelData.chat.id`; in a channel, use `channelData.channel.id`. Don't use a thread's `conversation.id` as the containing chat or channel ID.
-
-For a 1:1 response to an L1 message, use its `activity.id` as the root ID to start an L2 thread. For a response to an L2 message, use its `channelData.replyChain.id` to continue the thread. To deliberately move an L2 response to the main chat, use `app.send(chatId, message)`. In channels, context-based responses are placed at L2; use a proactive `app.send(channelId, message)` to post at L1. See [Considerations for proactive messages](#considerations-for-proactive-messages) for examples that store these IDs.
-
-::: zone pivot="teams-sdk-typescript"
+To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. This call requires only the chat ID, so omit the root ID requirement:
 
 ```typescript
-const destinationId = activity.channelData?.chat?.id ?? activity.channelData?.channel?.id;
-if (destinationId) {
-  await app.send(destinationId, 'A new top-level message');
-}
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-data = ctx.activity.channel_data
-destination_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
-if destination_id:
-    await app.send(destination_id, 'A new top-level message')
+await app.send(chatId, 'Your trip itinerary is ready.', {
+  agenticIdentity: getAgenticIdentity(activity.recipient),
+});
 ```
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
 
+The reply-chain routing shown here requires `Microsoft.Teams.Apps` version 2.2 or later.
+
 ```csharp
-var data = context.Activity.ChannelData;
-string? destinationId = data?.Chat?.Id ?? data?.Channel?.Id;
-if (!string.IsNullOrEmpty(destinationId))
+teamsApp.OnMessage(async (context, cancellationToken) =>
 {
-    await teamsApp.SendAsync(
-        destinationId,
-        "A new top-level message",
+    var activity = context.Activity;
+    string? chatId = activity.ChannelData?.Chat?.Id;
+    string? rootId = activity.ChannelData?.ReplyChain?.Id;
+    if (string.IsNullOrEmpty(chatId) || string.IsNullOrEmpty(rootId))
+    {
+        throw new InvalidOperationException(
+            "A chat ID and thread root ID are required.");
+    }
+
+    await teamsApp.ReplyAsync(
+        chatId,
+        rootId,
+        "Let us plan your trip in this thread.",
+        serviceUrl: activity.ServiceUrl,
+        agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
         cancellationToken: cancellationToken);
-}
+});
 ```
+
+To start a separate discussion at L1, use `teamsApp.SendAsync(chatId, message)` instead of `teamsApp.ReplyAsync()`. This call requires only the chat ID, so omit the root ID requirement:
+
+```csharp
+await teamsApp.SendAsync(
+    chatId,
+    "Your trip itinerary is ready.",
+    serviceUrl: activity.ServiceUrl,
+    agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
+    cancellationToken: cancellationToken);
+```
+
+Without an explicit `serviceUrl`, C# app-level sends use the last inbound activity's service URL; they throw until the app has received an activity.
 
 ::: zone-end
 
-## Send messages without the SDK (preview)
+::: zone pivot="teams-sdk-python"
 
-Agents that don't use the Teams SDK can send an activity to the conversation activities endpoint to create a top-level message. In a one-on-one chat, use `channelData.chat.id` as `conversationId`, including when the incoming activity is in a thread. In a channel, use `channelData.channel.id`.
+Use a release with the reply-chain APIs described in the [Python SDK threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/#threading).
 
-```http
-POST {serviceUrl}/v3/conversations/{conversationId}/activities
+```python
+from microsoft_teams.api import MessageActivity
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    activity = ctx.activity
+    data = activity.channel_data
+    chat_id = data.chat.id if data and data.chat else None
+    root_id = data.reply_chain.id if data and data.reply_chain else None
+    if not chat_id or not root_id:
+        raise ValueError("A chat ID and thread root ID are required.")
+
+    await app.reply(
+        chat_id,
+        root_id,
+        "Let us plan your trip in this thread.",
+        service_url=activity.service_url,
+        agentic_identity=activity.recipient.agentic_identity,
+    )
 ```
 
-To send a threaded reply, post the activity to the reply chain endpoint. Use `channelData.chat.id` for a one-on-one chat or `channelData.channel.id` for a channel as `chatOrChannelId`. Use the root message ID as `rootId`. For an incoming L1 message, the root ID is the incoming `activity.id`. For an incoming L2 message, it is `channelData.replyChain.id`.
+To start a separate discussion at L1, use `app.send(chat_id, message)` instead of `app.reply()`. This call requires only the chat ID, so omit the root ID requirement:
+
+```python
+await app.send(
+    chat_id,
+    "Your trip itinerary is ready.",
+    service_url=activity.service_url,
+    agentic_identity=activity.recipient.agentic_identity,
+)
+```
+
+Without an explicit `service_url`, Python app-level sends use the app's configured URL, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`.
+
+::: zone-end
+
+## Implement threading with REST API (preview)
+
+To send a top-level message (L1) with the REST API, use the containing chat or channel ID. Set `chatOrChannelId` to `channelData.chat.id` for a chat or `channelData.channel.id` for a channel:
+
+```http
+POST {serviceUrl}/v3/conversations/{chatOrChannelId}/activities
+```
+
+This is the REST API equivalent of `app.send(chatOrChannelId, message)` for a top-level message (L1).
+
+To send an L2 reply, post to the reply-chain endpoint with the same containing chat or channel ID. Set `rootId` to the incoming activity's `channelData.replyChain.id`:
 
 ```http
 POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootId}
 ```
 
-Setting `replyToId` on the activity doesn't determine its placement. Include the standard activity payload and authenticate the request as described in [Build a conversational capability](../../build-conversational-capability.md).
+This is the REST API equivalent of `app.reply(chatOrChannelId, rootId, message)` for a thread reply (L2).
 
-## Choose whether to quote a message
+Use the full incoming `serviceUrl`, include the standard activity payload, and authenticate as described in [Build a conversational capability](../../build-conversational-capability.md).
 
-Placement, prompt association, and quoting are separate choices. `replyToId` associates an activity with the message being answered. A reply-chain ID selects the thread. A quote identifies a message to show in the response.
+Existing integrations remain compatible: posting to `/activities` with a conversation ID in the form `19:...;messageid={rootId}` continues to send at L2 in channels and also works in chats that support threading. Use the reply-chain endpoint for new implementations.
 
-| Method | Placement | Quote behavior |
+### Threading-specific error responses
+
+The reply-chain endpoint can return the following errors:
+
+| Condition | HTTP status and error code | Error message |
 | --- | --- | --- |
-| `ctx.send(message)` | Inherits placement from the incoming activity | Doesn't automatically quote |
-| `ctx.reply(message)` | Inherits placement from the incoming activity | Automatically quotes an eligible incoming message |
-| `ctx.quote(messageToQuoteId, message)` | Inherits placement from the incoming activity | Explicitly quotes the specified message and sends |
-| `app.send(chatId, message)` | Sends at L1 in the specified chat | Doesn't automatically quote |
-| `app.reply(chatOrChannelId, threadRootMessageId, message)` | Sends at L2 in the specified thread | Doesn't automatically quote |
-
-In TypeScript SDK 2.2.0, `ctx.reply()` automatically quotes only when the incoming activity ID is a nonzero numeric message ID. For other ID formats, such as service-generated IDs, it behaves like `ctx.send()` and doesn't quote. This is an SDK implementation detail, so verify behavior for other SDK languages and versions. For more information about quoted replies, see [Quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview#quoted-replies).
-
-To quote a message other than the eligible incoming message, add the quote to the message content, then send it to the desired destination. `prependQuote()` adds the quote entity and its text placeholder.
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-import { MessageActivityInput } from "@microsoft/teams.api";
-
-const response = new MessageActivityInput('A threaded answer');
-response.prependQuote(messageToQuoteId);
-await app.reply(chatId, threadRootMessageId, response);
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-TODO: Add a C# quoted-reply example and document automatic-quote eligibility for the supported SDK version. For existing examples, see [Quoted replies in C#](../../build-conversational-capability.md?pivots=teams-sdk-csharp#quoted-replies).
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-TODO: Add a Python quoted-reply example and document automatic-quote eligibility for the supported SDK version. For existing examples, see [Quoted replies in Python](../../build-conversational-capability.md?pivots=teams-sdk-python#quoted-replies).
-
-::: zone-end
-
-`ctx.quote()` is a send operation. Don't call it to prepare a message and then send again with `app.reply()`, as that creates two messages. An explicit quote doesn't select or change the thread destination.
-
-## Agent design guidance and best practices
-
-In channels, users expect responses to their messages to appear in the associated thread. Keep top-level channel messages for proactive messages that are intended to start a new conversation.
-
-In one-on-one chats, choose a response pattern that matches your agent's conversation model:
-
-- For a focused discussion model, keep the exchange in a thread. When the incoming message is L1, explicitly start an L2 thread under it. When the incoming message is L2, continue in that thread.
-- For a continuous main-chat model, leave an L1 response at L1. If a response to an L2 message should return to the main chat, explicitly send to the chat ID.
-
-The SDK defaults to matching the incoming level. It doesn't start a new thread for every L1 message. The same placement patterns apply to chats with agentic users.
-
-### Use threads as context boundaries
-
-In a one-on-one agent chat, each thread has a conversation ID that differs from the conversation ID of the main chat. When a user starts a thread, the first reply in that thread can therefore look like activity in a new conversation to an agent that uses the conversation ID to identify its state.
-
-Plan how your agent handles state when it receives activity with a new conversation ID. For example, avoid unintentionally sending another welcome message or restarting sign-in when a user starts a thread. Decide which state should be shared with the main chat and which should remain specific to the thread. Don't assume that a thread's conversation ID is interchangeable with the main chat's ID.
-
-For an AI-powered agent, distinguish message placement from model context. A thread may need relevant information from the main chat, but unrelated exchanges shouldn't automatically become part of the thread's context. Select relevant history for each response while keeping the thread focused.
-
-Treat conversation IDs as opaque values. Don't parse or construct them to infer a relationship between a chat and a thread.
-
-For proactive replies in a thread, store the chat or channel ID and the root message ID. For an L2 message, the root ID is `channelData.replyChain.id`. For an L1 message that you want to follow up on in a new thread, the root ID is the message's `activity.id`. If the recipient is an agentic user, also store the agentic identity required to send to that user.
-
-## Considerations for proactive messages
-
-The default behavior described above applies when responding to a received message through its context. This is reactive messaging. A proactive message, such as a scheduled notification, is sent outside that context, so an agent must retain the conversation information it needs to target the intended conversation.
-
-Use the proactive reply method to target a thread in either a one-on-one chat or a channel. For channels, see [Proactive threading](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging#proactive-threading). For general proactive messaging guidance, see [Send proactive messages](send-proactive-messages.md).
-
-To proactively reply in a thread, call the targeted `app.reply(chatId, replyChainId, text)` overload with the stored chat or channel ID, root message ID, and response text. This targets the reply-chain endpoint. It doesn't quote a current message because there's no current activity in a proactive context. To send a new top-level message, call `app.send(chatId, text)` with the chat or channel ID. Also retain the service URL and agentic identity, if applicable, required by your proactive messaging setup.
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-// Store when the message arrives.
-const saved = {
-  chatOrChannelId: activity.channelData?.chat?.id ?? activity.channelData?.channel?.id,
-  rootId: activity.channelData?.replyChain?.id ?? (activity.type === 'message' ? activity.id : undefined),
-};
-
-// Later, outside a handler.
-if (saved.chatOrChannelId && saved.rootId) {
-  await app.reply(saved.chatOrChannelId, saved.rootId, 'Following up in the thread');
-}
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-# Store when the message arrives.
-data = ctx.activity.channel_data
-chat_or_channel_id = data.chat.id if data and data.chat else data.channel.id if data and data.channel else None
-root_id = data.reply_chain.id if data and data.reply_chain else ctx.activity.id if ctx.activity.type == 'message' else None
-
-# Later, outside a handler.
-if chat_or_channel_id and root_id:
-    await app.reply(chat_or_channel_id, root_id, 'Following up in the thread')
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-// Store when the message arrives.
-var data = context.Activity.ChannelData;
-string? chatOrChannelId = data?.Chat?.Id ?? data?.Channel?.Id;
-string? rootId = data?.ReplyChain?.Id ??
-  (context.Activity.Type == "message" ? context.Activity.Id : null);
-
-// Later, outside a handler.
-if (!string.IsNullOrEmpty(chatOrChannelId) && !string.IsNullOrEmpty(rootId))
-{
-    await teamsApp.ReplyAsync(chatOrChannelId, rootId, "Following up in the thread");
-}
-```
-
-::: zone-end
-
-## Streaming in threads
-
-With `ctx.stream`, the first streamed response creates the message and inherits placement from the incoming activity, as `ctx.send()` does. In a one-on-one chat, it stays at the incoming message level. In a channel, it starts in the incoming message's thread. Later chunks and the final response update that same message. They don't create separate messages or change its placement.
-
-In TypeScript SDK 2.2.0, the source sends the first thread-bound stream message to the reply-chain endpoint. Later chunks and finalization update the created activity through the activities endpoint using the stream ID. This endpoint change is part of the stream lifecycle and doesn't, by itself, indicate a placement change or a Teams rendering defect. The behavior of an explicit placement override for `ctx.stream` isn't documented here as a supported public recipe.
-
-Streaming doesn't automatically quote the incoming message. To include a quote, emit a message with an explicit quote, independently of the stream's placement:
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-import { MessageActivityInput } from "@microsoft/teams.api";
-
-const response = new MessageActivityInput('A streamed answer');
-response.prependQuote(messageToQuoteId);
-ctx.stream.emit(response);
-await ctx.stream.close();
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-TODO: Add a version-specific C# streaming example and validate quote behavior across the full stream lifecycle. See [C# streaming guidance](../../streaming-ux.md).
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-TODO: Add a version-specific Python streaming example and validate quote behavior across the full stream lifecycle. See [Python streaming guidance](../../streaming-ux.md).
-
-::: zone-end
-
-In TypeScript SDK 2.2.0, streamed text is accumulated, but final message metadata comes from the last emitted message. For multi-chunk quoted responses, verify that quote entities and placeholders are preserved without duplication and that the quote preview renders as expected. The example above shows a single message emit, not a complete multi-chunk quoting recipe.
-
-The documented `ctx.stream` path inherits placement from the incoming activity. This article doesn't provide a public API recipe for overriding stream placement.
-
-## Plans in threads
-
-`replyToId` anchors a plan to the prompt that started it. It doesn't by itself select a thread or add a visible quote. In the TypeScript SDK 2.2.0 source, a plan created with `ctx.plan()` configures reply-chain routing for completion when the prompt is in a one-on-one thread. Plan start, update, stop, and error activities use the conversation route with the prompt ID. This is source-derived routing behavior, not confirmation of how every Teams client renders plan progress. Verify the supported package, service, and client versions before relying on placement across the full plan lifecycle. Don't assume the same implementation across SDK languages.
-
-To quote a message in the plan's final answer, add an explicit quote to a message input passed to `complete()`:
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-import { MessageActivityInput } from "@microsoft/teams.api";
-
-const finalAnswer = new MessageActivityInput('The answer');
-finalAnswer.prependQuote(messageToQuoteId);
-await plan.complete(finalAnswer);
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-TODO: Add version-specific C# plan examples.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-TODO: Add version-specific Python plan examples.
-
-::: zone-end
-
-The `plan.complete()` quote example describes SDK input construction. It doesn't establish quote rendering on plan progress activities.
+| `chatOrChannelId` isn't a containing chat or channel ID. | `400 BadArgument` | `conversationId must be a thread id (19:...@...), not a reply-chain id (;messageid=) or a user id; the reply chain is identified by replyChainId` |
+| The chat or channel doesn't exist or was deleted. | `404 ConversationNotFound` | `Conversation not found.` |
+| `rootId` doesn't exist in the specified chat or channel. | `404 ActivityNotFoundInConversation` | `Message does not exist in the thread.` |
+| `rootId` identifies a targeted message. | `400 BadArgument` | `Replies are not allowed for Targeted Messages.` |
+| The chat doesn't support threads. | `400 BadArgument` | `Reply chains is not allowed in this thread type.` |
+
+## Identify the incoming activity's level
+
+Identifying the incoming activity's level is optional. If your agent handles top-level messages and thread replies differently, an L2 activity can be identified using the following:
+
+| Incoming activity | L2 when |
+| --- | --- |
+| Typed `message`, `messageUpdate`, or `messageDelete` | `channelData.replyChain.id` is present and differs from `activity.id`. |
+| `messageReaction` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
+| Card button sent as a `message` with `channelData.source` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
+| Message-action `invoke` with `value.messagePayload` | `channelData.replyChain.id` is present and a valid `value.messagePayload.id` differs from it. |
+| Other `invoke` with `replyToId` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
+| Other activity types, such as `installationUpdate` or `conversationUpdate` | Never classified as L2. |
+
+For reactions and actions, a valid message ID is a plain numeric ID other than `0`, and the comparison requires a root ID.
 
 ## See also
 
 - [Channel and group chat conversations for agents](channel-and-group-conversations.md)
 - [Send proactive messages](send-proactive-messages.md)
+- [Stream bot messages](../../streaming-ux.md)
+
+::: zone pivot="teams-sdk-typescript"
+
+- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/#threading)
+- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/proactive-messaging/#proactive-threading)
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/#threading)
+- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/proactive-messaging/#proactive-threading)
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/#threading)
+- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/proactive-messaging/#proactive-threading)
+
+::: zone-end
