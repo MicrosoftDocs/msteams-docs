@@ -109,6 +109,9 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 The following examples show how to send a thread reply (L2) in a one-on-one chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
 
 > [!NOTE]
+> When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](https://learn.microsoft.com/microsoftteams/platform/concepts/agentic-identity/receiving-sending-messages).
+
+> [!NOTE]
 > The SDK marks threading-related types and low-level operations as experimental. The send and reply helpers used here aren’t marked experimental.
 
 ::: zone pivot="teams-sdk-typescript"
@@ -118,6 +121,8 @@ Use Teams SDK version 2.2 or later for these examples.
 Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
 
 ```typescript
+import { getAgenticIdentity } from '@microsoft/teams.api';
+
 app.on('message', async (ctx) => {
   const activity = ctx.activity;
   const chatId = activity.channelData?.chat?.id;
@@ -126,14 +131,18 @@ app.on('message', async (ctx) => {
     throw new Error('A chat ID and thread root message ID are required.');
   }
 
-  await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.');
+  await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.', {
+    agenticIdentity: getAgenticIdentity(activity.recipient),
+  });
 });
 ```
 
 To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. A root message ID is not required.
 
 ```typescript
-await app.send(chatId, 'A new travel policy is available.');
+await app.send(chatId, 'A new travel policy is available.', {
+  agenticIdentity: getAgenticIdentity(activity.recipient),
+});
 ```
 
 ::: zone-end
@@ -159,6 +168,7 @@ app.OnMessage(async (ctx, cancellationToken) =>
         rootMessageId,
         "Let us plan your trip in this thread.",
         serviceUrl: activity.ServiceUrl,
+        agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
         cancellationToken: cancellationToken);
 });
 ```
@@ -170,6 +180,7 @@ await app.SendAsync(
     chatId,
     "A new travel policy is available.",
     serviceUrl: activity.ServiceUrl,
+    agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
     cancellationToken: cancellationToken);
 ```
 
@@ -199,6 +210,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         root_message_id,
         "Let us plan your trip in this thread.",
         service_url=activity.service_url,
+        agentic_identity=activity.recipient.agentic_identity,
     )
 ```
 
@@ -209,6 +221,7 @@ await app.send(
     chat_id,
     "A new travel policy is available.",
     service_url=activity.service_url,
+    agentic_identity=activity.recipient.agentic_identity,
 )
 ```
 
