@@ -33,14 +33,16 @@ For example, a user sends "Help me plan a trip" as a top-level message. The agen
 
 ### Get the discussion IDs
 
-In conversations that support threading, use the following IDs from the incoming activity to identify a discussion and choose where to send responses:
+Use the following IDs from the incoming activity to identify a discussion and choose where to send responses:
 
 | ID | Incoming activity field |
 | --- | --- |
 | Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
 | L1 root message ID | `channelData.replyChain.id` |
 
-Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id`. This field always identifies the top-level message at the root of the discussion. Don’t use its presence alone to distinguish L1 from L2.
+Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion.
+
+Before replying in a thread, check that the incoming activity includes `channelData.replyChain.id`. Its presence indicates threading support, not whether the incoming activity is L1 or L2. If the field is absent, don't attempt a thread reply for that activity.
 
 If your agent needs to handle these levels differently, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
 
