@@ -62,12 +62,15 @@ The activity context (`ctx` below) represents the incoming activity; `app` repre
 
 ### Choose where a message goes
 
+> [!IMPORTANT]
+> In a one-on-one chat, the send and reply methods on the incoming context object respond to a top-level (L1) message at L1. **This default differs from the recommended agent behavior, which is to respond in the message's thread (L2).** To respond at L2 in a supported chat, use the app-level reply method with the containing chat ID and the root message ID. In channels, context-based responses already go to L2.
+
 ::: zone pivot="teams-sdk-csharp"
 
 | To do this | Call | One-on-one chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.SendAsync(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
-| Respond and quote the user's message | `ctx.ReplyAsync(message)` | Same placement as `SendAsync`, with a quote when eligible. | Same placement as `SendAsync`, with a quote when eligible. |
+| Respond and quote the user's message | `ctx.ReplyAsync(message)` | Same placement as `SendAsync`. | Same placement as `SendAsync`. |
 | Post a new top-level message | `app.SendAsync(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
 | Reply in a thread | `app.ReplyAsync(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
@@ -80,7 +83,7 @@ Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, a
 | To do this | Call | One-on-one chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
-| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
+| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`. | Same placement as `send`. |
 | Post a new top-level message | `app.send(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
 | Reply in a thread | `app.reply(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
@@ -93,7 +96,7 @@ Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, a
 | To do this | Call | One-on-one chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
-| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
+| Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`. | Same placement as `send`. |
 | Post a new top-level message | `app.send(chat_or_channel_id, message)` | At the top level (L1). | At the top level (L1). |
 | Reply in a thread | `app.reply(chat_or_channel_id, root_message_id, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
@@ -101,18 +104,11 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 ::: zone-end
 
-> [!IMPORTANT]
-> In a one-on-one chat, the send and reply methods on the incoming context object respond to a top-level (L1) message at L1. **This default differs from the recommended agent behavior, which is to respond in the message's thread (L2).** To respond at L2 in a supported chat, use the app-level reply method with the containing chat ID and the root message ID. In channels, context-based responses already go to L2.
-
 ### Sending a reply
 
 The following examples show how to send a thread reply (L2) in a one-on-one chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
 
-> [!NOTE]
-> When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](https://learn.microsoft.com/microsoftteams/platform/concepts/agentic-identity/receiving-sending-messages).
-
-> [!NOTE]
-> The SDK marks threading-related types and low-level operations as experimental. The send and reply helpers used here aren’t marked experimental.
+When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](https://learn.microsoft.com/microsoftteams/platform/concepts/agentic-identity/receiving-sending-messages).
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -203,7 +199,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     chat_id = data.chat.id if data and data.chat else None
     root_message_id = data.reply_chain.id if data and data.reply_chain else None
     if not chat_id or not root_message_id:
-        raise ValueError("A chat ID and thread root messageID are required.")
+        raise ValueError("A chat ID and thread root message ID are required.")
 
     await app.reply(
         chat_id,
