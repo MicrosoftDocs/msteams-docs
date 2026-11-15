@@ -40,9 +40,9 @@ Use the following IDs from the incoming activity to identify a discussion and ch
 | Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
 | L1 root message ID | `channelData.replyChain.id` |
 
-Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion.
+Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion. For message activities, its presence alone doesn't distinguish L1 from L2.
 
-Before replying in a thread, check that the incoming activity includes `channelData.replyChain.id`. Its presence indicates threading support, not whether the incoming activity is L1 or L2. If the field is absent, don't attempt a thread reply for that activity.
+Before attempting a thread reply for an incoming activity, check that it provides `channelData.replyChain.id`. If the field is absent, don't attempt a thread reply for that activity.
 
 If your agent needs to handle these levels differently, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
 
@@ -261,19 +261,21 @@ The reply-chain endpoint can return the following errors:
 
 ## Identify the incoming activity's level
 
-Identifying the incoming activity's level is optional. If your agent handles top-level messages and thread replies differently, an L2 activity can be identified using the following:
+Identifying the incoming activity's level is optional. If your agent handles top-level messages and thread replies differently, use the following criteria.
 
-| Incoming activity | L2 when |
+To classify an activity as L2, `channelData.replyChain.id` (the root message ID) must be present. Then apply the additional conditions in the table:
+
+| Incoming activity | Additional condition for L2 |
 | --- | --- |
-| Typed `message`, `messageUpdate`, or `messageDelete` | `channelData.replyChain.id` is present and differs from `activity.id`. |
-| `messageReaction` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
-| Card button sent as a `message` with `channelData.source` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
-| Message-action `invoke` with `value.messagePayload` | `channelData.replyChain.id` is present and a valid `value.messagePayload.id` differs from it. |
-| Other `invoke` with `replyToId` | `channelData.replyChain.id` is present and a valid `replyToId` differs from it. |
+| Typed `message`, `messageUpdate`, or `messageDelete` | `activity.id` differs from the root message ID. |
+| `messageReaction` activity | `replyToId` differs from the root message ID. |
+| Card button sent as a `message` with `channelData.source` | `replyToId` differs from the root message ID. |
+| Message-action `invoke` with `value.messagePayload` | `value.messagePayload.id` differs from the root message ID. |
+| Other `invoke` with `replyToId` | `replyToId` differs from the root message ID. |
+| `invoke` with neither `value.messagePayload` nor `replyToId` | No additional condition. |
 | Other activity types, such as `installationUpdate` or `conversationUpdate` | Never classified as L2. |
 
-For reactions and actions, a valid message ID is a plain numeric ID other than `0`, and the comparison requires a root ID.
-
+For comparisons involving `replyToId` or `value.messagePayload.id`, the ID must be a plain numeric ID other than `0`.
 ## See also
 
 - [Channel and group chat conversations for agents](channel-and-group-conversations.md)
