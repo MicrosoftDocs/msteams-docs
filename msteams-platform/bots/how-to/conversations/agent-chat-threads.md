@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 A Teams agent can start a thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
 
-Threading is available in one-on-one agent chats, including chats with agentic users, and in channels.
+The threading capabilities described in this article are in preview. They are available in one-on-one agent chats, including chats with agentic users, and in channels.
 
 In a given context, messages appear at one of two levels:
 
