@@ -20,11 +20,27 @@
     - name: Agent basics
       href: bots/bot-concepts.md
       displayName: scopes, handler, activity
+    - name: Agent connectivity in Teams
+      href: agents-in-teams/agent-connectivity.md
+      displayName: connectivity, Teams, agent, network, integration
     - name: Build conversational capability
       href: bots/build-conversational-capability.md
       displayName: chat, message, reply
     - name: Best practices and features checklist
       href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+      displayName: scopes, handler, activity
+  - name: Register and configure
+    items:
+    - name: Agent registration concepts
+      href: agents-in-teams/registering-agent-teams-platform.md
+    - name: Choose an agent registration type
+      href: agents-in-teams/choose-agent-registration-type.md
+    - name: Configure runtime authentication
+      href: agents-in-teams/configure-agent-runtime-authentication.md
+    - name: Incoming request authentication
+      href: agents-in-teams/incoming-request-authentication.md
+    - name: Multi-tenant and single-tenant agents
+      href: agents-in-teams/agent-tenancy.md
   - name: Integrate AI
     items:
     - name: Receive all messages in group chats and channels
@@ -72,8 +88,17 @@
     - name: Send and receive files
       href: bots/how-to/bots-filesv4.md
       displayName: receive files using bot
+    - name: Send and receive inline images
+      href: bots/how-to/agents-inline-images.md
+      displayName: receive files using agents
   - name: How-tos
     items:
+    - name: Configure delivery method for an agent
+      href: agents-in-teams/configure-delivery-methods-for-agents.md
+      displayName: delivery method, agent, configuration
+    - name: Connect an agent to Teams without an SDK
+      href: agents-in-teams/connect-agent-without-sdk.md
+      displayName: agent, Teams, connectivity, without SDK
     - name: Port a Slack Bolt app
       href: agents-in-teams/port-slack-bolt-javascript-app.md
       displayName: block kit
@@ -101,13 +126,71 @@
     - name: Handle rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Manage conversation state
+      href: agents-in-teams/manage-conversation-state.md
+  - name: Agentic identity
+    items:
+    - name: Overview
+      href: concepts/agentic-identity/overview.md
+    - name: Setup
+      href: concepts/agentic-identity/setup.md
+    - name: Receiving and sending messages
+      href: concepts/agentic-identity/receiving-sending-messages.md
+    - name: Lifecycle events
+      href: concepts/agentic-identity/lifecycle-events.md
+    - name: Observability and governance
+      href: concepts/agentic-identity/observability-governance.md
 - name: Tools and SDKs
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
   - name: Teams SDK
-    href: /microsoftteams/platform/teams-ai-library/welcome
+    items:
+    - name: Overview
+      href: teams-sdk-overview.md
+    - name: Why an SDK?
+      href: concepts/why-sdk.md
+    - name: Code basics
+      href: concepts/sdk-code-basics.md
+    - name: App basics
+      href: concepts/sdk-app-basics.md
+    - name: Listening to events
+      href: concepts/listening-events.md
+    - name: Listening to activities
+      href: concepts/listening-activities.md
+    - name: Graph API client
+      href: concepts/sdk-graph-api-client.md
+    - name: Agent Communication Service API client
+      href: concepts/sdk-teams-api-client.md
+    - name: OpenTelemetry (.NET)
+      href: concepts/sdk-opentelemetry.md
+    - name: Add middleware and logging
+      href: agents-in-teams/agent-observability.md
+      displayName: observability, middleware, app.use, UseMiddleware, ITurnMiddleware, turn middleware, logger, ConsoleLogger, log level, LOG_LEVEL, diagnostics, tracing
+    - name: Host web content and manage your server
+      href: agents-in-teams/host-agent-server.md
+      displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
+    - name: Migrate a Bot Framework SDK bot
+      items:
+        - name: Overview
+          href: botbuilder-migration/overview.md
+        - name: Botbuilder Compatibility
+          href: botbuilder-migration/integration.md
+        - name: Sending Activities
+          href: botbuilder-migration/sending-activities.md
+        - name: Proactive Activities
+          href: botbuilder-migration/proactive-activities.md
+        - name: The API Client
+          href: botbuilder-migration/api-client.md
+        - name: User Authentication
+          href: botbuilder-migration/user-authentication.md
+  - name: Teams developer CLI
+    href: teams-developer-cli-overview.md
+  - name: Coding agent skill
+    href: coding-agent-skill.md
+  - name: llms.txt
+    href: llms-txt.md
   - name: Teams Developer Portal
     items:
     - name: Overview
@@ -116,6 +199,9 @@
     - name: Manage your apps in Developer Portal
       href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
       displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
+    - name: Manage Azure bots in Developer Portal
+      href: concepts/build-and-test/manage-azure-bots.md
+      displayName: Azure bots, manage, Developer Portal
     - name: Develop your apps with Agents Toolkit
       href: concepts/build-and-test/develop-your-apps-with-toolkit.md
       displayName: visual studio code, visual studio, agents toolkit, react web app, publish react app, debug
@@ -284,7 +370,7 @@
   - name: Legacy tools and SDKs
     href: legacy-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
-- name: Add authentication
+- name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
@@ -385,8 +471,8 @@
     - name: Preapproval of RSC permissions
       href: graph-api/rsc/preapproval-instruction-docs.md
       displayName: User, team, chat, application, delegated
-    - name: Grant RSC permission to your app
-      href: graph-api/rsc/grant-resource-specific-consent.md
+    - name: Declare RSC permission requirements
+      href: graph-api/rsc/declare-resource-specific-consent-requirements.md
       displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive app installation to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
@@ -603,7 +689,7 @@
       - name: Create API-based message extensions
         href: messaging-extensions/create-api-message-extension.md
         displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-    - name: Build message extensions using Bot Framework
+    - name: Build message extensions using Teams SDK
       items:
       - name: Bot-based message extensions
         href: messaging-extensions/build-bot-based-message-extension.md
@@ -807,6 +893,12 @@
           displayName: Sequential Workflows
         - name: Up to date cards
           href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
+    - name: Build cards with Teams SDK
+      items:
+      - name: Overview
+        href: task-modules-and-cards/cards/build-with-teams-sdk.md
+      - name: Executing actions
+        href: task-modules-and-cards/cards/executing-actions.md
     - name: Build dialogs
       items:
       - name: Dialogs overview
@@ -892,8 +984,6 @@
     - name: Best practices for Teams mobile app
       href: resources/teams-mobile-best-practices.md
       displayName: Teams mobile app, best practices, service worker, lighthouse, performance audit
-    - name: Contribute to Teams documentation
-      href: resources/teams-contributor-reference.md
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
@@ -928,6 +1018,11 @@
     displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Enable agent or app in Copilot
+    href: m365-apps/enable-agent-app-copilot.md
+  - name: Extend with Microsoft 365 Agents SDK
+    href: agents-in-teams/extend-with-agents-sdk.md
+    displayName: direct line, extensions, useTeamsSdk, email
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency

@@ -43,12 +43,9 @@ The following image displays the locations from where users can invoke message e
 
 ## Understand how message extensions work
 
-A message extension is composed of a web service that you host and an app manifest that defines the location where your web service is invoked within the Teams client. The web service uses the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
+A message extension is composed of an agent runtime service that you create with Teams SDK and host, and an app manifest that defines the location where your service is invoked within the Teams client. The agent runtime service uses the Teams platform messaging schema and secure communication protocol, so you must register your web service as a bot.
 
-> [!NOTE]
-> Although you can manually create the web service, use the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
-
-In the app manifest (previously called the Teams app manifest), you define a single message extension with up to 10 different commands. Each command defines a type, such as action or search, and the locations in the client where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. When you invoke the message extension, the web service receives an HTTPS message with a JSON payload that contains all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
+In the app manifest, you define a single message extension with up to 10 different commands. Each command defines a type, such as action or search, and the locations in the client where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. When you invoke the message extension, the web service receives an HTTPS message with a JSON payload that contains all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
 
 ## Message extension command types
 
@@ -58,7 +55,7 @@ There are two types of message extension commands: action commands and search co
 
 Use action commands to present users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Later, the user can submit the message. For more complex workflows, you can link multiple forms together.
 
-Trigger action commands from the compose message area, the command box, or a message. When you invoke the command from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred to as task module in TeamsJS v1.x):
+Trigger action commands from the compose message area, the command box, or a message. When you invoke the command from a message, the initial JSON payload sent to your agent includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred to as task module in TeamsJS v1.x):
 
 :::image type="content" source="../assets/images/task-module.png" alt-text="Message extension action command dialog":::
 
@@ -92,9 +89,7 @@ To build a message extension, use one of the following methods:
 
 * **Build message extensions using API (API-based)**: Create a message extension from an existing API. This method requires an OpenAPI Description (OAD) document.
 
-* **Build message extensions using Bot Framework (Bot-based)**: Create a new message extension from a bot if you want a one-on-one conversational experience.
-
-[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+* **Build message extensions using Teams SDK (Agent-based)**: Create a new message extension from an agent if you want a one-on-one conversational experience.
 
 The following table helps you select a message extension type to get started:
 
@@ -112,11 +107,11 @@ The following table helps you select a message extension type to get started:
     :::column-end:::
     :::column:::
 
-**Bot-based message extension**</br>
+**Agent-based message extension**</br>
 
 * More flexible.
-* Message extension uses a Bot Framework.
-* Can use the full capabilities of a bot.
+* Created with Teams SDK.
+* Can use the full capabilities of an agent.
 * Ideal for scenarios where the message extension needs to communicate with multiple services, manage complex logic or user interactions, or maintain state across sessions.
 * Supports action commands, search commands, and link unfurling.
 
@@ -126,17 +121,6 @@ The following table helps you select a message extension type to get started:
 </br>
 
 :::image type="content" source="../assets/images/Copilot/api-bot-based-message-extension-decision-tree.png" alt-text="Screenshot shows the decision tree, which helps the user to choose between API based and bot based message extension.":::
-
-**Select an option to start building a message extension:**
-
-:::row:::
-    :::column span="4":::
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/Copilot/build-message-extension-api-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md" border="false":::
-    :::column-end:::
-    :::column span="4":::
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md" border="false":::
-    :::column-end:::
-:::row-end:::
 
 ## Code sample
 
