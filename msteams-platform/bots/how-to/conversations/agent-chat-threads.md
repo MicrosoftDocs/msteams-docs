@@ -69,9 +69,9 @@ The activity context (`ctx` or `context`) represents the incoming activity; `app
 | Respond where the user wrote | `context.SendAsync(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
 | Respond and quote the user's message | `context.ReplyAsync(message)` | Same placement as `SendAsync`, with a quote when eligible. | Same placement as `SendAsync`, with a quote when eligible. |
 | Post a new top-level message | `teamsApp.SendAsync(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
-| Reply in a thread | `teamsApp.ReplyAsync(chatOrChannelId, rootId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+| Reply in a thread | `teamsApp.ReplyAsync(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
-Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, and `rootId` from `ChannelData.ReplyChain.Id`.
+Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, and `rootMessageId` from `ChannelData.ReplyChain.Id`.
 
 ::: zone-end
 
@@ -82,9 +82,9 @@ Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, a
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
 | Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
 | Post a new top-level message | `app.send(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
-| Reply in a thread | `app.reply(chatOrChannelId, rootId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+| Reply in a thread | `app.reply(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
-Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, and `rootId` from `channelData.replyChain.id`.
+Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, and `rootMessageId` from `channelData.replyChain.id`.
 
 ::: zone-end
 
@@ -95,9 +95,9 @@ Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, a
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
 | Respond and quote the user's message | `ctx.reply(message)` | Same placement as `send`, with a quote when eligible. | Same placement as `send`, with a quote when eligible. |
 | Post a new top-level message | `app.send(chat_or_channel_id, message)` | At the top level (L1). | At the top level (L1). |
-| Reply in a thread | `app.reply(chat_or_channel_id, root_id, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+| Reply in a thread | `app.reply(chat_or_channel_id, root_message_id, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
-Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.id`, and `root_id` from `channel_data.reply_chain.id`.
+Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.id`, and `root_message_id` from `channel_data.reply_chain.id`.
 
 ::: zone-end
 
@@ -113,19 +113,19 @@ The following examples show how to send a thread reply (L2) in a one-on-one chat
 
 ::: zone pivot="teams-sdk-typescript"
 
-These examples use `@microsoft/teams.apps` version 2.2.0.
+Use Teams SDK version 2.2 or later for these examples.
 
 Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
 
 ```typescript
 app.on('message', async ({ activity }) => {
   const chatId = activity.channelData?.chat?.id;
-  const rootId = activity.channelData?.replyChain?.id;
-  if (!chatId || !rootId) {
+  const rootMessageId = activity.channelData?.replyChain?.id;
+  if (!chatId || !rootMessageId) {
     throw new Error('A chat ID and thread root ID are required.');
   }
 
-  await app.reply(chatId, rootId, 'Let us plan your trip in this thread.');
+  await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.');
 });
 ```
 
@@ -139,15 +139,15 @@ await app.send(chatId, 'Your trip itinerary is ready.');
 
 ::: zone pivot="teams-sdk-csharp"
 
-The reply-chain routing shown here requires `Microsoft.Teams.Apps` version 2.2 or later.
+Use Teams SDK version 2.2 or later for these examples.
 
 ```csharp
 teamsApp.OnMessage(async (context, cancellationToken) =>
 {
     var activity = context.Activity;
     string? chatId = activity.ChannelData?.Chat?.Id;
-    string? rootId = activity.ChannelData?.ReplyChain?.Id;
-    if (string.IsNullOrEmpty(chatId) || string.IsNullOrEmpty(rootId))
+    string? rootMessageId = activity.ChannelData?.ReplyChain?.Id;
+    if (string.IsNullOrEmpty(chatId) || string.IsNullOrEmpty(rootMessageId))
     {
         throw new InvalidOperationException(
             "A chat ID and thread root ID are required.");
@@ -155,7 +155,7 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
 
     await teamsApp.ReplyAsync(
         chatId,
-        rootId,
+        rootMessageId,
         "Let us plan your trip in this thread.",
         serviceUrl: activity.ServiceUrl,
         cancellationToken: cancellationToken);
@@ -178,7 +178,7 @@ Without an explicit `serviceUrl`, C# app-level sends use the last inbound activi
 
 ::: zone pivot="teams-sdk-python"
 
-Use a release with the reply-chain APIs described in the [Python SDK threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/#threading).
+Use Teams SDK version 2.2 or later for these examples.
 
 ```python
 from microsoft_teams.api import MessageActivity
@@ -189,13 +189,13 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     activity = ctx.activity
     data = activity.channel_data
     chat_id = data.chat.id if data and data.chat else None
-    root_id = data.reply_chain.id if data and data.reply_chain else None
-    if not chat_id or not root_id:
+    root_message_id = data.reply_chain.id if data and data.reply_chain else None
+    if not chat_id or not root_message_id:
         raise ValueError("A chat ID and thread root ID are required.")
 
     await app.reply(
         chat_id,
-        root_id,
+        root_message_id,
         "Let us plan your trip in this thread.",
         service_url=activity.service_url,
     )
@@ -215,7 +215,11 @@ Without an explicit `service_url`, Python app-level sends use the app's configur
 
 ::: zone-end
 
-## Implement threading with REST API (preview)
+## Implement threading with the REST API
+
+Use the full incoming `serviceUrl`, include the standard activity payload, and authenticate as described in [Build a conversational capability](../../build-conversational-capability.md).
+
+### Send a top-level message
 
 To send a top-level message (L1) with the REST API, use the containing chat or channel ID. Set `chatOrChannelId` to `channelData.chat.id` for a chat or `channelData.channel.id` for a channel:
 
@@ -225,17 +229,17 @@ POST {serviceUrl}/v3/conversations/{chatOrChannelId}/activities
 
 This is the REST API equivalent of `app.send(chatOrChannelId, message)` for a top-level message (L1).
 
-To send an L2 reply, post to the reply-chain endpoint with the same containing chat or channel ID. Set `rootId` to the incoming activity's `channelData.replyChain.id`:
+### Send an in-thread reply (preview)
+
+To send an L2 reply, post to the following endpoint with the same containing chat or channel ID. Set `rootMessageId` to the incoming activity's `channelData.replyChain.id`:
 
 ```http
-POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootId}
+POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootMessageId}
 ```
 
-This is the REST API equivalent of `app.reply(chatOrChannelId, rootId, message)` for a thread reply (L2).
+This is the REST API equivalent of `app.reply(chatOrChannelId, rootMessageId, message)` for a thread reply (L2).
 
-Use the full incoming `serviceUrl`, include the standard activity payload, and authenticate as described in [Build a conversational capability](../../build-conversational-capability.md).
-
-Existing integrations remain compatible: posting to `/activities` with a conversation ID in the form `19:...;messageid={rootId}` continues to send at L2 in channels and also works in chats that support threading. Use the reply-chain endpoint for new implementations.
+Existing integrations remain compatible: posting to `/activities` with a conversation ID in the form `19:...;messageid={rootMessageId}` continues to send at L2 in channels and also works in chats that support threading. Use the reply-chain endpoint for new implementations.
 
 ### Threading-specific error responses
 
@@ -245,8 +249,8 @@ The reply-chain endpoint can return the following errors:
 | --- | --- | --- |
 | `chatOrChannelId` isn't a containing chat or channel ID. | `400 BadArgument` | `conversationId must be a thread id (19:...@...), not a reply-chain id (;messageid=) or a user id; the reply chain is identified by replyChainId` |
 | The chat or channel doesn't exist or was deleted. | `404 ConversationNotFound` | `Conversation not found.` |
-| `rootId` doesn't exist in the specified chat or channel. | `404 ActivityNotFoundInConversation` | `Message does not exist in the thread.` |
-| `rootId` identifies a targeted message. | `400 BadArgument` | `Replies are not allowed for Targeted Messages.` |
+| `rootMessageId` doesn't exist in the specified chat or channel. | `404 ActivityNotFoundInConversation` | `Message does not exist in the thread.` |
+| `rootMessageId` identifies a targeted message. | `400 BadArgument` | `Replies are not allowed for Targeted Messages.` |
 | The chat doesn't support threads. | `400 BadArgument` | `Reply chains is not allowed in this thread type.` |
 
 ## Identify the incoming activity's level
