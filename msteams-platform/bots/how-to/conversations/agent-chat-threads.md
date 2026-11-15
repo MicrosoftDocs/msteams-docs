@@ -20,7 +20,7 @@ The threading capabilities described in this article are in preview. They are av
 
 ## Recommended agent behavior
 
-Where threading is supported, agents should respond in threads:
+Where threading is supported, agents should always respond in a thread:
 
 - If the user's message is top-level (L1), reply in a thread under that message.
 - If the user's message is already in a thread (L2), reply in the same thread.
@@ -40,7 +40,7 @@ Use the following IDs from the incoming activity to identify a discussion and ch
 | Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
 | Thread root message ID | `channelData.replyChain.id` |
 
-Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion. For message activities, its presence alone doesn't distinguish L1 from L2.
+Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion.
 
 Before attempting a thread reply for an incoming activity, check that it provides `channelData.replyChain.id`. If the field is absent, don't attempt a thread reply for that activity.
 
