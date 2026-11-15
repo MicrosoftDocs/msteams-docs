@@ -217,7 +217,7 @@ Without an explicit `service_url`, Python app-level sends use the app's configur
 
 ## Implement threading with the REST API
 
-Use the full incoming `serviceUrl`, include the standard activity payload, and authenticate as described in [Build a conversational capability](../../build-conversational-capability.md).
+These endpoints use the Agent Communication Service (ACS) REST API. Use the full `serviceUrl` from the incoming activity. Follow the token acquisition and request construction instructions in [Connect an agent to Teams without an SDK](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/connect-agent-without-sdk#implement-acs-request-construction). In the following examples, `{accessToken}` is the resulting ACS access token.
 
 ### Send a top-level message
 
@@ -225,16 +225,40 @@ To send a top-level message (L1) with the REST API, use the containing chat or c
 
 ```http
 POST {serviceUrl}/v3/conversations/{chatOrChannelId}/activities
+Authorization: Bearer {accessToken}
+Content-Type: application/json
+
+{
+  "type": "message",
+  "text": "Your trip itinerary is ready."
+}
 ```
 
-This is the REST API equivalent of `app.send(chatOrChannelId, message)` for a top-level message (L1).
+This is the REST API equivalent of `app.send(chatOrChannelId, message)`.
+
+A successful top-level send returns a [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference#send-to-conversation) containing the sent message's `id`. For example:
+
+```json
+{
+  "id": "{messageId}"
+}
+```
+
+Store this ID as the root message ID if your agent needs to send replies in this message's thread later.
 
 ### Send an in-thread reply
 
-For new implementations, use the following `/replyChains` endpoint to send in-thread replies (L2). Use the same containing chat or channel ID for `chatOrChannelId` and set `rootMessageId` to the incoming activity's `channelData.replyChain.id`:
+For new implementations, use the following `/replyChains` endpoint to send in-thread replies (L2). Use the same containing chat or channel ID for `chatOrChannelId`. Set `rootMessageId` to the incoming activity's `channelData.replyChain.id`, or to the stored `id` returned when your agent sent the top-level message:
 
 ```http
 POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootMessageId}
+Authorization: Bearer {accessToken}
+Content-Type: application/json
+
+{
+  "type": "message",
+  "text": "Let us plan your trip in this thread."
+}
 ```
 
 This is the REST API equivalent of `app.reply(chatOrChannelId, rootMessageId, message)`.
