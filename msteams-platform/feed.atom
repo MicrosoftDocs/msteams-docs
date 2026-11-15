@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-10-28T00:00:00Z</updated>
+	<updated>2026-11-13T00:00:00Z</updated>
+	<entry>
+		<updated>2026-11-13T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-socket-mode-for-teams-agents</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-socket-mode-for-teams-agents"/>
+		<title type="html"><![CDATA[Preview: Socket mode for Teams agents]]></title>
+		<summary type="html"><![CDATA[Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.]]></summary>
+		<content type="html"><![CDATA[<p>Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.</p><p>During preview, socket mode is available only for newly created agents. Use it only to develop and test your agent. For production agents, including bots published to the Teams Store, use an HTTPS messaging endpoint.</p><p>To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/agent-connectivity">Choose how your agent receives activity data from Teams</a>.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-10-28T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-agents-can-now-stream-in-group-chats-channels-and-meetings</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: Teams SDK (stable and preview, multiple languages)]]></title>
 		<summary type="html"><![CDATA[New versions of Teams SDK are now available across TypeScript, .NET, and Python!]]></summary>
 		<content type="html"><![CDATA[<p>New versions of Teams SDK are now available across TypeScript, .NET, and Python!</p><h3>.NET</h3><p>Teams SDK for .NET 2.1.0 is a significant release that replaces the plugin-oriented model of 2.0 with a plain ASP.NET Core app. 2.1.0 also adds agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility. For more information, see the detailed <a href="https://github.com/microsoft/teams.net/releases/tag/v2.1.0">release notes</a>.</p><h3>TypeScript and Python</h3><p>Teams SDK for TypeScript and Python both have new stable maintenance releases, as well as new preview releases that include preview support for Agent 365 scenarios.</p><ul><li>TypeScript stable: 2.0.15 (<a href="https://github.com/microsoft/teams.ts/releases/tag/v2.0.15">release notes</a>)</li><li>TypeScript preview: 2.1.0-preview.3 (<a href="https://github.com/microsoft/teams.ts/releases/tag/v2.1.0-preview.3">release notes</a>)</li><li>Python stable: 2.0.15 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.0.15">release notes</a>)</li><li>Python preview: 2.1.0a1 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.1.0a1">release notes</a>)</li></ul>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-08-04T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#retiring-app-manifest-environment-variables</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#retiring-app-manifest-environment-variables"/>
-		<title type="html"><![CDATA[Retiring: App manifest environment variables]]></title>
-		<summary type="html"><![CDATA[On <strong>August 31, 2026</strong>, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.]]></summary>
-		<content type="html"><![CDATA[<p>On <strong>August 31, 2026</strong>, the Teams Developer Portal's environment variables feature for app manifests will be retired. App manifests that use environment variables will become invalid, and you'll no longer be able to create, manage, or access environment variables.</p><p>If you have a manifest that currently relies on the environment variables feature, split it into per-environment apps prior to the retirement date.</p>]]></content>
 	</entry>
 </feed>
