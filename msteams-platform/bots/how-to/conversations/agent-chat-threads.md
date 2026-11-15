@@ -1,7 +1,6 @@
 ---
 title: Use threads in channels and one-on-one agent chats
 description: Learn why agents should use threads, identify incoming message placement, and send responses to the main conversation or a thread.
-ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 11/13/2026
 zone_pivot_groups: teams-sdk-languages
@@ -55,7 +54,6 @@ Your agent might store conversation history or task progress to continue a discu
 
 Don't assume a particular meaning for `conversation.id` or use it as the storage key for this data. Treat it as an opaque value: don't parse it or use it to distinguish L1 from L2.
 
-
 ## Implement threading with Teams SDK
 
 The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context-level send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
@@ -108,7 +106,7 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 The following examples show how to send a thread reply (L2) in a chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
 
-When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](https://learn.microsoft.com/microsoftteams/platform/concepts/agentic-identity/receiving-sending-messages).
+When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](../../../concepts/agentic-identity/receiving-sending-messages.md).
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -227,7 +225,7 @@ Without an explicit `service_url`, Python app-level sends use the app's configur
 
 ## Implement threading with the REST API
 
-These endpoints use the Agent Communication Service (ACS) REST API. Use the full `serviceUrl` from the incoming activity. Follow the token acquisition and request construction instructions in [Connect an agent to Teams without an SDK](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/connect-agent-without-sdk#implement-acs-request-construction). In the following examples, `{accessToken}` is the resulting ACS access token.
+These endpoints use the Agent Communication Service (ACS) REST API. Use the full `serviceUrl` from the incoming activity. Follow the token acquisition and request construction instructions in [Connect an agent to Teams without an SDK](../../../agents-in-teams/connect-agent-without-sdk.md#implement-acs-request-construction). In the following examples, `{accessToken}` is the resulting ACS access token.
 
 ### Send a top-level message
 
