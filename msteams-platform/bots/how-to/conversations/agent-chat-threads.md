@@ -11,7 +11,7 @@ zone_pivot_groups: teams-sdk-languages
 
 A Teams agent can start a thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
 
-Threading is available in one-on-one agent chats, including chats with agentic users, and in channels. Support will expand to group chats.
+Threading is available in one-on-one agent chats, including chats with agentic users, and in channels.
 
 In a given context, messages appear at one of two levels:
 
@@ -118,8 +118,6 @@ These examples use `@microsoft/teams.apps` version 2.2.0.
 Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
 
 ```typescript
-import { getAgenticIdentity } from '@microsoft/teams.api';
-
 app.on('message', async ({ activity }) => {
   const chatId = activity.channelData?.chat?.id;
   const rootId = activity.channelData?.replyChain?.id;
@@ -127,18 +125,14 @@ app.on('message', async ({ activity }) => {
     throw new Error('A chat ID and thread root ID are required.');
   }
 
-  await app.reply(chatId, rootId, 'Let us plan your trip in this thread.', {
-    agenticIdentity: getAgenticIdentity(activity.recipient),
-  });
+  await app.reply(chatId, rootId, 'Let us plan your trip in this thread.');
 });
 ```
 
 To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. This call requires only the chat ID, so omit the root ID requirement:
 
 ```typescript
-await app.send(chatId, 'Your trip itinerary is ready.', {
-  agenticIdentity: getAgenticIdentity(activity.recipient),
-});
+await app.send(chatId, 'Your trip itinerary is ready.');
 ```
 
 ::: zone-end
@@ -164,7 +158,6 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
         rootId,
         "Let us plan your trip in this thread.",
         serviceUrl: activity.ServiceUrl,
-        agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
         cancellationToken: cancellationToken);
 });
 ```
@@ -176,7 +169,6 @@ await teamsApp.SendAsync(
     chatId,
     "Your trip itinerary is ready.",
     serviceUrl: activity.ServiceUrl,
-    agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
     cancellationToken: cancellationToken);
 ```
 
@@ -206,7 +198,6 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         root_id,
         "Let us plan your trip in this thread.",
         service_url=activity.service_url,
-        agentic_identity=activity.recipient.agentic_identity,
     )
 ```
 
@@ -217,7 +208,6 @@ await app.send(
     chat_id,
     "Your trip itinerary is ready.",
     service_url=activity.service_url,
-    agentic_identity=activity.recipient.agentic_identity,
 )
 ```
 
