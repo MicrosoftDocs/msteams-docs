@@ -13,7 +13,7 @@ This article is part 3 of the [Build an agent factory with Agentic Users in Team
 
 Every agent that someone creates in your product gets its own Agentic User, and all of them come from your one blueprint.
 
-:::image type="content" source="../../../assets/images/agent-blueprint-user-governance.png" alt-text="Diagram showing one reusable agent blueprint provisioning three separate Agentic Users, each with a yellow character avatar." lightbox="../../../assets/images/agent-blueprint-user-governance.png":::
+:::image type="content" source="../../../assets/images/agent-blueprint-user-governance.png" alt-text="Diagram showing one agent blueprint provisioning Agentic Users AU 1, AU 2, and AU 3 with yellow, orange, and green avatars." lightbox="../../../assets/images/agent-blueprint-user-governance.png":::
 
 *One blueprint, many Agentic Users.*
 
