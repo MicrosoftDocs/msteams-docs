@@ -1,3 +1,12 @@
+---
+title: Route messages to each agent
+description: Route messages to each Agentic User with Teams SDK. Read the recipient ID, load the right agent, and keep each agent's context separate. Learn how.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Route messages to each agent
 
 One service receives the messages for every Agentic User created from your blueprint. Each message names the Agentic User it's addressed to in its To field, the activity's recipient, and Teams SDK replies, sends, and calls APIs as that Agentic User for you.
@@ -25,7 +34,7 @@ app.on('message', async ({ activity, reply }) => {
 });
 ```
 
-Here, agentStore and agentRuntime stand in for your own storage and orchestration. Review note: the C# and Python versions are in the pull request.
+Here, agentStore and agentRuntime stand in for your own storage and orchestration.
 
 ## Keep each agent's context separate
 
@@ -34,9 +43,6 @@ Because each agent has its own identity, your service can keep each agent's know
 ## Call Microsoft 365 workloads as the agent itself
 
 Teams SDK gets the Agentic User's token for you, so replies and API calls run as the agent. To call Microsoft 365 APIs as the agent without Teams SDK, see the appendix, [Get an Agentic User token yourself](#get-an-agentic-user-token-yourself).
-
-<details>
-<summary>Under the hood</summary>
 
 ## Get an Agentic User token yourself
 
@@ -77,9 +83,7 @@ client_id={agent-identity-id}
 * Client secrets are for development only. In production, use a certificate or managed identity credential in the first call.
 * In .NET, Microsoft.Identity.Web.AgentIdentities makes all three calls for you with .WithAgentUserIdentity(agentId, userId).
 
-Source: Microsoft Learn, [autonomous agent authentication flow](https://learn.microsoft.com/entra/agent-id/autonomous-agent-authentication-authorization-flow).
-
-</details>
+Source: Microsoft Learn, [autonomous agent authentication flow](/entra/agent-id/autonomous-agent-authentication-authorization-flow).
 
 > [!div class="nextstepaction"]
 > [Next: Be in the know](be-in-the-know.md)

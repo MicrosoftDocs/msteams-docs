@@ -1,3 +1,12 @@
+---
+title: Agent factory FAQ
+description: Agent factory FAQ answers common questions about Teams activation, blueprints, Agentic Users, and admin approvals. Find quick answers to build and manage agents.
+ms.topic: faq
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Agent factory FAQ
 
 ## Do people need to install each agent in Teams?

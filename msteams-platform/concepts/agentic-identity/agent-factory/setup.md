@@ -1,3 +1,12 @@
+---
+title: Set up your agent factory
+description: Agent factory setup starts with a Microsoft Entra blueprint. Register it, add permissions, connect Teams SDK, and publish to Agent 365. Get started now.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Set up your agent factory
 
 You set up your agent factory once, in your own tenant. Then each customer's admin activates it in theirs.
@@ -76,7 +85,9 @@ Before anyone in an organization can create agents from your agent factory, an a
 1. Grant the permissions your agent factory needs.
 1. Select Review and finish.
 
-*Figure 2. Activating an agent factory in the Microsoft 365 admin center.*
+:::image type="content" source="../../../assets/images/activate-agent-factory-admin-center.png" alt-text="A screenshot of the Microsoft 365 admin center, showing an agent factory being activated." lightbox="../../../assets/images/activate-agent-factory-admin-center.png":::
+
+*Activating an agent factory in the Microsoft 365 admin center.*
 
 > [!div class="nextstepaction"]
 > [Next: Create Agentic Users for your agents](create-agentic-users.md)

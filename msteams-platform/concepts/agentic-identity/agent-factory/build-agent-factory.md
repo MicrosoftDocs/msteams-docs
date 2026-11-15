@@ -1,6 +1,15 @@
+---
+title: Build an agent factory
+description: Build an agent factory that lets users create custom AI agents, each with its own Agentic User identity in Microsoft Entra ID. Learn how to get started today.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Build an agent factory
 
-An agent factory <mark>lets users create their own agents, each tailored to a team, a workflow, or a body of knowledge, by using your tools, orchestration, and runtime</mark>. It might be a no-code agent builder, or a work app that lets each team set up its own assistant.
+An agent factory lets users create their own agents, each tailored to a team, a workflow, or a body of knowledge, by using your tools, orchestration, and runtime. It might be a no-code agent builder, or a work app that lets each team set up its own assistant.
 
 An Agentic User is a user account in Microsoft Entra ID that belongs to an AI agent instead of a person. It has a name, a profile, and a manager, so people can find it and work with it in Microsoft 365 the way they work with a colleague.
 
@@ -22,9 +31,9 @@ Each agent has its own identity in the organization's directory. It calls APIs a
 
 ## How it works
 
-*TODO new image*
+:::image type="content" source="../../../assets/images/agentic-user-event-flow.png" alt-text="A diagram illustrating how messages reach the correct agent within an agent runtime." lightbox="../../../assets/images/agentic-user-event-flow.png":::
 
-*Figure 1. How messages reach your service and the right agent.*
+*How messages reach your service and the right agent.*
 
 * Your agent factory is one agent identity blueprint. It holds the credentials and baseline permissions that all of your agents share. Each agent is a child of the blueprint and inherits its configuration unless you override it.
 * Each agent your users create gets its own agent identity and Agentic User in the customer's tenant.

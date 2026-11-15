@@ -1,15 +1,26 @@
+---
+title: Create Agentic Users for your agents
+description: Create Agentic Users for your agents with one blueprint and the Microsoft Graph API. Learn how to call the API, check status, and add agents to Teams chats.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Create Agentic Users for your agents
 
 Every agent that someone creates in your product gets its own Agentic User, and all of them come from your one blueprint.
 
-*Figure 3. One blueprint, many Agentic Users.*
+:::image type="content" source="../../../assets/images/agent-blueprint-user-governance.png" alt-text="A diagram illustrating how one agent blueprint is used to create and govern many Agentic Users." lightbox="../../../assets/images/agent-blueprint-user-governance.png":::
+
+*One blueprint, many Agentic Users.*
 
 ## Ways to create an agent
 
 Agents can be created in any of these ways. They're separate options, not steps, so support whichever ones fit your product.
 
 | **Option** | **Who creates the agent** | **How it works** |
-|----|----|----|
+| ---- | ---- | ---- |
 | From your product | A person using your product | Your service calls the Microsoft Graph API for creating agents, as shown in the next section. |
 | From the Agent Store | A person your customer's admin allowed | They create the agent from your agent factory's listing in the Agent Store in Teams. |
 | From the Microsoft 365 admin center | An admin | The admin creates the agent on behalf of a manager. |
@@ -60,7 +71,7 @@ Record the agent's Agentic User ID with the agent in your product. Your service 
 Once the agent is ready, people can add it to any conversation from the people picker in Teams and other Microsoft 365 apps. Your service can also add it with the standard Microsoft Graph membership APIs.
 
 | **To do this** | **Call** |
-|----|----|
+| ---- | ---- |
 | Add the agent to a team | POST /teams/{team-id}/members |
 | Add the agent to a private or shared channel | POST /teams/{team-id}/channels/{channel-id}/members |
 | Add the agent to a group chat | POST /chats/{chat-id}/members |

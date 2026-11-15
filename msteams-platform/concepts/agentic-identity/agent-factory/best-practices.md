@@ -1,3 +1,12 @@
+---
+title: Best practices
+description: Agent factory best practices help your agents become better teammates. Learn how to introduce agents, isolate context, and protect credentials and tokens.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Best practices
 
 You don't need these recommendations to get an agent working, but they make your agents better teammates and your agent factory easier to run.

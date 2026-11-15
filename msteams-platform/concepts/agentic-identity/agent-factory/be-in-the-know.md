@@ -1,3 +1,12 @@
+---
+title: Be in the know
+description: Agentic User notifications keep your service informed in real time when Microsoft 365 agents change. Learn which events to handle and how to respond.
+ms.topic: article
+ms.date: 11/14/2026
+ms.author: umangsehgal
+author: umangsehgal
+---
+
 # Be in the know
 
 For each Agentic User your service administers, Microsoft 365 notifies your service in real time when something changes: the agent is added to a conversation, its name, email address, or manager changes, or an admin disables or deletes it.
@@ -7,7 +16,7 @@ You don't have to handle any of these notifications. An agent works without them
 ## Notifications your service receives
 
 | **Notification** | **Sent when** |
-|----|----|
+| ---- | ---- |
 | Agentic User identity created | The agent's Agentic User is created. |
 | Workload onboarding updated | The agent's onboarding to a workload, such as Teams, changes state. |
 | Identity property updated | The agent's mail address, alias, or user principal name changes. |
