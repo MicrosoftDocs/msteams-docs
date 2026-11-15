@@ -9,23 +9,23 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use threads in channels and one-on-one agent chats
 
-A Teams agent can start a thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
+In chats and channels that support threading, messages appear at two levels:
 
-The threading capabilities described in this article are in preview. They are available in one-on-one agent chats, including chats with agentic users, and in channels.
-
-In a given context, messages appear at one of two levels:
-
-- **L1 (top-level):** A message in the main chat or channel conversation. Where threading is supported, an L1 message can be the root of a thread.
+- **L1 (top-level):** A message in the main chat or channel conversation. An L1 message can be the root of a thread.
 - **L2 (in-thread):** A reply in the thread under a top-level (L1) message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
+
+An agent can start a new thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
+
+The threading capabilities described in this article are in preview. They are available in channels and in one-on-one agent chats, including chats with agentic users.
 
 ## Recommended agent behavior
 
-In channels and chats that support threading, agents should respond in threads (L2):
+Where threading is supported, agents should respond in threads:
 
 - If the user's message is top-level (L1), reply in a thread under that message.
 - If the user's message is already in a thread (L2), reply in the same thread.
 
-Apply the same rules when responding to an action on a message. Send a new top-level message (L1) only to start a separate discussion.
+Send a new top-level message only to start a separate discussion.
 
 For example, a user sends "Help me plan a trip" as a top-level message. The agent replies in a thread under that request, where the user and agent discuss dates, hotels, and itinerary changes.
 
@@ -38,7 +38,7 @@ Use the following IDs from the incoming activity to identify a discussion and ch
 | ID | Incoming activity field |
 | --- | --- |
 | Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
-| L1 root message ID | `channelData.replyChain.id` |
+| Thread root message ID | `channelData.replyChain.id` |
 
 Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion. For message activities, its presence alone doesn't distinguish L1 from L2.
 
@@ -48,7 +48,7 @@ If your agent needs to handle these levels differently, see [Identify the incomi
 
 ### Store data by scope
 
-Choose the storage key based on the scope of your data:
+Your agent might store conversation history or task progress to continue a discussion across multiple messages. Choose a storage key based on the scope of that data:
 
 - For data about the entire chat or channel, use `channelData.chat.id` or `channelData.channel.id`.
 - For data about a specific thread, use the containing chat or channel ID together with the L1 root message ID (`channelData.replyChain.id`).
@@ -58,7 +58,7 @@ Don't assume a particular meaning for `conversation.id` or use it as the storage
 
 ## Implement threading with Teams SDK
 
-The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
+The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context-level send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
 
 ### Choose where a message goes
 
@@ -106,7 +106,7 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 ### Sending a reply
 
-The following examples show how to send a thread reply (L2) in a one-on-one chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
+The following examples show how to send a thread reply (L2) in a chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
 
 When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](https://learn.microsoft.com/microsoftteams/platform/concepts/agentic-identity/receiving-sending-messages).
 
