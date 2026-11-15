@@ -229,29 +229,29 @@ POST {serviceUrl}/v3/conversations/{chatOrChannelId}/activities
 
 This is the REST API equivalent of `app.send(chatOrChannelId, message)` for a top-level message (L1).
 
-### Send an in-thread reply (preview)
+### Send an in-thread reply
 
-To send an L2 reply, post to the following endpoint with the same containing chat or channel ID. Set `rootMessageId` to the incoming activity's `channelData.replyChain.id`:
+For new implementations, use the following `/replyChains` endpoint to send in-thread replies (L2). Use the same containing chat or channel ID for `chatOrChannelId` and set `rootMessageId` to the incoming activity's `channelData.replyChain.id`:
 
 ```http
 POST {serviceUrl}/v3/conversations/{chatOrChannelId}/replyChains/{rootMessageId}
 ```
 
-This is the REST API equivalent of `app.reply(chatOrChannelId, rootMessageId, message)` for a thread reply (L2).
+This is the REST API equivalent of `app.reply(chatOrChannelId, rootMessageId, message)`.
 
-Existing integrations remain compatible: posting to `/activities` with a conversation ID in the form `19:...;messageid={rootMessageId}` continues to send at L2 in channels and also works in chats that support threading. Use the reply-chain endpoint for new implementations.
+Existing integrations that already send L2 messages directly through `/activities` can continue using that route.
 
 ### Threading-specific error responses
 
-The reply-chain endpoint can return the following errors:
+Sending an in-thread reply can return the following errors:
 
-| Condition | HTTP status and error code | Error message |
-| --- | --- | --- |
-| `chatOrChannelId` isn't a containing chat or channel ID. | `400 BadArgument` | `conversationId must be a thread id (19:...@...), not a reply-chain id (;messageid=) or a user id; the reply chain is identified by replyChainId` |
-| The chat or channel doesn't exist or was deleted. | `404 ConversationNotFound` | `Conversation not found.` |
-| `rootMessageId` doesn't exist in the specified chat or channel. | `404 ActivityNotFoundInConversation` | `Message does not exist in the thread.` |
-| `rootMessageId` identifies a targeted message. | `400 BadArgument` | `Replies are not allowed for Targeted Messages.` |
-| The chat doesn't support threads. | `400 BadArgument` | `Reply chains is not allowed in this thread type.` |
+| Condition | HTTP status code | Response error code | Error message |
+| --- | --- | --- | --- |
+| `chatOrChannelId` isn't a containing chat or channel ID. | `400` | `BadArgument` | `conversationId must be a thread id (19:...@...), not a reply-chain id (;messageid=) or a user id; the reply chain is identified by replyChainId` |
+| The chat or channel doesn't exist or was deleted. | `404` | `ConversationNotFound` | `Conversation not found.` |
+| `rootMessageId` doesn't exist in the specified chat or channel. | `404` | `ActivityNotFoundInConversation` | `Message does not exist in the thread.` |
+| `rootMessageId` identifies a targeted message. | `400` | `BadArgument` | `Replies are not allowed for Targeted Messages.` |
+| The chat doesn't support threads. | `400` | `BadArgument` | `Reply chains is not allowed in this thread type.` |
 
 ## Identify the incoming activity's level
 
