@@ -58,7 +58,7 @@ Don't assume a particular meaning for `conversation.id` or use it as the storage
 
 ## Implement threading with Teams SDK
 
-The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later, proactively.
+The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
 
 ### Choose where a message goes
 
@@ -109,7 +109,7 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 The following examples show how to send a thread reply (L2) in a one-on-one chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
 
 > [!NOTE]
-> Reply-chain types and low-level SDK operations are marked experimental. The SDK send and reply helpers used in this article aren't marked experimental. See the SDK reference for language-specific annotations and warnings.
+> The SDK marks threading-related types and low-level operations as experimental. The send and reply helpers used here aren’t marked experimental.
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -123,7 +123,7 @@ app.on('message', async (ctx) => {
   const chatId = activity.channelData?.chat?.id;
   const rootMessageId = activity.channelData?.replyChain?.id;
   if (!chatId || !rootMessageId) {
-    throw new Error('A chat ID and thread root ID are required.');
+    throw new Error('A chat ID and thread root message ID are required.');
   }
 
   await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.');
@@ -151,7 +151,7 @@ app.OnMessage(async (ctx, cancellationToken) =>
     if (string.IsNullOrEmpty(chatId) || string.IsNullOrEmpty(rootMessageId))
     {
         throw new InvalidOperationException(
-            "A chat ID and thread root ID are required.");
+            "A chat ID and thread root message ID are required.");
     }
 
     await app.ReplyAsync(
@@ -192,7 +192,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     chat_id = data.chat.id if data and data.chat else None
     root_message_id = data.reply_chain.id if data and data.reply_chain else None
     if not chat_id or not root_message_id:
-        raise ValueError("A chat ID and thread root ID are required.")
+        raise ValueError("A chat ID and thread root messageID are required.")
 
     await app.reply(
         chat_id,
@@ -286,15 +286,14 @@ To classify an activity as L2, `channelData.replyChain.id` (the root message ID)
 
 | Incoming activity | Additional condition for L2 |
 | --- | --- |
-| Typed `message`, `messageUpdate`, or `messageDelete` | `activity.id` differs from the root message ID. |
+| User-typed `message`, `messageUpdate`, or `messageDelete` | `activity.id` differs from the root message ID. |
 | `messageReaction` activity | `replyToId` differs from the root message ID. |
-| Card button sent as a `message` with `channelData.source` | `replyToId` differs from the root message ID. |
+| Card button response sent as a `message` with `channelData.source` | `replyToId` differs from the root message ID. |
 | Message-action `invoke` with `value.messagePayload` | `value.messagePayload.id` differs from the root message ID. |
 | Other `invoke` with `replyToId` | `replyToId` differs from the root message ID. |
 | `invoke` with neither `value.messagePayload` nor `replyToId` | No additional condition. |
 | Other activity types, such as `installationUpdate` or `conversationUpdate` | Never classified as L2. |
 
-For comparisons involving `replyToId` or `value.messagePayload.id`, the ID must be a plain numeric ID other than `0`.
 ## See also
 
 - [Channel and group chat conversations for agents](channel-and-group-conversations.md)
