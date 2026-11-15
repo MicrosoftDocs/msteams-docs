@@ -25,24 +25,34 @@ In channels and chats that support threading, agents should respond in threads (
 - If the user's message is top-level (L1), reply in a thread under that message.
 - If the user's message is already in a thread (L2), reply in the same thread.
 
-Use the same placement when responding to an action on a message. Send a new top-level message (L1) only to start a separate discussion.
+Apply the same rules when responding to an action on a message. Send a new top-level message (L1) only to start a separate discussion.
 
 For example, a user sends "Help me plan a trip" as a top-level message. The agent replies in a thread under that request, where the user and agent discuss dates, hotels, and itinerary changes.
 
-## General developer considerations
+## Identify and track discussions
 
-When threading is supported, incoming L1 and L2 activities both include `channelData.replyChain.id`. This value always identifies the L1 root message. If you need to determine the incoming activity's level, use the value of this field, rather than its presence, as described in [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
+### Get the discussion IDs
 
-Incoming activities also provide the containing chat ID in `channelData.chat.id`, or the containing channel ID in `channelData.channel.id`. Use this ID together with the root message ID to select the response destination and organize stored conversation history by discussion.
+In conversations that support threading, use the following IDs from the incoming activity to identify a discussion and choose where to send responses:
 
-Treat conversation IDs as opaque values; don't parse them or use them to distinguish L1 from L2. `conversation.id` has different meanings in channels and chats, and the chat behavior is subject to change:
-
-| Scope | Current meaning of `conversation.id` |
+| ID | Incoming activity field |
 | --- | --- |
-| Channel | Identifies the thread associated with the message, even when the incoming message is L1. Sending to this conversation places the response at L2. |
-| Chat | Identifies the containing chat for both L1 and L2 activities. For now, the value remains unchanged when an activity occurs in a thread to avoid breaking existing apps that may use it as a key to store data about the chat. Sending to this conversation alone places the response at L1. |
+| Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
+| L1 root message ID | `channelData.replyChain.id` |
 
-A quote shows which message a response refers to, but doesn't select a destination. Similarly, setting the `replyToId` property alone doesn't select a thread for a regular message. During streaming, `replyToId` affects where the in-progress response is displayed, not where the final response is posted.
+Both top-level messages (L1) and thread replies (L2) include `channelData.replyChain.id`. This field always identifies the top-level message at the root of the discussion. Don’t use its presence alone to distinguish L1 from L2.
+
+If your agent needs to handle these levels differently, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
+
+### Store data by scope
+
+Choose the storage key based on the scope of your data:
+
+- For data about the entire chat or channel, use `channelData.chat.id` or `channelData.channel.id`.
+- For data about a specific thread, use the containing chat or channel ID together with the L1 root message ID (`channelData.replyChain.id`).
+
+Don't assume a particular meaning for `conversation.id` or use it as the storage key for this data. Treat it as an opaque value: don't parse it or use it to distinguish L1 from L2.
+
 
 ## Implement threading with Teams SDK
 
