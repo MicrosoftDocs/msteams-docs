@@ -58,7 +58,7 @@ Don't assume a particular meaning for `conversation.id` or use it as the storage
 
 ## Implement threading with Teams SDK
 
-The activity context (`ctx` or `context`) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later, proactively.
+The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later, proactively.
 
 ### Choose where a message goes
 
@@ -66,10 +66,10 @@ The activity context (`ctx` or `context`) represents the incoming activity; `app
 
 | To do this | Call | One-on-one chat | Channel |
 | --- | --- | --- | --- |
-| Respond where the user wrote | `context.SendAsync(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
-| Respond and quote the user's message | `context.ReplyAsync(message)` | Same placement as `SendAsync`, with a quote when eligible. | Same placement as `SendAsync`, with a quote when eligible. |
-| Post a new top-level message | `teamsApp.SendAsync(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
-| Reply in a thread | `teamsApp.ReplyAsync(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
+| Respond where the user wrote | `ctx.SendAsync(message)` | In the same thread if the user's message is L2; otherwise L1. | In the thread of the user's message. |
+| Respond and quote the user's message | `ctx.ReplyAsync(message)` | Same placement as `SendAsync`, with a quote when eligible. | Same placement as `SendAsync`, with a quote when eligible. |
+| Post a new top-level message | `app.SendAsync(chatOrChannelId, message)` | At the top level (L1). | At the top level (L1). |
+| Reply in a thread | `app.ReplyAsync(chatOrChannelId, rootMessageId, message)` | In the specified root message's thread (L2), starting it if needed. No automatic quote. | In the specified root message's thread (L2). No automatic quote. |
 
 Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, and `rootMessageId` from `ChannelData.ReplyChain.Id`.
 
@@ -118,7 +118,8 @@ Use Teams SDK version 2.2 or later for these examples.
 Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
 
 ```typescript
-app.on('message', async ({ activity }) => {
+app.on('message', async (ctx) => {
+  const activity = ctx.activity;
   const chatId = activity.channelData?.chat?.id;
   const rootMessageId = activity.channelData?.replyChain?.id;
   if (!chatId || !rootMessageId) {
@@ -142,9 +143,9 @@ await app.send(chatId, 'A new travel policy is available.');
 Use Teams SDK version 2.2 or later for these examples.
 
 ```csharp
-teamsApp.OnMessage(async (context, cancellationToken) =>
+app.OnMessage(async (ctx, cancellationToken) =>
 {
-    var activity = context.Activity;
+    var activity = ctx.Activity;
     string? chatId = activity.ChannelData?.Chat?.Id;
     string? rootMessageId = activity.ChannelData?.ReplyChain?.Id;
     if (string.IsNullOrEmpty(chatId) || string.IsNullOrEmpty(rootMessageId))
@@ -153,7 +154,7 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
             "A chat ID and thread root ID are required.");
     }
 
-    await teamsApp.ReplyAsync(
+    await app.ReplyAsync(
         chatId,
         rootMessageId,
         "Let us plan your trip in this thread.",
@@ -162,10 +163,10 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-To start a separate discussion at L1, use `teamsApp.SendAsync(chatId, message)` instead of `teamsApp.ReplyAsync()`. A root message ID is not required.
+To start a separate discussion at L1, use `app.SendAsync(chatId, message)` instead of `app.ReplyAsync()`. A root message ID is not required.
 
 ```csharp
-await teamsApp.SendAsync(
+await app.SendAsync(
     chatId,
     "A new travel policy is available.",
     serviceUrl: activity.ServiceUrl,
