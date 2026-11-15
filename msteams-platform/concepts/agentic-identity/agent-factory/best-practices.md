@@ -1,19 +1,21 @@
 ---
-title: Best practices
-description: Agent factory best practices help your agents become better teammates. Learn how to introduce agents, isolate context, and protect credentials and tokens.
+title: Best practices for Teams agent factories
+description: Operate a Teams agent factory with tenant-aware data isolation, manager controls, lifecycle handling, explicit retention policies, and protected credentials.
 ms.topic: article
-ms.date: 11/14/2026
+ms.date: 11/15/2026
 ms.author: umangsehgal
 author: umangsehgal
 ---
 
-# Best practices
+# Best practices for Teams agent factories
 
-You don't need these recommendations to get an agent working, but they make your agents better teammates and your agent factory easier to run.
+This article is part 6 of the [Build an agent factory with Agentic Users in Teams](build-agent-factory.md) series.
+
+Use these practices to make agents easier to work with and your factory easier to operate. Introductions and profiles improve the experience; authorization, isolation, and lifecycle handling are necessary to protect your service's data and honor admin controls.
 
 ## Introduce the agent
 
-* Send a short hello when the agent is created, in its one-on-one chat with its owner, and whenever it's added to a new conversation. Say what it can help with, and suggest a first task.
+* After Teams onboarding succeeds, send a short hello in the agent's one-on-one chat with its owner and whenever it's added to a new conversation. Say what it can help with, and suggest a first task.
 * When the agent's manager changes, have it introduce itself to its new manager and refresh what it knows about them.
 
 ## Give each agent a clear profile
@@ -22,35 +24,44 @@ When you create an agent, give it a recognizable name, description, and profile 
 
 ## Let the manager set boundaries
 
-Let each agent's manager decide how the agent responds when other people contact it.
+Provide controls in your product so each agent's manager can decide how it responds when other people contact it. Enforce those controls in your service's authorization and tool execution, not only in model instructions. Verify who the current manager is before accepting changes.
 
 ## Keep each agent's context separate
 
-* Key each agent's records by its Agentic User ID, and store the tenant ID with them.
+* Key each agent's records by both tenant ID and Agentic User ID. Include the conversation ID when storing conversation-specific state.
 * In each turn, load only that agent's instructions, knowledge, tools, and memory. One agent should never read another agent's conversations or data, even in the same organization.
-* If no agent matches an Agentic User ID, log it and stop. Don't fall back to another agent's logic.
-* Include the Agentic User ID in your logs and telemetry, so every action traces back to one agent.
+* If no enabled agent matches the tenant ID and Agentic User ID, log it and stop. Don't fall back to another agent's logic.
+* Include the tenant ID and Agentic User ID in your logs and telemetry, so every action traces back to one agent. Don't log tokens, credentials, or unnecessary conversation content.
 
 ## React to lifecycle notifications
 
 | **Notification** | **What your service can do** |
 | ---- | ---- |
 | Agentic User identity created | Create or link the agent's record, and initialize its configuration and state. |
+| Workload onboarding updated | Wait for successful Teams onboarding before sending a welcome message or starting Teams-specific work. |
 | Identity property updated | Refresh the stored mail address, alias, or user principal name. |
 | Manager updated | Update the agent's owner, and send approvals and escalations to the new manager. |
 | Disabled | Pause the agent's scheduled and proactive work. |
-| Enabled | Resume the agent's work. |
+| Enabled | Check onboarding, permissions, and your product's policies before resuming the agent's work. |
 | Deleted | Stop the agent, remove its access to your product's resources, and start cleanup. |
-| Undeleted | Restore the agent's state. |
+| Undeleted | Restore retained state only if retention policy allows it and the identity is enabled and authorized. |
+
+Make event handling idempotent and verify the current agent state before executing scheduled or proactive work. For handlers in each SDK language, see [Handle lifecycle notifications](be-in-the-know.md).
 
 ## Plan for deletion
 
-Deleting an Agentic User doesn't delete the agent in your product. Keep the agent's configuration and memory long enough to restore it if its Agentic User is undeleted, and then delete that data. When someone deletes an agent in your product, also remove its Agentic User from the customer's tenant.
+Deleting an Agentic User doesn't automatically delete the agent's configuration or memory in your product. Stop its work and revoke its access to your product's resources immediately.
+
+Define a retention period with your customer that satisfies their deletion and compliance requirements. During that period, retain only the data that policy allows and keep it inaccessible to active agents. If the identity is restored before the period expires, restore permitted state only after checking its enabled status and authorization. Otherwise, permanently delete retained data when the period ends. If policy requires immediate deletion, don't retain state for restoration.
+
+When someone deletes an agent in your product, also initiate deletion of its Agentic User through an authorized management workflow. Track failures and retry safely so your product and the customer's tenant don't diverge.
 
 ## Protect credentials and tokens
 
-* Store your blueprint's credentials and any tokens you cache in secure storage, such as Azure Key Vault or an encrypted Azure Cosmos DB database.
-* In production, authenticate the blueprint with a managed identity or a certificate. Use client secrets only during development.
+* Store credentials in a secret store such as Azure Key Vault. If you cache tokens, encrypt them, restrict access, and isolate entries by tenant, agent identity, Agentic User, and resource.
+* In production, use a supported managed identity or certificate configuration for your SDK and hosting environment. Use client secrets only during development. See [Runtime authentication configuration](../../../agents-in-teams/configure-agent-runtime-authentication.md).
+
+Previous: [Handle lifecycle notifications in your agent factory](be-in-the-know.md).
 
 > [!div class="nextstepaction"]
 > [Next: Agent factory FAQ](faq.md)

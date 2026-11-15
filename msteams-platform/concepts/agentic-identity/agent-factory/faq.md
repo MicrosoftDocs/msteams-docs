@@ -1,13 +1,15 @@
 ---
-title: Agent factory FAQ
-description: Agent factory FAQ answers common questions about Teams activation, blueprints, Agentic Users, and admin approvals. Find quick answers to build and manage agents.
+title: "Agent factories in Microsoft Teams: FAQ"
+description: Find answers about Teams agent factory activation, blueprint reuse, Agentic User identities, provisioning readiness, and admin lifecycle controls.
 ms.topic: faq
-ms.date: 11/14/2026
+ms.date: 11/15/2026
 ms.author: umangsehgal
 author: umangsehgal
 ---
 
-# Agent factory FAQ
+# Agent factories in Microsoft Teams: FAQ
+
+This article is part 7 of the [Build an agent factory with Agentic Users in Teams](build-agent-factory.md) series.
 
 ## Do people need to install each agent in Teams?
 
@@ -19,16 +21,21 @@ No. Create one blueprint for your agent factory. Each agent gets its own Agentic
 
 ## Can one agent identity have more than one Agentic User?
 
-No. Each agent identity pairs with exactly one Agentic User.
+No. An agent identity can have at most one associated Agentic User, and an Agentic User is associated with one agent identity. Each agent created through this factory pattern has its own pair. The blueprint is shared; the per-agent identities aren't.
 
 ## How soon can people use a new agent?
 
-The person who created the agent can chat with it one-on-one within minutes. It can take a little longer before everyone else in the organization can find it in people search.
+Creation is asynchronous. Wait for provisioning and Teams onboarding to succeed before treating the agent as ready. People-search indexing can take longer. Handle progress and failures in your product rather than promising a fixed completion time. See [Check the status](create-agentic-users.md#step-2-check-the-status).
 
 ## Who approves a new agent?
 
-Your customer's admin decides when they activate your agent factory: they can allow all users, or only specific users and groups, to create agents from it.
+Your customer's admin configures who can create agents when they activate your factory: all users, or specific users and groups. Creation is still subject to the tenant's policies and the selected provisioning workflow. See [What your customer's admin does](setup.md#what-your-customers-admin-does).
 
 ## What happens when an admin disables or deletes an agent?
 
-Your service receives a lifecycle notification, so it can pause or clean up that agent in your product. See Best practices.
+Your service receives a lifecycle notification. Stop scheduled and proactive work for the affected agent, and enforce its disabled or deleted state in your product. Deleting the directory identity doesn't automatically remove data from your service; apply your agreed retention and cleanup policy. See [Best practices for Teams agent factories](best-practices.md).
+
+Previous: [Best practices for Teams agent factories](best-practices.md).
+
+> [!div class="nextstepaction"]
+> [Return to the agent factory overview](build-agent-factory.md)
