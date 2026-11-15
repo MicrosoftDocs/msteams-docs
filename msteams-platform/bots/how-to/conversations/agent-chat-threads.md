@@ -129,10 +129,10 @@ app.on('message', async ({ activity }) => {
 });
 ```
 
-To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. This call requires only the chat ID, so omit the root ID requirement:
+To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. A root message ID is not required.
 
 ```typescript
-await app.send(chatId, 'Your trip itinerary is ready.');
+await app.send(chatId, 'A new travel policy is available.');
 ```
 
 ::: zone-end
@@ -162,12 +162,12 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-To start a separate discussion at L1, use `teamsApp.SendAsync(chatId, message)` instead of `teamsApp.ReplyAsync()`. This call requires only the chat ID, so omit the root ID requirement:
+To start a separate discussion at L1, use `teamsApp.SendAsync(chatId, message)` instead of `teamsApp.ReplyAsync()`. A root message ID is not required.
 
 ```csharp
 await teamsApp.SendAsync(
     chatId,
-    "Your trip itinerary is ready.",
+    "A new travel policy is available.",
     serviceUrl: activity.ServiceUrl,
     cancellationToken: cancellationToken);
 ```
@@ -201,12 +201,12 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     )
 ```
 
-To start a separate discussion at L1, use `app.send(chat_id, message)` instead of `app.reply()`. This call requires only the chat ID, so omit the root ID requirement:
+To start a separate discussion at L1, use `app.send(chat_id, message)` instead of `app.reply()`. A root message ID is not required.
 
 ```python
 await app.send(
     chat_id,
-    "Your trip itinerary is ready.",
+    "A new travel policy is available.",
     service_url=activity.service_url,
 )
 ```
@@ -230,7 +230,7 @@ Content-Type: application/json
 
 {
   "type": "message",
-  "text": "Your trip itinerary is ready."
+  "text": "A new travel policy is available."
 }
 ```
 
@@ -299,24 +299,3 @@ For comparisons involving `replyToId` or `value.messagePayload.id`, the ID must 
 - [Channel and group chat conversations for agents](channel-and-group-conversations.md)
 - [Send proactive messages](send-proactive-messages.md)
 - [Stream bot messages](../../streaming-ux.md)
-
-::: zone pivot="teams-sdk-typescript"
-
-- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/#threading)
-- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/typescript/essentials/sending-messages/proactive-messaging/#proactive-threading)
-
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
-
-- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/#threading)
-- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/csharp/essentials/sending-messages/proactive-messaging/#proactive-threading)
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-- [Teams SDK threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/#threading)
-- [Teams SDK proactive threading guide](https://microsoft.github.io/teams-sdk/python/essentials/sending-messages/proactive-messaging/#proactive-threading)
-
-::: zone-end
