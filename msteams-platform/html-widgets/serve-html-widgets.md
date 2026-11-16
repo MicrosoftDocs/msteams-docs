@@ -11,19 +11,19 @@ ms.date: 11/03/2026
 
 An MCP-generated HTML widget is an interactive interface that an MCP server provides alongside a tool result. Your Teams agent reads the widget's HTML, sends it in an extended Markdown message, and forwards user-initiated tool calls to the originating MCP server. Users can interact with the tool's results directly in the conversation.
 
-Use this walkthrough when an MCP server supplies the widget rather than your agent owning the HTML. To build your own widget, including its handshake, sizing, and bot-side tool handler, see [Send an HTML widget from an agent](send-html-widgets.md).
+Use this walkthrough when an MCP server supplies the widget rather than your agent owning the HTML. To build your own widget, including its handshake, sizing, and agent-side tool handler, see [Send an HTML widget from an agent](send-html-widgets.md).
 
 ## Prerequisites
 
-- A working TypeScript Teams SDK bot available on a public HTTPS endpoint.
+- A working TypeScript Teams SDK agent available on a public HTTPS endpoint.
 - An MCP client connected to a server that provides MCP App tools and widget resources, using `Client` from `@modelcontextprotocol/sdk`.
-- The [widget Markdown helper](send-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](send-html-widgets.md#step-6-handle-tool-calls-in-the-bot) from the agent-owned widget walkthrough. The combined route below reuses `handleWidgetTool` for calls that aren't from MCP widgets.
+- The [widget Markdown helper](send-html-widgets.md#put-the-widget-in-a-fenced-code-block) and [tool-call route](send-html-widgets.md#step-6-handle-tool-calls-in-the-agent) from the agent-owned widget walkthrough. The combined route below reuses `handleWidgetTool` for calls that aren't from MCP widgets.
 
 ## Widgets from MCP servers
 
-Some MCP servers return a widget along with a tool's result: these tools are MCP App tools. Your bot can show those widgets in Teams the same way as its own widgets. It sends each widget in an extended Markdown message and forwards the widget's tool calls to the MCP server that provided it.
+Some MCP servers return a widget along with a tool's result: these tools are MCP App tools. Your agent can show those widgets in Teams the same way as its own widgets. It sends each widget in an extended Markdown message and forwards the widget's tool calls to the MCP server that provided it.
 
-This section assumes that your bot already calls tools on MCP servers with a `Client` from the MCP TypeScript SDK (`@modelcontextprotocol/sdk`). It uses the correlation ID from [Optional: identify which widget is calling](send-html-widgets.md#optional-identify-which-widget-is-calling) to route each widget's tool calls to the right MCP server.
+This section assumes that your agent already calls tools on MCP servers with a `Client` from the MCP TypeScript SDK (`@modelcontextprotocol/sdk`). It uses the correlation ID from [Optional: identify which widget is calling](send-html-widgets.md#optional-identify-which-widget-is-calling) to route each widget's tool calls to the right MCP server.
 
 ### Declare widget support
 
@@ -33,7 +33,7 @@ MCP servers only return widgets to clients that support them. Declare that suppo
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 
 const client = new Client(
-  { name: "My bot", version: "1.0.0" },
+  { name: "My agent", version: "1.0.0" },
   {
     capabilities: {
       // Tells MCP servers that this client can display MCP App widgets.
@@ -49,12 +49,12 @@ const client = new Client(
 
 ### Call the tool and create the widget
 
-An MCP App tool declares its widget with a `ui://` URI in the tool's `_meta.ui.resourceUri` field. The widget's HTML is a resource on the MCP server, which the bot reads with `readResource`. The server can also declare the widget's domain, security policy, and permissions.
+An MCP App tool declares its widget with a `ui://` URI in the tool's `_meta.ui.resourceUri` field. The widget's HTML is a resource on the MCP server, which the agent reads with `readResource`. The server can also declare the widget's domain, security policy, and permissions.
 
 A widget produced by an MCP tool must include the `mcpUrl` field in its payload: the URL of the MCP server whose tool produced it.
 
 > [!IMPORTANT]
-> Always set `mcpUrl` on widgets produced by MCP tools. Teams uses it to run the widget on a dedicated domain, scoped to your bot's ID and to that MCP server's URL. This keeps widgets from different MCP servers isolated from each other and from your bot's own widgets. Without `mcpUrl`, an MCP widget runs on the domain scoped to your bot's ID only, and can call any service that accepts calls from that domain. See [Where widgets run](send-html-widgets.md#where-widgets-run).
+> Always set `mcpUrl` on widgets produced by MCP tools. Teams uses it to run the widget on a dedicated domain, scoped to your agent's ID and to that MCP server's URL. This keeps widgets from different MCP servers isolated from each other and from your agent's own widgets. Without `mcpUrl`, an MCP widget runs on the domain scoped to your agent's ID only, and can call any service that accepts calls from that domain. See [Where widgets run](send-html-widgets.md#where-widgets-run).
 
 Create `src/bot/mcp-widgets.ts`. Its imports cover the code in this section and in [Forward the widget's tool calls](#forward-the-widgets-tool-calls):
 
@@ -235,7 +235,7 @@ Test the supplied widget on Teams mobile following the [responsive scaling guida
 
 ### Forward the widget's tool calls
 
-When an MCP widget calls a tool, the bot forwards the call to the MCP server that provided the widget and returns the server's result to the widget.
+When an MCP widget calls a tool, the agent forwards the call to the MCP server that provided the widget and returns the server's result to the widget.
 
 Add the following code to `src/bot/mcp-widgets.ts`:
 
@@ -316,7 +316,7 @@ export async function handleMcpWidgetTool(
 }
 ```
 
-Then update the `widget.callTool` route from [Step 6](send-html-widgets.md#step-6-handle-tool-calls-in-the-bot), so that it sends tool calls from MCP widgets to `handleMcpWidgetTool`:
+Then update the `widget.callTool` route from [Step 6](send-html-widgets.md#step-6-handle-tool-calls-in-the-agent), so that it sends tool calls from MCP widgets to `handleMcpWidgetTool`:
 
 ```ts
 import type { IHtmlWidgetCallToolResponse } from "@microsoft/teams.api";
@@ -353,7 +353,7 @@ app.on(
 
 - **Only forward calls from widgets you sent.** A call is forwarded only if its correlation ID is known and belongs to the same conversation.
 - **Only forward tools that widgets may call.** A tool whose `_meta.ui.visibility` is `["model"]` is reserved for the model.
-- **Remove `__msteams__` from the arguments.** It is meant for your bot, not for the MCP server.
+- **Remove `__msteams__` from the arguments.** It is meant for your agent, not for the MCP server.
 - **Return the server's result.** Set `structuredContent` and `isError` even if the server omitted them, and remove `resource_link` content items, which Teams does not support.
 
 ## See also
