@@ -24,9 +24,9 @@ Get started with [Send HTML widgets](html-widgets/send-html-widgets.md) and [Ser
 Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.
 
 During preview, socket mode is available only for newly created agents. Use it only to develop and test your agent. For production agents, including bots published to the Teams Store, use an HTTPS messaging endpoint.
+
 To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
-To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
----
+
 ---
 
 ## Released: Agents can now stream in group chats, channels, and meetings
