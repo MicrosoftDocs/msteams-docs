@@ -92,9 +92,9 @@ Once the agent is created:
 * Lifecycle notifications start arriving at your blueprint's callback URL.
 * Teams creates a one-on-one chat between the agent and its owner, and notifies the owner when the agent is ready.
 
-Provisioning, Teams onboarding, and people-search indexing are separate asynchronous stages. Handle the `AgenticUserWorkloadOnboardingUpdated` notification and check both `workloadName` and `workloadOnboardingState` against the documented Teams workload and successful onboarding values. Don't treat a notification for another workload, directory creation, or `202 Accepted` as Teams readiness. For handler examples, see [Agentic User lifecycle events](../lifecycle-events.md#register-handlers).
+Provisioning, Teams onboarding, and people-search indexing are separate asynchronous stages. Handle the `AgenticUserWorkloadOnboardingUpdated` notification and check both `workloadName` and `workloadOnboardingState` against the documented Teams workload and successful onboarding values. For handler examples, see [Agentic User lifecycle events](../lifecycle-events.md#register-handlers).
 
-Wait for successful Teams onboarding before sending a welcome message. Search visibility can lag behind creation; don't promise a fixed completion time.
+Wait for successful Teams onboarding before sending a welcome message. Search visibility can lag behind creation.
 
 ### Step 4: Add the agent to conversations
 
