@@ -29,7 +29,7 @@ Provide controls in your product so each agent's manager can decide how it respo
 ## Keep each agent's context separate
 
 * Key each agent's records by both tenant ID and Agentic User ID. Include the conversation ID when storing conversation-specific state.
-* In each turn, load only that agent's instructions, knowledge, tools, and memory. One agent should never read another agent's conversations or data, even in the same organization.
+* Keep private per-agent state isolated. In each turn, load only the instructions, knowledge, tools, memory, and conversation history authorized for the selected agent.
 * If no enabled agent matches the tenant ID and Agentic User ID, log it and stop. Don't fall back to another agent's logic.
 * Include the tenant ID and Agentic User ID in your logs and telemetry, so every action traces back to one agent. Don't log tokens, credentials, or unnecessary conversation content.
 
@@ -40,7 +40,7 @@ Provide controls in your product so each agent's manager can decide how it respo
 | Agentic User identity created | Create or link the agent's record, and initialize its configuration and state. |
 | Workload onboarding updated | Wait for successful Teams onboarding before sending a welcome message or starting Teams-specific work. |
 | Identity property updated | Refresh the stored mail address, alias, or user principal name. |
-| Manager updated | Update the agent's owner, and send approvals and escalations to the new manager. |
+| Manager updated | Update the stored manager, and route manager-based approvals and escalations to the new manager. |
 | Disabled | Pause the agent's scheduled and proactive work. |
 | Enabled | Check onboarding, permissions, and your product's policies before resuming the agent's work. |
 | Deleted | Stop the agent, remove its access to your product's resources, and start cleanup. |

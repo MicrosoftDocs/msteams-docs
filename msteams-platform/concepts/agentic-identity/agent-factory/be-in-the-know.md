@@ -15,7 +15,7 @@ For each Agentic User mapped to your service, Microsoft 365 sends notifications 
 
 The events your service handles depend on the agent's business logic and scenarios. At a minimum, handle message activities delivered to your service when people post or reply in conversations that include the agent. For message handling, see [Route messages in your Teams agent factory](route-messages.md).
 
-A basic message handler can reply without custom lifecycle handlers. A factory that stores per-agent state or schedules work should also handle the events that affect ownership, readiness, and access. In particular, stop scheduled work when an agent is disabled or deleted; don't treat these events as optional cosmetic updates.
+A basic message handler can reply without custom lifecycle handlers. A factory that stores per-agent state or schedules work should also handle the events that affect ownership, readiness, and access. Stop scheduled work when an agent is disabled or deleted.
 
 ## Notifications your service receives
 

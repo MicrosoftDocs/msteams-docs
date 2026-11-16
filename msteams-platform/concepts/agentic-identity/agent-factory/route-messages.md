@@ -136,11 +136,13 @@ Key an agent's configuration, knowledge, and memory by tenant ID and Agentic Use
 
 A scheduled job has no inbound activity from which Teams SDK can select the sender. Store the tenant ID, Agentic User ID, agent identity client ID, conversation ID, and service URL when your service receives an activity. For proactive work, explicitly select that agent's identity rather than relying on a previous handler's context.
 
+Pass the customer's stored tenant ID when constructing the proactive identity. Teams SDK uses this value to scope proactive operations to that customer's tenant.
+
 For examples in each SDK language, see [Proactive messaging](../receiving-sending-messages.md#proactive-messaging).
 
 ## Call Microsoft 365 workloads as the agent itself
 
-Teams SDK handles token acquisition for operations that use its Agentic User scope. This doesn't grant additional permissions or automatically configure arbitrary HTTP clients. The target workload must support the operation and authorize the agent. To acquire a token for a separate Microsoft 365 API client without Teams SDK, see the following appendix.
+Teams SDK handles token acquisition for operations that use its Agentic User scope. The agent's granted permissions and the target workload's authorization rules determine which operations it can perform. For a separate Microsoft 365 API client, use the token-acquisition flow in the following appendix.
 
 ## Appendix: Get an Agentic User token yourself
 
