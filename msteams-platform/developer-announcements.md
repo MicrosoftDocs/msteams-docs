@@ -17,6 +17,8 @@ HTML widgets let your agents deliver rich, interactive experiences directly in T
 
 Get started with [Send HTML widgets](html-widgets/send-html-widgets.md) and [Serve MCP-generated HTML widgets](html-widgets/serve-html-widgets.md). Follow the [user experience guidelines](html-widgets/ux-guidelines.md) and [accessibility guidelines](html-widgets/accessibility-guidelines.md) to create responsive, accessible experiences.
 
+---
+
 ## Preview: Socket mode for Teams agents
 
 *November 13, 2026*
