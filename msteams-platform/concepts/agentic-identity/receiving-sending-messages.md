@@ -179,6 +179,7 @@ await api.Conversations.AddReactionAsync(
 const agenticIdentity = app.getAgenticIdentity({
   agenticAppId,
   agenticUserId,
+  tenantId,
 });
 
 await app.send(conversationId, 'Your scheduled update is ready.', {
