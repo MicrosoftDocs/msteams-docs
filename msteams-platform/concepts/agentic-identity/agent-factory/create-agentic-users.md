@@ -40,8 +40,6 @@ Complete [Set up an agent factory for Microsoft Teams](setup.md), including cust
 
 Creating an agent requires provisioning authorization in the customer's tenant. This is separate from the workload permissions the resulting agent uses to access Microsoft 365 resources.
 
-Before calling the API, confirm its supported authentication flow, the identity that requests the provisioning token, its required permissions, and any tenant consent requirements. Don't infer provisioning permissions from the workload permissions declared on the blueprint.
-
 ### Step 1: Call the API
 
 When an authorized person creates an agent in your product, call this API with a token authorized to provision agents in the customer's tenant. In this example, `sponsorUserIds` contains the ID of the agent's directory sponsor.
@@ -107,7 +105,7 @@ Once the agent is ready and searchable, people can add it to supported Teams con
 | Add the agent to a group chat | [POST /chats/{chat-id}/members](/graph/api/chat-post-members) |
 | Start a one-on-one chat between a person and the agent | [POST /chats](/graph/api/chat-post) |
 
-Check the linked API documentation for supported membership scenarios, request bodies, permissions, and limitations. A channel membership call isn't a general-purpose way to add an agent to a meeting.
+Check the linked API documentation for supported membership scenarios, request bodies, permissions, and limitations.
 
 Previous: [Set up an agent factory for Microsoft Teams](setup.md).
 

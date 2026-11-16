@@ -120,7 +120,7 @@ To make your agent factory available in Agent 365, where admins govern agents, w
 
 Publish the package in one of two ways:
 
-* Through Partner Center, to make your agent factory available to every organization.
+* Through Partner Center, to distribute your agent factory to customers.
 * Through the Microsoft 365 admin center, to make it available in one organization only, as a line-of-business app.
 
 For the upload procedure, see [Publish the agent](/microsoft-agent-365/developer/publish). Publishing makes the offering available; it doesn't replace customer activation or consent.

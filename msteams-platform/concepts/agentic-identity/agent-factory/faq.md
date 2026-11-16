@@ -25,7 +25,7 @@ No. An agent identity can have at most one associated Agentic User, and an Agent
 
 ## How soon can people use a new agent?
 
-Creation is asynchronous. Wait for provisioning and Teams onboarding to succeed before treating the agent as ready. People-search indexing can take longer. Handle progress and failures in your product rather than promising a fixed completion time. See [Check the status](create-agentic-users.md#step-2-check-the-status).
+Creation is asynchronous. Wait for provisioning and Teams onboarding to succeed before treating the agent as ready. People-search indexing can take longer. Show provisioning progress and any errors in your product. See [Check the status](create-agentic-users.md#step-2-check-the-status).
 
 ## Who approves a new agent?
 

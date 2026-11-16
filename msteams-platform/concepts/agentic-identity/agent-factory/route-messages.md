@@ -142,7 +142,7 @@ For examples in each SDK language, see [Proactive messaging](../receiving-sendin
 
 ## Call Microsoft 365 workloads as the agent itself
 
-Teams SDK handles token acquisition for operations that use its Agentic User scope. This doesn't grant additional permissions or automatically configure arbitrary HTTP clients. The target workload must support the operation and authorize the agent. To acquire a token for a separate Microsoft 365 API client without Teams SDK, see the following appendix.
+Teams SDK handles token acquisition for operations that use its Agentic User scope. The agent's granted permissions and the target workload's authorization rules determine which operations it can perform. For a separate Microsoft 365 API client, use the token-acquisition flow in the following appendix.
 
 ## Appendix: Get an Agentic User token yourself
 
