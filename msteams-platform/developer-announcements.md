@@ -2,7 +2,7 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/28/2026
+ms.date: 11/13/2026
 ---
 
 # Teams Platform developer announcements
@@ -18,6 +18,28 @@ Microsoft Teams is evolving how agents securely access files shared by users. As
 These changes are intended to strengthen security, align with Microsoft OneDrive and SharePoint authentication requirements, and support future file-sharing capabilities across Teams conversations.
 
 **Action required:** If your agent uses the `downloadUrl` in file attachments, or the `uploadUrl` it gets after a user accepts a file consent card to download or upload files, you'll need to migrate to requests that include your agent's own Microsoft Entra ID access token, obtained with a certificate, federated identity credential (FIC) or managed identity, to continue to download or upload files. Tokens obtained with a client secret won't work for these requests. If your agent downloads files with the Teams SDK, update the SDK once a version that sends your agent's token on file downloads is released (expected December 2026), and add a certificate, FIC or managed identity to its configuration. The SDK update covers downloads only, so if your agent uploads files, update your upload code too. Also add a file permission to your app manifest: `File.ReadSelected.User` if your agent only receives files, or `File.ReadWriteSelected.User` if it also sends them. For details, see [Prepare for upcoming file authentication changes](bots/how-to/bots-filesv4.md#prepare-for-upcoming-file-authentication-changes).
+
+---
+
+## Preview: Build interactive HTML widgets for Teams agents
+
+*November 16, 2026*
+
+HTML widgets let your agents deliver rich, interactive experiences directly in Teams chat. Build custom interfaces with HTML, CSS, and JavaScript, or display widgets supplied by Model Context Protocol (MCP) servers, so users can explore data and take action without leaving the conversation.
+
+Get started with [Send HTML widgets](html-widgets/send-html-widgets.md) and [Serve MCP-generated HTML widgets](html-widgets/serve-html-widgets.md). Follow the [user experience guidelines](html-widgets/ux-guidelines.md) and [accessibility guidelines](html-widgets/accessibility-guidelines.md) to create responsive, accessible experiences.
+
+---
+
+## Preview: Socket mode for Teams agents
+
+*November 13, 2026*
+
+Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.
+
+During preview, socket mode is available only for newly created agents. Use it only to develop and test your agent. For production agents, including bots published to the Teams Store, use an HTTPS messaging endpoint.
+
+To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
 
 ---
 
