@@ -2,7 +2,6 @@
 title: Route messages in your Teams agent factory
 description: Route Teams messages to the correct Agentic User, isolate each agent's context by tenant and user ID, and acquire tokens for Microsoft 365 API calls.
 ms.topic: article
-zone_pivot_groups: teams-sdk-languages
 ms.date: 11/15/2026
 ms.author: umangsehgal
 author: umangsehgal
@@ -18,7 +17,7 @@ One service receives the messages for every Agentic User created from your bluep
 
 Read the Agentic User ID from the recipient, resolve the customer's tenant ID from the SDK activity, and load only the matching agent from your product. Let Teams SDK validate incoming requests before these handlers run; identity fields aren't a replacement for request authentication.
 
-::: zone pivot="teams-sdk-csharp"
+# [C#](#tab/csharp)
 
 The C# example assumes a configured `teamsApp` and an `ILogger` named `logger` obtained through dependency injection.
 
@@ -53,9 +52,7 @@ teamsApp.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
+# [TypeScript](#tab/typescript)
 
 ```typescript
 import { getAgenticIdentity } from '@microsoft/teams.api';
@@ -86,9 +83,7 @@ app.on('message', async ({ activity, reply, log }) => {
 });
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
+# [Python](#tab/python)
 
 ```python
 from microsoft_teams.api import MessageActivity
@@ -129,7 +124,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     await ctx.reply(await agent_runtime.run(agent, ctx.activity.text or ""))
 ```
 
-::: zone-end
+---
 
 The store and runtime objects stand in for your own storage and orchestration. The store must look up the agent by both tenant ID and Agentic User ID, and return no agent if the identity isn't registered or is disabled. Never fall back to another agent's configuration. If an activity doesn't contain the required IDs, log the condition and stop.
 

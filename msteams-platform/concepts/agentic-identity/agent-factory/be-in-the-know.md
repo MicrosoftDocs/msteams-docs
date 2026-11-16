@@ -2,7 +2,6 @@
 title: Handle lifecycle notifications in your agent factory
 description: Handle Agentic User lifecycle notifications in a Teams agent factory to synchronize ownership, workload readiness, disablement, deletion, and restoration.
 ms.topic: article
-zone_pivot_groups: teams-sdk-languages
 ms.date: 11/15/2026
 ms.author: umangsehgal
 author: umangsehgal
@@ -34,7 +33,7 @@ A basic message handler can reply without custom lifecycle handlers. A factory t
 
 Register typed handlers for the events your service needs. For example, pause an agent's scheduled work while it's disabled:
 
-::: zone pivot="teams-sdk-csharp"
+# [C#](#tab/csharp)
 
 The C# example assumes a configured `teamsApp` and an `ILogger` named `logger` obtained through dependency injection.
 
@@ -56,9 +55,7 @@ teamsApp.OnAgenticUserDisabled(async (context, cancellationToken) =>
 });
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
+# [TypeScript](#tab/typescript)
 
 ```typescript
 import { App } from '@microsoft/teams.apps';
@@ -77,9 +74,7 @@ app.on('agenticUserDisabled', async ({ activity, log }) => {
 });
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
+# [Python](#tab/python)
 
 ```python
 from microsoft_teams.api import AgenticUserDisabledActivity
@@ -104,7 +99,7 @@ async def handle_disabled(ctx: ActivityContext[AgenticUserDisabledActivity]) -> 
     await scheduler.pause(tenant_id, agentic_user_id)
 ```
 
-::: zone-end
+---
 
 The scheduler is your service's own job scheduler. Its pause operation must apply only to the matching tenant and Agentic User. Make handlers safe to run more than once, and check the agent's current enabled and deleted state before executing queued work. Don't resume work until the identity is enabled, onboarding has succeeded, and your product's authorization checks pass.
 

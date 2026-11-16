@@ -2,7 +2,6 @@
 title: Set up an agent factory for Microsoft Teams
 description: Register an agent identity blueprint, configure Teams SDK authentication, package your agent factory, and prepare it for customer admin activation.
 ms.topic: article
-zone_pivot_groups: teams-sdk-languages
 ms.date: 11/15/2026
 ms.author: umangsehgal
 author: umangsehgal
@@ -43,7 +42,7 @@ Keep permissions to provision and manage agents separate from the workload permi
 
 Install Teams SDK in your service, and configure it with the blueprint's client ID, credential, and tenant ID, the same settings a standard Teams app uses. Teams SDK then receives each activity and gets the tokens your agents need.
 
-::: zone pivot="teams-sdk-typescript,teams-sdk-python"
+# [TypeScript / Python](#tab/typescript-python)
 
 Configure the blueprint identity through your runtime's environment variables. For a user-assigned managed identity configured as a federated identity credential:
 
@@ -53,9 +52,7 @@ TENANT_ID=<blueprint-tenant-id>
 MANAGED_IDENTITY_CLIENT_ID=<managed-identity-client-id>
 ```
 
-::: zone-end
-
-::: zone pivot="teams-sdk-csharp"
+# [C#](#tab/csharp)
 
 Configure the blueprint identity in `appsettings.json`. For a user-assigned managed identity configured as a federated identity credential:
 
@@ -74,7 +71,7 @@ Configure the blueprint identity in `appsettings.json`. For a user-assigned mana
 }
 ```
 
-::: zone-end
+---
 
 Associate the managed identity with the blueprint before using these settings. For installation and credential alternatives in your selected language, follow [Set up Agentic Users](../setup.md) and [Review or update agent runtime authentication configuration](../../../agents-in-teams/configure-agent-runtime-authentication.md). Use client secrets only for local development; never commit credentials to source control.
 
