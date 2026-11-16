@@ -33,9 +33,9 @@ To implement conversation events:
 1. [Handle installation update events](#installation-update-event) to initialize or clean up conversation data.
 1. [Plan for uninstall behavior](#plan-for-uninstall-behavior) and unexpected event types.
 
-## Implement conversation events
+## Implement conversation event handlers
 
-Teams delivers each event as an activity to your agent's messaging endpoint. Register only the handlers that your scenario requires, and use the activity fields described in each section.
+Teams delivers each event as an activity to your agent's messaging endpoint. With Teams SDK, you don't need to implement empty handlers for events that your agent ignores.
 
 > [!IMPORTANT]
 >
@@ -112,8 +112,6 @@ Member IDs received in the activity are unique to your agent. You can cache them
 > When a user is permanently deleted from a tenant, Teams sends a `conversationUpdate` activity with a `membersRemoved` collection.
 
 #### Register conversation event handlers
-
-Handler syntax and availability vary by SDK language. Select a language to view the handler for each event and the overall registration pattern.
 
 ::: zone pivot="teams-sdk-csharp"
 
