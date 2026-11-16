@@ -139,7 +139,7 @@ The prompt and the destination thread are separate. `replyToId` identifies the m
 
 In TypeScript SDK 2.2.0, `ctx.plan()` binds the plan to the incoming prompt. When the prompt is in a one-to-one chat thread, completion uses the reply-chain binding. Start, update, stop, and error activities use the conversation route with the prompt ID.
 
-For a plan started from an L1 prompt and completed in an L2 thread, progress operations still reference the original prompt, while the final response can be routed to the reply thread.
+If you want to complete a plan started from an L1 prompt with a final answer in an L2 reply, build the completion message with `plan.completion()` in TypeScript or Python, or `plan.Completion()` in C#, and send it through the SDK's reply method. Use the chat ID from `channelData.chat.id` and the original L1 message ID as the thread root. Keep the completion message's `replyToId` and `planInfo` entity unchanged so it remains associated with the original prompt. Creating an L2 reply alone doesn't change where the plan completes.
 
 Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
@@ -182,6 +182,15 @@ teams.OnMessage(async (context, ct) =>
 });
 ```
 
+To send the final answer as an L2 chat reply instead, replace `await plan.CompleteAsync(answer, ct);` with the following. Here, `chatId` is the incoming `channelData.chat.id`, and `serviceUrl` is the incoming service URL as a `Uri`.
+
+```csharp
+var completion = plan.Completion();
+completion.Text = answer;
+await teams.ReplyAsync(chatId, plan.ReplyToId, completion,
+    serviceUrl: serviceUrl, cancellationToken: ct);
+```
+
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
@@ -206,6 +215,14 @@ app.on('message', async (ctx) => {
 });
 ```
 
+To send the final answer as an L2 chat reply instead, replace `await plan.complete(answer);` with the following. Here, `chatId` is the incoming `channelData.chat.id`. The app's outbound client must use the incoming service URL.
+
+```typescript
+const completion = plan.completion();
+completion.text = answer;
+await app.reply(chatId, plan.replyToId, completion);
+```
+
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
@@ -224,6 +241,19 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     completed_step = step.model_copy(update={"version": 2, "status": "completed"})
     await plan.update([completed_step])
     await plan.complete(answer)
+```
+
+To send the final answer as an L2 chat reply instead, replace `await plan.complete(answer)` with the following. Here, `chat_id` is the incoming `channelData.chat.id`.
+
+```python
+completion = plan.completion()
+completion.text = answer
+await app.reply(
+    chat_id,
+    plan.reply_to_id,
+    completion,
+    service_url=ctx.activity.service_url,
+)
 ```
 
 ::: zone-end
@@ -609,6 +639,14 @@ POST /v3/conversations/{conversationId}/activities
     ]
 }
 ```
+
+To send the final answer as an L2 chat reply to an L1 prompt, send the same completion payload to the reply-chain endpoint instead:
+
+```http
+POST /v3/conversations/{chatId}/replyChains/{threadRootId}
+```
+
+Use the incoming `channelData.chat.id` for `{chatId}` and the original L1 message ID for `{threadRootId}`. URL-encode both IDs. Keep `replyToId` set to the original prompt ID; the route selects the thread, while `replyToId` associates the completion with the plan.
 
 For a streamed final answer, include `planInfo` with `planType: "complete"` on the final message alongside the final `streamInfo` entity with `streamType: "final"`. Intermediate stream messages don't complete the plan. The SDK sends the final activity through the normal Bot activity `POST` path.
 
