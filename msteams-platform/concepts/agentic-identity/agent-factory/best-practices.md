@@ -11,7 +11,7 @@ author: umangsehgal
 
 This article is part 6 of the [Build an agent factory with Agentic Users in Teams](build-agent-factory.md) series.
 
-Use these practices to make agents easier to work with and your factory easier to operate. Introductions and profiles improve the experience; authorization, isolation, and lifecycle handling are necessary to protect your service's data and honor admin controls.
+This article recommends best practices for developers building agents and agent factories. These recommendations aren't mandatory, but they're highly recommended to help you create a delightful experience for your customers and make your factory easier to operate.
 
 ## Introduce the agent
 

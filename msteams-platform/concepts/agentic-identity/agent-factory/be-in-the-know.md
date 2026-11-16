@@ -12,7 +12,9 @@ author: umangsehgal
 
 This article is part 5 of the [Build an agent factory with Agentic Users in Teams](build-agent-factory.md) series.
 
-For each Agentic User your service administers, Microsoft 365 sends lifecycle notifications when its identity, manager, workload onboarding, or availability changes. Teams also sends conversation updates when its conversation membership changes.
+For each Agentic User mapped to your service, Microsoft 365 sends notifications when something changes. Examples include changes to the agent's profile, such as its name, email address, or manager; changes to its workload onboarding; or an admin disabling or deleting it. Teams also sends conversation updates when the agent is added to or removed from a supported conversation. Conversation updates are separate from Agentic User lifecycle notifications.
+
+The events your service handles depend on the agent's business logic and scenarios. At a minimum, handle message activities delivered to your service when people post or reply in conversations that include the agent. For message handling, see [Route messages in your Teams agent factory](route-messages.md).
 
 A basic message handler can reply without custom lifecycle handlers. A factory that stores per-agent state or schedules work should also handle the events that affect ownership, readiness, and access. In particular, stop scheduled work when an agent is disabled or deleted; don't treat these events as optional cosmetic updates.
 
