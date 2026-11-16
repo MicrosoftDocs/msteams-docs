@@ -105,7 +105,7 @@ Without `supportsFiles: true`, users can't attach files in a personal chat with 
 
 > [!IMPORTANT]
 >
-> Setting `supportsFiles` isn't enough to keep bot file upload and download working after the upcoming authentication change. By March 1, 2027, update your bot to send an app-only access token on file requests, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. Also add the `File.ReadSelected.User` or `File.ReadWriteSelected.User` [RSC permission](#update-and-publish-your-app-manifest) to the app manifest. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+> Setting `supportsFiles` isn't enough to keep bot file upload and download working after the upcoming authentication change. By March 1, 2027, update your bot to send an app-only access token on file requests, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. Also add the required [RSC permission](#update-and-publish-your-app-manifest) to your app manifest, under the `authorization.permissions.resourceSpecific` property: `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
 
 ### Access received files and metadata
 
@@ -518,7 +518,7 @@ Use the bot file-consent workflow to request permission before your bot uploads 
 
 > [!IMPORTANT]
 >
-> The upcoming file authentication change also applies to bot file uploads. Before March 1, 2027, update your file-consent upload flow to send an app-only access token on every request to `uploadUrl`. Also add the `File.ReadWriteSelected.User` [RSC permission](#update-and-publish-your-app-manifest) to your app manifest. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+> The upcoming file authentication change also applies to bot file uploads. Before March 1, 2027, update your file-consent upload flow to send an app-only access token on every request to `uploadUrl`. Also add the `File.ReadWriteSelected.User` [RSC permission](#update-and-publish-your-app-manifest) to your app manifest, under the `authorization.permissions.resourceSpecific` property. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
 
 #### Request file consent
 
@@ -739,7 +739,7 @@ Key parameters and values:
 
 > [!NOTE]
 >
-> These samples send the `Authorization` header when you pass an access token. Today's files download/upload URLs will start following new authentication model-based values. This requires bot developers to supply the bot's app-only Entra token in the request header to perform files upload/download, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). Make and deploy these changes by March 1st, 2027 or your agent will not be able to upload/download files. 
+> These samples send the `Authorization` header when you pass an access token. Today's files download/upload URLs will start following new authentication model-based values. This requires bot developers to supply the bot's app-only Entra token in the request header to perform files upload/download, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). Make and deploy these changes by March 1, 2027 or your agent will not be able to upload/download files. 
 
 #### Notify the user
 
@@ -1078,12 +1078,14 @@ If your agent supports file upload or download, complete the following checklist
 1. **Identify your file token credential.** Determine whether your bot uses a certificate, FIC, managed identity, or client secret to acquire app-only tokens.
 1. **Replace client secrets for the file token.** If your bot uses a client secret, add a certificate or FIC to the bot's app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token.
 1. **Use the bot's app ID.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app.
-1. **Update and publish your app manifest.** Add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` [RSC permission](#update-and-publish-your-app-manifest). Then publish the updated manifest.
+1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` [RSC permission](#update-and-publish-your-app-manifest). Then publish the updated manifest.
 1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received.
 1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing.
 1. **Keep the fallback for today's URLs.** If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header.
 1. **Confirm service principals.** For a multi-tenant bot, verify that a service principal exists in each tenant where the bot is used.
 1. **Validate file upload and download.** Test your bot's file operations with the updated authentication approach, including missing tenant information and HTTP 401 responses.
+
+To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
 
 ## Design guidelines and best practices
 
