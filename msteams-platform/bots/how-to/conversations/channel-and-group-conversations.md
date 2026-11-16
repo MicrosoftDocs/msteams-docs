@@ -19,77 +19,7 @@ By default, agents in group chats and channels only receive messages when they'r
 > * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. Teams doesn't deliver messages authored by other agents or bots to the agent, even with these permissions. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 > * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
-## Design guidelines
-
-In group chats and channels, design your agent for collaborative conversations with clear value, concise responses, and minimal noise.
-
-## Threaded conversations
-
-::: zone pivot="teams-sdk-csharp"
-
-In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `SendAsync()` to send a message in the same thread without quoting, or `ReplyAsync()` to send with a visual quote of the inbound message.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    // Send in the same thread, no quote
-    await context.SendAsync("Acknowledged", cancellationToken);
-
-    // Send in the same thread with a visual quote of the inbound message
-    await context.ReplyAsync("Got it!", cancellationToken);
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async (context, cancellationToken) =>
-{
-    // Send in the same thread, no quote
-    await context.Send("Acknowledged", cancellationToken);
-
-    // Send in the same thread with a visual quote of the inbound message
-    await context.Reply("Got it!", cancellationToken);
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
-
-```typescript
-app.on('message', async ({ send, reply }) => {
-  // Send in the same thread, no quote
-  await send('Acknowledged');
-
-  // Send in the same thread with a visual quote of the inbound message
-  await reply('Got it!');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # Send in the same thread, no quote
-    await ctx.send("Acknowledged")
-
-    # Send in the same thread with a visual quote of the inbound message
-    await ctx.reply("Got it!")
-```
-
-::: zone-end
-
-For sending messages into a thread proactively, see [Proactive messages](send-proactive-messages.md).
+Design your agent for collaborative conversations with clear value, concise responses, and minimal noise. In channels, respond in the thread under the user's message to keep follow-up messages together. For recommended threading behavior and SDK and REST API examples, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
 
 ## Send a message on installation
 
