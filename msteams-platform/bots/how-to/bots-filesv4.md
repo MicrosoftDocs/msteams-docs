@@ -15,7 +15,7 @@ zone_pivot_groups: teams-sdk-languages
 
 > [!IMPORTANT]
 >
-> **Upcoming change: action required by March 1, 2027.** Teams is changing the authentication requirements for bot and agent file upload and download. Bots must send an app-only access token in the `Authorization` header on file download and upload requests, acquire that token without a client secret, and request it for the file's tenant. Bots must also add the `File.ReadSelected.User` or `File.ReadWriteSelected.User` [resource-specific consent (RSC) permission](#update-and-publish-your-app-manifest) to the app manifest and publish the updated manifest. If you don't make and deploy these changes by March 1, 2027, your agent might not be able to upload or download files, and users might see errors or broken file experiences. For details, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+> **If your bot already downloads or uploads files, update it by March 1, 2027.** Bots that aren't updated might not be able to download or upload files. To learn what to change, see [Update an existing bot to authenticate file requests](#update-an-existing-bot-to-authenticate-file-requests).
 
 Agents can receive, read, and send documents in Microsoft Teams conversations. Teams stores these files in OneDrive or SharePoint and displays them as file cards or stored items.
 
@@ -47,13 +47,13 @@ Choose a file API based on the app identity, direction, and conversation scope. 
 | Send or retrieve stored files across conversation scopes | Microsoft Graph |
 | Send a document from a bot in a personal chat | Teams SDK file consent |
 
-The Teams SDK file accessor filters the activity attachment collection and exposes supported documents as lazy incoming-file handles. Agentic users retrieve file bytes through Microsoft Graph with their identity. Today, traditional bots use the short-lived, pre-authorized URL supplied by Teams. Under the upcoming file authentication model, bots must send an app-only access token, acquired without a client secret and for the file's tenant, on every file download and upload request. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+The Teams SDK file accessor filters the activity attachment collection and exposes supported documents as lazy incoming-file handles. Agentic users retrieve file bytes through Microsoft Graph with their identity. Traditional bots download and upload files through URLs supplied by Teams and send their own app-only access token with each request. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 
 | Operation | Personal chat | Group chat | Channel | Requirement |
 | --- | --- | --- | --- | --- |
-| Receive files with the Teams SDK file accessor | Supported | Not explicitly supported | Not explicitly supported | Agentic users require Graph file permissions. Bots use a pre-authorized URL today and must meet the [upcoming file authentication requirements](#prepare-for-upcoming-file-authentication-changes). |
+| Receive files with the Teams SDK file accessor | Supported | Not explicitly supported | Not explicitly supported | Agentic users: Graph file permissions<br>Bots: [Bot file authentication requirements](#authenticate-bot-file-requests) |
 | Send or retrieve files with Graph | Supported | Supported | Supported | Configure permissions for the storage location, API, calling identity, and access model. |
-| Send files with bot file consent | Supported | Not supported | Not supported | Set `supportsFiles` to `true` on the bot entry and meet the [upcoming file authentication requirements](#prepare-for-upcoming-file-authentication-changes). |
+| Send files with bot file consent | Supported | Not supported | Not supported | Set `supportsFiles` to `true` on the bot entry and meet the [bot file authentication requirements](#authenticate-bot-file-requests). |
 
 ## Receive files
 
@@ -68,7 +68,7 @@ The required configuration depends on the identity and file operation:
 | Scenario | App manifest update | Other configuration |
 | --- | --- | --- |
 | Agentic user receives a file | None | Add a Microsoft Graph file permission to the agent blueprint and obtain administrator consent. |
-| Bot receives or sends a file through file consent | Set `supportsFiles` to `true` on the bot entry, and add the required [RSC permission](#update-and-publish-your-app-manifest). | Today, no other configuration is required for the pre-authorized file URL supplied by Teams. By March 1, 2027, configure a certificate, federated identity credential, or managed identity on the bot's app registration, and send the resulting token on file requests. Client secrets aren't supported for the file token. See [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). |
+| Bot receives or sends a file through file consent | Set `supportsFiles` to `true` on the bot entry.<br>Add the [RSC permission](#add-the-rsc-permission-to-your-app-manifest) under `authorization.permissions.resourceSpecific`. | Add a certificate, federated identity credential, or managed identity to the bot's app registration for the file token. Client secrets aren't supported. See [Authenticate bot file requests](#authenticate-bot-file-requests). |
 | App sends or retrieves a stored file with Microsoft Graph | No file-specific app manifest property | Configure the required Microsoft Graph permission and authentication for the calling identity. |
 
 #### Agentic user
@@ -103,9 +103,10 @@ Key values:
 
 Without `supportsFiles: true`, users can't attach files in a personal chat with the bot and the file accessor returns an empty collection. This setting doesn't grant Microsoft Graph permissions.
 
-> [!IMPORTANT]
->
-> Setting `supportsFiles` isn't enough to keep bot file upload and download working after the upcoming authentication change. By March 1, 2027, update your bot to send an app-only access token on file requests, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. Also add the required [RSC permission](#update-and-publish-your-app-manifest) to your app manifest, under the `authorization.permissions.resourceSpecific` property: `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+A bot that receives or sends files also needs:
+
+* The `File.ReadSelected.User` RSC permission if it only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest. For more information, see [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
+* An app-only access token on every file request, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 
 ### Access received files and metadata
 
@@ -409,7 +410,7 @@ Key APIs and values:
 
 ::: zone-end
 
-For an agentic user, Teams SDK uses the attachment `ContentUrl` and the agentic user's identity to retrieve the file through Microsoft Graph. For a bot, the SDK currently uses the short-lived, pre-authorized `downloadUrl` supplied in the activity. The file-read APIs shown in this section apply to both routes.
+For an agentic user, Teams SDK uses the attachment `ContentUrl` and the agentic user's identity to retrieve the file through Microsoft Graph. For a bot, the SDK uses the short-lived, pre-authorized `downloadUrl` supplied in the activity. The file-read APIs shown in this section apply to both routes. A Teams SDK version that sends the bot's access token on file downloads is expected in December 2026. When it's available, update the SDK and add a certificate, federated identity credential, or managed identity to its configuration.
 
 ### Access the raw file attachment
 
@@ -512,13 +513,11 @@ Use the bot file-consent workflow to request permission before your bot uploads 
 
 1. Send a `FileConsentCard`.
 1. Receive a `fileConsent/invoke` activity.
-1. If the user accepts, upload the bytes to `uploadUrl` with HTTP `PUT`.
+1. If the user accepts, upload the bytes to `uploadUrl` with HTTP `PUT`, and send the bot's access token in the `Authorization` header.
 1. Send a `FileInfoCard` that links to the uploaded file.
 1. If the user declines, discard the pending content.
 
-> [!IMPORTANT]
->
-> The upcoming file authentication change also applies to bot file uploads. Before March 1, 2027, update your file-consent upload flow to send an app-only access token on every request to `uploadUrl`. Also add the `File.ReadWriteSelected.User` [RSC permission](#update-and-publish-your-app-manifest) to your app manifest, under the `authorization.permissions.resourceSpecific` property. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+To upload files, a bot needs the `File.ReadWriteSelected.User` [RSC permission](#add-the-rsc-permission-to-your-app-manifest) under `authorization.permissions.resourceSpecific` in the app manifest, and an app-only access token on every request to `uploadUrl`. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 
 #### Request file consent
 
@@ -572,7 +571,7 @@ When the user accepts, Teams sends `fileConsent/invoke` with `action` set to `ac
 
 #### Upload file content
 
-Upload the pending bytes only after the user accepts the file. Use the supplied upload URL, required byte-range headers, the `Authorization` header, and HTTP `PUT`, then verify that OneDrive returns a successful status.
+Upload the pending bytes only after the user accepts the file. Use the supplied upload URL, required byte-range headers, the `Authorization` header, and HTTP `PUT`, then verify that OneDrive returns a successful status. To get the token, see [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
 
 Use the upload URL to transfer the file bytes:
 
@@ -739,7 +738,7 @@ Key parameters and values:
 
 > [!NOTE]
 >
-> These samples send the `Authorization` header when you pass an access token. Today's files download/upload URLs will start following new authentication model-based values. This requires bot developers to supply the bot's app-only Entra token in the request header to perform files upload/download, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes). Make and deploy these changes by March 1, 2027 or your agent will not be able to upload/download files. 
+> These samples send the `Authorization` header only when you pass an access token, so you can use them with the [fallback for URLs that have a `tempauth` parameter](#acquire-the-token-and-send-the-authorization-header).
 
 #### Notify the user
 
@@ -770,11 +769,154 @@ Key properties and values:
 * `uniqueId`: Set the OneDrive or SharePoint drive-item ID.
 * `fileType`: Set the platform-reported file extension without punctuation.
 
+## Authenticate bot file requests
+
+A bot sends its own access token with every file download and upload request. Your bot must:
+
+* **Declare the RSC permission**: Add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest.
+* **Send a bearer token with every file request**: Acquire an app-only token for the file URL's host and send it in the `Authorization` header on the download `GET` and on every request to `uploadUrl`.
+* **Not use a client secret for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. A token acquired with a client secret gets HTTP 401.
+* **Request the token for the file's tenant**: Use the tenant ID provided with the file, and fall back to the activity's tenant ID only when the file's tenant ID is missing.
+
+These requirements apply only to the token your bot uses for file operations. Your bot can keep using its client secret for other calls, such as getting the Bot Framework token.
+
+### Add the RSC permission to your app manifest
+
+Bots that receive or send files must complete these steps:
+
+1. **Update your Teams app manifest**
+
+   Under `authorization.permissions.resourceSpecific`, add the required RSC permission(s):
+
+   * `File.ReadSelected.User` — allows the bot to read files explicitly shared with it. Use it if your bot only downloads files.
+   * `File.ReadWriteSelected.User` — allows the bot to read and write files explicitly shared with it, including supported upload scenarios. Use it if your bot uploads files. It also covers downloads, so you don't need both.
+
+   These permissions allow Teams to provision the required app identity and file-access configuration.
+
+   Set `type` to `Application`. For the app manifest format, see [Declare RSC permissions in the app manifest](../../graph-api/rsc/declare-resource-specific-consent-requirements.md#declare-rsc-permissions-in-the-app-manifest).
+
+   > [!IMPORTANT]
+   >
+   > Declaring these permissions does not automatically grant file access. Access is granted only when an authorized user explicitly shares a file with the bot or consents to the relevant operation.
+
+1. **Publish the updated manifest**
+
+   Publish the updated Teams app manifest with the required permissions. Users or tenant admins may be prompted to approve the new permissions during standard app install or upgrade flows.
+
+### Choose a credential for the file token
+
+The following table shows which credentials can acquire the file token:
+
+| Credential type | File token support | Developer action |
+| --- | --- | --- |
+| Certificate or federated identity credential (FIC) | Supported | Use the certificate or FIC to acquire the file token. |
+| Managed identity | Supported | Use the managed identity to acquire the file token. You can skip the tenant resolution steps because a managed identity token always comes from the managed identity's own tenant, whatever tenant you pass. |
+| Client secret | Not supported | Add a certificate or FIC to the bot's app registration, or move to managed identity, and use it for the file token. |
+
+> [!WARNING]
+>
+> Don't use a client secret to acquire the file token. Requests that use a secret-based token get HTTP 401.
+
+Acquire the token with the bot's Microsoft App ID, the `bots[].botId` value in the app manifest. Don't use a separate single sign-on (SSO) app registration.
+
+The credential stays on the bot's app registration in its home tenant. A multi-tenant bot also needs a service principal in each tenant where it's used. If a tenant doesn't have one yet, the token request fails, so keep the [fallback for URLs that have a `tempauth` parameter](#acquire-the-token-and-send-the-authorization-header) in place.
+
+For more information about configuring credentials, see [Microsoft identity platform certificate credentials](/entra/identity-platform/certificate-credentials) and [Add and manage application credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
+
+### Resolve the tenant for file tokens
+
+Request the file token for the tenant ID provided with the file:
+
+| Operation | Tenant ID field | Fallback |
+| --- | --- | --- |
+| Download | `attachment.content.tenantId` when present in the file attachment, if not use `activity.channelData.tenant.id` | The activity's tenant ID |
+| Upload | `activity.value.uploadInfo.tenantId` on the `fileConsent/invoke` activity | The activity's tenant ID |
+
+The file's tenant ID identifies the tenant context to use when requesting authentication for the file operation. If your bot always uses the activity tenant ID, it can select the wrong tenant context when the file belongs to a different tenant.
+
+> [!WARNING]
+>
+> Don't assume that the tenant associated with the Teams conversation is always the correct tenant for the file.
+
+### Acquire the token and send the authorization header
+
+For each download or upload request:
+
+1. Resolve the tenant ID as described in [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
+1. Request an app-only token for the `https://<url host>/.default` scope, where `<url host>` is the host of the download URL or `uploadUrl`.
+1. Send `Authorization: Bearer <token>` on the download `GET` and on every request to `uploadUrl`.
+1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it. In Node, `fetch` and `axios` change `'` to `%27`, so use `https.request` with the original path.
+
+> [!IMPORTANT]
+>
+> Microsoft Graph upload session documentation says not to send an `Authorization` header on upload `PUT` requests. For Teams bot file uploads, send the header on every request to `uploadUrl`.
+
+Don't let a failed token request break a file request that would work without a token. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header.
+
+The following pseudocode illustrates tenant resolution, token acquisition, the authorization header, and the fallback for URLs that have a `tempauth` parameter:
+
+```typescript
+import * as https from 'node:https';
+import type { IncomingMessage } from 'node:http';
+
+// Download: attachment.content.tenantId
+// Upload: activity.value.uploadInfo.tenantId on fileConsent/invoke
+const tenantId = fileTenantId ?? activity.channelData?.tenant?.id;
+
+// Use the download URL or uploadUrl exactly as received.
+const scope = `https://${new URL(fileUrl).host}/.default`;
+
+let token: string | undefined;
+try {
+  // Use the bot's Microsoft App ID (bots[].botId) with a certificate,
+  // federated identity credential, or managed identity.
+  // Don't use a client secret.
+  // the acquireAppOnlyToken method used here is a placeholder for your own implementation. 
+
+  token = await acquireAppOnlyToken({ clientId: botAppId, tenantId, scope });
+} catch (error) {
+  log.warn('File token request failed.');
+}
+
+const hasTempauthParam = [...new URL(fileUrl).searchParams.keys()]
+  .some((key) => key.toLowerCase() === 'tempauth');
+
+const headers: Record<string, string> = {};
+if (token) {
+  headers['Authorization'] = `Bearer ${token}`;
+} else if (!hasTempauthParam) {
+  // A URL that has no tempauth parameter returns 401 without a token, so don't send it.
+  throw new Error('No file token, so the request was not sent.');
+}
+
+// Send the path and query exactly as received. Node fetch and axios
+// change ' to %27, and SharePoint then rejects the upload.
+const { hostname, port } = new URL(fileUrl);
+const path = fileUrl.slice(fileUrl.indexOf('/', 'https://'.length));
+
+const response = await new Promise<IncomingMessage>((resolve, reject) => {
+  https
+    .request({ method, hostname, port, path, headers }, resolve)
+    .on('error', reject)
+    .end(body);
+});
+```
+
+Key values:
+
+* `fileTenantId`: Use the tenant ID provided with the download attachment or upload information.
+* `activity.channelData.tenant.id`: Use the activity tenant only as a fallback.
+* `scope`: Request the token for the host of the file URL.
+* `botAppId`: Use the bot's Microsoft App ID from `bots[].botId`.
+* `Authorization`: Send the bearer token on the download `GET` and every `uploadUrl` request.
+* `tempauth`: Check for a `tempauth` query parameter, ignoring case. If token acquisition fails and the `tempauth` query parameter is present, the request can be made without the token.
+* `https.request`: Send the URL exactly as received. Node `fetch` and `axios` change `'` to `%27`.
+
 ## Handle errors
 
-Handle known SDK file errors separately from transport and service failures. For agentic users, handle credential and Graph access errors first because file retrieval depends on the agentic identity and consented blueprint permissions. The expired URL error applies to the bot path that uses the current time-bound, pre-authorized download URL.
+Handle known SDK file errors separately from transport and service failures. For agentic users, handle credential and Graph access errors first because file retrieval depends on the agentic identity and consented blueprint permissions. The expired URL error applies to the bot path that uses a pre-authorized download URL.
 
-After the upcoming file authentication change, bot file upload and download return HTTP 401 if the request doesn't include an access token, the token was acquired with a client secret, or the token was requested for the wrong tenant. If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header so downloads that work today keep working. Handle a missing tenant ID by falling back to the activity tenant ID, treat authentication failures as configuration issues to investigate, and show users a clear message instead of a broken file experience. For more information, see [Prepare for upcoming file authentication changes](#prepare-for-upcoming-file-authentication-changes).
+For URLs without a `tempauth` query parameter, bot file upload and download return HTTP 401 if the request doesn't include an access token, the token was acquired with a client secret, or the token was requested for the wrong tenant. If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header. Handle a missing tenant ID by falling back to the activity tenant ID, treat authentication failures as configuration issues to investigate, and show users a clear message instead of a broken file experience. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -919,170 +1061,29 @@ Key types and values:
 
 ::: zone-end
 
-## Prepare for upcoming file authentication changes
+## Update an existing bot to authenticate file requests
 
-> [!IMPORTANT]
->
-> **Changes to your agent must be made and deployed by March 1, 2027.** If your agent sends or receives files in Teams, review the following requirements now. Agents that don't meet them risk failed file uploads and downloads and errors shown to users.
+If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, make and deploy the following changes by March 1, 2027. If you don't, your bot might not be able to download or upload files, and users might see errors.
 
 Teams is updating how bots and agents securely access files that users share. The updated model uses application-based authentication for file operations to strengthen security, align with OneDrive and SharePoint authentication requirements, and support future file-sharing capabilities across Teams conversations.
 
-Today, bots download and upload files through time-bound, pre-authorized URLs that have a `tempauth` query parameter. After the change, download and upload URLs without a `tempauth` query parameter return HTTP 401 unless the request includes an access token. To keep file operations working, your bot must:
-
-* **Send a bearer token with every file request**: Acquire an app-only token for the file URL's host and send it in the `Authorization` header on the download `GET` and on every request to `uploadUrl`.
-* **Not use a client secret for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. A token acquired with a client secret gets HTTP 401.
-* **Request the token for the file's tenant**: Use the tenant ID provided with the file, and fall back to the activity's tenant ID only when the file's tenant ID is missing.
-
-These requirements apply only to the token your bot uses for file operations. Your bot can keep using its client secret for other calls, such as getting the Bot Framework token.
+Today, bots download and upload files through time-bound, pre-authorized URLs that have a `tempauth` query parameter. After the change, download and upload URLs without a `tempauth` query parameter return HTTP 401 unless the request includes an access token.
 
 > [!TIP]
 >
 > Today's file URLs ignore the `Authorization` header, so you can start sending it now without affecting downloads and uploads that work today.
 
-### Determine whether you need to take action
+Complete the following checklist:
 
-The required changes depend on the credential your bot uses to acquire the file token:
-
-| Credential type | File token support | Developer action |
-| --- | --- | --- |
-| Certificate or federated identity credential (FIC) | Supported | Use the certificate or FIC to acquire the file token. |
-| Managed identity | Supported | Use the managed identity to acquire the file token. You can skip the tenant resolution steps because a managed identity token always comes from the managed identity's own tenant, whatever tenant you pass. |
-| Client secret | Not supported | After the change, the bot can't open or upload files. Add a certificate or FIC to the bot's app registration, or move to managed identity, and use it for the file token. |
-
-> [!WARNING]
->
-> Don't use a client secret to acquire the file token. Requests that use a secret-based token get HTTP 401.
-
-Acquire the token with the bot's Microsoft App ID, the `bots[].botId` value in the app manifest. Don't use a separate single sign-on (SSO) app registration.
-
-The credential stays on the bot's app registration in its home tenant. A multi-tenant bot also needs a service principal in each tenant where it's used. Teams will start creating these service principals. While you test the `Authorization` header during this transition period, the service principal might not be provisioned yet in every tenant, so keep the [fallback for today's URLs](#acquire-the-token-and-send-the-authorization-header) in place.
-
-For more information about configuring credentials, see [Microsoft identity platform certificate credentials](/entra/identity-platform/certificate-credentials) and [Add and manage application credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
-
-### Resolve the tenant for file tokens
-
-Request the file token for the tenant ID provided with the file:
-
-| Operation | Tenant ID field | Fallback |
-| --- | --- | --- |
-| Download | `attachment.content.tenantId` when present in the file attachment, if not use `activity.channelData.tenant.id` | The activity's tenant ID |
-| Upload | `activity.value.uploadInfo.tenantId` on the `fileConsent/invoke` activity | The activity's tenant ID |
-
-The file's tenant ID identifies the tenant context to use when requesting authentication for the file operation. If your bot always uses the activity tenant ID, it can select the wrong tenant context when the file belongs to a different tenant.
-
-> [!WARNING]
->
-> Don't assume that the tenant associated with the Teams conversation is always the correct tenant for the file.
-
-### Acquire the token and send the authorization header
-
-For each download or upload request:
-
-1. Resolve the tenant ID as described in [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
-1. Request an app-only token for the `https://<url host>/.default` scope, where `<url host>` is the host of the download URL or `uploadUrl`.
-1. Send `Authorization: Bearer <token>` on the download `GET` and on every request to `uploadUrl`.
-1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it. In Node, `fetch` and `axios` change `'` to `%27`, so use `https.request` with the original path.
-
-> [!IMPORTANT]
->
-> This is a change for uploads. Microsoft Graph upload session documentation says not to send an `Authorization` header on upload `PUT` requests. For Teams bot file uploads, send the header on every request to `uploadUrl`.
-
-Don't let a failed token request break a download that works today. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header.
-
-The following pseudocode illustrates tenant resolution, token acquisition, the authorization header, and the fallback for today's URLs:
-
-```typescript
-import * as https from 'node:https';
-import type { IncomingMessage } from 'node:http';
-
-// Download: attachment.content.tenantId
-// Upload: activity.value.uploadInfo.tenantId on fileConsent/invoke
-const tenantId = fileTenantId ?? activity.channelData?.tenant?.id;
-
-// Use the download URL or uploadUrl exactly as received.
-const scope = `https://${new URL(fileUrl).host}/.default`;
-
-let token: string | undefined;
-try {
-  // Use the bot's Microsoft App ID (bots[].botId) with a certificate,
-  // federated identity credential, or managed identity.
-  // Don't use a client secret.
-  // the acquireAppOnlyToken method used here is a placeholder for your own implementation. 
-
-  token = await acquireAppOnlyToken({ clientId: botAppId, tenantId, scope });
-} catch (error) {
-  log.warn('File token request failed.');
-}
-
-const hasTempauthParam = [...new URL(fileUrl).searchParams.keys()]
-  .some((key) => key.toLowerCase() === 'tempauth');
-
-const headers: Record<string, string> = {};
-if (token) {
-  headers['Authorization'] = `Bearer ${token}`;
-} else if (!hasTempauthParam) {
-  // A URL that has no tempauth parameter returns 401 without a token, so don't send it.
-  throw new Error('No file token, so the request was not sent.');
-}
-
-// Send the path and query exactly as received. Node fetch and axios
-// change ' to %27, and SharePoint then rejects the upload.
-const { hostname, port } = new URL(fileUrl);
-const path = fileUrl.slice(fileUrl.indexOf('/', 'https://'.length));
-
-const response = await new Promise<IncomingMessage>((resolve, reject) => {
-  https
-    .request({ method, hostname, port, path, headers }, resolve)
-    .on('error', reject)
-    .end(body);
-});
-```
-
-Key values:
-
-* `fileTenantId`: Use the tenant ID provided with the download attachment or upload information.
-* `activity.channelData.tenant.id`: Use the activity tenant only as a fallback.
-* `scope`: Request the token for the host of the file URL.
-* `botAppId`: Use the bot's Microsoft App ID from `bots[].botId`.
-* `Authorization`: Send the bearer token on the download `GET` and every `uploadUrl` request.
-* `tempauth`: Check for a `tempauth` query parameter, ignoring case. If token acquisition fails and the `tempauth` query parameter is present, the request can be made without the token.
-* `https.request`: Send the URL exactly as received. Node `fetch` and `axios` change `'` to `%27`.
-
-### Update and publish your app manifest
-
-Bots that receive or send files must complete these steps:
-
-1. **Update your Teams app manifest**
-
-   Under `authorization.permissions.resourceSpecific`, add the required RSC permission(s):
-
-   * `File.ReadSelected.User` — allows the bot to read files explicitly shared with it. Use it if your bot only downloads files.
-   * `File.ReadWriteSelected.User` — allows the bot to read and write files explicitly shared with it, including supported upload scenarios. Use it if your bot uploads files. It also covers downloads, so you don't need both.
-
-   These permissions allow Teams to provision the required app identity and file-access configuration.
-
-   Set `type` to `Application`. For the app manifest format, see [Declare RSC permissions in the app manifest](../../graph-api/rsc/declare-resource-specific-consent-requirements.md#declare-rsc-permissions-in-the-app-manifest).
-
-   > [!IMPORTANT]
-   >
-   > Declaring these permissions does not automatically grant file access. Access is granted only when an authorized user explicitly shares a file with the bot or consents to the relevant operation.
-
-1. **Publish the updated manifest**
-
-   Publish the updated Teams app manifest with the required permissions. Users or tenant admins may be prompted to approve the new permissions during standard app install or upgrade flows.
-
-### Update your agent
-
-If your agent supports file upload or download, complete the following checklist and deploy your changes by March 1, 2027:
-
-1. **Identify your file token credential.** Determine whether your bot uses a certificate, FIC, managed identity, or client secret to acquire app-only tokens.
-1. **Replace client secrets for the file token.** If your bot uses a client secret, add a certificate or FIC to the bot's app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token.
-1. **Use the bot's app ID.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app.
-1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` [RSC permission](#update-and-publish-your-app-manifest). Then publish the updated manifest.
-1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received.
-1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing.
-1. **Keep the fallback for today's URLs.** If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header.
-1. **Confirm service principals.** For a multi-tenant bot, verify that a service principal exists in each tenant where the bot is used.
+1. **Identify your file token credential.** Determine whether your bot uses a certificate, FIC, managed identity, or client secret to acquire app-only tokens. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
+1. **Replace client secrets for the file token.** If your bot uses a client secret, add a certificate or FIC to the bot's app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
+1. **Use the bot's app ID.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
+1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` [RSC permission](#add-the-rsc-permission-to-your-app-manifest). Then publish the updated manifest.
+1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
+1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing. See [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
+1. **Keep the fallback for today's URLs.** If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
+1. **Confirm service principals.** For a multi-tenant bot, verify that a service principal exists in each tenant where the bot is used. Teams will start creating these service principals. Until a tenant has one, token requests there fail and the fallback applies. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
+1. **Update the Teams SDK.** If your bot downloads files with the Teams SDK, update the SDK once a version that sends the bot's token on file downloads is released (expected December 2026). The SDK update covers downloads only, so if your bot uploads files, update your upload code too.
 1. **Validate file upload and download.** Test your bot's file operations with the updated authentication approach, including missing tenant information and HTTP 401 responses.
 
 To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
