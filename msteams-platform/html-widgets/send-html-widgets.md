@@ -9,7 +9,7 @@ ms.date: 11/03/2026
 
 # Send HTML widgets
 
-HTML Widgets are a new type of rich content bots and agents can send in Teams messages. Widgets are built on top of the [MCP Apps standard](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx). This guide shows how a Teams agent written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
+HTML Widgets are a type of rich content bots and agents can send in Teams messages. Widgets are built on top of the [MCP Apps standard](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx). This guide shows how a Teams agent written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
 
 1. **Send** an interactive HTML widget into a chat.
 2. **Size the widget correctly**, so that Teams always shows all of its content.
@@ -21,7 +21,7 @@ HTML Widgets are a new type of rich content bots and agents can send in Teams me
 - A public HTTPS endpoint for your agent.
 
 > [!NOTE]
-> HTML widgets are a preview feature. The Teams SDK marks the related APIs as experimental, and they may change.
+> HTML widgets are a [preview](/microsoftteams/platform/developer-preview-features) feature. The Teams SDK marks the related APIs as experimental, and they may change.
 
 ## The example: a dice roller
 
