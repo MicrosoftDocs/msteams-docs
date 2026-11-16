@@ -102,7 +102,7 @@ The following flow describes how an agent manages a plan in response to a user m
 
 1. **Associate the plan with a user message.** In a message handler, `ctx.plan()` or `Plan.CreateFromContext(context)` creates a reactive plan associated with the incoming prompt. An agent can have only one ongoing plan per user message.
 1. **Add and update steps.** Provide a title and status for each step, with optional descriptions and sources. Update steps as the work progresses.
-1. **Complete the plan with a final response.** Teams doesn't infer plan completion from step statuses. Marking every step as completed before completing the plan is recommended, but not required. When the plan is completed, the Teams client renders its steps as completed without changing their stored statuses.
+1. **Complete the plan with a final response.** Teams doesn't infer plan completion from step statuses. Marking every step as completed before completing the plan is recommended, but not required. When the plan is completed, the Teams client renders its steps as completed.
 
 Completion, stopping, an overall error, timeout, and deletion are terminal states. Don't attempt to update a plan after it reaches a terminal state.
 
