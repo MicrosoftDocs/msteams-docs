@@ -24,15 +24,6 @@ Conversation events help your agent respond at the right point in the user journ
 
 Avoid sending a message for every event. Send a message only when it gives users useful context or a clear next action.
 
-## Developer experience
-
-To implement conversation events:
-
-1. [Handle conversation update events](#handle-conversation-update-events) for membership, team, and channel changes.
-1. [Handle message reaction events](#handle-message-reaction-events) for reactions to messages sent by your agent.
-1. [Handle installation update events](#installation-update-event) to initialize or clean up conversation data.
-1. [Plan for uninstall behavior](#plan-for-uninstall-behavior) and unexpected event types.
-
 ## Implement conversation event handlers
 
 Teams delivers each event as an activity to your agent's messaging endpoint. With Teams SDK, you don't need to implement empty handlers for events that your agent ignores.
