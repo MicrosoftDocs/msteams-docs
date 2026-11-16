@@ -2,7 +2,7 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/28/2026
+ms.date: 11/13/2026
 ---
 
 # Teams Platform developer announcements
@@ -16,6 +16,18 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 HTML widgets let your agents deliver rich, interactive experiences directly in Teams chat. Build custom interfaces with HTML, CSS, and JavaScript, or display widgets supplied by Model Context Protocol (MCP) servers, so users can explore data and take action without leaving the conversation.
 
 Get started with [Send HTML widgets](html-widgets/send-html-widgets.md) and [Serve MCP-generated HTML widgets](html-widgets/serve-html-widgets.md). Follow the [user experience guidelines](html-widgets/ux-guidelines.md) and [accessibility guidelines](html-widgets/accessibility-guidelines.md) to create responsive, accessible experiences.
+
+## Preview: Socket mode for Teams agents
+
+*November 13, 2026*
+
+Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.
+
+During preview, socket mode is available only for newly created agents. Use it only to develop and test your agent. For production agents, including bots published to the Teams Store, use an HTTPS messaging endpoint.
+To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
+To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
+---
+---
 
 ## Released: Agents can now stream in group chats, channels, and meetings
 
