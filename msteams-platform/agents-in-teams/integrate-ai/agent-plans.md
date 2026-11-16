@@ -1,7 +1,7 @@
 ---
 title: Plans and steps for Teams agents
 description: Learn how Teams agents use plans and steps to show structured progress, status updates, and sources while working on a user request.
-ms.date: 11/06/2026
+ms.date: 11/16/2026
 ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
@@ -10,7 +10,7 @@ zone_pivot_groups: teams-sdk-languages
 # Plans and steps for Teams agents
 
 > [!NOTE]
-> In Teams SDK, structured progress is implemented with the experimental plan API. Its types and methods might change.
+> Plans and steps are available in [Teams public preview](../../developer-preview-features.md#teams-public-preview). In Teams SDK, structured progress is implemented with the experimental plan API. Its types and methods might change.
 
 A plan lets a Teams agent show its progress while working on a user's request. Users can see which steps are complete, what the agent is working on, and when it needs assistance. The agent can update this progress without sending additional chat messages.
 
@@ -94,7 +94,7 @@ The illustration shows the **Proposed**, **Active**, and **Completed** states.
 
 :::image type="content" source="../../assets/images/agents-in-teams/agent-plans/plan-step-statuses.png" alt-text="Illustration of Proposed, Active, and Completed plan step states." lightbox="../../assets/images/agents-in-teams/agent-plans/plan-step-statuses.png":::
 
-There is no SDK or Bot API operation for reading a plan's current state. The Bot must maintain plan state based on the operations it sends and their responses. See [Code samples](#code-samples) for links to the SDK samples.
+There is no SDK or Agent Communication Service (ACS) operation for reading a plan's current state. The Bot must maintain plan state based on the operations it sends and their responses. See [Code samples](#code-samples) for links to the SDK samples.
 
 ## Manage the plan lifecycle
 
@@ -135,11 +135,15 @@ The Teams SDK exposes plans through a plan associated with the incoming message.
 
 ### Plan placement in threads
 
-The prompt and the destination thread are separate. `replyToId` identifies the message the plan answers. A reply-chain binding identifies the one-to-one chat and the root (L1) message for a plan completion posted in a thread reply (L2).
+The prompt and the destination thread are separate. `replyToId` identifies the message the plan answers. A reply-chain binding identifies the one-to-one chat and the root (L1) message for a plan completion posted in a thread reply (L2). For details about L1 and L2, see [agent chat threads](../../bots/how-to/conversations/agent-chat-threads.md).
 
-In TypeScript SDK 2.2.0, `ctx.plan()` binds the plan to the incoming prompt. When the prompt is in a one-to-one chat thread, completion uses the reply-chain binding. Start, update, stop, and error activities use the conversation route with the prompt ID.
+::: zone pivot="teams-sdk-typescript"
 
-If you want to complete a plan started from an L1 prompt with a final answer in an L2 reply, build the completion message with `plan.completion()` in TypeScript or Python, or `plan.Completion()` in C#, and send it through the SDK's reply method. Use the chat ID from `channelData.chat.id` and the original L1 message ID as the thread root. Keep the completion message's `replyToId` and `planInfo` entity unchanged so it remains associated with the original prompt. Creating an L2 reply alone doesn't change where the plan completes.
+`ctx.plan()` binds the plan to the incoming prompt. When the prompt is in a one-to-one chat thread, completion uses the reply-chain binding. Start, update, stop, and error activities use the conversation route with the prompt ID.
+
+::: zone-end
+
+If you want to complete a plan started from an L1 prompt with a final answer in an L2 reply, build a plan completion message and send it through the SDK's reply method. Use the chat ID from `channelData.chat.id` and the original L1 message ID as the thread root. Keep the completion message's `replyToId` and `planInfo` entity unchanged so it remains associated with the original prompt. Creating an L2 reply alone doesn't change where the plan completes.
 
 Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
@@ -194,6 +198,8 @@ await teams.ReplyAsync(chatId, plan.ReplyToId, completion,
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
+
+Use Teams SDK for TypeScript 2.2.0 or later.
 
 ```typescript
 import type { Step } from '@microsoft/teams.api';
@@ -548,9 +554,9 @@ async def run_plan_job(saved_plan: dict[str, Any], api_client: ApiClient) -> Non
 
 ::: zone-end
 
-## Use the Bot API without Teams SDK
+## Use ACS without Teams SDK
 
-If your agent doesn't use Teams SDK, send plan data in the `planInfo` entity on the Bot API activity. The activity must include `replyToId`, the ID of the user message the plan answers. Include at most one `planInfo` entity per activity. Plans aren't supported on targeted activities, activity edits, or `CreateConversation` activities.
+If your agent doesn't use Teams SDK, send plan data in the `planInfo` entity on the ACS activity. The activity must include `replyToId`, the ID of the user message the plan answers. Include at most one `planInfo` entity per activity. Plans aren't supported on targeted activities, activity edits, or `CreateConversation` activities.
 
 Use `type: "typing"` for `start`, `continue`, `stop`, and `error` operations. Start and continue require one or more complete step states and don't include `text`. Stop and error don't include `text` or `steps`. Use `type: "message"` with the final answer and `planType: "complete"` to complete the plan.
 
@@ -583,7 +589,7 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Update steps
 
-Send the full desired state for each step you add or update. Keep each step ID stable, and increment its version by 1 when any of its fields change. The service compares the ID and version to append a new step, replace a step with a newer revision, or skip a revision that isn't newer. The Bot API doesn't read the plan before each update. Each `continue` request returns `202 Accepted`, and the higher version of a step wins regardless of request arrival order. When later work depends on an earlier update, wait for that request to finish before sending the next operation.
+Send the full desired state for each step you add or update. Keep each step ID stable, and increment its version by 1 when any of its fields change. The service compares the ID and version to append a new step, replace a step with a newer revision, or skip a revision that isn't newer. ACS doesn't read the plan before each update. Each `continue` request returns `202 Accepted`, and the higher version of a step wins regardless of request arrival order. When later work depends on an earlier update, wait for that request to finish before sending the next operation.
 
 ```http
 POST /v3/conversations/{conversationId}/activities
@@ -656,7 +662,7 @@ Send a typing activity with `planType: "stop"` or `planType: "error"`. Do not in
 
 ### Responses and conflicts
 
-Successful `start`, `continue`, `stop`, and `error` operations return `202 Accepted` with no body. A successful complete returns the existing final-message response. The Bot API contract defines these `PlanConflict` cases:
+Successful `start`, `continue`, `stop`, and `error` operations return `202 Accepted` with no body. A successful complete returns the existing final-message response. The ACS contract defines these `PlanConflict` cases:
 
 | Scenario | HTTP status | Bot-facing message |
 | --- | --- | --- |
@@ -665,7 +671,7 @@ Successful `start`, `continue`, `stop`, and `error` operations return `202 Accep
 | Plan was already completed | `409` | `This plan is already complete. It can no longer be updated.` |
 | Operation isn't allowed in the current state | `409` | `Plan state does not allow this operation.` |
 
-`PlanConflict` doesn't always mean that the user stopped the plan. Use the response message to identify the specific plan lifecycle conflict. Overlapping `continue` requests return `202 Accepted`; for updates to the same step, the higher version wins regardless of request arrival order, and a revision that isn't newer is skipped. The Bot API doesn't define an operation for reading the current plan state. The Bot must track its plan state from its requests and responses.
+`PlanConflict` doesn't always mean that the user stopped the plan. Use the response message to identify the specific plan lifecycle conflict. Overlapping `continue` requests return `202 Accepted`; for updates to the same step, the higher version wins regardless of request arrival order, and a revision that isn't newer is skipped. ACS doesn't define an operation for reading the current plan state. The Bot must track its plan state from its requests and responses.
 
 ## Code samples
 
