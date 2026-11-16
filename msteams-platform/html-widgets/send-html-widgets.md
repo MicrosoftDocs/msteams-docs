@@ -9,16 +9,16 @@ ms.date: 11/03/2026
 
 # Send HTML widgets
 
-HTML Widgets are a new type of rich content bots and agents can send in Teams messages. Widgets are built on top of the [MCP Apps standard](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx). This guide shows how a Teams bot written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
+HTML Widgets are a new type of rich content bots and agents can send in Teams messages. Widgets are built on top of the [MCP Apps standard](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx). This guide shows how a Teams agent written in TypeScript with the [Teams SDK](https://github.com/microsoft/teams.ts) can:
 
 1. **Send** an interactive HTML widget into a chat.
 2. **Size the widget correctly**, so that Teams always shows all of its content.
-3. **Handle `callTool` requests** that the widget sends back to the bot.
+3. **Handle `callTool` requests** that the widget sends back to the agent.
 
 ## Prerequisites
 
-- A working TypeScript bot built with the Teams SDK.
-- A public HTTPS endpoint for your bot.
+- A working TypeScript agent built with the Teams SDK.
+- A public HTTPS endpoint for your agent.
 
 > [!NOTE]
 > HTML widgets are a preview feature. The Teams SDK marks the related APIs as experimental, and they may change.
@@ -27,11 +27,11 @@ HTML Widgets are a new type of rich content bots and agents can send in Teams me
 
 Every step in this guide builds the same small widget:
 
-- The bot sends a widget containing a **Roll a 6-sided die** button.
-- When the user selects the button, the widget asks the bot to roll the die. The bot picks the number and returns it.
+- The agent sends a widget containing a **Roll a 6-sided die** button.
+- When the user selects the button, the widget asks the agent to roll the die. The agent picks the number and returns it.
 - The widget adds each result to a list. The widget grows with every roll, so the example also shows how widgets resize.
 
-When the bot sends it, the widget looks like this:
+When the agent sends it, the widget looks like this:
 
 ![The dice widget in a chat message: a "Roll a 6-sided die" button.](../assets/images/html-widgets/dice-widget-initial.png)
 
@@ -46,7 +46,7 @@ A widget is an HTML document that Teams renders inside a sandboxed iframe in the
 | Piece      | What it is                                                         | Responsibilities                                                              |
 | ---------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | **Widget** | One HTML file with inline CSS and plain JavaScript. No frameworks. | Performs the handshake with Teams, reports its height, and calls tools.       |
-| **Bot**    | TypeScript code in your existing Teams SDK bot.                    | Sends the widget in an extended Markdown message, and answers its tool calls. |
+| **Agent**    | TypeScript code in your existing Teams SDK agent.                    | Sends the widget in an extended Markdown message, and answers its tool calls. |
 
 ## Project layout
 
@@ -54,7 +54,7 @@ A widget is an HTML document that Teams renders inside a sandboxed iframe in the
 widgets/
   dice-widget.html     # The widget: HTML, CSS, and JavaScript in one file
 src/
-  bot/
+  agent/
     widget-markdown.ts # Puts a widget in a fenced code block, for extended markdown messages
     dice-widget.ts     # Builds the dice widget's payload from dice-widget.html
     dice-tool.ts       # Handles tool calls from the widget
@@ -124,10 +124,10 @@ The payload has these fields:
 | `type`           | Yes      | Always `"widget/mcp-ui"`.                                                                                                                                                                                                                                                             |
 | `name`           | Yes      | Display name of the widget.                                                                                                                                                                                                                                                           |
 | `description`    | No       | Short description of the widget.                                                                                                                                                                                                                                                      |
-| `domain`         | Yes      | An HTTPS origin associated with the widget. Use your bot's origin.                                                                                                                                                                                                                    |
+| `domain`         | Yes      | An HTTPS origin associated with the widget. Use your agent's origin.                                                                                                                                                                                                                    |
 | `html`           | Yes      | The complete HTML document that Teams renders in the iframe.                                                                                                                                                                                                                          |
 | `securityPolicy` | No       | Origins the HTML may use. `resourceDomains` covers external scripts, styles, images, and fonts. `connectDomains` covers `fetch`, XHR, and WebSocket calls. Anything not listed is blocked.                                                                                            |
-| `mcpUrl`         | No       | Only for widgets produced by an MCP tool, and always set for them: the URL of the MCP server whose tool produced the widget. Teams uses it to run the widget on a dedicated domain scoped to the bot's ID and the MCP URL. See [Widgets from MCP servers](serve-html-widgets.md#widgets-from-mcp-servers). |
+| `mcpUrl`         | No       | Only for widgets produced by an MCP tool, and always set for them: the URL of the MCP server whose tool produced the widget. Teams uses it to run the widget on a dedicated domain scoped to the agent's ID and the MCP URL. See [Widgets from MCP servers](serve-html-widgets.md#widgets-from-mcp-servers). |
 
 ### Build the widget's payload
 
@@ -278,17 +278,17 @@ https://<hash>.widget-renderer.usercontent.microsoft
 
 | Widget                                          | What to set in the payload                                                 | Domain scoped to              | Text to hash         |
 | ----------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------- | -------------------- |
-| Your bot's own widgets, such as the dice roller | Nothing                                                                    | Your bot's ID                 | `<bot id>`           |
-| A widget produced by an MCP tool                | `mcpUrl`: the URL of the MCP server ([details](serve-html-widgets.md#widgets-from-mcp-servers)) | Your bot's ID and the MCP URL | `<bot id>-<mcp URL>` |
+| Your agent's own widgets, such as the dice roller | Nothing                                                                    | Your agent's ID                 | `<bot id>`           |
+| A widget produced by an MCP tool                | `mcpUrl`: the URL of the MCP server ([details](serve-html-widgets.md#widgets-from-mcp-servers)) | Your agent's ID and the MCP URL | `<bot id>-<mcp URL>` |
 
-When you send a widget produced by an MCP tool, pass the MCP server's URL in the `mcpUrl` field of the widget's payload. Teams then generates the hash from your bot's ID and that URL, so the widget gets its own domain.
+When you send a widget produced by an MCP tool, pass the MCP server's URL in the `mcpUrl` field of the widget's payload. Teams then generates the hash from your agent's ID and that URL, so the widget gets its own domain.
 
 To let a widget call one of your services (for example, an API listed in the widget's `connectDomains`), configure that service to accept calls from the widget's domain, for example in its CORS settings.
 
-To find the domain, generate the hash with the [widget domain tool](https://widgettool.z19.web.core.windows.net/). In its box, enter either your bot's ID, or a string in the format `<bot id>-<mcp URL>`.
+To find the domain, generate the hash with the [widget domain tool](https://widgettool.z19.web.core.windows.net/). In its box, enter either your agent's ID, or a string in the format `<bot id>-<mcp URL>`.
 
 > [!WARNING]
-> If you omit `mcpUrl` from a widget produced by an MCP tool, the widget runs on the domain scoped to your bot's ID only. It can then call any service that accepts calls from that domain, including the services meant for your bot's own widgets. Always pass `mcpUrl` in the payload of widgets produced by MCP tools.
+> If you omit `mcpUrl` from a widget produced by an MCP tool, the widget runs on the domain scoped to your agent's ID only. It can then call any service that accepts calls from that domain, including the services meant for your agent's own widgets. Always pass `mcpUrl` in the payload of widgets produced by MCP tools.
 
 ## Step 3: Connect the widget to Teams
 
@@ -480,7 +480,7 @@ The dice widget's height is driven by its content: its button, its list of rolls
 
 ## Step 5: Call a tool from the widget
 
-A widget asks its bot to do something by calling a tool with a `name` and an `arguments` object. The bot that sent the message containing the widget handles the call in [Step 6](#step-6-handle-tool-calls-in-the-bot).
+A widget asks its agent to do something by calling a tool with a `name` and an `arguments` object. The agent that sent the message containing the widget handles the call in [Step 6](#step-6-handle-tool-calls-in-the-agent).
 
 ### The callTool function
 
@@ -509,7 +509,7 @@ async function callTool(name, args) {
 }
 ```
 
-The result is the `callToolResult` object that your bot returns in [Step 6](#step-6-handle-tool-calls-in-the-bot):
+The result is the `callToolResult` object that your agent returns in [Step 6](#step-6-handle-tool-calls-in-the-agent):
 
 | Field               | Description                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------- |
@@ -519,8 +519,8 @@ The result is the `callToolResult` object that your bot returns in [Step 6](#ste
 
 Handle **both** kinds of failure:
 
-- **The promise rejects** when the call could not be completed: it timed out, or the bot's handler failed.
-- **The promise resolves with `isError: true`** when your bot ran the tool and reported a failure.
+- **The promise rejects** when the call could not be completed: it timed out, or the agent's handler failed.
+- **The promise resolves with `isError: true`** when your agent ran the tool and reported a failure.
 
 ### The dice widget
 
@@ -586,9 +586,9 @@ connect("Dice roller").then(
 - The button is disabled while a call is in progress, so a quick double-click does not roll twice.
 - Each new roll and each error message makes the root taller. The `ResizeObserver` from Step 4 reports the new height.
 
-## Step 6: Handle tool calls in the bot
+## Step 6: Handle tool calls in the agent
 
-When the widget calls a tool, your bot receives an `htmlwidget/calltool` invoke activity. In the Teams SDK, handle it with the `widget.callTool` route:
+When the widget calls a tool, your agent receives an `htmlwidget/calltool` invoke activity. In the Teams SDK, handle it with the `widget.callTool` route:
 
 - `activity.value.name` is the tool name.
 - `activity.value.arguments` is the arguments object, typed as `unknown`.
@@ -676,7 +676,7 @@ export function handleWidgetTool(
 }
 ```
 
-Register the route on your bot's `App`:
+Register the route on your agent's `App`:
 
 ```ts
 import type { IHtmlWidgetCallToolResponse } from "@microsoft/teams.api";
@@ -714,7 +714,7 @@ Follow these rules in every tool handler:
 1. **Always set all three fields:** `content`, `structuredContent` (use `{}` when there is no data), and `isError`. Fields you omit can reach the widget as `null`, which widgets built with the [MCP Apps SDK](https://github.com/modelcontextprotocol/ext-apps) reject.
 1. **Validate `arguments`.** They come from the browser. Treat them as untrusted input, like the body of any HTTP request.
 1. **Ignore properties you do not recognize.** Teams can add a reserved `__msteams__` property to `arguments`, so do not reject unexpected properties.
-1. **Do not authorize based on `activity.from`.** The invoke identifies the conversation, but it does not reliably carry the user's Microsoft Entra identity. If a tool needs a verified user, the widget must send a token that the bot validates, which is outside the scope of this guide.
+1. **Do not authorize based on `activity.from`.** The invoke identifies the conversation, but it does not reliably carry the user's Microsoft Entra identity. If a tool needs a verified user, the widget must send a token that the agent validates, which is outside the scope of this guide.
 1. **Respond quickly.** The user is waiting for the result in the widget.
 
 ### Optional: Identify which widget is calling
@@ -955,7 +955,7 @@ The two ways of telling the agent that something behaves differently:
 | Makes the agent respond | Yes, right away                     | No. The agent decides how to use it.              |
 | Repeated calls          | Each call posts a new message       |     Each call replaces the previous context           |
 
-#### Handle context updates in the bot
+#### Handle context updates in the agent
 
 In Teams, the widget's agent receives each `ui/update-model-context` request. Like an `Action.Submit` from an Adaptive Card, it arrives as a **message activity** whose `value` contains the request:
 
@@ -1063,10 +1063,10 @@ expandButton.addEventListener("click", async () => {
 
 ## Put it all together
 
-Your existing bot needs two additions:
+Your existing agent needs two additions:
 
 1. A `send` call for the extended Markdown message that contains the widget ([Step 2](#send-the-message)).
-2. The `widget.callTool` route ([Step 6](#step-6-handle-tool-calls-in-the-bot)).
+2. The `widget.callTool` route ([Step 6](#step-6-handle-tool-calls-in-the-agent)).
 
 The `<script>` element in `widgets/dice-widget.html` contains the code from [Step 3](#step-3-connect-the-widget-to-teams), [Step 4](#step-4-report-the-widgets-height), and [Step 5](#step-5-call-a-tool-from-the-widget), in that order.
 
@@ -1074,7 +1074,7 @@ To show widgets from MCP servers, also declare widget support on your MCP client
 
 To try it:
 
-1. Run your bot and make it send the widget in a Teams chat.
+1. Run your agent and make it send the widget in a Teams chat.
 1. Select **Roll a 6-sided die** a few times. Each roll appears in the list, and the widget grows to fit it without a scroll bar.
 1. Test the widget in Teams on iOS and Android in both portrait and landscape orientations. Check that primary content isn't clipped and actions are usable by touch without relying on hover. See [Responsive scaling](ux-guidelines.md#responsive-scaling).
 
@@ -1103,8 +1103,8 @@ To try it:
 
 - [ ] The widget calls tools in response to user actions.
 - [ ] The widget handles both a rejected `callTool` promise and a result with `isError: true`.
-- [ ] The bot's handler always returns `content`, `structuredContent`, and `isError` and never throws.
-- [ ] The bot validates `arguments`, ignores unknown properties such as `__msteams__`, and does not authorize based on `activity.from`.
+- [ ] The agent's handler always returns `content`, `structuredContent`, and `isError` and never throws.
+- [ ] The agent validates `arguments`, ignores unknown properties such as `__msteams__`, and does not authorize based on `activity.from`.
 
 **Other APIs**
 
@@ -1116,7 +1116,7 @@ To try it:
 **Widgets from MCP servers**
 
 - [ ] The MCP client declares the `io.modelcontextprotocol/ui` extension.
-- [ ] Each MCP widget's payload includes `mcpUrl`, the URL of the MCP server whose tool produced it, so the widget runs on a dedicated domain scoped to the bot's ID and that URL.
+- [ ] Each MCP widget's payload includes `mcpUrl`, the URL of the MCP server whose tool produced it, so the widget runs on a dedicated domain scoped to the agent's ID and that URL.
 - [ ] Each MCP widget has a unique `correlationId` that is stored with its MCP server and conversation.
 - [ ] Tool calls are forwarded only for known widgets in the same conversation and only for tools that widgets may call.
 - [ ] `__msteams__` is removed from the arguments before they are forwarded.
@@ -1128,14 +1128,14 @@ To try it:
 | Widget | `ui/initialize`                                 | Request      | `{ protocolVersion, appInfo: { name, version }, appCapabilities }` | Object that can include `hostContext`, such as the current theme |
 | Widget | `ui/notifications/initialized`                  | Notification | `{}`                                                               | None                                                             |
 | Widget | `ui/notifications/size-changed`                 | Notification | `{ height }` in CSS pixels                                         | None                                                             |
-| Widget | `tools/call`                                    | Request      | `{ name, arguments }`                                              | The bot's `callToolResult`                                       |
+| Widget | `tools/call`                                    | Request      | `{ name, arguments }`                                              | The agent's `callToolResult`                                       |
 | Widget | `ui/open-link`                                  | Request      | `{ url }`                                                          | `{}` or `{ isError: true }` if the URL could not be opened      |
 | Widget | `ui/message`                                    | Request      | `{ role: "user", content }`, where `content` is an array of blocks | `{}` or `{ isError: true }` if the message was not posted       |
 | Widget | `ui/update-model-context`                       | Request      | `{ content?, structuredContent? }`                                 | `{}`                                                             |
 | Widget | `ui/request-display-mode`                       | Request      | `{ mode }`: `"inline"`, `"fullscreen"`, or `"pip"`                 | `{ mode }`: the widget's actual display mode                     |
 | Teams  | `ui/notifications/host-context-changed`         | Notification | The `hostContext` fields that changed, such as `displayMode`       | None                                                             |
-| Bot    | `message` activity (`tryGetWidgetModelContext`) | Handler      | `activity.value`: the `ui/update-model-context` request            | None                                                             |
-| Bot    | `widget.callTool` route (`htmlwidget/calltool`) | Handler      | `activity.value`: `{ name, arguments }`                            | `{ responseType: "htmlwidget/calltoolresult", callToolResult }`  |
+| agent    | `message` activity (`tryGetWidgetModelContext`) | Handler      | `activity.value`: the `ui/update-model-context` request            | None                                                             |
+| agent    | `widget.callTool` route (`htmlwidget/calltool`) | Handler      | `activity.value`: `{ name, arguments }`                            | `{ responseType: "htmlwidget/calltoolresult", callToolResult }`  |
 
 Requests wait for a reply. Notifications do not.
 
