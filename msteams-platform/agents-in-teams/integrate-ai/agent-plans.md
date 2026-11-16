@@ -44,7 +44,7 @@ Users can expand the thinking indicator to see the agent's progress and each ste
 
 Add or update steps as the agent works. A **Stop** button is available in the expanded view.
 
-Teams shows the overall plan status in the header, such as **Thinking** or **Assistance Required**.
+Teams shows the overall plan status in the header, such as **Thinking**.
 
 ### Completed steps
 
@@ -60,14 +60,12 @@ When a user selects **Stop**, the plan indicator disappears. Teams doesn't displ
 
 ```json
 {
-        "error": {
-                "code": "PlanConflict",
-                "message": "The user stopped this plan. It can no longer be updated or completed."
-        }
+    "error": {
+        "code": "PlanConflict",
+        "message": "The user stopped this plan. It can no longer be updated or completed."
+    }
 }
 ```
-
-When the agent reports a plan error, the plan indicator also disappears and Teams doesn't display a "Ran into issues" message. A stopped or errored plan is terminal and can't be updated or completed. Stopping a plan doesn't cancel your application's work or stop a response stream. Handle application cancellation and streaming separately.
 
 ## Define and update steps
 
@@ -76,7 +74,7 @@ Each step requires a title and status. Descriptions and sources are optional.
 | Step information | Required | Description |
 | --- | --- | --- |
 | Title | Yes | A short description of the work represented by the step. |
-| Status | Yes | Whether the step is proposed, active, completed, blocked, or in error. |
+| Status | Yes | Whether the step is proposed, active, or completed. |
 | Description | No | Additional details that users can view by expanding the step. |
 | Sources | No | References supplied as citation objects. |
 
@@ -89,16 +87,12 @@ While the plan is active, your agent can add one or more steps or update the tit
 | Proposed | The step is planned but hasn't started. |
 | Active | The agent is executing the step. |
 | Completed | The step finished successfully. |
-| Blocked | The step needs user input, such as clarification or permissions. |
-| Error | The step encountered a failure. |
 
-Teams determines the thinking indicator's overall status from the highest-priority step status, in this order: **Blocked**, **Active**, **Error**, **Proposed**, **Completed**.
+Teams determines the thinking indicator's overall status from the highest-priority step status, in this order: **Active**, **Proposed**, **Completed**.
 
 The illustration shows the **Proposed**, **Active**, and **Completed** states.
 
 :::image type="content" source="../../assets/images/agents-in-teams/agent-plans/plan-step-statuses.png" alt-text="Illustration of Proposed, Active, and Completed plan step states." lightbox="../../assets/images/agents-in-teams/agent-plans/plan-step-statuses.png":::
-
-A step in the `error` state marks that step as failed. It doesn't end the plan. Reporting an error for the plan is a separate, terminal operation that ends the entire plan and prevents further updates. While a plan is active, its displayed status is derived from its steps. After the plan reaches a terminal state, its lifecycle determines whether it can be updated.
 
 There is no SDK or Bot API operation for reading a plan's current state. The Bot must maintain plan state based on the operations it sends and their responses. See [Code samples](#code-samples) for links to the SDK samples.
 
@@ -108,7 +102,7 @@ The following flow describes how an agent manages a plan in response to a user m
 
 1. **Associate the plan with a user message.** In a message handler, `ctx.plan()` or `Plan.CreateFromContext(context)` creates a reactive plan associated with the incoming prompt. An agent can have only one ongoing plan per user message.
 1. **Add and update steps.** Provide a title and status for each step, with optional descriptions and sources. Update steps as the work progresses.
-1. **Complete the plan with a final response.** Teams doesn't infer plan completion from step statuses. Marking every step as completed before completing the plan is recommended, but not required. When the plan is completed, the Teams client renders steps with any status other than `error` as completed. Steps in the `error` state remain in that state. The client doesn't change stored statuses.
+1. **Complete the plan with a final response.** Teams doesn't infer plan completion from step statuses. Marking every step as completed before completing the plan is recommended, but not required. When the plan is completed, the Teams client renders its steps as completed without changing their stored statuses.
 
 Completion, stopping, an overall error, timeout, and deletion are terminal states. Don't attempt to update a plan after it reaches a terminal state.
 
@@ -145,7 +139,7 @@ The prompt and the destination thread are separate. `replyToId` identifies the m
 
 In TypeScript SDK 2.2.0, `ctx.plan()` binds the plan to the incoming prompt. When the prompt is in a one-to-one chat thread, completion uses the reply-chain binding. Start, update, stop, and error activities use the conversation route with the prompt ID.
 
-For a plan started from an L1 prompt and completed in an L2 thread, progress operations still reference the original prompt, while the final response can be routed to the reply thread. This describes TypeScript SDK request routing. It doesn't guarantee where each Teams client displays the progress indicator. Verify client rendering before relying on thread placement, and don't infer C# or Python behavior from the TypeScript implementation. Plan positioning and message streaming are configured separately.
+For a plan started from an L1 prompt and completed in an L2 thread, progress operations still reference the original prompt, while the final response can be routed to the reply thread.
 
 Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
@@ -169,22 +163,22 @@ using Microsoft.Teams.Apps.Schema.Entities;
 
 teams.OnMessage(async (context, ct) =>
 {
-        Plan plan = Plan.CreateFromContext(context);
-        PlanStep step = new()
-        {
-                Id = "answer",
-                Version = 1,
-                Title = "Prepare answer",
-                Status = PlanStepStatuses.Active
-        };
+    Plan plan = Plan.CreateFromContext(context);
+    PlanStep step = new()
+    {
+        Id = "answer",
+        Version = 1,
+        Title = "Prepare answer",
+        Status = PlanStepStatuses.Active
+    };
 
-        await plan.StartAsync([step], ct);
+    await plan.StartAsync([step], ct);
 
-        string answer = "Here is your answer.";
-        step.Status = PlanStepStatuses.Completed;
-        step.Version++;
-        await plan.UpdateAsync([step], ct);
-        await plan.CompleteAsync(answer, ct);
+    string answer = "Here is your answer.";
+    step.Status = PlanStepStatuses.Completed;
+    step.Version++;
+    await plan.UpdateAsync([step], ct);
+    await plan.CompleteAsync(answer, ct);
 });
 ```
 
@@ -222,14 +216,14 @@ from microsoft_teams.apps import ActivityContext
 
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
-        plan = ctx.plan()
-        step = Step(id="answer", version=1, title="Prepare answer", status="active")
-        await plan.start([step])
+    plan = ctx.plan()
+    step = Step(id="answer", version=1, title="Prepare answer", status="active")
+    await plan.start([step])
 
-        answer = "Here is your answer."
-        completed_step = step.model_copy(update={"version": 2, "status": "completed"})
-        await plan.update([completed_step])
-        await plan.complete(answer)
+    answer = "Here is your answer."
+    completed_step = step.model_copy(update={"version": 2, "status": "completed"})
+    await plan.update([completed_step])
+    await plan.complete(answer)
 ```
 
 ::: zone-end
@@ -242,7 +236,7 @@ Use `plan.complete(answer)` when the complete answer is ready to send as one mes
 
 When using a plan with response streaming, start the plan first and skip informative updates. Emit the answer text, then attach the plan completion metadata to the final streaming activity with `streamType: "final"`. The SDK sends this activity through the normal Bot activity `POST` path. Don't call `plan.complete()` separately for the same answer. Stopping the plan doesn't stop the response stream. Your application must handle both lifecycles.
 
-The `completion()` or `Completion()` helper creates a new message bound to the original prompt and carrying completion metadata. It doesn't send a message or close a stream. The stream must target the same conversation as the plan. In TypeScript and Python, the SDK closes the stream automatically after a normal handler return. In C#, explicitly finalize the writer with the final activity.
+Use `plan.completion()` in TypeScript and Python, or `plan.Completion()` in C#, to create a message bound to the original prompt with plan completion metadata. This helper doesn't send a message or close a stream. The stream must target the same conversation as the plan. In TypeScript and Python, the SDK closes the stream automatically after a normal handler return. In C#, explicitly finalize the writer with the final activity.
 
 In TypeScript and Python, explicitly await `ctx.stream.close()` if you need to handle final-send errors inside the handler or finish one response before starting another.
 
@@ -310,7 +304,7 @@ await plan.error()
 
 ::: zone-end
 
-These methods don't accept a reason string or cancel your application's work. To describe a failure, it's recommended that you first update the affected step with a higher version, an `error` status, and a description, then report the Plan error.
+Both methods hide the thinking indicator. They don't accept a reason string or cancel your application's work. If you're streaming a response, stop the stream separately.
 
 `PlanConflict` is an HTTP `409` for plan lifecycle conflicts, including a stopped or already completed plan, or an operation that's invalid for the current state. Don't blindly retry terminal-state conflicts. For overlapping `continue` requests, each request returns `202 Accepted`. A higher version wins for each step regardless of request arrival order, and a revision that isn't newer is skipped.
 
@@ -329,12 +323,12 @@ For example, the serialized routing metadata for a one-to-one chat thread can lo
 
 ```json
 {
-        "conversationId": "a:opaque-conversation",
-        "replyToId": "original-prompt-id",
-        "replyChain": {
-                "chatOrChannelId": "19:chat@thread.v2",
-                "replyChainId": "root-message-id"
-        }
+    "conversationId": "a:opaque-conversation",
+    "replyToId": "original-prompt-id",
+    "replyChain": {
+        "chatOrChannelId": "19:chat@thread.v2",
+        "replyChainId": "root-message-id"
+    }
 }
 ```
 
@@ -346,55 +340,55 @@ When the worker runs, create a scoped, authenticated API client and reconstruct 
 
 ```csharp
 PlanOptions options = JsonSerializer.Deserialize<PlanOptions>(savedPlan)
-        ?? throw new InvalidOperationException("The saved plan binding is missing.");
+    ?? throw new InvalidOperationException("The saved plan binding is missing.");
 
 Plan plan = new(apiClient, options);
 await plan.StartAsync(
 [
-        new PlanStep
-        {
-                Id = "report",
-                Version = 1,
-                Status = PlanStepStatuses.Active,
-                Title = "Preparing report",
-                Description = "Preparing the report in the background."
-        }
+    new PlanStep
+    {
+        Id = "report",
+        Version = 1,
+        Status = PlanStepStatuses.Active,
+        Title = "Preparing report",
+        Description = "Preparing the report in the background."
+    }
 ], cancellationToken);
 
 // Perform background work...
 
 await plan.UpdateAsync(
 [
-        new PlanStep
-        {
-                Id = "report",
-                Version = 2,
-                Status = PlanStepStatuses.Completed,
-                Title = "Report ready",
-                Description = "The background report is ready."
-        },
-        new PlanStep
-        {
-                Id = "deliver",
-                Version = 1,
-                Status = PlanStepStatuses.Active,
-                Title = "Delivering report",
-                Description = "Delivering the report to the user."
-        }
+    new PlanStep
+    {
+        Id = "report",
+        Version = 2,
+        Status = PlanStepStatuses.Completed,
+        Title = "Report ready",
+        Description = "The background report is ready."
+    },
+    new PlanStep
+    {
+        Id = "deliver",
+        Version = 1,
+        Status = PlanStepStatuses.Active,
+        Title = "Delivering report",
+        Description = "Delivering the report to the user."
+    }
 ], cancellationToken);
 
 // Perform additional background work...
 
 await plan.UpdateAsync(
 [
-        new PlanStep
-        {
-                Id = "deliver",
-                Version = 2,
-                Status = PlanStepStatuses.Completed,
-                Title = "Report delivered",
-                Description = "The report was delivered successfully."
-        }
+    new PlanStep
+    {
+        Id = "deliver",
+        Version = 2,
+        Status = PlanStepStatuses.Completed,
+        Title = "Report delivered",
+        Description = "The report was delivered successfully."
+    }
 ], cancellationToken);
 
 await plan.CompleteAsync("Your background report is ready.", cancellationToken);
@@ -469,57 +463,57 @@ from microsoft_teams.api import ApiClient, Step
 from microsoft_teams.apps import Plan, PlanOptions
 
 async def run_plan_job(saved_plan: dict[str, Any], api_client: ApiClient) -> None:
-        options = PlanOptions(**saved_plan, api_client=api_client)
-        plan = Plan(**options)
+    options = PlanOptions(**saved_plan, api_client=api_client)
+    plan = Plan(**options)
 
-        await plan.start(
-                [
-                        Step(
-                                id="report",
-                                version=1,
-                                status="active",
-                                title="Preparing report",
-                                description="Preparing the report in the background.",
-                        )
-                ]
-        )
+    await plan.start(
+        [
+            Step(
+                id="report",
+                version=1,
+                status="active",
+                title="Preparing report",
+                description="Preparing the report in the background.",
+            )
+        ]
+    )
 
-        # Perform background work...
+    # Perform background work...
 
-        await plan.update(
-                [
-                        Step(
-                                id="report",
-                                version=2,
-                                status="completed",
-                                title="Report ready",
-                                description="The background report is ready.",
-                        ),
-                        Step(
-                                id="deliver",
-                                version=1,
-                                status="active",
-                                title="Delivering report",
-                                description="Delivering the report to the user.",
-                        ),
-                ]
-        )
+    await plan.update(
+        [
+            Step(
+                id="report",
+                version=2,
+                status="completed",
+                title="Report ready",
+                description="The background report is ready.",
+            ),
+            Step(
+                id="deliver",
+                version=1,
+                status="active",
+                title="Delivering report",
+                description="Delivering the report to the user.",
+            ),
+        ]
+    )
 
-        # Perform additional background work...
+    # Perform additional background work...
 
-        await plan.update(
-                [
-                        Step(
-                                id="deliver",
-                                version=2,
-                                status="completed",
-                                title="Report delivered",
-                                description="The report was delivered successfully.",
-                        )
-                ]
-        )
+    await plan.update(
+        [
+            Step(
+                id="deliver",
+                version=2,
+                status="completed",
+                title="Report delivered",
+                description="The report was delivered successfully.",
+            )
+        ]
+    )
 
-        await plan.complete("Your background report is ready.")
+    await plan.complete("Your background report is ready.")
 ```
 
 ::: zone-end
@@ -538,22 +532,22 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-        "type": "typing",
-        "replyToId": "prompt-message-id",
-        "entities": [
+    "type": "typing",
+    "replyToId": "prompt-message-id",
+    "entities": [
+        {
+            "type": "planInfo",
+            "planType": "start",
+            "steps": [
                 {
-                        "type": "planInfo",
-                        "planType": "start",
-                        "steps": [
-                                {
-                                        "id": "step-1",
-                                        "version": 1,
-                                        "status": "active",
-                                        "title": "Review the source material"
-                                }
-                        ]
+                    "id": "step-1",
+                    "version": 1,
+                    "status": "active",
+                    "title": "Review the source material"
                 }
-        ]
+            ]
+        }
+    ]
 }
 ```
 
@@ -567,28 +561,28 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-        "type": "typing",
-        "replyToId": "prompt-message-id",
-        "entities": [
+    "type": "typing",
+    "replyToId": "prompt-message-id",
+    "entities": [
+        {
+            "type": "planInfo",
+            "planType": "continue",
+            "steps": [
                 {
-                        "type": "planInfo",
-                        "planType": "continue",
-                        "steps": [
-                                {
-                                        "id": "step-1",
-                                        "version": 2,
-                                        "status": "completed",
-                                        "title": "Review the source material"
-                                },
-                                {
-                                        "id": "step-2",
-                                        "version": 1,
-                                        "status": "active",
-                                        "title": "Prepare the answer"
-                                }
-                        ]
+                    "id": "step-1",
+                    "version": 2,
+                    "status": "completed",
+                    "title": "Review the source material"
+                },
+                {
+                    "id": "step-2",
+                    "version": 1,
+                    "status": "active",
+                    "title": "Prepare the answer"
                 }
-        ]
+            ]
+        }
+    ]
 }
 ```
 
@@ -604,15 +598,15 @@ POST /v3/conversations/{conversationId}/activities
 
 ```json
 {
-        "type": "message",
-        "replyToId": "prompt-message-id",
-        "text": "Here is the final answer.",
-        "entities": [
-                {
-                        "type": "planInfo",
-                        "planType": "complete"
-                }
-        ]
+    "type": "message",
+    "replyToId": "prompt-message-id",
+    "text": "Here is the final answer.",
+    "entities": [
+        {
+            "type": "planInfo",
+            "planType": "complete"
+        }
+    ]
 }
 ```
 
@@ -620,7 +614,7 @@ For a streamed final answer, include `planInfo` with `planType: "complete"` on t
 
 ### Stop a plan or report an error
 
-Send a typing activity with `planType: "stop"` or `planType: "error"`. Do not include `text` or `steps`. Both operations stop the plan. A later plan update or completion can return `409 PlanConflict`.
+Send a typing activity with `planType: "stop"` or `planType: "error"`. Do not include `text` or `steps`. Both operations stop the plan and hide the thinking indicator. A later plan update or completion can return `409 PlanConflict`.
 
 ### Responses and conflicts
 
