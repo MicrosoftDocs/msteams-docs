@@ -1,7 +1,7 @@
 ---
 title: Send and receive files
 description: Learn how agents send and receive files in Microsoft Teams using Teams SDK and Microsoft Graph.
-ms.date: 11/06/2026
+ms.date: 11/17/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -410,7 +410,7 @@ Key APIs and values:
 
 ::: zone-end
 
-For an agentic user, Teams SDK uses the attachment `ContentUrl` and the agentic user's identity to retrieve the file through Microsoft Graph. For a bot, the SDK uses the short-lived, pre-authorized `downloadUrl` supplied in the activity. The file-read APIs shown in this section apply to both routes. A Teams SDK version that sends the bot's access token on file downloads is expected in December 2026. When it's available, update the SDK and add a certificate, federated identity credential, or managed identity to its configuration.
+For an agentic user, Teams SDK uses the attachment `ContentUrl` and the agentic user's identity to retrieve the file through Microsoft Graph. For a bot, the SDK uses the short-lived, pre-authorized `downloadUrl` supplied in the activity. The file-read APIs shown in this section apply to both routes.
 
 ### Access the raw file attachment
 
@@ -1083,7 +1083,6 @@ Complete the following checklist:
 1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing. See [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
 1. **Keep the fallback for today's URLs.** If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
 1. **Confirm service principals.** For a multi-tenant bot, verify that a service principal exists in each tenant where the bot is used. Teams will start creating these service principals. Until a tenant has one, token requests there fail and the fallback applies. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
-1. **Update the Teams SDK.** If your bot downloads files with the Teams SDK, update the SDK once a version that sends the bot's token on file downloads is released (expected December 2026). The SDK update covers downloads only, so if your bot uploads files, update your upload code too.
 1. **Validate file upload and download.** Test your bot's file operations with the updated authentication approach, including missing tenant information and HTTP 401 responses.
 
 To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
