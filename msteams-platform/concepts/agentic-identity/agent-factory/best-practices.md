@@ -40,7 +40,7 @@ Provide controls in your product so each agent's manager can decide how it respo
 | Agentic User identity created | Create or link the agent's record, and initialize its configuration and state. |
 | Workload onboarding updated | Wait for successful Teams onboarding before sending a welcome message or starting Teams-specific work. |
 | Identity property updated | Refresh the stored mail address, alias, or user principal name. |
-| Manager updated | Update the agent's owner, and send approvals and escalations to the new manager. |
+| Manager updated | Update the stored manager, and route manager-based approvals and escalations to the new manager. |
 | Disabled | Pause the agent's scheduled and proactive work. |
 | Enabled | Check onboarding, permissions, and your product's policies before resuming the agent's work. |
 | Deleted | Stop the agent, remove its access to your product's resources, and start cleanup. |
