@@ -136,7 +136,7 @@ Key an agent's configuration, knowledge, and memory by tenant ID and Agentic Use
 
 A scheduled job has no inbound activity from which Teams SDK can select the sender. Store the tenant ID, Agentic User ID, agent identity client ID, conversation ID, and service URL when your service receives an activity. For proactive work, explicitly select that agent's identity rather than relying on a previous handler's context.
 
-Use the customer's stored tenant ID when constructing the proactive identity. For an agent in another tenant, don't rely on the SDK's default tenant from the blueprint's runtime configuration.
+Pass the customer's stored tenant ID when constructing the proactive identity. Teams SDK uses this value to scope proactive operations to that customer's tenant.
 
 For examples in each SDK language, see [Proactive messaging](../receiving-sending-messages.md#proactive-messaging).
 
