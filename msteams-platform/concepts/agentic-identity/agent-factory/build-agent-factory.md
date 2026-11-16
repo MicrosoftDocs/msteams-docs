@@ -30,7 +30,7 @@ When you build your agent factory on Agentic Users, every agent your users creat
 
 Each agent is its own participant. People can tell an onboarding agent that belongs to HR from an incident agent that belongs to engineering, and both can join the same conversation, each in its own role.
 
-## Govern each agent individually
+## Admins govern each agent individually
 
 Each agent has its own identity in your customer's directory. Admins can manage individual agents without treating every agent from your factory as one shared account.
 
