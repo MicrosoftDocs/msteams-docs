@@ -147,7 +147,7 @@
         href: concepts/agentic-identity/agent-factory/create-agentic-users.md
       - name: Route messages to each agent
         href: concepts/agentic-identity/agent-factory/route-messages.md
-      - name: Be in the know
+      - name: Handle lifecycle notifications
         href: concepts/agentic-identity/agent-factory/be-in-the-know.md
       - name: Best practices
         href: concepts/agentic-identity/agent-factory/best-practices.md
