@@ -70,9 +70,6 @@ You can build either a search-based or an action-based message extension.
 
 Now, you can [upload your app in Teams](#upload-your-custom-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20a%20message%20extension%20app%20for%20Outlook&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dttk%252Csearch-based-message-extension%23build-or-extend-a-message-extension&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md&documentVersionIndependentId=2f0e2f61-c2b6-13c5-c367-283c55ae1be0&author=surbhigupta&platformId=f6fd84a6-25e7-c46b-e713-4a1598c448a9&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
 To extend your existing Teams message extension app to Outlook, ensure the following:
@@ -155,9 +152,6 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D+Extend+an+existing+Teams+message+extension+app+to+Outlook&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dexisting-app%252Csearch-based-message-extension&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md&documentVersionIndependentId=2f0e2f61-c2b6-13c5-c367-283c55ae1be0&author=surbhigupta&platformId=f6fd84a6-25e7-c46b-e713-4a1598c448a9&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 ---
 
 ## Upload your custom app in Teams
@@ -211,7 +205,7 @@ While your updated message extension continues to run in Teams, be aware of the 
 > [!NOTE]
 > When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would be in Teams.
 
-Use the [Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Teams developer community channels](/microsoftteams/platform/developer-support-feedback) to report issues and provide feedback.
 
 ## Code sample
 

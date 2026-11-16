@@ -200,9 +200,6 @@ Consider the following important points:
 * The `creationDateTime` property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
 * The `startMigration` API starts the message migration process by setting the migration mode to `InProgress` for a specified channel or chat.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## Step 2: Check migration status
 
 Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is set to `InProgress`. For more information, see:
@@ -358,9 +355,6 @@ HTTP/1.1 200 OK
 }
 ```
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## Step 4: Complete migration
 
 For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http&preserve-view=true ). Completing the migration is necessary to ensure that all the users of chat or channel see the same messages. Not completing the migration can result into inconsistent view of the chat or channel on Microsoft Teams clients.
@@ -410,9 +404,6 @@ To ensure that member A can see the 9 AM imported messages:
 
 Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
 [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true) to verify that the `migrationMode` is marked as `Completed`.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Tips and additional information
 

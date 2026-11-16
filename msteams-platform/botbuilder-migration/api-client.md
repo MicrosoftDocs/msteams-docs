@@ -1,0 +1,109 @@
+---
+title: The API Client
+description: Replace BotBuilder's static TeamsInfo class with Teams SDK's injected ApiClient for cleaner API interactions.
+ms.topic: how-to
+zone_pivot_groups: teams-sdk-languages-typescript-python
+ms.date: 10/09/2026
+---
+
+# The API Client
+
+BotBuilder exposes a static class `TeamsInfo` that allows you to query the api. In Teams SDK
+we pass an instance of our `ApiClient` into all our activity handlers through the context.
+
+> [!TIP]
+> The Teams SDK `ApiClient` uses a fluent API pattern that makes it easier to discover available methods through IDE autocompletion.
+
+::: zone pivot="teams-sdk-python"
+
+# [BotBuilder](#tab/BotBuilder)
+
+```python
+from botbuilder.core import ActivityHandler, TurnContext
+from botbuilder.core.teams import TeamsInfo
+
+class MyActivityHandler(ActivityHandler):
+    async def on_message_activity(self, turn_context: TurnContext):
+        members = await TeamsInfo.get_members(turn_context)
+```
+
+# [Teams SDK](#tab/TeamsSDK)
+
+```python
+from microsoft_teams.api import MessageActivity
+from microsoft_teams.apps import ActivityContext
+
+@app.on_message
+async def on_message(context: ActivityContext[MessageActivity]):
+    members = await context.api.conversations.get_members(context.activity.conversation.id)
+```
+
+---
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+# [BotBuilder](#tab/BotBuilder)
+
+```typescript
+import {
+  CloudAdapter,
+  ConfigurationBotFrameworkAuthentication,
+  TeamsInfo,
+} from 'botbuilder';
+
+const auth = new ConfigurationBotFrameworkAuthentication(process.env);
+const adapter = new CloudAdapter(auth);
+
+export class ActivityHandler extends TeamsActivityHandler {
+  constructor() {
+    super();
+    this.onMessage(async (context) => {
+      const members = await TeamsInfo.getMembers(context);
+    });
+  }
+}
+```
+
+# [Teams SDK](#tab/TeamsSDK)
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+const app = new App();
+
+app.on('message', async ({ api, activity }) => {
+  const members = await api.conversations.getMembers(activity.conversation.id);
+});
+```
+
+---
+
+::: zone-end
+
+## Mapping TeamsInfo APIs to Teams SDK ApiClient Methods
+
+The following table shows common BotBuilder `TeamsInfo` methods and their equivalent Teams SDK `ApiClient` methods:
+
+::: zone pivot="teams-sdk-python"
+
+| BotBuilder (TeamsInfo) | Teams SDK (ApiClient) |
+| ------------------------ | ---------------------- |
+| `TeamsInfo.get_member(context, user_id)` | `api.conversations.get_member_by_id(conversation_id, user_id)` |
+| `TeamsInfo.get_team_details(context, team_id)` | `api.teams.get_by_id(team_id)` |
+| `TeamsInfo.get_meeting_info(context, meeting_id)` | `api.meetings.get_by_id(meeting_id)` |
+| `TeamsInfo.send_message_to_teams_channel(context, team_id, message)` | `api.conversations.create(CreateConversationParams)` then `api.conversations.create_activity(conversation_id, activity)` |
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+| BotBuilder (TeamsInfo) | Teams SDK (ApiClient) |
+| ------------------------ | ---------------------- |
+| `TeamsInfo.getMember(context, userId)` | `api.conversations.getMemberById(conversationId, userId)` |
+| `TeamsInfo.getTeamDetails(context, teamId)` | `api.teams.getById(teamId)` |
+| `TeamsInfo.getMeetingInfo(context, meetingId)` | `api.meetings.getById(meetingId)` |
+| `TeamsInfo.sendMessageToTeamsChannel(context, teamId, message)` | `api.conversations.create(CreateConversationParams)` then `api.conversations.createActivity(conversationId, activity)` |
+
+::: zone-end

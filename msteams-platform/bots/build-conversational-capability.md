@@ -230,7 +230,7 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 To receive read receipts events for your agent, ensure the following:
 
-- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific), as follows:
+- Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-chats-and-meetings) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific), as follows:
 
   # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
 
@@ -1408,10 +1408,10 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: Precondition failed, please try again. | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. | Yes | Retry with exponential backoff. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size of the incoming request was too large. For more information, see [format your agent messages](/microsoftteams/platform/bots/how-to/format-your-bot-messages). | No | Reduce the payload size. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests sent by the agent. For more information, see [rate limit](/microsoftteams/platform/bots/how-to/rate-limit). | Yes | Retry using `Retry-After` header to determine backoff time. |
-| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](../feedback.md#report-issues). |
-| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums). |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
-| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
+| 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [Teams SDK repository](../developer-support-feedback.md#get-help-and-share-feedback). |
+| 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [Teams SDK repository](../developer-support-feedback.md#get-help-and-share-feedback). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [Teams SDK repository](../developer-support-feedback.md#get-help-and-share-feedback). |
+| 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [Teams SDK repository](../developer-support-feedback.md#get-help-and-share-feedback). |
 
 ### Status codes retry guidance
 

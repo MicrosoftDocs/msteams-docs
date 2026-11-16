@@ -3,7 +3,7 @@ title: Search Users with People Picker Control
 description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 06/10/2026
+ms.date: 10/13/2026
 ---
 
 # People Picker in Adaptive Cards
@@ -29,10 +29,10 @@ The following table provides popular scenarios for People Picker in Adaptive Car
 
 |Scenarios|Actions|
 |----------|-------------------------|
-|Approval-based scenarios| To request, assign, and reassign the approval to the intended user based on the requirement.|
-|Incident management| To track incidents and notify, assign, and reassign to the intended user for immediate action.|
-|Project management| To assign tickets or bugs to particular users.|
-|User lookup| To search for users across the organization.|
+|Approval-based scenarios|To request, assign, and reassign the approval to the intended user based on the requirement.|
+|Incident management|To track incidents and notify, assign, and reassign to the intended user for immediate action.|
+|Project management|To assign tickets or bugs to particular users.|
+|User lookup|To search for users across the organization.|
 
 # [Desktop](#tab/desktop)
 
@@ -100,9 +100,9 @@ The following properties are additions to the `Input.ChoiceSet` schema to enable
 
 #### Data.Query
 
-|Property |Type |Required |Description|
+|Property|Type|Required|Description|
 |--|--|--|--|
-|**dataset** |String |Yes |The type of data that must be fetched dynamically.|
+|**dataset**|String|Yes|The type of data that must be fetched dynamically.|
 
 #### dataset
 
@@ -110,8 +110,8 @@ The following table provides predefined values as **dataset** for people picker:
 
 |dataset|Search Scope
 |--|--|
-|**graph.microsoft.com/users** |Search all members across the organization.|
-|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|
+|**graph.microsoft.com/users**|Search all members across the organization.|
+|**graph.microsoft.com/users?scope=currentContext**|Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|
 
 ### Example
 
