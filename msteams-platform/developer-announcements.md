@@ -19,6 +19,8 @@ These changes are intended to strengthen security, align with Microsoft OneDrive
 
 **Action required:** If your agent uses the `downloadUrl` in file attachments, or the `uploadUrl` it gets after a user accepts a file consent card to download or upload files, you'll need to migrate to requests that include your agent's own Microsoft Entra ID access token, obtained with a certificate, federated identity credential (FIC) or managed identity, to continue to download or upload files. Tokens obtained with a client secret won't work for these requests. If your agent downloads files with the Teams SDK, update the SDK once a version that sends your agent's token on file downloads is released (expected December 2026), and add a certificate, FIC or managed identity to its configuration. The SDK update covers downloads only, so if your agent uploads files, update your upload code too. Also add a file permission to your app manifest: `File.ReadSelected.User` if your agent only receives files, or `File.ReadWriteSelected.User` if it also sends them. For details, see [Prepare for upcoming file authentication changes](bots/how-to/bots-filesv4.md#prepare-for-upcoming-file-authentication-changes).
 
+To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
+
 ---
 
 ## Preview: Build interactive HTML widgets for Teams agents
