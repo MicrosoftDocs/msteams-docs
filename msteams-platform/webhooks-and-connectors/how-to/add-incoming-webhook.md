@@ -4,18 +4,18 @@ description: Create an Incoming Webhook to Teams app and post external requests 
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: hantony
-ms.date: 05/06/2026
+ms.date: 10/26/2026
 ---
 
 # Create Incoming Webhooks
 
 [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
-An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. The webhooks provide a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
+An Incoming Webhook lets external applications share content in Microsoft Teams channels. The webhooks are used as tools to track and notify. You create webhooks by using the Workflows app, which provides a unique URL to send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single article. You can use cards in the following capabilities:
 
 * Bots
 * Message extensions
-* Connectors
+* Workflows
 
 > [!NOTE]
 >
@@ -28,11 +28,11 @@ The following table provides the features and description of an Incoming Webhook
 
 | Features | Description |
 | -------- | ----------- |
-|Adaptive Cards using an Incoming Webhook | Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Actionable messaging support | Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://amdesigner.azurewebsites.net/).|
-|Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
-|Markdown support|All text fields in actionable messaging cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
-|Scoped configuration|An Incoming Webhook is scoped and configured at the channel level.|
+|Adaptive Cards using an Incoming Webhook | Workflows webhooks support Adaptive Card and MessageCard payloads. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
+|Card payload support | MessageCard payloads render content but don't support interactive HTTP POST action buttons. For interactive cards, use Adaptive Cards and configure the workflow to handle card responses. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference).|
+|Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through a workflow webhook URL.|
+|Markdown support|All text fields in cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
+|Scoped configuration|A workflow webhook is configured for a specific channel or chat. Workflows webhooks support private channels. You can configure them through the Power Automate portal or the Workflows app in Teams.|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the insertion of malicious code.|
 
 <!--- TBD: A note should be short and eye-catching. No need to put a list item inside a Note or any admonition for that matter. Re-write the below list item.
@@ -40,7 +40,7 @@ The following table provides the features and description of an Incoming Webhook
 
 > [!NOTE]
 >
-> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS.
 > * For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create Webhooks using Workflows
@@ -95,12 +95,15 @@ Use Workflows when you need to:
 > [!IMPORTANT]
 > You can build a notification bot Teams app using [Microsoft 365 Agents Toolkit](../../toolkit/agents-toolkit-fundamentals.md) (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).
 
-You can create and send actionable messages through an Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
+You can create and send messages through a workflow webhook. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
-> [!NOTE]
-> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+### Supported payload formats
+
+Workflows webhooks support Adaptive Card and MessageCard payloads. MessageCard payloads render content but don't support interactive HTTP POST action buttons. For interactive cards, use Adaptive Cards and configure the workflow to handle card responses.
 
 ### Example
+
+In the following examples, replace the webhook URL with the URL generated by your workflow.
 
 # [C#](#tab/dotnet)
 
@@ -127,7 +130,7 @@ var adaptiveCardJson = @"{
   ]
 }";
 
-var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+var webhookUrl = "<WORKFLOW_WEBHOOK_URL>";
 
 var client = new HttpClient();
 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -162,7 +165,7 @@ var formatted_Card_Payload = {
         ]
     }
 
-var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+var webhookUrl = "<WORKFLOW_WEBHOOK_URL>";
 
 axios.post(webhookUrl , formatted_Card_Payload )
     .then(res => {
@@ -211,7 +214,7 @@ Remove a workflow from your list at any time.
 
 | Sample name | Description | .NET | Node.js |
 |---------------------|--------------|---------|--------|
-| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/nodejs)|
+| Incoming Webhook |This sample demonstrates a Teams tab to send cards using a webhook URL. Update the sample to use the URL generated by your workflow. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/nodejs)|
 
 ## See also
 

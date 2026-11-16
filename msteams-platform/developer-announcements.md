@@ -2,12 +2,55 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 10/22/2026
+ms.date: 11/13/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Preview: Build interactive HTML widgets for Teams agents
+
+*November 16, 2026*
+
+HTML widgets let your agents deliver rich, interactive experiences directly in Teams chat. Build custom interfaces with HTML, CSS, and JavaScript, or display widgets supplied by Model Context Protocol (MCP) servers, so users can explore data and take action without leaving the conversation.
+
+Get started with [Send HTML widgets](html-widgets/send-html-widgets.md) and [Serve MCP-generated HTML widgets](html-widgets/serve-html-widgets.md). Follow the [user experience guidelines](html-widgets/ux-guidelines.md) and [accessibility guidelines](html-widgets/accessibility-guidelines.md) to create responsive, accessible experiences.
+
+---
+
+## Preview: Socket mode for Teams agents
+
+*November 13, 2026*
+
+Socket mode lets your agent connect to Teams over a WebSocket and receive activities through that connection. Your agent initiates the connection, so it doesn’t need a public HTTPS endpoint or development tunnel.
+
+During preview, socket mode is available only for newly created agents. Use it only to develop and test your agent. For production agents, including bots published to the Teams Store, use an HTTPS messaging endpoint.
+
+To use socket mode, enable it in your bot registration and configure your agent’s runtime to use it. We recommend using the Teams SDK to establish and maintain the WebSocket connection for you. For more information, see [Choose how your agent receives activity data from Teams](/microsoftteams/platform/agents-in-teams/agent-connectivity).
+
+---
+
+## Released: Agents can now stream in group chats, channels, and meetings
+
+*October 28, 2026*
+
+Streaming now works in every conversation type.
+
+Users judge an agent by how quickly they see it working. When they see activity right away, the agent feels faster and more responsive. Agents used to get that only in one-on-one chats. Now they get it in group chats, channels, and meeting chats too.
+
+With streaming, users can read your agent's response while it's being generated. Before the response starts, informative updates show what your agent is doing, and your agent can change them as the work progresses.
+
+Informative updates have also been redesigned for group conversations. They now appear right under the message your agent is replying to. In a busy channel or chat, everyone can see which request your agent is working on, and the updates don't clutter the conversation.
+
+To adopt:
+
+- **Teams SDK**: Update to the latest version. Your existing streaming code then works in every conversation type. Older versions keep the legacy experience, in one-on-one chats only.
+- **REST API**: Set `replyToId` to the ID of the user message you're replying to. It's required outside one-on-one chats. If you leave it out in a one-on-one chat, you get the legacy experience.
+
+For details, see [Stream agent messages](bots/streaming-ux.md).
+
+---
 
 ## Preview update: Agent sessions preview ended, will not be released
 
@@ -400,7 +443,7 @@ Support for apps in private channels is available in developer preview. For more
 | 02/02/2024 | Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before June 2024 to ensure continued functionality. | Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) |
 | 02/02/2024 | The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming Collaboration controls retirement. | |
 | 01/02/2024 | Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365. | Extend your app across Microsoft 365 > [Adaptive Card-based Loop components](m365-apps/cards-loop-component.md) |
-| 01/02/2024 | Use application RSC permissions for chat scope. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [RSC permissions for a chat or meeting](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) |
+| 01/02/2024 | Use application RSC permissions for chat scope. | Utilize Teams data with Microsoft Graph > Resource-specific consent > [RSC permissions for a chat or meeting](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-chats-and-meetings) |
 | 25/01/2024 | Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams. | Build message extension > Build message extensions using Bot Framework > [Micro-capabilities for website links](messaging-extensions/how-to/micro-capabilities-for-website-links.md) |
 | 24/01/2024 | Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool. | [Debug your AI chat bot using Teams App Test Tool](toolkit/teams-app-test-tool-tutorial.md) |
 | 19/01/2024 | Use / to invoke message extensions from command box in the new Teams client. | Build message extension > [Build message extensions using Bot Framework](messaging-extensions/build-bot-based-message-extension.md) |
@@ -416,7 +459,7 @@ Support for apps in private channels is available in developer preview. For more
 | **Date** | **Update** | **Find here** |
 | -------- | ---------- | -------------- |
 | 20/12/2023 | Incoming Webhooks are available in GCC High environment. | [Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) |
-| 20/12/2023 | Introduced RSC permissions for users to access different resources. | Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access) |
+| 20/12/2023 | Introduced RSC permissions for users to access different resources. | Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-users-personal-scope) |
 | 18/12/2023 | App caching in chat, channel, and meeting tab scopes is available for iOS. | Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 | 15/12/2023 | Bots can mention tags in text messages and Adaptive Cards posted in Teams channels. | Build bots > Bot conversation > [Channel and group chat conversations with a bot](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) |
 | 12/12/2023 | Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills. | Build bots > [Teams AI library](bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) |
