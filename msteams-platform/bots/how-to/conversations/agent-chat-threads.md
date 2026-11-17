@@ -8,7 +8,7 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use threads in channels and one-on-one agent chats
 
-In chats and channels that support threading, messages appear at two levels:
+In channels and chats that support threading, messages appear at two levels:
 
 - **L1 (top-level):** A message in the main chat or channel conversation. An L1 message can be the root of a thread.
 - **L2 (in-thread):** A reply in the thread under a top-level (L1) message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
