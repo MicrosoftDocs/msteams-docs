@@ -208,9 +208,6 @@ This example contains a bot and tabs. If the bot and SSO use the same app regist
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, replace the domain in `api://subdomain.example.com/botid-<<BOT_ID>>` with your ngrok domain. Whenever the ngrok domain changes, update the Application ID URI in the SSO app registration, `webApplicationInfo.resource`, and the OAuth connection's **Token Exchange URL** to match. Keep the `botid-<<BOT_ID>>` segment unchanged.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23to-configure-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## Upload a custom app and Preview in Teams
 
 You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in Teams environment.
@@ -241,9 +238,6 @@ To preview your app in Teams:
 
   Congratulations! You've enabled SSO for your bot or message extension app.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+and+Preview+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23upload-a-custom-app-and-preview-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ## SSO support in Developer Portal
 
 You can import your SSO-enabled app in Developer Portal for Teams. For more information, see [import an existing app](../../../concepts/build-and-test/teams-developer-portal.md#import-an-existing-app). To enable SSO support for your app in Developer Portal after you import it, follow these steps:
@@ -261,6 +255,3 @@ You can import your SSO-enabled app in Developer Portal for Teams. For more info
 1. Select **Save**.
 
 Developer Portal now supports SSO for your app.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+SSO+support+in+Developer+Portal&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23sso-support-in-developer-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)

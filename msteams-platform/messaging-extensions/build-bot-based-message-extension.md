@@ -8,13 +8,9 @@ ms.owner: slamba
 ms.date: 09/16/2024
 ---
 
-# Build message extensions using Bot Framework
+# Build message extensions using Teams SDK
 
-Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
-
-Bot-based message extension takes advantage of the Bot Framework's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
-
-[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+Teams SDK-based message extensions take advantage of the Teams platform messaging schema and secure communication protocol.
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
@@ -26,11 +22,6 @@ Message extension search commands allow users to search external systems and ins
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card isn't sent if its size exceeds 28 KB.
-
-See the following video to learn how to define message extension search commands:
-<br>
-> [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
-<br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
 
@@ -74,23 +65,23 @@ The following code is an example of the `composeExtensions` property defining a 
 You must add the following parameters to your `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Manifest version |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
-| `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
+| `title` | Command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-|`semanticDescription`|Semantic description of the command for consumption by the Large Language Models (LLMs).|No|1.17|
+| `semanticDescription` | Semantic description of the command for consumption by the Large Language Models (LLMs). | No | 1.17 |
 | `type` | Type of command. Default is `query`. | No | 1.4 |
-|`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
+| `initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
 
 You must add the following search parameter details that define the text visible to your user in the Teams client:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
-|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
+| `parameter.semanticDescription` | Semantic description of the parameter for consumption by the Large Language Models (LLMs). | No | 1.17 |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
@@ -159,7 +150,7 @@ The following code is an example of the `composeExtensions` property defining an
 You must add the following parameters to your `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Manifest version |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `type` | Message extension type. Default is `action`. | No | 1.4 |
@@ -169,7 +160,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 If you're using a static list of parameters, you must also add the following parameters:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `parameters` | Describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
