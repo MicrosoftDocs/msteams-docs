@@ -782,6 +782,10 @@ These requirements apply only to the token your bot uses for file operations. Yo
 
 ### Add the RSC permission to your app manifest
 
+> [!IMPORTANT]
+>
+> Teams is rolling out support for the `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions. Until the rollout is complete, installing or updating an app whose manifest includes either permission might fail.
+
 Bots that receive or send files must complete these steps:
 
 1. **Update your Teams app manifest**
@@ -1078,7 +1082,7 @@ Complete the following checklist:
 1. **Identify your file token credential.** Determine whether your bot uses a certificate, FIC, managed identity, or client secret to acquire app-only tokens. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
 1. **Replace client secrets for the file token.** If your bot uses a client secret, add a certificate or FIC to the bot's app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
 1. **Use the bot's app ID.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
-1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` [RSC permission](#add-the-rsc-permission-to-your-app-manifest). Then publish the updated manifest.
+1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` RSC permission. Then publish the updated manifest. See [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
 1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
 1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing. See [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
 1. **Keep the fallback for today's URLs.** If token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
