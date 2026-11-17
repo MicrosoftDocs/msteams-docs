@@ -184,7 +184,7 @@ app.on('config.open', async (): Promise<ConfigResponse> => {
 
 * `app.on` event — Selects the handler for opening the configuration experience. Set this to `'config.open'` so the handler returns the initial configuration card.
 * `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
-* `config.type` — Keeps the configuration interaction open for user input. Set this to `'continue'` so Teams displays the configuration card.
+* `config.type` — Keeps the configuration interaction open for user input. For example, you can set this to `'continue'` so Teams displays the configuration card.
 * `config.value.card` — Supplies the Adaptive Card shown in the dialog. Set this to `cardAttachment('adaptive', card)` so users can interact with your configuration card.
 
 ::: zone-end
@@ -264,9 +264,9 @@ app.OnConfigSubmit((context, cancellationToken) =>
 
 * `SuggestedActions.To` — Identifies the user who receives the sign-in action. Set this to `[context.Activity.From.Id]` so the action targets the user configuring the agent.
 * `ActionType.OpenUrl` — Specifies the action used to open authentication. Pass this to `CardAction` so users can open your authentication page.
-* `CardAction.Title` — Sets the label displayed for the sign-in action. Set this to `"Sign in to this app"` so users understand the action.
+* `CardAction.Title` — Sets the label displayed for the sign-in action. For example, you can set this to `"Sign in to this app"` so users understand the action.
 * `CardAction.Value` — Provides the destination URL for the sign-in action. Replace `"https://example.com/auth"` with your authentication page URL so users reach your service.
-* `MessageTask` message — Supplies the final message returned by the submit handler. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result.
+* `MessageTask` message — Supplies the final message returned by the submit handler. Set this to `"You have chosen to finish setting up agent"` for the sample, or use a confirmation that describes the result to users.
 * `Task.FromResult<ConfigResponse>` — Returns a typed response from each configuration handler. Pass `response` so the fetch handler returns the authentication response and the submit handler returns the completion message.
 
 ::: zone-end
@@ -368,7 +368,7 @@ app.on('config.submit', async (): Promise<ConfigResponse> => {
 
 * `app.on` event — Selects the handler for submitted agent configuration settings. Set this to `'config.submit'` so the handler returns a completion response.
 * `responseType` — Identifies the returned payload as a configuration response. Set this to `'config'` and use `Promise<ConfigResponse>` as the handler's return type so the response matches the typed configuration contract.
-* `config.type` — Ends the configuration interaction with a response message. Set this to `'message'` so Teams doesn't request more input.
+* `config.type` — Ends the configuration interaction with a response message. Set this to `'message'` or this sample so Teams doesn't request more input.
 * `config.value` — Supplies the final message shown after configuration completes. Set this to `'You have chosen to finish setting up agent'` for the sample, or use a confirmation that describes the result.
 
 ::: zone-end
