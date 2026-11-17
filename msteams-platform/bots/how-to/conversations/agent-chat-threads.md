@@ -15,7 +15,7 @@ In chats and channels that support threading, messages appear at two levels:
 
 An agent can start a new thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
 
-The threading capabilities described in this article are in preview. They are available in channels and in one-on-one agent chats, including chats with agentic users.
+The threading capabilities described in this article are in preview. They are available in channels and one-on-one agent chats, including chats with agentic users. Group and one-on-one user chats will be available in preview soon.
 
 ## Recommended agent behavior
 
