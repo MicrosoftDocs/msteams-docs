@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-11-13T00:00:00Z</updated>
+	<updated>2026-11-16T00:00:00Z</updated>
+	<entry>
+		<updated>2026-11-16T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-build-interactive-html-widgets-for-teams-agents</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-build-interactive-html-widgets-for-teams-agents"/>
+		<title type="html"><![CDATA[Preview: Build interactive HTML widgets for Teams agents]]></title>
+		<summary type="html"><![CDATA[HTML widgets let your agents deliver rich, interactive experiences directly in Teams chat. Build custom interfaces with HTML, CSS, and JavaScript, or display widgets supplied by Model Context Protocol (MCP) servers, so users can explore data and take action without leaving the conversation.]]></summary>
+		<content type="html"><![CDATA[<p>HTML widgets let your agents deliver rich, interactive experiences directly in Teams chat. Build custom interfaces with HTML, CSS, and JavaScript, or display widgets supplied by Model Context Protocol (MCP) servers, so users can explore data and take action without leaving the conversation.</p><p>Get started with <a href="https://learn.microsoft.com/microsoftteams/platform/html-widgets/send-html-widgets">Send HTML widgets</a> and <a href="https://learn.microsoft.com/microsoftteams/platform/html-widgets/serve-html-widgets">Serve MCP-generated HTML widgets</a>. Follow the <a href="https://learn.microsoft.com/microsoftteams/platform/html-widgets/ux-guidelines">user experience guidelines</a> and <a href="https://learn.microsoft.com/microsoftteams/platform/html-widgets/accessibility-guidelines">accessibility guidelines</a> to create responsive, accessible experiences.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-11-13T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-socket-mode-for-teams-agents</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Released: Teams SDK for Python hotfix]]></title>
 		<summary type="html"><![CDATA[Hotfix releases for both the stable and preview tracks of Teams SDK for Python are now available on PyPI.]]></summary>
 		<content type="html"><![CDATA[<p>Hotfix releases for both the stable and preview tracks of Teams SDK for Python are now available on PyPI.</p><ul><li>Stable: 2.0.16 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.0.16">release notes</a>)</li><li>Preview: 2.1.0a2 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.1.0a2">release notes</a>)</li></ul>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-08-04T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-stable-and-preview-multiple-languages</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-stable-and-preview-multiple-languages"/>
-		<title type="html"><![CDATA[Released: Teams SDK (stable and preview, multiple languages)]]></title>
-		<summary type="html"><![CDATA[New versions of Teams SDK are now available across TypeScript, .NET, and Python!]]></summary>
-		<content type="html"><![CDATA[<p>New versions of Teams SDK are now available across TypeScript, .NET, and Python!</p><h3>.NET</h3><p>Teams SDK for .NET 2.1.0 is a significant release that replaces the plugin-oriented model of 2.0 with a plain ASP.NET Core app. 2.1.0 also adds agentic identity, multi-flow OAuth, built-in state, OpenTelemetry, and Bot Framework v4 compatibility. For more information, see the detailed <a href="https://github.com/microsoft/teams.net/releases/tag/v2.1.0">release notes</a>.</p><h3>TypeScript and Python</h3><p>Teams SDK for TypeScript and Python both have new stable maintenance releases, as well as new preview releases that include preview support for Agent 365 scenarios.</p><ul><li>TypeScript stable: 2.0.15 (<a href="https://github.com/microsoft/teams.ts/releases/tag/v2.0.15">release notes</a>)</li><li>TypeScript preview: 2.1.0-preview.3 (<a href="https://github.com/microsoft/teams.ts/releases/tag/v2.1.0-preview.3">release notes</a>)</li><li>Python stable: 2.0.15 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.0.15">release notes</a>)</li><li>Python preview: 2.1.0a1 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.1.0a1">release notes</a>)</li></ul>]]></content>
 	</entry>
 </feed>

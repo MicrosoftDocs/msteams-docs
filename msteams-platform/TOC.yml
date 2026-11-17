@@ -49,6 +49,9 @@
     - name: Stream messages
       href: bots/streaming-ux.md
       displayName: Thinking, informative, thinking indicator, typing indicator, progress bar, streaming
+    - name: Plans and steps
+      href: agents-in-teams/integrate-ai/agent-plans.md
+      displayName: plan, thinking indicator, progress, steps, status, sources
     - name: Prompt starters
       href: bots/how-to/conversations/prompt-starters.md
       displayName: suggest, natural language, autocomplete, command, welcome, discover, start, conversation
@@ -157,6 +160,22 @@
       href: concepts/agentic-identity/lifecycle-events.md
     - name: Observability and governance
       href: concepts/agentic-identity/observability-governance.md
+    - name: Build an agent factory with Agentic Users
+      items:
+      - name: Build an agent factory
+        href: concepts/agentic-identity/agent-factory/build-agent-factory.md
+      - name: Set up your agent factory
+        href: concepts/agentic-identity/agent-factory/setup.md
+      - name: Create Agentic Users for your agents
+        href: concepts/agentic-identity/agent-factory/create-agentic-users.md
+      - name: Route messages to each agent
+        href: concepts/agentic-identity/agent-factory/route-messages.md
+      - name: Handle lifecycle notifications
+        href: concepts/agentic-identity/agent-factory/be-in-the-know.md
+      - name: Best practices
+        href: concepts/agentic-identity/agent-factory/best-practices.md
+      - name: Agent factory FAQ
+        href: concepts/agentic-identity/agent-factory/faq.md
 - name: Tools and SDKs
   items:
   - name: Overview
