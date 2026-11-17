@@ -8,14 +8,14 @@ zone_pivot_groups: teams-sdk-languages
 
 # Use threads in channels and one-on-one agent chats
 
-In chats and channels that support threading, messages appear at two levels:
+In channels and chats that support threading, messages appear at two levels:
 
 - **L1 (top-level):** A message in the main chat or channel conversation. An L1 message can be the root of a thread.
 - **L2 (in-thread):** A reply in the thread under a top-level (L1) message. All replies in that thread share the same root. An L2 reply can't start a nested thread.
 
 An agent can start a new thread or respond within an existing thread to keep a discussion together under its original message. Threads help users work through a task without mixing follow-up questions with other conversations.
 
-The threading capabilities described in this article are in preview. They are available in channels and in one-on-one agent chats, including chats with agentic users.
+The threading capabilities described in this article are in preview. They are available in channels and one-on-one agent chats, including chats with agentic users. Group and one-on-one user chats will be available in preview soon.
 
 ## Recommended agent behavior
 
@@ -56,12 +56,12 @@ Don't assume a particular meaning for `conversation.id` or use it as the storage
 
 ## Implement threading with Teams SDK
 
-The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. With context-level send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. You can call the app-level methods while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
+The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application. Reactive methods are the send and reply methods on `ctx`. They use the incoming activity's context, so the SDK chooses where the response appears based on the incoming activity level and conversation type. Proactive methods are the send and reply methods on `app`. They don't use the incoming activity's context, even when you call them inside a handler, so values such as the service URL and agentic identity come from app configuration (or aren't set) unless you specify them yourself. Use them while handling an incoming activity or later for [proactive messaging](send-proactive-messages.md), such as notifications or scheduled reminders that aren't direct responses to user requests.
 
 ### Choose where a message goes
 
 > [!IMPORTANT]
-> In a one-on-one chat, the send and reply methods on the incoming context object respond to a top-level (L1) message at L1. **This default differs from the recommended agent behavior, which is to respond in the message's thread (L2).** To respond at L2 in a supported chat, use the app-level reply method with the containing chat ID and the root message ID. In channels, context-based responses already go to L2.
+> In a one-on-one chat, the send and reply methods on the incoming context object respond to a top-level (L1) message at L1. **This default differs from the recommended agent behavior, which is to respond in the message's thread (L2).** To respond at L2 in a supported chat, use the proactive reply method (`app.reply`) with the containing chat ID and the root message ID. In channels, context-based responses already go to L2.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -102,17 +102,51 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 ::: zone-end
 
-### Sending a reply
+### Use proactive methods
 
-The following examples show how to send a thread reply (L2) in a chat. They assume you've initialized a Teams SDK app and use the app-level methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above.
+To respond where the user wrote and quote their message, use the reactive `reply` method described in the table above. The proactive methods (`app.send` and `app.reply`) are described in the following sections.
 
-When responding as an agentic user, app-level send and reply methods require you to pass the agentic identity explicitly, even when called inside an incoming activity handler. Context-level methods use the incoming activity's identity automatically. For more information, see [Receiving and sending messages as an Agentic User](../../../concepts/agentic-identity/receiving-sending-messages.md).
+When responding as an agentic user, proactive methods need the agentic identity set explicitly, even inside an incoming activity handler. For more information, see [Receiving and sending messages as an Agentic User](../../../concepts/agentic-identity/receiving-sending-messages.md).
+
+Proactive methods aren't tied to an incoming activity, so they need to know which service URL to send to. Use the service URL from the activity you're responding to. With a wrong or incomplete URL, a thread reply can post at the top level or return a 404.
 
 ::: zone pivot="teams-sdk-typescript"
 
 Use Teams SDK version 2.2 or later for these examples.
 
-Configure the app's `serviceUrl` with the destination's full incoming service URL before using app-level methods. These methods use the app configuration, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`; they don't take a per-call URL or automatically use the incoming activity's URL.
+In TypeScript today, proactive methods don't accept a per-call service URL, and since they don't exist on the context, cannot use the incoming activity's URL. They use the `serviceUrl` you set on the app, then the `SERVICE_URL` environment variable, then `https://smba.trafficmanager.net/teams`. Set `serviceUrl` to the full URL of the destination.
+
+```typescript
+const app = new App({
+  serviceUrl: '<incoming service URL>',
+});
+```
+
+The `serviceUrl` you set applies to every `app.send` and `app.reply` call on that app, whichever conversation they target. To send to a destination with a different service URL, you need a separate `App` instance.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+Use Teams SDK version 2.2 or later for these examples.
+
+In C#, proactive methods accept a per-call `serviceUrl`. Pass the full URL of the destination.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use Teams SDK version 2.2 or later for these examples.
+
+In Python, proactive methods accept a per-call `service_url`. Pass the full URL of the destination.
+
+::: zone-end
+
+#### Reply in a thread
+
+The following examples show how to send a thread reply (L2) in a chat. They assume you've initialized a Teams SDK app and use the proactive methods to explicitly reply in the thread. For channels, use the channel ID as indicated in the table above. To post an in-thread reply under a specific root message, use the proactive reply method shown here, which takes the chat ID and the root message ID.
+
+::: zone pivot="teams-sdk-typescript"
 
 ```typescript
 import { getAgenticIdentity } from '@microsoft/teams.api';
@@ -126,24 +160,14 @@ app.on('message', async (ctx) => {
   }
 
   await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.', {
-    agenticIdentity: getAgenticIdentity(activity.recipient),
+    agenticIdentity: getAgenticIdentity(activity.recipient), // agentic user only
   });
-});
-```
-
-To start a separate discussion at L1, use `app.send(chatId, message)` instead of `app.reply()`. A root message ID is not required.
-
-```typescript
-await app.send(chatId, 'A new travel policy is available.', {
-  agenticIdentity: getAgenticIdentity(activity.recipient),
 });
 ```
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-csharp"
-
-Use Teams SDK version 2.2 or later for these examples.
 
 ```csharp
 app.OnMessage(async (ctx, cancellationToken) =>
@@ -162,29 +186,14 @@ app.OnMessage(async (ctx, cancellationToken) =>
         rootMessageId,
         "Let us plan your trip in this thread.",
         serviceUrl: activity.ServiceUrl,
-        agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
+        agenticIdentity: activity.Recipient?.GetAgenticIdentity(), // agentic user only
         cancellationToken: cancellationToken);
 });
 ```
 
-To start a separate discussion at L1, use `app.SendAsync(chatId, message)` instead of `app.ReplyAsync()`. A root message ID is not required.
-
-```csharp
-await app.SendAsync(
-    chatId,
-    "A new travel policy is available.",
-    serviceUrl: activity.ServiceUrl,
-    agenticIdentity: activity.Recipient?.GetAgenticIdentity(),
-    cancellationToken: cancellationToken);
-```
-
-Without an explicit `serviceUrl`, C# app-level sends use the last inbound activity's service URL; they throw until the app has received an activity.
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
-
-Use Teams SDK version 2.2 or later for these examples.
 
 ```python
 from microsoft_teams.api import MessageActivity
@@ -204,22 +213,55 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         root_message_id,
         "Let us plan your trip in this thread.",
         service_url=activity.service_url,
-        agentic_identity=activity.recipient.agentic_identity,
+        agentic_identity=activity.recipient.agentic_identity,  # agentic user only
     )
 ```
 
-To start a separate discussion at L1, use `app.send(chat_id, message)` instead of `app.reply()`. A root message ID is not required.
+::: zone-end
+
+If `channelData.replyChain.id` is missing, the snippets will throw. To tell whether the incoming message is top-level or in-thread, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level). For service responses to a reply, see [Threading-specific error responses](#threading-specific-error-responses).
+
+#### Post a new top-level message
+
+To start a separate discussion at L1, use the proactive send method instead of the reply method. A root message ID is not required.
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+await app.send(chatId, 'A new travel policy is available.', {
+  agenticIdentity: getAgenticIdentity(activity.recipient), // agentic user only
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+await app.SendAsync(
+    chatId,
+    "A new travel policy is available.",
+    serviceUrl: activity.ServiceUrl,
+    agenticIdentity: activity.Recipient?.GetAgenticIdentity(), // agentic user only
+    cancellationToken: cancellationToken);
+```
+
+Without an explicit `serviceUrl`, C# proactive sends use the last inbound activity's service URL; they throw until the app has received an activity.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 await app.send(
     chat_id,
     "A new travel policy is available.",
     service_url=activity.service_url,
-    agentic_identity=activity.recipient.agentic_identity,
+    agentic_identity=activity.recipient.agentic_identity,  # agentic user only
 )
 ```
 
-Without an explicit `service_url`, Python app-level sends use the app's configured URL, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`.
+Without an explicit `service_url`, Python proactive sends use the app's configured URL, then `SERVICE_URL`, then `https://smba.trafficmanager.net/teams`.
 
 ::: zone-end
 
