@@ -7,15 +7,16 @@ ms.topic: overview
 
 # Deprecated tools and SDKs for Teams development
 
-This article briefly describes SDKs and tools that previously supported Teams agent and app development but should no longer be used.
+This article lists SDKs and tools that are deprecated for Teams agent and app development and should not be used.
 
-**The SDKs and tools listed in this article are deprecated for Teams agent and app development.**
+**The SDKs and tools listed here are no longer supported for Teams agent and app development.**
 Consider migrating existing solutions that use any of these SDKs and tools to use the modern developer experience based on [Teams SDK](teams-sdk-overview.md) and the [Teams developer CLI](teams-developer-cli-overview.md).
 
 ## Bot Framework SDK (BotBuilder)
 
 The Bot Framework SDK, also called BotBuilder SDK, was used to build cross-platform bots compatible with Teams.
-The name "Bot Framework" is still occasionally used to refer to a larger ecosystem of cloud service and infrastructure components that remain an important part of the Teams platform, but the Bot Framework SDK should not be used for Teams app and agent development and is fully deprecated.
+It is fully deprecated, no longer supported, and should not be used for Teams app and agent development.
+The term "Bot Framework" is still occasionally used to refer to a larger ecosystem of cloud service and infrastructure components that are still used to enable connectivity to the Teams platform.
 
 Use [Teams SDK](teams-sdk-overview.md) to create agents that make full use of Teams' conversational features and collaborative surface.
 Use the [Bot Framework SDK migration guide](botbuilder-migration/overview.md) to migrate Bot Framework SDK agents and apps to Teams SDK.
@@ -23,7 +24,7 @@ Use the [Bot Framework SDK migration guide](botbuilder-migration/overview.md) to
 ## Teams AI Library
 
 Teams AI Library is now Teams SDK.
-Update existing solutions that use any versions of Teams AI Library to use the current version of Teams SDK.
+Update existing solutions that use any versions of Teams AI Library to use the current version of [Teams SDK](teams-sdk-overview.md).
 
 ## TeamsFx SDK (TypeScript and .NET)
 
