@@ -1056,7 +1056,7 @@ Key types and values:
 
 If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, make and deploy the following changes by March 1, 2027. If you don't, your bot won't be able to download or upload files, and users might see errors.
 
-Teams is updating how bots and agents securely access files that users share. The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
+The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
 
 Until enforcement begins on March 1, 2027, bots download and upload files through time-bound, pre-authorized URLs that have a `tempauth` query parameter. After enforcement, `downloadUrl` and `uploadUrl` values don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token.
 
