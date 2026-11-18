@@ -13,7 +13,7 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 *November 18, 2026*
 
-Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Make and deploy the changes described here by **March 1, 2027**, or your agent won't be able to upload or download files, and users might see errors.
+Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Make and deploy the [required changes](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) by **March 1, 2027**, or your agent won't be able to upload or download files, and users might see errors.
 
 These changes are intended to strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements.
 
