@@ -2,7 +2,7 @@
 title: Use threads in channels and one-on-one agent chats
 description: Learn why agents should use threads, identify incoming message placement, and send responses to the main conversation or a thread.
 ms.topic: how-to
-ms.date: 11/13/2026
+ms.date: 11/17/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
