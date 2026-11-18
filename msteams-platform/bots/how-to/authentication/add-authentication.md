@@ -564,8 +564,6 @@ Update the existing sample manifest using the [identity value mapping](#identity
 
 ## Code sample
 
-
-
 ::: zone pivot="teams-sdk-csharp"
 
 | Sample name | Description | .NET |
@@ -576,7 +574,7 @@ Update the existing sample manifest using the [identity value mapping](#identity
 
 ::: zone pivot="teams-sdk-typescript"
 
-| Sample name | Description | .NET |
+| Sample name | Description | TypeScript |
 | --- | --- | --- |
 | Bot Auth Quickstart | The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access. | [View the TypeScript/JavaScript Bot Auth Quickstart sample][teams-bot-auth-quickstart-js] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. |
 
@@ -584,7 +582,7 @@ Update the existing sample manifest using the [identity value mapping](#identity
 
 ::: zone pivot="teams-sdk-python"
 
-| Sample name | Description | .NET |
+| Sample name | Description | Python |
 | --- | --- | --- |
 | Bot Auth Quickstart | The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access. | [View the Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. |
 
