@@ -1544,7 +1544,7 @@
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema.md",
-        "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-1.23?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
+        "redirect_url": "/microsoft-365/extensibility/schema/"
       },
       {
         "source_path": "msteams-platform/sbs-gs-spfx.yml",
@@ -1772,6 +1772,21 @@
         "source_path": "msteams-platform/m365-apps/agent-connectors.md",
         "redirect_url": "/microsoft-365/copilot/extensibility/plugin-type-mcp-servers",
         "redirect_document_id": false
-      }
+      },
+      {
+        "source_path": "msteams-platform/graph-api/rsc/grant-resource-specific-consent.md",
+        "redirect_url": "/microsoftteams/platform/graph-api/rsc/declare-resource-specific-consent-requirements",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "msteams-platform/resources/teams-contributor-reference.md",
+        "redirect_url": "/microsoftteams/platform/developer-support-feedback",
+        "redirect_document_id": false
+      },
+    {
+      "source_path": "msteams-platform/legacy-tools-sdks.md",
+      "redirect_url": "/microsoftteams/platform/deprecated-tools-sdks",
+      "redirect_document_id": false
+    }
     ]
 }
