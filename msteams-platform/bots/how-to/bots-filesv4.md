@@ -110,7 +110,7 @@ A bot that receives or sends files also needs:
 
 ### Access received files and metadata
 
-When a user uploads a document in a personal chat, Teams stores it in the user's OneDrive. The message activity contains file metadata, and the Teams SDK file accessor provides lazy access to the file bytes.
+When a user attaches a document in a personal chat, Teams stores it in OneDrive or SharePoint. The message activity contains file metadata, and the Teams SDK file accessor provides lazy access to the file bytes.
 
 ::: zone pivot="teams-sdk-csharp"
 
