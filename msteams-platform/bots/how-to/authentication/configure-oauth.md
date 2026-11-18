@@ -6,10 +6,10 @@ ms.localizationpriority: high
 ms.date: 11/02/2026
 ---
 
+# Configure OAuth authentication for Teams agents and bots
+
 <a name="configure-oauth-authentication-for-a-teams-bot"></a>
 <a name="configure-oauth-authentication-for-teams-bots-and-agents"></a>
-
-# Configure OAuth authentication for Teams agents and bots
 
 Configure OAuth 2.0 so your Teams SDK conversational agent or bot can access APIs on behalf of a signed-in user. This guide covers Microsoft Entra ID registration, an Azure Bot OAuth connection, and runtime integration; for provisioning and deployment, see the [end-to-end tutorial](add-authentication.md).
 
