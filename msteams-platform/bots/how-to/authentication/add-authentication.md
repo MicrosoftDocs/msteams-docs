@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Add OAuth authentication to a Teams bot"
+title: Tutorial: Add OAuth authentication to a Teams bot
 description: Configure and test OAuth and Teams SSO with Microsoft Entra ID using a Teams SDK bot sample, as a foundation for conversational agents.
 ms.topic: tutorial
 ms.localizationpriority: high
@@ -69,9 +69,7 @@ Use the [Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py]. Insta
 
 ## Create the resource group
 
-Use a resource group to organize the Azure resources in this tutorial. You can reuse an existing resource group. The App Service plan is for hosting the bot in Azure App Service, not for enabling OAuth.
-
-You use a resource group to create individual resources for the bot. For performance, ensure that these resources are located in the same Azure region.
+For this tutorial, use a resource group to organize the Azure resources, or you can reuse an existing resource group. The App Service plan is for hosting the bot in Azure App Service, not for enabling OAuth. You use a resource group to create individual resources for the bot. For performance, ensure that these resources are located in the same Azure region:
 
 1. In your browser, sign into the [**Microsoft Azure portal**][azure-portal].
 1. In the left navigation panel, select **Resource groups**.
