@@ -1058,7 +1058,7 @@ If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` wi
 
 The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
 
-Until enforcement begins on March 1, 2027, bots download and upload files through time-bound, pre-authorized URLs that have a `tempauth` query parameter. After enforcement, `downloadUrl` and `uploadUrl` values don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token.
+You can make these changes now. Until enforcement begins on March 1, 2027, `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. Starting March 1, 2027, they don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token.
 
 Complete the following checklist:
 
