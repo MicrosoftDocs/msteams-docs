@@ -855,7 +855,7 @@ import type { IncomingMessage } from 'node:http';
 // Upload: activity.value.uploadInfo.tenantId on fileConsent/invoke
 const tenantId = fileTenantId ?? activity.channelData?.tenant?.id;
 
-// Use the download URL or uploadUrl exactly as received.
+// Use the downloadUrl or uploadUrl exactly as received.
 const scope = `https://${new URL(fileUrl).host}/.default`;
 
 let token: string | undefined;
