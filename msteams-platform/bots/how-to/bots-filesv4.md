@@ -736,10 +736,6 @@ Key parameters and values:
 
 ::: zone-end
 
-> [!NOTE]
->
-> These samples send the `Authorization` header only when you pass an access token, so you can use them with the [fallback for URLs that have a `tempauth` parameter](#acquire-the-token-and-send-the-authorization-header).
-
 #### Notify the user
 
 Notify the user after the upload succeeds so they can open or download the stored file. Send a `FileInfoCard` containing the drive-item identifier, file type, and stored file URL.
