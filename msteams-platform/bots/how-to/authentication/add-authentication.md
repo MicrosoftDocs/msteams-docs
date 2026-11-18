@@ -34,7 +34,7 @@ In this tutorial, you:
 - Git and the language-specific tools listed below. Install Visual Studio Code with Microsoft 365 Agents Toolkit if you use the sample's Toolkit deployment workflow.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - A Teams account with permission to upload custom apps, and permission to configure app registrations and grant consent in your test tenant.
-- The Bot Auth Quickstart sample for your selected language.
+- The [Bot Auth Quickstart sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) for your selected language.
 
 Select **C#** for C#/.NET, **TypeScript** for TypeScript/JavaScript on Node.js, or **Python** in the language selector. The selection applies throughout this article. The following paths are relative to `samples/TeamsSDK/bot-auth-quickstart` in the sample repository.
 
@@ -564,23 +564,29 @@ Update the existing sample manifest using the [identity value mapping](#identity
 
 ## Code sample
 
-The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access.
+
 
 ::: zone pivot="teams-sdk-csharp"
 
-[View the C#/.NET Bot Auth Quickstart sample][teams-bot-auth-quickstart-cs] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+| Sample name | Description | .NET |
+| --- | --- | --- |
+| Bot Auth Quickstart | The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access. | [View the C#/.NET Bot Auth Quickstart sample][teams-bot-auth-quickstart-cs] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. |
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-[View the TypeScript/JavaScript Bot Auth Quickstart sample][teams-bot-auth-quickstart-js] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+| Sample name | Description | .NET |
+| --- | --- | --- |
+| Bot Auth Quickstart | The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access. | [View the TypeScript/JavaScript Bot Auth Quickstart sample][teams-bot-auth-quickstart-js] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. |
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-[View the Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile.
+| Sample name | Description | .NET |
+| --- | --- | --- |
+| Bot Auth Quickstart | The Bot Auth Quickstart sample demonstrates OAuth and Teams SSO with Microsoft Entra ID. Use `signin`, `profile`, and `signout` to test sign-in and Microsoft Graph access. | [View the Python Bot Auth Quickstart sample][teams-bot-auth-quickstart-py] to sign in with Microsoft Entra ID and retrieve the user's Microsoft Graph profile. |
 
 ::: zone-end
 
