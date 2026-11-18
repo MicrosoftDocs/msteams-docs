@@ -1,7 +1,7 @@
 ---
 title: Send and receive files
 description: Learn how agents send and receive files in Microsoft Teams using Teams SDK and Microsoft Graph.
-ms.date: 11/17/2026
+ms.date: 11/18/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -1069,7 +1069,7 @@ Key types and values:
 
 If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, make and deploy the following changes by March 1, 2027. If you don't, your bot might not be able to download or upload files, and users might see errors.
 
-Teams is updating how bots and agents securely access files that users share. The updated model uses application-based authentication for file operations to strengthen security, align with OneDrive and SharePoint authentication requirements, and support future file-sharing capabilities across Teams conversations.
+Teams is updating how bots and agents securely access files that users share. The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
 
 Today, bots download and upload files through time-bound, pre-authorized URLs that have a `tempauth` query parameter. After the change, download and upload URLs without a `tempauth` query parameter return HTTP 401 unless the request includes an access token.
 
