@@ -5,7 +5,7 @@ author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: article
 ms.owner: vishachadha
-ms.date: 11/12/2026
+ms.date: 11/19/2026
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
