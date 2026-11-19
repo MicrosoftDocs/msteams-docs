@@ -7,67 +7,98 @@
     href: overview.md
     displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
   - name: Platform model
-    href: TODO
-    displayName: How entra, ACS, platform, runtime fit together
+    href: platform-concepts/todo.md
+    displayName: How entra, ACS, platform, runtime fit together, agentic identity
   - name: Development lifecycle
+    items:
+    - name: 
+      href: platform-concepts/todo.md
+    - name: Testing
+      href: platform-concepts/todo.md
+    - name: Publishing
+      href: platform-concepts/todo.md
   - name: Registration
-  - name: ACS
-  - name: Permissions
-  - name: Events
-  - name: AI
-  - name: Teams SDK and other tools (section?)
-  - name: Preview features
-  - name: User authentication (SSO and OAuth)
+    href: platform-concepts/todo.md
+  - name: Agent identity
+    href: platform-concepts/todo.md
+    displayName: entra, app registration, agentic identity
   - name: Messaging
-    href: TODO
+    href: platform-concepts/todo.md
     displayName: can define Proactive messaging here. include cards and widgets
+  - name: AI
+    href: platform-concepts/todo.md
+  - name: Microsoft Graph and WorkIQ
+    href: platform-concepts/todo.md
+  - name: User authentication (SSO and OAuth)
+    href: platform-concepts/todo.md
+  - name: Permissions
+    href: platform-concepts/todo.md
+  - name: Events
+    href: platform-concepts/todo.md
   - name: Agent capabilities (surfaces)
-  - name: Microsoft Graph
-  - name: App and agentic identity
-    href: TODO
-  - name: Testing
-  - name: Publishing
-
+    href: platform-concepts/todo.md
+  - name: Publishing and distribution
+    href: platform-concepts/todo.md
+  - name: Teams SDK and other tools (section?)
+    href: platform-concepts/todo.md  
+  - name: Preview features
+    href: platform-concepts/todo.md  
+  
 
 - name: Agent design concepts (conceptual and cognitive action)
   items:
-  - name: Interactivity and collaboration* (conceptual and cognitive action)
-    items:
-      - name: TODO
-        href: TODO
-        displayName: This is where good agent stuff goes, as well as feature checklists, capabilities. Not just designer-y design, also technical design, stuff like context management, connecting to will have more to say here than slack does.
-  - name: Runtime architecture (conceptual and cognitive action)
+  - name: Interactivity and collaboration design
+    href: agent-design-concepts/todo.md
+    displayName: This is where good agent stuff goes, as well as feature checklists, capabilities. Not just designer-y design, also technical design, stuff like context management, connecting to will have more to say here than slack does.
+  - name: Technical runtime design
+    href: agent-design-concepts/todo.md
     displayName: Considerations for managing turn state, storage, concurrency, memory, lifecycle events
+
+
+- name: Set up, register and configure
+  items:
+  - name: todo.md
+    href: todo.md
+    displayName: coding agent, dev env, register agent, tunnel, etc.
 
 
 - name: Build & test (action)
   items:
   - name: Set up your environment
-    href: TODO
+    href: todo.md
     displayName: Install coding agent, dev tunnel, see JTBD
   - name: Register and configure
     items:
-    - name: TODO
-      href: TDOO
+    - name: todo.md
+      href: todo.md
       displayName: enable dev preview
   - name: Send and receive messages
-    href: TDOO
+    href: todo.md
     displayName: 
   - name: Handle events and activities
   - name: Authenticate users (SSO and OAuth)
-    href: TODO
+    href: todo.md
   - name: Connect Graph and WorkIQ
   - name: Integrate AI
-    href: TODO
+    href: todo.md
     displayName: 
   - name: Configure agent permissions (RSC)
-    href: TODO
+    href: todo.md
     displayName: RSC, resource specific consent
   - name: Use device capabilities
   - name: Add capabilities (surfaces)
-    href: TODO
+    href: todo.md
 
-- name: Publish
+
+- name: Evaluate and deploy
+  href: todo.md
+
+
+- name: Publish and distribute
+  href: todo.md
+
+
+- name: 
 
 - name: Build conversational agents for Teams
   expanded: true
