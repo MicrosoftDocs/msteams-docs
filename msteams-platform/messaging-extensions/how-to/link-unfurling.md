@@ -9,8 +9,6 @@ ms.date: 11/19/2026
 ---
 # Link unfurling
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
-
 This document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
 
 :::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience for a Teams app installed or not installed in Teams and other apps." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
@@ -78,9 +76,6 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
    :::image type="content" source="../../assets/images/tdp/add-domain-button.png" alt-text="Screenshot of the message handlers section in Developer Portal." lightbox="../../assets/images/tdp/add-domain.png":::
 
 ### Add link unfurling manually
-
-> [!NOTE]
-> If authentication is added through Microsoft Entra ID, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 First, you must add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
 
@@ -169,105 +164,167 @@ Example of the response:
 # [.NET](#tab/dotnet)
 
 ```csharp
- protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
-  {
-     AdaptiveCard adaptiveCard = new AdaptiveCard(new AdaptiveSchemaVersion(1, 3));
-     adaptiveCard.Body.Add(new AdaptiveTextBlock()
-       {
-           Text = "Adaptive Card",
-           Size = AdaptiveTextSize.ExtraLarge
-       });
-         adaptiveCard.Body.Add(new AdaptiveImage()
-         {
-           Url = new Uri("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png")
-         });
-         var attachments = new MessagingExtensionAttachment()
-         {
-            Content = adaptiveCard,
-            ContentType = AdaptiveCard.ContentType
-         };
-         return Task.FromResult(new MessagingExtensionResponse
-         {
-           ComposeExtension = new MessagingExtensionResult
-             {
-               AttachmentLayout = "list",
-               Type = "result",
-               Attachments = new List<MessagingExtensionAttachment>
-                 {
-                    new MessagingExtensionAttachment
-                    {
-                      Content = adaptiveCard,
-                      ContentType = AdaptiveCard.ContentType,
-                      Preview = attachments,
-                    },       
-                  },
-              },
-         }); 
-   }
+using Microsoft.Teams.Apps.MessageExtensions;
+using Microsoft.Teams.Apps.Schema;
 
+bot.OnQueryLink((context, cancellationToken) =>
+{
+    string? url = context.Activity.Value?.Url?.ToString();
+
+    if (string.IsNullOrWhiteSpace(url))
+    {
+        return Task.FromResult(
+            MessageExtensionResponse.CreateBuilder()
+                .WithType(MessageExtensionResponseTypes.Message)
+                .WithText("No URL provided")
+                .Build());
+    }
+
+    const string imageUrl =
+        "https://raw.githubusercontent.com/microsoft/teams.net/main/bot_icon.png";
+
+    var preview = new TeamsAttachment
+    {
+        ContentType = AttachmentContentTypes.ThumbnailCard,
+        Content = new
+        {
+            title = "Link preview",
+            text = url,
+            images = new[] { new { url = imageUrl } }
+        }
+    };
+
+    var attachment = new TeamsAttachment
+    {
+        ContentType = AttachmentContentTypes.AdaptiveCard,
+        Content = new
+        {
+            type = "AdaptiveCard",
+            version = "1.3",
+            body = new object[]
+            {
+                new { type = "TextBlock", text = "Link preview", size = "Large" },
+                new { type = "TextBlock", text = url, wrap = true },
+                new { type = "Image", url = imageUrl }
+            }
+        }
+    };
+    attachment.Properties["preview"] = preview;
+
+    return Task.FromResult(
+        MessageExtensionResponse.CreateBuilder()
+            .WithType(MessageExtensionResponseTypes.Result)
+            .WithAttachmentLayout(TeamsAttachmentLayouts.List)
+            .WithAttachments(attachment)
+            .Build());
+});
 ```
 
 # [JavaScript](#tab/javascript)
 
 ```javascript
+import { cardAttachment } from '@microsoft/teams.api';
 
-handleTeamsAppBasedLinkQuery(context, query) {
-   const card = CardFactory.adaptiveCard({
-   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-   "type": "AdaptiveCard",
-   "version": "1.3"
-   });
-const attachment = CardFactory.adaptiveCard(card);
-attachment.preview = {
-   content: {
-     title: "Thumbnail Card",
-     text: query.url,
-     images: [
-       {
-          url: "https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png",
-       },
-     ],
-   },
-contentType: "application/vnd.microsoft.card.thumbnail",
-}
+app.on('message.ext.query-link', async ({ activity }) => {
+  const { url } = activity.value;
 
+  if (!url) {
+    return { status: 400 };
+  }
+
+  const imageUrl =
+    'https://raw.githubusercontent.com/microsoft/teams.net/main/bot_icon.png';
+
+  const card = {
+    type: 'AdaptiveCard',
+    version: '1.3',
+    body: [
+      { type: 'TextBlock', text: 'Link preview', size: 'Large' },
+      { type: 'TextBlock', text: url, wrap: true },
+      { type: 'Image', url: imageUrl },
+    ],
+  };
+
+  const preview = {
+    title: 'Link preview',
+    text: url,
+    images: [{ url: imageUrl }],
+  };
+
+  return {
+    composeExtension: {
+      type: 'result',
+      attachmentLayout: 'list',
+      attachments: [
+        {
+          ...cardAttachment('adaptive', card),
+          preview: cardAttachment('thumbnail', preview),
+        },
+      ],
+    },
+  };
+});
 ```
 
 # [Python](#tab/python)
 
-```python
-async def on_teams_app_based_link_query(self, turn_context: TurnContext, query):
-   """
-   Handles link unfurling when a user pastes a URL in a Teams conversation.
- 
-    This method creates a ThumbnailCard displaying the pasted URL and an image, 
-    then returns it as a Messaging Extension response.
-    """
-    Handles unfurling links when a user pastes them in a conversation.
-    """
-    # Create a ThumbnailCard for the unfurled link
-    attachment = ThumbnailCard(
-        title="Thumbnail Card",  # Title for the card
-        text=query.url,  # Display the URL that was pasted
-        images=[
-            # Add an image for the card (example image from GitHub)
-            CardImage(
-                url="https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png"
-            )
-        ],
-    ).to_attachment()
+```Python
+from microsoft_teams.api import (
+    InvokeResponse,
+    MessageExtensionQueryLinkInvokeActivity,
+)
+from microsoft_teams.api.models import (
+    Attachment,
+    MessagingExtensionAttachment,
+    MessagingExtensionInvokeResponse,
+    MessagingExtensionResult,
+)
+from microsoft_teams.apps import ActivityContext
 
-    # Prepare a MessagingExtensionResult with the unfurled link
-    result = MessagingExtensionResult(
-        type="result",  # Indicates this is a result
-        attachment_layout="list",  # Use list layout
-        attachments=[attachment],  # Include the attachment
+
+@app.on_message_ext_query_link
+async def handle_query_link(
+    ctx: ActivityContext[MessageExtensionQueryLinkInvokeActivity],
+):
+    url = ctx.activity.value.url
+    if not url:
+        return InvokeResponse[MessagingExtensionInvokeResponse](status=400)
+
+    image_url = (
+        "https://raw.githubusercontent.com/microsoft/teams.net/main/bot_icon.png"
     )
 
-    # Return the response with the unfurled link
-    return MessagingExtensionResponse(compose_extension=result)
-```
+    preview = Attachment(
+        content_type="application/vnd.microsoft.card.thumbnail",
+        content={
+            "title": "Link preview",
+            "text": url,
+            "images": [{"url": image_url}],
+        },
+    )
 
+    attachment = MessagingExtensionAttachment(
+        content_type="application/vnd.microsoft.card.adaptive",
+        content={
+            "type": "AdaptiveCard",
+            "version": "1.3",
+            "body": [
+                {"type": "TextBlock", "text": "Link preview", "size": "Large"},
+                {"type": "TextBlock", "text": url, "wrap": True},
+                {"type": "Image", "url": image_url},
+            ],
+        },
+        preview=preview,
+    )
+
+    return MessagingExtensionInvokeResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",
+            attachment_layout="list",
+            attachments=[attachment],
+        )
+    )
+```
 ---
 
 ## Micro-capabilities for website links
