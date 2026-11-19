@@ -11,7 +11,7 @@
     displayName: How entra, ACS, platform, runtime fit together, agentic identity
   - name: Development lifecycle
     items:
-    - name: 
+    - name: TODO
       href: platform-concepts/todo.md
     - name: Testing
       href: platform-concepts/todo.md
