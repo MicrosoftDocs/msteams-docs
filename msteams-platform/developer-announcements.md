@@ -2,12 +2,28 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 11/13/2026
+ms.date: 11/20/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Action required: Upcoming changes to file upload and download authentication for Microsoft Teams agents
+
+*November 20, 2026*
+
+Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Start planning for these changes now. To minimize disruption, make the [required changes](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) by **March 1, 2027**. After that date, agents that haven't been updated won't be able to upload or download files, and users might see errors.
+
+These changes are intended to strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements.
+
+**Action required:** If your agent uses the `downloadUrl` in file attachments, or the `uploadUrl` it gets after a user accepts a file consent card, to download or upload files, update it to include your agent's own Microsoft Entra ID access token on these requests. Get the token with a certificate, federated identity credential (FIC) or managed identity. Tokens obtained with a client secret won't work for these requests. If your agent downloads files with the Teams SDK, update the SDK once a version that sends your agent's token on file downloads is released (expected December 2026), and add a certificate, FIC or managed identity to its configuration. The SDK update covers downloads only, so if your agent uploads files, update your upload code too.
+
+For details, see [Update an existing bot to authenticate file requests](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests).
+
+To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
+
+---
 
 ## Preview: Build interactive HTML widgets for Teams agents
 
