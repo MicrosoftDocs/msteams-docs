@@ -283,6 +283,21 @@ app.on('message.ext.query-link', async ({ activity }) => {
 });
 ```
 
+In this example,
+
+- `app.on('message.ext.query-link', ...)`: Registers the handler for link-unfurling requests.
+- `activity.value.url`: Reads the pasted URL. Use it to retrieve linked content from your service.
+- `status: 400`: Returns an invalid-request response when the URL is missing.
+- `imageUrl`: Specifies the card image. Replace it with a publicly accessible HTTPS image for your content.
+- `type: 'AdaptiveCard'` and `version: '1.3'`: Specify the card format and schema version.
+- `body`: Defines the expanded card’s elements. Customize `text`, `size`, `wrap`, and image `url` to control its content and appearance.
+- `preview.title`, `preview.text`, and `preview.images`: Define the thumbnail preview’s heading, description, and image.
+- `cardAttachment('adaptive', card)`: Converts the expanded card into an Adaptive Card attachment.
+- `preview: cardAttachment('thumbnail', preview)`: Adds the thumbnail preview required for link unfurling.
+- `composeExtension.type: 'result'`: Identifies the response as a message extension result.
+- `attachmentLayout: 'list'` and `attachments`: Specify the display layout and returned cards. For link unfurling, Teams uses only the first card.
+
+
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
