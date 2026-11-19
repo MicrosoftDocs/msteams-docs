@@ -588,9 +588,23 @@ The following JSON payload example for `suggestedActions` property:
 
 ## Code sample
 
-|**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
-|----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+::: zone pivot="teams-sdk-csharp"
+
+|**Sample name** | **Description** | **.NET** | **Manifest**
+|----------------|-----------------|--------------|----------------|
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+|**Sample name** | **Description** | **Node.js**| 
+|----------------|-----------------|--------------
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-sso-config/nodejs) | 
+
+::: zone-end
+
+
 
 ## See also
 
