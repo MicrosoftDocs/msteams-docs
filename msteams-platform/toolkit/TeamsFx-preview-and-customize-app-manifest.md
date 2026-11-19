@@ -202,5 +202,5 @@ To preview values for all the environments, you can hover over the placeholder. 
 * [App manifest schema](/microsoft-365/extensibility/schema)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
-* [Public developer preview for Microsoft Teams](../resources/dev-preview/developer-preview-intro.md)
+* [Public developer preview for Microsoft Teams](../developer-preview-features.md)
 * [Provision cloud resources using Visual Studio Code](provision-cloud-resources.md)

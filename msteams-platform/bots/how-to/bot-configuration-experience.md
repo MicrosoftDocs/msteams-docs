@@ -72,9 +72,6 @@ In the app manifest (previously called Teams app manifest) file, update the `fet
 
 For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-bots-configuration).
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+app+manifest&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23update-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ### Configure your agent
 
 When a user installs the agent in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config.fetch` or `config.submit`.
@@ -87,7 +84,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 The following table lists the response type associated with the invoke requests:
 
-|Invoke request |Response type |
+| Invoke request | Response type |
 | --- | --- |
 | `config.fetch` | `Type: "continue"` or `Type = "auth"` |
 | `config.submit` | `Type: "continue"` or `Type: "message"` |
@@ -96,9 +93,44 @@ The following table lists the response type associated with the invoke requests:
 
    When the user submits the configuration, the `config.submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the agent configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
-# [C#](#tab/teams-bot-sdk1)
+# [C# SDK v2.1](#tab/teams-bot-sdk1)
 
-   ```csharp
+```csharp
+teams.OnTaskFetch(async (context, cancellationToken) =>
+{
+    var card = new AdaptiveCard
+    {
+        Body = new List<CardElement>
+        {
+            new TextBlock("Configure your agent")
+            {
+                Weight = TextWeight.Bolder
+            }
+        },
+        Actions = new List<Action>
+        {
+            new SubmitAction
+            {
+                Title = "Submit"
+            }
+        }
+    };
+
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("test card")
+        .WithHeight("medium")
+        .WithWidth("medium")
+        .WithCard(TeamsAttachment.CreateBuilder()
+            .WithAdaptiveCard(JsonSerializer.SerializeToElement(card))
+            .Build())
+        .Build();
+});
+   ```
+
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk1-legacy)
+
+```csharp
 
 app.OnConfigFetch(async (context) =>
 {
@@ -198,9 +230,23 @@ async def handle_config_open(
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-# [C#](#tab/teams-bot-sdk2)
+# [C# SDK v2.1](#tab/teams-bot-sdk2)
 
-   ```csharp
+```csharp
+teams.OnTaskFetch(async (context, cancellationToken) =>
+{
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Continue)
+        .WithTitle("Sign in to this app")
+        .WithUrl("https://example.com/auth")
+        .Build();
+});
+
+   ```
+
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk2-legacy)
+
+```csharp
 
 app.OnConfigFetch(async (context) =>
 {
@@ -273,9 +319,22 @@ async def handle_config_open(
 
 * `type="message"`: When the type is set to message, it indicates that the agent is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-# [C#](#tab/teams-bot-sdk3)
+# [C# SDK v2.1](#tab/teams-bot-sdk3)
 
-   ```csharp
+```csharp
+teams.OnTaskSubmit(async (context, cancellationToken) =>
+{
+    return TaskModuleResponse.CreateBuilder()
+        .WithType(TaskModuleResponseTypes.Message)
+        .WithMessage("You have chosen to finish setting up agent")
+        .Build();
+});
+
+   ```
+
+# [C# SDK<2.1(legacy)](#tab/teams-bot-sdk3-legacy)
+
+```csharp
 
 app.OnConfigSubmit(async (context) =>
 {
@@ -324,9 +383,6 @@ When a user reconfigures the agent, the `fetchTask` property in the app manifest
 * Hover over the agent, the agent profile card appears. To update or change the agent's configuration settings, select the settings icon in the agent profile card.
 
    :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot shows the configuration option for the agent in a Teams group chat.":::
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+your+bot&&author=%40vikasalmal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23configure-your-bot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Best practices
 

@@ -164,6 +164,22 @@ app.on('message', async ({ send, activity }) => {
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+// Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+await context.SendAsync(
+    new MessageActivityInput()
+      .WithText("This message is only visible to you!")
+      .WithRecipient(context.Activity.From, isTargeted: true),
+    cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {

@@ -115,12 +115,56 @@ Citations in your agent's messages can include the following:
 > [!NOTE]
 >
 > * A maximum of 20 citations are displayed in a message.
-> * Citations with Adaptive Cards are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Citations with Adaptive Cards are available in [public developer preview](../../developer-preview-features.md).
 > * Adaptive Cards aren't rendered in the citation pop-up window. However, Adaptive Cards can be rendered in the agent's message or in the citation's modal window accessible from the pop-up window.
 
 ### Add citations
 
 If you're using **Teams SDK** to build your agent, Use `addCitation()` to include in-text references and citation metadata in your message. Following is an example code snippet:
+
+# [C# SDK v2.1](#tab/csharp)
+
+```csharp
+async Task SendCitations(Context<MessageActivity> context, CancellationToken cancellationToken)
+{
+    var message = new MessageActivityInput()
+        .WithText("Hey I'm a friendly AI agent. This message is generated through AI [1]");
+
+    message.AddCitation(1, new CitationAppearance
+    {
+        Name = "AI messages agent",
+        Url = new Uri("https://example.com/claim-1"),
+        Abstract = "Excerpt description",
+        Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
+        Icon = CitationIcons.MicrosoftWord
+    });
+
+    await context.SendAsync(message, cancellationToken);
+}
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
+
+```csharp
+async Task SendCitations(IContext context)
+{
+    var message = new MessageActivity
+    {
+        Text = "Hey I'm a friendly AI agent. This message is generated through AI [1]"
+    };
+
+    message.AddCitation(1, new CitationAppearance
+    {
+        Name = "AI messages agent",
+        Url = "https://example.com/claim-1",
+        Abstract = "Excerpt description",
+        Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
+        Icon = CitationIcon.MicrosoftWord
+    });
+
+    await context.Send(message);
+}
+```
 
 # [JavaScript](#tab/javascript)
 
@@ -141,30 +185,6 @@ app.message(/citation/i, async ({ send }) => {
       .addCitation(1, appearance)
   );
 });
-```
-
-# [C#](#tab/csharp)
-
-```csharp
-
-async Task SendCitations(IContext context)
-{
-var message = new MessageActivity
-{
-Text = "Hey I'm a friendly AI agent. This message is generated through AI [1]"
-};
-
-message.AddCitation(1, new CitationAppearance
-{
-    Name = "AI messages agent",
-    Url = "https://example.com/claim-1",
-    Abstract = "Excerpt description",
-    Keywords = new List<string> { "keyword 1", "keyword 2", "keyword 3" },
-    Icon = CitationIcon.MicrosoftWord
-});
-
-await context.Send(message);
-}
 ```
 
 # [Python](#tab/python)

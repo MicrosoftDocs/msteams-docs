@@ -4,7 +4,7 @@ description: Learn how to build a bot-based message extension agent for Microsof
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 09/16/2024
+ms.date: 09/25/2026
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
-> * Bot-based search message extension agent is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
+> * Bot-based search message extension agent is available in [**public developer preview**](../developer-preview-features.md).
 > * Only *bot-based* message extensions with *search* commands can be extended as agents for Microsoft 365 Copilot.
 
 Microsoft 365 Copilot, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Microsoft 365 Copilot can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as an agent in Microsoft 365 Copilot, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Microsoft 365 Copilot. You can achieve this extension by developing an agent or connecting to an external data source.
@@ -276,7 +276,7 @@ To create a bot-based search message extension agent using Agents Toolkit CLI, f
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
    ```
-    teamsapp preview --env dev
+   teamsapp preview --env dev
    ```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
@@ -361,7 +361,7 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365-copilot/extensibility/debugging-copilot-plugin).
+For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio)
 
 ## See also
 

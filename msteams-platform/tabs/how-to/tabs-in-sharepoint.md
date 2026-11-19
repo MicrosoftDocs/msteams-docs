@@ -3,7 +3,7 @@ title: Integrate Teams Tab to SharePoint
 description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: concept-article
-ms.date: 04/13/2026
+ms.date: 10/01/2026
 ---
 
 # Add Teams tab to SharePoint
@@ -63,9 +63,6 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 > [!NOTE]
 > SharePoint extension commands aren’t supported in the Teams **Files** tab. You can [add a SharePoint page, list, or document library as a tab in Teams](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b).
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+the+sample+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint%23test-the-sample-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint.md&documentVersionIndependentId=afcc83c4-12c0-bab6-1cec-61ac463b4f60&platformId=f9b2ba89-f12b-cf79-099e-cba724602935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ### Use Teams tab in SharePoint
 
 1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`.
@@ -97,9 +94,6 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 1. Select **Add page to navigation** to have a quick reference to your page in the left navigation bar.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image073.png":::
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Use+Teams+tab+in+SharePoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint%23use-teams-tab-in-sharepoint&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint.md&documentVersionIndependentId=afcc83c4-12c0-bab6-1cec-61ac463b4f60&platformId=f9b2ba89-f12b-cf79-099e-cba724602935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Explore single part app pages in SharePoint
 

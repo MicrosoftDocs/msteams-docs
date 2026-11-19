@@ -7,6 +7,9 @@ ms.owner: nickwalk
 ms.date: 04/09/2026
 ---
 
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
+
 # Understand agent concepts
 
 An agent's interactions can be using text, speech, images, or video. It processes the user's input to understand their request and evaluates the input to perform relevant tasks. An agent may request information or enable access to services, and responds to the user.
@@ -75,78 +78,97 @@ When a Teams agent receives an activity, the SDK routes it through the registere
 
 The following snippets show Teams activity handlers for channel and team lifecycle events.
 
-# [TypeScript](#tab/typescript)
+# [C# SDK v2.1](#tab/csharp)
 
-Agents are built using the `@microsoft/teams.apps` package. You instantiate an `App` and register handlers with `app.on(eventName, handler)`. The SDK routes activities to the correct handler based on the event name string.
+Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
 
-`channelCreated`
+`OnChannelCreated`
 
-```typescript
-import { App } from '@microsoft/teams.apps';
+```csharp
+using Microsoft.Teams.Apps;
 
-const app = new App();
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
 
-app.on('channelCreated', async ({ activity }) => {
-  const channel = activity.channelData.channel; // { id, name }
-  const team    = activity.channelData.team;    // { id, name }
-  // Code logic here
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
+
+teams.OnChannelCreated(async (context, cancellationToken) =>
+{
+    var channel = context.Activity.ChannelData.Channel;
+    var team    = context.Activity.ChannelData.Team;
+    // Code logic here
 });
 ```
 
-`channelDeleted`
+`OnChannelDeleted`
 
-```typescript
-app.on('channelDeleted', async ({ activity }) => {
-  // Code logic here
+```csharp
+teams.OnChannelDeleted(async (context, cancellationToken) =>
+{
+    // Code logic here
 });
 ```
 
-`channelRenamed`
+`OnChannelRenamed`
 
-```typescript
-app.on('channelRenamed', async ({ activity }) => {
-  // Code logic here
+```csharp
+teams.OnChannelRenamed(async (context, cancellationToken) =>
+{
+    // Code logic here
 });
 ```
 
-`teamRenamed`
+`OnTeamRenamed`
 
-```typescript
-app.on('teamRenamed', async ({ activity }) => {
-  // Code logic here
+```csharp
+teams.OnTeamRenamed(async (context, cancellationToken) =>
+{
+    // Code logic here
 });
 ```
 
-`membersAdded` / `membersRemoved`
+`OnMembersAdded`
 
-```typescript
-app.on('membersAdded', async ({ activity, send }) => {
-  for (const member of activity.membersAdded) {
-    await send(`Welcome, ${member.name}!`);
-  }
-});
-
-app.on('membersRemoved', async ({ activity }) => {
-  // Code logic here
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersAdded)
+  {
+        // Code logic here
+    }
 });
 ```
 
-`messageUpdate` / `messageDelete`
+`OnMembersRemoved`
 
-Message edits are surfaced as `messageUpdate`. Soft deletes are surfaced as `messageDelete` — the `activity.channelData.eventType` will be `'softDeleteMessage'`.
-
-```typescript
-app.on('messageUpdate', async ({ activity }) => {
-  // Code logic here
-});
-
-app.on('messageDelete', async ({ activity }) => {
-  // activity.channelData.eventType === 'softDeleteMessage' for soft deletes
-  // Code logic here
+```csharp
+teams.OnMembersRemoved(async (context, cancellationToken) =>
+{
+  foreach (var member in context.Activity.MembersRemoved)
+  {
+        // Code logic here
+    }
 });
 ```
 
-# [C#](#tab/csharp)
+`OnMessageUpdate` / `OnMessageDelete`
+
+Message edits are handled via `OnMessageUpdate`. Soft deletes are handled via `OnMessageDelete`.
+
+```csharp
+teams.OnMessageUpdate(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+
+teams.OnMessageDelete(async (context, cancellationToken) =>
+{
+    // Code logic here
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
 
@@ -218,6 +240,77 @@ app.OnMessageUpdate(async context => {
 });
 
 app.OnMessageDelete(async context => {
+    // Code logic here
+});
+```
+
+# [TypeScript](#tab/typescript)
+
+Agents are built using the `@microsoft/teams.apps` package. You instantiate an `App` and register handlers with `app.on(eventName, handler)`. The SDK routes activities to the correct handler based on the event name string.
+
+`channelCreated`
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+const app = new App();
+
+app.on('channelCreated', async ({ activity }) => {
+    const channel = activity.channelData.channel; // { id, name }
+    const team    = activity.channelData.team;    // { id, name }
+    // Code logic here
+});
+```
+
+`channelDeleted`
+
+```typescript
+app.on('channelDeleted', async ({ activity }) => {
+    // Code logic here
+});
+```
+
+`channelRenamed`
+
+```typescript
+app.on('channelRenamed', async ({ activity }) => {
+    // Code logic here
+});
+```
+
+`teamRenamed`
+
+```typescript
+app.on('teamRenamed', async ({ activity }) => {
+    // Code logic here
+});
+```
+
+`membersAdded` / `membersRemoved`
+
+```typescript
+app.on('membersAdded', async ({ activity, send }) => {
+    for (const member of activity.membersAdded) {
+        await send(`Welcome, ${member.name}!`);
+    }
+});
+
+app.on('membersRemoved', async ({ activity }) => {
+    // Code logic here
+});
+```
+
+`messageUpdate` / `messageDelete`
+
+Message edits are surfaced as `messageUpdate`. Soft deletes are surfaced as `messageDelete` — the `activity.channelData.eventType` will be `'softDeleteMessage'`.
+
+```typescript
+app.on('messageUpdate', async ({ activity }) => {
+    // Code logic here
+});
+
+app.on('messageDelete', async ({ activity }) => {
+    // activity.channelData.eventType === 'softDeleteMessage' for soft deletes
     // Code logic here
 });
 ```
@@ -301,22 +394,27 @@ async def handle_undelete_message(ctx: ActivityContext):
 
 The following code provides an example of an agent activity:
 
-# [TypeScript](#tab/typescript)
+# [C# SDK v2.1](#tab/csharp)
 
-```typescript
-import { App } from '@microsoft/teams.apps';
+```csharp
+using Microsoft.Teams.Apps;
 
-const app = new App();
+WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
+builder.Services.AddTeamsBotApplication();
 
-app.on('message', async ({ activity, reply }) => {
-  const senderName = activity.from.name;
-  await send(`Hello <at>${senderName}</at>.`);
+WebApplication app = builder.Build();
+TeamsBotApplication teams = app.UseTeamsBotApplication();
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var senderName = context.Activity.From.Name;
+    await context.SendAsync($"Hello <at>{senderName}</at>.", cancellationToken);
 });
 
-app.start().catch(console.error);
+app.Run();
 ```
 
-# [C#](#tab/csharp)
+# [C# SDK<2.1(legacy)](#tab/csharp-legacy)
 
 ```csharp
 using Microsoft.Teams.Apps.Activities;
@@ -336,6 +434,21 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 
 app.Run();
+```
+
+# [TypeScript](#tab/typescript)
+
+```typescript
+import { App } from '@microsoft/teams.apps';
+
+const app = new App();
+
+app.on('message', async ({ activity, reply }) => {
+    const senderName = activity.from.name;
+    await send(`Hello <at>${senderName}</at>.`);
+});
+
+app.start().catch(console.error);
 ```
 
 # [Python](#tab/python)
@@ -364,7 +477,43 @@ Agent logic incorporates the fundamental rules and decision-making frameworks th
 
 In Teams SDK v2, the agent logic processes incoming activities from one or more agent channels and generates outgoing activities. All activity routing is handled by the `App` instance — you register the handlers, and the SDK dispatches activities to them automatically.
 
-# [TypeScript](#tab/typescript)
+# [C#](#tab/csharp-reference)
+
+#### Core activity handlers
+
+The `App` class exposes extension methods for registering handlers. Methods return `App` for fluent chaining.
+
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
+| Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
+| Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
+| Non-agent members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
+| Non-agent members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
+| Installation added | `OnInstall(handler)` | Agent was installed. |
+
+#### Teams-specific activity handlers
+
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Channel created | `OnChannelCreated(handler)` | A Teams channel was created. |
+| Channel deleted | `OnChannelDeleted(handler)` | A Teams channel was deleted. |
+| Channel renamed | `OnChannelRenamed(handler)` | A Teams channel was renamed. |
+| Team renamed | `OnTeamRenamed(handler)` | The team was renamed. |
+| Message edited | `OnMessageUpdate(handler)` | A message was edited. |
+| Message soft deleted | `OnMessageDelete(handler)` | A message was soft-deleted. |
+
+#### Teams invoke activities
+
+| Invoke type | Extension method | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `OnExecuteAction(handler)` | A card action invoke activity was received. |
+| `task/fetch` | `OnTaskFetch(handler)` | A dialog (task module) was fetched. |
+| `task/submit` | `OnTaskSubmit(handler)` | A dialog (task module) was submitted. |
+| `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
+
+# [TypeScript](#tab/typescript-reference)
 
 #### Core activity handlers
 
@@ -415,43 +564,7 @@ The following table lists invoke activity handlers available via `app.on()`:
 | `task/fetch` | `'dialog.open'` | A dialog (task module) was fetched. |
 | `task/submit` | `'dialog.submit'` | A dialog (task module) was submitted. |
 
-# [C#](#tab/csharp)
-
-#### Core activity handlers
-
-The `App` class exposes extension methods for registering handlers. Methods return `App` for fluent chaining.
-
-| Event | Extension method | Description |
-| --- | --- | --- |
-| Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
-| Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
-| Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
-| Non-agent members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
-| Non-agent members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
-| Installation added | `OnInstall(handler)` | Agent was installed. |
-
-#### Teams-specific activity handlers
-
-| Event | Extension method | Description |
-| --- | --- | --- |
-| Channel created | `OnChannelCreated(handler)` | A Teams channel was created. |
-| Channel deleted | `OnChannelDeleted(handler)` | A Teams channel was deleted. |
-| Channel renamed | `OnChannelRenamed(handler)` | A Teams channel was renamed. |
-| Team renamed | `OnTeamRenamed(handler)` | The team was renamed. |
-| Message edited | `OnMessageUpdate(handler)` | A message was edited. |
-| Message soft deleted | `OnMessageDelete(handler)` | A message was soft-deleted. |
-
-#### Teams invoke activities
-
-| Invoke type | Extension method | Description |
-| --- | --- | --- |
-| `CardAction.Invoke` | `OnExecuteAction(handler)` | A card action invoke activity was received. |
-| `task/fetch` | `OnTaskFetch(handler)` | A dialog (task module) was fetched. |
-| `task/submit` | `OnTaskSubmit(handler)` | A dialog (task module) was submitted. |
-| `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
-| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
-
-# [Python](#tab/python)
+# [Python](#tab/python-reference)
 
 #### Core activity handlers
 
