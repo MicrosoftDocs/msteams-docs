@@ -13,8 +13,6 @@ Before you add code to enable single sign-on (SSO), ensure that you configure yo
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
 
-> [!NOTE]
-> `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file are the only SSO handlers that are supported. Other SSO handlers aren't supported.
 
 This article covers:
 
@@ -47,9 +45,6 @@ You've now configured the required environment variables for your bot app and SS
 
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
-> [!NOTE]
-> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
-
 To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
@@ -73,9 +68,6 @@ To update your app's code:
     ```
 
     ---
-
-    > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest&preserve-view=true#remarks).
 
 1. Use the following code snippet for requesting a token.
 
@@ -350,9 +342,6 @@ async loginStep(stepContext) {
 ```
 
 ---
-
-> [!NOTE]
-> The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
 You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for.
 
