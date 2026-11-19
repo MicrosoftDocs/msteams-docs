@@ -220,6 +220,18 @@ bot.OnQueryLink((context, cancellationToken) =>
 
 ```
 
+In this example,
+
+- `context.Activity.Value?.Url`: Reads the pasted URL. Use it to retrieve the linked content from your service.
+- `cancellationToken`: Supports cancellation of asynchronous operations, such as fetching link metadata; unused in this example.
+- `imageUrl`: Sets the card image URL. Replace it with a publicly accessible HTTPS image for your content.
+- `ContentType`: Identifies the attachment format—thumbnail for the preview and Adaptive Card for the expanded card.
+- `Content`: Defines the card payload. Customize `title`, `text`, `images`, and `body` to display your content.
+- `version = "1.3"`: Declares the Adaptive Card schema version; keep it within the versions supported by link unfurling.
+- `attachment.Properties["preview"]`: Adds the preview attachment required for the unfurling response.
+- `WithType(...Result)`, `WithAttachmentLayout(...List)`, and `WithAttachments(...)`: Return the card as a message extension result using a list layout.
+- `WithText("No URL provided")`: Sets the user-facing message returned when the URL is missing.
+
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
