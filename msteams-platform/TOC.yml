@@ -1,20 +1,75 @@
-- name: Teams Platform documentation
-  href: index.yml
-- name: Overview
-  href: overview.md
-  displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: Developer announcements
-  href: developer-announcements.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
+- name: "Quickstart: Create and chat with an agent"
+  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+- name: Platform concepts
+  items:
+  - name: Teams platform overview*
+    href: overview.md
+    displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
+  - name: Platform model
+    href: TODO
+    displayName: How entra, ACS, platform, runtime fit together
+  - name: Development lifecycle
+  - name: Registration
+  - name: ACS
+  - name: Permissions
+  - name: AI
+  - name: Teams SDK and other tools (section?)
+  - name: Preview features
+  - name: User authentication, SSO and OAuth
+  - name: Messaging
+    href: TODO
+    displayName: can define Proactive messaging here. include cards and widgets
+  - name: Agent capabilities (surfaces)
+  - name: Microsoft Graph
+  - name: App and agentic identity
+    href: TODO
+  - name: Testing
+  - name: Publishing
+- name: Agent design concepts (conceptual and cognitive action)
+  items:
+  - name: Interactivity and collaboration* (conceptual and cognitive action)
+    items:
+      - name: TODO
+        href: TODO
+        displayName: This is where good agent stuff goes, as well as feature checklists, capabilities. Not just designer-y design, also technical design, stuff like context management, connecting to will have more to say here than slack does.
+  - name: Runtime architecture (conceptual and cognitive action)
+    displayName: Considerations for managing turn state, storage, concurrency, memory, lifecycle events
+
+- name: Build (action)
+  items:
+  - name: Set up your environment
+    href: TODO
+    displayName: Install coding agent, dev tunnel, see JTBD
+  - name: Register and configure
+    items:
+    - name: TODO
+      href: TDOO
+  - name: Send and receive messages
+    href: TDOO
+    displayName: 
+  - name: Handle events and activities
+  - name: Authenticate users (SSO and OAuth)
+    href: TODO
+  - name: Connect Graph and WorkIQ
+  - name: Integrate AI
+    href: TODO
+    displayName: 
+  - name: Configure agent permissions (RSC)
+    href: TODO
+    displayName: RSC, resource specific consent
+  - name: Use device capabilities
+  - name: Add capabilities (surfaces)
+    href: TODO
+  - 
+
 - name: Build conversational agents for Teams
   expanded: true
   items:
   - name: Get started
     expanded: true
     items:
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+
     - name: Agents in Teams
       href: agents-in-teams/overview.md
     - name: Agent basics
