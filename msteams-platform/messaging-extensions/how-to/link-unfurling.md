@@ -345,6 +345,19 @@ async def handle_query_link(
     )
 ```
 
+In this example,
+
+- `@app.on_message_ext_query_link`: Registers the handler for link-unfurling requests.
+- `ctx.activity.value.url`: Reads the pasted URL. Use it to retrieve the linked content from your service.
+- `status=400`: Returns an invalid-request response when no URL is provided.
+- `image_url`: Sets the card image URL. Replace it with a publicly accessible HTTPS image for your content.
+- `content_type`: Identifies the attachment format—thumbnail for the preview and Adaptive Card for the expanded card.
+- `content`: Defines the card payload. Customize `title`, `text`, `images`, and `body` to display your content.
+- `"version": "1.3"`: Declares the Adaptive Card schema version supported by this example.
+- `preview=preview`: Associates the thumbnail preview with the expanded card.
+- `type="result"`, `attachment_layout="list"`, and `attachments=[attachment]`: Specify a card result, its display layout, and the attachment returned to Teams.
+- `compose_extension`: Wraps the result in the message extension response.
+
 ::: zone-end
 
 ## Micro-capabilities for website links
