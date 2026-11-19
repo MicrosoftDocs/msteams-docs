@@ -3,7 +3,7 @@ title: Add code to enable SSO in a message extension
 description: Learn how to configure code, request and receive an access token, and handle sign-out when enabling SSO in a Teams message extension.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/12/2026
+ms.date: 11/19/2026
 ---
 
 # Add code to enable SSO in your message extension app
