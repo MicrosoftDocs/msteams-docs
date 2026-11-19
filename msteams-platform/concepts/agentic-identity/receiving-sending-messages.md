@@ -1,12 +1,12 @@
 ---
-title: Receiving and sending messages
+title: Receiving and Sending Messages as an Agentic User
 description: Receive messages and send replies, reactions, and proactive messages as an Agentic User.
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
 ms.date: 11/11/2026
 ---
 
-# Receiving and sending messages
+# Receiving and sending messages as an Agentic User
 
 Configure the blueprint client ID, credential, and tenant ID in your app's SDK credentials. Teams SDK uses them to acquire tokens for the Agentic User.
 
@@ -179,6 +179,7 @@ await api.Conversations.AddReactionAsync(
 const agenticIdentity = app.getAgenticIdentity({
   agenticAppId,
   agenticUserId,
+  tenantId,
 });
 
 await app.send(conversationId, 'Your scheduled update is ready.', {

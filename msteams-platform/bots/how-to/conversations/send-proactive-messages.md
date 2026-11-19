@@ -54,7 +54,7 @@ Regardless of how you get the information, store the `tenantId` and then store e
 Create the conversation, after you have the user or channel information.
 
 > [!NOTE]
-> Sending proactive messages using `aadObjectId` is supported only in personal scope.
+> In personal scope, you can address proactive messages using the user's Microsoft Entra ID object ID. Email addresses and User Principal Names (UPNs) can't be used to address proactive messages in any scope.
 
 ## Create the conversation
 
@@ -63,7 +63,7 @@ You can create the conversation if it doesn't exist or if you don't know the `co
 To create the conversation, you need a `aadObjectId` or `userId`, `tenantId`, and `serviceUrl`.
 
 > [!NOTE]
-> To create the conversation, pass the `aadObjetId` value in the `Id` parameter.
+> To create the conversation, pass the `aadObjectId` value in the `Id` parameter.
 
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
@@ -93,12 +93,7 @@ After you get the appropriate address information, you can send your message.
 
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.SendAsync()` method and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
-To proactively send a message as a reply to a thread in a channel, use `app.ReplyAsync()` with both the conversation ID and the ID of the thread's root message.
-
-> [!NOTE]
-> Teams doesn't support sending proactive messages using email or User Principal Name (UPN).
-
-Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the agent.
+To continue an existing discussion in a channel or in a chat that supports threading, send a reply in that discussion’s thread. Otherwise, send a new top-level message. For detailed implementation guidance, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
 
 ### Understand who blocked, muted, or uninstalled an agent
 
