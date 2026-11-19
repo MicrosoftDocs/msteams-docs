@@ -6,7 +6,9 @@ ms.localizationpriority: medium
 ms.topic: article
 ms.owner: slamba
 ms.date: 11/19/2026
+zone_pivot_groups: teams-sdk-languages
 ---
+
 # Link unfurling
 
 This document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
@@ -120,9 +122,7 @@ For more information, see [Action.Execute](~/task-modules-and-cards/cards/cards-
 
 The following code is an example of the `invoke` request:
 
-# [JSON](#tab/json)
-
- Following is an example of the `invoke` sent to your bot:
+Following is a JSON example of the `invoke` request sent to your bot:
 
 ```json
    {
@@ -160,7 +160,7 @@ Example of the response:
       
 ```
 
-# [.NET](#tab/dotnet)
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 using Microsoft.Teams.Apps.MessageExtensions;
@@ -219,7 +219,9 @@ bot.OnQueryLink((context, cancellationToken) =>
 });
 ```
 
-# [JavaScript](#tab/javascript)
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
 
 ```TypeScript
 import { cardAttachment } from '@microsoft/teams.api';
@@ -265,7 +267,9 @@ app.on('message.ext.query-link', async ({ activity }) => {
 });
 ```
 
-# [Python](#tab/python)
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```Python
 from microsoft_teams.api import (
@@ -324,7 +328,8 @@ async def handle_query_link(
         )
     )
 ```
----
+
+::: zone-end
 
 ## Micro-capabilities for website links
 
