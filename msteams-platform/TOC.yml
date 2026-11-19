@@ -13,10 +13,11 @@
   - name: Registration
   - name: ACS
   - name: Permissions
+  - name: Events
   - name: AI
   - name: Teams SDK and other tools (section?)
   - name: Preview features
-  - name: User authentication, SSO and OAuth
+  - name: User authentication (SSO and OAuth)
   - name: Messaging
     href: TODO
     displayName: can define Proactive messaging here. include cards and widgets
@@ -26,6 +27,8 @@
     href: TODO
   - name: Testing
   - name: Publishing
+
+
 - name: Agent design concepts (conceptual and cognitive action)
   items:
   - name: Interactivity and collaboration* (conceptual and cognitive action)
@@ -36,7 +39,8 @@
   - name: Runtime architecture (conceptual and cognitive action)
     displayName: Considerations for managing turn state, storage, concurrency, memory, lifecycle events
 
-- name: Build (action)
+
+- name: Build & test (action)
   items:
   - name: Set up your environment
     href: TODO
@@ -45,6 +49,7 @@
     items:
     - name: TODO
       href: TDOO
+      displayName: enable dev preview
   - name: Send and receive messages
     href: TDOO
     displayName: 
@@ -61,7 +66,8 @@
   - name: Use device capabilities
   - name: Add capabilities (surfaces)
     href: TODO
-  - 
+
+- name: Publish
 
 - name: Build conversational agents for Teams
   expanded: true
