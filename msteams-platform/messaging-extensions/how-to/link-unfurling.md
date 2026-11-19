@@ -80,7 +80,6 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 First, you must add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
 
 ```json
-...
 {
   "composeExtensions": [
     {
@@ -99,7 +98,7 @@ First, you must add the `messageHandlers` array to your app manifest and enable 
   ]
 }
 ...
-```
+
 
 For a complete manifest example, see [manifest reference](/microsoft-365/extensibility/schema/).
 
@@ -222,7 +221,7 @@ bot.OnQueryLink((context, cancellationToken) =>
 
 # [JavaScript](#tab/javascript)
 
-```javascript
+```TypeScript
 import { cardAttachment } from '@microsoft/teams.api';
 
 app.on('message.ext.query-link', async ({ activity }) => {
