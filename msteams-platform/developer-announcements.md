@@ -2,7 +2,7 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 11/18/2026
+ms.date: 11/20/2026
 ---
 
 # Teams Platform developer announcements
@@ -11,15 +11,17 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 ## Action required: Upcoming changes to file upload and download authentication for Microsoft Teams agents
 
-*November 18, 2026*
+*November 20, 2026*
 
-Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Make and deploy the [required changes](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) by **March 1, 2027**, or your agent won't be able to upload or download files, and users might see errors.
+Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Start planning for these changes now. To minimize disruption, make the [required changes](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) and publish your updated app manifest worldwide by **March 1, 2027**. After that date, agents that haven't been updated won't be able to upload or download files, and users might see errors.
 
 These changes are intended to strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements.
 
-**Action required:** If your agent uses the `downloadUrl` in file attachments, or the `uploadUrl` it gets after a user accepts a file consent card to download or upload files, you'll need to migrate to requests that include your agent's own Microsoft Entra ID access token, obtained with a certificate, federated identity credential (FIC) or managed identity, to continue to download or upload files. Tokens obtained with a client secret won't work for these requests. If your agent downloads files with the Teams SDK, update the SDK once a version that sends your agent's token on file downloads is released (expected December 2026), and add a certificate, FIC or managed identity to its configuration. The SDK update covers downloads only, so if your agent uploads files, update your upload code too. Also add a file permission to your app manifest: `File.ReadSelected.User` if your agent only receives files, or `File.ReadWriteSelected.User` if it also sends them. For details, see [Update an existing bot to authenticate file requests](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests).
+**Action required now:** If your agent uses the `downloadUrl` in file attachments, or the `uploadUrl` it gets after a user accepts a file consent card, to download or upload files, update it to include your agent's own Microsoft Entra ID access token on these requests. Get the token with a certificate, federated identity credential (FIC) or managed identity. Tokens obtained with a client secret won't work for these requests. If your agent downloads files with the Teams SDK, update the SDK once a version that sends your agent's token on file downloads is released (expected December 2026), and add a certificate, FIC or managed identity to its configuration. The SDK update covers downloads only, so if your agent uploads files, update your upload code too.
 
-Teams is rolling out support for the `File.ReadSelected.User` and `File.ReadWriteSelected.User` permissions. Until the rollout is complete, installing or updating an agent whose app manifest includes either permission might fail.
+**Starting January 15, 2027:** The `File.ReadSelected.User` and `File.ReadWriteSelected.User` permissions roll out for use in app manifests. Add `File.ReadSelected.User` if your agent only receives files, or `File.ReadWriteSelected.User` if it also sends them, and publish the updated manifest worldwide by March 1, 2027. If you add them earlier, see [Known issues](bots/how-to/bots-filesv4.md#known-issues).
+
+For details, see [Update an existing bot to authenticate file requests](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests).
 
 To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
 

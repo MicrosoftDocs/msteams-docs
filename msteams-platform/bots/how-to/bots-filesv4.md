@@ -1,7 +1,7 @@
 ---
 title: Send and receive files
 description: Learn how agents send and receive files in Microsoft Teams using Teams SDK and Microsoft Graph.
-ms.date: 11/18/2026
+ms.date: 11/20/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -15,7 +15,7 @@ zone_pivot_groups: teams-sdk-languages
 
 > [!IMPORTANT]
 >
-> **If your bot already downloads or uploads files, update it by March 1, 2027.** Bots that aren't updated won't be able to download or upload files. To learn what to change, see [Update an existing bot to authenticate file requests](#update-an-existing-bot-to-authenticate-file-requests).
+> **If your bot already downloads or uploads files, start planning for changes to file authentication.** Update your bot to send an access token on file requests now, and add the file permission to your app manifest starting January 15, 2027. To minimize disruption, deploy both changes and publish your updated manifest worldwide by March 1, 2027. After that date, bots that aren't updated can't download or upload files. See [Update an existing bot to authenticate file requests](#update-an-existing-bot-to-authenticate-file-requests).
 
 Agents can receive, read, and send documents in Microsoft Teams conversations. Teams stores these files in OneDrive or SharePoint and displays them as file cards or stored items.
 
@@ -68,7 +68,7 @@ The required configuration depends on the identity and file operation:
 | Scenario | App manifest update | Other configuration |
 | --- | --- | --- |
 | Agentic user receives a file | None | Add a Microsoft Graph file permission to the agent blueprint and obtain administrator consent. |
-| Bot receives a file, or sends a file through file consent | Set `supportsFiles` to `true` on the bot entry.<br>Add the [RSC permission](#add-the-rsc-permission-to-your-app-manifest) under `authorization.permissions.resourceSpecific`. | Add a certificate, federated identity credential, or managed identity to the bot's app registration for the file token. Client secrets aren't supported. See [Authenticate bot file requests](#authenticate-bot-file-requests). |
+| Bot receives a file, or sends a file through file consent | Set `supportsFiles` to `true` on the bot entry.<br>Starting January 15, 2027, add the [RSC permission](#add-the-rsc-permission-to-your-app-manifest) under `authorization.permissions.resourceSpecific`. | Add a certificate, federated identity credential, or managed identity to the bot's app registration for the file token. Client secrets aren't supported. See [Authenticate bot file requests](#authenticate-bot-file-requests). |
 | App sends or retrieves a stored file with Microsoft Graph | No file-specific app manifest property | Configure the required Microsoft Graph permission and authentication for the calling identity. |
 
 #### Agentic user
@@ -105,8 +105,8 @@ Without `supportsFiles: true`, users can't attach files in a personal chat with 
 
 A bot that receives or sends files also needs:
 
-* The `File.ReadSelected.User` RSC permission if it only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest. For more information, see [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
 * An app-only access token on every file request, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
+* Starting January 15, 2027, the `File.ReadSelected.User` RSC permission if it only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest. For more information, see [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
 
 ### Access received files and metadata
 
@@ -517,7 +517,7 @@ Use the bot file-consent workflow to request permission before your bot uploads 
 1. Send a `FileInfoCard` that links to the uploaded file.
 1. If the user declines, discard the pending content.
 
-To upload files, a bot needs the `File.ReadWriteSelected.User` [RSC permission](#add-the-rsc-permission-to-your-app-manifest) under `authorization.permissions.resourceSpecific` in the app manifest, and an app-only access token on every request to `uploadUrl`. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
+To upload files, a bot sends an app-only access token on every request to `uploadUrl`. Starting January 15, 2027, it also declares the `File.ReadWriteSelected.User` [RSC permission](#add-the-rsc-permission-to-your-app-manifest) in its app manifest. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 
 #### Request file consent
 
@@ -769,39 +769,12 @@ Key properties and values:
 
 A bot sends its own access token with every file download and upload request. Your bot must:
 
-* **Declare the RSC permission**: Add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest.
-* **Send a bearer token with every file request**: Acquire an app-only token for the host of the `downloadUrl` or `uploadUrl` and send it in the `Authorization` header on the download `GET` and on every request to `uploadUrl`.
-* **Not use a client secret for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. A token acquired with a client secret gets HTTP 401.
+* **Use a supported credential for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. A token acquired with a client secret gets HTTP 401.
 * **Request the token for the file's tenant**: Use the tenant ID provided with the file, and fall back to the activity's tenant ID only when the file's tenant ID is missing.
+* **Send a bearer token with every file request**: Acquire an app-only token for the host of the `downloadUrl` or `uploadUrl` and send it in the `Authorization` header on the download `GET` and on every request to `uploadUrl`.
+* **Declare the RSC permission, starting January 15, 2027**: Add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest.
 
 These requirements apply only to the token your bot uses for file operations. Your bot can keep using its client secret for other calls, such as getting the Bot Framework token.
-
-### Add the RSC permission to your app manifest
-
-> [!IMPORTANT]
->
-> Teams is rolling out support for the `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions. Until the rollout is complete, installing or updating an app whose manifest includes either permission might fail.
-
-Bots that receive or send files must complete these steps:
-
-1. **Update your Teams app manifest**
-
-   Under `authorization.permissions.resourceSpecific`, add the required RSC permission(s):
-
-   * `File.ReadSelected.User` — allows the bot to read files explicitly shared with it. Use it if your bot only downloads files.
-   * `File.ReadWriteSelected.User` — allows the bot to read and write files explicitly shared with it, including supported upload scenarios. Use it if your bot uploads files. It also covers downloads, so you don't need both.
-
-   These permissions allow Teams to provision the required app identity and file-access configuration.
-
-   Set `type` to `Application`. For the app manifest format, see [Declare RSC permissions in the app manifest](../../graph-api/rsc/declare-resource-specific-consent-requirements.md#declare-rsc-permissions-in-the-app-manifest).
-
-   > [!IMPORTANT]
-   >
-   > Declaring these permissions does not automatically grant file access. Access is granted only when an authorized user explicitly shares a file with the bot or consents to the relevant operation.
-
-1. **Publish the updated manifest**
-
-   Publish the updated Teams app manifest with the required permissions. Users or tenant admins might be prompted to approve the new permissions when they install or update the app.
 
 ### Choose a credential for the file token
 
@@ -902,6 +875,23 @@ Key values:
 * `Authorization`: Send the bearer token on the download `GET` and every `uploadUrl` request.
 * `tempauth`: Check for a `tempauth` query parameter, ignoring case. If token acquisition fails and the `tempauth` query parameter is present, the request can be made without the token.
 * `https.request`: Send the URL exactly as received. Node `fetch` and `axios` change `'` to `%27`.
+
+### Add the RSC permission to your app manifest
+
+> [!NOTE]
+>
+> The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions are rolling out for use in app manifests starting January 15, 2027. See [Known issues](#known-issues).
+
+Under `authorization.permissions.resourceSpecific` in your app manifest, add one of these permissions with `type` set to `Application`:
+
+* `File.ReadSelected.User`: The bot can read files that users share with it. Use it if your bot only downloads files.
+* `File.ReadWriteSelected.User`: The bot can read files that users share with it and upload files that users accept. Use it if your bot uploads files. It also covers downloads, so you don't need both.
+
+For the manifest format, see [Declare RSC permissions in the app manifest](../../graph-api/rsc/declare-resource-specific-consent-requirements.md#declare-rsc-permissions-in-the-app-manifest).
+
+The permission doesn't give your bot access to any file on its own. The bot can access a file only after a user shares it with the bot or accepts a file consent card.
+
+To minimize disruption, publish the updated manifest worldwide by March 1, 2027. Users or admins might be asked to approve the permission when they install or update the app.
 
 ## Handle errors
 
@@ -1054,22 +1044,28 @@ Key types and values:
 
 ## Update an existing bot to authenticate file requests
 
-If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, make and deploy the following changes by March 1, 2027. If you don't, your bot won't be able to download or upload files, and users might see errors.
+If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, start planning for these changes now. To minimize disruption, deploy the code changes and publish your updated app manifest worldwide by March 1, 2027. After that date, bots that aren't updated can't download or upload files, and users might see errors.
 
 The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
 
-You can make these changes now. Until enforcement begins on March 1, 2027, `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. Starting March 1, 2027, they don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token.
+| Date | What changes | What to do |
+| --- | --- | --- |
+| Now | `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. | Update your bot to send an access token on file requests. |
+| January 15, 2027 | The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions start rolling out for use in app manifests. | Add the permission to your app manifest and publish it. |
+| March 1, 2027 | `downloadUrl` and `uploadUrl` values don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token. | Have both changes deployed and your updated manifest published worldwide. |
 
-Complete the following checklist:
+### Changes to make now
 
-1. **Identify your file token credential.** Determine whether your bot uses a certificate, FIC, managed identity, or client secret to acquire app-only tokens. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
-1. **Replace client secrets for the file token.** If your bot uses a client secret, add a certificate or FIC to the bot's app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
-1. **Use the bot's app ID.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
-1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` RSC permission. Then publish the updated manifest. See [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
-1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
+1. **Set up a credential for the file token.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app. If the bot uses a client secret, add a certificate or FIC to its app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
 1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing. See [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
+1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
 1. **Keep the `tempauth` fallback until enforcement.** Before enforcement, if token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header to avoid disruption. This also covers tenants where a multi-tenant bot doesn't have a service principal yet. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
 1. **Validate file upload and download.** Test your bot's file operations with the updated authentication approach, including missing tenant information and HTTP 401 responses.
+
+### Changes to make starting January 15, 2027
+
+1. **Update and publish your app manifest.** Under `authorization.permissions.resourceSpecific`, add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, as an `Application` RSC permission. Publish the updated manifest worldwide by March 1, 2027. See [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
+1. **Test with the updated manifest.** Install the updated app and confirm that file download and upload still work.
 
 To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
 
@@ -1089,6 +1085,17 @@ Apply these guidelines to create secure, predictable file experiences. Review th
 * Don't log file bytes, credentials, identifiers, or `downloadUrl` and `uploadUrl` values.
 * Apply expiration and cleanup policies to pending file-consent uploads.
 * Propagate cancellation and handle HTTP, credential, scope, and expiration failures.
+
+## Known issues
+
+### Adding a file RSC permission before January 15, 2027
+
+Before January 15, 2027, Teams doesn't accept the `File.ReadSelected.User` and `File.ReadWriteSelected.User` permissions in app manifests. If your manifest includes either permission, users can't install your app, and users who already have it stay on the previous version. Teams shows one of these errors:
+
+* **App package can't be uploaded**, with "Something went wrong when uploading your app."
+* **Requested permission is not recognized.**
+
+Publish your manifest with these permissions starting January 15, 2027. You can make the [changes to make now](#changes-to-make-now) before then.
 
 ## See also
 
