@@ -228,99 +228,32 @@ Use the following code snippet example to invoke response:
 # [C#](#tab/cs3)
 
 ```csharp
-public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-    : base(nameof(MainDialog), configuration["ConnectionName"])
+auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
 {
-    AddDialog(new OAuthPrompt(
-        nameof(OAuthPrompt),
-        new OAuthPromptSettings
-        {
-            ConnectionName = ConnectionName,
-            Text = "Please Sign In",
-            Title = "Sign In",
-            Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-            EndOnInvalidMessage = true
-        }));
+    var accessToken = tokenResponse.Token;
 
-    AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-    AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
-    {
-        PromptStepAsync,
-        LoginStepAsync,
-    }));
-
-    // The initial child Dialog to run.
-    InitialDialogId = nameof(WaterfallDialog);
-}
-
-private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-{
-    return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-}
-
-private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-{
-    var tokenResponse = (TokenResponse)stepContext.Result;
-    if (tokenResponse?.Token != null)
-    {
-        var token = tokenResponse.Token;
-
-        // On successful login, the token contains sign in token.
-    }
-    else
-    {
-        await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-    }
-
-    return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
-}
+    // Use accessToken to call the protected resource.
+    await context.SendAsync(
+        "You have signed in successfully.",
+        cancellationToken);
+});
 ```
 
 # [JavaScript](#tab/js3)
 
 ```javascript
-class MainDialog {
-    this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
-        connectionName: process.env.connectionName,
-        text: 'Please Sign In',
-        title: 'Sign In',
-        timeout: 300000
-    }));
+auth.onSignInComplete(async (context, tokenResponse) => {
+  const accessToken = tokenResponse.token;
 
-    this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
-
-    this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
-        this.promptStep.bind(this),
-        this.loginStep.bind(this),
-    ]));
-
-    this.initialDialogId = MAIN_WATERFALL_DIALOG;
-}
-
-async promptStep(stepContext) {
-    try {
-        return await stepContext.beginDialog(OAUTH_PROMPT);
-    } catch (err) {
-        console.error(err);
-    }
-}
-
-async loginStep(stepContext) {
-    // Get the token from the previous step. Note that we could also have gotten the
-    // token directly from the prompt itself. There is an example of this in the next method.
-    const tokenResponse = stepContext.result;
-    if (!tokenResponse || !tokenResponse.token) {
-        await stepContext.context.sendActivity('Login was not successful please try again.');
-    } else {
-        const token = tokenResponse.token;
-        // On successful login, the token contains sign in token.
-    }
-    return await stepContext.endDialog();
-}
+  // Use accessToken to call the protected resource.
+  await context.send('You have signed in successfully.');
+});
 ```
 
 ---
+
+> [!NOTE]
+> These examples use Teams SDK OAuth flows instead of dialog-based authentication. Handle successful sign-in with the flow’s completion callback. A cached token returned by the sign-in method is handled directly by the calling handler.
 
 You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for.
 
