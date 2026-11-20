@@ -3,20 +3,15 @@
   displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
 - name: Platform concepts
   items:
-  - name: Teams platform overview*
+  - name: Teams platform overview
     href: overview.md
     displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
-  - name: Platform model
+  - name: Platform components
     href: platform-concepts/todo.md
     displayName: How entra, ACS, platform, runtime fit together, agentic identity
   - name: Development lifecycle
-    items:
-    - name: TODO
-      href: platform-concepts/todo.md
-    - name: Testing
-      href: platform-concepts/todo.md
-    - name: Publishing
-      href: platform-concepts/todo.md
+    href: platform-concepts/todo.md
+    displayName: developer journey
   - name: Registration
     href: platform-concepts/todo.md
   - name: Agent identity
@@ -35,6 +30,8 @@
     href: platform-concepts/todo.md
   - name: Events
     href: platform-concepts/todo.md
+  - name: Agent factory
+    href: platform-concepts/todo.md
   - name: Agent capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
@@ -45,37 +42,33 @@
     href: platform-concepts/todo.md  
   
 
-- name: Agent design concepts
+- name: Design for interactivity and collaboration
   items:
   - name: Interactivity and collaboration design
     href: agent-design-concepts/todo.md
     displayName: This is where good agent stuff goes, as well as feature checklists, capabilities. Not just designer-y design, also technical design, stuff like context management, connecting to will have more to say here than slack does.
-  - name: Technical runtime design
-    href: agent-design-concepts/todo.md
-    displayName: Considerations for managing turn state, storage, concurrency, memory, lifecycle events
 
-
-- name: Set up, register and configure
-  items:
-  - name: todo.md
-    href: todo.md
-    displayName: coding agent, dev env, register agent, tunnel, etc.
-
-
-- name: Build & test (action)
+- name: Build and test
   items:
   - name: Set up your environment
     href: todo.md
     displayName: Install coding agent, dev tunnel, see JTBD
-  - name: Register and configure
+  - name: Scaffold, register, and configure identity
     items:
-    - name: todo.md
-      href: todo.md
-      displayName: enable dev preview
-  - name: Send and receive messages
+    - name: Configure runtime authentication
+      href: agents-in-teams/configure-agent-runtime-authentication.md
+      displayName: enable dev preview, coding agnet, dev env, register, tunnel, etc.
+    - name: agentic id
+      href: todo
+  - name: "*Create the main agent loop*"
     href: todo.md
-    displayName: 
-  - name: Handle events and activities
+    displayName: messages, messaging, send, receive, events, activities; state and contxt mgmt?
+  - name: Send rich messages
+    href: todo.md
+    displayName: sending fancy messages - cards, widgets, inline images
+  - name: Use advanced conversational features
+    href: todo.md
+    displayName: emoji reactions, suggested actions, tms, slash commands, files, proactive?
   - name: Authenticate users (SSO and OAuth)
     href: todo.md
   - name: Connect Graph and WorkIQ
@@ -103,18 +96,33 @@
   - name: App manifest schema
     href: /microsoft-365/extensibility/schema
     displayName: Reference, JSON, package
-  - name: Teams SDK for .NET
-    href: /dotnet/teams-sdk-dotnet
-    displayName: Reference
-  - name: Teams SDK for TypeScript
-    href: /javascript/api/teams-sdk-typescript
-    displayName: Reference
-  - name: Teams SDK for Python
-    href: /python/api/msteams-sdk-python
-    displayName: Reference
-  - name: Live Share SDK and TeamsJS
-    href: /javascript/api/overview/msteams-client
-    displayName: Reference, TeamsJS, client
+  - name: Adaptive Cards
+    href: todo.md
+    displayName: link to ac ref site
+  - name: Activity protocol and payload
+    href: todo.md
+  - name: RSC permissions
+    href: todo
+  - name: Agent Communication Service
+    href: todo
+  - name: Events
+    href: todo
+  - name: Developer Tools and SDKs
+    items:
+    - name: Teams developer CLI
+      href: todo.md
+    - name: Teams SDK for .NET
+      href: /dotnet/teams-sdk-dotnet
+      displayName: Reference
+    - name: Teams SDK for TypeScript
+      href: /javascript/api/teams-sdk-typescript
+      displayName: Reference
+    - name: Teams SDK for Python
+      href: /python/api/msteams-sdk-python
+      displayName: Reference
+    - name: Live Share SDK and TeamsJS
+      href: /javascript/api/overview/msteams-client
+      displayName: Reference, TeamsJS, client
 
 
 - name: Junk drawer
@@ -146,8 +154,7 @@
         href: agents-in-teams/registering-agent-teams-platform.md
       - name: Choose an agent registration type
         href: agents-in-teams/choose-agent-registration-type.md
-      - name: Configure runtime authentication
-        href: agents-in-teams/configure-agent-runtime-authentication.md
+
       - name: Incoming request authentication
         href: agents-in-teams/incoming-request-authentication.md
       - name: Multi-tenant and single-tenant agents
