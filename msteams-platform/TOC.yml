@@ -6,9 +6,21 @@
   - name: Teams platform overview
     href: overview.md
     displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
-  - name: Platform model
-    href: todo.md
-    displayName: entra, ACS, manifest, runtime
+  - name: Platform model (section?)
+    items:
+      - name: Overview
+        href: todo.md
+      - name: Activity protocol
+        href: todo.md
+      - name: Manifest
+        href: todo.md
+      - name: Agent runtime
+        href: todo.md
+        displayName: the thing you build
+      - name: Agent Communication Service
+        href: todo.md
+        displayName: events, messaging mode
+    displayName: entra, ACS, manifest, registration, runtime , events
   - name: Developer experience
     items:
     - name: Overview
@@ -19,22 +31,22 @@
       href: platform-concepts/todo.md  
     - name: Preview features
       href: platform-concepts/todo.md
-  - name: Building an agent runtime
-    href: todo.md
-    displayName: incoming request authentication; 
-    displayName: very high-level overview of the thing you build
-  - name: Agent registration and identity
+  - name: Agent identity and permissions
     items:
       - name: Overview
         href: todo.md
         displayName: How entra, ACS, platform, runtime fit together, agentic identity
       - name: Agent identity
         href: todo.md
+        displayName: agent factory
       - name: Agent tenancy
+        href: todo.md
+      - name: RSC
         href: todo.md
     displayName: entra, app registration, agentic identity
   - name: Messaging
     href: platform-concepts/todo.md
+    display: threads, channels, group chats, shared and private channels
     displayName: can define Proactive messaging here. include cards and widgets
   - name: AI
     href: platform-concepts/todo.md
@@ -45,10 +57,7 @@
   - name: Permissions
     href: platform-concepts/todo.md
     displayName: RSC
-  - name: Events
-    href: platform-concepts/todo.md
-  - name: Agent factory
-    href: platform-concepts/todo.md
+
   - name: Agent capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
@@ -69,6 +78,12 @@
     displayName: Install coding agent, dev tunnel, see JTBD
   - name: Scaffold, register, and configure identity
     items:
+    - name: Overview
+      href: todo.md
+    - name: Choose delivery method
+      href: todo.md
+    - name: Configure delivery method
+      href: todo.md
     - name: choose registration type
       href: todo
     - name: Configure runtime authentication
@@ -78,13 +93,17 @@
       href: todo
     - name: Connect without sdk
       href: todo
-  - name: "*Create the main agent loop*"
+    - name: build agent factory
+      href: todo
+  - name: Port a slack bolt app
+    href: todo.md
+  - name: "*Create the main agent control flow*" (section?)
     href: todo.md
     displayName: messages, messaging, send, receive, events, activities; state and contxt mgmt?
   - name: Send rich messages
     href: todo.md
     displayName: sending fancy messages - cards, widgets, inline images
-  - name: Use advanced conversational features
+  - name: Interact in chat
     href: todo.md
     displayName: emoji reactions, suggested actions, tms, slash commands, files, proactive?
   - name: Authenticate users (SSO and OAuth)
