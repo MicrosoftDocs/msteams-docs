@@ -3,7 +3,7 @@ title: Add code to enable SSO in a message extension
 description: Learn how to configure code, request and receive an access token, and handle sign-out when enabling SSO in a Teams message extension.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 10/12/2026
+ms.date: 11/19/2026
 ---
 
 # Add code to enable SSO in your message extension app
@@ -13,8 +13,6 @@ Before you add code to enable single sign-on (SSO), ensure that you configure yo
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
 
-> [!NOTE]
-> `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the `TeamsMessagingExtensionsSearchAuthConfigBot.cs` file are the only SSO handlers that are supported. Other SSO handlers aren't supported.
 
 This article covers:
 
@@ -47,9 +45,6 @@ You've now configured the required environment variables for your bot app and SS
 
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
-> [!NOTE]
-> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
-
 To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
@@ -75,7 +70,7 @@ To update your app's code:
     ---
 
     > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest&preserve-view=true#remarks).
+    > The Teams SDK OAuth flow handles `signin/tokenExchange` requests and duplicate token exchanges. Configure shared state storage when running multiple application instances.
 
 1. Use the following code snippet for requesting a token.
 
@@ -84,54 +79,30 @@ To update your app's code:
    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
    ```csharp
-   public class AdapterWithErrorHandler : CloudAdapter
-   {
-       public AdapterWithErrorHandler(
-           IConfiguration configuration,
-           IHttpClientFactory httpClientFactory,
-           ILogger<IBotFrameworkHttpAdapter> logger,
-           IStorage storage,
-           ConversationState conversationState)
-           : base(configuration, httpClientFactory, logger)
-       {
-           base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-
-           OnTurnError = async (turnContext, exception) =>
-           {
-               // Log any leaked exception from the application.
-               // NOTE: In production environment, you must consider logging this to
-               // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
-               // to add telemetry capture to your bot.
-               logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
-
-               // Send a message to the user.
-               await turnContext.SendActivityAsync("The bot encountered an error or bug.");
-               await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
-
-               if (conversationState != null)
-               {
-                   try
-                   {
-                       // Delete the conversationState for the current conversation to prevent the
-                       // bot from getting stuck in an error-loop caused by being in a bad state.
-                       // ConversationState must be thought of as similar to "cookie-state" in a Web pages.
-                       await conversationState.DeleteAsync(turnContext);
-                   }
-                   catch (Exception e)
-                   {
-                       logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
-                   }
-               }
-
-               // Send a trace activity, which will be displayed in the Bot Framework Emulator.
-               await turnContext.TraceActivityAsync(
-                   "OnTurnError Trace",
-                   exception.Message,
-                   "https://www.botframework.com/schemas/error",
-                   "TurnError");
-           };
-       }
-   }
+    using Microsoft.Teams.Apps;
+    using Microsoft.Teams.Apps.OAuth;
+    
+    var builder = WebApplication.CreateBuilder(args);
+    
+    var connectionName = builder.Configuration["ConnectionName"]
+        ?? throw new InvalidOperationException("ConnectionName is required.");
+    
+    builder.Services.AddTeamsBotApplication(options =>
+    {
+        options.AddOAuthFlow(connectionName, oauth =>
+        {
+            oauth.OAuthCardText = "Sign in to your account";
+            oauth.SignInButtonText = "Sign in";
+        });
+    });
+    
+    var app = builder.Build();
+    var teams = app.UseTeamsBotApplication();
+    var auth = teams.GetOAuthFlow(connectionName);
+    
+    // Register application handlers here, before app.Run().
+    
+    app.Run();
    ```
 
    # [JavaScript](#tab/js2)
@@ -257,102 +228,32 @@ Use the following code snippet example to invoke response:
 # [C#](#tab/cs3)
 
 ```csharp
-public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-    : base(nameof(MainDialog), configuration["ConnectionName"])
+auth.OnSignInComplete(async (context, tokenResponse, cancellationToken) =>
 {
-    AddDialog(new OAuthPrompt(
-        nameof(OAuthPrompt),
-        new OAuthPromptSettings
-        {
-            ConnectionName = ConnectionName,
-            Text = "Please Sign In",
-            Title = "Sign In",
-            Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-            EndOnInvalidMessage = true
-        }));
+    var accessToken = tokenResponse.Token;
 
-    AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-    AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
-    {
-        PromptStepAsync,
-        LoginStepAsync,
-    }));
-
-    // The initial child Dialog to run.
-    InitialDialogId = nameof(WaterfallDialog);
-}
-
-private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-{
-    return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-}
-
-private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-{
-    var tokenResponse = (TokenResponse)stepContext.Result;
-    if (tokenResponse?.Token != null)
-    {
-        var token = tokenResponse.Token;
-
-        // On successful login, the token contains sign in token.
-    }
-    else
-    {
-        await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-    }
-
-    return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
-}
+    // Use accessToken to call the protected resource.
+    await context.SendAsync(
+        "You have signed in successfully.",
+        cancellationToken);
+});
 ```
 
 # [JavaScript](#tab/js3)
 
 ```javascript
-class MainDialog {
-    this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
-        connectionName: process.env.connectionName,
-        text: 'Please Sign In',
-        title: 'Sign In',
-        timeout: 300000
-    }));
+auth.onSignInComplete(async (context, tokenResponse) => {
+  const accessToken = tokenResponse.token;
 
-    this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
-
-    this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
-        this.promptStep.bind(this),
-        this.loginStep.bind(this),
-    ]));
-
-    this.initialDialogId = MAIN_WATERFALL_DIALOG;
-}
-
-async promptStep(stepContext) {
-    try {
-        return await stepContext.beginDialog(OAUTH_PROMPT);
-    } catch (err) {
-        console.error(err);
-    }
-}
-
-async loginStep(stepContext) {
-    // Get the token from the previous step. Note that we could also have gotten the
-    // token directly from the prompt itself. There is an example of this in the next method.
-    const tokenResponse = stepContext.result;
-    if (!tokenResponse || !tokenResponse.token) {
-        await stepContext.context.sendActivity('Login was not successful please try again.');
-    } else {
-        const token = tokenResponse.token;
-        // On successful login, the token contains sign in token.
-    }
-    return await stepContext.endDialog();
-}
+  // Use accessToken to call the protected resource.
+  await context.send('You have signed in successfully.');
+});
 ```
 
 ---
 
 > [!NOTE]
-> The code snippets use the Waterfall Dialog bot. For more information about Waterfall Dialog, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
+> These examples use Teams SDK OAuth flows instead of dialog-based authentication. Handle successful sign-in with the flow’s completion callback. A cached token returned by the sign-in method is handled directly by the calling handler.
 
 You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling SSO for.
 
@@ -595,15 +496,6 @@ async interrupt(innerDc) {
 
 ---
 
-## Code sample
-
-This section provides bot authentication v3 SDK samples.
-
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
-| --- | --- | --- | --- | --- | --- |
-| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) | NA |
-| Tab, bot, and message extension SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions using C# and Microsoft Entra ID for secure authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip) |
-| Tab, bot, and message extension | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and message extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## Next step
 
