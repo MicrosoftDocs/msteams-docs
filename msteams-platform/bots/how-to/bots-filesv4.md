@@ -1032,8 +1032,8 @@ Microsoft has changed the implementation and app manifest requirements for bots 
 
 Your bot needs the following changes, which can be made and deployed separately:
 
-- Code changes, which you can make and deploy now. See [Changes to make now](#changes-to-make-now).
-- An RSC permission in your app manifest, which you can add and publish starting **January 15, 2027**, when the permissions become available in Teams. See [Changes to make starting January 15, 2027](#changes-to-make-starting-january-15-2027).
+* Code changes, which you can make and deploy now. See [Changes to make now](#changes-to-make-now).
+* An RSC permission in your app manifest, which you can add and publish starting **January 15, 2027**, when the permissions become available in Teams. See [Changes to make starting January 15, 2027](#changes-to-make-starting-january-15-2027).
 
 | Date | What changes | What to do |
 | --- | --- | --- |
