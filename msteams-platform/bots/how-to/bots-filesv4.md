@@ -1034,13 +1034,13 @@ Microsoft has changed the implementation and app manifest requirements for bots 
 
 Your bot needs the following changes, which can be made and deployed separately:
 
-* Code changes, which you can make and deploy now. See [Changes to make now](#changes-to-make-now).
-* An RSC permission in your app manifest, which you can add and publish starting **January 15, 2027**, when the permissions become available in Teams. See [Changes to make starting January 15, 2027](#changes-to-make-starting-january-15-2027).
+* Code changes, which you can make and deploy now.
+* An RSC permission in your app manifest, which you can add and publish starting **January 15, 2027**, when the permissions become available in Teams.
 
 | Date | What changes | What to do |
 | --- | --- | --- |
-| Now | `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. | Update your bot to send an access token on file requests. |
-| January 15, 2027 | The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions become available for use in app manifests. | Add the permission to your app manifest and publish it. |
+| Now | `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. | [Update your bot to send an access token on file requests](#changes-to-make-now). |
+| January 15, 2027 | The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions become available for use in app manifests. | [Add the permission to your app manifest and publish it](#changes-to-make-starting-january-15-2027). |
 | March 1, 2027 | `downloadUrl` and `uploadUrl` values don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token. | Have both changes deployed and your updated manifest published worldwide. |
 
 ### Changes to make now
