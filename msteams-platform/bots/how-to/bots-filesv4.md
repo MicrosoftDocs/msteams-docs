@@ -816,7 +816,7 @@ For each download or upload request:
 1. Resolve the tenant ID as described in [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
 1. Request an app-only token for the `https://<url host>/.default` scope, where `<url host>` is the host of the `downloadUrl` or `uploadUrl`. Files in OneDrive use a SharePoint host, such as `contoso-my.sharepoint.com`. Use the host from the URL as is.
 1. Send `Authorization: Bearer <token>` on the download `GET` and on every request to `uploadUrl`.
-1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it. In Node, `fetch` and `axios` change `'` to `%27`, so use `https.request` with the original path.
+1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it. Some HTTP libraries re-encode characters, such as changing `'` to `%27`, and the request then fails.
 
 Until March 1, 2027, file URLs have a `tempauth` query parameter and work without a token. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header.
 
@@ -1081,8 +1081,8 @@ Apply these guidelines to create secure, predictable file experiences. Review th
 
 Before January 15, 2027, Teams doesn't accept the `File.ReadSelected.User` and `File.ReadWriteSelected.User` permissions in app manifests. If your manifest includes either permission, users can't install your app, and users who already have it stay on the previous version. Teams shows one of these errors:
 
-* **App package can't be uploaded**, with "Something went wrong when uploading your app."
-* **Requested permission is not recognized.**
+* "App package can't be uploaded"
+* "Requested permission is not recognized."
 
 Publish your manifest with these permissions starting January 15, 2027. You can make the [changes to make now](#changes-to-make-now) before then.
 
