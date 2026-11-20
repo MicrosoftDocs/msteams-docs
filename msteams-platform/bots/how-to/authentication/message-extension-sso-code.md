@@ -69,6 +69,9 @@ To update your app's code:
 
     ---
 
+    > [!NOTE]
+    > The Teams SDK OAuth flow handles `signin/tokenExchange` requests and duplicate token exchanges. Configure shared state storage when running multiple application instances.
+
 1. Use the following code snippet for requesting a token.
 
    # [C#](#tab/cs2)
@@ -76,54 +79,30 @@ To update your app's code:
    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
    ```csharp
-   public class AdapterWithErrorHandler : CloudAdapter
-   {
-       public AdapterWithErrorHandler(
-           IConfiguration configuration,
-           IHttpClientFactory httpClientFactory,
-           ILogger<IBotFrameworkHttpAdapter> logger,
-           IStorage storage,
-           ConversationState conversationState)
-           : base(configuration, httpClientFactory, logger)
-       {
-           base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-
-           OnTurnError = async (turnContext, exception) =>
-           {
-               // Log any leaked exception from the application.
-               // NOTE: In production environment, you must consider logging this to
-               // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
-               // to add telemetry capture to your bot.
-               logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
-
-               // Send a message to the user.
-               await turnContext.SendActivityAsync("The bot encountered an error or bug.");
-               await turnContext.SendActivityAsync("To continue to run this bot, please fix the bot source code.");
-
-               if (conversationState != null)
-               {
-                   try
-                   {
-                       // Delete the conversationState for the current conversation to prevent the
-                       // bot from getting stuck in an error-loop caused by being in a bad state.
-                       // ConversationState must be thought of as similar to "cookie-state" in a Web pages.
-                       await conversationState.DeleteAsync(turnContext);
-                   }
-                   catch (Exception e)
-                   {
-                       logger.LogError(e, $"Exception caught on attempting to Delete ConversationState : {e.Message}");
-                   }
-               }
-
-               // Send a trace activity, which will be displayed in the Bot Framework Emulator.
-               await turnContext.TraceActivityAsync(
-                   "OnTurnError Trace",
-                   exception.Message,
-                   "https://www.botframework.com/schemas/error",
-                   "TurnError");
-           };
-       }
-   }
+    using Microsoft.Teams.Apps;
+    using Microsoft.Teams.Apps.OAuth;
+    
+    var builder = WebApplication.CreateBuilder(args);
+    
+    var connectionName = builder.Configuration["ConnectionName"]
+        ?? throw new InvalidOperationException("ConnectionName is required.");
+    
+    builder.Services.AddTeamsBotApplication(options =>
+    {
+        options.AddOAuthFlow(connectionName, oauth =>
+        {
+            oauth.OAuthCardText = "Sign in to your account";
+            oauth.SignInButtonText = "Sign in";
+        });
+    });
+    
+    var app = builder.Build();
+    var teams = app.UseTeamsBotApplication();
+    var auth = teams.GetOAuthFlow(connectionName);
+    
+    // Register application handlers here, before app.Run().
+    
+    app.Run();
    ```
 
    # [JavaScript](#tab/js2)
