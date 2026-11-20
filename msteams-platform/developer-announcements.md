@@ -18,7 +18,7 @@ Microsoft has changed the implementation and app manifest requirements for agent
 Agents that send and receive files require the following changes, which can be made and deployed separately:
 
 - Code changes, which can be implemented and deployed effective immediately. Microsoft recommends implementing and deploying these changes as soon as possible.
-- Declaration of additional resource-specific consent (RSC) permissions requirements in the agent's app manifest. This change must be made and published after **January 15, 2027**, when the new permissions are made available in Teams platform. This change can be made separately from the required code changes.
+- Declaration of additional resource-specific consent (RSC) permissions requirements in the agent's app manifest. This change can be made and published starting **January 15, 2027**, when the new permissions become available in Teams. This change can be made separately from the required code changes.
 
 These changes strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements. To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
 

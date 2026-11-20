@@ -108,6 +108,8 @@ A bot that receives or sends files also needs:
 * An app-only access token on every file request, acquired with the bot's Microsoft App ID (`botId`) and a certificate, federated identity credential, or managed identity rather than a client secret. For more information, see [Authenticate bot file requests](#authenticate-bot-file-requests).
 * Starting January 15, 2027, the `File.ReadSelected.User` RSC permission if it only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest. For more information, see [Add the RSC permission to your app manifest](#add-the-rsc-permission-to-your-app-manifest).
 
+You can build and publish a bot that sends and receives files now. Add the RSC permission to its manifest starting January 15, 2027.
+
 ### Access received files and metadata
 
 When a user attaches a document in a personal chat, Teams stores it in OneDrive or SharePoint. The message activity contains file metadata, and the Teams SDK file accessor provides lazy access to the file bytes.
@@ -625,7 +627,7 @@ Key parameters and values:
 
 * `url`: Use the `UploadInfo.UploadUrl` returned after acceptance, exactly as received.
 * `content`: Provide the exact bytes associated with consent.
-* `accessToken`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) before enforcement.
+* `accessToken`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) until March 1, 2027.
 * `content.Length`: Reject an empty upload before creating its byte range.
 * `ContentType`: Set `application/octet-stream` for binary transfer.
 * `ContentLength`: Set the exact number of uploaded bytes.
@@ -682,7 +684,7 @@ Key parameters and values:
 
 * `url`: Use the `uploadInfo.uploadUrl` returned after acceptance, exactly as received.
 * `content`: Provide the exact bytes associated with consent.
-* `accessToken`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) before enforcement.
+* `accessToken`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) until March 1, 2027.
 * `content.length`: Reject an empty upload before creating its byte range.
 * `Content-Type`: Set `application/octet-stream` for binary file transfer.
 * `Content-Length`: Set the decimal length of uploaded bytes.
@@ -726,7 +728,7 @@ Key parameters and values:
 
 * `url`: Use the `upload_info.upload_url` returned after acceptance, exactly as received.
 * `content`: Provide the exact bytes associated with consent.
-* `access_token`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) before enforcement.
+* `access_token`: Send the app-only token for the `uploadUrl` host. The token is optional only so you can use the [`tempauth` fallback](#acquire-the-token-and-send-the-authorization-header) until March 1, 2027.
 * `if not content`: Reject an empty upload before creating its byte range.
 * `Content-Type`: Set `application/octet-stream` for binary transfer.
 * `Content-Length`: Set the exact number of uploaded bytes.
@@ -769,7 +771,7 @@ Key properties and values:
 
 A bot sends its own access token with every file download and upload request. Your bot must:
 
-* **Use a supported credential for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. A token acquired with a client secret gets HTTP 401.
+* **Use a supported credential for the file token**: Certificates, federated identity credentials (FIC), and managed identity all work. Starting March 1, 2027, a token acquired with a client secret gets HTTP 401.
 * **Request the token for the file's tenant**: Use the tenant ID provided with the file, and fall back to the activity's tenant ID only when the file's tenant ID is missing.
 * **Send a bearer token with every file request**: Acquire an app-only token for the host of the `downloadUrl` or `uploadUrl` and send it in the `Authorization` header on the download `GET` and on every request to `uploadUrl`.
 * **Declare the RSC permission, starting January 15, 2027**: Add `File.ReadSelected.User` if your bot only downloads files, or `File.ReadWriteSelected.User` if it uploads files, under `authorization.permissions.resourceSpecific` in the app manifest.
@@ -788,11 +790,11 @@ The following table shows which credentials can acquire the file token:
 
 > [!WARNING]
 >
-> Don't use a client secret to acquire the file token. Requests that use a secret-based token get HTTP 401.
+> Don't use a client secret to acquire the file token. Starting March 1, 2027, requests that use a secret-based token get HTTP 401.
 
 Acquire the token with the bot's Microsoft App ID, the `bots[].botId` value in the app manifest. Don't use a separate single sign-on (SSO) app registration.
 
-The credential stays on the bot's app registration in its home tenant. Before enforcement begins, a multi-tenant bot might not have a service principal in every tenant where it's used, and token requests in those tenants fail. Until enforcement begins, keep the [fallback for URLs that have a `tempauth` parameter](#acquire-the-token-and-send-the-authorization-header) in place so file requests in those tenants keep working.
+The credential stays on the bot's app registration in its home tenant. Until March 1, 2027, a multi-tenant bot might not have a service principal in every tenant where it's used, and token requests in those tenants fail. Until then, keep the [fallback for URLs that have a `tempauth` parameter](#acquire-the-token-and-send-the-authorization-header) in place so file requests in those tenants keep working.
 
 For more information about configuring credentials, see [Microsoft identity platform certificate credentials](/entra/identity-platform/certificate-credentials) and [Add and manage application credentials in Microsoft Entra ID](/entra/identity-platform/how-to-add-credentials).
 
@@ -816,7 +818,7 @@ For each download or upload request:
 1. Send `Authorization: Bearer <token>` on the download `GET` and on every request to `uploadUrl`.
 1. Use each URL exactly as received. Don't rebuild, re-encode, or modify it. In Node, `fetch` and `axios` change `'` to `%27`, so use `https.request` with the original path.
 
-Before enforcement begins, file URLs have a `tempauth` query parameter and work without a token. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header to avoid disruption.
+Until March 1, 2027, file URLs have a `tempauth` query parameter and work without a token. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header.
 
 The following pseudocode shows the same steps, including the fallback for URLs that have a `tempauth` parameter:
 
@@ -864,7 +866,7 @@ Key values:
 
 > [!NOTE]
 >
-> The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions are rolling out for use in app manifests starting January 15, 2027. See [Known issues](#known-issues).
+> The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions are available for use in app manifests starting January 15, 2027. See [Known issues](#known-issues).
 
 Under `authorization.permissions.resourceSpecific` in your app manifest, add one of these permissions with `type` set to `Application`:
 
@@ -875,7 +877,7 @@ For the manifest format, see [Declare RSC permissions in the app manifest](../..
 
 The permission doesn't give your bot access to any file on its own. The bot can access a file only after a user shares it with the bot or accepts a file consent card.
 
-To minimize disruption, publish the updated manifest worldwide by March 1, 2027. Users or admins might be asked to approve the permission when they install or update the app.
+Publish the updated manifest worldwide by March 1, 2027. Users or admins might be asked to approve the permission when they install or update the app.
 
 ## Handle errors
 
@@ -1038,7 +1040,7 @@ Your bot needs the following changes, which can be made and deployed separately:
 | Date | What changes | What to do |
 | --- | --- | --- |
 | Now | `downloadUrl` and `uploadUrl` values have a `tempauth` query parameter and work with or without an access token. | Update your bot to send an access token on file requests. |
-| January 15, 2027 | The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions start rolling out for use in app manifests. | Add the permission to your app manifest and publish it. |
+| January 15, 2027 | The `File.ReadSelected.User` and `File.ReadWriteSelected.User` RSC permissions become available for use in app manifests. | Add the permission to your app manifest and publish it. |
 | March 1, 2027 | `downloadUrl` and `uploadUrl` values don't have a `tempauth` query parameter and return HTTP 401 unless the request includes an access token. | Have both changes deployed and your updated manifest published worldwide. |
 
 ### Changes to make now
@@ -1046,8 +1048,8 @@ Your bot needs the following changes, which can be made and deployed separately:
 1. **Set up a credential for the file token.** Acquire the file token with the bot's Microsoft App ID (`bots[].botId`), not a separate SSO app. If the bot uses a client secret, add a certificate or FIC to its app registration, or move to managed identity. You can keep the client secret for other calls, such as getting the Bot Framework token. See [Choose a credential for the file token](#choose-a-credential-for-the-file-token).
 1. **Update tenant resolution logic.** Use `attachment.content.tenantId` for downloads and `activity.value.uploadInfo.tenantId` for uploads, falling back to the activity tenant ID only when the field is missing. See [Resolve the tenant for file tokens](#resolve-the-tenant-for-file-tokens).
 1. **Send the authorization header.** Request the token for `https://<url host>/.default` and send `Authorization: Bearer <token>` on the download `GET` and every request to `uploadUrl`. Use each URL exactly as received. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
-1. **Keep the `tempauth` fallback until enforcement.** Before enforcement, if token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header to avoid disruption. This also covers tenants where a multi-tenant bot doesn't have a service principal yet. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
-1. **Validate file upload and download.** Test your bot's file operations with the updated authentication approach, including missing tenant information and HTTP 401 responses.
+1. **Keep the `tempauth` fallback until March 1, 2027.** Until then, if token acquisition fails and the URL has a `tempauth` query parameter, send the request without the header. This also covers tenants where a multi-tenant bot doesn't have a service principal yet. See [Acquire the token and send the authorization header](#acquire-the-token-and-send-the-authorization-header).
+1. **Validate file upload and download.** Confirm that your bot acquires a token for the file host and sends it on every download and upload request, and that file operations still succeed. Also test the fallback paths for a missing tenant ID and a failed token request.
 
 ### Changes to make starting January 15, 2027
 
