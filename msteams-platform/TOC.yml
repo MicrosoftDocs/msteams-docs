@@ -97,7 +97,7 @@
       href: todo
   - name: Port a slack bolt app
     href: todo.md
-  - name: "*Create the main agent control flow*" (section?)
+  - name: "*Create the main agent control flow* (section?)"
     href: todo.md
     displayName: messages, messaging, send, receive, events, activities; state and contxt mgmt?
   - name: Send rich messages
