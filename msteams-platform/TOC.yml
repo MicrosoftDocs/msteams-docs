@@ -6,16 +6,32 @@
   - name: Teams platform overview
     href: overview.md
     displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
-  - name: Platform components
-    href: platform-concepts/todo.md
-    displayName: How entra, ACS, platform, runtime fit together, agentic identity
-  - name: Development lifecycle
-    href: platform-concepts/todo.md
-    displayName: developer journey
-  - name: Registration
-    href: platform-concepts/todo.md
-  - name: Agent identity
-    href: platform-concepts/todo.md
+  - name: Platform model
+    href: todo.md
+    displayName: entra, ACS, manifest, runtime
+  - name: Developer experience
+    items:
+    - name: Overview
+      href: todo.md
+    - name: Development lifecycle
+      href: todo.md
+    - name: Teams SDK and other tools (section?)
+      href: platform-concepts/todo.md  
+    - name: Preview features
+      href: platform-concepts/todo.md
+  - name: Building an agent runtime
+    href: todo.md
+    displayName: incoming request authentication; 
+    displayName: very high-level overview of the thing you build
+  - name: Agent registration and identity
+    items:
+      - name: Overview
+        href: todo.md
+        displayName: How entra, ACS, platform, runtime fit together, agentic identity
+      - name: Agent identity
+        href: todo.md
+      - name: Agent tenancy
+        href: todo.md
     displayName: entra, app registration, agentic identity
   - name: Messaging
     href: platform-concepts/todo.md
@@ -28,6 +44,7 @@
     href: platform-concepts/todo.md
   - name: Permissions
     href: platform-concepts/todo.md
+    displayName: RSC
   - name: Events
     href: platform-concepts/todo.md
   - name: Agent factory
@@ -36,10 +53,7 @@
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
-  - name: Teams SDK and other tools (section?)
-    href: platform-concepts/todo.md  
-  - name: Preview features
-    href: platform-concepts/todo.md  
+
   
 
 - name: Design for interactivity and collaboration
@@ -55,10 +69,14 @@
     displayName: Install coding agent, dev tunnel, see JTBD
   - name: Scaffold, register, and configure identity
     items:
+    - name: choose registration type
+      href: todo
     - name: Configure runtime authentication
       href: agents-in-teams/configure-agent-runtime-authentication.md
       displayName: enable dev preview, coding agnet, dev env, register, tunnel, etc.
     - name: agentic id
+      href: todo
+    - name: Connect without sdk
       href: todo
   - name: "*Create the main agent loop*"
     href: todo.md
