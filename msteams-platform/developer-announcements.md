@@ -13,7 +13,12 @@ Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive the
 
 *November 20, 2026*
 
-Microsoft Teams is evolving how agents securely access files shared by users. As part of this work, we're updating the authentication requirements for agent file upload and download operations. Start planning for these changes now. To minimize disruption, make the [required changes](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) and publish your updated app manifest worldwide by **March 1, 2027**. After that date, agents that haven't been updated won't be able to upload or download files, and users might see errors.
+Microsoft has changed the implementation and app manifest requirements for agents that send and receive files in Teams. Developers maintaining Teams agents that send or receive files must update them by **March 1, 2027** to ensure file operations continue working after that date. See [Update an existing bot to authenticate file requests](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) for detailed instructions and guidance.
+
+Agents that send and receive files require the following changes, which can be made and deployed separately:
+
+- Code changes, which can be implemented and deployed effective immediately. Microsoft recommends implementing and deploying these changes as soon as possible.
+- Declaration of additional resource-specific consent (RSC) permissions requirements in the agent's app manifest. This change must be made and published after **January 15, 2027**, when the new permissions are made available in Teams platform. This change can be made separately from the required code changes.
 
 These changes strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements. To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
 
