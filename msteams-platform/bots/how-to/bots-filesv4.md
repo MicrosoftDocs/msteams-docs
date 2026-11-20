@@ -1028,9 +1028,12 @@ Key types and values:
 
 ## Update an existing bot to authenticate file requests
 
-If your bot downloads files from `downloadUrl` or uploads them to `uploadUrl` without an access token, start planning for these changes now. To minimize disruption, deploy the code changes and publish your updated app manifest worldwide by March 1, 2027. After that date, bots that aren't updated can't download or upload files, and users might see errors.
+Microsoft has changed the implementation and app manifest requirements for bots that download or upload files in Teams. If your bot uses `downloadUrl` or `uploadUrl`, you must update it by **March 1, 2027** to keep file operations working after that date.
 
-The updated model uses application-based authentication for file operations to strengthen security and align with OneDrive and SharePoint authentication requirements.
+Your bot needs the following changes, which can be made and deployed separately:
+
+- Code changes, which you can make and deploy now. See [Changes to make now](#changes-to-make-now).
+- An RSC permission in your app manifest, which you can add and publish starting **January 15, 2027**, when the permissions become available in Teams. See [Changes to make starting January 15, 2027](#changes-to-make-starting-january-15-2027).
 
 | Date | What changes | What to do |
 | --- | --- | --- |
