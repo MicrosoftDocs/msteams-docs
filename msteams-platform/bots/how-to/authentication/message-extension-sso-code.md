@@ -496,15 +496,6 @@ async interrupt(innerDc) {
 
 ---
 
-## Code sample
-
-This section provides bot authentication v3 SDK samples.
-
-| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
-| --- | --- | --- | --- | --- | --- |
-| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/samples/TeamsSDK/bot-auth-quickstart/python/bot-auth-quickstart) | NA |
-| Tab, bot, and message extension SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions using C# and Microsoft Entra ID for secure authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip) |
-| Tab, bot, and message extension | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and message extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## Next step
 
