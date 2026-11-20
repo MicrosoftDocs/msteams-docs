@@ -15,7 +15,7 @@ zone_pivot_groups: teams-sdk-languages
 
 > [!IMPORTANT]
 >
-> **If your bot already downloads or uploads files, start planning for changes to file authentication.** Update your bot to send an access token on file requests now, and add the file permission to your app manifest starting January 15, 2027. To minimize disruption, deploy both changes and publish your updated manifest worldwide by March 1, 2027. After that date, bots that aren't updated can't download or upload files. See [Update an existing bot to authenticate file requests](#update-an-existing-bot-to-authenticate-file-requests).
+> This guidance was significantly updated on November 20, 2026. If you implemented file send and receive behavior in an agent prior to then, you need to update your agent's implementation and configuration before **March 1, 2027** to keep file operations working. See [Update an existing bot to authenticate file requests](#update-an-existing-bot-to-authenticate-file-requests) for detailed instructions and guidance.
 
 Agents can receive, read, and send documents in Microsoft Teams conversations. Teams stores these files in OneDrive or SharePoint and displays them as file cards or stored items.
 
