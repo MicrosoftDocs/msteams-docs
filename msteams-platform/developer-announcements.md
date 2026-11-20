@@ -2,12 +2,27 @@
 title: Teams Platform Developer Announcements
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the Atom feed for latest updates.
 ms.topic: whats-new
-ms.date: 11/13/2026
+ms.date: 11/20/2026
 ---
 
 # Teams Platform developer announcements
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
+
+## Action required: Upcoming changes to file upload and download authentication for Microsoft Teams agents
+
+*November 20, 2026*
+
+Microsoft has changed the implementation and app manifest requirements for agents that send and receive files in Teams. Developers maintaining Teams agents that send or receive files must update them by **March 1, 2027** to ensure file operations continue working after that date. See [Update an existing bot to authenticate file requests](bots/how-to/bots-filesv4.md#update-an-existing-bot-to-authenticate-file-requests) for detailed instructions and guidance.
+
+Agents that send and receive files require the following changes, which can be made and deployed separately:
+
+- Code changes, which can be implemented and deployed effective immediately. Microsoft recommends implementing and deploying these changes as soon as possible.
+- Declaration of additional resource-specific consent (RSC) permissions requirements in the agent's app manifest. This change can be made and published starting **January 15, 2027**, when the new permissions become available in Teams. This change can be made separately from the required code changes.
+
+These changes strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements. To share feedback, report issues, or ask questions about these changes, go to [aka.ms/TeamsDeveloperFeedback](https://aka.ms/TeamsDeveloperFeedback).
+
+---
 
 ## Preview: Build interactive HTML widgets for Teams agents
 
