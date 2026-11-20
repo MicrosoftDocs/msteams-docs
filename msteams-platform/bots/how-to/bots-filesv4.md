@@ -818,63 +818,47 @@ For each download or upload request:
 
 Before enforcement begins, file URLs have a `tempauth` query parameter and work without a token. If your bot can't acquire a token and the URL has a `tempauth` query parameter, send the request without the `Authorization` header to avoid disruption.
 
-The following pseudocode illustrates tenant resolution, token acquisition, the authorization header, and the fallback for URLs that have a `tempauth` parameter:
+The following pseudocode shows the same steps, including the fallback for URLs that have a `tempauth` parameter:
 
-```typescript
-import * as https from 'node:https';
-import type { IncomingMessage } from 'node:http';
+```text
+// Resolve the tenant.
+tenantId = attachment.content.tenantId              // download
+        or activity.value.uploadInfo.tenantId       // upload (fileConsent/invoke)
+if tenantId is missing:
+    tenantId = activity.channelData.tenant.id
 
-// Download: attachment.content.tenantId
-// Upload: activity.value.uploadInfo.tenantId on fileConsent/invoke
-const tenantId = fileTenantId ?? activity.channelData?.tenant?.id;
+// Request an app-only token for the host of the file URL.
+scope = "https://" + host of fileUrl + "/.default"
+try:
+    token = request an app-only token
+              client ID:  the bot's Microsoft App ID (bots[].botId)
+              tenant:     tenantId
+              scope:      scope
+              credential: certificate, FIC, or managed identity (not a client secret)
+if the token request fails:
+    token = none
 
-// Use the downloadUrl or uploadUrl exactly as received.
-const scope = `https://${new URL(fileUrl).host}/.default`;
+// Add the authorization header, or fall back for tempauth URLs.
+if token is not none:
+    add header  Authorization: Bearer <token>
+else if fileUrl has no "tempauth" query parameter:
+    don't send the request, because it returns HTTP 401 without a token
+else:
+    send the request without the Authorization header
 
-let token: string | undefined;
-try {
-  // Use the bot's Microsoft App ID (bots[].botId) with a certificate,
-  // federated identity credential, or managed identity.
-  // Don't use a client secret.
-  // acquireAppOnlyToken is a placeholder for your own token code.
-  token = await acquireAppOnlyToken({ clientId: botAppId, tenantId, scope });
-} catch (error) {
-  log.warn('File token request failed.');
-}
-
-const hasTempauthParam = [...new URL(fileUrl).searchParams.keys()]
-  .some((key) => key.toLowerCase() === 'tempauth');
-
-const headers: Record<string, string> = {};
-if (token) {
-  headers['Authorization'] = `Bearer ${token}`;
-} else if (!hasTempauthParam) {
-  // After enforcement, URLs have no tempauth parameter and return 401 without a token.
-  throw new Error('No file token, so the request was not sent.');
-}
-
-// Send the path and query exactly as received. Node fetch and axios
-// change ' to %27, and the request then fails.
-const { hostname, port } = new URL(fileUrl);
-const path = fileUrl.slice(fileUrl.indexOf('/', 'https://'.length));
-
-const response = await new Promise<IncomingMessage>((resolve, reject) => {
-  https
-    .request({ method, hostname, port, path, headers }, resolve)
-    .on('error', reject)
-    .end(body);
-});
+// Send the request to the URL exactly as received.
+download: GET fileUrl
+upload:   PUT each chunk to fileUrl, with the same header on every request
 ```
 
 Key values:
 
-* `fileTenantId`: Use the tenant ID provided with the download attachment or upload information.
-* `activity.channelData.tenant.id`: Use the activity tenant only as a fallback.
+* `tenantId`: Use the tenant ID provided with the download attachment or upload information. Use the activity's tenant ID only as a fallback.
 * `scope`: Request the token for the host of the file URL.
-* `botAppId`: Use the bot's Microsoft App ID from `bots[].botId`.
+* Client ID: Use the bot's Microsoft App ID from `bots[].botId`.
 * `Authorization`: Send the bearer token on the download `GET` and every `uploadUrl` request.
 * `tempauth`: Check for a `tempauth` query parameter, ignoring case. If token acquisition fails and the `tempauth` query parameter is present, the request can be made without the token.
-* `https.request`: Send the URL exactly as received. Node `fetch` and `axios` change `'` to `%27`.
+* `fileUrl`: Send the URL exactly as received. Some HTTP libraries re-encode characters, such as changing `'` to `%27`, and the request then fails.
 
 ### Add the RSC permission to your app manifest
 
