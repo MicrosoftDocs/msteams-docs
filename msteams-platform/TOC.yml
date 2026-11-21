@@ -8,10 +8,18 @@
     # This is the main "pitch" article that should remain in the docs
   - name: Teams platform overview
     href: overview.md
+  # Can explain here about apps vs agents?
   - name: Platform model
     items:
       - name: Overview
         href: todo.md
+      # The thing you build and host; what its arch looks like, Teams SDK or SDKless
+      - name: Agent runtime
+        href: todo.md
+      - name: Agent Communication Service
+        href: todo.md
+      - name: Agent registration concepts
+        href: agents-in-teams/registering-agent-teams-platform.md
         displayName: entra Tenant, entra, runtime, acs, manifest
       - name: Activity protocol
         href: todo.md
@@ -19,9 +27,7 @@
         href: todo.md
       # Agent loop, AI integration, telemetry, middleware, logging, hosting static content,
       # managing server
-      - name: Agent runtime
-        href: todo.md
-        displayName: the thing you build
+
       # ACS client
       - name: Agent Communication Service
         href: todo.md
@@ -61,7 +67,7 @@
   # and inline msgs
   - name: Messaging
     href: platform-concepts/todo.md
-  # Basicc AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
+  # Basic AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
   - name: AI
     href: platform-concepts/todo.md
   # Graph API client
@@ -69,12 +75,13 @@
     href: platform-concepts/todo.md
   - name: User authentication (SSO and OAuth)
     href: platform-concepts/todo.md
-  - name: Agent capabilities (surfaces)
+  - name: App capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
 
 
+# This section is about *agent design decision making*.
 # Acquisition and application; action-oriented topics here will be mostly cognitive
 # in nature, using verbs like "decide", "evaluate", "choose", "compare", "identify",
 # so it's all going together. Action verbs that show up in article headers are to be
@@ -85,10 +92,31 @@
 # consequences of them. For example, a section about context management should focus on
 # the desired functional/interaction outcome of doing context management, not the
 # technical implementation.
-- name: Design for interactivity and collaboration
+- name: Design
   items:
   - name: Interactivity and collaboration design
-    href: agent-design-concepts/todo.md
+    items:
+      # Events
+    - name: Overview
+      href: agent-design-concepts/todo.md
+    - name: Best practices and features checklist
+      href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
+      displayName: scopes, handler, activity
+    - name: Choose agent message format
+      href: agents-in-teams/agent-message-format-guidance.md
+      displayName: Teams, agent, message, format, guidance
+  - name: Identity
+    items:
+      - name: Choose identity type
+        href: todo.md
+  # agents-in-teams/choose-agent-registration-type.md goes here, also 
+  # agents-in-teams/agent-connectivity.md (choose messaging mode, TODO on that name)
+  # SDK or SDKless
+  - name: Runtime design
+    href: todo.md
+  # TODO topics we need design decision-making guidance on:
+  # Graph and WorkIQ, User Auth (OAuth and SSO), App capabilities, publishing,
+  # M365 extensibility?
 
 # Application, not acquisition. Basically everything in this section should
 # start with a non-gerund action verb
@@ -101,12 +129,9 @@
     items:
     - name: Overview
       href: todo.md
-    - name: Choose delivery method
-      href: todo.md
+    # TODO "messaging mode" name
     - name: Configure delivery method
-      href: todo.md
-    - name: choose registration type
-      href: todo
+      href: agents-in-teams/configure-delivery-methods-for-agents.md
     - name: Configure runtime authentication
       href: agents-in-teams/configure-agent-runtime-authentication.md
       displayName: enable dev preview, coding agnet, dev env, register, tunnel, etc.
@@ -197,21 +222,16 @@
       - name: Agent basics
         href: bots/bot-concepts.md
         displayName: scopes, handler, activity
-      - name: Agent connectivity in Teams
-        href: agents-in-teams/agent-connectivity.md
+
         displayName: connectivity, Teams, agent, network, integration
       - name: Build conversational capability
         href: bots/build-conversational-capability.md
         displayName: chat, message, reply
-      - name: Best practices and features checklist
-        href: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
-        displayName: scopes, handler, activity
+
     - name: Register and configure
       items:
-      - name: Agent registration concepts
-        href: agents-in-teams/registering-agent-teams-platform.md
-      - name: Choose an agent registration type
-        href: agents-in-teams/choose-agent-registration-type.md
+
+
 
       - name: Incoming request authentication
         href: agents-in-teams/incoming-request-authentication.md
@@ -252,9 +272,7 @@
       - name: Teams emoji reactions reference
         href: agents-in-teams/teams-reactions-reference.md
         displayName: like, dislike, smiley, grin, frown, eyes, thumbs, heart, status, checkmark, acknowledge, quick, feedback, sentiment, skin tone, gesture
-      - name: Choose agent message format
-        href: agents-in-teams/agent-message-format-guidance.md
-        displayName: Teams, agent, message, format, guidance
+
       - name: Format agent messages
         href: bots/how-to/format-your-bot-messages.md
         displayName: cross-platform support
@@ -289,8 +307,7 @@
         displayName: receive files using agents
     - name: How-tos
       items:
-      - name: Configure delivery method for an agent
-        href: agents-in-teams/configure-delivery-methods-for-agents.md
+
         displayName: delivery method, agent, configuration
       - name: Connect an agent to Teams without an SDK
         href: agents-in-teams/connect-agent-without-sdk.md
