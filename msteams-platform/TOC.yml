@@ -1,22 +1,28 @@
 - name: "Quickstart: Create and chat with an agent"
   href: agents-in-teams/quickstart-create-agent-teams-sdk.md
   displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+
+  # Cognitive acquisition only: explainers, no actions.
 - name: Platform concepts
   items:
+    # This is the main "pitch" article that should remain in the docs
   - name: Teams platform overview
     href: overview.md
-    displayName: why build apps with Microsoft Teams platform. This is where we explain platform and SDK are one.
-  - name: Platform model (section?)
+  - name: Platform model
     items:
       - name: Overview
         href: todo.md
+        displayName: entra Tenant, entra, runtime, acs, manifest
       - name: Activity protocol
         href: todo.md
       - name: Manifest
         href: todo.md
+      # Agent loop, AI integration, telemetry, middleware, logging, hosting static content,
+      # managing server
       - name: Agent runtime
         href: todo.md
         displayName: the thing you build
+      # ACS client
       - name: Agent Communication Service
         href: todo.md
         displayName: events, messaging mode
@@ -25,12 +31,16 @@
     items:
     - name: Overview
       href: todo.md
+      # Explain the developer lifecycle, including the local hosting and iteration process
     - name: Development lifecycle
       href: todo.md
     - name: Teams SDK and other tools (section?)
       href: platform-concepts/todo.md  
     - name: Preview features
       href: platform-concepts/todo.md
+    - name: App architecture
+      href: todo.md
+  # Not just "agentic identity", but the choice between it and traditional Entra app id
   - name: Agent identity and permissions
     items:
       - name: Overview
@@ -41,41 +51,52 @@
         displayName: agent factory
       - name: Agent tenancy
         href: todo.md
-      - name: RSC
-        href: todo.md
+      - name: RSC permissions
+        href: graph-api/rsc/resource-specific-consent.md
     displayName: entra, app registration, agentic identity
+  # Threads, channels, group chats, shared and private channels, scopes, proactive messaging,
+  # rich messaging (cards and widgets), advanced features like TMs etc.; receiving all messages,
+  # streaming, plans and steps, feedback, content labels, etc. etc. (some of these maybe categorized
+  # in the article as "AI messaging"), emoji, a subsection on rich formatting, slash commands, files
+  # and inline msgs
   - name: Messaging
     href: platform-concepts/todo.md
-    display: threads, channels, group chats, shared and private channels
-    displayName: can define Proactive messaging here. include cards and widgets
+  # Basicc AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
   - name: AI
     href: platform-concepts/todo.md
+  # Graph API client
   - name: Microsoft Graph and WorkIQ
     href: platform-concepts/todo.md
   - name: User authentication (SSO and OAuth)
     href: platform-concepts/todo.md
-  - name: Permissions
-    href: platform-concepts/todo.md
-    displayName: RSC
-
   - name: Agent capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
 
-  
 
+# Acquisition and application; action-oriented topics here will be mostly cognitive
+# in nature, using verbs like "decide", "evaluate", "choose", "compare", "identify",
+# so it's all going together. Action verbs that show up in article headers are to be
+# interpreted as design directives, not as indicators that the content explains how
+# to implement the action.
+# All agent design considerations go here. Feature checklists, best practices, etc.;
+# while it is not exclusive of technical concepts, it should focus on the interactivity
+# consequences of them. For example, a section about context management should focus on
+# the desired functional/interaction outcome of doing context management, not the
+# technical implementation.
 - name: Design for interactivity and collaboration
   items:
   - name: Interactivity and collaboration design
     href: agent-design-concepts/todo.md
-    displayName: This is where good agent stuff goes, as well as feature checklists, capabilities. Not just designer-y design, also technical design, stuff like context management, connecting to will have more to say here than slack does.
 
+# Application, not acquisition. Basically everything in this section should
+# start with a non-gerund action verb
 - name: Build and test
   items:
   - name: Set up your environment
     href: todo.md
-    displayName: Install coding agent, dev tunnel, see JTBD
+    displayName: Install coding agent, dev tunnel, entra tenant; see JTBD
   - name: Scaffold, register, and configure identity
     items:
     - name: Overview
