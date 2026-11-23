@@ -2,7 +2,7 @@
 title: Use threads in channels and one-on-one agent chats
 description: Learn why agents should use threads, identify incoming message placement, and send responses to the main conversation or a thread.
 ms.topic: how-to
-ms.date: 11/17/2026
+ms.date: 11/23/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -112,16 +112,15 @@ App-level methods aren't tied to an incoming activity, so they need to know whic
 
 ::: zone pivot="teams-sdk-typescript"
 
-Use Teams SDK version 2.2 or later for these examples.
+For these examples, use a Teams SDK TypeScript version that includes both threading (introduced in version 2.2) and per-call service URL support. The version 2.2 threading prerequisite alone doesn't guarantee support for the `serviceUrl` option.
 
-Configure the app's `serviceUrl` with the destination's full service URL before using app-level methods. The `serviceUrl` you set applies to every `app.send` and `app.reply` call on that app, whichever conversation they target. To send to a destination with a different service URL, you need a separate `App` instance.
+Pass the destination's full service URL in the options for each `app.send` or `app.reply` call. This allows the same `App` instance to target different service URLs without changing its configured default. For fallback behavior and routing scope, see [Per-call service URLs in TypeScript](send-proactive-messages.md#per-call-service-urls-in-typescript).
 
 ```typescript
 import { getAgenticIdentity } from '@microsoft/teams.api';
+import { App } from '@microsoft/teams.apps';
 
-const app = new App({
-  serviceUrl: '<incoming service URL>',
-});
+const app = new App();
 
 app.start();
 
@@ -134,6 +133,7 @@ app.on('message', async (ctx) => {
   }
 
   await app.reply(chatId, rootMessageId, 'Let us plan your trip in this thread.', {
+    serviceUrl: activity.serviceUrl,
     agenticIdentity: getAgenticIdentity(activity.recipient), // agentic user only
   });
 });
@@ -143,6 +143,7 @@ To start a separate discussion at L1, use `app.send(chatId, message)` instead of
 
 ```typescript
 await app.send(chatId, 'A new travel policy is available.', {
+  serviceUrl: activity.serviceUrl,
   agenticIdentity: getAgenticIdentity(activity.recipient), // agentic user only
 });
 ```

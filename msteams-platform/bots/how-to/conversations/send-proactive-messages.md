@@ -5,7 +5,7 @@ ms.topic: article
 ms.owner: nickwalk
 ms.author: nickwalk
 ms.localizationpriority: high
-ms.date: 06/30/2026
+ms.date: 11/23/2026
 ---
 
 # Proactive messages
@@ -20,7 +20,7 @@ To send a proactive message to a user, a group chat, or a team, your agent must 
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must proactively install your app using Graph. For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
-Sending a proactive message is different from sending a regular message. Proactive messages are sent via `app.SendAsync()` outside an activity handler. The SDK creates the conversation automatically when you call `app.SendAsync()`. You need a `conversationId`; the SDK resolves the service URL automatically. For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. Proactive messages are sent via `app.SendAsync()` outside an activity handler. The SDK creates the conversation automatically when you call `app.SendAsync()`. You need a `conversationId`; service URL routing depends on the SDK language. For TypeScript destination-specific routing, see [Per-call service URLs in TypeScript](#per-call-service-urls-in-typescript). For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
 To send a proactive message, follow these steps:
 
@@ -94,6 +94,28 @@ After you get the appropriate address information, you can send your message.
 Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.SendAsync()` method and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
 To continue an existing discussion in a channel or in a chat that supports threading, send a reply in that discussion’s thread. Otherwise, send a new top-level message. For detailed implementation guidance, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
+
+### Per-call service URLs in TypeScript
+
+Use a Teams SDK TypeScript version that includes per-call service URL support. Store the incoming activity's `serviceUrl` alongside the conversation ID for later proactive messages. Pass the stored URL in the options argument to `app.send(conversationId, activity, options?)` or `app.reply(chatOrChannelId, rootMessageId, activity, options?)`. The reply form requires the containing chat or channel ID and thread root message ID described in [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread).
+
+```typescript
+import { MessageActivity } from '@microsoft/teams.api';
+
+await app.send(conversationId, 'Proactive notification', { serviceUrl });
+await app.reply(chatOrChannelId, rootMessageId, 'Threaded reply', { serviceUrl });
+
+// Update a previously sent message using its activity ID.
+await app.send(conversationId, new MessageActivity('Updated notification').withId(activityId), {
+  serviceUrl,
+});
+```
+
+The optional, readonly `AppSendOptions.serviceUrl` selects the backend URL for that operation only, including activity updates. It doesn't mutate `app.api.serviceUrl` or affect overlapping or subsequent calls. If the option or options object is omitted, or `serviceUrl` is `undefined`, the call uses `app.api.serviceUrl`. Supply the override on each call that needs destination-specific routing. Put `serviceUrl` in the options object, not in the activity payload. You can combine it with `agenticIdentity` in the same options object.
+
+Existing calls remain compatible, including calls that pass only `agenticIdentity`. The deprecated `app.reply(conversationId, activity, options?)` overload also accepts `serviceUrl`, but remains deprecated; use the explicit thread reply form for new implementations. The override doesn't change thread placement or conversation and message ID requirements.
+
+App-level sends and replies don't remember incoming service URLs, even when called inside an activity handler. Reactive `ctx.send` and `ctx.reply` continue to use their conversation reference's service URL, which defaults to the inbound activity's URL.
 
 ### Understand who blocked, muted, or uninstalled an agent
 
@@ -257,14 +279,20 @@ public static class Notifications
 # [TypeScript](#tab/typescript)
 
 ```typescript
-// This would be some persistent storage
-const myConversationIdStorage = new Map<string, string>();
+// Replace this map with persistent storage in production.
+const myConversationStorage = new Map<string, {
+  conversationId: string;
+  serviceUrl?: string;
+}>();
 
-// Save the conversation ID on app install
+// Save the conversation ID and service URL on app install
 app.on("install.add", async ({ activity, send }) => {
-  myConversationIdStorage.set(
+  myConversationStorage.set(
     activity.from.aadObjectId!,
-    activity.conversation.id,
+    {
+      conversationId: activity.conversation.id,
+      serviceUrl: activity.serviceUrl,
+    },
   );
   await send("Hi! I am going to remind you to say something to me soon!");
   notificationQueue.addReminder(
@@ -274,14 +302,16 @@ app.on("install.add", async ({ activity, send }) => {
   );
 });
 
-// Send proactive message using stored conversation ID
+// Send proactive message using the stored destination
 const sendProactiveNotification = async (userId: string) => {
-  const conversationId = myConversationIdStorage.get(userId);
-  if (!conversationId) {
+  const conversation = myConversationStorage.get(userId);
+  if (!conversation) {
     return;
   }
   const activity = new MessageActivity("Hey! It's been a while. How are you?");
-  await app.send(conversationId, activity);
+  await app.send(conversation.conversationId, activity, {
+    serviceUrl: conversation.serviceUrl,
+  });
 };
 ```
 

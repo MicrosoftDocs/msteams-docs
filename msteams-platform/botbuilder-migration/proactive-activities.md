@@ -3,7 +3,7 @@ title: Proactive Activities
 description: Migrate from BotBuilder's complex conversation reference handling to Teams SDK's simple conversation ID-based proactive messaging.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages-typescript-python
-ms.date: 10/09/2026
+ms.date: 11/23/2026
 ---
 # Proactive Activities
 
@@ -16,7 +16,9 @@ passed into our activity handlers through our context. This method accepts a `co
 ::: zone pivot="teams-sdk-typescript"
 The BotBuilder proactive message flow requires storing a conversation reference.
 In Teams SDK, we expose a `send` method in the `App` class, almost identical to the one
-passed into our activity handlers through our context. This method accepts a `conversationId`, so storing just that is enough!
+passed into our activity handlers through our context. This method accepts a `conversationId`. Storing just that is enough when the app's configured service URL is correct for the destination. For destination-specific routing, also retain the conversation reference's `serviceUrl` and pass it in the existing options argument.
+
+Use a Teams SDK TypeScript version that includes per-call service URL support for the following migration example. Unlike reactive context methods, app-level sends don't remember incoming service URLs. Reactive `ctx.send` and `ctx.reply` continue to route using their conversation reference. For default and per-call behavior, see [Per-call service URLs in TypeScript](../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
@@ -97,9 +99,17 @@ import { App } from '@microsoft/teams.apps';
 
 const app = new App();
 
+// Routing fields retained from your stored BotBuilder conversation reference.
+const storedConversationReference = {
+  conversation: { id: 'your-conversation-id' },
+  serviceUrl: '<stored service URL>',
+};
+
 (async () => {
   await app.start();
-  await app.send('your-conversation-id', 'proactive hello');
+  await app.send(storedConversationReference.conversation.id, 'proactive hello', {
+    serviceUrl: storedConversationReference.serviceUrl,
+  });
 }());
 ```
 
