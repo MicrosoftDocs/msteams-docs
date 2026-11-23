@@ -3,7 +3,7 @@ title: Test & Debug App Locally or on Cloud
 description: In this module, learn options for testing and debugging Microsoft Teams apps in purely local, locally hosted in Teams, and cloud-hosted environment.
 ms.localizationpriority: medium
 ms.topic: article
-ms.date: 08/28/2022
+ms.date: 11/23/2026
 ---
 
 # Choose a test setup and debug your Teams app
