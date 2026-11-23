@@ -5,11 +5,13 @@
   # Cognitive acquisition only: explainers, no actions.
 - name: Platform concepts
   items:
-    # This is the main "pitch" article that should remain in the docs
-  - name: Teams platform overview
+    # This is the main "pitch" article that should remain in the docs. Scenarios.
+  - name: Teams platform overview & scenarios
     href: overview.md
-  # Can explain here about apps vs agents?
-  - name: Platform model
+  # This is "one page on how a Teams agent fits together: the app record, its identity,
+  # how messages reach it, what it knows and can change, and how customers approve it"
+  # (From isv-developer-journey-framework.md)
+  - name: Platform architecture
     items:
       - name: Overview
         href: todo.md
@@ -47,6 +49,7 @@
     - name: App architecture
       href: todo.md
   # Not just "agentic identity", but the choice between it and traditional Entra app id
+
   - name: Agent identity and permissions
     items:
       - name: Overview
@@ -79,6 +82,8 @@
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
+  - name: Cost considerations
+    href: todo.md
 
 
 # This section is about *agent design decision making*.
@@ -92,8 +97,12 @@
 # consequences of them. For example, a section about context management should focus on
 # the desired functional/interaction outcome of doing context management, not the
 # technical implementation.
-- name: Design
+- name: Decide & design
   items:
+  - name: Identity
+    items:
+    - name: Choose identity type
+      href: todo.md
   - name: Interactivity and collaboration design
     items:
       # Events
@@ -105,10 +114,6 @@
     - name: Choose agent message format
       href: agents-in-teams/agent-message-format-guidance.md
       displayName: Teams, agent, message, format, guidance
-  - name: Identity
-    items:
-      - name: Choose identity type
-        href: todo.md
   # agents-in-teams/choose-agent-registration-type.md goes here, also 
   # agents-in-teams/agent-connectivity.md (choose messaging mode, TODO on that name)
   # SDK or SDKless
@@ -117,6 +122,7 @@
   # TODO topics we need design decision-making guidance on:
   # Graph and WorkIQ, User Auth (OAuth and SSO), App capabilities, publishing,
   # M365 extensibility?
+
 
 # Application, not acquisition. Basically everything in this section should
 # start with a non-gerund action verb
@@ -166,7 +172,7 @@
     href: todo.md
 
 
-- name: Evaluate and deploy
+- name: Deploy and evaluate
   href: todo.md
 
 
