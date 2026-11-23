@@ -11,7 +11,7 @@
   # Quick overview with links into other core concepts like messaging, permissions
   # etc. Cover AI here, there's not a separate page? # Basic AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
   # ACS
-  - name: Teams agents
+  - name: Agents in Teams
     href: todo.md
     # Not just "agentic identity", but the choice between it and traditional Entra app id
   - name: Identity and permissions
@@ -47,7 +47,7 @@
           href: todo.md
     - name: Preview features
       href: platform-concepts/todo.md
-  - name: Platform elements
+  - name: Deployment elements
     items:
           # This is "one page on how a Teams agent fits together: the app record, its identity,
           # how messages reach it, what it knows and can change, and how customers approve it"
@@ -72,7 +72,7 @@
     href: platform-concepts/todo.md
   - name: User authentication (SSO and OAuth)
     href: platform-concepts/todo.md
-  - name: Additional app capabilities (surfaces)
+  - name: App capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
