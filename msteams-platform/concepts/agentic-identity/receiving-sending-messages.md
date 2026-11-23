@@ -192,7 +192,7 @@ const api = app.api.forAgenticIdentity(agenticIdentity);
 await api.conversations.addReaction(conversationId, activityId, 'like');
 ```
 
-Use a Teams SDK TypeScript version that includes per-call service URL support. The stored `serviceUrl` selects the destination for this send, while `agenticIdentity` selects the sender's identity scope. Both options can be supplied together without changing the app's default service URL. For routing scope and fallback behavior, see [Per-call service URLs in TypeScript](../../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
+Pass the stored `serviceUrl` and `agenticIdentity` together to select the destination and sender. For requirements and routing behavior, see [Per-call service URLs in TypeScript](../../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 
 ::: zone-end
 

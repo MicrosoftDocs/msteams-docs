@@ -97,7 +97,7 @@ To continue an existing discussion in a channel or in a chat that supports threa
 
 ### Per-call service URLs in TypeScript
 
-Use a Teams SDK TypeScript version that includes per-call service URL support. Store the incoming activity's `serviceUrl` alongside the conversation ID for later proactive messages. Pass the stored URL in the options argument to `app.send(conversationId, activity, options?)` or `app.reply(chatOrChannelId, rootMessageId, activity, options?)`. The reply form requires the containing chat or channel ID and thread root message ID described in [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread).
+Use a Teams SDK TypeScript version that supports per-call service URLs. Store the incoming activity's `serviceUrl` with the conversation ID for later proactive messages, then pass the URL in the send or reply options. For thread replies, use the containing chat or channel ID and thread root message ID. See [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread).
 
 ```typescript
 import { MessageActivity } from '@microsoft/teams.api';
@@ -111,11 +111,9 @@ await app.send(conversationId, new MessageActivity('Updated notification').withI
 });
 ```
 
-The optional, readonly `AppSendOptions.serviceUrl` selects the backend URL for that operation only, including activity updates. It doesn't mutate `app.api.serviceUrl` or affect overlapping or subsequent calls. If the option or options object is omitted, or `serviceUrl` is `undefined`, the call uses `app.api.serviceUrl`. Supply the override on each call that needs destination-specific routing. Put `serviceUrl` in the options object, not in the activity payload. You can combine it with `agenticIdentity` in the same options object.
+The URL applies only to that send, update, or reply and leaves the app's configured URL unchanged. If you omit `serviceUrl`, the SDK uses the configured URL. You can pass `agenticIdentity` in the same options object.
 
-Existing calls remain compatible, including calls that pass only `agenticIdentity`. The deprecated `app.reply(conversationId, activity, options?)` overload also accepts `serviceUrl`, but remains deprecated; use the explicit thread reply form for new implementations. The override doesn't change thread placement or conversation and message ID requirements.
-
-App-level sends and replies don't remember incoming service URLs, even when called inside an activity handler. Reactive `ctx.send` and `ctx.reply` continue to use their conversation reference's service URL, which defaults to the inbound activity's URL.
+Pass the URL on each app-level call that needs it; these methods don't retain incoming service URLs. Context methods (`ctx.send` and `ctx.reply`) use the incoming activity's URL automatically.
 
 ### Understand who blocked, muted, or uninstalled an agent
 

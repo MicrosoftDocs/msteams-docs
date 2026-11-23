@@ -112,9 +112,9 @@ App-level methods aren't tied to an incoming activity, so they need to know whic
 
 ::: zone pivot="teams-sdk-typescript"
 
-For these examples, use a Teams SDK TypeScript version that includes both threading (introduced in version 2.2) and per-call service URL support. The version 2.2 threading prerequisite alone doesn't guarantee support for the `serviceUrl` option.
+These examples require threading support (Teams SDK version 2.2 or later) and [per-call service URL support](send-proactive-messages.md#per-call-service-urls-in-typescript).
 
-Pass the destination's full service URL in the options for each `app.send` or `app.reply` call. This allows the same `App` instance to target different service URLs without changing its configured default. For fallback behavior and routing scope, see [Per-call service URLs in TypeScript](send-proactive-messages.md#per-call-service-urls-in-typescript).
+Pass `activity.serviceUrl` in each call's options to send to the incoming activity's destination.
 
 ```typescript
 import { getAgenticIdentity } from '@microsoft/teams.api';

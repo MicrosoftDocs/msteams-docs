@@ -14,11 +14,9 @@ passed into our activity handlers through our context. This method accepts a `co
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
-The BotBuilder proactive message flow requires storing a conversation reference.
-In Teams SDK, we expose a `send` method in the `App` class, almost identical to the one
-passed into our activity handlers through our context. This method accepts a `conversationId`. Storing just that is enough when the app's configured service URL is correct for the destination. For destination-specific routing, also retain the conversation reference's `serviceUrl` and pass it in the existing options argument.
+In Teams SDK, use `app.send` with the stored conversation ID to send a proactive message. If the destination uses a different service URL from the app's configured URL, also pass the stored conversation reference's `serviceUrl` in the send options.
 
-Use a Teams SDK TypeScript version that includes per-call service URL support for the following migration example. Unlike reactive context methods, app-level sends don't remember incoming service URLs. Reactive `ctx.send` and `ctx.reply` continue to route using their conversation reference. For default and per-call behavior, see [Per-call service URLs in TypeScript](../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
+Unlike context-level sends, app-level sends don't retain incoming service URLs. For requirements and routing behavior, see [Per-call service URLs in TypeScript](../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
