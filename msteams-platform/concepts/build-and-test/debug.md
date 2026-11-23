@@ -32,7 +32,7 @@ To debug an agent or a bot project with Microsoft 365 Agents Toolkit in Visual S
 
 1. Install the [Agents Playground prerequisites](~/toolkit/debug-your-agents-playground.md#prerequisites).
 1. Open your agent or bot project. If it doesn't have an Agents Playground debug configuration, follow [Debug an existing app with Agents Playground](~/toolkit/debug-your-agents-playground.md#debug-an-existing-app-with-agents-playground) to configure it.
-1. Set breakpoints in your bot's message or activity handlers.
+1. Set breakpoints in your agent's or bot's message or activity handlers.
 1. Open **Run and Debug** (`Ctrl+Shift+D`), select the **Debug in Microsoft 365 Agents Playground** configuration, and press **F5**. The configuration might include **(Preview)** in its name. Agents Playground opens in a browser.
 1. Send a message to your agent or bot, inspect its responses and Adaptive Cards, and step through your code when a breakpoint is reached. Use activity triggers to test events supported by the selected channel.
 
@@ -59,7 +59,7 @@ To set up ngrok in preparation to execute your Teams agent or app locally, follo
 
 To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For agents or bots built with Teams SDK, update the messaging endpoint in your bot's registration to use the ngrok HTTPS URL followed by `/api/messages`, for example, `https://2d1224fb.ngrok.io/api/messages`. Keep your local agent or app and ngrok running, then upload and install your agent or app in Teams. Send a message to your agent or bot in the Teams client to verify that Teams can reach your local endpoint and test Teams-specific functionality.
+For agents or bots built with Teams SDK, update the messaging endpoint in your agent's or bot's registration to use the ngrok HTTPS URL followed by `/api/messages`, for example, `https://2d1224fb.ngrok.io/api/messages`. Keep your local agent or app and ngrok running, then upload and install your agent or app in Teams. Send a message to your agent or bot in the Teams client to verify that Teams can reach your local endpoint and test Teams-specific functionality.
 
 > [!NOTE]
 > If the tunnel URL changes, update the messaging endpoint in your agent's or bot's registration before testing again. For registration and installation guidance, see [Register, install, and chat in Teams](~/agents-in-teams/quickstart-create-agent-teams-sdk.md#register-install-and-chat-in-teams).
