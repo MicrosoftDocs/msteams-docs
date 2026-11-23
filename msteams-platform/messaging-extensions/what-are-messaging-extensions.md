@@ -99,7 +99,7 @@ The following table helps you select a message extension type to get started:
 
 * Simpler and faster to create and maintain.
 * Message extension uses an API.
-* No extra code or resource is required for agent logic.
+* No extra code or resource is required for bot logic.
 * Ideal for scenarios where the message extension only needs to communicate with a web service and doesn't need any complex logic or state management.
 * Traffic is privatized as they don’t depend on Azure bot infrastructure.
 * Supports search commands.
