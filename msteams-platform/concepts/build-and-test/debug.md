@@ -10,7 +10,7 @@ ms.date: 11/23/2026
 
 Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
 
-* **Purely local**: For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
+* **Purely local**: For bots, you can test your experience in [Microsoft 365 Agents Playground](~/toolkit/debug-your-agents-playground.md), a local testing environment that simulates bot interactions without tunneling or Teams app and bot registration. For other content, you can run locally in your browser and address content through `http://localhost`.
 * **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
 * **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
@@ -23,20 +23,28 @@ Use multiple manifests and packages to maintain separation between production an
 
 ## Purely local
 
+Use Microsoft 365 Agents Playground to test your bot's core logic, exchange messages, and preview Adaptive Cards in a browser. You can also use mock data and activity triggers to simulate supported Teams scenarios, such as a member joining a team. You don't need a Microsoft 365 developer tenant for anonymous local testing.
+
 > [!NOTE]
-> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Teams.
+> Agents Playground simulates supported Teams activities and APIs, including roster calls, with mock data. It doesn't process your app manifest or reproduce every Teams feature. For supported scenarios and restrictions, see [Agents Playground limitations](~/toolkit/debug-your-agents-playground.md#limitations). Test your app in the Teams client to validate real service integration and features that aren't supported in Agents Playground.
 
-Your bot can run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Following are the steps:
+To debug a bot project with Microsoft 365 Agents Toolkit in Visual Studio Code:
 
-1. Run the code locally.
-2. Launch the Bot Emulator and set the URL:
-   * Node.js: `http://localhost:3978/api/messages`
-   * .NET/C#: `http://localhost:3979/api/messages`
-3. Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
+1. Install the [Agents Playground prerequisites](~/toolkit/debug-your-agents-playground.md#prerequisites).
+1. Open your bot project. If it doesn't have an Agents Playground debug configuration, follow [Debug an existing app with Agents Playground](~/toolkit/debug-your-agents-playground.md#debug-an-existing-app-with-agents-playground) to configure it.
+1. Set breakpoints in your bot's message or activity handlers.
+1. Open **Run and Debug** (`Ctrl+Shift+D`), select the **Debug in Microsoft 365 Agents Playground** configuration, and press **F5**. The configuration might include **(Preview)** in its name. Agents Playground opens in a browser.
+1. Send a message to your bot, inspect its responses and Adaptive Cards, and step through your code when a breakpoint is reached. Use activity triggers to test events supported by the selected channel.
+
+If you run your bot independently of Agents Toolkit, install and launch the standalone Playground as described in [Test your agent locally in Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project#start-your-project-by-cloning-or-with-the-cli). Run your bot locally and set Playground's `--app-endpoint` option to its actual messaging endpoint, using the port configured in your project.
+
+To simulate Teams-specific activities, select the `msteams` channel. Agents Toolkit launches Playground with the `emulator` channel by default. Change it with the `DEFAULT_CHANNEL_ID` environment variable or use `--channel-id msteams` for a standalone launch. For more information, see [Multiple channel support](~/toolkit/debug-your-agents-playground.md#multiple-channel-support).
+
+Agents Playground supports anonymous and authenticated testing. For anonymous testing, use your project's local development configuration. If your bot requires authentication, configure Microsoft Entra ID app registrations for both Playground and your app. For setup details, see [Configure Agents Playground for authentication](~/toolkit/debug-your-agents-playground.md#configure-agents-playground-for-authentication). Keep local development settings separate from production settings, and don't disable production authentication for local testing.
 
 ## Locally hosted
 
-Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software.
+Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software. Unlike testing in Agents Playground, this setup runs your app inside the Teams client and requires a publicly accessible endpoint.
 
 Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 
@@ -51,7 +59,7 @@ To set up ngrok in preparation to execute your Teams app locally, follow these s
 
 To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
+For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. This chat tests basic bot connectivity, not the full Teams experience. Upload your app to Teams to validate Teams-specific functionality.
 
 > [!NOTE]
 > To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
@@ -65,7 +73,7 @@ You can use any externally addressable service to host your development and prod
 
 ## Load and run your experience
 
-To load and run your experience within Teams, you need to create a package and upload it into Teams. For more information, see:
+To load and run your experience within Teams, you need to create a package and upload it into Teams. Packaging and uploading aren't required for testing in Agents Playground. Always test your app in the Teams client before moving it to production. For more information, see:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
@@ -77,6 +85,7 @@ To load and run your experience within Teams, you need to create a package and u
 
 ## See also
 
+* [Microsoft 365 Agents Playground](~/toolkit/debug-your-agents-playground.md)
 * [Test and debug your bot locally with IDE](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally-with-ide)
 * [Dev Tools for Microsoft Teams tabs](../../tabs/how-to/developer-tools.md)
 * [Test app behavior in different environment](../../toolkit/test-app-behavior.md)
