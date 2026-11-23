@@ -36,19 +36,19 @@ To debug an agent or a bot project with Microsoft 365 Agents Toolkit in Visual S
 1. Open **Run and Debug** (`Ctrl+Shift+D`), select the **Debug in Microsoft 365 Agents Playground** configuration, and press **F5**. The configuration might include **(Preview)** in its name. Agents Playground opens in a browser.
 1. Send a message to your agent or bot, inspect its responses and Adaptive Cards, and step through your code when a breakpoint is reached. Use activity triggers to test events supported by the selected channel.
 
-If you run your bot independently of Agents Toolkit, install and launch the standalone Playground as described in [Test your agent locally in Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project#start-your-project-by-cloning-or-with-the-cli). Run your agent or bot locally and set Playground's `--app-endpoint` option to its actual messaging endpoint, using the port configured in your project.
+If you run your agent or bot independently of Agents Toolkit, install and launch the standalone Playground as described in [Test your agent locally in Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project#start-your-project-by-cloning-or-with-the-cli). Run your agent or bot locally and set Playground's `--app-endpoint` option to its actual messaging endpoint, using the port configured in your project.
 
 To simulate Teams-specific activities, select the `msteams` channel. Agents Toolkit launches Playground with the `emulator` channel by default. Change it with the `DEFAULT_CHANNEL_ID` environment variable or use `--channel-id msteams` for a standalone launch. For more information, see [Multiple channel support](~/toolkit/debug-your-agents-playground.md#multiple-channel-support).
 
-Agents Playground supports anonymous and authenticated testing. For anonymous testing, use your project's local development configuration. If your agent or bot requires authentication, configure Microsoft Entra ID app registrations for both Playground and your app. For setup details, see [Configure Agents Playground for authentication](~/toolkit/debug-your-agents-playground.md#configure-agents-playground-for-authentication). Keep local development settings separate from production settings, and don't disable production authentication for local testing.
+Agents Playground supports anonymous and authenticated testing. For anonymous testing, use your project's local development configuration. If your agent or bot requires authentication, configure Microsoft Entra ID app registrations for both Playground and your agent or app. For setup details, see [Configure Agents Playground for authentication](~/toolkit/debug-your-agents-playground.md#configure-agents-playground-for-authentication). Keep local development settings separate from production settings, and don't disable production authentication for local testing.
 
 ## Locally hosted
 
-Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software. Unlike testing in Agents Playground, this setup runs your app inside the Teams client and requires a publicly accessible endpoint.
+Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your agent or app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software. Unlike testing in Agents Playground, this setup runs your agent or app inside the Teams client and requires a publicly accessible endpoint.
 
 Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 
-To set up ngrok in preparation to execute your Teams app locally, follow these steps:
+To set up ngrok in preparation to execute your Teams agent or app locally, follow these steps:
 
 1. Go to the directory where you have ngrok.exe installed in a terminal application. You may want to add it as a path variable to avoid this step.
 2. Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
@@ -59,10 +59,10 @@ To set up ngrok in preparation to execute your Teams app locally, follow these s
 
 To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. This chat tests basic bot connectivity, not the full Teams experience. Upload your app to Teams to validate Teams-specific functionality.
+For agents or bots built with Teams SDK, update the messaging endpoint in your bot's registration to use the ngrok HTTPS URL followed by `/api/messages`, for example, `https://2d1224fb.ngrok.io/api/messages`. Keep your local agent or app and ngrok running, then upload and install your agent or app in Teams. Send a message to your agent or bot in the Teams client to verify that Teams can reach your local endpoint and test Teams-specific functionality.
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+> If the tunnel URL changes, update the messaging endpoint in your agent's or bot's registration before testing again. For registration and installation guidance, see [Register, install, and chat in Teams](~/agents-in-teams/quickstart-create-agent-teams-sdk.md#register-install-and-chat-in-teams).
 
 ## Cloud-hosted
 
