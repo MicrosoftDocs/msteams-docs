@@ -1109,7 +1109,7 @@
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
     displayName: Basic, Standard, Enterprise E1, E3, and E5, developer, Education, Education Plus, and Education E5
-  - name: Choose a test setup and debug Teams app
+  - name: Choose a test setup and debug Teams agent or app
     href: concepts/build-and-test/debug.md
     displayName: Purely hosted, locally hosted, cloud hosted
   - name: Add test data to your environment
