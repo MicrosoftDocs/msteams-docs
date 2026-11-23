@@ -9,7 +9,7 @@ ms.date: 06/23/2026
 
 # Create Outgoing Webhooks
 
-The Outgoing Webhook acts as a bot and searches for messages in channels using **@mention**. It sends notifications to an external web service and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+An Outgoing Webhook receives messages from a Teams channel when users **@mention** it. It forwards those messages to an external web service, which can respond with rich messages that include cards and images.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts may be overused in this article. Check once.
@@ -78,7 +78,7 @@ The following scenario provides the details to add an Outgoing Webhook:
 
 **Create a URL on your app's server to accept and process a POST request with a JSON payload**
 
-Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the Microsoft Bot Framework SDK to process and parse messages. For more information, see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the Teams SDK to process and parse messages. For more information, see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing Webhooks are scoped to the `team` level and are visible to all the team members. Users need to **@mention** the name of the Outgoing Webhook to invoke it in the channel.
 
@@ -94,12 +94,15 @@ To ensure that your service is receiving calls only from actual Teams clients, T
 
 Your code must always validate the HMAC signature included in the request as follows:
 
-* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
-* Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
-* Convert the hash to a string using UTF-8 encoding.
-* Compare the string value of the generated hash with the value provided in the HTTP request.
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
+* Base64-decode the security token provided by Teams when you registered the Outgoing Webhook and use the resulting bytes as the HMAC key. See [create an Outgoing Webhook](#create-outgoing-webhooks).
+* Base64-encode the computed hash.
+* Compare the Base64-encoded hash with the signature after the `HMAC` scheme in the HTTP `Authorization` header. Use a constant-time comparison.
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
+:::row:::
+:::column:::
+
+# [C#](#tab/hmac-dotnet)
 
 ```csharp
 public static AuthResponse Validate(AuthenticationHeaderValue authenticationHeaderValue, string messageContent, string claimedSenderId)
@@ -139,6 +142,71 @@ public static AuthResponse Validate(AuthenticationHeaderValue authenticationHead
     }
 }
 ```
+
+# [TypeScript](#tab/hmac-typescript)
+
+Use the built-in Node.js `crypto` module. Pass the HTTP `Authorization` header, the unmodified request body as a `Buffer`, and the Base64-encoded security token as `signingKey`. Validate the signature before parsing the JSON body. If validation fails, reject the request with HTTP `401 Unauthorized` and don't process the message.
+
+```typescript
+import { createHmac, timingSafeEqual } from "node:crypto";
+
+function validateHmac(
+    authorizationHeader: string | undefined,
+    rawBody: Buffer,
+    signingKey: string
+): void {
+    const match = /^HMAC (.+)$/i.exec(authorizationHeader ?? "");
+    if (!match) {
+        throw new Error("Missing or invalid HMAC Authorization header.");
+    }
+
+    const keyBytes = Buffer.from(signingKey, "base64");
+    const calculatedHmac = createHmac("sha256", keyBytes)
+        .update(rawBody)
+        .digest("base64");
+    const expected = Buffer.from(calculatedHmac, "utf8");
+    const provided = Buffer.from(match[1], "utf8");
+
+    if (provided.length !== expected.length ||
+        !timingSafeEqual(provided, expected)) {
+        throw new Error("HMAC signature validation failed.");
+    }
+}
+```
+
+# [Python](#tab/hmac-python)
+
+Use the Python standard library. Pass the HTTP `Authorization` header, the unmodified request body as `bytes`, and the Base64-encoded security token as `signing_key`. Validate the signature before parsing the JSON body. If validation fails, reject the request with HTTP `401 Unauthorized` and don't process the message.
+
+```python
+import base64
+import hashlib
+import hmac
+from typing import Optional
+
+
+def validate_hmac(
+    authorization_header: Optional[str],
+    raw_body: bytes,
+    signing_key: str,
+) -> None:
+    scheme, separator, signature = (authorization_header or "").partition(" ")
+    if scheme.lower() != "hmac" or not separator or not signature:
+        raise ValueError("Missing or invalid HMAC Authorization header.")
+
+    key_bytes = base64.b64decode(signing_key, validate=True)
+    calculated_hmac = hmac.new(key_bytes, raw_body, hashlib.sha256).digest()
+    expected = base64.b64encode(calculated_hmac)
+    provided = signature.encode("utf-8")
+
+    if not hmac.compare_digest(provided, expected):
+        raise ValueError("HMAC signature validation failed.")
+```
+
+---
+
+:::column-end:::
+:::row-end:::
 
 # [Method to respond](#tab/methodtorespond)
 
@@ -202,11 +270,11 @@ var sampleResponseActivity = new Activity
 return sampleResponseActivity;
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [TypeScript/Node.js](#tab/typescript)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/outgoing-webhook/nodejs/app.js#L30)
 
-```javascript
+```typescript
 var receivedMsg = JSON.parse(payload);
 var responseMsg = JSON.stringify({
     "type": "message",
@@ -237,37 +305,6 @@ var responseMsg = JSON.stringify({
         }
     ]
 });
-```
-
-# [JSON](#tab/json)
-
-```json
-{
- "type": "message",
- "attachments": [
-  {
-   "contentType": "application/vnd.microsoft.card.adaptive",
-   "content": {
-    "type": "AdaptiveCard",
-    "version": "1.4",
-    "body": [
-     {
-      "type": "TextBlock",
-      "text": "Request sent by: Megan"
-     },
-     {
-      "type": "Image",
-      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
-     },
-     {
-      "type": "TextBlock",
-      "text": "Sample image for Adaptive Card.."
-     }
-    ]
-   }
-  }
- ]
-}
 ```
 
 # [Python](#tab/python)
@@ -305,13 +342,38 @@ response_msg = json.dumps({
 })
 ```
 
+# [JSON](#tab/json)
+
+```json
+{
+ "type": "message",
+ "attachments": [
+  {
+   "contentType": "application/vnd.microsoft.card.adaptive",
+   "content": {
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+     {
+      "type": "TextBlock",
+      "text": "Request sent by: Megan"
+     },
+     {
+      "type": "Image",
+      "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+     },
+     {
+      "type": "TextBlock",
+      "text": "Sample image for Adaptive Card.."
+     }
+    ]
+   }
+  }
+ ]
+}
+```
+
 ---
-
-## Code sample
-
-|**Sample name** | **Description** | **.NET** | **Node.js** |
-|----------------|------------------|--------|----------------|
-| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/outgoing-webhook/nodejs)|
 
 ## See also
 
