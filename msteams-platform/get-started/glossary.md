@@ -41,6 +41,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
 | [Bicep](../toolkit/provision.md) | Bicep is a domain-specific language designed to simplify the process of deploying Azure resources using declarative syntax. |
 | [Bot](../bots/what-are-bots.md) | A bot is an app or service that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
+| [Bot handle](../bots/how-to/authentication/bot-sso-register-aad.md) | A bot handle is a unique identifier for your bot. A bot handle represents a bot's registration with the online Azure Bot Service. This registration is associated with an HTTP webhook endpoint and registration with channels. <br> **See also**: [SSO](#s); [Bot resource](#b); [Microsoft Entra ID](#a) |
 | [Bot ID](../bots/how-to/authentication/bot-sso-register-aad.md) | A unique identifier of your bot app that is generated at the time you register your app in Microsoft Entra ID. <br> **See also**: [Bot handle](#b) |
 | [Bot resource](../bots/how-to/authentication/bot-sso-register-aad.md) | The Azure Bot resource (bot resource) allows you to register your bot with Azure Bot Services and to connect your bot to channels. <br> **See also**: [SSO](#s); [Microsoft Entra ID](#a) |
 
