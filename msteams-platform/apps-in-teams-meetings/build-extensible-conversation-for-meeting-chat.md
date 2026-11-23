@@ -1,6 +1,6 @@
 ---
 title: Build Extensible Conversations
-description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
+description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with agents, cards, and message extensions.
 ms.topic: concept-article
 ms.author: nickwalk
 ms.localizationpriority: medium
@@ -9,22 +9,21 @@ ms.date: 05/01/2026
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and dialogs (referred to as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Agents, message extensions, cards, and dialogs (referred to as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
-## Bots
+## Agents
 
-A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive tasks by users such as customer service or support staff. Everyday use of bots includes bots that provide information about the weather, make dinner reservations, or provide travel information. Interactions with bots can be quick questions and answers or complex conversations. A bot needs to be enabled in the `team` scope for a channel meeting and the `groupchat` scope for all other meeting types. To implement bots, start with [build a bot](/microsoftteams/platform/bots/what-are-bots).
+Agents in Teams are conversational apps that understand user intent, connect to business data, and perform tasks on behalf of users. They can answer questions, automate workflows, and help users collaborate in meeting chats. An agent needs to be enabled in the `team` scope for a channel meeting and the `groupchat` scope for all other meeting types. For more information, see [Agents in Teams](../agents-in-teams/overview.md).
 
-### Bot APIs
+### Build an agent
 
-The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true).
+Use Teams SDK to build agents with support for authentication, messaging, and UI components in Teams. You can develop agents using TypeScript, C#, or Python. To get started, follow [Quickstart: Create an agent and chat with it in Teams](../agents-in-teams/quickstart-create-agent-teams-sdk.md).
 
 ### Code samples - Bots
 
-| Sample name | Description | .NETCore | Node.js | Python | Java |
-| ---------------- | ----------------- | -------------- | ---------------- | ---------------- | ---------------- |
-| Bot Quickstart | This sample demonstrates how to handle various bot conversation events in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) | NA |
-| Bot samples | Set of bot framework v4 samples | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
+| Sample name | Description | C# | Typescript | Python |
+| ---------------- | ----------------- | -------------- | ---------------- | ---------------- |
+| Bot Quickstart | This sample demonstrates how to handle various bot conversation events in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
 
 ## Message extensions
 
@@ -38,12 +37,12 @@ Cards provide users with various visual, audio, and selectable messages and help
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots | Message extensions | Adaptive Cards | Dialogs |
+| User type | Agents | Message extensions | Adaptive Cards | Dialogs |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
-| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous | Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| In-tenant | Can view messages, interact with the content, and invoke the agent. | Available | Available | Available |
+| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Can view messages, interact with the content, and invoke the agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous | Can view and interact with the messages sent by the agent. Can't invoke the agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
 >
@@ -56,5 +55,4 @@ The following table provides the user types and lists the features that each use
 * [Design your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
 * [Design dialogs for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Enable an agent to receive all chat messages](../agents-in-teams/enable-receive-all-chat-messages.md)
-* [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
