@@ -6,9 +6,9 @@ ms.topic: article
 ms.date: 11/23/2026
 ---
 
-<a id="choose-a-test-setup-and-debug-your-teams-app"></a>
-
 # Choose a test setup and debug your Teams agent or app
+
+<a id="choose-a-test-setup-and-debug-your-teams-app"></a>
 
 Microsoft Teams agents and apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
 
