@@ -48,6 +48,8 @@ Update your bot's messaging endpoint to use the HTTPS URL provided by ngrok foll
 
 Use Agents Playground for local testing without installing your bot as an app in Teams. You can also talk to a registered bot directly by ID for basic testing. These options don't replace testing the full functionality of your bot in the Teams client. To fully test your bot, see [test by uploading to Teams](#test-by-uploading-to-teams).
 
+<a name="use-the-bot-emulator"></a>
+
 ### Use Microsoft 365 Agents Playground
 
 [Microsoft 365 Agents Playground](../../../toolkit/debug-your-agents-playground.md) provides a local environment for testing bot and agent-based apps. Use it instead of Bot Framework Emulator to send messages, inspect activities, render Adaptive Cards, and simulate Teams events with mock data. Agents Playground supports personal, team, and group chat scopes. You don't need a Microsoft 365 developer tenant, app registration, custom app upload permissions, or a tunneling service to use it.
