@@ -47,7 +47,7 @@
           href: todo.md
     - name: Preview features
       href: platform-concepts/todo.md
-  - name: Deployment elements
+  - name: Deployment components
     items:
           # This is "one page on how a Teams agent fits together: the app record, its identity,
           # how messages reach it, what it knows and can change, and how customers approve it"
@@ -168,15 +168,21 @@
 
 
 - name: Deploy and evaluate
-  href: todo.md
+  items:
+    - name: Overview
+      href: todo.md
 
 
 - name: Publish and distribute
-  href: todo.md
+  items:
+    - name: Overview
+      href: todo.md
 
 
 - name: Operate and maintain
-  href: todo.md
+  items:
+    - name: Overview
+      href: todo.md
 
 - name: Reference
   items:
@@ -212,7 +218,9 @@
       displayName: Reference, TeamsJS, client
 
 - name: Additional resources
-  href: todo.md
+  items:
+    - name: Overview
+      href: todo.md
 
 # - name: Junk drawer
 #   items:
