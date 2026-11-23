@@ -1,56 +1,20 @@
 - name: "Quickstart: Create and chat with an agent"
   href: agents-in-teams/quickstart-create-agent-teams-sdk.md
   displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
-
+  # High-level, aspirational "pitch" article that should remain in the docs. Scenarios.
+  # Chunky customer personas (ISV vs LOB)
+# - name: About Teams agents and apps
+#   href: overview.md
   # Cognitive acquisition only: explainers, no actions.
-- name: Platform concepts
+- name: Developer platform concepts
   items:
-    # This is the main "pitch" article that should remain in the docs. Scenarios.
-  - name: Teams platform overview & scenarios
-    href: overview.md
-  # This is "one page on how a Teams agent fits together: the app record, its identity,
-  # how messages reach it, what it knows and can change, and how customers approve it"
-  # (From isv-developer-journey-framework.md)
-  - name: Platform architecture
-    items:
-      - name: Overview
-        href: todo.md
-      # The thing you build and host; what its arch looks like, Teams SDK or SDKless
-      - name: Agent runtime
-        href: todo.md
-      - name: Agent Communication Service
-        href: todo.md
-      - name: Agent registration concepts
-        href: agents-in-teams/registering-agent-teams-platform.md
-        displayName: entra Tenant, entra, runtime, acs, manifest
-      - name: Activity protocol
-        href: todo.md
-      - name: Manifest
-        href: todo.md
-      # Agent loop, AI integration, telemetry, middleware, logging, hosting static content,
-      # managing server
-
-      # ACS client
-      - name: Agent Communication Service
-        href: todo.md
-        displayName: events, messaging mode
-    displayName: entra, ACS, manifest, registration, runtime , events
-  - name: Developer experience
-    items:
-    - name: Overview
-      href: todo.md
-      # Explain the developer lifecycle, including the local hosting and iteration process
-    - name: Development lifecycle
-      href: todo.md
-    - name: Teams SDK and other tools (section?)
-      href: platform-concepts/todo.md  
-    - name: Preview features
-      href: platform-concepts/todo.md
-    - name: App architecture
-      href: todo.md
-  # Not just "agentic identity", but the choice between it and traditional Entra app id
-
-  - name: Agent identity and permissions
+  # Quick overview with links into other core concepts like messaging, permissions
+  # etc. Cover AI here, there's not a separate page? # Basic AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
+  # ACS
+  - name: Teams agents
+    href: todo.md
+    # Not just "agentic identity", but the choice between it and traditional Entra app id
+  - name: Identity and permissions
     items:
       - name: Overview
         href: todo.md
@@ -62,7 +26,6 @@
         href: todo.md
       - name: RSC permissions
         href: graph-api/rsc/resource-specific-consent.md
-    displayName: entra, app registration, agentic identity
   # Threads, channels, group chats, shared and private channels, scopes, proactive messaging,
   # rich messaging (cards and widgets), advanced features like TMs etc.; receiving all messages,
   # streaming, plans and steps, feedback, content labels, etc. etc. (some of these maybe categorized
@@ -70,15 +33,46 @@
   # and inline msgs
   - name: Messaging
     href: platform-concepts/todo.md
-  # Basic AI-agnostic stance of the SDK, basic concepts of  MCP, A2A
-  - name: AI
-    href: platform-concepts/todo.md
+      
+  - name: Developer experience
+    items:
+    - name: Overview
+      href: todo.md
+      # Explain the developer lifecycle, including the local hosting and iteration process
+    - name: Development lifecycle
+      href: todo.md
+    - name: Tools and SDKs
+      items:
+        - name: Overview
+          href: todo.md
+    - name: Preview features
+      href: platform-concepts/todo.md
+  - name: Platform elements
+    items:
+          # This is "one page on how a Teams agent fits together: the app record, its identity,
+          # how messages reach it, what it knows and can change, and how customers approve it"
+          # (From isv-developer-journey-framework.md)
+          # A revised version of agents-in-teams/registering-agent-teams-platform.md
+      - name: Overview
+        href: todo.md
+      # The thing you build and host; what its arch looks like, Teams SDK or SDKless
+      # Agent loop, AI integration, telemetry, middleware, logging, hosting static content,
+      # managing server
+      - name: Agent runtime
+        href: todo.md
+        # ACS client, events, messaging mode
+      - name: Agent Communication Service
+        href: todo.md
+      - name: Microsoft Entra
+        href: todo.md
+      - name: Manifest
+        href: todo.md
   # Graph API client
   - name: Microsoft Graph and WorkIQ
     href: platform-concepts/todo.md
   - name: User authentication (SSO and OAuth)
     href: platform-concepts/todo.md
-  - name: App capabilities (surfaces)
+  - name: Additional app capabilities (surfaces)
     href: platform-concepts/todo.md
   - name: Publishing and distribution
     href: platform-concepts/todo.md
@@ -97,7 +91,7 @@
 # consequences of them. For example, a section about context management should focus on
 # the desired functional/interaction outcome of doing context management, not the
 # technical implementation.
-- name: Define & design
+- name: Define and design
   items:
   # "The four Microsoft calls": Agent vs. digital worker; context/what it knows;
   # what it can change, how does it get in. This is a decision guide.
@@ -126,7 +120,7 @@
 
 # Application, not acquisition. Basically everything in this section should
 # start with a non-gerund action verb
-- name: Build & test
+- name: Build and test
   items:
   # Tenant
   - name: Set up your environment
@@ -173,15 +167,15 @@
     href: todo.md
 
 
-- name: Deploy & evaluate
+- name: Deploy and evaluate
   href: todo.md
 
 
-- name: Publish & distribute
+- name: Publish and distribute
   href: todo.md
 
 
-- name: Operate & maintain
+- name: Operate and maintain
   href: todo.md
 
 - name: Reference
