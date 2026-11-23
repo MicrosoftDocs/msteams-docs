@@ -102,7 +102,7 @@ Your code must always validate the HMAC signature included in the request as fol
 :::row:::
 :::column:::
 
-# [C#](#tab/dotnet)
+# [C#](#tab/hmac-dotnet)
 
 ```csharp
 public static AuthResponse Validate(AuthenticationHeaderValue authenticationHeaderValue, string messageContent, string claimedSenderId)
@@ -143,7 +143,7 @@ public static AuthResponse Validate(AuthenticationHeaderValue authenticationHead
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/hmac-typescript)
 
 Use the built-in Node.js `crypto` module. Pass the HTTP `Authorization` header, the unmodified request body as a `Buffer`, and the Base64-encoded security token as `signingKey`. Validate the signature before parsing the JSON body. If validation fails, reject the request with HTTP `401 Unauthorized` and don't process the message.
 
@@ -174,7 +174,7 @@ function validateHmac(
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/hmac-python)
 
 Use the Python standard library. Pass the HTTP `Authorization` header, the unmodified request body as `bytes`, and the Base64-encoded security token as `signing_key`. Validate the signature before parsing the JSON body. If validation fails, reject the request with HTTP `401 Unauthorized` and don't process the message.
 
