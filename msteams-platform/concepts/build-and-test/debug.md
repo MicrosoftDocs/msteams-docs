@@ -73,7 +73,7 @@ You can use any externally addressable service to host your development and prod
 
 ## Load and run your experience
 
-To load and run your experience within Teams, you need to create a package and upload it into Teams. Packaging and uploading aren't required for testing in Agents Playground. Always test your app in the Teams client before moving it to production. For more information, see:
+To load and run your experience within Teams, you need to create a package and upload it into Teams. Packaging and uploading aren't required for testing in Agents Playground. Always test your agent or app in the Teams client before moving it to production. For more information, see:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
