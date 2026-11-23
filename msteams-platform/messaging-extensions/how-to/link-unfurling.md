@@ -38,11 +38,6 @@ When an app link is pasted into the Teams compose message area, the link unfurls
 
 ---
 
-See the following video to learn more about link unfurling:
-<br>
-> [!VIDEO c1c13e1e-23fc-4ca4-91c6-026c5776506b]
-<br>
-
 ## Add link unfurling to your app manifest
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com` that matches exactly one segment of the domain. If you need to match `a.b.example.com`, then use `*.*.example.com`.
