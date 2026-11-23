@@ -9,8 +9,6 @@ ms.date: 06/23/2026
 
 # Add third party authentication to your message extension
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
-
 > [!NOTE]
 > After adding authentication to the message extension, you must add "**token.botframework.com**" to the "**validDomains**" section in the manifest.
 
@@ -30,7 +28,7 @@ The `id` and `aadObjectId` values are guaranteed for the authenticated Teams use
 
 ## Authentication
 
-If your service requires user authentication, the users must sign in before they use the message extension. The authentication steps are similar to that of a bot or tab.
+If your service requires user authentication, the users must sign in before they use the message extension. The authentication steps are similar to that of an agent or tab.
 The sequence is as follows:
 
 1. User issues a query or the default query is automatically sent to your service.
@@ -137,12 +135,6 @@ At this point, the window closes and the control is passed to the Teams client. 
     "source": "msteams"
 }
 ```
-
-## Code sample
-
-|**Sample name** | **Description** |**.NET** | **Node.js**| **Manifest**|
-|----------------|-----------------|--------------|----------------|----------------|
-|Message extensions - auth and config | This sample demonstrates how to implement authentication in a C# message extension for Microsoft Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 
