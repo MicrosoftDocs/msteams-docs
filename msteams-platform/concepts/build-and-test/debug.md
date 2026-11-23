@@ -30,21 +30,21 @@ Use Microsoft 365 Agents Playground to test your agent's or bot's core logic, ex
 > [!NOTE]
 > Agents Playground simulates supported Teams activities and APIs, including roster calls, with mock data. It doesn't process your app manifest or reproduce every Teams feature. For supported scenarios and restrictions, see [Agents Playground limitations](~/toolkit/debug-your-agents-playground.md#limitations). Test your app in the Teams client to validate real service integration and features that aren't supported in Agents Playground.
 
-Before launching Playground, choose the channel and authentication settings for your local project:
+Before launching Agents Playground, choose the channel and authentication settings for your local project:
 
-* To simulate Teams-specific activities, select the `msteams` channel. Agents Toolkit launches Playground with the `emulator` channel by default. Change it with the `DEFAULT_CHANNEL_ID` environment variable or use `--channel-id msteams` for a standalone launch. For more information, see [Multiple channel support](~/toolkit/debug-your-agents-playground.md#multiple-channel-support).
-* Agents Playground supports anonymous and authenticated testing. For anonymous testing, use your project's local development configuration. If your agent or bot requires authentication, configure Microsoft Entra ID app registrations for both Playground and your app. For setup details, see [Configure Agents Playground for authentication](~/toolkit/debug-your-agents-playground.md#configure-agents-playground-for-authentication). Keep local development settings separate from production settings, and don't disable production authentication for local testing.
+* To simulate Teams-specific activities, select the `msteams` channel. Agents Toolkit launches Agents Playground with the `emulator` channel by default. Change it with the `DEFAULT_CHANNEL_ID` environment variable or use `--channel-id msteams` for a standalone launch. For more information, see [Multiple channel support](~/toolkit/debug-your-agents-playground.md#multiple-channel-support).
+* Agents Playground supports anonymous and authenticated testing. For anonymous testing, use your project's local development configuration. If your agent or bot requires authentication, configure Microsoft Entra ID app registrations for both Agents Playground and your app. For setup details, see [Configure Agents Playground for authentication](~/toolkit/debug-your-agents-playground.md#configure-agents-playground-for-authentication). Keep local development settings separate from production settings, and don't disable production authentication for local testing.
 
 To debug an agent or bot project with Microsoft 365 Agents Toolkit in Visual Studio Code:
 
 1. Install the [Agents Playground prerequisites](~/toolkit/debug-your-agents-playground.md#prerequisites).
 1. Open your bot project. If it doesn't have an Agents Playground debug configuration, follow [Debug an existing app with Agents Playground](~/toolkit/debug-your-agents-playground.md#debug-an-existing-app-with-agents-playground) to configure it.
-1. Apply the channel and authentication settings described above to your local debug configuration. If you change environment variables after Playground starts, stop and restart the debug session to apply them.
+1. Apply the channel and authentication settings described above to your local debug configuration. If you change environment variables after Agents Playground starts, stop and restart the debug session to apply them.
 1. Set breakpoints in your agent's or bot's message or activity handlers.
 1. Open **Run and Debug** (`Ctrl+Shift+D`), select the **Debug in Microsoft 365 Agents Playground** configuration, and press **F5**. The configuration might include **(Preview)** in its name. Agents Playground opens in a browser.
 1. Send a message to your bot, inspect its responses and Adaptive Cards, and step through your code when a breakpoint is reached. Use activity triggers to test events supported by the selected channel.
 
-If you run your bot independently of Agents Toolkit, install and launch the standalone Playground as described in [Test your agent locally in Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project#start-your-project-by-cloning-or-with-the-cli). Run your bot locally and set Playground's `--app-endpoint` option to its actual messaging endpoint, using the port configured in your project.
+If you run your bot independently of Agents Toolkit, install and launch the standalone Agents Playground as described in [Test your agent locally in Microsoft 365 Agents Playground](/microsoft-365/agents-sdk/test-with-toolkit-project#start-your-project-by-cloning-or-with-the-cli). Run your agent or bot locally and set Agents Playground's `--app-endpoint` option to its actual messaging endpoint, using the port configured in your project.
 
 ## Locally hosted
 
