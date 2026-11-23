@@ -1,18 +1,18 @@
 ---
 title: Test & Debug App Locally or on Cloud
-description: In this module, learn options for testing and debugging Microsoft Teams apps in purely local, locally hosted in Teams, and cloud-hosted environment.
+description: In this module, learn options for testing and debugging Microsoft Teams agents or apps in purely local, locally hosted in Teams, and cloud-hosted environment.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 11/23/2026
 ---
 
-# Choose a test setup and debug your Teams app
+# Choose a test setup and debug your Teams agent or app
 
-Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
+Microsoft Teams agents and apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
 
-* **Purely local**: For bots, you can test your experience in [Microsoft 365 Agents Playground](~/toolkit/debug-your-agents-playground.md), a local testing environment that simulates bot interactions without tunneling or Teams app and bot registration. For other content, you can run locally in your browser and address content through `http://localhost`.
-* **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
-* **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
+* **Purely local**: For agents or bots, you can test your experience in [Microsoft 365 Agents Playground](~/toolkit/debug-your-agents-playground.md), a local testing environment that simulates agent or bot interactions without tunneling or Teams app and bot registration. For other content, you can run locally in your browser and address content through `http://localhost`.
+* **Locally hosted in Teams**: This involves running the agent or app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your agent or  app within the Teams client.
+* **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams agent or app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
 Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging.
 
