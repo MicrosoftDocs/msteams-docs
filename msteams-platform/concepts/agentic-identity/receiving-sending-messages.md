@@ -82,13 +82,11 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
 ::: zone-end
 
 > [!NOTE]
-> Who sends the reply?
->
-> The example sends the reply as the Agentic User from the inbound activity, not as the blueprint. The blueprint authenticates the reusable runtime, but it isn't the conversational sender.
+> The blueprint authenticates the runtime, but it isn't the sender. Replies and API calls use the Agentic User from the inbound activity.
 
 ## Bot capabilities
 
-Most Teams capabilities available to standard bots are also available to Agentic Users, including cards, reactions, and API calls. For inbound activities, the handler's API client uses the Agentic User identity automatically.
+Most Teams capabilities available to standard bots are also available to Agentic Users, including cards, reactions, and API calls.
 
 This example adds a reaction to an incoming message as the Agentic User:
 
@@ -140,7 +138,7 @@ A proactive operation has no inbound activity that identifies the sender. Create
 
 :::image type="content" source="../../assets/agentic-identity-proactive-message.png" alt-text="Diagram illustrating the difference between reactive and proactive messages for agentic identities.":::
 
-If your app will send proactive messages later, store the conversation ID, service URL, Agentic App Instance ID, Agentic User ID, and tenant ID in persistent storage when it receives an activity.
+If your app will send proactive messages later, store the conversation ID, service URL, Agentic App Instance ID, Agentic User ID, and tenant ID in persistent storage when it receives an activity. When you send, pass the stored service URL to select the destination, and the agentic identity to send as the Agentic User rather than as the bot.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -192,7 +190,7 @@ const api = app.api.forAgenticIdentity(agenticIdentity);
 await api.conversations.addReaction(conversationId, activityId, 'like');
 ```
 
-Pass the stored `serviceUrl` and `agenticIdentity` together to select the destination and sender. For requirements and routing behavior, see [Per-call service URLs in TypeScript](../../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
+For requirements and routing behavior, see [Per-call service URLs in TypeScript](../../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 
 ::: zone-end
 
@@ -208,6 +206,7 @@ agentic_identity = app.get_agentic_identity(
 await app.send(
     conversation_id,
     "Your scheduled update is ready.",
+    service_url=service_url,
     agentic_identity=agentic_identity,
 )
 
