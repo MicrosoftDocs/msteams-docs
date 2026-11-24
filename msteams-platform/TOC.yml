@@ -866,9 +866,6 @@
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
-    - name: Extend Microsoft 365 Copilot
-      href: messaging-extensions/how-to-extend-copilot.md
-      displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Code samples
   href: get-started/code-samples.md
 - name: Integrate device capabilities
