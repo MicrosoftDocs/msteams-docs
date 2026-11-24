@@ -9,14 +9,6 @@ ms.date: 11/13/2026
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
-## Preview: Localized display names for activity feed notification types
-
-*November 19, 2026*
-
-The Teams app manifest now supports the `displayName` property for activity types. Use `displayName` to provide a localized, user-friendly name for an activity type that Teams can show in experiences such as notification settings and activity-specific controls.
-
-For more information, see [Designing activity feed notifications](concepts/design/activity-feed-notifications.md) and [Send activity feed notifications](tabs/send-activity-feed-notification.md).
-
 ## Preview: Build interactive HTML widgets for Teams agents
 
 *November 16, 2026*
