@@ -95,134 +95,7 @@ Now that you have the right address information, you can send your message. If y
 
 To continue an existing discussion in a channel or in a chat that supports threading, send a reply in that discussion’s thread. Otherwise, send a new top-level message. For detailed implementation guidance, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md). The app-level reply method sends an in-thread reply without an incoming activity and never quotes. Starting in Teams SDK 2.3.0, inside a handler in a chat, the context-level reply method already starts a thread under a top-level message by default; see [Choose a reply mode](agent-chat-threads.md#choose-a-reply-mode).
 
-### Per-call service URLs in TypeScript
-
-Use a Teams SDK TypeScript version that supports per-call service URLs. Store the incoming activity's `serviceUrl` with the conversation ID for later proactive messages, then pass the URL in the send or reply options. For thread replies, use the containing chat or channel ID and thread root message ID. See [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread-later).
-
-```typescript
-import { MessageActivity } from '@microsoft/teams.api';
-
-await app.send(conversationId, 'Proactive notification', { serviceUrl });
-await app.reply(chatOrChannelId, rootMessageId, 'Threaded reply', { serviceUrl });
-
-// Update a previously sent message using its activity ID.
-await app.send(conversationId, new MessageActivity('Updated notification').withId(activityId), {
-  serviceUrl,
-});
-```
-
-The URL applies only to that send, update, or reply and leaves the app's configured URL unchanged. If you omit `serviceUrl`, the SDK uses the configured URL. You can pass `agenticIdentity` in the same options object.
-
-Pass the URL on each app-level call that needs it; these methods don't retain incoming service URLs. Context methods (`ctx.send` and `ctx.reply`) use the incoming activity's URL automatically.
-
-### Understand who blocked, muted, or uninstalled an agent
-
-As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled an agent. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
-
-Using Teams, you can send a proactive message to the agent to verify if a user has blocked or uninstalled an agent. If the agent is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the agent isn't delivered to the user.
-
-The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the agent.
-
-The following code sample is an example of a 403 response code:
-
-```http
-HTTP/1.1 403 Forbidden
-Cache-Control: no-store, must-revalidate, no-cache
-Pragma: no-cache
-Content-Length: 196
-Content-Type: application/json; charset=utf-8
-Server: Microsoft-HTTPAPI/2.0
-Strict-Transport-Security: max-age=31536000; includeSubDomains
-MS-CV: NXZpLk030UGsuHjPdwyhLw.5.0
-ContextId: tcid=0,server=msgapi-canary-eus2-0,cv=NXZpLk030UGsuHjPdwyhLw.5.0
-Date: Tue, 29 Mar 2022 17:34:33 GMT
-
-{"errorCode":209,"message":"{\n  \"subCode\": \"MessageWritesBlocked\",\n  \"details\": \"Thread is blocked from message writes.\",\n  \"errorCode\": null,\n  \"errorSubCode\": null\n}"}
-```
-
-## Best practices for proactive messaging
-
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it marks their first interaction with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
-
-### Welcome messages
-
-When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
-
-A good welcome message can include the following information:
-
-- Reason for the message - It must be clear to the user why they're receiving the message. If your agent was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
-
-- Your offer - Users must be able to identify what they can do with your app and what value can you bring to them.
-
-- Next steps - Users should understand the next steps. For example, invite users to try out a command or interact with your app.
-
-### Notification messages
-
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of an agent. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
-
-- What happened? A clear indication of what happened to cause the notification.
-
-- What was the result? It must be clear, what item is updated to get the notification.
-
-- Who or what triggered it? Who or what took action which caused the notification to be sent.
-
-- What can users do in response? Make it easy for your users to take actions based on your notifications.
-
-- How can users opt-out? You must provide a path for users to opt-out of more notifications.
-
-To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
-
-To update or delete a proactive message sent by a notification only agent:
-
-1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
-
-1. Use `context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity)` or `context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId)` methods to update or delete the original message.
-
-### Scheduled messages
-
-When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages include:
-
-- Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
-
-- What can user do next? Users can take the required action based on the message content.
-
-## Proactively install your app using Graph
-
-You can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
-
-You can only install apps that are in your organizational app catalog or the Microsoft Teams Store.
-
-See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive agent installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).
-
-### Examples
-
-Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true&tabs=multitenant) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
-
-- [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
-- [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
-- REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
-
-  ```http
-  PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
-  ```
-
-  ```json
-  {
-    "type": "message",
-    "text": "This message has been updated"
-  }
-  ```
-
-  To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
-  If the call succeeds, the API returns with the following response object.
-
-  ```json
-  {
-    "id": "{{activityID}}"
-  }
-  ```
-
-## Samples
+### Samples
 
 The following code shows how to send proactive messages using the Teams SDK (Teams AI Library):
 
@@ -369,6 +242,133 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 ```
 
 ---
+
+### Per-call service URLs in TypeScript
+
+Use a Teams SDK TypeScript version that supports per-call service URLs. Store the incoming activity's `serviceUrl` with the conversation ID for later proactive messages, then pass the URL in the send or reply options. For thread replies, use the containing chat or channel ID and thread root message ID. See [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread-later).
+
+```typescript
+import { MessageActivity } from '@microsoft/teams.api';
+
+await app.send(conversationId, 'Proactive notification', { serviceUrl });
+await app.reply(chatOrChannelId, rootMessageId, 'Threaded reply', { serviceUrl });
+
+// Update a previously sent message using its activity ID.
+await app.send(conversationId, new MessageActivity('Updated notification').withId(activityId), {
+  serviceUrl,
+});
+```
+
+The URL applies only to that send, update, or reply and leaves the app's configured URL unchanged. If you omit `serviceUrl`, the SDK uses the configured URL. You can pass `agenticIdentity` in the same options object.
+
+Pass the URL on each app-level call that needs it; these methods don't retain incoming service URLs. Context methods (`ctx.send` and `ctx.reply`) use the incoming activity's URL automatically.
+
+## Best practices for proactive messaging
+
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it marks their first interaction with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+
+### Welcome messages
+
+When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
+
+A good welcome message can include the following information:
+
+- Reason for the message - It must be clear to the user why they're receiving the message. If your agent was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
+
+- Your offer - Users must be able to identify what they can do with your app and what value can you bring to them.
+
+- Next steps - Users should understand the next steps. For example, invite users to try out a command or interact with your app.
+
+### Notification messages
+
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of an agent. Ensure users have a clear understanding of why they've received a notification. Good notification messages include the following items:
+
+- What happened? A clear indication of what happened to cause the notification.
+
+- What was the result? It must be clear, what item is updated to get the notification.
+
+- Who or what triggered it? Who or what took action which caused the notification to be sent.
+
+- What can users do in response? Make it easy for your users to take actions based on your notifications.
+
+- How can users opt-out? You must provide a path for users to opt-out of more notifications.
+
+To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
+
+To update or delete a proactive message sent by a notification only agent:
+
+1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
+
+1. Use `context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity)` or `context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId)` methods to update or delete the original message.
+
+### Scheduled messages
+
+When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages include:
+
+- Why is the user receiving the message? Make it easy for your users to understand the reason for which they're receiving the message.
+
+- What can user do next? Users can take the required action based on the message content.
+
+## Understand who blocked, muted, or uninstalled an agent
+
+As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled an agent. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
+
+Using Teams, you can send a proactive message to the agent to verify if a user has blocked or uninstalled an agent. If the agent is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the agent isn't delivered to the user.
+
+The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the agent.
+
+The following code sample is an example of a 403 response code:
+
+```http
+HTTP/1.1 403 Forbidden
+Cache-Control: no-store, must-revalidate, no-cache
+Pragma: no-cache
+Content-Length: 196
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-HTTPAPI/2.0
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+MS-CV: NXZpLk030UGsuHjPdwyhLw.5.0
+ContextId: tcid=0,server=msgapi-canary-eus2-0,cv=NXZpLk030UGsuHjPdwyhLw.5.0
+Date: Tue, 29 Mar 2022 17:34:33 GMT
+
+{"errorCode":209,"message":"{\n  \"subCode\": \"MessageWritesBlocked\",\n  \"details\": \"Thread is blocked from message writes.\",\n  \"errorCode\": null,\n  \"errorSubCode\": null\n}"}
+```
+
+## Proactively install your app using Graph
+
+You can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
+
+You can only install apps that are in your organizational app catalog or the Microsoft Teams Store.
+
+See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive agent installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md).
+
+### Examples
+
+Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true&tabs=multitenant) before creating a new conversation using the REST API. The following are REST API to create a conversation in different contexts:
+
+- [REST API to create a conversation in a one-on-one chat](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples).
+- [REST API to create a conversation in a channel](../../../resources/bot-v3/bot-conversations/bots-conv-proactive.md#examples-for-creating-a-channel-conversation).
+- REST API to Update message in conversation: To update an existing activity within a conversation, include the conversationId and activityId in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+
+  ```http
+  PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{activityId}
+  ```
+
+  ```json
+  {
+    "type": "message",
+    "text": "This message has been updated"
+  }
+  ```
+
+  To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the `activity ID` returned by the original post call.
+  If the call succeeds, the API returns with the following response object.
+
+  ```json
+  {
+    "id": "{{activityID}}"
+  }
+  ```
 
 ## Code samples
 
