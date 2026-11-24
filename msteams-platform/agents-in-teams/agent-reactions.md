@@ -3,7 +3,7 @@ title: Build Agents that Use Emoji Reactions in Teams Chat
 description: Reactions are emoji markers on messages in Teams chat. Learn how to make an agent that adds, removes, and listens reactions with practical code examples.
 #customer intent: As a Teams agent developer, I want to add emoji reactions to chat messages so that my agent can acknowledge messages without interrupting the conversation.
 ms.localizationpriority: high
-ms.date: 07/17/2026
+ms.date: 11/23/2026
 author: nickwalkmsft
 ms.author: nickwalk
 ms.reviewer: nickwalk
@@ -162,84 +162,21 @@ Reaction operations fail if the target message is deleted or the agent is remove
 
 ## Listen for reaction events
 
-::: zone pivot="teams-sdk-csharp"
+::: zone pivot="teams-sdk-typescript"
 
-Agents can listen for reaction activity in conversations they're a part of by handling the `OnMessageReaction` event, or the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessageReactionAdded(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
-    {
-        Console.WriteLine($"User added reaction: {reaction.Type}");
-    }
-});
-
-teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
-    {
-        Console.WriteLine($"User removed reaction: {reaction.Type}");
-    }
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessageReactionAdded(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
-    {
-        Console.WriteLine($"User added reaction: {reaction.Type}");
-    }
-});
-
-app.OnMessageReactionRemoved(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
-    {
-        Console.WriteLine($"User removed reaction: {reaction.Type}");
-    }
-});
-```
+Implement a handler for the `messageReaction` activity to process emoji reaction activity in conversations the agent is a part of. See [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="teams-sdk-csharp"
 
-Agents can listen for reaction activity in conversations they're a part of by handling the `messageReaction` event.
-
-```typescript
-app.on('messageReaction', async ({ activity }) => {
-  for (const reaction of activity.reactionsAdded ?? []) {
-    console.log(`User added reaction: ${reaction.type}`);
-  }
-
-  for (const reaction of activity.reactionsRemoved ?? []) {
-    console.log(`User removed reaction: ${reaction.type}`);
-  }
-});
-```
+Implement handlers for the `OnMessageReaction` activity, or the `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities, to process emoji reaction activity in conversations the agent is a part of. See [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-Agents can listen for reaction activity in conversations they're a part of by handling for the `on_message_reaction` event.
-
-```python
-@app.on_message_reaction
-async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
-    for reaction in ctx.activity.reactions_added or []:
-        print(f"User added reaction: {reaction.type}")
-
-    for reaction in ctx.activity.reactions_removed or []:
-        print(f"User removed reaction: {reaction.type}")
-
-```
+Implement a handler for `@on_message_reaction` to process emoji reaction activity in conversations the agent is a part of. See [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
 
 ::: zone-end
 

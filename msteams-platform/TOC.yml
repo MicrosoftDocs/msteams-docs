@@ -17,9 +17,11 @@
       displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
-    - name: Agent basics
-      href: bots/bot-concepts.md
+    - name: Agent scopes
+      href: bots/agent-scopes.md
       displayName: scopes, handler, activity
+    - name: Activities and handlers
+      href: bots/activities-handlers.md
     - name: Agent connectivity in Teams
       href: agents-in-teams/agent-connectivity.md
       displayName: connectivity, Teams, agent, network, integration
@@ -124,10 +126,7 @@
       displayName: block kit
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, send message, bot framework, notification,
-    - name: Subscribe to conversation events
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+      displayName: conversationId, send message, bot framework, notification
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
       displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
@@ -193,8 +192,6 @@
       href: concepts/sdk-app-basics.md
     - name: Listening to events
       href: concepts/listening-events.md
-    - name: Listening to activities
-      href: concepts/listening-activities.md
     - name: Graph API client
       href: concepts/sdk-graph-api-client.md
     - name: Agent Communication Service API client
@@ -209,18 +206,18 @@
       displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
     - name: Migrate a Bot Framework SDK bot
       items:
-        - name: Overview
-          href: botbuilder-migration/overview.md
-        - name: Botbuilder Compatibility
-          href: botbuilder-migration/integration.md
-        - name: Sending Activities
-          href: botbuilder-migration/sending-activities.md
-        - name: Proactive Activities
-          href: botbuilder-migration/proactive-activities.md
-        - name: The API Client
-          href: botbuilder-migration/api-client.md
-        - name: User Authentication
-          href: botbuilder-migration/user-authentication.md
+      - name: Overview
+        href: botbuilder-migration/overview.md
+      - name: Botbuilder Compatibility
+        href: botbuilder-migration/integration.md
+      - name: Sending Activities
+        href: botbuilder-migration/sending-activities.md
+      - name: Proactive Activities
+        href: botbuilder-migration/proactive-activities.md
+      - name: The API Client
+        href: botbuilder-migration/api-client.md
+      - name: User Authentication
+        href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
   - name: Coding agent skill
@@ -248,7 +245,7 @@
     href: /graph/sdks/sdks-overview
   - name: Deprecated tools and SDKs
     href: deprecated-tools-sdks.md
-    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
+    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
 - name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
@@ -498,7 +495,7 @@
         displayName: notify, notification
       - name: Send activity feed notifications to users in Microsoft Teams
         href: tabs/send-activity-feed-notification.md
-        displayName: notify, notification      
+        displayName: notify, notification
   - name: Build tabs
     items:
     - name: Tabs overview
@@ -866,9 +863,6 @@
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
-    - name: Extend Microsoft 365 Copilot
-      href: messaging-extensions/how-to-extend-copilot.md
-      displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Code samples
   href: get-started/code-samples.md
 - name: Integrate device capabilities
@@ -1099,6 +1093,8 @@
   items:
   - name: App manifest schema
     href: /microsoft-365/extensibility/schema
+  - name: Agent activity events and handlers
+    href: bots/agent-activity-handler-reference.md
     displayName: Reference, JSON, package
   - name: Teams SDK for .NET
     href: /dotnet/teams-sdk-dotnet
