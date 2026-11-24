@@ -806,9 +806,6 @@
     - name: Considerations for Teams Integration
       href: samples/integrating-web-apps.md
       displayName: Multitenancy, SharePoint
-    - name: Create Virtual Assistant
-      href: samples/virtual-assistant.md
-      displayName: OnMessageActivityAsync, multi-language support
     - name: Power Apps integration
       href: /power-apps/teams/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/TOC.json
       displayName: Power Platform, Power Apps

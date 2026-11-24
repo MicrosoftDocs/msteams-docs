@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/samples/virtual-assistant.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/samples/virtual-assistant",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "msteams-platform/agents-in-teams/build-agent-toolkit.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/agents-in-teams/build-agent-toolkit",
       "redirect_document_id": false
