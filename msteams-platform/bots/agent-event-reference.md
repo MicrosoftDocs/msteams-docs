@@ -154,7 +154,7 @@ teams.OnReadReceipt(async (context, cancellationToken) =>
 
 A user added or removed a reaction to an agent message. Use `OnMessageReaction` to handle both changes. Read `context.Activity.ReactionsAdded` and `context.Activity.ReactionsRemoved` for the reactions, and `context.Activity.ReplyToId` for the message ID.
 
-Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ```csharp
 teams.OnMessageReaction(async (context, cancellationToken) =>
@@ -527,7 +527,7 @@ app.on('readReceipt', async (context) => {
 
 A user added or removed a reaction to an agent message. Handle both changes with the `messageReaction` event. Read `context.activity.reactionsAdded` and `context.activity.reactionsRemoved` for the reactions, and `context.activity.replyToId` for the message ID.
 
-Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ```typescript
 app.on('messageReaction', async (context) => {
@@ -867,7 +867,7 @@ Handler example pending verification.
 
 A user added or removed a reaction to an agent message. Handle both changes with `@app.on_message_reaction`. Read `ctx.activity.reactions_added` and `ctx.activity.reactions_removed` for the reactions, and `ctx.activity.reply_to_id` for the message ID.
 
-Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ```python
 @app.on_message_reaction
@@ -1085,6 +1085,19 @@ The SDK handles `signin/verifyState` automatically as part of the OAuth flow. Do
 
 ## Conversation update event details
 
+Teams sends `conversationUpdate` activities when an agent is added to a conversation, other members join or leave, or conversation metadata changes. An agent receives membership updates for teams where it's installed and an initial update when it's first added to a personal conversation.
+
+Use conversation events to:
+
+- Welcome users when your agent is added to a team or a new member joins.
+- Notify users about membership changes or channel creation, renaming, and deletion.
+- Identify the channel a user selected during installation.
+
+Channel and team lifecycle events apply to the team scope. Membership events apply to personal chats, group chats, and teams.
+
+> [!NOTE]
+> When an Azure Communication Services (ACS) client joins or leaves a Teams meeting, no conversation update events are triggered.
+
 Conversation update activities have `type` of `conversationUpdate`. Channel and team lifecycle events identify the change in `channelData.eventType`. Membership changes also populate `membersAdded` or `membersRemoved`.
 
 | Event | Payload event type or field | Scope | Payload example |
@@ -1103,11 +1116,23 @@ Conversation update activities have `type` of `conversationUpdate`. Channel and 
 
 Channel lifecycle payloads include the channel's ID and name in `channelData.channel` and the team ID in `channelData.team`. Team lifecycle payloads include the team's ID and name in `channelData.team`. Use these fields to identify the affected channel or team and, when appropriate, notify users about the change.
 
-Member-added events occur when the agent is installed or a user joins a conversation where the agent is installed. Member-removed events occur when the agent is uninstalled, a user leaves, or a user is permanently deleted from the tenant. Compare member IDs with `recipient.id` to distinguish agent changes from user changes. See [Member changes](bot-concepts.md#member-changes) for caching and installation behavior.
+### Member changes
+
+Member-added events occur when the agent is installed or a user joins a conversation where the agent is installed. Member-removed events occur when the agent is uninstalled, a user leaves, or a user is permanently deleted from the tenant.
+
+These events can describe either the agent itself or another user. Compare each member's `id` in `membersAdded` or `membersRemoved` with `recipient.id` to determine whether the event concerns the agent. The agent's ID has the format `28:<MicrosoftAppId>`.
+
+In a team context, the member-added event uses `channelData.eventType` of `teamMemberAdded`, and the member-removed event uses `teamMemberRemoved`.
+
+User IDs in these payloads are unique to the agent. Cache them when needed for future interactions, such as directly messaging a user. When the agent is removed, clear cached data for the team as appropriate for your app's data-retention requirements.
+
+When the agent is installed in a team, `conversation.id` identifies the channel selected by the user during installation or the channel from which installation was initiated. It isn't necessarily the General channel. For agent installation and removal workflows, prefer the [installation update event](#installation-update-event-details).
 
 ## Installation update event details
 
-Installation update activities have `type` of `installationUpdate`. Inspect `action` to determine the change.
+Teams sends an activity with `type` of `installationUpdate` when an agent is installed in or uninstalled from a conversation thread. Use installation updates to send an introductory message when your agent is installed and to clean up user or conversation-thread data when it's uninstalled. This helps your app meet privacy and data-retention requirements.
+
+Inspect `action` to determine the change.
 
 | Action | Meaning |
 | --- | --- |
@@ -1116,7 +1141,42 @@ Installation update activities have `type` of `installationUpdate`. Inspect `act
 | `add-upgrade` | An app upgrade added the agent to the manifest. |
 | `remove-upgrade` | An app upgrade removed the agent from the manifest. |
 
-For a team installation, `conversation.id` identifies the channel selected by the user or the channel where installation occurred. The [installation payload](#installation-update-payload) also shows `channelData.settings.selectedChannel.id`, `channelData.channel`, `channelData.team`, tenant information, and the installation source. See [Install update event](bot-concepts.md#install-update-event) for welcome-message routing and selected-channel limitations.
+When an app is upgraded, Teams sends this event only if the upgrade adds or removes an agent from the manifest. Other app upgrades don't trigger an installation update event.
+
+### Install update event
+
+When an agent is installed in a team, `conversation.id` in both the conversation update and installation update activities identifies the channel selected during installation or the channel where installation occurred. Send your welcome message to this channel, where the user intends the agent to operate. If you explicitly need the General channel ID, use `channelData.team.id`.
+
+The [installation payload](#installation-update-payload) also shows `channelData.settings.selectedChannel.id`, `channelData.channel`, `channelData.team`, tenant information, and the installation source.
+
+The following example shows installation in the Response channel of the Daves Demo team. Both activities identify the Response channel:
+
+:::image type="content" source="~/assets/videos/addteam.gif" alt-text="Animation showing installation of an agent in the selected Response channel.":::
+
+> [!NOTE]
+> The selected channel ID is only set on `installationUpdate` `add` events when an app is installed into a team. In the associated team-installation conversation update payload, `conversation.id` and `channelData.settings.selectedChannel.id` identify the selected channel.
+
+### Uninstall behavior for personal app with agent
+
+When an app is uninstalled, its agent is also uninstalled. Users receive a `403` response if they attempt to send a message to the app, and the agent receives a `403` response when it attempts to post new messages.
+
+Personal scope follows the same post-uninstall behavior as team and group chat scopes: the agent can't send or receive messages after the app is uninstalled.
+
+:::image type="content" source="../assets/images/bots/uninstallbot.png" alt-text="Screenshot showing a forbidden response after an agent is uninstalled." lightbox="../assets/images/bots/uninstallbot.png" border="true":::
+
+### Event handling for install and uninstall events
+
+Teams can add new events at any time, so design your agent to accept events it doesn't recognize. By default, Teams SDK responds with `200 OK` to events for which you haven't registered a handler.
+
+If you build an agent without Teams SDK or customize the SDK's default event handling, preserve this behavior for unexpected events. Otherwise, new installation, uninstallation, or other events can cause exceptions in your agent.
+
+## Handling errors in conversation events
+
+Don't send error messages that lack meaningful context to the conversation. The following screenshot shows an unhelpful error response:
+
+:::image type="content" source="../assets/images/handling-error.png" alt-text="Screenshot showing an error message without meaningful context in an agent conversation.":::
+
+During development, meaningful diagnostic messages can help explain a specific error. In production, log errors and events to Azure Application Insights instead of posting debugging details to the conversation. For more information, see [Add telemetry to your bot](/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Event payload examples
 

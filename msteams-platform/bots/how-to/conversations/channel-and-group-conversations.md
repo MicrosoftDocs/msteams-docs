@@ -588,7 +588,7 @@ The following table lists the throttling limits for tag mentions in an agent:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Understand conversation events](~/bots/bot-concepts.md#conversation-update-events)
+> [Understand conversation events](~/bots/agent-event-reference.md#conversation-update-event-details)
 
 ## See also
 
