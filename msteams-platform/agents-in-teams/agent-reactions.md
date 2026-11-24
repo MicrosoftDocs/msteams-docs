@@ -170,13 +170,13 @@ Implement a handler for the `messageReaction` activity to process emoji reaction
 
 ::: zone pivot="teams-sdk-csharp"
 
-Implement handlers for the `OnMessageReaction` activity, or the `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities, to process emoji reaction activity in conversations the agent is a part of. [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
+Implement handlers for the `OnMessageReaction` activity, or the `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities, to process emoji reaction activity in conversations the agent is a part of. See [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-Implement a handler for `@on_message_reaction` to process emoji reaction activity in conversations the agent is a part of. [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
+Implement a handler for `@on_message_reaction` to process emoji reaction activity in conversations the agent is a part of. See [Message reaction activities](../bots/agent-activity-handler-reference.md#message-reaction-activities) in the agent activity event reference for more information.
 
 ::: zone-end
 

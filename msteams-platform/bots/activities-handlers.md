@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Activities and handlers
 
-An **Activity** is a data payload that represents user activity in Teams. As user activity occurs in Teams, Agent Communication Service sends activity payloads to your agent in real time.
+An **Activity** is a data payload that represents user activity in Teams. As user activity occurs in Teams, Agent Communication Service sends activity payloads to your agent runtime in real time.
 
 For most agents, activity handlers - particularly the chat message handler - are the main entrypoints for the agent's behavior. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](agent-scopes.md) where your agent is active.
 
