@@ -4,7 +4,7 @@ description: Learn how to work with user mentions, send messages, and handle age
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 10/27/2026
+ms.date: 11/23/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -108,12 +108,12 @@ The following code shows an example of retrieving mentions:
 teams.OnMessage(async (context, cancellationToken) =>
 {
     var mentions = context.Activity.Entities?
-        .Where(e => e.Type == "mention")
+        .OfType<MentionEntity>()
         .ToList();
 
     if (mentions != null && mentions.Any())
     {
-        var firstMention = mentions[0].Properties["mentioned"]?["name"]?.ToString();
+        var firstMention = mentions[0].Mentioned?.Name;
         await context.SendAsync($"Hello {firstMention}", cancellationToken);
     }
     else
@@ -292,7 +292,7 @@ This code snippets shows how to listen for incoming messages and remove @mention
 
 * `ctx.activity.strip_mentions_text()` removes mention text such as @contoso.
 * `.text` returns the cleaned message.
-* `ctx.send()` replies with the cleaned text.
+* `ctx.send()` sends the cleaned text.
 
 For example, `@contoso summarize this chat` becomes `summarize this chat`, making the message easier to parse as a command or prompt.
 
@@ -410,7 +410,7 @@ The following code snippet shows an example of mentioning users with Entra Objec
 teams.OnMessage(async (context, cancellationToken) =>
 {
     // Mention a user by their User Principal Name (UPN)
-    var user = new Account { Id = "Adele@microsoft.com", Name = "Adele" };
+    var user = new TeamsChannelAccount { Id = "Adele@microsoft.com", Name = "Adele" };
     await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(user), cancellationToken);
 });
 ```
@@ -433,7 +433,7 @@ app.OnMessage(async context =>
 ```typescript
 app.on('message', async ({ send }) => {
     // Mention a user by their User Principal Name (UPN)
-    const user = { id: 'Adele@microsoft.com', name: 'Adele' };
+    const user = { id: 'Adele@microsoft.com', name: 'Adele', role: 'user' };
     await send(new MessageActivity('Hello!').addMention(user));
 });
 ```
@@ -484,7 +484,7 @@ To mention a tag, include a mention entity with `"type": "tag"` in your message.
 teams.OnMessage(async (context, cancellationToken) =>
 {
     // Mention a tag using the tag's Graph API ID
-    var tag = new Account { Id = "<base64-encoded-tag-id>", Name = "Test Tag" };
+    var tag = new TeamsChannelAccount { Id = "<base64-encoded-tag-id>", Name = "Test Tag", Properties = { ["type"] = "tag" } };
     await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(tag), cancellationToken);
 });
 ```
@@ -507,7 +507,7 @@ app.OnMessage(async context =>
 ```typescript
 app.on('message', async ({ send }) => {
     // Mention a tag using the tag's Graph API ID
-    const tag = { id: '<base64-encoded-tag-id>', name: 'Test Tag' };
+    const tag = { id: '<base64-encoded-tag-id>', name: 'Test Tag', role: 'user', type: 'tag' };
     await send(new MessageActivity('Hello!').addMention(tag));
 });
 ```
@@ -520,7 +520,7 @@ app.on('message', async ({ send }) => {
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     # Mention a tag using the tag's Graph API ID
-    tag = Account(id="<base64-encoded-tag-id>", name="Test Tag")
+    tag = Account(id="<base64-encoded-tag-id>", name="Test Tag", type="tag")
     await ctx.send(MessageActivityInput(text="Hello!").add_mention(account=tag))
 ```
 

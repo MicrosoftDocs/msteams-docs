@@ -1,7 +1,7 @@
 ---
 title: Plans and steps for Teams agents
 description: Learn how Teams agents use plans and steps to show structured progress, status updates, and sources while working on a user request.
-ms.date: 11/16/2026
+ms.date: 11/23/2026
 ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages
@@ -135,7 +135,7 @@ The Teams SDK exposes plans through a plan associated with the incoming message.
 
 ### Plan placement in threads
 
-The prompt and the destination thread are separate. `replyToId` identifies the message the plan answers. A reply-chain binding identifies the one-to-one chat and the root (L1) message for a plan completion posted in a thread reply (L2). For details about L1 and L2, see [agent chat threads](../../bots/how-to/conversations/agent-chat-threads.md).
+The prompt and the destination thread are separate. `replyToId` identifies the message the plan answers. A reply-chain binding identifies the one-to-one chat and the top-level root message for a plan completion posted as an in-thread reply. For details about top-level and in-thread messages, see [agent chat threads](../../bots/how-to/conversations/agent-chat-threads.md).
 
 ::: zone pivot="teams-sdk-typescript"
 
@@ -143,7 +143,7 @@ The prompt and the destination thread are separate. `replyToId` identifies the m
 
 ::: zone-end
 
-If you want to complete a plan started from an L1 prompt with a final answer in an L2 reply, build a plan completion message and send it through the SDK's reply method. Use the chat ID from `channelData.chat.id` and the original L1 message ID as the thread root. Keep the completion message's `replyToId` and `planInfo` entity unchanged so it remains associated with the original prompt. Creating an L2 reply alone doesn't change where the plan completes.
+If you want to complete a plan started from a top-level prompt with a final answer in an in-thread reply, build a plan completion message and send it through the app-level reply method. Use the chat ID from `channelData.chat.id` and the original top-level message ID as the thread root. Keep the completion message's `replyToId` and `planInfo` entity unchanged so it remains associated with the original prompt. Creating an in-thread reply alone doesn't change where the plan completes.
 
 Give every step a unique ID within its plan. Keep the ID stable for the lifetime of that logical step, and don't reuse it for different work. The `version` identifies successive revisions of that step. Increment it by 1 whenever you change its status, title, description, or sources. The service uses the step ID and version to append a new step, replace it with a newer revision, or skip a revision that isn't newer. The version has no other concurrency-control role. A step requires an ID, version, title, and status. Description and sources are optional.
 
@@ -186,7 +186,7 @@ teams.OnMessage(async (context, ct) =>
 });
 ```
 
-To send the final answer as an L2 chat reply instead, replace `await plan.CompleteAsync(answer, ct);` with the following. Here, `chatId` is the incoming `channelData.chat.id`, and `serviceUrl` is the incoming service URL as a `Uri`.
+To send the final answer as an in-thread chat reply instead, replace `await plan.CompleteAsync(answer, ct);` with the following. Here, `chatId` is the incoming `channelData.chat.id`, and `serviceUrl` is the incoming service URL as a `Uri`.
 
 ```csharp
 var completion = plan.Completion();
@@ -221,7 +221,7 @@ app.on('message', async (ctx) => {
 });
 ```
 
-To send the final answer as an L2 chat reply instead, replace `await plan.complete(answer);` with the following. Here, `chatId` is the incoming `channelData.chat.id`. The app's outbound client must use the incoming service URL.
+To send the final answer as an in-thread chat reply instead, replace `await plan.complete(answer);` with the following. Here, `chatId` is the incoming `channelData.chat.id`. The app's outbound client must use the incoming service URL.
 
 ```typescript
 const completion = plan.completion();
@@ -249,7 +249,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]) -> None:
     await plan.complete(answer)
 ```
 
-To send the final answer as an L2 chat reply instead, replace `await plan.complete(answer)` with the following. Here, `chat_id` is the incoming `channelData.chat.id`.
+To send the final answer as an in-thread chat reply instead, replace `await plan.complete(answer)` with the following. Here, `chat_id` is the incoming `channelData.chat.id`.
 
 ```python
 completion = plan.completion()
@@ -496,10 +496,16 @@ async function runPlanJob(savedPlan: SavedPlanBinding, apiClient: Client) {
 from typing import Any
 
 from microsoft_teams.api import ApiClient, Step
-from microsoft_teams.apps import Plan, PlanOptions
+from microsoft_teams.apps import Plan, PlanOptions, PlanReplyChain
 
 async def run_plan_job(saved_plan: dict[str, Any], api_client: ApiClient) -> None:
-    options = PlanOptions(**saved_plan, api_client=api_client)
+    reply_chain = saved_plan.get("replyChain")
+    options = PlanOptions(
+        conversation_id=saved_plan["conversationId"],
+        reply_to_id=saved_plan["replyToId"],
+        reply_chain=PlanReplyChain.model_validate(reply_chain) if reply_chain else None,
+        api_client=api_client,
+    )
     plan = Plan(**options)
 
     await plan.start(
@@ -646,13 +652,13 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-To send the final answer as an L2 chat reply to an L1 prompt, send the same completion payload to the reply-chain endpoint instead:
+To send the final answer as an in-thread chat reply to a top-level prompt, send the same completion payload to the reply-chain endpoint instead:
 
 ```http
 POST /v3/conversations/{chatId}/replyChains/{threadRootId}
 ```
 
-Use the incoming `channelData.chat.id` for `{chatId}` and the original L1 message ID for `{threadRootId}`. URL-encode both IDs. Keep `replyToId` set to the original prompt ID; the route selects the thread, while `replyToId` associates the completion with the plan.
+Use the incoming `channelData.chat.id` for `{chatId}` and the original top-level message ID for `{threadRootId}`. URL-encode both IDs. Keep `replyToId` set to the original prompt ID; the route selects the thread, while `replyToId` associates the completion with the plan.
 
 For a streamed final answer, include `planInfo` with `planType: "complete"` on the final message alongside the final `streamInfo` entity with `streamType: "final"`. Intermediate stream messages don't complete the plan. The SDK sends the final activity through the normal Bot activity `POST` path.
 

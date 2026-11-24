@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.date: 09/28/2026
+ms.date: 11/23/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -13,81 +13,11 @@ zone_pivot_groups: teams-sdk-languages
 
 Conversational agents communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that agent conversations are interactive, dynamic, adaptive, and user friendly.
 
-## Message content
-
-Messages interaction between your agent and user can include different types of message content that:
-
-| Content type | From user to agent | From agent to user |
-| --- | :---: | :---: |
-| [Rich text and emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
-| [Pictures](#use-picture-messages) | ✔️ | ✔️ |
-| [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
-
-### Use rich text message and emojis
-
-Your Teams agent can send rich text and emojis. Teams supports emojis through UTF-16, like U+1F600 for a grinning face.
-
-### Use picture messages
-
-To make agent messages pop, the user can add pictures as attachments:
-
-- Pictures can be up to 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIFs aren't supported.
-- You can specify the height and width of each image using XML. In Markdown, the image size defaults to 256×256. For example:
-  - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-  - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-For more information on attachments, see [send messages and attachments](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview).
-
-> [!NOTE]
->In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links cannot be rendered. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
-
-### Use Adaptive Cards
-
-A conversational agent can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. You can author Adaptive Cards in an agent and shown in multiple apps such as Teams, your website, and so on.
-
-For more information, see:
-
-- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
-- [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
-
-The following code shows an example of sending a simple Adaptive Card:
-
-<details>
-<summary>Example: Send a simple Adaptive Card</summary>
-
-```json
-{
-  "type": "AdaptiveCard",
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.5",
-  "body": [
-    {
-      "items": [
-        {
-          "size": "large",
-          "text": "Simple Adaptive Card example with a Textbox",
-          "type": "TextBlock",
-          "weight": "bolder",
-          "wrap": true
-        }
-      ],
-      "spacing": "extraLarge",
-      "type": "Container",
-      "verticalContentAlignment": "center"
-    }
-  ]
-}
-```
-
-</details>
-
-## Send and receive messages
+## Receive messages
 
 Sending and receiving messages is the core functionality of an agent.
 
-### Message size limits
-
-[!INCLUDE [agent-message-size-limit](how-to/includes/agent-message-size-limit.md)]
+In group chats and channels, your agent receives only the messages in which it's @mentioned, unless you [configure it to receive all messages](../agents-in-teams/enable-receive-all-chat-messages.md). That article also shows how to filter for messages that @mention your agent.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
@@ -142,7 +72,7 @@ app.OnMessage(async context =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-- [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsactivityhandler-onmessage)
+- [SDK reference](/javascript/api/teams-sdk-typescript/@microsoft/teams.apps/app?view=msteams-sdk-ts-latest&preserve-view=true#@microsoft-teams-apps-app-on)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-quickstart/nodejs/app.ts)
 
 ```typescript
@@ -155,7 +85,6 @@ app.on("message", async ({ activity, send }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-- [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-activityhandler-on-message-activity)
 - [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-quickstart/python/app.py)
 
 ```python
@@ -213,6 +142,557 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
   "locale": "en-US"
 }
 ```
+
+## Send messages
+
+### Send a message
+
+To send a text message, specify the string you want to send as an activity. In the agent's activity handler, call the send method on the activity context once for each message you send.
+
+The activity context has two methods for responding:
+
+- **Send**, in a chat, keeps the level of the user's message: at the top level, or in the user's thread. In a channel, it responds in the thread of the user's message.
+- **Reply** quotes the user's message and, starting in Teams SDK 2.3.0, in a chat, starts a thread under a top-level message by default.
+
+For where each method places a response, the reply modes, and the app-level methods for sending outside a handler, see [Use threads in channels and one-on-one agent chats](how-to/conversations/agent-chat-threads.md#reply-in-a-thread).
+
+The following code shows an example of sending a message when a user is added to a conversation:
+
+::: zone pivot="teams-sdk-csharp"
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id != context.Activity.Recipient.Id)
+        {
+            await context.SendAsync("Hello and welcome!", cancellationToken);
+        }
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMembersAdded(async context =>
+{
+    foreach (var member in context.Activity.MembersAdded)
+    {
+        if (member.Id != context.Activity.Recipient.Id)
+        {
+            await context.Send("Hello and welcome!");
+        }
+    }
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
+
+```typescript
+app.on("conversationUpdate", async ({ activity, send }) => {
+  for (const member of activity.membersAdded ?? []) {
+    if (member.id !== activity.recipient.id) {
+      await send(`Welcome to the team ${member.name}`);
+    }
+  }
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
+
+```python
+@app.on_conversation_update
+async def handle_conversation_update(ctx: ActivityContext[ConversationUpdateActivity]):
+    for member in ctx.activity.members_added or []:
+        if member.id != ctx.activity.recipient.id:
+            await ctx.send(f"Welcome your new team member {member.id}")
+```
+
+::: zone-end
+
+```json
+{
+  "type": "message",
+  "from": {
+    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+    "name": "Teams TestAgent"
+  },
+  "conversation": {
+    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+    "name": "Convo1"
+  },
+  "recipient": {
+    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+    "name": "Megan Bowen"
+  },
+  "text": "My agent's reply",
+  "replyToId": "1632474074231"
+}
+```
+
+```http
+HTTP Request: {Service URL of your agent}/v3/conversations/{conversationId}/activities
+```
+
+```json
+{
+  "type": "message",
+  "from": {
+    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+    "name": "Teams TestAgent"
+  },
+  "conversation": {
+    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+    "name": "Convo1"
+  },
+  "recipient": {
+    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+    "name": "Megan Bowen"
+  },
+  "text": "My agent's reply"
+}
+```
+
+> [!NOTE]
+>
+> - Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](#update-and-delete-messages-sent-from-agent) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> - Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
+
+Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Teams SDK allows you to modify the message structure.
+
+### Message size limits
+
+[!INCLUDE [agent-message-size-limit](how-to/includes/agent-message-size-limit.md)]
+
+## Quoted replies
+
+Quoted replies let your agent reference a previous message in the conversation. When a user sends a message that quotes another message, your agent receives structured metadata about the quoted content. Your agent can also send messages that quote previous messages.
+
+The examples in this section use the following methods:
+
+::: zone pivot="teams-sdk-csharp"
+
+| Action | Use |
+| --- | --- |
+| Read the quotes in the inbound message | `context.Activity.GetQuotedMessages()` |
+| Reply and quote the inbound activity | `context.ReplyAsync()` |
+| Quote a specific message | `context.QuoteAsync()` |
+| Build a message with one or more quotes | `MessageActivityInput.AddQuote()` |
+| Get the ID of the message that holds a card | `context.Activity.ReplyToId` |
+
+In C# SDK versions earlier than 2.1, the reply and quote methods are `Reply()` and `Quote()`.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+| Action | Use |
+| --- | --- |
+| Read the quotes in the inbound message | `activity.getQuotedMessages()` |
+| Reply and quote the inbound activity | `reply()` |
+| Quote a specific message | `quote()` |
+| Build a message with one or more quotes | `MessageActivity.addQuote()` |
+| Get the ID of the message that holds a card | `activity.replyToId` |
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+| Action | Use |
+| --- | --- |
+| Read the quotes in the inbound message | `ctx.activity.get_quoted_messages()` |
+| Reply and quote the inbound activity | `ctx.reply()` |
+| Quote a specific message | `ctx.quote()` |
+| Build a message with one or more quotes | `MessageActivityInput.add_quote()` |
+| Get the ID of the message that holds a card | `ctx.activity.reply_to_id` |
+
+::: zone-end
+
+### Receive quoted replies
+
+When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the method that reads the quotes to access all quoted reply entities.
+
+::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var quotes = context.Activity.GetQuotedMessages().ToList();
+
+    if (quotes.Count > 0)
+    {
+        var quote = quotes[0].QuotedReply;
+        await context.ReplyAsync(
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"", cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    var quotes = context.Activity.GetQuotedMessages();
+
+    if (quotes.Count > 0)
+    {
+        var quote = quotes[0].QuotedReply;
+        await context.Reply(
+            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
+    }
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on("message", async ({ activity, reply }) => {
+  const quotes = activity.getQuotedMessages();
+
+  if (quotes.length > 0) {
+    const quote = quotes[0].quotedReply;
+    await reply(
+      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`,
+    );
+  }
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    quotes = ctx.activity.get_quoted_messages()
+
+    if quotes:
+        quote = quotes[0].quoted_reply
+        await ctx.reply(
+            f"You quoted message {quote.message_id} from {quote.sender_name}: \"{quote.preview}\""
+        )
+```
+
+::: zone-end
+
+### Send quoted replies
+
+When your agent calls the reply method, the SDK automatically stamps a quoted reply entity referencing the inbound activity. The reply appears as a quoted reply in Teams.
+
+The reply quotes the inbound activity only when that activity can be quoted, so a reply to a card action or another invoke is sent without a quote. A reply to a reaction quotes the message the user reacted to. A reply to a targeted message carries a prompt preview instead of a quote. In TypeScript and Python, the reply is also sent as a targeted message. In C#, the reply is public unless you mark its recipient as targeted. Starting in Teams SDK 2.3.0, in a chat, the reply also starts a thread under a top-level message by default. The [reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode) decides whether the quote is added: the thread mode leaves it out, except when the incoming activity lacks the [IDs that threading needs](how-to/conversations/agent-chat-threads.md#how-context-level-replies-are-placed).
+
+To quote in a card or invoke handler, quote the message that holds the card with the quote method and the activity's reply-to ID.
+
+::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // ReplyAsync() quotes the inbound message
+    await context.ReplyAsync("Got it!", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Reply() automatically quotes the inbound message
+    await context.Reply("Got it!");
+});
+```
+
+---
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on("message", async ({ reply }) => {
+  // reply() quotes the inbound message
+  await reply("Got it!");
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # reply() quotes the inbound message
+    await ctx.reply("Got it!")
+```
+
+::: zone-end
+
+To quote a different message in the same conversation (not the inbound message), use the quote method with the message ID you want to quote.
+
+::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Quote a specific message by its ID
+    var parentMessageId = "1772050244572";
+    await context.QuoteAsync(parentMessageId, "Referencing an earlier message", cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+app.OnMessage(async context =>
+{
+    // Quote a specific message by its ID
+    var parentMessageId = "1772050244572";
+    await context.Quote(parentMessageId, "Referencing an earlier message");
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on("message", async ({ quote }) => {
+  // Quote a specific message by its ID
+  const parentMessageId = "1772050244572";
+  await quote(parentMessageId, "Referencing an earlier message");
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    # Quote a specific message by its ID
+    parent_message_id = "1772050244572"
+    await ctx.quote(parent_message_id, "Referencing an earlier message")
+```
+
+::: zone-end
+
+### Build quoted replies for proactively sending messages
+
+For proactive scenarios (using the app-level send method) or when quoting multiple messages, add quotes to a message activity. Pass the message ID and an optional response text.
+
+::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+var parentMessageId = "1772050244572";
+var firstMessageId = "1772050244573";
+var secondMessageId = "1772050244574";
+
+// Single quote with response below it
+var msg = new MessageActivityInput()
+    .AddQuote(parentMessageId, "Here is my response");
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivityInput()
+    .AddQuote(firstMessageId, "response to first")
+    .AddQuote(secondMessageId, "response to second");
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivityInput()
+    .WithText("see below for previous messages")
+    .AddQuote(firstMessageId)
+    .AddQuote(secondMessageId, "response to both");
+await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
+```csharp
+var parentMessageId = "1772050244572";
+var firstMessageId = "1772050244573";
+var secondMessageId = "1772050244574";
+
+// Single quote with response below it
+var msg = new MessageActivity()
+    .AddQuote(parentMessageId, "Here is my response");
+await app.Send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+    .AddQuote(firstMessageId, "response to first")
+    .AddQuote(secondMessageId, "response to second");
+await app.Send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity("see below for previous messages")
+    .AddQuote(firstMessageId)
+    .AddQuote(secondMessageId, "response to both");
+await app.Send(conversationId, msg);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+import { MessageActivity } from "@microsoft/teams.api";
+
+const parentMessageId = "1772050244572";
+const firstMessageId = "1772050244573";
+const secondMessageId = "1772050244574";
+
+// Single quote with response below it
+let msg = new MessageActivity().addQuote(
+  parentMessageId,
+  "Here is my response",
+);
+await app.send(conversationId, msg);
+
+// Multiple quotes with interleaved responses
+msg = new MessageActivity()
+  .addQuote(firstMessageId, "response to first")
+  .addQuote(secondMessageId, "response to second");
+await app.send(conversationId, msg);
+
+// Grouped quotes — omit response to group quotes together
+msg = new MessageActivity("see below for previous messages")
+  .addQuote(firstMessageId)
+  .addQuote(secondMessageId, "response to both");
+await app.send(conversationId, msg);
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+from microsoft_teams.api.activities.message import MessageActivityInput
+
+parent_message_id = "1772050244572"
+first_message_id = "1772050244573"
+second_message_id = "1772050244574"
+
+# Single quote with response below it
+msg = (MessageActivityInput()
+    .add_quote(parent_message_id, "Here is my response"))
+await app.send(conversation_id, msg)
+
+# Multiple quotes with interleaved responses
+msg = (MessageActivityInput()
+    .add_quote(first_message_id, "response to first")
+    .add_quote(second_message_id, "response to second"))
+await app.send(conversation_id, msg)
+
+# Grouped quotes — omit response to group quotes together
+msg = (MessageActivityInput(text="see below for previous messages")
+    .add_quote(first_message_id)
+    .add_quote(second_message_id, "response to both"))
+await app.send(conversation_id, msg)
+```
+
+::: zone-end
+
+## Message content
+
+Messages interaction between your agent and user can include different types of message content that:
+
+| Content type | From user to agent | From agent to user |
+| --- | :---: | :---: |
+| [Rich text and emojis](#use-rich-text-message-and-emojis) | ✔️ | ✔️ |
+| [Pictures](#use-picture-messages) | ✔️ | ✔️ |
+| [Adaptive Cards](#use-adaptive-cards) | ❌ | ✔️ |
+
+### Use rich text message and emojis
+
+Your Teams agent can send rich text and emojis. Teams supports emojis through UTF-16, like U+1F600 for a grinning face.
+
+### Use picture messages
+
+To make agent messages pop, the user can add pictures as attachments:
+
+- Pictures can be up to 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIFs aren't supported.
+- You can specify the height and width of each image using XML. In Markdown, the image size defaults to 256×256. For example:
+  - ✔️: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+  - ❌: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+For more information on attachments, see [Send and receive files](how-to/bots-filesv4.md).
+
+> [!NOTE]
+>In **GCC High and DoD environments**, embed images in bot messages or cards as base64-encoded content because external image links cannot be rendered. For details, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
+
+### Use Adaptive Cards
+
+A conversational agent can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields. You can author Adaptive Cards in an agent and shown in multiple apps such as Teams, your website, and so on.
+
+For more information, see:
+
+- [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+- [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards.
+
+The following code shows an example of sending a simple Adaptive Card:
+
+<details>
+<summary>Example: Send a simple Adaptive Card</summary>
+
+```json
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "items": [
+        {
+          "size": "large",
+          "text": "Simple Adaptive Card example with a Textbox",
+          "type": "TextBlock",
+          "weight": "bolder",
+          "wrap": true
+        }
+      ],
+      "spacing": "extraLarge",
+      "type": "Container",
+      "verticalContentAlignment": "center"
+    }
+  ]
+}
+```
+
+</details>
+
+## Respond to message events
+
+Your agent can also receive events when users read, edit, delete, or restore messages.
 
 ### Receive a read receipt
 
@@ -274,17 +754,22 @@ To receive read receipts events for your agent, ensure the following:
 
 You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
-- Override the method `OnReadReceipt` with `context.Activity.Value.LastReadMessageId`.
+- Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the agent to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
 
-  The `context.Activity.Value.LastReadMessageId`method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnReadReceipt` method to receive read receipts with `context.Activity.Value.LastReadMessageId` method:
+Register a read receipt handler. The event's `value.lastReadMessageId` is the ID of the last message the user read. If the ID of a message your agent sent is less than or equal to `lastReadMessageId`, the user has read that message.
+
+::: zone pivot="teams-sdk-csharp"
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
-teams.OnReadReceipt(async (context, cancellationToken) =>
+teams.OnEvent(async (context, cancellationToken) =>
 {
-    var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-    await context.SendAsync("User read the agent's message", cancellationToken);
+    if (context.Activity.Name?.Value == "application/vnd.microsoft.readReceipt")
+    {
+        var lastReadMessageId = context.Activity.Value?["lastReadMessageId"]?.ToString();
+        await context.SendAsync("User read the agent's message", cancellationToken);
+    }
 });
 ```
 
@@ -299,6 +784,28 @@ app.OnReadReceipt(async context =>
 ```
 
 ---
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on("readReceipt", async ({ send }) => {
+  await send("User read the agent's message");
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_read_receipt
+async def handle_read_receipt(ctx: ActivityContext[ReadReceiptEventActivity]):
+    await ctx.send("User read the agent's message")
+```
+
+::: zone-end
 
 The following example shows a read receipts event request that an agent receives:
 
@@ -334,17 +841,15 @@ The following example shows a read receipts event request that an agent receives
 }
 ```
 
-- Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the agent to receive the read receipt events. The admin or the user must enable or disable the read receipt setting.
-
 After the agent is enabled in a user to agent chat scenario, the agent promptly receives a read receipt event when the user reads the agent's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
 ### Receive edit message activity
 
 When you edit a message, the agent gets a notification of the edit message activity.
 
-To get an edit message activity notification in an agent, register the `OnMessageUpdate` handler.
+To get an edit message activity notification in an agent, register a message edit handler.
 
-The following is an example of an edit message activity notification using `OnMessageUpdate` when a sent message is edited:
+The following is an example of an edit message activity notification when a sent message is edited:
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -375,10 +880,20 @@ app.OnMessageEdit(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on("messageEdit", async ({ activity, send }) => {
+app.on("editMessage", async ({ activity, send }) => {
   const editedMessage = activity.text;
   await send(`The edited message is ${editedMessage}`);
 });
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_edit_message
+async def handle_edit_message(ctx: ActivityContext[MessageUpdateActivity]):
+    await ctx.send(f"The edited message is {ctx.activity.text}")
 ```
 
 ::: zone-end
@@ -433,141 +948,15 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 }
 ```
 
-### Send a message
-
-To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.SendAsync(...)` method to send a single message response. Use the object's `multiple context.SendAsync(...) calls` method to send multiple responses.
-
-The following code shows an example of sending a message when a user is added to a conversation:
-
-::: zone pivot="teams-sdk-csharp"
-
-- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
-
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/Archived/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMembersAdded(async (context, cancellationToken) =>
-{
-    foreach (var member in context.Activity.MembersAdded)
-    {
-        if (member.Id != context.Activity.Recipient.Id)
-        {
-            await context.SendAsync("Hello and welcome!", cancellationToken);
-        }
-    }
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMembersAdded(async context =>
-{
-    foreach (var member in context.Activity.MembersAdded)
-    {
-        if (member.Id != context.Activity.Recipient.Id)
-        {
-            await context.Send("Hello and welcome!");
-        }
-    }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs)
-
-```typescript
-app.on("membersAdded", async ({ activity, send }) => {
-  for (const member of activity.membersAdded ?? []) {
-    if (member.id !== activity.recipient.id) {
-      await send(`Welcome to the team ${member.name}`);
-    }
-  }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-- [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview)
-- [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python)
-
-```python
-@app.on_members_added
-async def handle_members_added(ctx: ActivityContext):
-    for member in ctx.activity.members_added:
-        if member.id != ctx.activity.recipient.id:
-            await ctx.send(f"Welcome your new team member {member.id}")
-```
-
-::: zone-end
-
-```json
-{
-  "type": "message",
-  "from": {
-    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-    "name": "Teams TestAgent"
-  },
-  "conversation": {
-    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-    "name": "Convo1"
-  },
-  "recipient": {
-    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-    "name": "Megan Bowen"
-  },
-  "text": "My agent's reply",
-  "replyToId": "1632474074231"
-}
-```
-
-```http
-HTTP Request: {Service URL of your agent}/v3/conversations/{conversationId}/activities
-```
-
-```json
-{
-  "type": "message",
-  "from": {
-    "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-    "name": "Teams TestAgent"
-  },
-  "conversation": {
-    "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-    "name": "Convo1"
-  },
-  "recipient": {
-    "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-    "name": "Megan Bowen"
-  },
-  "text": "My agent's reply"
-}
-```
-
-> [!NOTE]
->
-> - Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
-> - Messages sent can be localized to provide personalization. For more information, see [localize your app](../concepts/build-and-test/apps-localization.md).
-
-Messages sent between users and agents include internal channel data within the message. This data allows the agent to communicate properly on that channel. The Teams SDK allows you to modify the message structure.
-
 ### Receive undelete message activity
 
 When you undelete a message, the agent gets a notification of the undelete message activity.
 
-Undelete activities arrive through the `OnMessageUpdate` handler in Teams SDK 2.1.0.
-
 The following is an example of an undelete message activity notification when a deleted message is restored:
 
 ::: zone pivot="teams-sdk-csharp"
+
+Undelete activities arrive through the `OnMessageUpdate` handler in Teams SDK 2.1.0.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -598,12 +987,24 @@ app.OnMessageUndelete(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on("messageUndelete", async ({ activity, send }) => {
+app.on("undeleteMessage", async ({ activity, send }) => {
   const undeletedMessage = activity.text;
   await send(
     `Previously the message was deleted. After undeleting, the message is now: "${undeletedMessage}"`,
   );
 });
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_undelete_message
+async def handle_undelete_message(ctx: ActivityContext[MessageUpdateActivity]):
+    await ctx.send(
+        f'Previously the message was deleted. After undeleting, the message is now: "{ctx.activity.text}"'
+    )
 ```
 
 ::: zone-end
@@ -663,11 +1064,11 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 
 When you soft delete a message, the agent gets a notification of the soft delete message activity.
 
-Soft delete activities arrive through the `OnMessageDelete` handler in Teams SDK 2.1.0.
-
 The following example shows a soft delete message activity notification when a message is soft deleted:
 
 ::: zone pivot="teams-sdk-csharp"
+
+Soft delete activities arrive through the `OnMessageDelete` handler in Teams SDK 2.1.0.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -694,10 +1095,20 @@ app.OnMessageSoftDelete(async context =>
 ::: zone pivot="teams-sdk-typescript"
 
 ```typescript
-app.on("messageSoftDelete", async ({ activity, send }) => {
+app.on("softDeleteMessage", async ({ activity, send }) => {
   const messageId = activity.id;
   await send(`The deleted message id is ${messageId}`);
 });
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_soft_delete_message
+async def handle_soft_delete_message(ctx: ActivityContext[MessageDeleteActivity]):
+    await ctx.send(f"The deleted message id is {ctx.activity.id}")
 ```
 
 ::: zone-end
@@ -742,14 +1153,14 @@ app.on("messageSoftDelete", async ({ activity, send }) => {
 }
 ```
 
-### Update and delete messages sent from agent
+## Update and delete messages sent from agent
 
-Your agent can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK `context.Api.Conversations.Activities.DeleteAsync(...)` method.
+Your agent can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Teams SDK API client.
 
 > [!NOTE]
 > An agent can't update or delete messages sent by the user in Microsoft Teams.
 
-#### Update messages
+### Update messages
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
@@ -759,7 +1170,7 @@ It is not necessary for the new message to match the original in type. For examp
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.UpdateActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -773,7 +1184,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
     var updatedActivity = new MessageActivityInput().WithText("The new text for the activity");
 
-    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+    await context.Api.Conversations.UpdateActivityAsync(conversationId, activityId, updatedActivity, cancellationToken: cancellationToken);
 });
 ```
 
@@ -855,7 +1266,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
-#### Update cards
+### Update cards
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
@@ -863,7 +1274,7 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the `TurnContext` class.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.UpdateActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -878,7 +1289,7 @@ teams.OnMessage(async (context, cancellationToken) =>
         .Build();
     var updatedActivity = new MessageActivityInput().AddAttachment(attachment);
 
-    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+    await context.Api.Conversations.UpdateActivityAsync(conversationId, activityId, updatedActivity, cancellationToken: cancellationToken);
 });
 ```
 
@@ -955,15 +1366,15 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated cards, you can delete messages using the Teams SDK.
 
-#### Delete messages
+### Delete messages
 
-In the Teams SDK, every message has its unique activity identifier. Messages can be deleted using the `context.Api.Conversations.Activities.DeleteAsync(...)` method.
+In the Teams SDK, every message has its unique activity identifier. Messages can be deleted using the API client's delete method.
 
 ::: zone pivot="teams-sdk-csharp"
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the `TurnContext` class.
+To delete a message, pass that activity's ID to the `context.Api.Conversations.DeleteActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -974,7 +1385,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
     foreach (var activityId in _list)
     {
-        await context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId, cancellationToken);
+        await context.Api.Conversations.DeleteActivityAsync(conversationId, activityId, cancellationToken: cancellationToken);
     }
 });
 ```
@@ -1041,317 +1452,9 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 | ------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | N/A                      | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
-## Quoted replies
-
-Quoted replies let your agent reference a previous message in the conversation. When a user sends a message that quotes another message, your agent receives structured metadata about the quoted content. Your agent can also send messages that quote previous messages.
-
-### Receive quoted replies
-
-::: zone pivot="teams-sdk-csharp"
-
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `GetQuotedMessages` method to access all quoted reply entities.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    var quotes = context.Activity.GetQuotedMessages();
-
-    if (quotes.Count > 0)
-    {
-        var quote = quotes[0].QuotedReply;
-        await context.ReplyAsync(
-            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"", cancellationToken);
-    }
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async context =>
-{
-    var quotes = context.Activity.GetQuotedMessages();
-
-    if (quotes.Count > 0)
-    {
-        var quote = quotes[0].QuotedReply;
-        await context.Reply(
-            $"You quoted message {quote.MessageId} from {quote.SenderName}: \"{quote.Preview}\"");
-    }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `getQuotedMessages` method to access all quoted reply entities.
-
-```typescript
-app.on("message", async ({ activity, reply }) => {
-  const quotes = activity.getQuotedMessages();
-
-  if (quotes.length > 0) {
-    const quote = quotes[0].quotedReply;
-    await reply(
-      `You quoted message ${quote.messageId} from ${quote.senderName}: "${quote.preview}"`,
-    );
-  }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-When a user quotes a message and sends it to your agent, the quoted reply metadata is available on the inbound activity. Use the `get_quoted_messages` method to access all quoted reply entities.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    quotes = ctx.activity.get_quoted_messages()
-
-    if quotes:
-        quote = quotes[0].quoted_reply
-        await ctx.reply(
-            f"You quoted message {quote.message_id} from {quote.sender_name}: \"{quote.preview}\""
-        )
-```
-
-::: zone-end
-
-### Send quoted replies
-
-::: zone pivot="teams-sdk-csharp"
-
-When your agent calls `Reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    // ReplyAsync() automatically quotes the inbound message
-    await context.ReplyAsync("Got it!", cancellationToken);
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async context =>
-{
-    // Reply() automatically quotes the inbound message
-    await context.Reply("Got it!");
-});
-```
-
----
-
-To quote a different message in the same conversation (not the inbound message), use the `Quote()` method with the message ID you want to quote.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    // Quote a specific message by its ID
-    var parentMessageId = "1772050244572";
-    await context.QuoteAsync(parentMessageId, "Referencing an earlier message", cancellationToken);
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async context =>
-{
-    // Quote a specific message by its ID
-    var parentMessageId = "1772050244572";
-    await context.Quote(parentMessageId, "Referencing an earlier message");
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
-
-```typescript
-app.on("message", async ({ reply }) => {
-  // reply() automatically quotes the inbound message
-  await reply("Got it!");
-});
-```
-
-To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
-
-```typescript
-app.on("message", async ({ quote }) => {
-  // Quote a specific message by its ID
-  const parentMessageId = "1772050244572";
-  await quote(parentMessageId, "Referencing an earlier message");
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-When your agent calls `reply()`, the SDK automatically stamps a quoted reply entity referencing the inbound message. The reply will appear as a quoted reply in Teams.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # reply() automatically quotes the inbound message
-    await ctx.reply("Got it!")
-```
-
-To quote a different message in the same conversation (not the inbound message), use the `quote()` method with the message ID you want to quote.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # Quote a specific message by its ID
-    parent_message_id = "1772050244572"
-    await ctx.quote(parent_message_id, "Referencing an earlier message")
-```
-
-::: zone-end
-
-### Build quoted replies for proactively sending messages
-
-::: zone pivot="teams-sdk-csharp"
-
-For proactive scenarios (using `teams.SendAsync()`) or when quoting multiple messages, use the `AddQuote()` method on a message activity. Pass the message ID and an optional response text.
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-var parentMessageId = "1772050244572";
-var firstMessageId = "1772050244573";
-var secondMessageId = "1772050244574";
-
-// Single quote with response below it
-var msg = new MessageActivityInput()
-    .WithText("Here is my response")
-    .AddQuote(parentMessageId);
-await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
-
-// Multiple quotes with interleaved responses
-msg = new MessageActivityInput()
-    .WithText("response to first")
-    .AddQuote(firstMessageId)
-    .AddQuote(secondMessageId, "response to second");
-await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
-
-// Grouped quotes — omit response to group quotes together
-msg = new MessageActivityInput()
-    .WithText("see below for previous messages")
-    .AddQuote(firstMessageId)
-    .AddQuote(secondMessageId, "response to both");
-await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-var parentMessageId = "1772050244572";
-var firstMessageId = "1772050244573";
-var secondMessageId = "1772050244574";
-
-// Single quote with response below it
-var msg = new MessageActivity()
-    .AddQuote(parentMessageId, "Here is my response");
-await app.Send(conversationId, msg);
-
-// Multiple quotes with interleaved responses
-msg = new MessageActivity()
-    .AddQuote(firstMessageId, "response to first")
-    .AddQuote(secondMessageId, "response to second");
-await app.Send(conversationId, msg);
-
-// Grouped quotes — omit response to group quotes together
-msg = new MessageActivity("see below for previous messages")
-    .AddQuote(firstMessageId)
-    .AddQuote(secondMessageId, "response to both");
-await app.Send(conversationId, msg);
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `addQuote()` method on a message activity. Pass the message ID and an optional response text.
-
-```typescript
-import { MessageActivity } from "@microsoft/teams.api";
-
-const parentMessageId = "1772050244572";
-const firstMessageId = "1772050244573";
-const secondMessageId = "1772050244574";
-
-// Single quote with response below it
-let msg = new MessageActivity().addQuote(
-  parentMessageId,
-  "Here is my response",
-);
-await app.send(conversationId, msg);
-
-// Multiple quotes with interleaved responses
-msg = new MessageActivity()
-  .addQuote(firstMessageId, "response to first")
-  .addQuote(secondMessageId, "response to second");
-await app.send(conversationId, msg);
-
-// Grouped quotes — omit response to group quotes together
-msg = new MessageActivity("see below for previous messages")
-  .addQuote(firstMessageId)
-  .addQuote(secondMessageId, "response to both");
-await app.send(conversationId, msg);
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-For proactive scenarios (using `app.send()`) or when quoting multiple messages, use the `add_quote()` method on a message activity. Pass the message ID and an optional response text.
-
-```python
-from microsoft_teams.api.activities.message import MessageActivityInput
-
-parent_message_id = "1772050244572"
-first_message_id = "1772050244573"
-second_message_id = "1772050244574"
-
-# Single quote with response below it
-msg = (MessageActivityInput()
-    .add_quote(parent_message_id, "Here is my response"))
-await app.send(conversation_id, msg)
-
-# Multiple quotes with interleaved responses
-msg = (MessageActivityInput()
-    .add_quote(first_message_id, "response to first")
-    .add_quote(second_message_id, "response to second"))
-await app.send(conversation_id, msg)
-
-# Grouped quotes — omit response to group quotes together
-msg = (MessageActivityInput(text="see below for previous messages")
-    .add_quote(first_message_id)
-    .add_quote(second_message_id, "response to both"))
-await app.send(conversation_id, msg)
-```
-
-::: zone-end
-
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `App` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the activity context object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
 A typical `channelData` object in an activity sent to your agent contains the following information:
 
@@ -1442,42 +1545,6 @@ Two non-standard request header fields are added to all the requests sent to age
 If the tenant or conversation ID isn't present in the activity or wasn't validated on the service side, the value is empty.
 
 :::image type="content" source="../assets/images/bots/requestheaderfields.png" alt-text="Image shows header fields.":::
-
-### Receive only at-mentioned messages
-
-To enable your agents to get only those channel or chat messages where your agent is @mentioned, you must filter the messages. Use the following code snippet to enable your agent to receive only those messages where it's @mentioned:
-
-# [C# SDK v2.1](#tab/dotnet-v2-1)
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-    if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
-    {
-        return;
-    }
-
-    await context.SendAsync("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.", cancellationToken);
-});
-```
-
-# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
-
-```csharp
-app.OnMessage(async context =>
-{
-    if (!context.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(context.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
-    {
-        return;
-    }
-
-    await context.Send("Using RSC the agent can receive messages across channels or chats in team without being @mentioned.");
-});
-```
-
----
-
-If you want your agent to receive all messages, then you don't need to filter the @mention messages.
 
 ## Next step
 
