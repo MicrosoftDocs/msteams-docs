@@ -9,13 +9,11 @@ ai-usage: ai-assisted
 
 # Activities and handlers
 
-An **Activity** is the Teams‑specific payload that flows between the user and your bot.
+An **Activity** is a data payload that represents user activity in Teams. As user activity occurs in Teams, Agent Communication Service sends activity payloads to your agent in real time.
 
-Activity handlers are the core of an agent's functionality. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](agent-scopes.md) where your agent is active.
+For most agents, activity handlers - particularly the chat message handler - are the main entrypoints for the agent's behavior. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](agent-scopes.md) where your agent is active.
 
-
-
-## Register an activity handler
+## Register activity handlers
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -62,7 +60,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 If your agent takes more than 15 seconds to process an activity, Teams sends a retry request to the agent endpoint, so you might see duplicate requests.
 
-For event descriptions, handler registration syntax, payload examples, and event-handling guidance, see the [agent event reference](agent-event-reference.md).
+For a complete listing of activity events, payload examples, and event-handling guidance, see the [agent event reference](agent-activity-handler-reference.md).
 
 ## Activity handler chaining
 

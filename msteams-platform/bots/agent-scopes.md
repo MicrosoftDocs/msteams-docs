@@ -15,7 +15,7 @@ Teams supports three primary scopes:
 | Scope           | Description                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
 | **`personal`**  | Users can install the agent as a personal app and interact with it through a private, one-on-one chat.        |
-| **`groupchat`** | Users can install the agent in group chats, where multiple participants can interact with it in a shared conversation. |
+| **`groupChat`** | Users can install the agent in group chats, where multiple participants can interact with it in a shared conversation. |
 | **`team`**      | Users can install the agent ina team, allowing it to participate in conversations in the team's channels.              |
 
 A fourth scope, `copilot`, enables the agent's use in Microsoft 365 Copilot. For more information, see [Enable an agent or app in Microsoft 365 Copilot](../m365-apps/enable-agent-app-copilot.md).
@@ -34,7 +34,7 @@ Declare one or more scopes for an agent in the `bots.scopes` property of its man
 }
 ```
 
-For more information, see [the app manifest reference documentation](/microsoft-365/extensibility/schema/root-bots#scopes.
+For more information, see [the app manifest reference documentation](/microsoft-365/extensibility/schema/root-bots#scopes).
 
 ## Agent design guidance
 

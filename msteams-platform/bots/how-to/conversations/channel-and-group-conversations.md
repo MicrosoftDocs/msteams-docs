@@ -585,11 +585,6 @@ The following table lists the throttling limits for tag mentions in an agent:
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in an agent.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Understand conversation events](~/bots/agent-event-reference.md#conversation-update-event-details)
-
 ## See also
 
 * [Teams SDK - API Client](/microsoftteams/platform/teams-sdk/essentials/api)

@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 Use this reference to find the handler registration syntax for Teams agent activities. For an introduction, see [Activities and handlers](activities-handlers.md).
 
-The handler listings show declarations, and the [message reaction examples](#message-reactions) also show how to process event payloads. Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
+Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
 
 The language-independent [conversation update](#conversation-update-event-details) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
 
@@ -35,234 +35,143 @@ Register asynchronous functions with decorators on an `App` instance named `app`
 
 ::: zone-end
 
-## Base activity types
-
-### Any activity received
-
-A catch-all handler observes incoming activities.
+## Event reference
 
 ::: zone pivot="teams-sdk-csharp"
 
-Handler example pending verification.
+#### Core activity handlers
 
-<!-- TODO: Verify the current TeamsBotApplication catch-all registration API. The source article's OnActivity example uses the older App API. -->
+The `App` class exposes extension methods for registering handlers. Methods return `App` for fluent chaining.
+
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
+| Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
+| Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
+| Non-agent members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
+| Non-agent members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
+| Installation added | `OnInstall(handler)` | Agent was installed. |
+
+#### Teams-specific activity handlers
+
+| Event | Extension method | Description |
+| --- | --- | --- |
+| Channel created | `OnChannelCreated(handler)` | A Teams channel was created. |
+| Channel deleted | `OnChannelDeleted(handler)` | A Teams channel was deleted. |
+| Channel renamed | `OnChannelRenamed(handler)` | A Teams channel was renamed. |
+| Team renamed | `OnTeamRenamed(handler)` | The team was renamed. |
+| Message edited | `OnMessageUpdate(handler)` | A message was edited. |
+| Message soft deleted | `OnMessageDelete(handler)` | A message was soft-deleted. |
+
+#### Teams invoke activities
+
+| Invoke type | Extension method | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `OnExecuteAction(handler)` | A card action invoke activity was received. |
+| `task/fetch` | `OnTaskFetch(handler)` | A dialog (task module) was fetched. |
+| `task/submit` | `OnTaskSubmit(handler)` | A dialog (task module) was submitted. |
+| `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript"
+::: zone pivot="teams-sdk-typescript:
 
-```typescript
-app.on('activity', async (context) => {
+#### Core activity handlers
 
-});
-```
+The list of event names supported by `app.on()` includes the following:
+
+| Event | Event name string | Description |
+| --- | --- | --- |
+| Any activity type received | `'activity'` | Catch-all handler called for every activity. |
+| Message activity received | `'message'` | Handle incoming text messages. Use `app.message(pattern, handler)` for regex matching. |
+| Conversation update received | `'conversationUpdate'` | Raw conversation update activity. |
+| Installation added | `'install.add'` | Agent was installed. |
+| Installation removed | `'install.remove'` | Agent was uninstalled. |
+| Members added | `'membersAdded'` | One or more members joined the conversation. |
+| Members removed | `'membersRemoved'` | One or more members left the conversation. |
+| Message edited | `'messageUpdate'` | A message in the conversation was edited. |
+| Message soft deleted | `'messageDelete'` | A message was soft-deleted (`activity.channelData.eventType === 'softDeleteMessage'`). |
+| Read receipt received | `'readReceipt'` | A read receipt was received. |
+
+#### Teams-specific event handlers
+
+`app.on()` supports the following Teams-specific event name strings:
+
+| Event | Event name string | Description |
+| --- | --- | --- |
+| `channelCreated` | `'channelCreated'` | A Teams channel was created. |
+| `channelDeleted` | `'channelDeleted'` | A Teams channel was deleted. |
+| `channelRenamed` | `'channelRenamed'` | A Teams channel was renamed. |
+| `channelRestored` | `'channelRestored'` | A Teams channel was restored. |
+| `channelMemberAdded` | `'channelMemberAdded'` | A member was added to a channel. |
+| `channelMemberRemoved` | `'channelMemberRemoved'` | A member was removed from a channel. |
+| `teamRenamed` | `'teamRenamed'` | The team was renamed. |
+| `teamArchived` | `'teamArchived'` | The team was archived. |
+| `teamDeleted` | `'teamDeleted'` | The team was deleted. |
+| `teamRestored` | `'teamRestored'` | The team was restored. |
+| Meeting started | `'meetingStart'` | A meeting has started. |
+| Meeting ended | `'meetingEnd'` | A meeting has ended. |
+| Participant joined | `'meetingParticipantJoin'` | A participant joined a meeting. |
+| Participant left | `'meetingParticipantLeave'` | A participant left a meeting. |
+
+#### Teams invoke activities
+
+The following table lists invoke activity handlers available via `app.on()`:
+
+| Invoke type | Event name string | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `'card.action'` | A card action invoke activity was received (`adaptiveCard/action`). |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
+| `task/fetch` | `'dialog.open'` | A dialog (task module) was fetched. |
+| `task/submit` | `'dialog.submit'` | A dialog (task module) was submitted. |
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-```python
-@app.on_activity
-async def handle_activity(ctx: ActivityContext):
-    pass
-```
+#### Core activity handlers
+
+The `App` class exposes decorator-style handler registration.
+
+| Event | Decorator | Description |
+| --- | --- | --- |
+| Any activity received | `@app.on_activity` | Catch-all handler for every activity. |
+| Message received | `@app.on_message` | Handle incoming text messages. |
+| Message with pattern | `@app.on_message_pattern(re.compile(...))` | Handle messages matching a regex pattern. |
+| Conversation update | `@app.on_conversation_update` | Raw conversation update; check `members_added` / `members_removed`. |
+| Installation added | `@app.on_install_add` | Agent was installed. |
+| Installation removed | `@app.on_install_remove` | Agent was uninstalled. |
+
+#### Teams-specific activity handlers
+
+| Event | Decorator | Description |
+| --- | --- | --- |
+| Channel created | `@app.on_channel_created` | A Teams channel was created. |
+| Channel deleted | `@app.on_channel_deleted` | A Teams channel was deleted. |
+| Channel renamed | `@app.on_channel_renamed` | A Teams channel was renamed. |
+| Team renamed | `@app.on_team_renamed` | The team was renamed. |
+| Message edited | `@app.on_edit_message` | A message was edited. |
+| Message soft deleted | `@app.on_soft_delete_message` | A message was soft-deleted. |
+| Message undeleted | `@app.on_undelete_message` | A deleted message was restored. |
+| Meeting started | `@app.on_meeting_start` | A meeting has started. |
+| Meeting ended | `@app.on_meeting_end` | A meeting has ended. |
+| Participant joined | `@app.on_meeting_participant_join` | A participant joined a meeting. |
+| Participant left | `@app.on_meeting_participant_leave` | A participant left a meeting. |
+
+#### Teams invoke activities
+
+| Invoke type | Decorator | Description |
+| --- | --- | --- |
+| `CardAction.Invoke` | `@app.on_card_action` | A card action invoke activity was received. |
+| `task/fetch` | `@app.on_dialog_open` | A dialog (task module) was fetched. |
+| `task/submit` | `@app.on_dialog_submit` | A dialog (task module) was submitted. |
+| `fileConsent/invoke` | `@app.on_file_consent` | A file consent card activity was received. |
+| `signin/verifyState` | Handled automatically by the SDK (OAuth flow) | Sign-in verify state activity. |
 
 ::: zone-end
 
-### Message received
-
-Handle incoming text messages.
-
-::: zone pivot="teams-sdk-csharp"
-
-For pattern matching, pass a regex string before the handler.
-
-```csharp
-teams.OnMessage(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-For regex matching, use `app.message(pattern, handler)`.
-
-```typescript
-app.on('message', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-For regex matching, use `@app.on_message_pattern(re.compile(...))`.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Conversation update received
-
-Handle a raw conversation update activity.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnConversationUpdate(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('conversationUpdate', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_conversation_update
-async def handle_conversation_update(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Message changes
-
-### Message edited
-
-A message was edited.
-
-::: zone pivot="teams-sdk-csharp"
-
-Inspect `context.Activity.ChannelData?.EventType` to distinguish edits from restored messages.
-
-```csharp
-teams.OnMessageUpdate(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('messageUpdate', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_edit_message
-async def handle_edit_message(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Message soft deleted
-
-A message was soft deleted.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnMessageDelete(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-`context.activity.channelData.eventType` is `softDeleteMessage`.
-
-```typescript
-app.on('messageDelete', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_soft_delete_message
-async def handle_soft_delete_message(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Message undeleted
-
-A deleted message was restored.
-
-::: zone pivot="teams-sdk-csharp"
-
-Use the message update handler and check for `context.Activity.ChannelData?.EventType == "undeleteMessage"`.
-
-```csharp
-teams.OnMessageUpdate(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('messageUndelete', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_undelete_message
-async def handle_undelete_message(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Message reactions and receipts
-
-### Message reactions
-
-A user added and/or removed one or more reactions to an agent message.
+## Message reaction activities
 
 Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
@@ -349,892 +258,11 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ::: zone-end
 
-### Read receipt received
+## conversationUpdate activities
 
-A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
+`conversationUpdate` activities are used to represent multiple kinds of events in Teams. Different `conversationUpdate` events can be distinguished by examining their `channelData` properties. In most cases, this is not necessary, as Teams SDK provided dedicated activity handler subscriptions for each kind.
 
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnReadReceipt(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('readReceipt', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the Python handler registration API for read receipts. -->
-
-::: zone-end
-
-## Installation
-
-### Installation added
-
-The agent was installed.
-
-::: zone pivot="teams-sdk-csharp"
-
-Inspect `context.Activity.Action` to distinguish installation from removal.
-
-```csharp
-teams.OnInstall(async (context, cancellationToken) =>
-{
-
-});
-```
-
-You can also handle the raw installation update activity with `OnInstallUpdate` and inspect `context.Activity.Action`. Choose the handler appropriate to your workflow rather than registering both for the same action.
-
-```csharp
-teams.OnInstallUpdate(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('install.add', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_install_add
-async def handle_install_add(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Installation removed
-
-The agent was uninstalled.
-
-::: zone pivot="teams-sdk-csharp"
-
-Installation changes use the same handler; inspect `context.Activity.Action` for `remove`.
-
-```csharp
-teams.OnInstall(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('install.remove', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_install_remove
-async def handle_install_remove(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Conversation membership
-
-### Members added
-
-One or more members joined the conversation.
-
-::: zone pivot="teams-sdk-csharp"
-
-Read `context.Activity.MembersAdded`.
-
-```csharp
-teams.OnMembersAdded(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Read `context.activity.membersAdded`.
-
-```typescript
-app.on('membersAdded', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Use the conversation update handler and inspect `ctx.activity.members_added`.
-
-```python
-@app.on_conversation_update
-async def handle_members_added(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Members removed
-
-One or more members left the conversation.
-
-::: zone pivot="teams-sdk-csharp"
-
-Read `context.Activity.MembersRemoved`.
-
-```csharp
-teams.OnMembersRemoved(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Read `context.activity.membersRemoved`.
-
-```typescript
-app.on('membersRemoved', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Use the conversation update handler and inspect `ctx.activity.members_removed`.
-
-```python
-@app.on_conversation_update
-async def handle_members_removed(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Channel changes
-
-### Channel created
-
-A Teams channel was created.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnChannelCreated(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelCreated', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_channel_created
-async def handle_channel_created(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Channel deleted
-
-A Teams channel was deleted.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnChannelDeleted(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelDeleted', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_channel_deleted
-async def handle_channel_deleted(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Channel renamed
-
-A Teams channel was renamed.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnChannelRenamed(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelRenamed', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_channel_renamed
-async def handle_channel_renamed(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Channel restored
-
-A deleted channel was restored.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnChannelRestored(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelRestored', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_channel_restored
-async def handle_channel_restored(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Channel member added
-
-A member was added to a channel.
-
-::: zone pivot="teams-sdk-csharp"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# registration API for channelMemberAdded. -->
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelMemberAdded', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the Python handler registration API for channelMemberAdded. -->
-
-::: zone-end
-
-### Channel member removed
-
-A member was removed from a channel.
-
-::: zone pivot="teams-sdk-csharp"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# registration API for channelMemberRemoved. -->
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('channelMemberRemoved', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the Python handler registration API for channelMemberRemoved. -->
-
-::: zone-end
-
-## Team changes
-
-### Team renamed
-
-The team was renamed.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTeamRenamed(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('teamRenamed', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_team_renamed
-async def handle_team_renamed(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Team archived
-
-The team was archived.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTeamArchived(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('teamArchived', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_team_archived
-async def handle_team_archived(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Team unarchived
-
-A team where the agent is installed was unarchived.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTeamUnarchived(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('teamUnarchived', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_team_unarchived
-async def handle_team_unarchived(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Team deleted
-
-The team was deleted.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTeamDeleted(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('teamDeleted', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_team_deleted
-async def handle_team_deleted(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Team restored
-
-A deleted team was restored.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTeamRestored(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('teamRestored', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_team_restored
-async def handle_team_restored(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Meetings
-
-### Meeting started
-
-A meeting started. The event name is `application/vnd.microsoft.meetingStart`.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnMeetingStart(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('meetingStart', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_meeting_start
-async def handle_meeting_start(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Meeting ended
-
-A meeting ended. The event name is `application/vnd.microsoft.meetingEnd`.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnMeetingEnd(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('meetingEnd', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_meeting_end
-async def handle_meeting_end(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Meeting participant joined
-
-A participant joined a meeting. The event name is `application/vnd.microsoft.meetingParticipantJoin`.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnMeetingJoin(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('meetingParticipantJoin', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_meeting_participant_join
-async def handle_meeting_participant_join(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Meeting participant left
-
-A participant left a meeting. The event name is `application/vnd.microsoft.meetingParticipantLeave`.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnMeetingLeave(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('meetingParticipantLeave', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_meeting_participant_leave
-async def handle_meeting_participant_leave(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-## Card actions and dialogs
-
-### Adaptive Card action
-
-An Adaptive Card action was invoked (`adaptiveCard/action`).
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnAdaptiveCardAction((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('card.action', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_card_action
-async def handle_card_action(ctx: ActivityContext):
-    raise NotImplementedError
-```
-
-::: zone-end
-
-### Dialog fetched
-
-A dialog (task module) was fetched (`task/fetch`).
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTaskFetch((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('dialog.open', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_dialog_open
-async def handle_dialog_open(ctx: ActivityContext):
-    raise NotImplementedError
-```
-
-::: zone-end
-
-### Dialog submitted
-
-A dialog (task module) was submitted (`task/submit`).
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnTaskSubmit((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('dialog.submit', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_dialog_submit
-async def handle_dialog_submit(ctx: ActivityContext):
-    raise NotImplementedError
-```
-
-::: zone-end
-
-## File handling
-
-### File consent
-
-A file consent card was accepted or declined (`fileConsent/invoke`).
-
-::: zone pivot="teams-sdk-csharp"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# file consent registration API. The source article lists OnFileConsent, but a current TeamsBotApplication example is needed. -->
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('file.consent', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_file_consent
-async def handle_file_consent(ctx: ActivityContext):
-    raise NotImplementedError
-```
-
-::: zone-end
-
-## Authentication
-
-### Sign-in state verified
-
-The SDK handles `signin/verifyState` automatically as part of the OAuth flow. Don't register a handler solely to implement this flow.
-
-## Conversation update event details
-
-Teams sends `conversationUpdate` activities when an agent is added to a conversation, other members join or leave, or conversation metadata changes. An agent receives membership updates for teams where it's installed and an initial update when it's first added to a personal conversation.
-
-Use conversation events to:
-
-- Welcome users when your agent is added to a team or a new member joins.
-- Notify users about membership changes or channel creation, renaming, and deletion.
-- Identify the channel a user selected during installation.
-
-Channel and team lifecycle events apply to the team scope. Membership events apply to personal chats, group chats, and teams.
-
-> [!NOTE]
-> When an Azure Communication Services (ACS) client joins or leaves a Teams meeting, no conversation update events are triggered.
-
-Conversation update activities have `type` of `conversationUpdate`. Channel and team lifecycle events identify the change in `channelData.eventType`. Membership changes also populate `membersAdded` or `membersRemoved`.
+Conversation update activity payloads have `type` of `conversationUpdate`. Channel and team lifecycle events identify the change in `channelData.eventType`. Membership changes also populate `membersAdded` or `membersRemoved`.
 
 | Event | Payload event type or field | Scope | Payload example |
 | --- | --- | --- | --- |
@@ -1251,6 +279,8 @@ Conversation update activities have `type` of `conversationUpdate`. Channel and 
 | Team restored | `channelData.eventType`: `teamRestored` | Team | [Team restored](#team-restored-payload) |
 
 Channel lifecycle payloads include the channel's ID and name in `channelData.channel` and the team ID in `channelData.team`. Team lifecycle payloads include the team's ID and name in `channelData.team`. Use these fields to identify the affected channel or team and, when appropriate, notify users about the change.
+
+Azure Communication Services clients joining or leaving Teams meetings do not trigger conversation update activities.
 
 ### Member changes
 

@@ -1096,6 +1096,8 @@
   items:
   - name: App manifest schema
     href: /microsoft-365/extensibility/schema
+  - name: Agent activity events and handlers
+    href: bots/agent-activity-handler-reference.md
     displayName: Reference, JSON, package
   - name: Teams SDK for .NET
     href: /dotnet/teams-sdk-dotnet
@@ -1109,5 +1111,3 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
-  - name: Agent activity events and handlers
-    href: bots/agent-event-reference.md
