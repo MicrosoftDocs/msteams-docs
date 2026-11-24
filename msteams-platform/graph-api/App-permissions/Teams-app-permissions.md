@@ -1,22 +1,25 @@
 ---
 title: Agent and App permissions
-description: Learn how Teams apps are managed in Microsoft Entra ID and resource-specific consent (RSC) based on the feature and capability wise management.
+description: Teams agent and app permissions span Microsoft Entra ID and resource-specific consent (RSC). Learn how each model works.
 ms.topic: article
 ms.date: 11/24/2026
 ---
 
 # Agent and app permissions
 
-Permission for Teams agents and apps are managed in two places, depending on the app feature:
+Permissions for Teams agents fall into two categories:
 
-* [Microsoft Entra ID](#azure-active-directory)
-* [Resource-specific consent (RSC)](#resource-specific-consent-rsc)
+* Microsoft Entra ID and Graph permissions
+* Resource-specific consent (RSC) permissions
 
 :::image type="content" source="../../assets/images/teams-app-permissions-3.png" alt-text="The screenshot describes the different Teams app permissions." border="false":::
 
 ## Resource-specific consent (RSC)
 
-Resource-specific consent (RSC) is the permissions model for Teams that scopes certain agent and app permissions to the resources - teams, chats, meetings, and user personal scopes - where users install them. See [Resource-specific consent for Teams agents and apps](../rsc/resource-specific-consent.md) for more information.
+Resource-specific consent (RSC) is the permissions model for Teams that scopes certain agent and app permissions to the resources - teams, chats, meetings, and user personal scopes - where users install them.
+RSC permissions are a category of Microsoft Graph permissions that extend only to the teams, chats, meetings, and user personal scopes where they are installed.
+Developers declare in the app manifest which RSC permissions their agents and apps need up front, and users are empowered to grant those permissions within the scope of the resources they control.
+See [Resource-specific consent for Teams agents and apps](../rsc/resource-specific-consent.md) for more information.
 
 <a name='azure-active-directory'></a>
 
