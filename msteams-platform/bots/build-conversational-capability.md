@@ -1485,4 +1485,4 @@ If you want your agent to receive all messages, then you don't need to filter th
 
 ## See also
 
-- [Conversation events in your Teams agent](agent-activity-handler-reference.md#conversation-update-event-details)
+- [Conversation events in your Teams agent](agent-activity-handler-reference.md)

@@ -13,7 +13,7 @@ Use this reference to find the handler registration syntax for Teams agent activ
 
 Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
 
-The language-independent [conversation update](#conversation-update-event-details) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
+The language-independent [conversation update](#conversationupdate-activities) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
 
 Invoke handlers can require a response to Teams. The invoke examples throw a not-implemented exception instead of returning a success response without an implementation. Replace the exception with the appropriate response before using these handlers.
 
@@ -75,7 +75,7 @@ The `App` class exposes extension methods for registering handlers. Methods retu
 
 ::: zone-end
 
-::: zone pivot="teams-sdk-typescript:
+::: zone pivot="teams-sdk-typescript"
 
 #### Core activity handlers
 
