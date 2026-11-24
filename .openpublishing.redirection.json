@@ -1787,6 +1787,11 @@
       "source_path": "msteams-platform/legacy-tools-sdks.md",
       "redirect_url": "/microsoftteams/platform/deprecated-tools-sdks",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/subscribe-to-conversation-events.md",
+      "redirect_url": "/microsoftteams/platform/bots/bot-concepts",
+      "redirect_document_id": false
     }
     ]
 }

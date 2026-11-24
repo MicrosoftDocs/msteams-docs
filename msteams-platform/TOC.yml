@@ -124,10 +124,7 @@
       displayName: block kit
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, send message, bot framework, notification,
-    - name: Subscribe to conversation events
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+      displayName: conversationId, send message, bot framework, notification
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
       displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat

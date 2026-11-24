@@ -37,7 +37,7 @@ The code snippets in the [samples](#samples) section are to create a one-on-one 
 
 You can create a new conversation with a user or a conversation thread in a channel and you must have the correct ID. You can receive or retrieve this ID using any of the following ways:
 
-- When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- When your app is installed in a particular context, you receive an [`onMembersAdded` activity](~/bots/agent-event-reference.md#members-added).
 - When a new user is added to a context where your app is installed, you receive an `onMembersAdded` activity.
 - Every event that the agent receives contains the required information, which you can get from the agent context (activity context).
 - You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.

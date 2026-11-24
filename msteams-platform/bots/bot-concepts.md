@@ -2,10 +2,8 @@
 title: Activity Handlers and Agent Logic
 description: Learn how Teams agent scopes, activity handlers, and conversational logic work together. Explore examples in C#, TypeScript, and Python.
 ms.topic: article
-ms.localizationpriority: medium
-ms.owner: nickwalk
-ms.date: 11/23/2026
 zone_pivot_groups: teams-sdk-languages
+ms.date: 11/23/2026
 ai-usage: ai-assisted
 ---
 
@@ -50,135 +48,139 @@ One-to-one chat is a traditional way for a conversational agent to interact with
 - agents that take notes.
 Before creating one-to-one agents, consider whether a conversation-based interface is the best way to present your functionality.
 
-## Activity handler and agent logic
+## Activities and handlers
 
-To create an agent app that meets your needs, understanding Microsoft Teams activity handler and agent logic is essential. These two key components work together to organize conversational logic.
-
-- [Teams activity handler](#teams-activity-handler):
-  Processes Teams-specific events and interactions such as channel creation, team member additions, and other actions unique to the Teams environment.
-
-- [Agent logic](#agent-logic):
-  Houses the agent's conversational logic and is responsible for making decisions based on user input. Incoming activities are routed to the appropriate handler based on activity type and optional pattern matching.
-
-### Teams activity handler
-
-The activity handler is the core of an agent's functionality, managing and processing user interactions. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. The SDK routes incoming activities to the appropriate handlers.
+Activity handlers are the core of an agent's functionality. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events.
 
 > [!NOTE]
 > If an agent activity takes more than 15 seconds to process, Teams sends a retry request to the agent endpoint, so you might see duplicate requests.
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use the `Microsoft.Teams.Apps` package to register a `TeamsBotApplication` with ASP.NET Core. Call `AddTeamsBotApplication()` to register the SDK services, then `UseTeamsBotApplication()` to connect the agent to the request pipeline. Register handlers with methods such as `OnMessage()`. Handlers receive a typed context and a cancellation token. Use `context.SendAsync()` or `context.ReplyAsync()` to respond.
+Register handlers with `OnMessage()`. Handlers receive a typed context and a cancellation token.
 
 The following example registers a message handler that echoes the user's message:
 
 ```csharp
-using Microsoft.Teams.Apps;
-
-WebApplicationBuilder builder = WebApplication.CreateSlimBuilder(args);
-builder.Services.AddTeamsBotApplication();
-
-WebApplication app = builder.Build();
-TeamsBotApplication teams = app.UseTeamsBotApplication();
-
 teams.OnMessage(async (context, cancellationToken) =>
 {
     await context.SendAsync($"You said: {context.Activity.Text}", cancellationToken);
 });
-
-app.Run();
 ```
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-Use the `@microsoft/teams.apps` package to create an `App` instance. Register handlers with `app.on(eventName, handler)`. The SDK infers the activity type from the event name. The handler context exposes the incoming `activity` and functions such as `send()` and `reply()` to respond.
+Register handlers with `app.on(eventName, handler)`. The SDK infers the activity type from the event name. The handler context exposes the incoming `activity` and functions such as `send()` and `reply()` to respond.
 
 The following example registers a message handler that echoes the user's message:
 
 ```typescript
-import { App } from '@microsoft/teams.apps';
-
-const app = new App();
-
 app.on('message', async ({ activity, send }) => {
     await send(`You said: ${activity.text}`);
 });
-
-app.start().catch(console.error);
 ```
 
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-Use the `microsoft-teams-apps` package to create an `App` instance. Register an asynchronous function with a decorator such as `@app.on_message`. The handler receives an `ActivityContext[TActivity]` object. Use `ctx.send()` or `ctx.reply()` to respond.
+Register an asynchronous function with one of the dedicated event-handler decorators like `@app.on_message`. The handler receives an `ActivityContext[TActivity]` object. Use `ctx.send()` or `ctx.reply()` to respond.
 
 The following example registers a message handler that echoes the user's message:
 
 ```python
-import asyncio
-from microsoft_teams.apps import App, ActivityContext
-from microsoft_teams.api import MessageActivity
-
-app = App()
-
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.send(f"You said: {ctx.activity.text}")
-
-if __name__ == "__main__":
-    asyncio.run(app.start())
 ```
 
 ::: zone-end
 
-For event descriptions and handler registration syntax, see the [Teams agent event reference](agent-event-reference.md).
+For event descriptions and handler registration syntax, see the [agent event reference](agent-event-reference.md).
 
-### Agent logic
+### Conversation update events
 
-Agent logic incorporates the fundamental rules and decision-making frameworks that dictate an agent's actions and interactions. It outlines how the agent interprets user input, formulates responses, and participates in conversations.
+Teams sends `conversationUpdate` activities when an agent is added to a conversation, other members join or leave, or conversation metadata changes. An agent receives membership updates for teams where it's installed and an initial update when it's first added to a personal conversation.
 
-Keep event registration separate from the decisions your agent makes in each handler. A handler receives the activity context, evaluates the user's input or the event payload, and calls the services needed to complete the task.
+Use conversation events to:
 
-Now that you've familiarized yourself with agent activity handlers, explore how agents behave differently depending on the conversation and the messages they receive or send.
+- Welcome users when your agent is added to a team or a new member joins.
+- Notify users about membership changes or channel creation, renaming, and deletion.
+- Identify the channel a user selected during installation.
 
-## Recommendations
-
-An extensive dialog between your agent and the user is a slow and complex way to get a task completed. An agent that supports excessive commands, especially a broad range of commands, isn't successful or viewed positively by users.
-
-- **Avoid multi-turn experiences in chat** An extensive dialog requires the developer to maintain state. To exit this state, a user must either time out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
-
-    USER: Schedule a meeting with Megan.
-
-    AGENT: I've found 200 results, include a first and last name.
-
-    USER: Schedule a meeting with Megan Bowen.
-
-    AGENT: OK, what time would you like to meet with Megan Bowen?
-
-    USER: 1:00 pm.
-
-    AGENT: On which day?
-
-- **Support six or less frequent commands** As there are only six visible commands in the current agent menu, anything more is unlikely to be used with any frequency. Agents that go deep into a specific area rather than trying to be a broad assistant work and fare better.
-- **Optimize size of knowledge base for quicker interaction** One of the disadvantages of agents is that it's difficult to maintain a large retrieval knowledge base with unranked responses. Agents are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+Channel and team lifecycle events apply to the team scope. Membership events apply to personal chats, group chats, and teams. For event names, payload fields, and handler declarations, see [Conversation update event details](agent-event-reference.md#conversation-update-event-details).
 
 > [!NOTE]
-> Teams platform only supports Transport Layer Security (TLS) version 1.2. Ensure you configure your agent environment accordingly.
+> When an Azure Communication Services (ACS) client joins or leaves a Teams meeting, no conversation update events are triggered.
 
-## Explore other agent features
+#### Member changes
 
-In addition to conventional agent features, you can also explore advanced features available in a Teams agent app:
+Member-added and member-removed events can describe either the agent itself or another user. Compare each member's `id` in `membersAdded` or `membersRemoved` with `recipient.id` to determine whether the event concerns the agent. The agent's ID has the format `28:<MicrosoftAppId>`.
 
-- [Get Teams specific context for your agent](how-to/get-teams-context.md).
-- [Calls and online meetings agents](calls-and-meetings/calls-meetings-bots-overview.md).
-- [Enable SSO for your app](how-to/authentication/bot-sso-overview.md).
+In a team context, the member-added event uses `channelData.eventType` of `teamMemberAdded`, and the member-removed event uses `teamMemberRemoved`. A member-removed event is also triggered when a user is permanently deleted from the tenant.
+
+User IDs in these payloads are unique to the agent. Cache them when needed for future interactions, such as directly messaging a user. When the agent is removed, clear cached data for the team as appropriate for your app's data-retention requirements.
+
+When the agent is installed in a team, `conversation.id` identifies the channel selected by the user during installation or the channel from which installation was initiated. It isn't necessarily the General channel. For agent installation and removal workflows, prefer the [installation update event](#installation-update-event).
+
+### Message reaction events
+
+Teams sends a `messageReaction` activity when a user adds or removes a reaction to a message sent by your agent. These events apply to all conversation scopes. Use them, for example, to respond when a user likes an agent message.
+
+The activity's `replyToId` identifies the original message. Each entry in `reactionsAdded` or `reactionsRemoved` has a `type` value describing the reaction, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`.
+
+Reaction events don't contain the original message's contents. If your agent needs those contents to process reactions, store the message when you send it. See [Message reaction event details](agent-event-reference.md#message-reaction-event-details) for handler syntax and payload examples.
+
+### Installation update event
+
+Teams sends an `installationUpdate` activity when an agent is installed in or uninstalled from a conversation thread. The activity's `action` is `add` for installation and `remove` for uninstallation.
+
+When an app is upgraded, Teams sends this event only if the upgrade adds or removes an agent from the manifest. The action is `add-upgrade` or `remove-upgrade`, respectively. Other app upgrades don't trigger an installation update event.
+
+Use installation updates to send an introductory message when your agent is installed and to clean up user or conversation-thread data when it's uninstalled. This helps your app meet privacy and data-retention requirements. See [Installation update event details](agent-event-reference.md#installation-update-event-details) for action values, handler declarations, and a payload example.
+
+#### Install update event
+
+When an agent is installed in a team, `conversation.id` in both the conversation update and installation update activities identifies the channel selected during installation or the channel where installation occurred. Send your welcome message to this channel, where the user intends the agent to operate. If you explicitly need the General channel ID, use `channelData.team.id`.
+
+The following example shows installation in the Response channel of the Daves Demo team. Both activities identify the Response channel:
+
+:::image type="content" source="~/assets/videos/addteam.gif" alt-text="Animation showing installation of an agent in the selected Response channel.":::
+
+> [!NOTE]
+> The selected channel ID is only set on `installationUpdate` `add` events when an app is installed into a team. In the associated team-installation conversation update payload, `conversation.id` and `channelData.settings.selectedChannel.id` identify the selected channel.
+
+### Uninstall behavior for personal app with agent
+
+When an app is uninstalled, its agent is also uninstalled. Users receive a `403` response if they attempt to send a message to the app, and the agent receives a `403` response when it attempts to post new messages.
+
+Personal scope follows the same post-uninstall behavior as team and group chat scopes: the agent can't send or receive messages after the app is uninstalled.
+
+:::image type="content" source="../assets/images/bots/uninstallbot.png" alt-text="Screenshot showing a forbidden response after an agent is uninstalled." lightbox="../assets/images/bots/uninstallbot.png" border="true":::
+
+### Event handling for install and uninstall events
+
+Teams can add new events at any time, so design your agent to accept events it doesn't recognize. By default, Teams SDK responds with `200 OK` to events for which you haven't registered a handler.
+
+If you build an agent without Teams SDK or customize the SDK's default event handling, preserve this behavior for unexpected events. Otherwise, new installation, uninstallation, or other events can cause exceptions in your agent.
+
+### Handling errors in conversation events
+
+Don't send error messages that lack meaningful context to the conversation. The following screenshot shows an unhelpful error response:
+
+:::image type="content" source="../assets/images/handling-error.png" alt-text="Screenshot showing an error message without meaningful context in an agent conversation.":::
+
+During development, meaningful diagnostic messages can help explain a specific error. In production, log errors and events to Azure Application Insights instead of posting debugging details to the conversation. For more information, see [Add telemetry to your bot](/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## Code sample
 
 | Sample name | Description | TypeScript | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams conversation agent | This app demonstrates basic agent events. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+| Teams conversation agent | This app demonstrates conversation events, Adaptive Cards, read receipts, and message updates. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/nodejs/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet/bot-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/python/bot-quickstart) |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Send proactive messages](how-to/conversations/send-proactive-messages.md)

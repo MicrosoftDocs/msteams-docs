@@ -1355,14 +1355,14 @@ The `channelData` object isn't included in messages in personal conversations, a
 
 A typical `channelData` object in an activity sent to your agent contains the following information:
 
-- `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+- `eventType`: Teams event type passed only in cases of [channel modification events](agent-event-reference.md#conversation-update-event-details).
 - `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
 - `team`: Passed only in channel contexts, not in personal chat.
   - `id`: GUID for the channel.
-  - `name`: Name of the team passed only in cases of [team rename events](how-to/conversations/subscribe-to-conversation-events.md#team-renamed).
+  - `name`: Name of the team passed only in cases of [team rename events](agent-event-reference.md#team-renamed).
 - `channel`: Passed only in channel contexts, when the agent is mentioned or for events in channels in teams, where the agent is added.
   - `id`: GUID for the channel.
-  - `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+  - `name`: Channel name passed only in cases of [channel modification events](agent-event-reference.md#conversation-update-event-details).
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 - `app`: Available in one-on-one (personal-app) conversations. Contains the app ID and the installed manifest version of the app associated with the activity. In some scenarios, `channelData.app` may not be provided, such as when the agent isn't installed for the user or when multiple apps map to a single bot ID. Your agent must handle the case where this field is absent.
@@ -1398,7 +1398,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 400 | **Code**: `Bad Argument` <br/> **Message**: *scenario specific | Invalid request payload provided by the agent. See error message for specific details. | No | Reevaluate request payload for errors. Check returned error message for details. |
 | 401 | **Code**: `BotNotRegistered` <br/> **Message**: No registration found for this agent. | The registration for this agent wasn't found. | No | Verify the agent ID and password. Ensure the bot ID (Microsoft Entra ID) is registered in the Teams Developer Portal or via Azure bot channel registration in Azure with 'Teams' channel enabled. |
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this agent | Admin blocked interactions between user and the agent app. Admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with agent is explicitly initiated by a user in the conversation indicating that the agent is no longer blocked. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The agent isn't part of the conversation roster. | The agent isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the agent is added again. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The agent isn't part of the conversation roster. | The agent isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](bot-concepts.md#install-update-event) event, which indicates that the agent is added again. |
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the agent. | User blocked the agent in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with agent is explicitly initiated by a user in the conversation, indicating that the agent is no longer blocked. |
 | 403 | **Code**: `ForbiddenOperationException` <br/> **Message**: Agent isn't installed in user's personal scope | Proactive message is sent by an agent, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
 | 403 | **Code**: `InvalidBotApiHost` <br/> **Message**: Invalid agent api host. For GCC tenants, call `https://smba.infra.gcc.teams.microsoft.com`. | The agent called the public API endpoint for a conversation that belongs to a GCC tenant. | No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request. |
@@ -1485,4 +1485,4 @@ If you want your agent to receive all messages, then you don't need to filter th
 
 ## See also
 
-- [Conversation events in your Teams agent](how-to/conversations/subscribe-to-conversation-events.md)
+- [Conversation events in your Teams agent](bot-concepts.md#conversation-update-events)
