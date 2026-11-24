@@ -13,11 +13,13 @@ An **Activity** is a data payload that represents user activity in Teams. As use
 
 For most agents, activity handlers - particularly the chat message handler - are the main entrypoints for the agent's behavior. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](agent-scopes.md) where your agent is active.
 
+Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
+
 ## Register activity handlers
 
 ::: zone pivot="teams-sdk-csharp"
 
-Register handlers with `OnMessage()`. Handlers receive a typed context and a cancellation token.
+Register handlers with the `OnXXX()` methods on your agent runtime's `TeamsBotApplication` instance before starting it. Handlers receive a typed context and a cancellation token.
 
 The following example registers a message handler that echoes the user's message:
 
@@ -32,7 +34,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
 ::: zone pivot="teams-sdk-typescript"
 
-Register handlers with `app.on(eventName, handler)`. The SDK infers the activity type from the event name. The handler context exposes the incoming `activity` and functions such as `send()` and `reply()` to respond.
+Register handlers with `app.on(eventName, handler)`, where `app` is your agent runtime's main `App` instance, before starting it. The SDK infers the activity type from the event name. The handler context exposes the incoming `activity` and functions such as `send()` and `reply()` to respond.
 
 The following example registers a message handler that echoes the user's message:
 
@@ -46,7 +48,7 @@ app.on('message', async ({ activity, send }) => {
 
 ::: zone pivot="teams-sdk-python"
 
-Register an asynchronous function with one of the dedicated event-handler decorators like `@app.on_message`. The handler receives an `ActivityContext[TActivity]` object. Use `ctx.send()` or `ctx.reply()` to respond.
+Register an asynchronous function with one of the dedicated event-handler decorators on your agent runtime's `App` instance like `@app.on_message`. The handler receives an `ActivityContext[TActivity]` object. Use `ctx.send()` or `ctx.reply()` to respond.
 
 The following example registers a message handler that echoes the user's message:
 

@@ -11,29 +11,9 @@ ai-usage: ai-assisted
 
 Use this reference to find the handler registration syntax for Teams agent activities. For an introduction, see [Activities and handlers](activities-handlers.md).
 
-Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
-
 The language-independent [conversation update](#conversationupdate-activities) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
 
 Invoke handlers can require a response to Teams. The invoke examples throw a not-implemented exception instead of returning a success response without an implementation. Replace the exception with the appropriate response before using these handlers.
-
-::: zone pivot="teams-sdk-csharp"
-
-Register handlers on the `TeamsBotApplication` instance named `teams`. These examples use the current `Microsoft.Teams.Apps` APIs. Activity handlers receive a typed context and a cancellation token.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Register handlers with `app.on(eventName, handler)` on an `App` instance named `app`, imported from `@microsoft/teams.apps`. The SDK infers the activity context type from the event name.
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Register asynchronous functions with decorators on an `App` instance named `app`. Import `App` and `ActivityContext` from `microsoft_teams.apps`. The examples use `ActivityContext` without an activity type parameter; add the specific activity type when implementing each handler.
-
-::: zone-end
 
 ## Event reference
 

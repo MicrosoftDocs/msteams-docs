@@ -8,9 +8,7 @@ ai-usage: ai-assisted
 
 # Agent scopes
 
-Scope is a setting configured in an agent's app manifest that determines in which contexts users can install and use it in Teams.
-
-Teams supports three primary scopes:
+Teams' *agent scopes* - `personal`, `groupChat`, and `team` - are the three different kinds of conversational environments in which users can install and use agents. Developers must use configuration in the app manifest to explicitly declare the scopes in which an agent can be installed and used.
 
 | Scope           | Description                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -33,8 +31,6 @@ Declare one or more scopes for an agent in the `bots.scopes` property of its man
     }
 }
 ```
-
-For more information, see [the app manifest reference documentation](/microsoft-365/extensibility/schema/root-bots#scopes).
 
 ## Agent design guidance
 
@@ -70,3 +66,7 @@ Before creating one-to-one agents, consider whether a conversation-based interfa
 
 > [!div class="nextstepaction"]
 > [Understand activities and handlers](activities-handlers.md)
+
+## See also
+
+- [App manifest reference documentation for scopes](/microsoft-365/extensibility/schema/root-bots#scopes)
