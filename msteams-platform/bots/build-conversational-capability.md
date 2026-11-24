@@ -222,7 +222,7 @@ The activity context has two methods for responding:
 - **Send**, in a chat, keeps the level of the user's message: at the top level, or in the user's thread. In a channel, it responds in the thread of the user's message.
 - **Reply** quotes the user's message and, starting in Teams SDK 2.3.0, in a chat, starts a thread under a top-level message by default.
 
-For where each method places a response, the reply modes, and the app-level methods for sending outside a handler, see [Use threads in channels and one-on-one agent chats](how-to/conversations/agent-chat-threads.md#implement-threading-with-teams-sdk).
+For where each method places a response, the reply modes, and the app-level methods for sending outside a handler, see [Use threads in channels and one-on-one agent chats](how-to/conversations/agent-chat-threads.md#reply-in-a-thread).
 
 The following code shows an example of sending a message when a user is added to a conversation:
 

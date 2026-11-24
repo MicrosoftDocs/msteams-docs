@@ -28,39 +28,48 @@ Send a new top-level message only to start a separate discussion.
 
 For example, a user sends "Help me plan a trip" as a top-level message. The agent replies in a thread under that request, where the user and agent discuss dates, hotels, and itinerary changes.
 
-## Identify and track discussions
-
-### Get the discussion IDs
-
-Use the following IDs from the incoming activity to identify a discussion and choose where to send responses:
-
-| ID | Incoming activity field |
-| --- | --- |
-| Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
-| Thread root message ID | `channelData.replyChain.id` |
-
-Both top-level messages and in-thread replies include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion.
-
-Before attempting a thread reply for an incoming activity, check that it provides `channelData.replyChain.id`. If the field is absent, don't attempt a thread reply for that activity.
-
-If your agent needs to handle these levels differently, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
-
-### Store data by scope
-
-Your agent might store conversation history or task progress to continue a discussion across multiple messages. Choose a storage key based on the scope of that data:
-
-- For data about the entire chat or channel, use `channelData.chat.id` or `channelData.channel.id`.
-- For data about a specific thread, use the containing chat or channel ID together with the top-level root message ID (`channelData.replyChain.id`).
-
-Don't assume a particular meaning for `conversation.id` or use it as the storage key for this data. Treat it as an opaque value: don't parse it or use it to distinguish top-level messages from in-thread replies.
-
-## Implement threading with Teams SDK
+## Reply in a thread
 
 The activity context (`ctx` below) represents the incoming activity; `app` represents the agent application (`teams` in the C# examples). With context-level send and reply methods, the SDK chooses where the response appears based on the incoming activity level and conversation type. With app-level send and reply methods, you specify the destination yourself. To respond to the incoming activity, use the context-level methods. Use the app-level methods for [proactive messaging](send-proactive-messages.md), such as notifications, scheduled reminders, or a reply sent when a long task finishes, and to post a new top-level message while handling an in-thread message.
 
-### Choose where a message goes
+Starting in Teams SDK 2.3.0, the context-level reply method follows the [recommended agent behavior](#recommended-agent-behavior) by default: in a chat, a reply to a top-level message starts a thread under that message, and a reply to an in-thread message stays in its thread. It also quotes the user's message. In a channel, the reply goes in the thread of the user's message.
 
-The context-level reply method follows the recommended agent behavior: in a chat, a reply to a top-level message starts a thread under that message, and a reply to an in-thread message stays in its thread. In a chat, the context-level send method keeps the level of the user's message. The following tables describe the default [reply mode](#choose-a-reply-mode) (Teams SDK 2.3.0 and later).
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnMessage(async (ctx, cancellationToken) =>
+{
+    await ctx.ReplyAsync("Let us plan your trip in this thread.", cancellationToken);
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('message', async ({ reply }) => {
+  await reply('Let us plan your trip in this thread.');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    await ctx.reply("Let us plan your trip in this thread.")
+```
+
+::: zone-end
+
+To change whether the reply starts a thread or quotes, see [Choose a reply mode](#choose-a-reply-mode). To reply in a thread later, without the incoming activity, see [Reply in a thread later](#reply-in-a-thread-later).
+
+## Choose where a message goes
+
+The following tables show where each method places a message, with the default [reply mode](#choose-a-reply-mode) (Teams SDK 2.3.0 and later). In a chat, the context-level send method keeps the level of the user's message.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -101,7 +110,7 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 
 ::: zone-end
 
-### Choose a reply mode
+## Choose a reply mode
 
 > [!NOTE]
 > Reply modes are available starting in Teams SDK version 2.3.0. The reply mode APIs are in preview and may change. In earlier versions, a context-level reply always matches the level of the incoming message, which is equivalent to the quote reply mode.
@@ -121,14 +130,6 @@ teams.OnMessage(async (ctx, cancellationToken) =>
 });
 ```
 
-| Mode | In a chat | Quote |
-| --- | --- | --- |
-| `ReplyMode.Combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
-| `ReplyMode.Thread` | Same as `ReplyMode.Combined`. | No |
-| `ReplyMode.Quote` | The reply stays at the level of the incoming message. | Yes |
-
-To match replies to the level of the incoming message, set the mode to `ReplyMode.Quote`.
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
@@ -142,14 +143,6 @@ app.on('message', async ({ reply }) => {
   await reply('Got it!', { replyMode: 'quote' });
 });
 ```
-
-| Mode | In a chat | Quote |
-| --- | --- | --- |
-| `combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
-| `thread` | Same as `combined`. | No |
-| `quote` | The reply stays at the level of the incoming message. | Yes |
-
-To match replies to the level of the incoming message, set the mode to `quote`.
 
 ::: zone-end
 
@@ -165,22 +158,22 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.reply("Got it!", reply_mode="quote")
 ```
 
+::: zone-end
+
 | Mode | In a chat | Quote |
 | --- | --- | --- |
 | `combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
 | `thread` | Same as `combined`. | No |
 | `quote` | The reply stays at the level of the incoming message. | Yes |
 
-To match replies to the level of the incoming message, set the mode to `quote`.
-
-::: zone-end
+In C#, the modes are `ReplyMode.Combined`, `ReplyMode.Thread`, and `ReplyMode.Quote`.
 
 In a channel, every reply goes in the thread of the user's message, so the mode only decides the quote. The mode affects only the context-level reply method. It doesn't change the context-level send method, quoting a specific message, streams, plans, or the app-level methods.
 
 > [!NOTE]
 > **Replies that can't be threaded:** When the incoming activity lacks the [IDs that threading needs](#how-context-level-replies-are-placed), for example in a meeting, a reply is never threaded, so it keeps the quote in every mode, including the thread mode. Without a thread, the quote is what shows which message the reply answers.
 
-### How context-level replies are placed
+## How context-level replies are placed
 
 Threading needs `channelData.replyChain.id` on the incoming activity, plus the containing chat or channel ID (`channelData.chat.id` or `channelData.channel.id`). Without them, for example in a meeting, the context-level methods send to the same conversation the incoming activity came from. In a channel, that conversation can already identify the existing thread, so the response still appears in it.
 
@@ -195,9 +188,35 @@ Starting in Teams SDK 2.3.0, a typing indicator is placed like a context-level s
 > [!TIP]
 > In a chat, because the context-level reply method starts a thread and the send method doesn't, a handler that calls the reply method and then the send method splits its answer between the thread and the main conversation. To keep follow-ups in the thread, send them with the reply method too, using the thread mode if they shouldn't quote again.
 
-### Reply in a thread
+## Identify and track discussions
 
-Starting in Teams SDK 2.3.0, the context-level reply method inside a handler already starts a thread under a top-level message. Use the app-level reply method when you reply without the incoming activity's context, for example when a long task finishes. It never quotes, and if the service rejects the thread reply, it throws the error without falling back to another route.
+### Get the discussion IDs
+
+Use the following IDs from the incoming activity to identify a discussion and choose where to send responses:
+
+| ID | Incoming activity field |
+| --- | --- |
+| Containing chat or channel ID | `channelData.chat.id` or `channelData.channel.id` |
+| Thread root message ID | `channelData.replyChain.id` |
+
+Both top-level messages and in-thread replies include `channelData.replyChain.id` when threading is supported. This field always identifies the top-level message at the root of the discussion.
+
+Before attempting a thread reply for an incoming activity, check that it provides `channelData.replyChain.id`. If the field is absent, don't attempt a thread reply for that activity.
+
+If your agent needs to handle these levels differently, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
+
+### Store data by scope
+
+Your agent might store conversation history or task progress to continue a discussion across multiple messages. Choose a storage key based on the scope of that data:
+
+- For data about the entire chat or channel, use `channelData.chat.id` or `channelData.channel.id`.
+- For data about a specific thread, use the containing chat or channel ID together with the top-level root message ID (`channelData.replyChain.id`).
+
+Don't assume a particular meaning for `conversation.id` or use it as the storage key for this data. Treat it as an opaque value: don't parse it or use it to distinguish top-level messages from in-thread replies.
+
+## Reply in a thread later
+
+Use the app-level reply method when you reply without the incoming activity's context, for example when a long task finishes. It never quotes, and if the service rejects the thread reply, it throws the error without falling back to another route.
 
 The following examples save the destination while handling a message, then send an in-thread reply in a chat later, when a long task finishes. For channels, read `channelData.channel.id` instead of `channelData.chat.id`; see [Get the discussion IDs](#get-the-discussion-ids).
 

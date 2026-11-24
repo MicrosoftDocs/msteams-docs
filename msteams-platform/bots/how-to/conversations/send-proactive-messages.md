@@ -97,7 +97,7 @@ To continue an existing discussion in a channel or in a chat that supports threa
 
 ### Per-call service URLs in TypeScript
 
-Use a Teams SDK TypeScript version that supports per-call service URLs. Store the incoming activity's `serviceUrl` with the conversation ID for later proactive messages, then pass the URL in the send or reply options. For thread replies, use the containing chat or channel ID and thread root message ID. See [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread).
+Use a Teams SDK TypeScript version that supports per-call service URLs. Store the incoming activity's `serviceUrl` with the conversation ID for later proactive messages, then pass the URL in the send or reply options. For thread replies, use the containing chat or channel ID and thread root message ID. See [Use threads in channels and one-on-one agent chats](agent-chat-threads.md#reply-in-a-thread-later).
 
 ```typescript
 import { MessageActivity } from '@microsoft/teams.api';
