@@ -518,14 +518,12 @@ var secondMessageId = "1772050244574";
 
 // Single quote with response below it
 var msg = new MessageActivityInput()
-    .WithText("Here is my response")
-    .AddQuote(parentMessageId);
+    .AddQuote(parentMessageId, "Here is my response");
 await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
 
 // Multiple quotes with interleaved responses
 msg = new MessageActivityInput()
-    .WithText("response to first")
-    .AddQuote(firstMessageId)
+    .AddQuote(firstMessageId, "response to first")
     .AddQuote(secondMessageId, "response to second");
 await teams.SendAsync(conversationId, msg, cancellationToken: cancellationToken);
 
@@ -765,10 +763,13 @@ Register a read receipt handler. The event's `value.lastReadMessageId` is the ID
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
 ```csharp
-teams.OnReadReceipt(async (context, cancellationToken) =>
+teams.OnEvent(async (context, cancellationToken) =>
 {
-    var lastReadMessageId = context.Activity.Value.LastReadMessageId;
-    await context.SendAsync("User read the agent's message", cancellationToken);
+    if (context.Activity.Name?.Value == "application/vnd.microsoft.readReceipt")
+    {
+        var lastReadMessageId = context.Activity.Value?["lastReadMessageId"]?.ToString();
+        await context.SendAsync("User read the agent's message", cancellationToken);
+    }
 });
 ```
 
@@ -1169,7 +1170,7 @@ It is not necessary for the new message to match the original in type. For examp
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the activity context.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `context.Api.Conversations.UpdateActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -1183,7 +1184,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
     var updatedActivity = new MessageActivityInput().WithText("The new text for the activity");
 
-    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+    await context.Api.Conversations.UpdateActivityAsync(conversationId, activityId, updatedActivity, cancellationToken: cancellationToken);
 });
 ```
 
@@ -1273,7 +1274,7 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-cards/dotnet)
 
-To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.Activities.UpdateAsync(...)` method of the activity context.
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `context.Api.Conversations.UpdateActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -1288,7 +1289,7 @@ teams.OnMessage(async (context, cancellationToken) =>
         .Build();
     var updatedActivity = new MessageActivityInput().AddAttachment(attachment);
 
-    await context.Api.Conversations.Activities.UpdateAsync(conversationId, activityId, updatedActivity, cancellationToken);
+    await context.Api.Conversations.UpdateActivityAsync(conversationId, activityId, updatedActivity, cancellationToken: cancellationToken);
 });
 ```
 
@@ -1373,7 +1374,7 @@ In the Teams SDK, every message has its unique activity identifier. Messages can
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-quickstart/dotnet)
 
-To delete a message, pass that activity's ID to the `context.Api.Conversations.Activities.DeleteAsync(...)` method of the activity context.
+To delete a message, pass that activity's ID to the `context.Api.Conversations.DeleteActivityAsync(...)` method of the activity context.
 
 # [C# SDK v2.1](#tab/dotnet-v2-1)
 
@@ -1384,7 +1385,7 @@ teams.OnMessage(async (context, cancellationToken) =>
 
     foreach (var activityId in _list)
     {
-        await context.Api.Conversations.Activities.DeleteAsync(conversationId, activityId, cancellationToken);
+        await context.Api.Conversations.DeleteActivityAsync(conversationId, activityId, cancellationToken: cancellationToken);
     }
 });
 ```
@@ -1454,8 +1455,6 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `App` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the activity context object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
 
 A typical `channelData` object in an activity sent to your agent contains the following information:
 

@@ -496,10 +496,16 @@ async function runPlanJob(savedPlan: SavedPlanBinding, apiClient: Client) {
 from typing import Any
 
 from microsoft_teams.api import ApiClient, Step
-from microsoft_teams.apps import Plan, PlanOptions
+from microsoft_teams.apps import Plan, PlanOptions, PlanReplyChain
 
 async def run_plan_job(saved_plan: dict[str, Any], api_client: ApiClient) -> None:
-    options = PlanOptions(**saved_plan, api_client=api_client)
+    reply_chain = saved_plan.get("replyChain")
+    options = PlanOptions(
+        conversation_id=saved_plan["conversationId"],
+        reply_to_id=saved_plan["replyToId"],
+        reply_chain=PlanReplyChain.model_validate(reply_chain) if reply_chain else None,
+        api_client=api_client,
+    )
     plan = Plan(**options)
 
     await plan.start(

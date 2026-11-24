@@ -109,7 +109,7 @@ Agents receive messages via standard message events. Targeted messages can be di
   ```typescript
 
     app.on('message', async ({ send, activity }) => {
-      if(activity.Recipient.isTargeted) {
+      if(activity.recipient?.isTargeted) {
          // Handle message event
         }
     });
@@ -134,10 +134,11 @@ Agents receive messages via standard message events. Targeted messages can be di
 
 ```python
 
-  @app.on_message
-  async def handle_message(ctx):
+@app.on_message
+async def handle_message(ctx):
     if getattr(ctx.activity.recipient, "is_targeted", False):
-      # Handle message event
+        # Handle message event
+        pass
 ```
 
 ::: zone-end
@@ -252,7 +253,7 @@ if (isTargeted)
 ```python
 
 if is_targeted:
-response.add_targeted_message_info(activity.id)
+    response.add_targeted_message_info(activity.id)
 ```
 
 ::: zone-end

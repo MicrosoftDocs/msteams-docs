@@ -66,7 +66,7 @@ To create an agent app that meets your needs, understanding Microsoft Teams acti
 The activity handler is the core of an agent's functionality, managing and processing user interactions. In the Teams SDK v2:
 
 - You instantiate an `App` object and register handlers on it.
-- Handlers receive a typed context object (`IActivityContext` in TypeScript, `IContext<TActivity>` in C#, `ActivityContext[TActivity]` in Python).
+- Handlers receive a typed context object (`IActivityContext` in TypeScript, `Context<TActivity>` in C#, `ActivityContext[TActivity]` in Python).
 - Responses are sent via `ctx.send()`, which keeps the level of the user's message in a chat and responds in the user's thread in a channel, or `ctx.reply()`, which quotes the user's message and, starting in Teams SDK 2.3.0, in a chat, starts a thread under a top-level message by default (see [Choose a reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode)). Proactive messages are sent with the app-level `app.send()` and `app.reply()` methods.
 
 When a Teams agent receives an activity, the SDK routes it through the registered handler. Teams-specific events (channel lifecycle, member changes, etc.) are surfaced as distinct named events, so you do not need to inspect `channelData.eventType` manually.
@@ -80,7 +80,7 @@ The following snippets show Teams activity handlers for channel and team lifecyc
 
 # [C# SDK v2.1](#tab/csharp)
 
-Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive an `IContext<TActivity>` object.
+Agents are built using the `Microsoft.Teams.Apps` package. You instantiate an `App` and chain handler registrations using extension methods such as `OnMessage()`, `OnChannelCreated()`, etc. All handlers receive a `Context<TActivity>` object.
 
 `OnChannelCreated`
 
@@ -286,17 +286,17 @@ app.on('teamRenamed', async ({ activity }) => {
 });
 ```
 
-`membersAdded` / `membersRemoved`
+`conversationUpdate` (members added / removed)
 
 ```typescript
-app.on('membersAdded', async ({ activity, send }) => {
-    for (const member of activity.membersAdded) {
+app.on('conversationUpdate', async ({ activity, send }) => {
+    for (const member of activity.membersAdded ?? []) {
         await send(`Welcome, ${member.name}!`);
     }
-});
 
-app.on('membersRemoved', async ({ activity }) => {
-    // Code logic here
+    if (activity.membersRemoved?.length) {
+        // Code logic here
+    }
 });
 ```
 
@@ -340,6 +340,7 @@ async def handle_channel_created(ctx: ActivityContext[ConversationUpdateActivity
 @app.on_channel_deleted
 async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity]):
     # Code logic here
+    pass
 ```
 
 `on_channel_renamed`
@@ -348,6 +349,7 @@ async def handle_channel_deleted(ctx: ActivityContext[ConversationUpdateActivity
 @app.on_channel_renamed
 async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
     # Code logic here
+    pass
 ```
 
 `on_team_renamed`
@@ -356,6 +358,7 @@ async def handle_channel_renamed(ctx: ActivityContext[ConversationUpdateActivity
 @app.on_team_renamed
 async def handle_team_renamed(ctx: ActivityContext[ConversationUpdateActivity]):
     # Code logic here
+    pass
 ```
 
 `on_conversation_update` (members added / removed)
@@ -370,6 +373,7 @@ async def handle_conversation_update(ctx: ActivityContext[ConversationUpdateActi
             await ctx.send(f"Welcome, {member.name}!")
     if ctx.activity.members_removed:
         # Code logic here
+        pass
 ```
 
 `on_edit_message` / `on_soft_delete_message` / `on_undelete_message`
@@ -378,14 +382,17 @@ async def handle_conversation_update(ctx: ActivityContext[ConversationUpdateActi
 @app.on_edit_message
 async def handle_edit_message(ctx: ActivityContext):
     # Code logic here
+    pass
 
 @app.on_soft_delete_message
 async def handle_soft_delete_message(ctx: ActivityContext):
     # Code logic here
+    pass
 
 @app.on_undelete_message
 async def handle_undelete_message(ctx: ActivityContext):
     # Code logic here
+    pass
 ```
 
 ---
@@ -443,7 +450,7 @@ import { App } from '@microsoft/teams.apps';
 
 const app = new App();
 
-app.on('message', async ({ activity, reply }) => {
+app.on('message', async ({ activity, send }) => {
     const senderName = activity.from.name;
     await send(`Hello <at>${senderName}</at>.`);
 });
@@ -462,7 +469,7 @@ app = App()
 
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    sender_name = ctx.activity.from_property.name
+    sender_name = ctx.activity.from_.name
     await ctx.send(f"Hello <at>{sender_name}</at>.")
 
 if __name__ == "__main__":
@@ -481,15 +488,14 @@ In Teams SDK v2, the agent logic processes incoming activities from one or more 
 
 #### Core activity handlers
 
-The `App` class exposes extension methods for registering handlers. Methods return `App` for fluent chaining.
+The `TeamsBotApplication` class exposes extension methods for registering handlers. Methods return `TeamsBotApplication` for fluent chaining.
 
 | Event | Extension method | Description |
 | --- | --- | --- |
-| Any activity type received | `OnActivity(handler)` | Catch-all handler called for every activity. |
 | Message activity received | `OnMessage(handler)` | Handle incoming text messages. Pass a regex string as the first argument for pattern matching. |
 | Conversation update received | `OnConversationUpdate(handler)` | Raw conversation update activity. |
-| Non-agent members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Length > 0`. |
-| Non-agent members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Length > 0`. |
+| Members joined | `OnMembersAdded(handler)` | Fires when `MembersAdded.Count > 0`. |
+| Members left | `OnMembersRemoved(handler)` | Fires when `MembersRemoved.Count > 0`. |
 | Installation added | `OnInstall(handler)` | Agent was installed. |
 
 #### Teams-specific activity handlers
@@ -507,7 +513,7 @@ The `App` class exposes extension methods for registering handlers. Methods retu
 
 | Invoke type | Extension method | Description |
 | --- | --- | --- |
-| `CardAction.Invoke` | `OnExecuteAction(handler)` | A card action invoke activity was received. |
+| `CardAction.Invoke` | `OnAdaptiveCardAction(handler)` | A card action invoke activity was received. |
 | `task/fetch` | `OnTaskFetch(handler)` | A dialog (task module) was fetched. |
 | `task/submit` | `OnTaskSubmit(handler)` | A dialog (task module) was submitted. |
 | `fileConsent/invoke` | `OnFileConsent(handler)` | A file consent card activity was received. |
@@ -526,8 +532,6 @@ The list of event names supported by `app.on()` includes the following:
 | Conversation update received | `'conversationUpdate'` | Raw conversation update activity. |
 | Installation added | `'install.add'` | Agent was installed. |
 | Installation removed | `'install.remove'` | Agent was uninstalled. |
-| Members added | `'membersAdded'` | One or more members joined the conversation. |
-| Members removed | `'membersRemoved'` | One or more members left the conversation. |
 | Message edited | `'messageUpdate'` | A message in the conversation was edited. |
 | Message soft deleted | `'messageDelete'` | A message was soft-deleted (`activity.channelData.eventType === 'softDeleteMessage'`). |
 | Read receipt received | `'readReceipt'` | A read receipt was received. |
