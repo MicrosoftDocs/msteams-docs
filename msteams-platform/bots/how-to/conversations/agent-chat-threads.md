@@ -197,7 +197,7 @@ A typing indicator is placed like a context-level send: when the incoming activi
 
 ### Reply in a thread
 
-Inside a handler, the context-level reply method already starts a thread under a top-level message. Use the app-level reply method when you reply without the incoming activity's context, for example when a long task finishes. It never quotes, and if the service rejects the thread reply, it throws the error without falling back to another route.
+Starting in Teams SDK 2.3.0, the context-level reply method inside a handler already starts a thread under a top-level message. Use the app-level reply method when you reply without the incoming activity's context, for example when a long task finishes. It never quotes, and if the service rejects the thread reply, it throws the error without falling back to another route.
 
 The following examples save the destination while handling a message, then send an in-thread reply in a chat later, when a long task finishes. For channels, read `channelData.channel.id` instead of `channelData.chat.id`; see [Get the discussion IDs](#get-the-discussion-ids).
 

@@ -220,7 +220,7 @@ To send a text message, specify the string you want to send as an activity. In t
 The activity context has two methods for responding:
 
 - **Send** keeps the level of the user's message: at the top level, or in the user's thread.
-- **Reply** quotes the user's message and, in a one-on-one chat, starts a thread under a top-level message by default.
+- **Reply** quotes the user's message and, starting in Teams SDK 2.3.0, in a one-on-one chat, starts a thread under a top-level message by default.
 
 For where each method places a response, the reply modes, and the app-level methods for sending outside a handler, see [Use threads in channels and one-on-one agent chats](how-to/conversations/agent-chat-threads.md#implement-threading-with-teams-sdk).
 
@@ -1218,7 +1218,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 When your agent calls the reply method, the SDK automatically stamps a quoted reply entity referencing the inbound activity. The reply appears as a quoted reply in Teams.
 
-The reply quotes the inbound activity only when that activity can be quoted, so a reply to a card action or another invoke is sent without a quote. A reply to a reaction quotes the message the user reacted to. In a one-on-one chat, the reply also starts a thread under a top-level message by default. The [reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode) decides whether the quote is added: the thread mode leaves it out, except on a reply that can't be threaded.
+The reply quotes the inbound activity only when that activity can be quoted, so a reply to a card action or another invoke is sent without a quote. A reply to a reaction quotes the message the user reacted to. Starting in Teams SDK 2.3.0, in a one-on-one chat, the reply also starts a thread under a top-level message by default. The [reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode) decides whether the quote is added: the thread mode leaves it out, except on a reply that can't be threaded.
 
 To quote in a card or invoke handler, quote the message that holds the card with the quote method and the activity's reply-to ID.
 
@@ -1229,7 +1229,7 @@ To quote in a card or invoke handler, quote the message that holds the card with
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
 {
-    // ReplyAsync() quotes the inbound message and, in a one-on-one chat, starts a thread under a top-level message
+    // ReplyAsync() quotes the inbound message
     await context.ReplyAsync("Got it!", cancellationToken);
 });
 ```
@@ -1252,7 +1252,7 @@ app.OnMessage(async context =>
 
 ```typescript
 app.on("message", async ({ reply }) => {
-  // reply() quotes the inbound message and, in a one-on-one chat, starts a thread under a top-level message
+  // reply() quotes the inbound message
   await reply("Got it!");
 });
 ```
@@ -1264,7 +1264,7 @@ app.on("message", async ({ reply }) => {
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # reply() quotes the inbound message and, in a one-on-one chat, starts a thread under a top-level message
+    # reply() quotes the inbound message
     await ctx.reply("Got it!")
 ```
 
