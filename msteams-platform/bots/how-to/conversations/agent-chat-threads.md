@@ -60,11 +60,11 @@ The activity context (`ctx` below) represents the incoming activity; `app` repre
 
 ### Choose where a message goes
 
-The context-level reply method follows the recommended agent behavior: in a one-on-one chat, a reply to a top-level message starts a thread under that message, and a reply to an in-thread message stays in its thread. In a one-on-one chat, the context-level send method keeps the level of the user's message. The following tables describe the default [reply mode](#choose-a-reply-mode) (Teams SDK 2.3.0 and later).
+The context-level reply method follows the recommended agent behavior: in a chat, a reply to a top-level message starts a thread under that message, and a reply to an in-thread message stays in its thread. In a chat, the context-level send method keeps the level of the user's message. The following tables describe the default [reply mode](#choose-a-reply-mode) (Teams SDK 2.3.0 and later).
 
 ::: zone pivot="teams-sdk-csharp"
 
-| To do this | Call | One-on-one chat | Channel |
+| To do this | Call | Chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.SendAsync(message)` | In the same thread if the user's message is in a thread; otherwise at the top level. | In the thread of the user's message. |
 | Reply to the user's message | `ctx.ReplyAsync(message)` | In the thread of the user's message, starting it if the message is top-level. Quotes the user's message. | In the thread of the user's message. Quotes the user's message. |
@@ -77,7 +77,7 @@ Take `chatOrChannelId` from `ChannelData.Chat.Id` or `ChannelData.Channel.Id`, a
 
 ::: zone pivot="teams-sdk-typescript"
 
-| To do this | Call | One-on-one chat | Channel |
+| To do this | Call | Chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is in a thread; otherwise at the top level. | In the thread of the user's message. |
 | Reply to the user's message | `ctx.reply(message)` | In the thread of the user's message, starting it if the message is top-level. Quotes the user's message. | In the thread of the user's message. Quotes the user's message. |
@@ -90,7 +90,7 @@ Take `chatOrChannelId` from `channelData.chat.id` or `channelData.channel.id`, a
 
 ::: zone pivot="teams-sdk-python"
 
-| To do this | Call | One-on-one chat | Channel |
+| To do this | Call | Chat | Channel |
 | --- | --- | --- | --- |
 | Respond where the user wrote | `ctx.send(message)` | In the same thread if the user's message is in a thread; otherwise at the top level. | In the thread of the user's message. |
 | Reply to the user's message | `ctx.reply(message)` | In the thread of the user's message, starting it if the message is top-level. Quotes the user's message. | In the thread of the user's message. Quotes the user's message. |
@@ -104,9 +104,9 @@ Take `chat_or_channel_id` from `channel_data.chat.id` or `channel_data.channel.i
 ### Choose a reply mode
 
 > [!NOTE]
-> Reply modes are available starting in Teams SDK version 2.3.0. The Teams SDK marks the reply mode APIs as experimental, and they may change. In earlier versions, a context-level reply always matches the level of the incoming message, which is equivalent to the quote reply mode.
+> Reply modes are available starting in Teams SDK version 2.3.0. The reply mode APIs are in preview and may change. In earlier versions, a context-level reply always matches the level of the incoming message, which is equivalent to the quote reply mode.
 
-The reply mode decides where the context-level reply method places its response in a one-on-one chat, and whether it quotes the user's message. Set it for the whole app, or pass it on a single call, which overrides the app setting.
+The reply mode decides where the context-level reply method places its response in a chat, and whether it quotes the user's message. Set it for the whole app, or pass it on a single call, which overrides the app setting.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -121,7 +121,7 @@ teams.OnMessage(async (ctx, cancellationToken) =>
 });
 ```
 
-| Mode | In a one-on-one chat | Quote |
+| Mode | In a chat | Quote |
 | --- | --- | --- |
 | `ReplyMode.Combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
 | `ReplyMode.Thread` | Same as `ReplyMode.Combined`. | No |
@@ -143,7 +143,7 @@ app.on('message', async ({ reply }) => {
 });
 ```
 
-| Mode | In a one-on-one chat | Quote |
+| Mode | In a chat | Quote |
 | --- | --- | --- |
 | `combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
 | `thread` | Same as `combined`. | No |
@@ -165,7 +165,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.reply("Got it!", reply_mode="quote")
 ```
 
-| Mode | In a one-on-one chat | Quote |
+| Mode | In a chat | Quote |
 | --- | --- | --- |
 | `combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
 | `thread` | Same as `combined`. | No |
@@ -186,14 +186,14 @@ Threading needs `channelData.replyChain.id` on the incoming activity, plus the c
 
 A reply that starts a thread starts it under the message the incoming activity is about: the user's message, or the message the user reacted to, edited, deleted, or selected a card button on. If that message can't be a thread root, for example a card message whose ID can't be used as a thread root, the reply stays at the top level. For how the SDK decides whether an activity is in a thread, see [Identify the incoming activity's level](#identify-the-incoming-activitys-level).
 
-When the service rejects a thread reply in a one-on-one chat, the context-level reply method throws the error to your handler and doesn't send the reply at the top level instead. In a channel, if the service returns `404` for the thread reply, the SDK posts to the same thread through the legacy channel threading endpoint.
+When the service rejects a thread reply in a chat, the context-level reply method throws the error to your handler and doesn't send the reply at the top level instead. In a channel, if the service returns `404` for the thread reply, the SDK posts to the same thread through the legacy channel threading endpoint.
 
 For which replies add a quote and which message they quote, see [Send quoted replies](../../build-conversational-capability.md#send-quoted-replies).
 
-A typing indicator is placed like a context-level send: when the incoming activity is in a thread, the indicator shows in that thread. A typing indicator never starts a thread, so in a one-on-one chat, for a top-level message the indicator shows in the main conversation while a reply that starts a thread appears in the thread.
+Starting in Teams SDK 2.3.0, a typing indicator is placed like a context-level send: when the incoming activity is in a thread, the indicator shows in that thread. A typing indicator never starts a thread, so in a chat, for a top-level message the indicator shows in the main conversation while a reply that starts a thread appears in the thread.
 
 > [!TIP]
-> In a one-on-one chat, because the context-level reply method starts a thread and the send method doesn't, a handler that calls the reply method and then the send method splits its answer between the thread and the main conversation. To keep follow-ups in the thread, send them with the reply method too, using the thread mode if they shouldn't quote again.
+> In a chat, because the context-level reply method starts a thread and the send method doesn't, a handler that calls the reply method and then the send method splits its answer between the thread and the main conversation. To keep follow-ups in the thread, send them with the reply method too, using the thread mode if they shouldn't quote again.
 
 ### Reply in a thread
 
@@ -207,7 +207,7 @@ When the recipient is an agentic user, app-level send and reply methods require 
 
 ::: zone pivot="teams-sdk-typescript"
 
-These examples require threading support (Teams SDK version 2.2 or later) and [per-call service URL support](send-proactive-messages.md#per-call-service-urls-in-typescript).
+These examples require Teams SDK version 2.3.0 or later and [per-call service URL support](send-proactive-messages.md#per-call-service-urls-in-typescript).
 
 Pass the stored service URL in each call's options. Without an explicit `serviceUrl`, TypeScript app-level sends use the app's configured service URL.
 
@@ -223,6 +223,9 @@ type ThreadDestination = {
 };
 
 const app = new App();
+
+// Your long-running task. It calls replyWhenDone(destination) when it finishes.
+declare function startTripPlanning(destination: ThreadDestination): void;
 
 app.on('message', async (ctx) => {
   const activity = ctx.activity;
@@ -243,7 +246,7 @@ app.on('message', async (ctx) => {
   startTripPlanning(destination);
 });
 
-// Later, when the task finishes.
+// Called by the long-running task when it finishes.
 async function replyWhenDone(destination: ThreadDestination) {
   await app.reply(destination.chatId, destination.rootMessageId, 'Your trip plan is ready.', {
     serviceUrl: destination.serviceUrl,
@@ -269,7 +272,7 @@ async function postNewTopic(destination: ThreadDestination) {
 
 ::: zone pivot="teams-sdk-csharp"
 
-Use Teams SDK version 2.2 or later for these examples.
+Use Teams SDK version 2.3.0 or later for these examples.
 
 ```csharp
 teams.OnMessage(async (ctx, cancellationToken) =>
@@ -293,7 +296,7 @@ teams.OnMessage(async (ctx, cancellationToken) =>
     StartTripPlanning(destination);
 });
 
-// Later, when the task finishes.
+// Called by the long-running task when it finishes.
 async Task ReplyWhenDoneAsync(ThreadDestination destination, CancellationToken cancellationToken)
 {
     await teams.ReplyAsync(
@@ -304,6 +307,9 @@ async Task ReplyWhenDoneAsync(ThreadDestination destination, CancellationToken c
         agenticIdentity: destination.AgenticIdentity,
         cancellationToken: cancellationToken);
 }
+
+// Your long-running task. It calls ReplyWhenDoneAsync(destination, cancellationToken) when it finishes.
+void StartTripPlanning(ThreadDestination destination) { /* ... */ }
 
 record ThreadDestination(
     string ChatId,
@@ -332,13 +338,15 @@ Without an explicit `serviceUrl`, C# app-level sends use the last inbound activi
 
 ::: zone pivot="teams-sdk-python"
 
-Use Teams SDK version 2.2 or later for these examples.
+Use Teams SDK version 2.3.0 or later for these examples.
 
 ```python
 from dataclasses import dataclass
 
 from microsoft_teams.api import AgenticIdentity, MessageActivity
-from microsoft_teams.apps import ActivityContext
+from microsoft_teams.apps import ActivityContext, App
+
+app = App()
 
 @dataclass
 class ThreadDestination:
@@ -346,6 +354,9 @@ class ThreadDestination:
     root_message_id: str
     service_url: str | None
     agentic_identity: AgenticIdentity | None  # agentic user only
+
+def start_trip_planning(destination: ThreadDestination) -> None:
+    """Your long-running task. It calls reply_when_done(destination) when it finishes."""
 
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
@@ -366,7 +377,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
     await ctx.reply("Working on your trip plan.")
     start_trip_planning(destination)
 
-# Later, when the task finishes.
+# Called by the long-running task when it finishes.
 async def reply_when_done(destination: ThreadDestination):
     await app.reply(
         destination.chat_id,
@@ -457,7 +468,7 @@ Sending an in-thread reply can return the following errors:
 
 ## Identify the incoming activity's level
 
-Identifying the incoming activity's level is optional. The context-level send and reply methods apply these criteria for you. If your agent handles top-level messages and thread replies differently, use the following criteria.
+Identifying the incoming activity's level is optional. If your agent handles top-level messages and thread replies differently, use the following criteria.
 
 To classify an activity as in-thread, `channelData.replyChain.id` (the root message ID) must be present. Then apply the additional conditions in the table:
 

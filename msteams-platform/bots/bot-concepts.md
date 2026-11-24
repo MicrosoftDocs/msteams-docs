@@ -67,7 +67,7 @@ The activity handler is the core of an agent's functionality, managing and proce
 
 - You instantiate an `App` object and register handlers on it.
 - Handlers receive a typed context object (`IActivityContext` in TypeScript, `IContext<TActivity>` in C#, `ActivityContext[TActivity]` in Python).
-- Responses are sent via `ctx.send()`, which keeps the level of the user's message, or `ctx.reply()`, which quotes the user's message and, starting in Teams SDK 2.3.0, in a one-on-one chat, starts a thread under a top-level message by default (see [Choose a reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode)). Proactive messages are sent with the app-level `app.send()` and `app.reply()` methods.
+- Responses are sent via `ctx.send()`, which keeps the level of the user's message in a chat and responds in the user's thread in a channel, or `ctx.reply()`, which quotes the user's message and, starting in Teams SDK 2.3.0, in a chat, starts a thread under a top-level message by default (see [Choose a reply mode](how-to/conversations/agent-chat-threads.md#choose-a-reply-mode)). Proactive messages are sent with the app-level `app.send()` and `app.reply()` methods.
 
 When a Teams agent receives an activity, the SDK routes it through the registered handler. Teams-specific events (channel lifecycle, member changes, etc.) are surfaced as distinct named events, so you do not need to inspect `channelData.eventType` manually.
 

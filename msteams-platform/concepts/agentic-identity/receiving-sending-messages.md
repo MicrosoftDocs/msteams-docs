@@ -210,7 +210,7 @@ await app.send(
     agentic_identity=agentic_identity,
 )
 
-api = app.api.for_agentic_identity(agentic_identity)
+api = app.api.clone(service_url=service_url, agentic_identity=agentic_identity)
 
 await api.conversations.add_reaction(conversation_id, activity_id, "like")
 ```
