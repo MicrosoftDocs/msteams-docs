@@ -17,7 +17,7 @@ Conversational agents communicate with users through messaging, enabling seamles
 
 Sending and receiving messages is the core functionality of an agent.
 
-In group chats and channels, your agent receives only the messages in which it's @mentioned, unless you [configure it to receive all messages](../agents-in-teams/enable-receive-all-chat-messages.md). That article also shows how to [filter for messages that @mention your agent](../agents-in-teams/enable-receive-all-chat-messages.md#filter-mention-messages).
+In group chats and channels, your agent receives only the messages in which it's @mentioned, unless you [configure it to receive all messages](../agents-in-teams/enable-receive-all-chat-messages.md). That article also shows how to filter for messages that @mention your agent.
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your agent. Teams sends a JSON object to your agent's messaging endpoint, and it allows only one endpoint for messaging. Your agent then checks the message to figure out its type and responds accordingly.
 
