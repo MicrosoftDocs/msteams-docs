@@ -2,7 +2,7 @@
 title: Send and Receive Targeted Messages
 description: Use targeted messages to enable agents to privately interact with users in group conversations without distracting other users or revealing private information.
 ms.localizationpriority: high
-ms.date: 07/17/2026
+ms.date: 11/23/2026
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
 ---
@@ -76,7 +76,7 @@ The agent sends a public reply to the user's request that includes the prompt pr
 
 Quoted replies reference an earlier message in a thread, helping readers identify what a response relates to and navigate back to the original context. Use a quoted reply when responding to an earlier point in a busy thread or when readers may need to return to the referenced message. Quoted replies support thread navigation, while Prompt Preview preserves the private prompt-response relationship for targeted agent responses and approval-based sharing.
 
-For more information, see [quoted replies](/microsoftteams/platform/teams-sdk/essentials/sending-messages/overview?pivots=csharp).
+For more information, see [quoted replies](../bots/build-conversational-capability.md#quoted-replies).
 
 ## Implement targeted messages
 

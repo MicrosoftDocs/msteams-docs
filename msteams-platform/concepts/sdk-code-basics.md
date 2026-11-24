@@ -3,7 +3,7 @@ title: Teams SDK Code Basics
 description: Understanding the structure and key components of a Teams SDK application including the Application class, dependency injection, and project organization.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
-ms.date: 11/11/2026
+ms.date: 11/23/2026
 ---
 
 # Teams SDK Code Basics
@@ -159,7 +159,7 @@ You can also match specific messages with a regular expression — `teams.OnMess
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    await ctx.reply(TypingActivityInput())
+    await ctx.send(TypingActivityInput())
 
     if "reply" in ctx.activity.text.lower():
         await ctx.reply("Hello! How can I assist you today?")

@@ -3,7 +3,7 @@ title: Manage Conversation State
 description: Manage conversation state in Teams SDK apps to store user and conversation data across turns. Learn how to enable, read, write, clear, and scale state.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
-ms.date: 09/27/2026
+ms.date: 11/23/2026
 ---
 
 # Manage conversation state
@@ -49,7 +49,7 @@ app.on('message', async (ctx) => {
   }
 
   const name = ctx.state.user?.get<string>('name') ?? 'there';
-  await ctx.reply(`Hello, ${name}. Message #${count}.`);
+  await ctx.send(`Hello, ${name}. Message #${count}.`);
 });
 ```
 

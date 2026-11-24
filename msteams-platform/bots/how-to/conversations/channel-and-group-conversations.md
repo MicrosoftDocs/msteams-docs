@@ -4,7 +4,7 @@ description: Learn how to work with user mentions, send messages, and handle age
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 10/27/2026
+ms.date: 11/23/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -292,7 +292,7 @@ This code snippets shows how to listen for incoming messages and remove @mention
 
 * `ctx.activity.strip_mentions_text()` removes mention text such as @contoso.
 * `.text` returns the cleaned message.
-* `ctx.send()` replies with the cleaned text.
+* `ctx.send()` sends the cleaned text.
 
 For example, `@contoso summarize this chat` becomes `summarize this chat`, making the message easier to parse as a command or prompt.
 

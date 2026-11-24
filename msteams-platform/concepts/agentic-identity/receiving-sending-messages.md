@@ -17,7 +17,7 @@ An inbound Agent 365 activity includes the Agentic User in `activity.recipient`.
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-teamsApp.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     AgenticIdentity? agenticIdentity =
         context.Activity.Recipient?.GetAgenticIdentity();
@@ -95,7 +95,7 @@ This example adds a reaction to an incoming message as the Agentic User:
 ::: zone pivot="teams-sdk-csharp"
 
 ```csharp
-teamsApp.OnMessage(async (context, cancellationToken) =>
+teams.OnMessage(async (context, cancellationToken) =>
 {
     await context.Api.Conversations.AddReactionAsync(
         context.Activity.Conversation.Id,
@@ -153,14 +153,14 @@ var agenticIdentity = new AgenticIdentity
     TenantId = tenantId
 };
 
-await teamsApp.SendAsync(
+await teams.SendAsync(
     conversationId,
     "Your scheduled update is ready.",
     serviceUrl,
     agenticIdentity,
     cancellationToken);
 
-ApiClient api = teamsApp.Api
+ApiClient api = teams.Api
     .ForServiceUrl(serviceUrl)
     .ForAgenticIdentity(agenticIdentity);
 

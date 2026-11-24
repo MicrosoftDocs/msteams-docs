@@ -20,7 +20,7 @@ To send a proactive message to a user, a group chat, or a team, your agent must 
 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use a [custom app policy](/microsoftteams/teams-custom-app-policies-and-settings) to install an app in your teams and for organization's users. For certain scenarios, you must proactively install your app using Graph. For a user to receive proactive messages, install the app for the user or make the user a part of a team in which the app is installed.
 
-Sending a proactive message is different from sending a regular message. Proactive messages are sent via `app.SendAsync()` outside an activity handler. The SDK creates the conversation automatically when you call `app.SendAsync()`. You need a `conversationId`; service URL routing depends on the SDK language. For TypeScript destination-specific routing, see [Per-call service URLs in TypeScript](#per-call-service-urls-in-typescript). For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. Proactive messages are sent with the app-level send method outside an activity handler. The SDK creates the conversation automatically when you call it. You need a `conversationId`; service URL routing depends on the SDK language. For TypeScript destination-specific routing, see [Per-call service URLs in TypeScript](#per-call-service-urls-in-typescript). For example, a new one-on-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
 To send a proactive message, follow these steps:
 
@@ -75,7 +75,7 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 > [!WARNING]
 >
 > - These URLs are for proactive messages only. Avoid hardcoding them. Instead, use `serviceUrl` from the incoming activity or conversation reference. If it's unavailable, use global URLs based on region and cloud.
-> - For any reply to messages, use `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true) property.
+> - For any reply to messages, use `serviceUrl` from the incoming request.
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
@@ -91,9 +91,9 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `app.SendAsync()` method and the `conversationId` to make a direct API call. To send your message, set the `conversationParameters`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, use the app-level send method with the `conversationId`. See the [samples](#samples) section or use one of the samples listed in the [code samples](#code-samples) section.
 
-To continue an existing discussion in a channel or in a chat that supports threading, send a reply in that discussion’s thread. Otherwise, send a new top-level message. For detailed implementation guidance, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
+To continue an existing discussion in a channel or in a chat that supports threading, send a reply in that discussion’s thread. Otherwise, send a new top-level message. For detailed implementation guidance, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md). The app-level reply method sends an in-thread reply without an incoming activity and never quotes. Inside a handler, the context-level reply method already starts a thread under a top-level message by default; see [Choose a reply mode](agent-chat-threads.md#choose-a-reply-mode).
 
 ### Per-call service URLs in TypeScript
 
@@ -229,23 +229,22 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 # [C# SDK v2.1](#tab/dotnet)
 
 ```csharp
+// Replace this dictionary with persistent storage in production.
+var conversationIds = new ConcurrentDictionary<string, string>();
+
 // Save the conversation ID and schedule a proactive reminder on install
 teams.OnInstall(async (context, cancellationToken) =>
 {
-    context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    conversationIds[context.Activity.From.AadObjectId!] = context.Activity.Conversation.Id;
     await context.SendAsync("Hi! I am going to remind you to say something to me soon!", cancellationToken);
-    notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
+    notificationQueue.AddReminder(context.Activity.From.AadObjectId!, SendProactiveAsync, 10_000);
 });
 
 // Send proactive message using stored conversation ID
-public static class Notifications
+async Task SendProactiveAsync(string userId)
 {
-    public static async Task SendProactive(string userId)
-    {
-        var conversationId = (string?)storage.Get(userId);
-        if (conversationId is null) return;
-        await app.SendAsync(conversationId, "Hey! It's been a while. How are you?");
-    }
+    if (!conversationIds.TryGetValue(userId, out var conversationId)) return;
+    await teams.SendAsync(conversationId, "Hey! It's been a while. How are you?");
 }
 
 ```
