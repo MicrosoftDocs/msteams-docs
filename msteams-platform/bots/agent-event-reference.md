@@ -2,16 +2,16 @@
 title: Teams Agent Events and Activity Handlers
 description: Teams agent events include messages, member changes, channel updates, meetings, and card actions. Find handler registration syntax for each SDK language.
 ms.topic: reference
-ms.date: 11/23/2026
+ms.date: 11/24/2026
 zone_pivot_groups: teams-sdk-languages
 ai-usage: ai-assisted
 ---
 
 # Teams agent event reference
 
-Use this reference to find the handler registration syntax for Teams agent activities. For an introduction to activity handlers and agent logic, see [Understand agent concepts](bot-concepts.md).
+Use this reference to find the handler registration syntax for Teams agent activities. For an introduction, see [Activities and handlers](activities-and-handlers.md).
 
-The handler listings show declarations, and the [message reaction examples](#message-reactions) also show how to process event payloads. For handler basics, see [Activities and handlers](bot-concepts.md#activities-and-handlers). Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
+The handler listings show declarations, and the [message reaction examples](#message-reactions) also show how to process event payloads. Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
 
 The language-independent [conversation update](#conversation-update-event-details) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
 
@@ -35,7 +35,7 @@ Register asynchronous functions with decorators on an `App` instance named `app`
 
 ::: zone-end
 
-## Core activity handlers
+## Base activity types
 
 ### Any activity received
 
@@ -145,170 +145,7 @@ async def handle_conversation_update(ctx: ActivityContext):
 
 ::: zone-end
 
-### Members added
-
-One or more members joined the conversation.
-
-::: zone pivot="teams-sdk-csharp"
-
-Read `context.Activity.MembersAdded`.
-
-```csharp
-teams.OnMembersAdded(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Read `context.activity.membersAdded`.
-
-```typescript
-app.on('membersAdded', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Use the conversation update handler and inspect `ctx.activity.members_added`.
-
-```python
-@app.on_conversation_update
-async def handle_members_added(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Members removed
-
-One or more members left the conversation.
-
-::: zone pivot="teams-sdk-csharp"
-
-Read `context.Activity.MembersRemoved`.
-
-```csharp
-teams.OnMembersRemoved(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Read `context.activity.membersRemoved`.
-
-```typescript
-app.on('membersRemoved', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Use the conversation update handler and inspect `ctx.activity.members_removed`.
-
-```python
-@app.on_conversation_update
-async def handle_members_removed(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Installation added
-
-The agent was installed.
-
-::: zone pivot="teams-sdk-csharp"
-
-Inspect `context.Activity.Action` to distinguish installation from removal.
-
-```csharp
-teams.OnInstall(async (context, cancellationToken) =>
-{
-
-});
-```
-
-You can also handle the raw installation update activity with `OnInstallUpdate` and inspect `context.Activity.Action`. Choose the handler appropriate to your workflow rather than registering both for the same action.
-
-```csharp
-teams.OnInstallUpdate(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('install.add', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_install_add
-async def handle_install_add(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
-
-### Installation removed
-
-The agent was uninstalled.
-
-::: zone pivot="teams-sdk-csharp"
-
-Installation changes use the same handler; inspect `context.Activity.Action` for `remove`.
-
-```csharp
-teams.OnInstall(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('install.remove', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-```python
-@app.on_install_remove
-async def handle_install_remove(ctx: ActivityContext):
-    pass
-```
-
-::: zone-end
+## Message changes
 
 ### Message edited
 
@@ -421,44 +258,13 @@ async def handle_undelete_message(ctx: ActivityContext):
 
 ::: zone-end
 
-### Read receipt received
-
-A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
-
-::: zone pivot="teams-sdk-csharp"
-
-```csharp
-teams.OnReadReceipt(async (context, cancellationToken) =>
-{
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-```typescript
-app.on('readReceipt', async (context) => {
-
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Handler example pending verification.
-
-<!-- TODO: Verify the Python handler registration API for read receipts. -->
-
-::: zone-end
+## Message reactions and receipts
 
 ### Message reactions
 
-A user added or removed a reaction to an agent message.
+A user added and/or removed one or more reactions to an agent message.
 
-Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -471,21 +277,7 @@ teams.OnMessageReaction(async (context, cancellationToken) =>
 });
 ```
 
-C# also provides `OnMessageReactionAdded` and `OnMessageReactionRemoved` if you prefer separate handlers for additions and removals:
-
-```csharp
-teams.OnMessageReactionAdded(async (context, cancellationToken) =>
-{
-
-});
-
-teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
-{
-
-});
-```
-
-Use either the general handler or the specific handlers, rather than processing the same reaction twice. The following example uses the specific handlers to log each added or removed reaction's type:
+Teams SDK also provides separate handlers specifically for `OnMessageReactionAdded` and `OnMessageReactionRemoved`. Implement either the general handler or the specific handlers, not both. The following example illustrated using the specific handlers to log each added or removed reaction's type.
 
 ```csharp
 teams.OnMessageReactionAdded(async (context, cancellationToken) =>
@@ -557,7 +349,209 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
 
 ::: zone-end
 
-## Teams-specific activity handlers
+### Read receipt received
+
+A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnReadReceipt(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('readReceipt', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Handler example pending verification.
+
+<!-- TODO: Verify the Python handler registration API for read receipts. -->
+
+::: zone-end
+
+## Installation
+
+### Installation added
+
+The agent was installed.
+
+::: zone pivot="teams-sdk-csharp"
+
+Inspect `context.Activity.Action` to distinguish installation from removal.
+
+```csharp
+teams.OnInstall(async (context, cancellationToken) =>
+{
+
+});
+```
+
+You can also handle the raw installation update activity with `OnInstallUpdate` and inspect `context.Activity.Action`. Choose the handler appropriate to your workflow rather than registering both for the same action.
+
+```csharp
+teams.OnInstallUpdate(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('install.add', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
+### Installation removed
+
+The agent was uninstalled.
+
+::: zone pivot="teams-sdk-csharp"
+
+Installation changes use the same handler; inspect `context.Activity.Action` for `remove`.
+
+```csharp
+teams.OnInstall(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('install.remove', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_install_remove
+async def handle_install_remove(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
+## Conversation membership
+
+### Members added
+
+One or more members joined the conversation.
+
+::: zone pivot="teams-sdk-csharp"
+
+Read `context.Activity.MembersAdded`.
+
+```csharp
+teams.OnMembersAdded(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Read `context.activity.membersAdded`.
+
+```typescript
+app.on('membersAdded', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the conversation update handler and inspect `ctx.activity.members_added`.
+
+```python
+@app.on_conversation_update
+async def handle_members_added(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
+### Members removed
+
+One or more members left the conversation.
+
+::: zone pivot="teams-sdk-csharp"
+
+Read `context.Activity.MembersRemoved`.
+
+```csharp
+teams.OnMembersRemoved(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Read `context.activity.membersRemoved`.
+
+```typescript
+app.on('membersRemoved', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the conversation update handler and inspect `ctx.activity.members_removed`.
+
+```python
+@app.on_conversation_update
+async def handle_members_removed(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
+## Channel changes
 
 ### Channel created
 
@@ -759,6 +753,8 @@ Handler example pending verification.
 
 ::: zone-end
 
+## Team changes
+
 ### Team renamed
 
 The team was renamed.
@@ -934,6 +930,8 @@ async def handle_team_restored(ctx: ActivityContext):
 
 ::: zone-end
 
+## Meetings
+
 ### Meeting started
 
 A meeting started. The event name is `application/vnd.microsoft.meetingStart`.
@@ -1074,7 +1072,7 @@ async def handle_meeting_participant_leave(ctx: ActivityContext):
 
 ::: zone-end
 
-## Teams invoke activities
+## Card actions and dialogs
 
 ### Adaptive Card action
 
@@ -1181,6 +1179,8 @@ async def handle_dialog_submit(ctx: ActivityContext):
 
 ::: zone-end
 
+## File handling
+
 ### File consent
 
 A file consent card was accepted or declined (`fileConsent/invoke`).
@@ -1212,6 +1212,8 @@ async def handle_file_consent(ctx: ActivityContext):
 ```
 
 ::: zone-end
+
+## Authentication
 
 ### Sign-in state verified
 

@@ -2062,6 +2062,11 @@
       "source_path": "msteams-platform/bots/how-to/conversations/subscribe-to-conversation-events.md",
       "redirect_url": "/microsoftteams/platform/bots/bot-concepts",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/concepts/listening-activities.md",
+      "redirect_url": "/microsoftteams/platform/bots/activities-handlers",
+      "redirect_document_id": false
     }
     ]
 }

@@ -17,9 +17,11 @@
       displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
-    - name: Agent basics
+    - name: Agent scopes
       href: bots/bot-concepts.md
       displayName: scopes, handler, activity
+    - name: Activities and handlers
+      href: bots/activities-handlers.md
     - name: Agent connectivity in Teams
       href: agents-in-teams/agent-connectivity.md
       displayName: connectivity, Teams, agent, network, integration
@@ -191,7 +193,7 @@
     - name: Listening to events
       href: concepts/listening-events.md
     - name: Listening to activities
-      href: concepts/listening-activities.md
+      href: bots/activities-handlers.md
     - name: Graph API client
       href: concepts/sdk-graph-api-client.md
     - name: Agent Communication Service API client
@@ -206,18 +208,18 @@
       displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
     - name: Migrate a Bot Framework SDK bot
       items:
-        - name: Overview
-          href: botbuilder-migration/overview.md
-        - name: Botbuilder Compatibility
-          href: botbuilder-migration/integration.md
-        - name: Sending Activities
-          href: botbuilder-migration/sending-activities.md
-        - name: Proactive Activities
-          href: botbuilder-migration/proactive-activities.md
-        - name: The API Client
-          href: botbuilder-migration/api-client.md
-        - name: User Authentication
-          href: botbuilder-migration/user-authentication.md
+      - name: Overview
+        href: botbuilder-migration/overview.md
+      - name: Botbuilder Compatibility
+        href: botbuilder-migration/integration.md
+      - name: Sending Activities
+        href: botbuilder-migration/sending-activities.md
+      - name: Proactive Activities
+        href: botbuilder-migration/proactive-activities.md
+      - name: The API Client
+        href: botbuilder-migration/api-client.md
+      - name: User Authentication
+        href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
   - name: Coding agent skill
@@ -495,7 +497,7 @@
         displayName: notify, notification
       - name: Send activity feed notifications to users in Microsoft Teams
         href: tabs/send-activity-feed-notification.md
-        displayName: notify, notification      
+        displayName: notify, notification
   - name: Build tabs
     items:
     - name: Tabs overview
@@ -1109,5 +1111,5 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
-  - name: Activities and handlers
+  - name: Agent activity events and handlers
     href: bots/agent-event-reference.md

@@ -162,7 +162,23 @@ Reaction operations fail if the target message is deleted or the agent is remove
 
 ## Listen for reaction events
 
-For reaction event handlers and examples that process added and removed reactions, see [Message reactions](../bots/agent-event-reference.md#message-reactions) in the agent event reference.
+::: zone pivot="teams-sdk-typescript"
+
+Implement a handler for the `messageReaction` activity to process emoji reaction activity in conversations the agent is a part of. See [Message reactions](../bots/agent-event-reference.md#message-reactions) in the agent activity event reference for more information.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-csharp"
+
+Implement handlers for the `OnMessageReaction` activity, or the `OnMessageReactionAdded` and `OnMessageReactionRemoved` activities, to process emoji reaction activity in conversations the agent is a part of. See [Message reactions](../bots/agent-event-reference.md#message-reactions) in the agent activity event reference for more information.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Implement a handler for `@on_message_reaction` to process emoji reaction activity in conversations the agent is a part of. See [Message reactions](../bots/agent-event-reference.md#message-reactions) in the agent activity event reference for more information.
+
+::: zone-end
 
 ## Best practices and design guidance
 
