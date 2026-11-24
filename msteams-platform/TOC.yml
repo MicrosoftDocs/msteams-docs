@@ -1269,3 +1269,5 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
+  - name: Teams Agent Events and Activity Handlers
+    href: bots/agent-event-reference.md
