@@ -245,7 +245,7 @@
     href: /graph/sdks/sdks-overview
   - name: Deprecated tools and SDKs
     href: deprecated-tools-sdks.md
-    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
+    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
 - name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
@@ -1109,5 +1109,5 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
-  - name: Teams Agent Events and Activity Handlers
+  - name: Activities and handlers
     href: bots/agent-event-reference.md
