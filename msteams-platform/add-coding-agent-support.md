@@ -1,8 +1,8 @@
 ---
 title: Add coding agent support
-description: Agent Skills give AI coding assistants context to build Teams bots. Install the teams-dev skill and let your assistant handle bot setup for you. Get started today.
+description: Add coding agent support to your Teams development workflow. Use the teams-dev skill with Copilot, Claude Code, Cursor, and other agents to build faster. Learn how.
 ms.topic: article
-ms.date: 11/03/2026
+ms.date: 11/24/2026
 ---
 
 # Add coding agent support

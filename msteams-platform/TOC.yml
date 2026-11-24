@@ -235,8 +235,6 @@
   - name: TeamsJS client library
     href: tabs/how-to/using-teams-client-library.md
     displayName: iFrame, execute URL, getTabInstances
-  - name: Microsoft Graph SDKs
-    href: /graph/sdks/sdks-overview
   - name: Deprecated tools and SDKs
     href: deprecated-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
