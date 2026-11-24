@@ -9,7 +9,15 @@
 	<link rel="self" href="https://aka.ms/TeamsPlatformUpdates" />
 	<link rel="alternate" href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements" />
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
-	<updated>2026-11-16T00:00:00Z</updated>
+	<updated>2026-11-20T00:00:00Z</updated>
+	<entry>
+		<updated>2026-11-20T00:00:00Z</updated>
+		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#action-required-upcoming-changes-to-file-upload-and-download-authentication-for-microsoft-teams-agents</id>
+		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#action-required-upcoming-changes-to-file-upload-and-download-authentication-for-microsoft-teams-agents"/>
+		<title type="html"><![CDATA[Action required: Upcoming changes to file upload and download authentication for Microsoft Teams agents]]></title>
+		<summary type="html"><![CDATA[Microsoft has changed the implementation and app manifest requirements for agents that send and receive files in Teams. Developers maintaining Teams agents that send or receive files must update them by <strong>March 1, 2027</strong> to ensure file operations continue working after that date. See <a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/bots-filesv4#update-an-existing-bot-to-authenticate-file-requests">Update an existing bot to authenticate file requests</a> for detailed instructions and guidance.]]></summary>
+		<content type="html"><![CDATA[<p>Microsoft has changed the implementation and app manifest requirements for agents that send and receive files in Teams. Developers maintaining Teams agents that send or receive files must update them by <strong>March 1, 2027</strong> to ensure file operations continue working after that date. See <a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/bots-filesv4#update-an-existing-bot-to-authenticate-file-requests">Update an existing bot to authenticate file requests</a> for detailed instructions and guidance.</p><p>Agents that send and receive files require the following changes, which can be made and deployed separately:</p><ul><li>Code changes, which can be implemented and deployed effective immediately. Microsoft recommends implementing and deploying these changes as soon as possible.</li><li>Declaration of additional resource-specific consent (RSC) permissions requirements in the agent's app manifest. This change can be made and published starting <strong>January 15, 2027</strong>, when the new permissions become available in Teams. This change can be made separately from the required code changes.</li></ul><p>These changes strengthen security and align with Microsoft OneDrive and SharePoint authentication requirements. To share feedback, report issues, or ask questions about these changes, go to <a href="https://aka.ms/TeamsDeveloperFeedback">aka.ms/TeamsDeveloperFeedback</a>.</p>]]></content>
+	</entry>
 	<entry>
 		<updated>2026-11-16T00:00:00Z</updated>
 		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#preview-build-interactive-html-widgets-for-teams-agents</id>
@@ -81,13 +89,5 @@
 		<title type="html"><![CDATA[Preview: Extended Markdown formatting for agent messages]]></title>		
 		<summary type="html"><![CDATA[Agents can now send richer, better-formatted responses. Set <code>textFormat: "extendedmarkdown"</code> to add tables, task lists, code blocks, equations, images, at-mentions, and citations to your agent's messages. This feature is currently in preview.]]></summary>
 		<content type="html"><![CDATA[<p>Agents can now send richer, better-formatted responses. Set <code>textFormat: "extendedmarkdown"</code> to add tables, task lists, code blocks, equations, images, at-mentions, and citations to your agent's messages. This feature is currently in preview.</p><p>Extended Markdown content also renders progressively during <a href="https://learn.microsoft.com/microsoftteams/platform/bots/streaming-ux">streaming</a>, so users see formatted output as it arrives.</p><p>For more information, see <a href="https://learn.microsoft.com/microsoftteams/platform/bots/how-to/format-your-bot-messages#set-message-text-format">Format your agent messages</a>.</p>]]></content>
-	</entry>
-	<entry>
-		<updated>2026-08-20T00:00:00Z</updated>
-		<id>https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-for-python-hotfix</id>
-		<link href="https://learn.microsoft.com/microsoftteams/platform/developer-announcements#released-teams-sdk-for-python-hotfix"/>
-		<title type="html"><![CDATA[Released: Teams SDK for Python hotfix]]></title>
-		<summary type="html"><![CDATA[Hotfix releases for both the stable and preview tracks of Teams SDK for Python are now available on PyPI.]]></summary>
-		<content type="html"><![CDATA[<p>Hotfix releases for both the stable and preview tracks of Teams SDK for Python are now available on PyPI.</p><ul><li>Stable: 2.0.16 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.0.16">release notes</a>)</li><li>Preview: 2.1.0a2 (<a href="https://github.com/microsoft/teams.py/releases/tag/v2.1.0a2">release notes</a>)</li></ul>]]></content>
 	</entry>
 </feed>
