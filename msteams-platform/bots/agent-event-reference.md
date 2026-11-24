@@ -21,19 +21,61 @@ Invoke handlers can require a response to Teams. The invoke examples throw a not
 
 Register handlers on the `TeamsBotApplication` instance named `teams`. These examples use the current `Microsoft.Teams.Apps` APIs. Activity handlers receive a typed context and a cancellation token.
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Register handlers with `app.on(eventName, handler)` on an `App` instance named `app`, imported from `@microsoft/teams.apps`. The SDK infers the activity context type from the event name.
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Register asynchronous functions with decorators on an `App` instance named `app`. Import `App` and `ActivityContext` from `microsoft_teams.apps`. The examples use `ActivityContext` without an activity type parameter; add the specific activity type when implementing each handler.
+
+::: zone-end
+
 ## Core activity handlers
 
 ### Any activity received
 
 A catch-all handler observes incoming activities.
 
+::: zone pivot="teams-sdk-csharp"
+
 Handler example pending verification.
 
 <!-- TODO: Verify the current TeamsBotApplication catch-all registration API. The source article's OnActivity example uses the older App API. -->
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('activity', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_activity
+async def handle_activity(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Message received
 
-Handle incoming text messages. For pattern matching, pass a regex string before the handler.
+Handle incoming text messages.
+
+::: zone pivot="teams-sdk-csharp"
+
+For pattern matching, pass a regex string before the handler.
 
 ```csharp
 teams.OnMessage(async (context, cancellationToken) =>
@@ -42,9 +84,37 @@ teams.OnMessage(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+For regex matching, use `app.message(pattern, handler)`.
+
+```typescript
+app.on('message', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+For regex matching, use `@app.on_message_pattern(re.compile(...))`.
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Conversation update received
 
 Handle a raw conversation update activity.
+
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teams.OnConversationUpdate(async (context, cancellationToken) =>
@@ -53,9 +123,35 @@ teams.OnConversationUpdate(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('conversationUpdate', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_conversation_update
+async def handle_conversation_update(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Members added
 
-One or more members joined the conversation. Read `context.Activity.MembersAdded`.
+One or more members joined the conversation.
+
+::: zone pivot="teams-sdk-csharp"
+
+Read `context.Activity.MembersAdded`.
 
 ```csharp
 teams.OnMembersAdded(async (context, cancellationToken) =>
@@ -64,9 +160,39 @@ teams.OnMembersAdded(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Read `context.activity.membersAdded`.
+
+```typescript
+app.on('membersAdded', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the conversation update handler and inspect `ctx.activity.members_added`.
+
+```python
+@app.on_conversation_update
+async def handle_members_added(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Members removed
 
-One or more members left the conversation. Read `context.Activity.MembersRemoved`.
+One or more members left the conversation.
+
+::: zone pivot="teams-sdk-csharp"
+
+Read `context.Activity.MembersRemoved`.
 
 ```csharp
 teams.OnMembersRemoved(async (context, cancellationToken) =>
@@ -75,9 +201,39 @@ teams.OnMembersRemoved(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+Read `context.activity.membersRemoved`.
+
+```typescript
+app.on('membersRemoved', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Use the conversation update handler and inspect `ctx.activity.members_removed`.
+
+```python
+@app.on_conversation_update
+async def handle_members_removed(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Installation added
 
-The agent was installed. Inspect `context.Activity.Action` to distinguish installation from removal.
+The agent was installed.
+
+::: zone pivot="teams-sdk-csharp"
+
+Inspect `context.Activity.Action` to distinguish installation from removal.
 
 ```csharp
 teams.OnInstall(async (context, cancellationToken) =>
@@ -95,9 +251,35 @@ teams.OnInstallUpdate(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('install.add', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_install_add
+async def handle_install_add(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Installation removed
 
-The agent was uninstalled. Installation changes use the same handler; inspect `context.Activity.Action` for `remove`.
+The agent was uninstalled.
+
+::: zone pivot="teams-sdk-csharp"
+
+Installation changes use the same handler; inspect `context.Activity.Action` for `remove`.
 
 ```csharp
 teams.OnInstall(async (context, cancellationToken) =>
@@ -106,9 +288,35 @@ teams.OnInstall(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('install.remove', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_install_remove
+async def handle_install_remove(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Message edited
 
-A message was edited. Inspect `context.Activity.ChannelData?.EventType` to distinguish edits from restored messages.
+A message was edited.
+
+::: zone pivot="teams-sdk-csharp"
+
+Inspect `context.Activity.ChannelData?.EventType` to distinguish edits from restored messages.
 
 ```csharp
 teams.OnMessageUpdate(async (context, cancellationToken) =>
@@ -117,9 +325,33 @@ teams.OnMessageUpdate(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('messageUpdate', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_edit_message
+async def handle_edit_message(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Message soft deleted
 
 A message was soft deleted.
+
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teams.OnMessageDelete(async (context, cancellationToken) =>
@@ -128,9 +360,37 @@ teams.OnMessageDelete(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+`context.activity.channelData.eventType` is `softDeleteMessage`.
+
+```typescript
+app.on('messageDelete', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_soft_delete_message
+async def handle_soft_delete_message(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Message undeleted
 
-A deleted message was restored. Use the message update handler and check for `context.Activity.ChannelData?.EventType == "undeleteMessage"`.
+A deleted message was restored.
+
+::: zone pivot="teams-sdk-csharp"
+
+Use the message update handler and check for `context.Activity.ChannelData?.EventType == "undeleteMessage"`.
 
 ```csharp
 teams.OnMessageUpdate(async (context, cancellationToken) =>
@@ -139,9 +399,33 @@ teams.OnMessageUpdate(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('messageUndelete', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+```python
+@app.on_undelete_message
+async def handle_undelete_message(ctx: ActivityContext):
+    pass
+```
+
+::: zone-end
+
 ### Read receipt received
 
 A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
+
+::: zone pivot="teams-sdk-csharp"
 
 ```csharp
 teams.OnReadReceipt(async (context, cancellationToken) =>
@@ -150,11 +434,35 @@ teams.OnReadReceipt(async (context, cancellationToken) =>
 });
 ```
 
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('readReceipt', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
+
+Handler example pending verification.
+
+<!-- TODO: Verify the Python handler registration API for read receipts. -->
+
+::: zone-end
+
 ### Message reactions
 
-A user added or removed a reaction to an agent message. Use `OnMessageReaction` to handle both changes. Read `context.Activity.ReactionsAdded` and `context.Activity.ReactionsRemoved` for the reactions, and `context.Activity.ReplyToId` for the message ID.
+A user added or removed a reaction to an agent message.
 
 Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+
+::: zone pivot="teams-sdk-csharp"
+
+Use `OnMessageReaction` to handle both changes. Read `context.Activity.ReactionsAdded` and `context.Activity.ReactionsRemoved` for the reactions, and `context.Activity.ReplyToId` for the message ID.
 
 ```csharp
 teams.OnMessageReaction(async (context, cancellationToken) =>
@@ -197,337 +505,11 @@ teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
 });
 ```
 
-## Teams-specific activity handlers
-
-### Channel created
-
-A Teams channel was created.
-
-```csharp
-teams.OnChannelCreated(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Channel deleted
-
-A Teams channel was deleted.
-
-```csharp
-teams.OnChannelDeleted(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Channel renamed
-
-A Teams channel was renamed.
-
-```csharp
-teams.OnChannelRenamed(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Channel restored
-
-A deleted channel was restored.
-
-```csharp
-teams.OnChannelRestored(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Channel member added
-
-A member was added to a channel.
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# registration API for channelMemberAdded. -->
-
-### Channel member removed
-
-A member was removed from a channel.
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# registration API for channelMemberRemoved. -->
-
-### Team renamed
-
-The team was renamed.
-
-```csharp
-teams.OnTeamRenamed(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Team archived
-
-The team was archived.
-
-```csharp
-teams.OnTeamArchived(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Team unarchived
-
-A team where the agent is installed was unarchived.
-
-```csharp
-teams.OnTeamUnarchived(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Team deleted
-
-The team was deleted.
-
-```csharp
-teams.OnTeamDeleted(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Team restored
-
-A deleted team was restored.
-
-```csharp
-teams.OnTeamRestored(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Meeting started
-
-A meeting started. The event name is `application/vnd.microsoft.meetingStart`.
-
-```csharp
-teams.OnMeetingStart(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Meeting ended
-
-A meeting ended. The event name is `application/vnd.microsoft.meetingEnd`.
-
-```csharp
-teams.OnMeetingEnd(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Meeting participant joined
-
-A participant joined a meeting. The event name is `application/vnd.microsoft.meetingParticipantJoin`.
-
-```csharp
-teams.OnMeetingJoin(async (context, cancellationToken) =>
-{
-
-});
-```
-
-### Meeting participant left
-
-A participant left a meeting. The event name is `application/vnd.microsoft.meetingParticipantLeave`.
-
-```csharp
-teams.OnMeetingLeave(async (context, cancellationToken) =>
-{
-
-});
-```
-
-## Teams invoke activities
-
-### Adaptive Card action
-
-An Adaptive Card action was invoked (`adaptiveCard/action`).
-
-```csharp
-teams.OnAdaptiveCardAction((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-### Dialog fetched
-
-A dialog (task module) was fetched (`task/fetch`).
-
-```csharp
-teams.OnTaskFetch((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-### Dialog submitted
-
-A dialog (task module) was submitted (`task/submit`).
-
-```csharp
-teams.OnTaskSubmit((context, cancellationToken) =>
-{
-    throw new NotImplementedException();
-});
-```
-
-### File consent
-
-A file consent card was accepted or declined (`fileConsent/invoke`).
-
-Handler example pending verification.
-
-<!-- TODO: Verify the current C# file consent registration API. The source article lists OnFileConsent, but a current TeamsBotApplication example is needed. -->
-
-### Sign-in state verified
-
-The SDK handles `signin/verifyState` automatically as part of the OAuth flow. Don't register a handler solely to implement this flow.
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
 
-Register handlers with `app.on(eventName, handler)` on an `App` instance named `app`, imported from `@microsoft/teams.apps`. The SDK infers the activity context type from the event name.
-
-## Core activity handlers
-
-### Any activity received
-
-A catch-all handler observes incoming activities.
-
-```typescript
-app.on('activity', async (context) => {
-
-});
-```
-
-### Message received
-
-Handle incoming text messages. For regex matching, use `app.message(pattern, handler)`.
-
-```typescript
-app.on('message', async (context) => {
-
-});
-```
-
-### Conversation update received
-
-Handle a raw conversation update activity.
-
-```typescript
-app.on('conversationUpdate', async (context) => {
-
-});
-```
-
-### Members added
-
-One or more members joined the conversation. Read `context.activity.membersAdded`.
-
-```typescript
-app.on('membersAdded', async (context) => {
-
-});
-```
-
-### Members removed
-
-One or more members left the conversation. Read `context.activity.membersRemoved`.
-
-```typescript
-app.on('membersRemoved', async (context) => {
-
-});
-```
-
-### Installation added
-
-The agent was installed.
-
-```typescript
-app.on('install.add', async (context) => {
-
-});
-```
-
-### Installation removed
-
-The agent was uninstalled.
-
-```typescript
-app.on('install.remove', async (context) => {
-
-});
-```
-
-### Message edited
-
-A message was edited.
-
-```typescript
-app.on('messageUpdate', async (context) => {
-
-});
-```
-
-### Message soft deleted
-
-A message was soft deleted. `context.activity.channelData.eventType` is `softDeleteMessage`.
-
-```typescript
-app.on('messageDelete', async (context) => {
-
-});
-```
-
-### Message undeleted
-
-A deleted message was restored.
-
-```typescript
-app.on('messageUndelete', async (context) => {
-
-});
-```
-
-### Read receipt received
-
-A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
-
-```typescript
-app.on('readReceipt', async (context) => {
-
-});
-```
-
-### Message reactions
-
-A user added or removed a reaction to an agent message. Handle both changes with the `messageReaction` event. Read `context.activity.reactionsAdded` and `context.activity.reactionsRemoved` for the reactions, and `context.activity.replyToId` for the message ID.
-
-Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Handle both changes with the `messageReaction` event. Read `context.activity.reactionsAdded` and `context.activity.reactionsRemoved` for the reactions, and `context.activity.replyToId` for the message ID.
 
 ```typescript
 app.on('messageReaction', async (context) => {
@@ -549,325 +531,11 @@ app.on('messageReaction', async ({ activity }) => {
 });
 ```
 
-## Teams-specific activity handlers
-
-### Channel created
-
-A Teams channel was created.
-
-```typescript
-app.on('channelCreated', async (context) => {
-
-});
-```
-
-### Channel deleted
-
-A Teams channel was deleted.
-
-```typescript
-app.on('channelDeleted', async (context) => {
-
-});
-```
-
-### Channel renamed
-
-A Teams channel was renamed.
-
-```typescript
-app.on('channelRenamed', async (context) => {
-
-});
-```
-
-### Channel restored
-
-A deleted channel was restored.
-
-```typescript
-app.on('channelRestored', async (context) => {
-
-});
-```
-
-### Channel member added
-
-A member was added to a channel.
-
-```typescript
-app.on('channelMemberAdded', async (context) => {
-
-});
-```
-
-### Channel member removed
-
-A member was removed from a channel.
-
-```typescript
-app.on('channelMemberRemoved', async (context) => {
-
-});
-```
-
-### Team renamed
-
-The team was renamed.
-
-```typescript
-app.on('teamRenamed', async (context) => {
-
-});
-```
-
-### Team archived
-
-The team was archived.
-
-```typescript
-app.on('teamArchived', async (context) => {
-
-});
-```
-
-### Team unarchived
-
-A team where the agent is installed was unarchived.
-
-```typescript
-app.on('teamUnarchived', async (context) => {
-
-});
-```
-
-### Team deleted
-
-The team was deleted.
-
-```typescript
-app.on('teamDeleted', async (context) => {
-
-});
-```
-
-### Team restored
-
-A deleted team was restored.
-
-```typescript
-app.on('teamRestored', async (context) => {
-
-});
-```
-
-### Meeting started
-
-A meeting started. The event name is `application/vnd.microsoft.meetingStart`.
-
-```typescript
-app.on('meetingStart', async (context) => {
-
-});
-```
-
-### Meeting ended
-
-A meeting ended. The event name is `application/vnd.microsoft.meetingEnd`.
-
-```typescript
-app.on('meetingEnd', async (context) => {
-
-});
-```
-
-### Meeting participant joined
-
-A participant joined a meeting. The event name is `application/vnd.microsoft.meetingParticipantJoin`.
-
-```typescript
-app.on('meetingParticipantJoin', async (context) => {
-
-});
-```
-
-### Meeting participant left
-
-A participant left a meeting. The event name is `application/vnd.microsoft.meetingParticipantLeave`.
-
-```typescript
-app.on('meetingParticipantLeave', async (context) => {
-
-});
-```
-
-## Teams invoke activities
-
-### Adaptive Card action
-
-An Adaptive Card action was invoked (`adaptiveCard/action`).
-
-```typescript
-app.on('card.action', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-### Dialog fetched
-
-A dialog (task module) was fetched (`task/fetch`).
-
-```typescript
-app.on('dialog.open', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-### Dialog submitted
-
-A dialog (task module) was submitted (`task/submit`).
-
-```typescript
-app.on('dialog.submit', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-### File consent
-
-A file consent card was accepted or declined (`fileConsent/invoke`).
-
-```typescript
-app.on('file.consent', async (context) => {
-    throw new Error('Not implemented');
-});
-```
-
-### Sign-in state verified
-
-The SDK handles `signin/verifyState` automatically as part of the OAuth flow. Don't register a handler solely to implement this flow.
-
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
 
-Register asynchronous functions with decorators on an `App` instance named `app`. Import `App` and `ActivityContext` from `microsoft_teams.apps`. The examples use `ActivityContext` without an activity type parameter; add the specific activity type when implementing each handler.
-
-## Core activity handlers
-
-### Any activity received
-
-A catch-all handler observes incoming activities.
-
-```python
-@app.on_activity
-async def handle_activity(ctx: ActivityContext):
-    pass
-```
-
-### Message received
-
-Handle incoming text messages. For regex matching, use `@app.on_message_pattern(re.compile(...))`.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext):
-    pass
-```
-
-### Conversation update received
-
-Handle a raw conversation update activity.
-
-```python
-@app.on_conversation_update
-async def handle_conversation_update(ctx: ActivityContext):
-    pass
-```
-
-### Members added
-
-One or more members joined the conversation. Use the conversation update handler and inspect `ctx.activity.members_added`.
-
-```python
-@app.on_conversation_update
-async def handle_members_added(ctx: ActivityContext):
-    pass
-```
-
-### Members removed
-
-One or more members left the conversation. Use the conversation update handler and inspect `ctx.activity.members_removed`.
-
-```python
-@app.on_conversation_update
-async def handle_members_removed(ctx: ActivityContext):
-    pass
-```
-
-### Installation added
-
-The agent was installed.
-
-```python
-@app.on_install_add
-async def handle_install_add(ctx: ActivityContext):
-    pass
-```
-
-### Installation removed
-
-The agent was uninstalled.
-
-```python
-@app.on_install_remove
-async def handle_install_remove(ctx: ActivityContext):
-    pass
-```
-
-### Message edited
-
-A message was edited.
-
-```python
-@app.on_edit_message
-async def handle_edit_message(ctx: ActivityContext):
-    pass
-```
-
-### Message soft deleted
-
-A message was soft deleted.
-
-```python
-@app.on_soft_delete_message
-async def handle_soft_delete_message(ctx: ActivityContext):
-    pass
-```
-
-### Message undeleted
-
-A deleted message was restored.
-
-```python
-@app.on_undelete_message
-async def handle_undelete_message(ctx: ActivityContext):
-    pass
-```
-
-### Read receipt received
-
-A user read a message. The event name is `application/vnd.microsoft.readReceipt`.
-
-Handler example pending verification.
-
-<!-- TODO: Verify the Python handler registration API for read receipts. -->
-
-### Message reactions
-
-A user added or removed a reaction to an agent message. Handle both changes with `@app.on_message_reaction`. Read `ctx.activity.reactions_added` and `ctx.activity.reactions_removed` for the reactions, and `ctx.activity.reply_to_id` for the message ID.
-
-Agents can listen for reaction activity in conversations they're part of, for example, to respond when a user likes an agent message. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`. The payload doesn't include the original message contents, so store the message when you send it if your agent needs those contents to process reactions. Payloads can also include the older message identifier in `legacy.replyToId`. See the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+Handle both changes with `@app.on_message_reaction`. Read `ctx.activity.reactions_added` and `ctx.activity.reactions_removed` for the reactions, and `ctx.activity.reply_to_id` for the message ID.
 
 ```python
 @app.on_message_reaction
@@ -887,11 +555,36 @@ async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
         print(f"User removed reaction: {reaction.type}")
 ```
 
+::: zone-end
+
 ## Teams-specific activity handlers
 
 ### Channel created
 
 A Teams channel was created.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnChannelCreated(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelCreated', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_channel_created
@@ -899,9 +592,34 @@ async def handle_channel_created(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Channel deleted
 
 A Teams channel was deleted.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnChannelDeleted(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelDeleted', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_channel_deleted
@@ -909,9 +627,34 @@ async def handle_channel_deleted(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Channel renamed
 
 A Teams channel was renamed.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnChannelRenamed(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelRenamed', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_channel_renamed
@@ -919,9 +662,34 @@ async def handle_channel_renamed(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Channel restored
 
 A deleted channel was restored.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnChannelRestored(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelRestored', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_channel_restored
@@ -929,25 +697,94 @@ async def handle_channel_restored(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Channel member added
 
 A member was added to a channel.
+
+::: zone pivot="teams-sdk-csharp"
+
+Handler example pending verification.
+
+<!-- TODO: Verify the current C# registration API for channelMemberAdded. -->
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelMemberAdded', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 Handler example pending verification.
 
 <!-- TODO: Verify the Python handler registration API for channelMemberAdded. -->
 
+::: zone-end
+
 ### Channel member removed
 
 A member was removed from a channel.
+
+::: zone pivot="teams-sdk-csharp"
+
+Handler example pending verification.
+
+<!-- TODO: Verify the current C# registration API for channelMemberRemoved. -->
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('channelMemberRemoved', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 Handler example pending verification.
 
 <!-- TODO: Verify the Python handler registration API for channelMemberRemoved. -->
 
+::: zone-end
+
 ### Team renamed
 
 The team was renamed.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTeamRenamed(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('teamRenamed', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_team_renamed
@@ -955,9 +792,34 @@ async def handle_team_renamed(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Team archived
 
 The team was archived.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTeamArchived(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('teamArchived', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_team_archived
@@ -965,9 +827,34 @@ async def handle_team_archived(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Team unarchived
 
 A team where the agent is installed was unarchived.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTeamUnarchived(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('teamUnarchived', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_team_unarchived
@@ -975,9 +862,34 @@ async def handle_team_unarchived(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Team deleted
 
 The team was deleted.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTeamDeleted(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('teamDeleted', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_team_deleted
@@ -985,9 +897,34 @@ async def handle_team_deleted(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Team restored
 
 A deleted team was restored.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTeamRestored(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('teamRestored', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_team_restored
@@ -995,9 +932,34 @@ async def handle_team_restored(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Meeting started
 
 A meeting started. The event name is `application/vnd.microsoft.meetingStart`.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnMeetingStart(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('meetingStart', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_meeting_start
@@ -1005,9 +967,34 @@ async def handle_meeting_start(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Meeting ended
 
 A meeting ended. The event name is `application/vnd.microsoft.meetingEnd`.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnMeetingEnd(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('meetingEnd', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_meeting_end
@@ -1015,9 +1002,34 @@ async def handle_meeting_end(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Meeting participant joined
 
 A participant joined a meeting. The event name is `application/vnd.microsoft.meetingParticipantJoin`.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnMeetingJoin(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('meetingParticipantJoin', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_meeting_participant_join
@@ -1025,9 +1037,34 @@ async def handle_meeting_participant_join(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ### Meeting participant left
 
 A participant left a meeting. The event name is `application/vnd.microsoft.meetingParticipantLeave`.
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnMeetingLeave(async (context, cancellationToken) =>
+{
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('meetingParticipantLeave', async (context) => {
+
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_meeting_participant_leave
@@ -1035,11 +1072,36 @@ async def handle_meeting_participant_leave(ctx: ActivityContext):
     pass
 ```
 
+::: zone-end
+
 ## Teams invoke activities
 
 ### Adaptive Card action
 
 An Adaptive Card action was invoked (`adaptiveCard/action`).
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnAdaptiveCardAction((context, cancellationToken) =>
+{
+    throw new NotImplementedException();
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('card.action', async (context) => {
+    throw new Error('Not implemented');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_card_action
@@ -1047,9 +1109,34 @@ async def handle_card_action(ctx: ActivityContext):
     raise NotImplementedError
 ```
 
+::: zone-end
+
 ### Dialog fetched
 
 A dialog (task module) was fetched (`task/fetch`).
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTaskFetch((context, cancellationToken) =>
+{
+    throw new NotImplementedException();
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('dialog.open', async (context) => {
+    throw new Error('Not implemented');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_dialog_open
@@ -1057,9 +1144,34 @@ async def handle_dialog_open(ctx: ActivityContext):
     raise NotImplementedError
 ```
 
+::: zone-end
+
 ### Dialog submitted
 
 A dialog (task module) was submitted (`task/submit`).
+
+::: zone pivot="teams-sdk-csharp"
+
+```csharp
+teams.OnTaskSubmit((context, cancellationToken) =>
+{
+    throw new NotImplementedException();
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('dialog.submit', async (context) => {
+    throw new Error('Not implemented');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_dialog_submit
@@ -1067,9 +1179,31 @@ async def handle_dialog_submit(ctx: ActivityContext):
     raise NotImplementedError
 ```
 
+::: zone-end
+
 ### File consent
 
 A file consent card was accepted or declined (`fileConsent/invoke`).
+
+::: zone pivot="teams-sdk-csharp"
+
+Handler example pending verification.
+
+<!-- TODO: Verify the current C# file consent registration API. The source article lists OnFileConsent, but a current TeamsBotApplication example is needed. -->
+
+::: zone-end
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+app.on('file.consent', async (context) => {
+    throw new Error('Not implemented');
+});
+```
+
+::: zone-end
+
+::: zone pivot="teams-sdk-python"
 
 ```python
 @app.on_file_consent
@@ -1077,11 +1211,11 @@ async def handle_file_consent(ctx: ActivityContext):
     raise NotImplementedError
 ```
 
+::: zone-end
+
 ### Sign-in state verified
 
 The SDK handles `signin/verifyState` automatically as part of the OAuth flow. Don't register a handler solely to implement this flow.
-
-::: zone-end
 
 ## Conversation update event details
 
