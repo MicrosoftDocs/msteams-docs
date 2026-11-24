@@ -244,7 +244,7 @@
   - name: Deprecated tools and SDKs
     href: deprecated-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
-- name: Teams app permissions
+- name: Agent and app permissions
   items:
     - name: Overview
       href: graph-api/App-permissions/Teams-app-permissions.md
