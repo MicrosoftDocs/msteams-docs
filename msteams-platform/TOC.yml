@@ -192,8 +192,6 @@
       href: concepts/sdk-app-basics.md
     - name: Listening to events
       href: concepts/listening-events.md
-    - name: Graph API client
-      href: concepts/sdk-graph-api-client.md
     - name: Agent Communication Service API client
       href: concepts/sdk-teams-api-client.md
     - name: OpenTelemetry (.NET)
@@ -246,6 +244,19 @@
   - name: Deprecated tools and SDKs
     href: deprecated-tools-sdks.md
     displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
+- name: Teams app permissions
+  items:
+    - name: Overview
+      href: graph-api/App-permissions/Teams-app-permissions.md
+    - name: Resource-specific consent (RSC)
+      href: graph-api/rsc/resource-specific-consent.md
+      displayName: RSC, permissions, delegated, application
+    - name: Declare RSC permission requirements
+      href: graph-api/rsc/declare-resource-specific-consent-requirements.md
+      displayName: Permissions, delegated, user, team, chat, application
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
 - name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
@@ -326,44 +337,7 @@
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate Microsoft Graph
-  items:
-  - name: Overview
-    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Permissions, communication, channels, delegated, reports, extensions
-  - name: Microsoft Graph Toolkit
-    href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Access, routing
-  - name: Get started
-    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Access, report, MSAL2
-  - name: Teams app permissions
-    href: graph-api/App-permissions/Teams-app-permissions.md
-    displayName: RSC permissions
-  - name: Resource-specific consent
-    items:
-    - name: RSC permissions
-      href: graph-api/rsc/resource-specific-consent.md
-      displayName: types of RSC, delegated, application
-    - name: Preapproval of RSC permissions
-      href: graph-api/rsc/preapproval-instruction-docs.md
-      displayName: User, team, chat, application, delegated
-    - name: Declare RSC permission requirements
-      href: graph-api/rsc/declare-resource-specific-consent-requirements.md
-      displayName: Permissions, delegated, user, team, chat, application
-  - name: Proactive app installation to send messages
-    href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-    displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
-  - name: Send personal welcome message
-    href: graph-api/proactive-bots-and-messages/send-personal-welcome-message.md
-    displayName: personal welcome message, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
-  - name: Approvals app APIs
-    href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
-  - name: Import third-party messages
-    href: graph-api/import-messages/import-external-messages-to-teams.md
-  - name: Code samples
-    href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
-    displayName: graph api samples
+  href: concepts/sdk-graph-api-client.md
 - name: Add Teams app capabilities
   items:
   - name: Get started
@@ -844,6 +818,11 @@
     - name: Use Fluid with Teams
       href: tabs/how-to/using-fluid-msteam.md
       displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React components, Fluid Framework
+    - name: Approvals app APIs
+      href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
+    - name: Import third-party messages
+      href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Resources
     items:
     - name: Localization
