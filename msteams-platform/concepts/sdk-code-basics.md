@@ -256,7 +256,7 @@ This code initializes your application server and, when configured for Teams, al
 
 ## Next Steps
 
-- Add more activity handlers for different types of interactions. See [Listening To Activities](listening-activities.md) for more details.
+- Add more activity handlers for different types of interactions. See [Listening To Activities](../bots/activities-handlers.md) for more details.
 - Integrate with external services using the [Agent Communication Service API Client](sdk-teams-api-client.md).
 - Add interactive [cards](../task-modules-and-cards/cards/build-with-teams-sdk.md) and [dialogs](../task-modules-and-cards/what-are-task-modules.md).
 
