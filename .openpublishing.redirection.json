@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/concepts/build-and-test/develop-your-apps-with-toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/concepts/build-and-test/develop-your-apps-with-toolkit",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "msteams-platform/samples/virtual-assistant.md",
       "redirect_url": "/previous-versions/microsoftteams/platform/samples/virtual-assistant",
       "redirect_document_id": false
