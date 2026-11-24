@@ -11,9 +11,9 @@ ai-usage: ai-assisted
 
 Use this reference to find the handler registration syntax for Teams agent activities. For an introduction to activity handlers and agent logic, see [Understand agent concepts](bot-concepts.md).
 
-The handler listings show declarations only. The [reaction listening examples](#listen-for-reaction-events) also show how to process event payloads. For handler basics, see [Activities and handlers](bot-concepts.md#activities-and-handlers). Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
+The handler listings show declarations, and the [message reaction examples](#message-reactions) also show how to process event payloads. For handler basics, see [Activities and handlers](bot-concepts.md#activities-and-handlers). Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
 
-The language-independent [conversation update](#conversation-update-event-details), [message reaction](#message-reaction-event-details), and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
+The language-independent [conversation update](#conversation-update-event-details) and [installation update](#installation-update-event-details) sections describe event scopes and payload fields. [Event payload examples](#event-payload-examples) apply to all SDK languages.
 
 Invoke handlers can require a response to Teams. The invoke examples throw a not-implemented exception instead of returning a success response without an implementation. Replace the exception with the appropriate response before using these handlers.
 
@@ -150,25 +150,50 @@ teams.OnReadReceipt(async (context, cancellationToken) =>
 });
 ```
 
-### Reactions added to agent message
+### Message reactions
 
-A user added a reaction to an agent message. Read `context.Activity.ReactionsAdded` and `context.Activity.ReplyToId`.
+A user added or removed a reaction to an agent message. Use `OnMessageReaction` to handle both changes. Read `context.Activity.ReactionsAdded` and `context.Activity.ReactionsRemoved` for the reactions, and `context.Activity.ReplyToId` for the message ID.
+
+Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
+
+```csharp
+teams.OnMessageReaction(async (context, cancellationToken) =>
+{
+
+});
+```
+
+C# also provides `OnMessageReactionAdded` and `OnMessageReactionRemoved` if you prefer separate handlers for additions and removals:
 
 ```csharp
 teams.OnMessageReactionAdded(async (context, cancellationToken) =>
 {
 
 });
-```
 
-### Reactions removed from agent message
-
-A user removed a reaction from an agent message. Read `context.Activity.ReactionsRemoved` and `context.Activity.ReplyToId`.
-
-```csharp
 teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
 {
 
+});
+```
+
+Use either the general handler or the specific handlers, rather than processing the same reaction twice. The following example uses the specific handlers to log each added or removed reaction's type:
+
+```csharp
+teams.OnMessageReactionAdded(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
+    {
+        Console.WriteLine($"User added reaction: {reaction.Type}");
+    }
+});
+
+teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
+{
+    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
+    {
+        Console.WriteLine($"User removed reaction: {reaction.Type}");
+    }
 });
 ```
 
@@ -498,23 +523,29 @@ app.on('readReceipt', async (context) => {
 });
 ```
 
-### Reactions added to agent message
+### Message reactions
 
-A user added a reaction to an agent message. Read `context.activity.reactionsAdded` and `context.activity.replyToId`.
+A user added or removed a reaction to an agent message. Handle both changes with the `messageReaction` event. Read `context.activity.reactionsAdded` and `context.activity.reactionsRemoved` for the reactions, and `context.activity.replyToId` for the message ID.
+
+Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ```typescript
-app.on('reactionsAdded', async (context) => {
+app.on('messageReaction', async (context) => {
 
 });
 ```
 
-### Reactions removed from agent message
-
-A user removed a reaction from an agent message. Read `context.activity.reactionsRemoved` and `context.activity.replyToId`.
+The following example processes both added and removed reactions in one handler and logs each reaction's type:
 
 ```typescript
-app.on('reactionsRemoved', async (context) => {
+app.on('messageReaction', async ({ activity }) => {
+  for (const reaction of activity.reactionsAdded ?? []) {
+    console.log(`User added reaction: ${reaction.type}`);
+  }
 
+  for (const reaction of activity.reactionsRemoved ?? []) {
+    console.log(`User removed reaction: ${reaction.type}`);
+  }
 });
 ```
 
@@ -832,24 +863,28 @@ Handler example pending verification.
 
 <!-- TODO: Verify the Python handler registration API for read receipts. -->
 
-### Reactions added to agent message
+### Message reactions
 
-A user added a reaction to an agent message. Read `ctx.activity.reactions_added` and `ctx.activity.reply_to_id`.
+A user added or removed a reaction to an agent message. Handle both changes with `@app.on_message_reaction`. Read `ctx.activity.reactions_added` and `ctx.activity.reactions_removed` for the reactions, and `ctx.activity.reply_to_id` for the message ID.
+
+Agents can listen for reaction activity in conversations they're part of. These activities have `type` of `messageReaction` and apply to all scopes. Each reaction has a `type` value. The payload doesn't include the original message contents and can also include the older message identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance and the [added](#reactions-added-payload) and [removed](#reactions-removed-payload) reaction payload examples.
 
 ```python
-@app.on_reactions_added
-async def handle_reactions_added(ctx: ActivityContext):
+@app.on_message_reaction
+async def handle_reaction(ctx: ActivityContext):
     pass
 ```
 
-### Reactions removed from agent message
-
-A user removed a reaction from an agent message. Read `ctx.activity.reactions_removed` and `ctx.activity.reply_to_id`.
+The following example processes both added and removed reactions in one handler and logs each reaction's type:
 
 ```python
-@app.on_reactions_removed
-async def handle_reactions_removed(ctx: ActivityContext):
-    pass
+@app.on_message_reaction
+async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
+    for reaction in ctx.activity.reactions_added or []:
+        print(f"User added reaction: {reaction.type}")
+
+    for reaction in ctx.activity.reactions_removed or []:
+        print(f"User removed reaction: {reaction.type}")
 ```
 
 ## Teams-specific activity handlers
@@ -1069,79 +1104,6 @@ Conversation update activities have `type` of `conversationUpdate`. Channel and 
 Channel lifecycle payloads include the channel's ID and name in `channelData.channel` and the team ID in `channelData.team`. Team lifecycle payloads include the team's ID and name in `channelData.team`. Use these fields to identify the affected channel or team and, when appropriate, notify users about the change.
 
 Member-added events occur when the agent is installed or a user joins a conversation where the agent is installed. Member-removed events occur when the agent is uninstalled, a user leaves, or a user is permanently deleted from the tenant. Compare member IDs with `recipient.id` to distinguish agent changes from user changes. See [Member changes](bot-concepts.md#member-changes) for caching and installation behavior.
-
-## Message reaction event details
-
-Message reaction activities have `type` of `messageReaction` and apply to all scopes.
-
-| Event | Payload field | Scope | Payload example |
-| --- | --- | --- | --- |
-| Reactions added to agent message | `reactionsAdded` | All | [Reactions added](#reactions-added-payload) |
-| Reactions removed from agent message | `reactionsRemoved` | All | [Reactions removed](#reactions-removed-payload) |
-
-Each reaction has a `type` value. `replyToId` identifies the agent message that received the reaction; the payload doesn't include the message contents. Payloads can also include the older identifier in `legacy.replyToId`. See [Message reaction events](bot-concepts.md#message-reaction-events) for message storage guidance.
-
-### Listen for reaction events
-
-Agents can listen for reaction activity in conversations they're part of. The following examples process added and removed reactions and log each reaction's type. Use either a general reaction handler or the specific added and removed handlers for your workflow, rather than processing the same reaction twice.
-
-::: zone pivot="teams-sdk-csharp"
-
-Handle reaction activity with `OnMessageReaction`, or use the more specific `OnMessageReactionAdded` and `OnMessageReactionRemoved` handlers. The following example uses the specific handlers:
-
-```csharp
-teams.OnMessageReactionAdded(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsAdded ?? [])
-    {
-        Console.WriteLine($"User added reaction: {reaction.Type}");
-    }
-});
-
-teams.OnMessageReactionRemoved(async (context, cancellationToken) =>
-{
-    foreach (var reaction in context.Activity.ReactionsRemoved ?? [])
-    {
-        Console.WriteLine($"User removed reaction: {reaction.Type}");
-    }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-Handle the `messageReaction` event to process both added and removed reactions in one handler:
-
-```typescript
-app.on('messageReaction', async ({ activity }) => {
-  for (const reaction of activity.reactionsAdded ?? []) {
-    console.log(`User added reaction: ${reaction.type}`);
-  }
-
-  for (const reaction of activity.reactionsRemoved ?? []) {
-    console.log(`User removed reaction: ${reaction.type}`);
-  }
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-Use the `@app.on_message_reaction` decorator to process both added and removed reactions in one handler:
-
-```python
-@app.on_message_reaction
-async def handle_reaction(ctx: ActivityContext[MessageReactionActivity]):
-    for reaction in ctx.activity.reactions_added or []:
-        print(f"User added reaction: {reaction.type}")
-
-    for reaction in ctx.activity.reactions_removed or []:
-        print(f"User removed reaction: {reaction.type}")
-```
-
-::: zone-end
 
 ## Installation update event details
 

@@ -162,7 +162,7 @@ Reaction operations fail if the target message is deleted or the agent is remove
 
 ## Listen for reaction events
 
-For reaction event handlers and examples that process added and removed reactions, see [Listen for reaction events](../bots/agent-event-reference.md#listen-for-reaction-events) in the agent event reference.
+For reaction event handlers and examples that process added and removed reactions, see [Message reactions](../bots/agent-event-reference.md#message-reactions) in the agent event reference.
 
 ## Best practices and design guidance
 

@@ -131,7 +131,7 @@ Teams sends a `messageReaction` activity when a user adds or removes a reaction 
 
 The activity's `replyToId` identifies the original message. Each entry in `reactionsAdded` or `reactionsRemoved` has a `type` value describing the reaction, such as `angry`, `heart`, `laugh`, `like`, `sad`, or `surprised`.
 
-Reaction events don't contain the original message's contents. If your agent needs those contents to process reactions, store the message when you send it. See [Message reaction event details](agent-event-reference.md#message-reaction-event-details) for handler syntax and payload examples.
+Reaction events don't contain the original message's contents. If your agent needs those contents to process reactions, store the message when you send it. See [Message reactions](agent-event-reference.md#message-reactions) for handler syntax and payload examples.
 
 ### Installation update event
 
