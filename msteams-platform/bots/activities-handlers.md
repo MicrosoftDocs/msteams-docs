@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 An **Activity** is the Teams‑specific payload that flows between the user and your bot.
 
-Activity handlers are the core of an agent's functionality. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](bot-concepts.md) where your agent is active.
+Activity handlers are the core of an agent's functionality. Register handlers for the activities your agent needs to process, such as messages, member changes, and channel lifecycle events. These activities occur in the [conversation scopes](agent-scopes.md) where your agent is active.
 
 
 

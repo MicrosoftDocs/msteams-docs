@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Teams agent event reference
 
-Use this reference to find the handler registration syntax for Teams agent activities. For an introduction, see [Activities and handlers](activities-and-handlers.md).
+Use this reference to find the handler registration syntax for Teams agent activities. For an introduction, see [Activities and handlers](activities-handlers.md).
 
 The handler listings show declarations, and the [message reaction examples](#message-reactions) also show how to process event payloads. Register the handlers you need before starting the app. Some events share a handler; inspect the activity payload to distinguish them rather than registering duplicate handlers.
 
