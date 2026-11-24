@@ -226,5 +226,4 @@ logging.getLogger().setLevel(os.getenv("LOG_LEVEL", "INFO").upper())
 
 ## See also
 
-* [Agent basics](../bots/agent-scopes.md)
 * [Host web content and manage your agent's HTTP server](host-agent-server.md)

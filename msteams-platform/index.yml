@@ -37,7 +37,7 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/agents-best-practices-features-checklist.md
       - text: Agents in Teams
         url: /microsoftteams/platform/agents-in-teams/overview
-      - text: Agent basics
+      - text: Agent scopes
         url: /microsoftteams/platform/bots/agent-scopes
     - linkListType: whats-new
       links:
