@@ -216,10 +216,8 @@
         href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
-  - name: Coding agent skill
-    href: coding-agent-skill.md
-  - name: llms.txt
-    href: llms-txt.md
+  - name: Add coding agent support
+    href: add-coding-agent-support.md
   - name: Teams Developer Portal
     items:
     - name: Overview
@@ -336,7 +334,7 @@
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate Microsoft Graph
   href: concepts/sdk-graph-api-client.md
-- name: Add Teams app capabilities
+- name: Add app capabilities
   items:
   - name: Get started
     expanded: false
