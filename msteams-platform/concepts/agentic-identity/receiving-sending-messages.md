@@ -185,7 +185,7 @@ await app.send(conversationId, 'Your scheduled update is ready.', {
   agenticIdentity,
 });
 
-const api = app.api.forAgenticIdentity(agenticIdentity);
+const api = app.api.clone({ serviceUrl, agenticIdentity });
 
 await api.conversations.addReaction(conversationId, activityId, 'like');
 ```

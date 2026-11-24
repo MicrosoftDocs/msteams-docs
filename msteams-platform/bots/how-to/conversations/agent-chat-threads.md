@@ -294,6 +294,8 @@ async function postNewTopic(destination: ThreadDestination) {
 Use Teams SDK version 2.3.0 or later for these examples.
 
 ```csharp
+using Microsoft.Teams.Core.Schema;
+
 teams.OnMessage(async (ctx, cancellationToken) =>
 {
     var activity = ctx.Activity;

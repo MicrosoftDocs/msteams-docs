@@ -102,6 +102,8 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 # [C# SDK v2.1](#tab/dotnet)
 
 ```csharp
+using System.Collections.Concurrent;
+
 // Replace this dictionary with persistent storage in production.
 var conversations = new ConcurrentDictionary<string, (string ConversationId, Uri? ServiceUrl)>();
 
