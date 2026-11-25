@@ -6,9 +6,6 @@
 - name: Platform overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: Developer announcements
-  href: developer-announcements.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
   items:
   - name: Get started
@@ -235,9 +232,6 @@
   - name: TeamsJS client library
     href: tabs/how-to/using-teams-client-library.md
     displayName: iFrame, execute URL, getTabInstances
-  - name: Deprecated tools and SDKs
-    href: deprecated-tools-sdks.md
-    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
 - name: Agent and app permissions
   items:
     - name: Overview
@@ -1068,10 +1062,16 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
+- name: Developer announcements
+  href: developer-announcements.md
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Code samples
   href: get-started/code-samples.md
 - name: Additional resources
   items:
+  - name: Support and feedback
+    href: developer-support-feedback.md
+    displayName: Developer community help, questions, suggestions, contact, issues
   - name: Develop with preview features
     href: developer-preview-features.md
     displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
@@ -1080,6 +1080,6 @@
   - name: Glossary
     href: get-started/glossary.md
     displayName: App tray, terminologies, definitions, new word, meaning
-  - name: Support and feedback
-    href: developer-support-feedback.md
-    displayName: Developer community help, questions, suggestions, contact, issues
+  - name: Deprecated tools and SDKs
+    href: deprecated-tools-sdks.md
+    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
