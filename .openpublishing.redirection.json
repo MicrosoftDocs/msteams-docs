@@ -2076,6 +2076,21 @@
       "source_path": "msteams-platform/bots/bot-concepts.md",
       "redirect_url": "/microsoftteams/platform/bots/agent-scopes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message.md",
+      "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/coding-agent-skill.md",
+      "redirect_url": "/microsoftteams/platform/add-coding-agent-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/llms-txt.md",
+      "redirect_url": "/microsoftteams/platform/add-coding-agent-support",
+      "redirect_document_id": false
     }
     ]
 }
