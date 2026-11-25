@@ -3,7 +3,7 @@ title: Proactive Activities
 description: Migrate from BotBuilder's complex conversation reference handling to Teams SDK's simple conversation ID-based proactive messaging.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages-typescript-python
-ms.date: 10/09/2026
+ms.date: 11/23/2026
 ---
 # Proactive Activities
 
@@ -14,9 +14,9 @@ passed into our activity handlers through our context. This method accepts a `co
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
-The BotBuilder proactive message flow requires storing a conversation reference.
-In Teams SDK, we expose a `send` method in the `App` class, almost identical to the one
-passed into our activity handlers through our context. This method accepts a `conversationId`, so storing just that is enough!
+In Teams SDK, use `app.send` with the stored conversation ID to send a proactive message. If the destination uses a different service URL from the app's configured URL, also pass the stored conversation reference's `serviceUrl` in the send options.
+
+Unlike context-level sends, app-level sends don't retain incoming service URLs. For requirements and routing behavior, see [Per-call service URLs in TypeScript](../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
@@ -97,9 +97,17 @@ import { App } from '@microsoft/teams.apps';
 
 const app = new App();
 
+// Routing fields retained from your stored BotBuilder conversation reference.
+const storedConversationReference = {
+  conversation: { id: 'your-conversation-id' },
+  serviceUrl: '<stored service URL>',
+};
+
 (async () => {
   await app.start();
-  await app.send('your-conversation-id', 'proactive hello');
+  await app.send(storedConversationReference.conversation.id, 'proactive hello', {
+    serviceUrl: storedConversationReference.serviceUrl,
+  });
 }());
 ```
 

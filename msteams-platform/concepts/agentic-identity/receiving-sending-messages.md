@@ -3,7 +3,7 @@ title: Receiving and Sending Messages as an Agentic User
 description: Receive messages and send replies, reactions, and proactive messages as an Agentic User.
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
-ms.date: 11/11/2026
+ms.date: 11/23/2026
 ---
 
 # Receiving and sending messages as an Agentic User
@@ -183,6 +183,7 @@ const agenticIdentity = app.getAgenticIdentity({
 });
 
 await app.send(conversationId, 'Your scheduled update is ready.', {
+  serviceUrl,
   agenticIdentity,
 });
 
@@ -190,6 +191,8 @@ const api = app.api.forAgenticIdentity(agenticIdentity);
 
 await api.conversations.addReaction(conversationId, activityId, 'like');
 ```
+
+Pass the stored `serviceUrl` and `agenticIdentity` together to select the destination and sender. For requirements and routing behavior, see [Per-call service URLs in TypeScript](../../bots/how-to/conversations/send-proactive-messages.md#per-call-service-urls-in-typescript).
 
 ::: zone-end
 
