@@ -80,7 +80,7 @@ If the bot uses a user-assigned managed identity, the bot identity and authentic
 
 Configure `webApplicationInfo` with the authentication app ID and the matching application ID URI. Add the required token-service domains to `validDomains`, and configure the relevant commands or link domains in `composeExtensions`.
 
-For more information, see [Update app manifest for SSO](bot-sso-manifest.md) and [Configure your app in Microsoft Entra ID](bot-sso-register-aad).
+For more information, see [Update app manifest for SSO](bot-sso-manifest.md) and [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md).
 
 Use the token-service endpoints appropriate for your deployment. For regional endpoints, see [OAuth URL support for Azure Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true). A service domain containing `botframework.com` is still a service requirement; it isn't an SDK dependency.
 
@@ -101,7 +101,7 @@ const graph = app.addOAuthFlow('graph');
 
 * `graph` identifies the OAuth connection used by this flow. Set it to your Azure Bot OAuth connection name so token operations use the intended connection.
 
-Registered OAuth flows can't be combined with `oauth.defaultConnectionName`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (TypeScript)](bot-sso-code?tabs=ts1).
+Registered OAuth flows can't be combined with `oauth.defaultConnectionName`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (TypeScript)](bot-sso-code.md?tabs=ts1).
 
 ::: zone-end
 
@@ -125,7 +125,7 @@ OAuthFlow graph = teams.GetOAuthFlow("graph");
 
 * `"graph"` identifies the OAuth connection registered with your application. Set it to your Azure Bot OAuth connection name so the retrieved flow owns the intended token operations.
 
-This snippet assumes an ASP.NET Core Teams SDK project. Register your handlers before calling `app.Run()`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (C#)](bot-sso-code?tabs=cs1).
+This snippet assumes an ASP.NET Core Teams SDK project. Register your handlers before calling `app.Run()`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (C#)](bot-sso-code.md?tabs=cs1).
 
 ::: zone-end
 
@@ -140,7 +140,7 @@ graph = app.add_oauth_flow("graph")
 
 * `"graph"` identifies the OAuth connection used by this flow. Set it to your Azure Bot OAuth connection name so token operations use the intended connection.
 
-For related conversational-bot guidance, see [Add code to enable SSO in a bot (Python)](bot-sso-code?tabs=py1).
+For related conversational-bot guidance, see [Add code to enable SSO in a bot (Python)](bot-sso-code.md?tabs=py1).
 
 ::: zone-end
 
