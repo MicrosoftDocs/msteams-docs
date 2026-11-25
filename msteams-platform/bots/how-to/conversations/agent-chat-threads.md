@@ -163,15 +163,17 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 | Mode | In a chat | Quote |
 | --- | --- | --- |
 | `combined` (default) | A reply to a top-level message starts a thread under it; a reply inside a thread stays in that thread. | Yes |
-| `thread` | Same as `combined`. | No |
+| `thread` | Same as `combined`. | No\* |
 | `quote` | The reply stays at the level of the incoming message. | Yes |
+
+\* A reply that doesn't land in a thread always includes the quote, in every mode. See the following note.
+
+> [!NOTE]
+> **Replies that don't land in a thread:** A reply that doesn't land in a thread keeps the quote in every mode, including the thread mode. Without a thread, the quote is what shows which message the reply answers. That happens when the incoming activity lacks the [IDs that threading needs](#how-context-level-replies-are-placed), for example in a meeting, or in a chat when the message the activity is about can't start a thread.
 
 In C#, the modes are `ReplyMode.Combined`, `ReplyMode.Thread`, and `ReplyMode.Quote`.
 
 In a channel, every reply goes in the thread of the user's message, so the mode only decides the quote. The mode affects only the context-level reply method. It doesn't change the context-level send method, quoting a specific message, streams, plans, or the app-level methods.
-
-> [!NOTE]
-> **Replies that can't be threaded:** When the incoming activity lacks the [IDs that threading needs](#how-context-level-replies-are-placed), for example in a meeting, a reply is never threaded, so it keeps the quote in every mode, including the thread mode. Without a thread, the quote is what shows which message the reply answers.
 
 ## How context-level replies are placed
 
