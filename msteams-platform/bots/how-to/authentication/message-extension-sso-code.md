@@ -399,8 +399,8 @@ A complete Teams SDK message-extension SSO sample isn't verified for this draft.
 
 ## See also
 
-* [Authenticating app users](https://learn.microsoft.com/microsoftteams/platform/concepts/authentication/authentication)
-* [Configure your app in Microsoft Entra ID](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-register-aad)
-* [Respond to search commands (TypeScript)](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/search-commands/respond-to-search?tabs=typescript)
-* [Respond to search commands (C#)](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/search-commands/respond-to-search?tabs=dotnet1)
-* [Respond to search commands (Python)](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/search-commands/respond-to-search?tabs=python)
+* [Authenticating app users](../../../concepts/authentication/authentication.md)
+* [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md)
+* [Respond to search commands (TypeScript)](../../../messaging-extensions/how-to/search-commands/respond-to-search.md?tabs=typescript)
+* [Respond to search commands (C#)](../../../messaging-extensions/how-to/search-commands/respond-to-search.md?tabs=dotnet1)
+* [Respond to search commands (Python)](../../../messaging-extensions/how-to/search-commands/respond-to-search.md?tabs=python)
