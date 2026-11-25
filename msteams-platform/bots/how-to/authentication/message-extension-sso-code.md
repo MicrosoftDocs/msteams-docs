@@ -101,7 +101,7 @@ const graph = app.addOAuthFlow('graph');
 
 * `graph` identifies the OAuth connection used by this flow. Set it to your Azure Bot OAuth connection name so token operations use the intended connection.
 
-Registered OAuth flows can't be combined with `oauth.defaultConnectionName`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (TypeScript)](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-code?tabs=ts1).
+Registered OAuth flows can't be combined with `oauth.defaultConnectionName`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (TypeScript)](bot-sso-code?tabs=ts1).
 
 ::: zone-end
 
@@ -125,7 +125,7 @@ OAuthFlow graph = teams.GetOAuthFlow("graph");
 
 * `"graph"` identifies the OAuth connection registered with your application. Set it to your Azure Bot OAuth connection name so the retrieved flow owns the intended token operations.
 
-This snippet assumes an ASP.NET Core Teams SDK project. Register your handlers before calling `app.Run()`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (C#)](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-code?tabs=cs1).
+This snippet assumes an ASP.NET Core Teams SDK project. Register your handlers before calling `app.Run()`. For related conversational-bot guidance, see [Add code to enable SSO in a bot (C#)](bot-sso-code?tabs=cs1).
 
 ::: zone-end
 
@@ -140,7 +140,7 @@ graph = app.add_oauth_flow("graph")
 
 * `"graph"` identifies the OAuth connection used by this flow. Set it to your Azure Bot OAuth connection name so token operations use the intended connection.
 
-For related conversational-bot guidance, see [Add code to enable SSO in a bot (Python)](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-code?tabs=py1).
+For related conversational-bot guidance, see [Add code to enable SSO in a bot (Python)](bot-sso-code?tabs=py1).
 
 ::: zone-end
 
@@ -335,7 +335,7 @@ If your API receives an access token intended for that API, validate it with a s
 
 Don't rely on decoding a token or checking an issuer prefix alone. Don't log access tokens, credentials, or full authentication payloads, and don't include tokens in cards or diagnostic responses.
 
-For more information, see [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens) and [Teams SDK incoming request authentication](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/incoming-request-authentication).
+For more information, see [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens) and [Teams SDK incoming request authentication](../../../agents-in-teams/incoming-request-authentication.md).
 
 ## Handle errors
 
