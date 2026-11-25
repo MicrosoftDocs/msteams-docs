@@ -4,7 +4,7 @@ description: Learn how to work with user mentions, send messages, and handle age
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 

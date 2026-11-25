@@ -3,7 +3,7 @@ title: Manage Conversation State
 description: Manage conversation state in Teams SDK apps to store user and conversation data across turns. Learn how to enable, read, write, clear, and scale state.
 ms.topic: how-to
 zone_pivot_groups: teams-sdk-languages
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 ---
 
 # Manage conversation state

@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 

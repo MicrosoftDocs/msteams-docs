@@ -1,7 +1,7 @@
 ---
 title: Plans and steps for Teams agents
 description: Learn how Teams agents use plans and steps to show structured progress, status updates, and sources while working on a user request.
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 ms.topic: article
 ms.localizationpriority: high
 zone_pivot_groups: teams-sdk-languages

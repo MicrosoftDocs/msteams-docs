@@ -3,7 +3,7 @@ title: Receiving and Sending Messages as an Agentic User
 description: Receive messages and send replies, reactions, and proactive messages as an Agentic User.
 ms.topic: article
 zone_pivot_groups: teams-sdk-languages
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 ---
 
 # Receiving and sending messages as an Agentic User

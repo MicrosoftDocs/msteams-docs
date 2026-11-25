@@ -4,7 +4,7 @@ description: Learn about agent events and activity handlers for messages, channe
 ms.topic: article
 ms.localizationpriority: medium
 ms.owner: nickwalk
-ms.date: 11/23/2026
+ms.date: 11/30/2026
 ---
 
 <!-- markdownlint-disable MD024 -->
