@@ -115,9 +115,9 @@ Agent: I'll create an echo bot for you.
 
 Instead of installing a skill, you can point your coding agent at the Teams platform llms.txt files. These agent-optimized, plain-text copies of the documentation are designed to maximize your agent's ability to answer questions about Teams development and build Teams agents and apps without installing anything. See [llmstxt.org](https://llmstxt.org) for more information.
 
-## Available files
+### Available files
 
-### Root
+#### Root
 
 High-level SDK overview with links to reference guides.
 
@@ -125,7 +125,7 @@ High-level SDK overview with links to reference guides.
 https://microsoft.github.io/teams-sdk/llms_docs/llms.txt
 ```
 
-### Per-language
+#### Per-language
 
 # [TypeScript](#tab/typescript)
 
