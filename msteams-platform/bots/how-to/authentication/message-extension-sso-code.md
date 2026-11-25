@@ -6,21 +6,12 @@ ms.localizationpriority: high
 ms.date: 11/19/2026
 ---
 
-# Add code to enable SSO in your message extension app
+# Enable SSO in your message extension app
 
-Before you add code to enable single sign-on (SSO), ensure that you configure your app and bot resource in Microsoft Entra admin center.
+Single sign-on (SSO) lets a bot-based message extension access resources on behalf of a Teams user using their Microsoft Entra identity. This article describes the Teams SDK configuration, message-extension handlers, and considerations for authentication.
 
-> [!div class="nextstepaction"]
-> [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
-
-
-This article covers:
-
-1. [Update development environment variables](#update-development-environment-variables)
-1. [Add code to request a token](#add-code-to-request-a-token)
-1. [Add code to receive the token](#add-code-to-receive-the-token)
-1. [Add token to Bot Framework Token Store](#add-token-to-bot-framework-token-store)
-1. [Handle app user log out](#handle-app-user-log-out)
+> [!IMPORTANT]
+> This article doesn't provide an end-to-end Teams SDK implementation of message-extension SSO. The sign-in and sign-out examples are for an optional conversational bot and don't authenticate a message-extension request. Verify the extension's authentication response, token exchange, and request handling in Teams before deploying your app.
 
 ## Update development environment variables
 
