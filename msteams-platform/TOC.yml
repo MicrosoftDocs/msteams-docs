@@ -1,20 +1,15 @@
 - name: Teams Platform documentation
   href: index.yml
-- name: Overview
+- name: "Quickstart: Create and chat with an agent"
+  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+- name: Platform overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: Developer announcements
-  href: developer-announcements.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
-  expanded: true
   items:
   - name: Get started
-    expanded: true
     items:
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
     - name: Agent scopes
@@ -218,10 +213,8 @@
         href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
-  - name: Coding agent skill
-    href: coding-agent-skill.md
-  - name: llms.txt
-    href: llms-txt.md
+  - name: Add coding agent support
+    href: add-coding-agent-support.md
   - name: Teams Developer Portal
     items:
     - name: Overview
@@ -239,12 +232,7 @@
   - name: TeamsJS client library
     href: tabs/how-to/using-teams-client-library.md
     displayName: iFrame, execute URL, getTabInstances
-  - name: Microsoft Graph SDKs
-    href: /graph/sdks/sdks-overview
-  - name: Deprecated tools and SDKs
-    href: deprecated-tools-sdks.md
-    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
-- name: Agent and app permissions
+- name: Configure agent and app permissions
   items:
     - name: Overview
       href: graph-api/App-permissions/Teams-app-permissions.md
@@ -338,7 +326,7 @@
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate Microsoft Graph
   href: concepts/sdk-graph-api-client.md
-- name: Add Teams app capabilities
+- name: Add app capabilities
   items:
   - name: Get started
     expanded: false
@@ -766,6 +754,25 @@
       - name: Use dialogs from bots
         href: task-modules-and-cards/task-modules/task-modules-bots.md
         displayName: create dialogue box, invoke dialog, submit action
+  - name: Integrate device capabilities
+    items:
+    - name: What are device capabilities?
+      href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: camera, microphone, gallery, QR, barcode scanner, location
+    - name: Device permissions for Teams app
+      href: concepts/device-capabilities/native-device-permissions.md
+      displayName: Teams app permission
+    - name: Device permissions for the browser
+      href: concepts/device-capabilities/browser-device-permissions.md
+      displayName: web apps, browser permission
+    - name: Integrate media capabilities
+      href: concepts/device-capabilities/media-capabilities.md
+      displayName: camera
+    - name: Integrate QR or barcode scanner capability
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: Integrate location capabilities
+      href: concepts/device-capabilities/location-capability.md
+      displayName: attendance
   - name: Integrate with Teams
     items:
     - name: Web app integration
@@ -842,27 +849,6 @@
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
-- name: Code samples
-  href: get-started/code-samples.md
-- name: Integrate device capabilities
-  items:
-  - name: What are device capabilities?
-    href: concepts/device-capabilities/device-capabilities-overview.md
-    displayName: camera, microphone, gallery, QR, barcode scanner, location
-  - name: Device permissions for Teams app
-    href: concepts/device-capabilities/native-device-permissions.md
-    displayName: Teams app permission
-  - name: Device permissions for the browser
-    href: concepts/device-capabilities/browser-device-permissions.md
-    displayName: web apps, browser permission
-  - name: Integrate media capabilities
-    href: concepts/device-capabilities/media-capabilities.md
-    displayName: camera
-  - name: Integrate QR or barcode scanner capability
-    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-  - name: Integrate location capabilities
-    href: concepts/device-capabilities/location-capability.md
-    displayName: attendance
 - name: Extend agent or app across Microsoft 365
   items:
   - name: Overview
@@ -1009,9 +995,6 @@
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
   - name: Upload your agent or app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
-  - name: Drive customer adoption of your app
-    href: promote-app-adoption.md
-    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Grow, adapt and track usage
   items:
   - name: Strategize and execute app growth
@@ -1031,6 +1014,9 @@
     - name: Gain traction for collaborative apps
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
       displayName: upskill, awareness, marketplace, activation, rollout, monetization
+    - name: Drive customer adoption of your app
+      href: promote-app-adoption.md
+      displayName: app promotion, awareness, adoption, rollout, admin approval, change management
     - name: Scale your collaborative app
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
       displayName: CSP, webinar, advertise, pitch, sell
@@ -1057,17 +1043,6 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
-- name: Develop with preview features
-  href: developer-preview-features.md
-  displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
-- name: Frequently asked questions
-  href: teams-faq.md
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, new word, meaning
-- name: Support and feedback
-  href: developer-support-feedback.md
-  displayName: Developer community help, questions, suggestions, contact, issues
 - name: Reference
   items:
   - name: App manifest schema
@@ -1087,3 +1062,24 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
+- name: Developer announcements
+  href: developer-announcements.md
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
+- name: Code samples
+  href: get-started/code-samples.md
+- name: Additional resources
+  items:
+  - name: Support and feedback
+    href: developer-support-feedback.md
+    displayName: Developer community help, questions, suggestions, contact, issues
+  - name: Develop with preview features
+    href: developer-preview-features.md
+    displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
+  - name: Frequently asked questions
+    href: teams-faq.md
+  - name: Glossary
+    href: get-started/glossary.md
+    displayName: App tray, terminologies, definitions, new word, meaning
+  - name: Deprecated tools and SDKs
+    href: deprecated-tools-sdks.md
+    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
