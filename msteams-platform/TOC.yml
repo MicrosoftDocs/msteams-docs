@@ -232,7 +232,7 @@
   - name: TeamsJS client library
     href: tabs/how-to/using-teams-client-library.md
     displayName: iFrame, execute URL, getTabInstances
-- name: Agent and app permissions
+- name: Configure agent and app permissions
   items:
     - name: Overview
       href: graph-api/App-permissions/Teams-app-permissions.md
@@ -995,9 +995,6 @@
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
   - name: Upload your agent or app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
-  - name: Drive customer adoption of your app
-    href: promote-app-adoption.md
-    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Grow, adapt and track usage
   items:
   - name: Strategize and execute app growth
@@ -1017,6 +1014,9 @@
     - name: Gain traction for collaborative apps
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
       displayName: upskill, awareness, marketplace, activation, rollout, monetization
+    - name: Drive customer adoption of your app
+      href: promote-app-adoption.md
+      displayName: app promotion, awareness, adoption, rollout, admin approval, change management
     - name: Scale your collaborative app
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
       displayName: CSP, webinar, advertise, pitch, sell
