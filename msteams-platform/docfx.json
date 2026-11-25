@@ -25,7 +25,8 @@
                 "**/*.svg",
                 "**/*.gif",
                 "assets/**/*.pdf",
-                "feed.atom"
+                "feed.atom",
+                "**/*.txt"
             ],
             "exclude": [
                 "**/obj/**",
