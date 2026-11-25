@@ -12,7 +12,7 @@ zone_pivot_groups: teams-sdk-languages
 Single sign-on (SSO) lets your bot-based message extension access protected resources on behalf of the signed-in Teams user. For example, users can search a protected business system and insert its results into a message without repeatedly signing in. Microsoft Entra ID provides the user identity, and an OAuth connection provides access to the resources the user authorizes.
 
 > [!IMPORTANT]
-> This draft describes the required message-extension SSO flow and provides Teams SDK OAuth registration, existing-token lookup, and sign-out helpers for TypeScript, C#, and Python. It doesn't provide a complete message-extension SSO implementation. Authentication response construction, invoke authentication payload handling, token exchange, and request completion require engineering-approved examples before publication. Don't deploy the helpers alone as an SSO implementation.
+> This article describes the required message-extension SSO flow and provides Teams SDK OAuth registration, existing-token lookup, and sign-out helpers for TypeScript, C#, and Python. It doesn't provide a complete message-extension SSO implementation. Authentication response construction, invoke authentication payload handling, token exchange, and request completion require engineering-approved examples before publication. Don't deploy the helpers alone as an SSO implementation.
 
 This article covers bot-based message extensions. For API-based message extensions, see [Enable SSO for API-based message extensions](../../../messaging-extensions/api-based-microsoft-entra.md).
 
@@ -25,7 +25,7 @@ This article covers bot-based message extensions. For API-based message extensio
 * A reachable HTTPS messaging endpoint and a test tenant where you can install the app in Teams.
 * A language-specific Teams SDK project configured for app authentication.
 
-The snippets use the named OAuth flow APIs documented for Teams SDK 2.1. For configuration, see [Configure your app in Microsoft Entra ID](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-register-aad).
+The snippets use the named OAuth flow APIs documented for Teams SDK 2.1. For configuration, see [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md).
 
 <!-- TODO: Engineering must confirm tested package versions for all three languages and the supported message-extension scenarios, clients, accounts, and tenants. -->
 
@@ -74,19 +74,19 @@ The following values must match:
 
 Use the OAuth connection name consistently in your code. This article uses `graph` as an example name; registration doesn't itself grant Microsoft Graph permissions.
 
-If the bot uses a user-assigned managed identity, the bot identity and authentication app registration have different roles. Follow the ID mapping in [webApplicationInfo property](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-manifest#webapplicationinfo-property).
+If the bot uses a user-assigned managed identity, the bot identity and authentication app registration have different roles. Follow the ID mapping in [webApplicationInfo property](bot-sso-manifest.md#webapplicationinfo-property).
 
 ### Configure the app manifest
 
 Configure `webApplicationInfo` with the authentication app ID and the matching application ID URI. Add the required token-service domains to `validDomains`, and configure the relevant commands or link domains in `composeExtensions`.
 
-For more information, see [Update app manifest for SSO](bot-sso-manifest.md) and [Configure your app in Microsoft Entra ID](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-register-aad).
+For more information, see [Update app manifest for SSO](bot-sso-manifest.md) and [Configure your app in Microsoft Entra ID](bot-sso-register-aad).
 
 Use the token-service endpoints appropriate for your deployment. For regional endpoints, see [OAuth URL support for Azure Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true). A service domain containing `botframework.com` is still a service requirement; it isn't an SDK dependency.
 
 ### Configure app authentication and register the OAuth flow
 
-Configure the bot identity, tenant, and credential using [Review or update agent runtime authentication configuration](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/configure-agent-runtime-authentication) and your language's application configuration. Keep credentials in environment configuration or a secret store, not in source code.
+Configure the bot identity, tenant, and credential using [Review or update agent runtime authentication configuration](../../../agents-in-teams/configure-agent-runtime-authentication.md) and your language's application configuration. Keep credentials in environment configuration or a secret store, not in source code.
 
 The following snippets register one OAuth connection. They don't register extension handlers or complete SSO. Add the missing handlers before starting or deploying the app.
 
