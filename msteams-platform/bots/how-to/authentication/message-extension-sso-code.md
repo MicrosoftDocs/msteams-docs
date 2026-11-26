@@ -185,7 +185,7 @@ Use downstream tokens only with the resources for which they're issued. Don't tr
 
 These requirements also apply when your custom API uses a third-party authentication service: validate tokens against that service's trusted issuer and your API's authorization requirements.
 
-For more information, see [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens) and [Teams SDK incoming request authentication](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/incoming-request-authentication).
+For more information, see [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens) and [Teams SDK incoming request authentication](../../../agents-in-teams/incoming-request-authentication.md).
 
 ## Handle sign-out
 
@@ -264,7 +264,7 @@ Sign-out doesn't necessarily sign the user out of Teams or revoke consent. For a
 
 ## See also
 
-* [Add code to enable SSO in a bot](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-code)
-* [Configure your app in Microsoft Entra ID](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-register-aad)
-* [Respond to search commands](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/search-commands/respond-to-search)
-* [Add authentication to your message extension](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/add-authentication)
+* [Add code to enable SSO in a bot](bot-sso-code.md)
+* [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md)
+* [Respond to search commands](../../../messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Add authentication to your message extension](add-authentication.md)
