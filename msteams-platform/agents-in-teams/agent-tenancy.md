@@ -11,7 +11,7 @@ Most workflows for creating and registering an agent, including `teams app creat
 
 ## Verify and configure agent tenant settings
 
-An agent's primary Entra ID app registration, linked to its Agent Communication Service (ACS) registration, resides in a a tenant controlled by its developer. Its `signInAudience` property (displayed in some contexts as its **Supported account types**) determines whether the agent is limited to installation and use in that tenant, or can be installed and used in any tenant.
+An agent's primary Entra ID app registration, linked to its Agent Communication Service (ACS) registration, resides in a tenant controlled by its developer. Its `signInAudience` property (displayed in some contexts as its **Supported account types**) determines whether the agent is limited to installation and use in that tenant, or can be installed and used in any tenant.
 
 To check whether an agent is single-tenant or multi-tenant, sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) and examine the app registration's **Supported account types**.
 
@@ -24,7 +24,7 @@ To check whether an agent is single-tenant or multi-tenant, sign in to the [Micr
 
 ## Considerations for implementation and distribution
 
-All activity data received by any installation of an agent in Teams, across any tenant, is powered by the single runtime endpoint configured in the agent's ACS registration. Developers are responsible for enforcing tenant boundaries within their agent runtime implementations. All user data stored by an agent should be strongly associated with a tenant, and users in one tenant should not be able to access data associated with another.
+Teams agent runtimes are multi-tenant applications: ACS sends all activity payloads for a Teams agent to the single runtime endpoint configured in its ACS registration, regardless of which tenant or installation scope each activity is associated with. Developers are responsible for enforcing tenant boundaries and other logical boundaries within their agent runtime implementations. All user data stored by an agent should be strongly associated with a tenant, and users in one tenant should not be able to access data associated with another.
 
 Agents intended for use only in a single tenant, or a known set of tenants, should always validate the tenant ID of incoming activity payloads in their application code. Configuring an agent to be single-tenant or configuring [sign in audience restrictions](/graph/api/resources/allowedtenantsaudience) are not substitutes for performing tenant validation in code.
 
