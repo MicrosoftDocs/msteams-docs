@@ -1,44 +1,41 @@
 ---
 title: Register Calls & Meetings Bot
-description: Learn to register audio and video call bot, create a bot or add calling capability, and add graph permissions. Sample to create call, join meeting and transfer call.
+description: Learn to enable audio and video calling for an existing bot using Developer Portal for Teams and configure Microsoft Graph permissions.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 06/10/2026
+ms.date: 11/26/2026
 ---
 # Register calls and meetings bot for Microsoft Teams
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There's a new version of app manifest (previously called Teams app manifest) with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [app manifest](/microsoft-365/extensibility/schema/root-bots).
+* The app manifest includes the `supportsCalling` and `supportsVideo` settings in the [bot configuration](/microsoft-365/extensibility/schema/root-bots).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
-* The Graph calls and online meetings APIs permissions require admin consent.
+* Microsoft Graph application permissions for calls and online meetings require admin consent.
 
-## New app manifest settings
+<a name="new-app-manifest-settings"></a>
 
-Calls and online meetings bots have the following two additional settings in the manifest.json that enable audio or video for your bot in Teams.
+## App manifest settings
+
+Calls and online meetings bots use the following settings in the app manifest to enable audio or video for your bot in Teams.
 
 * `bots[0].supportsCalling`. If present and set to `true`, Teams allows your bot to participate in calls and online meetings.
 * `bots[0].supportsVideo`. If present and set to `true`, Teams knows that your bot supports video.
 
-If you want your IDE to properly validate the manifest.json schema for your calls and meetings bot for these values, you can change the `$schema` attribute as follows:
+<a name="create-new-bot-or-add-calling-capabilities"></a>
 
-```json
-"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
-```
+## Add calling capabilities to an existing bot
 
-The next section enables you to create a new bot or add calling capabilities to your existing bot.
+The following steps assume that you already have an Azure bot available in [Developer Portal for Teams](https://dev.teams.microsoft.com/).
 
-## Create new bot or add calling capabilities
+1. In Developer Portal, select **Tools** > **Bot management** > **Azure-managed bots**.
+1. Select the subscription that contains your bot, then select the bot to open its **Configure** page.
+1. Select the Azure portal link under **Update other bot properties in Azure portal**. Azure-managed bot channels are configured in the Azure portal.
+1. In your Azure Bot resource, select **Channels** > **Microsoft Teams**. If the Teams channel isn't enabled, follow [Connect a bot to Microsoft Teams](/azure/bot-service/channel-connect-teams).
+1. On the Teams channel page, select **Calling** > **Enable calling**.
+1. Set **Webhook (for calling)** to the HTTPS endpoint that receives incoming call notifications, such as `https://contoso.com/teamsapp/api/calling`, and save your changes.
 
-To create a new bot for Teams:
-
-1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
-    > [!NOTE]
-    > Bot display names can't include special characters.
-1. Add the Teams channel.
-1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
-
-    ![Configure Teams channel information](~/assets/images/calls-and-meetings/configure-msteams-channel.png)
+For more information about finding and managing an existing Azure bot in Developer Portal, see [Manage Azure bots in Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-test/manage-azure-bots).
 
 The next section provides a list of application permissions supported for calls and online meetings.
 
@@ -48,16 +45,7 @@ The Graph provides granular permissions to control the access that apps have to 
 
 ### RSC permissions for calls
 
-RSC is an authorization framework built by Teams and Microsoft identity platform that allows for granting scoped access to an app. Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type.
-
-If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
-
-The following table provides RSC application permissions for calls:
-
-| Permission name | Action |
-| ----- | ----- |
-| `Calls.AccessMedia.Chat` | Access media streams in calls associated with this chat or meeting. |
-| `Calls.JoinGroupCalls.Chat` | Join calls associated with this chat or meeting. |
+For guidance on requesting and obtaining RSC permissions, see [Resource-specific consent for Teams agents and apps](../../graph-api/rsc/resource-specific-consent.md). For calling permissions such as `Calls.AccessMedia.Chat` and `Calls.JoinGroupCalls.Chat`, see [RSC permissions for chats and meetings](../../graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-chats-and-meetings).
 
 ### Application permissions for calls
 
@@ -105,7 +93,6 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 | **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
-| Calling and meeting bot | This sample demonstrates how a bot can create, join, and transfer calls or meetings within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/Archived/bot-calling-meeting/csharp) |
 | Realtime meeting events |This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-meetings/dotnet/bot-meetings)|
 
 ## Next step

@@ -9,7 +9,7 @@ ms.date: 11/24/2026
 
 Teams SDK offers a dedicated coding agent skill, `teams-dev`, to support support for building agents and apps, well as llms.txt files that agents can use to search and consume the documentation.
 
-## The teams-dev coding agent skill skill
+## The teams-dev coding agent skill
 
 The `teams-dev` coding agent skill gives AI coding assistants (Claude Code, Cursor, GitHub Copilot, and others) relevant context to assist in developing Teams bots and use the Teams Developer CLI to manage your bot infrastructure. Instead of running CLI commands manually, you describe what you want and your AI assistant handles the rest.
 
