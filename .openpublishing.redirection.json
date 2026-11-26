@@ -1,6 +1,276 @@
 {
   "redirections": [
     {
+      "source_path": "msteams-platform/concepts/build-and-test/develop-your-apps-with-toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/concepts/build-and-test/develop-your-apps-with-toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/samples/virtual-assistant.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/samples/virtual-assistant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/agents-in-teams/build-agent-toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/agents-in-teams/build-agent-toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/concepts/build-and-test/adaptive-card-previewer-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/concepts/build-and-test/adaptive-card-previewer-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/concepts/build-and-test/adaptive-card-previewer.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/concepts/build-and-test/adaptive-card-previewer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/concepts/build-and-test/install-adaptive-card-previewer.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/concepts/build-and-test/install-adaptive-card-previewer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/AAD-manifest-customization.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/AAD-manifest-customization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/Microsoft-365-Agents-Toolkit-CLI.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/Microsoft-365-Agents-Toolkit-CLI",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/TeamsFx-collaboration.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-collaboration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/TeamsFx-multi-env.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-multi-env",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/TeamsFx-preview-and-customize-app-manifest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/add-how-to-guides-vsc.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/add-how-to-guides-vsc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/add-resource.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/add-resource",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/add-single-sign-on.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/add-single-sign-on",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/agents-toolkit-fundamentals.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/agents-toolkit-fundamentals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/agents-toolkit-migration-guide.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/agents-toolkit-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/build-environments.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/build-environments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/create-new-project.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/create-new-project",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-apps-in-Teams-desktop-client.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-apps-in-Teams-desktop-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-background-process.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-background-process",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-local.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-local",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-message-extension-app-in-test-tool.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-message-extension-app-in-test-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-mobile.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-overview.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/debug-your-agents-playground.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/debug-your-agents-playground",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/deploy-Teams-app-to-container-service.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/deploy-Teams-app-to-container-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/deploy.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/develop-single-sign-on-experience-in-Teams.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/develop-single-sign-on-experience-in-Teams",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/explore-Agents-Toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/explore-Agents-Toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/install-Agents-Toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/install-Agents-Toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/overview-agents-toolkit.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/overview-agents-toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/provision.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/provision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/publish-your-teams-apps-using-developer-portal.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/publish-your-teams-apps-using-developer-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/publish.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/publish",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/teams-toolkit-migration-guide_1714.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/teams-toolkit-migration-guide_1714",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/test-app-behavior.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/test-app-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/add-single-sign-on-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/add-single-sign-on-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/build-environments-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/build-environments-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/create-new-project-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/create-new-project-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/debug-background-process-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/debug-background-process-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/debug-local-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/debug-local-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/debug-overview-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/debug-overview-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/debug-your-agents-playground-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/debug-your-agents-playground-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/deploy-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/deploy-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Agents-Toolkit-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/explore-Agents-Toolkit-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/install-Agents-Toolkit-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/install-Agents-Toolkit-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/provision-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/provision-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/toolkit-v4/tools-prerequisites-vs.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/toolkit-v4/tools-prerequisites-vs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/tools-prerequisites.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/tools-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/use-CICD-template.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/use-CICD-template",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/toolkit/use-existing-aad-app.md",
+      "redirect_url": "/previous-versions/microsoftteams/platform/toolkit/use-existing-aad-app",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "msteams-platform/feedback.md",
       "redirect_url": "developer-support-feedback",
       "redirect_document_id": true
@@ -1064,10 +1334,14 @@
       },
       {
         "source_path": "msteams-platform/copilot/how-to-extend-copilot.md",
-        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to-extend-copilot"
+        "redirect_url": "/microsoft-365-copilot/extensibility/"
       },
       {
         "source_path": "msteams-platform/messaging-extensions/how-to-extend-copilot.md",
+        "redirect_url": "/microsoft-365-copilot/extensibility/"
+      },
+      {
+        "source_path": "msteams-platform/archive/how-to-extend-copilot.md",
         "redirect_url": "/microsoft-365-copilot/extensibility/"
       },
       {
@@ -1786,6 +2060,36 @@
     {
       "source_path": "msteams-platform/legacy-tools-sdks.md",
       "redirect_url": "/microsoftteams/platform/deprecated-tools-sdks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/how-to/conversations/subscribe-to-conversation-events.md",
+      "redirect_url": "/microsoftteams/platform/bots/bot-concepts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/concepts/listening-activities.md",
+      "redirect_url": "/microsoftteams/platform/bots/activities-handlers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/bots/bot-concepts.md",
+      "redirect_url": "/microsoftteams/platform/bots/agent-scopes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/graph-api/proactive-bots-and-messages/send-personal-welcome-message.md",
+      "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/coding-agent-skill.md",
+      "redirect_url": "/microsoftteams/platform/add-coding-agent-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "msteams-platform/llms-txt.md",
+      "redirect_url": "/microsoftteams/platform/add-coding-agent-support",
       "redirect_document_id": false
     }
     ]
