@@ -11,15 +11,15 @@ ms.date: 10/09/2026
 [Microsoft Graph](/graph/overview) gives you access to the wider Microsoft 365 ecosystem. You can enrich your application with data from across Microsoft 365.
 
 ::: zone pivot="teams-sdk-csharp"
-The SDK gives your application easy access to the Microsoft Graph API via the `Microsoft.Graph` package.
+Teams SDK gives your application easy access to the Microsoft Graph API via the `Microsoft.Graph` package.
 ::: zone-end
 
 ::: zone pivot="teams-sdk-python"
-The SDK gives your application easy access to the Microsoft Graph API via the `microsoft-teams-graph` package.
+Teams SDK gives your application easy access to the Microsoft Graph API via the `microsoft-teams-graph` package.
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"
-The SDK gives your application easy access to the Microsoft Graph API via the `@microsoft/teams.graph`, `@microsoft/teams.graph-endpoints` and `@microsoft/teams.graph-endpoints-beta` packages.
+Teams SDK gives your application easy access to the Microsoft Graph API via the `@microsoft/teams.graph`, `@microsoft/teams.graph-endpoints` and `@microsoft/teams.graph-endpoints-beta` packages.
 ::: zone-end
 
 ::: zone pivot="teams-sdk-typescript"

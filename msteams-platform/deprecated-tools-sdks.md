@@ -38,3 +38,10 @@ Microsoft 365 Agents Toolkit, formerly Teams Toolkit, is a set of developer tool
 Agents Toolkit is actively supported for Copilot extensibility development, but is deprecated for Teams agent and app development.
 
 Use the [Teams developer CLI](teams-developer-cli-overview.md)'s command-line workflow for Teams agent and app development tasks.
+
+## Microsoft Graph Toolkit
+
+The Microsoft Graph Toolkit provided a set of reusable web components and helpers to accelerate development of apps that use Microsoft Graph.
+It is fully deprecated and no longer supported.
+
+Use Teams SDK's [Graph API Client](concepts/sdk-graph-api-client.md) to interact with Microsoft Graph from Teams agents and apps.

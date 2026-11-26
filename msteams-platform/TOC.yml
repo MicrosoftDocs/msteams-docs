@@ -1,25 +1,22 @@
 - name: Teams Platform documentation
   href: index.yml
-- name: Overview
+- name: "Quickstart: Create and chat with an agent"
+  href: agents-in-teams/quickstart-create-agent-teams-sdk.md
+  displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
+- name: Platform overview
   href: overview.md
   displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
-- name: Developer announcements
-  href: developer-announcements.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Build conversational agents for Teams
-  expanded: true
   items:
   - name: Get started
-    expanded: true
     items:
-    - name: "Quickstart: Create and chat with an agent"
-      href: agents-in-teams/quickstart-create-agent-teams-sdk.md
-      displayName: Get started, chat, start, introduction, tutorial, demo, SDK, Teams, bot, developer, CLI, agent, sideload, devtunnel
     - name: Agents in Teams
       href: agents-in-teams/overview.md
-    - name: Agent basics
-      href: bots/bot-concepts.md
+    - name: Agent scopes
+      href: bots/agent-scopes.md
       displayName: scopes, handler, activity
+    - name: Activities and handlers
+      href: bots/activities-handlers.md
     - name: Agent connectivity in Teams
       href: agents-in-teams/agent-connectivity.md
       displayName: connectivity, Teams, agent, network, integration
@@ -124,10 +121,7 @@
       displayName: block kit
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, send message, bot framework, notification,
-    - name: Subscribe to conversation events
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
-      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
+      displayName: conversationId, send message, bot framework, notification, welcome message
     - name: Get Teams-specific context
       href: bots/how-to/get-teams-context.md
       displayName: Fetch roster or user profile, get user profile, get roster, get team, get channel, get chat
@@ -193,10 +187,6 @@
       href: concepts/sdk-app-basics.md
     - name: Listening to events
       href: concepts/listening-events.md
-    - name: Listening to activities
-      href: concepts/listening-activities.md
-    - name: Graph API client
-      href: concepts/sdk-graph-api-client.md
     - name: Agent Communication Service API client
       href: concepts/sdk-teams-api-client.md
     - name: OpenTelemetry (.NET)
@@ -209,24 +199,22 @@
       displayName: static pages, app.tab, HttpServerAdapter, ExpressAdapter, FastAPIAdapter, self-managing server, custom server, Express, FastAPI, Restify, Starlette
     - name: Migrate a Bot Framework SDK bot
       items:
-        - name: Overview
-          href: botbuilder-migration/overview.md
-        - name: Botbuilder Compatibility
-          href: botbuilder-migration/integration.md
-        - name: Sending Activities
-          href: botbuilder-migration/sending-activities.md
-        - name: Proactive Activities
-          href: botbuilder-migration/proactive-activities.md
-        - name: The API Client
-          href: botbuilder-migration/api-client.md
-        - name: User Authentication
-          href: botbuilder-migration/user-authentication.md
+      - name: Overview
+        href: botbuilder-migration/overview.md
+      - name: Botbuilder Compatibility
+        href: botbuilder-migration/integration.md
+      - name: Sending Activities
+        href: botbuilder-migration/sending-activities.md
+      - name: Proactive Activities
+        href: botbuilder-migration/proactive-activities.md
+      - name: The API Client
+        href: botbuilder-migration/api-client.md
+      - name: User Authentication
+        href: botbuilder-migration/user-authentication.md
   - name: Teams developer CLI
     href: teams-developer-cli-overview.md
-  - name: Coding agent skill
-    href: coding-agent-skill.md
-  - name: llms.txt
-    href: llms-txt.md
+  - name: Add coding agent support
+    href: add-coding-agent-support.md
   - name: Teams Developer Portal
     items:
     - name: Overview
@@ -238,174 +226,25 @@
     - name: Manage Azure bots in Developer Portal
       href: concepts/build-and-test/manage-azure-bots.md
       displayName: Azure bots, manage, Developer Portal
-    - name: Develop your apps with Agents Toolkit
-      href: concepts/build-and-test/develop-your-apps-with-toolkit.md
-      displayName: visual studio code, visual studio, agents toolkit, react web app, publish react app, debug
     - name: Analyze app and agent usage in Developer Portal
       href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md
       displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app, agent usage
   - name: TeamsJS client library
     href: tabs/how-to/using-teams-client-library.md
     displayName: iFrame, execute URL, getTabInstances
-  - name: Microsoft Graph SDKs
-    href: /graph/sdks/sdks-overview
-  - name: Microsoft 365 Agents Toolkit
-    items:
+- name: Configure agent and app permissions
+  items:
     - name: Overview
-      href: toolkit/overview-agents-toolkit.md
-      displayName: ATK, M365, Microsoft 365, Agents Toolkit
-    - name: Agents Toolkit for VSC
-      items:
-      - name: Agents Toolkit overview
-        href: toolkit/agents-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
-      - name: Install Agents Toolkit
-        href: toolkit/install-agents-toolkit.md
-        displayName: download
-      - name: Explore Agents Toolkit
-        href: toolkit/explore-agents-toolkit.md
-      - name: Build apps using Agents Toolkit
-        href: toolkit/build-environments.md
-        items:
-        - name: Prerequisites to create Teams agent or app
-          href: toolkit/tools-prerequisites.md
-          displayName: accounts to build your Teams app
-        - name: Create new Teams agent project
-          href: agents-in-teams/build-agent-toolkit.md
-        - name: Create new Teams app project
-          href: toolkit/create-new-project.md
-      - name: Develop your app in VSC
-        items:
-        - name: Add and manage environment
-          href: toolkit/TeamsFx-multi-env.md
-          displayName: local, prod, and dev environment
-        - name: How-to guides
-          href: toolkit/add-how-to-guides-vsc.md
-          displayName: Multiple capabilities app, add tab capability, add bot capability, add message extension capability
-        - name: Add cloud resources and API connection
-          href: toolkit/add-resource.md
-          displayName: application, endpoint
-        - name: Add SSO to Teams app
-          href: toolkit/add-single-sign-on.md
-        - name: Enable SSO for Teams app
-          href: toolkit/develop-single-sign-on-experience-in-teams.md
-        - name: Use Microsoft Entra app in TeamsFx
-          href: toolkit/use-existing-aad-app.md
-        - name: Use certificate or MSI for app authentication
-          href: toolkit/update-bot-me-app-to-use-certificate-or-msi-for-authentication.md
-          displayName: MSI, certificate, bot, message extension, authentication
-      - name: Customize app manifest
-        items:
-        - name: Customize app manifest
-          href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-        - name: Edit Microsoft Entra manifest
-          href: toolkit/aad-manifest-customization.md
-      - name: Debug your Teams app
-        items:
-        - name: App debug overview
-          href: toolkit/debug-overview.md
-        - name: Debug using Agents Playground
-          href: toolkit/debug-your-agents-playground.md
-          displayName: Mock activity, custom activity, predefined activity
-        - name: Debug message extension app in Agents Playground
-          href: toolkit/debug-message-extension-app-in-test-tool.md
-        - name: Debug your app locally
-          href: toolkit/debug-local.md
-        - name: Debug in Teams desktop client
-          href: toolkit/debug-apps-in-teams-desktop-client.md
-          displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Microsoft 365 Agents Toolkit, Visual Studio Code, plugins
-        - name: Debug background process
-          href: toolkit/debug-background-process.md
-        - name: Debug for mobile
-          href: toolkit/debug-mobile.md
-      - name: Host your app on Azure
-        items:
-        - name: Provision cloud resources
-          href: toolkit/provision.md
-        - name: Deploy to cloud using VSC
-          href: toolkit/deploy.md
-        - name: Deploy Teams app to container service
-          href: toolkit/deploy-Teams-app-to-container-service.md
-        - name: Set up CI/CD pipelines
-          href: toolkit/use-CICD-template.md
-      - name: Test your Teams app
-        items:
-        - name: Integrate and collaborate
-          href: toolkit/TeamsFx-collaboration.md
-          displayName: collaborate on Teams
-        - name: Test apps in different environment
-          href: toolkit/test-app-behavior.md
-      - name: Publish your Teams app
-        items:
-        - name: Publish Teams apps using Agents Toolkit
-          href: toolkit/publish.md
-          displayName: license
-        - name: Publish Teams apps using Developer Portal
-          href: toolkit/publish-your-teams-apps-using-developer-portal.md
-        - name: FAQ
-          href: toolkit/faq.md
-    - name: Agents Toolkit for VS
-      items:
-      - name: Overview
-        href: toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md
-        displayName: TTK, version, 17.7
-      - name: Install Agents Toolkit
-        href: toolkit/toolkit-v4/install-agents-toolkit-vs.md
-        displayName: download
-      - name: Explore Agents Toolkit
-        href: toolkit/toolkit-v4/explore-agents-toolkit-vs.md
-      - name: Prepare to build apps using Agents Toolkit
-        href: toolkit/toolkit-v4/build-environments-vs.md
-        items:
-        - name: Prerequisites to create Teams app
-          href: toolkit/toolkit-v4/tools-prerequisites-vs.md
-          displayName: accounts to build your Teams app
-        - name: Create a new Teams app project
-          href: toolkit/toolkit-v4/create-new-project-vs.md
-      - name: Add SSO for Teams app using VS
-        href: toolkit/toolkit-v4/add-single-sign-on-vs.md
-        displayName: authentication
-      - name: Customize Teams app manifest
-        href: toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md
-      - name: Debug your Teams app
-        items:
-        - name: Debug overview
-          href: toolkit/toolkit-v4/debug-overview-vs.md
-        - name: Debug with Agents Playground
-          href: toolkit/toolkit-v4/debug-your-agents-playground-vs.md
-        - name: Debug Teams app locally
-          href: toolkit/toolkit-v4/debug-local-vs.md
-          displayName: DevTunnel
-        - name: Debug background process
-          href: toolkit/toolkit-v4/debug-background-process-vs.md
-          displayName: DevTunnel
-      - name: Host your app on Azure
-        items:
-        - name: Provision cloud resources
-          href: toolkit/toolkit-v4/provision-vs.md
-        - name: Deploy to cloud using VS
-          href: toolkit/toolkit-v4/deploy-vs.md
-      - name: Migrate project from 17.13 to 17.14+
-        href: toolkit/teams-toolkit-migration-guide_1714.md
-      - name: Migrate project from 17.9 to 17.10+
-        href: toolkit/teams-toolkit-migration-guide.md
-        displayName: migrate Teams toolkit, new project structure, YAML configuration
-    - name: Agents Toolkit CLI
-      href: toolkit/microsoft-365-agents-toolkit-CLI.md
-    - name: Adaptive Card Previewer for VSC
-      items:
-      - name: Overview
-        href: concepts/build-and-test/adaptive-card-previewer.md
-        displayName: preview, Adaptive Card, ACP
-      - name: Install Adaptive Card Previewer
-        href: concepts/build-and-test/install-adaptive-card-previewer.md
-        displayName: install, Adaptive Card Previewer, ACP
-    - name: Adaptive Card Previewer for VS
-      href: concepts/build-and-test/adaptive-card-previewer-vs.md
-      displayName: ACP
-  - name: Deprecated tools and SDKs
-    href: deprecated-tools-sdks.md
-    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Teams AI Library
+      href: graph-api/App-permissions/Teams-app-permissions.md
+    - name: Resource-specific consent (RSC)
+      href: graph-api/rsc/resource-specific-consent.md
+      displayName: RSC, permissions, delegated, application
+    - name: Declare RSC permission requirements
+      href: graph-api/rsc/declare-resource-specific-consent-requirements.md
+      displayName: Permissions, delegated, user, team, chat, application
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
 - name: Add user authentication (SSO and OAuth)
   items:
   - name: User authentication in Teams
@@ -486,45 +325,8 @@
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate Microsoft Graph
-  items:
-  - name: Overview
-    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Permissions, communication, channels, delegated, reports, extensions
-  - name: Microsoft Graph Toolkit
-    href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Access, routing
-  - name: Get started
-    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Access, report, MSAL2
-  - name: Teams app permissions
-    href: graph-api/App-permissions/Teams-app-permissions.md
-    displayName: RSC permissions
-  - name: Resource-specific consent
-    items:
-    - name: RSC permissions
-      href: graph-api/rsc/resource-specific-consent.md
-      displayName: types of RSC, delegated, application
-    - name: Preapproval of RSC permissions
-      href: graph-api/rsc/preapproval-instruction-docs.md
-      displayName: User, team, chat, application, delegated
-    - name: Declare RSC permission requirements
-      href: graph-api/rsc/declare-resource-specific-consent-requirements.md
-      displayName: Permissions, delegated, user, team, chat, application
-  - name: Proactive app installation to send messages
-    href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-    displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
-  - name: Send personal welcome message
-    href: graph-api/proactive-bots-and-messages/send-personal-welcome-message.md
-    displayName: personal welcome message, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
-  - name: Approvals app APIs
-    href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
-  - name: Import third-party messages
-    href: graph-api/import-messages/import-external-messages-to-teams.md
-  - name: Code samples
-    href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
-    displayName: graph api samples
-- name: Add Teams app capabilities
+  href: concepts/sdk-graph-api-client.md
+- name: Add app capabilities
   items:
   - name: Get started
     expanded: false
@@ -652,6 +454,9 @@
         displayName: hide page layout
       - name: Activity feed notifications
         href: concepts/design/activity-feed-notifications.md
+        displayName: notify, notification
+      - name: Send activity feed notifications to users in Microsoft Teams
+        href: tabs/send-activity-feed-notification.md
         displayName: notify, notification
   - name: Build tabs
     items:
@@ -949,6 +754,25 @@
       - name: Use dialogs from bots
         href: task-modules-and-cards/task-modules/task-modules-bots.md
         displayName: create dialogue box, invoke dialog, submit action
+  - name: Integrate device capabilities
+    items:
+    - name: What are device capabilities?
+      href: concepts/device-capabilities/device-capabilities-overview.md
+      displayName: camera, microphone, gallery, QR, barcode scanner, location
+    - name: Device permissions for Teams app
+      href: concepts/device-capabilities/native-device-permissions.md
+      displayName: Teams app permission
+    - name: Device permissions for the browser
+      href: concepts/device-capabilities/browser-device-permissions.md
+      displayName: web apps, browser permission
+    - name: Integrate media capabilities
+      href: concepts/device-capabilities/media-capabilities.md
+      displayName: camera
+    - name: Integrate QR or barcode scanner capability
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: Integrate location capabilities
+      href: concepts/device-capabilities/location-capability.md
+      displayName: attendance
   - name: Integrate with Teams
     items:
     - name: Web app integration
@@ -957,9 +781,6 @@
     - name: Considerations for Teams Integration
       href: samples/integrating-web-apps.md
       displayName: Multitenancy, SharePoint
-    - name: Create Virtual Assistant
-      href: samples/virtual-assistant.md
-      displayName: OnMessageActivityAsync, multi-language support
     - name: Power Apps integration
       href: /power-apps/teams/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/TOC.json
       displayName: Power Platform, Power Apps
@@ -1004,6 +825,11 @@
     - name: Use Fluid with Teams
       href: tabs/how-to/using-fluid-msteam.md
       displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React components, Fluid Framework
+    - name: Approvals app APIs
+      href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
+    - name: Import third-party messages
+      href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Resources
     items:
     - name: Localization
@@ -1023,30 +849,6 @@
     - name: Troubleshoot your Microsoft Teams app
       href: resources/troubleshoot.md
       displayName: DevTools, Cache-Control, authentication issues, app uploading error
-    - name: Extend Microsoft 365 Copilot
-      href: messaging-extensions/how-to-extend-copilot.md
-      displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
-- name: Code samples
-  href: get-started/code-samples.md
-- name: Integrate device capabilities
-  items:
-  - name: What are device capabilities?
-    href: concepts/device-capabilities/device-capabilities-overview.md
-    displayName: camera, microphone, gallery, QR, barcode scanner, location
-  - name: Device permissions for Teams app
-    href: concepts/device-capabilities/native-device-permissions.md
-    displayName: Teams app permission
-  - name: Device permissions for the browser
-    href: concepts/device-capabilities/browser-device-permissions.md
-    displayName: web apps, browser permission
-  - name: Integrate media capabilities
-    href: concepts/device-capabilities/media-capabilities.md
-    displayName: camera
-  - name: Integrate QR or barcode scanner capability
-    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
-  - name: Integrate location capabilities
-    href: concepts/device-capabilities/location-capability.md
-    displayName: attendance
 - name: Extend agent or app across Microsoft 365
   items:
   - name: Overview
@@ -1193,9 +995,6 @@
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
   - name: Upload your agent or app in Teams
     href: concepts/deploy-and-publish/apps-upload.md
-  - name: Drive customer adoption of your app
-    href: promote-app-adoption.md
-    displayName: app promotion, awareness, adoption, rollout, admin approval, change management
 - name: Grow, adapt and track usage
   items:
   - name: Strategize and execute app growth
@@ -1215,6 +1014,9 @@
     - name: Gain traction for collaborative apps
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/gain-traction.md
       displayName: upskill, awareness, marketplace, activation, rollout, monetization
+    - name: Drive customer adoption of your app
+      href: promote-app-adoption.md
+      displayName: app promotion, awareness, adoption, rollout, admin approval, change management
     - name: Scale your collaborative app
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/scale-app.md
       displayName: CSP, webinar, advertise, pitch, sell
@@ -1241,21 +1043,12 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
-- name: Develop with preview features
-  href: developer-preview-features.md
-  displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
-- name: Frequently asked questions
-  href: teams-faq.md
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, new word, meaning
-- name: Support and feedback
-  href: developer-support-feedback.md
-  displayName: Developer community help, questions, suggestions, contact, issues
 - name: Reference
   items:
   - name: App manifest schema
     href: /microsoft-365/extensibility/schema
+  - name: Agent activity events and handlers
+    href: bots/agent-activity-handler-reference.md
     displayName: Reference, JSON, package
   - name: Teams SDK for .NET
     href: /dotnet/teams-sdk-dotnet
@@ -1269,3 +1062,24 @@
   - name: Live Share SDK and TeamsJS
     href: /javascript/api/overview/msteams-client
     displayName: Reference, TeamsJS, client
+- name: Developer announcements
+  href: developer-announcements.md
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
+- name: Code samples
+  href: get-started/code-samples.md
+- name: Additional resources
+  items:
+  - name: Support and feedback
+    href: developer-support-feedback.md
+    displayName: Developer community help, questions, suggestions, contact, issues
+  - name: Develop with preview features
+    href: developer-preview-features.md
+    displayName: public preview, devPreview, manifest, GA, general, availability, test, unreleased, evaluate, flag, package
+  - name: Frequently asked questions
+    href: teams-faq.md
+  - name: Glossary
+    href: get-started/glossary.md
+    displayName: App tray, terminologies, definitions, new word, meaning
+  - name: Deprecated tools and SDKs
+    href: deprecated-tools-sdks.md
+    displayName: Bot Framework, TeamsFx, BotBuilder, Teams Toolkit, Agents Toolkit, Microsoft 365 Agents Toolkit, Toolkit, Teams AI Library
