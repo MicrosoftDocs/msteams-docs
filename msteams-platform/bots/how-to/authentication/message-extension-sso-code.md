@@ -14,7 +14,7 @@ Single sign-on (SSO) lets your bot-based message extension access protected reso
 The message extension uses the bot's authentication backend, but users sign in through the extension rather than a bot conversation. This article focuses on app setup, sign-in and token storage, extension invokes, token validation, and sign-out.
 
 > [!IMPORTANT]
-> This draft provides Teams SDK setup and token-operation snippets, not a complete message-extension SSO implementation. The extension sign-in and invoke examples still require engineering confirmation before publication.
+> This article provides Teams SDK setup and token-operation snippets, not a complete message-extension SSO implementation. The extension sign-in and invoke examples still require engineering confirmation before publication.
 
 For API-based extensions, see [Enable SSO for API-based message extensions](../../../messaging-extensions/api-based-microsoft-entra.md).
 
@@ -22,9 +22,9 @@ For API-based extensions, see [Enable SSO for API-based message extensions](../.
 
 When users open your extension, an existing token can allow them to see the available options and retrieve protected results without another prompt. If no usable token is available, users sign in within the message extension. They might also need to grant consent for the requested permissions.
 
-After authentication, the extension returns the requested search results or link preview. Administrator-granted consent can remove the user consent prompt, but doesn't bypass authentication or tenant policy.
+[TODO: Screenshot of update ME UI]
 
-<!-- TODO: Replace legacy UI examples with a current Teams screenshot after Ajay provides the reference. Confirm the visual with the author and review privacy and alt text before adding an asset. -->
+After authentication, the extension returns the requested search results or link preview. Administrator-granted consent can remove the user consent prompt, but doesn't bypass authentication or tenant policy.
 
 ## App setup
 
