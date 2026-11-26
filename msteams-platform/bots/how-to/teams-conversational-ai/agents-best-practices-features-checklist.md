@@ -49,7 +49,7 @@ An agent's ability to receive targeted messages must be enabled in its app manif
 
 ## Welcome messages
 
-Agents can proactively send [welcome messages](../../../graph-api/proactive-bots-and-messages/send-personal-welcome-message.md) when users add them to a conversation or install them as a personal app with one-on-one chat capabilities. Agents should use welcome messages to explain the value they provide, present configuration instructions, offer example prompts, and describe any commands they expose.
+Agents can proactively send [welcome messages](../conversations/send-proactive-messages.md) when users add them to a conversation or install them as a personal app with one-on-one chat capabilities. Agents should use welcome messages to explain the value they provide, present configuration instructions, offer example prompts, and describe any commands they expose.
 
 Agents distributed through the Teams Store and enabled for personal scope (one-on-one conversations) must implement welcome messages, prompt starters, or both.
 

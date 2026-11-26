@@ -13,7 +13,7 @@ ms.date: 06/19/2026
 
 If you need to send messages to users who haven't installed or previously interacted with your app—for example, to broadcast important information to everyone in your organization—you can use the Microsoft Graph API to proactively install your bot for those users. Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member.
 
-This article covers how to use Microsoft Graph to check installation status and install your bot programmatically. After installation, see [Send a personal welcome message](send-personal-welcome-message.md) to learn how to retrieve the conversation ID and send a 1:1 message to the user.
+This article covers how to use Microsoft Graph to check installation status and install your bot programmatically. After installation, see [Send a personal welcome message](../../bots/how-to/conversations/send-proactive-messages.md) to learn how to retrieve the conversation ID and send a 1:1 message to the user.
 
 ## Permissions
 
@@ -139,7 +139,7 @@ Content-Type: application/json
 
 If the user has Microsoft Teams running, app installation occurs immediately. A restart may be required to view the installed app.
 
-For next steps, see [Send a personal welcome message](send-personal-welcome-message.md) to learn how to retrieve the conversation ID and send a 1:1 message to the user.
+For next steps, see [Send a personal welcome message](../../bots/how-to/conversations/send-proactive-messages.md) to learn how to retrieve the conversation ID and send a 1:1 message to the user.
 
 ## Code sample
 
