@@ -3,7 +3,7 @@ title: Universal Actions for Cards - Overview
 description: Learn Universal Actions for Adaptive Cards, such as user-specific views, sequential workflow support, and more for desktop and mobile environments
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 02/28/2023
+ms.date: 09/30/2026
 ---
 
 # Universal Actions for Adaptive Cards
@@ -70,7 +70,7 @@ The following image shows an example of a ticketing message extension (ME) where
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg":::
+:::image type="content" source="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.png" alt-text="Mobile User Specific Views" lightbox="../../../assets/images/adaptive-cards/mobile-universal-bots-incident-management.png":::
 
 # [Desktop](#tab/desktop)
 

@@ -4,7 +4,7 @@ description: Learn how to work with user mentions, send messages, and handle age
 ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
-ms.date: 06/23/2026
+ms.date: 10/27/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -16,65 +16,10 @@ By default, agents in group chats and channels only receive messages when they'r
 
 > [!NOTE]
 >
-> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
+> * Using resource-specific consent (RSC), an agent can receive all channel and group chat messages in conversations where it's installed without being @mentioned. Teams doesn't deliver messages authored by other agents or bots to the agent, even with these permissions. For more information, see [Enable an agent to receive all chat messages](../../../agents-in-teams/enable-receive-all-chat-messages.md).
 > * Private channel support for agent apps is limited. You can add agent-enabled apps in private channels where private channel app support is enabled, but agents can't post messages or Adaptive Cards in private channel conversations. For private and shared channel app support details, see [apps for shared and private channels](~/build-apps-for-shared-private-channels.md).
 
-## Design guidelines
-
-In group chats and channels, design your agent for collaborative conversations with clear value, concise responses, and minimal noise.
-
-## Threaded conversations
-
-::: zone pivot="teams-sdk-csharp"
-
-In Teams channels, messages can be organized into threads. When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `Send()` to send a message in the same thread without quoting, or `Reply()` to send with a visual quote of the inbound message.
-
-```csharp
-app.OnMessage(async (context, cancellationToken) =>
-{
-    // Send in the same thread, no quote
-    await context.Send("Acknowledged", cancellationToken);
-
-    // Send in the same thread with a visual quote of the inbound message
-    await context.Reply("Got it!", cancellationToken);
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-typescript"
-
-When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
-
-```typescript
-app.on('message', async ({ send, reply }) => {
-  // Send in the same thread, no quote
-  await send('Acknowledged');
-
-  // Send in the same thread with a visual quote of the inbound message
-  await reply('Got it!');
-});
-```
-
-::: zone-end
-
-::: zone pivot="teams-sdk-python"
-
-When your agent receives a message in a thread, the conversation context already carries the thread ID. Use `send()` to send a message in the same thread without quoting, or `reply()` to send with a visual quote of the inbound message.
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    # Send in the same thread, no quote
-    await ctx.send("Acknowledged")
-
-    # Send in the same thread with a visual quote of the inbound message
-    await ctx.reply("Got it!")
-```
-
-::: zone-end
-
-For sending messages into a thread proactively, see [Proactive messages](send-proactive-messages.md).
+Design your agent for collaborative conversations with clear value, concise responses, and minimal noise. In channels, respond in the thread under the user's message to keep follow-up messages together. For recommended threading behavior and SDK and REST API examples, see [Use threads in channels and one-on-one agent chats](agent-chat-threads.md).
 
 ## Send a message on installation
 
@@ -87,6 +32,17 @@ You can also store the `conversationId` during installation to enable [proactive
 The following code shows an example of sending welcome messages on installation:
 
 ::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnInstall(async (context, cancellationToken) =>
+{
+    await context.SendAsync("Hello! I'm your agent. Here's what I can do...", cancellationToken);
+}); 
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnInstall(async context => 
@@ -145,6 +101,29 @@ You can retrieve all mentions in the message by filtering the `entities` array i
 The following code shows an example of retrieving mentions:
 
 ::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var mentions = context.Activity.Entities?
+        .Where(e => e.Type == "mention")
+        .ToList();
+
+    if (mentions != null && mentions.Any())
+    {
+        var firstMention = mentions[0].Properties["mentioned"]?["name"]?.ToString();
+        await context.SendAsync($"Hello {firstMention}", cancellationToken);
+    }
+    else
+    {
+        await context.SendAsync("Aw, no one was mentioned.", cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async context =>
@@ -327,6 +306,21 @@ The following code shows an example of adding mentions to your messages:
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var user = context.Activity.From;
+    var message = new MessageActivityInput()
+        .WithText($"Hello <at>{user.Name}</at>!")
+        .AddMention(user);
+    await context.SendAsync(message, cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -410,6 +404,19 @@ The following code snippet shows an example of mentioning users with Entra Objec
 
 ::: zone pivot="teams-sdk-csharp"
 
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Mention a user by their User Principal Name (UPN)
+    var user = new Account { Id = "Adele@microsoft.com", Name = "Adele" };
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(user), cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
+
 ```csharp
 app.OnMessage(async context =>
 {
@@ -470,6 +477,19 @@ Your agent can mention tags in text messages and Adaptive Cards posted in channe
 To mention a tag, include a mention entity with `"type": "tag"` in your message. The `id` field must be the base64-encoded tag ID from the [List teamworkTags](/graph/api/teamworktag-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API.
 
 ::: zone pivot="teams-sdk-csharp"
+
+# [C# SDK v2.1](#tab/dotnet-v2-1)
+
+```csharp
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    // Mention a tag using the tag's Graph API ID
+    var tag = new Account { Id = "<base64-encoded-tag-id>", Name = "Test Tag" };
+    await context.SendAsync(new MessageActivityInput().WithText("Hello!").AddMention(tag), cancellationToken);
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/dotnet-legacy)
 
 ```csharp
 app.OnMessage(async context =>
@@ -564,11 +584,6 @@ The following table lists the throttling limits for tag mentions in an agent:
 * Tag mentions aren't supported in shared and private channels.
 * Tag mentions aren't supported in connectors.
 * Tag mentions don't support the invoke flow in an agent.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## See also
 

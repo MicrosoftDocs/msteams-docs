@@ -3,7 +3,7 @@ title: Sequential Workflow for Adaptive Cards
 description: Learn about Sequential Workflows for Adaptive Cards using Universal Actions with code samples, invoke request received on bot side, and Adaptive Card response.
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 12/14/2022
+ms.date: 10/13/2026
 ---
 
 # Sequential Workflows

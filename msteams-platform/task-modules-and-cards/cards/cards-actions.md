@@ -747,7 +747,71 @@ Universal Action submissions are delivered to your bot as `invoke` activities na
 
 Use the `OnAdaptiveCardAction` handler to process card actions:
 
-# [C#](#tab/csharp7)
+# [C# SDK v2.1](#tab/csharp7)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+
+//...
+
+teams.OnAdaptiveCardAction(async (context, cancellationToken) =>
+{
+  var data = context.Activity.Value?.Action?.Data;
+
+    if (data == null)
+    {
+        return AdaptiveCardResponse.CreateMessageResponse("No data specified", 400);
+    }
+
+    string? action = data.TryGetValue("action", out var actionObj) ? actionObj?.ToString() : null;
+
+    if (string.IsNullOrEmpty(action))
+    {
+        return AdaptiveCardResponse.CreateMessageResponse("No action specified", 400);
+    }
+
+    string? GetFormValue(string key)
+    {
+        if (data.TryGetValue(key, out var val))
+        {
+            if (val is JsonElement element)
+                return element.GetString();
+            return val?.ToString();
+        }
+        return null;
+    }
+
+    switch (action)
+    {
+        case "submit_feedback":
+            var feedbackText = GetFormValue("feedback") ?? "No feedback provided";
+            await context.SendAsync($"Feedback received: {feedbackText}", cancellationToken);
+            break;
+
+        case "create_task":
+            var title = GetFormValue("title") ?? "Untitled";
+            var priority = GetFormValue("priority") ?? "medium";
+            var dueDate = GetFormValue("due_date") ?? "No date";
+            await context.SendAsync($"Task created!\nTitle: {title}\nPriority: {priority}\nDue: {dueDate}", cancellationToken);
+            break;
+
+        case "save_profile":
+            var name = GetFormValue("name") ?? "Unknown";
+            var email = GetFormValue("email") ?? "No email";
+            var subscribe = GetFormValue("subscribe") ?? "false";
+            await context.SendAsync($"Profile saved!\nName: {name}\nEmail: {email}\nSubscribed: {subscribe}", cancellationToken);
+            break;
+
+        default:
+            return AdaptiveCardResponse.CreateMessageResponse("Unknown action", 400);
+    }
+
+    return AdaptiveCardResponse.CreateMessageResponse("Action processed successfully");
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp7-legacy)
 
 ```csharp
 using System.Text.Json;
@@ -1134,7 +1198,31 @@ def create_task_form_card():
 
 ### Send the card
 
-# [C#](#tab/csharp9)
+# [C# SDK v2.1](#tab/csharp9)
+
+```csharp
+using System.Text.Json;
+using Microsoft.Teams.Apps;
+using Microsoft.Teams.Apps.Schema;
+
+teams.OnMessage(async (context, cancellationToken) =>
+{
+    var text = context.Activity.Text?.ToLowerInvariant() ?? "";
+
+    if (text.Contains("form"))
+    {
+        await context.TypingAsync(cancellationToken);
+        var card = CreateTaskFormCard();
+        JsonElement cardElement = JsonSerializer.SerializeToElement(card);
+        TeamsAttachment attachment = TeamsAttachment.CreateBuilder()
+          .WithAdaptiveCard(cardElement)
+          .Build();
+        await context.SendAsync(new MessageActivityInput().AddAttachment(attachment), cancellationToken);
+    }
+});
+```
+
+# [C# SDK<2.1(legacy)](#tab/csharp9-legacy)
 
 ```csharp
 teams.OnMessage(async context =>

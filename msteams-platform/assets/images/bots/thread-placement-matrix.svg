@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Choose where a one-on-one chat response appears</title>
+  <desc id="desc">Four diagrams show incoming L1 and L2 messages and possible L1 main-chat or L2 thread responses. L1 to L2 starts a thread under the top-level message. L2 to L2 continues in the same thread. L2 to L1 returns to the main chat.</desc>
+  <style>
+    text { font-family: Segoe UI, Arial, sans-serif; fill: #242424; }
+    .heading { font-size: 24px; font-weight: 600; }
+    .label { font-size: 18px; font-weight: 600; }
+    .copy { font-size: 16px; }
+    .card { fill: #ffffff; stroke: #8a8886; stroke-width: 1.5; }
+    .incoming { fill: #e8f1fb; stroke: #5b86b4; stroke-width: 1.5; }
+    .outgoing { fill: #e7f2e7; stroke: #5a865c; stroke-width: 1.5; }
+    .thread { fill: none; stroke: #8a8886; stroke-width: 2; }
+    .arrow { fill: none; stroke: #424242; stroke-width: 2; marker-end: url(#arrow); }
+    .tag { font-size: 15px; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#424242" />
+    </marker>
+  </defs>
+  <text x="32" y="42" class="heading">Incoming message level and response location are separate choices</text>
+
+  <g transform="translate(24,68)">
+    <rect width="564" height="266" rx="8" class="card" />
+    <text x="20" y="32" class="label">L1 → L1 · answer in the main chat</text>
+    <rect x="28" y="58" width="220" height="56" rx="8" class="incoming" />
+    <text x="42" y="82" class="tag">Incoming L1</text>
+    <text x="42" y="103" class="copy">Root message</text>
+    <path d="M258 86 H310" class="arrow" />
+    <rect x="326" y="58" width="210" height="56" rx="8" class="outgoing" />
+    <text x="342" y="82" class="tag">Response L1</text>
+    <text x="342" y="103" class="copy">Main chat</text>
+    <text x="28" y="154" class="copy">The SDK default for an incoming L1 message.</text>
+  </g>
+
+  <g transform="translate(612,68)">
+    <rect width="564" height="266" rx="8" class="card" />
+    <text x="20" y="32" class="label">L1 → L2 · start a thread</text>
+    <rect x="28" y="58" width="220" height="56" rx="8" class="incoming" />
+    <text x="42" y="82" class="tag">Incoming L1</text>
+    <text x="42" y="103" class="copy">Thread root</text>
+    <path d="M258 86 H310" class="arrow" />
+    <path d="M330 58 V148 H350" class="thread" />
+    <rect x="350" y="120" width="186" height="56" rx="8" class="outgoing" />
+    <text x="366" y="144" class="tag">Response L2</text>
+    <text x="366" y="165" class="copy">Under the root</text>
+    <text x="28" y="218" class="copy">Target the incoming message ID as the root.</text>
+  </g>
+
+  <g transform="translate(24,356)">
+    <rect width="564" height="266" rx="8" class="card" />
+    <text x="20" y="32" class="label">L2 → L1 · return to the main chat</text>
+    <rect x="28" y="58" width="220" height="56" rx="8" class="incoming" />
+    <text x="42" y="82" class="tag">Incoming L2</text>
+    <text x="42" y="103" class="copy">Thread follow-up</text>
+    <path d="M258 86 H310" class="arrow" />
+    <rect x="326" y="58" width="210" height="56" rx="8" class="outgoing" />
+    <text x="342" y="82" class="tag">Response L1</text>
+    <text x="342" y="103" class="copy">Main chat</text>
+    <text x="28" y="154" class="copy">Target the containing chat ID.</text>
+  </g>
+
+  <g transform="translate(612,356)">
+    <rect width="564" height="266" rx="8" class="card" />
+    <text x="20" y="32" class="label">L2 → L2 · continue the same thread</text>
+    <rect x="28" y="58" width="220" height="56" rx="8" class="incoming" />
+    <text x="42" y="82" class="tag">Incoming L2</text>
+    <text x="42" y="103" class="copy">Thread follow-up</text>
+    <path d="M258 86 H310" class="arrow" />
+    <path d="M330 58 V148 H350" class="thread" />
+    <rect x="350" y="120" width="186" height="56" rx="8" class="outgoing" />
+    <text x="366" y="144" class="tag">Response L2</text>
+    <text x="366" y="165" class="copy">Same thread</text>
+    <text x="28" y="218" class="copy">Use the existing thread root ID.</text>
+  </g>
+</svg>
