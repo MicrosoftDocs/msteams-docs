@@ -35,7 +35,7 @@ Before adding authentication code, you need:
 * A Microsoft Entra app registration configured for SSO and the delegated permissions your resource requires.
 * An app manifest with the extension commands or link domains and `webApplicationInfo`.
 
-For setup instructions, see [Configure your app in Microsoft Entra ID](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-register-aad), [Update app manifest for SSO](bot-sso-manifest.md), and [Review or update agent runtime authentication configuration](https://learn.microsoft.com/microsoftteams/platform/agents-in-teams/configure-agent-runtime-authentication).
+For setup instructions, see [Configure your app in Microsoft Entra ID](bot-sso-register-aad.md), [Update app manifest for SSO](bot-sso-manifest.md), and [Review or update agent runtime authentication configuration](../../../agents-in-teams/configure-agent-runtime-authentication.md).
 
 The application ID URI, OAuth connection's token exchange URL, and `webApplicationInfo.resource` must match. Keep credentials in environment configuration or a secret store.
 
@@ -161,9 +161,9 @@ async def get_user_token(
 
 If no token is available, your extension must use its sign-in experience before accessing protected resources. Conversational `signIn`, `SignInAsync`, and `sign_in` helpers send an OAuth card; they aren't substitutes for the extension's authentication response.
 
-For related bot authentication guidance, see [Add code to enable SSO in a bot](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/authentication/bot-sso-code). The backend concepts are shared; the extension invokes and user interaction differ.
+For related bot authentication guidance, see [Add code to enable SSO in a bot](bot-sso-code.md). The backend concepts are shared; the extension invokes and user interaction differ.
 
-If you use a third-party authentication service, follow its sign-in and token-management contract. Don't assume it supports Microsoft Entra SSO or the same OAuth connection flow. For more information, see [Add authentication to your message extension](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
+If you use a third-party authentication service, follow its sign-in and token-management contract. Don't assume it supports Microsoft Entra SSO or the same OAuth connection flow. For more information, see [Add authentication to your message extension](add-authentication.md).
 
 ## Handle message-extension invokes
 
@@ -171,7 +171,7 @@ Search and link-unfurling requests arrive as invokes, not bot messages. Handle t
 
 Use the authenticated user's token to retrieve the requested data and return a message-extension result. If authentication is required, return the extension's supported sign-in response. A conversational "signed in" message doesn't complete the extension request.
 
-For the language-specific request and response examples, see [Respond to search commands](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/search-commands/respond-to-search) and [Add link unfurling](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/how-to/link-unfurling).
+For the language-specific request and response examples, see [Respond to search commands](../../../messaging-extensions/how-to/search-commands/respond-to-search.md) and [Add link unfurling](../../../messaging-extensions/how-to/link-unfurling.md).
 
 <!-- TODO: Add engineering-approved shortened extension sign-in and invoke examples for TypeScript, C#, and Python. Confirm authentication payload handling and the supported response APIs, including C#, rather than implying conversational callbacks complete an extension request. -->
 
