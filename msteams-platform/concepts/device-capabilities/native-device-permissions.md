@@ -5,7 +5,7 @@ description: Learn to update your app manifest to request access to native featu
 ms.localizationpriority: high
 ms.topic: how-to
 ms.author: vikasalmal
-ms.date: 03/02/2026
+ms.date: 11/25/2026
 ---
 
 # Request device permissions for your Teams app
@@ -20,7 +20,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 ## Native device permissions
 
-You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, dialogs (referred as task modules in TeamsJS v1.x), or message extensions. The user must go to the permissions page in Teams settings to manage device permissions.
+You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, dialogs (referred as task modules in TeamsJS v1.x), or message extensions. On Teams desktop, users can manage device permissions in Teams settings.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
 
 * Capture and view images
@@ -42,18 +42,7 @@ While access to these features is standard in modern web browsers, you must info
 
 ## Manage permissions
 
-A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
-
-# [Mobile](#tab/mobile)
-
-1. Open Teams.
-1. Go to **Settings** > **App permissions**.
-1. Select the app for which you want to customize the settings.
-1. Select your desired settings.
-
-    :::image type="content" source="~/assets/images/tabs/MobilePermissions.png" alt-text="Screenshot shows the mobile App permissions.":::
-
-# [Desktop](#tab/desktop)
+A user can manage device permissions in Teams desktop settings by selecting **Allow** or **Deny** permissions to specific apps.
 
 1. Open Teams.
 1. Go to **Settings** > **App permissions**.
@@ -61,8 +50,6 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your desired settings.
 
     :::image type="content" source="../../assets/images/tabs/device-permissions-new.png" alt-text="Screenshot shows the device permissions." lightbox="~/assets/images/tabs/device-permissions-new.png":::
-
----
 
 ## Specify permissions
 
