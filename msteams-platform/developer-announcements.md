@@ -9,6 +9,16 @@ ms.date: 11/20/2026
 
 Subscribe to the [Atom feed](https://aka.ms/TeamsPlatformUpdates) to receive these announcements in your feed reader as they're published.
 
+## Released: Update existing agents for group-chat-to-channel conversion
+
+*November 27, 2026*
+
+If you maintain a Teams agent that participates in group chats, review and update its event handlers for group-chat-to-channel conversion, including agents built before this capability was available.
+
+New event fields help your agent preserve conversation state and distinguish automatic installations from ordinary onboarding. Existing handlers that don't account for these scenarios can lose conversation continuity or send unexpected welcome messages.
+
+Review [Preserve conversation state during conversion](bots/build-conversational-capability.md#preserve-conversation-state-during-conversion), update your [conversion event handlers](bots/agent-activity-handler-reference.md#handle-group-chat-to-channel-conversion-events), and apply the [welcome-message guidance](bots/how-to/conversations/send-proactive-messages.md#welcome-messages) to existing implementations.
+
 ## Action required: Upcoming changes to file upload and download authentication for Microsoft Teams agents
 
 *November 20, 2026*
