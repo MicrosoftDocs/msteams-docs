@@ -5,7 +5,7 @@ ms.topic: article
 ms.owner: nickwalk
 ms.author: nickwalk
 ms.localizationpriority: high
-ms.date: 06/30/2026
+ms.date: 11/27/2026
 ---
 
 # Proactive messages
@@ -87,6 +87,8 @@ If you don't have the `conversationId`, you can [proactively install your app us
 
 Use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any activity sent to you from that context. Store this ID for reference.
 
+When a group chat is converted into a private channel, the destination conversation has a different ID. Reassociate existing conversation state using the conversion-related `channelMemberAdded` activity, not the installation activity. For more information, see [Preserve conversation state during conversion](../../build-conversational-capability.md#preserve-conversation-state-during-conversion).
+
 After you get the appropriate address information, you can send your message.
 
 ## Send the message
@@ -122,11 +124,18 @@ Date: Tue, 29 Mar 2022 17:34:33 GMT
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it marks their first interaction with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. A welcome message might be their first interaction with your app. It's important to explain why users are receiving the message.
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
+When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. If it's their first interaction with your app, it's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
+
+An installation or membership event doesn't always represent a first interaction. Before sending a welcome message for an `installationUpdate/add` activity, check `channelData.settings.backgroundInstall`. If this property is `true`, Teams installed your agent automatically. Suppress welcome messages and other onboarding behavior that's inappropriate for an automatic installation.
+
+Automatic installation can occur when a group chat is converted into a private channel. Users are continuing an existing conversation, so don't repeat your agent's introduction. For conversion-related channel membership events, also suppress welcome messages when `channelData.convertedFromConversation.id` is present.
+
+> [!NOTE]
+> `backgroundInstall` isn't specific to conversions. Don't use it to identify a conversion or reassociate conversation state. For event-specific guidance, see [Handle group-chat-to-channel conversion events](../../agent-activity-handler-reference.md#handle-group-chat-to-channel-conversion-events).
 
 A good welcome message can include the following information:
 
@@ -206,6 +215,8 @@ Ensure that you authenticate and have a [bearer token](/azure/bot-service/rest-a
 
 The following code shows how to send proactive messages using the Teams SDK (Teams AI Library):
 
+The installation handlers store the conversation ID, but skip the welcome message and onboarding reminder when Teams installs the agent automatically. The .NET examples read `backgroundInstall` from the settings extension properties, and the Python example reads it from `model_extra`, because those SDK settings models don't declare a dedicated property.
+
 # [C# SDK v2.1](#tab/dotnet)
 
 ```csharp
@@ -213,6 +224,16 @@ The following code shows how to send proactive messages using the Teams SDK (Tea
 teams.OnInstall(async (context, cancellationToken) =>
 {
     context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    if (context.Activity.ChannelData?.Settings?.Properties
+        .TryGetValue("backgroundInstall", out var backgroundInstall) == true
+        && backgroundInstall is System.Text.Json.JsonElement
+        {
+            ValueKind: System.Text.Json.JsonValueKind.True
+        })
+    {
+        return;
+    }
+
     await context.SendAsync("Hi! I am going to remind you to say something to me soon!", cancellationToken);
     notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
 });
@@ -237,6 +258,16 @@ public static class Notifications
 teams.OnInstall(async (context, cancellationToken) =>
 {
     context.Storage.Set(context.Activity.From.AadObjectId!, context.Activity.Conversation.Id);
+    if (context.Activity.ChannelData?.Settings?.Properties
+        .TryGetValue("backgroundInstall", out var backgroundInstall) == true
+        && backgroundInstall is System.Text.Json.JsonElement
+        {
+            ValueKind: System.Text.Json.JsonValueKind.True
+        })
+    {
+        return;
+    }
+
     await context.Send("Hi! I am going to remind you to say something to me soon!", cancellationToken);
     notificationQueue.AddReminder(context.Activity.From.AadObjectId!, Notifications.SendProactive, 10_000);
 });
@@ -266,6 +297,10 @@ app.on("install.add", async ({ activity, send }) => {
     activity.from.aadObjectId!,
     activity.conversation.id,
   );
+  if (activity.channelData?.settings?.backgroundInstall === true) {
+    return;
+  }
+
   await send("Hi! I am going to remind you to say something to me soon!");
   notificationQueue.addReminder(
     activity.from.aadObjectId!,
@@ -295,6 +330,10 @@ storage = dict[str, str]()
 @app.on_install_add
 async def handle_install_add(ctx: ActivityContext[InstalledActivity]):
     storage[ctx.activity.from_.aad_object_id] = ctx.activity.conversation.id
+    settings = ctx.activity.channel_data.settings if ctx.activity.channel_data else None
+    if settings and (settings.model_extra or {}).get("backgroundInstall") is True:
+        return
+
     await ctx.send("Hi! I am going to remind you to say something to me soon!")
     notification_queue.add_reminder(ctx.activity.from_.aad_object_id, send_proactive_notification, 60000)
 
