@@ -25,15 +25,19 @@ The existing SSO guidance documents search and link-unfurling scenarios. These r
 
 ## How message-extension SSO works
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/sequence-diagram.png" alt-text="Image shows the sequence diagram for enabling SSO for message extension app.":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/sequence-diagram.png" alt-text="Image shows the sequence diagram for enabling SSO for message extension app." lightbox="../../../assets/images/authentication/teams-sso-mex/sequence-diagram.png":::
 
-1. The user runs a search command or pastes a link from one of your registered domains. Teams sends a `composeExtension/query` or `composeExtension/queryLink` invoke to your bot.
-1. Your handler checks the token store for a token for this user. If one exists, go to step 6.
-1. If no token exists, your handler returns a `silentAuth` response that includes a sign-in link.
-1. Teams gets an SSO token for the user, shows a consent prompt if one is needed, and resends the same invoke with the token in `value.authentication.token`.
-1. Your handler exchanges the SSO token through the OAuth connection. The token service stores the resulting token for the user.
-   * If the token can't be exchanged and the platform requires interactive sign-in, return HTTP status `412`. Teams then shows the interactive sign-in using the link from step 3. After the user signs in, Teams resends the query with a magic code in `value.state`; pass it to the token service to finish sign-in. Don't convert network or service errors into `412`; confirm the SDK's exact nonexchangeable-token result before implementing this branch.
-1. Your handler uses the token to retrieve the data and returns a `result` response.
+1. The user runs a search command or pastes a link from a registered domain. Teams sends a `composeExtension/query` or `composeExtension/queryLink` invoke to your bot.
+1. Your handler checks the token store for the user's token. If a token is available, continue to step 6.
+1. If no token is available, your handler returns a `silentAuth` response with a sign-in link.
+1. Teams obtains an SSO token for the user, requests consent if needed, and resends the original invoke with the token in `value.authentication.token`.
+1. Your handler exchanges the SSO token through the OAuth connection. The token service stores the resulting access token for the user.
+
+   If the exchange requires interactive sign-in, your handler returns HTTP `412`. Teams opens the sign-in experience using the link from step 3. After sign-in, Teams resends the query with a magic code in `value.state`. Your handler passes this code to the token service to complete authentication.
+
+   Return HTTP `412` only for the SDK-confirmed nonexchangeable-token result. Handle network and service errors separately.
+
+1. Your handler uses the access token to retrieve the requested data and returns a `result` response to Teams.
 
 When an administrator grants tenant-wide consent, users don't see the consent prompt. Admin consent doesn't bypass authentication or tenant policy.
 
