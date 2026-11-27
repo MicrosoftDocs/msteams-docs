@@ -89,18 +89,11 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
 
 ## Value Proposition
 
-Agents should be designed to complete enterprise workflows and must deliver differentiated value beyond what Copilot offers by one of the following [*Must fix*]:
+Agents and Plugins should be designed to complete enterprise workflows and must deliver differentiated value beyond what Copilot offers by one of the following [*Must fix*]:
 
 * Achieving workflows that cannot be achieved easily via Copilot. For example, a **Contoso Ticket Management Agent** that allows users to create tickets directly on the Contoso platform.
 * Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
 * Using specialized orchestration or fine-tuned models for domain-specific workflows. For example, a **Contoso Pharma Agent** fine-tuned on pharma data to help identify domain-specific chemicals.
-
-Copilot Cowork can be [extended](/microsoft-365/copilot/cowork/cowork-plugin-development) through:
-
-* Skills — Custom skills can be published using the agentSkills manifest node
-* Connectors — Dynamic MCP server tools can be published using the agentConnector manifest node
-  
-  All such Skills and Connectors must deliver clear, differentiated Enterprise value beyond native Copilot Cowork capabilities.
 
 ## Description
 
@@ -225,13 +218,13 @@ Agent responses provided as an Adaptive Card must meet the following requirement
 
 ## Compatibility
 
-Agents must be fully responsive and functional on the latest versions of these clients: [*Must fix*]
+Agents and Plugins must be fully responsive and functional on the latest versions of these clients: [*Must fix*]
 
-* Microsoft Teams on desktop and web
-* copilot.microsoft.com on web
-* Microsoft 365 Copilot in Word
+* Microsoft Teams copilot (Desktop and Web)
+* Microsoft Outlook copilot (Desktop and web)
+* Copilot App (Desktop and web)
 
-### Ensure your agents work with Microsoft 365 - Word, Excel, PowerPoint, OneNote, Office, and Outlook Copilots
+In addition to above, plugin should also be responsive and functional within – Word, Excel, PowerPoint, and OneNote.
 
 You must ensure to meet the following guidelines for agents:
 
