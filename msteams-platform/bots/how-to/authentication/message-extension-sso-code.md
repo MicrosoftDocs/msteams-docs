@@ -25,7 +25,7 @@ The existing SSO guidance documents search and link-unfurling scenarios. These r
 
 ## How message-extension SSO works
 
-<!-- TODO: Add sequence diagram image here. -->
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/sequence-diagram.png" alt-text="Image shows the sequence diagram for enabling SSO for message extension app.":::
 
 1. The user runs a search command or pastes a link from one of your registered domains. Teams sends a `composeExtension/query` or `composeExtension/queryLink` invoke to your bot.
 1. Your handler checks the token store for a token for this user. If one exists, go to step 6.
