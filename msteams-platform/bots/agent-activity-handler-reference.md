@@ -2,7 +2,7 @@
 title: Teams Agent Events and Activity Handlers
 description: Teams agent events include messages, member changes, channel updates, meetings, and card actions. Find handler registration syntax for each SDK language.
 ms.topic: reference
-ms.date: 11/24/2026
+ms.date: 11/27/2026
 zone_pivot_groups: teams-sdk-languages
 ai-usage: ai-assisted
 ---
@@ -84,7 +84,7 @@ The list of event names supported by `app.on()` includes the following:
 | `channelDeleted` | `'channelDeleted'` | A Teams channel was deleted. |
 | `channelRenamed` | `'channelRenamed'` | A Teams channel was renamed. |
 | `channelRestored` | `'channelRestored'` | A Teams channel was restored. |
-| `channelMemberAdded` | `'channelMemberAdded'` | A member was added to a channel. |
+| `channelMemberAdded` | `'channelMemberAdded'` | A member was added to a channel. Inspect the [conversion fields](#handle-group-chat-to-channel-conversion-events) before responding. |
 | `channelMemberRemoved` | `'channelMemberRemoved'` | A member was removed from a channel. |
 | `teamRenamed` | `'teamRenamed'` | The team was renamed. |
 | `teamArchived` | `'teamArchived'` | The team was archived. |
@@ -250,6 +250,7 @@ Conversation update activity payloads have `type` of `conversationUpdate`. Chann
 | Channel renamed | `channelData.eventType`: `channelRenamed` | Team | [Channel renamed](#channel-renamed-payload) |
 | Channel deleted | `channelData.eventType`: `channelDeleted` | Team | [Channel deleted](#channel-deleted-payload) |
 | Channel restored | `channelData.eventType`: `channelRestored` | Team | [Channel restored](#channel-restored-payload) |
+| Channel members added | `channelData.eventType`: `channelMemberAdded`; `membersAdded` | Channel | For conversion-specific fields, see [Handle group-chat-to-channel conversion events](#handle-group-chat-to-channel-conversion-events). |
 | Members added | `membersAdded`; in a team, `channelData.eventType`: `teamMemberAdded` | All | [Team installation](#members-added-team-installation-payload), [personal installation](#members-added-personal-installation-payload) |
 | Members removed | `membersRemoved`; in a team, `channelData.eventType`: `teamMemberRemoved` | All | [Members removed](#members-removed-payload) |
 | Team renamed | `channelData.eventType`: `teamRenamed` | Team | [Team renamed](#team-renamed-payload) |
@@ -262,6 +263,51 @@ Channel lifecycle payloads include the channel's ID and name in `channelData.cha
 
 Azure Communication Services clients joining or leaving Teams meetings do not trigger conversation update activities.
 
+### Handle group-chat-to-channel conversion events
+
+When a group chat is converted into a private channel, agents added to the destination channel receive conversation events. These events also occur outside conversion, so inspect the activity payload before deciding how to respond. For conversion behavior and agent eligibility, see [Preserve conversation state during conversion](build-conversational-capability.md#preserve-conversation-state-during-conversion).
+
+| Event | Received after conversion? | Guidance |
+| --- | --- | --- |
+| `conversationUpdate/channelMemberAdded` | All agents added to the destination channel. | Use only this handler for state reassociation and other required post-conversion behavior. The presence of `channelData.convertedFromConversation.id` indicates conversion. Use its value as the original group chat ID and `conversation.id` as the destination conversation ID. Suppress welcome messages and repeated onboarding. |
+| `installationUpdate/add` | Agents added to the destination channel that weren't already members of its team. | Usually doesn't require conversion-specific logic. If you handle it for other reasons, check `channelData.settings.backgroundInstall`. When it's `true`, suppress welcome messages and other behavior that's inappropriate for automatic installation. Don't reassociate state in this handler. |
+| `conversationUpdate/teamMemberAdded` | Agents added to the destination channel that weren't already members of its team. | Don't use this event for conversion-related logic. Its payload doesn't distinguish conversion from other scenarios. |
+
+> [!NOTE]
+> `channelData.convertedFromConversation.id` identifies the original group chat in a conversion-related `channelMemberAdded` activity. `channelData.settings.backgroundInstall` is a Boolean flag for automatic installation, which can occur during conversion or in other scenarios. Don't use the installation flag alone to identify conversion.
+
+> [!IMPORTANT]
+> These activities can arrive in any order. Perform state reassociation only in the `channelMemberAdded` handler, without waiting for installation or team membership events. Moved messages don't generate message activities.
+
+The following TypeScript example illustrates conversion detection in an existing Teams SDK app. Replace the comments with your agent's state storage logic. The local type extension describes the source-conversation field for SDK versions that don't declare it.
+
+::: zone pivot="teams-sdk-typescript"
+
+```typescript
+import type { ChannelData } from '@microsoft/teams.api';
+
+app.on('channelMemberAdded', async ({ activity }) => {
+  const channelData: ChannelData & {
+    convertedFromConversation?: { id?: string };
+  } = activity.channelData ?? {};
+  const originalConversationId = channelData.convertedFromConversation?.id;
+
+  if (originalConversationId) {
+    // Reassociate state from originalConversationId with activity.conversation.id.
+    // Don't send a welcome message for the continuing conversation.
+  } else {
+    // Handle ordinary channel membership additions as appropriate.
+  }
+});
+```
+
+* `channelData.convertedFromConversation.id` identifies the group chat before conversion. Use the received ID to locate existing state.
+* `activity.conversation.id` identifies the destination conversation. Associate the existing state with this received ID.
+
+::: zone-end
+
+For automatic-install onboarding suppression, see the installation handlers in [Proactive messages](how-to/conversations/send-proactive-messages.md#samples).
+
 ### Member changes
 
 Member-added events occur when the agent is installed or a user joins a conversation where the agent is installed. Member-removed events occur when the agent is uninstalled, a user leaves, or a user is permanently deleted from the tenant.
@@ -270,13 +316,15 @@ These events can describe either the agent itself or another user. Compare each 
 
 In a team context, the member-added event uses `channelData.eventType` of `teamMemberAdded`, and the member-removed event uses `teamMemberRemoved`.
 
+During group-chat-to-channel conversion, agents added to the destination channel also receive `teamMemberAdded` if they weren't already members of its team. This event can't identify conversion. Use the [conversion-related `channelMemberAdded` activity](#handle-group-chat-to-channel-conversion-events) for state reassociation instead.
+
 User IDs in these payloads are unique to the agent. Cache them when needed for future interactions, such as directly messaging a user. When the agent is removed, clear cached data for the team as appropriate for your app's data-retention requirements.
 
 When the agent is installed in a team, `conversation.id` identifies the channel selected by the user during installation or the channel from which installation was initiated. It isn't necessarily the General channel. For agent installation and removal workflows, prefer the [installation update event](#installation-update-event-details).
 
 ## Installation update event details
 
-Teams sends an activity with `type` of `installationUpdate` when an agent is installed in or uninstalled from a conversation thread. Use installation updates to send an introductory message when your agent is installed and to clean up user or conversation-thread data when it's uninstalled. This helps your app meet privacy and data-retention requirements.
+Teams sends an activity with `type` of `installationUpdate` when an agent is installed in or uninstalled from a conversation thread. Use installation updates to send an introductory message when appropriate and to clean up user or conversation-thread data when it's uninstalled. This helps your app meet privacy and data-retention requirements.
 
 Inspect `action` to determine the change.
 
@@ -291,7 +339,12 @@ When an app is upgraded, Teams sends this event only if the upgrade adds or remo
 
 ### Install update event
 
-When an agent is installed in a team, `conversation.id` in both the conversation update and installation update activities identifies the channel selected during installation or the channel where installation occurred. Send your welcome message to this channel, where the user intends the agent to operate. If you explicitly need the General channel ID, use `channelData.team.id`.
+When an agent is installed in a team, `conversation.id` in both the conversation update and installation update activities identifies the channel selected during installation or the channel where installation occurred. If a welcome message is appropriate, send it to this channel, where the user intends the agent to operate. If you explicitly need the General channel ID, use `channelData.team.id`.
+
+Before sending an introductory message for an `installationUpdate/add` activity, check `channelData.settings.backgroundInstall`. When it's `true`, Teams performed the installation automatically, including some installations during group-chat-to-channel conversion. Suppress welcome messages and other onboarding behavior that's inappropriate for automatic installation. For guidance and examples, see [Welcome messages](how-to/conversations/send-proactive-messages.md#welcome-messages).
+
+> [!NOTE]
+> `backgroundInstall: true` doesn't establish that conversion occurred. Use the [conversion-related `channelMemberAdded` activity](#handle-group-chat-to-channel-conversion-events) for conversion detection and state reassociation.
 
 The [installation payload](#installation-update-payload) also shows `channelData.settings.selectedChannel.id`, `channelData.channel`, `channelData.team`, tenant information, and the installation source.
 

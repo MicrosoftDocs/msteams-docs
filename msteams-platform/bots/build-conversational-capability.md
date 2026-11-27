@@ -5,7 +5,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.author: nickwalk
 ms.reviewer: nickwalk
-ms.date: 09/28/2026
+ms.date: 11/27/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
@@ -109,6 +109,25 @@ The following table lists the activity that your agent can receive and take acti
 | [Receive edit message activity](#receive-edit-message-activity)               | Message edit activity        | All   |
 | [Receive undelete message activity](#receive-undelete-message-activity)       | Message undelete activity    | All   |
 | [Receive soft delete message activity](#receive-soft-delete-message-activity) | Message soft delete activity | All   |
+
+### Preserve conversation state during conversion
+
+Users can convert a group chat into a private channel when their collaboration needs the structure and capabilities of channels. Your agent needs to preserve conversational memory across this change.
+
+During conversion, Teams:
+
+1. Creates a private channel in the team selected by the user.
+1. Adds the group chat's members and eligible agents to the channel, and to its team if necessary.
+1. Moves the group chat's messages into the channel as read-only. [Targeted messages](../agents-in-teams/targeted-messages.md) aren't moved.
+1. Deletes the original group chat.
+
+Only agents that support private channels are added to the destination channel. Messages previously sent by agents that aren't eligible are still moved. For eligibility guidance, see [Agents and tab apps for shared and private channels](../build-apps-for-shared-private-channels.md#enable-apps-for-shared-and-private-channels).
+
+Your agent doesn't receive message activities for the moved messages. To maintain continuity, reassociate existing conversation state with the destination conversation when your agent receives the conversion-related `channelMemberAdded` activity.
+
+Use `channelData.convertedFromConversation.id` to identify the original group chat and `conversation.id` to identify the destination conversation. For event handling details, see [Handle group-chat-to-channel conversion events](agent-activity-handler-reference.md#handle-group-chat-to-channel-conversion-events).
+
+For example, if your agent maintains project discussion memory under a group chat ID, associate that memory with the destination conversation ID rather than waiting for the moved messages to arrive again. Don't repeat onboarding for the continuing conversation. For more information, see [Welcome messages](how-to/conversations/send-proactive-messages.md#welcome-messages).
 
 ### Receive a message activity
 
@@ -438,6 +457,9 @@ PUT {Service URL of your agent}/v3/conversations/{conversationId}/activities/{ac
 To send a text message, specify the string you want to send as an activity. In the agent's activity handler, use the turn context object's `context.SendAsync(...)` method to send a single message response. Use the object's `multiple context.SendAsync(...) calls` method to send multiple responses.
 
 The following code shows an example of sending a message when a user is added to a conversation:
+
+> [!NOTE]
+> These examples illustrate greeting a user during an ordinary membership change. Membership events don't always indicate a first interaction. Don't use `teamMemberAdded` to detect group-chat-to-channel conversion; its payload doesn't distinguish conversion from other scenarios. For conversion-related channel membership and automatic-install checks, see [Handle group-chat-to-channel conversion events](agent-activity-handler-reference.md#handle-group-chat-to-channel-conversion-events) and [Welcome messages](how-to/conversations/send-proactive-messages.md#welcome-messages).
 
 ::: zone pivot="teams-sdk-csharp"
 
@@ -1365,6 +1387,8 @@ A typical `channelData` object in an activity sent to your agent contains the fo
   - `name`: Channel name passed only in cases of channel modification events.
 - `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 - `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+- `convertedFromConversation.id`: Original group chat ID in a conversion-related `channelMemberAdded` activity. Use it with `conversation.id` to reassociate conversation state.
+- `settings.backgroundInstall`: When `true` in an installation activity, indicates that Teams installed the agent automatically. This flag isn't specific to conversion and doesn't identify the original conversation.
 - `app`: Available in one-on-one (personal-app) conversations. Contains the app ID and the installed manifest version of the app associated with the activity. In some scenarios, `channelData.app` may not be provided, such as when the agent isn't installed for the user or when multiple apps map to a single bot ID. Your agent must handle the case where this field is absent.
   - `id`: The app ID.
   - `version`: The manifest version of the installed app.
