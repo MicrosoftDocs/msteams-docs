@@ -139,6 +139,10 @@ Don't use the conversational `signIn`, `SignInAsync`, or `sign_in` helpers in a 
 
 When no token is available, return a `silentAuth` response. The sign-in link comes from the token service for your OAuth connection and is used only if silent SSO fails.
 
+:::image type="content" source="../../../assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="Image shows message extension app sign-in prompt for the user.":::
+
+Teams uses the response to present the sign-in action in your message extension when interactive sign-in is required. You don't need to create a separate sign-in button or send an OAuth card to a bot conversation.
+
 ```json
 {
   "composeExtension": {
