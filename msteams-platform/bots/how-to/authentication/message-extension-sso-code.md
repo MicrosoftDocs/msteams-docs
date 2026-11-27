@@ -3,7 +3,7 @@ title: Enable message extension SSO with Teams SDK
 description: Set up message extension SSO with Teams SDK and learn about sign-in, token storage, invoke handling, validation, and sign-out in three languages.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 11/26/2026
+ms.date: 11/76/2026
 zone_pivot_groups: teams-sdk-languages
 ---
 
